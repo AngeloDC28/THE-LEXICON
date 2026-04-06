@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lexicon; Relational Cultural Archive</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bone: '#FAF9F6',
+            overlay: '#FDFCF0',
+          },
+          fontFamily: {
+            inter: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', '"Courier New"', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    *, *::before, *::after {
+      cursor: crosshair;
+      border-radius: 0 !important;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #FAF9F6;
+      color: #000000;
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      overflow: hidden;
+    }
+
+    #app-root {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Desaturated high-contrast */
+    .desaturate {
+      filter: grayscale(70%) contrast(1.15);
+    }
+
+    /* Hotspot dot: ONLY circular element */
+    .hotspot-dot {
+      width: 16px;
+      height: 16px;
+      background: #000000;
+      border: 3px solid #FAF9F6;
+      border-radius: 50% !important;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      cursor: crosshair;
+      z-index: 10;
+      transition: transform 0.12s ease;
+    }
+    .hotspot-dot:hover {
+      transform: translate(-50%, -50%) scale(1.35);
+    }
+
+    /* Info box */
+    .info-box {
+      border: 3px solid #000000;
+      background: #FDFCF0;
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      box-shadow: 6px 6px 0px #000000;
+    }
+
+    /* Active/inverted row */
+    .entry-row-active {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #FAF9F6; }
+    ::-webkit-scrollbar-thumb { background: #000; }
+
+    /* Image grid tight layout */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Taxonomy 2-col grid */
+    .taxonomy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .taxonomy-cell {
+      padding: 8px 12px;
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: crosshair;
+      border-bottom: 2px solid #000;
+      border-right: 2px solid #000;
+      transition: all 0.08s ease;
+    }
+    .taxonomy-cell:nth-child(even) {
+      border-right: none;
+    }
+    .taxonomy-cell:hover {
+      background: #000;
+      color: #fff;
+    }
+    .taxonomy-cell.active {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app-root">
+
+    <!-- ============================================================
+         TOP HEADER BAR
+    ============================================================ -->
+    <header class="bg-black text-white flex items-center justify-between px-5 py-3 border-b-[3px] border-black shrink-0">
+      <div class="flex items-baseline gap-4">
+        <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono">The Lexicon</h1>
+      </div>
+      <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70">
+        Cultural Archive; Rel. 2025.1; <span id="header-count">0</span> Entries
+      </div>
+    </header>
+
+    <!-- ============================================================
+         MAIN SHELL
+    ============================================================ -->
+    <div class="flex flex-1 overflow-hidden">
+
+      <!-- LEFT: IMAGE GRID PANEL -->
+      <div id="image-panel" class="w-[60%] overflow-y-auto bg-bone border-r-[3px] border-black">
+
+        <!-- Grid View -->
+        <div id="grid-view" class="p-1">
+          <div id="image-grid" class="image-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Detail View (single image + hotspots) -->
+        <div id="detail-image-view" class="hidden relative">
+          <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
+          <!-- Hotspot dots appended by JS -->
+        </div>
+
+      </div>
+
+      <!-- RIGHT: INDEX PANEL -->
+      <div id="index-panel" class="w-[40%] flex flex-col overflow-hidden bg-overlay">
+
+        <!-- Index Header -->
+        <div class="border-b-[3px] border-black px-4 py-3 flex items-baseline justify-between shrink-0">
+          <span class="text-xs font-bold uppercase tracking-[0.15em]">Index / A-Z</span>
+        </div>
+
+        <!-- Search -->
+        <div class="border-b-[3px] border-black p-3 shrink-0">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search brand, year, season..."
+            class="w-full border-[3px] border-black bg-bone px-3 py-2 text-xs font-mono placeholder:text-black/40 focus:outline-none focus:bg-white uppercase tracking-wide"
+          />
+        </div>
+
+        <!-- Entry List -->
+        <div id="entry-list" class="overflow-y-auto flex-1">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Taxonomy Grid -->
+        <div class="shrink-0">
+          <div class="border-t-[3px] border-black px-4 py-2">
+            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">Taxonomy</span>
+          </div>
+          <div id="taxonomy-grid" class="taxonomy-grid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Active Entry Panel -->
+        <div id="active-entry-panel" class="hidden shrink-0 border-t-[3px] border-black overflow-y-auto" style="max-height: 45%;">
+          <div class="px-4 py-2 border-b-[3px] border-black bg-bone flex items-center justify-between">
+            <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em]"></span>
+            <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60">X</button>
+          </div>
+          <div id="active-entry-hotspots" class="p-3 space-y-3">
+            <!-- Hotspot info boxes rendered by JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ============================================================
+         BOTTOM STATUS BAR
+    ============================================================ -->
+    <footer class="border-t-[3px] border-black bg-overlay grid grid-cols-4 shrink-0">
+      <div class="px-4 py-3 border-r-[3px] border-black">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Brand</span>
+        <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+      </div>
+      <div class="px-4 py-3 border-r-[3px] border-black">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Year</span>
+        <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+      </div>
+      <div class="px-4 py-3 border-r-[3px] border-black">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Season</span>
+        <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+      </div>
+      <div class="px-4 py-3">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Entry</span>
+        <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ============================================================
+       HOTSPOT FLOATING POPUP (DESKTOP)
+  ============================================================ -->
+  <div id="hotspot-popup" class="hidden fixed z-50 info-box p-4 max-w-xs">
+    <div class="flex items-start justify-between mb-1">
+      <p id="hotspot-label" class="text-[11px] font-bold uppercase tracking-wider"></p>
+      <button id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-60">X</button>
+    </div>
+    <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
+  </div>
+
+  <!-- ============================================================
+       ENGINE
+  ============================================================ -->
+  <script>
+    /* ============================================================
+       STATE
+    ============================================================ */
+    const AppState = {
+      currentView: 'grid',
+      selectedEntryId: null,
+      activePillar: null,
+      searchQuery: '',
+      activeHotspot: null,
+    };
+
+    /* ============================================================
+       9-PILLAR TAXONOMY
+    ============================================================ */
+    const taxonomyPillars = [
+      { label: 'Brands', key: 'brand' },
+      { label: 'Eras', key: 'era' },
+      { label: 'Politics', key: 'politics' },
+      { label: 'Theories', key: 'theories' },
+      { label: 'Gender', key: 'gender' },
+      { label: 'Materials', key: 'materials' },
+      { label: 'Geography', key: 'geography' },
+      { label: 'Form & Anatomy', key: 'form' },
+      { label: 'Format & Medium', key: 'format' },
+    ];
+
+    /* ============================================================
+       DOM
+    ============================================================ */
+    const $ = (id) => document.getElementById(id);
+
+    /* ============================================================
+       UTILITIES
+    ============================================================ */
+    function debounce(fn, delay) {
+      let t;
+      return function (...a) {
+        clearTimeout(t);
+        t = setTimeout(() => fn.apply(this, a), delay);
+      };
+    }
+
+    function pad(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function getFilteredEntries() {
+      const q = AppState.searchQuery.toLowerCase();
+      const pillar = AppState.activePillar;
+
+      return archiveData.filter((entry) => {
+        if (pillar) {
+          const v = entry.tags[pillar.key] || '';
+          if (!v) return false;
+        }
+        if (q) {
+          const searchable = [
+            entry.title, entry.season, String(entry.year), entry.description,
+            ...Object.values(entry.tags),
+          ].join(' ').toLowerCase();
+          if (!searchable.includes(q)) return false;
+        }
+        return true;
+      });
+    }
+
+    /* ============================================================
+       RENDER: HEADER COUNT
+    ============================================================ */
+    function updateHeaderCount() {
+      $('header-count').textContent = archiveData.length;
+    }
+
+    /* ============================================================
+       RENDER: IMAGE GRID
+    ============================================================ */
+    function renderImageGrid() {
+      const entries = getFilteredEntries();
+      const grid = $('image-grid');
+
+      if (entries.length === 0) {
+        grid.innerHTML = '<div class="col-span-3 p-12 text-center"><p class="text-[10px] uppercase tracking-[0.2em] opacity-40">No entries match your query.</p></div>';
+        return;
+      }
+
+      /* Generate multiple thumbnails per entry to fill the grid (reference shows ~12 images) */
+      let html = '';
+      entries.forEach((entry) => {
+        /* Use multiple placeholder variants to simulate a full grid */
+        const variants = [
+          { w: 400, h: 550, suffix: '1' },
+          { w: 400, h: 500, suffix: '2' },
+          { w: 400, h: 520, suffix: '3' },
+          { w: 400, h: 480, suffix: '4' },
+          { w: 400, h: 540, suffix: '5' },
+          { w: 400, h: 510, suffix: '6' },
+          { w: 400, h: 530, suffix: '7' },
+          { w: 400, h: 490, suffix: '8' },
+          { w: 400, h: 560, suffix: '9' },
+          { w: 400, h: 500, suffix: '10' },
+          { w: 400, h: 520, suffix: '11' },
+          { w: 400, h: 540, suffix: '12' },
+        ];
+
+        variants.forEach((v, i) => {
+          html += `<div class="overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
+            <img
+              src="https://placehold.co/${v.w}x${v.h}/e5e5e5/999999?text=${encodeURIComponent(entry.tags.brand)}+${v.suffix}"
+              alt="${entry.title}"
+              class="desaturate w-full aspect-[3/4] object-cover block hover:filter-none transition-all duration-200"
+              loading="lazy"
+            />
+          </div>`;
+        });
+      });
+
+      grid.innerHTML = html;
+    }
+
+    /* ============================================================
+       RENDER: ENTRY LIST
+    ============================================================ */
+    function renderEntryList() {
+      const entries = getFilteredEntries();
+      const list = $('entry-list');
+      let html = '';
+
+      entries.forEach((entry, i) => {
+        const isActive = AppState.selectedEntryId === entry.id;
+        const activeClass = isActive ? 'entry-row-active' : '';
+
+        html += `<div class="border-b-[3px] border-black px-4 py-3 cursor-crosshair transition-all duration-75 hover:bg-black hover:text-white ${activeClass}" data-entry-id="${entry.id}">
+          <div class="flex items-baseline gap-3">
+            <span class="text-[10px] opacity-50">${pad(i + 1)}</span>
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.08em]">${entry.tags.brand}</p>
+              <p class="text-[10px] uppercase tracking-[0.1em] opacity-60 mt-0.5">${entry.year} &middot; ${entry.season}</p>
+            </div>
+          </div>
+        </div>`;
+      });
+
+      list.innerHTML = html;
+    }
+
+    /* ============================================================
+       RENDER: TAXONOMY GRID
+    ============================================================ */
+    function renderTaxonomyGrid() {
+      const grid = $('taxonomy-grid');
+      let html = '';
+
+      taxonomyPillars.forEach((p) => {
+        const isActive = AppState.activePillar && AppState.activePillar.key === p.key;
+        html += `<div class="taxonomy-cell ${isActive ? 'active' : ''}" data-pillar-key="${p.key}">${p.label}</div>`;
+      });
+
+      /* Add empty cell if odd number to complete the grid row */
+      if (taxonomyPillars.length % 2 !== 0) {
+        html += `<div class="taxonomy-cell" style="border-right:none;opacity:0;pointer-events:none;">&nbsp;</div>`;
+      }
+
+      grid.innerHTML = html;
+    }
+
+    /* ============================================================
+       RENDER: STATUS BAR
+    ============================================================ */
+    function renderStatusBar() {
+      const entry = archiveData.find((e) => e.id === AppState.selectedEntryId);
+
+      if (entry) {
+        $('status-brand').textContent = entry.tags.brand;
+        $('status-year').textContent = entry.year;
+        $('status-season').textContent = entry.season;
+        $('status-entry').textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
+      } else {
+        $('status-brand').innerHTML = '&mdash;';
+        $('status-year').innerHTML = '&mdash;';
+        $('status-season').innerHTML = '&mdash;';
+        $('status-entry').innerHTML = '&mdash;';
+      }
+    }
+
+    /* ============================================================
+       DETAIL VIEW
+    ============================================================ */
+    function openDetail(entryId) {
+      AppState.currentView = 'detail';
+      AppState.selectedEntryId = entryId;
+
+      const entry = archiveData.find((e) => e.id === entryId);
+      if (!entry) return;
+
+      /* Swap grid for detail image */
+      $('grid-view').classList.add('hidden');
+      const detailView = $('detail-image-view');
+      detailView.classList.remove('hidden');
+
+      $('detail-image').src = entry.imageUrl;
+      $('detail-image').alt = entry.title;
+
+      /* Render hotspot dots */
+      detailView.querySelectorAll('.hotspot-dot').forEach((el) => el.remove());
+      entry.hotspots.forEach((spot, i) => {
+        const dot = document.createElement('div');
+        dot.className = 'hotspot-dot';
+        dot.style.left = spot.x + '%';
+        dot.style.top = spot.y + '%';
+        dot.setAttribute('data-index', i);
+        detailView.appendChild(dot);
+      });
+
+      /* Show active entry panel */
+      $('active-entry-panel').classList.remove('hidden');
+      $('active-entry-title').textContent = 'Active Entry: ' + entry.tags.brand + ' ' + entry.year;
+
+      /* Render hotspot info boxes */
+      const container = $('active-entry-hotspots');
+      container.innerHTML = '';
+      entry.hotspots.forEach((spot, i) => {
+        const box = document.createElement('div');
+        box.className = 'info-box p-3';
+        box.setAttribute('data-hotspot-index', i);
+        box.innerHTML = `
+          <div class="flex items-start justify-between mb-1">
+            <p class="text-[11px] font-bold uppercase tracking-wider">${spot.label}</p>
+            <button class="text-[10px] font-bold ml-2 hover:opacity-60 hotspot-box-close">X</button>
+          </div>
+          <p class="text-[10px] leading-relaxed mt-1">${spot.description}</p>
+        `;
+        container.appendChild(box);
+      });
+
+      /* Update other views */
+      renderEntryList();
+      renderStatusBar();
+    }
+
+    function closeDetail() {
+      AppState.currentView = 'grid';
+      AppState.selectedEntryId = null;
+
+      $('detail-image-view').classList.add('hidden');
+      $('grid-view').classList.remove('hidden');
+      $('active-entry-panel').classList.add('hidden');
+
+      hideHotspotPopup();
+      renderEntryList();
+      renderStatusBar();
+    }
+
+    /* ============================================================
+       HOTSPOT POPUP
+    ============================================================ */
+    function showHotspotPopup(index, dotEl) {
+      const entry = archiveData.find((e) => e.id === AppState.selectedEntryId);
+      if (!entry) return;
+      const spot = entry.hotspots[index];
+      if (!spot) return;
+
+      AppState.activeHotspot = index;
+
+      const popup = $('hotspot-popup');
+      $('hotspot-label').textContent = spot.label;
+      $('hotspot-desc').textContent = spot.description;
+
+      const rect = dotEl.getBoundingClientRect();
+      const pw = 280;
+      const offset = 16;
+
+      let left = rect.right + offset;
+      let top = rect.top - 10;
+
+      if (left + pw > window.innerWidth - 20) {
+        left = rect.left - pw - offset;
+      }
+      if (top + 140 > window.innerHeight - 20) {
+        top = window.innerHeight - 160;
+      }
+      if (top < 10) top = 10;
+
+      popup.style.left = left + 'px';
+      popup.style.top = top + 'px';
+      popup.style.width = pw + 'px';
+      popup.classList.remove('hidden');
+
+      /* Highlight corresponding info box in panel */
+      document.querySelectorAll('#active-entry-hotspots .info-box').forEach((el, i) => {
+        if (i === index) {
+          el.style.borderColor = '#000';
+          el.style.background = '#000';
+          el.style.color = '#fff';
+        } else {
+          el.style.borderColor = '#000';
+          el.style.background = '#FDFCF0';
+          el.style.color = '#000';
+        }
+      });
+    }
+
+    function hideHotspotPopup() {
+      $('hotspot-popup').classList.add('hidden');
+      AppState.activeHotspot = null;
+
+      /* Reset info box highlights */
+      document.querySelectorAll('#active-entry-hotspots .info-box').forEach((el) => {
+        el.style.background = '#FDFCF0';
+        el.style.color = '#000';
+      });
+    }
+
+    /* ============================================================
+       FILTERING
+    ============================================================ */
+    function filterByPillar(key) {
+      if (AppState.activePillar && AppState.activePillar.key === key) {
+        AppState.activePillar = null;
+      } else {
+        AppState.activePillar = taxonomyPillars.find((p) => p.key === key) || null;
+      }
+      renderTaxonomyGrid();
+      renderEntryList();
+      renderImageGrid();
+    }
+
+    function handleSearch(value) {
+      AppState.searchQuery = value;
+      renderEntryList();
+      renderImageGrid();
+    }
+
+    /* ============================================================
+       INIT
+    ============================================================ */
+    function init() {
+      updateHeaderCount();
+      renderImageGrid();
+      renderEntryList();
+      renderTaxonomyGrid();
+      renderStatusBar();
+
+      /* Search */
+      $('search-input').addEventListener('input', debounce(function (e) {
+        handleSearch(e.target.value);
+      }, 150));
+
+      /* Entry list click (delegated) */
+      $('entry-list').addEventListener('click', function (e) {
+        const row = e.target.closest('[data-entry-id]');
+        if (!row) return;
+        const id = row.getAttribute('data-entry-id');
+        if (AppState.selectedEntryId === id) {
+          closeDetail();
+        } else {
+          openDetail(id);
+        }
+      });
+
+      /* Image grid click (delegated) */
+      $('image-grid').addEventListener('click', function (e) {
+        const cell = e.target.closest('[data-entry-id]');
+        if (!cell) return;
+        const id = cell.getAttribute('data-entry-id');
+        openDetail(id);
+      });
+
+      /* Hotspot dot click (delegated) */
+      $('detail-image-view').addEventListener('click', function (e) {
+        const dot = e.target.closest('.hotspot-dot');
+        if (!dot) return;
+        e.stopPropagation();
+        const idx = parseInt(dot.getAttribute('data-index'), 10);
+        showHotspotPopup(idx, dot);
+      });
+
+      /* Close detail */
+      $('btn-close-detail').addEventListener('click', closeDetail);
+
+      /* Close popup */
+      $('btn-close-popup').addEventListener('click', function (e) {
+        e.stopPropagation();
+        hideHotspotPopup();
+      });
+
+      /* Close hotspot info box */
+      document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('hotspot-box-close')) {
+          e.target.closest('.info-box').remove();
+        }
+      });
+
+      /* Taxonomy click */
+      $('taxonomy-grid').addEventListener('click', function (e) {
+        const cell = e.target.closest('.taxonomy-cell');
+        if (!cell) return;
+        const key = cell.getAttribute('data-pillar-key');
+        if (key) filterByPillar(key);
+      });
+
+      /* Click outside popup */
+      document.addEventListener('click', function (e) {
+        if (AppState.activeHotspot === null) return;
+        const popup = $('hotspot-popup');
+        if (!popup.contains(e.target) && !e.target.closest('.hotspot-dot')) {
+          hideHotspotPopup();
+        }
+      });
+
+      /* Escape key */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (AppState.activeHotspot !== null) {
+            hideHotspotPopup();
+          } else if (AppState.currentView === 'detail') {
+            closeDetail();
+          }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+
+    /* ============================================================
+       ARCHIVE DATA ENGINE
+    ============================================================ */
+    const archiveData = [
+      {
+        id: 'margiela-aw94',
+        title: 'Maison Margiela Autumn/Winter 1994',
+        year: 1994,
+        season: 'Autumn/Winter',
+        imageUrl: 'https://placehold.co/800x1100/e5e5e5/333333?text=Margiela+AW94',
+        description:
+          'A collection that redefined the boundary between construction and deconstruction. Martin Margiela presented garments that exposed their own making; linings became exteriors and raw edges replaced finished seams. The show took place in a disused warehouse in the 18th arrondissement; reinforcing the label\'s commitment to anti-spectacle. This body of work is frequently cited in academic discourse on post-structuralist fashion theory; particularly in relation to the dissolution of hierarchical garment conventions.',
+        tags: {
+          brand: 'Maison Margiela',
+          era: '1990 - 1999',
+          politics: 'Class & Scarcity',
+          theories: 'Deconstruction',
+          gender: 'Unisex',
+          materials: 'Raw Textiles',
+          geography: 'Paris',
+          form: 'Architectural Shielding',
+          format: 'Runway',
+        },
+        hotspots: [
+          {
+            x: 35,
+            y: 22,
+            label: 'Exposed Lining',
+            description:
+              'Silk lining deliberately turned outward; reversing the interior/exterior hierarchy of the garment. A signature Margiela technique from this period.',
+          },
+          {
+            x: 60,
+            y: 55,
+            label: 'Raw Hem Construction',
+            description:
+              'Unfinished edges left deliberately frayed. The garment refuses the convention of a polished terminus; the process of making remains visible.',
+          },
+          {
+            x: 45,
+            y: 80,
+            label: 'Tabi Boot',
+            description:
+              'The split-toe boot; derived from Japanese tabi socks. First introduced in the Spring/Summer 1989 debut and present in nearly every subsequent collection.',
+          },
+        ],
+      },
+    ];
+  </script>
+</body>
+</html>
