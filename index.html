@@ -221,6 +221,14 @@
 
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative">
+          <div id="detail-nav" class="hidden flex items-center justify-between border-b-[3px] border-black bg-bone px-4 py-2">
+            <button id="btn-back-grid" class="text-[10px] font-bold uppercase tracking-[0.12em] hover:opacity-60">&larr; Grid</button>
+            <span id="detail-nav-label" class="text-[10px] font-bold uppercase tracking-[0.12em]"></span>
+            <div class="flex gap-3">
+              <button id="btn-prev-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Prev</button>
+              <button id="btn-next-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Next</button>
+            </div>
+          </div>
           <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
           <!-- Hotspot dots appended by JS -->
         </div>
@@ -568,6 +576,13 @@
       $('detail-image').src = entry.imageUrl;
       $('detail-image').alt = entry.title;
 
+      /* Show nav bar and set position label */
+      const navBar = $('detail-nav');
+      navBar.classList.remove('hidden');
+      const filtered = getFilteredEntries();
+      const posIndex = filtered.findIndex(function (e) { return e.id === entryId; });
+      $('detail-nav-label').textContent = pad(posIndex + 1) + ' / ' + pad(filtered.length);
+
       /* Render hotspot dots */
       detailView.querySelectorAll('.hotspot-dot').forEach((el) => el.remove());
       entry.hotspots.forEach((spot, i) => {
@@ -664,6 +679,7 @@
       AppState.selectedEntryId = null;
 
       $('detail-image-view').classList.add('hidden');
+      $('detail-nav').classList.add('hidden');
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
@@ -671,6 +687,19 @@
       hideHotspotPopup();
       renderEntryList();
       renderStatusBar();
+    }
+
+    function navigateEntry(direction) {
+      const entries = getFilteredEntries();
+      if (entries.length <= 1) return;
+      const currentIndex = entries.findIndex(function (e) {
+        return e.id === AppState.selectedEntryId;
+      });
+      if (currentIndex === -1) return;
+      let newIndex = currentIndex + direction;
+      if (newIndex < 0) newIndex = entries.length - 1;
+      if (newIndex >= entries.length) newIndex = 0;
+      openDetail(entries[newIndex].id);
     }
 
     /* ============================================================
@@ -797,6 +826,11 @@
         showHotspotPopup(idx, dot);
       });
 
+      /* Detail nav buttons */
+      $('btn-back-grid').addEventListener('click', closeDetail);
+      $('btn-prev-entry').addEventListener('click', function () { navigateEntry(-1); });
+      $('btn-next-entry').addEventListener('click', function () { navigateEntry(1); });
+
       /* Close detail */
       $('btn-close-detail').addEventListener('click', closeDetail);
 
@@ -838,13 +872,22 @@
         }
       });
 
-      /* Escape key */
+      /* Keyboard navigation */
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
           if (AppState.activeHotspot !== null) {
             hideHotspotPopup();
           } else if (AppState.currentView === 'detail') {
             closeDetail();
+          }
+        }
+        if (AppState.currentView === 'detail') {
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            navigateEntry(-1);
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            navigateEntry(1);
           }
         }
       });
