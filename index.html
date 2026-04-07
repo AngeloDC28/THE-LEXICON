@@ -160,7 +160,7 @@
     /* Taxonomy pill buttons */
     .tag-pill {
       border: 2px solid #000;
-      padding: 4px 10px;
+      padding: 6px 14px;
       font-size: 9px;
       font-family: 'IBM Plex Mono', 'Courier New', monospace;
       text-transform: uppercase;
@@ -236,31 +236,39 @@
          TOP HEADER BAR
     ============================================================ -->
     <header class="bg-black text-white flex items-center justify-between px-5 py-3 border-b-[3px] border-black shrink-0">
-      <div class="flex items-baseline gap-4">
-        <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono">The Lexicon</h1>
+      <div class="flex items-center gap-4">
+        <button id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em]">[ &#9776; ]</button>
+        <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none">The Lexicon</h1>
       </div>
-      <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70">
+      <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden md:block">
         Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ About ]</a>
+        <a href="#contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ Contact ]</a>
+      </div>
     </header>
+
+    <!-- Drawer Backdrop (mobile only) -->
+    <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
 
     <!-- ============================================================
          STATUS RIBBON
     ============================================================ -->
     <div id="status-ribbon" class="grid grid-cols-4 border-b-[3px] border-black bg-overlay shrink-0">
-      <div class="px-4 py-2 border-r-[2px] border-black">
+      <div class="px-4 py-1 border-r-[2px] border-black">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Brand</span>
         <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
       </div>
-      <div class="px-4 py-2 border-r-[2px] border-black">
+      <div class="px-4 py-1 border-r-[2px] border-black">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Year</span>
         <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
       </div>
-      <div class="px-4 py-2 border-r-[2px] border-black">
+      <div class="px-4 py-1 border-r-[2px] border-black">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Season</span>
         <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
       </div>
-      <div class="px-4 py-2">
+      <div class="px-4 py-1">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Entry</span>
         <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
       </div>
@@ -272,7 +280,7 @@
     <div class="flex flex-1 overflow-hidden">
 
       <!-- LEFT: INDEX PANEL -->
-      <div id="index-panel" class="w-[40%] flex flex-col overflow-hidden bg-overlay border-r-[3px] border-black">
+      <div id="index-panel" class="w-[85%] md:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:relative md:inset-auto md:z-auto flex flex-col overflow-hidden bg-overlay border-r-[3px] border-black">
 
         <!-- Index Header -->
         <div class="border-b-[3px] border-black px-4 py-3 flex items-baseline justify-between shrink-0">
@@ -280,7 +288,7 @@
         </div>
 
         <!-- Search -->
-        <div class="border-b-[3px] border-black p-3 shrink-0">
+        <div id="search-wrapper" class="border-b-[3px] border-black p-3 shrink-0">
           <input
             id="search-input"
             type="text"
@@ -312,6 +320,7 @@
           <div class="px-4 py-2 border-b-[3px] border-black bg-bone flex items-center justify-between">
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
+              <button id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ &lt; Grid ]</button>
               <button id="btn-panel-prev" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ &lt; Prev ]</button>
               <button id="btn-panel-next" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ Next &gt; ]</button>
               <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60 ml-2">X</button>
@@ -328,7 +337,7 @@
       </div>
 
       <!-- RIGHT: IMAGE GRID PANEL -->
-      <div id="image-panel" class="w-[60%] overflow-y-auto bg-bone">
+      <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone">
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1">
@@ -339,14 +348,6 @@
 
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative">
-          <div id="detail-nav" class="hidden flex items-center justify-between border-b-[3px] border-black bg-bone px-4 py-2 sticky top-0 z-10">
-            <button id="btn-back-grid" class="text-[10px] font-bold uppercase tracking-[0.12em] hover:opacity-60">&larr; Grid</button>
-            <span id="detail-nav-label" class="text-[10px] font-bold uppercase tracking-[0.12em]"></span>
-            <div class="flex gap-3">
-              <button id="btn-prev-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Prev</button>
-              <button id="btn-next-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Next</button>
-            </div>
-          </div>
           <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
           <!-- Hotspot dots appended by JS -->
         </div>
@@ -1029,12 +1030,13 @@
       $('detail-image').src = entry.imageUrl;
       $('detail-image').alt = entry.title;
 
-      /* Show nav bar and set position label */
-      const navBar = $('detail-nav');
-      navBar.classList.remove('hidden');
+      /* Compute position in filtered list */
       const filtered = getFilteredEntries();
       const posIndex = filtered.findIndex(function (e) { return e.id === entryId; });
-      $('detail-nav-label').textContent = pad(posIndex + 1) + ' / ' + pad(filtered.length);
+
+      /* Collapse search and taxonomy for maximum analysis space */
+      $('search-wrapper').classList.add('hidden');
+      $('taxonomy-container').classList.add('hidden');
 
       /* Render hotspot dots */
       detailView.querySelectorAll('.hotspot-dot').forEach((el) => el.remove());
@@ -1049,7 +1051,7 @@
 
       /* Show active entry panel */
       $('active-entry-panel').classList.remove('hidden');
-      $('active-entry-title').textContent = 'Active Entry: ' + entry.tags.brand + ' ' + entry.year;
+      $('active-entry-title').textContent = entry.tags.brand + ' ' + entry.year + ' [' + pad(posIndex + 1) + '/' + pad(filtered.length) + ']';
 
       /* Render taxonomy pill tags */
       const container = $('active-entry-hotspots');
@@ -1058,10 +1060,10 @@
       const tagsRow = document.createElement('div');
       tagsRow.style.display = 'flex';
       tagsRow.style.flexWrap = 'wrap';
-      tagsRow.style.gap = '6px';
-      tagsRow.style.paddingBottom = '12px';
+      tagsRow.style.gap = '10px';
+      tagsRow.style.paddingBottom = '14px';
       tagsRow.style.borderBottom = '2px solid #000';
-      tagsRow.style.marginBottom = '12px';
+      tagsRow.style.marginBottom = '16px';
 
       Object.entries(entry.tags).forEach(function (pair) {
         const key = pair[0];
@@ -1132,10 +1134,13 @@
       AppState.selectedEntryId = null;
 
       $('detail-image-view').classList.add('hidden');
-      $('detail-nav').classList.add('hidden');
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
+
+      /* Restore search and taxonomy panels */
+      $('search-wrapper').classList.remove('hidden');
+      $('taxonomy-container').classList.remove('hidden');
 
       hideHotspotPopup();
       renderEntryList();
@@ -1240,6 +1245,28 @@
       renderTaxonomySub();
       renderStatusBar();
 
+      /* Mobile drawer toggle */
+      var drawerBackdrop = $('drawer-backdrop');
+      var indexPanel = $('index-panel');
+      function openDrawer() {
+        indexPanel.classList.add('translate-x-0');
+        indexPanel.classList.remove('-translate-x-full');
+        drawerBackdrop.classList.remove('hidden');
+      }
+      function closeDrawer() {
+        indexPanel.classList.remove('translate-x-0');
+        indexPanel.classList.add('-translate-x-full');
+        drawerBackdrop.classList.add('hidden');
+      }
+      $('btn-hamburger').addEventListener('click', function () {
+        if (indexPanel.classList.contains('translate-x-0')) {
+          closeDrawer();
+        } else {
+          openDrawer();
+        }
+      });
+      drawerBackdrop.addEventListener('click', closeDrawer);
+
       /* Search */
       $('search-input').addEventListener('input', debounce(function (e) {
         handleSearch(e.target.value);
@@ -1274,12 +1301,8 @@
         showHotspotPopup(idx, dot);
       });
 
-      /* Detail nav buttons */
+      /* Back to grid and close detail */
       $('btn-back-grid').addEventListener('click', closeDetail);
-      $('btn-prev-entry').addEventListener('click', function () { navigateEntry(-1); });
-      $('btn-next-entry').addEventListener('click', function () { navigateEntry(1); });
-
-      /* Close detail */
       $('btn-close-detail').addEventListener('click', closeDetail);
 
       /* Close popup */
