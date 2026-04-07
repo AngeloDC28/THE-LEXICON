@@ -226,30 +226,6 @@
       color: #fff;
     }
 
-    /* Detail bottom navigation */
-    .detail-bottom-nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 12px;
-      border-top: 3px solid #000;
-    }
-    .detail-bottom-nav button {
-      font-size: 10px;
-      font-weight: 700;
-      font-family: 'IBM Plex Mono', 'Courier New', monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      cursor: crosshair;
-      border: 2px solid #000;
-      padding: 5px 12px;
-      background: transparent;
-      transition: all 0.08s ease;
-    }
-    .detail-bottom-nav button:hover {
-      background: #000;
-      color: #fff;
-    }
   </style>
 </head>
 
@@ -264,43 +240,39 @@
         <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono">The Lexicon</h1>
       </div>
       <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70">
-        Cultural Directory; Rel. <span id="header-rel"></span>; <span id="header-count">0</span> Entries
+        Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
     </header>
+
+    <!-- ============================================================
+         STATUS RIBBON
+    ============================================================ -->
+    <div id="status-ribbon" class="grid grid-cols-4 border-b-[3px] border-black bg-overlay shrink-0">
+      <div class="px-4 py-2 border-r-[2px] border-black">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Brand</span>
+        <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+      </div>
+      <div class="px-4 py-2 border-r-[2px] border-black">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Year</span>
+        <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+      </div>
+      <div class="px-4 py-2 border-r-[2px] border-black">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Season</span>
+        <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+      </div>
+      <div class="px-4 py-2">
+        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Entry</span>
+        <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+      </div>
+    </div>
 
     <!-- ============================================================
          MAIN SHELL
     ============================================================ -->
     <div class="flex flex-1 overflow-hidden">
 
-      <!-- LEFT: IMAGE GRID PANEL -->
-      <div id="image-panel" class="w-[60%] overflow-y-auto bg-bone border-r-[3px] border-black">
-
-        <!-- Grid View -->
-        <div id="grid-view" class="p-1">
-          <div id="image-grid" class="image-grid">
-            <!-- Rendered by JS -->
-          </div>
-        </div>
-
-        <!-- Detail View (single image + hotspots) -->
-        <div id="detail-image-view" class="hidden relative">
-          <div id="detail-nav" class="hidden flex items-center justify-between border-b-[3px] border-black bg-bone px-4 py-2">
-            <button id="btn-back-grid" class="text-[10px] font-bold uppercase tracking-[0.12em] hover:opacity-60">&larr; Grid</button>
-            <span id="detail-nav-label" class="text-[10px] font-bold uppercase tracking-[0.12em]"></span>
-            <div class="flex gap-3">
-              <button id="btn-prev-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Prev</button>
-              <button id="btn-next-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Next</button>
-            </div>
-          </div>
-          <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
-          <!-- Hotspot dots appended by JS -->
-        </div>
-
-      </div>
-
-      <!-- RIGHT: INDEX PANEL -->
-      <div id="index-panel" class="w-[40%] flex flex-col overflow-hidden bg-overlay">
+      <!-- LEFT: INDEX PANEL -->
+      <div id="index-panel" class="w-[40%] flex flex-col overflow-hidden bg-overlay border-r-[3px] border-black">
 
         <!-- Index Header -->
         <div class="border-b-[3px] border-black px-4 py-3 flex items-baseline justify-between shrink-0">
@@ -338,8 +310,12 @@
         <!-- Active Entry Panel -->
         <div id="active-entry-panel" class="hidden shrink-0 border-t-[3px] border-black overflow-y-auto" style="max-height: 45%;">
           <div class="px-4 py-2 border-b-[3px] border-black bg-bone flex items-center justify-between">
-            <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em]"></span>
-            <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60">X</button>
+            <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
+            <div class="flex items-center gap-2 ml-3 shrink-0">
+              <button id="btn-panel-prev" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ &lt; Prev ]</button>
+              <button id="btn-panel-next" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ Next &gt; ]</button>
+              <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60 ml-2">X</button>
+            </div>
           </div>
           <div id="active-entry-hotspots" class="p-3 space-y-3">
             <!-- Tags and hotspot info boxes rendered by JS -->
@@ -347,37 +323,37 @@
           <div id="related-entries" class="p-3 border-t-[3px] border-black hidden">
             <!-- Related entries rendered by JS -->
           </div>
-          <div id="detail-bottom-nav" class="detail-bottom-nav hidden">
-            <button id="btn-detail-prev">[ &lt; Previous ]</button>
-            <button id="btn-detail-next">[ Next &gt; ]</button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: IMAGE GRID PANEL -->
+      <div id="image-panel" class="w-[60%] overflow-y-auto bg-bone">
+
+        <!-- Grid View -->
+        <div id="grid-view" class="p-1">
+          <div id="image-grid" class="image-grid">
+            <!-- Rendered by JS -->
           </div>
+        </div>
+
+        <!-- Detail View (single image + hotspots) -->
+        <div id="detail-image-view" class="hidden relative">
+          <div id="detail-nav" class="hidden flex items-center justify-between border-b-[3px] border-black bg-bone px-4 py-2 sticky top-0 z-10">
+            <button id="btn-back-grid" class="text-[10px] font-bold uppercase tracking-[0.12em] hover:opacity-60">&larr; Grid</button>
+            <span id="detail-nav-label" class="text-[10px] font-bold uppercase tracking-[0.12em]"></span>
+            <div class="flex gap-3">
+              <button id="btn-prev-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Prev</button>
+              <button id="btn-next-entry" class="text-[10px] font-bold uppercase tracking-[0.12em] border-[2px] border-black px-3 py-1 hover:bg-black hover:text-white transition-all duration-75">Next</button>
+            </div>
+          </div>
+          <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
+          <!-- Hotspot dots appended by JS -->
         </div>
 
       </div>
 
     </div>
-
-    <!-- ============================================================
-         BOTTOM STATUS BAR
-    ============================================================ -->
-    <footer class="border-t-[3px] border-black bg-overlay grid grid-cols-4 shrink-0">
-      <div class="px-4 py-3 border-r-[3px] border-black">
-        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Brand</span>
-        <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
-      </div>
-      <div class="px-4 py-3 border-r-[3px] border-black">
-        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Year</span>
-        <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
-      </div>
-      <div class="px-4 py-3 border-r-[3px] border-black">
-        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Season</span>
-        <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
-      </div>
-      <div class="px-4 py-3">
-        <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Entry</span>
-        <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
-      </div>
-    </footer>
 
   </div>
 
@@ -774,9 +750,11 @@
     ============================================================ */
     function updateHeaderMeta() {
       const now = new Date();
-      const yyyy = now.getFullYear();
-      const mm = String(now.getMonth() + 1).padStart(2, '0');
-      $('header-rel').textContent = yyyy + '.' + mm;
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+      ];
+      $('header-rel').textContent = monthNames[now.getMonth()] + ' ' + now.getFullYear();
       $('header-count').textContent = archiveData.length;
     }
 
@@ -1144,9 +1122,6 @@
         relatedContainer.innerHTML = '';
       }
 
-      /* Show detail bottom navigation */
-      $('detail-bottom-nav').classList.remove('hidden');
-
       /* Update other views */
       renderEntryList();
       renderStatusBar();
@@ -1161,7 +1136,6 @@
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
-      $('detail-bottom-nav').classList.add('hidden');
 
       hideHotspotPopup();
       renderEntryList();
@@ -1329,9 +1303,9 @@
         openDetail(id);
       });
 
-      /* Detail bottom nav buttons */
-      $('btn-detail-prev').addEventListener('click', function () { navigateEntry(-1); });
-      $('btn-detail-next').addEventListener('click', function () { navigateEntry(1); });
+      /* Panel nav buttons (active entry header) */
+      $('btn-panel-prev').addEventListener('click', function () { navigateEntry(-1); });
+      $('btn-panel-next').addEventListener('click', function () { navigateEntry(1); });
 
       /* Taxonomy pillar click */
       $('taxonomy-grid').addEventListener('click', function (e) {
