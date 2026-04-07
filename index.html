@@ -186,6 +186,70 @@
       background: #000;
       color: #fff;
     }
+
+    /* Taxonomy sub-category panel */
+    .taxonomy-sub-item {
+      padding: 6px 12px;
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: crosshair;
+      border-bottom: 1px solid #000;
+      transition: all 0.08s ease;
+    }
+    .taxonomy-sub-item:hover {
+      background: #000;
+      color: #fff;
+    }
+    .taxonomy-sub-item.active {
+      background: #000;
+      color: #fff;
+    }
+    .taxonomy-group-header {
+      padding: 6px 12px;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: crosshair;
+      border-bottom: 2px solid #000;
+      background: #FAF9F6;
+      transition: all 0.08s ease;
+    }
+    .taxonomy-group-header:hover {
+      background: #000;
+      color: #fff;
+    }
+    .taxonomy-group-header.active {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Detail bottom navigation */
+    .detail-bottom-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      border-top: 3px solid #000;
+    }
+    .detail-bottom-nav button {
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: crosshair;
+      border: 2px solid #000;
+      padding: 5px 12px;
+      background: transparent;
+      transition: all 0.08s ease;
+    }
+    .detail-bottom-nav button:hover {
+      background: #000;
+      color: #fff;
+    }
   </style>
 </head>
 
@@ -259,12 +323,15 @@
         </div>
 
         <!-- Taxonomy Grid -->
-        <div class="shrink-0">
-          <div class="border-t-[3px] border-black px-4 py-2">
+        <div id="taxonomy-container" class="shrink-0 border-t-[3px] border-black overflow-y-auto" style="max-height: 45%;">
+          <div class="px-4 py-2">
             <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">Taxonomy</span>
           </div>
           <div id="taxonomy-grid" class="taxonomy-grid">
-            <!-- Rendered by JS -->
+            <!-- Top-level pillars rendered by JS -->
+          </div>
+          <div id="taxonomy-sub" class="hidden">
+            <!-- Sub-categories rendered by JS -->
           </div>
         </div>
 
@@ -279,6 +346,10 @@
           </div>
           <div id="related-entries" class="p-3 border-t-[3px] border-black hidden">
             <!-- Related entries rendered by JS -->
+          </div>
+          <div id="detail-bottom-nav" class="detail-bottom-nav hidden">
+            <button id="btn-detail-prev">[ &lt; Previous ]</button>
+            <button id="btn-detail-next">[ Next &gt; ]</button>
           </div>
         </div>
 
@@ -334,22 +405,329 @@
       activePillar: null,
       searchQuery: '',
       activeHotspot: null,
+      expandedPillar: null,
+      expandedGroup: null,
+      activeSubFilter: null,
     };
 
     /* ============================================================
-       9-PILLAR TAXONOMY
+       HIERARCHICAL TAXONOMY DATA
     ============================================================ */
-    const taxonomyPillars = [
-      { label: 'Brands', key: 'brand' },
-      { label: 'Eras', key: 'era' },
-      { label: 'Politics', key: 'politics' },
-      { label: 'Theories', key: 'theories' },
-      { label: 'Gender', key: 'gender' },
-      { label: 'Materials', key: 'materials' },
-      { label: 'Geography', key: 'geography' },
-      { label: 'Form & Anatomy', key: 'form' },
-      { label: 'Format & Medium', key: 'format' },
-    ];
+    const taxonomyData = {
+      brand: {
+        label: 'Brands',
+        children: [
+          'Acne Studios', 'Alexander McQueen', 'Alexander Wang', 'Altuzarra',
+          'Ann Demeulemeester', 'Anna Sui', 'Azzedine Alaia', 'Balenciaga',
+          'Balmain', 'Bode', 'Bottega Veneta', 'Brunello Cucinelli',
+          'Burberry', 'Calvin Klein', 'Carolina Herrera', 'Celine',
+          'Chanel', 'Chloe', 'Christian Dior', 'Christian Lacroix',
+          'Christopher Kane', 'Comme des Garcons', 'Coperni', 'Courreges',
+          'Craig Green', 'Diesel', 'Dolce & Gabbana', 'Donna Karan',
+          'Dries Van Noten', 'Dsquared2', 'Erdem', 'Ermenegildo Zegna',
+          'Etro', 'Fear of God', 'Fendi', 'Ganni', 'Gareth Pugh',
+          'Giorgio Armani', 'Givenchy', 'Gucci', 'Haider Ackermann',
+          'Helmut Lang', 'Hermes', 'Hussein Chalayan', 'Issey Miyake',
+          'JW Anderson', 'Jacquemus', 'Jean Paul Gaultier', 'Jil Sander',
+          'John Galliano', 'Junya Watanabe', 'Kenzo', 'Khaite',
+          'Kiko Kostadinov', 'Lanvin', 'Loewe', 'Loro Piana',
+          'Louis Vuitton', 'Maison Margiela', 'Marc Jacobs', 'Marine Serre',
+          'Max Mara', 'Michael Kors', 'Missoni', 'Miu Miu', 'Moschino',
+          'Noir Kei Ninomiya', 'Off-White', 'Oscar de la Renta',
+          'Paco Rabanne', 'Prada', 'Proenza Schouler', 'Ralph Lauren',
+          'Richard Quinn', 'Rick Owens', 'Roberto Cavalli', 'Roksanda',
+          'Sacai', 'Saint Laurent', 'Salvatore Ferragamo', 'Schiaparelli',
+          'Simone Rocha', 'Stella McCartney', 'Telfar', 'The Row',
+          'Thierry Mugler', 'Thom Browne', 'Tod\'s', 'Tom Ford',
+          'Trussardi', 'Undercover', 'Valentino', 'Versace', 'Vetements',
+          'Viktor & Rolf', 'Vivienne Westwood', 'Wales Bonner',
+          'Walter Van Beirendonck', 'Y/Project', 'Yohji Yamamoto'
+        ]
+      },
+      era: {
+        label: 'Eras',
+        children: {
+          'Chronological Eras': [
+            '1980 to 1989; The Post-Modern Shift',
+            '1990 to 1999; The Deconstructionist Decade',
+            '2000 to 2009; The Global Conglomerate Era',
+            '2010 to 2019; The Digital and Streetwear Pivot',
+            '2020 to Present; The Post-Pandemic and Surrealist Current'
+          ],
+          'Seasonal Cycles': [
+            'Autumn and Winter (Ready-to-Wear)',
+            'Spring and Summer (Ready-to-Wear)',
+            'Resort and Cruise',
+            'Pre-Fall',
+            'Couture Autumn and Winter',
+            'Couture Spring and Summer',
+            'Capsule and Special Drop'
+          ],
+          'Annual Data Points': [
+            '1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989',
+            '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999',
+            '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009',
+            '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019',
+            '2020', '2021', '2022', '2023', '2024', '2025', '2026'
+          ]
+        }
+      },
+      politics: {
+        label: 'Politics',
+        children: [
+          'Queer Theory & Subcultural Systems',
+          'Gender Deconstruction & Fluidity',
+          'Body Politics & Corporeal Interventions',
+          'Class Dynamics & Anti-Elitism',
+          'Post-Colonialism & Diasporic Narratives',
+          'Anti-Consumerism & Institutional Critique',
+          'Activism & Crisis Response',
+          'Globalisation & Cultural Hybridity',
+          'Surveillance & Architectural Shielding',
+          'Ecological Politics & Resource Extraction',
+          'Labour Politics & Industrial Production',
+          'Feminist Theory & The Subverted Gaze',
+          'Racial Identity & Representation',
+          'Censorship & Provocation',
+          'Techno-Politics & Digital Identities'
+        ]
+      },
+      theories: {
+        label: 'Theories',
+        children: {
+          'Sociological Systems': [
+            'Subcultural Resistance Theory',
+            'Habitus and Field (Bourdieu)',
+            'Trickle-Down and Bubble-Up Dynamics',
+            'Institutional Critique',
+            'Corporate Nihilism',
+            'Class Distinctions and Signalling'
+          ],
+          'Semiotics and Linguistics': [
+            'Structuralism and Sign Systems',
+            'Mythology and Contemporary Lore (Barthes)',
+            'Visual Rhetoric',
+            'Symbolic Exchange',
+            'Narrative Curation',
+            'Deconstructionist Logic (Derrida)'
+          ],
+          'Identity and Subjectivity': [
+            'Queer Performativity (Butler)',
+            'The Subverted Gaze',
+            'Intersectionality',
+            'Psychoanalytic Theory (Lacanian)',
+            'The Mirror Stage',
+            'Bodily Autonomy and Transgression',
+            'Gender Deconstruction'
+          ],
+          'Critical and Political Theory': [
+            'Biopolitics and Bio-Power (Foucault)',
+            'Panoptic Surveillance',
+            'Post-Colonial Critique',
+            'The Society of the Spectacle (Debord)',
+            'Marxist Materialism',
+            'Affect Theory',
+            'Globalisation and Diaspora'
+          ],
+          'Aesthetic Philosophy': [
+            'The Simulacrum (Baudrillard)',
+            'Hauntology (Fisher)',
+            'Camp and Kitsch Subversion',
+            'Object-Oriented Ontology',
+            'Radical Romanticism',
+            'Brutalist Information Architecture',
+            'The Grotesque and Abject'
+          ],
+          'Technological and Media Theory': [
+            'Cyborg Manifestos (Haraway)',
+            'Post-Humanism',
+            'Algorithmic Determinism',
+            'Digital Dualism',
+            'Techno-Optimism and Accelerationism',
+            'Remediation',
+            'Hyperreality'
+          ]
+        }
+      },
+      gender: {
+        label: 'Gender',
+        children: [
+          'Menswear',
+          'Womenswear',
+          'Unisex / Neutral',
+          'Conceptual / Post-Binary Form'
+        ]
+      },
+      materials: {
+        label: 'Materials',
+        children: {
+          'Natural & Organic Matter': [
+            'Animal Protein Fibres (Wool; Silk; Hair; Shearling)',
+            'Plant-Based Cellulose (Cotton; Linen; Hemp; Jute)',
+            'Bovine & Exotic Skins (Leather; Suede; Vachetta)',
+            'Fine Precious Metallics (Gold; Silver; Copper Thread)',
+            'Biological Ephemera (Feathers; Shells; Bone; Wood)'
+          ],
+          'Synthetic & Industrial Synthesis': [
+            'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)',
+            'Thermoplastic Membranes (PVC; Vinyl; Latex)',
+            'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)',
+            'Cellulosic Semi-Synthetics (Rayon; Viscose; Acetate; Lyocell)',
+            'Industrial Coatings (Resin; Polyurethane; Rubberised Finishes)'
+          ],
+          'Technical & Performative Systems': [
+            'High-Performance Textiles (Gore-Tex; Cordura; Ripstop)',
+            'Structural Composites (Carbon Fibre; Fibreglass; Kevlar)',
+            'Non-Woven Industrial Membranes (Tyvek; Neoprene; Scuba)',
+            'Smart & Kinetic Textiles (Conductive Thread; Phase-Change Materials)',
+            'Reflective & Refractive Media (Glass Micro-Beads; Mylar; Holographic Foil)'
+          ],
+          'Experimental & Bio-Based Fabrication': [
+            'Lab-Grown Organics (Mycelium; Algae; Bacterial Cellulose)',
+            '3D Printed Polymers & Stereolithography',
+            'Laser-Cut & Ultrasonic Welded Assemblies',
+            'Additive Manufacturing Structures',
+            'Molecularly Engineered Bio-Plastics (Grape Leather; Cactus Silk)'
+          ],
+          'Found & Deconstructed Matter': [
+            'Upcycled Industrial Waste (Parachutes; Tyres; Seatbelts)',
+            'Domestic Found Objects (Blankets; Curtains; Plastic Bags)',
+            'Artificially Degraded Textiles (Distressed; Boiled; Acid-Washed)',
+            'Deadstock & Surplus Inventory',
+            'Assembled Non-Textile Hardware (Safety Pins; Ring Pulls; Cable Ties)'
+          ]
+        }
+      },
+      geography: {
+        label: 'Geography',
+        children: {
+          'Show Location': [
+            'Paris (Chambre Syndicale / RTW)',
+            'Paris (Federation de la Haute Couture)',
+            'Milan (Camera Nazionale)',
+            'London (BFC / Official Schedule)',
+            'New York (CFDA / Bryant Park / Lincoln Center)',
+            'Tokyo (Rakuten Fashion Week)',
+            'Shanghai / Seoul (Emerging East Asian Hubs)',
+            'Alternative Capital (Sydney; Copenhagen; Mexico City)',
+            'Non-Capital Site (Arles; Puglia; Los Angeles)',
+            'Site-Specific / Architectural Intervention (Museum; Bridge; Subway)',
+            'Industrial / Warehouse Site',
+            'Digital / Meta-Geographic Space',
+            'Private / Salon Presentation',
+            'Street / Guerrilla Site'
+          ],
+          'Heritage & Origin': [
+            'The Antwerp Scene (The Six & Successors)',
+            'Tokyo Avant-Garde (1980s Transformation)',
+            'Japanese Minimalist System',
+            'French Bourgeois Tradition',
+            'Italian Industrial Excellence',
+            'Mediterranean Vernacular',
+            'American Utilitarianism / Sportswear',
+            'American Minimalist (Nineties)',
+            'British Eccentricity / Savile Row',
+            'London Underground / Club Culture',
+            'NYC Ballroom / Queer Resistance',
+            'Nordic / Scandinavian Functionalism',
+            'Eastern Bloc / Post-Soviet Archive',
+            'Latin American Surrealism / Craft',
+            'Global South / Indigenous Knowledge Systems',
+            'Diasporic Narrative / Hybrid Identity',
+            'Pan-European Luxury Hegemony',
+            'Subcultural Origin (Punk; Goth; Grunge; Hip-Hop)',
+            'Academic / Institutional Lineage (CSM; RCA; Parsons; La Cambre)',
+            'Digital-Native / Algorithm-Led Identity',
+            'Retro-Futurist Heritage',
+            'Historical Revisionist / Period Archive',
+            'Corporate / Executive Nihilism',
+            'Neoclassical / Sacred Iconography'
+          ]
+        }
+      },
+      form: {
+        label: 'Form & Anatomy',
+        children: {
+          'Silhouette and Spatial Volume': [
+            'Monolithic Massing',
+            'Radical Asymmetry',
+            'Compressed Proportions',
+            'Geometric Abstraction',
+            'Linear Elongation',
+            'Negative Space and Void'
+          ],
+          'Structural Construction': [
+            'Deconstructed Assembly',
+            'Tailored Rigidity',
+            'Modular Componentry',
+            'Suspended Drape',
+            'Scaffolding and Internal Frameworks',
+            'Bias-Cut Fluidity'
+          ],
+          'Anatomical Interaction': [
+            'Sartorial Restriction',
+            'Prosthetic Extension',
+            'Architectural Shielding and Armour',
+            'Clinical Exposure and Nudity',
+            'Displaced Anatomy and Padding',
+            'Bodily Obfuscation'
+          ],
+          'Kinetic State and Movement': [
+            'Mechanical Fluidity',
+            'Structural Stasis',
+            'Weight and Gravity Defiance',
+            'Adaptive Transformation',
+            'Pendulous Motion'
+          ],
+          'Surface Geometry and Planar Logic': [
+            'Topographic Layering',
+            'Pleat and Fold Architecture',
+            'Surface Erosion and Degradation',
+            'Planar Distortion',
+            'Membrane and Transparency'
+          ]
+        }
+      },
+      format: {
+        label: 'Format & Medium',
+        children: {
+          'Physical Presence': [
+            'Traditional Runway (The Linear Catwalk)',
+            'Circular / Arena Format',
+            'Theatrical Stage Performance',
+            'Site-Specific Intervention (Architectural / Industrial)',
+            'Guerrilla / Street Presentation',
+            'Gallery / Museum Installation',
+            'Static Presentation (Plinth / Mannequin)',
+            'Salon / Intimate Appointment',
+            'Immersive Environment (360-Degree Set)',
+            'Performance Art / Live Action',
+            'Kinetic / Mechanical Runway',
+            'Public / Open-Access Spectacle',
+            'Pop-Up / Temporary Structure'
+          ],
+          'Digital Transmission': [
+            'Live Streamed Event',
+            'Fashion Film / Cinematic Narrative',
+            'Lookbook / Still Photography Series',
+            'Social Media Native Campaign (Instagram / TikTok)',
+            'Augmented Reality (AR) Overlay',
+            '3D Rendered Environment',
+            'Editorial Exclusive Release',
+            'Archival / Found Footage Assemblage',
+            'Interactive Web Experience',
+            'Documentary / Behind-The-Scenes Format',
+            'Television / Broadcast Special',
+            'Virtual Showroom / Portal'
+          ]
+        }
+      }
+    };
+
+    /* Derived flat pillar list for backward compatibility */
+    const taxonomyPillars = Object.entries(taxonomyData).map(function (pair) {
+      return { label: pair[1].label, key: pair[0] };
+    });
 
     /* ============================================================
        DOM
@@ -489,17 +867,110 @@
       const grid = $('taxonomy-grid');
       let html = '';
 
-      taxonomyPillars.forEach((p) => {
-        const isActive = AppState.activePillar && AppState.activePillar.key === p.key;
-        html += `<div class="taxonomy-cell ${isActive ? 'active' : ''}" data-pillar-key="${p.key}">${p.label}</div>`;
+      taxonomyPillars.forEach(function (p) {
+        const isExpanded = AppState.expandedPillar === p.key;
+        html += '<div class="taxonomy-cell ' + (isExpanded ? 'active' : '') + '" data-pillar-key="' + p.key + '">' + p.label + '</div>';
       });
 
-      /* Add empty cell if odd number to complete the grid row */
       if (taxonomyPillars.length % 2 !== 0) {
-        html += `<div class="taxonomy-cell" style="border-right:none;opacity:0;pointer-events:none;">&nbsp;</div>`;
+        html += '<div class="taxonomy-cell" style="border-right:none;opacity:0;pointer-events:none;">&nbsp;</div>';
       }
 
       grid.innerHTML = html;
+    }
+
+    /* ============================================================
+       RENDER: TAXONOMY SUB-CATEGORIES
+    ============================================================ */
+    function renderTaxonomySub() {
+      const subContainer = $('taxonomy-sub');
+
+      if (!AppState.expandedPillar) {
+        subContainer.classList.add('hidden');
+        subContainer.innerHTML = '';
+        return;
+      }
+
+      const pillarData = taxonomyData[AppState.expandedPillar];
+      if (!pillarData) return;
+
+      subContainer.classList.remove('hidden');
+      let html = '';
+
+      if (Array.isArray(pillarData.children)) {
+        /* Flat list of sub-categories */
+        pillarData.children.forEach(function (item) {
+          var isActive = AppState.activeSubFilter === item;
+          html += '<div class="taxonomy-sub-item' + (isActive ? ' active' : '') + '" data-sub-value="' + item.replace(/'/g, '&#39;') + '">' + item + '</div>';
+        });
+      } else {
+        /* Grouped sub-categories */
+        Object.keys(pillarData.children).forEach(function (groupName) {
+          var isGroupExpanded = AppState.expandedGroup === groupName;
+          html += '<div class="taxonomy-group-header' + (isGroupExpanded ? ' active' : '') + '" data-group-name="' + groupName.replace(/'/g, '&#39;') + '">' + groupName + '</div>';
+
+          if (isGroupExpanded) {
+            pillarData.children[groupName].forEach(function (item) {
+              var isActive = AppState.activeSubFilter === item;
+              html += '<div class="taxonomy-sub-item' + (isActive ? ' active' : '') + '" data-sub-value="' + item.replace(/'/g, '&#39;') + '" style="padding-left:24px;">' + item + '</div>';
+            });
+          }
+        });
+      }
+
+      subContainer.innerHTML = html;
+    }
+
+    /* ============================================================
+       TAXONOMY INTERACTION HANDLERS
+    ============================================================ */
+    function handlePillarClick(key) {
+      if (AppState.expandedPillar === key) {
+        /* Collapse */
+        AppState.expandedPillar = null;
+        AppState.expandedGroup = null;
+        AppState.activeSubFilter = null;
+        AppState.searchQuery = '';
+        AppState.activePillar = null;
+        $('search-input').value = '';
+      } else {
+        /* Expand */
+        AppState.expandedPillar = key;
+        AppState.expandedGroup = null;
+        AppState.activeSubFilter = null;
+      }
+      renderTaxonomyGrid();
+      renderTaxonomySub();
+      renderEntryList();
+      renderImageGrid();
+    }
+
+    function handleGroupClick(groupName) {
+      if (AppState.expandedGroup === groupName) {
+        AppState.expandedGroup = null;
+        AppState.activeSubFilter = null;
+      } else {
+        AppState.expandedGroup = groupName;
+        AppState.activeSubFilter = null;
+      }
+      renderTaxonomySub();
+    }
+
+    function handleSubItemClick(value) {
+      if (AppState.activeSubFilter === value) {
+        AppState.activeSubFilter = null;
+        AppState.searchQuery = '';
+        AppState.activePillar = null;
+        $('search-input').value = '';
+      } else {
+        AppState.activeSubFilter = value;
+        AppState.searchQuery = value;
+        AppState.activePillar = null;
+        $('search-input').value = value;
+      }
+      renderTaxonomySub();
+      renderEntryList();
+      renderImageGrid();
     }
 
     /* ============================================================
@@ -552,10 +1023,14 @@
       closeDetail();
       AppState.searchQuery = value;
       AppState.activePillar = null;
+      AppState.expandedPillar = null;
+      AppState.expandedGroup = null;
+      AppState.activeSubFilter = null;
       $('search-input').value = value;
       renderImageGrid();
       renderEntryList();
       renderTaxonomyGrid();
+      renderTaxonomySub();
     }
 
     /* ============================================================
@@ -669,6 +1144,9 @@
         relatedContainer.innerHTML = '';
       }
 
+      /* Show detail bottom navigation */
+      $('detail-bottom-nav').classList.remove('hidden');
+
       /* Update other views */
       renderEntryList();
       renderStatusBar();
@@ -683,6 +1161,7 @@
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
+      $('detail-bottom-nav').classList.add('hidden');
 
       hideHotspotPopup();
       renderEntryList();
@@ -765,19 +1244,13 @@
     /* ============================================================
        FILTERING
     ============================================================ */
-    function filterByPillar(key) {
-      if (AppState.activePillar && AppState.activePillar.key === key) {
-        AppState.activePillar = null;
-      } else {
-        AppState.activePillar = taxonomyPillars.find((p) => p.key === key) || null;
-      }
-      renderTaxonomyGrid();
-      renderEntryList();
-      renderImageGrid();
-    }
-
     function handleSearch(value) {
       AppState.searchQuery = value;
+      AppState.expandedPillar = null;
+      AppState.expandedGroup = null;
+      AppState.activeSubFilter = null;
+      renderTaxonomyGrid();
+      renderTaxonomySub();
       renderEntryList();
       renderImageGrid();
     }
@@ -790,6 +1263,7 @@
       renderImageGrid();
       renderEntryList();
       renderTaxonomyGrid();
+      renderTaxonomySub();
       renderStatusBar();
 
       /* Search */
@@ -855,12 +1329,31 @@
         openDetail(id);
       });
 
-      /* Taxonomy click */
+      /* Detail bottom nav buttons */
+      $('btn-detail-prev').addEventListener('click', function () { navigateEntry(-1); });
+      $('btn-detail-next').addEventListener('click', function () { navigateEntry(1); });
+
+      /* Taxonomy pillar click */
       $('taxonomy-grid').addEventListener('click', function (e) {
         const cell = e.target.closest('.taxonomy-cell');
         if (!cell) return;
         const key = cell.getAttribute('data-pillar-key');
-        if (key) filterByPillar(key);
+        if (key) handlePillarClick(key);
+      });
+
+      /* Taxonomy sub-category click */
+      $('taxonomy-sub').addEventListener('click', function (e) {
+        var groupHeader = e.target.closest('.taxonomy-group-header');
+        if (groupHeader) {
+          var groupName = groupHeader.getAttribute('data-group-name');
+          if (groupName) handleGroupClick(groupName);
+          return;
+        }
+        var subItem = e.target.closest('.taxonomy-sub-item');
+        if (subItem) {
+          var value = subItem.getAttribute('data-sub-value');
+          if (value) handleSubItemClick(value);
+        }
       });
 
       /* Click outside popup */
