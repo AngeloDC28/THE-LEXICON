@@ -139,6 +139,53 @@
       background: #000;
       color: #fff;
     }
+
+    /* Grid hover overlay */
+    .grid-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none;
+    }
+    .group:hover .grid-overlay {
+      opacity: 1;
+    }
+
+    /* Taxonomy pill buttons */
+    .tag-pill {
+      border: 2px solid #000;
+      padding: 4px 10px;
+      font-size: 9px;
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: transparent;
+      color: #000;
+      cursor: crosshair;
+      transition: all 0.1s ease;
+    }
+    .tag-pill:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Related entry card */
+    .related-card {
+      border: 2px solid #000;
+      cursor: crosshair;
+      transition: all 0.1s ease;
+      flex-shrink: 0;
+    }
+    .related-card:hover {
+      background: #000;
+      color: #fff;
+    }
   </style>
 </head>
 
@@ -153,7 +200,7 @@
         <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono">The Lexicon</h1>
       </div>
       <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70">
-        Cultural Archive; Rel. 2025.1; <span id="header-count">0</span> Entries
+        Cultural Directory; Rel. <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
     </header>
 
@@ -220,7 +267,10 @@
             <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60">X</button>
           </div>
           <div id="active-entry-hotspots" class="p-3 space-y-3">
-            <!-- Hotspot info boxes rendered by JS -->
+            <!-- Tags and hotspot info boxes rendered by JS -->
+          </div>
+          <div id="related-entries" class="p-3 border-t-[3px] border-black hidden">
+            <!-- Related entries rendered by JS -->
           </div>
         </div>
 
@@ -234,19 +284,19 @@
     <footer class="border-t-[3px] border-black bg-overlay grid grid-cols-4 shrink-0">
       <div class="px-4 py-3 border-r-[3px] border-black">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Brand</span>
-        <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+        <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
       </div>
       <div class="px-4 py-3 border-r-[3px] border-black">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Year</span>
-        <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+        <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
       </div>
       <div class="px-4 py-3 border-r-[3px] border-black">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Season</span>
-        <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+        <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
       </div>
       <div class="px-4 py-3">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Entry</span>
-        <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-1">&mdash;</span>
+        <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-1">--</span>
       </div>
     </footer>
 
@@ -334,9 +384,13 @@
     }
 
     /* ============================================================
-       RENDER: HEADER COUNT
+       RENDER: HEADER METADATA
     ============================================================ */
-    function updateHeaderCount() {
+    function updateHeaderMeta() {
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, '0');
+      $('header-rel').textContent = yyyy + '.' + mm;
       $('header-count').textContent = archiveData.length;
     }
 
@@ -352,10 +406,9 @@
         return;
       }
 
-      /* Generate multiple thumbnails per entry to fill the grid (reference shows ~12 images) */
+      /* Generate multiple thumbnails per entry to fill the grid */
       let html = '';
       entries.forEach((entry) => {
-        /* Use multiple placeholder variants to simulate a full grid */
         const variants = [
           { w: 400, h: 550, suffix: '1' },
           { w: 400, h: 500, suffix: '2' },
@@ -371,14 +424,23 @@
           { w: 400, h: 540, suffix: '12' },
         ];
 
+        const snippet = entry.description.length > 80
+          ? entry.description.substring(0, 80) + '...'
+          : entry.description;
+
         variants.forEach((v, i) => {
-          html += `<div class="overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
+          html += `<div class="group relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
             <img
               src="https://placehold.co/${v.w}x${v.h}/e5e5e5/999999?text=${encodeURIComponent(entry.tags.brand)}+${v.suffix}"
               alt="${entry.title}"
               class="desaturate w-full aspect-[3/4] object-cover block hover:filter-none transition-all duration-200"
               loading="lazy"
             />
+            <div class="grid-overlay">
+              <p class="text-[10px] font-bold uppercase tracking-wider text-white font-mono">${entry.tags.brand}</p>
+              <p class="text-[9px] uppercase tracking-wide text-white/70 mt-0.5 font-mono">${entry.year}</p>
+              <p class="text-[9px] text-white/60 mt-1 leading-snug font-mono">${snippet}</p>
+            </div>
           </div>`;
         });
       });
@@ -444,11 +506,48 @@
         $('status-season').textContent = entry.season;
         $('status-entry').textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
       } else {
-        $('status-brand').innerHTML = '&mdash;';
-        $('status-year').innerHTML = '&mdash;';
-        $('status-season').innerHTML = '&mdash;';
-        $('status-entry').innerHTML = '&mdash;';
+        $('status-brand').innerHTML = '--';
+        $('status-year').innerHTML = '--';
+        $('status-season').innerHTML = '--';
+        $('status-entry').innerHTML = '--';
       }
+    }
+
+    /* ============================================================
+       HELPERS: RELATED ENTRIES + TAG FILTERING
+    ============================================================ */
+    function findRelatedEntries(entry, count) {
+      if (typeof count === 'undefined') count = 3;
+      const entryTagValues = Object.values(entry.tags).map(function (v) {
+        return v.toLowerCase();
+      });
+
+      const scored = [];
+      archiveData.forEach(function (candidate) {
+        if (candidate.id === entry.id) return;
+        let score = 0;
+        Object.values(candidate.tags).forEach(function (val) {
+          if (entryTagValues.indexOf(val.toLowerCase()) !== -1) {
+            score++;
+          }
+        });
+        if (score >= 1) {
+          scored.push({ entry: candidate, score: score });
+        }
+      });
+
+      scored.sort(function (a, b) { return b.score - a.score; });
+      return scored.slice(0, count).map(function (s) { return s.entry; });
+    }
+
+    function filterByTagValue(key, value) {
+      closeDetail();
+      AppState.searchQuery = value;
+      AppState.activePillar = null;
+      $('search-input').value = value;
+      renderImageGrid();
+      renderEntryList();
+      renderTaxonomyGrid();
     }
 
     /* ============================================================
@@ -484,9 +583,32 @@
       $('active-entry-panel').classList.remove('hidden');
       $('active-entry-title').textContent = 'Active Entry: ' + entry.tags.brand + ' ' + entry.year;
 
-      /* Render hotspot info boxes */
+      /* Render taxonomy pill tags */
       const container = $('active-entry-hotspots');
       container.innerHTML = '';
+
+      const tagsRow = document.createElement('div');
+      tagsRow.style.display = 'flex';
+      tagsRow.style.flexWrap = 'wrap';
+      tagsRow.style.gap = '6px';
+      tagsRow.style.paddingBottom = '12px';
+      tagsRow.style.borderBottom = '2px solid #000';
+      tagsRow.style.marginBottom = '12px';
+
+      Object.entries(entry.tags).forEach(function (pair) {
+        const key = pair[0];
+        const value = pair[1];
+        const pill = document.createElement('button');
+        pill.className = 'tag-pill';
+        pill.textContent = value;
+        pill.addEventListener('click', function () {
+          filterByTagValue(key, value);
+        });
+        tagsRow.appendChild(pill);
+      });
+      container.appendChild(tagsRow);
+
+      /* Render hotspot info boxes */
       entry.hotspots.forEach((spot, i) => {
         const box = document.createElement('div');
         box.className = 'info-box p-3';
@@ -501,6 +623,37 @@
         container.appendChild(box);
       });
 
+      /* Render related entries matrix */
+      const relatedContainer = $('related-entries');
+      const related = findRelatedEntries(entry);
+
+      if (related.length > 0) {
+        relatedContainer.classList.remove('hidden');
+        let relHtml = '<p class="text-[9px] font-bold uppercase tracking-[0.15em] opacity-50 mb-3">Related Entries</p>';
+        relHtml += '<div style="display:flex;gap:8px;overflow-x:auto;">';
+
+        related.forEach(function (rel) {
+          relHtml += `<div class="related-card" data-related-id="${rel.id}" style="width:100px;">
+            <img
+              src="${rel.imageUrl}"
+              alt="${rel.title}"
+              class="desaturate block"
+              style="width:100px;height:120px;object-fit:cover;"
+            />
+            <div style="padding:6px;">
+              <p class="text-[9px] font-bold uppercase tracking-wide font-mono">${rel.tags.brand}</p>
+              <p class="text-[8px] uppercase tracking-wide opacity-60 font-mono mt-0.5">${rel.year}</p>
+            </div>
+          </div>`;
+        });
+
+        relHtml += '</div>';
+        relatedContainer.innerHTML = relHtml;
+      } else {
+        relatedContainer.classList.add('hidden');
+        relatedContainer.innerHTML = '';
+      }
+
       /* Update other views */
       renderEntryList();
       renderStatusBar();
@@ -513,6 +666,7 @@
       $('detail-image-view').classList.add('hidden');
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
+      $('related-entries').classList.add('hidden');
 
       hideHotspotPopup();
       renderEntryList();
@@ -603,7 +757,7 @@
        INIT
     ============================================================ */
     function init() {
-      updateHeaderCount();
+      updateHeaderMeta();
       renderImageGrid();
       renderEntryList();
       renderTaxonomyGrid();
@@ -657,6 +811,14 @@
         if (e.target.classList.contains('hotspot-box-close')) {
           e.target.closest('.info-box').remove();
         }
+      });
+
+      /* Related entry card click (delegated) */
+      $('related-entries').addEventListener('click', function (e) {
+        const card = e.target.closest('[data-related-id]');
+        if (!card) return;
+        const id = card.getAttribute('data-related-id');
+        openDetail(id);
       });
 
       /* Taxonomy click */
