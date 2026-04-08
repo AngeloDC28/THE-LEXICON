@@ -70,7 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 40;
+      z-index: 100;
       cursor: pointer;
       background: transparent;
       border: none;
@@ -332,6 +332,39 @@
 
       <!-- LEFT: INDEX PANEL -->
       <div id="index-panel" class="w-[85%] md:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:relative md:inset-auto md:z-auto flex flex-col overflow-hidden bg-overlay border-r-[3px] border-black">
+
+        <!-- Index Header -->
+        <div class="border-b-[3px] border-black px-4 py-3 flex items-baseline justify-between shrink-0">
+          <span class="text-xs font-bold uppercase tracking-[0.15em]">Index / A-Z</span>
+        </div>
+
+        <!-- Search -->
+        <div id="search-wrapper" class="border-b-[3px] border-black p-3 shrink-0">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search brand, year, season..."
+            class="w-full border-[3px] border-black bg-bone px-3 py-2 text-xs font-mono placeholder:text-black/40 focus:outline-none focus:bg-white uppercase tracking-wide"
+          />
+        </div>
+
+        <!-- Entry List -->
+        <div id="entry-list" class="overflow-y-auto flex-1">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Taxonomy Grid -->
+        <div id="taxonomy-container" class="shrink-0 border-t-[3px] border-black overflow-y-auto" style="max-height: 45%;">
+          <div class="px-4 py-2">
+            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">Taxonomy</span>
+          </div>
+          <div id="taxonomy-grid" class="taxonomy-grid">
+            <!-- Top-level pillars rendered by JS -->
+          </div>
+          <div id="taxonomy-sub" class="hidden">
+            <!-- Sub-categories rendered by JS -->
+          </div>
+        </div>
 
         <!-- Active Entry Panel -->
         <div id="active-entry-panel" class="hidden shrink-0 border-t-[3px] border-black overflow-y-auto" style="max-height: 45%;">
@@ -1081,7 +1114,11 @@
       AppState.expandedPillar = null;
       AppState.expandedGroup = null;
       AppState.activeSubFilter = null;
+      $('search-input').value = value;
       renderImageGrid();
+      renderEntryList();
+      renderTaxonomyGrid();
+      renderTaxonomySub();
     }
 
     /* ============================================================
@@ -1105,6 +1142,10 @@
       /* Compute position in filtered list */
       const filtered = getFilteredEntries();
       const posIndex = filtered.findIndex(function (e) { return e.id === entryId; });
+
+      /* Collapse search and taxonomy for maximum analysis space */
+      $('search-wrapper').classList.add('hidden');
+      $('taxonomy-container').classList.add('hidden');
 
       /* Render hotspot dots with touch-target wrappers */
       detailView.querySelectorAll('.hotspot-btn').forEach((el) => el.remove());
@@ -1195,7 +1236,8 @@
         relatedContainer.innerHTML = '';
       }
 
-      /* Update status bar */
+      /* Update other views */
+      renderEntryList();
       renderStatusBar();
     }
 
@@ -1208,7 +1250,12 @@
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
 
+      /* Restore search and taxonomy panels */
+      $('search-wrapper').classList.remove('hidden');
+      $('taxonomy-container').classList.remove('hidden');
+
       hideHotspotPopup();
+      renderEntryList();
       renderStatusBar();
     }
 
@@ -1273,7 +1320,6 @@
         $('dock-desc').textContent = spot.description;
         dock.classList.remove('hidden');
         dock.classList.add('flex');
-        /* Force reflow then remove translate to animate */
         void dock.offsetHeight;
         dock.classList.remove('translate-y-full');
       }
@@ -1332,6 +1378,9 @@
     function init() {
       updateHeaderMeta();
       renderImageGrid();
+      renderEntryList();
+      renderTaxonomyGrid();
+      renderTaxonomySub();
       renderStatusBar();
 
       /* Landing Gate */
@@ -1396,6 +1445,23 @@
         el.addEventListener('click', function () {
           closeModal(el.getAttribute('data-modal-backdrop'));
         });
+      });
+
+      /* Search */
+      $('search-input').addEventListener('input', debounce(function (e) {
+        handleSearch(e.target.value);
+      }, 150));
+
+      /* Entry list click (delegated) */
+      $('entry-list').addEventListener('click', function (e) {
+        const row = e.target.closest('[data-entry-id]');
+        if (!row) return;
+        const id = row.getAttribute('data-entry-id');
+        if (AppState.selectedEntryId === id) {
+          closeDetail();
+        } else {
+          openDetail(id);
+        }
       });
 
       /* Image grid click (delegated) */
@@ -1465,6 +1531,29 @@
         if (Math.abs(delta) > 50) {
           if (delta < 0) navigateEntry(1);
           else navigateEntry(-1);
+        }
+      });
+
+      /* Taxonomy pillar click */
+      $('taxonomy-grid').addEventListener('click', function (e) {
+        const cell = e.target.closest('.taxonomy-cell');
+        if (!cell) return;
+        const key = cell.getAttribute('data-pillar-key');
+        if (key) handlePillarClick(key);
+      });
+
+      /* Taxonomy sub-category click */
+      $('taxonomy-sub').addEventListener('click', function (e) {
+        var groupHeader = e.target.closest('.taxonomy-group-header');
+        if (groupHeader) {
+          var groupName = groupHeader.getAttribute('data-group-name');
+          if (groupName) handleGroupClick(groupName);
+          return;
+        }
+        var subItem = e.target.closest('.taxonomy-sub-item');
+        if (subItem) {
+          var value = subItem.getAttribute('data-sub-value');
+          if (value) handleSubItemClick(value);
         }
       });
 
