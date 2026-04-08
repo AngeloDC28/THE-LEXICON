@@ -244,8 +244,8 @@
         Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
       <div class="hidden md:flex items-center gap-4">
-        <a href="#about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ About ]</a>
-        <a href="#contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ Contact ]</a>
+        <button id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ About ]</button>
+        <button id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ Contact ]</button>
       </div>
     </header>
 
@@ -367,6 +367,44 @@
       <button id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-60">X</button>
     </div>
     <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
+  </div>
+
+  <!-- ============================================================
+       ABOUT MODAL
+  ============================================================ -->
+  <div id="about-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="about"></div>
+    <div class="relative bg-bone w-full h-full md:max-w-2xl md:h-auto md:mx-4 p-8 md:p-12 border-[3px] border-black overflow-y-auto max-h-full">
+      <div class="flex items-start justify-between mb-8">
+        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
+        <button data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2">[ X Close ]</button>
+      </div>
+      <div class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
+        <p>THE LEXICON is a relational database and cultural directory dedicated to the rigorous audit of fashion history, visual culture, and subcultural theory.</p>
+        <p>Founded in 2026 by Angelo Sanchez Dela Cruz, the archive functions as a proprietary research terminal; mapping the intersections of aesthetic language, structural power, and historical precedent. Operating outside traditional fashion media ecosystems, every indexed entry is anchored in stringent anthropological and critical commentary to ensure maximum academic and cultural relevance.</p>
+        <p>The directory prioritises the architectural analysis of avant-garde deconstruction, the genesis of underground aesthetics, and the surreal theatrics of modern image-making. Built as an evolving, high-density system, THE LEXICON is designed for academics, visual artists, and cultural critics who require uncompromising analysis over trend-based consumption.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CONTACT MODAL
+  ============================================================ -->
+  <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="contact"></div>
+    <div class="relative bg-bone w-full h-full md:max-w-2xl md:h-auto md:mx-4 p-8 md:p-12 border-[3px] border-black overflow-y-auto max-h-full">
+      <div class="flex items-start justify-between mb-8">
+        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Contact</h2>
+        <button data-modal-close="contact" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2">[ X Close ]</button>
+      </div>
+      <div class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
+        <p>System Communications</p>
+        <p>For editorial commissions, institutional inquiries, and requests for archival access; please route all correspondence through the primary directory channel.</p>
+        <p>Email: info@thelexicon.xyz</p>
+        <p>Location: London, United Kingdom</p>
+        <p>The archive is maintained independently. All network correspondence is monitored and processed systematically.</p>
+      </div>
+    </div>
   </div>
 
   <!-- ============================================================
@@ -1267,6 +1305,30 @@
       });
       drawerBackdrop.addEventListener('click', closeDrawer);
 
+      /* Modal logic */
+      function openModal(id) {
+        $(id + '-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal(id) {
+        $(id + '-modal').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      $('btn-about').addEventListener('click', function () { openModal('about'); });
+      $('btn-contact').addEventListener('click', function () { openModal('contact'); });
+
+      document.querySelectorAll('[data-modal-close]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          closeModal(btn.getAttribute('data-modal-close'));
+        });
+      });
+      document.querySelectorAll('[data-modal-backdrop]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          closeModal(el.getAttribute('data-modal-backdrop'));
+        });
+      });
+
       /* Search */
       $('search-input').addEventListener('input', debounce(function (e) {
         handleSearch(e.target.value);
@@ -1365,6 +1427,16 @@
       /* Keyboard navigation */
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
+          var aboutOpen = !$('about-modal').classList.contains('hidden');
+          var contactOpen = !$('contact-modal').classList.contains('hidden');
+          if (aboutOpen) {
+            closeModal('about');
+            return;
+          }
+          if (contactOpen) {
+            closeModal('contact');
+            return;
+          }
           if (AppState.activeHotspot !== null) {
             hideHotspotPopup();
           } else if (AppState.currentView === 'detail') {
