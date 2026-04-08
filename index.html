@@ -61,6 +61,24 @@
       filter: grayscale(70%) contrast(1.15);
     }
 
+    /* Hotspot touch-target wrapper */
+    .hotspot-btn {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0;
+      touch-action: manipulation;
+      pointer-events: auto;
+    }
+
     /* Hotspot dot: ONLY circular element */
     .hotspot-dot {
       width: 16px;
@@ -68,16 +86,11 @@
       background: #000000;
       border: 3px solid #FAF9F6;
       border-radius: 50% !important;
-      position: absolute;
-      transform: translate(-50%, -50%);
       cursor: crosshair;
-      z-index: 50;
       transition: transform 0.12s ease;
-      touch-action: manipulation;
-      pointer-events: auto;
     }
-    .hotspot-dot:hover {
-      transform: translate(-50%, -50%) scale(1.35);
+    .hotspot-btn:hover .hotspot-dot {
+      transform: scale(1.35);
     }
 
     /* Info box */
@@ -276,7 +289,7 @@
     <header class="bg-black text-white flex items-center justify-between px-5 py-3 border-b-[3px] border-black shrink-0">
       <div class="flex items-center gap-4">
         <button id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em]">[ &#9776; ]</button>
-        <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none">The Lexicon</h1>
+        <h1 class="text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none">The Lexicon<img src="IMG_6655.jpeg" alt="Logo" class="h-5 w-5 inline-block ml-2"></h1>
       </div>
       <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden md:block">
         Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
@@ -385,12 +398,7 @@
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1">
-          <!-- Neutral State -->
-          <div id="neutral-state" class="flex flex-col items-center justify-center h-full py-24">
-            <img src="IMG_6655.jpeg" alt="The Lexicon" class="w-16 h-16 object-contain mb-4" />
-            <span class="text-xs font-mono uppercase tracking-widest opacity-40">[ Awaiting Query ]</span>
-          </div>
-          <div id="image-grid" class="image-grid hidden">
+          <div id="image-grid" class="image-grid">
             <!-- Rendered by JS -->
           </div>
         </div>
@@ -398,6 +406,11 @@
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative" style="pointer-events: auto">
           <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
+          <!-- Viewer Navigation -->
+          <div class="absolute bottom-20 left-0 right-0 flex justify-between px-4 z-[100] pointer-events-none">
+            <button id="btn-viewer-prev" class="border-[3px] border-black bg-bone text-xs md:text-sm font-mono font-bold uppercase px-4 py-2 hover:opacity-60 pointer-events-auto">[ &lt; Prev ]</button>
+            <button id="btn-viewer-next" class="border-[3px] border-black bg-bone text-xs md:text-sm font-mono font-bold uppercase px-4 py-2 hover:opacity-60 pointer-events-auto">[ Next &gt; ]</button>
+          </div>
           <!-- Hotspot dots appended by JS -->
         </div>
 
@@ -410,7 +423,7 @@
   <!-- ============================================================
        HOTSPOT FLOATING POPUP (DESKTOP)
   ============================================================ -->
-  <div id="hotspot-popup" class="hidden fixed z-50 info-box p-4 max-w-xs">
+  <div id="hotspot-popup" class="hidden fixed bottom-0 left-0 w-full z-[150] bg-bone border-t-[3px] border-black p-5 md:bottom-auto md:left-auto md:w-auto md:max-w-xs md:border-[3px] md:border-black md:bg-[#FDFCF0] md:z-50 md:p-4">
     <div class="flex items-start justify-between mb-1">
       <p id="hotspot-label" class="text-[11px] font-bold uppercase tracking-wider"></p>
       <button id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-60">X</button>
@@ -1109,11 +1122,6 @@
       const entry = archiveData.find((e) => e.id === entryId);
       if (!entry) return;
 
-      /* Dismiss neutral state on first interaction */
-      var neutralState = $('neutral-state');
-      if (neutralState) neutralState.classList.add('hidden');
-      $('image-grid').classList.remove('hidden');
-
       /* Swap grid for detail image */
       $('grid-view').classList.add('hidden');
       const detailView = $('detail-image-view');
@@ -1130,15 +1138,18 @@
       $('search-wrapper').classList.add('hidden');
       $('taxonomy-container').classList.add('hidden');
 
-      /* Render hotspot dots */
-      detailView.querySelectorAll('.hotspot-dot').forEach((el) => el.remove());
+      /* Render hotspot dots with touch-target wrappers */
+      detailView.querySelectorAll('.hotspot-btn').forEach((el) => el.remove());
       entry.hotspots.forEach((spot, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'hotspot-btn';
+        btn.style.left = spot.x + '%';
+        btn.style.top = spot.y + '%';
+        btn.setAttribute('data-index', i);
         const dot = document.createElement('div');
         dot.className = 'hotspot-dot';
-        dot.style.left = spot.x + '%';
-        dot.style.top = spot.y + '%';
-        dot.setAttribute('data-index', i);
-        detailView.appendChild(dot);
+        btn.appendChild(dot);
+        detailView.appendChild(btn);
       });
 
       /* Show active entry panel */
@@ -1256,6 +1267,11 @@
        HOTSPOT POPUP
     ============================================================ */
     function showHotspotPopup(index, dotEl) {
+      /* Close any previously open hotspot */
+      if (AppState.activeHotspot !== null) {
+        hideHotspotPopup();
+      }
+
       const entry = archiveData.find((e) => e.id === AppState.selectedEntryId);
       if (!entry) return;
       const spot = entry.hotspots[index];
@@ -1267,24 +1283,32 @@
       $('hotspot-label').textContent = spot.label;
       $('hotspot-desc').textContent = spot.description;
 
-      const rect = dotEl.getBoundingClientRect();
-      const pw = 280;
-      const offset = 16;
+      /* Desktop: position near the dot; Mobile: CSS handles bottom dock */
+      if (window.innerWidth >= 768) {
+        const rect = dotEl.getBoundingClientRect();
+        const pw = 280;
+        const offset = 16;
 
-      let left = rect.right + offset;
-      let top = rect.top - 10;
+        let left = rect.right + offset;
+        let top = rect.top - 10;
 
-      if (left + pw > window.innerWidth - 20) {
-        left = rect.left - pw - offset;
+        if (left + pw > window.innerWidth - 20) {
+          left = rect.left - pw - offset;
+        }
+        if (top + 140 > window.innerHeight - 20) {
+          top = window.innerHeight - 160;
+        }
+        if (top < 10) top = 10;
+
+        popup.style.left = left + 'px';
+        popup.style.top = top + 'px';
+        popup.style.width = pw + 'px';
+      } else {
+        popup.style.left = '';
+        popup.style.top = '';
+        popup.style.width = '';
       }
-      if (top + 140 > window.innerHeight - 20) {
-        top = window.innerHeight - 160;
-      }
-      if (top < 10) top = 10;
 
-      popup.style.left = left + 'px';
-      popup.style.top = top + 'px';
-      popup.style.width = pw + 'px';
       popup.classList.remove('hidden');
 
       /* Highlight corresponding info box in panel */
@@ -1346,6 +1370,9 @@
           setTimeout(function () {
             gate.remove();
             document.body.style.overflow = '';
+            if (archiveData.length > 0) {
+              openDetail(archiveData[0].id);
+            }
           }, 700);
         });
       }
@@ -1425,11 +1452,11 @@
 
       /* Hotspot dot click (delegated) */
       $('detail-image-view').addEventListener('click', function (e) {
-        const dot = e.target.closest('.hotspot-dot');
-        if (!dot) return;
+        const btn = e.target.closest('.hotspot-btn');
+        if (!btn) return;
         e.stopPropagation();
-        const idx = parseInt(dot.getAttribute('data-index'), 10);
-        showHotspotPopup(idx, dot);
+        const idx = parseInt(btn.getAttribute('data-index'), 10);
+        showHotspotPopup(idx, btn);
       });
 
       /* Back to grid and close detail */
@@ -1461,6 +1488,24 @@
       $('btn-panel-prev').addEventListener('click', function () { navigateEntry(-1); });
       $('btn-panel-next').addEventListener('click', function () { navigateEntry(1); });
 
+      /* Viewer nav buttons (image panel) */
+      $('btn-viewer-prev').addEventListener('click', function () { navigateEntry(-1); });
+      $('btn-viewer-next').addEventListener('click', function () { navigateEntry(1); });
+
+      /* Touch swipe detection */
+      var detailPanel = $('detail-image-view');
+      var touchStartX = 0;
+      detailPanel.addEventListener('touchstart', function (e) {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+      detailPanel.addEventListener('touchend', function (e) {
+        var delta = e.changedTouches[0].screenX - touchStartX;
+        if (Math.abs(delta) > 50) {
+          if (delta < 0) navigateEntry(1);
+          else navigateEntry(-1);
+        }
+      });
+
       /* Taxonomy pillar click */
       $('taxonomy-grid').addEventListener('click', function (e) {
         const cell = e.target.closest('.taxonomy-cell');
@@ -1488,7 +1533,7 @@
       document.addEventListener('click', function (e) {
         if (AppState.activeHotspot === null) return;
         const popup = $('hotspot-popup');
-        if (!popup.contains(e.target) && !e.target.closest('.hotspot-dot')) {
+        if (!popup.contains(e.target) && !e.target.closest('.hotspot-btn')) {
           hideHotspotPopup();
         }
       });
