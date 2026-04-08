@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE LEXICON</title>
+  <link rel="icon" type="image/jpeg" href="IMG_6655.jpeg">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -70,8 +71,10 @@
       position: absolute;
       transform: translate(-50%, -50%);
       cursor: crosshair;
-      z-index: 10;
+      z-index: 50;
       transition: transform 0.12s ease;
+      touch-action: manipulation;
+      pointer-events: auto;
     }
     .hotspot-dot:hover {
       transform: translate(-50%, -50%) scale(1.35);
@@ -290,22 +293,22 @@
     <!-- ============================================================
          STATUS RIBBON
     ============================================================ -->
-    <div id="status-ribbon" class="grid grid-cols-4 border-b-[3px] border-black bg-overlay shrink-0">
-      <div class="px-4 py-1 border-r-[2px] border-black">
+    <div id="status-ribbon" class="grid grid-cols-4 border-b-[3px] border-black bg-overlay shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))">
+      <div class="px-2 md:px-4 py-1 border-r-[2px] border-black overflow-hidden">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Brand</span>
-        <span id="status-brand" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+        <span id="status-brand" class="text-[10px] md:text-xs font-bold uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-4 py-1 border-r-[2px] border-black">
+      <div class="px-2 md:px-4 py-1 border-r-[2px] border-black overflow-hidden">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Year</span>
-        <span id="status-year" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+        <span id="status-year" class="text-[10px] md:text-xs font-bold uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-4 py-1 border-r-[2px] border-black">
+      <div class="px-2 md:px-4 py-1 border-r-[2px] border-black overflow-hidden">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Season</span>
-        <span id="status-season" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+        <span id="status-season" class="text-[10px] md:text-xs font-bold uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-4 py-1">
+      <div class="px-2 md:px-4 py-1 overflow-hidden">
         <span class="text-[9px] uppercase tracking-[0.2em] opacity-40 block">Entry</span>
-        <span id="status-entry" class="text-xs font-bold uppercase tracking-wide block mt-0.5">--</span>
+        <span id="status-entry" class="text-[10px] md:text-xs font-bold uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
     </div>
 
@@ -369,6 +372,12 @@
           </div>
         </div>
 
+        <!-- Mobile Drawer: About / Contact -->
+        <div class="md:hidden border-t-[3px] border-black px-4 py-3 flex items-center gap-4 shrink-0">
+          <button id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ About ]</button>
+          <button id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ Contact ]</button>
+        </div>
+
       </div>
 
       <!-- RIGHT: IMAGE GRID PANEL -->
@@ -376,13 +385,18 @@
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1">
-          <div id="image-grid" class="image-grid">
+          <!-- Neutral State -->
+          <div id="neutral-state" class="flex flex-col items-center justify-center h-full py-24">
+            <img src="IMG_6655.jpeg" alt="The Lexicon" class="w-16 h-16 object-contain mb-4" />
+            <span class="text-xs font-mono uppercase tracking-widest opacity-40">[ Awaiting Query ]</span>
+          </div>
+          <div id="image-grid" class="image-grid hidden">
             <!-- Rendered by JS -->
           </div>
         </div>
 
         <!-- Detail View (single image + hotspots) -->
-        <div id="detail-image-view" class="hidden relative">
+        <div id="detail-image-view" class="hidden relative" style="pointer-events: auto">
           <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
           <!-- Hotspot dots appended by JS -->
         </div>
@@ -1037,10 +1051,10 @@
         $('status-season').textContent = entry.season;
         $('status-entry').textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
       } else {
-        $('status-brand').innerHTML = '--';
-        $('status-year').innerHTML = '--';
-        $('status-season').innerHTML = '--';
-        $('status-entry').innerHTML = '--';
+        $('status-brand').innerHTML = 'N/A';
+        $('status-year').innerHTML = 'N/A';
+        $('status-season').innerHTML = 'N/A';
+        $('status-entry').innerHTML = 'N/A';
       }
     }
 
@@ -1094,6 +1108,11 @@
 
       const entry = archiveData.find((e) => e.id === entryId);
       if (!entry) return;
+
+      /* Dismiss neutral state on first interaction */
+      var neutralState = $('neutral-state');
+      if (neutralState) neutralState.classList.add('hidden');
+      $('image-grid').classList.remove('hidden');
 
       /* Swap grid for detail image */
       $('grid-view').classList.add('hidden');
@@ -1365,6 +1384,8 @@
 
       $('btn-about').addEventListener('click', function () { openModal('about'); });
       $('btn-contact').addEventListener('click', function () { openModal('contact'); });
+      $('btn-about-mobile').addEventListener('click', function () { closeDrawer(); openModal('about'); });
+      $('btn-contact-mobile').addEventListener('click', function () { closeDrawer(); openModal('contact'); });
 
       document.querySelectorAll('[data-modal-close]').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -1511,9 +1532,9 @@
     const archiveData = [
       {
         id: 'margiela-aw94',
-        title: 'Maison Margiela Autumn/Winter 1994',
+        title: 'Maison Margiela AW 1994',
         year: 1994,
-        season: 'Autumn/Winter',
+        season: 'AW',
         imageUrl: 'https://placehold.co/800x1100/e5e5e5/333333?text=Margiela+AW94',
         description:
           'A collection that redefined the boundary between construction and deconstruction. Martin Margiela presented garments that exposed their own making; linings became exteriors and raw edges replaced finished seams. The show took place in a disused warehouse in the 18th arrondissement; reinforcing the label\'s commitment to anti-spectacle. This body of work is frequently cited in academic discourse on post-structuralist fashion theory; particularly in relation to the dissolution of hierarchical garment conventions.',
