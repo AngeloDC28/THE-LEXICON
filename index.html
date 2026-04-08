@@ -252,6 +252,19 @@
       animation: marquee 20s linear infinite;
     }
 
+    /* Index-open state: suppress interactive overlays */
+    .index-open .hotspot-btn,
+    .index-open .hotspot-dot,
+    .index-open #btn-viewer-prev,
+    .index-open #btn-viewer-next,
+    .index-open #master-dock,
+    .index-open #hotspot-popup {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+
   </style>
 </head>
 
@@ -1400,11 +1413,13 @@
       var drawerBackdrop = $('drawer-backdrop');
       var indexPanel = $('index-panel');
       function openDrawer() {
+        document.documentElement.classList.add('index-open');
         indexPanel.classList.add('translate-x-0');
         indexPanel.classList.remove('-translate-x-full');
         drawerBackdrop.classList.remove('hidden');
       }
       function closeDrawer() {
+        document.documentElement.classList.remove('index-open');
         indexPanel.classList.remove('translate-x-0');
         indexPanel.classList.add('-translate-x-full');
         drawerBackdrop.classList.add('hidden');
