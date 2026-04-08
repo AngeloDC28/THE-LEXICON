@@ -1,3 +1,6 @@
+/* ============================================================
+   ARCHIVE DATA ENGINE
+============================================================ */
 const archiveData = [
   {
     id: 'margiela-aw94',
@@ -5,7 +8,8 @@ const archiveData = [
     year: 1994,
     season: 'AW',
     imageUrl: 'https://placehold.co/800x1100/e5e5e5/333333?text=Margiela+AW94',
-    description: 'A collection that redefined the boundary between construction and deconstruction. Martin Margiela presented garments that exposed their own making; linings became exteriors and raw edges replaced finished seams. The show took place in a disused warehouse in the 18th arrondissement; reinforcing the label\'s commitment to anti-spectacle. This body of work is frequently cited in academic discourse on post-structuralist fashion theory; particularly in relation to the dissolution of hierarchical garment conventions.',
+    description:
+      'A collection that redefined the boundary between construction and deconstruction. Martin Margiela presented garments that exposed their own making; linings became exteriors and raw edges replaced finished seams. The show took place in a disused warehouse in the 18th arrondissement; reinforcing the label\'s commitment to anti-spectacle. This body of work is frequently cited in academic discourse on post-structuralist fashion theory; particularly in relation to the dissolution of hierarchical garment conventions.',
     tags: {
       brand: 'Maison Margiela',
       era: '1990 - 1999',
@@ -22,19 +26,22 @@ const archiveData = [
         x: 35,
         y: 22,
         label: 'Exposed Lining',
-        description: 'Silk lining deliberately turned outward; reversing the interior/exterior hierarchy of the garment. A signature Margiela technique from this period.',
+        description:
+          'Silk lining deliberately turned outward; reversing the interior/exterior hierarchy of the garment. A signature Margiela technique from this period.',
       },
       {
         x: 60,
         y: 55,
         label: 'Raw Hem Construction',
-        description: 'Unfinished edges left deliberately frayed. The garment refuses the convention of a polished terminus; the process of making remains visible.',
+        description:
+          'Unfinished edges left deliberately frayed. The garment refuses the convention of a polished terminus; the process of making remains visible.',
       },
       {
         x: 45,
         y: 80,
         label: 'Tabi Boot',
-        description: 'The split-toe boot; derived from Japanese tabi socks. First introduced in the Spring/Summer 1989 debut and present in nearly every subsequent collection.',
+        description:
+          'The split-toe boot; derived from Japanese tabi socks. First introduced in the Spring/Summer 1989 debut and present in nearly every subsequent collection.',
       },
     ],
   },
@@ -44,7 +51,7 @@ const archiveData = [
     year: 1997,
     season: 'SS',
     imageUrl: 'assets/cdg-ss97/01.jpg',
-    description: 'Known as "Body Meets Dress, Dress Meets Body" (or the "Lumps and Bumps" collection); Kawakubo radically deformed the natural human silhouette. By inserting asymmetrical down-filled pads into stretch gingham garments; the collection challenged Western fashion’s historical reliance on tailoring to flatter or sexualize the female form. It is a masterclass in the rejection of the male gaze.',
+    description: 'Known as "Body Meets Dress, Dress Meets Body" (or the "Lumps and Bumps" collection); Kawakubo radically deformed the natural human silhouette. By inserting asymmetrical down-filled pads into stretch gingham garments; the collection challenged Western fashion\'s historical reliance on tailoring to flatter or sexualize the female form. It is a masterclass in the rejection of the male gaze.',
     tags: {
       brand: 'Comme des Garcons',
       era: '1990 to 1999; The Deconstructionist Decade',
