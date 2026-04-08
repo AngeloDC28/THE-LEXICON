@@ -407,8 +407,8 @@
         <div id="detail-image-view" class="hidden relative" style="pointer-events: auto">
           <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
           <!-- Viewer Navigation: Edge-Mounted Carousel Controls -->
-          <button id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-3 border-[3px] border-black bg-bone text-xs md:text-sm font-mono font-bold uppercase px-4 py-2 hover:opacity-60 z-[50]">[ &lt; Prev ]</button>
-          <button id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-3 border-[3px] border-black bg-bone text-xs md:text-sm font-mono font-bold uppercase px-4 py-2 hover:opacity-60 z-[50]">[ Next &gt; ]</button>
+          <button id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-3 text-3xl md:text-5xl text-black p-4 z-[50] cursor-pointer hover:opacity-50 select-none">&#8592;</button>
+          <button id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-3 text-3xl md:text-5xl text-black p-4 z-[50] cursor-pointer hover:opacity-50 select-none">&#8594;</button>
           <!-- Hotspot dots appended by JS -->
         </div>
 
@@ -421,7 +421,7 @@
   <!-- ============================================================
        MASTER DOCK (MOBILE HOTSPOT PANEL)
   ============================================================ -->
-  <div id="master-dock" class="fixed bottom-0 left-0 w-full bg-bone border-t-[3px] border-black p-6 z-[200] transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
+  <div id="master-dock" class="fixed bottom-0 left-0 w-full bg-bone border-t-[3px] border-black p-6 z-[200] shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
     <div class="flex items-start justify-between mb-2">
       <p id="dock-title" class="text-[11px] font-bold uppercase tracking-wider flex-1"></p>
       <button id="btn-close-dock" class="text-xs font-bold ml-3 hover:opacity-60 p-2 -m-2">[ X ]</button>
