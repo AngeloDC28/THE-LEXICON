@@ -226,10 +226,45 @@
       color: #fff;
     }
 
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 20s linear infinite;
+    }
+
   </style>
 </head>
 
 <body>
+
+  <!-- ============================================================
+       TERMINAL GATE
+  ============================================================ -->
+  <div id="landing-gate" class="fixed inset-0 z-[200] bg-bone flex flex-col justify-between overflow-hidden transition-transform duration-700 ease-in-out">
+    <!-- Marquee Ticker -->
+    <div class="w-full overflow-hidden border-b-[3px] border-black py-3">
+      <div class="marquee-track">
+        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">1990-1999 ; Avant-Garde ; Prosthetic Extension ; Deconstruction ; Visual Anthropology ; Aesthetic Language ; Historical Precedent ;</span>
+        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">1990-1999 ; Avant-Garde ; Prosthetic Extension ; Deconstruction ; Visual Anthropology ; Aesthetic Language ; Historical Precedent ;</span>
+      </div>
+    </div>
+
+    <!-- Core Lock-Up -->
+    <div class="flex flex-col items-center justify-center flex-1 px-4">
+      <h1 class="text-[12vw] md:text-[150px] font-mono font-bold uppercase leading-none tracking-[0.04em] text-center">The Lexicon</h1>
+      <p class="text-[10px] md:text-sm font-mono uppercase tracking-[0.25em] mt-4 md:mt-6 text-center">Cultural Directory ; Relational Database ; Est. 2026</p>
+    </div>
+
+    <!-- Action Trigger -->
+    <div class="flex justify-center pb-12 md:pb-16">
+      <button id="btn-initiate" class="text-sm md:text-base font-mono font-bold uppercase tracking-[0.15em] border-[3px] border-black px-10 py-4 hover:opacity-60 transition-opacity">[ Access Archive ]</button>
+    </div>
+  </div>
+
   <div id="app-root">
 
     <!-- ============================================================
@@ -1282,6 +1317,19 @@
       renderTaxonomyGrid();
       renderTaxonomySub();
       renderStatusBar();
+
+      /* Landing Gate */
+      var gate = $('landing-gate');
+      if (gate) {
+        document.body.style.overflow = 'hidden';
+        $('btn-initiate').addEventListener('click', function () {
+          gate.classList.add('-translate-y-full');
+          setTimeout(function () {
+            gate.remove();
+            document.body.style.overflow = '';
+          }, 700);
+        });
+      }
 
       /* Mobile drawer toggle */
       var drawerBackdrop = $('drawer-backdrop');
