@@ -372,8 +372,6 @@
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
               <button id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ &lt; Grid ]</button>
-              <button id="btn-panel-prev" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ &lt; Prev ]</button>
-              <button id="btn-panel-next" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[2px] border-black px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ Next &gt; ]</button>
               <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60 ml-2">X</button>
             </div>
           </div>
@@ -404,11 +402,11 @@
         </div>
 
         <!-- Detail View (single image + hotspots) -->
-        <div id="detail-image-view" class="hidden relative" style="pointer-events: auto">
+        <div id="detail-image-view" class="hidden relative overflow-hidden w-full h-full" style="pointer-events: auto">
           <img id="detail-image" class="w-full h-auto desaturate block" src="" alt="" />
           <!-- Viewer Navigation: Edge-Mounted Carousel Controls -->
-          <button id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-3 text-3xl md:text-5xl text-black p-4 z-[50] cursor-pointer hover:opacity-50 select-none">&#8592;</button>
-          <button id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-3 text-3xl md:text-5xl text-black p-4 z-[50] cursor-pointer hover:opacity-50 select-none">&#8594;</button>
+          <button id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-0 text-4xl text-black px-4 z-[100] cursor-pointer hover:opacity-50 select-none">&#8592;</button>
+          <button id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-0 text-4xl text-black px-4 z-[100] cursor-pointer hover:opacity-50 select-none">&#8594;</button>
           <!-- Hotspot dots appended by JS -->
         </div>
 
@@ -421,7 +419,7 @@
   <!-- ============================================================
        MASTER DOCK (MOBILE HOTSPOT PANEL)
   ============================================================ -->
-  <div id="master-dock" class="fixed bottom-0 left-0 w-full bg-bone border-t-[3px] border-black p-6 z-[200] shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
+  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone border-t-[3px] border-black p-6 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
     <div class="flex items-start justify-between mb-2">
       <p id="dock-title" class="text-[11px] font-bold uppercase tracking-wider flex-1"></p>
       <button id="btn-close-dock" class="text-xs font-bold ml-3 hover:opacity-60 p-2 -m-2">[ X ]</button>
@@ -1170,8 +1168,7 @@
       container.innerHTML = '';
 
       const tagsRow = document.createElement('div');
-      tagsRow.style.display = 'flex';
-      tagsRow.style.flexWrap = 'wrap';
+      tagsRow.className = 'hidden md:flex md:flex-wrap';
       tagsRow.style.gap = '10px';
       tagsRow.style.paddingBottom = '14px';
       tagsRow.style.borderBottom = '2px solid #000';
@@ -1512,9 +1509,7 @@
         openDetail(id);
       });
 
-      /* Panel nav buttons (active entry header) */
-      $('btn-panel-prev').addEventListener('click', function () { navigateEntry(-1); });
-      $('btn-panel-next').addEventListener('click', function () { navigateEntry(1); });
+      /* Viewer arrow nav buttons */
 
       /* Viewer nav buttons (image panel) */
       $('btn-viewer-prev').addEventListener('click', function () { navigateEntry(-1); });
