@@ -1,81 +1,133 @@
-/* ============================================================
-   ARCHIVE DATA ENGINE
-============================================================ */
+/* === ARCHIVE DATA === */
 const archiveData = [
   {
-    id: 'margiela-aw94',
-    title: 'Maison Margiela AW 1994',
-    year: 1994,
-    season: 'AW',
-    imageUrl: 'https://placehold.co/800x1100/e5e5e5/333333?text=Margiela+AW94',
-    description:
-      'A collection that redefined the boundary between construction and deconstruction. Martin Margiela presented garments that exposed their own making; linings became exteriors and raw edges replaced finished seams. The show took place in a disused warehouse in the 18th arrondissement; reinforcing the label\'s commitment to anti-spectacle. This body of work is frequently cited in academic discourse on post-structuralist fashion theory; particularly in relation to the dissolution of hierarchical garment conventions.',
-    tags: {
-      brand: 'Maison Margiela',
-      era: '1990 - 1999',
-      politics: 'Class & Scarcity',
-      theories: 'Deconstruction',
-      gender: 'Unisex',
-      materials: 'Raw Textiles',
-      geography: 'Paris',
-      form: 'Architectural Shielding',
-      format: 'Runway',
-    },
-    hotspots: [
-      {
-        x: 35,
-        y: 22,
-        label: 'Exposed Lining',
-        description:
-          'Silk lining deliberately turned outward; reversing the interior/exterior hierarchy of the garment. A signature Margiela technique from this period.',
-      },
-      {
-        x: 60,
-        y: 55,
-        label: 'Raw Hem Construction',
-        description:
-          'Unfinished edges left deliberately frayed. The garment refuses the convention of a polished terminus; the process of making remains visible.',
-      },
-      {
-        x: 45,
-        y: 80,
-        label: 'Tabi Boot',
-        description:
-          'The split-toe boot; derived from Japanese tabi socks. First introduced in the Spring/Summer 1989 debut and present in nearly every subsequent collection.',
-      },
-    ],
+    id: 'mcqueen-ss99',
+    title: 'Alexander McQueen SS 1999',
+    year: 1999,
+    season: 'SS',
+    imageUrl: 'assets/mcqueen-ss99/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
   },
   {
-    id: 'cdg-ss97-gingham',
-    title: 'Comme des Garçons SS 1997',
-    year: 1997,
+    id: 'mugler-aw95',
+    title: 'Thierry Mugler AW 1995',
+    year: 1995,
+    season: 'AW',
+    imageUrl: 'assets/mugler-aw95/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'miyake-ss99',
+    title: 'Issey Miyake SS 1999',
+    year: 1999,
     season: 'SS',
-    imageUrl: 'assets/cdg-ss97/01.jpg',
-    description: 'Known as "Body Meets Dress, Dress Meets Body" (or the "Lumps and Bumps" collection); Kawakubo radically deformed the natural human silhouette. By inserting asymmetrical down-filled pads into stretch gingham garments; the collection challenged Western fashion\'s historical reliance on tailoring to flatter or sexualize the female form. It is a masterclass in the rejection of the male gaze.',
-    tags: {
-      brand: 'Comme des Garcons',
-      era: '1990 to 1999; The Deconstructionist Decade',
-      politics: 'Body Politics & Corporeal Interventions',
-      theories: 'Bodily Autonomy and Transgression',
-      gender: 'Womenswear',
-      materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)',
-      geography: 'Paris (Chambre Syndicale / RTW)',
-      form: 'Displaced Anatomy and Padding',
-      format: 'Traditional Runway (The Linear Catwalk)',
-    },
-    hotspots: [
-      {
-        x: 65,
-        y: 35,
-        label: 'Asymmetrical Padding',
-        description: 'Down-filled polyurethane pads sit indiscriminately at the shoulder; waist; and hips. They violently reject traditional anatomical proportions and render the body grotesque.',
-      },
-      {
-        x: 35,
-        y: 70,
-        label: 'Stretch Gingham',
-        description: 'The domestic; suburban association of gingham violently contrasts with the radical bodily manipulation. The fabric is forced to distort over the synthetic tumours.',
-      }
-    ],
+    imageUrl: 'assets/miyake-ss99/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'wvb-aw95',
+    title: 'Walter Van Beirendonck AW 1995',
+    year: 1995,
+    season: 'AW',
+    imageUrl: 'assets/wvb-aw95/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'chalayan-aw00',
+    title: 'Hussein Chalayan AW 2000',
+    year: 2000,
+    season: 'AW',
+    imageUrl: 'assets/chalayan-aw00/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'prada-ss96',
+    title: 'Prada SS 1996',
+    year: 1996,
+    season: 'SS',
+    imageUrl: 'assets/prada-ss96/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'galliano-dior-ss00',
+    title: 'John Galliano for Dior Couture SS 2000',
+    year: 2000,
+    season: 'SS',
+    imageUrl: 'assets/galliano-dior-ss00/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'owens-ss14',
+    title: 'Rick Owens SS 2014',
+    year: 2014,
+    season: 'SS',
+    imageUrl: 'assets/owens-ss14/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'margiela-ss89',
+    title: 'Maison Martin Margiela SS 1989',
+    year: 1989,
+    season: 'SS',
+    imageUrl: 'assets/margiela-ss89/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'yamamoto-aw98',
+    title: 'Yohji Yamamoto AW 1998',
+    year: 1998,
+    season: 'AW',
+    imageUrl: 'assets/yamamoto-aw98/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'gaultier-aw93',
+    title: 'Jean Paul Gaultier AW 1993',
+    year: 1993,
+    season: 'AW',
+    imageUrl: 'assets/gaultier-aw93/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'viktor-rolf-aw99',
+    title: 'Viktor & Rolf AW 1999',
+    year: 1999,
+    season: 'AW',
+    imageUrl: 'assets/viktor-rolf-aw99/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
+  },
+  {
+    id: 'lang-aw98',
+    title: 'Helmut Lang AW 1998',
+    year: 1998,
+    season: 'AW',
+    imageUrl: 'assets/lang-aw98/01.jpg',
+    description: '',
+    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    hotspots: []
   }
 ];
