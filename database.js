@@ -7,7 +7,7 @@ const archiveData = [
     season: 'SS',
     imageUrl: 'assets/mcqueen-ss99/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Alexander McQueen', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -17,7 +17,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/mugler-aw95/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Thierry Mugler', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -27,7 +27,7 @@ const archiveData = [
     season: 'SS',
     imageUrl: 'assets/miyake-ss99/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Issey Miyake', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -37,7 +37,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/wvb-aw95/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Walter Van Beirendonck', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -47,7 +47,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/chalayan-aw00/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Hussein Chalayan', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -57,7 +57,7 @@ const archiveData = [
     season: 'SS',
     imageUrl: 'assets/prada-ss96/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Prada', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -67,7 +67,7 @@ const archiveData = [
     season: 'SS',
     imageUrl: 'assets/galliano-dior-ss00/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'John Galliano for Dior', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -77,7 +77,7 @@ const archiveData = [
     season: 'SS',
     imageUrl: 'assets/owens-ss14/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Rick Owens', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -87,7 +87,7 @@ const archiveData = [
     season: 'SS',
     imageUrl: 'assets/margiela-ss89/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Maison Martin Margiela', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -97,7 +97,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/yamamoto-aw98/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Yohji Yamamoto', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -107,7 +107,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/gaultier-aw93/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Jean Paul Gaultier', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -117,7 +117,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/viktor-rolf-aw99/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Viktor & Rolf', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
@@ -127,7 +127,7 @@ const archiveData = [
     season: 'AW',
     imageUrl: 'assets/lang-aw98/01.jpg',
     description: '',
-    tags: { brand: '', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Helmut Lang', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     hotspots: []
   },
   {
