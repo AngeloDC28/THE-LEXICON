@@ -63,6 +63,69 @@
     #detail-image-view { cursor: crosshair; }
     #image-grid { cursor: crosshair; }
 
+    /* Sticky Note Squares */
+    #sticky-note-triggers {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 200;
+    }
+    .sticky-trigger {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    #sticky-note-panel {
+      position: absolute;
+      top: 48px;
+      right: 12px;
+      width: 220px;
+      min-height: 160px;
+      border: 1px solid #000;
+      box-shadow: 4px 4px 0px #000;
+      padding: 12px;
+      z-index: 201;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    #sticky-note-panel.visible { display: flex; }
+    .sticky-note-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .sticky-note-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #000;
+    }
+    .sticky-note-close {
+      font-size: 10px;
+      font-weight: 700;
+      font-family: 'IBM Plex Mono', monospace;
+      color: #000;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      line-height: 1;
+    }
+    .sticky-note-body {
+      font-size: 10px;
+      line-height: 1.6;
+      color: #000;
+      flex: 1;
+    }
+
     /* Hotspot touch-target wrapper */
     .hotspot-btn {
       position: absolute;
@@ -422,6 +485,20 @@
           <!-- Viewer Navigation: Edge-Mounted Carousel Controls -->
           <button id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-0 text-4xl text-black px-4 z-[100] cursor-pointer hover:opacity-50 select-none">&#8592;</button>
           <button id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-0 text-4xl text-black px-4 z-[100] cursor-pointer hover:opacity-50 select-none">&#8594;</button>
+          <!-- Archival Sticky Note Triggers -->
+          <div id="sticky-note-triggers">
+            <button class="sticky-trigger" style="background:#FF0000;" data-note="critique" aria-label="Critique"></button>
+            <button class="sticky-trigger" style="background:#0000FF;" data-note="strategy" aria-label="Strategy"></button>
+            <button class="sticky-trigger" style="background:#E6FF00;" data-note="provenance" aria-label="Provenance"></button>
+          </div>
+          <!-- Archival Sticky Note Panel -->
+          <div id="sticky-note-panel">
+            <div class="sticky-note-header">
+              <span class="sticky-note-title" id="sticky-note-title"></span>
+              <button class="sticky-note-close" id="btn-close-sticky">[ X ]</button>
+            </div>
+            <p class="sticky-note-body" id="sticky-note-body"></p>
+          </div>
           <!-- Hotspot dots appended by JS -->
         </div>
 
@@ -1507,6 +1584,43 @@
       /* Back to grid and close detail */
       $('btn-back-grid').addEventListener('click', closeDetail);
       $('btn-close-detail').addEventListener('click', closeDetail);
+
+      /* Archival Sticky Notes */
+      var stickyNotes = {
+        critique:   { color: '#FF0000', title: 'CRITIQUE',   body: 'Critical observations; formal analysis; aesthetic dissent.' },
+        strategy:   { color: '#0000FF', title: 'STRATEGY',   body: 'Commercial context; brand positioning; cultural strategy.' },
+        provenance: { color: '#E6FF00', title: 'PROVENANCE', body: 'Archival sourcing; acquisition notes; chain of custody.' },
+      };
+      var activeNote = null;
+
+      function openStickyNote(key) {
+        var note = stickyNotes[key];
+        var panel = $('sticky-note-panel');
+        $('sticky-note-title').textContent = note.title;
+        $('sticky-note-body').textContent = note.body;
+        panel.style.backgroundColor = note.color;
+        panel.classList.add('visible');
+        activeNote = key;
+      }
+
+      function closeStickyNote() {
+        $('sticky-note-panel').classList.remove('visible');
+        activeNote = null;
+      }
+
+      document.querySelectorAll('.sticky-trigger').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var key = btn.getAttribute('data-note');
+          if (activeNote === key) { closeStickyNote(); return; }
+          openStickyNote(key);
+        });
+      });
+
+      $('btn-close-sticky').addEventListener('click', function (e) {
+        e.stopPropagation();
+        closeStickyNote();
+      });
 
       /* Close popup (desktop) */
       $('btn-close-popup').addEventListener('click', function (e) {
