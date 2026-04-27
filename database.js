@@ -8,6 +8,7 @@ const archiveData = [
     imageUrl: 'assets/mcqueen-ss99/01.jpg',
     description: '',
     tags: { brand: 'Alexander McQueen', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -18,6 +19,7 @@ const archiveData = [
     imageUrl: 'assets/mugler-aw95/01.jpg',
     description: '',
     tags: { brand: 'Thierry Mugler', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -28,6 +30,7 @@ const archiveData = [
     imageUrl: 'assets/miyake-ss99/01.jpg',
     description: '',
     tags: { brand: 'Issey Miyake', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -38,6 +41,7 @@ const archiveData = [
     imageUrl: 'assets/wvb-aw95/01.jpg',
     description: '',
     tags: { brand: 'Walter Van Beirendonck', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -48,6 +52,7 @@ const archiveData = [
     imageUrl: 'assets/chalayan-aw00/01.jpg',
     description: '',
     tags: { brand: 'Hussein Chalayan', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -58,6 +63,7 @@ const archiveData = [
     imageUrl: 'assets/prada-ss96/01.jpg',
     description: '',
     tags: { brand: 'Prada', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -68,6 +74,7 @@ const archiveData = [
     imageUrl: 'assets/galliano-dior-ss00/01.jpg',
     description: '',
     tags: { brand: 'John Galliano for Dior', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -78,6 +85,7 @@ const archiveData = [
     imageUrl: 'assets/owens-ss14/01.jpg',
     description: '',
     tags: { brand: 'Rick Owens', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -88,6 +96,7 @@ const archiveData = [
     imageUrl: 'assets/margiela-ss89/01.jpg',
     description: '',
     tags: { brand: 'Maison Martin Margiela', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -98,6 +107,7 @@ const archiveData = [
     imageUrl: 'assets/yamamoto-aw98/01.jpg',
     description: '',
     tags: { brand: 'Yohji Yamamoto', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -108,6 +118,7 @@ const archiveData = [
     imageUrl: 'assets/gaultier-aw93/01.jpg',
     description: '',
     tags: { brand: 'Jean Paul Gaultier', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -118,6 +129,7 @@ const archiveData = [
     imageUrl: 'assets/viktor-rolf-aw99/01.jpg',
     description: '',
     tags: { brand: 'Viktor & Rolf', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
   {
@@ -128,6 +140,7 @@ const archiveData = [
     imageUrl: 'assets/lang-aw98/01.jpg',
     description: '',
     tags: { brand: 'Helmut Lang', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   }
 ];

@@ -1234,6 +1234,13 @@
       $('detail-image').src = entry.imageUrl;
       $('detail-image').alt = entry.title;
 
+      /* Load per-entry sticky note content */
+      closeStickyNote();
+      var n = entry.notes || {};
+      stickyNotes.critique.body   = n.critique   || '';
+      stickyNotes.strategy.body   = n.strategy   || '';
+      stickyNotes.provenance.body = n.provenance || '';
+
       /* Compute position in filtered list */
       const filtered = getFilteredEntries();
       const posIndex = filtered.findIndex(function (e) { return e.id === entryId; });
@@ -1467,6 +1474,31 @@
     }
 
     /* ============================================================
+       STICKY NOTES
+    ============================================================ */
+    var stickyNotes = {
+      critique:   { color: '#FF0000', title: 'CRITIQUE',   body: '' },
+      strategy:   { color: '#0000FF', title: 'STRATEGY',   body: '' },
+      provenance: { color: '#E6FF00', title: 'PROVENANCE', body: '' },
+    };
+    var activeNote = null;
+
+    function openStickyNote(key) {
+      var note = stickyNotes[key];
+      var panel = $('sticky-note-panel');
+      $('sticky-note-title').textContent = note.title;
+      $('sticky-note-body').textContent = note.body;
+      panel.style.backgroundColor = note.color;
+      panel.classList.add('visible');
+      activeNote = key;
+    }
+
+    function closeStickyNote() {
+      $('sticky-note-panel').classList.remove('visible');
+      activeNote = null;
+    }
+
+    /* ============================================================
        INIT
     ============================================================ */
     function init() {
@@ -1586,28 +1618,6 @@
       $('btn-close-detail').addEventListener('click', closeDetail);
 
       /* Archival Sticky Notes */
-      var stickyNotes = {
-        critique:   { color: '#FF0000', title: 'CRITIQUE',   body: 'Critical observations; formal analysis; aesthetic dissent.' },
-        strategy:   { color: '#0000FF', title: 'STRATEGY',   body: 'Commercial context; brand positioning; cultural strategy.' },
-        provenance: { color: '#E6FF00', title: 'PROVENANCE', body: 'Archival sourcing; acquisition notes; chain of custody.' },
-      };
-      var activeNote = null;
-
-      function openStickyNote(key) {
-        var note = stickyNotes[key];
-        var panel = $('sticky-note-panel');
-        $('sticky-note-title').textContent = note.title;
-        $('sticky-note-body').textContent = note.body;
-        panel.style.backgroundColor = note.color;
-        panel.classList.add('visible');
-        activeNote = key;
-      }
-
-      function closeStickyNote() {
-        $('sticky-note-panel').classList.remove('visible');
-        activeNote = null;
-      }
-
       document.querySelectorAll('.sticky-trigger').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
           e.stopPropagation();
