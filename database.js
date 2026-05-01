@@ -111,11 +111,11 @@ const archiveData = [
     hotspots: []
   },
   {
-    id: 'gaultier-aw93',
-    title: 'Jean Paul Gaultier AW 1993',
-    year: 1993,
-    season: 'AW',
-    imageUrl: 'assets/gaultier-aw93/01.jpg',
+    id: 'gaultier-ss94',
+    title: 'Jean Paul Gaultier SS 1994',
+    year: 1994,
+    season: 'SS',
+    imageUrl: 'assets/gaultier-ss94/01.jpg',
     description: '',
     tags: { brand: 'Jean Paul Gaultier', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     notes: { critique: '', strategy: '', provenance: '' },
