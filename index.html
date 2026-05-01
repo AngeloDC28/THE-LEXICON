@@ -976,31 +976,21 @@
       }
 
       /* Generate multiple thumbnails per entry to fill the grid */
+      const heightPool = [550, 500, 520, 480, 540, 510, 530, 490, 560, 500, 520, 540];
       let html = '';
       entries.forEach((entry) => {
-        const variants = [
-          { w: 400, h: 550, suffix: '1' },
-          { w: 400, h: 500, suffix: '2' },
-          { w: 400, h: 520, suffix: '3' },
-          { w: 400, h: 480, suffix: '4' },
-          { w: 400, h: 540, suffix: '5' },
-          { w: 400, h: 510, suffix: '6' },
-          { w: 400, h: 530, suffix: '7' },
-          { w: 400, h: 490, suffix: '8' },
-          { w: 400, h: 560, suffix: '9' },
-          { w: 400, h: 500, suffix: '10' },
-          { w: 400, h: 520, suffix: '11' },
-          { w: 400, h: 540, suffix: '12' },
-        ];
+        const count = entry.looks || 12;
 
         const snippet = entry.description.length > 80
           ? entry.description.substring(0, 80) + '...'
           : entry.description;
 
-        variants.forEach((v, i) => {
+        for (var i = 0; i < count; i++) {
+          var h = heightPool[i % heightPool.length];
+          var suffix = i + 1;
           html += `<div class="group relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
             <img
-              src="https://placehold.co/${v.w}x${v.h}/e5e5e5/999999?text=${encodeURIComponent(entry.tags.brand)}+${v.suffix}"
+              src="https://placehold.co/400x${h}/e5e5e5/999999?text=${encodeURIComponent(entry.tags.brand)}+${suffix}"
               alt="${entry.title}"
               class="desaturate w-full aspect-[3/4] object-cover block hover:filter-none transition-all duration-200"
               loading="lazy"
@@ -1011,7 +1001,7 @@
               <p class="text-[9px] text-white/60 mt-1 leading-snug font-mono">${snippet}</p>
             </div>
           </div>`;
-        });
+        }
       });
 
       grid.innerHTML = html;
