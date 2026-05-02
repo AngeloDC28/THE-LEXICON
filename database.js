@@ -199,7 +199,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg',
     description: '',
-    tags: { brand: 'John Galliano', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Class Dynamics & Anti-Elitism', theories: 'The Society of the Spectacle (Debord)', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Federation de la Haute Couture)', form: 'Bias-Cut Fluidity', format: 'Theatrical Stage Performance' },
+    tags: { brand: 'Christian Dior', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Class Dynamics & Anti-Elitism', theories: 'The Society of the Spectacle (Debord)', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Federation de la Haute Couture)', form: 'Bias-Cut Fluidity', format: 'Theatrical Stage Performance' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
