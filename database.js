@@ -37,14 +37,14 @@ const archiveData = [
     hotspots: []
   },
   {
-    id: 'wvb-aw95',
-    title: 'Walter Van Beirendonck AW 1995',
-    year: 1995,
-    season: 'AW',
+    id: 'balenciaga-ss07',
+    title: 'Balenciaga SS 2007',
+    year: 2007,
+    season: 'SS',
     looks: 15,
-    imageUrl: 'assets/wvb-aw95/01.jpg',
+    imageUrl: 'assets/balenciaga-ss07/01.jpg',
     description: '',
-    tags: { brand: 'Walter Van Beirendonck', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
+    tags: { brand: 'Balenciaga', era: '', politics: '', theories: '', gender: '', materials: '', geography: '', form: '', format: '' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
