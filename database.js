@@ -26,7 +26,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg',
     description: '',
-    tags: { brand: 'Alexander McQueen', era: '1990s', politics: 'Disability; Vulnerability; Power', theories: 'Performance Art; Constriction as Power', gender: 'Feminine; Weaponised', materials: 'Lace; Leather; Bone-Pale Silks; Carved Wood', geography: 'London', form: 'Cage Constructions; Prosthetic Legs; Paint-Sprayed Finale', format: 'Ready-to-Wear' },
+    tags: { brand: 'Alexander McQueen', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Body Politics & Corporeal Interventions', theories: 'The Grotesque and Abject', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'London (BFC / Official Schedule)', form: 'Prosthetic Extension', format: 'Performance Art / Live Action' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -56,7 +56,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-01.jpg',
     description: '',
-    tags: { brand: 'Thierry Mugler', era: '1990s', politics: 'Age; Glamour; Hyperbolic Femininity', theories: 'Exoskeletal Body Construction; Silhouette as Architecture', gender: 'Hyperbolic Feminine', materials: 'Latex; Chrome; Hand-Beaten Metal; Leather; Silk', geography: 'Paris', form: 'Sculptural Shoulders; Cinched Waists; Metallic Breastplates', format: 'Haute Couture' },
+    tags: { brand: 'Thierry Mugler', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Feminist Theory & The Subverted Gaze', theories: 'The Simulacrum (Baudrillard)', gender: 'Womenswear', materials: 'Thermoplastic Membranes (PVC; Vinyl; Latex)', geography: 'Paris (Federation de la Haute Couture)', form: 'Architectural Shielding and Armour', format: 'Circular / Arena Format' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -84,7 +84,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg',
     description: '',
-    tags: { brand: 'Issey Miyake', era: '1990s', politics: 'Zero-Waste Manufacturing; Communal Garment Systems', theories: 'A-POC Technology; Body-Textile Connectivity', gender: 'Body-Neutral', materials: 'Continuous Knit Tubes; Red Jersey; Industrial Knitting', geography: 'Paris', form: 'Connected Knit Tubes; Pre-Cut Wearable Systems', format: 'Ready-to-Wear' },
+    tags: { brand: 'Issey Miyake', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Ecological Politics & Resource Extraction', theories: 'Post-Humanism', gender: 'Unisex / Neutral', materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Modular Componentry', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -113,7 +113,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-01.jpg',
     description: '',
-    tags: { brand: 'Balenciaga', era: '2000s', politics: 'Cyborg Femininity; Technological Transcendence', theories: 'Robotic Articulation; Mechanical Body Transformation', gender: 'Androgynous', materials: 'Patent Leather; Moulded Plastics; Articulated Metal; Neoprene', geography: 'Paris', form: 'Exoskeletal Structures; Robotic Leggings; Hard Shell Construction', format: 'Ready-to-Wear' },
+    tags: { brand: 'Balenciaga', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Techno-Politics & Digital Identities', theories: 'Cyborg Manifestos (Haraway)', gender: 'Womenswear', materials: 'Non-Woven Industrial Membranes (Tyvek; Neoprene; Scuba)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Architectural Shielding and Armour', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -141,7 +141,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-01.jpg',
     description: '',
-    tags: { brand: 'Hussein Chalayan', era: '2000s', politics: 'Refugee Displacement; Migration; War', theories: 'Fashion as Performance; Furniture-as-Garment', gender: 'Feminine', materials: 'Cotton; Mahogany; Metal; Leather; Tulle', geography: 'London', form: 'Transformable Furniture; Slipcover Dresses; Coffee Table Skirt', format: 'Ready-to-Wear' },
+    tags: { brand: 'Hussein Chalayan', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Post-Colonialism & Diasporic Narratives', theories: 'Object-Oriented Ontology', gender: 'Womenswear', materials: 'Biological Ephemera (Feathers; Shells; Bone; Wood)', geography: 'London (BFC / Official Schedule)', form: 'Adaptive Transformation', format: 'Performance Art / Live Action' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -170,7 +170,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/prada-ss96/prada-ss99-01.jpg',
     description: '',
-    tags: { brand: 'Prada', era: '1990s', politics: 'Critique of Beauty; Anti-Aspirational Aesthetics', theories: 'Ugly Chic; Bad Taste as Intellectual Rigour', gender: 'Agnostic', materials: 'Nylon; Synthetic Blends; Clashing Prints', geography: 'Milan', form: 'Boxy Silhouettes; Awkward Proportions; Clashing Prints', format: 'Ready-to-Wear' },
+    tags: { brand: 'Prada', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Anti-Consumerism & Institutional Critique', theories: 'Camp and Kitsch Subversion', gender: 'Womenswear', materials: 'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)', geography: 'Milan (Camera Nazionale)', form: 'Compressed Proportions', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -199,7 +199,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg',
     description: '',
-    tags: { brand: 'John Galliano for Dior', era: '2000s', politics: 'Luxury vs. Poverty; Homelessness; Class Aesthetics', theories: 'Couture Technique Applied to Street Destitution; Vionnet Bias-Cut', gender: 'Feminine', materials: 'Silk; Newspaper Prints; Distressed Fabrics; Safety Pins', geography: 'Paris', form: 'Bias-Cut Gowns; Elongated Trains; Enormous Sleeves', format: 'Haute Couture' },
+    tags: { brand: 'John Galliano', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Class Dynamics & Anti-Elitism', theories: 'The Society of the Spectacle (Debord)', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Federation de la Haute Couture)', form: 'Bias-Cut Fluidity', format: 'Theatrical Stage Performance' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -228,7 +228,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg',
     description: '',
-    tags: { brand: 'Rick Owens', era: '2010s', politics: 'Race; Body Diversity; HBCU Culture; Representation', theories: 'Clothing as Secondary to Body Performance; Communal Kinetic Identity', gender: 'Diverse; Gender-Fluid', materials: 'Leather; Draped Wool; Crepe Soles', geography: 'Paris', form: 'Draped Asymmetric Tunics; Long Leather Skirts; Platform Boots', format: 'Ready-to-Wear' },
+    tags: { brand: 'Rick Owens', era: '2010 to 2019; The Digital and Streetwear Pivot', politics: 'Racial Identity & Representation', theories: 'Subcultural Resistance Theory', gender: 'Conceptual / Post-Binary Form', materials: 'Bovine & Exotic Skins (Leather; Suede; Vachetta)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Suspended Drape', format: 'Performance Art / Live Action' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -257,7 +257,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg',
     description: '',
-    tags: { brand: 'Comme des Garçons', era: '1990s', politics: 'Feminist Critique; Beauty Standards; Disabled Body', theories: 'Goose-Down Padding Distortion; Body as Material Substrate', gender: 'Feminine; Defeminised Through Distortion', materials: 'Stretch Nylon-Urethane; Gingham; Goose-Down Padding', geography: 'Paris', form: 'Padded Lumps and Bumps; Alien Silhouettes; Asymmetrical', format: 'Ready-to-Wear' },
+    tags: { brand: 'Comme des Garcons', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Body Politics & Corporeal Interventions', theories: 'Bodily Autonomy and Transgression', gender: 'Womenswear', materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Displaced Anatomy and Padding', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -286,7 +286,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-01.jpg',
     description: '',
-    tags: { brand: 'Yohji Yamamoto', era: '1990s', politics: 'Japanese-Western Tailoring Dialectic; Anti-Body Construction', theories: 'Volume as Independent System; Garment-as-Space', gender: 'Androgynous', materials: 'Dense Wools; Silks; Distressed Fabrics; Japanese Textiles', geography: 'Paris', form: 'Massive Asymmetric Coats; Extreme Volumetric Skirts; Architectural Crinoline', format: 'Ready-to-Wear' },
+    tags: { brand: 'Yohji Yamamoto', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Globalisation & Cultural Hybridity', theories: 'Deconstructionist Logic (Derrida)', gender: 'Conceptual / Post-Binary Form', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Monolithic Massing', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -316,7 +316,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-01.jpg',
     description: '',
-    tags: { brand: 'Jean Paul Gaultier', era: '1990s', politics: 'Subcultural Identity; Gender Subversion; Cross-Cultural Hybridity', theories: 'Trompe L\'Oeil Tattoo Printing; Skin-Fabric Confusion', gender: 'Gender-Subversive', materials: 'Mesh; Denim; Metallic Knitwear; Sequins; Chainmail', geography: 'Paris', form: 'Patchwork Denim Couture; Tattoo-Print Mesh; Joan of Arc Armour', format: 'Ready-to-Wear' },
+    tags: { brand: 'Jean Paul Gaultier', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Queer Theory & Subcultural Systems', theories: 'Queer Performativity (Butler)', gender: 'Conceptual / Post-Binary Form', materials: 'Fine Precious Metallics (Gold; Silver; Copper Thread)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Topographic Layering', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -337,7 +337,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-01.jpg',
     description: '',
-    tags: { brand: 'Viktor & Rolf', era: '1990s', politics: 'Fashion Accumulation Theory; Body as Container', theories: 'Russian Matryoshka Nesting; Fashion Excess; Layering as Philosophy', gender: 'Feminine', materials: 'Silk; Couture Construction; Crinoline', geography: 'Paris', form: 'Progressive Layering; Increasing Volume; Silhouette Obliteration', format: 'Haute Couture' },
+    tags: { brand: 'Viktor & Rolf', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Anti-Consumerism & Institutional Critique', theories: 'The Simulacrum (Baudrillard)', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Federation de la Haute Couture)', form: 'Monolithic Massing', format: 'Theatrical Stage Performance' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -361,7 +361,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/lang-aw98/lang-aw98-01.jpg',
     description: '',
-    tags: { brand: 'Helmut Lang', era: '1990s', politics: 'Disruption of Fashion Calendar; Anti-Theatrical Aesthetic', theories: 'Utilitarian Precision; Bondage-Influenced Construction; CD-ROM Distribution', gender: 'Androgynous', materials: 'Nylon; Synthetic Blends; Technical Fabrics; Bonded Seams', geography: 'Paris', form: 'Tailored Jackets with Exposed Hardware; Bondage Straps', format: 'Ready-to-Wear' },
+    tags: { brand: 'Helmut Lang', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Anti-Consumerism & Institutional Critique', theories: 'Techno-Optimism and Accelerationism', gender: 'Unisex / Neutral', materials: 'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)', geography: 'Digital / Meta-Geographic Space', form: 'Tailored Rigidity', format: 'Lookbook / Still Photography Series' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -389,7 +389,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-01.jpg',
     description: '',
-    tags: { brand: 'Moschino', era: '2010s', politics: 'Critique of Fashion Pretensions; Luxury vs. Mass Culture', theories: 'Sign System Mutation; Corporate Branding as Aesthetic Material', gender: 'Feminine', materials: 'Bouclé; Fast-Food Branded Imagery; Embroidery', geography: 'Milan', form: 'McDonald\'s-Branded Suits; Spongebob Jacquard; Fast-Food Packaging', format: 'Ready-to-Wear' },
+    tags: { brand: 'Moschino', era: '2010 to 2019; The Digital and Streetwear Pivot', politics: 'Anti-Consumerism & Institutional Critique', theories: 'Camp and Kitsch Subversion', gender: 'Womenswear', materials: 'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)', geography: 'Milan (Camera Nazionale)', form: 'Compressed Proportions', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
@@ -418,7 +418,7 @@ const archiveData = [
     ],
     imageUrl: 'THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-01.jpg',
     description: '',
-    tags: { brand: 'Schiaparelli', era: '2020s', politics: 'Bodily Autonomy; Weaponised Beauty; Anatomical Visibility', theories: 'Moulded Anatomical Breastplates; Trompe L\'Oeil Hardware; Surrealist Displacement', gender: 'Feminine; Anatomically Explicit', materials: 'Moulded Leather; Gold Cast Elements; Chain-Link; Shocking Pink', geography: 'Paris', form: 'Gilded Breastplate Torsos; Anatomical Sculpture; Trompe L\'Oeil Jewellery', format: 'Haute Couture' },
+    tags: { brand: 'Schiaparelli', era: '2020 to Present; The Post-Pandemic and Surrealist Current', politics: 'Feminist Theory & The Subverted Gaze', theories: 'Hyperreality', gender: 'Womenswear', materials: 'Fine Precious Metallics (Gold; Silver; Copper Thread)', geography: 'Paris (Federation de la Haute Couture)', form: 'Prosthetic Extension', format: 'Gallery / Museum Installation' },
     notes: { critique: '', strategy: '', provenance: '' },
     hotspots: []
   },
