@@ -27,7 +27,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg',
     description: '',
     tags: { brand: 'Alexander McQueen', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Body Politics & Corporeal Interventions', theories: 'The Grotesque and Abject', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'London (BFC / Official Schedule)', form: 'Prosthetic Extension', format: 'Performance Art / Live Action' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'SHALOM HARLOW ON A ROTATING PLATFORM SPRAYED BY ROBOTIC ARMS COLLAPSED COUTURE AND MANUFACTURING; BEAUTY AND VIOLATION. AIMEE MULLINS WALKED ON HAND-CARVED WOODEN PROSTHETICS; DISABILITY POLITICS AS RUNWAY STATEMENT.', strategy: 'FINAL MAJOR COLLECTION BEFORE GUCCI GROUP ACQUISITION. POSITIONED MCQUEEN AS COMMERCIALLY VIABLE PROVOCATEUR WHILST RETAINING FULL ARTISTIC CONTROL.', provenance: 'GATLIFF ROAD WAREHOUSE; VICTORIA; LONDON. SEPTEMBER 1998. RUNWAY PHOTOGRAPHY BY FIRSTVIEW. SHOW FILMED BY NICK KNIGHT. STYLING BY KATY ENGLAND. PIECES HELD AT V&A MUSEUM; LONDON.' },
     hotspots: []
   },
   {
@@ -57,7 +57,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-01.jpg',
     description: '',
     tags: { brand: 'Thierry Mugler', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Feminist Theory & The Subverted Gaze', theories: 'The Simulacrum (Baudrillard)', gender: 'Womenswear', materials: 'Thermoplastic Membranes (PVC; Vinyl; Latex)', geography: 'Paris (Federation de la Haute Couture)', form: 'Architectural Shielding and Armour', format: 'Circular / Arena Format' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'FASHION CONCEIVED ON THE SCALE OF A ROCK CONCERT. THE BODY AS ARCHITECTURAL EXOSKELETON; WAISTS CINCHED TO IMPOSSIBLE MEASUREMENTS; SHOULDERS SCULPTED AS ARMOUR. CARMEN DELL\'OREFICE OPENING IN HER MID-SIXTIES WAS A RADICAL STATEMENT ABOUT AGE AND GLAMOUR.', strategy: 'PUBLICLY TICKETED EVENT AT THE 6,000-CAPACITY ZENITH ARENA; BROADCAST NATIONALLY. CELEBRATION OF 20 YEARS OF THE MUGLER HOUSE; COMMERCIAL SPECTACLE AS BRAND MANIFESTO.', provenance: 'ZENITH ARENA; PARIS. MARCH 1995. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND GETTY IMAGES. PIECES HELD AT MUSEE DES ARTS DECORATIFS; PARIS AND KYOTO COSTUME INSTITUTE.' },
     hotspots: []
   },
   {
@@ -85,7 +85,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg',
     description: '',
     tags: { brand: 'Issey Miyake', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Ecological Politics & Resource Extraction', theories: 'Post-Humanism', gender: 'Unisex / Neutral', materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Modular Componentry', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'A-POC PROPOSED COMPLETE GARMENTS PRODUCED IN A SINGLE CONTINUOUS INDUSTRIAL KNITTING PROCESS; ELIMINATING WASTE ENTIRELY. MODELS WALKED PHYSICALLY CONNECTED BY AN UNBROKEN RED TEXTILE; COLLAPSING THE INDIVIDUAL GARMENT INTO SOMETHING COMMUNAL AND CONTINUOUS.', strategy: 'PUBLIC INTRODUCTION OF THE A-POC MANUFACTURING PHILOSOPHY DEVELOPED WITH DAI FUJIWARA. POSITIONED MIYAKE AT THE INTERSECTION OF INDUSTRIAL PROCESS AND FASHION DESIGN; ANTICIPATING SUSTAINABLE DISCOURSE BY TWO DECADES.', provenance: 'PARIS. OCTOBER 1998. CO-CREDITED TO ISSEY MIYAKE AND DAI FUJIWARA. A-POC PIECES HELD AT MOMA; NEW YORK AND FONDATION CARTIER. MIYAKE DESIGN STUDIO ARCHIVE; TOKYO.' },
     hotspots: []
   },
   {
@@ -114,7 +114,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-01.jpg',
     description: '',
     tags: { brand: 'Balenciaga', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Techno-Politics & Digital Identities', theories: 'Cyborg Manifestos (Haraway)', gender: 'Womenswear', materials: 'Non-Woven Industrial Membranes (Tyvek; Neoprene; Scuba)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Architectural Shielding and Armour', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'GHESQUIERE SEVERED THE HUMAN FORM FROM ORGANIC SOFTNESS AND FORCED IT INTO MECHANISED RIGIDITY. THE METALLIC ROBOT LEGGINGS; VALUED AT OVER $100,000; REPLACED THE ORGANIC LIMB WITH A MECHANISED CARAPACE. CRISTOBAL BALENCIAGA\'S ARCHITECTURAL VOLUMES REBORN AS 21ST-CENTURY EXOSKELETONS.', strategy: 'PEAK OF GHESQUIERE\'S FIFTEEN-YEAR TENURE. BEYONCE WORE THE GOLD LEGGINGS AT THE 2007 BET AWARDS; CEMENTING THE PIECE AS ONE OF THE DECADE\'S MOST RECOGNISABLE FASHION IMAGES.', provenance: 'PARIS. OCTOBER 2006. RUNWAY PHOTOGRAPHY BY PETER STIGTER. STYLING BY MARIE-AMELIE SAUVE. SHOW VENUE LIKELY COUVENT DES CORDELIERS.' },
     hotspots: []
   },
   {
@@ -142,7 +142,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-01.jpg',
     description: '',
     tags: { brand: 'Hussein Chalayan', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Post-Colonialism & Diasporic Narratives', theories: 'Object-Oriented Ontology', gender: 'Womenswear', materials: 'Biological Ephemera (Feathers; Shells; Bone; Wood)', geography: 'London (BFC / Official Schedule)', form: 'Adaptive Transformation', format: 'Performance Art / Live Action' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'MODELS REMOVED CHAIR SLIPCOVERS AND WORE THEM AS DRESSES; THE EXPOSED FRAMES FOLDED INTO SUITCASES. A SINGLE MODEL PULLED A MAHOGANY COFFEE TABLE UP TO HER WAIST; ITS SLATS TELESCOPING INTO A SKIRT. THE ROOM BECAME THE BODY; THE FURNITURE BECAME THE GARMENT.', strategy: 'WON CHALAYAN HIS SECOND CONSECUTIVE BRITISH DESIGNER OF THE YEAR. STAGED AT SADLER\'S WELLS THEATRE; PRODUCED BY ALEXANDRE DE BETAK. EXPANDED FASHION\'S DEFINITION INTO FURNITURE; ARCHITECTURE; AND PERFORMANCE.', provenance: 'SADLER\'S WELLS THEATRE; LONDON. FEBRUARY 2000. PHOTOGRAPHY BY GIOVANNI GIANNONI (WWD) AND CHRIS MOORE. FINALE FILMED BY MARCUS TOMLINSON. COFFEE TABLE SKIRT HELD AT MUDAM LUXEMBOURG; EXHIBITED AT TATE MODERN.' },
     hotspots: []
   },
   {
@@ -171,7 +171,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/prada-ss96/prada-ss99-01.jpg',
     description: '',
     tags: { brand: 'Prada', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Anti-Consumerism & Institutional Critique', theories: 'Camp and Kitsch Subversion', gender: 'Womenswear', materials: 'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)', geography: 'Milan (Camera Nazionale)', form: 'Compressed Proportions', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'THE FOUNDATIONAL DOCUMENT OF "UGLY CHIC". PRADA PROPOSED THAT GENUINE LUXURY COULD AND SHOULD BE UNCOMFORTABLE; CHALLENGING; EVEN UGLY; AND THAT THE CAPACITY TO APPRECIATE IT WAS CULTURAL INTELLIGENCE. EVERY WRONG CHOICE WAS EXACTLY RIGHT.', strategy: 'A DIRECT CRITIQUE OF THE ASPIRATIONAL LOGIC OF FASHION AND THE ITALIAN LUXURY INDUSTRY\'S OWN VISUAL CONVENTIONS. INTELLIGENCE; NOT BEAUTY; AS THE BASIS OF LUXURY. CENTRAL TO ACADEMIC FASHION DISCOURSE SINCE THE LATE 1990S.', provenance: 'MILAN. SEPTEMBER 1995. RUNWAY PHOTOGRAPHY BY FIRSTVIEW. CRITICAL TEXTS BY JUDITH CLARK. COLLECTION HELD AT FONDAZIONE PRADA; MILAN.' },
     hotspots: []
   },
   {
@@ -200,7 +200,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg',
     description: '',
     tags: { brand: 'Christian Dior', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Class Dynamics & Anti-Elitism', theories: 'The Society of the Spectacle (Debord)', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Federation de la Haute Couture)', form: 'Bias-Cut Fluidity', format: 'Theatrical Stage Performance' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'OBSESSIVE COUTURE TECHNIQUE APPLIED TO THE AESTHETICS OF HOMELESSNESS. NEWSPAPER PRINTS WERE WOVEN OR EMBROIDERED AT HAUTE COUTURE LEVEL; FRAYING WAS PRECISELY CALIBRATED; SAFETY PINS WERE COUTURE HARDWARE. THE TENSION BETWEEN POVERTY SIGNIFIERS AND EXTREME LUXURY WAS THE SUBJECT.', strategy: 'GALLIANO\'S MOST PROVOCATIVE COUTURE STATEMENT FOR DIOR. POSITIONED COUTURE AS CONCEPTUAL COMMENTARY ON WEALTH AND DESTITUTION; CLASS AND BEAUTY; PARIS AS A CITY OF EXTREMES.', provenance: 'PARIS. JANUARY 2000. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND GETTY IMAGES. MAKEUP BY PAT MCGRATH. HAIR BY JULIEN D\'YS. PIECES HELD AT MUSEE DES ARTS DECORATIFS; PARIS AND V&A.' },
     hotspots: []
   },
   {
@@ -229,7 +229,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg',
     description: '',
     tags: { brand: 'Rick Owens', era: '2010 to 2019; The Digital and Streetwear Pivot', politics: 'Racial Identity & Representation', theories: 'Subcultural Resistance Theory', gender: 'Conceptual / Post-Binary Form', materials: 'Bovine & Exotic Skins (Leather; Suede; Vachetta)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Suspended Drape', format: 'Performance Art / Live Action' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'OWENS REPLACED PROFESSIONAL MODELS WITH SEVEN AMERICAN COLLEGIATE STEP-DANCE TEAMS FROM HBCUS. THE COLLECTIVE; PERCUSSIVE PERFORMANCE REPLACED THE INDIVIDUALISED MODEL-WALK; FOREGROUNDING THE BODY AS A SOCIAL AND POLITICAL ENTITY. CLOTHING EXISTS IN TIME AND MOTION.', strategy: 'A DIRECT CHALLENGE TO FASHION\'S RACIAL AND BODY-TYPE HOMOGENEITY. THE SHOW BECAME A TOUCHSTONE FOR DISCUSSIONS OF REPRESENTATION; CULTURAL APPROPRIATION; AND THE POLITICS OF SPECTACLE.', provenance: 'PALAIS DU TROCADERO; PARIS. SEPTEMBER 2013. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND YANNIS VLAMOS / INDIGITAL. STEP-DANCE TEAMS SOURCED THROUGH AMERICAN UNIVERSITY NETWORKS.' },
     hotspots: []
   },
   {
@@ -258,7 +258,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg',
     description: '',
     tags: { brand: 'Comme des Garcons', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Body Politics & Corporeal Interventions', theories: 'Bodily Autonomy and Transgression', gender: 'Womenswear', materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Displaced Anatomy and Padding', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'KAWAKUBO INSERTED KIDNEY-SHAPED PILLOWS INTO GARMENT LININGS; DISTORTING THE BODY AT THE ABDOMEN; HIPS; BACK; AND SHOULDERS. THE PADDED GINGHAM SLIPS WERE A DEVASTATING COUNTERPOINT TO TOM FORD\'S GUCCI AND GALLIANO\'S DIOR DEBUT IN THE SAME SEASON.', strategy: 'SHOWN IN SILENCE; NO MUSIC; NO CONVENTIONAL RUNWAY. THE MET; MOMA; KYOTO COSTUME INSTITUTE; AND NATIONAL GALLERY OF VICTORIA ALL HOLD PIECES. COSTUMES FOR MERCE CUNNINGHAM\'S "SCENARIO" AT BROOKLYN ACADEMY OF MUSIC.', provenance: 'MUSEE NATIONAL DES ARTS D\'AFRIQUE ET D\'OCEANIE; PARIS. OCTOBER 1996. ADVERTISING PHOTOGRAPHY BY KISHIN SHINOYAMA FOR SIX MAGAZINE / VISIONAIRE NO. 20.' },
     hotspots: []
   },
   {
@@ -287,7 +287,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-01.jpg',
     description: '',
     tags: { brand: 'Yohji Yamamoto', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Globalisation & Cultural Hybridity', theories: 'Deconstructionist Logic (Derrida)', gender: 'Conceptual / Post-Binary Form', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Monolithic Massing', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'EXTREME STRUCTURAL VOLUME; CRINOLINES AND INTERNAL ARCHITECTURE PRODUCED SILHOUETTES BEARING NO RELATIONSHIP TO THE BODY. WESTERN TAILORING SHAPES FABRIC TO THE FIGURE; YAMAMOTO PROPOSED THE GARMENT AS A SPACE THE BODY OCCUPIED; DETERMINED BY THE CLOTH\'S OWN LOGIC.', strategy: 'YAMAMOTO\'S MOST EXTREME STATEMENT OF HIS POST-WESTERN CONSTRUCTION PRINCIPLE. THE GARMENTS OPERATED BY DIFFERENT PRINCIPLES THAT FOUND THEIR FULLEST EXPRESSION IN THE CONTEXT OF PARIS FASHION WEEK.', provenance: 'PARIS. MARCH 1998. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND NIALL MCINERNEY. PIECES HELD AT KYOTO COSTUME INSTITUTE; V&A LONDON; AND MOMU ANTWERP.' },
     hotspots: []
   },
   {
@@ -317,7 +317,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-01.jpg',
     description: '',
     tags: { brand: 'Jean Paul Gaultier', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Queer Theory & Subcultural Systems', theories: 'Queer Performativity (Butler)', gender: 'Conceptual / Post-Binary Form', materials: 'Fine Precious Metallics (Gold; Silver; Copper Thread)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Topographic Layering', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'THE CONFUSION BETWEEN SKIN AND FABRIC. TROMPE L\'OEIL TATTOO PRINTS ON SECOND-SKIN MESH CREATED THE ILLUSION OF INKED BODIES. THE FINALE OF SHIMMERING SAINTS IN HEAVENLY CROWNS AND JOAN OF ARC CHAINMAIL OVER DECONSTRUCTED CORSET DRESSES REMAINS ICONIC.', strategy: 'SELECTED BY VOGUE AS ONE OF THE 25 MOST UNFORGETTABLE SHOWS OF THE 1990S. LANDMARK IN DIVERSITY; CASTING SUPERMODELS ALONGSIDE EVE SALVAIL; ROSSY DE PALMA; JENNY SHIMIZU. MEN WALKED IN SKIRTS.', provenance: 'GALERIE VIVIENNE; PARIS. OCTOBER 18; 1993. PHOTOGRAPHY BY GUY MARINEAU (CONDE NAST). HAIR BY ODILE GILBERT; MAKEUP BY STEPHANE MARAIS. NEARLY 100 LOOKS SHOWN.' },
     hotspots: []
   },
   {
@@ -338,7 +338,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-01.jpg',
     description: '',
     tags: { brand: 'Viktor & Rolf', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Anti-Consumerism & Institutional Critique', theories: 'The Simulacrum (Baudrillard)', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'Paris (Federation de la Haute Couture)', form: 'Monolithic Massing', format: 'Theatrical Stage Performance' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'THE ENTIRE COLLECTION PRESENTED ON A SINGLE MODEL; MAGGIE RIZER; ON A ROTATING PLATFORM. LAYER UPON LAYER OF COUTURE ADDED ON TOP OF THE PREVIOUS; THE BODY PROGRESSIVELY BURIED. FASHION AS ACCUMULATION; THE BODY AS THE OCCASION FOR CLOTHING.', strategy: 'DEFINITIVELY ESTABLISHED VIKTOR & ROLF AS MAJOR CONCEPTUAL FORCES WITHIN HAUTE COUTURE. THE SHOW PROPOSED THAT FASHION IS ALWAYS IN EXCESS OF THE BODY; FOLLOWING CONVENTION TO ITS LOGICAL EXTREME.', provenance: 'PARIS. JULY 1999. SINGLE MODEL; MAGGIE RIZER. DESIGNERS DRESSED THE MODEL THEMSELVES ON THE PLATFORM. ARCHIVE HELD AT KUNSTMUSEUM; THE HAGUE AND GRONINGER MUSEUM.' },
     hotspots: []
   },
   {
@@ -362,7 +362,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/lang-aw98/lang-aw98-01.jpg',
     description: '',
     tags: { brand: 'Helmut Lang', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Anti-Consumerism & Institutional Critique', theories: 'Techno-Optimism and Accelerationism', gender: 'Unisex / Neutral', materials: 'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)', geography: 'Digital / Meta-Geographic Space', form: 'Tailored Rigidity', format: 'Lookbook / Still Photography Series' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'LANG SHOWED HIS COLLECTION ON CD-ROM BEFORE PARIS FASHION WEEK; CHALLENGING THE CALENDAR HIERARCHY AND ARGUING THAT PHYSICAL GEOGRAPHY WAS IRRELEVANT IN A NETWORKED WORLD. THE GESTURE ANTICIPATED DIGITAL FASHION SHOWS BY TWO DECADES.', strategy: '"SEANCE DE TRAVAIL" (WORKING SESSION) REINFORCED THE ANTI-THEATRICAL PREMISE; THIS IS WORK; NOT SPECTACLE. DEEPLY INFLUENTIAL ON THE SUBSEQUENT DEVELOPMENT OF MINIMALISM IN FASHION AND THE AESTHETIC OF THE EARLY INTERNET ERA.', provenance: 'DIGITAL BROADCAST VIA CD-ROM; MARCH 1998. ARCHIVE ACQUIRED BY PRATT INSTITUTE; NEW YORK (2006). PHOTOGRAPHY CREDITS UNCONFIRMED DUE TO UNCONVENTIONAL FORMAT.' },
     hotspots: []
   },
   {
@@ -390,7 +390,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-01.jpg',
     description: '',
     tags: { brand: 'Moschino', era: '2010 to 2019; The Digital and Streetwear Pivot', politics: 'Anti-Consumerism & Institutional Critique', theories: 'Camp and Kitsch Subversion', gender: 'Womenswear', materials: 'Petroleum-Based Polymers (Polyester; Nylon; Acrylic)', geography: 'Milan (Camera Nazionale)', form: 'Compressed Proportions', format: 'Traditional Runway (The Linear Catwalk)' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'THE MCDONALD\'S GOLDEN ARCHES MUTATED INTO A CHANEL-STYLE BOUCLE SUIT. THE ARCHES BECAME BRAID TRIM; THE RED-AND-YELLOW PALETTE BECAME THE COLOURWAY. SIMULTANEOUSLY A CRITIQUE OF FASHION\'S PRETENSIONS AND A CELEBRATION OF AMERICAN MASS CULTURE.', strategy: 'JEREMY SCOTT\'S DEBUT FULL COLLECTION FOR MOSCHINO. CONTINUED FRANCO MOSCHINO\'S TRADITION OF SEMIOTIC DISRUPTION; TRANSLATED INTO 21ST-CENTURY AMERICAN CONSUMER CULTURE. THE REFERENCES WERE CHEAP BUT THE CONSTRUCTION WAS NOT.', provenance: 'MILAN. FEBRUARY 2014. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND GETTY IMAGES. STYLED IN-HOUSE BY JEREMY SCOTT.' },
     hotspots: []
   },
   {
@@ -419,7 +419,7 @@ const archiveData = [
     imageUrl: 'THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-01.jpg',
     description: '',
     tags: { brand: 'Schiaparelli', era: '2020 to Present; The Post-Pandemic and Surrealist Current', politics: 'Feminist Theory & The Subverted Gaze', theories: 'Hyperreality', gender: 'Womenswear', materials: 'Fine Precious Metallics (Gold; Silver; Copper Thread)', geography: 'Paris (Federation de la Haute Couture)', form: 'Prosthetic Extension', format: 'Gallery / Museum Installation' },
-    notes: { critique: '', strategy: '', provenance: '' },
+    notes: { critique: 'THE ANATOMICAL BODY MADE EXTERNAL AND ARTIFICIAL; MOULDED LEATHER BREASTPLATES REPRODUCED THE HUMAN CHEST IN GILDED SCULPTURAL FORM. THE BIOLOGICAL TRANSLATED INTO THE ARCHITECTURAL; THE SEXUAL INTO THE ARMORIAL. DIRECT CONTINUATION OF ELSA SCHIAPARELLI\'S SURREALIST PRACTICE.', strategy: 'DANIEL ROSEBERRY\'S FULL DECLARATION OF HIS VISION FOR THE RELAUNCHED HOUSE. PRESENTED DURING PANDEMIC RESTRICTIONS; JANUARY 2021. ONE OF THE MOST SIGNIFICANT COUTURE DEBUTS OF THE 21ST CENTURY.', provenance: 'PARIS. JANUARY 2021. COMBINATION OF PHYSICAL PRESENTATION AND DIGITAL FORMAT. RUNWAY PHOTOGRAPHY BY VOGUE RUNWAY; FIRSTVIEW; AND GETTY IMAGES.' },
     hotspots: []
   },
 ];
