@@ -583,6 +583,7 @@
     const AppState = {
       currentView: 'grid',
       selectedEntryId: null,
+      currentImageIndex: 0,
       activePillar: null,
       searchQuery: '',
       activeHotspot: null,
@@ -975,23 +976,20 @@
         return;
       }
 
-      /* Generate multiple thumbnails per entry to fill the grid */
-      const heightPool = [550, 500, 520, 480, 540, 510, 530, 490, 560, 500, 520, 540];
+      /* Generate thumbnails from entry.images array */
       let html = '';
       entries.forEach((entry) => {
-        const count = entry.looks || 12;
+        const imgs = entry.images || [];
 
         const snippet = entry.description.length > 80
           ? entry.description.substring(0, 80) + '...'
           : entry.description;
 
-        for (var i = 0; i < count; i++) {
-          var h = heightPool[i % heightPool.length];
-          var suffix = i + 1;
+        imgs.forEach((src, i) => {
           html += `<div class="group relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
             <img
-              src="https://placehold.co/400x${h}/e5e5e5/999999?text=${encodeURIComponent(entry.tags.brand)}+${suffix}"
-              alt="${entry.title}"
+              src="${src}"
+              alt="${entry.title} Look ${i + 1}"
               class="desaturate w-full aspect-[3/4] object-cover block hover:filter-none transition-all duration-200"
               loading="lazy"
             />
@@ -1001,7 +999,7 @@
               <p class="text-[9px] text-white/60 mt-1 leading-snug font-mono">${snippet}</p>
             </div>
           </div>`;
-        }
+        });
       });
 
       grid.innerHTML = html;
@@ -1209,20 +1207,23 @@
     /* ============================================================
        DETAIL VIEW
     ============================================================ */
-    function openDetail(entryId) {
+    function openDetail(entryId, imgIdx) {
       AppState.currentView = 'detail';
       AppState.selectedEntryId = entryId;
 
       const entry = archiveData.find((e) => e.id === entryId);
       if (!entry) return;
 
+      var imgs = entry.images || [entry.imageUrl];
+      AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
+
       /* Swap grid for detail image */
       $('grid-view').classList.add('hidden');
       const detailView = $('detail-image-view');
       detailView.classList.remove('hidden');
 
-      $('detail-image').src = entry.imageUrl;
-      $('detail-image').alt = entry.title;
+      $('detail-image').src = imgs[AppState.currentImageIndex];
+      $('detail-image').alt = entry.title + ' Look ' + (AppState.currentImageIndex + 1);
 
       /* Load per-entry sticky note content */
       closeStickyNote();
@@ -1255,7 +1256,7 @@
 
       /* Show active entry panel */
       $('active-entry-panel').classList.remove('hidden');
-      $('active-entry-title').textContent = entry.tags.brand + ' ' + entry.year + ' [' + pad(posIndex + 1) + '/' + pad(filtered.length) + ']';
+      $('active-entry-title').textContent = entry.tags.brand + ' ' + entry.year + ' [' + pad(AppState.currentImageIndex + 1) + '/' + pad(imgs.length) + ']';
 
       /* Render taxonomy pill tags */
       const container = $('active-entry-hotspots');
@@ -1308,7 +1309,7 @@
         related.forEach(function (rel) {
           relHtml += `<div class="related-card" data-related-id="${rel.id}" style="width:100px;">
             <img
-              src="${rel.imageUrl}"
+              src="${(rel.images && rel.images[0]) || rel.imageUrl}"
               alt="${rel.title}"
               class="desaturate block"
               style="width:100px;height:120px;object-fit:cover;"
@@ -1351,16 +1352,28 @@
     }
 
     function navigateEntry(direction) {
-      const entries = getFilteredEntries();
-      if (entries.length <= 1) return;
-      const currentIndex = entries.findIndex(function (e) {
-        return e.id === AppState.selectedEntryId;
-      });
+      var entry = archiveData.find(function (e) { return e.id === AppState.selectedEntryId; });
+      if (!entry) return;
+      var imgs = entry.images || [entry.imageUrl];
+      var nextImg = AppState.currentImageIndex + direction;
+
+      if (nextImg >= 0 && nextImg < imgs.length) {
+        AppState.currentImageIndex = nextImg;
+        $('detail-image').src = imgs[nextImg];
+        $('detail-image').alt = entry.title + ' Look ' + (nextImg + 1);
+        $('active-entry-title').textContent = entry.tags.brand + ' ' + entry.year + ' [' + pad(nextImg + 1) + '/' + pad(imgs.length) + ']';
+        return;
+      }
+
+      var entries = getFilteredEntries();
+      if (entries.length <= 1 && imgs.length <= 1) return;
+      var currentIndex = entries.findIndex(function (e) { return e.id === AppState.selectedEntryId; });
       if (currentIndex === -1) return;
-      let newIndex = currentIndex + direction;
+      var newIndex = currentIndex + direction;
       if (newIndex < 0) newIndex = entries.length - 1;
       if (newIndex >= entries.length) newIndex = 0;
-      openDetail(entries[newIndex].id);
+      var startImg = direction > 0 ? 0 : (entries[newIndex].images || [entries[newIndex].imageUrl]).length - 1;
+      openDetail(entries[newIndex].id, startImg);
     }
 
     /* ============================================================
@@ -1591,7 +1604,8 @@
         const cell = e.target.closest('[data-entry-id]');
         if (!cell) return;
         const id = cell.getAttribute('data-entry-id');
-        openDetail(id);
+        const imgIdx = parseInt(cell.getAttribute('data-img-index') || '0', 10);
+        openDetail(id, imgIdx);
       });
 
       /* Hotspot dot click (delegated) */
