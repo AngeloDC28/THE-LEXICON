@@ -51,7 +51,31 @@
       display: flex;
       flex-direction: column;
       height: 100vh;
+      height: 100dvh;
       overflow: hidden;
+      min-height: 0;
+    }
+
+    /* Keyboard focus (brutalist: offset ring, no radius) */
+    :focus { outline: none; }
+    :focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+    .focus-ring:focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .marquee-track {
+        animation: none !important;
+      }
     }
 
     /* Desaturated high-contrast */
@@ -170,6 +194,22 @@
     .entry-row-active {
       background: #111111 !important;
       color: #FFFFFF !important;
+    }
+
+    .entry-row {
+      transition: background-color 0.12s ease, color 0.12s ease;
+    }
+
+    /* Mobile grid: centre-column reveals colour + overlay */
+    @media (max-width: 767px) {
+      .grid-cell.grid-cell--focus img.desaturate,
+      body.grid-meta-always .grid-cell img.desaturate {
+        filter: none !important;
+      }
+      .grid-cell.grid-cell--focus .grid-overlay,
+      body.grid-meta-always .grid-cell .grid-overlay {
+        opacity: 1;
+      }
     }
 
     /* Scrollbar */
@@ -307,6 +347,46 @@
       color: #fff;
     }
 
+    #taxonomy-sub:not(.hidden) {
+      max-height: min(38vh, 260px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    @media (max-width: 767px) {
+      #sticky-note-panel { display: none !important; }
+      .sticky-trigger {
+        min-width: 44px;
+        min-height: 44px;
+      }
+    }
+
+    @keyframes hotspotPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+    #detail-image-view.detail-active .hotspot-dot {
+      animation: hotspotPulse 2.2s ease-in-out infinite;
+    }
+    #detail-image-view.detail-active .hotspot-btn:hover .hotspot-dot {
+      animation: none;
+      transform: scale(1.35);
+    }
+
+    #detail-desktop-stack {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #master-dock {
+      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+    }
+
     @keyframes marquee {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -355,7 +435,7 @@
 
     <!-- Action Trigger -->
     <div class="flex justify-center pb-12 md:pb-16">
-      <button id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black pb-1 hover:opacity-50 transition-opacity">Access Archive</button>
+        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black pb-2 px-3 min-h-[44px] hover:opacity-60 transition-opacity focus-ring">Access Archive</button>
     </div>
   </div>
 
@@ -365,16 +445,19 @@
          TOP HEADER BAR
     ============================================================ -->
     <header class="bg-black text-white flex items-center justify-between px-5 py-3 border-b-[1px] border-black/80 shrink-0">
-      <div class="flex items-center gap-4">
-        <button id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em]">[ &#9776; ]</button>
-        <h1 id="header-title" class="text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none cursor-pointer hover:opacity-60">The Lexicon<img src="IMG_6655.jpeg" alt="Logo" class="h-10 w-10 md:h-8 md:w-8 inline-block ml-2"></h1>
+      <div class="flex items-center gap-3 min-w-0">
+        <button type="button" id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em] px-2 py-2 -mx-2 hover:opacity-70 focus-ring shrink-0" aria-expanded="false" aria-controls="index-panel" aria-label="Open index menu">[ &#9776; ]</button>
+        <button type="button" id="header-title" class="text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none flex items-center justify-center md:justify-start gap-2 min-w-0 bg-transparent border-0 text-white cursor-pointer hover:opacity-70 focus-ring" aria-label="Return to archive home">
+          <span class="truncate">The Lexicon</span>
+          <img src="IMG_6655.jpeg" alt="" width="32" height="32" class="h-8 w-8 md:h-8 md:w-8 shrink-0 object-cover border border-white/30" />
+        </button>
       </div>
       <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden md:block">
         Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
       <div class="hidden md:flex items-center gap-4">
-        <button id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ About ]</button>
-        <button id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ Contact ]</button>
+        <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
+        <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
       </div>
     </header>
 
@@ -418,12 +501,20 @@
 
         <!-- Search -->
         <div id="search-wrapper" class="border-b-[1px] border-black/80 p-3 shrink-0">
-          <input
-            id="search-input"
-            type="text"
-            placeholder="Search brand, year, season..."
-            class="w-full border-[1px] border-black/80 bg-bone px-3 py-2 text-xs font-mono placeholder:text-black/40 focus:outline-none focus:bg-white uppercase tracking-wide"
-          />
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-2 items-stretch">
+              <input
+                id="search-input"
+                type="search"
+                autocomplete="off"
+                placeholder="Search brand, year, season..."
+                aria-label="Search archive"
+                class="flex-1 min-w-0 border-[1px] border-black/80 bg-bone px-3 py-2.5 text-xs font-mono placeholder:text-black/40 focus:bg-white uppercase tracking-wide focus-ring"
+              />
+              <button type="button" id="btn-clear-directory" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 bg-bone px-2.5 py-2 hover:bg-black hover:text-white transition-colors duration-100 focus-ring" title="Clear all filters and search">Clear</button>
+            </div>
+            <button type="button" id="btn-toggle-grid-meta" class="md:hidden text-[8px] font-bold font-mono uppercase tracking-[0.1em] border-[1px] border-black/80 bg-bone px-2 py-2 hover:bg-black hover:text-white transition-colors w-full focus-ring">Show grid labels while scrolling</button>
+          </div>
         </div>
 
         <!-- Entry List -->
@@ -449,8 +540,8 @@
           <div class="px-4 py-2 border-b-[1px] border-black/80 bg-bone flex items-center justify-between">
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
-              <button id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 px-2 py-0.5 hover:bg-black hover:text-white transition-all duration-75">[ &lt; Grid ]</button>
-              <button id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-60 ml-2">X</button>
+              <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 px-2 py-1 hover:bg-black hover:text-white transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
+              <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
             </div>
           </div>
           <div id="active-entry-hotspots" class="p-3 space-y-3">
@@ -463,39 +554,40 @@
 
         <!-- Mobile Drawer: About / Contact -->
         <div class="md:hidden border-t-[1px] border-black/80 px-4 py-3 flex items-center gap-4 shrink-0">
-          <button id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ About ]</button>
-          <button id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-60">[ Contact ]</button>
+          <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
+          <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Contact ]</button>
         </div>
 
       </div>
 
       <!-- RIGHT: IMAGE GRID PANEL -->
-      <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone">
+      <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone flex flex-col min-h-0">
 
         <!-- Grid View -->
-        <div id="grid-view" class="p-1">
+        <div id="grid-view" class="p-1 flex-1 min-h-0">
           <div id="image-grid" class="image-grid">
             <!-- Rendered by JS -->
           </div>
         </div>
 
         <!-- Detail View (single image + hotspots) -->
-        <div id="detail-image-view" class="hidden relative overflow-hidden w-full h-full p-4 md:p-16 flex items-center justify-center bg-bone" style="pointer-events: auto">
-          <img id="detail-image" class="w-auto h-full max-h-screen object-contain desaturate block" src="" alt="" />
-          <!-- Viewer Navigation: Edge-Mounted Carousel Controls -->
-          <button id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-0 text-4xl text-black px-4 z-[100] cursor-pointer hover:opacity-50 select-none">&#8592;</button>
-          <button id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-0 text-4xl text-black px-4 z-[100] cursor-pointer hover:opacity-50 select-none">&#8594;</button>
+        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone" style="pointer-events: auto">
+          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-4 md:p-12">
+            <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain desaturate block mx-auto" src="" alt="" />
+            <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image">&#8592;</button>
+            <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image">&#8594;</button>
+          </div>
           <!-- Archival Sticky Note Triggers -->
           <div id="sticky-note-triggers">
-            <button class="sticky-trigger" style="background:#FF0000;" data-note="critique" aria-label="Critique"></button>
-            <button class="sticky-trigger" style="background:#0000FF;" data-note="strategy" aria-label="Strategy"></button>
-            <button class="sticky-trigger" style="background:#E6FF00;" data-note="provenance" aria-label="Provenance"></button>
+            <button type="button" class="sticky-trigger focus-ring" style="background:#FF0000;" data-note="critique" aria-label="Open critique note"></button>
+            <button type="button" class="sticky-trigger focus-ring" style="background:#0000FF;" data-note="strategy" aria-label="Open strategy note"></button>
+            <button type="button" class="sticky-trigger focus-ring" style="background:#E6FF00;" data-note="provenance" aria-label="Open provenance note"></button>
           </div>
           <!-- Archival Sticky Note Panel -->
           <div id="sticky-note-panel">
             <div class="sticky-note-header">
               <span class="sticky-note-title" id="sticky-note-title"></span>
-              <button class="sticky-note-close" id="btn-close-sticky">[ X ]</button>
+              <button type="button" class="sticky-note-close focus-ring" id="btn-close-sticky" aria-label="Close note">[ X ]</button>
             </div>
             <p class="sticky-note-body" id="sticky-note-body"></p>
           </div>
@@ -511,10 +603,10 @@
   <!-- ============================================================
        MASTER DOCK (MOBILE HOTSPOT PANEL)
   ============================================================ -->
-  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone border-t-[1px] border-black/80 p-6 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
+  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone border-t-[1px] border-black/80 px-5 pt-5 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
     <div class="flex items-start justify-between mb-2">
       <p id="dock-title" class="text-[11px] font-bold uppercase tracking-wider flex-1"></p>
-      <button id="btn-close-dock" class="text-xs font-bold ml-3 hover:opacity-60 p-2 -m-2">[ X ]</button>
+      <button type="button" id="btn-close-dock" class="text-xs font-bold ml-3 hover:opacity-70 p-2 -m-2 focus-ring" aria-label="Close panel">[ X ]</button>
     </div>
     <p id="dock-desc" class="text-[11px] leading-relaxed"></p>
   </div>
@@ -525,7 +617,7 @@
   <div id="hotspot-popup" class="hidden fixed z-50 info-box p-4 max-w-xs">
     <div class="flex items-start justify-between mb-1">
       <p id="hotspot-label" class="text-[11px] font-bold uppercase tracking-wider"></p>
-      <button id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-60">X</button>
+      <button type="button" id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-70 focus-ring" aria-label="Close">X</button>
     </div>
     <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
   </div>
@@ -533,12 +625,12 @@
   <!-- ============================================================
        ABOUT MODAL
   ============================================================ -->
-  <div id="about-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
-    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="about"></div>
-    <div class="relative bg-bone w-full h-full md:max-w-2xl md:h-auto md:mx-4 p-8 md:p-12 border-[1px] border-black/80 overflow-y-auto max-h-full">
+  <div id="about-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="about" aria-hidden="true"></div>
+    <div class="relative bg-bone w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
       <div class="flex items-start justify-between mb-8">
-        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
-        <button data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2">[ X Close ]</button>
+        <h2 id="about-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
+        <button type="button" data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
       </div>
       <div class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
         <p>THE LEXICON is a relational database and cultural directory dedicated to the rigorous audit of fashion history, visual culture, and subcultural theory.</p>
@@ -551,17 +643,17 @@
   <!-- ============================================================
        CONTACT MODAL
   ============================================================ -->
-  <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center">
-    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="contact"></div>
-    <div class="relative bg-bone w-full h-full md:max-w-2xl md:h-auto md:mx-4 p-8 md:p-12 border-[1px] border-black/80 overflow-y-auto max-h-full">
+  <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="contact" aria-hidden="true"></div>
+    <div class="relative bg-bone w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
       <div class="flex items-start justify-between mb-8">
-        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Contact</h2>
-        <button data-modal-close="contact" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2">[ X Close ]</button>
+        <h2 id="contact-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Contact</h2>
+        <button type="button" data-modal-close="contact" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
       </div>
       <div class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
         <p>System Communications</p>
         <p>For editorial commissions, institutional inquiries, and requests for archival access; please route all correspondence through the primary directory channel.</p>
-        <p>Email: info@thelexicon.xyz</p>
+        <p>Email: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
         <p>Location: London, United Kingdom</p>
         <p>The archive is maintained independently. All network correspondence is monitored and processed systematically.</p>
       </div>
@@ -590,7 +682,10 @@
       expandedPillar: null,
       expandedGroup: null,
       activeSubFilter: null,
+      dockMode: null,
     };
+
+    var gridIntersectionObserver = null;
 
     /* ============================================================
        HIERARCHICAL TAXONOMY DATA
@@ -931,6 +1026,56 @@
       return String(n).padStart(2, '0');
     }
 
+    function isMobileViewport() {
+      return window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+    }
+
+    function closeMobileDock() {
+      var dock = $('master-dock');
+      if (!dock) return;
+      dock.classList.add('translate-y-full');
+      dock.style.backgroundColor = '';
+      var dt = $('dock-title');
+      var dd = $('dock-desc');
+      if (dt) dt.style.color = '';
+      if (dd) dd.style.color = '';
+      setTimeout(function () {
+        dock.classList.add('hidden');
+        dock.classList.remove('flex');
+      }, 300);
+      AppState.dockMode = null;
+    }
+
+    function setupGridIntersectionObserver() {
+      if (gridIntersectionObserver) {
+        gridIntersectionObserver.disconnect();
+        gridIntersectionObserver = null;
+      }
+      var rootEl = $('image-panel');
+      var cells = document.querySelectorAll('#image-grid .grid-cell');
+      if (!cells.length || !rootEl) return;
+      if (!window.matchMedia('(max-width: 767px)').matches) {
+        cells.forEach(function (c) { c.classList.remove('grid-cell--focus'); });
+        return;
+      }
+      gridIntersectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.intersectionRatio >= 0.5) {
+            en.target.classList.add('grid-cell--focus');
+          } else {
+            en.target.classList.remove('grid-cell--focus');
+          }
+        });
+      }, {
+        root: rootEl,
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      });
+      cells.forEach(function (cell) {
+        gridIntersectionObserver.observe(cell);
+      });
+    }
+
     function getFilteredEntries() {
       const q = AppState.searchQuery.toLowerCase();
       const pillar = AppState.activePillar;
@@ -972,7 +1117,7 @@
       const grid = $('image-grid');
 
       if (entries.length === 0) {
-        grid.innerHTML = '<div class="col-span-3 p-12 text-center"><p class="text-[10px] uppercase tracking-[0.2em] opacity-40">No entries match your query.</p></div>';
+        grid.innerHTML = '<div class="col-span-3 p-12 md:p-16 text-center border border-black/80 bg-overlay"><p class="text-[10px] uppercase tracking-[0.24em] opacity-60 leading-relaxed">No entries match this query.<br /><span class="opacity-40 text-[9px]">Clear search or adjust taxonomy filters.</span></p></div>';
         return;
       }
 
@@ -986,11 +1131,11 @@
           : entry.description;
 
         imgs.forEach((src, i) => {
-          html += `<div class="group relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
+          html += `<div class="group grid-cell relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
             <img
               src="${src}"
               alt="${entry.title} Look ${i + 1}"
-              class="desaturate w-full aspect-[3/4] object-cover block hover:filter-none transition-all duration-200"
+              class="desaturate w-full aspect-[3/4] object-cover block md:hover:filter-none transition-all duration-200"
               loading="lazy"
             />
             <div class="grid-overlay">
@@ -1003,6 +1148,7 @@
       });
 
       grid.innerHTML = html;
+      setupGridIntersectionObserver();
     }
 
     /* ============================================================
@@ -1017,7 +1163,7 @@
         const isActive = AppState.selectedEntryId === entry.id;
         const activeClass = isActive ? 'entry-row-active' : '';
 
-        html += `<div class="border-b-[1px] border-black/80 px-4 py-3 cursor-crosshair transition-all duration-75 hover:bg-black hover:text-white ${activeClass}" data-entry-id="${entry.id}">
+        html += `<div tabindex="0" role="button" class="entry-row border-b-[1px] border-black/80 px-4 py-3.5 cursor-crosshair transition-all duration-75 hover:bg-black hover:text-white ${activeClass}" data-entry-id="${entry.id}">
           <div class="flex items-baseline gap-3">
             <span class="text-[10px] opacity-50">${pad(i + 1)}</span>
             <div>
@@ -1221,6 +1367,7 @@
       $('grid-view').classList.add('hidden');
       const detailView = $('detail-image-view');
       detailView.classList.remove('hidden');
+      detailView.classList.add('detail-active');
 
       $('detail-image').src = imgs[AppState.currentImageIndex];
       $('detail-image').alt = entry.title + ' Look ' + (AppState.currentImageIndex + 1);
@@ -1338,6 +1485,7 @@
       AppState.selectedEntryId = null;
 
       $('detail-image-view').classList.add('hidden');
+      $('detail-image-view').classList.remove('detail-active');
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
@@ -1347,6 +1495,7 @@
       $('taxonomy-container').classList.remove('hidden');
 
       hideHotspotPopup();
+      closeStickyNote();
       renderEntryList();
       renderStatusBar();
     }
@@ -1380,6 +1529,9 @@
        HOTSPOT POPUP
     ============================================================ */
     function showHotspotPopup(index, dotEl) {
+      if (isMobileViewport() && AppState.dockMode === 'sticky') {
+        closeStickyNote();
+      }
       /* Close any previously open hotspot */
       if (AppState.activeHotspot !== null) {
         hideHotspotPopup();
@@ -1418,10 +1570,15 @@
         popup.style.width = pw + 'px';
         popup.classList.remove('hidden');
       } else {
-        /* Mobile: master dock slides up from bottom */
+        AppState.dockMode = 'hotspot';
+        activeNote = null;
+        $('sticky-note-panel').classList.remove('visible');
         var dock = $('master-dock');
         $('dock-title').textContent = spot.label;
         $('dock-desc').textContent = spot.description;
+        $('dock-title').style.color = '#000';
+        $('dock-desc').style.color = '#000';
+        dock.style.backgroundColor = '#FAF9F6';
         dock.classList.remove('hidden');
         dock.classList.add('flex');
         void dock.offsetHeight;
@@ -1445,13 +1602,10 @@
     function hideHotspotPopup() {
       $('hotspot-popup').classList.add('hidden');
 
-      /* Close master dock on mobile */
-      var dock = $('master-dock');
-      dock.classList.add('translate-y-full');
-      setTimeout(function () {
-        dock.classList.add('hidden');
-        dock.classList.remove('flex');
-      }, 300);
+      var hadHotspot = AppState.activeHotspot !== null;
+      if (isMobileViewport() && hadHotspot) {
+        closeMobileDock();
+      }
 
       AppState.activeHotspot = null;
 
@@ -1476,6 +1630,25 @@
       renderImageGrid();
     }
 
+    function resetArchiveHome() {
+      AppState.searchQuery = '';
+      AppState.activePillar = null;
+      AppState.expandedPillar = null;
+      AppState.expandedGroup = null;
+      AppState.activeSubFilter = null;
+      $('search-input').value = '';
+
+      closeStickyNote();
+      hideHotspotPopup();
+      closeDetail();
+
+      renderTaxonomyGrid();
+      renderTaxonomySub();
+      renderEntryList();
+      renderImageGrid();
+      renderStatusBar();
+    }
+
     /* ============================================================
        STICKY NOTES
     ============================================================ */
@@ -1487,7 +1660,28 @@
     var activeNote = null;
 
     function openStickyNote(key) {
+      if (AppState.activeHotspot !== null) {
+        hideHotspotPopup();
+      }
       var note = stickyNotes[key];
+      if (isMobileViewport()) {
+        AppState.dockMode = 'sticky';
+        AppState.activeHotspot = null;
+        $('hotspot-popup').classList.add('hidden');
+        var dock = $('master-dock');
+        $('dock-title').textContent = note.title;
+        $('dock-desc').textContent = note.body;
+        $('dock-title').style.color = '#000';
+        $('dock-desc').style.color = '#000';
+        dock.style.backgroundColor = note.color;
+        dock.classList.remove('hidden');
+        dock.classList.add('flex');
+        void dock.offsetHeight;
+        dock.classList.remove('translate-y-full');
+        $('sticky-note-panel').classList.remove('visible');
+        activeNote = key;
+        return;
+      }
       var panel = $('sticky-note-panel');
       $('sticky-note-title').textContent = note.title;
       $('sticky-note-body').textContent = note.body;
@@ -1498,6 +1692,9 @@
 
     function closeStickyNote() {
       $('sticky-note-panel').classList.remove('visible');
+      if (isMobileViewport() && AppState.dockMode === 'sticky') {
+        closeMobileDock();
+      }
       activeNote = null;
     }
 
@@ -1531,20 +1728,28 @@
       /* Mobile drawer toggle */
       var drawerBackdrop = $('drawer-backdrop');
       var indexPanel = $('index-panel');
+      var btnHamburger = $('btn-hamburger');
       function openDrawer() {
         document.documentElement.classList.add('index-open');
         indexPanel.classList.add('translate-x-0');
         indexPanel.classList.remove('-translate-x-full');
         drawerBackdrop.classList.remove('hidden');
+        if (btnHamburger) {
+          btnHamburger.setAttribute('aria-expanded', 'true');
+        }
       }
       function closeDrawer() {
         document.documentElement.classList.remove('index-open');
         indexPanel.classList.remove('translate-x-0');
         indexPanel.classList.add('-translate-x-full');
         drawerBackdrop.classList.add('hidden');
+        if (btnHamburger) {
+          btnHamburger.setAttribute('aria-expanded', 'false');
+        }
       }
       $('header-title').addEventListener('click', function () {
-        closeDetail();
+        resetArchiveHome();
+        closeDrawer();
       });
 
       $('btn-hamburger').addEventListener('click', function () {
@@ -1587,11 +1792,43 @@
         handleSearch(e.target.value);
       }, 150));
 
+      $('btn-clear-directory').addEventListener('click', function () {
+        resetArchiveHome();
+      });
+
+      var btnGridMeta = $('btn-toggle-grid-meta');
+      if (btnGridMeta) {
+        btnGridMeta.addEventListener('click', function () {
+          document.body.classList.toggle('grid-meta-always');
+          var on = document.body.classList.contains('grid-meta-always');
+          btnGridMeta.textContent = on
+            ? 'Always show grid labels (on)'
+            : 'Show grid labels while scrolling';
+        });
+      }
+
+      window.addEventListener('resize', debounce(function () {
+        setupGridIntersectionObserver();
+      }, 200));
+
       /* Entry list click (delegated) */
       $('entry-list').addEventListener('click', function (e) {
         const row = e.target.closest('[data-entry-id]');
         if (!row) return;
         const id = row.getAttribute('data-entry-id');
+        if (AppState.selectedEntryId === id) {
+          closeDetail();
+        } else {
+          openDetail(id);
+        }
+      });
+
+      $('entry-list').addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        var row = e.target.closest('[data-entry-id]');
+        if (!row || !$('entry-list').contains(row)) return;
+        e.preventDefault();
+        var id = row.getAttribute('data-entry-id');
         if (AppState.selectedEntryId === id) {
           closeDetail();
         } else {
@@ -1645,7 +1882,11 @@
       /* Close master dock (mobile) */
       $('btn-close-dock').addEventListener('click', function (e) {
         e.stopPropagation();
-        hideHotspotPopup();
+        if (AppState.dockMode === 'sticky') {
+          closeStickyNote();
+        } else {
+          hideHotspotPopup();
+        }
       });
 
       /* Close hotspot info box */
@@ -1726,6 +1967,10 @@
           }
           if (contactOpen) {
             closeModal('contact');
+            return;
+          }
+          if (isMobileViewport() && AppState.dockMode === 'sticky') {
+            closeStickyNote();
             return;
           }
           if (AppState.activeHotspot !== null) {
