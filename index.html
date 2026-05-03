@@ -90,26 +90,32 @@
     /* Sticky Note Squares */
     #sticky-note-triggers {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 8px;
+      right: 8px;
       display: flex;
       flex-direction: column;
       gap: 6px;
       z-index: 200;
     }
     .sticky-trigger {
-      width: 20px;
-      height: 20px;
+      width: 28px;
+      height: 28px;
       border: 1px solid #000;
       cursor: pointer;
       flex-shrink: 0;
+      touch-action: manipulation;
+    }
+    @media (min-width: 768px) {
+      #sticky-note-triggers { top: 12px; right: 12px; }
+      .sticky-trigger { width: 20px; height: 20px; }
     }
     #sticky-note-panel {
       position: absolute;
-      top: 48px;
-      right: 12px;
-      width: 220px;
-      min-height: 160px;
+      top: 8px;
+      right: 44px;
+      width: calc(100% - 60px);
+      max-width: 220px;
+      min-height: 120px;
       border: 1px solid #000;
       box-shadow: 4px 4px 0px #000;
       padding: 12px;
@@ -118,6 +124,10 @@
       flex-direction: column;
       gap: 8px;
       font-family: 'IBM Plex Mono', monospace;
+      background: #FAF9F6;
+    }
+    @media (min-width: 768px) {
+      #sticky-note-panel { top: 48px; right: 12px; width: 220px; }
     }
     #sticky-note-panel.visible { display: flex; }
     .sticky-note-header {
@@ -220,8 +230,15 @@
     /* Image grid tight layout */
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+
+    @media (min-width: 768px) {
+      .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+      }
     }
 
     .image-grid img {
@@ -229,6 +246,22 @@
       height: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    .image-grid .img-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: #E8E6E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-grid .img-placeholder::after {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: #000;
+      opacity: 0.2;
     }
 
     /* Taxonomy 2-col grid */
@@ -444,10 +477,10 @@
     <!-- ============================================================
          TOP HEADER BAR
     ============================================================ -->
-    <header class="bg-black text-white flex items-center justify-between px-5 py-3 border-b-[1px] border-black/80 shrink-0">
-      <div class="flex items-center gap-3 min-w-0">
-        <button type="button" id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em] px-2 py-2 -mx-2 hover:opacity-70 focus-ring shrink-0" aria-expanded="false" aria-controls="index-panel" aria-label="Open index menu">[ &#9776; ]</button>
-        <button type="button" id="header-title" class="text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none flex items-center justify-center md:justify-start gap-2 min-w-0 bg-transparent border-0 text-white cursor-pointer hover:opacity-70 focus-ring" aria-label="Return to archive home">
+    <header class="bg-black text-white flex items-center justify-between px-3 py-2 md:px-5 md:py-3 border-b-[1px] border-black/80 shrink-0">
+      <div class="flex items-center gap-3 md:gap-4 min-w-0">
+        <button type="button" id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em] px-2 py-2 -mx-1 hover:opacity-70 focus-ring shrink-0" aria-expanded="false" aria-controls="index-panel" aria-label="Open index menu">[ &#9776; ]</button>
+        <button type="button" id="header-title" class="text-base md:text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none flex items-center justify-center md:justify-start gap-2 min-w-0 bg-transparent border-0 text-white cursor-pointer hover:opacity-70 focus-ring" aria-label="Return to archive home">
           <span class="truncate">The Lexicon</span>
           <img src="IMG_6655.jpeg" alt="" width="32" height="32" class="h-8 w-8 md:h-8 md:w-8 shrink-0 object-cover border border-white/30" />
         </button>
@@ -572,10 +605,10 @@
 
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone" style="pointer-events: auto">
-          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-4 md:p-12">
+          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 md:p-12">
             <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain desaturate block mx-auto" src="" alt="" />
-            <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image">&#8592;</button>
-            <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image">&#8594;</button>
+            <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
+            <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image" style="touch-action: manipulation">&#8594;</button>
           </div>
           <!-- Archival Sticky Note Triggers -->
           <div id="sticky-note-triggers">
@@ -663,7 +696,7 @@
   <!-- ============================================================
        DATA
   ============================================================ -->
-  <script src="database.js?v=6"></script>
+  <script src="database.js?v=7"></script>
 
   <!-- ============================================================
        ENGINE
@@ -1117,7 +1150,7 @@
       const grid = $('image-grid');
 
       if (entries.length === 0) {
-        grid.innerHTML = '<div class="col-span-3 p-12 md:p-16 text-center border border-black/80 bg-overlay"><p class="text-[10px] uppercase tracking-[0.24em] opacity-60 leading-relaxed">No entries match this query.<br /><span class="opacity-40 text-[9px]">Clear search or adjust taxonomy filters.</span></p></div>';
+        grid.innerHTML = '<div class="col-span-2 md:col-span-3 p-12 md:p-16 text-center border border-black/80 bg-overlay"><p class="text-[10px] uppercase tracking-[0.24em] opacity-60 leading-relaxed">No entries match this query.<br /><span class="opacity-40 text-[9px]">Clear search or adjust taxonomy filters.</span></p></div>';
         return;
       }
 
@@ -1137,11 +1170,11 @@
               alt="${entry.title} Look ${i + 1}"
               class="desaturate w-full aspect-[3/4] object-cover block md:hover:filter-none transition-all duration-200"
               loading="lazy"
+              onerror="this.outerHTML='<div class=\\'img-placeholder\\'></div>'"
             />
             <div class="grid-overlay">
               <p class="text-[10px] font-bold uppercase tracking-wider text-white font-mono">${entry.tags.brand}</p>
               <p class="text-[9px] uppercase tracking-wide text-white/70 mt-0.5 font-mono">${entry.year}</p>
-              <p class="text-[9px] text-white/60 mt-1 leading-snug font-mono">${snippet}</p>
             </div>
           </div>`;
         });
@@ -1302,10 +1335,11 @@
         $('status-season').textContent = entry.season;
         $('status-entry').textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
       } else {
-        $('status-brand').innerHTML = 'N/A';
-        $('status-year').innerHTML = 'N/A';
-        $('status-season').innerHTML = 'N/A';
-        $('status-entry').innerHTML = 'N/A';
+        const filtered = getFilteredEntries();
+        $('status-brand').textContent = '--';
+        $('status-year').textContent = '--';
+        $('status-season').textContent = '--';
+        $('status-entry').textContent = pad(filtered.length) + ' ENTRIES';
       }
     }
 
