@@ -14,13 +14,18 @@
     rel="stylesheet"
   />
 
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             bone: '#FAF9F6',
             overlay: '#FDFCF0',
+            darkBase: '#0A0A0A',
+            darkSurface: '#111111',
+            acid: '#CCFF00',
           },
           fontFamily: {
             inter: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
@@ -45,6 +50,12 @@
       color: #000000;
       font-family: 'IBM Plex Mono', 'Courier New', monospace;
       overflow: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    html.dark body {
+      background: #0A0A0A;
+      color: #F4F4F5;
     }
 
     #app-root {
@@ -62,6 +73,7 @@
       outline: 2px solid #000;
       outline-offset: 2px;
     }
+    html.dark :focus-visible { outline-color: #CCFF00; }
     .focus-ring:focus-visible {
       outline: 2px solid #000;
       outline-offset: 2px;
@@ -443,6 +455,106 @@
       transition: opacity 0.2s ease, visibility 0.2s ease;
     }
 
+  
+    
+    /* PAN & ZOOM */
+    #detail-image {
+      transform-origin: center center;
+      transition: transform 0.1s ease-out;
+      will-change: transform;
+    }
+    .dragging { cursor: grabbing !important; transition: none !important; }
+    #detail-desktop-stack { cursor: grab; overflow: hidden; }
+    
+    /* FILM GRAIN */
+    @keyframes grain {
+      0%, 100% { transform: translate(0, 0); }
+      10% { transform: translate(-5%, -10%); }
+      30% { transform: translate(5%, -15%); }
+      50% { transform: translate(-15%, 5%); }
+      70% { transform: translate(15%, 15%); }
+      90% { transform: translate(-10%, 10%); }
+    }
+    #film-grain {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      animation: grain 8s steps(10) infinite;
+      content: "";
+      width: 300vw;
+      height: 300vh;
+      left: -100vw;
+      top: -100vh;
+    }
+    
+    /* CMD PALETTE */
+    .cmd-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
+    html.dark .cmd-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .cmd-item:hover, .cmd-item.selected { background: #000; color: #fff; }
+    html.dark .cmd-item:hover, html.dark .cmd-item.selected { background: #CCFF00; color: #000; }
+
+    /* DARK MODE OVERRIDES */
+    html.dark .sticky-trigger { border-color: rgba(255,255,255,0.3); }
+    html.dark #sticky-note-panel { 
+      border-color: rgba(255,255,255,0.3); 
+      box-shadow: 4px 4px 0px rgba(255,255,255,0.1); 
+      background: #111111; 
+    }
+    html.dark .sticky-note-title, html.dark .sticky-note-close, html.dark .sticky-note-body {
+      color: #F4F4F5;
+    }
+    html.dark .hotspot-dot {
+      background: #CCFF00;
+      border-color: #0A0A0A;
+      box-shadow: 0 0 10px rgba(204,255,0,0.5);
+    }
+    html.dark .info-box {
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(17,17,17,0.85);
+      backdrop-filter: blur(8px);
+      color: #F4F4F5;
+      box-shadow: 3px 3px 0px rgba(204,255,0,0.2);
+    }
+    html.dark .entry-row-active {
+      background: #CCFF00 !important;
+      color: #000 !important;
+    }
+    html.dark .taxonomy-cell {
+      border-color: rgba(255,255,255,0.2);
+    }
+    html.dark .taxonomy-cell:hover {
+      background: #CCFF00;
+      color: #000;
+    }
+    html.dark .taxonomy-cell.active {
+      background: #CCFF00;
+      color: #000;
+    }
+    html.dark .tag-pill {
+      border-color: rgba(255,255,255,0.3);
+      color: #F4F4F5;
+    }
+    html.dark .tag-pill:hover {
+      background: #CCFF00;
+      color: #000;
+    }
+    html.dark .related-card {
+      border-color: rgba(255,255,255,0.3);
+    }
+    html.dark .related-card:hover {
+      background: #CCFF00;
+      color: #000;
+    }
+    html.dark .taxonomy-sub-item { border-color: rgba(255,255,255,0.2); }
+    html.dark .taxonomy-sub-item:hover, html.dark .taxonomy-sub-item.active { background: #CCFF00; color: #000; }
+    html.dark .taxonomy-group-header { border-color: rgba(255,255,255,0.2); background: #0A0A0A; }
+    html.dark .taxonomy-group-header:hover, html.dark .taxonomy-group-header.active { background: #CCFF00; color: #000; }
+    
+    html.dark #master-dock { border-color: rgba(255,255,255,0.2); box-shadow: 0 -10px 20px rgba(0,0,0,0.5); }
+    html.dark .image-grid .img-placeholder { background: #222; }
+    html.dark .image-grid .img-placeholder::after { background: rgba(255,255,255,0.2); }
+    html.dark ::-webkit-scrollbar-track { background: #0A0A0A; }
+    html.dark ::-webkit-scrollbar-thumb { background: #333; }
+    html.dark ::-webkit-scrollbar-thumb:hover { background: #CCFF00; }
+
   </style>
 </head>
 
@@ -451,9 +563,9 @@
   <!-- ============================================================
        TERMINAL GATE
   ============================================================ -->
-  <div id="landing-gate" class="fixed inset-0 z-[200] bg-bone flex flex-col justify-between overflow-hidden transition-transform duration-700 ease-in-out">
+  <div id="landing-gate" class="fixed inset-0 z-[200] bg-bone dark:bg-darkBase flex flex-col justify-between overflow-hidden transition-transform duration-700 ease-in-out">
     <!-- Marquee Ticker -->
-    <div class="w-full overflow-hidden border-b-[1px] border-black/80 py-3">
+    <div class="w-full overflow-hidden border-b-[1px] border-black/80 dark:border-white/20 py-3">
       <div class="marquee-track">
         <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture ;</span>
         <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture ;</span>
@@ -468,7 +580,7 @@
 
     <!-- Action Trigger -->
     <div class="flex justify-center pb-12 md:pb-16">
-        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black pb-2 px-3 min-h-[44px] hover:opacity-60 transition-opacity focus-ring">Access Archive</button>
+        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black dark:border-white/30 pb-2 px-3 min-h-[44px] hover:opacity-60 transition-opacity focus-ring">Access Archive</button>
     </div>
   </div>
 
@@ -477,7 +589,7 @@
     <!-- ============================================================
          TOP HEADER BAR
     ============================================================ -->
-    <header class="bg-black text-white flex items-center justify-between px-3 py-2 md:px-5 md:py-3 border-b-[1px] border-black/80 shrink-0">
+    <header class="bg-black text-white flex items-center justify-between px-3 py-2 md:px-5 md:py-3 border-b-[1px] border-black/80 dark:border-white/20 shrink-0">
       <div class="flex items-center gap-3 md:gap-4 min-w-0">
         <button type="button" id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em] px-2 py-2 -mx-1 hover:opacity-70 focus-ring shrink-0" aria-expanded="false" aria-controls="index-panel" aria-label="Open index menu">[ &#9776; ]</button>
         <button type="button" id="header-title" class="text-base md:text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none flex items-center justify-center md:justify-start gap-2 min-w-0 bg-transparent border-0 text-white cursor-pointer hover:opacity-70 focus-ring" aria-label="Return to archive home">
@@ -489,6 +601,8 @@
         Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
       <div class="hidden md:flex items-center gap-4">
+        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ View: Grid ]</button>
+        <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Theme: Light ]</button>
         <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
         <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
       </div>
@@ -500,16 +614,16 @@
     <!-- ============================================================
          STATUS RIBBON
     ============================================================ -->
-    <div id="status-ribbon" class="grid grid-cols-4 border-b-[1px] border-black/80 bg-overlay shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))">
-      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 overflow-hidden">
+    <div id="status-ribbon" class="grid grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))">
+      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Brand</span>
         <span id="status-brand" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 overflow-hidden">
+      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Year</span>
         <span id="status-year" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 overflow-hidden">
+      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Season</span>
         <span id="status-season" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
@@ -525,15 +639,15 @@
     <div class="flex flex-1 overflow-hidden">
 
       <!-- LEFT: INDEX PANEL -->
-      <div id="index-panel" class="w-[85%] md:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:relative md:inset-auto md:z-auto flex flex-col overflow-hidden bg-overlay border-r-[1px] border-black/80">
+      <div id="index-panel" class="w-[85%] md:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:relative md:inset-auto md:z-auto flex flex-col overflow-hidden bg-overlay dark:bg-darkSurface border-r-[1px] border-black/80 dark:border-white/20">
 
         <!-- Index Header -->
-        <div class="border-b-[1px] border-black/80 px-4 py-3 flex items-baseline justify-between shrink-0">
+        <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
           <span class="text-xs font-bold uppercase tracking-[0.15em]">Index / A-Z</span>
         </div>
 
         <!-- Search -->
-        <div id="search-wrapper" class="border-b-[1px] border-black/80 p-3 shrink-0">
+        <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
           <div class="flex flex-col gap-2">
             <div class="flex gap-2 items-stretch">
               <input
@@ -542,11 +656,11 @@
                 autocomplete="off"
                 placeholder="Search brand, year, season..."
                 aria-label="Search archive"
-                class="flex-1 min-w-0 border-[1px] border-black/80 bg-bone px-3 py-2.5 text-xs font-mono placeholder:text-black/40 focus:bg-white uppercase tracking-wide focus-ring"
+                class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono placeholder:text-black/40 dark:text-white/40 focus:bg-white dark:bg-zinc-800 uppercase tracking-wide focus-ring"
               />
-              <button type="button" id="btn-clear-directory" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 bg-bone px-2.5 py-2 hover:bg-black hover:text-white transition-colors duration-100 focus-ring" title="Clear all filters and search">Clear</button>
+              <button type="button" id="btn-clear-directory" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-2.5 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors duration-100 focus-ring" title="Clear all filters and search">Clear</button>
             </div>
-            <button type="button" id="btn-toggle-grid-meta" class="md:hidden text-[8px] font-bold font-mono uppercase tracking-[0.1em] border-[1px] border-black/80 bg-bone px-2 py-2 hover:bg-black hover:text-white transition-colors w-full focus-ring">Show grid labels while scrolling</button>
+            <button type="button" id="btn-toggle-grid-meta" class="md:hidden text-[8px] font-bold font-mono uppercase tracking-[0.1em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-2 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors w-full focus-ring">Show grid labels while scrolling</button>
           </div>
         </div>
 
@@ -556,7 +670,7 @@
         </div>
 
         <!-- Taxonomy Grid -->
-        <div id="taxonomy-container" class="shrink-0 border-t-[1px] border-black/80 overflow-y-auto" style="max-height: 45%;">
+        <div id="taxonomy-container" class="shrink-0 border-t-[1px] border-black/80 dark:border-white/20 overflow-y-auto" style="max-height: 45%;">
           <div class="px-4 py-2">
             <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">Taxonomy</span>
           </div>
@@ -569,24 +683,27 @@
         </div>
 
         <!-- Active Entry Panel -->
-        <div id="active-entry-panel" class="hidden shrink-0 border-t-[1px] border-black/80 overflow-y-auto" style="max-height: 45%;">
-          <div class="px-4 py-2 border-b-[1px] border-black/80 bg-bone flex items-center justify-between">
+        <div id="active-entry-panel" class="hidden shrink-0 border-t-[1px] border-black/80 dark:border-white/20 overflow-y-auto" style="max-height: 45%;">
+          <div class="px-4 py-2 border-b-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase flex items-center justify-between">
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
-              <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 px-2 py-1 hover:bg-black hover:text-white transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
+              <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
             </div>
           </div>
           <div id="active-entry-hotspots" class="p-3 space-y-3">
             <!-- Tags and hotspot info boxes rendered by JS -->
           </div>
-          <div id="related-entries" class="p-3 border-t-[1px] border-black/80 hidden">
+          <div id="related-entries" class="p-3 border-t-[1px] border-black/80 dark:border-white/20 hidden">
             <!-- Related entries rendered by JS -->
           </div>
         </div>
 
         <!-- Mobile Drawer: About / Contact -->
-        <div class="md:hidden border-t-[1px] border-black/80 px-4 py-3 flex items-center gap-4 shrink-0">
+        <div class="md:hidden border-t-[1px] border-black/80 dark:border-white/20 dark:border-white/20 px-4 py-3 flex flex-wrap items-center gap-4 shrink-0">
+          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ View: Grid ]</button>
+          <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Search ⌘K ]</button>
+          <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Theme: Light ]</button>
           <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
           <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Contact ]</button>
         </div>
@@ -594,7 +711,7 @@
       </div>
 
       <!-- RIGHT: IMAGE GRID PANEL -->
-      <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone flex flex-col min-h-0">
+      <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone dark:bg-darkBase flex flex-col min-h-0">
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
@@ -603,12 +720,19 @@
           </div>
         </div>
 
+        
+        <!-- Graph View -->
+        <div id="graph-view" class="hidden p-1 flex-1 min-h-0 w-full relative">
+          <div id="knowledge-graph" class="w-full h-full border border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase"></div>
+          <div class="absolute bottom-4 left-4 pointer-events-none text-[10px] font-mono uppercase opacity-50 mix-blend-difference text-white">Drag to Pan / Scroll to Zoom</div>
+        </div>
+
         <!-- Detail View (single image + hotspots) -->
-        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone" style="pointer-events: auto">
+        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase" style="pointer-events: auto">
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 md:p-12">
             <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain desaturate block mx-auto" src="" alt="" />
-            <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
-            <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image" style="touch-action: manipulation">&#8594;</button>
+            <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
+            <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image" style="touch-action: manipulation">&#8594;</button>
           </div>
           <!-- Archival Sticky Note Triggers -->
           <div id="sticky-note-triggers">
@@ -636,7 +760,7 @@
   <!-- ============================================================
        MASTER DOCK (MOBILE HOTSPOT PANEL)
   ============================================================ -->
-  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone border-t-[1px] border-black/80 px-5 pt-5 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
+  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone dark:bg-darkBase border-t-[1px] border-black/80 dark:border-white/20 px-5 pt-5 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
     <div class="flex items-start justify-between mb-2">
       <p id="dock-title" class="text-[11px] font-bold uppercase tracking-wider flex-1"></p>
       <button type="button" id="btn-close-dock" class="text-xs font-bold ml-3 hover:opacity-70 p-2 -m-2 focus-ring" aria-label="Close panel">[ X ]</button>
@@ -655,12 +779,35 @@
     <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
   </div>
 
+  
+  <!-- ============================================================
+       FILM GRAIN OVERLAY
+  ============================================================ -->
+  <div id="film-grain" class="pointer-events-none fixed inset-0 z-[9999] opacity-20 mix-blend-overlay"></div>
+
+  <!-- ============================================================
+       COMMAND PALETTE (CMD+K)
+  ============================================================ -->
+  <div id="cmd-palette" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-md" id="cmd-palette-backdrop"></div>
+    <div class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border-[1px] border-black/80 dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
+      <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
+        <span class="text-xl font-bold font-mono">></span>
+        <input type="text" id="cmd-input" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30 text-black dark:text-white" placeholder="Search brands, eras, politics..." autocomplete="off">
+        <span class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
+      </div>
+      <div id="cmd-results" class="overflow-y-auto flex-1 font-mono">
+        <!-- Results rendered by JS -->
+      </div>
+    </div>
+  </div>
+
   <!-- ============================================================
        ABOUT MODAL
   ============================================================ -->
   <div id="about-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
     <div class="absolute inset-0 bg-black/70" data-modal-backdrop="about" aria-hidden="true"></div>
-    <div class="relative bg-bone w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+    <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
       <div class="flex items-start justify-between mb-8">
         <h2 id="about-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
         <button type="button" data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
@@ -678,7 +825,7 @@
   ============================================================ -->
   <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
     <div class="absolute inset-0 bg-black/70" data-modal-backdrop="contact" aria-hidden="true"></div>
-    <div class="relative bg-bone w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+    <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
       <div class="flex items-start justify-between mb-8">
         <h2 id="contact-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Contact</h2>
         <button type="button" data-modal-close="contact" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
@@ -1150,7 +1297,7 @@
       const grid = $('image-grid');
 
       if (entries.length === 0) {
-        grid.innerHTML = '<div class="col-span-2 md:col-span-3 p-12 md:p-16 text-center border border-black/80 bg-overlay"><p class="text-[10px] uppercase tracking-[0.24em] opacity-60 leading-relaxed">No entries match this query.<br /><span class="opacity-40 text-[9px]">Clear search or adjust taxonomy filters.</span></p></div>';
+        grid.innerHTML = '<div class="col-span-2 md:col-span-3 p-12 md:p-16 text-center border border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface"><p class="text-[10px] uppercase tracking-[0.24em] opacity-60 leading-relaxed">No entries match this query.<br /><span class="opacity-40 text-[9px]">Clear search or adjust taxonomy filters.</span></p></div>';
         return;
       }
 
@@ -1196,7 +1343,7 @@
         const isActive = AppState.selectedEntryId === entry.id;
         const activeClass = isActive ? 'entry-row-active' : '';
 
-        html += `<div tabindex="0" role="button" class="entry-row border-b-[1px] border-black/80 px-4 py-3.5 cursor-crosshair transition-all duration-75 hover:bg-black hover:text-white ${activeClass}" data-entry-id="${entry.id}">
+        html += `<div tabindex="0" role="button" class="entry-row border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3.5 cursor-crosshair transition-all duration-75 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black ${activeClass}" data-entry-id="${entry.id}">
           <div class="flex items-baseline gap-3">
             <span class="text-[10px] opacity-50">${pad(i + 1)}</span>
             <div>
@@ -1390,6 +1537,7 @@
     function openDetail(entryId, imgIdx) {
       AppState.currentView = 'detail';
       AppState.selectedEntryId = entryId;
+      updateHash(entryId);
 
       const entry = archiveData.find((e) => e.id === entryId);
       if (!entry) return;
@@ -1517,6 +1665,8 @@
     function closeDetail() {
       AppState.currentView = 'grid';
       AppState.selectedEntryId = null;
+      updateHash(null);
+      scale = 1; panX = 0; panY = 0; updateTransform();
 
       $('detail-image-view').classList.add('hidden');
       $('detail-image-view').classList.remove('detail-active');
@@ -1612,7 +1762,7 @@
         $('dock-desc').textContent = spot.description;
         $('dock-title').style.color = '#000';
         $('dock-desc').style.color = '#000';
-        dock.style.backgroundColor = '#FAF9F6';
+        dock.style.backgroundColor = document.documentElement.classList.contains('dark') ? '#0A0A0A' : '#FAF9F6';
         dock.classList.remove('hidden');
         dock.classList.add('flex');
         void dock.offsetHeight;
@@ -1623,12 +1773,12 @@
       document.querySelectorAll('#active-entry-hotspots .info-box').forEach((el, i) => {
         if (i === index) {
           el.style.borderColor = '#000';
-          el.style.background = '#000';
-          el.style.color = '#fff';
+          el.style.background = document.documentElement.classList.contains('dark') ? '#CCFF00' : '#000';
+          el.style.color = document.documentElement.classList.contains('dark') ? '#000' : '#fff';
         } else {
           el.style.borderColor = '#000';
-          el.style.background = '#FDFCF0';
-          el.style.color = '#000';
+          el.style.background = document.documentElement.classList.contains('dark') ? 'rgba(17,17,17,0.85)' : '#FDFCF0';
+          el.style.color = document.documentElement.classList.contains('dark') ? '#F4F4F5' : '#000';
         }
       });
     }
@@ -1645,8 +1795,8 @@
 
       /* Reset info box highlights */
       document.querySelectorAll('#active-entry-hotspots .info-box').forEach((el) => {
-        el.style.background = '#FDFCF0';
-        el.style.color = '#000';
+        el.style.background = document.documentElement.classList.contains('dark') ? 'rgba(17,17,17,0.85)' : '#FDFCF0';
+        el.style.color = document.documentElement.classList.contains('dark') ? '#F4F4F5' : '#000';
       });
     }
 
@@ -1735,6 +1885,299 @@
     /* ============================================================
        INIT
     ============================================================ */
+    
+    /* ============================================================
+       THEME TOGGLE
+    ============================================================ */
+    function initTheme() {
+      const savedTheme = localStorage.getItem('lexicon-theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        updateThemeButtons(true);
+      } else {
+        document.documentElement.classList.remove('dark');
+        updateThemeButtons(false);
+      }
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('lexicon-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(isDark);
+    }
+
+    function updateThemeButtons(isDark) {
+      const text = isDark ? '[ Theme: Dark ]' : '[ Theme: Light ]';
+      const btnDesktop = document.getElementById('btn-theme-toggle');
+      const btnMobile = document.getElementById('btn-theme-toggle-mobile');
+      if (btnDesktop) btnDesktop.textContent = text;
+      if (btnMobile) btnMobile.textContent = text;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      const btnDesktop = document.getElementById('btn-theme-toggle');
+      const btnMobile = document.getElementById('btn-theme-toggle-mobile');
+      if (btnDesktop) btnDesktop.addEventListener('click', toggleTheme);
+      if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
+    });
+
+    
+    /* ============================================================
+       URL ROUTING (DEEP LINKING)
+    ============================================================ */
+    function updateHash(id) {
+      if (id) {
+        history.replaceState(null, null, '#' + id);
+      } else {
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+      }
+    }
+
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.substring(1);
+      if (hash && archiveData.find(e => e.id === hash)) {
+        if (AppState.selectedEntryId !== hash) openDetail(hash);
+      } else if (!hash && AppState.selectedEntryId) {
+        closeDetail();
+      }
+    });
+
+    /* ============================================================
+       COMMAND PALETTE
+    ============================================================ */
+    let cmdSelectedIndex = -1;
+    let cmdResults = [];
+
+    function toggleCmdPalette() {
+      const modal = $('cmd-palette');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        $('cmd-input').value = '';
+        $('cmd-input').focus();
+        renderCmdResults('');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function renderCmdResults(query) {
+      const container = $('cmd-results');
+      cmdSelectedIndex = -1;
+      if (!query.trim()) {
+        container.innerHTML = '<div class="p-4 text-xs opacity-50 uppercase text-center">Start typing to search...</div>';
+        cmdResults = [];
+        return;
+      }
+      
+      const q = query.toLowerCase();
+      cmdResults = archiveData.filter(entry => {
+        const searchable = [entry.title, entry.season, String(entry.year), entry.description, ...Object.values(entry.tags)].join(' ').toLowerCase();
+        return searchable.includes(q);
+      }).slice(0, 10); // Limit to 10 results
+
+      if (cmdResults.length === 0) {
+        container.innerHTML = '<div class="p-4 text-xs opacity-50 uppercase text-center">No matching records found.</div>';
+        return;
+      }
+
+      let html = '';
+      cmdResults.forEach((entry, i) => {
+        html += `<div class="cmd-item p-3 px-4 cursor-pointer flex justify-between items-center transition-colors" data-index="${i}">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wide">${entry.tags.brand}</div>
+            <div class="text-[10px] opacity-60 uppercase">${entry.year} &middot; ${entry.season}</div>
+          </div>
+          <div class="text-[10px] opacity-40">↵</div>
+        </div>`;
+      });
+      container.innerHTML = html;
+    }
+
+    document.addEventListener('keydown', e => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        toggleCmdPalette();
+      }
+      if (!$('cmd-palette').classList.contains('hidden')) {
+        if (e.key === 'Escape') toggleCmdPalette();
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          cmdSelectedIndex = Math.min(cmdSelectedIndex + 1, cmdResults.length - 1);
+          updateCmdSelection();
+        }
+        if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          cmdSelectedIndex = Math.max(cmdSelectedIndex - 1, 0);
+          updateCmdSelection();
+        }
+        if (e.key === 'Enter' && cmdSelectedIndex >= 0 && cmdSelectedIndex < cmdResults.length) {
+          toggleCmdPalette();
+          openDetail(cmdResults[cmdSelectedIndex].id);
+        }
+      }
+    });
+
+    function updateCmdSelection() {
+      document.querySelectorAll('.cmd-item').forEach((el, i) => {
+        if (i === cmdSelectedIndex) el.classList.add('selected');
+        else el.classList.remove('selected');
+      });
+    }
+
+    $('cmd-input').addEventListener('input', e => renderCmdResults(e.target.value));
+    $('cmd-results').addEventListener('click', e => {
+      const item = e.target.closest('.cmd-item');
+      if (item) {
+        const idx = parseInt(item.getAttribute('data-index'), 10);
+        toggleCmdPalette();
+        openDetail(cmdResults[idx].id);
+      }
+    });
+    $('cmd-palette-backdrop').addEventListener('click', toggleCmdPalette);
+
+    /* ============================================================
+       KNOWLEDGE GRAPH
+    ============================================================ */
+    let network = null;
+
+    function initGraph() {
+      if (network !== null) return;
+      const nodes = [];
+      const edges = [];
+      const isDark = document.documentElement.classList.contains('dark');
+      const nodeColor = isDark ? '#CCFF00' : '#000000';
+      const bgColor = isDark ? '#0A0A0A' : '#FAF9F6';
+      const fontColor = isDark ? '#F4F4F5' : '#000000';
+      
+      const tagMap = new Map();
+
+      archiveData.forEach(entry => {
+        nodes.push({ id: entry.id, label: `${entry.tags.brand}\n${entry.year}`, group: 'entry', shape: 'box', color: { background: bgColor, border: nodeColor }, font: { color: fontColor, face: 'IBM Plex Mono', size: 12 } });
+        
+        ['politics', 'theories'].forEach(tagKey => {
+          const tagValue = entry.tags[tagKey];
+          if (tagValue) {
+            const tagId = `tag_${tagValue}`;
+            if (!tagMap.has(tagId)) {
+              tagMap.set(tagId, true);
+              nodes.push({ id: tagId, label: tagValue, group: 'tag', shape: 'dot', size: 10, color: { background: nodeColor, border: nodeColor }, font: { color: fontColor, face: 'Inter', size: 10 } });
+            }
+            edges.push({ from: entry.id, to: tagId, color: { color: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' } });
+          }
+        });
+      });
+
+      const container = $('knowledge-graph');
+      const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+      const options = {
+        physics: { stabilization: false, barnesHut: { springLength: 150, damping: 0.09 } },
+        interaction: { hover: true, tooltipDelay: 200 }
+      };
+      
+      network = new vis.Network(container, data, options);
+      network.on('click', params => {
+        if (params.nodes.length > 0) {
+          const nodeId = params.nodes[0];
+          if (!nodeId.startsWith('tag_')) {
+            openDetail(nodeId);
+          }
+        }
+      });
+    }
+
+    function toggleViewMode() {
+      const isGraph = !$('graph-view').classList.contains('hidden');
+      if (isGraph) {
+        $('graph-view').classList.add('hidden');
+        $('grid-view').classList.remove('hidden');
+        $('btn-view-toggle').textContent = '[ View: Grid ]';
+        if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Grid ]';
+      } else {
+        $('grid-view').classList.add('hidden');
+        $('graph-view').classList.remove('hidden');
+        $('btn-view-toggle').textContent = '[ View: Graph ]';
+        if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
+        initGraph();
+      }
+    }
+
+    /* ============================================================
+       IMAGE PAN & ZOOM
+    ============================================================ */
+    let scale = 1, panX = 0, panY = 0;
+    let isDragging = false, startX, startY;
+    const imgEl = $('detail-image');
+    const stackEl = $('detail-desktop-stack');
+
+    function updateTransform() {
+      imgEl.style.transform = `translate(${panX}px, ${panY}px) scale(${scale})`;
+    }
+
+    stackEl.addEventListener('wheel', e => {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? -0.1 : 0.1;
+      scale = Math.min(Math.max(1, scale + delta), 4);
+      if (scale === 1) { panX = 0; panY = 0; }
+      updateTransform();
+    });
+
+    stackEl.addEventListener('mousedown', e => {
+      if (scale > 1 && e.target === imgEl) {
+        isDragging = true;
+        startX = e.clientX - panX;
+        startY = e.clientY - panY;
+        stackEl.classList.add('dragging');
+      }
+    });
+
+    window.addEventListener('mousemove', e => {
+      if (isDragging) {
+        panX = e.clientX - startX;
+        panY = e.clientY - startY;
+        updateTransform();
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+      stackEl.classList.remove('dragging');
+    });
+
+    // Mobile Pinch to Zoom (basic implementation via distance)
+    let initialDistance = null;
+    stackEl.addEventListener('touchstart', e => {
+      if (e.touches.length === 2) {
+        initialDistance = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+      } else if (e.touches.length === 1 && scale > 1) {
+        isDragging = true;
+        startX = e.touches[0].pageX - panX;
+        startY = e.touches[0].pageY - panY;
+      }
+    }, { passive: false });
+
+    stackEl.addEventListener('touchmove', e => {
+      if (e.touches.length === 2 && initialDistance) {
+        e.preventDefault();
+        const currentDistance = Math.hypot(e.touches[0].pageX - e.touches[1].pageX, e.touches[0].pageY - e.touches[1].pageY);
+        const delta = currentDistance / initialDistance;
+        scale = Math.min(Math.max(1, scale * delta), 4);
+        initialDistance = currentDistance;
+        if (scale === 1) { panX = 0; panY = 0; }
+        updateTransform();
+      } else if (e.touches.length === 1 && isDragging) {
+        e.preventDefault();
+        panX = e.touches[0].pageX - startX;
+        panY = e.touches[0].pageY - startY;
+        updateTransform();
+      }
+    }, { passive: false });
+
+    stackEl.addEventListener('touchend', e => {
+      if (e.touches.length < 2) initialDistance = null;
+      if (e.touches.length === 0) isDragging = false;
+    });
+
     function init() {
       updateHeaderMeta();
       renderImageGrid();
@@ -1746,6 +2189,22 @@
       /* Landing Gate */
       var gate = $('landing-gate');
       if (gate) {
+        
+      const btnViewToggle = $('btn-view-toggle');
+      if (btnViewToggle) btnViewToggle.addEventListener('click', toggleViewMode);
+      const btnViewToggleMobile = $('btn-view-toggle-mobile');
+      if (btnViewToggleMobile) btnViewToggleMobile.addEventListener('click', toggleViewMode);
+      const btnSearchMobile = $('btn-search-mobile');
+      if (btnSearchMobile) btnSearchMobile.addEventListener('click', () => { closeDrawer(); toggleCmdPalette(); });
+      
+      // Process hash on load
+      setTimeout(() => {
+        if (window.location.hash) {
+          const hash = window.location.hash.substring(1);
+          if (archiveData.find(e => e.id === hash)) openDetail(hash);
+        }
+      }, 100);
+
         document.body.style.overflow = 'hidden';
         $('btn-initiate').addEventListener('click', function () {
           gate.classList.add('-translate-y-full');
