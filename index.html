@@ -485,6 +485,33 @@
       top: -100vh;
     }
     
+    
+    /* GRAPH FULLSCREEN */
+    .fullscreen-graph {
+      position: fixed !important;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 10000;
+      background: inherit;
+    }
+    #btn-graph-fullscreen {
+      position: absolute;
+      top: 10px; right: 10px;
+      z-index: 10;
+      background: var(--bg-color, #FAF9F6);
+      border: 1px solid #000;
+      padding: 4px 8px;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-family: 'IBM Plex Mono', monospace;
+      cursor: pointer;
+    }
+    html.dark #btn-graph-fullscreen {
+      background: #0A0A0A;
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+    }
+    html.dark #btn-graph-fullscreen:hover { background: #CCFF00; color: #000; }
+
     /* CMD PALETTE */
     .cmd-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
     html.dark .cmd-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -722,8 +749,9 @@
 
         
         <!-- Graph View -->
-        <div id="graph-view" class="hidden p-1 flex-1 min-h-0 w-full relative">
-          <div id="knowledge-graph" class="w-full h-full border border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase"></div>
+        <div id="graph-view" class="hidden p-1 flex-1 min-h-0 w-full relative bg-bone dark:bg-darkBase">
+          <div id="knowledge-graph" class="w-full h-full border border-black/80 dark:border-white/20"></div>
+          <button id="btn-graph-fullscreen" class="focus-ring">[ Enlarge ⤢ ]</button>
           <div class="absolute bottom-4 left-4 pointer-events-none text-[10px] font-mono uppercase opacity-50 mix-blend-difference text-white">Drag to Pan / Scroll to Zoom</div>
         </div>
 
@@ -1907,6 +1935,7 @@
     }
 
     function updateThemeButtons(isDark) {
+      if (typeof applyGraphTheme === 'function') applyGraphTheme();
       const text = isDark ? '[ Theme: Dark ]' : '[ Theme: Light ]';
       const btnDesktop = document.getElementById('btn-theme-toggle');
       const btnMobile = document.getElementById('btn-theme-toggle-mobile');
@@ -2040,20 +2069,53 @@
        KNOWLEDGE GRAPH
     ============================================================ */
     let network = null;
+    let graphNodes = null;
+    let graphEdges = null;
+
+    function applyGraphTheme() {
+      if (!graphNodes || !graphEdges) return;
+      const isDark = document.documentElement.classList.contains('dark');
+      const entryBorder = isDark ? '#CCFF00' : '#000000';
+      const entryBg = isDark ? '#111111' : '#FFFFFF';
+      const entryFont = isDark ? '#F4F4F5' : '#000000';
+      
+      const tagBg = isDark ? '#0A0A0A' : '#FAF9F6';
+      const tagBorder = isDark ? '#555555' : '#888888';
+      const edgeColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.3)';
+
+      const updatedNodes = [];
+      graphNodes.forEach(node => {
+        if (node.group === 'entry') {
+          updatedNodes.push({ id: node.id, color: { background: entryBg, border: entryBorder }, font: { color: entryFont } });
+        } else {
+          updatedNodes.push({ id: node.id, color: { background: tagBg, border: tagBorder }, font: { color: entryFont } });
+        }
+      });
+      graphNodes.update(updatedNodes);
+
+      const updatedEdges = [];
+      graphEdges.forEach(edge => {
+        updatedEdges.push({ id: edge.id, color: { color: edgeColor, highlight: entryBorder } });
+      });
+      graphEdges.update(updatedEdges);
+    }
 
     function initGraph() {
       if (network !== null) return;
       const nodes = [];
       const edges = [];
-      const isDark = document.documentElement.classList.contains('dark');
-      const nodeColor = isDark ? '#CCFF00' : '#000000';
-      const bgColor = isDark ? '#0A0A0A' : '#FAF9F6';
-      const fontColor = isDark ? '#F4F4F5' : '#000000';
       
       const tagMap = new Map();
 
       archiveData.forEach(entry => {
-        nodes.push({ id: entry.id, label: `${entry.tags.brand}\n${entry.year}`, group: 'entry', shape: 'box', color: { background: bgColor, border: nodeColor }, font: { color: fontColor, face: 'IBM Plex Mono', size: 12 } });
+        nodes.push({ 
+          id: entry.id, 
+          label: `${entry.tags.brand}\n${entry.year}`, 
+          group: 'entry', 
+          shape: 'box', 
+          borderWidth: 2,
+          font: { face: 'IBM Plex Mono', size: 14, multi: true, bold: '14px IBM Plex Mono' } 
+        });
         
         ['politics', 'theories'].forEach(tagKey => {
           const tagValue = entry.tags[tagKey];
@@ -2061,30 +2123,78 @@
             const tagId = `tag_${tagValue}`;
             if (!tagMap.has(tagId)) {
               tagMap.set(tagId, true);
-              nodes.push({ id: tagId, label: tagValue, group: 'tag', shape: 'dot', size: 10, color: { background: nodeColor, border: nodeColor }, font: { color: fontColor, face: 'Inter', size: 10 } });
+              nodes.push({ 
+                id: tagId, 
+                label: `<b>${tagValue}</b>`, 
+                group: 'tag', 
+                shape: 'ellipse', 
+                borderWidth: 1,
+                font: { face: 'Inter', size: 12, multi: true } 
+              });
             }
-            edges.push({ from: entry.id, to: tagId, color: { color: isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)' } });
+            edges.push({ id: `${entry.id}-${tagId}`, from: entry.id, to: tagId, width: 1 });
           }
         });
       });
 
+      graphNodes = new vis.DataSet(nodes);
+      graphEdges = new vis.DataSet(edges);
+
       const container = $('knowledge-graph');
-      const data = { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) };
+      const data = { nodes: graphNodes, edges: graphEdges };
       const options = {
-        physics: { stabilization: false, barnesHut: { springLength: 150, damping: 0.09 } },
+        physics: { stabilization: false, barnesHut: { springLength: 200, damping: 0.1, centralGravity: 0.3 } },
         interaction: { hover: true, tooltipDelay: 200 }
       };
       
       network = new vis.Network(container, data, options);
+      applyGraphTheme();
+
       network.on('click', params => {
         if (params.nodes.length > 0) {
           const nodeId = params.nodes[0];
           if (!nodeId.startsWith('tag_')) {
+            // Close fullscreen if active
+            $('graph-view').classList.remove('fullscreen-graph');
+            $('btn-graph-fullscreen').textContent = '[ Enlarge ⤢ ]';
             openDetail(nodeId);
           }
         }
       });
     }
+
+    $('btn-graph-fullscreen').addEventListener('click', function() {
+      const gv = $('graph-view');
+      gv.classList.toggle('fullscreen-graph');
+      if (gv.classList.contains('fullscreen-graph')) {
+        this.textContent = '[ Shrink ⤡ ]';
+      } else {
+        this.textContent = '[ Enlarge ⤢ ]';
+      }
+      if (network) network.fit();
+    });
+
+    $('btn-view-connections').addEventListener('click', function() {
+      const entryId = AppState.selectedEntryId;
+      if (!entryId) return;
+      
+      closeDetail(); // Close the detail panel
+      $('grid-view').classList.add('hidden');
+      $('graph-view').classList.remove('hidden');
+      $('btn-view-toggle').textContent = '[ View: Graph ]';
+      if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
+      
+      initGraph();
+      
+      // Enlarge and focus
+      $('graph-view').classList.add('fullscreen-graph');
+      $('btn-graph-fullscreen').textContent = '[ Shrink ⤡ ]';
+      
+      setTimeout(() => {
+        network.focus(entryId, { scale: 1.5, animation: { duration: 1000, easingFunction: 'easeInOutQuad' } });
+        network.selectNodes([entryId]);
+      }, 500);
+    });
 
     function toggleViewMode() {
       const isGraph = !$('graph-view').classList.contains('hidden');
