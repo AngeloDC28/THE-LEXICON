@@ -802,7 +802,7 @@
     </div>
 
     <!-- TIMELINE SCRUBBER -->
-    <div id="timeline-scrubber" class="shrink-0 bg-overlay dark:bg-darkSurface hidden md:flex" title="Click a year to filter"></div>
+    <!-- Timeline scrubber removed -->
 
     <!-- ============================================================
          MAIN SHELL
@@ -2329,9 +2329,10 @@
           id: entry.id, 
           label: `${entry.tags.brand}\n${entry.year}`, 
           group: 'entry', 
-          shape: 'box', 
+          shape: 'diamond', 
+          size: 20,
           borderWidth: 2,
-          font: { face: 'IBM Plex Mono', size: 14, multi: true, bold: '14px IBM Plex Mono' } 
+          font: { face: 'IBM Plex Mono', size: 13, multi: true, bold: '13px IBM Plex Mono', vadjust: -2 } 
         });
         
         ['politics', 'theories'].forEach(tagKey => {
@@ -2344,9 +2345,10 @@
                 id: tagId, 
                 label: `<b>${tagValue}</b>`, 
                 group: 'tag', 
-                shape: 'ellipse', 
+                shape: 'triangleDown', 
+                size: 14,
                 borderWidth: 1,
-                font: { face: 'Inter', size: 12, multi: true } 
+                font: { face: 'Inter', size: 11, multi: true, vadjust: 4 } 
               });
             }
             edges.push({ id: `${entry.id}-${tagId}`, from: entry.id, to: tagId, width: 1 });
