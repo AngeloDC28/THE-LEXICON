@@ -99,7 +99,9 @@
     #detail-image-view { cursor: crosshair; }
     #image-grid { cursor: crosshair; }
 
-    /* Sticky Note Squares */
+    /* Sticky Note Squares - hidden behind gate */
+    #landing-gate ~ #app-root #sticky-note-triggers,
+    #landing-gate ~ #app-root #sticky-note-panel { display: none; }
     #sticky-note-triggers {
       position: absolute;
       top: 8px;
@@ -906,11 +908,16 @@
         </div>
 
         
-        <!-- Graph View -->
-        <div id="graph-view" class="hidden p-1 flex-1 min-h-0 w-full relative bg-bone dark:bg-darkBase">
-          <div id="knowledge-graph" class="w-full h-full border border-black/80 dark:border-white/20"></div>
-          <button id="btn-graph-fullscreen" class="focus-ring">[ Enlarge ⤢ ]</button>
-          <div class="absolute bottom-4 left-4 pointer-events-none text-[10px] font-mono uppercase opacity-50 mix-blend-difference text-white">Drag to Pan / Scroll to Zoom</div>
+        <!-- Graph View (floating resizable panel) -->
+        <div id="graph-view" class="hidden" style="position:fixed; bottom:16px; right:16px; width:420px; height:340px; z-index:500; border:1px solid rgba(0,0,0,0.8); box-shadow:6px 6px 0 rgba(0,0,0,0.15); background:#FAF9F6; resize:both; overflow:hidden; min-width:280px; min-height:200px;">
+          <div id="graph-drag-handle" class="flex items-center justify-between px-3 py-1.5 bg-black text-white cursor-move select-none" style="font-size:10px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em;">
+            <span>Knowledge Graph</span>
+            <div class="flex gap-2">
+              <button id="btn-graph-fullscreen" class="hover:opacity-60" style="font-size:10px;">[ Enlarge ]</button>
+              <button id="btn-graph-close" class="hover:opacity-60" style="font-size:10px;">[ X ]</button>
+            </div>
+          </div>
+          <div id="knowledge-graph" style="width:100%; height:calc(100% - 28px);"></div>
         </div>
 
         <!-- Detail View (single image + hotspots) -->
@@ -973,13 +980,7 @@
   ============================================================ -->
   <div id="film-grain" class="pointer-events-none fixed inset-0 z-[9999] opacity-20 mix-blend-overlay"></div>
 
-  <!-- FILM GRAIN CONTROL -->
-  <div id="grain-control">
-    <button class="grain-btn" data-grain="0">Off</button>
-    <button class="grain-btn" data-grain="0.1">Low</button>
-    <button class="grain-btn active" data-grain="0.2">Med</button>
-    <button class="grain-btn" data-grain="0.4">High</button>
-  </div>
+  <!-- Film grain control removed -->
 
   <!-- TOAST -->
   <div id="toast" class="hidden"></div>
@@ -2145,12 +2146,54 @@
           const gv = $('graph-view');
           gv.classList.toggle('fullscreen-graph');
           if (gv.classList.contains('fullscreen-graph')) {
-            this.textContent = '[ Shrink ⤡ ]';
+            this.textContent = '[ Shrink ]';
+            gv.style.width = ''; gv.style.height = '';
+            gv.style.bottom = ''; gv.style.right = '';
+            gv.style.top = ''; gv.style.left = '';
           } else {
-            this.textContent = '[ Enlarge ⤢ ]';
+            this.textContent = '[ Enlarge ]';
+            gv.style.width = '420px'; gv.style.height = '340px';
+            gv.style.bottom = '16px'; gv.style.right = '16px';
+            gv.style.top = ''; gv.style.left = '';
           }
           if (network) network.fit();
         });
+      }
+
+      /* Graph close button */
+      const btnGraphClose = $('btn-graph-close');
+      if (btnGraphClose) {
+        btnGraphClose.addEventListener('click', function() {
+          $('graph-view').classList.add('hidden');
+          $('graph-view').classList.remove('fullscreen-graph');
+          $('btn-view-toggle').textContent = '[ View: Graph ]';
+          if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
+        });
+      }
+
+      /* Graph drag handle */
+      const dragHandle = $('graph-drag-handle');
+      if (dragHandle) {
+        let gDragging = false, gStartX, gStartY, gOrigLeft, gOrigTop;
+        dragHandle.addEventListener('mousedown', e => {
+          if (e.target.tagName === 'BUTTON') return;
+          const gv = $('graph-view');
+          if (gv.classList.contains('fullscreen-graph')) return;
+          gDragging = true;
+          const rect = gv.getBoundingClientRect();
+          gStartX = e.clientX; gStartY = e.clientY;
+          gOrigLeft = rect.left; gOrigTop = rect.top;
+          gv.style.bottom = 'auto'; gv.style.right = 'auto';
+          gv.style.left = gOrigLeft + 'px'; gv.style.top = gOrigTop + 'px';
+          e.preventDefault();
+        });
+        window.addEventListener('mousemove', e => {
+          if (!gDragging) return;
+          const gv = $('graph-view');
+          gv.style.left = (gOrigLeft + e.clientX - gStartX) + 'px';
+          gv.style.top = (gOrigTop + e.clientY - gStartY) + 'px';
+        });
+        window.addEventListener('mouseup', () => { gDragging = false; });
       }
 
       const btnViewConn = $('btn-view-connections');
@@ -2160,16 +2203,18 @@
           if (!entryId) return;
           
           closeDetail(); // Close the detail panel
-          $('grid-view').classList.add('hidden');
           $('graph-view').classList.remove('hidden');
-          $('btn-view-toggle').textContent = '[ View: Grid ]';
-          if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Grid ]';
+          const isDark = document.documentElement.classList.contains('dark');
+          $('graph-view').style.background = isDark ? '#0A0A0A' : '#FAF9F6';
+          $('graph-view').style.borderColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.8)';
+          $('btn-view-toggle').textContent = '[ Hide Graph ]';
+          if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ Hide Graph ]';
           
           initGraph();
           
           // Enlarge and focus
           $('graph-view').classList.add('fullscreen-graph');
-          $('btn-graph-fullscreen').textContent = '[ Shrink ⤡ ]';
+          $('btn-graph-fullscreen').textContent = '[ Shrink ]';
           
           setTimeout(() => {
             network.focus(entryId, { scale: 1.5, animation: { duration: 1000, easingFunction: 'easeInOutQuad' } });
@@ -2375,7 +2420,7 @@
           if (!nodeId.startsWith('tag_')) {
             // Close fullscreen if active
             $('graph-view').classList.remove('fullscreen-graph');
-            $('btn-graph-fullscreen').textContent = '[ Enlarge ⤢ ]';
+            $('btn-graph-fullscreen').textContent = '[ Enlarge ]';
             openDetail(nodeId);
           }
         }
@@ -2383,17 +2428,20 @@
     }
 
     function toggleViewMode() {
-      const isGraph = !$('graph-view').classList.contains('hidden');
-      if (isGraph) {
+      const isVisible = !$('graph-view').classList.contains('hidden');
+      if (isVisible) {
         $('graph-view').classList.add('hidden');
-        $('grid-view').classList.remove('hidden');
-        $('btn-view-toggle').textContent = '[ View: Grid ]';
-        if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Grid ]';
-      } else {
-        $('grid-view').classList.add('hidden');
-        $('graph-view').classList.remove('hidden');
         $('btn-view-toggle').textContent = '[ View: Graph ]';
         if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
+      } else {
+        $('graph-view').classList.remove('hidden');
+        $('graph-view').classList.remove('fullscreen-graph');
+        // Apply dark mode styles
+        const isDark = document.documentElement.classList.contains('dark');
+        $('graph-view').style.background = isDark ? '#0A0A0A' : '#FAF9F6';
+        $('graph-view').style.borderColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.8)';
+        $('btn-view-toggle').textContent = '[ Hide Graph ]';
+        if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ Hide Graph ]';
         initGraph();
       }
     }
