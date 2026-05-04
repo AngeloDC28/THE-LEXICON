@@ -590,7 +590,7 @@
   <!-- ============================================================
        TERMINAL GATE
   ============================================================ -->
-  <div id="landing-gate" class="fixed inset-0 z-[200] bg-bone dark:bg-darkBase flex flex-col justify-between overflow-hidden transition-transform duration-700 ease-in-out">
+  <div id="landing-gate" class="fixed inset-0 z-[200] bg-bone dark:bg-darkBase flex flex-col justify-between overflow-hidden transition-transform duration-700 ease-in-out cursor-pointer">
     <!-- Marquee Ticker -->
     <div class="w-full overflow-hidden border-b-[1px] border-black/80 dark:border-white/20 py-3">
       <div class="marquee-track">
@@ -606,8 +606,8 @@
     </div>
 
     <!-- Action Trigger -->
-    <div class="flex justify-center pb-12 md:pb-16">
-        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black dark:border-white/30 pb-2 px-3 min-h-[44px] hover:opacity-60 transition-opacity focus-ring">Access Archive</button>
+    <div class="flex justify-center pb-12 md:pb-16 pointer-events-none">
+        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black dark:border-white/30 pb-2 px-3 min-h-[44px] opacity-60">Click Anywhere To Access Archive</button>
     </div>
   </div>
 
@@ -2316,15 +2316,26 @@
       }, 100);
 
         document.body.style.overflow = 'hidden';
-        $('btn-initiate').addEventListener('click', function () {
+        
+        function closeGate() {
+          if (gate.classList.contains('-translate-y-full')) return;
           gate.classList.add('-translate-y-full');
           setTimeout(function () {
             gate.remove();
             document.body.style.overflow = '';
-            if (archiveData.length > 0) {
+            if (!window.location.hash && archiveData.length > 0) {
               openDetail(archiveData[0].id);
             }
           }, 700);
+        }
+
+        gate.addEventListener('click', closeGate);
+        
+        // Also allow enter key or space
+        document.addEventListener('keydown', function(e) {
+          if (document.body.contains(gate) && (e.key === 'Enter' || e.key === ' ')) {
+            closeGate();
+          }
         });
       }
 
