@@ -714,6 +714,7 @@
           <div class="px-4 py-2 border-b-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase flex items-center justify-between">
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
+              <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-2">[ View Connections ]</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
             </div>
@@ -1949,6 +1950,60 @@
       const btnMobile = document.getElementById('btn-theme-toggle-mobile');
       if (btnDesktop) btnDesktop.addEventListener('click', toggleTheme);
       if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
+      
+      // Safe event listeners
+      const cmdInput = $('cmd-input');
+      const cmdResults = $('cmd-results');
+      const cmdBackdrop = $('cmd-palette-backdrop');
+      if (cmdInput) cmdInput.addEventListener('input', e => renderCmdResults(e.target.value));
+      if (cmdResults) cmdResults.addEventListener('click', e => {
+        const item = e.target.closest('.cmd-item');
+        if (item) {
+          const idx = parseInt(item.getAttribute('data-index'), 10);
+          toggleCmdPalette();
+          openDetail(cmdResults[idx].id);
+        }
+      });
+      if (cmdBackdrop) cmdBackdrop.addEventListener('click', toggleCmdPalette);
+      
+      const btnGraphFS = $('btn-graph-fullscreen');
+      if (btnGraphFS) {
+        btnGraphFS.addEventListener('click', function() {
+          const gv = $('graph-view');
+          gv.classList.toggle('fullscreen-graph');
+          if (gv.classList.contains('fullscreen-graph')) {
+            this.textContent = '[ Shrink ⤡ ]';
+          } else {
+            this.textContent = '[ Enlarge ⤢ ]';
+          }
+          if (network) network.fit();
+        });
+      }
+
+      const btnViewConn = $('btn-view-connections');
+      if (btnViewConn) {
+        btnViewConn.addEventListener('click', function() {
+          const entryId = AppState.selectedEntryId;
+          if (!entryId) return;
+          
+          closeDetail(); // Close the detail panel
+          $('grid-view').classList.add('hidden');
+          $('graph-view').classList.remove('hidden');
+          $('btn-view-toggle').textContent = '[ View: Graph ]';
+          if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
+          
+          initGraph();
+          
+          // Enlarge and focus
+          $('graph-view').classList.add('fullscreen-graph');
+          $('btn-graph-fullscreen').textContent = '[ Shrink ⤡ ]';
+          
+          setTimeout(() => {
+            network.focus(entryId, { scale: 1.5, animation: { duration: 1000, easingFunction: 'easeInOutQuad' } });
+            network.selectNodes([entryId]);
+          }, 500);
+        });
+      }
     });
 
     
@@ -2054,17 +2109,6 @@
       });
     }
 
-    $('cmd-input').addEventListener('input', e => renderCmdResults(e.target.value));
-    $('cmd-results').addEventListener('click', e => {
-      const item = e.target.closest('.cmd-item');
-      if (item) {
-        const idx = parseInt(item.getAttribute('data-index'), 10);
-        toggleCmdPalette();
-        openDetail(cmdResults[idx].id);
-      }
-    });
-    $('cmd-palette-backdrop').addEventListener('click', toggleCmdPalette);
-
     /* ============================================================
        KNOWLEDGE GRAPH
     ============================================================ */
@@ -2162,39 +2206,6 @@
         }
       });
     }
-
-    $('btn-graph-fullscreen').addEventListener('click', function() {
-      const gv = $('graph-view');
-      gv.classList.toggle('fullscreen-graph');
-      if (gv.classList.contains('fullscreen-graph')) {
-        this.textContent = '[ Shrink ⤡ ]';
-      } else {
-        this.textContent = '[ Enlarge ⤢ ]';
-      }
-      if (network) network.fit();
-    });
-
-    $('btn-view-connections').addEventListener('click', function() {
-      const entryId = AppState.selectedEntryId;
-      if (!entryId) return;
-      
-      closeDetail(); // Close the detail panel
-      $('grid-view').classList.add('hidden');
-      $('graph-view').classList.remove('hidden');
-      $('btn-view-toggle').textContent = '[ View: Graph ]';
-      if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
-      
-      initGraph();
-      
-      // Enlarge and focus
-      $('graph-view').classList.add('fullscreen-graph');
-      $('btn-graph-fullscreen').textContent = '[ Shrink ⤡ ]';
-      
-      setTimeout(() => {
-        network.focus(entryId, { scale: 1.5, animation: { duration: 1000, easingFunction: 'easeInOutQuad' } });
-        network.selectNodes([entryId]);
-      }, 500);
-    });
 
     function toggleViewMode() {
       const isGraph = !$('graph-view').classList.contains('hidden');
