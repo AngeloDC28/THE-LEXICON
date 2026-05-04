@@ -582,10 +582,151 @@
     html.dark ::-webkit-scrollbar-thumb { background: #333; }
     html.dark ::-webkit-scrollbar-thumb:hover { background: #CCFF00; }
 
+    /* ── STAGGERED GRID ENTRANCE ── */
+    @keyframes gridFadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .grid-cell { opacity: 0; animation: gridFadeUp 0.35s ease forwards; }
+
+    /* ── SKELETON SHIMMER ── */
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #E8E6E1 25%, #F5F4F0 50%, #E8E6E1 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s ease infinite;
+      aspect-ratio: 3/4;
+    }
+    html.dark .skeleton {
+      background: linear-gradient(90deg, #1a1a1a 25%, #222 50%, #1a1a1a 75%);
+      background-size: 200% 100%;
+    }
+
+    /* ── LAZY FADE-IN ── */
+    .grid-cell img { opacity: 0; transition: opacity 0.4s ease; }
+    .grid-cell img.loaded { opacity: 1; }
+
+    /* ── CUSTOM CURSOR ── */
+    #image-grid { cursor: crosshair; }
+    #detail-desktop-stack { cursor: grab; }
+    .dragging { cursor: grabbing !important; }
+
+    /* ── FILTER CHIPS ── */
+    #filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .filter-chip {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 9px; font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border: 1px solid #000; padding: 3px 8px;
+      background: #000; color: #fff; cursor: pointer;
+    }
+    html.dark .filter-chip { background: #CCFF00; color: #000; border-color: #CCFF00; }
+    .filter-chip:hover { opacity: 0.7; }
+
+    /* ── ODOMETER COUNTER ── */
+    .odometer-digit {
+      display: inline-block; overflow: hidden; height: 1.1em; vertical-align: bottom;
+    }
+    .odometer-digit-inner {
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    /* ── TIMELINE SCRUBBER ── */
+    #timeline-scrubber {
+      display: flex; align-items: flex-end; gap: 1px;
+      height: 24px; padding: 0 4px; cursor: pointer;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+    html.dark #timeline-scrubber { border-color: rgba(255,255,255,0.15); }
+    .timeline-bar {
+      flex: 1; min-width: 3px; background: rgba(0,0,0,0.25);
+      transition: background 0.15s ease, height 0.2s ease;
+    }
+    .timeline-bar:hover, .timeline-bar.active { background: #000; }
+    html.dark .timeline-bar { background: rgba(255,255,255,0.15); }
+    html.dark .timeline-bar:hover, html.dark .timeline-bar.active { background: #CCFF00; }
+
+    /* ── BOOKMARK STAR ── */
+    .bookmark-star {
+      font-size: 14px; cursor: pointer; opacity: 0.3;
+      transition: opacity 0.15s ease, transform 0.15s ease;
+      user-select: none; line-height: 1;
+    }
+    .bookmark-star:hover { opacity: 0.6; transform: scale(1.2); }
+    .bookmark-star.bookmarked { opacity: 1; color: #CCFF00; text-shadow: 0 0 4px rgba(204,255,0,0.4); }
+
+    /* ── TOAST NOTIFICATION ── */
+    @keyframes toastIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes toastOut { from { opacity: 1; } to { opacity: 0; } }
+    #toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      z-index: 99999; padding: 8px 20px;
+      font-size: 10px; font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      background: #000; color: #fff; border: 1px solid rgba(255,255,255,0.2);
+      pointer-events: none; animation: toastIn 0.3s ease;
+    }
+    html.dark #toast { background: #CCFF00; color: #000; }
+
+    /* ── FILM GRAIN CONTROL ── */
+    #grain-control {
+      position: fixed; bottom: 8px; right: 8px; z-index: 10000;
+      display: flex; gap: 4px; align-items: center;
+    }
+    .grain-btn {
+      font-size: 8px; font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border: 1px solid rgba(0,0,0,0.3); padding: 2px 6px;
+      background: transparent; cursor: pointer; opacity: 0.5;
+      transition: all 0.15s ease;
+    }
+    .grain-btn.active { opacity: 1; background: #000; color: #fff; }
+    html.dark .grain-btn { border-color: rgba(255,255,255,0.2); color: #fff; }
+    html.dark .grain-btn.active { background: #CCFF00; color: #000; }
+
+    /* ── ACCENT GLOW ── */
+    .accent-glow {
+      position: absolute; inset: 0; pointer-events: none;
+      opacity: 0.15; transition: box-shadow 0.8s ease;
+    }
+
+    /* ── SKIP TO CONTENT ── */
+    .skip-link {
+      position: absolute; top: -100px; left: 0; z-index: 99999;
+      background: #000; color: #fff; padding: 8px 16px;
+      font-size: 12px; font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── RECENTLY VIEWED ── */
+    .recent-row {
+      display: flex; gap: 6px; padding: 6px 12px; overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .recent-thumb {
+      width: 36px; height: 44px; object-fit: cover; flex-shrink: 0;
+      border: 1px solid rgba(0,0,0,0.3); cursor: pointer;
+      filter: grayscale(70%); transition: filter 0.2s ease;
+    }
+    .recent-thumb:hover { filter: none; }
+    html.dark .recent-thumb { border-color: rgba(255,255,255,0.2); }
+
   </style>
+
+  <!-- OG Meta Tags (dynamically updated by JS) -->
+  <meta property="og:title" content="THE LEXICON" />
+  <meta property="og:description" content="A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="IMG_6655.jpeg" />
+  <meta name="description" content="THE LEXICON — A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture" />
 </head>
 
 <body>
+  <a href="#image-panel" class="skip-link">Skip to Archive</a>
 
   <!-- ============================================================
        TERMINAL GATE
@@ -641,7 +782,7 @@
     <!-- ============================================================
          STATUS RIBBON
     ============================================================ -->
-    <div id="status-ribbon" class="grid grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))">
+    <div id="status-ribbon" class="grid grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))" aria-live="polite" aria-atomic="true">
       <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Brand</span>
         <span id="status-brand" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
@@ -660,6 +801,9 @@
       </div>
     </div>
 
+    <!-- TIMELINE SCRUBBER -->
+    <div id="timeline-scrubber" class="shrink-0 bg-overlay dark:bg-darkSurface hidden md:flex" title="Click a year to filter"></div>
+
     <!-- ============================================================
          MAIN SHELL
     ============================================================ -->
@@ -671,6 +815,15 @@
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
           <span class="text-xs font-bold uppercase tracking-[0.15em]">Index / A-Z</span>
+          <button type="button" id="btn-show-bookmarks" class="text-[9px] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity">★ Saved</button>
+        </div>
+
+        <!-- Recently Viewed -->
+        <div id="recent-container" class="border-b-[1px] border-black/80 dark:border-white/20 shrink-0 hidden">
+          <div class="px-3 pt-2 pb-1 flex items-center justify-between">
+            <span class="text-[8px] uppercase tracking-[0.2em] opacity-40">Recently Viewed</span>
+          </div>
+          <div id="recent-row" class="recent-row"></div>
         </div>
 
         <!-- Search -->
@@ -689,6 +842,8 @@
             </div>
             <button type="button" id="btn-toggle-grid-meta" class="md:hidden text-[8px] font-bold font-mono uppercase tracking-[0.1em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-2 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors w-full focus-ring">Show grid labels while scrolling</button>
           </div>
+          <!-- Filter Chips -->
+          <div id="filter-chips" class="hidden"></div>
         </div>
 
         <!-- Entry List -->
@@ -714,7 +869,9 @@
           <div class="px-4 py-2 border-b-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase flex items-center justify-between">
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
-              <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-2">[ View Connections ]</button>
+              <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
+              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
+              <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
             </div>
@@ -769,6 +926,8 @@
             <button type="button" class="sticky-trigger focus-ring" style="background:#0000FF;" data-note="strategy" aria-label="Open strategy note"></button>
             <button type="button" class="sticky-trigger focus-ring" style="background:#E6FF00;" data-note="provenance" aria-label="Open provenance note"></button>
           </div>
+          <!-- Accent Glow -->
+          <div id="accent-glow" class="accent-glow"></div>
           <!-- Archival Sticky Note Panel -->
           <div id="sticky-note-panel">
             <div class="sticky-note-header">
@@ -813,6 +972,20 @@
        FILM GRAIN OVERLAY
   ============================================================ -->
   <div id="film-grain" class="pointer-events-none fixed inset-0 z-[9999] opacity-20 mix-blend-overlay"></div>
+
+  <!-- FILM GRAIN CONTROL -->
+  <div id="grain-control">
+    <button class="grain-btn" data-grain="0">Off</button>
+    <button class="grain-btn" data-grain="0.1">Low</button>
+    <button class="grain-btn active" data-grain="0.2">Med</button>
+    <button class="grain-btn" data-grain="0.4">High</button>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="hidden"></div>
+
+  <!-- JSON-LD Structured Data -->
+  <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture"}</script>
 
   <!-- ============================================================
        COMMAND PALETTE (CMD+K)
@@ -2617,6 +2790,302 @@
     }
 
     document.addEventListener('DOMContentLoaded', init);
+
+    /* ============================================================
+       ENHANCEMENT FEATURES
+    ============================================================ */
+
+    /* ── TOAST ── */
+    function showToast(msg, duration) {
+      if (!duration) duration = 1800;
+      const t = $('toast');
+      t.textContent = msg;
+      t.classList.remove('hidden');
+      t.style.animation = 'toastIn 0.3s ease';
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => {
+        t.style.animation = 'toastOut 0.3s ease forwards';
+        setTimeout(() => { t.classList.add('hidden'); }, 300);
+      }, duration);
+    }
+
+    /* ── BOOKMARKS ── */
+    function getBookmarks() {
+      try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
+    }
+    function setBookmarks(arr) { localStorage.setItem('lexicon-bookmarks', JSON.stringify(arr)); }
+    function isBookmarked(id) { return getBookmarks().includes(id); }
+    function toggleBookmark(id) {
+      let bm = getBookmarks();
+      if (bm.includes(id)) { bm = bm.filter(x => x !== id); showToast('Bookmark removed'); }
+      else { bm.unshift(id); showToast('Bookmarked'); }
+      setBookmarks(bm);
+      updateBookmarkUI(id);
+    }
+    function updateBookmarkUI(id) {
+      const star = $('btn-bookmark-entry');
+      if (star) {
+        if (isBookmarked(id)) star.classList.add('bookmarked');
+        else star.classList.remove('bookmarked');
+      }
+    }
+    let showingBookmarks = false;
+
+    /* ── RECENTLY VIEWED ── */
+    function getRecentlyViewed() {
+      try { return JSON.parse(localStorage.getItem('lexicon-recent') || '[]'); } catch(e) { return []; }
+    }
+    function addRecentlyViewed(entryId) {
+      let recent = getRecentlyViewed().filter(id => id !== entryId);
+      recent.unshift(entryId);
+      if (recent.length > 8) recent = recent.slice(0, 8);
+      localStorage.setItem('lexicon-recent', JSON.stringify(recent));
+      renderRecentlyViewed();
+    }
+    function renderRecentlyViewed() {
+      const recent = getRecentlyViewed();
+      const container = $('recent-container');
+      const row = $('recent-row');
+      if (!recent.length) { container.classList.add('hidden'); return; }
+      container.classList.remove('hidden');
+      let html = '';
+      recent.forEach(id => {
+        const entry = archiveData.find(e => e.id === id);
+        if (!entry) return;
+        const thumb = (entry.images && entry.images[0]) || '';
+        html += `<img src="${thumb}" alt="${entry.tags.brand}" class="recent-thumb" data-recent-id="${id}" loading="lazy" />`;
+      });
+      row.innerHTML = html;
+    }
+
+    /* ── TIMELINE SCRUBBER ── */
+    function renderTimeline() {
+      const scrubber = $('timeline-scrubber');
+      if (!scrubber) return;
+      const years = {};
+      archiveData.forEach(e => { years[e.year] = (years[e.year] || 0) + 1; });
+      const allYears = Object.keys(years).map(Number).sort();
+      if (allYears.length < 2) return;
+      const minYear = allYears[0];
+      const maxYear = allYears[allYears.length - 1];
+      const maxCount = Math.max(...Object.values(years));
+      let html = '';
+      for (let y = minYear; y <= maxYear; y++) {
+        const count = years[y] || 0;
+        const h = count ? Math.max(4, Math.round((count / maxCount) * 22)) : 2;
+        html += `<div class="timeline-bar" data-year="${y}" style="height:${h}px;" title="${y}: ${count} entries"></div>`;
+      }
+      scrubber.innerHTML = html;
+    }
+
+    /* ── FILTER CHIPS ── */
+    function renderFilterChips() {
+      const container = $('filter-chips');
+      if (!container) return;
+      let chips = [];
+      if (AppState.searchQuery) chips.push({ label: 'Search: ' + AppState.searchQuery, type: 'search' });
+      if (AppState.activePillar) chips.push({ label: AppState.activePillar.label, type: 'pillar' });
+      if (AppState.activeSubFilter) chips.push({ label: AppState.activeSubFilter, type: 'sub' });
+      if (showingBookmarks) chips.push({ label: '★ Bookmarks', type: 'bookmarks' });
+      if (chips.length === 0) { container.classList.add('hidden'); container.innerHTML = ''; return; }
+      container.classList.remove('hidden');
+      container.innerHTML = chips.map(c => `<span class="filter-chip" data-chip-type="${c.type}">${c.label} ✕</span>`).join('');
+    }
+
+    /* ── STAGGERED GRID ANIMATION ── */
+    const origRenderImageGrid = renderImageGrid;
+    renderImageGrid = function() {
+      origRenderImageGrid();
+      document.querySelectorAll('#image-grid .grid-cell').forEach((cell, i) => {
+        cell.style.animationDelay = (i * 30) + 'ms';
+        const img = cell.querySelector('img');
+        if (img) {
+          if (img.complete) img.classList.add('loaded');
+          else img.addEventListener('load', () => img.classList.add('loaded'));
+        }
+      });
+      renderFilterChips();
+    };
+
+    /* ── ACCENT COLOR EXTRACTION ── */
+    function extractAccentColor(imgEl) {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = 1; canvas.height = 1;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imgEl, 0, 0, 1, 1);
+        const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+        const glow = $('accent-glow');
+        if (glow) glow.style.boxShadow = `inset 0 0 120px 40px rgba(${r},${g},${b},0.3)`;
+      } catch(e) { /* CORS */ }
+    }
+
+    /* ── OG META + JSON-LD UPDATE ── */
+    function updateMetaForEntry(entry) {
+      if (!entry) return;
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      if (ogTitle) ogTitle.content = entry.tags.brand + ' ' + entry.year + ' — THE LEXICON';
+      if (ogDesc) ogDesc.content = entry.description.substring(0, 200);
+      if (ogImage && entry.images && entry.images[0]) ogImage.content = entry.images[0];
+      document.title = entry.tags.brand + ' ' + entry.year + ' — THE LEXICON';
+      const ld = $('json-ld');
+      if (ld) {
+        ld.textContent = JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'CreativeWork',
+          name: entry.title, dateCreated: String(entry.year),
+          description: entry.description,
+          image: (entry.images && entry.images[0]) || ''
+        });
+      }
+    }
+    function resetMeta() {
+      document.title = 'THE LEXICON';
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.content = 'THE LEXICON';
+    }
+
+    /* ── PATCH openDetail / closeDetail ── */
+    const origOpenDetail = openDetail;
+    openDetail = function(entryId, imgIdx) {
+      origOpenDetail(entryId, imgIdx);
+      const entry = archiveData.find(e => e.id === entryId);
+      if (entry) {
+        addRecentlyViewed(entryId);
+        updateBookmarkUI(entryId);
+        updateMetaForEntry(entry);
+        const img = $('detail-image');
+        if (img) {
+          if (img.complete) extractAccentColor(img);
+          else img.addEventListener('load', () => extractAccentColor(img), { once: true });
+        }
+      }
+    };
+    const origCloseDetail = closeDetail;
+    closeDetail = function() {
+      origCloseDetail();
+      resetMeta();
+      const glow = $('accent-glow');
+      if (glow) glow.style.boxShadow = '';
+    };
+
+    /* ── FILM GRAIN CONTROL ── */
+    document.querySelectorAll('.grain-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseFloat(btn.getAttribute('data-grain'));
+        $('film-grain').style.opacity = val;
+        document.querySelectorAll('.grain-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        localStorage.setItem('lexicon-grain', val);
+      });
+    });
+    (function restoreGrain() {
+      const saved = localStorage.getItem('lexicon-grain');
+      if (saved !== null) {
+        $('film-grain').style.opacity = saved;
+        document.querySelectorAll('.grain-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-grain') === saved);
+        });
+      }
+    })();
+
+    /* ── COPY LINK ── */
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnCopy = $('btn-copy-link');
+      if (btnCopy) btnCopy.addEventListener('click', () => {
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => showToast('Link copied'));
+      });
+
+      const btnBookmark = $('btn-bookmark-entry');
+      if (btnBookmark) btnBookmark.addEventListener('click', () => {
+        if (AppState.selectedEntryId) toggleBookmark(AppState.selectedEntryId);
+      });
+
+      const btnShowBM = $('btn-show-bookmarks');
+      if (btnShowBM) btnShowBM.addEventListener('click', () => {
+        showingBookmarks = !showingBookmarks;
+        if (showingBookmarks) {
+          const bm = getBookmarks();
+          AppState.searchQuery = '';
+          $('search-input').value = '';
+          const origFilter = getFilteredEntries;
+          window._origGetFiltered = origFilter;
+          getFilteredEntries = function() {
+            if (!showingBookmarks) return window._origGetFiltered();
+            return archiveData.filter(e => bm.includes(e.id));
+          };
+          btnShowBM.style.opacity = '1';
+          showToast('Showing bookmarks');
+        } else {
+          if (window._origGetFiltered) getFilteredEntries = window._origGetFiltered;
+          btnShowBM.style.opacity = '';
+          showToast('Showing all entries');
+        }
+        renderEntryList();
+        renderImageGrid();
+        renderFilterChips();
+      });
+
+      /* Recently viewed click */
+      const recentRow = $('recent-row');
+      if (recentRow) recentRow.addEventListener('click', e => {
+        const thumb = e.target.closest('[data-recent-id]');
+        if (thumb) openDetail(thumb.getAttribute('data-recent-id'));
+      });
+
+      /* Timeline scrubber */
+      renderTimeline();
+      const scrubber = $('timeline-scrubber');
+      if (scrubber) scrubber.addEventListener('click', e => {
+        const bar = e.target.closest('.timeline-bar');
+        if (!bar) return;
+        const year = bar.getAttribute('data-year');
+        document.querySelectorAll('.timeline-bar').forEach(b => b.classList.remove('active'));
+        if (AppState.searchQuery === year) {
+          AppState.searchQuery = '';
+          $('search-input').value = '';
+        } else {
+          AppState.searchQuery = year;
+          $('search-input').value = year;
+          bar.classList.add('active');
+        }
+        renderEntryList();
+        renderImageGrid();
+        renderFilterChips();
+      });
+
+      /* Filter chips click */
+      const chipContainer = $('filter-chips');
+      if (chipContainer) chipContainer.addEventListener('click', e => {
+        const chip = e.target.closest('.filter-chip');
+        if (!chip) return;
+        const type = chip.getAttribute('data-chip-type');
+        if (type === 'search') { AppState.searchQuery = ''; $('search-input').value = ''; }
+        if (type === 'pillar') { AppState.activePillar = null; }
+        if (type === 'sub') { AppState.activeSubFilter = null; AppState.searchQuery = ''; $('search-input').value = ''; }
+        if (type === 'bookmarks' && $('btn-show-bookmarks')) $('btn-show-bookmarks').click();
+        renderEntryList(); renderImageGrid(); renderTaxonomyGrid(); renderTaxonomySub(); renderFilterChips();
+      });
+
+      /* Focus trap for Command Palette */
+      $('cmd-palette').addEventListener('keydown', e => {
+        if (e.key !== 'Tab') return;
+        const focusable = $('cmd-palette').querySelectorAll('input, button, [tabindex]:not([tabindex="-1"])');
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+
+      renderRecentlyViewed();
+      renderFilterChips();
+    });
 
   </script>
 </body>
