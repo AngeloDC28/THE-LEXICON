@@ -14,7 +14,7 @@
     rel="stylesheet"
   />
 
-  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <!-- vis-network removed: replaced with Connection Matrix -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -514,6 +514,80 @@
     }
     html.dark #btn-graph-fullscreen:hover { background: #CCFF00; color: #000; }
 
+    /* ── CONNECTION MATRIX ── */
+    #connection-matrix {
+      display: none;
+      position: fixed; inset: 0; z-index: 1000;
+    }
+    #connection-matrix.open { display: flex; align-items: center; justify-content: center; }
+    #connection-matrix .matrix-backdrop {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(6px);
+    }
+    #connection-matrix .matrix-panel {
+      position: relative; z-index: 1;
+      width: 100%; height: 100%;
+      max-width: 900px; max-height: 90vh;
+      margin: 0 auto;
+      background: #FAF9F6;
+      border: 1px solid rgba(0,0,0,0.8);
+      overflow-y: auto;
+      display: flex; flex-direction: column;
+    }
+    html.dark #connection-matrix .matrix-panel {
+      background: #0A0A0A;
+      border-color: rgba(255,255,255,0.2);
+    }
+    .matrix-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.8);
+      background: #000; color: #fff;
+    }
+    html.dark .matrix-header { background: #111; }
+    .matrix-center {
+      padding: 20px; border-bottom: 1px solid rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    html.dark .matrix-center { border-color: rgba(255,255,255,0.1); }
+    .matrix-section {
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    html.dark .matrix-section { border-color: rgba(255,255,255,0.08); }
+    .matrix-section-title {
+      font-size: 9px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.2em;
+      opacity: 0.4; margin-bottom: 12px;
+    }
+    .matrix-entries {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 8px;
+    }
+    .matrix-entry {
+      border: 1px solid rgba(0,0,0,0.3);
+      padding: 10px; cursor: pointer;
+      transition: all 0.12s ease;
+    }
+    .matrix-entry:hover {
+      background: #000; color: #fff;
+    }
+    html.dark .matrix-entry {
+      border-color: rgba(255,255,255,0.15);
+    }
+    html.dark .matrix-entry:hover {
+      background: #CCFF00; color: #000;
+    }
+    .matrix-tag {
+      display: inline-block;
+      font-size: 9px; font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border: 1px solid rgba(0,0,0,0.3);
+      padding: 3px 8px; margin: 3px 3px 3px 0;
+    }
+    html.dark .matrix-tag { border-color: rgba(255,255,255,0.2); }
+
     /* CMD PALETTE */
     .cmd-item { border-bottom: 1px solid rgba(0,0,0,0.1); }
     html.dark .cmd-item { border-bottom: 1px solid rgba(255,255,255,0.1); }
@@ -771,7 +845,7 @@
         Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
       </div>
       <div class="hidden md:flex items-center gap-4">
-        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ View: Grid ]</button>
+        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Connections ]</button>
         <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Theme: Light ]</button>
         <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
         <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
@@ -888,7 +962,7 @@
 
         <!-- Mobile Drawer: About / Contact -->
         <div class="md:hidden border-t-[1px] border-black/80 dark:border-white/20 dark:border-white/20 px-4 py-3 flex flex-wrap items-center gap-4 shrink-0">
-          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ View: Grid ]</button>
+          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Connections ]</button>
           <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Search ⌘K ]</button>
           <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Theme: Light ]</button>
           <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
@@ -908,17 +982,7 @@
         </div>
 
         
-        <!-- Graph View (floating resizable panel) -->
-        <div id="graph-view" class="hidden" style="position:fixed; bottom:16px; right:16px; width:420px; height:340px; z-index:500; border:1px solid rgba(0,0,0,0.8); box-shadow:6px 6px 0 rgba(0,0,0,0.15); background:#FAF9F6; resize:both; overflow:hidden; min-width:280px; min-height:200px;">
-          <div id="graph-drag-handle" class="flex items-center justify-between px-3 py-1.5 bg-black text-white cursor-move select-none" style="font-size:10px; font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.1em;">
-            <span>Knowledge Graph</span>
-            <div class="flex gap-2">
-              <button id="btn-graph-fullscreen" class="hover:opacity-60" style="font-size:10px;">[ Enlarge ]</button>
-              <button id="btn-graph-close" class="hover:opacity-60" style="font-size:10px;">[ X ]</button>
-            </div>
-          </div>
-          <div id="knowledge-graph" style="width:100%; height:calc(100% - 28px);"></div>
-        </div>
+        <!-- Graph view removed: replaced with Connection Matrix modal -->
 
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase" style="pointer-events: auto">
@@ -987,6 +1051,21 @@
 
   <!-- JSON-LD Structured Data -->
   <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture"}</script>
+  <!-- ============================================================
+       CONNECTION MATRIX
+  ============================================================ -->
+  <div id="connection-matrix">
+    <div class="matrix-backdrop" id="matrix-backdrop"></div>
+    <div class="matrix-panel">
+      <div class="matrix-header">
+        <span class="text-[10px] font-mono font-bold uppercase tracking-[0.15em]">Connection Matrix</span>
+        <button type="button" id="btn-close-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60">[ X Close ]</button>
+      </div>
+      <div id="matrix-content" class="flex-1 overflow-y-auto">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        COMMAND PALETTE (CMD+K)
@@ -2140,86 +2219,30 @@
       });
       if (cmdBackdrop) cmdBackdrop.addEventListener('click', toggleCmdPalette);
       
-      const btnGraphFS = $('btn-graph-fullscreen');
-      if (btnGraphFS) {
-        btnGraphFS.addEventListener('click', function() {
-          const gv = $('graph-view');
-          gv.classList.toggle('fullscreen-graph');
-          if (gv.classList.contains('fullscreen-graph')) {
-            this.textContent = '[ Shrink ]';
-            gv.style.width = ''; gv.style.height = '';
-            gv.style.bottom = ''; gv.style.right = '';
-            gv.style.top = ''; gv.style.left = '';
-          } else {
-            this.textContent = '[ Enlarge ]';
-            gv.style.width = '420px'; gv.style.height = '340px';
-            gv.style.bottom = '16px'; gv.style.right = '16px';
-            gv.style.top = ''; gv.style.left = '';
-          }
-          if (network) network.fit();
-        });
-      }
+      /* Connection Matrix listeners */
+      const btnCloseMatrix = $('btn-close-matrix');
+      if (btnCloseMatrix) btnCloseMatrix.addEventListener('click', closeConnectionMatrix);
+      const matrixBackdrop = $('matrix-backdrop');
+      if (matrixBackdrop) matrixBackdrop.addEventListener('click', closeConnectionMatrix);
 
-      /* Graph close button */
-      const btnGraphClose = $('btn-graph-close');
-      if (btnGraphClose) {
-        btnGraphClose.addEventListener('click', function() {
-          $('graph-view').classList.add('hidden');
-          $('graph-view').classList.remove('fullscreen-graph');
-          $('btn-view-toggle').textContent = '[ View: Graph ]';
-          if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
-        });
-      }
+      /* Click entry inside matrix to navigate */
+      const matrixContent = $('matrix-content');
+      if (matrixContent) matrixContent.addEventListener('click', function(e) {
+        const entry = e.target.closest('[data-matrix-entry-id]');
+        if (entry) {
+          const id = entry.getAttribute('data-matrix-entry-id');
+          closeConnectionMatrix();
+          openDetail(id);
+        }
+      });
 
-      /* Graph drag handle */
-      const dragHandle = $('graph-drag-handle');
-      if (dragHandle) {
-        let gDragging = false, gStartX, gStartY, gOrigLeft, gOrigTop;
-        dragHandle.addEventListener('mousedown', e => {
-          if (e.target.tagName === 'BUTTON') return;
-          const gv = $('graph-view');
-          if (gv.classList.contains('fullscreen-graph')) return;
-          gDragging = true;
-          const rect = gv.getBoundingClientRect();
-          gStartX = e.clientX; gStartY = e.clientY;
-          gOrigLeft = rect.left; gOrigTop = rect.top;
-          gv.style.bottom = 'auto'; gv.style.right = 'auto';
-          gv.style.left = gOrigLeft + 'px'; gv.style.top = gOrigTop + 'px';
-          e.preventDefault();
-        });
-        window.addEventListener('mousemove', e => {
-          if (!gDragging) return;
-          const gv = $('graph-view');
-          gv.style.left = (gOrigLeft + e.clientX - gStartX) + 'px';
-          gv.style.top = (gOrigTop + e.clientY - gStartY) + 'px';
-        });
-        window.addEventListener('mouseup', () => { gDragging = false; });
-      }
-
+      /* View Connections button in detail panel */
       const btnViewConn = $('btn-view-connections');
       if (btnViewConn) {
         btnViewConn.addEventListener('click', function() {
           const entryId = AppState.selectedEntryId;
           if (!entryId) return;
-          
-          closeDetail(); // Close the detail panel
-          $('graph-view').classList.remove('hidden');
-          const isDark = document.documentElement.classList.contains('dark');
-          $('graph-view').style.background = isDark ? '#0A0A0A' : '#FAF9F6';
-          $('graph-view').style.borderColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.8)';
-          $('btn-view-toggle').textContent = '[ Hide Graph ]';
-          if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ Hide Graph ]';
-          
-          initGraph();
-          
-          // Enlarge and focus
-          $('graph-view').classList.add('fullscreen-graph');
-          $('btn-graph-fullscreen').textContent = '[ Shrink ]';
-          
-          setTimeout(() => {
-            network.focus(entryId, { scale: 1.5, animation: { duration: 1000, easingFunction: 'easeInOutQuad' } });
-            network.selectNodes([entryId]);
-          }, 500);
+          openConnectionMatrix(entryId);
         });
       }
     });
@@ -2328,123 +2351,73 @@
     }
 
     /* ============================================================
-       KNOWLEDGE GRAPH
+       CONNECTION MATRIX
     ============================================================ */
-    let network = null;
-    let graphNodes = null;
-    let graphEdges = null;
+    function applyGraphTheme() { /* no-op: matrix auto-themes via CSS */ }
 
-    function applyGraphTheme() {
-      if (!graphNodes || !graphEdges) return;
-      const isDark = document.documentElement.classList.contains('dark');
-      const entryBorder = isDark ? '#CCFF00' : '#000000';
-      const entryBg = isDark ? '#111111' : '#FFFFFF';
-      const entryFont = isDark ? '#F4F4F5' : '#000000';
-      
-      const tagBg = isDark ? '#0A0A0A' : '#FAF9F6';
-      const tagBorder = isDark ? '#555555' : '#888888';
-      const edgeColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.3)';
+    function openConnectionMatrix(entryId) {
+      const entry = archiveData.find(e => e.id === entryId);
+      if (!entry) return;
 
-      const updatedNodes = [];
-      graphNodes.forEach(node => {
-        if (node.group === 'entry') {
-          updatedNodes.push({ id: node.id, color: { background: entryBg, border: entryBorder }, font: { color: entryFont } });
-        } else {
-          updatedNodes.push({ id: node.id, color: { background: tagBg, border: tagBorder }, font: { color: entryFont } });
-        }
+      const tagKeys = ['politics', 'theories', 'era', 'form', 'format', 'brand'];
+      const connections = new Map();
+
+      tagKeys.forEach(key => {
+        const val = entry.tags[key];
+        if (!val) return;
+        const matches = archiveData.filter(e => e.id !== entryId && e.tags[key] === val);
+        if (matches.length > 0) connections.set(val, { key, entries: matches });
       });
-      graphNodes.update(updatedNodes);
 
-      const updatedEdges = [];
-      graphEdges.forEach(edge => {
-        updatedEdges.push({ id: edge.id, color: { color: edgeColor, highlight: entryBorder } });
-      });
-      graphEdges.update(updatedEdges);
+      let html = '';
+
+      html += `<div class="matrix-center">
+        <p class="text-[9px] uppercase tracking-[0.2em] opacity-40 mb-2">Currently Viewing</p>
+        <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${entry.tags.brand}</p>
+        <p class="text-xs font-mono uppercase opacity-60 mt-1">${entry.year} &middot; ${entry.season}</p>
+        <div class="mt-3">
+          ${Object.entries(entry.tags).map(function(pair) { return '<span class="matrix-tag">' + pair[1] + '</span>'; }).join('')}
+        </div>
+      </div>`;
+
+      if (connections.size === 0) {
+        html += '<div class="matrix-section"><p class="text-[10px] uppercase tracking-[0.15em] opacity-40 text-center py-8">No shared connections found in the archive.</p></div>';
+      } else {
+        connections.forEach(function(data, tagValue) {
+          html += '<div class="matrix-section">';
+          html += '<p class="matrix-section-title">Shared: ' + tagValue + '</p>';
+          html += '<div class="matrix-entries">';
+          data.entries.slice(0, 12).forEach(function(rel) {
+            var thumb = (rel.images && rel.images[0]) || '';
+            html += '<div class="matrix-entry" data-matrix-entry-id="' + rel.id + '">';
+            if (thumb) html += '<img src="' + thumb + '" alt="' + rel.tags.brand + '" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;filter:grayscale(70%) contrast(1.15);" loading="lazy" />';
+            html += '<p class="text-[10px] font-bold font-mono uppercase tracking-wide">' + rel.tags.brand + '</p>';
+            html += '<p class="text-[9px] font-mono uppercase opacity-50 mt-0.5">' + rel.year + '</p>';
+            html += '</div>';
+          });
+          html += '</div></div>';
+        });
+      }
+
+      $('matrix-content').innerHTML = html;
+      $('connection-matrix').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
 
-    function initGraph() {
-      if (network !== null) return;
-      const nodes = [];
-      const edges = [];
-      
-      const tagMap = new Map();
-
-      archiveData.forEach(entry => {
-        nodes.push({ 
-          id: entry.id, 
-          label: `${entry.tags.brand}\n${entry.year}`, 
-          group: 'entry', 
-          shape: 'diamond', 
-          size: 20,
-          borderWidth: 2,
-          font: { face: 'IBM Plex Mono', size: 13, multi: true, bold: '13px IBM Plex Mono', vadjust: -2 } 
-        });
-        
-        ['politics', 'theories'].forEach(tagKey => {
-          const tagValue = entry.tags[tagKey];
-          if (tagValue) {
-            const tagId = `tag_${tagValue}`;
-            if (!tagMap.has(tagId)) {
-              tagMap.set(tagId, true);
-              nodes.push({ 
-                id: tagId, 
-                label: `<b>${tagValue}</b>`, 
-                group: 'tag', 
-                shape: 'triangleDown', 
-                size: 14,
-                borderWidth: 1,
-                font: { face: 'Inter', size: 11, multi: true, vadjust: 4 } 
-              });
-            }
-            edges.push({ id: `${entry.id}-${tagId}`, from: entry.id, to: tagId, width: 1 });
-          }
-        });
-      });
-
-      graphNodes = new vis.DataSet(nodes);
-      graphEdges = new vis.DataSet(edges);
-
-      const container = $('knowledge-graph');
-      const data = { nodes: graphNodes, edges: graphEdges };
-      const options = {
-        physics: { stabilization: false, barnesHut: { springLength: 200, damping: 0.1, centralGravity: 0.3 } },
-        interaction: { hover: true, tooltipDelay: 200 }
-      };
-      
-      network = new vis.Network(container, data, options);
-      applyGraphTheme();
-
-      network.on('click', params => {
-        if (params.nodes.length > 0) {
-          const nodeId = params.nodes[0];
-          if (!nodeId.startsWith('tag_')) {
-            // Close fullscreen if active
-            $('graph-view').classList.remove('fullscreen-graph');
-            $('btn-graph-fullscreen').textContent = '[ Enlarge ]';
-            openDetail(nodeId);
-          }
-        }
-      });
+    function closeConnectionMatrix() {
+      $('connection-matrix').classList.remove('open');
+      document.body.style.overflow = '';
     }
 
     function toggleViewMode() {
-      const isVisible = !$('graph-view').classList.contains('hidden');
-      if (isVisible) {
-        $('graph-view').classList.add('hidden');
-        $('btn-view-toggle').textContent = '[ View: Graph ]';
-        if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ View: Graph ]';
+      if ($('connection-matrix').classList.contains('open')) {
+        closeConnectionMatrix();
       } else {
-        $('graph-view').classList.remove('hidden');
-        $('graph-view').classList.remove('fullscreen-graph');
-        // Apply dark mode styles
-        const isDark = document.documentElement.classList.contains('dark');
-        $('graph-view').style.background = isDark ? '#0A0A0A' : '#FAF9F6';
-        $('graph-view').style.borderColor = isDark ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.8)';
-        $('btn-view-toggle').textContent = '[ Hide Graph ]';
-        if ($('btn-view-toggle-mobile')) $('btn-view-toggle-mobile').textContent = '[ Hide Graph ]';
-        initGraph();
+        var currentId = AppState.selectedEntryId || (archiveData.length > 0 ? archiveData[0].id : null);
+        if (currentId) openConnectionMatrix(currentId);
       }
     }
+
 
     /* ============================================================
        IMAGE PAN & ZOOM
