@@ -90,10 +90,7 @@
       }
     }
 
-    /* Desaturated high-contrast */
-    .desaturate {
-      filter: grayscale(70%) contrast(1.15);
-    }
+    /* Images display unfiltered */
 
     /* Selective crosshair cursor */
     #detail-image-view { cursor: crosshair; }
@@ -226,8 +223,8 @@
 
     /* Mobile grid: centre-column reveals colour + overlay */
     @media (max-width: 767px) {
-      .grid-cell.grid-cell--focus img.desaturate,
-      body.grid-meta-always .grid-cell img.desaturate {
+      .grid-cell.grid-cell--focus img,
+      body.grid-meta-always .grid-cell img {
         filter: none !important;
       }
       .grid-cell.grid-cell--focus .grid-overlay,
@@ -468,24 +465,7 @@
     .dragging { cursor: grabbing !important; transition: none !important; }
     #detail-desktop-stack { cursor: grab; overflow: hidden; }
     
-    /* FILM GRAIN */
-    @keyframes grain {
-      0%, 100% { transform: translate(0, 0); }
-      10% { transform: translate(-5%, -10%); }
-      30% { transform: translate(5%, -15%); }
-      50% { transform: translate(-15%, 5%); }
-      70% { transform: translate(15%, 15%); }
-      90% { transform: translate(-10%, 10%); }
-    }
-    #film-grain {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-      animation: grain 8s steps(10) infinite;
-      content: "";
-      width: 300vw;
-      height: 300vh;
-      left: -100vw;
-      top: -100vh;
-    }
+    /* Film grain removed */
     
     
     /* GRAPH FULLSCREEN */
@@ -987,7 +967,7 @@
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase" style="pointer-events: auto">
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 md:p-12">
-            <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain desaturate block mx-auto" src="" alt="" />
+            <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain block mx-auto" src="" alt="" />
             <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
             <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image" style="touch-action: manipulation">&#8594;</button>
           </div>
@@ -1039,12 +1019,7 @@
   </div>
 
   
-  <!-- ============================================================
-       FILM GRAIN OVERLAY
-  ============================================================ -->
-  <div id="film-grain" class="pointer-events-none fixed inset-0 z-[9999] opacity-20 mix-blend-overlay"></div>
-
-  <!-- Film grain control removed -->
+  <!-- Film grain removed -->
 
   <!-- TOAST -->
   <div id="toast" class="hidden"></div>
@@ -1597,7 +1572,7 @@
             <img
               src="${src}"
               alt="${entry.title} Look ${i + 1}"
-              class="desaturate w-full aspect-[3/4] object-cover block md:hover:filter-none transition-all duration-200"
+              class="w-full aspect-[3/4] object-cover block transition-all duration-200"
               loading="lazy"
               onerror="this.outerHTML='<div class=\\'img-placeholder\\'></div>'"
             />
@@ -1922,7 +1897,7 @@
             <img
               src="${(rel.images && rel.images[0]) || rel.imageUrl}"
               alt="${rel.title}"
-              class="desaturate block"
+              class="block"
               style="width:100px;height:120px;object-fit:cover;"
             />
             <div style="padding:6px;">
