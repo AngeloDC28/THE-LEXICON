@@ -926,7 +926,7 @@
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
-              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Extract Coordinate ]</button>
+              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
               <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
@@ -2997,7 +2997,7 @@
       const btnCopy = $('btn-copy-link');
       if (btnCopy) btnCopy.addEventListener('click', () => {
         const url = window.location.href;
-        navigator.clipboard.writeText(url).then(() => showToast('Coordinate Extracted'));
+        navigator.clipboard.writeText(url).then(() => showToast('Link copied'));
       });
 
       const btnBookmark = $('btn-bookmark-entry');
