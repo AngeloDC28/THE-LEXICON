@@ -791,8 +791,8 @@
     <!-- Marquee Ticker -->
     <div class="w-full overflow-hidden border-b-[1px] border-black/80 dark:border-white/20 py-3">
       <div class="marquee-track">
-        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture ;</span>
-        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture ;</span>
+        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">DECODING THE MECHANICS OF STRUCTURAL POWER ; ISOLATING GARMENTS THAT SUBVERT SOCIETAL CODES ; EVERY INDEXED RUNWAY IS A CULTURAL ARTIFACT ;</span>
+        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">DECODING THE MECHANICS OF STRUCTURAL POWER ; ISOLATING GARMENTS THAT SUBVERT SOCIETAL CODES ; EVERY INDEXED RUNWAY IS A CULTURAL ARTIFACT ;</span>
       </div>
     </div>
 
@@ -804,7 +804,7 @@
 
     <!-- Action Trigger -->
     <div class="flex justify-center pb-12 md:pb-16 pointer-events-none">
-        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black dark:border-white/30 pb-2 px-3 min-h-[44px] opacity-60">Click Anywhere To Access Archive</button>
+        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black dark:border-white/30 pb-2 px-3 min-h-[44px] opacity-60">[ INITIATE FORENSIC QUERY ]</button>
     </div>
   </div>
 
@@ -890,7 +890,7 @@
                 id="search-input"
                 type="search"
                 autocomplete="off"
-                placeholder="Search brand, year, season..."
+                placeholder="Query brand, era, or structural intervention..."
                 aria-label="Search archive"
                 class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono placeholder:text-black/40 dark:text-white/40 focus:bg-white dark:bg-zinc-800 uppercase tracking-wide focus-ring"
               />
@@ -910,7 +910,7 @@
         <!-- Taxonomy Grid -->
         <div id="taxonomy-container" class="shrink-0 border-t-[1px] border-black/80 dark:border-white/20 overflow-y-auto" style="max-height: 45%;">
           <div class="px-4 py-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">Taxonomy</span>
+            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">[ Map Taxonomy ]</span>
           </div>
           <div id="taxonomy-grid" class="taxonomy-grid">
             <!-- Top-level pillars rendered by JS -->
@@ -926,7 +926,7 @@
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
-              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
+              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Extract Coordinate ]</button>
               <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
@@ -973,9 +973,9 @@
           </div>
           <!-- Archival Sticky Note Triggers -->
           <div id="sticky-note-triggers">
-            <button type="button" class="sticky-trigger focus-ring" style="background:#FF0000;" data-note="critique" aria-label="Open critique note"></button>
-            <button type="button" class="sticky-trigger focus-ring" style="background:#0000FF;" data-note="strategy" aria-label="Open strategy note"></button>
-            <button type="button" class="sticky-trigger focus-ring" style="background:#E6FF00;" data-note="provenance" aria-label="Open provenance note"></button>
+            <button type="button" class="sticky-trigger focus-ring" style="background:#FF0000;" data-note="critique" aria-label="Forensic Critique"></button>
+            <button type="button" class="sticky-trigger focus-ring" style="background:#0000FF;" data-note="strategy" aria-label="Isolate Strategy"></button>
+            <button type="button" class="sticky-trigger focus-ring" style="background:#E6FF00;" data-note="provenance" aria-label="Audit Provenance"></button>
           </div>
           <!-- Accent Glow -->
           <div id="accent-glow" class="accent-glow"></div>
@@ -1050,7 +1050,7 @@
     <div class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border-[1px] border-black/80 dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
       <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
         <span class="text-xl font-bold font-mono">></span>
-        <input type="text" id="cmd-input" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30 text-black dark:text-white" placeholder="Search brands, eras, politics..." autocomplete="off">
+        <input type="text" id="cmd-input" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30 text-black dark:text-white" placeholder="Query brand, era, or structural intervention..." autocomplete="off">
         <span class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
       </div>
       <div id="cmd-results" class="overflow-y-auto flex-1 font-mono">
@@ -1070,9 +1070,9 @@
         <button type="button" data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
       </div>
       <div class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
-        <p>THE LEXICON is a relational database and cultural directory dedicated to the rigorous audit of fashion history, visual culture, and subcultural theory.</p>
-        <p>Founded in 2026 by Angelo Sanchez Dela Cruz, the archive functions as a proprietary research terminal; mapping the intersections of aesthetic language, structural power, and historical precedent. Operating outside traditional fashion media ecosystems, every indexed entry is anchored in stringent anthropological and critical commentary to ensure maximum academic and cultural relevance.</p>
-        <p>The directory prioritises the architectural analysis of avant-garde deconstruction, the genesis of underground aesthetics, and the surreal theatrics of modern image-making. Built as an evolving, high-density system, THE LEXICON is designed for academics, visual artists, and cultural critics who require uncompromising analysis over trend-based consumption.</p>
+        <p>THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.</p>
+        <p>Operating strictly outside the traditional fashion media ecosystem, the directory maps the intersections of aesthetic language, historical precedent, and structural power. We strip away trend-based consumption to isolate the avant-garde; treating radical corporeal interventions and exercises in semiotic sabotage as vital cultural artifacts.</p>
+        <p>Designed for cultural critics and visual strategists, this system decodes the underlying mechanics of class dynamics and bodily autonomy through the lens of visionary image-making.</p>
       </div>
     </div>
   </div>
@@ -1889,7 +1889,7 @@
 
       if (related.length > 0) {
         relatedContainer.classList.remove('hidden');
-        let relHtml = '<p class="text-[9px] font-bold uppercase tracking-[0.15em] opacity-50 mb-3">Related Entries</p>';
+        let relHtml = '<p class="text-[9px] font-bold uppercase tracking-[0.15em] opacity-50 mb-3">[ Intersecting Artifacts ]</p>';
         relHtml += '<div style="display:flex;gap:8px;overflow-x:auto;">';
 
         related.forEach(function (rel) {
@@ -2094,9 +2094,9 @@
        STICKY NOTES
     ============================================================ */
     var stickyNotes = {
-      critique:   { color: '#FF0000', title: 'CRITIQUE',   body: '' },
-      strategy:   { color: '#0000FF', title: 'STRATEGY',   body: '' },
-      provenance: { color: '#E6FF00', title: 'PROVENANCE', body: '' },
+      critique:   { color: '#FF0000', title: 'FORENSIC CRITIQUE',   body: '' },
+      strategy:   { color: '#0000FF', title: 'ISOLATE STRATEGY',   body: '' },
+      provenance: { color: '#E6FF00', title: 'AUDIT PROVENANCE', body: '' },
     };
     var activeNote = null;
 
@@ -2925,7 +2925,11 @@
       const ogDesc = document.querySelector('meta[property="og:description"]');
       const ogImage = document.querySelector('meta[property="og:image"]');
       if (ogTitle) ogTitle.content = entry.tags.brand + ' ' + entry.year + ' — THE LEXICON';
-      if (ogDesc) ogDesc.content = entry.description.substring(0, 200);
+      if (ogDesc) {
+        const form = entry.tags.form || '--';
+        const politics = entry.tags.politics || '--';
+        ogDesc.content = `${entry.tags.brand} ${entry.year} ; A forensic audit of ${form} and ${politics}. Access the cultural directory to map the structural precedent.`;
+      }
       if (ogImage && entry.images && entry.images[0]) ogImage.content = entry.images[0];
       document.title = entry.tags.brand + ' ' + entry.year + ' — THE LEXICON';
       const ld = $('json-ld');
@@ -2993,7 +2997,7 @@
       const btnCopy = $('btn-copy-link');
       if (btnCopy) btnCopy.addEventListener('click', () => {
         const url = window.location.href;
-        navigator.clipboard.writeText(url).then(() => showToast('Link copied'));
+        navigator.clipboard.writeText(url).then(() => showToast('Coordinate Extracted'));
       });
 
       const btnBookmark = $('btn-bookmark-entry');
