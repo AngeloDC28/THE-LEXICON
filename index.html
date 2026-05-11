@@ -917,32 +917,7 @@
       touch-action: manipulation;
     }
 
-    /* ── FEATURE 2: SYLLABUS COMPILER ── */
-    .grid-cell.syllabus-selected {
-      outline: 3px solid #000; outline-offset: -3px;
-      position: relative;
-    }
-    html.dark .grid-cell.syllabus-selected {
-      outline-color: #CCFF00;
-    }
-    .grid-cell.syllabus-selected::after {
-      content: '\2713'; position: absolute; top: 6px; right: 6px;
-      width: 22px; height: 22px; background: #000; color: #fff;
-      font-size: 14px; font-weight: 700; line-height: 22px;
-      text-align: center; z-index: 10; pointer-events: none;
-    }
-    html.dark .grid-cell.syllabus-selected::after {
-      background: #CCFF00; color: #000;
-    }
-    #syllabus-action-bar {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      z-index: 9998; transform: translateY(100%);
-      transition: transform 0.3s ease;
-      padding-bottom: env(safe-area-inset-bottom, 0px);
-    }
-    #syllabus-action-bar.visible {
-      transform: translateY(0);
-    }
+
 
     /* ── HEADER TELEMETRY FEED ── */
     #header-telemetry {
@@ -3027,7 +3002,6 @@
       $('auth-modal').addEventListener('click', (e) => { if(e.target === $('auth-modal')) closeModal('auth'); });
       $('about-modal').addEventListener('click', (e) => { if(e.target === $('about-modal')) closeModal('about'); });
       $('contact-modal').addEventListener('click', (e) => { if(e.target === $('contact-modal')) closeModal('contact'); });
-      $('schema-modal').addEventListener('click', (e) => { if(e.target === $('schema-modal')) closeModal('schema'); });
       $('cmd-palette-backdrop').addEventListener('click', toggleCmdPalette);
 
       /* Search */
