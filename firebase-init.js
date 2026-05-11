@@ -6,13 +6,13 @@ import { getFirestore, collection, doc, setDoc, getDocs, arrayUnion } from "fire
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD8rcO0QWdVTd5yucuYYKsBw_oXkksUapw",
-  authDomain: "lexicon-7575c.firebaseapp.com",
-  projectId: "lexicon-7575c",
-  storageBucket: "lexicon-7575c.firebasestorage.app",
-  messagingSenderId: "733240893165",
-  appId: "1:733240893165:web:cceb5e159b131bcbaf36e4",
-  measurementId: "G-W474SBHNRF"
+  apiKey: "AIzaSyDdIoJuDHQKjOS5T9j3IcvnqCNxRA284DY",
+  authDomain: "lexicon-7c6d9.firebaseapp.com",
+  projectId: "lexicon-7c6d9",
+  storageBucket: "lexicon-7c6d9.firebasestorage.app",
+  messagingSenderId: "1075493892861",
+  appId: "1:1075493892861:web:911c08714a76c833388494",
+  measurementId: "G-BK3N3DVMZ4"
 };
 
 // Initialize Firebase
