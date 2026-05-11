@@ -7,8 +7,7 @@
   <link rel="icon" type="image/jpeg" href="IMG_6655.jpeg">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -16,7 +15,6 @@
     rel="stylesheet"
   />
 
-  <!-- vis-network removed: replaced with Connection Matrix -->
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -519,9 +517,6 @@
     .dragging { cursor: grabbing !important; transition: none !important; }
     #detail-desktop-stack { cursor: grab; overflow: hidden; }
     
-    /* Film grain removed */
-    
-    
     /* GRAPH FULLSCREEN */
     .fullscreen-graph {
       position: fixed !important;
@@ -781,22 +776,6 @@
     }
     html.dark #toast { background: #CCFF00; color: #000; }
 
-    /* ── FILM GRAIN CONTROL ── */
-    #grain-control {
-      position: fixed; bottom: 8px; right: 8px; z-index: 10000;
-      display: flex; gap: 4px; align-items: center;
-    }
-    .grain-btn {
-      font-size: 8px; font-family: 'IBM Plex Mono', monospace;
-      text-transform: uppercase; letter-spacing: 0.06em;
-      border: 1px solid rgba(0,0,0,0.3); padding: 2px 6px;
-      background: transparent; cursor: pointer; opacity: 0.5;
-      transition: all 0.15s ease;
-    }
-    .grain-btn.active { opacity: 1; background: #000; color: #fff; }
-    html.dark .grain-btn { border-color: rgba(255,255,255,0.2); color: #fff; }
-    html.dark .grain-btn.active { background: #CCFF00; color: #000; }
-
     /* ── ACCENT GLOW ── */
     .accent-glow {
       position: absolute; inset: 0; pointer-events: none;
@@ -927,22 +906,7 @@
       50% { opacity: 0; }
     }
 
-    /* ── FEATURE: CITATION ENGINE ── */
-    #citation-modal {
-      position: fixed; inset: 0; z-index: 10000;
-      background: rgba(0,0,0,0.85); backdrop-filter: blur(4px);
-      display: none; align-items: center; justify-content: center; padding: 20px;
-    }
-    #citation-modal.active { display: flex; }
-    #citation-container {
-      background: var(--bone); width: 100%; max-width: 600px;
-      border: 1px solid #000; padding: 24px; position: relative;
-    }
-    html.dark #citation-container { background: var(--darkBase); border-color: rgba(255,255,255,0.2); }
-    .citation-block { margin-bottom: 20px; }
-    .citation-label { font-size: 10px; font-weight: bold; opacity: 0.5; margin-bottom: 4px; display: block; }
-    .citation-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 1.6; word-break: break-all; }
-    .btn-copy-citation { font-size: 9px; font-weight: bold; border: 1px solid currentColor; padding: 2px 6px; margin-top: 6px; cursor: pointer; }
+
 
     /* ── FEATURE: EVOLUTION MATRIX ── */
     #timeline-view {
@@ -1003,7 +967,7 @@
        BOOT OVERLAY (auto-dismiss after 1.2s)
   ============================================================ -->
   <div id="boot-overlay">
-    <span class="boot-text" id="boot-text">[ INITIALIZING FORENSIC AUDIT ]</span><span class="boot-cursor"></span>
+    <span class="boot-text" id="boot-text">[ LOADING THE LEXICON ]</span><span class="boot-cursor"></span>
   </div>
 
   <div id="app-root">
@@ -1126,8 +1090,7 @@
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
-              <button type="button" id="btn-export-dossier" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1" title="Export entry as shareable image">[ Export ]</button>
-              <button type="button" id="btn-export-citation" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1" title="Generate academic citations">[ Citation ]</button>
+
 
               <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
               <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
@@ -1183,10 +1146,6 @@
           </div>
         </div>
 
-
-        
-        <!-- Graph view removed: replaced with Connection Matrix modal -->
-
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase" style="pointer-events: auto">
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 md:p-12">
@@ -1239,24 +1198,6 @@
       <button type="button" id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-70 focus-ring" aria-label="Close">X</button>
     </div>
     <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
-  </div>
-
-  
-  <!-- Film grain removed -->
-
-  <!-- DOSSIER HIDDEN TEMPLATE (Feature 1) -->
-  <div id="dossier-template">
-    <div class="dossier-header">
-      <div class="dossier-brand" id="dossier-brand"></div>
-      <div class="dossier-year" id="dossier-year"></div>
-    </div>
-    <div class="dossier-image-wrap">
-      <img id="dossier-image" src="" alt="" crossorigin="anonymous" />
-    </div>
-    <div class="dossier-footer">
-      <div class="dossier-critique" id="dossier-critique"></div>
-      <div class="dossier-watermark">THE LEXICON ; thelexicon.xyz</div>
-    </div>
   </div>
 
   <!-- SYLLABUS ACTION BAR (Feature 2) -->
@@ -1829,6 +1770,22 @@
 
       grid.innerHTML = html;
       setupGridIntersectionObserver();
+
+      /* ── STAGGERED GRID ANIMATION & LAZY LOAD ── */
+      document.querySelectorAll('#image-grid .grid-cell').forEach((cell, i) => {
+        cell.style.animationDelay = (i * 30) + 'ms';
+        const img = cell.querySelector('img');
+        if (img) {
+          if (img.complete) img.classList.add('loaded');
+          else img.addEventListener('load', () => img.classList.add('loaded'));
+        }
+      });
+      if (typeof renderFilterChips === 'function') renderFilterChips();
+      
+      /* Refresh Timeline if active */
+      if (AppState.currentView === 'timeline' && typeof renderTimelineMatrix === 'function') {
+        renderTimelineMatrix();
+      }
     }
 
     /* ============================================================
@@ -2164,6 +2121,18 @@
       /* Update other views */
       renderEntryList();
       renderStatusBar();
+
+      /* ── Enhancements ── */
+      if (typeof addRecentlyViewed === 'function') addRecentlyViewed(entryId);
+      if (typeof updateBookmarkUI === 'function') updateBookmarkUI(entryId);
+      if (typeof updateMetaForEntry === 'function') updateMetaForEntry(entry);
+      if (typeof extractAccentColor === 'function') {
+        const img = $('detail-image');
+        if (img) {
+          if (img.complete) extractAccentColor(img);
+          else img.addEventListener('load', () => extractAccentColor(img), { once: true });
+        }
+      }
     }
 
     function closeDetail() {
@@ -2188,6 +2157,11 @@
       closeStickyNote();
       renderEntryList();
       renderStatusBar();
+
+      /* ── Enhancements ── */
+      if (typeof resetMeta === 'function') resetMeta();
+      const glow = $('accent-glow');
+      if (glow) glow.style.boxShadow = '';
     }
 
     function navigateEntry(direction) {
@@ -2421,7 +2395,7 @@
       if (btnMobile) btnMobile.textContent = text;
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    function initCoreUI() {
       initTheme();
       const btnDesktop = document.getElementById('btn-theme-toggle');
       const btnMobile = document.getElementById('btn-theme-toggle-mobile');
@@ -2469,7 +2443,7 @@
           openConnectionMatrix(entryId);
         });
       }
-    });
+    }
 
     
     /* ============================================================
@@ -3019,6 +2993,12 @@
           }
         }
       });
+
+      // Initialize secondary modules deterministically
+      if (typeof initCoreUI === 'function') initCoreUI();
+      if (typeof initSecondaryFeatures === 'function') initSecondaryFeatures();
+      if (typeof initSyllabusEvents === 'function') initSyllabusEvents();
+      if (typeof startHeaderTelemetry === 'function') startHeaderTelemetry();
     }
 
     document.addEventListener('DOMContentLoaded', init);
@@ -3124,20 +3104,7 @@
       container.innerHTML = chips.map(c => `<span class="filter-chip" data-chip-type="${c.type}">${c.label} ✕</span>`).join('');
     }
 
-    /* ── STAGGERED GRID ANIMATION ── */
-    const origRenderImageGrid = renderImageGrid;
-    renderImageGrid = function() {
-      origRenderImageGrid();
-      document.querySelectorAll('#image-grid .grid-cell').forEach((cell, i) => {
-        cell.style.animationDelay = (i * 30) + 'ms';
-        const img = cell.querySelector('img');
-        if (img) {
-          if (img.complete) img.classList.add('loaded');
-          else img.addEventListener('load', () => img.classList.add('loaded'));
-        }
-      });
-      renderFilterChips();
-    };
+    /* ── STAGGERED GRID ANIMATION (Integrated into renderImageGrid) ── */
 
     /* ── ACCENT COLOR EXTRACTION ── */
     function extractAccentColor(imgEl) {
@@ -3182,52 +3149,10 @@
       if (ogTitle) ogTitle.content = 'THE LEXICON';
     }
 
-    /* ── PATCH openDetail / closeDetail ── */
-    const origOpenDetail = openDetail;
-    openDetail = function(entryId, imgIdx) {
-      origOpenDetail(entryId, imgIdx);
-      const entry = archiveData.find(e => e.id === entryId);
-      if (entry) {
-        addRecentlyViewed(entryId);
-        updateBookmarkUI(entryId);
-        updateMetaForEntry(entry);
-        const img = $('detail-image');
-        if (img) {
-          if (img.complete) extractAccentColor(img);
-          else img.addEventListener('load', () => extractAccentColor(img), { once: true });
-        }
-      }
-    };
-    const origCloseDetail = closeDetail;
-    closeDetail = function() {
-      origCloseDetail();
-      resetMeta();
-      const glow = $('accent-glow');
-      if (glow) glow.style.boxShadow = '';
-    };
-
-    /* ── FILM GRAIN CONTROL ── */
-    document.querySelectorAll('.grain-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const val = parseFloat(btn.getAttribute('data-grain'));
-        $('film-grain').style.opacity = val;
-        document.querySelectorAll('.grain-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        localStorage.setItem('lexicon-grain', val);
-      });
-    });
-    (function restoreGrain() {
-      const saved = localStorage.getItem('lexicon-grain');
-      if (saved !== null) {
-        $('film-grain').style.opacity = saved;
-        document.querySelectorAll('.grain-btn').forEach(b => {
-          b.classList.toggle('active', b.getAttribute('data-grain') === saved);
-        });
-      }
-    })();
+    /* ── PATCH openDetail / closeDetail (Integrated) ── */
 
     /* ── COPY LINK ── */
-    document.addEventListener('DOMContentLoaded', () => {
+    function initSecondaryFeatures() {
       const btnCopy = $('btn-copy-link');
       if (btnCopy) btnCopy.addEventListener('click', () => {
         const url = window.location.href;
@@ -3321,7 +3246,7 @@
 
       renderRecentlyViewed();
       renderFilterChips();
-    });
+    }
 
   </script>
 
@@ -3329,94 +3254,7 @@
        FEATURE MODULES (1, 2, 4)
   ============================================================ -->
   <script>
-    /* ============================================================
-       FEATURE 1: EXPORTABLE DOSSIER
-       Captures a hidden 9:16 DOM template via html2canvas and
-       auto-downloads the PNG as a mobile share asset.
-    ============================================================ */
-    (function initExportDossier() {
-      document.addEventListener('DOMContentLoaded', function () {
-        var btnExport = document.getElementById('btn-export-dossier');
-        if (!btnExport) return;
 
-        btnExport.addEventListener('click', function () {
-          if (typeof html2canvas === 'undefined') {
-            showToast('Export library loading...');
-            return;
-          }
-
-          var entry = archiveData.find(function (e) { return e.id === AppState.selectedEntryId; });
-          if (!entry) return;
-
-          showToast('Generating dossier...');
-
-          var imgs = entry.images || [entry.imageUrl];
-          var currentImg = imgs[AppState.currentImageIndex] || imgs[0];
-          
-          var dossierImg = document.getElementById('dossier-image');
-          var template = document.getElementById('dossier-template');
-
-          /* Populate the template */
-          document.getElementById('dossier-brand').textContent = entry.tags.brand;
-          document.getElementById('dossier-year').textContent = entry.year + ' ; ' + entry.season;
-          dossierImg.src = currentImg;
-
-          var critique = (entry.notes && entry.notes.critique) || entry.description || '';
-          if (critique.length > 280) critique = critique.substring(0, 280) + '...';
-          document.getElementById('dossier-critique').textContent = critique;
-
-          function executeCapture() {
-            /* Move template into viewport but keep it hidden behind UI */
-            template.style.position = 'fixed';
-            template.style.left = '0';
-            template.style.top = '0';
-            template.style.zIndex = '-100';
-            template.style.opacity = '1';
-            template.style.pointerEvents = 'none';
-            template.style.visibility = 'visible';
-
-            html2canvas(template, {
-              width: 1080,
-              height: 1920,
-              scale: 1,
-              useCORS: true,
-              allowTaint: true,
-              backgroundColor: '#FFFFFF',
-              logging: false,
-            }).then(function (canvas) {
-              /* Reset template to off-screen */
-              template.style.position = 'absolute';
-              template.style.left = '-9999px';
-              template.style.opacity = '0';
-              template.style.visibility = 'hidden';
-
-              var link = document.createElement('a');
-              var slug = (entry.tags.brand + '-' + entry.year).replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
-              link.download = 'LEXICON-' + slug + '.png';
-              link.href = canvas.toDataURL('image/png');
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-              showToast('Dossier exported');
-            }).catch(function (err) {
-              console.error('Export failed:', err);
-              template.style.left = '-9999px';
-              showToast('Export failed — try again');
-            });
-          }
-
-          /* Bulletproof image readiness check using decode() API */
-          if (dossierImg.complete && dossierImg.naturalWidth > 0) {
-            dossierImg.decode().then(executeCapture).catch(executeCapture);
-          } else {
-            dossierImg.onload = function() {
-              dossierImg.decode().then(executeCapture).catch(executeCapture);
-            };
-            dossierImg.onerror = function () { showToast('Image load failed'); };
-          }
-        });
-      });
-    })();
 
 
     /* ============================================================
@@ -3493,12 +3331,17 @@
       }
 
       function generateSyllabusPDF() {
-        if (typeof window.jspdf === 'undefined') {
-          showToast('PDF library loading...');
-          return;
-        }
         if (selectedIds.size === 0) {
           showToast('No entries selected');
+          return;
+        }
+
+        if (typeof window.jspdf === 'undefined') {
+          showToast('Loading PDF engine...');
+          var script = document.createElement('script');
+          script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+          script.onload = function() { generateSyllabusPDF(); };
+          document.head.appendChild(script);
           return;
         }
 
@@ -3690,7 +3533,7 @@
         showToast('Syllabus compiled \u2014 ' + entries.length + ' entries');
       }
 
-      document.addEventListener('DOMContentLoaded', function () {
+      window.initSyllabusEvents = function () {
         var btnD = document.getElementById('btn-syllabus-toggle');
         var btnM = document.getElementById('btn-syllabus-toggle-mobile');
         if (btnD) btnD.addEventListener('click', toggleSyllabusMode);
@@ -3709,58 +3552,10 @@
             handleGridClickForSyllabus(e);
           }, true); /* Capture phase to run before existing handler */
         }
-      });
+      };
     })();
 
-    /* ============================================================
-       FEATURE 1: AUTOMATED CITATION ENGINE
-    ============================================================ */
-    (function initCitationEngine() {
-      const modal = document.getElementById('citation-modal');
-      const btnExport = document.getElementById('btn-export-citation');
-      if (!btnExport || !modal) return;
 
-      btnExport.addEventListener('click', () => {
-        const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
-        if (!entry) return;
-
-        const brand = entry.tags.brand;
-        const year = entry.year;
-        const season = entry.season || '';
-        const subtitle = entry.subtitle || '';
-        const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
-        const url = window.location.origin + '/?id=' + entry.id;
-
-        // MLA 9th Ed
-        const mla = `${brand}. ${subtitle ? '"' + subtitle + '," ' : ''}${season} ${year}. THE LEXICON, ${url}. Accessed ${today}.`;
-        // APA 7th Ed
-        const apa = `${brand}. (${year}). ${subtitle ? subtitle + ' [' + season + '].' : season + '.'} THE LEXICON. ${url}`;
-        // Chicago 17th Ed
-        const chicago = `${brand}. "${subtitle || season + ' ' + year}." THE LEXICON. Accessed ${today}. ${url}`;
-
-        document.getElementById('cite-mla').textContent = mla;
-        document.getElementById('cite-apa').textContent = apa;
-        document.getElementById('cite-chicago').textContent = chicago;
-
-        modal.classList.add('active');
-      });
-
-      document.getElementById('btn-close-citation').addEventListener('click', () => modal.classList.remove('active'));
-      
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.classList.remove('active');
-      });
-
-      document.querySelectorAll('.btn-copy-citation').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const type = btn.getAttribute('data-type');
-          const text = document.getElementById('cite-' + type).textContent;
-          navigator.clipboard.writeText(text).then(() => {
-            showToast('Citation copied to clipboard');
-          });
-        });
-      });
-    })();
 
     /* ============================================================
        FEATURE 2: CHRONOLOGICAL EVOLUTION MATRIX
@@ -3825,12 +3620,7 @@
       document.getElementById('btn-toggle-grid').addEventListener('click', () => toggleViewMode('grid'));
       document.getElementById('btn-toggle-timeline').addEventListener('click', () => toggleViewMode('timeline'));
 
-      // Patch existing render functions to refresh timeline if active
-      const origRenderImageGrid = window.renderImageGrid;
-      window.renderImageGrid = function() {
-        origRenderImageGrid();
-        if (currentMode === 'timeline') renderTimelineMatrix();
-      };
+      // Refresh timeline is now handled within renderImageGrid
     })();
 
     /* ============================================================
@@ -3897,36 +3687,12 @@
       }
 
       /* Start after boot overlay fades (1.2s + 0.5s buffer) */
-      document.addEventListener('DOMContentLoaded', function () {
+      window.startHeaderTelemetry = function () {
         setTimeout(tick, 1700);
-      });
+      };
     })();
   </script>
-  <!-- Citation Modal -->
-  <div id="citation-modal">
-    <div id="citation-container">
-      <button type="button" id="btn-close-citation" class="absolute top-4 right-4 text-xs font-bold font-mono uppercase tracking-widest hover:opacity-50">[ Close ]</button>
-      <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 border-b border-black dark:border-white/20 pb-2">Academic Citations</h3>
-      
-      <div class="citation-block">
-        <span class="citation-label">MLA (9th Edition)</span>
-        <div id="cite-mla" class="citation-text"></div>
-        <button type="button" class="btn-copy-citation" data-type="mla">COPY MLA</button>
-      </div>
 
-      <div class="citation-block">
-        <span class="citation-label">APA (7th Edition)</span>
-        <div id="cite-apa" class="citation-text"></div>
-        <button type="button" class="btn-copy-citation" data-type="apa">COPY APA</button>
-      </div>
-
-      <div class="citation-block">
-        <span class="citation-label">CHICAGO (17th Edition)</span>
-        <div id="cite-chicago" class="citation-text"></div>
-        <button type="button" class="btn-copy-citation" data-type="chicago">COPY CHICAGO</button>
-      </div>
-    </div>
-  </div>
 
 </body>
 </html>
