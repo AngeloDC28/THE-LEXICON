@@ -78,6 +78,16 @@
       overflow: hidden;
       min-height: 0;
       position: relative;
+      /* Brutalist Grid Background */
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    html.dark #app-root {
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
     }
 
     /* ── MOBILE PORTRAIT OPTIMIZATION ── */
@@ -141,6 +151,27 @@
       }
     }
 
+    /* ── CUSTOM BRUTALIST CURSOR (Desktop Only) ── */
+    @media (hover: hover) and (pointer: fine) {
+      body { cursor: none; }
+      @keyframes cursorFlicker {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      #custom-cursor {
+        position: fixed;
+        width: 12px;
+        height: 12px;
+        background: #CCFF00;
+        mix-blend-mode: difference;
+        pointer-events: none;
+        z-index: 10000;
+        transition: transform 0.05s ease-out;
+        animation: cursorFlicker 0.1s infinite;
+      }
+      .cursor-expanding { transform: scale(3.5); }
+    }
+
     /* Images display unfiltered */
 
     /* Selective crosshair cursor */
@@ -150,23 +181,23 @@
     /* Sticky Note Squares */
     #sticky-note-triggers {
       position: absolute;
-      top: 8px;
-      right: 8px;
+      top: 6px;
+      right: 6px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
       z-index: 200;
     }
     .sticky-trigger {
-      width: 28px;
-      height: 28px;
+      width: 22px;
+      height: 22px;
       border: 1px solid #000;
       cursor: pointer;
       flex-shrink: 0;
       touch-action: manipulation;
     }
-    @media (min-width: 768px) {
-      #sticky-note-triggers { top: 12px; right: 12px; }
+    @media (min-width: 1024px) {
+      #sticky-note-triggers { top: 12px; right: 12px; gap: 6px; }
       .sticky-trigger { width: 20px; height: 20px; }
     }
     #sticky-note-panel {
@@ -482,12 +513,32 @@
 
     /* ── BOOT OVERLAY ── */
     #boot-overlay {
-      position: fixed; inset: 0; z-index: 200;
+      position: fixed;
+      inset: 0;
       background: #000;
-      display: flex; align-items: center; justify-content: center;
-      transition: opacity 0.5s ease;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #CCFF00;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      pointer-events: all;
+    }
+    /* Scanline effect */
+    #boot-overlay::before {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+      z-index: 2;
+      background-size: 100% 2px, 3px 100%;
       pointer-events: none;
     }
+    .boot-text { position: relative; z-index: 3; }
     #boot-overlay.boot-fade-out {
       opacity: 0;
     }
@@ -973,6 +1024,8 @@
 </head>
 
 <body>
+  <div id="custom-cursor"></div>
+
   <a href="#image-panel" class="skip-link">Skip to Archive</a>
 
   <!-- ============================================================
@@ -987,50 +1040,52 @@
     <!-- ============================================================
          TOP HEADER BAR
     ============================================================ -->
-    <header class="bg-black text-white flex items-center justify-between px-3 py-2 md:px-5 md:py-3 border-b-[1px] border-black/80 dark:border-white/20 shrink-0">
-      <div class="flex items-center gap-3 md:gap-4 min-w-0">
-        <button type="button" id="btn-hamburger" class="md:hidden text-sm font-bold font-mono uppercase tracking-[0.06em] px-2 py-2 -mx-1 hover:opacity-70 focus-ring shrink-0" aria-expanded="false" aria-controls="index-panel" aria-label="Open index menu">[ &#9776; ]</button>
-        <button type="button" id="header-title" class="text-base md:text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-center md:text-left md:flex-none flex items-center justify-center md:justify-start gap-2 min-w-0 bg-transparent border-0 text-white cursor-pointer hover:opacity-70 focus-ring" aria-label="Return to archive home">
+    <header class="bg-black text-white flex items-center justify-between px-3 py-2 lg:px-5 lg:py-3 border-b-[1px] border-black/80 dark:border-white/20 shrink-0 relative z-[60]">
+      <div class="flex items-center gap-3 lg:gap-4 min-w-0">
+        <button type="button" id="btn-hamburger" class="lg:hidden text-lg font-bold font-mono uppercase tracking-[0.06em] p-3 -mx-2 hover:bg-white/10 active:bg-white/20 focus-ring shrink-0 flex items-center justify-center min-w-[44px] min-h-[44px]" aria-expanded="false" aria-controls="index-panel" aria-label="Open index menu">
+          <span id="hamburger-icon" class="leading-none transition-transform duration-200">&#9776;</span>
+        </button>
+        <button type="button" id="header-title" class="text-base md:text-lg font-bold uppercase tracking-[0.15em] font-mono flex-1 text-left lg:flex-none flex items-center justify-start gap-2 min-w-0 bg-transparent border-0 text-white cursor-pointer hover:opacity-70 focus-ring" aria-label="Return to archive home">
           <span class="truncate">The Lexicon</span>
           <img src="IMG_6655.jpeg" alt="" width="32" height="32" class="h-8 w-8 md:h-8 md:w-8 shrink-0 object-cover border border-white/30" />
         </button>
       </div>
-      <div id="header-telemetry" class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden md:block min-w-0 max-w-[40%]">
+      <div id="header-telemetry" class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden lg:block min-w-0 max-w-[40%]">
         <span id="telemetry-text" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span><span id="telemetry-cursor"></span>
       </div>
-      <div class="hidden md:flex items-center gap-4">
-        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Connections</button>
-        <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Theme: Light</button>
-        <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Sign In</button>
-        <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">About</button>
-        <button type="button" id="btn-schema-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Schema</button>
-        <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Contact</button>
-        <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Syllabus</button>
+      <div class="hidden lg:flex items-center gap-4">
+        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Connections</button>
+        <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Theme: Light</button>
+        <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Sign In</button>
+        <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">About</button>
+        <button type="button" id="btn-schema-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Schema</button>
+        <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Contact</button>
+        <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Syllabus</button>
       </div>
     </header>
 
     <!-- Drawer Backdrop (mobile only) -->
-    <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden"></div>
+    <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
 
     <!-- ============================================================
          STATUS RIBBON
     ============================================================ -->
     <div id="status-ribbon" class="grid grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))" aria-live="polite" aria-atomic="true">
-      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Brand</span>
-        <span id="status-brand" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-brand" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Year</span>
-        <span id="status-year" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-year" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 md:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Season</span>
-        <span id="status-season" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-season" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 md:px-4 py-1 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Entry</span>
-        <span id="status-entry" class="text-[10px] md:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-entry" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
     </div>
 
@@ -1044,7 +1099,7 @@
 
 
       <!-- LEFT: INDEX PANEL -->
-      <div id="index-panel" class="w-[85%] md:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:relative md:inset-auto md:z-auto flex flex-col overflow-hidden bg-overlay dark:bg-darkSurface border-r-[1px] border-black/80 dark:border-white/20">
+      <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto flex flex-col overflow-hidden bg-overlay dark:bg-darkSurface border-r-[1px] border-black/80 dark:border-white/20">
 
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
@@ -1121,21 +1176,24 @@
         </div>
 
         <!-- Mobile Drawer: About / Contact -->
-        <div class="md:hidden border-t-[1px] border-black/80 dark:border-white/20 dark:border-white/20 px-4 py-3 flex flex-wrap items-center gap-4 shrink-0">
-          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Connections</button>
-          <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Search ⌘K</button>
-          <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Theme: Light</button>
-          <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Sign In</button>
-          <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">About</button>
-          <button type="button" id="btn-schema-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Schema</button>
-          <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Contact</button>
-          <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Syllabus</button>
+        <div class="lg:hidden border-t-[1px] border-black/80 dark:border-white/20 px-4 py-4 flex flex-wrap items-center gap-3 shrink-0 bg-bone dark:bg-darkBase">
+          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Connections</button>
+          <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Search</button>
+          <div class="w-full flex gap-3">
+            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Theme</button>
+            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Sign In</button>
+          </div>
+          <div class="w-full flex gap-3">
+            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">About</button>
+            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Contact</button>
+          </div>
+          <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] w-full text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Syllabus Compiler</button>
         </div>
 
       </div>
 
       <!-- RIGHT: IMAGE GRID PANEL -->
-      <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone dark:bg-darkBase flex flex-col min-h-0">
+      <div id="image-panel" class="w-full lg:w-[60%] overflow-y-auto bg-bone dark:bg-darkBase flex flex-col min-h-0">
         <!-- View Controls -->
         <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between bg-bone dark:bg-darkBase shrink-0">
           <div class="flex items-center gap-4">
@@ -1164,10 +1222,10 @@
 
         <!-- Detail View (single image + hotspots) -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase" style="pointer-events: auto">
-          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 md:p-12">
+          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 lg:p-12">
             <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain block mx-auto" src="" alt="" />
-            <button type="button" id="btn-viewer-prev" class="hidden md:block absolute top-1/2 -translate-y-1/2 left-1 md:left-2 text-3xl md:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
-            <button type="button" id="btn-viewer-next" class="hidden md:block absolute top-1/2 -translate-y-1/2 right-1 md:right-2 text-3xl md:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image" style="touch-action: manipulation">&#8594;</button>
+            <button type="button" id="btn-viewer-prev" class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-1 lg:left-2 text-3xl lg:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
+            <button type="button" id="btn-viewer-next" class="hidden lg:block absolute top-1/2 -translate-y-1/2 right-1 lg:right-2 text-3xl lg:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Next image" style="touch-action: manipulation">&#8594;</button>
           </div>
           <!-- Archival Sticky Note Triggers -->
           <div id="sticky-note-triggers">
@@ -1197,7 +1255,7 @@
   <!-- ============================================================
        MASTER DOCK (MOBILE HOTSPOT PANEL)
   ============================================================ -->
-  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone dark:bg-darkBase border-t-[1px] border-black/80 dark:border-white/20 px-5 pt-5 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden md:hidden flex-col">
+  <div id="master-dock" class="fixed bottom-0 left-0 w-full z-[9999] bg-bone dark:bg-darkBase border-t-[1px] border-black/80 dark:border-white/20 px-5 pt-5 shadow-2xl max-h-[50vh] overflow-y-auto transform translate-y-full transition-transform duration-300 hidden lg:hidden flex-col">
     <div class="flex items-start justify-between mb-2">
       <p id="dock-title" class="text-[11px] font-bold uppercase tracking-wider flex-1"></p>
       <button type="button" id="btn-close-dock" class="text-xs font-bold ml-3 hover:opacity-70 p-2 -m-2 focus-ring" aria-label="Close panel">[ X ]</button>
@@ -2199,6 +2257,7 @@
       renderStatusBar();
 
       /* ── Enhancements ── */
+      if (typeof updateHeaderTelemetry === 'function') updateHeaderTelemetry(`ACCESSING_NODE: ${entry.id.toUpperCase()}`);
       if (typeof addRecentlyViewed === 'function') addRecentlyViewed(entryId);
       if (typeof updateBookmarkUI === 'function') updateBookmarkUI(entryId);
       if (typeof updateMetaForEntry === 'function') updateMetaForEntry(entry);
@@ -2841,6 +2900,11 @@
         drawerBackdrop.classList.remove('hidden');
         if (btnHamburger) {
           btnHamburger.setAttribute('aria-expanded', 'true');
+          const icon = $('hamburger-icon');
+          if (icon) {
+            icon.textContent = '×';
+            icon.style.transform = 'scale(1.2)';
+          }
         }
       }
       function closeDrawer() {
@@ -2850,6 +2914,11 @@
         drawerBackdrop.classList.add('hidden');
         if (btnHamburger) {
           btnHamburger.setAttribute('aria-expanded', 'false');
+          const icon = $('hamburger-icon');
+          if (icon) {
+            icon.textContent = '☰';
+            icon.style.transform = 'scale(1)';
+          }
         }
       }
       $('header-title').addEventListener('click', function () {
@@ -2891,6 +2960,13 @@
           closeModal(el.getAttribute('data-modal-backdrop'));
         });
       });
+      
+      /* Universal backdrop close (standard UX) */
+      $('auth-modal').addEventListener('click', (e) => { if(e.target === $('auth-modal')) closeModal('auth'); });
+      $('about-modal').addEventListener('click', (e) => { if(e.target === $('about-modal')) closeModal('about'); });
+      $('contact-modal').addEventListener('click', (e) => { if(e.target === $('contact-modal')) closeModal('contact'); });
+      $('schema-modal').addEventListener('click', (e) => { if(e.target === $('schema-modal')) closeModal('schema'); });
+      $('cmd-palette-backdrop').addEventListener('click', toggleCmdPalette);
 
       /* Search */
       $('search-input').addEventListener('input', debounce(function (e) {
@@ -3356,7 +3432,57 @@
   ============================================================ -->
   <script>
 
+    /* ── CUSTOM CURSOR LOGIC ── */
+    const cursor = $('custom-cursor');
+    if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      });
+      document.querySelectorAll('button, a, input, [role="button"]').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-expanding'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-expanding'));
+      });
+    }
 
+    /* ── TELEMETRY SYSTEM ── */
+    const telemetryLogs = [
+      'INITIALIZING ARCHIVE_v7.2.5...',
+      'ESTABLISHING HANDSHAKE WITH CLOUD_RUN...',
+      'AUDITING SOCIO-POLITICAL METADATA...',
+      'PARSING DECONSTRUCTIONIST TAXONOMY...',
+      'MAPPING RELATIONAL NODE NETWORKS...',
+      'INDEXING FASHION REPOSITORY...',
+      'BUFFERING ARCHIVAL VISUALS...',
+      'TERMINAL_ACCESS: GRANTED',
+      'READY_FOR_INPUT.'
+    ];
+    let logIndex = 0;
+
+    function updateTelemetry(manualLog = null) {
+      const telText = $('telemetry-text');
+      if (!telText) return;
+      
+      let base;
+      if (manualLog) {
+        base = manualLog;
+      } else {
+        base = telemetryLogs[logIndex % telemetryLogs.length];
+        logIndex++;
+      }
+      
+      const timestamp = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      telText.textContent = `[${timestamp}] ${base}`;
+      
+      if (!manualLog) {
+        setTimeout(() => updateTelemetry(), 4000 + Math.random() * 3000);
+      }
+    }
+    updateTelemetry();
+
+    function updateHeaderTelemetry(text) {
+      updateTelemetry(`ACTION_LOG: ${text.toUpperCase()}`);
+    }
 
     /* ============================================================
        FEATURE 2: SYLLABUS COMPILER
