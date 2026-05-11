@@ -31,7 +31,7 @@ exports.sendCustomMagicLink = functions.https.onCall(async (data, context) => {
     // 1. Generate the secure authentication URL programmatically
     const authLink = await admin.auth().generateSignInWithEmailLink(email, actionCodeSettings);
 
-    // 2. The Acid Brutalist HTML Template (Curatorial Voice)
+    // 2. The Institutional HTML Template (Curatorial Voice)
     const htmlContent = `
       <!DOCTYPE html>
       <html lang="en">
@@ -42,72 +42,85 @@ exports.sendCustomMagicLink = functions.https.onCall(async (data, context) => {
             background-color: #FAF9F6;
             color: #000000;
             font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.6;
             margin: 0;
-            padding: 40px;
+            padding: 20px;
+          }
+          .wrapper {
+            background-color: #FAF9F6;
+            padding: 40px 20px;
           }
           .container {
-            max-width: 600px;
+            max-width: 540px;
             margin: 0 auto;
             border: 1px solid #000000;
-            padding: 30px;
+            padding: 32px;
             background-color: #FAF9F6;
           }
-          .title {
+          .header {
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.2em;
+            margin-bottom: 32px;
+            font-size: 11px;
             border-bottom: 1px solid #000000;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
+            padding-bottom: 12px;
           }
           p {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
           }
-          .btn-container {
-            margin: 40px 0;
+          .link-container {
+            margin: 48px 0;
+            text-align: center;
           }
-          .btn {
+          .link-btn {
             display: inline-block;
             background-color: #000000;
             color: #FAF9F6;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 16px 32px;
             border: 1px solid #000000;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: 0;
+            letter-spacing: 0.15em;
+            font-size: 11px;
           }
-          .btn:hover {
+          .link-btn:hover {
             background-color: #FAF9F6;
             color: #000000;
           }
           .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #000000;
-            font-size: 11px;
-            opacity: 0.7;
+            margin-top: 48px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.6;
           }
         </style>
       </head>
       <body>
-        <div class="container">
-          <div class="title">The Lexicon — Secure Access</div>
-          
-          <p>A request has been made to access your research space within The Lexicon.</p>
-          <p>Use the secure link below to authenticate your session and return to your Connection Matrix.</p>
-          
-          <div class="btn-container">
-            <a href="${authLink}" class="btn">AUTHENTICATE SESSION</a>
-          </div>
-          
-          <p>If you did not initiate this request, please disregard this message.</p>
-          
-          <div class="footer">
-            The Lexicon | Visual Culture Archive
+        <div class="wrapper">
+          <div class="container">
+            <div class="header">SYSTEM_AUTHENTICATION // THE LEXICON</div>
+            
+            <p>A request has been made to access your research space within The Lexicon.</p>
+            <p>Use the secure link below to return to your Connection Matrix.</p>
+            
+            <div class="link-container">
+              <a href="${authLink}" class="link-btn">[ INITIALIZE SESSION ]</a>
+            </div>
+            
+            <p style="font-size: 10px; opacity: 0.5;">IF YOU DID NOT INITIATE THIS REQUEST, DISREGARD THIS TRANSMISSION.</p>
+            
+            <div class="footer">
+              Relational Database & Cultural Directory<br>
+              Institutional Access Protocol v7.2.5
+            </div>
           </div>
         </div>
       </body>

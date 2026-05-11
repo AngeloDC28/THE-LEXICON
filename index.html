@@ -1054,13 +1054,11 @@
         <span id="telemetry-text" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span><span id="telemetry-cursor"></span>
       </div>
       <div class="hidden lg:flex items-center gap-4">
-        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Connections</button>
+        <button type="button" id="btn-volumes-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Volumes</button>
         <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Theme: Light</button>
         <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Sign In</button>
         <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">About</button>
-        <button type="button" id="btn-schema-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Schema</button>
         <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Contact</button>
-        <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:bg-white hover:text-black dark:hover:bg-acid dark:hover:text-black px-2 py-1 transition-all duration-100 focus-ring">Syllabus</button>
       </div>
     </header>
 
@@ -1068,22 +1066,22 @@
     <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
 
     <!-- ============================================================
-         STATUS RIBBON
+         STATUS RIBBON (Responsive)
     ============================================================ -->
-    <div id="status-ribbon" class="grid grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" style="grid-template-columns: repeat(4, minmax(0, 1fr))" aria-live="polite" aria-atomic="true">
+    <div id="status-ribbon" class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" aria-live="polite" aria-atomic="true">
       <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Brand</span>
         <span id="status-brand" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 md:border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Year</span>
         <span id="status-year" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Season</span>
         <span id="status-season" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 lg:px-4 py-1 overflow-hidden">
+      <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Entry</span>
         <span id="status-entry" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
@@ -1161,8 +1159,8 @@
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
 
 
-              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">Copy Link</button>
-              <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">Connections</button>
+               <button type="button" id="btn-save-to-volume" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">Save to Volume</button>
+              <button type="button" id="btn-cite-artifact" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">Cite</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">Back to Grid</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
             </div>
@@ -1170,24 +1168,26 @@
           <div id="active-entry-hotspots" class="p-3 space-y-3">
             <!-- Tags and hotspot info boxes rendered by JS -->
           </div>
-          <div id="related-entries" class="p-3 border-t-[1px] border-black/80 dark:border-white/20 hidden">
-            <!-- Related entries rendered by JS -->
+          <div id="related-section" class="p-4 border-t border-black/10 dark:border-white/10">
+            <h4 class="text-[9px] font-bold uppercase tracking-[0.2em] mb-3 opacity-50">Related Artifacts</h4>
+            <div id="related-grid" class="grid grid-cols-3 gap-2">
+              <!-- Similarity engine results here -->
+            </div>
           </div>
         </div>
 
         <!-- Mobile Drawer: About / Contact -->
-        <div class="lg:hidden border-t-[1px] border-black/80 dark:border-white/20 px-4 py-4 flex flex-wrap items-center gap-3 shrink-0 bg-bone dark:bg-darkBase">
-          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Connections</button>
-          <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Search</button>
-          <div class="w-full flex gap-3">
-            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Theme</button>
-            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Sign In</button>
+        <div class="lg:hidden border-t-[1px] border-black/80 dark:border-white/20 px-4 py-6 flex flex-col gap-4 shrink-0 bg-bone dark:bg-darkBase">
+          <div class="flex gap-2">
+            <button type="button" id="btn-volumes-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px] flex-1 text-center hover:bg-black hover:text-white transition-colors focus-ring">Volumes</button>
+            <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px] flex-1 text-center hover:bg-black hover:text-white transition-colors focus-ring">Search</button>
           </div>
-          <div class="w-full flex gap-3">
-            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">About</button>
-            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] flex-1 text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Contact</button>
+          <div class="grid grid-cols-2 gap-2">
+            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px] text-center hover:bg-black hover:text-white transition-colors focus-ring">Theme</button>
+            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px] text-center hover:bg-black hover:text-white transition-colors focus-ring">Sign In</button>
+            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px] text-center hover:bg-black hover:text-white transition-colors focus-ring">About</button>
+            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px] text-center hover:bg-black hover:text-white transition-colors focus-ring">Contact</button>
           </div>
-          <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-3 min-h-[44px] w-full text-center hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors focus-ring">Syllabus Compiler</button>
         </div>
 
       </div>
@@ -1220,8 +1220,24 @@
           </div>
         </div>
 
+        <!-- Archival Volumes View -->
+        <div id="volumes-view" class="hidden flex-1 overflow-y-auto p-4 md:p-8 bg-bone dark:bg-darkBase">
+          <div class="max-w-6xl mx-auto">
+            <div class="flex items-baseline justify-between mb-8 border-b border-black dark:border-white pb-4">
+              <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Volumes</h1>
+              <div class="flex gap-4">
+                <button id="btn-export-all-volumes" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[ Export Database ]</button>
+                <span id="volumes-count" class="text-[10px] font-mono opacity-50 uppercase">0 Volumes Initialized</span>
+              </div>
+            </div>
+            <div id="volumes-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
         <!-- Detail View (single image + hotspots) -->
-        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase" style="pointer-events: auto">
+        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase pb-[80px] lg:pb-0" style="pointer-events: auto">
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 lg:p-12">
             <img id="detail-image" class="relative z-0 w-auto max-h-[min(92vh,92dvh)] max-h-[92vh] object-contain block mx-auto" src="" alt="" />
             <button type="button" id="btn-viewer-prev" class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-1 lg:left-2 text-3xl lg:text-4xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring" aria-label="Previous image" style="touch-action: manipulation">&#8592;</button>
@@ -1243,7 +1259,11 @@
             </div>
             <p class="sticky-note-body" id="sticky-note-body"></p>
           </div>
-          <!-- Hotspot dots appended by JS -->
+          <!-- Mobile Action Bar (Sticky) -->
+          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-bone dark:bg-darkBase border-t border-black dark:border-white/20 px-4 py-3 flex gap-2 z-[200] shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
+            <button type="button" id="btn-save-volume-mobile" class="flex-1 bg-black text-white dark:bg-acid dark:text-black py-3 text-[10px] font-bold uppercase tracking-widest focus-ring">Save Volume</button>
+            <button type="button" id="btn-cite-artifact-mobile" class="flex-1 border border-black dark:border-white/20 py-3 text-[10px] font-bold uppercase tracking-widest focus-ring">Cite</button>
+          </div>
         </div>
 
       </div>
@@ -1274,16 +1294,7 @@
     <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
   </div>
 
-  <!-- SYLLABUS ACTION BAR (Feature 2) -->
-  <div id="syllabus-action-bar" class="bg-black dark:bg-darkBase border-t-[1px] border-black/80 dark:border-white/20">
-    <div class="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
-      <div class="flex items-center gap-3">
-        <span id="syllabus-count" class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.15em] text-white dark:text-acid">0 Selected</span>
-        <button type="button" id="btn-syllabus-clear" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] text-white/60 hover:text-white dark:hover:text-acid">[ Clear ]</button>
-      </div>
-      <button type="button" id="btn-generate-syllabus" class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.12em] bg-white text-black dark:bg-acid dark:text-black px-4 py-2 min-h-[44px] hover:opacity-80 transition-opacity touch-action-manipulation">[ Generate Syllabus ]</button>
-    </div>
-  </div>
+
 
   <!-- TOAST -->
   <div id="toast" class="hidden"></div>
@@ -1291,20 +1302,24 @@
   <!-- JSON-LD Structured Data -->
   <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture"}</script>
   <!-- ============================================================
-       CONNECTION MATRIX
+       SAVE TO VOLUME MODAL
   ============================================================ -->
-  <div id="connection-matrix">
-    <div class="matrix-backdrop" id="matrix-backdrop"></div>
-    <div class="matrix-panel">
-      <div class="matrix-header">
-        <span class="text-[10px] font-mono font-bold uppercase tracking-[0.15em]">Connection Matrix</span>
-        <div>
-          <button type="button" id="btn-save-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60 mr-4">Save to Matrix</button>
-          <button type="button" id="btn-close-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60">Close</button>
-        </div>
+  <div id="save-volume-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="save-volume"></div>
+    <div class="relative w-full max-w-md bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[80vh]">
+      <button type="button" data-modal-close="save-volume" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close">X</button>
+      <h2 class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Save to Archival Volume</h2>
+      
+      <div class="flex-1 overflow-y-auto mb-6 space-y-2" id="volume-list-container">
+        <!-- Existing volumes listed here -->
       </div>
-      <div id="matrix-content" class="flex-1 overflow-y-auto">
-        <!-- Rendered by JS -->
+
+      <div class="border-t border-black dark:border-white pt-4">
+        <label for="new-volume-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New Volume</label>
+        <div class="flex gap-2">
+          <input type="text" id="new-volume-name" class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none" placeholder="VOLUME_TITLE_01">
+          <button type="button" id="btn-create-volume" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-80 transition-opacity">[ Initialize ]</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1351,25 +1366,7 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       SCHEMA MODAL
-  ============================================================ -->
-  <div id="schema-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="schema-modal-title">
-    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="schema" aria-hidden="true"></div>
-    <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-4xl md:max-h-[90vh] md:mx-auto p-4 md:p-8 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
-      <div class="flex items-start justify-between mb-4 border-b border-black dark:border-white pb-2">
-        <h2 id="schema-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Portfolio Framing (Process & Schema)</h2>
-        <button type="button" data-modal-close="schema" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 focus-ring cursor-crosshair">Close</button>
-      </div>
-      <div class="font-mono text-xs md:text-sm leading-relaxed tracking-[0.04em] space-y-4">
-        <p class="uppercase opacity-80 border-l-2 border-black dark:border-white pl-3 py-1 text-[10px]">
-          The strict visual constraints (zero border-radius, monochromatic palette, IBM Plex Mono) and explicit taxonomy are deliberate narrative choices. They strip away commercial marketing to expose the underlying socio-political realities and structural power dynamics within the fashion system.
-        </p>
-        <p class="font-bold uppercase mt-6 mb-2 text-[10px] tracking-widest">Raw Database Schema</p>
-        <pre id="schema-json-container" class="bg-black/5 dark:bg-white/5 p-2 overflow-x-auto text-[9px] md:text-[10px] border border-black/20 dark:border-white/20"></pre>
-      </div>
-    </div>
-  </div>
+
 
   <!-- ============================================================
        ABOUT MODAL
@@ -1432,6 +1429,7 @@
       expandedGroup: null,
       activeSubFilter: null,
       dockMode: null,
+      archivalVolumes: [],
     };
 
     var gridIntersectionObserver = null;
@@ -2097,13 +2095,18 @@
     }
 
     function filterByTagValue(key, value) {
-      closeDetail();
+      if (AppState.currentView === 'detail') {
+        closeDetail();
+      }
       AppState.searchQuery = value;
       AppState.activePillar = null;
       AppState.expandedPillar = null;
       AppState.expandedGroup = null;
       AppState.activeSubFilter = null;
       $('search-input').value = value;
+      
+      updateHeaderTelemetry(`FILTER_PIVOT: ${value.toUpperCase()}`);
+      
       renderImageGrid();
       renderEntryList();
       renderTaxonomyGrid();
@@ -2121,11 +2124,15 @@
       const entry = archiveData.find((e) => e.id === entryId);
       if (!entry) return;
 
+      /* Similarity Engine */
+      renderRelatedArtifacts(entry);
+
       var imgs = entry.images || [entry.imageUrl];
       AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
       /* Swap grid for detail image */
       $('grid-view').classList.add('hidden');
+      $('volumes-view').classList.add('hidden');
       const detailView = $('detail-image-view');
       detailView.classList.remove('hidden');
       detailView.classList.add('detail-active');
@@ -2270,6 +2277,40 @@
       }
     }
 
+    function renderRelatedArtifacts(currentEntry) {
+      const container = $('related-grid');
+      if (!container) return;
+      container.innerHTML = '';
+
+      // Score artifacts based on tag overlap
+      const scored = archiveData
+        .filter(e => e.id !== currentEntry.id)
+        .map(e => {
+          let score = 0;
+          const currentTags = Object.values(currentEntry.tags).flat();
+          const targetTags = Object.values(e.tags).flat();
+          targetTags.forEach(t => {
+            if (currentTags.includes(t)) score++;
+          });
+          return { entry: e, score };
+        })
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3);
+
+      scored.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'cursor-crosshair group relative';
+        div.innerHTML = `
+          <img src="${item.entry.image}" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 border border-black/10 dark:border-white/10" />
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center p-2 transition-opacity">
+            <span class="text-[8px] text-white font-mono text-center uppercase tracking-tighter">${item.entry.tags.brand}</span>
+          </div>
+        `;
+        div.onclick = () => openDetail(item.entry.id);
+        container.appendChild(div);
+      });
+    }
+
     function closeDetail() {
       AppState.currentView = 'grid';
       AppState.selectedEntryId = null;
@@ -2285,8 +2326,13 @@
       $('related-entries').classList.add('hidden');
 
       /* Restore search and taxonomy panels */
-      $('search-wrapper').classList.remove('hidden');
-      $('taxonomy-container').classList.remove('hidden');
+      if (AppState.currentView === 'volumes') {
+        $('volumes-view').classList.remove('hidden');
+      } else {
+        $('grid-view').classList.remove('hidden');
+        $('search-wrapper').classList.remove('hidden');
+        $('taxonomy-container').classList.remove('hidden');
+      }
 
       hideHotspotPopup();
       closeStickyNote();
@@ -2544,19 +2590,7 @@
       if (btnAuthDesktop) btnAuthDesktop.addEventListener('click', toggleAuth);
       if (btnAuthMobile) btnAuthMobile.addEventListener('click', toggleAuth);
       
-      const btnSchemaDesktop = $('btn-schema-toggle');
-      const btnSchemaMobile = $('btn-schema-toggle-mobile');
-      const openSchema = () => {
-        $('schema-modal').classList.remove('hidden');
-        $('schema-json-container').textContent = JSON.stringify(archiveData.slice(0, 2), null, 2) + '\n\n// ... ' + (archiveData.length - 2) + ' more entries omitted for brevity';
-      };
-      if (btnSchemaDesktop) btnSchemaDesktop.addEventListener('click', openSchema);
-      if (btnSchemaMobile) btnSchemaMobile.addEventListener('click', openSchema);
-      
-      const btnCloseSchema = document.querySelector('[data-modal-close="schema"]');
-      if (btnCloseSchema) btnCloseSchema.addEventListener('click', () => $('schema-modal').classList.add('hidden'));
-      const backdropSchema = document.querySelector('[data-modal-backdrop="schema"]');
-      if (backdropSchema) backdropSchema.addEventListener('click', () => $('schema-modal').classList.add('hidden'));
+
       
       // Safe event listeners
       const cmdInput = $('cmd-input');
@@ -2767,15 +2801,39 @@
       document.body.style.overflow = '';
     }
 
-    function toggleViewMode() {
-      if ($('connection-matrix').classList.contains('open')) {
-        closeConnectionMatrix();
-      } else {
-        var currentId = AppState.selectedEntryId || (archiveData.length > 0 ? archiveData[0].id : null);
-        if (currentId) openConnectionMatrix(currentId);
-      }
+    function closeArchivalVolumes() {
+      switchView('grid');
     }
 
+    function exportVolume(volId) {
+      const vol = AppState.archivalVolumes.find(v => v.id === volId);
+      if (!vol) return;
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(vol, null, 2));
+      const downloadAnchorNode = document.createElement('a');
+      downloadAnchorNode.setAttribute("href", dataStr);
+      downloadAnchorNode.setAttribute("download", `LEXICON_VOLUME_${vol.name.replace(/\s+/g, '_')}.json`);
+      document.body.appendChild(downloadAnchorNode);
+      downloadAnchorNode.click();
+      downloadAnchorNode.remove();
+      showToast(`Exported ${vol.name} as JSON`);
+    }
+
+    function exportDatabase() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(archiveData, null, 2));
+      const downloadAnchorNode = document.createElement('a');
+      downloadAnchorNode.setAttribute("href", dataStr);
+      downloadAnchorNode.setAttribute("download", `THE_LEXICON_DATABASE_FULL.json`);
+      document.body.appendChild(downloadAnchorNode);
+      downloadAnchorNode.click();
+      downloadAnchorNode.remove();
+      showToast(`Global Database Exported (JSON)`);
+    }
+
+    /* Final init for export button */
+    setTimeout(() => {
+      const btnExp = $('btn-export-all-volumes');
+      if (btnExp) btnExp.addEventListener('click', exportDatabase);
+    }, 1000);
 
     /* ============================================================
        IMAGE PAN & ZOOM
@@ -2872,10 +2930,14 @@
         }, 1200);
       }
 
-      const btnViewToggle = $('btn-view-toggle');
-      if (btnViewToggle) btnViewToggle.addEventListener('click', toggleViewMode);
-      const btnViewToggleMobile = $('btn-view-toggle-mobile');
-      if (btnViewToggleMobile) btnViewToggleMobile.addEventListener('click', toggleViewMode);
+      const btnVolumesToggle = $('btn-volumes-toggle');
+      if (btnVolumesToggle) btnVolumesToggle.addEventListener('click', () => switchView('volumes'));
+      const btnVolumesToggleMobile = $('btn-volumes-toggle-mobile');
+      if (btnVolumesToggleMobile) btnVolumesToggleMobile.addEventListener('click', () => { closeDrawer(); switchView('volumes'); });
+      
+      const btnGridToggle = $('btn-toggle-grid');
+      if (btnGridToggle) btnGridToggle.addEventListener('click', () => switchView('grid'));
+      
       const btnSearchMobile = $('btn-search-mobile');
       if (btnSearchMobile) btnSearchMobile.addEventListener('click', () => { closeDrawer(); toggleCmdPalette(); });
 
@@ -2973,8 +3035,62 @@
         handleSearch(e.target.value);
       }, 150));
 
+      /* Cookie Compliance */
+      if (!localStorage.getItem('lexicon-cookies-accepted')) {
+        $('cookie-banner').classList.remove('hidden');
+      }
+      $('btn-accept-cookies').addEventListener('click', () => {
+        localStorage.setItem('lexicon-cookies-accepted', 'true');
+        $('cookie-banner').classList.add('hidden');
+      });
+
+      /* Citation Listener */
+      $('btn-cite-artifact').addEventListener('click', () => {
+        const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+        if (!entry) return;
+        const citation = `THE LEXICON (${new Date().getFullYear()}). "${entry.subtitle || 'Untitled Artifact'}". ${entry.tags.brand}, ${entry.season} ${entry.year}. Accessed ${new Date().toLocaleDateString()}.`;
+        navigator.clipboard.writeText(citation);
+        showToast('Citation copied to clipboard (APA Format)');
+      });
+
+      /* Mobile Detail Action Listeners */
+      const btnSaveMobile = $('btn-save-volume-mobile');
+      if (btnSaveMobile) btnSaveMobile.addEventListener('click', () => {
+        if (!currentUser) { showToast('Login required.'); openModal('auth'); return; }
+        openModal('save-volume');
+        fetchArchivalVolumes();
+      });
+      const btnCiteMobile = $('btn-cite-artifact-mobile');
+      if (btnCiteMobile) btnCiteMobile.addEventListener('click', () => {
+        const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+        if (!entry) return;
+        const citation = `THE LEXICON (${new Date().getFullYear()}). "${entry.subtitle || 'Untitled Artifact'}". ${entry.tags.brand}, ${entry.season} ${entry.year}.`;
+        navigator.clipboard.writeText(citation);
+        showToast('Citation Copied');
+      });
+
       $('btn-clear-directory').addEventListener('click', function () {
         resetArchiveHome();
+      });
+
+      /* Volumes Listeners */
+      $('btn-save-to-volume').addEventListener('click', () => {
+        if (!currentUser) {
+          showToast('Login required to archive artifacts.');
+          openModal('auth');
+          return;
+        }
+        openModal('save-volume');
+        fetchArchivalVolumes();
+      });
+
+      $('btn-create-volume').addEventListener('click', () => {
+        const name = $('new-volume-name').value;
+        if (name) createArchivalVolume(name);
+      });
+
+      $('save-volume-modal').addEventListener('click', (e) => { 
+        if(e.target.hasAttribute('data-modal-backdrop')) closeModal('save-volume'); 
       });
 
       var btnGridMeta = $('btn-toggle-grid-meta');
@@ -3174,7 +3290,7 @@
       // Initialize secondary modules deterministically
       if (typeof initCoreUI === 'function') initCoreUI();
       if (typeof initSecondaryFeatures === 'function') initSecondaryFeatures();
-      if (typeof initSyllabusEvents === 'function') initSyllabusEvents();
+
       if (typeof startHeaderTelemetry === 'function') startHeaderTelemetry();
     }
 
@@ -3484,303 +3600,7 @@
       updateTelemetry(`ACTION_LOG: ${text.toUpperCase()}`);
     }
 
-    /* ============================================================
-       FEATURE 2: SYLLABUS COMPILER
-       Multi-select grid entries → generate a brutalist PDF via jsPDF.
-       Selection mode is toggled via the [ Syllabus ] header button.
-    ============================================================ */
-    (function initSyllabusCompiler() {
-      var syllabusMode = false;
-      var selectedIds = new Set();
 
-      function updateActionBar() {
-        var bar = document.getElementById('syllabus-action-bar');
-        var countEl = document.getElementById('syllabus-count');
-        if (!bar) return;
-        if (selectedIds.size > 0 && syllabusMode) {
-          bar.classList.add('visible');
-          countEl.textContent = selectedIds.size + ' Selected';
-        } else {
-          bar.classList.remove('visible');
-        }
-      }
-
-      function toggleSyllabusMode() {
-        syllabusMode = !syllabusMode;
-        var btnD = document.getElementById('btn-syllabus-toggle');
-        var btnM = document.getElementById('btn-syllabus-toggle-mobile');
-        if (syllabusMode) {
-          if (btnD) btnD.textContent = 'Syllabus: ON';
-          if (btnM) btnM.textContent = 'Syllabus: ON';
-          showToast('Syllabus mode \u2014 tap entries to select');
-        } else {
-          if (btnD) btnD.textContent = 'Syllabus';
-          if (btnM) btnM.textContent = 'Syllabus';
-          selectedIds.clear();
-          document.querySelectorAll('.grid-cell.syllabus-selected').forEach(function (c) {
-            c.classList.remove('syllabus-selected');
-          });
-          updateActionBar();
-          showToast('Syllabus mode off');
-        }
-      }
-
-      function clearSyllabus() {
-        selectedIds.clear();
-        document.querySelectorAll('.grid-cell.syllabus-selected').forEach(function (c) {
-          c.classList.remove('syllabus-selected');
-        });
-        updateActionBar();
-      }
-
-      function handleGridClickForSyllabus(e) {
-        if (!syllabusMode) return false;
-        var cell = e.target.closest('.grid-cell[data-entry-id]');
-        if (!cell) return false;
-
-        e.preventDefault();
-        e.stopPropagation();
-
-        var id = cell.getAttribute('data-entry-id');
-        if (selectedIds.has(id)) {
-          selectedIds.delete(id);
-          /* Remove selection from all cells of this entry */
-          document.querySelectorAll('.grid-cell[data-entry-id="' + id + '"]').forEach(function (c) {
-            c.classList.remove('syllabus-selected');
-          });
-        } else {
-          selectedIds.add(id);
-          /* Mark first cell only for visual clarity */
-          cell.classList.add('syllabus-selected');
-        }
-        updateActionBar();
-        return true;
-      }
-
-      function generateSyllabusPDF() {
-        if (selectedIds.size === 0) {
-          showToast('No entries selected');
-          return;
-        }
-
-        if (typeof window.jspdf === 'undefined') {
-          showToast('Loading PDF engine...');
-          var script = document.createElement('script');
-          script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-          script.onload = function() { generateSyllabusPDF(); };
-          document.head.appendChild(script);
-          return;
-        }
-
-        showToast('Compiling syllabus...');
-
-        var jsPDF = window.jspdf.jsPDF;
-        var doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
-        var pageW = 210;
-        var pageH = 297;
-        var marginL = 20;
-        var marginR = 20;
-        var marginT = 25;
-        var usableW = pageW - marginL - marginR;
-        var y = marginT;
-        var lineH = 5;
-
-        /* Cover page */
-        doc.setFont('courier', 'bold');
-        doc.setFontSize(28);
-        doc.text('THE LEXICON', marginL, 60);
-        doc.setFontSize(10);
-        doc.setFont('courier', 'normal');
-        doc.text('SYLLABUS COMPILATION', marginL, 72);
-        doc.text(new Date().toISOString().split('T')[0] + ' ; ' + selectedIds.size + ' ENTRIES', marginL, 80);
-
-        /* Horizontal rule */
-        doc.setLineWidth(0.5);
-        doc.line(marginL, 88, pageW - marginR, 88);
-
-        doc.setFontSize(8);
-        doc.text('GENERATED BY THE LEXICON ; THELEXICON.XYZ', marginL, 96);
-        doc.text('A RELATIONAL DATABASE DEDICATED TO THE FORENSIC', marginL, 102);
-        doc.text('AUDIT OF AVANT-GARDE FASHION HISTORY', marginL, 108);
-
-        /* Entry pages */
-        var entries = archiveData.filter(function (e) { return selectedIds.has(e.id); });
-
-        entries.forEach(function (entry, idx) {
-          doc.addPage();
-          y = marginT;
-
-          /* Entry header */
-          doc.setFont('courier', 'bold');
-          doc.setFontSize(16);
-          var brandLines = doc.splitTextToSize(entry.tags.brand.toUpperCase(), usableW);
-          doc.text(brandLines, marginL, y);
-          y += brandLines.length * 7 + 2;
-
-          doc.setFontSize(10);
-          doc.setFont('courier', 'normal');
-          doc.text(entry.year + ' ; ' + entry.season, marginL, y);
-          y += 8;
-          if (entry.subtitle) {
-            doc.text(entry.subtitle.toUpperCase(), marginL, y);
-            y += 8;
-          }
-
-          /* Horizontal rule */
-          doc.setLineWidth(0.3);
-          doc.line(marginL, y, pageW - marginR, y);
-          y += 10;
-
-          /* Entry number */
-          doc.setFontSize(7);
-          doc.setFont('courier', 'bold');
-          doc.text('ENTRY ' + String(idx + 1).padStart(2, '0') + ' / ' + String(entries.length).padStart(2, '0'), marginL, y);
-          y += 8;
-
-          /* FORM tag */
-          if (entry.tags.form) {
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('FORM & ANATOMY', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var formLines = doc.splitTextToSize(entry.tags.form.toUpperCase(), usableW);
-            doc.text(formLines, marginL, y);
-            y += formLines.length * lineH + 4;
-          }
-
-          /* POLITICS tag */
-          if (entry.tags.politics) {
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('POLITICS', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var polLines = doc.splitTextToSize(entry.tags.politics.toUpperCase(), usableW);
-            doc.text(polLines, marginL, y);
-            y += polLines.length * lineH + 4;
-          }
-
-          /* THEORIES tag */
-          if (entry.tags.theories) {
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('THEORIES', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var theoLines = doc.splitTextToSize(entry.tags.theories.toUpperCase(), usableW);
-            doc.text(theoLines, marginL, y);
-            y += theoLines.length * lineH + 4;
-          }
-
-          /* MATERIALS tag */
-          if (entry.tags.materials) {
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('MATERIALS', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var matLines = doc.splitTextToSize(entry.tags.materials.toUpperCase(), usableW);
-            doc.text(matLines, marginL, y);
-            y += matLines.length * lineH + 4;
-          }
-
-          /* FORMAT tag */
-          if (entry.tags.format) {
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('FORMAT & MEDIUM', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var fmtLines = doc.splitTextToSize(entry.tags.format.toUpperCase(), usableW);
-            doc.text(fmtLines, marginL, y);
-            y += fmtLines.length * lineH + 4;
-          }
-
-          /* Divider */
-          y += 2;
-          doc.setLineWidth(0.2);
-          doc.line(marginL, y, pageW - marginR, y);
-          y += 8;
-
-          /* CRITIQUE (notes) */
-          if (entry.notes && entry.notes.critique) {
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('FORENSIC CRITIQUE', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var critiqueText = entry.notes.critique;
-            var critLines = doc.splitTextToSize(critiqueText, usableW);
-            /* Handle overflow to new page */
-            critLines.forEach(function (line) {
-              if (y > pageH - 20) {
-                doc.addPage();
-                y = marginT;
-              }
-              doc.text(line, marginL, y);
-              y += lineH;
-            });
-            y += 4;
-          }
-
-          /* PROVENANCE */
-          if (entry.notes && entry.notes.provenance) {
-            if (y > pageH - 40) { doc.addPage(); y = marginT; }
-            doc.setFontSize(8);
-            doc.setFont('courier', 'bold');
-            doc.text('PROVENANCE', marginL, y);
-            y += lineH;
-            doc.setFont('courier', 'normal');
-            doc.setFontSize(7);
-            var provLines = doc.splitTextToSize(entry.notes.provenance, usableW);
-            provLines.forEach(function (line) {
-              if (y > pageH - 20) { doc.addPage(); y = marginT; }
-              doc.text(line, marginL, y);
-              y += lineH;
-            });
-          }
-
-          /* Page footer */
-          doc.setFontSize(6);
-          doc.setFont('courier', 'normal');
-          doc.text('THE LEXICON ; THELEXICON.XYZ', marginL, pageH - 10);
-          doc.text('PAGE ' + String(idx + 2), pageW - marginR - 20, pageH - 10);
-        });
-
-        /* Save */
-        var dateSlug = new Date().toISOString().split('T')[0];
-        doc.save('LEXICON-SYLLABUS-' + dateSlug + '.pdf');
-        showToast('Syllabus compiled \u2014 ' + entries.length + ' entries');
-      }
-
-      window.initSyllabusEvents = function () {
-        var btnD = document.getElementById('btn-syllabus-toggle');
-        var btnM = document.getElementById('btn-syllabus-toggle-mobile');
-        if (btnD) btnD.addEventListener('click', toggleSyllabusMode);
-        if (btnM) btnM.addEventListener('click', toggleSyllabusMode);
-
-        var btnClear = document.getElementById('btn-syllabus-clear');
-        if (btnClear) btnClear.addEventListener('click', clearSyllabus);
-
-        var btnGen = document.getElementById('btn-generate-syllabus');
-        if (btnGen) btnGen.addEventListener('click', generateSyllabusPDF);
-
-        /* Intercept grid clicks when syllabus mode is on */
-        var grid = document.getElementById('image-grid');
-        if (grid) {
-          grid.addEventListener('click', function (e) {
-            handleGridClickForSyllabus(e);
-          }, true); /* Capture phase to run before existing handler */
-        }
-      };
-    })();
 
 
 
@@ -3820,34 +3640,7 @@
         });
       }
 
-      function toggleViewMode(mode) {
-        currentMode = mode;
-        const gridView = document.getElementById('grid-view');
-        const timelineView = document.getElementById('timeline-view');
-        const btnGrid = document.getElementById('btn-toggle-grid');
-        const btnTimeline = document.getElementById('btn-toggle-timeline');
-        const label = document.getElementById('current-view-label');
-
-        if (mode === 'timeline') {
-          gridView.style.display = 'none';
-          timelineView.classList.add('active');
-          btnGrid.classList.replace('opacity-100', 'opacity-40');
-          btnTimeline.classList.replace('opacity-40', 'opacity-100');
-          label.textContent = 'EVOLUTION_MATRIX';
-          renderTimelineMatrix();
-        } else {
-          gridView.style.display = 'block';
-          timelineView.classList.remove('active');
-          btnTimeline.classList.replace('opacity-100', 'opacity-40');
-          btnGrid.classList.replace('opacity-40', 'opacity-100');
-          label.textContent = 'ARCHIVE_GRID';
-        }
-      }
-
-      document.getElementById('btn-toggle-grid').addEventListener('click', () => toggleViewMode('grid'));
-      document.getElementById('btn-toggle-timeline').addEventListener('click', () => toggleViewMode('timeline'));
-
-      // Refresh timeline is now handled within renderImageGrid
+      // View switching is now handled by centralized switchView function
     })();
 
     /* ============================================================
@@ -4002,31 +3795,130 @@
       }
     }
 
-    function saveConnectionMatrix() {
-      if (!currentUser) {
-        showToast('Login required to save matrix.');
+    /* ============================================================
+       ARCHIVAL VOLUMES LOGIC
+    ============================================================ */
+    async function fetchArchivalVolumes() {
+      if (!currentUser) return;
+      const colRef = window.collection(window.firebaseDb, 'users', currentUser.uid, 'archival_volumes');
+      const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
+      const querySnapshot = await window.getDocs(q);
+      AppState.archivalVolumes = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      renderVolumesView();
+      renderSaveToVolumeModal();
+    }
+
+    async function createArchivalVolume(name) {
+      if (!currentUser || !name) return;
+      const colRef = window.collection(window.firebaseDb, 'users', currentUser.uid, 'archival_volumes');
+      await window.addDoc(colRef, {
+        name: name.toUpperCase(),
+        createdAt: new Date().toISOString(),
+        lookIds: []
+      });
+      $('new-volume-name').value = '';
+      showToast('Volume initialized.');
+      fetchArchivalVolumes();
+    }
+
+    async function saveToVolume(volumeId) {
+      if (!currentUser || !AppState.selectedEntryId) return;
+      const docRef = window.doc(window.firebaseDb, 'users', currentUser.uid, 'archival_volumes', volumeId);
+      await window.updateDoc(docRef, {
+        lookIds: window.arrayUnion(AppState.selectedEntryId)
+      });
+      showToast('Artifact added to Volume.');
+      closeModal('save-volume');
+      fetchArchivalVolumes();
+    }
+
+    function renderVolumesView() {
+      const container = $('volumes-grid');
+      const countEl = $('volumes-count');
+      if (!container) return;
+
+      container.innerHTML = '';
+      countEl.textContent = `${AppState.archivalVolumes.length} Volumes Initialized`;
+
+      if (AppState.archivalVolumes.length === 0) {
+        container.innerHTML = '<div class="col-span-full py-20 text-center opacity-40 font-mono text-xs uppercase tracking-widest">No Archival Volumes Detected. Initialize a volume from any artifact.</div>';
         return;
       }
-      const entryId = AppState.selectedEntryId;
-      if (!entryId) return;
-      const entry = archiveData.find(e => e.id === entryId);
-      if (!entry) return;
 
-      const matrixData = { 
-        id: entry.id,
-        brand: entry.tags.brand || '',
-        title: entry.title || '',
-        year: entry.year || '',
-        savedAt: new Date().toISOString() 
-      };
-
-      const docRef = window.doc(window.collection(window.firebaseDb, 'users', currentUser.uid, 'connection_matrices'), 'board');
-      window.setDoc(docRef, { items: window.arrayUnion(matrixData) }, { merge: true }).then(() => {
-        showToast('Saved to your Connection Matrix.');
-      }).catch((error) => {
-        console.error("Error saving matrix: ", error);
-        showToast('Error saving matrix.');
+      AppState.archivalVolumes.forEach(vol => {
+        const card = document.createElement('div');
+        card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all group';
+        card.innerHTML = \`
+          <div class="flex justify-between items-start mb-4">
+            <h3 class="text-base font-bold font-mono uppercase tracking-wider">\${vol.name}</h3>
+            <button class="btn-export-vol text-[8px] border border-current px-2 py-0.5 opacity-0 group-hover:opacity-100" data-vol-id="\${vol.id}">EXPORT_JSON</button>
+          </div>
+          <div class="flex justify-between items-end">
+            <span class="text-[10px] font-mono opacity-60 uppercase">\${vol.lookIds.length} Artifacts Audited</span>
+            <span class="text-[9px] font-mono opacity-40 italic">\${new Date(vol.createdAt).toLocaleDateString()}</span>
+          </div>
+        \`;
+        card.addEventListener('click', (e) => {
+          if (e.target.classList.contains('btn-export-vol')) {
+            e.stopPropagation();
+            exportVolume(vol.id);
+            return;
+          }
+          // Navigate to Volume Detail (future step)
+        });
+        container.appendChild(card);
       });
+    }
+
+    function renderSaveToVolumeModal() {
+      const container = $('volume-list-container');
+      if (!container) return;
+      container.innerHTML = '';
+
+      if (AppState.archivalVolumes.length === 0) {
+        container.innerHTML = '<p class="text-[10px] font-mono opacity-40 uppercase py-4">No existing volumes found.</p>';
+        return;
+      }
+
+      AppState.archivalVolumes.forEach(vol => {
+        const btn = document.createElement('button');
+        btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
+        btn.innerHTML = `
+          <span>${vol.name}</span>
+          <span class="opacity-50">${vol.lookIds ? vol.lookIds.length : 0}</span>
+        `;
+        btn.addEventListener('click', () => saveToVolume(vol.id));
+        container.appendChild(btn);
+      });
+    }
+
+    function switchView(viewName) {
+      // Hide all main views
+      $('grid-view').classList.add('hidden');
+      $('timeline-view').classList.add('hidden');
+      $('volumes-view').classList.add('hidden');
+      $('detail-image-view').classList.add('hidden');
+      $('active-entry-panel').classList.add('hidden');
+      $('related-entries').classList.add('hidden');
+      $('search-wrapper').classList.add('hidden');
+      $('taxonomy-container').classList.add('hidden');
+
+      if (viewName === 'grid') {
+        $('grid-view').classList.remove('hidden');
+        $('search-wrapper').classList.remove('hidden');
+        $('taxonomy-container').classList.remove('hidden');
+        $('current-view-label').textContent = 'ARCHIVE_GRID';
+        AppState.currentView = 'grid';
+      } else if (viewName === 'timeline') {
+        $('timeline-view').classList.remove('hidden');
+        $('current-view-label').textContent = 'EVOLUTION_MATRIX';
+        AppState.currentView = 'timeline';
+      } else if (viewName === 'volumes') {
+        $('volumes-view').classList.remove('hidden');
+        $('current-view-label').textContent = 'ARCHIVAL_VOLUMES';
+        AppState.currentView = 'volumes';
+        fetchArchivalVolumes();
+      }
     }
   </script>
 
