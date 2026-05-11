@@ -423,3 +423,11 @@ const archiveData = [
     hotspots: []
   },
 ];
+
+/* ── DUAL-ENVIRONMENT EXPORT ──
+   Browser: `typeof module` is undefined → block is skipped, archiveData is a global.
+   Node.js: `module.exports` is set → `require('../database.js')` returns the array.
+   No bundler required. */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = archiveData;
+}
