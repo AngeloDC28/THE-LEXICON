@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, collection, doc, setDoc, getDocs } from "firebase/firestore";
+import { getFirestore, collection, doc, setDoc, getDocs, arrayUnion } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -33,6 +33,7 @@ window.signOut = signOut;
 window.setDoc = setDoc;
 window.doc = doc;
 window.collection = collection;
+window.arrayUnion = arrayUnion;
 window.getDocs = getDocs;
 
 

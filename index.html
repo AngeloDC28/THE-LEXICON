@@ -1003,6 +1003,7 @@
         <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Theme: Light ]</button>
         <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Login ]</button>
         <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
+        <button type="button" id="btn-schema-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Schema ]</button>
         <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
         <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Syllabus ]</button>
       </div>
@@ -1126,6 +1127,7 @@
           <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Theme: Light ]</button>
           <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Login ]</button>
           <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
+          <button type="button" id="btn-schema-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Schema ]</button>
           <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Contact ]</button>
           <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Syllabus ]</button>
         </div>
@@ -1287,6 +1289,26 @@
       </div>
       <div id="auth-success-container" class="hidden">
         <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Link transmitted. Check your inbox to complete initialization.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SCHEMA MODAL
+  ============================================================ -->
+  <div id="schema-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="schema-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="schema" aria-hidden="true"></div>
+    <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-4xl md:max-h-[90vh] md:mx-auto p-4 md:p-8 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+      <div class="flex items-start justify-between mb-4 border-b border-black dark:border-white pb-2">
+        <h2 id="schema-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Portfolio Framing (Process & Schema)</h2>
+        <button type="button" data-modal-close="schema" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 focus-ring cursor-crosshair">[ X Close ]</button>
+      </div>
+      <div class="font-mono text-xs md:text-sm leading-relaxed tracking-[0.04em] space-y-4">
+        <p class="uppercase opacity-80 border-l-2 border-black dark:border-white pl-3 py-1 text-[10px]">
+          The strict visual constraints (zero border-radius, monochromatic palette, IBM Plex Mono) and explicit taxonomy are deliberate narrative choices. They strip away commercial marketing to expose the underlying socio-political realities and structural power dynamics within the fashion system.
+        </p>
+        <p class="font-bold uppercase mt-6 mb-2 text-[10px] tracking-widest">[ Raw Database Schema ]</p>
+        <pre id="schema-json-container" class="bg-black/5 dark:bg-white/5 p-2 overflow-x-auto text-[9px] md:text-[10px] border border-black/20 dark:border-white/20"></pre>
       </div>
     </div>
   </div>
@@ -2114,6 +2136,18 @@
       });
       container.appendChild(tagsRow);
 
+      /* Progressive Disclosure for Notes */
+      if (entry.notes && (entry.notes.critique || entry.notes.strategy || entry.notes.provenance)) {
+        let detailsHtml = '<details class="mb-4 border border-black/80 dark:border-white/80 p-2 cursor-crosshair">';
+        detailsHtml += '<summary class="text-[10px] font-bold uppercase tracking-widest cursor-crosshair outline-none opacity-80 hover:opacity-100">[ QUALITATIVE ANALYSIS ]</summary>';
+        detailsHtml += '<div class="mt-3 space-y-3 cursor-text">';
+        if (entry.notes.critique) detailsHtml += '<p class="text-[9px] leading-relaxed"><strong class="opacity-50">CRITIQUE:</strong> ' + entry.notes.critique + '</p>';
+        if (entry.notes.strategy) detailsHtml += '<p class="text-[9px] leading-relaxed"><strong class="opacity-50">STRATEGY:</strong> ' + entry.notes.strategy + '</p>';
+        if (entry.notes.provenance) detailsHtml += '<p class="text-[9px] leading-relaxed"><strong class="opacity-50">PROVENANCE:</strong> ' + entry.notes.provenance + '</p>';
+        detailsHtml += '</div></details>';
+        container.insertAdjacentHTML('beforeend', detailsHtml);
+      }
+
       /* Render hotspot info boxes */
       entry.hotspots.forEach((spot, i) => {
         const box = document.createElement('div');
@@ -2450,6 +2484,20 @@
       const btnAuthMobile = $('btn-auth-toggle-mobile');
       if (btnAuthDesktop) btnAuthDesktop.addEventListener('click', toggleAuth);
       if (btnAuthMobile) btnAuthMobile.addEventListener('click', toggleAuth);
+      
+      const btnSchemaDesktop = $('btn-schema-toggle');
+      const btnSchemaMobile = $('btn-schema-toggle-mobile');
+      const openSchema = () => {
+        $('schema-modal').classList.remove('hidden');
+        $('schema-json-container').textContent = JSON.stringify(archiveData.slice(0, 2), null, 2) + '\n\n// ... ' + (archiveData.length - 2) + ' more entries omitted for brevity';
+      };
+      if (btnSchemaDesktop) btnSchemaDesktop.addEventListener('click', openSchema);
+      if (btnSchemaMobile) btnSchemaMobile.addEventListener('click', openSchema);
+      
+      const btnCloseSchema = document.querySelector('[data-modal-close="schema"]');
+      if (btnCloseSchema) btnCloseSchema.addEventListener('click', () => $('schema-modal').classList.add('hidden'));
+      const backdropSchema = document.querySelector('[data-modal-backdrop="schema"]');
+      if (backdropSchema) backdropSchema.addEventListener('click', () => $('schema-modal').classList.add('hidden'));
       
       // Safe event listeners
       const cmdInput = $('cmd-input');
@@ -3831,10 +3879,20 @@
       }
       const entryId = AppState.selectedEntryId;
       if (!entryId) return;
-      const matrixData = { entryId: entryId, savedAt: new Date().toISOString() };
-      const docRef = window.doc(window.collection(window.firebaseDb, 'users', currentUser.uid, 'connection_matrices'), entryId);
-      window.setDoc(docRef, matrixData).then(() => {
-        showToast('Matrix saved to secure terminal.');
+      const entry = archiveData.find(e => e.id === entryId);
+      if (!entry) return;
+
+      const matrixData = { 
+        id: entry.id,
+        brand: entry.tags.brand || '',
+        title: entry.title || '',
+        year: entry.year || '',
+        savedAt: new Date().toISOString() 
+      };
+
+      const docRef = window.doc(window.collection(window.firebaseDb, 'users', currentUser.uid, 'connection_matrices'), 'board');
+      window.setDoc(docRef, { items: window.arrayUnion(matrixData) }, { merge: true }).then(() => {
+        showToast('Item saved to your Personalized Board.');
       }).catch((error) => {
         console.error("Error saving matrix: ", error);
         showToast('Error saving matrix.');
