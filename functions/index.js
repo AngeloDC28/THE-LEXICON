@@ -21,9 +21,9 @@ exports.sendCustomMagicLink = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError('invalid-argument', 'The function must be called with an "email" argument.');
   }
 
-  // Set the redirection URL to the correct lexicon-7c6d9 authorized domain.
+  // Set the redirection URL to the correct lexicon-7575c authorized domain.
   const actionCodeSettings = {
-    url: 'https://lexicon-7c6d9.web.app/', // Change to your exact live domain if using a custom one
+    url: 'https://lexicon-7575c.web.app/', // Change to your exact live domain if using a custom one
     handleCodeInApp: true,
   };
 
