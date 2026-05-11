@@ -7,6 +7,8 @@
   <link rel="icon" type="image/jpeg" href="IMG_6655.jpeg">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -85,7 +87,7 @@
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
-      .marquee-track {
+      .boot-cursor {
         animation: none !important;
       }
     }
@@ -96,9 +98,7 @@
     #detail-image-view { cursor: crosshair; }
     #image-grid { cursor: crosshair; }
 
-    /* Sticky Note Squares - hidden behind gate */
-    #landing-gate ~ #app-root #sticky-note-triggers,
-    #landing-gate ~ #app-root #sticky-note-panel { display: none; }
+    /* Sticky Note Squares */
     #sticky-note-triggers {
       position: absolute;
       top: 8px;
@@ -431,15 +431,30 @@
       padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
     }
 
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    /* ── BOOT OVERLAY ── */
+    #boot-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: #000;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
     }
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 20s linear infinite;
+    #boot-overlay.boot-fade-out {
+      opacity: 0;
     }
+    #boot-overlay .boot-text {
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: #fff; opacity: 0.7;
+    }
+    #boot-overlay .boot-cursor {
+      display: inline-block; width: 2px; height: 1.1em;
+      background: #fff; margin-left: 3px;
+      vertical-align: text-bottom;
+      animation: cursorBlink 0.5s step-end infinite;
+    }
+    html.dark #boot-overlay { background: #0A0A0A; }
 
     /* Index-open state: suppress interactive overlays */
     .index-open .hotspot-btn,
@@ -771,6 +786,108 @@
     .recent-thumb:hover { filter: none; }
     html.dark .recent-thumb { border-color: rgba(255,255,255,0.2); }
 
+    /* ── FEATURE 1: EXPORTABLE DOSSIER ── */
+    #dossier-template {
+      position: fixed; left: -9999px; top: -9999px;
+      width: 1080px; height: 1920px;
+      background: #FFFFFF; overflow: hidden;
+      font-family: 'IBM Plex Mono', 'Courier New', monospace;
+      display: flex; flex-direction: column;
+    }
+    #dossier-template .dossier-header {
+      padding: 60px 60px 40px;
+      border-bottom: 3px solid #000;
+    }
+    #dossier-template .dossier-brand {
+      font-size: 42px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.15em;
+      color: #000; line-height: 1.1;
+    }
+    #dossier-template .dossier-year {
+      font-size: 22px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: #000; margin-top: 12px; opacity: 0.6;
+    }
+    #dossier-template .dossier-image-wrap {
+      flex: 1; display: flex; align-items: center;
+      justify-content: center; overflow: hidden;
+      padding: 30px 60px;
+    }
+    #dossier-template .dossier-image-wrap img {
+      max-width: 100%; max-height: 100%;
+      object-fit: contain;
+    }
+    #dossier-template .dossier-footer {
+      padding: 40px 60px 60px;
+      border-top: 3px solid #000;
+    }
+    #dossier-template .dossier-critique {
+      font-size: 18px; line-height: 1.6;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      color: #000;
+    }
+    #dossier-template .dossier-watermark {
+      font-size: 14px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: #000; opacity: 0.3; margin-top: 20px;
+    }
+    #btn-export-dossier {
+      min-width: 44px; min-height: 44px;
+      touch-action: manipulation;
+    }
+
+    /* ── FEATURE 2: SYLLABUS COMPILER ── */
+    .grid-cell.syllabus-selected {
+      outline: 3px solid #000; outline-offset: -3px;
+      position: relative;
+    }
+    html.dark .grid-cell.syllabus-selected {
+      outline-color: #CCFF00;
+    }
+    .grid-cell.syllabus-selected::after {
+      content: '\2713'; position: absolute; top: 6px; right: 6px;
+      width: 22px; height: 22px; background: #000; color: #fff;
+      font-size: 14px; font-weight: 700; line-height: 22px;
+      text-align: center; z-index: 10; pointer-events: none;
+    }
+    html.dark .grid-cell.syllabus-selected::after {
+      background: #CCFF00; color: #000;
+    }
+    #syllabus-action-bar {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 9998; transform: translateY(100%);
+      transition: transform 0.3s ease;
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    #syllabus-action-bar.visible {
+      transform: translateY(0);
+    }
+
+    /* ── HEADER TELEMETRY FEED ── */
+    #header-telemetry {
+      display: flex; align-items: center;
+      min-width: 0; overflow: hidden;
+    }
+    #telemetry-text {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    #telemetry-cursor {
+      display: inline-block;
+      width: 2px; height: 1.1em;
+      background: currentColor;
+      margin-left: 2px; flex-shrink: 0;
+      vertical-align: text-bottom;
+      animation: cursorBlink 0.7s step-end infinite;
+    }
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
   </style>
 
   <!-- OG Meta Tags (dynamically updated by JS) -->
@@ -785,27 +902,10 @@
   <a href="#image-panel" class="skip-link">Skip to Archive</a>
 
   <!-- ============================================================
-       TERMINAL GATE
+       BOOT OVERLAY (auto-dismiss after 1.2s)
   ============================================================ -->
-  <div id="landing-gate" class="fixed inset-0 z-[200] bg-bone dark:bg-darkBase flex flex-col justify-between overflow-hidden transition-transform duration-700 ease-in-out cursor-pointer">
-    <!-- Marquee Ticker -->
-    <div class="w-full overflow-hidden border-b-[1px] border-black/80 dark:border-white/20 py-3">
-      <div class="marquee-track">
-        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">DECODING THE MECHANICS OF STRUCTURAL POWER ; ISOLATING GARMENTS THAT SUBVERT SOCIETAL CODES ; EVERY INDEXED RUNWAY IS A CULTURAL ARTIFACT ;</span>
-        <span class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.3em] whitespace-nowrap px-8">DECODING THE MECHANICS OF STRUCTURAL POWER ; ISOLATING GARMENTS THAT SUBVERT SOCIETAL CODES ; EVERY INDEXED RUNWAY IS A CULTURAL ARTIFACT ;</span>
-      </div>
-    </div>
-
-    <!-- Core Lock-Up -->
-    <div class="flex flex-col items-center justify-center flex-1 px-4">
-      <h1 class="text-[12vw] md:text-[150px] font-mono font-bold uppercase leading-none tracking-[0.04em] text-center">The Lexicon</h1>
-      <p class="text-[10px] md:text-sm font-mono uppercase tracking-[0.25em] mt-4 md:mt-6 text-center">Cultural Directory ; Relational Database ; Est. 2026</p>
-    </div>
-
-    <!-- Action Trigger -->
-    <div class="flex justify-center pb-12 md:pb-16 pointer-events-none">
-        <button type="button" id="btn-initiate" class="text-xs md:text-sm font-mono uppercase tracking-[0.2em] border-b-[1px] border-black dark:border-white/30 pb-2 px-3 min-h-[44px] opacity-60">[ INITIATE FORENSIC QUERY ]</button>
-    </div>
+  <div id="boot-overlay">
+    <span class="boot-text" id="boot-text">[ INITIALIZING FORENSIC AUDIT ]</span><span class="boot-cursor"></span>
   </div>
 
   <div id="app-root">
@@ -821,14 +921,15 @@
           <img src="IMG_6655.jpeg" alt="" width="32" height="32" class="h-8 w-8 md:h-8 md:w-8 shrink-0 object-cover border border-white/30" />
         </button>
       </div>
-      <div class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden md:block">
-        Cultural Directory; <span id="header-rel"></span>; <span id="header-count">0</span> Entries
+      <div id="header-telemetry" class="text-[10px] font-mono uppercase tracking-[0.2em] opacity-70 hidden md:block min-w-0 max-w-[40%]">
+        <span id="telemetry-text" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span><span id="telemetry-cursor"></span>
       </div>
       <div class="hidden md:flex items-center gap-4">
         <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Connections ]</button>
         <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Theme: Light ]</button>
         <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
         <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
+        <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Syllabus ]</button>
       </div>
     </header>
 
@@ -926,6 +1027,7 @@
             <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.12em] flex-1 truncate"></span>
             <div class="flex items-center gap-2 ml-3 shrink-0">
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
+              <button type="button" id="btn-export-dossier" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1" title="Export entry as shareable image">[ Export ]</button>
               <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
               <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
@@ -947,6 +1049,7 @@
           <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Theme: Light ]</button>
           <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
           <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Contact ]</button>
+          <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Syllabus ]</button>
         </div>
 
       </div>
@@ -1020,6 +1123,32 @@
 
   
   <!-- Film grain removed -->
+
+  <!-- DOSSIER HIDDEN TEMPLATE (Feature 1) -->
+  <div id="dossier-template">
+    <div class="dossier-header">
+      <div class="dossier-brand" id="dossier-brand"></div>
+      <div class="dossier-year" id="dossier-year"></div>
+    </div>
+    <div class="dossier-image-wrap">
+      <img id="dossier-image" src="" alt="" crossorigin="anonymous" />
+    </div>
+    <div class="dossier-footer">
+      <div class="dossier-critique" id="dossier-critique"></div>
+      <div class="dossier-watermark">THE LEXICON ; thelexicon.xyz</div>
+    </div>
+  </div>
+
+  <!-- SYLLABUS ACTION BAR (Feature 2) -->
+  <div id="syllabus-action-bar" class="bg-black dark:bg-darkBase border-t-[1px] border-black/80 dark:border-white/20">
+    <div class="flex items-center justify-between px-4 py-3 md:px-6 md:py-4">
+      <div class="flex items-center gap-3">
+        <span id="syllabus-count" class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.15em] text-white dark:text-acid">0 Selected</span>
+        <button type="button" id="btn-syllabus-clear" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] text-white/60 hover:text-white dark:hover:text-acid">[ Clear ]</button>
+      </div>
+      <button type="button" id="btn-generate-syllabus" class="text-[10px] md:text-xs font-mono font-bold uppercase tracking-[0.12em] bg-white text-black dark:bg-acid dark:text-black px-4 py-2 min-h-[44px] hover:opacity-80 transition-opacity touch-action-manipulation">[ Generate Syllabus ]</button>
+    </div>
+  </div>
 
   <!-- TOAST -->
   <div id="toast" class="hidden"></div>
@@ -1537,13 +1666,7 @@
        RENDER: HEADER METADATA
     ============================================================ */
     function updateHeaderMeta() {
-      const now = new Date();
-      const monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-      ];
-      $('header-rel').textContent = monthNames[now.getMonth()] + ' ' + now.getFullYear();
-      $('header-count').textContent = archiveData.length;
+      /* Header now uses live telemetry feed; no static text to update */
     }
 
     /* ============================================================
@@ -2148,12 +2271,12 @@
     ============================================================ */
     function initTheme() {
       const savedTheme = localStorage.getItem('lexicon-theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-        updateThemeButtons(true);
-      } else {
+      if (savedTheme === 'light') {
         document.documentElement.classList.remove('dark');
         updateThemeButtons(false);
+      } else {
+        document.documentElement.classList.add('dark');
+        updateThemeButtons(true);
       }
     }
 
@@ -2478,48 +2601,33 @@
       renderTaxonomySub();
       renderStatusBar();
 
-      /* Landing Gate */
-      var gate = $('landing-gate');
-      if (gate) {
-        
+      /* Boot Overlay — auto-dismiss after 1.2s */
+      var bootOverlay = $('boot-overlay');
+      if (bootOverlay) {
+        setTimeout(function () {
+          bootOverlay.classList.add('boot-fade-out');
+          setTimeout(function () {
+            bootOverlay.remove();
+          }, 500);
+        }, 1200);
+      }
+
       const btnViewToggle = $('btn-view-toggle');
       if (btnViewToggle) btnViewToggle.addEventListener('click', toggleViewMode);
       const btnViewToggleMobile = $('btn-view-toggle-mobile');
       if (btnViewToggleMobile) btnViewToggleMobile.addEventListener('click', toggleViewMode);
       const btnSearchMobile = $('btn-search-mobile');
       if (btnSearchMobile) btnSearchMobile.addEventListener('click', () => { closeDrawer(); toggleCmdPalette(); });
-      
-      // Process hash on load
+
+      // Process hash on load or open first entry
       setTimeout(() => {
         if (window.location.hash) {
           const hash = window.location.hash.substring(1);
           if (archiveData.find(e => e.id === hash)) openDetail(hash);
+        } else if (archiveData.length > 0) {
+          openDetail(archiveData[0].id);
         }
       }, 100);
-
-        document.body.style.overflow = 'hidden';
-        
-        function closeGate() {
-          if (gate.classList.contains('-translate-y-full')) return;
-          gate.classList.add('-translate-y-full');
-          setTimeout(function () {
-            gate.remove();
-            document.body.style.overflow = '';
-            if (!window.location.hash && archiveData.length > 0) {
-              openDetail(archiveData[0].id);
-            }
-          }, 700);
-        }
-
-        gate.addEventListener('click', closeGate);
-        
-        // Also allow enter key or space
-        document.addEventListener('keydown', function(e) {
-          if (document.body.contains(gate) && (e.key === 'Enter' || e.key === ' ')) {
-            closeGate();
-          }
-        });
-      }
 
       /* Mobile drawer toggle */
       var drawerBackdrop = $('drawer-backdrop');
@@ -3089,6 +3197,458 @@
       renderFilterChips();
     });
 
+  </script>
+
+  <!-- ============================================================
+       FEATURE MODULES (1, 2, 4)
+  ============================================================ -->
+  <script>
+    /* ============================================================
+       FEATURE 1: EXPORTABLE DOSSIER
+       Captures a hidden 9:16 DOM template via html2canvas and
+       auto-downloads the PNG as a mobile share asset.
+    ============================================================ */
+    (function initExportDossier() {
+      document.addEventListener('DOMContentLoaded', function () {
+        var btnExport = document.getElementById('btn-export-dossier');
+        if (!btnExport) return;
+
+        btnExport.addEventListener('click', function () {
+          if (typeof html2canvas === 'undefined') {
+            showToast('Export library loading...');
+            return;
+          }
+
+          var entry = archiveData.find(function (e) { return e.id === AppState.selectedEntryId; });
+          if (!entry) return;
+
+          showToast('Generating dossier...');
+
+          /* Populate the hidden template */
+          var imgs = entry.images || [entry.imageUrl];
+          var currentImg = imgs[AppState.currentImageIndex] || imgs[0];
+          document.getElementById('dossier-brand').textContent = entry.tags.brand;
+          document.getElementById('dossier-year').textContent = entry.year + ' ; ' + entry.season;
+          document.getElementById('dossier-image').src = currentImg;
+
+          /* Critique snippet — first 280 chars */
+          var critique = (entry.notes && entry.notes.critique) || entry.description || '';
+          if (critique.length > 280) critique = critique.substring(0, 280) + '...';
+          document.getElementById('dossier-critique').textContent = critique;
+
+          /* Wait for image to load then capture */
+          var dossierImg = document.getElementById('dossier-image');
+          function capture() {
+            var template = document.getElementById('dossier-template');
+            /* Temporarily make visible for html2canvas */
+            template.style.left = '0';
+            template.style.top = '0';
+            template.style.zIndex = '-1';
+            template.style.opacity = '0';
+
+            html2canvas(template, {
+              width: 1080,
+              height: 1920,
+              scale: 1,
+              useCORS: true,
+              allowTaint: true,
+              backgroundColor: '#FFFFFF',
+              logging: false,
+            }).then(function (canvas) {
+              /* Reset template position */
+              template.style.left = '-9999px';
+              template.style.top = '-9999px';
+              template.style.zIndex = '';
+              template.style.opacity = '';
+
+              /* Auto-download */
+              var link = document.createElement('a');
+              var slug = (entry.tags.brand + '-' + entry.year).replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+              link.download = 'LEXICON-' + slug + '.png';
+              link.href = canvas.toDataURL('image/png');
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+              showToast('Dossier exported');
+            }).catch(function () {
+              template.style.left = '-9999px';
+              template.style.top = '-9999px';
+              template.style.zIndex = '';
+              template.style.opacity = '';
+              showToast('Export failed — try again');
+            });
+          }
+
+          if (dossierImg.complete && dossierImg.naturalWidth > 0) {
+            capture();
+          } else {
+            dossierImg.onload = capture;
+            dossierImg.onerror = function () { showToast('Image load failed'); };
+          }
+        });
+      });
+    })();
+
+    /* ============================================================
+       FEATURE 2: SYLLABUS COMPILER
+       Multi-select grid entries → generate a brutalist PDF via jsPDF.
+       Selection mode is toggled via the [ Syllabus ] header button.
+    ============================================================ */
+    (function initSyllabusCompiler() {
+      var syllabusMode = false;
+      var selectedIds = new Set();
+
+      function updateActionBar() {
+        var bar = document.getElementById('syllabus-action-bar');
+        var countEl = document.getElementById('syllabus-count');
+        if (!bar) return;
+        if (selectedIds.size > 0 && syllabusMode) {
+          bar.classList.add('visible');
+          countEl.textContent = selectedIds.size + ' Selected';
+        } else {
+          bar.classList.remove('visible');
+        }
+      }
+
+      function toggleSyllabusMode() {
+        syllabusMode = !syllabusMode;
+        var btnD = document.getElementById('btn-syllabus-toggle');
+        var btnM = document.getElementById('btn-syllabus-toggle-mobile');
+        if (syllabusMode) {
+          if (btnD) btnD.textContent = '[ Syllabus: ON ]';
+          if (btnM) btnM.textContent = '[ Syllabus: ON ]';
+          showToast('Syllabus mode \u2014 tap entries to select');
+        } else {
+          if (btnD) btnD.textContent = '[ Syllabus ]';
+          if (btnM) btnM.textContent = '[ Syllabus ]';
+          selectedIds.clear();
+          document.querySelectorAll('.grid-cell.syllabus-selected').forEach(function (c) {
+            c.classList.remove('syllabus-selected');
+          });
+          updateActionBar();
+          showToast('Syllabus mode off');
+        }
+      }
+
+      function clearSyllabus() {
+        selectedIds.clear();
+        document.querySelectorAll('.grid-cell.syllabus-selected').forEach(function (c) {
+          c.classList.remove('syllabus-selected');
+        });
+        updateActionBar();
+      }
+
+      function handleGridClickForSyllabus(e) {
+        if (!syllabusMode) return false;
+        var cell = e.target.closest('.grid-cell[data-entry-id]');
+        if (!cell) return false;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        var id = cell.getAttribute('data-entry-id');
+        if (selectedIds.has(id)) {
+          selectedIds.delete(id);
+          /* Remove selection from all cells of this entry */
+          document.querySelectorAll('.grid-cell[data-entry-id="' + id + '"]').forEach(function (c) {
+            c.classList.remove('syllabus-selected');
+          });
+        } else {
+          selectedIds.add(id);
+          /* Mark first cell only for visual clarity */
+          cell.classList.add('syllabus-selected');
+        }
+        updateActionBar();
+        return true;
+      }
+
+      function generateSyllabusPDF() {
+        if (typeof window.jspdf === 'undefined') {
+          showToast('PDF library loading...');
+          return;
+        }
+        if (selectedIds.size === 0) {
+          showToast('No entries selected');
+          return;
+        }
+
+        showToast('Compiling syllabus...');
+
+        var jsPDF = window.jspdf.jsPDF;
+        var doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+        var pageW = 210;
+        var pageH = 297;
+        var marginL = 20;
+        var marginR = 20;
+        var marginT = 25;
+        var usableW = pageW - marginL - marginR;
+        var y = marginT;
+        var lineH = 5;
+
+        /* Cover page */
+        doc.setFont('courier', 'bold');
+        doc.setFontSize(28);
+        doc.text('THE LEXICON', marginL, 60);
+        doc.setFontSize(10);
+        doc.setFont('courier', 'normal');
+        doc.text('SYLLABUS COMPILATION', marginL, 72);
+        doc.text(new Date().toISOString().split('T')[0] + ' ; ' + selectedIds.size + ' ENTRIES', marginL, 80);
+
+        /* Horizontal rule */
+        doc.setLineWidth(0.5);
+        doc.line(marginL, 88, pageW - marginR, 88);
+
+        doc.setFontSize(8);
+        doc.text('GENERATED BY THE LEXICON ; THELEXICON.XYZ', marginL, 96);
+        doc.text('A RELATIONAL DATABASE DEDICATED TO THE FORENSIC', marginL, 102);
+        doc.text('AUDIT OF AVANT-GARDE FASHION HISTORY', marginL, 108);
+
+        /* Entry pages */
+        var entries = archiveData.filter(function (e) { return selectedIds.has(e.id); });
+
+        entries.forEach(function (entry, idx) {
+          doc.addPage();
+          y = marginT;
+
+          /* Entry header */
+          doc.setFont('courier', 'bold');
+          doc.setFontSize(16);
+          var brandLines = doc.splitTextToSize(entry.tags.brand.toUpperCase(), usableW);
+          doc.text(brandLines, marginL, y);
+          y += brandLines.length * 7 + 2;
+
+          doc.setFontSize(10);
+          doc.setFont('courier', 'normal');
+          doc.text(entry.year + ' ; ' + entry.season, marginL, y);
+          y += 8;
+          if (entry.subtitle) {
+            doc.text(entry.subtitle.toUpperCase(), marginL, y);
+            y += 8;
+          }
+
+          /* Horizontal rule */
+          doc.setLineWidth(0.3);
+          doc.line(marginL, y, pageW - marginR, y);
+          y += 10;
+
+          /* Entry number */
+          doc.setFontSize(7);
+          doc.setFont('courier', 'bold');
+          doc.text('ENTRY ' + String(idx + 1).padStart(2, '0') + ' / ' + String(entries.length).padStart(2, '0'), marginL, y);
+          y += 8;
+
+          /* FORM tag */
+          if (entry.tags.form) {
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('FORM & ANATOMY', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var formLines = doc.splitTextToSize(entry.tags.form.toUpperCase(), usableW);
+            doc.text(formLines, marginL, y);
+            y += formLines.length * lineH + 4;
+          }
+
+          /* POLITICS tag */
+          if (entry.tags.politics) {
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('POLITICS', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var polLines = doc.splitTextToSize(entry.tags.politics.toUpperCase(), usableW);
+            doc.text(polLines, marginL, y);
+            y += polLines.length * lineH + 4;
+          }
+
+          /* THEORIES tag */
+          if (entry.tags.theories) {
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('THEORIES', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var theoLines = doc.splitTextToSize(entry.tags.theories.toUpperCase(), usableW);
+            doc.text(theoLines, marginL, y);
+            y += theoLines.length * lineH + 4;
+          }
+
+          /* MATERIALS tag */
+          if (entry.tags.materials) {
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('MATERIALS', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var matLines = doc.splitTextToSize(entry.tags.materials.toUpperCase(), usableW);
+            doc.text(matLines, marginL, y);
+            y += matLines.length * lineH + 4;
+          }
+
+          /* FORMAT tag */
+          if (entry.tags.format) {
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('FORMAT & MEDIUM', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var fmtLines = doc.splitTextToSize(entry.tags.format.toUpperCase(), usableW);
+            doc.text(fmtLines, marginL, y);
+            y += fmtLines.length * lineH + 4;
+          }
+
+          /* Divider */
+          y += 2;
+          doc.setLineWidth(0.2);
+          doc.line(marginL, y, pageW - marginR, y);
+          y += 8;
+
+          /* CRITIQUE (notes) */
+          if (entry.notes && entry.notes.critique) {
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('FORENSIC CRITIQUE', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var critiqueText = entry.notes.critique;
+            var critLines = doc.splitTextToSize(critiqueText, usableW);
+            /* Handle overflow to new page */
+            critLines.forEach(function (line) {
+              if (y > pageH - 20) {
+                doc.addPage();
+                y = marginT;
+              }
+              doc.text(line, marginL, y);
+              y += lineH;
+            });
+            y += 4;
+          }
+
+          /* PROVENANCE */
+          if (entry.notes && entry.notes.provenance) {
+            if (y > pageH - 40) { doc.addPage(); y = marginT; }
+            doc.setFontSize(8);
+            doc.setFont('courier', 'bold');
+            doc.text('PROVENANCE', marginL, y);
+            y += lineH;
+            doc.setFont('courier', 'normal');
+            doc.setFontSize(7);
+            var provLines = doc.splitTextToSize(entry.notes.provenance, usableW);
+            provLines.forEach(function (line) {
+              if (y > pageH - 20) { doc.addPage(); y = marginT; }
+              doc.text(line, marginL, y);
+              y += lineH;
+            });
+          }
+
+          /* Page footer */
+          doc.setFontSize(6);
+          doc.setFont('courier', 'normal');
+          doc.text('THE LEXICON ; THELEXICON.XYZ', marginL, pageH - 10);
+          doc.text('PAGE ' + String(idx + 2), pageW - marginR - 20, pageH - 10);
+        });
+
+        /* Save */
+        var dateSlug = new Date().toISOString().split('T')[0];
+        doc.save('LEXICON-SYLLABUS-' + dateSlug + '.pdf');
+        showToast('Syllabus compiled \u2014 ' + entries.length + ' entries');
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var btnD = document.getElementById('btn-syllabus-toggle');
+        var btnM = document.getElementById('btn-syllabus-toggle-mobile');
+        if (btnD) btnD.addEventListener('click', toggleSyllabusMode);
+        if (btnM) btnM.addEventListener('click', toggleSyllabusMode);
+
+        var btnClear = document.getElementById('btn-syllabus-clear');
+        if (btnClear) btnClear.addEventListener('click', clearSyllabus);
+
+        var btnGen = document.getElementById('btn-generate-syllabus');
+        if (btnGen) btnGen.addEventListener('click', generateSyllabusPDF);
+
+        /* Intercept grid clicks when syllabus mode is on */
+        var grid = document.getElementById('image-grid');
+        if (grid) {
+          grid.addEventListener('click', function (e) {
+            handleGridClickForSyllabus(e);
+          }, true); /* Capture phase to run before existing handler */
+        }
+      });
+    })();
+
+    /* ============================================================
+       HEADER TELEMETRY FEED
+       Typewriter cycling through academic phrases in the header.
+       Starts after boot overlay dismisses (1.7s from load).
+    ============================================================ */
+    (function initHeaderTelemetry() {
+      var phrases = [
+        '[ ROUTING: SEMIOTIC SABOTAGE ]',
+        '[ ISOLATING: CLASS DYNAMICS ]',
+        '[ DECODING: STRUCTURAL POWER MECHANICS ]',
+        '[ MAPPING: SUBCULTURAL RESISTANCE THEORY ]',
+        '[ PARSING: DECONSTRUCTIONIST LOGICS ]',
+        '[ INDEXING: AVANT-GARDE TAXONOMY ]',
+        '[ TRACING: DIASPORIC NARRATIVES ]',
+        '[ AUDITING: BODILY AUTONOMY PROTOCOLS ]',
+        '[ SCANNING: SIMULACRAL ARCHITECTURES ]',
+        '[ COMPILING: FORENSIC CRITIQUE DATA ]',
+        '[ INTERCEPTING: ANTI-CONSUMERIST SIGNALS ]',
+        '[ CALIBRATING: POST-BINARY FORM ANALYSIS ]',
+        '[ ISOLATING: RADICAL CORPOREAL INTERVENTIONS ]',
+      ];
+
+      var currentPhrase = 0;
+      var charIndex = 0;
+      var isDeleting = false;
+      var typeSpeed = 45;
+      var deleteSpeed = 25;
+      var pauseAfterType = 2200;
+      var pauseAfterDelete = 350;
+
+      function tick() {
+        var textEl = document.getElementById('telemetry-text');
+        if (!textEl) return;
+
+        var phrase = phrases[currentPhrase];
+
+        if (!isDeleting) {
+          charIndex++;
+          textEl.textContent = phrase.substring(0, charIndex);
+
+          if (charIndex >= phrase.length) {
+            setTimeout(function () {
+              isDeleting = true;
+              tick();
+            }, pauseAfterType);
+            return;
+          }
+          setTimeout(tick, typeSpeed);
+        } else {
+          charIndex--;
+          textEl.textContent = phrase.substring(0, charIndex);
+
+          if (charIndex <= 0) {
+            isDeleting = false;
+            currentPhrase = (currentPhrase + 1) % phrases.length;
+            setTimeout(tick, pauseAfterDelete);
+            return;
+          }
+          setTimeout(tick, deleteSpeed);
+        }
+      }
+
+      /* Start after boot overlay fades (1.2s + 0.5s buffer) */
+      document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(tick, 1700);
+      });
+    })();
   </script>
 </body>
 </html>
