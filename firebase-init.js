@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, collection, doc, setDoc, getDocs, arrayUnion } from "firebase/firestore";
+import { getFunctions, httpsCallable } from "firebase/functions";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -23,6 +24,8 @@ const db = getFirestore(app);
 
 window.firebaseAuth = auth;
 window.firebaseDb = db;
+window.firebaseFunctions = getFunctions(app);
+window.httpsCallable = httpsCallable;
 window.sendSignInLinkToEmail = sendSignInLinkToEmail;
 window.isSignInWithEmailLink = isSignInWithEmailLink;
 window.signInWithEmailLink = signInWithEmailLink;

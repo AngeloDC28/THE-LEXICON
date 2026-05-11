@@ -3842,12 +3842,11 @@
           // Fallback to the live domain if testing locally or via file:// to prevent unauthorized-continue-uri
           const redirectUrl = (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? liveDomain : currentUrl;
           
-          const actionCodeSettings = {
-            url: redirectUrl,
-            handleCodeInApp: true
-          };
           $('btn-submit-auth').textContent = 'Sending Link...';
-          window.sendSignInLinkToEmail(window.firebaseAuth, email, actionCodeSettings)
+          
+          const sendCustomMagicLink = window.httpsCallable(window.firebaseFunctions, 'sendCustomMagicLink');
+          
+          sendCustomMagicLink({ email: email })
             .then(() => {
               window.localStorage.setItem('emailForSignIn', email);
               $('auth-form-container').classList.add('hidden');
