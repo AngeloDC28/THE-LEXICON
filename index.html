@@ -979,7 +979,7 @@
        BOOT OVERLAY (auto-dismiss after 1.2s)
   ============================================================ -->
   <div id="boot-overlay">
-    <span class="boot-text" id="boot-text">[ LOADING THE LEXICON ]</span><span class="boot-cursor"></span>
+    <span class="boot-text" id="boot-text">Loading The Lexicon...</span><span class="boot-cursor"></span>
   </div>
 
   <div id="app-root">
@@ -999,13 +999,13 @@
         <span id="telemetry-text" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span><span id="telemetry-cursor"></span>
       </div>
       <div class="hidden md:flex items-center gap-4">
-        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Connections ]</button>
-        <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Theme: Light ]</button>
-        <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Login ]</button>
-        <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
-        <button type="button" id="btn-schema-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Schema ]</button>
-        <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
-        <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Syllabus ]</button>
+        <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Connections</button>
+        <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Theme: Light</button>
+        <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Sign In</button>
+        <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">About</button>
+        <button type="button" id="btn-schema-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Schema</button>
+        <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Contact</button>
+        <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">Syllabus</button>
       </div>
     </header>
 
@@ -1088,7 +1088,7 @@
         <!-- Taxonomy Grid -->
         <div id="taxonomy-container" class="shrink-0 border-t-[1px] border-black/80 dark:border-white/20 overflow-y-auto" style="max-height: 45%;">
           <div class="px-4 py-2">
-            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">[ Map Taxonomy ]</span>
+            <span class="text-[9px] uppercase tracking-[0.2em] opacity-40">Taxonomy Map</span>
           </div>
           <div id="taxonomy-grid" class="taxonomy-grid">
             <!-- Top-level pillars rendered by JS -->
@@ -1106,9 +1106,9 @@
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
 
 
-              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
-              <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
-              <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
+              <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">Copy Link</button>
+              <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">Connections</button>
+              <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">Back to Grid</button>
               <button type="button" id="btn-close-detail" class="text-xs font-bold uppercase tracking-wider hover:opacity-70 ml-2 focus-ring px-1" aria-label="Close entry">X</button>
             </div>
           </div>
@@ -1122,14 +1122,14 @@
 
         <!-- Mobile Drawer: About / Contact -->
         <div class="md:hidden border-t-[1px] border-black/80 dark:border-white/20 dark:border-white/20 px-4 py-3 flex flex-wrap items-center gap-4 shrink-0">
-          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Connections ]</button>
-          <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Search ⌘K ]</button>
-          <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Theme: Light ]</button>
-          <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Login ]</button>
-          <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
-          <button type="button" id="btn-schema-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Schema ]</button>
-          <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Contact ]</button>
-          <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Syllabus ]</button>
+          <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Connections</button>
+          <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Search ⌘K</button>
+          <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Theme: Light</button>
+          <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Sign In</button>
+          <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">About</button>
+          <button type="button" id="btn-schema-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Schema</button>
+          <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Contact</button>
+          <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">Syllabus</button>
         </div>
 
       </div>
@@ -1139,8 +1139,8 @@
         <!-- View Controls -->
         <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between bg-bone dark:bg-darkBase shrink-0">
           <div class="flex items-center gap-4">
-            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] opacity-100" title="Switch to Grid View">[ Grid View ]</button>
-            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] opacity-40 hover:opacity-100" title="Switch to Evolution Matrix">[ Timeline View ]</button>
+            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] opacity-100" title="Switch to Grid View">Grid View</button>
+            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] opacity-40 hover:opacity-100" title="Switch to Evolution Matrix">Timeline View</button>
           </div>
           <div class="flex items-center">
             <span id="current-view-label" class="text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">ARCHIVE_GRID</span>
@@ -1241,8 +1241,8 @@
       <div class="matrix-header">
         <span class="text-[10px] font-mono font-bold uppercase tracking-[0.15em]">Connection Matrix</span>
         <div>
-          <button type="button" id="btn-save-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60 mr-4">[ Save Matrix ]</button>
-          <button type="button" id="btn-close-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60">[ X Close ]</button>
+          <button type="button" id="btn-save-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60 mr-4">Save to Matrix</button>
+          <button type="button" id="btn-close-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60">Close</button>
         </div>
       </div>
       <div id="matrix-content" class="flex-1 overflow-y-auto">
@@ -1301,13 +1301,13 @@
     <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-4xl md:max-h-[90vh] md:mx-auto p-4 md:p-8 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
       <div class="flex items-start justify-between mb-4 border-b border-black dark:border-white pb-2">
         <h2 id="schema-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Portfolio Framing (Process & Schema)</h2>
-        <button type="button" data-modal-close="schema" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 focus-ring cursor-crosshair">[ X Close ]</button>
+        <button type="button" data-modal-close="schema" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 focus-ring cursor-crosshair">Close</button>
       </div>
       <div class="font-mono text-xs md:text-sm leading-relaxed tracking-[0.04em] space-y-4">
         <p class="uppercase opacity-80 border-l-2 border-black dark:border-white pl-3 py-1 text-[10px]">
           The strict visual constraints (zero border-radius, monochromatic palette, IBM Plex Mono) and explicit taxonomy are deliberate narrative choices. They strip away commercial marketing to expose the underlying socio-political realities and structural power dynamics within the fashion system.
         </p>
-        <p class="font-bold uppercase mt-6 mb-2 text-[10px] tracking-widest">[ Raw Database Schema ]</p>
+        <p class="font-bold uppercase mt-6 mb-2 text-[10px] tracking-widest">Raw Database Schema</p>
         <pre id="schema-json-container" class="bg-black/5 dark:bg-white/5 p-2 overflow-x-auto text-[9px] md:text-[10px] border border-black/20 dark:border-white/20"></pre>
       </div>
     </div>
@@ -2139,7 +2139,7 @@
       /* Progressive Disclosure for Notes */
       if (entry.notes && (entry.notes.critique || entry.notes.strategy || entry.notes.provenance)) {
         let detailsHtml = '<details class="mb-4 border border-black/80 dark:border-white/80 p-2 cursor-crosshair">';
-        detailsHtml += '<summary class="text-[10px] font-bold uppercase tracking-widest cursor-crosshair outline-none opacity-80 hover:opacity-100">[ QUALITATIVE ANALYSIS ]</summary>';
+        detailsHtml += '<summary class="text-[10px] font-bold uppercase tracking-widest cursor-crosshair outline-none opacity-80 hover:opacity-100">QUALITATIVE ANALYSIS</summary>';
         detailsHtml += '<div class="mt-3 space-y-3 cursor-text">';
         if (entry.notes.critique) detailsHtml += '<p class="text-[9px] leading-relaxed"><strong class="opacity-50">CRITIQUE:</strong> ' + entry.notes.critique + '</p>';
         if (entry.notes.strategy) detailsHtml += '<p class="text-[9px] leading-relaxed"><strong class="opacity-50">STRATEGY:</strong> ' + entry.notes.strategy + '</p>';
@@ -2169,7 +2169,7 @@
 
       if (related.length > 0) {
         relatedContainer.classList.remove('hidden');
-        let relHtml = '<p class="text-[9px] font-bold uppercase tracking-[0.15em] opacity-50 mb-3">[ Intersecting Artifacts ]</p>';
+        let relHtml = '<p class="text-[9px] font-bold uppercase tracking-[0.15em] opacity-50 mb-3">Intersecting Artifacts</p>';
         relHtml += '<div style="display:flex;gap:8px;overflow-x:auto;">';
 
         related.forEach(function (rel) {
@@ -2464,7 +2464,7 @@
 
     function updateThemeButtons(isDark) {
       if (typeof applyGraphTheme === 'function') applyGraphTheme();
-      const text = isDark ? '[ Theme: Dark ]' : '[ Theme: Light ]';
+      const text = isDark ? 'Theme: Dark' : 'Theme: Light';
       const btnDesktop = document.getElementById('btn-theme-toggle');
       const btnMobile = document.getElementById('btn-theme-toggle-mobile');
       if (btnDesktop) btnDesktop.textContent = text;
@@ -3384,12 +3384,12 @@
         var btnD = document.getElementById('btn-syllabus-toggle');
         var btnM = document.getElementById('btn-syllabus-toggle-mobile');
         if (syllabusMode) {
-          if (btnD) btnD.textContent = '[ Syllabus: ON ]';
-          if (btnM) btnM.textContent = '[ Syllabus: ON ]';
+          if (btnD) btnD.textContent = 'Syllabus: ON';
+          if (btnM) btnM.textContent = 'Syllabus: ON';
           showToast('Syllabus mode \u2014 tap entries to select');
         } else {
-          if (btnD) btnD.textContent = '[ Syllabus ]';
-          if (btnM) btnM.textContent = '[ Syllabus ]';
+          if (btnD) btnD.textContent = 'Syllabus';
+          if (btnM) btnM.textContent = 'Syllabus';
           selectedIds.clear();
           document.querySelectorAll('.grid-cell.syllabus-selected').forEach(function (c) {
             c.classList.remove('syllabus-selected');
@@ -3732,19 +3732,19 @@
     ============================================================ */
     (function initHeaderTelemetry() {
       var phrases = [
-        '[ ROUTING: SEMIOTIC SABOTAGE ]',
-        '[ ISOLATING: CLASS DYNAMICS ]',
-        '[ DECODING: STRUCTURAL POWER MECHANICS ]',
-        '[ MAPPING: SUBCULTURAL RESISTANCE THEORY ]',
-        '[ PARSING: DECONSTRUCTIONIST LOGICS ]',
-        '[ INDEXING: AVANT-GARDE TAXONOMY ]',
-        '[ TRACING: DIASPORIC NARRATIVES ]',
-        '[ AUDITING: BODILY AUTONOMY PROTOCOLS ]',
-        '[ SCANNING: SIMULACRAL ARCHITECTURES ]',
-        '[ COMPILING: FORENSIC CRITIQUE DATA ]',
-        '[ INTERCEPTING: ANTI-CONSUMERIST SIGNALS ]',
-        '[ CALIBRATING: POST-BINARY FORM ANALYSIS ]',
-        '[ ISOLATING: RADICAL CORPOREAL INTERVENTIONS ]',
+        'Routing Semiotic Sabotage',
+        'Isolating Class Dynamics',
+        'Decoding Structural Power Mechanics',
+        'Mapping Subcultural Resistance Theory',
+        'Parsing Deconstructionist Logics',
+        'Indexing Avant-Garde Taxonomy',
+        'Tracing Diasporic Narratives',
+        'Auditing Bodily Autonomy Protocols',
+        'Scanning Simulacral Architectures',
+        'Compiling Forensic Critique Data',
+        'Intercepting Anti-Consumerist Signals',
+        'Calibrating Post-Binary Form Analysis',
+        'Isolating Radical Corporeal Interventions',
       ];
 
       var currentPhrase = 0;
@@ -3809,7 +3809,7 @@
         window.signInWithEmailLink(window.firebaseAuth, email, window.location.href)
           .then((result) => {
             window.localStorage.removeItem('emailForSignIn');
-            showToast('Terminal access granted.');
+            showToast('Access granted.');
             window.history.replaceState(null, '', window.location.pathname);
           })
           .catch((error) => {
@@ -3823,12 +3823,12 @@
         const btnAuthDesktop = $('btn-auth-toggle');
         const btnAuthMobile = $('btn-auth-toggle-mobile');
         if (user) {
-          if (btnAuthDesktop) btnAuthDesktop.textContent = '[ Logout ]';
-          if (btnAuthMobile) btnAuthMobile.textContent = '[ Logout ]';
+          if (btnAuthDesktop) btnAuthDesktop.textContent = 'Sign Out';
+          if (btnAuthMobile) btnAuthMobile.textContent = 'Sign Out';
           $('auth-modal').classList.add('hidden');
         } else {
-          if (btnAuthDesktop) btnAuthDesktop.textContent = '[ Login ]';
-          if (btnAuthMobile) btnAuthMobile.textContent = '[ Login ]';
+          if (btnAuthDesktop) btnAuthDesktop.textContent = 'Sign In';
+          if (btnAuthMobile) btnAuthMobile.textContent = 'Sign In';
         }
       });
 
@@ -3846,7 +3846,7 @@
             url: redirectUrl,
             handleCodeInApp: true
           };
-          $('btn-submit-auth').textContent = '[ Transmitting... ]';
+          $('btn-submit-auth').textContent = 'Sending Link...';
           window.sendSignInLinkToEmail(window.firebaseAuth, email, actionCodeSettings)
             .then(() => {
               window.localStorage.setItem('emailForSignIn', email);
@@ -3856,7 +3856,7 @@
             .catch((error) => {
               $('auth-message').textContent = 'Error: ' + error.message;
               $('auth-message').classList.remove('hidden');
-              $('btn-submit-auth').textContent = '[ Transmit ]';
+              $('btn-submit-auth').textContent = 'Send Sign-In Link';
             });
         });
       }
@@ -3865,7 +3865,7 @@
     function toggleAuth() {
       if (currentUser) {
         window.signOut(window.firebaseAuth).then(() => {
-          showToast('Session terminated.');
+          showToast('Signed out successfully.');
         });
       } else {
         $('auth-modal').classList.remove('hidden');
@@ -3873,7 +3873,7 @@
         $('auth-success-container').classList.add('hidden');
         $('auth-email').value = '';
         $('auth-message').classList.add('hidden');
-        $('btn-submit-auth').textContent = '[ Transmit ]';
+        $('btn-submit-auth').textContent = 'Send Sign-In Link';
       }
     }
 
@@ -3897,7 +3897,7 @@
 
       const docRef = window.doc(window.collection(window.firebaseDb, 'users', currentUser.uid, 'connection_matrices'), 'board');
       window.setDoc(docRef, { items: window.arrayUnion(matrixData) }, { merge: true }).then(() => {
-        showToast('Item saved to your Personalized Board.');
+        showToast('Saved to your Connection Matrix.');
       }).catch((error) => {
         console.error("Error saving matrix: ", error);
         showToast('Error saving matrix.');
