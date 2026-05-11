@@ -67,7 +67,46 @@
       height: 100dvh;
       overflow: hidden;
       min-height: 0;
+      position: relative;
     }
+
+    /* ── MOBILE PORTRAIT OPTIMIZATION ── */
+    @media (max-width: 767px) {
+      #app-root.detail-mode-active .main-shell {
+        flex-direction: column;
+      }
+      #app-root.detail-mode-active #index-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 40dvh;
+        transform: none;
+        border-right: 0;
+        border-top: 1px solid rgba(0,0,0,0.8);
+        order: 2;
+        z-index: 10;
+      }
+      #app-root.detail-mode-active #image-panel {
+        width: 100%;
+        flex: 1;
+        order: 1;
+        height: auto;
+        min-height: 0;
+      }
+      #app-root.detail-mode-active #detail-image-view {
+        height: 100%;
+      }
+      #app-root.detail-mode-active #detail-desktop-stack {
+        padding: 10px;
+        flex: 1;
+        min-height: 0;
+      }
+      #detail-image {
+        max-height: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
 
     /* Keyboard focus (brutalist: offset ring, no radius) */
     :focus { outline: none; }
@@ -888,6 +927,65 @@
       50% { opacity: 0; }
     }
 
+    /* ── FEATURE: CITATION ENGINE ── */
+    #citation-modal {
+      position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0,0,0,0.85); backdrop-filter: blur(4px);
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    #citation-modal.active { display: flex; }
+    #citation-container {
+      background: var(--bone); width: 100%; max-width: 600px;
+      border: 1px solid #000; padding: 24px; position: relative;
+    }
+    html.dark #citation-container { background: var(--darkBase); border-color: rgba(255,255,255,0.2); }
+    .citation-block { margin-bottom: 20px; }
+    .citation-label { font-size: 10px; font-weight: bold; opacity: 0.5; margin-bottom: 4px; display: block; }
+    .citation-text { font-family: 'IBM Plex Mono', monospace; font-size: 11px; line-height: 1.6; word-break: break-all; }
+    .btn-copy-citation { font-size: 9px; font-weight: bold; border: 1px solid currentColor; padding: 2px 6px; margin-top: 6px; cursor: pointer; }
+
+    /* ── FEATURE: EVOLUTION MATRIX ── */
+    #timeline-view {
+      position: relative; width: 100%; height: 100%;
+      overflow-x: auto; overflow-y: hidden;
+      white-space: nowrap; -webkit-overflow-scrolling: touch;
+      display: none; scroll-behavior: smooth;
+    }
+    #timeline-view::-webkit-scrollbar { display: none; }
+    #timeline-view.active { display: block; }
+    .timeline-axis {
+      position: absolute; top: 50%; left: 0; right: 0;
+      height: 1px; background: #000; z-index: 0;
+    }
+    html.dark .timeline-axis { background: rgba(255,255,255,0.3); }
+    .timeline-node {
+      display: inline-block; position: relative;
+      width: 180px; height: 100%; vertical-align: top;
+      margin: 0 40px; cursor: pointer; z-index: 1;
+    }
+    .node-content {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      text-align: center; width: 140px;
+    }
+    .node-top { bottom: calc(50% + 20px); }
+    .node-bottom { top: calc(50% + 20px); }
+    .node-stem {
+      position: absolute; left: 50%; width: 1px; background: #000;
+      height: 20px; transform: translateX(-50%);
+    }
+    html.dark .node-stem { background: rgba(255,255,255,0.3); }
+    .node-stem-top { bottom: 0; }
+    .node-stem-bottom { top: -20px; }
+    .node-thumb {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border: 1px solid #000; filter: grayscale(1); transition: all 0.2s ease;
+    }
+    html.dark .node-thumb { border-color: rgba(255,255,255,0.2); }
+    .timeline-node:hover .node-thumb { filter: grayscale(0); transform: translateY(-5px); }
+    .node-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; margin-top: 8px; line-height: 1.2; white-space: normal; }
+    .node-year { font-weight: bold; font-size: 11px; margin-bottom: 2px; display: block; }
+
+
   </style>
 
   <!-- OG Meta Tags (dynamically updated by JS) -->
@@ -964,7 +1062,8 @@
     <!-- ============================================================
          MAIN SHELL
     ============================================================ -->
-    <div class="flex flex-1 overflow-hidden">
+    <div class="flex flex-1 overflow-hidden main-shell">
+
 
       <!-- LEFT: INDEX PANEL -->
       <div id="index-panel" class="w-[85%] md:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 md:relative md:inset-auto md:z-auto flex flex-col overflow-hidden bg-overlay dark:bg-darkSurface border-r-[1px] border-black/80 dark:border-white/20">
@@ -1028,6 +1127,8 @@
             <div class="flex items-center gap-2 ml-3 shrink-0">
               <span id="btn-bookmark-entry" class="bookmark-star" title="Bookmark this entry">★</span>
               <button type="button" id="btn-export-dossier" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1" title="Export entry as shareable image">[ Export ]</button>
+              <button type="button" id="btn-export-citation" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1" title="Generate academic citations">[ Citation ]</button>
+
               <button type="button" id="btn-copy-link" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Copy Link ]</button>
               <button type="button" id="btn-view-connections" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring mr-1">[ Connections ]</button>
               <button type="button" id="btn-back-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all duration-75 focus-ring">[ &lt; Grid ]</button>
@@ -1056,6 +1157,16 @@
 
       <!-- RIGHT: IMAGE GRID PANEL -->
       <div id="image-panel" class="w-full md:w-[60%] overflow-y-auto bg-bone dark:bg-darkBase flex flex-col min-h-0">
+        <!-- View Controls -->
+        <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between bg-bone dark:bg-darkBase shrink-0">
+          <div class="flex items-center gap-4">
+            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] opacity-100" title="Switch to Grid View">[ Grid View ]</button>
+            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] opacity-40 hover:opacity-100" title="Switch to Evolution Matrix">[ Timeline View ]</button>
+          </div>
+          <div class="flex items-center">
+            <span id="current-view-label" class="text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">ARCHIVE_GRID</span>
+          </div>
+        </div>
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
@@ -1063,6 +1174,15 @@
             <!-- Rendered by JS -->
           </div>
         </div>
+
+        <!-- Timeline View -->
+        <div id="timeline-view" class="flex-1 min-h-0">
+          <div class="timeline-axis"></div>
+          <div id="timeline-matrix" class="flex h-full items-center">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
 
         
         <!-- Graph view removed: replaced with Connection Matrix modal -->
@@ -1930,6 +2050,10 @@
       const detailView = $('detail-image-view');
       detailView.classList.remove('hidden');
       detailView.classList.add('detail-active');
+      
+      /* Mobile Layout Patch */
+      document.getElementById('app-root').classList.add('detail-mode-active');
+
 
       $('detail-image').src = imgs[AppState.currentImageIndex];
       $('detail-image').alt = entry.title + ' Look ' + (AppState.currentImageIndex + 1);
@@ -2050,6 +2174,8 @@
 
       $('detail-image-view').classList.add('hidden');
       $('detail-image-view').classList.remove('detail-active');
+      document.getElementById('app-root').classList.remove('detail-mode-active');
+
       $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
@@ -3224,27 +3350,30 @@
 
           showToast('Generating dossier...');
 
-          /* Populate the hidden template */
           var imgs = entry.images || [entry.imageUrl];
           var currentImg = imgs[AppState.currentImageIndex] || imgs[0];
+          
+          var dossierImg = document.getElementById('dossier-image');
+          var template = document.getElementById('dossier-template');
+
+          /* Populate the template */
           document.getElementById('dossier-brand').textContent = entry.tags.brand;
           document.getElementById('dossier-year').textContent = entry.year + ' ; ' + entry.season;
-          document.getElementById('dossier-image').src = currentImg;
+          dossierImg.src = currentImg;
 
-          /* Critique snippet — first 280 chars */
           var critique = (entry.notes && entry.notes.critique) || entry.description || '';
           if (critique.length > 280) critique = critique.substring(0, 280) + '...';
           document.getElementById('dossier-critique').textContent = critique;
 
-          /* Wait for image to load then capture */
-          var dossierImg = document.getElementById('dossier-image');
-          function capture() {
-            var template = document.getElementById('dossier-template');
-            /* Temporarily make visible for html2canvas */
+          function executeCapture() {
+            /* Move template into viewport but keep it hidden behind UI */
+            template.style.position = 'fixed';
             template.style.left = '0';
             template.style.top = '0';
-            template.style.zIndex = '-1';
-            template.style.opacity = '0';
+            template.style.zIndex = '-100';
+            template.style.opacity = '1';
+            template.style.pointerEvents = 'none';
+            template.style.visibility = 'visible';
 
             html2canvas(template, {
               width: 1080,
@@ -3255,13 +3384,12 @@
               backgroundColor: '#FFFFFF',
               logging: false,
             }).then(function (canvas) {
-              /* Reset template position */
+              /* Reset template to off-screen */
+              template.style.position = 'absolute';
               template.style.left = '-9999px';
-              template.style.top = '-9999px';
-              template.style.zIndex = '';
-              template.style.opacity = '';
+              template.style.opacity = '0';
+              template.style.visibility = 'hidden';
 
-              /* Auto-download */
               var link = document.createElement('a');
               var slug = (entry.tags.brand + '-' + entry.year).replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
               link.download = 'LEXICON-' + slug + '.png';
@@ -3270,24 +3398,26 @@
               link.click();
               document.body.removeChild(link);
               showToast('Dossier exported');
-            }).catch(function () {
+            }).catch(function (err) {
+              console.error('Export failed:', err);
               template.style.left = '-9999px';
-              template.style.top = '-9999px';
-              template.style.zIndex = '';
-              template.style.opacity = '';
               showToast('Export failed — try again');
             });
           }
 
+          /* Bulletproof image readiness check using decode() API */
           if (dossierImg.complete && dossierImg.naturalWidth > 0) {
-            capture();
+            dossierImg.decode().then(executeCapture).catch(executeCapture);
           } else {
-            dossierImg.onload = capture;
+            dossierImg.onload = function() {
+              dossierImg.decode().then(executeCapture).catch(executeCapture);
+            };
             dossierImg.onerror = function () { showToast('Image load failed'); };
           }
         });
       });
     })();
+
 
     /* ============================================================
        FEATURE 2: SYLLABUS COMPILER
@@ -3583,7 +3713,129 @@
     })();
 
     /* ============================================================
+       FEATURE 1: AUTOMATED CITATION ENGINE
+    ============================================================ */
+    (function initCitationEngine() {
+      const modal = document.getElementById('citation-modal');
+      const btnExport = document.getElementById('btn-export-citation');
+      if (!btnExport || !modal) return;
+
+      btnExport.addEventListener('click', () => {
+        const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+        if (!entry) return;
+
+        const brand = entry.tags.brand;
+        const year = entry.year;
+        const season = entry.season || '';
+        const subtitle = entry.subtitle || '';
+        const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+        const url = window.location.origin + '/?id=' + entry.id;
+
+        // MLA 9th Ed
+        const mla = `${brand}. ${subtitle ? '"' + subtitle + '," ' : ''}${season} ${year}. THE LEXICON, ${url}. Accessed ${today}.`;
+        // APA 7th Ed
+        const apa = `${brand}. (${year}). ${subtitle ? subtitle + ' [' + season + '].' : season + '.'} THE LEXICON. ${url}`;
+        // Chicago 17th Ed
+        const chicago = `${brand}. "${subtitle || season + ' ' + year}." THE LEXICON. Accessed ${today}. ${url}`;
+
+        document.getElementById('cite-mla').textContent = mla;
+        document.getElementById('cite-apa').textContent = apa;
+        document.getElementById('cite-chicago').textContent = chicago;
+
+        modal.classList.add('active');
+      });
+
+      document.getElementById('btn-close-citation').addEventListener('click', () => modal.classList.remove('active'));
+      
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+
+      document.querySelectorAll('.btn-copy-citation').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const type = btn.getAttribute('data-type');
+          const text = document.getElementById('cite-' + type).textContent;
+          navigator.clipboard.writeText(text).then(() => {
+            showToast('Citation copied to clipboard');
+          });
+        });
+      });
+    })();
+
+    /* ============================================================
+       FEATURE 2: CHRONOLOGICAL EVOLUTION MATRIX
+    ============================================================ */
+    (function initEvolutionMatrix() {
+      let currentMode = 'grid'; // 'grid' or 'timeline'
+
+      function renderTimelineMatrix() {
+        const container = document.getElementById('timeline-matrix');
+        if (!container) return;
+        
+        // Use currently filtered entries from the global state logic
+        const entries = getFilteredEntries().sort((a, b) => a.year - b.year);
+        container.innerHTML = '';
+
+        entries.forEach((entry, index) => {
+          const node = document.createElement('div');
+          node.className = 'timeline-node';
+          const isTop = index % 2 === 0;
+
+          const content = `
+            <div class="node-content ${isTop ? 'node-top' : 'node-bottom'}">
+              <div class="node-stem ${isTop ? 'node-stem-top' : 'node-stem-bottom'}"></div>
+              <img src="${entry.imageUrl}" class="node-thumb" loading="lazy" alt="${entry.tags.brand}">
+              <div class="node-meta">
+                <span class="node-year">${entry.year}</span>
+                <span class="node-brand uppercase font-bold">${entry.tags.brand}</span>
+              </div>
+            </div>
+          `;
+          
+          node.innerHTML = content;
+          node.addEventListener('click', () => openDetail(entry.id));
+          container.appendChild(node);
+        });
+      }
+
+      function toggleViewMode(mode) {
+        currentMode = mode;
+        const gridView = document.getElementById('grid-view');
+        const timelineView = document.getElementById('timeline-view');
+        const btnGrid = document.getElementById('btn-toggle-grid');
+        const btnTimeline = document.getElementById('btn-toggle-timeline');
+        const label = document.getElementById('current-view-label');
+
+        if (mode === 'timeline') {
+          gridView.style.display = 'none';
+          timelineView.classList.add('active');
+          btnGrid.classList.replace('opacity-100', 'opacity-40');
+          btnTimeline.classList.replace('opacity-40', 'opacity-100');
+          label.textContent = 'EVOLUTION_MATRIX';
+          renderTimelineMatrix();
+        } else {
+          gridView.style.display = 'block';
+          timelineView.classList.remove('active');
+          btnTimeline.classList.replace('opacity-100', 'opacity-40');
+          btnGrid.classList.replace('opacity-40', 'opacity-100');
+          label.textContent = 'ARCHIVE_GRID';
+        }
+      }
+
+      document.getElementById('btn-toggle-grid').addEventListener('click', () => toggleViewMode('grid'));
+      document.getElementById('btn-toggle-timeline').addEventListener('click', () => toggleViewMode('timeline'));
+
+      // Patch existing render functions to refresh timeline if active
+      const origRenderImageGrid = window.renderImageGrid;
+      window.renderImageGrid = function() {
+        origRenderImageGrid();
+        if (currentMode === 'timeline') renderTimelineMatrix();
+      };
+    })();
+
+    /* ============================================================
        HEADER TELEMETRY FEED
+
        Typewriter cycling through academic phrases in the header.
        Starts after boot overlay dismisses (1.7s from load).
     ============================================================ */
@@ -3650,5 +3902,31 @@
       });
     })();
   </script>
+  <!-- Citation Modal -->
+  <div id="citation-modal">
+    <div id="citation-container">
+      <button type="button" id="btn-close-citation" class="absolute top-4 right-4 text-xs font-bold font-mono uppercase tracking-widest hover:opacity-50">[ Close ]</button>
+      <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-6 border-b border-black dark:border-white/20 pb-2">Academic Citations</h3>
+      
+      <div class="citation-block">
+        <span class="citation-label">MLA (9th Edition)</span>
+        <div id="cite-mla" class="citation-text"></div>
+        <button type="button" class="btn-copy-citation" data-type="mla">COPY MLA</button>
+      </div>
+
+      <div class="citation-block">
+        <span class="citation-label">APA (7th Edition)</span>
+        <div id="cite-apa" class="citation-text"></div>
+        <button type="button" class="btn-copy-citation" data-type="apa">COPY APA</button>
+      </div>
+
+      <div class="citation-block">
+        <span class="citation-label">CHICAGO (17th Edition)</span>
+        <div id="cite-chicago" class="citation-text"></div>
+        <button type="button" class="btn-copy-citation" data-type="chicago">COPY CHICAGO</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
