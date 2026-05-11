@@ -3837,8 +3837,13 @@
         authForm.addEventListener('submit', (e) => {
           e.preventDefault();
           const email = $('auth-email').value;
+          const liveDomain = 'https://lexicon-7575c.web.app/'; // Ensure this matches the authorized domain
+          const currentUrl = window.location.origin + window.location.pathname;
+          // Fallback to the live domain if testing locally or via file:// to prevent unauthorized-continue-uri
+          const redirectUrl = (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? liveDomain : currentUrl;
+          
           const actionCodeSettings = {
-            url: window.location.origin + window.location.pathname,
+            url: redirectUrl,
             handleCodeInApp: true
           };
           $('btn-submit-auth').textContent = '[ Transmitting... ]';
