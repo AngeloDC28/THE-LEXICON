@@ -8,6 +8,18 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <script type="importmap">
+    {
+      "imports": {
+        "firebase/app": "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js",
+        "firebase/analytics": "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js",
+        "firebase/auth": "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"
+      }
+    }
+  </script>
+  <script type="module" src="firebase-init.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -989,6 +1001,7 @@
       <div class="hidden md:flex items-center gap-4">
         <button type="button" id="btn-view-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Connections ]</button>
         <button type="button" id="btn-theme-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Theme: Light ]</button>
+        <button type="button" id="btn-auth-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Login ]</button>
         <button type="button" id="btn-about" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ About ]</button>
         <button type="button" id="btn-contact" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Contact ]</button>
         <button type="button" id="btn-syllabus-toggle" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-1 -m-1">[ Syllabus ]</button>
@@ -1111,6 +1124,7 @@
           <button type="button" id="btn-view-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Connections ]</button>
           <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Search ⌘K ]</button>
           <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Theme: Light ]</button>
+          <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Login ]</button>
           <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ About ]</button>
           <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Contact ]</button>
           <button type="button" id="btn-syllabus-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] hover:opacity-70 focus-ring px-1 py-2">[ Syllabus ]</button>
@@ -1224,7 +1238,10 @@
     <div class="matrix-panel">
       <div class="matrix-header">
         <span class="text-[10px] font-mono font-bold uppercase tracking-[0.15em]">Connection Matrix</span>
-        <button type="button" id="btn-close-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60">[ X Close ]</button>
+        <div>
+          <button type="button" id="btn-save-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60 mr-4">[ Save Matrix ]</button>
+          <button type="button" id="btn-close-matrix" class="text-[10px] font-mono font-bold uppercase tracking-[0.06em] hover:opacity-60">[ X Close ]</button>
+        </div>
       </div>
       <div id="matrix-content" class="flex-1 overflow-y-auto">
         <!-- Rendered by JS -->
@@ -1245,6 +1262,31 @@
       </div>
       <div id="cmd-results" class="overflow-y-auto flex-1 font-mono">
         <!-- Results rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       AUTH MODAL
+  ============================================================ -->
+  <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth"></div>
+    <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
+      <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
+      <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Terminal Access</h2>
+      <div id="auth-form-container">
+        <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your credentials to receive a magic link for terminal access.</p>
+        <form id="auth-form" class="space-y-4">
+          <div>
+            <label for="auth-email" class="block text-[10px] font-bold uppercase tracking-widest mb-1">Email Address</label>
+            <input type="email" id="auth-email" class="w-full bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white" placeholder="RESEARCHER@INSTITUTE.ORG" required>
+          </div>
+          <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:bg-transparent dark:hover:bg-transparent hover:text-black dark:hover:text-white transition-colors py-2 text-[10px] font-bold uppercase tracking-widest focus-ring">[ Transmit ]</button>
+        </form>
+        <p id="auth-message" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
+      </div>
+      <div id="auth-success-container" class="hidden">
+        <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Link transmitted. Check your inbox to complete initialization.</p>
       </div>
     </div>
   </div>
@@ -2397,10 +2439,17 @@
 
     function initCoreUI() {
       initTheme();
+      if (typeof initFirebaseAuth === 'function') initFirebaseAuth();
+      
       const btnDesktop = document.getElementById('btn-theme-toggle');
       const btnMobile = document.getElementById('btn-theme-toggle-mobile');
       if (btnDesktop) btnDesktop.addEventListener('click', toggleTheme);
       if (btnMobile) btnMobile.addEventListener('click', toggleTheme);
+      
+      const btnAuthDesktop = $('btn-auth-toggle');
+      const btnAuthMobile = $('btn-auth-toggle-mobile');
+      if (btnAuthDesktop) btnAuthDesktop.addEventListener('click', toggleAuth);
+      if (btnAuthMobile) btnAuthMobile.addEventListener('click', toggleAuth);
       
       // Safe event listeners
       const cmdInput = $('cmd-input');
@@ -2420,6 +2469,10 @@
       /* Connection Matrix listeners */
       const btnCloseMatrix = $('btn-close-matrix');
       if (btnCloseMatrix) btnCloseMatrix.addEventListener('click', closeConnectionMatrix);
+      const btnSaveMatrix = $('btn-save-matrix');
+      if (btnSaveMatrix) btnSaveMatrix.addEventListener('click', () => {
+        if (typeof saveConnectionMatrix === 'function') saveConnectionMatrix();
+      });
       const matrixBackdrop = $('matrix-backdrop');
       if (matrixBackdrop) matrixBackdrop.addEventListener('click', closeConnectionMatrix);
 
@@ -3691,6 +3744,102 @@
         setTimeout(tick, 1700);
       };
     })();
+
+    /* ============================================================
+       FIREBASE AUTH & MATRIX
+    ============================================================ */
+    let currentUser = null;
+
+    function initFirebaseAuth() {
+      if (!window.firebaseAuth) return;
+
+      if (window.isSignInWithEmailLink(window.firebaseAuth, window.location.href)) {
+        let email = window.localStorage.getItem('emailForSignIn');
+        if (!email) {
+          email = window.prompt('Please provide your email for confirmation');
+        }
+        window.signInWithEmailLink(window.firebaseAuth, email, window.location.href)
+          .then((result) => {
+            window.localStorage.removeItem('emailForSignIn');
+            showToast('Terminal access granted.');
+            window.history.replaceState(null, '', window.location.pathname);
+          })
+          .catch((error) => {
+            console.error('Error signing in', error);
+            showToast('Authorization failed.');
+          });
+      }
+
+      window.onAuthStateChanged(window.firebaseAuth, (user) => {
+        currentUser = user;
+        const btnAuthDesktop = $('btn-auth-toggle');
+        const btnAuthMobile = $('btn-auth-toggle-mobile');
+        if (user) {
+          if (btnAuthDesktop) btnAuthDesktop.textContent = '[ Logout ]';
+          if (btnAuthMobile) btnAuthMobile.textContent = '[ Logout ]';
+          $('auth-modal').classList.add('hidden');
+        } else {
+          if (btnAuthDesktop) btnAuthDesktop.textContent = '[ Login ]';
+          if (btnAuthMobile) btnAuthMobile.textContent = '[ Login ]';
+        }
+      });
+
+      const authForm = $('auth-form');
+      if (authForm) {
+        authForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = $('auth-email').value;
+          const actionCodeSettings = {
+            url: window.location.origin + window.location.pathname,
+            handleCodeInApp: true
+          };
+          $('btn-submit-auth').textContent = '[ Transmitting... ]';
+          window.sendSignInLinkToEmail(window.firebaseAuth, email, actionCodeSettings)
+            .then(() => {
+              window.localStorage.setItem('emailForSignIn', email);
+              $('auth-form-container').classList.add('hidden');
+              $('auth-success-container').classList.remove('hidden');
+            })
+            .catch((error) => {
+              $('auth-message').textContent = 'Error: ' + error.message;
+              $('auth-message').classList.remove('hidden');
+              $('btn-submit-auth').textContent = '[ Transmit ]';
+            });
+        });
+      }
+    }
+
+    function toggleAuth() {
+      if (currentUser) {
+        window.signOut(window.firebaseAuth).then(() => {
+          showToast('Session terminated.');
+        });
+      } else {
+        $('auth-modal').classList.remove('hidden');
+        $('auth-form-container').classList.remove('hidden');
+        $('auth-success-container').classList.add('hidden');
+        $('auth-email').value = '';
+        $('auth-message').classList.add('hidden');
+        $('btn-submit-auth').textContent = '[ Transmit ]';
+      }
+    }
+
+    function saveConnectionMatrix() {
+      if (!currentUser) {
+        showToast('Login required to save matrix.');
+        return;
+      }
+      const entryId = AppState.selectedEntryId;
+      if (!entryId) return;
+      const matrixData = { entryId: entryId, savedAt: new Date().toISOString() };
+      const docRef = window.doc(window.collection(window.firebaseDb, 'users', currentUser.uid, 'connection_matrices'), entryId);
+      window.setDoc(docRef, matrixData).then(() => {
+        showToast('Matrix saved to secure terminal.');
+      }).catch((error) => {
+        console.error("Error saving matrix: ", error);
+        showToast('Error saving matrix.');
+      });
+    }
   </script>
 
 

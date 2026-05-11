@@ -1,0 +1,38 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, doc, setDoc, getDocs } from "firebase/firestore";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyD8rcO0QWdVTd5yucuYYKsBw_oXkksUapw",
+  authDomain: "lexicon-7575c.firebaseapp.com",
+  projectId: "lexicon-7575c",
+  storageBucket: "lexicon-7575c.firebasestorage.app",
+  messagingSenderId: "733240893165",
+  appId: "1:733240893165:web:cceb5e159b131bcbaf36e4",
+  measurementId: "G-W474SBHNRF"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+window.firebaseAuth = auth;
+window.firebaseDb = db;
+window.sendSignInLinkToEmail = sendSignInLinkToEmail;
+window.isSignInWithEmailLink = isSignInWithEmailLink;
+window.signInWithEmailLink = signInWithEmailLink;
+window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
+window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+window.onAuthStateChanged = onAuthStateChanged;
+window.signOut = signOut;
+window.setDoc = setDoc;
+window.doc = doc;
+window.collection = collection;
+window.getDocs = getDocs;
+
+
