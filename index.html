@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    window.onerror = function(msg, url, lineNo, columnNo, error) {
+      console.error("LEXICON_CORE_EXCEPTION:", msg, "at line", lineNo, error);
+    };
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE LEXICON</title>
@@ -14,7 +19,8 @@
         "firebase/app": "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js",
         "firebase/analytics": "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js",
         "firebase/auth": "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js",
-        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js",
+        "firebase/functions": "https://www.gstatic.com/firebasejs/10.13.0/firebase-functions.js"
       }
     }
   </script>
@@ -292,26 +298,45 @@
 
     /* Hotspot dot: Forensic Lens */
     .hotspot-dot {
-      width: 18px;
-      height: 18px;
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 50% !important;
+      width: 16px;
+      height: 16px;
+      background: rgba(230, 255, 0, 0.1); /* Translucent Acid Yellow */
+      border: 1px solid rgba(230, 255, 0, 0.6);
+      border-radius: 0 !important; /* Brutalist Square */
       cursor: crosshair;
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-      transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.15s ease;
+      backdrop-filter: blur(2px) invert(0.1);
+      -webkit-backdrop-filter: blur(2px) invert(0.1);
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
     }
-    html.dark .hotspot-dot {
-      background: rgba(255, 255, 255, 0.6);
-      border-color: rgba(0, 0, 0, 0.6);
+    
+    /* Crosshair markers */
+    .hotspot-dot::before, .hotspot-dot::after {
+      content: '';
+      position: absolute;
+      background: #E6FF00;
+      opacity: 0.8;
     }
+    /* Horizontal */
+    .hotspot-dot::before {
+      top: 50%; left: -6px; width: 28px; height: 1px;
+      transform: translateY(-50%);
+    }
+    /* Vertical */
+    .hotspot-dot::after {
+      left: 50%; top: -6px; width: 1px; height: 28px;
+      transform: translateX(-50%);
+    }
+
     .hotspot-btn:hover .hotspot-dot {
-      transform: scale(1.4);
-      border-color: rgba(255, 255, 255, 0.8);
+      transform: scale(1.2) rotate(45deg);
+      background: rgba(230, 255, 0, 0.3);
+      border-color: #E6FF00;
     }
-    html.dark .hotspot-btn:hover .hotspot-dot {
-      border-color: rgba(0, 0, 0, 0.9);
+
+    html.dark .hotspot-dot {
+      background: rgba(204, 255, 0, 0.05);
+      border-color: rgba(204, 255, 0, 0.4);
     }
 
     /* Info box */
@@ -532,11 +557,12 @@
     }
 
     @keyframes hotspotPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
     }
     #detail-image-view.detail-active .hotspot-dot {
-      animation: hotspotPulse 2.2s ease-in-out infinite;
+      animation: hotspotPulse 3s ease-in-out infinite;
     }
     #detail-image-view.detail-active .hotspot-btn:hover .hotspot-dot {
       animation: none;
@@ -743,9 +769,9 @@
       color: #F4F4F5;
     }
     html.dark .hotspot-dot {
-      background: #CCFF00;
-      border-color: #0A0A0A;
-      box-shadow: 0 0 10px rgba(204,255,0,0.5);
+      background: rgba(255, 255, 255, 0.6);
+      border-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
     }
     html.dark .info-box {
       border-color: rgba(255,255,255,0.2);
@@ -997,7 +1023,7 @@
       position: relative; width: 100%; height: 100%;
       overflow-x: auto; overflow-y: hidden;
       white-space: nowrap; -webkit-overflow-scrolling: touch;
-      display: none; scroll-behavior: smooth;
+      scroll-behavior: smooth;
     }
     #timeline-view::-webkit-scrollbar { display: none; }
     #timeline-view.active { display: block; }
@@ -1189,7 +1215,7 @@
           <div id="active-entry-hotspots" class="p-3 space-y-3">
             <!-- Tags and hotspot info boxes rendered by JS -->
           </div>
-          <div id="related-section" class="p-4 border-t border-black/10 dark:border-white/10">
+          <div id="related-entries" class="p-4 border-t border-black/10 dark:border-white/10">
             <h4 class="text-[9px] font-bold uppercase tracking-[0.2em] mb-3 opacity-50">Related Artifacts</h4>
             <div id="related-grid" class="grid grid-cols-3 gap-2">
               <!-- Similarity engine results here -->
@@ -1234,7 +1260,7 @@
         </div>
 
         <!-- Timeline View -->
-        <div id="timeline-view" class="flex-1 min-h-0">
+        <div id="timeline-view" class="hidden flex-1 min-h-0">
           <div class="timeline-axis"></div>
           <div id="timeline-matrix" class="flex h-full items-center">
             <!-- Rendered by JS -->
@@ -1319,6 +1345,12 @@
 
   <!-- TOAST -->
   <div id="toast" class="hidden"></div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="hidden fixed bottom-4 right-4 z-[10000] bg-bone dark:bg-darkBase border border-black dark:border-white p-4 shadow-2xl max-w-sm">
+    <p class="text-[10px] uppercase font-mono tracking-wide mb-3 leading-relaxed">This directory uses persistent local storage (cookies) to maintain terminal state and archival volumes.</p>
+    <button id="btn-accept-cookies" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-80 transition-opacity">[ ACCEPT_TERMS ]</button>
+  </div>
 
   <!-- JSON-LD Structured Data -->
   <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture"}</script>
@@ -1451,6 +1483,7 @@
       activeSubFilter: null,
       dockMode: null,
       archivalVolumes: [],
+      previousView: 'grid',
     };
 
     var gridIntersectionObserver = null;
@@ -1794,6 +1827,13 @@
       return String(n).padStart(2, '0');
     }
 
+    function resolveImgSrc(imgObj, fallback) {
+      if (!imgObj) return fallback || '';
+      if (typeof imgObj === 'string') return imgObj;
+      if (imgObj && typeof imgObj === 'object' && imgObj.src) return imgObj.src;
+      return fallback || '';
+    }
+
     function isMobileViewport() {
       return window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
     }
@@ -1857,6 +1897,7 @@
           const searchable = [
             entry.title, entry.season, String(entry.year), entry.description,
             ...Object.values(entry.tags),
+            ...(entry.images || []).flatMap(img => (img.hotspots || []).flatMap(h => [h.label, h.description]))
           ].join(' ').toLowerCase();
           if (!searchable.includes(q)) return false;
         }
@@ -1893,7 +1934,7 @@
           : entry.description;
 
         imgs.forEach((imgObj, i) => {
-          const src = typeof imgObj === 'string' ? imgObj : imgObj.src;
+          const src = resolveImgSrc(imgObj, entry.imageUrl);
           html += `<div class="group grid-cell relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
             <img
               src="${src}"
@@ -2139,6 +2180,12 @@
        DETAIL VIEW
     ============================================================ */
     function openDetail(entryId, imgIdx) {
+      /* Reset scroll for fresh entry view */
+      window.scrollTo(0, 0);
+
+      if (AppState.currentView !== 'detail') {
+        AppState.previousView = AppState.currentView;
+      }
       AppState.currentView = 'detail';
       AppState.selectedEntryId = entryId;
       updateHash(entryId);
@@ -2155,6 +2202,7 @@
       /* Swap grid for detail image */
       $('grid-view').classList.add('hidden');
       $('volumes-view').classList.add('hidden');
+      $('timeline-view').classList.add('hidden');
       const detailView = $('detail-image-view');
       detailView.classList.remove('hidden');
       detailView.classList.add('detail-active');
@@ -2163,7 +2211,7 @@
       document.getElementById('app-root').classList.add('detail-mode-active');
 
       const currentImgObj = imgs[AppState.currentImageIndex];
-      const currentImgSrc = typeof currentImgObj === 'string' ? currentImgObj : currentImgObj.src;
+      const currentImgSrc = resolveImgSrc(currentImgObj, entry.imageUrl);
 
       $('detail-image').src = currentImgSrc;
       $('detail-image').alt = entry.title + ' Look ' + (AppState.currentImageIndex + 1);
@@ -2265,10 +2313,11 @@
         related.forEach(function (rel) {
           relHtml += `<div class="related-card" data-related-id="${rel.id}" style="width:100px;">
             <img
-              src="${(rel.images && rel.images[0]) || rel.imageUrl}"
+              src="${resolveImgSrc(rel.images && rel.images[0], rel.imageUrl)}"
               alt="${rel.title}"
               class="block"
               style="width:100px;height:120px;object-fit:cover;"
+              onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'width:100px;height:120px;\'></div>'"
             />
             <div style="padding:6px;">
               <p class="text-[9px] font-bold uppercase tracking-wide font-mono">${rel.tags.brand}</p>
@@ -2325,8 +2374,9 @@
       scored.forEach(item => {
         const div = document.createElement('div');
         div.className = 'cursor-crosshair group relative';
+        const thumbSrc = resolveImgSrc(item.entry.images && item.entry.images[0], item.entry.imageUrl);
         div.innerHTML = `
-          <img src="${item.entry.image}" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 border border-black/10 dark:border-white/10" />
+          <img src="${thumbSrc}" class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 border border-black/10 dark:border-white/10" />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center p-2 transition-opacity">
             <span class="text-[8px] text-white font-mono text-center uppercase tracking-tighter">${item.entry.tags.brand}</span>
           </div>
@@ -2337,7 +2387,8 @@
     }
 
     function closeDetail() {
-      AppState.currentView = 'grid';
+      const targetView = AppState.previousView || 'grid';
+      AppState.currentView = targetView;
       AppState.selectedEntryId = null;
       updateHash(null);
       scale = 1; panX = 0; panY = 0; updateTransform();
@@ -2346,13 +2397,14 @@
       $('detail-image-view').classList.remove('detail-active');
       document.getElementById('app-root').classList.remove('detail-mode-active');
 
-      $('grid-view').classList.remove('hidden');
       $('active-entry-panel').classList.add('hidden');
       $('related-entries').classList.add('hidden');
 
-      /* Restore search and taxonomy panels */
-      if (AppState.currentView === 'volumes') {
+      /* Restore the correct view */
+      if (targetView === 'volumes') {
         $('volumes-view').classList.remove('hidden');
+      } else if (targetView === 'timeline') {
+        $('timeline-view').classList.remove('hidden');
       } else {
         $('grid-view').classList.remove('hidden');
         $('search-wrapper').classList.remove('hidden');
@@ -2615,7 +2667,9 @@
         if (item) {
           const idx = parseInt(item.getAttribute('data-index'), 10);
           toggleCmdPalette();
-          openDetail(cmdResults[idx].id);
+          if (AppState.cmdResults && AppState.cmdResults[idx]) {
+            openDetail(AppState.cmdResults[idx].id);
+          }
         }
       });
       if (cmdBackdrop) cmdBackdrop.addEventListener('click', toggleCmdPalette);
@@ -2951,6 +3005,9 @@
       const btnGridToggle = $('btn-toggle-grid');
       if (btnGridToggle) btnGridToggle.addEventListener('click', () => switchView('grid'));
       
+      const btnTimelineToggle = $('btn-toggle-timeline');
+      if (btnTimelineToggle) btnTimelineToggle.addEventListener('click', () => switchView('timeline'));
+      
       const btnSearchMobile = $('btn-search-mobile');
       if (btnSearchMobile) btnSearchMobile.addEventListener('click', () => { closeDrawer(); toggleCmdPalette(); });
 
@@ -2995,6 +3052,9 @@
             icon.style.transform = 'scale(1)';
           }
         }
+      }
+      if (drawerBackdrop) {
+        drawerBackdrop.addEventListener('click', closeDrawer);
       }
       $('header-title').addEventListener('click', function () {
         resetArchiveHome();
@@ -3158,6 +3218,7 @@
       $('detail-image-view').addEventListener('click', function (e) {
         const btn = e.target.closest('.hotspot-btn');
         if (!btn) return;
+        e.preventDefault();
         e.stopPropagation();
         const idx = parseInt(btn.getAttribute('data-index'), 10);
         showHotspotPopup(idx, btn);
@@ -3369,8 +3430,7 @@
       recent.forEach(id => {
         const entry = archiveData.find(e => e.id === id);
         if (!entry) return;
-        const thumbObj = entry.images && entry.images[0];
-        const thumbSrc = thumbObj ? (typeof thumbObj === 'string' ? thumbObj : thumbObj.src) : '';
+        const thumbSrc = resolveImgSrc(entry.images && entry.images[0], entry.imageUrl);
         html += `<img src="${thumbSrc}" alt="${entry.tags.brand}" class="recent-thumb" data-recent-id="${id}" loading="lazy" />`;
       });
       row.innerHTML = html;
@@ -3437,8 +3497,7 @@
         const politics = entry.tags.politics || '--';
         ogDesc.content = `${entry.tags.brand} ${entry.year} ; A forensic audit of ${form} and ${politics}. Access the cultural directory to map the structural precedent.`;
       }
-      const thumbObj = entry.images && entry.images[0];
-      const thumbSrc = thumbObj ? (typeof thumbObj === 'string' ? thumbObj : thumbObj.src) : '';
+      const thumbSrc = resolveImgSrc(entry.images && entry.images[0], entry.imageUrl);
       if (ogImage && thumbSrc) ogImage.content = thumbSrc;
       document.title = entry.tags.brand + ' ' + entry.year + ' — THE LEXICON';
       const ld = $('json-ld');
@@ -3622,41 +3681,35 @@
     /* ============================================================
        FEATURE 2: CHRONOLOGICAL EVOLUTION MATRIX
     ============================================================ */
-    (function initEvolutionMatrix() {
-      let currentMode = 'grid'; // 'grid' or 'timeline'
+    function renderTimelineMatrix() {
+      const container = document.getElementById('timeline-matrix');
+      if (!container) return;
+      
+      // Use currently filtered entries from the global state logic
+      const entries = getFilteredEntries().sort((a, b) => a.year - b.year);
+      container.innerHTML = '';
 
-      function renderTimelineMatrix() {
-        const container = document.getElementById('timeline-matrix');
-        if (!container) return;
-        
-        // Use currently filtered entries from the global state logic
-        const entries = getFilteredEntries().sort((a, b) => a.year - b.year);
-        container.innerHTML = '';
+      entries.forEach((entry, index) => {
+        const node = document.createElement('div');
+        node.className = 'timeline-node';
+        const isTop = index % 2 === 0;
 
-        entries.forEach((entry, index) => {
-          const node = document.createElement('div');
-          node.className = 'timeline-node';
-          const isTop = index % 2 === 0;
-
-          const content = `
-            <div class="node-content ${isTop ? 'node-top' : 'node-bottom'}">
-              <div class="node-stem ${isTop ? 'node-stem-top' : 'node-stem-bottom'}"></div>
-              <img src="${entry.imageUrl}" class="node-thumb" loading="lazy" alt="${entry.tags.brand}">
-              <div class="node-meta">
-                <span class="node-year">${entry.year}</span>
-                <span class="node-brand uppercase font-bold">${entry.tags.brand}</span>
-              </div>
+        const content = `
+          <div class="node-content ${isTop ? 'node-top' : 'node-bottom'}">
+            <div class="node-stem ${isTop ? 'node-stem-top' : 'node-stem-bottom'}"></div>
+            <img src="${resolveImgSrc(entry.images && entry.images[0], entry.imageUrl)}" class="node-thumb" loading="lazy" alt="${entry.tags.brand}" onerror="this.outerHTML='<div class=\'img-placeholder\'></div>'">
+            <div class="node-meta">
+              <span class="node-year">${entry.year}</span>
+              <span class="node-brand uppercase font-bold">${entry.tags.brand}</span>
             </div>
-          `;
-          
-          node.innerHTML = content;
-          node.addEventListener('click', () => openDetail(entry.id));
-          container.appendChild(node);
-        });
-      }
-
-      // View switching is now handled by centralized switchView function
-    })();
+          </div>
+        `;
+        
+        node.innerHTML = content;
+        node.addEventListener('click', () => openDetail(entry.id));
+        container.appendChild(node);
+      });
+    }
 
     /* ============================================================
        HEADER TELEMETRY FEED
@@ -3815,7 +3868,7 @@
     ============================================================ */
     async function fetchArchivalVolumes() {
       if (!currentUser) return;
-      const colRef = window.collection(window.firebaseDb, 'users', currentUser.uid, 'archival_volumes');
+      const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
       const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
       const querySnapshot = await window.getDocs(q);
       AppState.archivalVolumes = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
@@ -3825,7 +3878,7 @@
 
     async function createArchivalVolume(name) {
       if (!currentUser || !name) return;
-      const colRef = window.collection(window.firebaseDb, 'users', currentUser.uid, 'archival_volumes');
+      const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
       await window.addDoc(colRef, {
         name: name.toUpperCase(),
         createdAt: new Date().toISOString(),
@@ -3838,7 +3891,7 @@
 
     async function saveToVolume(volumeId) {
       if (!currentUser || !AppState.selectedEntryId) return;
-      const docRef = window.doc(window.firebaseDb, 'users', currentUser.uid, 'archival_volumes', volumeId);
+      const docRef = window.doc(window.firebaseDb, `users/${currentUser.uid}/archival_volumes/${volumeId}`);
       await window.updateDoc(docRef, {
         lookIds: window.arrayUnion(AppState.selectedEntryId)
       });
@@ -3923,14 +3976,22 @@
         $('search-wrapper').classList.remove('hidden');
         $('taxonomy-container').classList.remove('hidden');
         $('current-view-label').textContent = 'ARCHIVE_GRID';
+        $('btn-toggle-grid').style.opacity = '1';
+        $('btn-toggle-timeline').style.opacity = '0.4';
         AppState.currentView = 'grid';
+        renderImageGrid();
       } else if (viewName === 'timeline') {
         $('timeline-view').classList.remove('hidden');
         $('current-view-label').textContent = 'EVOLUTION_MATRIX';
+        $('btn-toggle-grid').style.opacity = '0.4';
+        $('btn-toggle-timeline').style.opacity = '1';
         AppState.currentView = 'timeline';
+        renderTimelineMatrix();
       } else if (viewName === 'volumes') {
         $('volumes-view').classList.remove('hidden');
         $('current-view-label').textContent = 'ARCHIVAL_VOLUMES';
+        $('btn-toggle-grid').style.opacity = '0.4';
+        $('btn-toggle-timeline').style.opacity = '0.4';
         AppState.currentView = 'volumes';
         fetchArchivalVolumes();
       }
