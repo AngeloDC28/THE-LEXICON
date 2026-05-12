@@ -48,7 +48,31 @@
     };
   </script>
 
+  <script>
+    (function() {
+      const saved = localStorage.getItem('lexicon-theme');
+      if (saved === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
   <style>
+    :root {
+      --bg-base: #FAF9F6;
+      --bg-overlay: #FDFCF0;
+      --text-main: #000000;
+      --border-color: rgba(0,0,0,0.8);
+    }
+    html.dark {
+      --bg-base: #0A0A0A;
+      --bg-overlay: #111111;
+      --text-main: #F4F4F5;
+      --border-color: rgba(255,255,255,0.2);
+    }
+
     *, *::before, *::after {
       border-radius: 0 !important;
       box-sizing: border-box;
@@ -58,17 +82,14 @@
       height: 100%;
       margin: 0;
       padding: 0;
-      background: #FAF9F6;
-      color: #000000;
+      background-color: var(--bg-base);
+      color: var(--text-main);
       font-family: 'IBM Plex Mono', 'Courier New', monospace;
       overflow: hidden;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    html.dark body {
-      background: #0A0A0A;
-      color: #F4F4F5;
-    }
+
 
     #app-root {
       display: flex;
@@ -271,24 +292,62 @@
 
     /* Hotspot dot: ONLY circular element */
     .hotspot-dot {
-      width: 16px;
-      height: 16px;
-      background: #000000;
-      border: 3px solid #FAF9F6;
+      width: 14px;
+      height: 14px;
+      background: #000;
+      border: 2px solid #FAF9F6;
       border-radius: 50% !important;
       cursor: crosshair;
-      transition: transform 0.12s ease;
+      transition: transform 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    html.dark .hotspot-dot {
+      background: #CCFF00;
+      border-color: #0A0A0A;
+      box-shadow: 0 0 15px rgba(204,255,0,0.3);
+    }
+    @keyframes hotspotPulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,0,0,0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0,0,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+    }
+    @keyframes hotspotPulseDark {
+      0% { box-shadow: 0 0 0 0 rgba(204,255,0,0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(204,255,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(204,255,0,0); }
+    }
+    .hotspot-dot {
+      animation: hotspotPulse 2s infinite;
+    }
+    html.dark .hotspot-dot {
+      animation: hotspotPulseDark 2s infinite;
     }
     .hotspot-btn:hover .hotspot-dot {
-      transform: scale(1.35);
+      transform: scale(1.5);
+      animation: none;
     }
 
     /* Info box */
     .info-box {
-      border: 1px solid rgba(0,0,0,0.8);
-      background: #FDFCF0;
+      border: 1px solid var(--border-color);
+      background: var(--bg-overlay);
+      color: var(--text-main);
       font-family: 'IBM Plex Mono', 'Courier New', monospace;
-      box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+      box-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+      transition: all 0.2s ease;
+    }
+    html.dark .info-box {
+      box-shadow: 4px 4px 0px rgba(204,255,0,0.1);
+    }
+    .info-box.active-hotspot {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+    html.dark .info-box.active-hotspot {
+      border-color: #CCFF00;
+      background: #CCFF00;
+      color: #000;
     }
 
     /* Active/inverted row */
@@ -2408,13 +2467,9 @@
       /* Highlight corresponding info box in panel */
       document.querySelectorAll('#active-entry-hotspots .info-box').forEach((el, i) => {
         if (i === index) {
-          el.style.borderColor = '#000';
-          el.style.background = document.documentElement.classList.contains('dark') ? '#CCFF00' : '#000';
-          el.style.color = document.documentElement.classList.contains('dark') ? '#000' : '#fff';
+          el.classList.add('active-hotspot');
         } else {
-          el.style.borderColor = '#000';
-          el.style.background = document.documentElement.classList.contains('dark') ? 'rgba(17,17,17,0.85)' : '#FDFCF0';
-          el.style.color = document.documentElement.classList.contains('dark') ? '#F4F4F5' : '#000';
+          el.classList.remove('active-hotspot');
         }
       });
     }
@@ -2431,8 +2486,7 @@
 
       /* Reset info box highlights */
       document.querySelectorAll('#active-entry-hotspots .info-box').forEach((el) => {
-        el.style.background = document.documentElement.classList.contains('dark') ? 'rgba(17,17,17,0.85)' : '#FDFCF0';
-        el.style.color = document.documentElement.classList.contains('dark') ? '#F4F4F5' : '#000';
+        el.classList.remove('active-hotspot');
       });
     }
 
@@ -2525,17 +2579,6 @@
     /* ============================================================
        THEME TOGGLE
     ============================================================ */
-    function initTheme() {
-      const savedTheme = localStorage.getItem('lexicon-theme');
-      if (savedTheme === 'light') {
-        document.documentElement.classList.remove('dark');
-        updateThemeButtons(false);
-      } else {
-        document.documentElement.classList.add('dark');
-        updateThemeButtons(true);
-      }
-    }
-
     function toggleTheme() {
       const isDark = document.documentElement.classList.toggle('dark');
       localStorage.setItem('lexicon-theme', isDark ? 'dark' : 'light');
@@ -2552,7 +2595,11 @@
     }
 
     function initCoreUI() {
-      initTheme();
+      // Immediate theme check already performed in HEAD. 
+      // Just update button labels.
+      const isDark = document.documentElement.classList.contains('dark');
+      updateThemeButtons(isDark);
+      
       if (typeof initFirebaseAuth === 'function') initFirebaseAuth();
       
       const btnDesktop = document.getElementById('btn-theme-toggle');

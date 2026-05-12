@@ -28,7 +28,11 @@ const archiveData = [
     description: '',
     tags: { brand: 'Alexander McQueen', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Body Politics & Corporeal Interventions', theories: 'The Grotesque and Abject', gender: 'Womenswear', materials: 'Animal Protein Fibres (Wool; Silk; Hair; Shearling)', geography: 'London (BFC / Official Schedule)', form: 'Prosthetic Extension', format: 'Performance Art / Live Action' },
     notes: { critique: 'SHALOM HARLOW ON A ROTATING PLATFORM SPRAYED BY ROBOTIC ARMS COLLAPSED COUTURE AND MANUFACTURING; BEAUTY AND VIOLATION. AIMEE MULLINS WALKED ON HAND-CARVED WOODEN PROSTHETICS; DISABILITY POLITICS AS RUNWAY STATEMENT.', strategy: 'FINAL MAJOR COLLECTION BEFORE GUCCI GROUP ACQUISITION. POSITIONED MCQUEEN AS COMMERCIALLY VIABLE PROVOCATEUR WHILST RETAINING FULL ARTISTIC CONTROL.', provenance: 'GATLIFF ROAD WAREHOUSE; VICTORIA; LONDON. SEPTEMBER 1998. RUNWAY PHOTOGRAPHY BY FIRSTVIEW. SHOW FILMED BY NICK KNIGHT. STYLING BY KATY ENGLAND. PIECES HELD AT V&A MUSEUM; LONDON.' },
-    hotspots: []
+    hotspots: [
+      { x: 50, y: 55, label: 'KINETIC COLLABORATION', description: 'The 13th look featured Shalom Harlow in a white strapless dress, physically interacting with two robotic arms from an automotive manufacturing line.' },
+      { x: 22, y: 45, label: 'INDUSTRIAL AUTOMATION', description: 'Robotic arms modified from Fiat assembly lines, repurposed here to perform a "mechanical ballet" of spray-painting.' },
+      { x: 50, y: 88, label: 'ROTATING PLINTH', description: 'The model stood on a concealed rotating platform, allowing for a 360-degree application of pigment, turning the body into a canvas.' }
+    ]
   },
   {
     id: 'mugler-aw95',
@@ -58,7 +62,10 @@ const archiveData = [
     description: '',
     tags: { brand: 'Thierry Mugler', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Feminist Theory & The Subverted Gaze', theories: 'The Simulacrum (Baudrillard)', gender: 'Womenswear', materials: 'Thermoplastic Membranes (PVC; Vinyl; Latex)', geography: 'Paris (Federation de la Haute Couture)', form: 'Architectural Shielding and Armour', format: 'Circular / Arena Format' },
     notes: { critique: 'FASHION CONCEIVED ON THE SCALE OF A ROCK CONCERT. THE BODY AS ARCHITECTURAL EXOSKELETON; WAISTS CINCHED TO IMPOSSIBLE MEASUREMENTS; SHOULDERS SCULPTED AS ARMOUR. CARMEN DELL\'OREFICE OPENING IN HER MID-SIXTIES WAS A RADICAL STATEMENT ABOUT AGE AND GLAMOUR.', strategy: 'PUBLICLY TICKETED EVENT AT THE 6,000-CAPACITY ZENITH ARENA; BROADCAST NATIONALLY. CELEBRATION OF 20 YEARS OF THE MUGLER HOUSE; COMMERCIAL SPECTACLE AS BRAND MANIFESTO.', provenance: 'ZENITH ARENA; PARIS. MARCH 1995. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND GETTY IMAGES. PIECES HELD AT MUSEE DES ARTS DECORATIFS; PARIS AND KYOTO COSTUME INSTITUTE.' },
-    hotspots: []
+    hotspots: [
+      { x: 50, y: 40, label: 'ARCHITECTURAL ARMOUR', description: 'Sculpted shoulders designed as a protective exoskeleton, translating the feminine silhouette into a form of biological weaponry.' },
+      { x: 50, y: 70, label: 'ZENITH PROPORTIONS', description: 'The waist cinched to extreme, "simulacral" measurements, referencing the impossible anatomy of comic book heroines.' }
+    ]
   },
   {
     id: 'miyake-ss99',
@@ -86,7 +93,10 @@ const archiveData = [
     description: '',
     tags: { brand: 'Issey Miyake', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Ecological Politics & Resource Extraction', theories: 'Post-Humanism', gender: 'Unisex / Neutral', materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Modular Componentry', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: 'A-POC PROPOSED COMPLETE GARMENTS PRODUCED IN A SINGLE CONTINUOUS INDUSTRIAL KNITTING PROCESS; ELIMINATING WASTE ENTIRELY. MODELS WALKED PHYSICALLY CONNECTED BY AN UNBROKEN RED TEXTILE; COLLAPSING THE INDIVIDUAL GARMENT INTO SOMETHING COMMUNAL AND CONTINUOUS.', strategy: 'PUBLIC INTRODUCTION OF THE A-POC MANUFACTURING PHILOSOPHY DEVELOPED WITH DAI FUJIWARA. POSITIONED MIYAKE AT THE INTERSECTION OF INDUSTRIAL PROCESS AND FASHION DESIGN; ANTICIPATING SUSTAINABLE DISCOURSE BY TWO DECADES.', provenance: 'PARIS. OCTOBER 1998. CO-CREDITED TO ISSEY MIYAKE AND DAI FUJIWARA. A-POC PIECES HELD AT MOMA; NEW YORK AND FONDATION CARTIER. MIYAKE DESIGN STUDIO ARCHIVE; TOKYO.' },
-    hotspots: []
+    hotspots: [
+      { x: 75, y: 50, label: 'UNBROKEN TEXTILE', description: 'Models connected by a single continuous piece of industrial knit, representing a communal identity and zero-waste production.' },
+      { x: 45, y: 40, label: 'A-POC GEOMETRY', description: 'The garment is defined by its cutting lines, allowing the end user to determine the final form, a radical decentralisation of design power.' }
+    ]
   },
   {
     id: 'balenciaga-ss07',
@@ -143,7 +153,10 @@ const archiveData = [
     description: '',
     tags: { brand: 'Hussein Chalayan', era: '2000 to 2009; The Global Conglomerate Era', politics: 'Post-Colonialism & Diasporic Narratives', theories: 'Object-Oriented Ontology', gender: 'Womenswear', materials: 'Biological Ephemera (Feathers; Shells; Bone; Wood)', geography: 'London (BFC / Official Schedule)', form: 'Adaptive Transformation', format: 'Performance Art / Live Action' },
     notes: { critique: 'MODELS REMOVED CHAIR SLIPCOVERS AND WORE THEM AS DRESSES; THE EXPOSED FRAMES FOLDED INTO SUITCASES. A SINGLE MODEL PULLED A MAHOGANY COFFEE TABLE UP TO HER WAIST; ITS SLATS TELESCOPING INTO A SKIRT. THE ROOM BECAME THE BODY; THE FURNITURE BECAME THE GARMENT.', strategy: 'WON CHALAYAN HIS SECOND CONSECUTIVE BRITISH DESIGNER OF THE YEAR. STAGED AT SADLER\'S WELLS THEATRE; PRODUCED BY ALEXANDRE DE BETAK. EXPANDED FASHION\'S DEFINITION INTO FURNITURE; ARCHITECTURE; AND PERFORMANCE.', provenance: 'SADLER\'S WELLS THEATRE; LONDON. FEBRUARY 2000. PHOTOGRAPHY BY GIOVANNI GIANNONI (WWD) AND CHRIS MOORE. FINALE FILMED BY MARCUS TOMLINSON. COFFEE TABLE SKIRT HELD AT MUDAM LUXEMBOURG; EXHIBITED AT TATE MODERN.' },
-    hotspots: []
+    hotspots: [
+      { x: 50, y: 72, label: 'TELESCOPIC ASSEMBLY', description: 'A mahogany coffee table that telescopes upwards to form a structural skirt, collapsing the boundary between domestic furniture and wearable architecture.' },
+      { x: 50, y: 92, label: 'MAHOGANY SLATS', description: 'The use of heavy, traditional timber as a textile substitute addresses themes of displacement and the portability of "home".' }
+    ]
   },
   {
     id: 'prada-ss96',
@@ -230,7 +243,10 @@ const archiveData = [
     description: '',
     tags: { brand: 'Rick Owens', era: '2010 to 2019; The Digital and Streetwear Pivot', politics: 'Racial Identity & Representation', theories: 'Subcultural Resistance Theory', gender: 'Conceptual / Post-Binary Form', materials: 'Bovine & Exotic Skins (Leather; Suede; Vachetta)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Suspended Drape', format: 'Performance Art / Live Action' },
     notes: { critique: 'OWENS REPLACED PROFESSIONAL MODELS WITH SEVEN AMERICAN COLLEGIATE STEP-DANCE TEAMS FROM HBCUS. THE COLLECTIVE; PERCUSSIVE PERFORMANCE REPLACED THE INDIVIDUALISED MODEL-WALK; FOREGROUNDING THE BODY AS A SOCIAL AND POLITICAL ENTITY. CLOTHING EXISTS IN TIME AND MOTION.', strategy: 'A DIRECT CHALLENGE TO FASHION\'S RACIAL AND BODY-TYPE HOMOGENEITY. THE SHOW BECAME A TOUCHSTONE FOR DISCUSSIONS OF REPRESENTATION; CULTURAL APPROPRIATION; AND THE POLITICS OF SPECTACLE.', provenance: 'PALAIS DU TROCADERO; PARIS. SEPTEMBER 2013. RUNWAY PHOTOGRAPHY BY FIRSTVIEW AND YANNIS VLAMOS / INDIGITAL. STEP-DANCE TEAMS SOURCED THROUGH AMERICAN UNIVERSITY NETWORKS.' },
-    hotspots: []
+    hotspots: [
+      { x: 50, y: 85, label: 'PERCUSSIVE DYNAMICS', description: 'The "Vicious" show replaced the model walk with the percussive stomps of step-dance, grounding the garments in rhythmic force.' },
+      { x: 55, y: 35, label: 'COLLECTIVE SUBJECTIVITY', description: 'The use of collegiate step teams from HBCUs challenged fashion\'s reliance on the individualised "muse" in favour of the social collective.' }
+    ]
   },
   {
     id: 'garcons-ss97',
@@ -259,7 +275,10 @@ const archiveData = [
     description: '',
     tags: { brand: 'Comme des Garcons', era: '1990 to 1999; The Deconstructionist Decade', politics: 'Body Politics & Corporeal Interventions', theories: 'Bodily Autonomy and Transgression', gender: 'Womenswear', materials: 'Elastomeric Compounds (Lycra; Spandex; Stretch Blends)', geography: 'Paris (Chambre Syndicale / RTW)', form: 'Displaced Anatomy and Padding', format: 'Traditional Runway (The Linear Catwalk)' },
     notes: { critique: 'KAWAKUBO INSERTED KIDNEY-SHAPED PILLOWS INTO GARMENT LININGS; DISTORTING THE BODY AT THE ABDOMEN; HIPS; BACK; AND SHOULDERS. THE PADDED GINGHAM SLIPS WERE A DEVASTATING COUNTERPOINT TO TOM FORD\'S GUCCI AND GALLIANO\'S DIOR DEBUT IN THE SAME SEASON.', strategy: 'SHOWN IN SILENCE; NO MUSIC; NO CONVENTIONAL RUNWAY. THE MET; MOMA; KYOTO COSTUME INSTITUTE; AND NATIONAL GALLERY OF VICTORIA ALL HOLD PIECES. COSTUMES FOR MERCE CUNNINGHAM\'S "SCENARIO" AT BROOKLYN ACADEMY OF MUSIC.', provenance: 'MUSEE NATIONAL DES ARTS D\'AFRIQUE ET D\'OCEANIE; PARIS. OCTOBER 1996. ADVERTISING PHOTOGRAPHY BY KISHIN SHINOYAMA FOR SIX MAGAZINE / VISIONAIRE NO. 20.' },
-    hotspots: []
+    hotspots: [
+      { x: 65, y: 62, label: 'DISPLACED ANATOMY', description: 'Polyester-fiber padding inserted into the garment lining to create non-biological protrusions, challenging the "ideal" female silhouette.' },
+      { x: 42, y: 35, label: 'BANAL SIGNIFIER', description: 'The use of domestic gingham (picnic cloth) subverts the extreme, grotesque forms, grounding the radical intervention in the everyday.' }
+    ]
   },
   {
     id: 'yamamoto-aw98',
