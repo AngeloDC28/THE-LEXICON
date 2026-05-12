@@ -290,41 +290,28 @@
       pointer-events: auto;
     }
 
-    /* Hotspot dot: ONLY circular element */
+    /* Hotspot dot: Forensic Lens */
     .hotspot-dot {
-      width: 14px;
-      height: 14px;
-      background: #000;
-      border: 2px solid #FAF9F6;
+      width: 18px;
+      height: 18px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       border-radius: 50% !important;
       cursor: crosshair;
-      transition: transform 0.12s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.15s ease;
     }
     html.dark .hotspot-dot {
-      background: #CCFF00;
-      border-color: #0A0A0A;
-      box-shadow: 0 0 15px rgba(204,255,0,0.3);
-    }
-    @keyframes hotspotPulse {
-      0% { box-shadow: 0 0 0 0 rgba(0,0,0,0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(0,0,0,0); }
-      100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
-    }
-    @keyframes hotspotPulseDark {
-      0% { box-shadow: 0 0 0 0 rgba(204,255,0,0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(204,255,0,0); }
-      100% { box-shadow: 0 0 0 0 rgba(204,255,0,0); }
-    }
-    .hotspot-dot {
-      animation: hotspotPulse 2s infinite;
-    }
-    html.dark .hotspot-dot {
-      animation: hotspotPulseDark 2s infinite;
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(0, 0, 0, 0.6);
     }
     .hotspot-btn:hover .hotspot-dot {
-      transform: scale(1.5);
-      animation: none;
+      transform: scale(1.4);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+    html.dark .hotspot-btn:hover .hotspot-dot {
+      border-color: rgba(0, 0, 0, 0.9);
     }
 
     /* Info box */
@@ -1905,7 +1892,8 @@
           ? entry.description.substring(0, 80) + '...'
           : entry.description;
 
-        imgs.forEach((src, i) => {
+        imgs.forEach((imgObj, i) => {
+          const src = typeof imgObj === 'string' ? imgObj : imgObj.src;
           html += `<div class="group grid-cell relative overflow-hidden cursor-crosshair" data-entry-id="${entry.id}" data-img-index="${i}">
             <img
               src="${src}"
@@ -2161,7 +2149,7 @@
       /* Similarity Engine */
       renderRelatedArtifacts(entry);
 
-      var imgs = entry.images || [entry.imageUrl];
+      var imgs = entry.images || [{src: entry.imageUrl}];
       AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
       /* Swap grid for detail image */
@@ -2174,8 +2162,10 @@
       /* Mobile Layout Patch */
       document.getElementById('app-root').classList.add('detail-mode-active');
 
+      const currentImgObj = imgs[AppState.currentImageIndex];
+      const currentImgSrc = typeof currentImgObj === 'string' ? currentImgObj : currentImgObj.src;
 
-      $('detail-image').src = imgs[AppState.currentImageIndex];
+      $('detail-image').src = currentImgSrc;
       $('detail-image').alt = entry.title + ' Look ' + (AppState.currentImageIndex + 1);
 
       /* Load per-entry sticky note content */
@@ -2195,7 +2185,8 @@
 
       /* Render hotspot dots with touch-target wrappers */
       detailView.querySelectorAll('.hotspot-btn').forEach((el) => el.remove());
-      entry.hotspots.forEach((spot, i) => {
+      const currentHotspots = currentImgObj.hotspots || entry.hotspots || [];
+      currentHotspots.forEach((spot, i) => {
         const btn = document.createElement('button');
         btn.className = 'hotspot-btn';
         btn.style.left = spot.x + '%';
@@ -2382,14 +2373,11 @@
     function navigateEntry(direction) {
       var entry = archiveData.find(function (e) { return e.id === AppState.selectedEntryId; });
       if (!entry) return;
-      var imgs = entry.images || [entry.imageUrl];
+      var imgs = entry.images || [{src: entry.imageUrl}];
       var nextImg = AppState.currentImageIndex + direction;
 
       if (nextImg >= 0 && nextImg < imgs.length) {
-        AppState.currentImageIndex = nextImg;
-        $('detail-image').src = imgs[nextImg];
-        $('detail-image').alt = entry.title + ' Look ' + (nextImg + 1);
-        $('active-entry-title').textContent = entry.tags.brand + ' ' + entry.year + ' [' + pad(nextImg + 1) + '/' + pad(imgs.length) + ']';
+        openDetail(entry.id, nextImg);
         return;
       }
 
@@ -2418,7 +2406,10 @@
 
       const entry = archiveData.find((e) => e.id === AppState.selectedEntryId);
       if (!entry) return;
-      const spot = entry.hotspots[index];
+      const imgs = entry.images || [];
+      const currentImgObj = imgs[AppState.currentImageIndex] || {};
+      const currentHotspots = currentImgObj.hotspots || entry.hotspots || [];
+      const spot = currentHotspots[index];
       if (!spot) return;
 
       AppState.activeHotspot = index;
@@ -3378,8 +3369,9 @@
       recent.forEach(id => {
         const entry = archiveData.find(e => e.id === id);
         if (!entry) return;
-        const thumb = (entry.images && entry.images[0]) || '';
-        html += `<img src="${thumb}" alt="${entry.tags.brand}" class="recent-thumb" data-recent-id="${id}" loading="lazy" />`;
+        const thumbObj = entry.images && entry.images[0];
+        const thumbSrc = thumbObj ? (typeof thumbObj === 'string' ? thumbObj : thumbObj.src) : '';
+        html += `<img src="${thumbSrc}" alt="${entry.tags.brand}" class="recent-thumb" data-recent-id="${id}" loading="lazy" />`;
       });
       row.innerHTML = html;
     }
@@ -3445,7 +3437,9 @@
         const politics = entry.tags.politics || '--';
         ogDesc.content = `${entry.tags.brand} ${entry.year} ; A forensic audit of ${form} and ${politics}. Access the cultural directory to map the structural precedent.`;
       }
-      if (ogImage && entry.images && entry.images[0]) ogImage.content = entry.images[0];
+      const thumbObj = entry.images && entry.images[0];
+      const thumbSrc = thumbObj ? (typeof thumbObj === 'string' ? thumbObj : thumbObj.src) : '';
+      if (ogImage && thumbSrc) ogImage.content = thumbSrc;
       document.title = entry.tags.brand + ' ' + entry.year + ' — THE LEXICON';
       const ld = $('json-ld');
       if (ld) {
@@ -3453,7 +3447,7 @@
           '@context': 'https://schema.org', '@type': 'CreativeWork',
           name: entry.title, dateCreated: String(entry.year),
           description: entry.description,
-          image: (entry.images && entry.images[0]) || ''
+          image: thumbSrc
         });
       }
     }
