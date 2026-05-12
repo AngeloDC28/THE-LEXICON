@@ -1162,6 +1162,10 @@
 
         <!-- Search -->
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
+          <div id="active-volume-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
+            <span>Filtering: <span id="active-volume-name"></span></span>
+            <button onclick="clearVolumeFilter()" class="underline">[ CLEAR_FILTER ]</button>
+          </div>
           <div class="flex flex-col gap-2">
             <div class="flex gap-2 items-stretch">
               <input
@@ -1484,6 +1488,7 @@
       dockMode: null,
       archivalVolumes: [],
       previousView: 'grid',
+      activeVolumeId: null,
     };
 
     var gridIntersectionObserver = null;
@@ -1887,8 +1892,19 @@
     function getFilteredEntries() {
       const q = AppState.searchQuery.toLowerCase();
       const pillar = AppState.activePillar;
+      const volId = AppState.activeVolumeId;
+      
+      let entries = archiveData;
 
-      return archiveData.filter((entry) => {
+      // Filter by volume if active
+      if (volId) {
+        const vol = AppState.archivalVolumes.find(v => v.id === volId);
+        if (vol) {
+          entries = entries.filter(e => vol.lookIds.includes(e.id));
+        }
+      }
+
+      return entries.filter((entry) => {
         if (pillar) {
           const v = entry.tags[pillar.key] || '';
           if (!v) return false;
@@ -1905,6 +1921,11 @@
       });
     }
 
+    function clearVolumeFilter() {
+      AppState.activeVolumeId = null;
+      switchView('grid');
+    }
+
     /* ============================================================
        RENDER: HEADER METADATA
     ============================================================ */
@@ -1918,6 +1939,17 @@
     function renderImageGrid() {
       const entries = getFilteredEntries();
       const grid = $('image-grid');
+
+      // Handle Volume Indicator
+      const volIndicator = $('active-volume-indicator');
+      const volName = $('active-volume-name');
+      if (AppState.activeVolumeId) {
+        volIndicator.classList.remove('hidden');
+        const vol = AppState.archivalVolumes.find(v => v.id === AppState.activeVolumeId);
+        volName.textContent = vol ? vol.name : 'Unknown Volume';
+      } else {
+        volIndicator.classList.add('hidden');
+      }
 
       if (entries.length === 0) {
         grid.innerHTML = '<div class="col-span-2 md:col-span-3 p-12 md:p-16 text-center border border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface"><p class="text-[10px] uppercase tracking-[0.24em] opacity-60 leading-relaxed">No entries match this query.<br /><span class="opacity-40 text-[9px]">Clear search or adjust taxonomy filters.</span></p></div>';
@@ -2553,6 +2585,7 @@
       AppState.expandedPillar = null;
       AppState.expandedGroup = null;
       AppState.activeSubFilter = null;
+      AppState.activeVolumeId = null;
       $('search-input').value = '';
 
       closeStickyNote();
@@ -3868,36 +3901,55 @@
     ============================================================ */
     async function fetchArchivalVolumes() {
       if (!currentUser) return;
-      const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
-      const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
-      const querySnapshot = await window.getDocs(q);
-      AppState.archivalVolumes = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-      renderVolumesView();
-      renderSaveToVolumeModal();
+      const grid = $('volumes-grid');
+      if (grid && grid.innerHTML === '') {
+        grid.innerHTML = '<div class="col-span-full py-20 text-center opacity-40 font-mono text-xs uppercase tracking-widest animate-pulse">Synchronizing archival connection...</div>';
+      }
+      try {
+        const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
+        const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
+        const querySnapshot = await window.getDocs(q);
+        AppState.archivalVolumes = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        renderVolumesView();
+        renderSaveToVolumeModal();
+      } catch (err) {
+        console.error("Fetch Volumes Error:", err);
+        showToast('Error syncing volumes.');
+      }
     }
 
     async function createArchivalVolume(name) {
       if (!currentUser || !name) return;
-      const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
-      await window.addDoc(colRef, {
-        name: name.toUpperCase(),
-        createdAt: new Date().toISOString(),
-        lookIds: []
-      });
-      $('new-volume-name').value = '';
-      showToast('Volume initialized.');
-      fetchArchivalVolumes();
+      try {
+        const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
+        await window.addDoc(colRef, {
+          name: name.toUpperCase(),
+          createdAt: new Date().toISOString(),
+          lookIds: []
+        });
+        $('new-volume-name').value = '';
+        showToast('Volume initialized.');
+        fetchArchivalVolumes();
+      } catch (err) {
+        console.error("Create Volume Error:", err);
+        showToast('Failed to initialize volume.');
+      }
     }
 
     async function saveToVolume(volumeId) {
       if (!currentUser || !AppState.selectedEntryId) return;
-      const docRef = window.doc(window.firebaseDb, `users/${currentUser.uid}/archival_volumes/${volumeId}`);
-      await window.updateDoc(docRef, {
-        lookIds: window.arrayUnion(AppState.selectedEntryId)
-      });
-      showToast('Artifact added to Volume.');
-      closeModal('save-volume');
-      fetchArchivalVolumes();
+      try {
+        const docRef = window.doc(window.firebaseDb, `users/${currentUser.uid}/archival_volumes/${volumeId}`);
+        await window.updateDoc(docRef, {
+          lookIds: window.arrayUnion(AppState.selectedEntryId)
+        });
+        showToast('Artifact added to Volume.');
+        closeModal('save-volume');
+        fetchArchivalVolumes();
+      } catch (err) {
+        console.error("Save to Volume Error:", err);
+        showToast('Failed to save artifact.');
+      }
     }
 
     function renderVolumesView() {
@@ -3932,7 +3984,10 @@
             exportVolume(vol.id);
             return;
           }
-          // Navigate to Volume Detail (future step)
+          // Navigate to Volume Detail
+          AppState.activeVolumeId = vol.id;
+          switchView('grid');
+          showToast(`Browsing ${vol.name}`);
         });
         container.appendChild(card);
       });
