@@ -1,0 +1,104 @@
+/**
+ * core-state.js
+ * Central state management and taxonomy definitions.
+ */
+
+export const AppState = {
+  currentView: 'grid', // 'grid', 'volumes', 'timeline'
+  selectedEntryId: null,
+  currentImageIndex: 0,
+  activeTaxonomy: null, // 'brand', 'era', etc.
+  language: localStorage.getItem('lexicon-lang') || 'en',
+  filters: {
+    brand: null,
+    era: null,
+    politics: null,
+    theories: null,
+    gender: null,
+    materials: null,
+    geography: null
+  },
+  searchQuery: '',
+  archivalVolumes: [],
+  activeVolumeId: null,
+  previousView: 'grid',
+};
+
+export let gridIntersectionObserver = null;
+export function setGridIntersectionObserver(observer) {
+  gridIntersectionObserver = observer;
+}
+
+export const stickyNotes = {
+  critique:   { color: '#FF0000', title: 'FORENSIC CRITIQUE',   body: '' },
+  strategy:   { color: '#0000FF', title: 'ISOLATE STRATEGY',   body: '' },
+  provenance: { color: '#E6FF00', title: 'AUDIT PROVENANCE', body: '' },
+};
+
+export function updateHash(id) {
+  if (id) {
+    window.location.hash = id;
+  } else {
+    // Clear hash without jump
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+  }
+}
+
+export const taxonomyData = {
+  brand: [
+    'Acne Studios', 'Alexander McQueen', 'Alexander Wang', 'Altuzarra', 'Ann Demeulemeester', 'Anna Sui', 'Azzedine Alaia', 'Balenciaga', 'Balmain', 'Bode', 'Bottega Veneta', 'Brunello Cucinelli', 'Burberry', 'Calvin Klein', 'Carolina Herrera', 'Celine', 'Chanel', 'Chloe', 'Christian Dior', 'Christian Lacroix', 'Christopher Kane', 'Comme des Garcons', 'Coperni', 'Courreges', 'Craig Green', 'Diesel', 'Dior', 'Dolce & Gabbana', 'Donna Karan', 'Dries Van Noten', 'Dsquared2', 'Erdem', 'Ermenegildo Zegna', 'Etro', 'Fear of God', 'Fendi', 'Ganni', 'Gareth Pugh', 'Giorgio Armani', 'Givenchy', 'Gucci', 'Haider Ackermann', 'Helmut Lang', 'Hermes', 'Hussein Chalayan', 'Issey Miyake', 'JW Anderson', 'Jacquemus', 'Jean Paul Gaultier', 'Jil Sander', 'John Galliano', 'Junya Watanabe', 'Kenzo', 'Khaite', 'Kiko Kostadinov', 'Lanvin', 'Loewe', 'Loro Piana', 'Louis Vuitton', 'Maison Margiela', 'Marc Jacobs', 'Marine Serre', 'Max Mara', 'Michael Kors', 'Missoni', 'Miu Miu', 'Moschino', 'Noir Kei Ninomiya', 'Off-White', 'Oscar de la Renta', 'Paco Rabanne', 'Prada', 'Proenza Schouler', 'Ralph Lauren', 'Richard Quinn', 'Rick Owens', 'Roberto Cavalli', 'Roksanda', 'Sacai', 'Saint Laurent', 'Salvatore Ferragamo', 'Schiaparelli', 'Simone Rocha', 'Stella McCartney', 'Telfar', 'The Row', 'Thierry Mugler', 'Thom Browne', 'Tod\'s', 'Tom Ford', 'Trussardi', 'Undercover', 'Valentino', 'Versace', 'Vetements', 'Viktor & Rolf', 'Vivienne Westwood', 'Wales Bonner', 'Walter Van Beirendonck', 'Y/Project', 'Yohji Yamamoto'
+  ],
+  era: [
+    '1980 to 1989; The Post-Modern Shift',
+    '1990 to 1999; The Deconstructionist Decade',
+    '2000 to 2009; The Global Conglomerate Era',
+    '2010 to 2019; The Digital and Streetwear Pivot',
+    '2020 to Present; The Post-Pandemic and Surrealist Current'
+  ],
+  politics: [
+    'Queer Theory & Subcultural Systems',
+    'Gender Deconstruction & Fluidity',
+    'Body Politics & Corporeal Interventions',
+    'Class Dynamics & Anti-Elitism',
+    'Post-Colonialism & Diasporic Narratives',
+    'Anti-Consumerism & Institutional Critique',
+    'Activism & Crisis Response',
+    'Globalisation & Cultural Hybridity',
+    'Surveillance & Architectural Shielding',
+    'Ecological Politics & Resource Extraction',
+    'Labour Politics & Industrial Production',
+    'Feminist Theory & The Subverted Gaze',
+    'Racial Identity & Representation',
+    'Censorship & Provocation',
+    'Techno-Politics & Digital Identities'
+  ],
+  theories: [
+    'Subcultural Resistance Theory',
+    'Habitus and Field (Bourdieu)',
+    'Trickle-Down and Bubble-Up Dynamics',
+    'Structuralism and Sign Systems',
+    'Mythology and Contemporary Lore (Barthes)',
+    'Visual Rhetoric',
+    'Symbolic Exchange',
+    'Queer Performativity (Butler)',
+    'The Subverted Gaze',
+    'Intersectionality',
+    'Biopolitics and Bio-Power (Foucault)',
+    'Society of the Spectacle (Debord)',
+    'Marxist Materialism',
+    'The Simulacrum (Baudrillard)',
+    'Hauntology (Fisher)',
+    'Object-Oriented Ontology',
+    'Post-Humanism',
+    'Algorithmic Determinism'
+  ],
+  gender: [
+    'Menswear', 'Womenswear', 'Unisex / Neutral', 'Conceptual / Post-Binary Form'
+  ],
+  materials: [
+    'Animal Protein Fibres', 'Plant-Based Cellulose', 'Bovine & Exotic Skins', 'Petroleum-Based Polymers', 'Thermoplastic Membranes', 'High-Performance Textiles', 'Structural Composites', 'Lab-Grown Organics', '3D Printed Polymers', 'Upcycled Industrial Waste'
+  ],
+  geography: [
+    'Paris (Chambre Syndicale)', 'Milan (Camera Nazionale)', 'London (BFC)', 'New York (CFDA)', 'Tokyo (Rakuten)', 'Shanghai / Seoul', 'The Antwerp Scene', 'French Bourgeois Tradition', 'Italian Industrial Excellence', 'American Utilitarianism', 'British Eccentricity', 'NYC Ballroom', 'Nordic Functionalism', 'Post-Soviet Archive'
+  ]
+};

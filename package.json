@@ -1,5 +1,18 @@
 {
+  "name": "the-lexicon",
+  "version": "1.0.0",
+  "description": "Forensic visual culture research terminal",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "firebase": "^12.13.0"
-  }
+    "firebase": "^10.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE FILE"
 }

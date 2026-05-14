@@ -1,21 +1,54 @@
-MIT License
+THE LEXICON: ARCHIVAL TERMINAL LICENSE
+Version 1.0 (Forensic/Academic)
 
 Copyright (c) 2026 Angelo Sanchez Dela Cruz
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+===============================================================================
+1. CORE PHILOSOPHY
+===============================================================================
+THE LEXICON is an open-access research terminal dedicated to the forensic audit 
+of visual culture. This license is engineered to facilitate global academic 
+inquiry and subcultural education while strictly prohibiting the unauthorized 
+commercial exploitation of the archival data and taxonomic structures.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+===============================================================================
+2. PERMISSIONS (OPEN ACCESS)
+===============================================================================
+Permission is hereby granted, free of charge, to any person to:
+- Access, view, and interact with the Terminal for personal, educational, 
+  and non-commercial research purposes.
+- Share and redistribute the Archival Nodes, provided that full attribution 
+  is given to THE LEXICON and the original researcher.
+- Use the source code for non-commercial educational projects, provided that 
+  such projects also remain Open Access.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+===============================================================================
+3. RESTRICTIONS (COMMERCIAL & EXTRACIVE USE)
+===============================================================================
+The following actions are STRICTLY PROHIBITED without a specific, written 
+Commercial License granted by the Copyright Holder:
+- The use of the Archival Database (database.js), taxonomic nodes, or 
+  research notes for commercial gain, trend forecasting services, or 
+  corporate strategy.
+- The modification or "remixing" of the archive for the purpose of 
+  redistributing it as a competing product or service.
+- The scraping of archival data for the purpose of training commercial 
+  generative AI models without explicit consent.
+
+===============================================================================
+4. COMMERCIAL INITIALIZATION
+===============================================================================
+Entities seeking to utilize THE LEXICON for commercial inquiry, corporate 
+auditing, or brand strategy must initialize a Commercial Protocol. 
+Contact: info@thelexicon.xyz for licensing initialization.
+
+===============================================================================
+5. DISCLAIMER
+===============================================================================
+THE SOFTWARE AND DATA ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+DEALINGS IN THE SYSTEM.
