@@ -88,7 +88,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <img
             src="${src}"
             alt="${entry.id}"
-            class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
             onload="this.classList.add('loaded')"
             onerror="console.error('LEXICON_ASSET_LOAD_FAILURE:', this.src); this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');"
           />

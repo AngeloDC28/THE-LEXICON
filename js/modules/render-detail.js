@@ -230,7 +230,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     card.innerHTML = `
       <div class="aspect-[3/4] overflow-hidden border border-black/10 dark:border-white/10 mb-2">
         <img src="${resolveImgSrc(item.entry.images && item.entry.images[0], item.entry.imageUrl)}" 
-             class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-105"
+             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105"
              onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');" />
       </div>
       <p class="text-[8px] font-bold uppercase tracking-widest opacity-60">${item.entry.tags.brand}</p>

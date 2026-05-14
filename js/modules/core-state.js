@@ -24,6 +24,7 @@ export const AppState = {
   archivalVolumes: [],
   activeVolumeId: null,
   previousView: 'grid',
+  fidelityMode: localStorage.getItem('lexicon-fidelity') || 'forensic', // 'forensic', 'aesthetic'
 };
 
 export let gridIntersectionObserver = null;

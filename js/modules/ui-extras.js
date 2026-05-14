@@ -30,7 +30,7 @@ export function renderTimeline(archiveData, callbacks) {
           ${entries.map(e => `
             <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5" data-id="${e.id}">
               <img src="${resolveImgSrc(e.images && e.images[0], e.imageUrl)}" 
-                   class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
                    loading="lazy"
                    onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');" />
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">

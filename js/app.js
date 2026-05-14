@@ -152,6 +152,29 @@ function refreshUI() {
   if (btnVolumes) btnVolumes.textContent = t('nav_volumes');
   const btnTheme = $('btn-theme-toggle');
   if (btnTheme) btnTheme.textContent = document.documentElement.classList.contains('dark') ? t('nav_theme_dark') : t('nav_theme_light');
+  
+  const btnFidelity = $('btn-fidelity-toggle');
+  const btnFidelityMob = $('btn-fidelity-toggle-mobile');
+  if (btnFidelity || btnFidelityMob) {
+    const isForensic = AppState.fidelityMode === 'forensic';
+    const label = isForensic ? 'Fidelity: Forensic' : 'Fidelity: Aesthetic';
+    if (btnFidelity) {
+      btnFidelity.textContent = label;
+      btnFidelity.setAttribute('aria-pressed', !isForensic);
+    }
+    if (btnFidelityMob) {
+      btnFidelityMob.textContent = label;
+      btnFidelityMob.setAttribute('aria-pressed', !isForensic);
+    }
+    document.body.classList.toggle('high-fidelity', !isForensic);
+    
+    // Update Telemetry with state change
+    const telText = $('telemetry-text');
+    if (telText && AppState.fidelityMode !== telText.dataset.lastFidelity) {
+       telText.dataset.lastFidelity = AppState.fidelityMode;
+    }
+  }
+
   const btnAuth = $('btn-auth-toggle');
   if (btnAuth && !currentUser) btnAuth.textContent = t('nav_signin');
   const btnAbout = $('btn-about');
@@ -299,7 +322,10 @@ function setupEventListeners() {
 
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
   $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
-
+  
+  $('btn-fidelity-toggle')?.addEventListener('click', toggleFidelity);
+  $('btn-fidelity-toggle-mobile')?.addEventListener('click', toggleFidelity);
+  
   $('btn-auth-toggle')?.addEventListener('click', toggleAuth);
   $('btn-auth-toggle-mobile')?.addEventListener('click', toggleAuth);
 
@@ -567,6 +593,13 @@ function toggleLanguage() {
   localStorage.setItem('lexicon-lang', AppState.language);
   refreshUI();
   showToast(`Terminal Language: ${AppState.language.toUpperCase()}`);
+}
+
+function toggleFidelity() {
+  AppState.fidelityMode = AppState.fidelityMode === 'forensic' ? 'aesthetic' : 'forensic';
+  localStorage.setItem('lexicon-fidelity', AppState.fidelityMode);
+  refreshUI();
+  updateHeaderTelemetry(`VISUAL_FIDELITY_SET: ${AppState.fidelityMode.toUpperCase()}`);
 }
 
 function renderVolumesView() {

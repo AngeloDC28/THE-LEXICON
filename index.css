@@ -87,14 +87,94 @@ html.dark #app-root {
 
 /* Keyboard focus (brutalist: offset ring, no radius) */
 :focus { outline: none; }
-:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
-}
-html.dark :focus-visible { outline-color: #CCFF00; }
 .focus-ring:focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
+}
+html.dark .focus-ring:focus-visible {
+  outline: 2px solid #CCFF00;
+}
+
+/* Accessibility: Skip Links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
+  transition: top 0.2s;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ── FIDELITY MODES (FORENSIC VS AESTHETIC) ── */
+/* Default (Forensic): Clinical, desaturated, high-contrast */
+.grid-cell img,
+.entry-thumbnail img,
+#main-image-viewer img,
+.recent-thumb,
+.node-thumb {
+  filter: grayscale(1) contrast(1.1) brightness(0.95);
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
+}
+
+/* Hover reveals original data in Forensic mode */
+.grid-cell:hover img,
+.entry-thumbnail:hover img,
+.recent-thumb:hover,
+.timeline-node:hover .node-thumb {
+  filter: grayscale(0.2) contrast(1) brightness(1);
+}
+
+/* High Fidelity (Aesthetic): Full colour, natural vibrant contrast */
+body.high-fidelity .grid-cell img,
+body.high-fidelity .entry-thumbnail img,
+body.high-fidelity #main-image-viewer img,
+body.high-fidelity .recent-thumb,
+body.high-fidelity .node-thumb {
+  filter: grayscale(0) contrast(1) brightness(1) !important;
+}
+
+body.high-fidelity .grid-cell:hover img {
+  filter: none !important;
+}
+
+/* High Fidelity also removes the 'broken' desaturation unless truly broken */
+body.high-fidelity .broken-asset {
+  filter: grayscale(1) opacity(0.3);
+}
+
+/* Status LED for Fidelity Toggle */
+#btn-fidelity-toggle, #btn-fidelity-toggle-mobile {
+  position: relative;
+  padding-left: 1.5rem !important;
+}
+
+#btn-fidelity-toggle::before, #btn-fidelity-toggle-mobile::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff0000; /* Forensic Red */
+  box-shadow: 0 0 4px #ff0000;
+  transition: all 0.3s ease;
+}
+
+body.high-fidelity #btn-fidelity-toggle::before, 
+body.high-fidelity #btn-fidelity-toggle-mobile::before {
+  background-color: #00ff00; /* Aesthetic Green */
+  box-shadow: 0 0 4px #00ff00;
 }
 
 @media (prefers-reduced-motion: reduce) {
