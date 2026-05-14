@@ -506,15 +506,10 @@ html.dark .info-box.active-hotspot {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px; /* Precision hairline grid */
-  background-color: var(--border-color); /* Grid lines */
-  border-top: 1px solid var(--border-color);
-  border-left: 1px solid var(--border-color);
+  gap: 0;
 }
 
-.image-grid > * {
-  background-color: var(--bg-base);
-}
+
 
 @media (min-width: 768px) {
   .image-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -626,15 +621,15 @@ html.dark #detail-image-view {
   justify-content: center;
   flex: 1;
   min-height: 0;
-  padding: 0; /* Eliminate unnecessary voids */
+  padding: 1rem; /* Subtle padding for breathing room */
   position: relative;
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--bg-base); /* Match background to eliminate voids */
   overflow: hidden;
 }
 
 #detail-image-wrapper {
   position: relative;
-  display: inline-block; /* Critical: Shrink-wraps the image box */
+  display: inline-block; /* Essential: Shrink-wraps the image box for hotspot alignment */
   max-width: 100%;
   max-height: 100%;
   z-index: 10;
@@ -650,15 +645,16 @@ html.dark .cmd-item.selected {
 }
 
 #detail-image {
+  display: block;
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 94vh; /* Maximize vertical density */
+  max-height: 100%;
   object-fit: contain;
-  display: block;
   user-select: none;
   pointer-events: none;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  transition: opacity 0.3s ease;
 }
 
 
