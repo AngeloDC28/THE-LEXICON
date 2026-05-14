@@ -89,8 +89,8 @@ export function renderImageGrid(archiveData, callbacks) {
             src="${src}"
             alt="${entry.id}"
             class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
-            onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');"
-            loading="lazy"
+            onload="this.classList.add('loaded')"
+            onerror="console.error('LEXICON_ASSET_LOAD_FAILURE:', this.src); this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
             <p class="text-white text-[10px] font-bold uppercase tracking-widest font-mono">${(entry.tags && entry.tags.brand) ? entry.tags.brand : 'UNKNOWN'}</p>

@@ -15,7 +15,7 @@ export const resolveImgSrc = (imgObj, fallback) => {
   if (!src) return BROKEN_ASSET;
   // Ensure absolute path for Vite public assets
   if (src.startsWith('THE-LEXICON-ASSETS')) {
-    return '/' + src;
+    return window.location.origin + '/' + src;
   }
   return src;
 };

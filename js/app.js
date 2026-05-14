@@ -252,16 +252,29 @@ function refreshUI() {
 
 function handleRouting() {
   const hash = window.location.hash;
+  if (!hash) {
+    switchView('grid', callbacks);
+    return;
+  }
+
   if (hash.startsWith('#detail/')) {
     const id = hash.replace('#detail/', '');
     openDetail(id, 0, archiveData, callbacks);
-  }
- else if (hash === '#volumes') {
+  } else if (hash === '#volumes') {
     switchView('volumes', callbacks);
   } else if (hash === '#timeline') {
     switchView('timeline', callbacks);
-  } else if (hash === '#grid' || hash === '') {
+  } else if (hash === '#grid') {
     switchView('grid', callbacks);
+  } else {
+    // Try to treat hash as entry ID
+    const potentialId = hash.replace('#', '');
+    const entry = archiveData.find(e => e.id === potentialId);
+    if (entry) {
+      openDetail(potentialId, 0, archiveData, callbacks);
+    } else {
+      switchView('grid', callbacks);
+    }
   }
 }
 
@@ -494,18 +507,17 @@ function setupEventListeners() {
     const gridCell = e.target.closest('.grid-cell');
     if (gridCell) {
       const id = gridCell.dataset.entryId;
-      const idx = parseInt(gridCell.dataset.imgIndex) || 0;
-      console.log('LEXICON_ACTION: GRID_CELL_NAV', { id, idx });
-      // Direct call since hash only supports ID
-      openDetail(id, idx, archiveData, callbacks);
+      console.log('LEXICON_ACTION: GRID_CELL_NAV', id);
+      window.location.hash = `detail/${id}`;
       return;
     }
 
     // Entry Item Click
     const entryItem = e.target.closest('.entry-item');
     if (entryItem) {
-      console.log('LEXICON_ACTION: ENTRY_ITEM_NAV', entryItem.dataset.id);
-      window.location.hash = entryItem.dataset.id;
+      const id = entryItem.dataset.id;
+      console.log('LEXICON_ACTION: ENTRY_ITEM_NAV', id);
+      window.location.hash = `detail/${id}`;
       return;
     }
 
