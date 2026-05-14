@@ -356,6 +356,30 @@ html.dark .info-box.active-hotspot {
   background: #000;
   opacity: 0.2;
 }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+  .image-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
 .grid-cell {
   position: relative;
   aspect-ratio: 3/4;
@@ -628,12 +652,20 @@ html.dark #btn-graph-fullscreen:hover { background: #CCFF00; color: #000; }
 /* ── CONNECTION MATRIX ── */
 #connection-matrix {
   display: none;
-  position: fixed; inset: 0; z-index: 1000;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
 }
-#connection-matrix.open { display: flex; align-items: center; justify-content: center; }
+#connection-matrix.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #connection-matrix .matrix-backdrop {
-  position: absolute; inset: 0;
-  background: rgba(0,0,0,0.7); backdrop-filter: blur(6px);
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
 }
 #connection-matrix .matrix-panel {
   position: relative; z-index: 1;
@@ -643,7 +675,8 @@ html.dark #btn-graph-fullscreen:hover { background: #CCFF00; color: #000; }
   background: #FAF9F6;
   border: 1px solid rgba(0,0,0,0.8);
   overflow-y: auto;
-  display: flex flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 html.dark #connection-matrix .matrix-panel {
   background: #0A0A0A;

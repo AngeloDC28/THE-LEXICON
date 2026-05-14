@@ -4,6 +4,7 @@
  */
 
 export const $ = (id) => document.getElementById(id);
+export const $$ = (s) => document.querySelectorAll(s);
 
 export const pad = (num) => (num < 10 ? '0' + num : num);
 

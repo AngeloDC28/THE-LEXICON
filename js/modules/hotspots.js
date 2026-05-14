@@ -52,8 +52,8 @@ function showHotspot(index) {
     const spot = hotspots[index];
     
     if (spot && window.innerWidth < 768) {
-      const title = $('mobile-dock-title');
-      const desc = $('mobile-dock-description');
+      const title = $('dock-title');
+      const desc = $('dock-desc');
       if (title) title.textContent = spot.label;
       if (desc) desc.textContent = spot.description;
       toggleMobileDock(true);
@@ -100,11 +100,13 @@ export function toggleMobileHotspots() {
 }
 
 export function toggleMobileDock(show) {
-  const dock = $('mobile-dock');
+  const dock = $('master-dock');
   if (!dock) return;
 
   if (show) {
     dock.classList.remove('translate-y-full');
+    dock.classList.remove('hidden');
+    dock.classList.add('flex');
   } else {
     dock.classList.add('translate-y-full');
   }

@@ -30,15 +30,15 @@ export function setStickyNote(type, entry) {
     }
   } else {
     // Mobile dock
-    const title = $('mobile-dock-title');
-    const desc = $('mobile-dock-description');
-    const dock = $('mobile-dock');
+    const title = $('dock-title');
+    const desc = $('dock-desc');
+    const dock = $('master-dock');
     
     if (title && desc && dock) {
       title.textContent = noteData.title;
       desc.textContent = body;
       dock.style.backgroundColor = noteData.color;
-      // Force light text for dark background colors if needed, but for acid/bone it's fine
+      // Force light text for dark background colors if needed
       title.style.color = '#000';
       desc.style.color = '#000';
       toggleMobileDock(true);

@@ -5,7 +5,7 @@
  */
 
 import { archiveData } from '../database.js';
-import { $, debounce } from './modules/core-utils.js';
+import { $, $$, debounce } from './modules/core-utils.js';
 import { AppState, updateHash } from './modules/core-state.js';
 import { 
   renderTaxonomyGrid, 
@@ -18,12 +18,12 @@ import { openDetail, closeDetail, navigateEntry } from './modules/render-detail.
 import { 
   initHotspotInteractions, 
   cleanupHotspots, 
-  toggleMobileHotspots 
+  toggleMobileHotspots,
+  toggleMobileDock 
 } from './modules/hotspots.js';
 import { 
   initDockInteractions, 
-  setStickyNote, 
-  toggleMobileDock 
+  setStickyNote 
 } from './modules/sticky-notes.js';
 import { switchView } from './modules/navigation.js';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
