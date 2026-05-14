@@ -23,95 +23,86 @@ import { getTranslation, supportedLanguages } from './modules/translations.js';
 
 // --- Shared Callbacks ---
 const callbacks = {
-  openDetail: (id, idx = 0) => openDetail(id, idx, archiveData, callbacks),
+  refreshUI,
+  openDetail: (id, idx) => openDetail(id, idx, archiveData, callbacks),
   closeDetail: () => closeDetail(callbacks, archiveData),
   navigateEntry: (dir) => navigateEntry(dir, archiveData, callbacks),
-  showToast: showToast,
-  showAnnouncement: (msg) => {
-    const announcer = $('aria-announcer');
-    if (announcer) announcer.textContent = msg;
-  },
-  renderFolders: () => renderFoldersView(),
-  renderFolderOptions: () => renderSaveFolderModal(),
-  updateBookmarkUI: (id) => {
-    const btn = $('btn-bookmark-entry');
-    if (btn) { btn.style.opacity = isBookmarked(id) ? '1' : '0.4'; }
-  },
+  renderGrid: () => renderImageGrid(getFilteredEntries(archiveData, AppState), callbacks),
+  renderList: () => renderEntryList(getFilteredEntries(archiveData, AppState), callbacks),
+  renderTimeline: () => renderTimeline(getFilteredEntries(archiveData, AppState), callbacks),
+  renderFilterChips: () => renderFilterChips(AppState),
+  switchView: (view) => switchView(view, callbacks),
+  updateStatusBar: () => updateStatusBar(archiveData, AppState),
+  toggleBookmark: (id) => toggleBookmark(id, callbacks),
+  isBookmarked: (id) => isBookmarked(id),
   closeModal: (id) => {
     const modal = $(id + '-modal');
     if (modal) modal.classList.add('hidden');
   },
-  updateHeaderTelemetry: updateHeaderTelemetry,
-  addRecentlyViewed: (id) => addRecentlyViewed(id, archiveData, callbacks),
-  updateMetaForEntry: updateMetaForEntry,
-  extractAccentColor: extractAccentColor,
-  resetMeta: resetMeta,
-  switchView: (view) => switchView(view, callbacks),
-  onUpdate: () => refreshUI()
+  getArchiveData: () => archiveData,
+  getAppState: () => AppState,
 };
 
-// --- Initialization ---
-document.addEventListener('DOMContentLoaded', () => {
-  console.log('LEXICON_BOOT: INITIALIZING_ARCHIVE_CORE...');
-  console.log('LEXICON_DATA_AUDIT: ENTRIES_DETECTED =', archiveData.length);
-
-  if (!archiveData || archiveData.length === 0) {
-    console.error('LEXICON_DATA_EXCEPTION: ARCHIVE_DATA_LOAD_FAILED_OR_EMPTY');
-    return;
-  }
-
-  // Initial State
-  AppState.archivalFolders = fetchArchivalFolders();
-
-  // Systems
+// --- App Init ---
+async function init() {
+  console.log('LEXICON_BOOT: Initializing...');
   initCustomCursor();
-  initHeaderTypewriter();
-  // Pass archiveData to hotspots so it doesn't need to import database.js itself
-  initHotspotInteractions(archiveData);
-  initDockInteractions();
-  initFirebaseAuth(callbacks);
-
-  // Listeners
-  setupEventListeners();
-  handleRouting();
-
-  // Initial Render
+  await initFirebaseAuth(callbacks);
+  await fetchArchivalFolders(callbacks);
+  renderRecentlyViewed(archiveData, callbacks);
+  renderTaxonomyGrid();
+  renderTaxonomySub(callbacks);
+  switchView('grid', callbacks);
   refreshUI();
+  initHeaderTypewriter();
+  updateTelemetry(archiveData);
+  initDockInteractions(callbacks);
+  setupEventListeners();
+  handleHashOnLoad();
+  showOrientationPanel();
+  showCookieConsent();
 
-  // Orientation Panel Logic
-  var dismissed;
-  try { dismissed = localStorage.getItem('lexicon-orientation-dismissed'); } catch(e) {}
-  if (dismissed) {
-    const op = $('orientation-panel');
-    if (op) op.classList.add('hidden');
+  // Pass archiveData to hotspots so it doesn't need to import database.js itself
+  initHotspotInteractions(archiveData, callbacks);
+
+  // Dismiss boot overlay once app is genuinely ready
+  const overlay = $('boot-overlay');
+  const root    = $('app-root');
+  if (overlay) {
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+      if (root) root.classList.remove('opacity-0');
+    }, 500);
+  } else if (root) {
+    root.classList.remove('opacity-0');
   }
 
-  // Reveal UI
-  setTimeout(() => {
-    const overlay = $('boot-overlay');
-    const root = $('app-root');
-    if (overlay) {
-      overlay.style.opacity = '0';
-      setTimeout(() => {
-        overlay.classList.add('hidden');
-        if (root) root.classList.remove('opacity-0');
-      }, 300);
-    } else if (root) {
-      root.classList.remove('opacity-0');
-    }
-  }, 500);
+  console.log('LEXICON_BOOT: Ready.');
+}
+
+init().catch(err => {
+  console.error('LEXICON_BOOT_ERROR:', err);
+  // Fail-safe: ensure app is visible even on error
+  const overlay = $('boot-overlay');
+  const root    = $('app-root');
+  if (overlay) overlay.classList.add('hidden');
+  if (root) root.classList.remove('opacity-0');
 });
 
 function refreshUI() {
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
 
-  // --- Header ---
   const btnAuth = $('btn-auth-toggle');
   const btnAuthMobile = $('btn-auth-toggle-mobile');
-  const authText = currentUser ? t('nav_signout') : t('nav_signin');
-  if (btnAuth) btnAuth.textContent = authText.toUpperCase();
-  if (btnAuthMobile) btnAuthMobile.textContent = authText.toUpperCase();
+  if (currentUser) {
+    if (btnAuth) btnAuth.textContent = t('nav_signout').toUpperCase();
+    if (btnAuthMobile) btnAuthMobile.textContent = t('nav_signout_mobile').toUpperCase();
+  } else {
+    if (btnAuth) btnAuth.textContent = t('nav_signin').toUpperCase();
+    if (btnAuthMobile) btnAuthMobile.textContent = t('nav_signin_mobile').toUpperCase();
+  }
 
   const btnAbout = $('btn-about');
   const btnAboutMobile = $('btn-about-mobile');
@@ -125,8 +116,12 @@ function refreshUI() {
 
   const btnLang = $('btn-lang-toggle');
   const btnLangMobile = $('btn-lang-toggle-mobile');
-  if (btnLang) btnLang.textContent = t('nav_language').toUpperCase();
-  if (btnLangMobile) btnLangMobile.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
+  const langLabelDesktop = document.getElementById('lang-toggle-label');
+  const langLabelMobile  = document.getElementById('lang-toggle-label-mobile');
+  if (langLabelDesktop) langLabelDesktop.textContent = (t('nav_language') + ' [' + lang.toUpperCase() + ']').toUpperCase();
+  else if (btnLang) btnLang.textContent = t('nav_language').toUpperCase();
+  if (langLabelMobile) langLabelMobile.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
+  else if (btnLangMobile) btnLangMobile.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
 
   const btnTheme = $('btn-theme-toggle');
   const btnThemeMobile = $('btn-theme-toggle-mobile');
@@ -138,183 +133,130 @@ function refreshUI() {
   const btnFoldersMobile = $('btn-folders-toggle-mobile');
   if (btnFoldersMobile) btnFoldersMobile.textContent = t('nav_folders_mobile').toUpperCase();
 
-  const telemetry = $('telemetry-text');
-  if (telemetry) telemetry.textContent = t('telemetry_status');
-
-  // --- Index Panel ---
-  const indexTitle = $('index-panel-title');
-  if (indexTitle) indexTitle.textContent = t('index_title');
-
-  const btnBookmarks = $('btn-show-bookmarks');
-  if (btnBookmarks) btnBookmarks.textContent = t('index_saved');
-
-  const recentTitle = $$('#recent-container span')[0];
-  if (recentTitle) recentTitle.textContent = t('index_recent');
-
   const searchInput = $('search-input');
   if (searchInput) searchInput.placeholder = t('search_placeholder');
 
-  const btnClearDir = $('btn-clear-directory');
-  if (btnClearDir) btnClearDir.textContent = t('search_clear');
+  const indexTitle = $('index-panel-title');
+  if (indexTitle) indexTitle.textContent = t('index_title').toUpperCase();
 
-  const btnGridLabels = $('btn-toggle-grid-meta');
-  if (btnGridLabels) btnGridLabels.textContent = t('search_show_labels');
+  const savedLabel = $('label-saved');
+  if (savedLabel) savedLabel.textContent = t('index_saved').toUpperCase();
 
-  // --- Status Ribbon ---
-  const statusLabels = {
-    'status-brand': 'status_brand',
-    'status-year':  'status_year',
-    'status-season':'status_season',
-    'status-entry': 'status_entry'
-  };
-  Object.entries(statusLabels).forEach(([id, key]) => {
-    const el = $(id)?.previousElementSibling;
-    if (el) el.textContent = t(key);
-  });
+  const recentLabel = $('label-recent');
+  if (recentLabel) recentLabel.textContent = t('index_recent').toUpperCase();
 
-  // --- Active Entry Detail ---
-  const btnSaveFolder       = $('btn-save-to-folder');
-  const btnSaveFolderMobile = $('btn-save-folder-mobile');
-  if (btnSaveFolder)       btnSaveFolder.textContent       = t('btn_save_folder');
-  if (btnSaveFolderMobile) btnSaveFolderMobile.textContent = t('btn_save_folder');
+  const taxonomyMapTitle = $('taxonomy-map-title');
+  if (taxonomyMapTitle) taxonomyMapTitle.textContent = t('taxonomy_map').toUpperCase();
 
-  const btnNexus = $('btn-open-matrix');
-  if (btnNexus) btnNexus.textContent = t('btn_view_nexus');
+  const clearBtn = $('btn-clear-directory');
+  if (clearBtn) clearBtn.textContent = t('btn_clear_filter');
 
-  const btnCite       = $('btn-cite-artifact');
-  const btnCiteMobile = $('btn-cite-artifact-mobile');
-  if (btnCite)       btnCite.textContent       = t('btn_cite');
-  if (btnCiteMobile) btnCiteMobile.textContent = t('btn_cite');
-
-  const btnBackGrid = $('btn-back-grid');
-  if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
-
-  const relatedTitle = $$('#related-entries h4')[0];
-  if (relatedTitle) relatedTitle.textContent = t('related_artifacts');
-
-  // --- Folders View ---
-  const folderTitle = $$('#folders-view h1')[0];
-  if (folderTitle) folderTitle.textContent = t('folders_title');
+  const foldersTitle = $('folders-panel-title');
+  if (foldersTitle) foldersTitle.textContent = t('folders_title').toUpperCase();
 
   const btnExport = $('btn-export-all-folders');
   if (btnExport) btnExport.textContent = t('folders_export');
 
-  const folderCount = $('folders-count');
-  if (folderCount) folderCount.textContent = `${AppState.archivalFolders.length} ${t('folders_initialized')}`;
-
-  const btnClearFolderFilter = $('btn-clear-folder-filter');
-  if (btnClearFolderFilter) btnClearFolderFilter.textContent = t('btn_clear_filter');
-
-  // --- Modals ---
-  const bootText = $('boot-text');
-  if (bootText) bootText.textContent = t('loading');
-
-  const cookieText = $('cookie-notice-text');
-  if (cookieText) cookieText.textContent = t('cookie_notice');
-
-  const btnAcceptCookies = $('btn-accept-cookies');
-  if (btnAcceptCookies) btnAcceptCookies.textContent = t('accept_terms');
-
-  // Auth Modal
   const authTitle = $$('#auth-modal h2')[0];
   if (authTitle) authTitle.textContent = t('modal_terminal_access');
-
-  const authDesc = $$('#auth-form-container p')[0];
+  const authDesc = $$('#auth-modal p')[0];
   if (authDesc) authDesc.textContent = t('modal_auth_desc');
-
   const btnSubmitAuth = $('btn-submit-auth');
   if (btnSubmitAuth) btnSubmitAuth.textContent = t('modal_auth_transmit');
 
-  // Save to Folder Modal
   const saveFolderTitle = $$('#save-folder-modal h2')[0];
   if (saveFolderTitle) saveFolderTitle.textContent = t('btn_save_folder');
-
   const newFolderLabel = $$('#save-folder-modal label')[0];
-  if (newFolderLabel) newFolderLabel.textContent = t('btn_initialize').replace('[ ', '').replace(' ]', '');
+  if (newFolderLabel) newFolderLabel.textContent = t('btn_save_folder');
 
-  const btnInitialize = $('btn-create-folder');
-  if (btnInitialize) btnInitialize.textContent = t('btn_initialize');
+  const relatedTitle = $('related-artifacts-title');
+  if (relatedTitle) relatedTitle.textContent = t('related_artifacts').toUpperCase();
 
-  // About Modal
+  const btnViewGrid = $('btn-toggle-grid');
+  if (btnViewGrid) btnViewGrid.textContent = t('view_archive_grid');
+  const btnViewTimeline = $('btn-toggle-timeline');
+  if (btnViewTimeline) btnViewTimeline.textContent = t('view_evolution_matrix');
+
   const aboutTitle = $('about-modal-title');
   if (aboutTitle) aboutTitle.textContent = t('modal_about_title');
-
   const aboutBody = $('about-modal-body');
-  if (aboutBody) {
+  if (aboutBody)
     aboutBody.innerHTML = t('modal_about_body').map(p => `<p>${p}</p>`).join('');
-  }
 
-  // Contact Modal
   const contactTitle = $('contact-modal-title');
   if (contactTitle) contactTitle.textContent = t('modal_contact_title');
-
   const contactBody = $('contact-modal-body');
-  if (contactBody) {
+  if (contactBody)
     contactBody.innerHTML = t('modal_contact_body').map(p => `<p>${p}</p>`).join('');
-  }
 
-  // Legal Modals
   const privacyTitle = $('privacy-modal-title');
   if (privacyTitle) privacyTitle.textContent = t('legal_privacy_title');
-
   const privacyBody = $('privacy-modal-body');
-  if (privacyBody) {
+  if (privacyBody)
     privacyBody.innerHTML = t('legal_privacy_body').map(p => `<p>${p}</p>`).join('');
-  }
 
   const termsTitle = $('terms-modal-title');
   if (termsTitle) termsTitle.textContent = t('legal_terms_title');
-
   const termsBody = $('terms-modal-body');
-  if (termsBody) {
+  if (termsBody)
     termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
-  }
 
-  // --- Taxonomy ---
-  renderTaxonomyGrid();
-  renderTaxonomySub(callbacks);
+  // Telemetry
+  updateHeaderTelemetry(archiveData, AppState, t);
 
-  // --- Rendering ---
-  const filtered = getFilteredEntries(archiveData);
-
-  // Persistent Sidebar
-  renderEntryList(archiveData, callbacks);
-
+  // Re-render current view
   if (AppState.currentView === 'grid') {
-    renderImageGrid(archiveData, callbacks);
+    renderImageGrid(getFilteredEntries(archiveData, AppState), callbacks);
+    renderEntryList(getFilteredEntries(archiveData, AppState), callbacks);
   } else if (AppState.currentView === 'timeline') {
-    renderTimeline(filtered, callbacks);
+    renderTimeline(getFilteredEntries(archiveData, AppState), callbacks);
   } else if (AppState.currentView === 'folders') {
-    if (callbacks.renderFolders) callbacks.renderFolders();
+    renderFoldersView();
   }
+  renderFilterChips(AppState);
+  renderTaxonomySub(callbacks);
+  renderRecentlyViewed(archiveData, callbacks);
 
-  renderFilterChips(callbacks);
-  updateStatusBar(archiveData);
+  if (AppState.selectedEntryId) {
+    updateStatusBar(archiveData, AppState);
+    updateMetaForEntry(AppState.selectedEntryId, archiveData);
+  }
 }
 
-function handleRouting() {
-  const hash = window.location.hash;
-  if (!hash) { switchView('grid', callbacks); return; }
-
-  if (hash.startsWith('#detail/')) {
-    const parts = hash.replace('#detail/', '').split('/');
-    const id  = parts[0];
-    const idx = parts[1] ? parseInt(parts[1]) : 0;
-    openDetail(id, idx, archiveData, callbacks);
-  } else if (hash === '#folders') {
-    switchView('folders', callbacks);
-  } else if (hash === '#timeline') {
-    switchView('timeline', callbacks);
-  } else if (hash === '#grid') {
-    switchView('grid', callbacks);
-  } else {
-    const potentialId = hash.replace('#', '');
-    const entry = archiveData.find(e => e.id === potentialId);
-    if (entry) {
-      openDetail(potentialId, 0, archiveData, callbacks);
-    } else {
-      switchView('grid', callbacks);
+function handleHashOnLoad() {
+  const hash = window.location.hash.replace('#', '');
+  if (hash.startsWith('detail/')) {
+    const parts = hash.split('/');
+    const id  = parts[1];
+    const idx = parseInt(parts[2]) || 0;
+    if (id) openDetail(id, idx, archiveData, callbacks);
+  }
+  window.addEventListener('hashchange', () => {
+    const h = window.location.hash.replace('#', '');
+    if (h.startsWith('detail/')) {
+      const p = h.split('/');
+      openDetail(p[1], parseInt(p[2]) || 0, archiveData, callbacks);
+    } else if (h === 'grid') {
+      closeDetail(callbacks, archiveData);
     }
+  });
+}
+
+function showOrientationPanel() {
+  let dismissed = false;
+  try { dismissed = localStorage.getItem('lexicon-orientation-dismissed'); } catch(e) {}
+  if (!dismissed) {
+    const op = $('orientation-panel');
+    if (op) op.classList.remove('hidden');
+  }
+}
+
+function showCookieConsent() {
+  let cookieAccepted = false;
+  try { cookieAccepted = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
+  if (!cookieAccepted) {
+    const cookieBanner = $('cookie-consent');
+    if (cookieBanner) cookieBanner.classList.remove('hidden');
   }
 }
 
@@ -402,10 +344,10 @@ function setupEventListeners() {
   $('btn-folders-toggle')?.addEventListener('click', () => switchView('folders', callbacks));
   $('btn-folders-toggle-mobile')?.addEventListener('click', () => { switchView('folders', callbacks); toggleHamburger(); });
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
-  $('btn-lang-toggle')?.addEventListener('click', toggleLanguage);
+  $('btn-lang-toggle')?.addEventListener('click', openLangDropdown);
   $('btn-auth-toggle')?.addEventListener('click', toggleAuth);
   $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
-  $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
+  $('btn-lang-toggle-mobile')?.addEventListener('click', openLangDropdown);
   $('btn-auth-toggle-mobile')?.addEventListener('click', toggleAuth);
 
   // Modals
@@ -419,6 +361,7 @@ function setupEventListeners() {
   $('btn-hamburger')?.addEventListener('click', toggleHamburger);
   $('drawer-backdrop')?.addEventListener('click', toggleHamburger);
 
+  // Modal close handlers — single delegated registration only
   document.querySelectorAll('[data-modal-backdrop]').forEach(el => {
     el.addEventListener('click', () => {
       const modalId = el.getAttribute('data-modal-backdrop');
@@ -481,75 +424,121 @@ function setupEventListeners() {
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
-  $('btn-save-folder-mobile')?.addEventListener('click', () => {
+
+  $('btn-new-folder')?.addEventListener('click', () => {
     if (!currentUser) { showToast('Authentication required.'); toggleAuth(); return; }
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
 
-  // Sticky Notes
-  document.querySelectorAll('.sticky-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const noteType = btn.dataset.note;
-      const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
-      if (entry) setStickyNote(noteType, entry);
-    });
-  });
-  $('btn-close-sticky')?.addEventListener('click', () => {
-    $('sticky-note-panel').classList.remove('visible');
+  // Image hotspots
+  $('btn-toggle-hotspots')?.addEventListener('click', toggleMobileHotspots);
+
+  // Cookie consent
+  $('btn-accept-terms')?.addEventListener('click', () => {
+    const cookieBanner = $('cookie-consent');
+    if (cookieBanner) cookieBanner.classList.add('hidden');
+    try { localStorage.setItem('lexicon-terms-accepted', 'true'); } catch(e) {}
   });
 
-  // Keyboard
-  window.addEventListener('keydown', (e) => {
-    if (AppState.selectedEntryId) {
-      if (e.key === 'ArrowLeft')  navigateEntry(-1, archiveData, callbacks);
-      else if (e.key === 'ArrowRight') navigateEntry(1, archiveData, callbacks);
-      else if (e.key === 'Escape')     closeDetail(callbacks, archiveData);
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeLangDropdown();
+      closeConnectionMatrix();
+      if (AppState.selectedEntryId) closeDetail(callbacks, archiveData);
     }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
-      toggleCmdPalette(archiveData, callbacks);
+      toggleCmdPalette();
     }
-    handleCmdKeydown(e, archiveData, callbacks);
+    if (AppState.currentView === 'cmd') handleCmdKeydown(e, archiveData, callbacks);
   });
 
-  $('cmd-input')?.addEventListener('input', (e) => {
+  $('btn-cmd-palette')?.addEventListener('click', toggleCmdPalette);
+  $('cmd-input')?.addEventListener('input', debounce((e) => {
     renderCmdResults(e.target.value, archiveData, callbacks);
-  });
-  $('cmd-palette-backdrop')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
+  }, 150));
 
-  // Cookie
-  var cookieAccepted;
-  try { cookieAccepted = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
-  if (!cookieAccepted) {
-    $('cookie-banner')?.classList.remove('hidden');
+  // Sticky notes
+  $$('.sticky-note-textarea').forEach(ta => {
+    ta.addEventListener('input', debounce((e) => {
+      const key = e.target.dataset.noteKey;
+      if (key) setStickyNote(key, e.target.value);
+    }, 300));
+  });
+
+  // Folders
+  const folderForm = $('new-folder-form');
+  if (folderForm) {
+    folderForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = $('new-folder-name');
+      if (input?.value.trim()) {
+        await createArchivalFolder(input.value.trim(), callbacks);
+        input.value = '';
+      }
+    });
   }
-  $('btn-accept-cookies')?.addEventListener('click', () => {
-    try { localStorage.setItem('lexicon-terms-accepted', 'true'); } catch(e) {}
-    $('cookie-banner')?.classList.add('hidden');
+
+  document.addEventListener('click', (e) => {
+    const saveBtn = e.target.closest('.btn-save-to-existing-folder');
+    if (saveBtn) {
+      const folderId = saveBtn.dataset.folderId;
+      if (AppState.selectedEntryId && folderId) {
+        saveToFolder(AppState.selectedEntryId, folderId, callbacks);
+        $('save-folder-modal').classList.add('hidden');
+      }
+    }
+    if (e.target.classList.contains('btn-export-fol')) { e.stopPropagation(); exportFolder(e.target.closest('[data-folder-id]')?.dataset.folderId); return; }
   });
 
-  // Custom Refresh Event
-  document.addEventListener('lexicon-refresh', refreshUI);
+  $('btn-export-all-folders')?.addEventListener('click', exportAllFolders);
 }
 
 function toggleHamburger() {
-  const panel    = $('index-panel');
+  const drawer = $('mobile-drawer');
   const backdrop = $('drawer-backdrop');
-  const btn      = $('btn-hamburger');
-  if (!panel || !backdrop || !btn) return;
-  const isOpen = panel.classList.contains('translate-x-0');
-  if (isOpen) {
-    panel.classList.remove('translate-x-0');
-    panel.classList.add('-translate-x-full');
-    backdrop.classList.add('hidden');
-    btn.setAttribute('aria-expanded', 'false');
-  } else {
-    panel.classList.add('translate-x-0');
-    panel.classList.remove('-translate-x-full');
-    backdrop.classList.remove('hidden');
-    btn.setAttribute('aria-expanded', 'true');
+  if (!drawer) return;
+  const isOpen = !drawer.classList.contains('-translate-x-full');
+  drawer.classList.toggle('-translate-x-full', isOpen);
+  if (backdrop) backdrop.classList.toggle('hidden', isOpen);
+}
+
+function renderSaveFolderModal() {
+  const container = $('save-folder-list');
+  if (!container) return;
+  container.innerHTML = '';
+  if (AppState.archivalFolders.length === 0) {
+    container.innerHTML = '<p class="text-[10px] font-mono uppercase opacity-40">No folders. Create one below.</p>';
+    return;
   }
+  AppState.archivalFolders.forEach(fol => {
+    const btn = document.createElement('button');
+    btn.className = 'btn-save-to-existing-folder w-full text-left text-[10px] font-mono uppercase tracking-wider py-2 px-3 border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors';
+    btn.dataset.folderId = fol.id;
+    btn.textContent = fol.name.toUpperCase();
+    container.appendChild(btn);
+  });
+}
+
+function exportFolder(folderId) {
+  const folder = AppState.archivalFolders.find(f => f.id === folderId);
+  if (!folder) return;
+  const entries = (folder.entryIds || []).map(id => archiveData.find(e => e.id === id)).filter(Boolean);
+  const blob = new Blob([JSON.stringify(entries, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `lexicon-folder-${folder.name.replace(/\s+/g, '-').toLowerCase()}.json`;
+  a.click();
+}
+
+function exportAllFolders() {
+  const blob = new Blob([JSON.stringify(AppState.archivalFolders, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'lexicon-all-folders.json';
+  a.click();
 }
 
 function toggleTheme() {
@@ -558,13 +547,108 @@ function toggleTheme() {
   refreshUI();
 }
 
-function toggleLanguage() {
-  let idx = supportedLanguages.indexOf(AppState.language);
-  idx = (idx + 1) % supportedLanguages.length;
-  AppState.language = supportedLanguages[idx];
-  try { localStorage.setItem('lexicon-lang', AppState.language); } catch(e) {}
+// Language display names (native script)
+const LANG_NAMES = {
+  en: 'EN — English',
+  fr: 'FR — Français',
+  it: 'IT — Italiano',
+  es: 'ES — Español',
+  de: 'DE — Deutsch',
+  pt: 'PT — Português',
+  ru: 'RU — Русский',
+  zh: 'ZH — 中文',
+  ja: 'JA — 日本語',
+  ko: 'KO — 한국어',
+};
+
+function setLanguage(code) {
+  AppState.language = code;
+  try { localStorage.setItem('lexicon-lang', code); } catch(e) {}
   refreshUI();
-  showToast(`Terminal Language: ${AppState.language.toUpperCase()}`);
+  showToast(`Terminal Language: ${code.toUpperCase()}`);
+}
+
+function closeLangDropdown() {
+  const dd = document.getElementById('lang-dropdown');
+  if (dd) dd.remove();
+  document.removeEventListener('click', closeLangDropdownOutside, true);
+}
+
+function closeLangDropdownOutside(e) {
+  const dd = document.getElementById('lang-dropdown');
+  if (dd && !dd.contains(e.target) && e.target.id !== 'btn-lang-toggle') {
+    closeLangDropdown();
+  }
+}
+
+function openLangDropdown(e) {
+  e.stopPropagation();
+  // If already open, close it (toggle)
+  if (document.getElementById('lang-dropdown')) { closeLangDropdown(); return; }
+
+  const btn = e.currentTarget;
+  const rect = btn.getBoundingClientRect();
+
+  const dd = document.createElement('div');
+  dd.id = 'lang-dropdown';
+  dd.setAttribute('role', 'listbox');
+  dd.setAttribute('aria-label', 'Select language');
+  dd.style.cssText = [
+    `position:fixed`,
+    `z-index:9000`,
+    `top:${rect.bottom + 6}px`,
+    `right:${Math.max(8, window.innerWidth - rect.right)}px`,
+    `min-width:200px`,
+    `background:var(--tw-prose-body,#111)`,
+    `border:1px solid rgba(128,128,128,0.25)`,
+    `box-shadow:0 8px 32px rgba(0,0,0,0.45)`,
+  ].join(';');
+
+  // Match site theme
+  const isDark = document.documentElement.classList.contains('dark');
+  dd.style.background = isDark ? '#111110' : '#f5f3ed';
+  dd.style.color = isDark ? '#e0dfd8' : '#1a1a18';
+
+  supportedLanguages.forEach((code, idx) => {
+    const isActive = code === AppState.language;
+    const item = document.createElement('button');
+    item.setAttribute('role', 'option');
+    item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    item.style.cssText = [
+      `display:block`,
+      `width:100%`,
+      `padding:9px 14px`,
+      `text-align:left`,
+      `font-family:monospace`,
+      `font-size:10px`,
+      `font-weight:700`,
+      `letter-spacing:0.1em`,
+      `text-transform:uppercase`,
+      `cursor:pointer`,
+      `background:${isActive ? '#E6FF00' : 'transparent'}`,
+      `color:${isActive ? '#111' : 'inherit'}`,
+      `border:none`,
+      `border-bottom:${idx < supportedLanguages.length - 1 ? '1px solid rgba(128,128,128,0.15)' : 'none'}`,
+      `transition:background 120ms`,
+    ].join(';');
+    item.textContent = LANG_NAMES[code] || code.toUpperCase();
+    item.addEventListener('mouseenter', () => {
+      if (!isActive) item.style.background = 'rgba(128,128,128,0.12)';
+    });
+    item.addEventListener('mouseleave', () => {
+      if (!isActive) item.style.background = 'transparent';
+    });
+    item.addEventListener('click', (ev) => {
+      ev.stopPropagation();
+      closeLangDropdown();
+      setLanguage(code);
+    });
+    dd.appendChild(item);
+  });
+
+  document.body.appendChild(dd);
+  // Delay outside-click binding so the triggering click doesn't immediately close it
+  setTimeout(() => document.addEventListener('click', closeLangDropdownOutside, true), 0);
 }
 
 function renderFoldersView() {
@@ -578,59 +662,26 @@ function renderFoldersView() {
   AppState.archivalFolders.forEach(fol => {
     const card = document.createElement('div');
     card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all group';
+    card.dataset.folderId = fol.id;
     card.innerHTML = `
-      <div class="flex items-baseline justify-between mb-4">
-        <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
+      <div class="flex justify-between items-start mb-3">
+        <span class="text-[11px] font-bold font-mono uppercase tracking-wider">${fol.name}</span>
         <button class="btn-export-fol text-[9px] font-mono uppercase opacity-40 group-hover:opacity-100 underline">EXPORT_JSON</button>
       </div>
-      <p class="text-[10px] font-mono opacity-60 mb-4">${fol.notes ? fol.notes : 'No observations logged.'}</p>
-      <div class="flex gap-6 text-[9px] font-mono uppercase opacity-50">
-        <span>${fol.lookIds ? fol.lookIds.length : 0} Artifacts Audited</span>
-        <span>${new Date(fol.createdAt).toLocaleDateString()}</span>
-      </div>
+      <div class="text-[9px] font-mono opacity-60">${(fol.entryIds || []).length} ENTRIES</div>
     `;
-    card.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-export-fol')) { e.stopPropagation(); exportFolder(fol.id); return; }
+    card.addEventListener('click', () => {
       AppState.activeFolderId = fol.id;
       switchView('grid', callbacks);
       refreshUI();
-      showToast(`Browsing ${fol.name}`);
     });
     container.appendChild(card);
   });
-}
 
-function renderSaveFolderModal() {
-  const container = $('folder-list-container');
-  if (!container) return;
-  container.innerHTML = '';
-  if (AppState.archivalFolders.length === 0) {
-    container.innerHTML = '<p class="text-[10px] font-mono uppercase opacity-40">No existing folders found.</p>';
-    return;
-  }
-  AppState.archivalFolders.forEach(fol => {
-    const btn = document.createElement('button');
-    btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
-    btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40">${fol.lookIds ? fol.lookIds.length : 0}</span>`;
-    btn.addEventListener('click', () => saveToFolder(fol.id, AppState.selectedEntryId, callbacks));
-    container.appendChild(btn);
+  document.querySelectorAll('.btn-export-fol').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      exportFolder(btn.closest('[data-folder-id]')?.dataset.folderId);
+    });
   });
-}
-
-function exportFolder(folId) {
-  const fol = AppState.archivalFolders.find(f => f.id === folId);
-  if (!fol) return;
-  const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(fol, null, 2));
-  const a = document.createElement('a');
-  a.setAttribute('href', dataStr);
-  a.setAttribute('download', `lexicon_folder_${fol.name.toLowerCase()}.json`);
-  a.click();
-}
-
-function exportAllFolders() {
-  const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(AppState.archivalFolders, null, 2));
-  const a = document.createElement('a');
-  a.setAttribute('href', dataStr);
-  a.setAttribute('download', 'lexicon_all_folders.json');
-  a.click();
 }
