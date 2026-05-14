@@ -93,11 +93,13 @@ const callbacks = {
 
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
+  console.log("BOOT: DOMContentLoaded fired");
   initHeaderTypewriter();
   updateTelemetry();
   initFirebaseAuth(callbacks);
   initDockInteractions();
   initHotspotInteractions();
+  console.log("BOOT: Basic modules initialized");
   renderRecentlyViewed(archiveData, callbacks);
   
   // Initial render
@@ -112,7 +114,11 @@ document.addEventListener('DOMContentLoaded', () => {
   handleRouting();
 
   // Global Event Delegation
+  console.log("BOOT: Setting up event listeners...");
   setupEventListeners();
+  console.log("BOOT: Initialization sequence complete.");
+
+  document.addEventListener('lexicon-refresh', () => refreshUI());
 
   // Auto-dismiss boot overlay
   setTimeout(() => {
@@ -229,6 +235,7 @@ function refreshUI() {
 
   const filtered = getFilteredEntries(archiveData);
   renderImageGrid(filtered, callbacks);
+  renderTimeline(filtered, callbacks);
   renderEntryList(archiveData, callbacks);
   renderTaxonomyGrid(callbacks);
   renderTaxonomySub(callbacks);
@@ -250,6 +257,7 @@ function handleRouting() {
 }
 
 function setupEventListeners() {
+  console.log("EVENT_SYSTEM: Binding listeners...");
   // --- Header ---
   $('header-title')?.addEventListener('click', () => {
     AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null };

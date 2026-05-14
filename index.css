@@ -155,6 +155,18 @@ html.dark :focus-visible { outline-color: #CCFF00; }
   #sticky-note-triggers { top: 12px; right: 12px; gap: 6px; }
   .sticky-trigger { width: 20px; height: 20px; }
 }
+/* Broken Asset Styling */
+.broken-asset {
+  filter: grayscale(1) contrast(1.2) brightness(0.8) !important;
+  opacity: 1 !important;
+}
+
+#header-telemetry {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #sticky-note-panel {
   position: absolute;
   top: 8px;

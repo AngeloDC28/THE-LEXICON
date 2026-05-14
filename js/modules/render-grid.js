@@ -3,7 +3,7 @@
  * Rendering logic for the image grid.
  */
 
-import { $, pad, resolveImgSrc } from './core-utils.js';
+import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -60,9 +60,20 @@ export function renderImageGrid(archiveData, callbacks) {
     grid.innerHTML = `
       <div class="col-span-full py-40 flex flex-col items-center justify-center opacity-40">
         <p class="text-[10px] uppercase tracking-[0.3em] mb-2">Null Set Detected</p>
-        <p class="text-[8px] uppercase tracking-widest">Adjust filters or search parameters</p>
+        <p class="text-[8px] uppercase tracking-widest mb-6">Adjust filters or search parameters</p>
+        <button id="btn-reset-filters-null" class="text-[9px] font-bold border border-black dark:border-white px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all uppercase tracking-widest">
+          Reset System
+        </button>
       </div>
     `;
+    
+    // Attach reset listener
+    $('btn-reset-filters-null')?.addEventListener('click', () => {
+      AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null };
+      AppState.searchQuery = '';
+      if ($('search-input')) $('search-input').value = '';
+      if (callbacks && callbacks.onUpdate) callbacks.onUpdate();
+    });
     return;
   }
 
@@ -79,6 +90,7 @@ export function renderImageGrid(archiveData, callbacks) {
             alt="${entry.id}"
             class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110 opacity-0"
             onload="this.classList.remove('opacity-0')"
+            onerror="this.src='${BROKEN_ASSET}'; this.classList.remove('opacity-0'); this.classList.add('broken-asset');"
             loading="lazy"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">

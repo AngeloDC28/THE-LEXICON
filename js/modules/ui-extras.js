@@ -3,7 +3,7 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, pad, resolveImgSrc } from './core-utils.js';
+import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState } from './core-state.js';
 
 export function renderTimeline(archiveData, callbacks) {
@@ -16,20 +16,27 @@ export function renderTimeline(archiveData, callbacks) {
     years[e.year].push(e);
   });
 
-  const sortedYears = Object.keys(years).sort((a, b) => b - a);
+  const sortedYears = Object.keys(years).sort((a, b) => a - b);
   
   container.innerHTML = sortedYears.map(year => {
     const entries = years[year];
     return `
-      <div class="border-t border-black/10 dark:border-white/10 pt-8">
-        <div class="flex items-baseline gap-4 mb-6">
-          <h3 class="text-2xl font-bold font-mono tracking-tighter">${year}</h3>
+      <div class="flex-shrink-0 w-64 h-full border-r border-black/10 dark:border-white/10 flex flex-col p-4 bg-overlay/20 dark:bg-darkSurface/20">
+        <div class="flex justify-between items-baseline mb-6 shrink-0">
+          <h3 class="text-3xl font-bold font-mono tracking-tighter text-acid">${year}</h3>
           <span class="text-[8px] uppercase tracking-widest opacity-40">${entries.length} Artifacts</span>
         </div>
-        <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+        <div class="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar">
           ${entries.map(e => `
-            <div class="aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair group" onclick="window.openDetail('${e.id}')">
-              <img src="${resolveImgSrc(e.images && e.images[0], e.imageUrl)}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" loading="lazy" />
+            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5" data-id="${e.id}">
+              <img src="${resolveImgSrc(e.images && e.images[0], e.imageUrl)}" 
+                   class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" 
+                   loading="lazy"
+                   onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');" />
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
+                <p class="text-[9px] text-white font-bold uppercase tracking-wider truncate">${e.tags.brand}</p>
+                <p class="text-[7px] text-white/60 uppercase truncate">${e.title}</p>
+              </div>
             </div>
           `).join('')}
         </div>
@@ -37,15 +44,13 @@ export function renderTimeline(archiveData, callbacks) {
     `;
   }).join('');
 
-  // Note: window.openDetail is a shortcut for the click delegation if needed, 
-  // but we prefer standard app.js delegation. We'll use IDs.
-  container.querySelectorAll('[onclick]').forEach(el => {
-    const attr = el.getAttribute('onclick');
-    const match = attr.match(/'([^']+)'/);
-    if (match) {
-      el.removeAttribute('onclick');
-      el.addEventListener('click', () => callbacks.openDetail(match[1]));
-    }
+  // Attach Listeners
+  container.querySelectorAll('.timeline-item').forEach(el => {
+    el.addEventListener('click', () => {
+      if (callbacks && callbacks.openDetail) {
+        callbacks.openDetail(el.dataset.id);
+      }
+    });
   });
 }
 
