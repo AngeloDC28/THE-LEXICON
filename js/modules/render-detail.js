@@ -203,12 +203,11 @@ function renderHotspots(entry, container) {
     // Sidebar Info Box
     if (hotspotsContainer) {
       const box = document.createElement('div');
-      box.className = 'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3';
+      box.className = 'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 transition-all duration-300';
       box.setAttribute('data-hotspot-index', i);
-      const t = (key) => getTranslation(key, AppState.language);
       box.innerHTML = `
-        <p class="text-[9px] font-bold uppercase tracking-widest mb-1 opacity-60">${t(spot.label)}</p>
-        <p class="text-[10px] leading-relaxed uppercase tracking-tight">${t(spot.description)}</p>
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1 opacity-60">${spot.label}</p>
+        <p class="text-[10px] leading-relaxed uppercase tracking-tight">${spot.description}</p>
       `;
       hotspotsContainer.appendChild(box);
     }

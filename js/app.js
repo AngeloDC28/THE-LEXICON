@@ -88,7 +88,8 @@ const callbacks = {
   updateMetaForEntry: updateMetaForEntry,
   extractAccentColor: extractAccentColor,
   resetMeta: resetMeta,
-  switchView: (view) => switchView(view, callbacks)
+  switchView: (view) => switchView(view, callbacks),
+  onUpdate: () => refreshUI()
 };
 
 // --- Initialization ---
@@ -98,44 +99,32 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (!archiveData || archiveData.length === 0) {
     console.error("LEXICON_DATA_EXCEPTION: ARCHIVE_DATA_LOAD_FAILED_OR_EMPTY");
+    return;
   }
+
+  // Initial State
+  AppState.archivalFolders = fetchArchivalFolders();
+  
+  // Systems
   initCustomCursor();
   initHeaderTypewriter();
-  updateTelemetry();
-  initFirebaseAuth(callbacks);
-  initDockInteractions();
   initHotspotInteractions();
-  console.log("BOOT: Basic modules initialized");
-  renderRecentlyViewed(archiveData, callbacks);
+  initDockInteractions();
+  initFirebaseAuth(callbacks);
   
-  // Initial render
-  try {
-    refreshUI();
-    // Focus search on desktop load
-    if (window.innerWidth >= 1024) {
-      setTimeout(() => $('search-input')?.focus(), 100);
-    }
-  } catch (e) {
-    console.error("BOOT_INITIAL_RENDER_ERROR:", e);
-  }
-
-  // Hash Routing
-  window.addEventListener('hashchange', handleRouting);
+  // Listeners
+  setupEventListeners();
   handleRouting();
 
-  // Global Event Delegation
-  console.log("BOOT: Setting up event listeners...");
-  setupEventListeners();
-  console.log("BOOT: Initialization sequence complete.");
+  // Initial Render
+  refreshUI();
 
-  document.addEventListener('lexicon-refresh', () => refreshUI());
-
-  // Auto-dismiss boot overlay
+  // Reveal UI
   setTimeout(() => {
     const overlay = $('boot-overlay');
     const root = $('app-root');
     if (overlay) {
-      overlay.classList.add('boot-fade-out');
+      overlay.style.opacity = '0';
       setTimeout(() => {
         overlay.classList.add('hidden');
         if (root) root.classList.remove('opacity-0');
@@ -190,8 +179,6 @@ function refreshUI() {
   if (indexTitle) indexTitle.textContent = t('index_title');
   const btnBookmarks = $('btn-show-bookmarks');
   if (btnBookmarks) btnBookmarks.textContent = t('index_saved');
-  const taxMapLabel = $('taxonomy-map-label');
-  if (taxMapLabel) taxMapLabel.textContent = t('taxonomy_map');
   const recentTitle = $$('#recent-container span')[0];
   if (recentTitle) recentTitle.textContent = t('index_recent');
 
@@ -265,7 +252,7 @@ function refreshUI() {
   const saveFolderTitle = $$('#save-folder-modal h2')[0];
   if (saveFolderTitle) saveFolderTitle.textContent = t('btn_save_folder');
   const newFolderLabel = $$('#save-folder-modal label')[0];
-  if (newFolderLabel) newFolderLabel.textContent = t('btn_initialize').replace('[ ', '').replace(' ]', ''); // Placeholder logic
+  if (newFolderLabel) newFolderLabel.textContent = t('btn_initialize').replace('[ ', '').replace(' ]', ''); 
   const btnInitialize = $('btn-create-folder');
   if (btnInitialize) btnInitialize.textContent = t('btn_initialize');
 
@@ -300,14 +287,14 @@ function refreshUI() {
     termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
   }
 
-  // Render sub-views (Optimized: only render what is visible)
+  // --- Rendering ---
   const filtered = getFilteredEntries(archiveData);
   
-  // Always render the index list if it exists (persistent sidebar component)
+  // Persistent Sidebar
   renderEntryList(archiveData, callbacks);
   
   if (AppState.currentView === 'grid') {
-    renderImageGrid(filtered, callbacks);
+    renderImageGrid(archiveData, callbacks);
   } else if (AppState.currentView === 'timeline') {
     renderTimeline(filtered, callbacks);
   } else if (AppState.currentView === 'folders') {
@@ -317,7 +304,6 @@ function refreshUI() {
   renderFilterChips(callbacks);
   updateStatusBar(archiveData);
 }
-
 
 function handleRouting() {
   const hash = window.location.hash;
@@ -338,7 +324,6 @@ function handleRouting() {
   } else if (hash === '#grid') {
     switchView('grid', callbacks);
   } else {
-    // Try to treat hash as entry ID
     const potentialId = hash.replace('#', '');
     const entry = archiveData.find(e => e.id === potentialId);
     if (entry) {
@@ -351,7 +336,40 @@ function handleRouting() {
 
 function setupEventListeners() {
   console.log("EVENT_SYSTEM: Binding listeners...");
-  // --- Header ---
+
+  // Global Click Delegation
+  document.addEventListener('click', (e) => {
+    // Grid Cell Click
+    const gridCell = e.target.closest('.grid-cell');
+    if (gridCell) {
+      const id = gridCell.dataset.entryId;
+      const idx = gridCell.dataset.imgIndex || 0;
+      console.log('LEXICON_ACTION: GRID_CELL_NAV', id, idx);
+      window.location.hash = `detail/${id}/${idx}`;
+      return;
+    }
+
+    // Entry Item Click (A-Z Index)
+    const entryItem = e.target.closest('.entry-item');
+    if (entryItem) {
+      const id = entryItem.dataset.id;
+      console.log('LEXICON_ACTION: ENTRY_ITEM_NAV', id);
+      window.location.hash = `detail/${id}/0`;
+      return;
+    }
+
+    // Recent Entry Click
+    const recentItem = e.target.closest('[data-recent-id]');
+    if (recentItem) {
+      openDetail(recentItem.dataset.recentId, 0, archiveData, callbacks);
+      return;
+    }
+
+    // Mobile Dock Close
+    if (e.target.id === 'btn-close-dock') toggleMobileDock(false);
+  });
+
+  // Header Title
   $('header-title')?.addEventListener('click', () => {
     AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
     AppState.searchQuery = '';
@@ -362,6 +380,7 @@ function setupEventListeners() {
     updateHash('grid');
   });
 
+  // Toggles
   $('btn-folders-toggle')?.addEventListener('click', () => switchView('folders', callbacks));
   $('btn-folders-toggle-mobile')?.addEventListener('click', () => {
     switchView('folders', callbacks);
@@ -371,19 +390,18 @@ function setupEventListeners() {
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle')?.addEventListener('click', toggleLanguage);
   $('btn-auth-toggle')?.addEventListener('click', toggleAuth);
-  $('btn-about')?.addEventListener('click', () => $('about-modal').classList.remove('hidden'));
-  $('btn-contact')?.addEventListener('click', () => $('contact-modal').classList.remove('hidden'));
-
-  // Mobile variants
+  
   $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
   $('btn-auth-toggle-mobile')?.addEventListener('click', toggleAuth);
 
+  // Modals
+  $('btn-about')?.addEventListener('click', () => $('about-modal').classList.remove('hidden'));
+  $('btn-contact')?.addEventListener('click', () => $('contact-modal').classList.remove('hidden'));
   $('btn-about-mobile')?.addEventListener('click', () => {
     $('about-modal').classList.remove('hidden');
     toggleHamburger();
   });
-
   $('btn-contact-mobile')?.addEventListener('click', () => {
     $('contact-modal').classList.remove('hidden');
     toggleHamburger();
@@ -391,11 +409,9 @@ function setupEventListeners() {
 
   $('btn-privacy-link')?.addEventListener('click', () => $('privacy-modal').classList.remove('hidden'));
   $('btn-terms-link')?.addEventListener('click', () => $('terms-modal').classList.remove('hidden'));
-
   $('btn-hamburger')?.addEventListener('click', toggleHamburger);
   $('drawer-backdrop')?.addEventListener('click', toggleHamburger);
 
-  // --- Legal ---
   document.querySelectorAll('[data-modal-backdrop]').forEach(el => {
     el.addEventListener('click', () => {
       const modalId = el.getAttribute('data-modal-backdrop');
@@ -410,7 +426,7 @@ function setupEventListeners() {
     });
   });
 
-  // --- Search & Filters ---
+  // Search
   $('search-input')?.addEventListener('input', debounce((e) => {
     AppState.searchQuery = e.target.value;
     refreshUI();
@@ -429,25 +445,11 @@ function setupEventListeners() {
     refreshUI();
   });
 
-  // --- View Toggles ---
+  // Views
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));
   $('btn-toggle-timeline')?.addEventListener('click', () => switchView('timeline', callbacks));
 
-  // --- Auth Modal ---
-  $('auth-form')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    sendSignInLink(callbacks);
-  });
-
-  // --- Folders ---
-  $('btn-create-folder')?.addEventListener('click', () => {
-    const name = $('new-folder-name').value;
-    if (name) createArchivalFolder(name, callbacks);
-  });
-
-  $('btn-export-all-folders')?.addEventListener('click', exportAllFolders);
-
-  // --- Detail Actions ---
+  // Detail
   $('btn-close-detail')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-back-grid')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-viewer-prev')?.addEventListener('click', () => navigateEntry(-1, archiveData, callbacks));
@@ -457,52 +459,23 @@ function setupEventListeners() {
     if (AppState.selectedEntryId) toggleBookmark(AppState.selectedEntryId, callbacks);
   });
   
-  // --- Connection Matrix ---
   $('btn-open-matrix')?.addEventListener('click', () => {
-    if (AppState.selectedEntryId) {
-      openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
-    }
+    if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
   });
 
-  $('btn-close-matrix')?.addEventListener('click', () => closeConnectionMatrix());
-  $('matrix-backdrop')?.addEventListener('click', () => closeConnectionMatrix());
-
   $('btn-save-to-folder')?.addEventListener('click', () => {
-    if (!currentUser) {
-      showToast('Authentication required to save folders.');
-      toggleAuth();
-      return;
-    }
+    if (!currentUser) { showToast('Authentication required.'); toggleAuth(); return; }
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
 
   $('btn-save-folder-mobile')?.addEventListener('click', () => {
-    if (!currentUser) {
-      showToast('Authentication required.');
-      toggleAuth();
-      return;
-    }
+    if (!currentUser) { showToast('Authentication required.'); toggleAuth(); return; }
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
 
-  // --- Modal Backdrops ---
-  document.querySelectorAll('[data-modal-backdrop]').forEach(el => {
-    el.addEventListener('click', () => {
-      const modal = el.closest('.fixed');
-      if (modal) modal.classList.add('hidden');
-    });
-  });
-
-  document.querySelectorAll('[data-modal-close]').forEach(el => {
-    el.addEventListener('click', () => {
-      const modal = el.closest('.fixed');
-      if (modal) modal.classList.add('hidden');
-    });
-  });
-
-  // --- Sticky Notes ---
+  // Sticky Notes
   document.querySelectorAll('.sticky-trigger').forEach(btn => {
     btn.addEventListener('click', () => {
       const noteType = btn.dataset.note;
@@ -515,21 +488,13 @@ function setupEventListeners() {
     $('sticky-note-panel').classList.remove('visible');
   });
 
-  // --- Command Palette ---
+  // Keyboard
   window.addEventListener('keydown', (e) => {
-    // Detail View Navigation
     if (AppState.selectedEntryId) {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        navigateEntry(-1, archiveData, callbacks);
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        navigateEntry(1, archiveData, callbacks);
-      } else if (e.key === 'Escape') {
-        closeDetail(callbacks, archiveData);
-      }
+      if (e.key === 'ArrowLeft') navigateEntry(-1, archiveData, callbacks);
+      else if (e.key === 'ArrowRight') navigateEntry(1, archiveData, callbacks);
+      else if (e.key === 'Escape') closeDetail(callbacks, archiveData);
     }
-
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       toggleCmdPalette(archiveData, callbacks);
@@ -543,7 +508,7 @@ function setupEventListeners() {
 
   $('cmd-palette-backdrop')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
 
-  // --- Cookie Banner ---
+  // Cookie
   if (!localStorage.getItem('lexicon-terms-accepted')) {
     $('cookie-banner')?.classList.remove('hidden');
   }
@@ -552,73 +517,7 @@ function setupEventListeners() {
     $('cookie-banner')?.classList.add('hidden');
   });
 
-  // --- Global Click Delegation ---
-  document.addEventListener('click', (e) => {
-    // Recent Entry Click
-    const recentItem = e.target.closest('[data-recent-id]');
-    if (recentItem) {
-      openDetail(recentItem.dataset.recentId, 0, archiveData, callbacks);
-      return;
-    }
-
-    // Taxonomy Item Click
-    const taxItem = e.target.closest('.taxonomy-item');
-    if (taxItem) {
-      setActiveTaxonomy(taxItem.dataset.type);
-      renderTaxonomySub(callbacks);
-      return;
-    }
-
-    // Taxonomy Back Button
-    if (e.target.closest('.btn-back-taxonomy')) {
-      setActiveTaxonomy(null);
-      refreshUI();
-      return;
-    }
-
-    // Taxonomy Pill Click
-    const taxPill = e.target.closest('.taxonomy-pill');
-    if (taxPill) {
-      const val = taxPill.dataset.value;
-      const type = AppState.activeTaxonomy;
-      if (AppState.filters[type] === val) {
-        AppState.filters[type] = null;
-      } else {
-        AppState.filters[type] = val;
-      }
-      refreshUI();
-      return;
-    }
-    
-    // Grid Cell Click
-    const gridCell = e.target.closest('.grid-cell');
-    if (gridCell) {
-      const id = gridCell.dataset.entryId;
-      const idx = gridCell.dataset.imgIndex || 0;
-      console.log('LEXICON_ACTION: GRID_CELL_NAV', id, idx);
-      window.location.hash = `detail/${id}/${idx}`;
-      return;
-    }
-
-    // Entry Item Click
-    const entryItem = e.target.closest('.entry-item');
-    if (entryItem) {
-      const id = entryItem.dataset.id;
-      console.log('LEXICON_ACTION: ENTRY_ITEM_NAV', id);
-      window.location.hash = `detail/${id}`;
-      return;
-    }
-
-    // Close Mobile Dock
-    if (e.target.id === 'btn-close-dock') {
-      toggleMobileDock(false);
-    }
-    if (e.target.id === 'btn-lang-toggle' || e.target.id === 'btn-lang-toggle-mobile') {
-      toggleLanguage();
-    }
-  });
-
-  // Custom refresh event
+  // Custom Refresh Event
   document.addEventListener('lexicon-refresh', refreshUI);
 }
 
@@ -628,7 +527,6 @@ function toggleHamburger() {
   const btn = $('btn-hamburger');
   if (!panel || !backdrop || !btn) return;
   const isOpen = panel.classList.contains('translate-x-0');
-  
   if (isOpen) {
     panel.classList.remove('translate-x-0');
     panel.classList.add('-translate-x-full');
@@ -657,21 +555,14 @@ function toggleLanguage() {
   showToast(`Terminal Language: ${AppState.language.toUpperCase()}`);
 }
 
-// toggleFidelity removed as per editorial requirement
-
 function renderFoldersView() {
   const container = $('folders-grid');
-  const countEl = $('folders-count');
   if (!container) return;
-
   container.innerHTML = '';
-  // countEl is updated in refreshUI
-
   if (AppState.archivalFolders.length === 0) {
     container.innerHTML = '<div class="col-span-full py-20 text-center opacity-40 font-mono text-xs uppercase tracking-widest">No Archival Folders Detected.</div>';
     return;
   }
-
   AppState.archivalFolders.forEach(fol => {
     const card = document.createElement('div');
     card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all group';
@@ -687,11 +578,7 @@ function renderFoldersView() {
       </div>
     `;
     card.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-export-fol')) {
-        e.stopPropagation();
-        exportFolder(fol.id);
-        return;
-      }
+      if (e.target.classList.contains('btn-export-fol')) { e.stopPropagation(); exportFolder(fol.id); return; }
       AppState.activeFolderId = fol.id;
       switchView('grid', callbacks);
       refreshUI();
@@ -705,22 +592,15 @@ function renderSaveFolderModal() {
   const container = $('folder-list-container');
   if (!container) return;
   container.innerHTML = '';
-
   if (AppState.archivalFolders.length === 0) {
     container.innerHTML = '<p class="text-[10px] font-mono opacity-40 uppercase py-4">No existing folders found.</p>';
     return;
   }
-
   AppState.archivalFolders.forEach(fol => {
     const btn = document.createElement('button');
     btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
-    btn.innerHTML = `
-      <span>${fol.name}</span>
-      <span class="opacity-50">${fol.lookIds ? fol.lookIds.length : 0}</span>
-    `;
-    btn.addEventListener('click', () => {
-      saveToFolder(fol.id, AppState.selectedEntryId, callbacks);
-    });
+    btn.innerHTML = `<span>${fol.name}</span><span class="opacity-50">${fol.lookIds ? fol.lookIds.length : 0}</span>`;
+    btn.addEventListener('click', () => saveToFolder(fol.id, AppState.selectedEntryId, callbacks));
     container.appendChild(btn);
   });
 }
@@ -728,32 +608,17 @@ function renderSaveFolderModal() {
 function exportFolder(folId) {
   const fol = AppState.archivalFolders.find(f => f.id === folId);
   if (!fol) return;
-  const entries = fol.lookIds.map(id => archiveData.find(e => e.id === id)).filter(Boolean);
-  const data = {
-    folder: fol.name,
-    exportedAt: new Date().toISOString(),
-    artifacts: entries
-  };
-  downloadJSON(data, `LEXICON_FOLDER_${fol.name}.json`);
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(fol, null, 2));
+  const dlAnchorElem = document.createElement('a');
+  dlAnchorElem.setAttribute("href", dataStr);
+  dlAnchorElem.setAttribute("download", `lexicon_folder_${fol.name.toLowerCase()}.json`);
+  dlAnchorElem.click();
 }
 
 function exportAllFolders() {
-  const data = {
-    exportedAt: new Date().toISOString(),
-    folders: AppState.archivalFolders
-  };
-  downloadJSON(data, `LEXICON_FULL_DATABASE_EXPORT.json`);
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(AppState.archivalFolders, null, 2));
+  const dlAnchorElem = document.createElement('a');
+  dlAnchorElem.setAttribute("href", dataStr);
+  dlAnchorElem.setAttribute("download", "lexicon_all_folders.json");
+  dlAnchorElem.click();
 }
-
-function downloadJSON(data, filename) {
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
-}
-
-// Expose for debugging
-window.AppState = AppState;
