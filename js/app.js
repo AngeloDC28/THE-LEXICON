@@ -119,7 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial Render
   refreshUI();
 
-  // Reveal UI
+  // Orientation Panel Logic
+  if (localStorage.getItem('lexicon-orientation-dismissed')) {
+    const op = $('orientation-panel');
+    if (op) op.classList.add('hidden');
+  }
+
+  // Reveal UI (Shortened Boot)
   setTimeout(() => {
     const overlay = $('boot-overlay');
     const root = $('app-root');
@@ -128,11 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         overlay.classList.add('hidden');
         if (root) root.classList.remove('opacity-0');
-      }, 500);
+      }, 300); // Shorter fade
     } else if (root) {
       root.classList.remove('opacity-0');
     }
-  }, 1000);
+  }, 500); // Shorter boot
 });
 
 function refreshUI() {
@@ -445,7 +451,14 @@ function setupEventListeners() {
     refreshUI();
   });
 
-  // Views
+  // --- Orientation ---
+  $('btn-dismiss-orientation')?.addEventListener('click', () => {
+    const op = $('orientation-panel');
+    if (op) op.classList.add('hidden');
+    localStorage.setItem('lexicon-orientation-dismissed', 'true');
+  });
+
+  // --- View Toggles ---
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));
   $('btn-toggle-timeline')?.addEventListener('click', () => switchView('timeline', callbacks));
 

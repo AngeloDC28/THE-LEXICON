@@ -37,7 +37,12 @@ export const translations = {
     tax_format: 'Format',
     taxonomy_map: 'Research Index',
     related_artifacts: 'Related Artifacts',
-    telemetry_status: 'FORENSIC ARCHIVE // STATUS: NOMINAL',
+    telemetry_status: 'ARCHIVE STATUS: STABLE',
+    folders_active: 'Folders Active',
+    folders_title: 'Archival Collection',
+    modal_terminal_access: 'Researcher Authentication',
+    modal_auth_transmit: 'Request Access',
+    connection_matrix_title: 'Relational Nexus',
     nav_folders_mobile: 'Folders',
     nav_search_mobile: 'Search',
     nav_theme_mobile: 'Theme',
@@ -55,7 +60,7 @@ export const translations = {
     status_entry: 'Entry',
     
     // Active Entry
-    btn_save_folder: 'Save to Folder',
+    btn_save_folder: 'Save to Collection',
     btn_cite: 'Cite',
     btn_back_grid: 'Back to Grid',
     btn_view_nexus: 'View Nexus',
@@ -71,14 +76,10 @@ export const translations = {
     view_evolution_matrix: 'EVOLUTION_MATRIX',
     
     // Folders
-    folders_title: 'Archival Folders',
-    folders_initialized: 'Folders Initialized',
     folders_export: '[ Export Database ]',
     
     // Modals
-    modal_terminal_access: 'Terminal Access',
-    modal_auth_desc: 'Enter your credentials to receive a magic link for terminal access.',
-    modal_auth_transmit: '[ Transmit ]',
+    modal_auth_desc: 'Enter your credentials to receive a secure access link.',
     modal_about_title: 'About',
     modal_about_body: [
       'THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.',

@@ -146,7 +146,7 @@
        BOOT OVERLAY (auto-dismiss after 1.2s)
   ============================================================ -->
   <div id="boot-overlay" class="pointer-events-auto">
-    <div class="boot-text" id="boot-text">LOADING THE LEXICON</div>
+    <div class="boot-text" id="boot-text">THE LEXICON</div>
   </div>
 
   <!-- ============================================================
@@ -159,11 +159,11 @@
       </button>
       <button id="header-title" class="text-[11px] lg:text-[13px] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring">THE LEXICON</button>
       <div id="header-telemetry" class="hidden md:block text-[9px] font-mono opacity-60 tracking-widest uppercase">
-        <span id="telemetry-text">FORENSIC ARCHIVE // STATUS: NOMINAL</span><span id="telemetry-cursor"></span>
+        <span id="telemetry-text">ARCHIVE STATUS: STABLE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
     <div class="flex items-center gap-3 lg:gap-5">
-      <button id="btn-auth-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">SIGN IN</button>
+      <button id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">ACCESS</button>
       <button id="btn-lang-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">LANGUAGES</button>
       <button id="btn-about" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">ABOUT</button>
       <button id="btn-contact" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">CONTACT</button>
@@ -298,6 +298,32 @@
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
+          <!-- Orientation Panel -->
+          <div id="orientation-panel" class="mb-1 p-4 md:p-8 bg-black text-white dark:bg-acid dark:text-black font-mono">
+            <div class="max-w-3xl">
+              <h2 class="text-lg md:text-xl font-bold uppercase tracking-[0.2em] mb-4">Archive Orientation</h2>
+              <p class="text-xs md:text-sm leading-relaxed mb-6 opacity-90">
+                THE LEXICON is a cultural research system for students, critics, and historians. It maps the intersections of aesthetic language and structural power through a forensic audit of visual culture.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-current pt-6">
+                <div>
+                  <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Research Index</h3>
+                  <p class="text-[10px] leading-relaxed opacity-80">Query the directory by brand, era, or theory to isolate specific archival nodes.</p>
+                </div>
+                <div>
+                  <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Relational Nexus</h3>
+                  <p class="text-[10px] leading-relaxed opacity-80">Use the Nexus tool in any entry to visualize connections between disparate artifacts.</p>
+                </div>
+                <div>
+                  <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Archival Collections</h3>
+                  <p class="text-[10px] leading-relaxed opacity-80">Authenticate via 'Access' to save artifacts into private collections for ongoing study.</p>
+                </div>
+              </div>
+              <button id="btn-dismiss-orientation" class="mt-8 text-[9px] font-bold uppercase tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black dark:hover:bg-black dark:hover:text-acid transition-colors">
+                [ Proceed to Archive ]
+              </button>
+            </div>
+          </div>
           <div id="image-grid" class="image-grid"></div>
         </div>
 
