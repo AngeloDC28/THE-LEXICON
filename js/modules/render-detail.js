@@ -49,7 +49,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   // Render content
   renderImage(entry);
   renderMetadata(entry);
-  renderHotspots(entry, detailView);
+  renderHotspots(entry, $('detail-image-wrapper'));
   renderRelatedEntries(entry, archiveData, callbacks);
   
   // Callbacks
@@ -184,12 +184,13 @@ function renderHotspots(entry, container) {
   if (hotspotsContainer) hotspotsContainer.innerHTML = '';
 
   hotspots.forEach((spot, i) => {
-    // Floating Button
+    // Floating Button (Forensic Marker)
     const btn = document.createElement('button');
-    btn.className = 'hotspot-btn';
+    btn.className = 'hotspot-btn focus-ring';
     btn.style.left = spot.x + '%';
     btn.style.top = spot.y + '%';
     btn.setAttribute('data-index', i);
+    btn.setAttribute('aria-label', `Intervention: ${spot.label}`);
     btn.innerHTML = '<div class="hotspot-dot"></div>';
     container.appendChild(btn);
 
