@@ -67,7 +67,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     }
   }
 
-  updateHash(`detail/${entryId}`);
+  updateHash(`detail/${entryId}/${AppState.currentImageIndex}`);
   updateStatusBar(archiveData);
 }
 
@@ -217,8 +217,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     .filter(e => e && e.id && e.id !== entry.id)
     .map(e => {
       let score = 0;
-      if (e.tags && entry.tags) {
-        const currentTags = Object.values(entry.tags).flat();
+      if (e.tags) {
         const targetTags = Object.values(e.tags).flat();
         targetTags.forEach(t => { if (currentTags.includes(t)) score++; });
       }

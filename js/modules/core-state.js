@@ -25,6 +25,7 @@ export const AppState = {
   activeFolderId: null,
   previousView: 'grid',
   fidelityMode: localStorage.getItem('lexicon-fidelity') || 'forensic', // 'forensic', 'aesthetic'
+  activeHotspot: null,
 };
 
 export let gridIntersectionObserver = null;

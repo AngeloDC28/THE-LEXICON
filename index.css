@@ -377,69 +377,80 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
   flex: 1;
 }
 
-/* Hotspot touch-target wrapper */
+/* ── FORENSIC LENS (HOTSPOTS) ── */
 .hotspot-btn {
   position: absolute;
-  transform: translate(-50%, -50%);
-  min-width: 44px;
-  min-height: 44px;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  margin-top: -12px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  cursor: pointer;
+  cursor: crosshair;
   background: transparent;
   border: none;
   padding: 0;
   touch-action: manipulation;
   pointer-events: auto;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Hotspot dot: Forensic Lens */
 .hotspot-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50% !important;
   background: rgba(204, 255, 0, 0.4);
   border: 1.5px solid #CCFF00;
   box-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s;
-  animation: hotspotPulse 2s infinite ease-in-out;
-}
-@keyframes hotspotPulse {
-  0% { transform: scale(1); box-shadow: 0 0 5px rgba(204, 255, 0, 0.4); }
-  50% { transform: scale(1.2); box-shadow: 0 0 15px rgba(204, 255, 0, 0.6); }
-  100% { transform: scale(1); box-shadow: 0 0 5px rgba(204, 255, 0, 0.4); }
+  position: relative;
 }
 
 /* Crosshair markers */
 .hotspot-dot::before, .hotspot-dot::after {
   content: '';
   position: absolute;
-  background: #E6FF00;
+  background: #CCFF00;
   opacity: 0.8;
+  transition: all 0.3s ease;
 }
+
 /* Horizontal */
 .hotspot-dot::before {
-  top: 50%; left: -6px; width: 28px; height: 1px;
+  top: 50%; left: -6px; width: 22px; height: 1px;
   transform: translateY(-50%);
 }
+
 /* Vertical */
 .hotspot-dot::after {
-  left: 50%; top: -6px; width: 1px; height: 28px;
+  left: 50%; top: -6px; width: 1px; height: 22px;
   transform: translateX(-50%);
 }
 
 .hotspot-btn:hover .hotspot-dot {
-  transform: scale(1.2) rotate(45deg);
-  background: rgba(230, 255, 0, 0.3);
-  border-color: #E6FF00;
+  transform: scale(1.5);
+  background: rgba(204, 255, 0, 0.8);
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.6);
+}
+
+.hotspot-btn.active .hotspot-dot {
+  background: #CCFF00;
+  animation: hotspotPulse 2s infinite ease-in-out;
+}
+
+@keyframes hotspotPulse {
+  0% { transform: scale(1); box-shadow: 0 0 5px rgba(204, 255, 0, 0.4); }
+  50% { transform: scale(1.2); box-shadow: 0 0 20px rgba(204, 255, 0, 0.8); }
+  100% { transform: scale(1); box-shadow: 0 0 5px rgba(204, 255, 0, 0.4); }
 }
 
 html.dark .hotspot-dot {
-  background: rgba(204, 255, 0, 0.05);
-  border-color: rgba(204, 255, 0, 0.4);
+  background: rgba(204, 255, 0, 0.1);
+  border-color: #CCFF00;
 }
+
 
 /* Info box */
 .info-box {
@@ -491,64 +502,28 @@ html.dark .info-box.active-hotspot {
 ::-webkit-scrollbar-track { background: #FAF9F6; }
 ::-webkit-scrollbar-thumb { background: #000; }
 
-/* Image grid tight layout */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2px;
-}
-
-@media (min-width: 768px) {
-  .image-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3px;
-  }
-}
-
-.image-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.image-grid .img-placeholder {
-  width: 100%;
-  aspect-ratio: 3/4;
-  background: #E8E6E1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.image-grid .img-placeholder::after {
-  content: '';
-  width: 24px;
-  height: 1px;
-  background: #000;
-  opacity: 0.2;
-}
+/* ── ARCHIVE GRID SYSTEM ── */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+  gap: 1px; /* Precision hairline grid */
+  background-color: var(--border-color); /* Grid lines */
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
+
+.image-grid > * {
+  background-color: var(--bg-base);
+}
+
 @media (min-width: 768px) {
-  .image-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-  }
+  .image-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (min-width: 1024px) {
-  .image-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  .image-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (min-width: 1280px) {
-  .image-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-  }
+  .image-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
 .grid-cell {
@@ -558,6 +533,32 @@ html.dark .info-box.active-hotspot {
   cursor: crosshair;
   content-visibility: auto;
   contain-intrinsic-size: 1px 300px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+              transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.grid-cell.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.grid-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.grid-cell img.loaded {
+  opacity: 1;
+}
+
+.grid-cell:hover img {
+  transform: scale(1.05);
 }
 
 /* Taxonomy 2-col grid */
@@ -639,6 +640,15 @@ html.dark #detail-image-view {
   z-index: 10;
 }
 
+.cmd-item.selected {
+  background: #CCFF00;
+  color: #000;
+}
+html.dark .cmd-item.selected {
+  background: #fff;
+  color: #000;
+}
+
 #detail-image {
   width: auto;
   height: auto;
@@ -651,40 +661,7 @@ html.dark #detail-image-view {
   box-shadow: 0 30px 60px rgba(0,0,0,0.25);
 }
 
-/* ── FORENSIC INTERVENTION MARKERS ── */
-.hotspot-btn {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  margin-top: -12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 30;
-  cursor: crosshair;
-}
 
-.hotspot-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50% !important;
-  background: #CCFF00;
-  border: 1px solid #000;
-  box-shadow: 0 0 10px rgba(204, 255, 0, 0.6);
-  transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hotspot-btn:hover .hotspot-dot {
-  transform: scale(2.5);
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.9);
-}
-
-.hotspot-btn.active .hotspot-dot {
-  transform: scale(1.5);
-  background: #fff;
-  animation: hotspotPulse 1.5s infinite;
-}
 
 .grid-overlay {
   position: absolute;
@@ -790,13 +767,7 @@ html.dark #detail-image-view {
   50% { transform: scale(1.1); opacity: 0.7; }
   100% { transform: scale(1); opacity: 1; }
 }
-#detail-image-view.detail-active .hotspot-dot {
-  animation: hotspotPulse 3s ease-in-out infinite;
-}
-#detail-image-view.detail-active .hotspot-btn:hover .hotspot-dot {
-  animation: none;
-  transform: scale(1.35);
-}
+
 
 #detail-desktop-stack {
   position: relative;
@@ -1023,26 +994,7 @@ html.dark #sticky-note-panel {
 html.dark .sticky-note-title, html.dark .sticky-note-close, html.dark .sticky-note-body {
   color: #F4F4F5;
 }
-html.dark .hotspot-dot {
-  background: #CCFF00;
-  border-color: #000;
-  box-shadow: 0 0 15px rgba(204,255,0,0.4);
-}
-.hotspot-btn {
-  width: 14px; height: 14px;
-  background: rgba(204, 255, 0, 0.2);
-  border: 1px solid #CCFF00;
-  border-radius: 50% !important;
-  cursor: crosshair;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 0 10px rgba(204, 255, 0, 0.1);
-  z-index: 20;
-}
-.hotspot-btn:hover {
-  transform: scale(1.8);
-  background: #CCFF00;
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
-}
+
 html.dark .info-box {
   border-color: rgba(255,255,255,0.2);
   background: rgba(17,17,17,0.85);
@@ -1230,16 +1182,7 @@ html.dark .recent-thumb { border-color: rgba(255,255,255,0.2); }
 html.dark .entry-item:hover::after {
   background: #CCFF00;
 }
-/* ── HOTSPOT PULSE ── */
-@keyframes hotspotPulse {
-  0% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(204, 255, 0, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(204, 255, 0, 0); }
-}
-.hotspot-btn.active {
-  animation: hotspotPulse 1.5s infinite;
-  background: #CCFF00 !important;
-}
+
 
 /* ── SMOOTH VIEW TRANSITIONS ── */
 #image-panel > div {

@@ -69,7 +69,10 @@ export function renderImageGrid(archiveData, callbacks) {
     
     // Attach reset listener
     $('btn-reset-filters-null')?.addEventListener('click', () => {
-      AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null };
+      AppState.filters = { 
+        brand: null, era: null, politics: null, theories: null, 
+        gender: null, materials: null, geography: null, format: null, anatomy: null 
+      };
       AppState.searchQuery = '';
       if ($('search-input')) $('search-input').value = '';
       if (callbacks && callbacks.onUpdate) callbacks.onUpdate();
@@ -104,18 +107,6 @@ export function renderImageGrid(archiveData, callbacks) {
   });
 
   grid.innerHTML = html;
-  
-  // Attach Click Events
-  grid.querySelectorAll('.grid-cell').forEach(cell => {
-    cell.addEventListener('click', () => {
-      const id = cell.dataset.entryId;
-      const idx = parseInt(cell.dataset.imgIndex);
-      if (callbacks && callbacks.openDetail) {
-        callbacks.openDetail(id, idx);
-      }
-    });
-  });
-
   setupGridIntersectionObserver();
 }
 
@@ -154,12 +145,4 @@ export function renderEntryList(archiveData, callbacks) {
       </div>
     `;
   }).join('');
-
-  container.querySelectorAll('.entry-item').forEach(el => {
-    el.addEventListener('click', () => {
-      if (callbacks && callbacks.openDetail) {
-        callbacks.openDetail(el.dataset.id);
-      }
-    });
-  });
 }

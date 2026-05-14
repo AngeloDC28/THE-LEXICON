@@ -1,10 +1,6 @@
-/**
- * navigation.js
- * Logic for view switching and tab management.
- */
-
 import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 export function switchView(viewId, callbacks) {
   // If we are in detail view, we might want to close it first if switching to a primary view
@@ -46,10 +42,12 @@ export function switchView(viewId, callbacks) {
   // Header Title State
   const headerTitle = $('header-title');
   if (headerTitle) {
+    const t = (key) => getTranslation(key, AppState.language);
+    
     if (viewId === 'folders') {
-      headerTitle.innerHTML = 'LEXICON / FOLDERS';
+      headerTitle.innerHTML = `LEXICON / ${t('nav_folders_mobile').toUpperCase()}`;
     } else if (viewId === 'timeline') {
-      headerTitle.innerHTML = 'LEXICON / CHRONOLOGY';
+      headerTitle.innerHTML = `LEXICON / ${t('view_timeline').toUpperCase()}`;
     } else {
       headerTitle.innerHTML = 'THE LEXICON';
     }

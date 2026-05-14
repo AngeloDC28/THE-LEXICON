@@ -316,8 +316,10 @@ function handleRouting() {
   }
 
   if (hash.startsWith('#detail/')) {
-    const id = hash.replace('#detail/', '');
-    openDetail(id, 0, archiveData, callbacks);
+    const parts = hash.replace('#detail/', '').split('/');
+    const id = parts[0];
+    const idx = parts[1] ? parseInt(parts[1]) : 0;
+    openDetail(id, idx, archiveData, callbacks);
   } else if (hash === '#folders') {
     switchView('folders', callbacks);
   } else if (hash === '#timeline') {
@@ -342,7 +344,7 @@ function setupEventListeners() {
   $('header-title')?.addEventListener('click', () => {
     AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
     AppState.searchQuery = '';
-    AppState.activeVolumeId = null;
+    AppState.activeFolderId = null;
     if ($('search-input')) $('search-input').value = '';
     switchView('grid', callbacks);
     refreshUI();
@@ -406,7 +408,7 @@ function setupEventListeners() {
   $('btn-clear-directory')?.addEventListener('click', () => {
     AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
     AppState.searchQuery = '';
-    AppState.activeVolumeId = null;
+    AppState.activeFolderId = null;
     if ($('search-input')) $('search-input').value = '';
     refreshUI();
   });
@@ -568,8 +570,9 @@ function setupEventListeners() {
     const gridCell = e.target.closest('.grid-cell');
     if (gridCell) {
       const id = gridCell.dataset.entryId;
-      console.log('LEXICON_ACTION: GRID_CELL_NAV', id);
-      window.location.hash = `detail/${id}`;
+      const idx = gridCell.dataset.imgIndex || 0;
+      console.log('LEXICON_ACTION: GRID_CELL_NAV', id, idx);
+      window.location.hash = `detail/${id}/${idx}`;
       return;
     }
 
