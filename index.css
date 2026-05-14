@@ -128,8 +128,6 @@ html.dark .focus-ring:focus-visible {
 
 /* Grid Reveal Animation */
 .grid-cell {
-  opacity: 0;
-  transform: translateY(10px);
   transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
               transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -530,8 +528,6 @@ html.dark .info-box.active-hotspot {
   cursor: crosshair;
   content-visibility: auto;
   contain-intrinsic-size: 1px 300px;
-  opacity: 0;
-  transform: translateY(10px);
   transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
               transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -546,7 +542,7 @@ html.dark .info-box.active-hotspot {
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .grid-cell img.loaded {

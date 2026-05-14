@@ -5296,8 +5296,3 @@ export const archiveData = [
     "hotspots": []
   }
 ];
-
-if (typeof module !== "undefined") {
-  module.exports = archiveData;
-}
-export { archiveData };

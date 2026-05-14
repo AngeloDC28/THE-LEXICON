@@ -20,7 +20,7 @@ export const translations = {
     brand_unknown: 'UNKNOWN BRAND',
     
     // Index Panel
-    index_title: 'Index / A-Z',
+    index_title: 'Research Index',
     index_saved: '★ Saved',
     index_recent: 'Recently Viewed',
     search_placeholder: 'Query brand, era, or structural intervention...',

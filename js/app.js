@@ -303,17 +303,17 @@ function refreshUI() {
   // Render sub-views (Optimized: only render what is visible)
   const filtered = getFilteredEntries(archiveData);
   
+  // Always render the index list if it exists (persistent sidebar component)
+  renderEntryList(archiveData, callbacks);
+  
   if (AppState.currentView === 'grid') {
     renderImageGrid(filtered, callbacks);
-    renderEntryList(archiveData, callbacks);
   } else if (AppState.currentView === 'timeline') {
     renderTimeline(filtered, callbacks);
   } else if (AppState.currentView === 'folders') {
     if (callbacks.renderFolders) callbacks.renderFolders();
   }
 
-  renderTaxonomyGrid(callbacks);
-  renderTaxonomySub(callbacks);
   renderFilterChips(callbacks);
   updateStatusBar(archiveData);
 }

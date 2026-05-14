@@ -16,7 +16,12 @@ export const resolveImgSrc = (imgObj, fallback) => {
   
   // Ensure absolute path resolution from site root for consistent asset loading
   if (src.startsWith('THE-LEXICON-ASSETS')) {
+    // If we're in a Vite dev environment or production, absolute root path is usually safest
     return '/' + src;
+  }
+  // Fallback for relative paths that might have been incorrectly prefixed
+  if (src.startsWith('./THE-LEXICON-ASSETS')) {
+    return src.replace('./', '/');
   }
   return src;
 };
