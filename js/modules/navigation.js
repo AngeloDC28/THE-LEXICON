@@ -32,7 +32,8 @@ export function switchView(viewId, callbacks) {
   // Sidebar Visibility (Directory)
   const directory = $('index-panel');
   if (directory) {
-    if (viewId === 'grid') {
+    // Only hide sidebar if explicitly not in grid view AND on mobile
+    if (viewId === 'grid' || window.innerWidth >= 1024) {
       directory.classList.remove('hidden');
     } else {
       directory.classList.add('hidden');

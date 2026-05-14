@@ -93,11 +93,11 @@ export function renderImageGrid(archiveData, callbacks) {
             src="${src}"
             alt="${entry.id}"
             class="w-full h-full object-cover group-hover:scale-110"
-            onload="this.parentElement.classList.add('loaded')"
-            onerror="console.error('LEXICON_ASSET_LOAD_FAILURE:', this.src); this.src='${BROKEN_ASSET}'; this.parentElement.classList.add('loaded'); this.classList.add('broken-asset');"
+            onload="this.classList.add('loaded'); this.parentElement.classList.add('loaded')"
+            onerror="console.error('LEXICON_ASSET_LOAD_FAILURE:', this.src); this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.parentElement.classList.add('loaded'); this.classList.add('broken-asset');"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
-            <p class="text-white text-[10px] font-bold uppercase tracking-widest font-mono">${(entry.tags && entry.tags.brand) ? entry.tags.brand : 'UNKNOWN'}</p>
+            <p class="text-white text-[10px] font-bold uppercase tracking-widest font-mono">${(entry.tags && entry.tags.brand) ? getTranslation(entry.tags.brand, AppState.language) : getTranslation('brand_unknown', AppState.language)}</p>
             <p class="text-white/60 text-[8px] uppercase tracking-widest font-mono">${entry.year || '----'} // ${entry.season || 'ARCHIVE'}</p>
           </div>
         </div>

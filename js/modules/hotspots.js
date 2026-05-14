@@ -5,6 +5,7 @@
 
 import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
+import { archiveData } from '../../database.js';
 
 export function initHotspotInteractions() {
   const detailView = $('detail-image-view');
@@ -32,26 +33,29 @@ export function toggleHotspot(index) {
 
 function showHotspot(index) {
   AppState.activeHotspot = index;
+  console.log('LEXICON_ACTION: HOTSPOT_SELECT', index);
 
   // Desktop: Highlight sidebar info box
   const infoBoxes = document.querySelectorAll('#active-entry-hotspots > div');
-  infoBoxes.forEach((box, i) => {
-    if (i === index) {
-      box.classList.add('border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
-      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-      box.classList.remove('border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
-    }
-  });
+  if (infoBoxes.length > 0) {
+    infoBoxes.forEach((box, i) => {
+      if (i === index) {
+        box.classList.add('active-hotspot-box', 'border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
+        box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        box.classList.remove('active-hotspot-box', 'border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
+      }
+    });
+  }
 
   // Mobile: Populate and show dock
-  const entry = window.archiveData.find(e => e.id === AppState.selectedEntryId);
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (entry) {
     const imgs = entry.images || [{src: entry.imageUrl}];
     const hotspots = imgs[AppState.currentImageIndex]?.hotspots || entry.hotspots || [];
     const spot = hotspots[index];
     
-    if (spot && window.innerWidth < 768) {
+    if (spot && window.innerWidth < 1024) { // Use 1024 for tablet/mobile
       const title = $('dock-title');
       const desc = $('dock-desc');
       if (title) title.textContent = spot.label;
@@ -63,7 +67,7 @@ function showHotspot(index) {
   // Highlight button
   const btns = document.querySelectorAll('.hotspot-btn');
   btns.forEach((btn, i) => {
-    if (i === index) btn.classList.add('active');
+    if (parseInt(btn.dataset.index) === index) btn.classList.add('active');
     else btn.classList.remove('active');
   });
 }

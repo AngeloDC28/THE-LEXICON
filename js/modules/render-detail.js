@@ -7,6 +7,7 @@ import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
+import { toggleHotspot } from './hotspots.js';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -142,7 +143,8 @@ function renderImage(entry) {
 
   const titleEl = $('active-entry-title');
   if (titleEl) {
-    titleEl.textContent = `${entry.tags.brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]`;
+    const brand = getTranslation(entry.tags.brand, AppState.language);
+    titleEl.textContent = `${brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]`;
   }
 }
 
@@ -165,7 +167,7 @@ function renderMetadata(entry) {
   grid.innerHTML = fields.map(f => `
     <div>
       <p class="text-[8px] opacity-40 uppercase tracking-widest mb-0.5">${f.label}</p>
-      <p class="text-[10px] font-bold uppercase tracking-wider">${f.value || '--'}</p>
+      <p class="text-[10px] font-bold uppercase tracking-wider">${getTranslation(f.value, AppState.language) || '--'}</p>
     </div>
   `).join('');
 }
@@ -192,6 +194,10 @@ function renderHotspots(entry, container) {
     btn.setAttribute('data-index', i);
     btn.setAttribute('aria-label', `Intervention: ${spot.label}`);
     btn.innerHTML = '<div class="hotspot-dot"></div>';
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleHotspot(i);
+    });
     container.appendChild(btn);
 
     // Sidebar Info Box
@@ -199,9 +205,10 @@ function renderHotspots(entry, container) {
       const box = document.createElement('div');
       box.className = 'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3';
       box.setAttribute('data-hotspot-index', i);
+      const t = (key) => getTranslation(key, AppState.language);
       box.innerHTML = `
-        <p class="text-[9px] font-bold uppercase tracking-widest mb-1 opacity-60">${spot.label}</p>
-        <p class="text-[10px] leading-relaxed uppercase tracking-tight">${spot.description}</p>
+        <p class="text-[9px] font-bold uppercase tracking-widest mb-1 opacity-60">${t(spot.label)}</p>
+        <p class="text-[10px] leading-relaxed uppercase tracking-tight">${t(spot.description)}</p>
       `;
       hotspotsContainer.appendChild(box);
     }
@@ -233,8 +240,9 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     card.innerHTML = `
       <div class="aspect-[3/4] overflow-hidden border border-black/10 dark:border-white/10 mb-2">
         <img src="${resolveImgSrc(item.entry.images && item.entry.images[0], item.entry.imageUrl)}" 
-             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105"
-             onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');" />
+             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105 opacity-0"
+             onload="this.classList.add('loaded'); this.style.opacity='1';"
+             onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.classList.add('broken-asset');" />
       </div>
       <p class="text-[8px] font-bold uppercase tracking-widest opacity-60">${item.entry.tags.brand}</p>
     `;

@@ -16,7 +16,7 @@ export const resolveImgSrc = (imgObj, fallback) => {
   
   // Ensure absolute path resolution from site root for consistent asset loading
   if (src.startsWith('THE-LEXICON-ASSETS')) {
-    return src;
+    return '/' + src;
   }
   return src;
 };

@@ -154,6 +154,9 @@
   ============================================================ -->
   <header id="primary-header" class="bg-black text-white flex items-center justify-between px-3 py-2 lg:px-5 lg:py-3 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
     <div class="flex items-center gap-4 lg:gap-6">
+      <button id="btn-hamburger" class="lg:hidden text-white hover:text-acid focus-ring" aria-label="Toggle Menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
       <button id="header-title" class="text-[11px] lg:text-[13px] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring">THE LEXICON</button>
       <div id="header-telemetry" class="hidden md:block text-[9px] font-mono opacity-60 tracking-widest uppercase">
         <span id="telemetry-text">FORENSIC ARCHIVE // STATUS: NOMINAL</span><span id="telemetry-cursor"></span>
@@ -335,10 +338,10 @@
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 lg:p-12">
             <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
               <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
-              <img id="detail-image" class="relative z-0 w-auto max-h-[92vh] object-contain block mx-auto" src="" alt="" />
+              <img id="detail-image" class="relative z-0" src="" alt="" crossorigin="anonymous" />
             </div>
-            <button type="button" id="btn-viewer-prev" class="hidden lg:block absolute top-1/2 -translate-y-1/2 left-2 text-3xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring">&#8592;</button>
-            <button type="button" id="btn-viewer-next" class="hidden lg:block absolute top-1/2 -translate-y-1/2 right-2 text-3xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring">&#8594;</button>
+            <button type="button" id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-2 text-3xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring">&#8592;</button>
+            <button type="button" id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-2 text-3xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none focus-ring">&#8594;</button>
           </div>
           <div id="sticky-note-triggers">
             <button type="button" class="sticky-trigger focus-ring" style="background:#FF0000;" data-note="critique" aria-label="Forensic Critique"></button>

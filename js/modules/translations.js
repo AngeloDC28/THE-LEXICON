@@ -14,6 +14,10 @@ export const translations = {
     nav_about: 'About',
     nav_contact: 'Contact',
     nav_language: 'Languages',
+    note_critique: 'FORENSIC CRITIQUE',
+    note_strategy: 'ISOLATE STRATEGY',
+    note_provenance: 'AUDIT PROVENANCE',
+    brand_unknown: 'UNKNOWN BRAND',
     
     // Index Panel
     index_title: 'Index / A-Z',
@@ -106,7 +110,13 @@ export const translations = {
       '1. INTELLECTUAL PROPERTY: All archival content is for research purposes only. Unauthorized commercial redistribution is strictly prohibited.',
       '2. TERMINAL USAGE: Users are expected to maintain the integrity of the database. Automated scraping or denial-of-service attempts will result in IP termination.',
       '3. LIABILITY: THE LEXICON is provided "as is" without warranty. We are not responsible for temporal or intellectual displacement resulting from archival immersion.'
-    ]
+    ],
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980 to 1989; The Post-Modern Shift',
+    '1990 to 1999; The Deconstructionist Decade': '1990 to 1999; The Deconstructionist Decade',
+    '2000 to 2009; The Global Conglomerate Era': '2000 to 2009; The Global Conglomerate Era',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010 to 2019; The Digital and Streetwear Pivot',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': '2020 to Present; The Post-Pandemic and Surrealist Current'
   },
   'en-gb': {
     nav_folders: 'Folders',
@@ -160,6 +170,10 @@ export const translations = {
       'Email: info@thelexicon.xyz',
       'Location: London, United Kingdom'
     ],
+    note_critique: 'FORENSIC CRITIQUE',
+    note_strategy: 'ISOLATE STRATEGY',
+    note_provenance: 'AUDIT PROVENANCE',
+    brand_unknown: 'UNKNOWN BRAND',
     
     loading: 'LOADING THE LEXICON',
     accept_terms: '[ ACCEPT_TERMS ]',
@@ -178,7 +192,13 @@ export const translations = {
       '1. INTELLECTUAL PROPERTY: All archival content is for research purposes only. Unauthorized commercial redistribution is strictly prohibited.',
       '2. TERMINAL USAGE: Users are expected to maintain the integrity of the database. Automated scraping or denial-of-service attempts will result in IP termination.',
       '3. LIABILITY: THE LEXICON is provided "as is" without warranty. We are not responsible for temporal or intellectual displacement resulting from archival immersion.'
-    ]
+    ],
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980 to 1989; The Post-Modern Shift',
+    '1990 to 1999; The Deconstructionist Decade': '1990 to 1999; The Deconstructionist Decade',
+    '2000 to 2009; The Global Conglomerate Era': '2000 to 2009; The Global Conglomerate Era',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010 to 2019; The Digital and Streetwear Pivot',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': '2020 to Present; The Post-Pandemic and Surrealist Current',
   },
   fr: {
     nav_folders: 'Folders',
@@ -189,6 +209,10 @@ export const translations = {
     nav_about: 'À propos',
     nav_contact: 'Contact',
     nav_language: 'Langue',
+    note_critique: 'CRITIQUE MÉDICO-LÉGALE',
+    note_strategy: 'STRATÉGIE D\'ISOLEMENT',
+    note_provenance: 'PROVENANCE DE L\'AUDIT',
+    brand_unknown: 'MARQUE INCONNUE',
     
     index_title: 'Index / A-Z',
     index_saved: '★ Enregistré',
@@ -233,13 +257,16 @@ export const translations = {
       'Lieu: Londres, Royaume-Uni'
     ],
     
-    loading: 'CHARGEMENT DU LEXIQUE...',
-    accept_terms: '[ ACCEPTER ]',
-    cookie_notice: 'Ce répertoire utilise le stockage local pour maintenir l\'état du terminal.',
-    close: 'Fermer'
+    close: 'Fermer',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980 à 1989 ; Le tournant post-moderne',
+    '1990 to 1999; The Deconstructionist Decade': '1990 à 1999 ; La décennie déconstructionniste',
+    '2000 to 2009; The Global Conglomerate Era': '2000 à 2009 ; L\'ère des conglomérats mondiaux',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010 à 2019 ; Le pivot numérique et streetwear',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': 'De 2020 à aujourd\'hui ; Le courant post-pandémique et surréaliste',
   },
   it: {
-    nav_folders: 'Volumi',
+    nav_folders: 'Folder',
     nav_theme_light: 'Tema: Chiaro',
     nav_theme_dark: 'Tema: Scuro',
     nav_signin: 'Accedi',
@@ -247,6 +274,10 @@ export const translations = {
     nav_about: 'Info',
     nav_contact: 'Contatti',
     nav_language: 'Lingua',
+    note_critique: 'CRITICA FORENSE',
+    note_strategy: 'STRATEGIA DI ISOLAMENTO',
+    note_provenance: 'PROVENIENZA AUDIT',
+    brand_unknown: 'MARCHIO SCONOSCIUTO',
     
     index_title: 'Indice / A-Z',
     index_saved: '★ Salvati',
@@ -271,8 +302,8 @@ export const translations = {
     view_archive_grid: 'GRIGLIA_ARCHIVIO',
     view_evolution_matrix: 'MATRICE_EVOLUZIONE',
     
-    folders_title: 'Volumi d\'Archivio',
-    folders_initialized: 'Volumi Inizializzati',
+    folders_title: 'Folder d\'Archivio',
+    folders_initialized: 'Folder Inizializzati',
     folders_export: '[ Esporta Database ]',
     
     modal_terminal_access: 'Accesso Terminale',
@@ -294,7 +325,13 @@ export const translations = {
     loading: 'CARICAMENTO LEXICON...',
     accept_terms: '[ ACCETTA ]',
     cookie_notice: 'Questa directory utilizza lo storage locale per mantenere lo stato del terminale.',
-    close: 'Chiudi'
+    close: 'Chiudi',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980-1989: La svolta postmoderna',
+    '1990 to 1999; The Deconstructionist Decade': '1990-1999: Il decennio decostruzionista',
+    '2000 to 2009; The Global Conglomerate Era': '2000-2009: L\'era dei conglomerati globali',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010-2019: La svolta digitale e dello streetwear',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': 'Dal 2020 a oggi: La corrente post-pandemica e surrealista',
   },
   'en-us': {
     nav_folders: 'Folders',
@@ -348,7 +385,7 @@ export const translations = {
     close: 'Dismiss'
   },
   es: {
-    nav_folders: 'Volúmenes',
+    nav_folders: 'Carpetas',
     nav_theme_light: 'Modo Claro',
     nav_theme_dark: 'Modo Oscuro',
     nav_signin: 'Acceder',
@@ -356,6 +393,10 @@ export const translations = {
     nav_about: 'Acerca de',
     nav_contact: 'Contacto',
     nav_language: 'Idioma',
+    note_critique: 'CRÍTICA FORENSE',
+    note_strategy: 'ESTRATEGIA DE AISLAMIENTO',
+    note_provenance: 'PROCEDENCIA DE AUDITORÍA',
+    brand_unknown: 'MARCA DESCONOCIDA',
     index_title: 'Índice / A-Z',
     index_saved: '★ Guardados',
     index_recent: 'Visto recientemente',
@@ -375,8 +416,8 @@ export const translations = {
     view_timeline: 'Vista Cronológica',
     view_archive_grid: 'MATRIZ_ARCHIVO',
     view_evolution_matrix: 'MATRIZ_EVOLUCIÓN',
-    folders_title: 'Volúmenes de Archivo',
-    folders_initialized: 'Volúmenes Inicializados',
+    folders_title: 'Carpetas de Archivo',
+    folders_initialized: 'Carpetas Inicializadas',
     folders_export: '[ Exportar Base ]',
     modal_terminal_access: 'Acceso al Terminal',
     modal_auth_desc: 'Ingrese sus credenciales para recibir un enlace mágico.',
@@ -396,10 +437,16 @@ export const translations = {
     loading: 'CARGANDO TERMINAL...',
     accept_terms: '[ ACEPTAR ]',
     cookie_notice: 'Este directorio utiliza almacenamiento local para mantener el estado del terminal.',
-    close: 'Cerrar'
+    close: 'Cerrar',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980 a 1989: El giro posmoderno',
+    '1990 to 1999; The Deconstructionist Decade': '1990 a 1999: La década deconstruccionista',
+    '2000 to 2009; The Global Conglomerate Era': '2000 a 2009: La era de los conglomerados globales',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010 a 2019: El pivote digital y del streetwear',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': 'De 2020 al presente: La corriente pospandémica y surrealista',
   },
   de: {
-    nav_folders: 'Bände',
+    nav_folders: 'Ordner',
     nav_theme_light: 'Heller Modus',
     nav_theme_dark: 'Dunkler Modus',
     nav_signin: 'Anmelden',
@@ -407,6 +454,10 @@ export const translations = {
     nav_about: 'Über uns',
     nav_contact: 'Kontakt',
     nav_language: 'Sprache',
+    note_critique: 'FORENSISCHE KRITIK',
+    note_strategy: 'ISOLATIONSSTRATEGIE',
+    note_provenance: 'PROVENIENZPRÜFUNG',
+    brand_unknown: 'UNBEKANNTE MARKE',
     index_title: 'Index / A-Z',
     index_saved: '★ Gespeichert',
     index_recent: 'Zuletzt angesehen',
@@ -426,8 +477,8 @@ export const translations = {
     view_timeline: 'Zeitstrahl',
     view_archive_grid: 'ARCHIV_RASTER',
     view_evolution_matrix: 'EVO_MATRIX',
-    folders_title: 'Archivbände',
-    folders_initialized: 'Bände initialisiert',
+    folders_title: 'Archivordner',
+    folders_initialized: 'Ordner initialisiert',
     folders_export: '[ Datenbank exportieren ]',
     modal_terminal_access: 'Terminal-Zugang',
     modal_auth_desc: 'Anmeldedaten für Magic Link eingeben.',
@@ -447,7 +498,13 @@ export const translations = {
     loading: 'TERMINAL WIRD GELADEN...',
     accept_terms: '[ AKZEPTIEREN ]',
     cookie_notice: 'Dieses Verzeichnis verwendet lokalen Speicher, um den Terminalstatus zu erhalten.',
-    close: 'Schließen'
+    close: 'Schließen',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980 bis 1989: Der postmoderne Wandel',
+    '1990 to 1999; The Deconstructionist Decade': '1990 bis 1999: Das dekonstruktivistische Jahrzehnt',
+    '2000 to 2009; The Global Conglomerate Era': '2000 bis 2009: Die Ära der globalen Konglomerate',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010 bis 2019: Der digitale und Streetwear-Pivot',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': '2020 bis heute: Die postpandemische und surrealistische Strömung',
   },
   pt: {
     nav_folders: 'Folders',
@@ -501,7 +558,7 @@ export const translations = {
     close: 'Fechar'
   },
   ru: {
-    nav_folders: 'Тома',
+    nav_folders: 'Папки',
     nav_theme_light: 'Светлая тема',
     nav_theme_dark: 'Темная тема',
     nav_signin: 'Войти',
@@ -509,6 +566,10 @@ export const translations = {
     nav_about: 'О проекте',
     nav_contact: 'Контакт',
     nav_language: 'Язык',
+    note_critique: 'СУДЕБНАЯ КРИТИКА',
+    note_strategy: 'СТРАТЕГИЯ ИЗОЛЯЦИИ',
+    note_provenance: 'ПРОВЕРКА ПРОИСХОЖДЕНИЯ',
+    brand_unknown: 'НЕИЗВЕСТНЫЙ БРЕНД',
     index_title: 'Индекс / A-Z',
     index_saved: '★ Сохранено',
     index_recent: 'Недавние просмотры',
@@ -528,8 +589,8 @@ export const translations = {
     view_timeline: 'Таймлайн',
     view_archive_grid: 'АРХИВНАЯ_СЕТКА',
     view_evolution_matrix: 'МАТРИЦА_ЭВОЛЮЦИИ',
-    folders_title: 'Архивные тома',
-    folders_initialized: 'Тома инициализированы',
+    folders_title: 'Архивные папки',
+    folders_initialized: 'Папки инициализированы',
     folders_export: '[ Экспорт базы ]',
     modal_terminal_access: 'Доступ к терминалу',
     modal_auth_desc: 'Введите учетные данные для получения ссылки.',
@@ -549,7 +610,13 @@ export const translations = {
     loading: 'ЗАГРУЗКА ТЕРМИНАЛА...',
     accept_terms: '[ ПРИНЯТЬ ]',
     cookie_notice: 'Этот каталог использует локальное хранилище для сохранения состояния.',
-    close: 'Закрыть'
+    close: 'Закрыть',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980-1989: Постмодернистский сдвиг',
+    '1990 to 1999; The Deconstructionist Decade': '1990-1999: Десятилетие деконструктивизма',
+    '2000 to 2009; The Global Conglomerate Era': '2000-2009: Эра глобальных конгломератов',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010-2019: Цифровой и стритвир поворот',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': 'С 2020 по настоящее время: Постпандемическое и сюрреалистическое течение',
   },
   zh: {
     nav_folders: '卷册',
@@ -560,6 +627,10 @@ export const translations = {
     nav_about: '关于',
     nav_contact: '联系',
     nav_language: '语言',
+    note_critique: '法证评论',
+    note_strategy: '隔离策略',
+    note_provenance: '审计来源',
+    brand_unknown: '未知品牌',
     index_title: '索引 / A-Z',
     index_saved: '★ 已收藏',
     index_recent: '最近查看',
@@ -598,12 +669,24 @@ export const translations = {
       '地点: 英国伦敦'
     ],
     loading: '终端初始化中...',
+    // Brands
+    'Gucci': '古驰',
+    'Prada': '普拉达',
+    'Maison Margiela': '梅森·马吉拉',
+    'Alexander McQueen': '亚历山大·麦昆',
+    'Balenciaga': '巴黎世家',
     accept_terms: '[ 接受条款 ]',
     cookie_notice: '本目录使用本地存储来保持终端状态和档案数据。',
-    close: '关闭'
+    close: '关闭',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980至1989年；后现代转变',
+    '1990 to 1999; The Deconstructionist Decade': '1990至1999年；解构主义十年',
+    '2000 to 2009; The Global Conglomerate Era': '2000至2009年；全球集团时代',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010至2019年；数字化与街头服饰转型',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': '2020年至今；后疫情与超现实主义浪潮',
   },
   ja: {
-    nav_folders: 'ボリューム',
+    nav_folders: 'フォルダ',
     nav_theme_light: 'ライトモード',
     nav_theme_dark: 'ダークモード',
     nav_signin: 'ログイン',
@@ -611,6 +694,10 @@ export const translations = {
     nav_about: '概要',
     nav_contact: '連絡先',
     nav_language: '言語',
+    note_critique: '法医学的批判',
+    note_strategy: '隔離戦略',
+    note_provenance: '来歴監査',
+    brand_unknown: '不明なブランド',
     index_title: '索引 / A-Z',
     index_saved: '★ 保存済み',
     index_recent: '最近の閲覧',
@@ -630,7 +717,7 @@ export const translations = {
     view_timeline: 'タイムライン表示',
     view_archive_grid: 'アーカイブ・グリッド',
     view_evolution_matrix: '進化マトリクス',
-    folders_title: 'アーカイブ・ボリューム',
+    folders_title: 'アーカイブ・フォルダ',
     folders_initialized: '初期化完了',
     folders_export: '[ データベース書き出し ]',
     modal_terminal_access: '端末アクセス',
@@ -649,9 +736,21 @@ export const translations = {
       '所在地: 英国ロンドン'
     ],
     loading: '読み込み中...',
+    // Brands
+    'Gucci': 'グッチ',
+    'Prada': 'プラダ',
+    'Maison Margiela': 'メゾン・マルジェラ',
+    'Alexander McQueen': 'アレキサンダー・マックイーン',
+    'Balenciaga': 'バレンシアガ',
     accept_terms: '[ 同意する ]',
     cookie_notice: '本ディレクトリは、端末の状態を維持するためにローカルストレージを使用しています。',
-    close: '閉じる'
+    close: '閉じる',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980年〜1989年：ポストモダンの転換',
+    '1990 to 1999; The Deconstructionist Decade': '1990年〜1999年：脱構築主義の10年',
+    '2000 to 2009; The Global Conglomerate Era': '2000年〜2009年：グローバル・コングロマリットの時代',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010年〜2019年：デジタルとストリートウェアの転換',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': '2020年〜現在：ポストパンデミックとシュルレアリスムの流れ',
   },
   ko: {
     nav_folders: '볼륨',
@@ -662,6 +761,10 @@ export const translations = {
     nav_about: '정보',
     nav_contact: '연락처',
     nav_language: '언어',
+    note_critique: '법의학적 비평',
+    note_strategy: '격리 전략',
+    note_provenance: '출처 감사',
+    brand_unknown: '알 수 없는 브랜드',
     index_title: '인덱스 / A-Z',
     index_saved: '★ 저장됨',
     index_recent: '최근 본 항목',
@@ -702,8 +805,14 @@ export const translations = {
     loading: '초기화 중...',
     accept_terms: '[ 동의함 ]',
     cookie_notice: '이 디렉토리는 터미널 상태를 유지하기 위해 로컬 스토리지를 사용합니다.',
-    close: '닫기'
-  }
+    close: '닫기',
+    // Taxonomy Values
+    '1980 to 1989; The Post-Modern Shift': '1980~1989: 포스트모던의 전환',
+    '1990 to 1999; The Deconstructionist Decade': '1990~1999: 해체주의의 10년',
+    '2000 to 2009; The Global Conglomerate Era': '2000~2009: 글로벌 거대 기업의 시대',
+    '2010 to 2019; The Digital and Streetwear Pivot': '2010~2019: 디지털 및 스트릿웨어 피벗',
+    '2020 to Present; The Post-Pandemic and Surrealist Current': '2020~현재: 포스트 팬데믹 및 초현실주의 흐름',
+  },
 };
 
 export const supportedLanguages = Object.keys(translations);

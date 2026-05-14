@@ -3,7 +3,7 @@
  * Logic for the artifact intersection matrix.
  */
 
-import { $ } from './core-utils.js';
+import { $, resolveImgSrc } from './core-utils.js';
 
 export function openConnectionMatrix(entryId, archiveData, callbacks) {
   const entry = archiveData.find(e => e.id === entryId);
@@ -37,9 +37,9 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
       html += '<p class="matrix-section-title">Shared: ' + tagValue + '</p>';
       html += '<div class="matrix-entries">';
       data.entries.slice(0, 12).forEach(function(rel) {
-        const thumb = (rel.images && rel.images[0]) || '';
+        const thumbSrc = resolveImgSrc(rel.images && rel.images[0], rel.imageUrl);
         html += `<div class="matrix-entry" data-matrix-entry-id="${rel.id}">`;
-        if (thumb) html += `<img src="${thumb.src || thumb}" alt="${rel.tags.brand}" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;filter:grayscale(70%) contrast(1.15);" loading="lazy" />`;
+        html += `<img src="${thumbSrc}" alt="${rel.tags.brand}" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;filter:grayscale(70%) contrast(1.15);" loading="lazy" />`;
         html += `<p class="text-[10px] font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>`;
         html += `<p class="text-[9px] font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>`;
         html += '</div>';
@@ -51,12 +51,18 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   const content = $('matrix-content');
   if (content) content.innerHTML = html;
   const matrix = $('connection-matrix');
-  if (matrix) matrix.classList.add('open');
+  if (matrix) {
+    matrix.classList.remove('hidden');
+    matrix.classList.add('open');
+  }
   document.body.style.overflow = 'hidden';
 }
 
 export function closeConnectionMatrix() {
   const matrix = $('connection-matrix');
-  if (matrix) matrix.classList.remove('open');
+  if (matrix) {
+    matrix.classList.remove('open');
+    matrix.classList.add('hidden');
+  }
   document.body.style.overflow = '';
 }

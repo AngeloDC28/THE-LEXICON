@@ -34,9 +34,10 @@ export function updateTelemetry(manualLog = null) {
   const timestamp = new Date().toLocaleTimeString('en-GB', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' });
   telText.textContent = `[${timestamp}] ${base}`;
   
-  if (!manualLog) {
-    setTimeout(() => updateTelemetry(), 4000 + Math.random() * 3000);
-  }
+  // Removed periodic update to avoid conflict with typewriter
+  // if (!manualLog) {
+  //   setTimeout(() => updateTelemetry(), 4000 + Math.random() * 3000);
+  // }
 }
 
 export function updateHeaderTelemetry(text) {

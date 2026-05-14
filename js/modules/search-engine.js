@@ -121,7 +121,7 @@ export function renderTaxonomySub(callbacks) {
         const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'border-black/5 dark:border-white/5';
         return `
           <button class="taxonomy-pill text-[9px] font-bold uppercase tracking-widest p-3 border transition-all text-left truncate ${activeClass}" data-value="${val}">
-            ${val}
+            ${getTranslation(val, AppState.language)}
           </button>
         `;
       }).join('')}

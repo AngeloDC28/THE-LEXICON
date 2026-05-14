@@ -111,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial render
   try {
     refreshUI();
+    // Focus search on desktop load
+    if (window.innerWidth >= 1024) {
+      setTimeout(() => $('search-input')?.focus(), 100);
+    }
   } catch (e) {
     console.error("BOOT_INITIAL_RENDER_ERROR:", e);
   }
@@ -296,11 +300,18 @@ function refreshUI() {
     termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
   }
 
-  // Render sub-views
+  // Render sub-views (Optimized: only render what is visible)
   const filtered = getFilteredEntries(archiveData);
-  renderImageGrid(filtered, callbacks);
-  renderTimeline(filtered, callbacks);
-  renderEntryList(archiveData, callbacks);
+  
+  if (AppState.currentView === 'grid') {
+    renderImageGrid(filtered, callbacks);
+    renderEntryList(archiveData, callbacks);
+  } else if (AppState.currentView === 'timeline') {
+    renderTimeline(filtered, callbacks);
+  } else if (AppState.currentView === 'folders') {
+    if (callbacks.renderFolders) callbacks.renderFolders();
+  }
+
   renderTaxonomyGrid(callbacks);
   renderTaxonomySub(callbacks);
   renderFilterChips(callbacks);
@@ -501,11 +512,24 @@ function setupEventListeners() {
   });
 
   $('btn-close-sticky')?.addEventListener('click', () => {
-    $('sticky-note-panel').classList.remove('active');
+    $('sticky-note-panel').classList.remove('visible');
   });
 
   // --- Command Palette ---
   window.addEventListener('keydown', (e) => {
+    // Detail View Navigation
+    if (AppState.selectedEntryId) {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        navigateEntry(-1, archiveData, callbacks);
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        navigateEntry(1, archiveData, callbacks);
+      } else if (e.key === 'Escape') {
+        closeDetail(callbacks, archiveData);
+      }
+    }
+
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       toggleCmdPalette(archiveData, callbacks);

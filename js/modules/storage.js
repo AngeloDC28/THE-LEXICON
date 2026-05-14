@@ -3,7 +3,7 @@
  * Logic for bookmarks, recently viewed, and local storage.
  */
 
-import { $, resolveImgSrc } from './core-utils.js';
+import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 
 export function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
@@ -56,7 +56,15 @@ export function renderRecentlyViewed(archiveData, callbacks) {
     const entry = archiveData.find(e => e.id === id);
     if (!entry) return;
     const thumbSrc = resolveImgSrc(entry.images && entry.images[0], entry.imageUrl);
-    html += `<img src="${thumbSrc}" alt="${entry.tags.brand}" class="recent-thumb" data-recent-id="${id}" loading="lazy" />`;
+    html += `
+      <img src="${thumbSrc}" 
+           alt="${entry.tags.brand}" 
+           class="recent-thumb opacity-0" 
+           data-recent-id="${id}" 
+           loading="lazy" 
+           onload="this.classList.add('loaded'); this.style.opacity='1';"
+           onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded');" />
+    `;
   });
   row.innerHTML = html;
 }

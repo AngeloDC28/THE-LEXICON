@@ -1,4 +1,4 @@
-const archiveData = [
+export const archiveData = [
   {
     "id": "mcqueen-ss99",
     "title": "Alexander McQueen SS 1999",

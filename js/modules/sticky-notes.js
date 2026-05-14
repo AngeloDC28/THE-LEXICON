@@ -6,6 +6,7 @@
 import { $ } from './core-utils.js';
 import { AppState, stickyNotes } from './core-state.js';
 import { toggleMobileDock } from './hotspots.js';
+import { getTranslation } from './translations.js';
 
 export function initDockInteractions() {
   // Mobile dock closer handled in app.js delegation
@@ -23,10 +24,10 @@ export function setStickyNote(type, entry) {
     const bodyEl = $('sticky-note-body');
 
     if (panel && titleEl && bodyEl) {
-      titleEl.textContent = noteData.title;
+      titleEl.textContent = getTranslation(`note_${type}`, AppState.language);
       bodyEl.textContent = body;
       panel.style.backgroundColor = noteData.color;
-      panel.classList.add('active');
+      panel.classList.add('visible');
     }
   } else {
     // Mobile dock
@@ -35,12 +36,15 @@ export function setStickyNote(type, entry) {
     const dock = $('master-dock');
     
     if (title && desc && dock) {
-      title.textContent = noteData.title;
+      title.textContent = getTranslation(`note_${type}`, AppState.language);
       desc.textContent = body;
       dock.style.backgroundColor = noteData.color;
-      // Force light text for dark background colors if needed
-      title.style.color = '#000';
-      desc.style.color = '#000';
+      
+      // Dynamic text color for accessibility
+      const isAcid = noteData.color === '#E6FF00';
+      title.style.color = isAcid ? '#000' : '#FFF';
+      desc.style.color = isAcid ? '#000' : '#FFF';
+      
       toggleMobileDock(true);
     }
   }

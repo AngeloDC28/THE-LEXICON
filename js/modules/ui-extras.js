@@ -3,8 +3,9 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
+import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');
@@ -27,12 +28,14 @@ export function renderTimeline(archiveData, callbacks) {
           <span class="text-[8px] uppercase tracking-widest opacity-40">${entries.length} Artifacts</span>
         </div>
         <div class="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar">
-          ${entries.map(e => `
-            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5" data-id="${e.id}">
+          ${entries.map((e, i) => `
+            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0 translateY-10" 
+                 data-id="${e.id}" style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
               <img src="${resolveImgSrc(e.images && e.images[0], e.imageUrl)}" 
-                   class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" 
+                   class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0" 
                    loading="lazy"
-                   onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');" />
+                   onload="this.classList.add('loaded'); this.parentElement.classList.add('loaded');"
+                   onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.parentElement.classList.add('loaded'); this.classList.add('broken-asset');" />
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
                 <p class="text-[9px] text-white font-bold uppercase tracking-wider truncate">${e.tags.brand}</p>
                 <p class="text-[7px] text-white/60 uppercase truncate">${e.title}</p>
@@ -65,7 +68,9 @@ export function renderFilterChips(callbacks) {
 
   Object.entries(AppState.filters).forEach(([type, val]) => {
     if (val) {
-      chips.push({ label: `${type.toUpperCase()}: ${val}`, type, value: val });
+      const translatedType = getTranslation(`tax_${type}`, AppState.language);
+      const translatedVal = getTranslation(val, AppState.language);
+      chips.push({ label: `${translatedType.toUpperCase()}: ${translatedVal}`, type, value: val });
     }
   });
 
