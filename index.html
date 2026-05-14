@@ -11,10 +11,10 @@
   <title>THE LEXICON | Forensic Visual Culture Archive</title>
   
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#000000">
 
   <!-- SEO & Social Meta Tags -->
@@ -110,10 +110,18 @@
       } else {
         document.documentElement.classList.add('dark');
       }
+
+      // Fail-safe boot dismissal
+      setTimeout(() => {
+        const overlay = document.getElementById('boot-overlay');
+        if (overlay && overlay.style.opacity !== '0') {
+          console.warn("BOOT_FAILSAFE_TRIGGERED");
+          overlay.style.opacity = '0';
+          setTimeout(() => overlay.classList.add('hidden'), 500);
+        }
+      }, 2500);
     })();
   </script>
-
-  <link rel="stylesheet" href="index.css" />
 
   <link rel="stylesheet" href="index.css" />
 </head>

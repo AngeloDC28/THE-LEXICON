@@ -104,7 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
   renderRecentlyViewed(archiveData, callbacks);
   
   // Initial render
-  refreshUI();
+  try {
+    refreshUI();
+  } catch (e) {
+    console.error("BOOT_INITIAL_RENDER_ERROR:", e);
+  }
 
   // Hash Routing
   window.addEventListener('hashchange', handleRouting);
@@ -120,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       overlay.style.opacity = '0';
       setTimeout(() => overlay.classList.add('hidden'), 500);
     }
-  }, 1200);
+  }, 1000);
 });
 
 function refreshUI() {
