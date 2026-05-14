@@ -45,15 +45,15 @@ export function renderImageGrid(archiveData, callbacks) {
   const grid = $('image-grid');
   if (!grid) return;
 
-  // Handle Volume Indicator
-  const volIndicator = $('active-volume-indicator');
-  const volName = $('active-volume-name');
-  if (AppState.activeVolumeId) {
-    if (volIndicator) volIndicator.classList.remove('hidden');
-    const vol = AppState.archivalVolumes.find(v => v.id === AppState.activeVolumeId);
-    if (volName) volName.textContent = vol ? vol.name : 'Unknown Volume';
+  // Handle Folder Indicator
+  const folIndicator = $('active-folder-indicator');
+  const folName = $('active-folder-name');
+  if (AppState.activeFolderId) {
+    if (folIndicator) folIndicator.classList.remove('hidden');
+    const fol = AppState.archivalFolders.find(v => v.id === AppState.activeFolderId);
+    if (folName) folName.textContent = fol ? fol.name : 'Unknown Folder';
   } else {
-    if (volIndicator) volIndicator.classList.add('hidden');
+    if (folIndicator) folIndicator.classList.add('hidden');
   }
 
   if (entries.length === 0) {
@@ -78,19 +78,20 @@ export function renderImageGrid(archiveData, callbacks) {
   }
 
   let html = '';
-  entries.forEach((entry) => {
+  entries.forEach((entry, index) => {
     const imgs = entry.images || [{src: entry.imageUrl}];
     imgs.forEach((imgObj, i) => {
       const src = resolveImgSrc(imgObj, entry.imageUrl);
+      const delay = (index % 10) * 0.05; // Staggered reveal
       html += `
         <div class="group grid-cell relative aspect-[3/4] overflow-hidden border-r border-b border-black/10 dark:border-white/10 cursor-crosshair" 
-             data-entry-id="${entry.id}" data-img-index="${i}">
+             data-entry-id="${entry.id}" data-img-index="${i}" style="transition-delay: ${delay}s">
           <img
             src="${src}"
             alt="${entry.id}"
-            class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
-            onload="this.classList.add('loaded')"
-            onerror="console.error('LEXICON_ASSET_LOAD_FAILURE:', this.src); this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');"
+            class="w-full h-full object-cover group-hover:scale-110"
+            onload="this.parentElement.classList.add('loaded')"
+            onerror="console.error('LEXICON_ASSET_LOAD_FAILURE:', this.src); this.src='${BROKEN_ASSET}'; this.parentElement.classList.add('loaded'); this.classList.add('broken-asset');"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
             <p class="text-white text-[10px] font-bold uppercase tracking-widest font-mono">${(entry.tags && entry.tags.brand) ? entry.tags.brand : 'UNKNOWN'}</p>

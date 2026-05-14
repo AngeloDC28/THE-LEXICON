@@ -4,7 +4,7 @@
  */
 
 export const AppState = {
-  currentView: 'grid', // 'grid', 'volumes', 'timeline'
+  currentView: 'grid', // 'grid', 'folders', 'timeline'
   selectedEntryId: null,
   currentImageIndex: 0,
   activeTaxonomy: null, // 'brand', 'era', etc.
@@ -21,8 +21,8 @@ export const AppState = {
     anatomy: null
   },
   searchQuery: '',
-  archivalVolumes: [],
-  activeVolumeId: null,
+  archivalFolders: [],
+  activeFolderId: null,
   previousView: 'grid',
   fidelityMode: localStorage.getItem('lexicon-fidelity') || 'forensic', // 'forensic', 'aesthetic'
 };

@@ -36,10 +36,10 @@ import {
   initFirebaseAuth, 
   toggleAuth, 
   sendSignInLink, 
-  createArchivalVolume, 
-  saveToVolume,
+  createArchivalFolder, 
+  saveToFolder,
   currentUser,
-  fetchArchivalVolumes
+  fetchArchivalFolders
 } from './modules/auth.js';
 import { 
   addRecentlyViewed, 
@@ -71,8 +71,8 @@ const callbacks = {
     const announcer = $('aria-announcer');
     if (announcer) announcer.textContent = msg;
   },
-  renderVolumes: () => renderVolumesView(),
-  renderVolumeOptions: () => renderSaveToVolumeModal(),
+  renderFolders: () => renderFoldersView(),
+  renderFolderOptions: () => renderSaveFolderModal(),
   updateBookmarkUI: (id) => {
     const btn = $('btn-bookmark-entry');
     if (btn) {
@@ -146,54 +146,50 @@ function refreshUI() {
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
 
-  // Language buttons
-  const btnLang = $('btn-lang-toggle');
-  if (btnLang) btnLang.textContent = lang.toUpperCase();
-  const btnLangMob = $('btn-lang-toggle-mobile');
-  if (btnLangMob) btnLangMob.textContent = `${t('nav_language')}: ${lang.toUpperCase()}`;
-
-  // Localize Header
-  const btnVolumes = $('btn-volumes-toggle');
-  if (btnVolumes) btnVolumes.textContent = t('nav_volumes');
-  const btnTheme = $('btn-theme-toggle');
-  if (btnTheme) btnTheme.textContent = document.documentElement.classList.contains('dark') ? t('nav_theme_dark') : t('nav_theme_light');
-  
-  const btnFidelity = $('btn-fidelity-toggle');
-  const btnFidelityMob = $('btn-fidelity-toggle-mobile');
-  if (btnFidelity || btnFidelityMob) {
-    const isForensic = AppState.fidelityMode === 'forensic';
-    const label = isForensic ? 'Fidelity: Forensic' : 'Fidelity: Aesthetic';
-    if (btnFidelity) {
-      btnFidelity.textContent = label;
-      btnFidelity.setAttribute('aria-pressed', !isForensic);
-    }
-    if (btnFidelityMob) {
-      btnFidelityMob.textContent = label;
-      btnFidelityMob.setAttribute('aria-pressed', !isForensic);
-    }
-    document.body.classList.toggle('high-fidelity', !isForensic);
-    
-    // Update Telemetry with state change
-    const telText = $('telemetry-text');
-    if (telText && AppState.fidelityMode !== telText.dataset.lastFidelity) {
-       telText.dataset.lastFidelity = AppState.fidelityMode;
-    }
-  }
-
+  // --- Header ---
   const btnAuth = $('btn-auth-toggle');
-  if (btnAuth && !currentUser) btnAuth.textContent = t('nav_signin');
+  const btnAuthMobile = $('btn-auth-toggle-mobile');
+  const authText = currentUser ? t('nav_signout') : t('nav_signin');
+  if (btnAuth) btnAuth.textContent = authText.toUpperCase();
+  if (btnAuthMobile) btnAuthMobile.textContent = authText.toUpperCase();
+  
   const btnAbout = $('btn-about');
-  if (btnAbout) btnAbout.textContent = t('nav_about');
+  const btnAboutMobile = $('btn-about-mobile');
+  if (btnAbout) btnAbout.textContent = t('nav_about').toUpperCase();
+  if (btnAboutMobile) btnAboutMobile.textContent = t('nav_about_mobile').toUpperCase();
+  
   const btnContact = $('btn-contact');
-  if (btnContact) btnContact.textContent = t('nav_contact');
+  const btnContactMobile = $('btn-contact-mobile');
+  if (btnContact) btnContact.textContent = t('nav_contact').toUpperCase();
+  if (btnContactMobile) btnContactMobile.textContent = t('nav_contact_mobile').toUpperCase();
+  
+  const btnLang = $('btn-lang-toggle');
+  const btnLangMobile = $('btn-lang-toggle-mobile');
+  if (btnLang) btnLang.textContent = t('nav_language').toUpperCase();
+  if (btnLangMobile) btnLangMobile.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
 
-  // Localize Search & Index
+  const btnTheme = $('btn-theme-toggle');
+  const btnThemeMobile = $('btn-theme-toggle-mobile');
+  const isDark = document.documentElement.classList.contains('dark');
+  const themeText = isDark ? t('nav_theme_dark') : t('nav_theme_light');
+  if (btnTheme) btnTheme.textContent = themeText.toUpperCase();
+  if (btnThemeMobile) btnThemeMobile.textContent = t('nav_theme_mobile').toUpperCase();
+
+  const btnFoldersMobile = $('btn-folders-toggle-mobile');
+  if (btnFoldersMobile) btnFoldersMobile.textContent = t('nav_folders_mobile').toUpperCase();
+
+  const telemetry = $('telemetry-text');
+  if (telemetry) telemetry.textContent = t('telemetry_status');
+
+  // --- Index Panel ---
   const indexTitle = $('index-panel-title');
   if (indexTitle) indexTitle.textContent = t('index_title');
   const btnBookmarks = $('btn-show-bookmarks');
   if (btnBookmarks) btnBookmarks.textContent = t('index_saved');
   const taxMapLabel = $('taxonomy-map-label');
   if (taxMapLabel) taxMapLabel.textContent = t('taxonomy_map');
+  const recentTitle = $$('#recent-container span')[0];
+  if (recentTitle) recentTitle.textContent = t('index_recent');
 
   const searchInput = $('search-input');
   if (searchInput) searchInput.placeholder = t('search_placeholder');
@@ -202,7 +198,7 @@ function refreshUI() {
   const btnGridLabels = $('btn-toggle-grid-meta');
   if (btnGridLabels) btnGridLabels.textContent = t('search_show_labels');
 
-  // Status Ribbon
+  // --- Status Ribbon ---
   const statusLabels = {
     'status-brand': 'status_brand',
     'status-year': 'status_year',
@@ -214,13 +210,38 @@ function refreshUI() {
     if (el) el.textContent = t(key);
   });
 
-  // Volumes View
-  const volTitle = $$('#volumes-view h1')[0];
-  if (volTitle) volTitle.textContent = t('volumes_title');
-  const btnExport = $('btn-export-all-volumes');
-  if (btnExport) btnExport.textContent = t('volumes_export');
+  // --- Active Entry Detail ---
+  const btnSaveFolder = $('btn-save-to-folder');
+  const btnSaveFolderMobile = $('btn-save-folder-mobile');
+  if (btnSaveFolder) btnSaveFolder.textContent = t('btn_save_folder');
+  if (btnSaveFolderMobile) btnSaveFolderMobile.textContent = t('btn_save_folder');
 
-  // Modals & General
+  const btnNexus = $('btn-open-matrix');
+  if (btnNexus) btnNexus.textContent = t('btn_view_nexus');
+
+  const btnCite = $('btn-cite-artifact');
+  const btnCiteMobile = $('btn-cite-artifact-mobile');
+  if (btnCite) btnCite.textContent = t('btn_cite');
+  if (btnCiteMobile) btnCiteMobile.textContent = t('btn_cite');
+
+  const btnBackGrid = $('btn-back-grid');
+  if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
+
+  const relatedTitle = $$('#related-entries h4')[0];
+  if (relatedTitle) relatedTitle.textContent = t('related_artifacts');
+
+  // --- Folders View ---
+  const folderTitle = $$('#folders-view h1')[0];
+  if (folderTitle) folderTitle.textContent = t('folders_title');
+  const btnExport = $('btn-export-all-folders');
+  if (btnExport) btnExport.textContent = t('folders_export');
+  const folderCount = $('folders-count');
+  if (folderCount) folderCount.textContent = `${AppState.archivalFolders.length} ${t('folders_initialized')}`;
+
+  const btnClearFolderFilter = $('btn-clear-folder-filter');
+  if (btnClearFolderFilter) btnClearFolderFilter.textContent = t('btn_clear_filter');
+
+  // --- Modals ---
   const bootText = $('boot-text');
   if (bootText) bootText.textContent = t('loading');
   const cookieText = $('cookie-notice-text');
@@ -235,6 +256,14 @@ function refreshUI() {
   if (authDesc) authDesc.textContent = t('modal_auth_desc');
   const btnSubmitAuth = $('btn-submit-auth');
   if (btnSubmitAuth) btnSubmitAuth.textContent = t('modal_auth_transmit');
+
+  // Save to Folder Modal
+  const saveFolderTitle = $$('#save-folder-modal h2')[0];
+  if (saveFolderTitle) saveFolderTitle.textContent = t('btn_save_folder');
+  const newFolderLabel = $$('#save-folder-modal label')[0];
+  if (newFolderLabel) newFolderLabel.textContent = t('btn_initialize').replace('[ ', '').replace(' ]', ''); // Placeholder logic
+  const btnInitialize = $('btn-create-folder');
+  if (btnInitialize) btnInitialize.textContent = t('btn_initialize');
 
   // About Modal
   const aboutTitle = $('about-modal-title');
@@ -267,6 +296,7 @@ function refreshUI() {
     termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
   }
 
+  // Render sub-views
   const filtered = getFilteredEntries(archiveData);
   renderImageGrid(filtered, callbacks);
   renderTimeline(filtered, callbacks);
@@ -288,8 +318,8 @@ function handleRouting() {
   if (hash.startsWith('#detail/')) {
     const id = hash.replace('#detail/', '');
     openDetail(id, 0, archiveData, callbacks);
-  } else if (hash === '#volumes') {
-    switchView('volumes', callbacks);
+  } else if (hash === '#folders') {
+    switchView('folders', callbacks);
   } else if (hash === '#timeline') {
     switchView('timeline', callbacks);
   } else if (hash === '#grid') {
@@ -319,28 +349,28 @@ function setupEventListeners() {
     updateHash('grid');
   });
 
-  $('btn-volumes-toggle')?.addEventListener('click', () => switchView('volumes', callbacks));
-  $('btn-volumes-toggle-mobile')?.addEventListener('click', () => {
-    switchView('volumes', callbacks);
+  $('btn-folders-toggle')?.addEventListener('click', () => switchView('folders', callbacks));
+  $('btn-folders-toggle-mobile')?.addEventListener('click', () => {
+    switchView('folders', callbacks);
     toggleHamburger();
   });
 
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
-  $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
-  
-  $('btn-fidelity-toggle')?.addEventListener('click', toggleFidelity);
-  $('btn-fidelity-toggle-mobile')?.addEventListener('click', toggleFidelity);
-  
+  $('btn-lang-toggle')?.addEventListener('click', toggleLanguage);
   $('btn-auth-toggle')?.addEventListener('click', toggleAuth);
+  $('btn-about')?.addEventListener('click', () => $('about-modal').classList.remove('hidden'));
+  $('btn-contact')?.addEventListener('click', () => $('contact-modal').classList.remove('hidden'));
+
+  // Mobile variants
+  $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+  $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
   $('btn-auth-toggle-mobile')?.addEventListener('click', toggleAuth);
 
-  $('btn-about')?.addEventListener('click', () => $('about-modal').classList.remove('hidden'));
   $('btn-about-mobile')?.addEventListener('click', () => {
     $('about-modal').classList.remove('hidden');
     toggleHamburger();
   });
 
-  $('btn-contact')?.addEventListener('click', () => $('contact-modal').classList.remove('hidden'));
   $('btn-contact-mobile')?.addEventListener('click', () => {
     $('contact-modal').classList.remove('hidden');
     toggleHamburger();
@@ -381,8 +411,8 @@ function setupEventListeners() {
     refreshUI();
   });
 
-  $('btn-clear-volume-filter')?.addEventListener('click', () => {
-    AppState.activeVolumeId = null;
+  $('btn-clear-folder-filter')?.addEventListener('click', () => {
+    AppState.activeFolderId = null;
     refreshUI();
   });
 
@@ -396,13 +426,13 @@ function setupEventListeners() {
     sendSignInLink(callbacks);
   });
 
-  // --- Volumes ---
-  $('btn-create-volume')?.addEventListener('click', () => {
-    const name = $('new-volume-name').value;
-    if (name) createArchivalVolume(name, callbacks);
+  // --- Folders ---
+  $('btn-create-folder')?.addEventListener('click', () => {
+    const name = $('new-folder-name').value;
+    if (name) createArchivalFolder(name, callbacks);
   });
 
-  $('btn-export-all-volumes')?.addEventListener('click', exportAllVolumes);
+  $('btn-export-all-folders')?.addEventListener('click', exportAllFolders);
 
   // --- Detail Actions ---
   $('btn-close-detail')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
@@ -424,24 +454,24 @@ function setupEventListeners() {
   $('btn-close-matrix')?.addEventListener('click', () => closeConnectionMatrix());
   $('matrix-backdrop')?.addEventListener('click', () => closeConnectionMatrix());
 
-  $('btn-save-to-volume')?.addEventListener('click', () => {
+  $('btn-save-to-folder')?.addEventListener('click', () => {
     if (!currentUser) {
-      showToast('Authentication required to save volumes.');
+      showToast('Authentication required to save folders.');
       toggleAuth();
       return;
     }
-    $('save-volume-modal').classList.remove('hidden');
-    renderSaveToVolumeModal();
+    $('save-folder-modal').classList.remove('hidden');
+    renderSaveFolderModal();
   });
 
-  $('btn-save-volume-mobile')?.addEventListener('click', () => {
+  $('btn-save-folder-mobile')?.addEventListener('click', () => {
     if (!currentUser) {
       showToast('Authentication required.');
       toggleAuth();
       return;
     }
-    $('save-volume-modal').classList.remove('hidden');
-    renderSaveToVolumeModal();
+    $('save-folder-modal').classList.remove('hidden');
+    renderSaveFolderModal();
   });
 
   // --- Modal Backdrops ---
@@ -600,95 +630,90 @@ function toggleLanguage() {
   showToast(`Terminal Language: ${AppState.language.toUpperCase()}`);
 }
 
-function toggleFidelity() {
-  AppState.fidelityMode = AppState.fidelityMode === 'forensic' ? 'aesthetic' : 'forensic';
-  localStorage.setItem('lexicon-fidelity', AppState.fidelityMode);
-  refreshUI();
-  updateHeaderTelemetry(`VISUAL_FIDELITY_SET: ${AppState.fidelityMode.toUpperCase()}`);
-}
+// toggleFidelity removed as per editorial requirement
 
-function renderVolumesView() {
-  const container = $('volumes-grid');
-  const countEl = $('volumes-count');
+function renderFoldersView() {
+  const container = $('folders-grid');
+  const countEl = $('folders-count');
   if (!container) return;
 
   container.innerHTML = '';
-  countEl.textContent = `${AppState.archivalVolumes.length} Volumes Initialized`;
+  // countEl is updated in refreshUI
 
-  if (AppState.archivalVolumes.length === 0) {
-    container.innerHTML = '<div class="col-span-full py-20 text-center opacity-40 font-mono text-xs uppercase tracking-widest">No Archival Volumes Detected.</div>';
+  if (AppState.archivalFolders.length === 0) {
+    container.innerHTML = '<div class="col-span-full py-20 text-center opacity-40 font-mono text-xs uppercase tracking-widest">No Archival Folders Detected.</div>';
     return;
   }
 
-  AppState.archivalVolumes.forEach(vol => {
+  AppState.archivalFolders.forEach(fol => {
     const card = document.createElement('div');
     card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all group';
     card.innerHTML = `
       <div class="flex justify-between items-start mb-4">
-        <h3 class="text-base font-bold font-mono uppercase tracking-wider">${vol.name}</h3>
-        <button class="btn-export-vol text-[8px] border border-current px-2 py-0.5 opacity-0 group-hover:opacity-100" data-vol-id="${vol.id}">EXPORT_JSON</button>
+        <h3 class="text-base font-bold font-mono uppercase tracking-wider">${fol.name}</h3>
+        <button class="btn-export-fol text-[8px] border border-current px-2 py-0.5 opacity-0 group-hover:opacity-100" data-fol-id="${fol.id}">EXPORT_JSON</button>
       </div>
-      ${vol.notes ? `<p class="text-[9px] font-mono opacity-60 mb-4 line-clamp-2 uppercase tracking-tight">${vol.notes}</p>` : `<p class="text-[9px] font-mono opacity-30 mb-4 uppercase tracking-widest italic">No observations logged.</p>`}
+      ${fol.notes ? `<p class="text-[9px] font-mono opacity-60 mb-4 line-clamp-2 uppercase tracking-tight">${fol.notes}</p>` : `<p class="text-[9px] font-mono opacity-30 mb-4 uppercase tracking-widest italic">No observations logged.</p>`}
       <div class="flex justify-between items-end">
-        <span class="text-[10px] font-mono opacity-60 uppercase">${vol.lookIds ? vol.lookIds.length : 0} Artifacts Audited</span>
-        <span class="text-[9px] font-mono opacity-40 italic">${new Date(vol.createdAt).toLocaleDateString()}</span>
+        <span class="text-[10px] font-mono opacity-60 uppercase">${fol.lookIds ? fol.lookIds.length : 0} Artifacts Audited</span>
+        <span class="text-[9px] font-mono opacity-40 italic">${new Date(fol.createdAt).toLocaleDateString()}</span>
       </div>
     `;
     card.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-export-vol')) {
+      if (e.target.classList.contains('btn-export-fol')) {
         e.stopPropagation();
-        exportVolume(vol.id);
+        exportFolder(fol.id);
         return;
       }
-      AppState.activeVolumeId = vol.id;
+      AppState.activeFolderId = fol.id;
       switchView('grid', callbacks);
       refreshUI();
-      showToast(`Browsing ${vol.name}`);
+      showToast(`Browsing ${fol.name}`);
     });
     container.appendChild(card);
   });
 }
 
-function renderSaveToVolumeModal() {
-  const container = $('volume-list-container');
+function renderSaveFolderModal() {
+  const container = $('folder-list-container');
   if (!container) return;
   container.innerHTML = '';
 
-  if (AppState.archivalVolumes.length === 0) {
-    container.innerHTML = '<p class="text-[10px] font-mono opacity-40 uppercase py-4">No existing volumes found.</p>';
+  if (AppState.archivalFolders.length === 0) {
+    container.innerHTML = '<p class="text-[10px] font-mono opacity-40 uppercase py-4">No existing folders found.</p>';
     return;
   }
 
-  AppState.archivalVolumes.forEach(vol => {
+  AppState.archivalFolders.forEach(fol => {
     const btn = document.createElement('button');
     btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
     btn.innerHTML = `
-      <span>${vol.name}</span>
-      <span class="opacity-50">${vol.lookIds ? vol.lookIds.length : 0}</span>
+      <span>${fol.name}</span>
+      <span class="opacity-50">${fol.lookIds ? fol.lookIds.length : 0}</span>
     `;
     btn.addEventListener('click', () => {
-      saveToVolume(vol.id, AppState.selectedEntryId, callbacks);
+      saveToFolder(fol.id, AppState.selectedEntryId, callbacks);
     });
     container.appendChild(btn);
   });
 }
 
-function exportVolume(volId) {
-  const vol = AppState.archivalVolumes.find(v => v.id === volId);
-  if (!vol) return;
-  const entries = vol.lookIds.map(id => archiveData.find(e => e.id === id)).filter(Boolean);
+function exportFolder(folId) {
+  const fol = AppState.archivalFolders.find(f => f.id === folId);
+  if (!fol) return;
+  const entries = fol.lookIds.map(id => archiveData.find(e => e.id === id)).filter(Boolean);
   const data = {
-    volume: vol.name,
+    folder: fol.name,
     exportedAt: new Date().toISOString(),
     artifacts: entries
   };
-  downloadJSON(data, `LEXICON_VOL_${vol.name}.json`);
+  downloadJSON(data, `LEXICON_FOLDER_${fol.name}.json`);
 }
 
-function exportAllVolumes() {
+function exportAllFolders() {
   const data = {
     exportedAt: new Date().toISOString(),
-    volumes: AppState.archivalVolumes
+    folders: AppState.archivalFolders
   };
   downloadJSON(data, `LEXICON_FULL_DATABASE_EXPORT.json`);
 }

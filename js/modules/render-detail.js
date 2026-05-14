@@ -6,6 +6,7 @@
 import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
+import { getTranslation } from './translations.js';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -130,14 +131,13 @@ function renderImage(entry) {
       imgEl.classList.add('broken-asset');
     };
     
-    // Improved animation handling: clear existing and re-trigger
-    imgEl.classList.remove('scanning');
-    void imgEl.offsetWidth; // Trigger reflow
-    imgEl.classList.add('scanning');
-    
-    // Remove scan after 2 seconds for clarity
-    if (window._scanTimeout) clearTimeout(window._scanTimeout);
-    window._scanTimeout = setTimeout(() => imgEl.classList.remove('scanning'), 2000);
+    // Trigger Scan Animation
+    const scanLine = $('scan-line');
+    if (scanLine) {
+      scanLine.classList.add('active');
+      if (window._scanTimeout) clearTimeout(window._scanTimeout);
+      window._scanTimeout = setTimeout(() => scanLine.classList.remove('active'), 2500);
+    }
   }
 
   const titleEl = $('active-entry-title');
@@ -150,13 +150,16 @@ function renderMetadata(entry) {
   const grid = $('metadata-grid');
   if (!grid) return;
 
+  const lang = AppState.language;
+  const t = (key) => getTranslation(key, lang);
+
   const fields = [
-    { label: 'ERA', value: entry.tags.era },
-    { label: 'GENDER', value: entry.tags.gender },
-    { label: 'POLITICS', value: entry.tags.politics },
-    { label: 'THEORIES', value: entry.tags.theories },
-    { label: 'MATERIALS', value: entry.tags.materials },
-    { label: 'GEOGRAPHY', value: entry.tags.geography }
+    { label: t('tax_era'), value: entry.tags.era },
+    { label: t('tax_gender'), value: entry.tags.gender },
+    { label: t('tax_politics'), value: entry.tags.politics },
+    { label: t('tax_theories'), value: entry.tags.theories },
+    { label: t('tax_materials'), value: entry.tags.materials },
+    { label: t('tax_geography'), value: entry.tags.geography }
   ];
 
   grid.innerHTML = fields.map(f => `

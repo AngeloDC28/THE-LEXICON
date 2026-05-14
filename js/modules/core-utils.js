@@ -12,10 +12,11 @@ export const BROKEN_ASSET = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL
 
 export const resolveImgSrc = (imgObj, fallback) => {
   let src = (imgObj && imgObj.src) ? imgObj.src : fallback;
-  if (!src) return BROKEN_ASSET;
-  // Ensure absolute path for Vite public assets
+  if (!src || typeof src !== 'string') return BROKEN_ASSET;
+  
+  // Ensure absolute path resolution from site root for consistent asset loading
   if (src.startsWith('THE-LEXICON-ASSETS')) {
-    return window.location.origin + '/' + src;
+    return '/' + src;
   }
   return src;
 };

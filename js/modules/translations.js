@@ -6,14 +6,14 @@
 export const translations = {
   en: {
     // Header & Navigation
-    nav_volumes: 'Volumes',
+    nav_folders: 'Folders',
     nav_theme_light: 'Theme: Light',
     nav_theme_dark: 'Theme: Dark',
     nav_signin: 'Sign In',
     nav_signout: 'Sign Out',
     nav_about: 'About',
     nav_contact: 'Contact',
-    nav_language: 'Language',
+    nav_language: 'Languages',
     
     // Index Panel
     index_title: 'Index / A-Z',
@@ -22,8 +22,27 @@ export const translations = {
     search_placeholder: 'Query brand, era, or structural intervention...',
     search_clear: 'Clear',
     search_show_labels: 'Show grid labels while scrolling',
+    tax_brand: 'Brands',
+    tax_era: 'Era',
+    tax_politics: 'Politics',
+    tax_theories: 'Theory',
+    tax_gender: 'Identity',
+    tax_materials: 'Materials',
+    tax_geography: 'Location',
+    tax_anatomy: 'Anatomy',
+    tax_format: 'Format',
     taxonomy_map: 'Research Index',
     related_artifacts: 'Related Artifacts',
+    telemetry_status: 'FORENSIC ARCHIVE // STATUS: NOMINAL',
+    nav_folders_mobile: 'Folders',
+    nav_search_mobile: 'Search',
+    nav_theme_mobile: 'Theme',
+    nav_fidelity_mobile: 'Fidelity: Forensic',
+    nav_signin_mobile: 'Sign In',
+    nav_signout_mobile: 'Sign Out',
+    nav_about_mobile: 'About',
+    nav_contact_mobile: 'Contact',
+    nav_language_mobile: 'Language: EN',
     
     // Status Ribbon
     status_brand: 'Brand',
@@ -32,9 +51,14 @@ export const translations = {
     status_entry: 'Entry',
     
     // Active Entry
-    btn_save_volume: 'Save to Volume',
+    btn_save_folder: 'Save to Folder',
     btn_cite: 'Cite',
     btn_back_grid: 'Back to Grid',
+    btn_view_nexus: 'View Nexus',
+    btn_clear_filter: '[ CLEAR_FILTER ]',
+    btn_initialize: '[ Initialize ]',
+    btn_export_json: 'EXPORT_JSON',
+    btn_close: '[ X Close ]',
     
     // Views
     view_grid: 'Grid View',
@@ -42,10 +66,10 @@ export const translations = {
     view_archive_grid: 'ARCHIVE_GRID',
     view_evolution_matrix: 'EVOLUTION_MATRIX',
     
-    // Volumes
-    volumes_title: 'Archival Volumes',
-    volumes_initialized: 'Volumes Initialized',
-    volumes_export: '[ Export Database ]',
+    // Folders
+    folders_title: 'Archival Folders',
+    folders_initialized: 'Folders Initialized',
+    folders_export: '[ Export Database ]',
     
     // Modals
     modal_terminal_access: 'Terminal Access',
@@ -65,16 +89,16 @@ export const translations = {
     ],
     
     // General
-    loading: 'LOADING THE LEXICON...',
+    loading: 'LOADING THE LEXICON',
     accept_terms: '[ ACCEPT_TERMS ]',
-    cookie_notice: 'This directory uses persistent local storage (cookies) to maintain terminal state and archival volumes.',
+    cookie_notice: 'This directory uses persistent local storage (cookies) to maintain terminal state and archival folders.',
     close: 'Close',
     
     // Legal
     legal_privacy_title: 'Privacy Protocol',
     legal_privacy_body: [
       '1. DATA COLLECTION: THE LEXICON operates as a decentralized research terminal. We do not engage in the commercial harvest of personal metadata.',
-      '2. LOCAL STORAGE: Archival volumes and terminal preferences are stored locally on your device. Clearing your browser cache will reset your terminal state.',
+      '2. LOCAL STORAGE: Archival folders and terminal preferences are stored locally on your device. Clearing your browser cache will reset your terminal state.',
       '3. AUTHENTICATION: Email addresses provided for terminal access are used exclusively for magic link delivery and are encrypted at rest.'
     ],
     legal_terms_title: 'Terms of Service',
@@ -85,14 +109,14 @@ export const translations = {
     ]
   },
   'en-gb': {
-    nav_volumes: 'Volumes',
+    nav_folders: 'Folders',
     nav_theme_light: 'Theme: Light',
     nav_theme_dark: 'Theme: Dark',
     nav_signin: 'Sign In',
     nav_signout: 'Sign Out',
     nav_about: 'About',
     nav_contact: 'Contact',
-    nav_language: 'Language',
+    nav_language: 'Languages',
     
     index_title: 'Index / A-Z',
     index_saved: '★ Saved',
@@ -108,7 +132,7 @@ export const translations = {
     status_season: 'Season',
     status_entry: 'Entry',
     
-    btn_save_volume: 'Save to Volume',
+    btn_save_folder: 'Save to Folder',
     btn_cite: 'Cite',
     btn_back_grid: 'Back to Grid',
     
@@ -117,9 +141,9 @@ export const translations = {
     view_archive_grid: 'ARCHIVE_GRID',
     view_evolution_matrix: 'EVOLUTION_MATRIX',
     
-    volumes_title: 'Archival Volumes',
-    volumes_initialized: 'Volumes Initialized',
-    volumes_export: '[ Export Database ]',
+    folders_title: 'Archival Folders',
+    folders_initialized: 'Folders Initialized',
+    folders_export: '[ Export Database ]',
     
     modal_terminal_access: 'Terminal Access',
     modal_auth_desc: 'Enter your credentials to receive a magic link for terminal access.',
@@ -137,16 +161,16 @@ export const translations = {
       'Location: London, United Kingdom'
     ],
     
-    loading: 'LOADING THE LEXICON...',
+    loading: 'LOADING THE LEXICON',
     accept_terms: '[ ACCEPT_TERMS ]',
-    cookie_notice: 'This directory uses persistent local storage (cookies) to maintain terminal state and archival volumes.',
+    cookie_notice: 'This directory uses persistent local storage (cookies) to maintain terminal state and archival folders.',
     close: 'Close',
     
     // Legal
     legal_privacy_title: 'Privacy Protocol',
     legal_privacy_body: [
       '1. DATA COLLECTION: THE LEXICON operates as a decentralized research terminal. We do not engage in the commercial harvest of personal metadata.',
-      '2. LOCAL STORAGE: Archival volumes and terminal preferences are stored locally on your device. Clearing your browser cache will reset your terminal state.',
+      '2. LOCAL STORAGE: Archival folders and terminal preferences are stored locally on your device. Clearing your browser cache will reset your terminal state.',
       '3. AUTHENTICATION: Email addresses provided for terminal access are used exclusively for magic link delivery and are encrypted at rest.'
     ],
     legal_terms_title: 'Terms of Service',
@@ -157,7 +181,7 @@ export const translations = {
     ]
   },
   fr: {
-    nav_volumes: 'Volumes',
+    nav_folders: 'Folders',
     nav_theme_light: 'Thème: Clair',
     nav_theme_dark: 'Thème: Sombre',
     nav_signin: 'Se connecter',
@@ -180,7 +204,7 @@ export const translations = {
     status_season: 'Saison',
     status_entry: 'Entrée',
     
-    btn_save_volume: 'Enregistrer dans le Volume',
+    btn_save_folder: 'Enregistrer dans le Folder',
     btn_cite: 'Citer',
     btn_back_grid: 'Retour à la Grille',
     
@@ -189,9 +213,9 @@ export const translations = {
     view_archive_grid: 'GRILLE_ARCHIVE',
     view_evolution_matrix: 'MATRICE_EVOLUTION',
     
-    volumes_title: 'Volumes d\'Archive',
-    volumes_initialized: 'Volumes Initialisés',
-    volumes_export: '[ Exporter la Base ]',
+    folders_title: 'Folders d\'Archive',
+    folders_initialized: 'Folders Initialisés',
+    folders_export: '[ Exporter la Base ]',
     
     modal_terminal_access: 'Accès Terminal',
     modal_auth_desc: 'Entrez vos identifiants pour recevoir un lien magique.',
@@ -215,7 +239,7 @@ export const translations = {
     close: 'Fermer'
   },
   it: {
-    nav_volumes: 'Volumi',
+    nav_folders: 'Volumi',
     nav_theme_light: 'Tema: Chiaro',
     nav_theme_dark: 'Tema: Scuro',
     nav_signin: 'Accedi',
@@ -238,7 +262,7 @@ export const translations = {
     status_season: 'Stagione',
     status_entry: 'Voce',
     
-    btn_save_volume: 'Salva nel Volume',
+    btn_save_folder: 'Salva nel Folder',
     btn_cite: 'Cita',
     btn_back_grid: 'Torna alla Griglia',
     
@@ -247,9 +271,9 @@ export const translations = {
     view_archive_grid: 'GRIGLIA_ARCHIVIO',
     view_evolution_matrix: 'MATRICE_EVOLUZIONE',
     
-    volumes_title: 'Volumi d\'Archivio',
-    volumes_initialized: 'Volumi Inizializzati',
-    volumes_export: '[ Esporta Database ]',
+    folders_title: 'Volumi d\'Archivio',
+    folders_initialized: 'Volumi Inizializzati',
+    folders_export: '[ Esporta Database ]',
     
     modal_terminal_access: 'Accesso Terminale',
     modal_auth_desc: 'Inserisci le tue credenziali per ricevere un link magico.',
@@ -273,14 +297,14 @@ export const translations = {
     close: 'Chiudi'
   },
   'en-us': {
-    nav_volumes: 'Volumes',
+    nav_folders: 'Folders',
     nav_theme_light: 'Light Mode',
     nav_theme_dark: 'Dark Mode',
     nav_signin: 'Log In',
     nav_signout: 'Log Out',
     nav_about: 'About',
     nav_contact: 'Contact',
-    nav_language: 'Language',
+    nav_language: 'Languages',
     index_title: 'Index / A-Z',
     index_saved: '★ Bookmarked',
     index_recent: 'Recent Searches',
@@ -293,16 +317,16 @@ export const translations = {
     status_year: 'Year',
     status_season: 'Season',
     status_entry: 'Entry',
-    btn_save_volume: 'Add to Volume',
+    btn_save_folder: 'Add to Folder',
     btn_cite: 'Citation',
     btn_back_grid: 'Exit to Grid',
     view_grid: 'Grid Layout',
     view_timeline: 'Timeline Layout',
     view_archive_grid: 'ARCHIVE_CORE',
     view_evolution_matrix: 'EVO_MATRIX',
-    volumes_title: 'Archival Volumes',
-    volumes_initialized: 'Volumes Initialized',
-    volumes_export: '[ Export System DB ]',
+    folders_title: 'Archival Folders',
+    folders_initialized: 'Folders Initialized',
+    folders_export: '[ Export System DB ]',
     modal_terminal_access: 'Terminal Access',
     modal_auth_desc: 'Enter credentials for a secure login link.',
     modal_auth_transmit: '[ Transmit ]',
@@ -324,7 +348,7 @@ export const translations = {
     close: 'Dismiss'
   },
   es: {
-    nav_volumes: 'Volúmenes',
+    nav_folders: 'Volúmenes',
     nav_theme_light: 'Modo Claro',
     nav_theme_dark: 'Modo Oscuro',
     nav_signin: 'Acceder',
@@ -344,16 +368,16 @@ export const translations = {
     status_year: 'Año',
     status_season: 'Temporada',
     status_entry: 'Entrada',
-    btn_save_volume: 'Guardar en Volumen',
+    btn_save_folder: 'Guardar en Folder',
     btn_cite: 'Citar',
     btn_back_grid: 'Volver a la cuadrícula',
     view_grid: 'Vista Cuadrícula',
     view_timeline: 'Vista Cronológica',
     view_archive_grid: 'MATRIZ_ARCHIVO',
     view_evolution_matrix: 'MATRIZ_EVOLUCIÓN',
-    volumes_title: 'Volúmenes de Archivo',
-    volumes_initialized: 'Volúmenes Inicializados',
-    volumes_export: '[ Exportar Base ]',
+    folders_title: 'Volúmenes de Archivo',
+    folders_initialized: 'Volúmenes Inicializados',
+    folders_export: '[ Exportar Base ]',
     modal_terminal_access: 'Acceso al Terminal',
     modal_auth_desc: 'Ingrese sus credenciales para recibir un enlace mágico.',
     modal_auth_transmit: '[ Transmitir ]',
@@ -375,7 +399,7 @@ export const translations = {
     close: 'Cerrar'
   },
   de: {
-    nav_volumes: 'Bände',
+    nav_folders: 'Bände',
     nav_theme_light: 'Heller Modus',
     nav_theme_dark: 'Dunkler Modus',
     nav_signin: 'Anmelden',
@@ -395,16 +419,16 @@ export const translations = {
     status_year: 'Jahr',
     status_season: 'Saison',
     status_entry: 'Eintrag',
-    btn_save_volume: 'In Band speichern',
+    btn_save_folder: 'In Band speichern',
     btn_cite: 'Zitieren',
     btn_back_grid: 'Zurück zur Übersicht',
     view_grid: 'Rasteransicht',
     view_timeline: 'Zeitstrahl',
     view_archive_grid: 'ARCHIV_RASTER',
     view_evolution_matrix: 'EVO_MATRIX',
-    volumes_title: 'Archivbände',
-    volumes_initialized: 'Bände initialisiert',
-    volumes_export: '[ Datenbank exportieren ]',
+    folders_title: 'Archivbände',
+    folders_initialized: 'Bände initialisiert',
+    folders_export: '[ Datenbank exportieren ]',
     modal_terminal_access: 'Terminal-Zugang',
     modal_auth_desc: 'Anmeldedaten für Magic Link eingeben.',
     modal_auth_transmit: '[ Senden ]',
@@ -426,7 +450,7 @@ export const translations = {
     close: 'Schließen'
   },
   pt: {
-    nav_volumes: 'Volumes',
+    nav_folders: 'Folders',
     nav_theme_light: 'Modo Claro',
     nav_theme_dark: 'Modo Escuro',
     nav_signin: 'Entrar',
@@ -446,16 +470,16 @@ export const translations = {
     status_year: 'Ano',
     status_season: 'Temporada',
     status_entry: 'Entrada',
-    btn_save_volume: 'Salvar no Volume',
+    btn_save_folder: 'Salvar no Folder',
     btn_cite: 'Citar',
     btn_back_grid: 'Voltar para Grade',
     view_grid: 'Vista em Grade',
     view_timeline: 'Linha do Tempo',
     view_archive_grid: 'MATRIZ_ARQUIVO',
     view_evolution_matrix: 'MATRIZ_EVOLUÇÃO',
-    volumes_title: 'Volumes de Arquivo',
-    volumes_initialized: 'Volumes Inicializados',
-    volumes_export: '[ Exportar Base ]',
+    folders_title: 'Folders de Arquivo',
+    folders_initialized: 'Folders Inicializados',
+    folders_export: '[ Exportar Base ]',
     modal_terminal_access: 'Acesso ao Terminal',
     modal_auth_desc: 'Insira suas credenciais para receber um link mágico.',
     modal_auth_transmit: '[ Transmitir ]',
@@ -477,7 +501,7 @@ export const translations = {
     close: 'Fechar'
   },
   ru: {
-    nav_volumes: 'Тома',
+    nav_folders: 'Тома',
     nav_theme_light: 'Светлая тема',
     nav_theme_dark: 'Темная тема',
     nav_signin: 'Войти',
@@ -497,16 +521,16 @@ export const translations = {
     status_year: 'Год',
     status_season: 'Сезон',
     status_entry: 'Запись',
-    btn_save_volume: 'Сохранить в том',
+    btn_save_folder: 'Сохранить в том',
     btn_cite: 'Цитата',
     btn_back_grid: 'Назад к сетке',
     view_grid: 'Сетка',
     view_timeline: 'Таймлайн',
     view_archive_grid: 'АРХИВНАЯ_СЕТКА',
     view_evolution_matrix: 'МАТРИЦА_ЭВОЛЮЦИИ',
-    volumes_title: 'Архивные тома',
-    volumes_initialized: 'Тома инициализированы',
-    volumes_export: '[ Экспорт базы ]',
+    folders_title: 'Архивные тома',
+    folders_initialized: 'Тома инициализированы',
+    folders_export: '[ Экспорт базы ]',
     modal_terminal_access: 'Доступ к терминалу',
     modal_auth_desc: 'Введите учетные данные для получения ссылки.',
     modal_auth_transmit: '[ Передать ]',
@@ -528,7 +552,7 @@ export const translations = {
     close: 'Закрыть'
   },
   zh: {
-    nav_volumes: '卷册',
+    nav_folders: '卷册',
     nav_theme_light: '浅色模式',
     nav_theme_dark: '深色模式',
     nav_signin: '登录',
@@ -548,16 +572,16 @@ export const translations = {
     status_year: '年份',
     status_season: '季节',
     status_entry: '条目',
-    btn_save_volume: '保存至卷册',
+    btn_save_folder: '保存至卷册',
     btn_cite: '引用',
     btn_back_grid: '返回网格',
     view_grid: '网格视图',
     view_timeline: '时间轴视图',
     view_archive_grid: '存档网格',
     view_evolution_matrix: '演变矩阵',
-    volumes_title: '档案卷册',
-    volumes_initialized: '卷册已初始化',
-    volumes_export: '[ 导出数据库 ]',
+    folders_title: '档案卷册',
+    folders_initialized: '卷册已初始化',
+    folders_export: '[ 导出数据库 ]',
     modal_terminal_access: '终端访问',
     modal_auth_desc: '输入凭据以获取登录链接。',
     modal_auth_transmit: '[ 发送 ]',
@@ -579,7 +603,7 @@ export const translations = {
     close: '关闭'
   },
   ja: {
-    nav_volumes: 'ボリューム',
+    nav_folders: 'ボリューム',
     nav_theme_light: 'ライトモード',
     nav_theme_dark: 'ダークモード',
     nav_signin: 'ログイン',
@@ -599,16 +623,16 @@ export const translations = {
     status_year: '年',
     status_season: 'シーズン',
     status_entry: 'エントリ',
-    btn_save_volume: '保存',
+    btn_save_folder: '保存',
     btn_cite: '引用',
     btn_back_grid: 'グリッドに戻る',
     view_grid: 'グリッド表示',
     view_timeline: 'タイムライン表示',
     view_archive_grid: 'アーカイブ・グリッド',
     view_evolution_matrix: '進化マトリクス',
-    volumes_title: 'アーカイブ・ボリューム',
-    volumes_initialized: '初期化完了',
-    volumes_export: '[ データベース書き出し ]',
+    folders_title: 'アーカイブ・ボリューム',
+    folders_initialized: '初期化完了',
+    folders_export: '[ データベース書き出し ]',
     modal_terminal_access: '端末アクセス',
     modal_auth_desc: 'マジックリンクを受け取るための認証情報を入力してください。',
     modal_auth_transmit: '[ 送信 ]',
@@ -630,7 +654,7 @@ export const translations = {
     close: '閉じる'
   },
   ko: {
-    nav_volumes: '볼륨',
+    nav_folders: '볼륨',
     nav_theme_light: '라이트 모드',
     nav_theme_dark: '다크 모드',
     nav_signin: '로그인',
@@ -650,16 +674,16 @@ export const translations = {
     status_year: '연도',
     status_season: '시즌',
     status_entry: '항목',
-    btn_save_volume: '볼륨에 저장',
+    btn_save_folder: '볼륨에 저장',
     btn_cite: '인용',
     btn_back_grid: '그리드로 돌아가기',
     view_grid: '그리드 보기',
     view_timeline: '타임라인 보기',
     view_archive_grid: '아카이브_그리드',
     view_evolution_matrix: '진화_매트릭스',
-    volumes_title: '아카이브 볼륨',
-    volumes_initialized: '볼륨 초기화됨',
-    volumes_export: '[ 데이터베이스 내보내기 ]',
+    folders_title: '아카이브 볼륨',
+    folders_initialized: '볼륨 초기화됨',
+    folders_export: '[ 데이터베이스 내보내기 ]',
     modal_terminal_access: '터미널 접속',
     modal_auth_desc: '매직 링크를 받으려면 자격 증명을 입력하세요.',
     modal_auth_transmit: '[ 전송 ]',

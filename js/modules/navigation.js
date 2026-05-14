@@ -21,7 +21,7 @@ export function switchView(viewId, callbacks) {
   AppState.currentView = viewId;
 
   // Views mapping
-  const views = ['grid-view', 'volumes-view', 'timeline-view'];
+  const views = ['grid-view', 'folders-view', 'timeline-view'];
   views.forEach(v => {
     const el = $(v);
     if (el) {
@@ -46,8 +46,8 @@ export function switchView(viewId, callbacks) {
   // Header Title State
   const headerTitle = $('header-title');
   if (headerTitle) {
-    if (viewId === 'volumes') {
-      headerTitle.innerHTML = 'LEXICON / VOLUMES';
+    if (viewId === 'folders') {
+      headerTitle.innerHTML = 'LEXICON / FOLDERS';
     } else if (viewId === 'timeline') {
       headerTitle.innerHTML = 'LEXICON / CHRONOLOGY';
     } else {
@@ -59,8 +59,8 @@ export function switchView(viewId, callbacks) {
   updateNavStates(viewId);
 
   // View Specific Logic
-  if (viewId === 'volumes' && callbacks?.renderVolumes) {
-    callbacks.renderVolumes();
+  if (viewId === 'folders' && callbacks?.renderFolders) {
+    callbacks.renderFolders();
   }
 
   if (callbacks?.onUpdate) callbacks.onUpdate();
@@ -87,13 +87,13 @@ function updateNavStates(viewId) {
     }
   }
 
-  // Volumes Button (Header)
-  const btnVolumes = $('btn-volumes-toggle');
-  if (btnVolumes) {
-    if (viewId === 'volumes') {
-      btnVolumes.classList.add('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
+  // Folders Button (Header)
+  const btnFolders = $('btn-folders-toggle');
+  if (btnFolders) {
+    if (viewId === 'folders') {
+      btnFolders.classList.add('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
     } else {
-      btnVolumes.classList.remove('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
+      btnFolders.classList.remove('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
     }
   }
 }

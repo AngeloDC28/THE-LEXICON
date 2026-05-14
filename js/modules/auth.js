@@ -1,6 +1,6 @@
 /**
  * auth.js
- * Firebase Auth and Archival Volumes logic (Firestore version).
+ * Firebase Auth and Archival Folders logic (Firestore version).
  */
 
 import { $ } from './core-utils.js';
@@ -41,12 +41,12 @@ export function initFirebaseAuth(callbacks) {
       if (btnAuth) btnAuth.textContent = 'Sign Out';
       if (btnAuthMobile) btnAuthMobile.textContent = 'Sign Out';
       $('auth-modal')?.classList.add('hidden');
-      fetchArchivalVolumes(callbacks);
+      fetchArchivalFolders(callbacks);
     } else {
       if (btnAuth) btnAuth.textContent = 'Sign In';
       if (btnAuthMobile) btnAuthMobile.textContent = 'Sign In';
-      AppState.archivalVolumes = [];
-      if (callbacks && callbacks.renderVolumes) callbacks.renderVolumes();
+      AppState.archivalFolders = [];
+      if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
     }
   });
 }
@@ -87,53 +87,53 @@ export function sendSignInLink(callbacks) {
     });
 }
 
-export async function fetchArchivalVolumes(callbacks) {
+export async function fetchArchivalFolders(callbacks) {
   if (!currentUser || !window.firebaseDb) return;
   try {
-    const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
+    const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_folders`);
     const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
     const querySnapshot = await window.getDocs(q);
-    AppState.archivalVolumes = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    AppState.archivalFolders = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
     
-    if (callbacks && callbacks.renderVolumes) callbacks.renderVolumes();
-    if (callbacks && callbacks.renderVolumeOptions) callbacks.renderVolumeOptions();
+    if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
+    if (callbacks && callbacks.renderFolderOptions) callbacks.renderFolderOptions();
   } catch (err) {
-    console.error("Fetch Volumes Error:", err);
+    console.error("Fetch Folders Error:", err);
   }
 }
 
-export async function createArchivalVolume(name, callbacks) {
+export async function createArchivalFolder(name, callbacks) {
   if (!currentUser || !name) return;
   try {
-    const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_volumes`);
+    const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_folders`);
     await window.addDoc(colRef, {
       name: name.toUpperCase(),
       createdAt: new Date().toISOString(),
       lookIds: []
     });
-    if (callbacks && callbacks.showToast) callbacks.showToast('New Volume Initialized.');
-    fetchArchivalVolumes(callbacks);
+    if (callbacks && callbacks.showToast) callbacks.showToast('New Folder Initialized.');
+    fetchArchivalFolders(callbacks);
     
-    const input = $('new-volume-name');
+    const input = $('new-folder-name');
     if (input) input.value = '';
   } catch (err) {
-    console.error("Create Volume Error:", err);
+    console.error("Create Folder Error:", err);
     if (callbacks && callbacks.showToast) callbacks.showToast('Initialization failed.');
   }
 }
 
-export async function saveToVolume(volumeId, entryId, callbacks) {
+export async function saveToFolder(folderId, entryId, callbacks) {
   if (!currentUser || !entryId) return;
   try {
-    const docRef = window.doc(window.firebaseDb, `users/${currentUser.uid}/archival_volumes/${volumeId}`);
+    const docRef = window.doc(window.firebaseDb, `users/${currentUser.uid}/archival_folders/${folderId}`);
     await window.updateDoc(docRef, {
       lookIds: window.arrayUnion(entryId)
     });
-    if (callbacks && callbacks.showToast) callbacks.showToast('Artifact Synced to Volume.');
-    if (callbacks && callbacks.closeModal) callbacks.closeModal('save-volume');
-    fetchArchivalVolumes(callbacks);
+    if (callbacks && callbacks.showToast) callbacks.showToast('Artifact Synced to Folder.');
+    if (callbacks && callbacks.closeModal) callbacks.closeModal('save-folder');
+    fetchArchivalFolders(callbacks);
   } catch (err) {
-    console.error("Save to Volume Error:", err);
+    console.error("Save to Folder Error:", err);
     if (callbacks && callbacks.showToast) callbacks.showToast('Sync failed.');
   }
 }
