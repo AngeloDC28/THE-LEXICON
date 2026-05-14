@@ -115,10 +115,16 @@
       // Fail-safe boot dismissal
       setTimeout(() => {
         const overlay = document.getElementById('boot-overlay');
-        if (overlay && overlay.style.opacity !== '0') {
+        const root = document.getElementById('app-root');
+        if (overlay && !overlay.classList.contains('hidden')) {
           console.warn("BOOT_FAILSAFE_TRIGGERED");
-          overlay.style.opacity = '0';
-          setTimeout(() => overlay.classList.add('hidden'), 500);
+          overlay.classList.add('boot-fade-out');
+          setTimeout(() => {
+            overlay.classList.add('hidden');
+            if (root) root.classList.remove('opacity-0');
+          }, 500);
+        } else if (root && root.classList.contains('opacity-0')) {
+          root.classList.remove('opacity-0');
         }
       }, 2500);
     })();
@@ -128,6 +134,7 @@
 </head>
 
 <body>
+  <!-- Custom Brutalist Cursor (Desktop Only) -->
   <div id="custom-cursor"></div>
 
   <!-- ARIA Live Region for accessibility announcements -->
@@ -138,11 +145,11 @@
   <!-- ============================================================
        BOOT OVERLAY (auto-dismiss after 1.2s)
   ============================================================ -->
-  <div id="boot-overlay">
-    <span class="boot-text" id="boot-text">LOADING THE LEXICON...</span><span class="boot-cursor"></span>
+  <div id="boot-overlay" class="pointer-events-auto">
+    <div class="boot-text">BOOTING LEXICON <span id="boot-status">INITIALIZING</span><span class="boot-cursor"></span></div>
   </div>
 
-  <div id="app-root">
+  <div id="app-root" class="opacity-0 transition-opacity duration-1000">
 
     <!-- ============================================================
          TOP HEADER BAR
@@ -518,9 +525,6 @@
       <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
     </div>
   </div>
-
-  <!-- CUSTOM FORENSIC CURSOR -->
-  <div id="custom-cursor"></div>
 
   <!-- MAIN ENTRY POINT -->
   <script type="module" src="js/app.js"></script>

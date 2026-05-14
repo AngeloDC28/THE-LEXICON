@@ -129,10 +129,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Auto-dismiss boot overlay
   setTimeout(() => {
     const overlay = $('boot-overlay');
+    const root = $('app-root');
     if (overlay) {
-      overlay.style.transition = 'opacity 0.5s ease-out';
-      overlay.style.opacity = '0';
-      setTimeout(() => overlay.classList.add('hidden'), 500);
+      overlay.classList.add('boot-fade-out');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        if (root) root.classList.remove('opacity-0');
+      }, 500);
+    } else if (root) {
+      root.classList.remove('opacity-0');
     }
   }, 1000);
 });
