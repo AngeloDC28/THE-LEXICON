@@ -66,21 +66,23 @@ export function renderTaxonomyGrid() {
   if (!container) return;
 
   const types = [
-    { key: 'brand', label: 'LABELS', code: '01' },
-    { key: 'era', label: 'CHRONOLOGY', code: '02' },
+    { key: 'brand', label: 'BRANDS', code: '01' },
+    { key: 'era', label: 'ERA', code: '02' },
     { key: 'politics', label: 'POLITICS', code: '03' },
-    { key: 'theories', label: 'THEORIES', code: '04' },
+    { key: 'theories', label: 'THEORY', code: '04' },
     { key: 'gender', label: 'IDENTITY', code: '05' },
-    { key: 'materials', label: 'MATERIALITY', code: '06' },
-    { key: 'geography', label: 'GEOGRAPHY', code: '07' }
+    { key: 'materials', label: 'MATERIALS', code: '06' },
+    { key: 'geography', label: 'LOCATION', code: '07' },
+    { key: 'format', label: 'FORMAT', code: '08' },
+    { key: 'anatomy', label: 'ANATOMY', code: '09' }
   ];
+
 
   container.innerHTML = types.map(t => {
     const isActive = AppState.activeTaxonomy === t.key;
     const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : '';
     return `
       <button class="taxonomy-item p-4 text-left hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all ${activeClass}" data-type="${t.key}">
-        <span class="text-[8px] uppercase tracking-widest opacity-40 block mb-1">CAT_${t.code}</span>
         <span class="text-[10px] font-bold uppercase tracking-wider">${t.label}</span>
       </button>
     `;
@@ -89,25 +91,40 @@ export function renderTaxonomyGrid() {
 
 export function renderTaxonomySub(callbacks) {
   const container = $('taxonomy-sub');
-  if (!container) return;
+  const grid = $('taxonomy-grid');
+  if (!container || !grid) return;
 
   const type = AppState.activeTaxonomy;
   if (!type || !taxonomyData[type]) {
-    container.innerHTML = '<div class="col-span-full py-10 text-center opacity-20 text-[8px] uppercase tracking-widest">Select category to refine search</div>';
+    container.classList.add('hidden');
+    grid.classList.remove('hidden');
     return;
   }
 
+  // Show sub, hide grid
+  container.classList.remove('hidden');
+  grid.classList.add('hidden');
+
   const values = taxonomyData[type];
-  container.innerHTML = values.map(val => {
-    const isActive = AppState.filters[type] === val;
-    const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'border-black/10 dark:border-white/10';
-    return `
-      <button class="taxonomy-pill text-[9px] font-bold uppercase tracking-widest p-2 border transition-all text-left truncate ${activeClass}" data-value="${val}">
-        ${val}
-      </button>
-    `;
-  }).join('');
+  container.innerHTML = `
+    <div class="p-2 border-b border-black/10 dark:border-white/10 flex justify-between items-center bg-black/5 dark:bg-white/5">
+      <span class="text-[8px] font-bold uppercase tracking-widest opacity-60">REFINE_BY: ${type.toUpperCase()}</span>
+      <button class="btn-back-taxonomy text-[8px] font-bold uppercase underline hover:no-underline" title="Back to main categories">[ BACK ]</button>
+    </div>
+    <div class="grid grid-cols-2 gap-0">
+      ${values.map(val => {
+        const isActive = AppState.filters[type] === val;
+        const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'border-black/5 dark:border-white/5';
+        return `
+          <button class="taxonomy-pill text-[9px] font-bold uppercase tracking-widest p-3 border transition-all text-left truncate ${activeClass}" data-value="${val}">
+            ${val}
+          </button>
+        `;
+      }).join('')}
+    </div>
+  `;
 }
+
 
 export function setActiveTaxonomy(type) {
   if (AppState.activeTaxonomy === type) {

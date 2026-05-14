@@ -88,9 +88,8 @@ export function renderImageGrid(archiveData, callbacks) {
           <img
             src="${src}"
             alt="${entry.id}"
-            class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110 opacity-0"
-            onload="this.classList.remove('opacity-0')"
-            onerror="this.src='${BROKEN_ASSET}'; this.classList.remove('opacity-0'); this.classList.add('broken-asset');"
+            class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+            onerror="this.src='${BROKEN_ASSET}'; this.classList.add('broken-asset');"
             loading="lazy"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
@@ -99,6 +98,7 @@ export function renderImageGrid(archiveData, callbacks) {
           </div>
         </div>
       `;
+
     });
   });
 

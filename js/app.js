@@ -5,7 +5,7 @@
  */
 
 import { archiveData } from '../database.js';
-import { $, $$, debounce } from './modules/core-utils.js';
+import { $, $$, debounce, initCustomCursor, showToast } from './modules/core-utils.js';
 import { AppState, updateHash } from './modules/core-state.js';
 import { 
   renderTaxonomyGrid, 
@@ -14,7 +14,7 @@ import {
   setActiveTaxonomy 
 } from './modules/search-engine.js';
 import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
-import { openDetail, closeDetail, navigateEntry } from './modules/render-detail.js';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
 import { 
   initHotspotInteractions, 
   cleanupHotspots, 
@@ -63,7 +63,7 @@ import { getTranslation, supportedLanguages } from './modules/translations.js';
 
 // --- Shared Callbacks ---
 const callbacks = {
-  openDetail: (id) => openDetail(id, archiveData, callbacks),
+  openDetail: (id, idx = 0) => openDetail(id, idx, archiveData, callbacks),
   closeDetail: () => closeDetail(callbacks, archiveData),
   navigateEntry: (dir) => navigateEntry(dir, archiveData, callbacks),
   showToast: showToast,
@@ -94,6 +94,7 @@ const callbacks = {
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
   console.log("BOOT: DOMContentLoaded fired");
+  initCustomCursor();
   initHeaderTypewriter();
   updateTelemetry();
   initFirebaseAuth(callbacks);
@@ -240,14 +241,17 @@ function refreshUI() {
   renderTaxonomyGrid(callbacks);
   renderTaxonomySub(callbacks);
   renderFilterChips(callbacks);
+  updateStatusBar(archiveData);
 }
+
 
 function handleRouting() {
   const hash = window.location.hash;
   if (hash.startsWith('#detail/')) {
     const id = hash.replace('#detail/', '');
-    openDetail(id, archiveData, callbacks);
-  } else if (hash === '#volumes') {
+    openDetail(id, 0, archiveData, callbacks);
+  }
+ else if (hash === '#volumes') {
     switchView('volumes', callbacks);
   } else if (hash === '#timeline') {
     switchView('timeline', callbacks);
@@ -260,7 +264,7 @@ function setupEventListeners() {
   console.log("EVENT_SYSTEM: Binding listeners...");
   // --- Header ---
   $('header-title')?.addEventListener('click', () => {
-    AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null };
+    AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
     AppState.searchQuery = '';
     AppState.activeVolumeId = null;
     if ($('search-input')) $('search-input').value = '';
@@ -321,7 +325,7 @@ function setupEventListeners() {
   }, 300));
 
   $('btn-clear-directory')?.addEventListener('click', () => {
-    AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null };
+    AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
     AppState.searchQuery = '';
     AppState.activeVolumeId = null;
     if ($('search-input')) $('search-input').value = '';
@@ -448,7 +452,7 @@ function setupEventListeners() {
     // Recent Entry Click
     const recentItem = e.target.closest('[data-recent-id]');
     if (recentItem) {
-      openDetail(recentItem.dataset.recentId, archiveData, callbacks);
+      openDetail(recentItem.dataset.recentId, 0, archiveData, callbacks);
       return;
     }
 
@@ -457,6 +461,13 @@ function setupEventListeners() {
     if (taxItem) {
       setActiveTaxonomy(taxItem.dataset.type);
       renderTaxonomySub(callbacks);
+      return;
+    }
+
+    // Taxonomy Back Button
+    if (e.target.closest('.btn-back-taxonomy')) {
+      setActiveTaxonomy(null);
+      refreshUI();
       return;
     }
 
@@ -491,6 +502,7 @@ function toggleHamburger() {
   const panel = $('index-panel');
   const backdrop = $('drawer-backdrop');
   const btn = $('btn-hamburger');
+  if (!panel || !backdrop || !btn) return;
   const isOpen = panel.classList.contains('translate-x-0');
   
   if (isOpen) {
@@ -519,18 +531,6 @@ function toggleLanguage() {
   localStorage.setItem('lexicon-lang', AppState.language);
   refreshUI();
   showToast(`Terminal Language: ${AppState.language.toUpperCase()}`);
-}
-
-function showToast(msg) {
-  const toast = $('toast');
-  if (!toast) return;
-  toast.textContent = msg;
-  toast.classList.remove('hidden');
-  toast.classList.add('show');
-  setTimeout(() => {
-    toast.classList.remove('show');
-    setTimeout(() => toast.classList.add('hidden'), 300);
-  }, 3000);
 }
 
 function renderVolumesView() {

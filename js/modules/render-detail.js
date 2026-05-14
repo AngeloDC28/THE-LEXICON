@@ -218,7 +218,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
   });
 }
 
-function updateStatusBar(archiveData) {
+export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   const brand = $('status-brand');
   const year = $('status-year');

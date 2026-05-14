@@ -22,7 +22,7 @@ export const translations = {
     search_placeholder: 'Query brand, era, or structural intervention...',
     search_clear: 'Clear',
     search_show_labels: 'Show grid labels while scrolling',
-    taxonomy_map: 'Taxonomy Map',
+    taxonomy_map: 'Research Index',
     related_artifacts: 'Related Artifacts',
     
     // Status Ribbon
@@ -100,7 +100,7 @@ export const translations = {
     search_placeholder: 'Query brand, era, or structural intervention...',
     search_clear: 'Clear',
     search_show_labels: 'Show grid labels while scrolling',
-    taxonomy_map: 'Taxonomy Map',
+    taxonomy_map: 'Research Index',
     related_artifacts: 'Related Artifacts',
     
     status_brand: 'Brand',
@@ -287,7 +287,7 @@ export const translations = {
     search_placeholder: 'Search brand, era, or structural analysis...',
     search_clear: 'Clear',
     search_show_labels: 'Show grid labels',
-    taxonomy_map: 'Taxonomy Map',
+    taxonomy_map: 'Research Index',
     related_artifacts: 'Related Artifacts',
     status_brand: 'Brand',
     status_year: 'Year',
