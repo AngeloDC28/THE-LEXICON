@@ -30,7 +30,7 @@ export function switchView(viewId, callbacks) {
   });
 
   // Sidebar Visibility (Directory)
-  const directory = $('directory-sidebar');
+  const directory = $('index-panel');
   if (directory) {
     if (viewId === 'grid') {
       directory.classList.remove('hidden');
