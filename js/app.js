@@ -53,10 +53,6 @@ import {
   renderCmdResults 
 } from './modules/command-palette.js';
 import { 
-  openConnectionMatrix, 
-  closeConnectionMatrix 
-} from './modules/connection-matrix.js';
-import { 
   renderTimeline, 
   renderFilterChips, 
   updateMetaForEntry, 
@@ -122,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     const overlay = $('boot-overlay');
     if (overlay) {
+      overlay.style.transition = 'opacity 0.5s ease-out';
       overlay.style.opacity = '0';
       setTimeout(() => overlay.classList.add('hidden'), 500);
     }
@@ -232,6 +229,7 @@ function refreshUI() {
 
   const filtered = getFilteredEntries(archiveData);
   renderImageGrid(filtered, callbacks);
+  renderEntryList(archiveData, callbacks);
   renderTaxonomyGrid(callbacks);
   renderTaxonomySub(callbacks);
   renderFilterChips(callbacks);

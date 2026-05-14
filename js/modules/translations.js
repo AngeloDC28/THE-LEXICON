@@ -271,7 +271,6 @@ export const translations = {
     accept_terms: '[ ACCETTA ]',
     cookie_notice: 'Questa directory utilizza lo storage locale per mantenere lo stato del terminale.',
     close: 'Chiudi'
-  }
   },
   'en-us': {
     nav_volumes: 'Volumes',

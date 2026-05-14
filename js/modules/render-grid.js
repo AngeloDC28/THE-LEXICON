@@ -6,6 +6,7 @@
 import { $, pad, resolveImgSrc } from './core-utils.js';
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
+import { getTranslation } from './translations.js';
 
 export function setupGridIntersectionObserver() {
   if (gridIntersectionObserver) {
@@ -13,7 +14,7 @@ export function setupGridIntersectionObserver() {
     setGridIntersectionObserver(null);
   }
   const rootEl = $('grid-view');
-  const cells = document.querySelectorAll('#main-grid .grid-cell');
+  const cells = document.querySelectorAll('#image-grid .grid-cell');
   if (!cells.length || !rootEl) return;
   
   if (!window.matchMedia('(max-width: 767px)').matches) {
@@ -81,8 +82,8 @@ export function renderImageGrid(archiveData, callbacks) {
             loading="lazy"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">
-            <p class="text-white text-[10px] font-bold uppercase tracking-widest font-mono">${entry.tags.brand}</p>
-            <p class="text-white/60 text-[8px] uppercase tracking-widest font-mono">${entry.year} // ${entry.season || 'ARCHIVE'}</p>
+            <p class="text-white text-[10px] font-bold uppercase tracking-widest font-mono">${(entry.tags && entry.tags.brand) ? entry.tags.brand : 'UNKNOWN'}</p>
+            <p class="text-white/60 text-[8px] uppercase tracking-widest font-mono">${entry.year || '----'} // ${entry.season || 'ARCHIVE'}</p>
           </div>
         </div>
       `;
@@ -105,7 +106,47 @@ export function renderImageGrid(archiveData, callbacks) {
   setupGridIntersectionObserver();
 }
 
-export function renderEntryList(archiveData) {
-  // Legacy support or alternative view if needed
-  console.warn('renderEntryList is currently deprecated in the unified grid layout.');
+export function renderEntryList(archiveData, callbacks) {
+  const container = $('entry-list');
+  if (!container) return;
+
+  const filtered = getFilteredEntries(archiveData);
+  const total = archiveData.length;
+  const count = filtered.length;
+
+  // Update total count labels
+  const totalLabel = $('index-panel-title');
+  if (totalLabel) {
+    const t = (key) => getTranslation(key, AppState.language);
+    totalLabel.textContent = `${t('index_title')} / ${pad(count)} OF ${pad(total)}`;
+  }
+
+  if (count === 0) {
+    container.innerHTML = '<div class="p-8 text-center opacity-40 text-[10px] uppercase tracking-widest">No results</div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(entry => {
+    const brand = (entry.tags && entry.tags.brand) ? entry.tags.brand : 'UNKNOWN BRAND';
+    const year = entry.year || '----';
+    const title = entry.title || 'Untitled Entry';
+    
+    return `
+      <div class="entry-item group px-4 py-3 border-b border-black/5 dark:border-white/5 cursor-crosshair hover:bg-black/5 dark:hover:bg-white/5 transition-colors" data-id="${entry.id}">
+        <div class="flex justify-between items-baseline mb-1">
+          <h4 class="text-[10px] font-bold uppercase tracking-wider group-hover:text-acid transition-colors">${brand}</h4>
+          <span class="text-[8px] font-mono opacity-40">${year}</span>
+        </div>
+        <p class="text-[9px] opacity-60 uppercase tracking-tight line-clamp-1">${title}</p>
+      </div>
+    `;
+  }).join('');
+
+  container.querySelectorAll('.entry-item').forEach(el => {
+    el.addEventListener('click', () => {
+      if (callbacks && callbacks.openDetail) {
+        callbacks.openDetail(el.dataset.id);
+      }
+    });
+  });
 }

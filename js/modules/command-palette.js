@@ -36,9 +36,14 @@ export function renderCmdResults(query, archiveData) {
   
   const q = query.toLowerCase();
   cmdResults = archiveData.filter(entry => {
+    if (!entry) return false;
     const searchable = [
-      entry.title, entry.season, String(entry.year), entry.description,
-      ...Object.values(entry.tags)
+      entry.title || '',
+      entry.season || '',
+      entry.year ? String(entry.year) : '',
+      entry.description || '',
+      ...(entry.tags ? Object.values(entry.tags) : []),
+      ...(entry.notes ? Object.values(entry.notes) : [])
     ].join(' ').toLowerCase();
     return searchable.includes(q);
   }).slice(0, 10);

@@ -31,6 +31,7 @@ export function getFilteredEntries(archiveData) {
 
   // 2. Filter by taxonomy tags
   entries = entries.filter(entry => {
+    if (!entry.tags) return false;
     for (const [key, val] of Object.entries(AppState.filters)) {
       if (val && entry.tags[key] !== val) return false;
     }
@@ -41,12 +42,12 @@ export function getFilteredEntries(archiveData) {
   if (q) {
     entries = entries.filter(entry => {
       const searchable = [
-        entry.id,
-        entry.title,
-        entry.year,
-        entry.season,
-        entry.description,
-        ...Object.values(entry.tags),
+        entry.id || '',
+        entry.title || '',
+        entry.year ? String(entry.year) : '',
+        entry.season || '',
+        entry.description || '',
+        ...(entry.tags ? Object.values(entry.tags) : []),
         ...(entry.notes ? Object.values(entry.notes) : [])
       ].join(' ').toLowerCase();
       return searchable.includes(q);

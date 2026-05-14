@@ -103,9 +103,15 @@ function renderImage(entry) {
   if (imgEl) {
     imgEl.src = currentImgSrc;
     imgEl.alt = entry.title || entry.id;
+    
+    // Improved animation handling: clear existing and re-trigger
+    imgEl.classList.remove('scanning');
+    void imgEl.offsetWidth; // Trigger reflow
     imgEl.classList.add('scanning');
+    
     // Remove scan after 2 seconds for clarity
-    setTimeout(() => imgEl.classList.remove('scanning'), 2000);
+    if (window._scanTimeout) clearTimeout(window._scanTimeout);
+    window._scanTimeout = setTimeout(() => imgEl.classList.remove('scanning'), 2000);
   }
 
   const titleEl = $('active-entry-title');
@@ -178,11 +184,14 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
 
   const currentTags = Object.values(entry.tags).flat();
   const scored = archiveData
-    .filter(e => e.id !== entry.id)
+    .filter(e => e && e.id && e.id !== entry.id)
     .map(e => {
       let score = 0;
-      const targetTags = Object.values(e.tags).flat();
-      targetTags.forEach(t => { if (currentTags.includes(t)) score++; });
+      if (e.tags && entry.tags) {
+        const currentTags = Object.values(entry.tags).flat();
+        const targetTags = Object.values(e.tags).flat();
+        targetTags.forEach(t => { if (currentTags.includes(t)) score++; });
+      }
       return { entry: e, score };
     })
     .sort((a, b) => b.score - a.score)
