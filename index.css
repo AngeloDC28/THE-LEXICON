@@ -539,6 +539,14 @@ html.dark .info-box.active-hotspot {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+#detail-image.scanning {
+  animation: forensicScan 2s ease-in-out infinite;
+}
+@keyframes forensicScan {
+  0% { filter: grayscale(1) contrast(1.2) brightness(1); }
+  50% { filter: grayscale(0.5) contrast(1.5) brightness(1.2); }
+  100% { filter: grayscale(1) contrast(1.2) brightness(1); }
+}
 .boot-text { position: relative; z-index: 3; }
 #boot-overlay.boot-fade-out {
   opacity: 0;

@@ -12,8 +12,8 @@ let lastCacheKey = null;
 export function getFilteredEntries(archiveData) {
   const q = (AppState.searchQuery || '').toLowerCase();
   const volId = AppState.activeVolumeId;
-  const filters = JSON.stringify(AppState.filters);
-  const cacheKey = `${q}|${volId}|${filters}`;
+  const filterKey = JSON.stringify(AppState.filters);
+  const cacheKey = `${q}|${volId}|${filterKey}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -31,7 +31,7 @@ export function getFilteredEntries(archiveData) {
 
   // 2. Filter by taxonomy tags
   entries = entries.filter(entry => {
-    for (const [key, val] of Object.entries(filters)) {
+    for (const [key, val] of Object.entries(AppState.filters)) {
       if (val && entry.tags[key] !== val) return false;
     }
     return true;

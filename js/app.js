@@ -26,6 +26,7 @@ import {
   toggleMobileDock 
 } from './modules/sticky-notes.js';
 import { switchView } from './modules/navigation.js';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
 import { 
   updateTelemetry, 
   initHeaderTypewriter, 
@@ -353,6 +354,16 @@ function setupEventListeners() {
   $('btn-bookmark-entry')?.addEventListener('click', () => {
     if (AppState.selectedEntryId) toggleBookmark(AppState.selectedEntryId, callbacks);
   });
+  
+  // --- Connection Matrix ---
+  $('btn-open-matrix')?.addEventListener('click', () => {
+    if (AppState.selectedEntryId) {
+      openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
+    }
+  });
+
+  $('btn-close-matrix')?.addEventListener('click', () => closeConnectionMatrix());
+  $('matrix-backdrop')?.addEventListener('click', () => closeConnectionMatrix());
 
   $('btn-save-to-volume')?.addEventListener('click', () => {
     if (!currentUser) {
@@ -537,6 +548,7 @@ function renderVolumesView() {
         <h3 class="text-base font-bold font-mono uppercase tracking-wider">${vol.name}</h3>
         <button class="btn-export-vol text-[8px] border border-current px-2 py-0.5 opacity-0 group-hover:opacity-100" data-vol-id="${vol.id}">EXPORT_JSON</button>
       </div>
+      ${vol.notes ? `<p class="text-[9px] font-mono opacity-60 mb-4 line-clamp-2 uppercase tracking-tight">${vol.notes}</p>` : `<p class="text-[9px] font-mono opacity-30 mb-4 uppercase tracking-widest italic">No observations logged.</p>`}
       <div class="flex justify-between items-end">
         <span class="text-[10px] font-mono opacity-60 uppercase">${vol.lookIds ? vol.lookIds.length : 0} Artifacts Audited</span>
         <span class="text-[9px] font-mono opacity-40 italic">${new Date(vol.createdAt).toLocaleDateString()}</span>

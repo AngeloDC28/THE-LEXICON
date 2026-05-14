@@ -41,7 +41,7 @@ export function setupGridIntersectionObserver() {
 
 export function renderImageGrid(archiveData, callbacks) {
   const entries = getFilteredEntries(archiveData);
-  const grid = $('main-grid');
+  const grid = $('image-grid');
   if (!grid) return;
 
   // Handle Volume Indicator
@@ -76,7 +76,8 @@ export function renderImageGrid(archiveData, callbacks) {
           <img
             src="${src}"
             alt="${entry.id}"
-            class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110"
+            class="w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0 group-hover:scale-110 opacity-0"
+            onload="this.classList.remove('opacity-0')"
             loading="lazy"
           />
           <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end">

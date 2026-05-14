@@ -103,6 +103,9 @@ function renderImage(entry) {
   if (imgEl) {
     imgEl.src = currentImgSrc;
     imgEl.alt = entry.title || entry.id;
+    imgEl.classList.add('scanning');
+    // Remove scan after 2 seconds for clarity
+    setTimeout(() => imgEl.classList.remove('scanning'), 2000);
   }
 
   const titleEl = $('active-entry-title');
@@ -170,7 +173,7 @@ function renderHotspots(entry, container) {
 }
 
 function renderRelatedEntries(entry, archiveData, callbacks) {
-  const container = $('related-entries-grid');
+  const container = $('related-grid');
   if (!container) return;
 
   const currentTags = Object.values(entry.tags).flat();
