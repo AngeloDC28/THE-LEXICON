@@ -93,7 +93,12 @@ const callbacks = {
 
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
-  console.log("BOOT: DOMContentLoaded fired");
+  console.log("LEXICON_BOOT: INITIALIZING_ARCHIVE_CORE...");
+  console.log("LEXICON_DATA_AUDIT: ENTRIES_DETECTED =", archiveData.length);
+  
+  if (!archiveData || archiveData.length === 0) {
+    console.error("LEXICON_DATA_EXCEPTION: ARCHIVE_DATA_LOAD_FAILED_OR_EMPTY");
+  }
   initCustomCursor();
   initHeaderTypewriter();
   updateTelemetry();
@@ -485,6 +490,25 @@ function setupEventListeners() {
       return;
     }
     
+    // Grid Cell Click
+    const gridCell = e.target.closest('.grid-cell');
+    if (gridCell) {
+      const id = gridCell.dataset.entryId;
+      const idx = parseInt(gridCell.dataset.imgIndex) || 0;
+      console.log('LEXICON_ACTION: GRID_CELL_NAV', { id, idx });
+      // Direct call since hash only supports ID
+      openDetail(id, idx, archiveData, callbacks);
+      return;
+    }
+
+    // Entry Item Click
+    const entryItem = e.target.closest('.entry-item');
+    if (entryItem) {
+      console.log('LEXICON_ACTION: ENTRY_ITEM_NAV', entryItem.dataset.id);
+      window.location.hash = entryItem.dataset.id;
+      return;
+    }
+
     // Close Mobile Dock
     if (e.target.id === 'btn-close-dock') {
       toggleMobileDock(false);

@@ -14,7 +14,7 @@ export const resolveImgSrc = (imgObj, fallback) => {
   let src = (imgObj && imgObj.src) ? imgObj.src : fallback;
   if (!src) return BROKEN_ASSET;
   // Ensure absolute path for Vite public assets
-  if (src.startsWith('THE-LEXICON-ASSETS') || src.startsWith('assets')) {
+  if (src.startsWith('THE-LEXICON-ASSETS')) {
     return '/' + src;
   }
   return src;

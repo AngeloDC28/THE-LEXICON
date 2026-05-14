@@ -7,7 +7,29 @@ import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 
+export function updateStatusBar(archiveData) {
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+  const brand = $('status-brand');
+  const year = $('status-year');
+  const season = $('status-season');
+  const entryStatus = $('status-entry');
+
+  if (entry) {
+    if (brand) brand.textContent = entry.tags.brand;
+    if (year) year.textContent = entry.year;
+    if (season) season.textContent = entry.season;
+    if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
+  } else {
+    const filtered = getFilteredEntries(archiveData);
+    if (brand) brand.textContent = '--';
+    if (year) year.textContent = '--';
+    if (season) season.textContent = '--';
+    if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ENTRIES';
+  }
+}
+
 export function openDetail(entryId, imgIdx, archiveData, callbacks) {
+  console.log('LEXICON_ACTION: OPEN_DETAIL_INIT', { entryId, imgIdx });
   const entry = archiveData.find((e) => e.id === entryId);
   if (!entry) return;
 
@@ -218,23 +240,3 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
   });
 }
 
-export function updateStatusBar(archiveData) {
-  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
-  const brand = $('status-brand');
-  const year = $('status-year');
-  const season = $('status-season');
-  const entryStatus = $('status-entry');
-
-  if (entry) {
-    if (brand) brand.textContent = entry.tags.brand;
-    if (year) year.textContent = entry.year;
-    if (season) season.textContent = entry.season;
-    if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
-  } else {
-    const filtered = getFilteredEntries(archiveData);
-    if (brand) brand.textContent = '--';
-    if (year) year.textContent = '--';
-    if (season) season.textContent = '--';
-    if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ENTRIES';
-  }
-}

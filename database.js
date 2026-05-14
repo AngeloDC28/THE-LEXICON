@@ -385,7 +385,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
       "geography": "London (BFC / Official Schedule)",
-      "form": "Prosthetic Extension",
+      "anatomy": "Prosthetic Extension",
       "format": "Performance Art / Live Action"
     },
     "notes": {
@@ -781,7 +781,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Thermoplastic Membranes (PVC; Vinyl; Latex)",
       "geography": "Paris (Federation de la Haute Couture)",
-      "form": "Architectural Shielding and Armour",
+      "anatomy": "Architectural Shielding and Armour",
       "format": "Circular / Arena Format"
     },
     "notes": {
@@ -1131,7 +1131,7 @@ const archiveData = [
       "gender": "Unisex / Neutral",
       "materials": "Elastomeric Compounds (Lycra; Spandex; Stretch Blends)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "form": "Modular Componentry",
+      "anatomy": "Modular Componentry",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -1504,7 +1504,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Non-Woven Industrial Membranes (Tyvek; Neoprene; Scuba)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "form": "Architectural Shielding and Armour",
+      "anatomy": "Architectural Shielding and Armour",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -1854,7 +1854,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Biological Ephemera (Feathers; Shells; Bone; Wood)",
       "geography": "London (BFC / Official Schedule)",
-      "form": "Adaptive Transformation",
+      "anatomy": "Adaptive Transformation",
       "format": "Performance Art / Live Action"
     },
     "notes": {
@@ -2227,7 +2227,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Petroleum-Based Polymers (Polyester; Nylon; Acrylic)",
       "geography": "Milan (Camera Nazionale)",
-      "form": "Compressed Proportions",
+      "anatomy": "Compressed Proportions",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -2600,7 +2600,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
       "geography": "Paris (Federation de la Haute Couture)",
-      "form": "Bias-Cut Fluidity",
+      "anatomy": "Bias-Cut Fluidity",
       "format": "Theatrical Stage Performance"
     },
     "notes": {
@@ -2973,7 +2973,7 @@ const archiveData = [
       "gender": "Conceptual / Post-Binary Form",
       "materials": "Bovine & Exotic Skins (Leather; Suede; Vachetta)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "form": "Suspended Drape",
+      "anatomy": "Suspended Drape",
       "format": "Performance Art / Live Action"
     },
     "notes": {
@@ -3346,7 +3346,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Elastomeric Compounds (Lycra; Spandex; Stretch Blends)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "form": "Displaced Anatomy and Padding",
+      "anatomy": "Displaced Anatomy and Padding",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -3719,7 +3719,7 @@ const archiveData = [
       "gender": "Conceptual / Post-Binary Form",
       "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "form": "Monolithic Massing",
+      "anatomy": "Monolithic Massing",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -4115,7 +4115,7 @@ const archiveData = [
       "gender": "Conceptual / Post-Binary Form",
       "materials": "Fine Precious Metallics (Gold; Silver; Copper Thread)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "form": "Topographic Layering",
+      "anatomy": "Topographic Layering",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -4304,7 +4304,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
       "geography": "Paris (Federation de la Haute Couture)",
-      "form": "Monolithic Massing",
+      "anatomy": "Monolithic Massing",
       "format": "Theatrical Stage Performance"
     },
     "notes": {
@@ -4562,7 +4562,7 @@ const archiveData = [
       "gender": "Unisex / Neutral",
       "materials": "Petroleum-Based Polymers (Polyester; Nylon; Acrylic)",
       "geography": "Digital / Meta-Geographic Space",
-      "form": "Tailored Rigidity",
+      "anatomy": "Tailored Rigidity",
       "format": "Lookbook / Still Photography Series"
     },
     "notes": {
@@ -4912,7 +4912,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Petroleum-Based Polymers (Polyester; Nylon; Acrylic)",
       "geography": "Milan (Camera Nazionale)",
-      "form": "Compressed Proportions",
+      "anatomy": "Compressed Proportions",
       "format": "Traditional Runway (The Linear Catwalk)"
     },
     "notes": {
@@ -5285,7 +5285,7 @@ const archiveData = [
       "gender": "Womenswear",
       "materials": "Fine Precious Metallics (Gold; Silver; Copper Thread)",
       "geography": "Paris (Federation de la Haute Couture)",
-      "form": "Prosthetic Extension",
+      "anatomy": "Prosthetic Extension",
       "format": "Gallery / Museum Installation"
     },
     "notes": {

@@ -66,15 +66,15 @@ export function renderTaxonomyGrid() {
   if (!container) return;
 
   const types = [
-    { key: 'brand', label: 'BRANDS', code: '01' },
-    { key: 'era', label: 'ERA', code: '02' },
-    { key: 'politics', label: 'POLITICS', code: '03' },
-    { key: 'theories', label: 'THEORY', code: '04' },
-    { key: 'gender', label: 'IDENTITY', code: '05' },
-    { key: 'materials', label: 'MATERIALS', code: '06' },
-    { key: 'geography', label: 'LOCATION', code: '07' },
-    { key: 'format', label: 'FORMAT', code: '08' },
-    { key: 'anatomy', label: 'ANATOMY', code: '09' }
+    { key: 'brand', label: 'BRANDS' },
+    { key: 'era', label: 'ERA' },
+    { key: 'politics', label: 'POLITICS' },
+    { key: 'theories', label: 'THEORY' },
+    { key: 'gender', label: 'IDENTITY' },
+    { key: 'materials', label: 'MATERIALS' },
+    { key: 'geography', label: 'LOCATION' },
+    { key: 'anatomy', label: 'ANATOMY' },
+    { key: 'format', label: 'FORMAT' }
   ];
 
 
