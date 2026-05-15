@@ -19,7 +19,7 @@ export function getFilteredEntries(archiveData) {
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
   }
-  
+
   let entries = archiveData;
 
   // 1. Filter by folder if active
@@ -56,9 +56,7 @@ export function getFilteredEntries(archiveData) {
   }
 
   searchCache.set(cacheKey, entries);
-  // Optional: clear cache if it grows too large
   if (searchCache.size > 50) searchCache.clear();
-
   return entries;
 }
 
@@ -70,26 +68,24 @@ export function renderTaxonomyGrid() {
   const t = (key) => getTranslation(key, lang);
 
   const types = [
-    { key: 'brand', label: t('tax_brand') },
-    { key: 'era', label: t('tax_era') },
-    { key: 'politics', label: t('tax_politics') },
-    { key: 'theories', label: t('tax_theories') },
-    { key: 'gender', label: t('tax_gender') },
+    { key: 'brand',     label: t('tax_brand') },
+    { key: 'era',       label: t('tax_era') },
+    { key: 'politics',  label: t('tax_politics') },
+    { key: 'theories',  label: t('tax_theories') },
+    { key: 'gender',    label: t('tax_gender') },
     { key: 'materials', label: t('tax_materials') },
     { key: 'geography', label: t('tax_geography') },
-    { key: 'anatomy', label: t('tax_anatomy') },
-    { key: 'format', label: t('tax_format') }
+    { key: 'anatomy',   label: t('tax_anatomy') },
+    { key: 'format',    label: t('tax_format') }
   ];
 
-
-  container.innerHTML = types.map(t => {
-    const isActive = AppState.activeTaxonomy === t.key;
+  container.innerHTML = types.map(type => {
+    const isActive = AppState.activeTaxonomy === type.key;
     const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : '';
-    return `
-      <button class="taxonomy-item p-4 text-left hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all ${activeClass}" data-type="${t.key}">
-        <span class="text-[10px] font-bold uppercase tracking-wider">${t.label}</span>
-      </button>
-    `;
+    return `<button
+      class="taxonomy-btn border border-current px-3 py-1 text-xs tracking-widest uppercase hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors ${activeClass}"
+      data-taxonomy-type="${type.key}"
+    >${type.label}</button>`;
   }).join('');
 }
 
@@ -111,24 +107,23 @@ export function renderTaxonomySub(callbacks) {
 
   const values = taxonomyData[type];
   container.innerHTML = `
-    <div class="p-2 border-b border-black/10 dark:border-white/10 flex justify-between items-center bg-black/5 dark:bg-white/5">
-      <span class="text-[8px] font-bold uppercase tracking-widest opacity-60">REFINE_BY: ${type.toUpperCase()}</span>
-      <button class="btn-back-taxonomy text-[8px] font-bold uppercase underline hover:no-underline" title="Back to main categories">[ BACK ]</button>
+    <div class="taxonomy-sub-header flex items-center gap-4 mb-2">
+      <span class="text-xs tracking-widest uppercase opacity-60">REFINE BY: ${type.toUpperCase()}</span>
+      <button class="text-xs tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-taxonomy-back="1">&larr; BACK</button>
     </div>
-    <div class="grid grid-cols-2 gap-0">
+    <div class="taxonomy-sub-values flex flex-wrap gap-2">
       ${values.map(val => {
         const isActive = AppState.filters[type] === val;
-        const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'border-black/5 dark:border-white/5';
-        return `
-          <button class="taxonomy-pill text-[9px] font-bold uppercase tracking-widest p-3 border transition-all text-left truncate ${activeClass}" data-value="${val}">
-            ${getTranslation(val, AppState.language)}
-          </button>
-        `;
+        const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'border-black/30 dark:border-white/30';
+        return `<button
+          class="taxonomy-val-btn border border-current px-3 py-1 text-xs tracking-widest uppercase hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors ${activeClass}"
+          data-taxonomy-type="${type}"
+          data-taxonomy-val="${val}"
+        >${getTranslation(val, AppState.language)}</button>`;
       }).join('')}
     </div>
   `;
 }
-
 
 export function setActiveTaxonomy(type) {
   if (AppState.activeTaxonomy === type) {
