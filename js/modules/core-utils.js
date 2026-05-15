@@ -9,14 +9,15 @@ export const $$ = (s) => document.querySelectorAll(s);
 export const pad = (num) => (num < 10 ? '0' + num : num);
 
 // Valid fallback SVG — dark panel with centered ERROR_404 text
-export const BROKEN_ASSET = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgMzAwIDQwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMxMTEiLz48dGV4dCB4PSI1MCUiIHk9IjQ1JSIgZmlsbD0iIzQ0NCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+RVJST1JfNDA0PC90ZXh0Pjx0ZXh0IHg9IjUwJSIgeT0iNTUlIiBmaWxsPSIjNDQ0IiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBmb250LXNpemU9IjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkFTU0VUX05PVF9GT1VORDwvdGV4dD48cmVjdCB4PSIxMCUiIHk9IjEwJSIgd2lkdGg9IjgwJSIgaGVpZ2h0PSI4MCUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSI0Ii8+PC9zdmc+`;
+export const BROKEN_ASSET = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgMzAwIDQwMCI+PHJlY3Qgd2lkdGg9IjMwMCIga[...]`;
 
 /**
  * resolveImgSrc
- * FIX: Normalises all image paths to absolute URLs relative to the site root.
- * Previously, paths like "THE-LEXICON-ASSETS/foo.jpg" resolved differently
- * depending on which JS module called them. Now they are all anchored to
- * window.location.origin so they work from any module depth.
+ * Normalises image paths to absolute URLs relative to the detected site root.
+ * - Accepts absolute (http/data) ULRs unchanged.
+ * - Strips leading ./ and anchors relative paths to a computed asset base.
+ * - Reads a configurable base from <meta name="asset-base" content="..."> or window.LEXICON_ASSET_BASE.
+ * This handles hosting under repo subpaths (e.g., GitHub Pages project sites).
  */
 export const resolveImgSrc = (imgObj, fallback) => {
   let src = (imgObj && imgObj.src) ? imgObj.src : fallback;
@@ -25,11 +26,38 @@ export const resolveImgSrc = (imgObj, fallback) => {
   // Already absolute
   if (src.startsWith('http') || src.startsWith('data:')) return src;
 
-  // Strip leading slash or ./ — then anchor to origin
-  src = src.replace(/^\.?\//, '');
+  // Remove only leading "./"
+  src = src.replace(/^\.\//, '');
 
-  // Return as an absolute path from the site root
-  return `${window.location.origin}/${src}`;
+  // Determine configured base
+  let configuredBase = null;
+  if (typeof document !== 'undefined') {
+    const meta = document.querySelector('meta[name="asset-base"]');
+    if (meta) configuredBase = meta.getAttribute('content');
+  }
+  if (typeof window !== 'undefined' && window.LEXICON_ASSET_BASE) configuredBase = window.LEXICON_ASSET_BASE;
+
+  // Compute site-root aware base
+  let basePath = '/';
+  if (configuredBase) {
+    basePath = configuredBase;
+  } else if (typeof window !== 'undefined') {
+    // Use the current pathname dirname so project pages served under /owner/repo/ resolve correctly
+    try {
+      const pathname = window.location.pathname || '/';
+      // Keep the leading and trailing slash
+      basePath = pathname.replace(/\/[^\/]*$/, '/');
+    } catch (e) { basePath = '/'; }
+  }
+
+  // If src begins with a leading slash, treat as absolute path at origin
+  try {
+    const base = `${window.location.origin}${basePath}`;
+    const url = new URL(src, base);
+    return url.toString();
+  } catch (e) {
+    return `${window.location.origin}/${src}`;
+  }
 };
 
 export function initCustomCursor() {
@@ -40,12 +68,10 @@ export function initCustomCursor() {
     cursor.style.top  = `${e.clientY}px`;
   });
   document.addEventListener('mousedown', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(0.9)';
-    cursor.style.background = 'var(--accent, #E6FF00)';
+    cursor.classList.add('cursor-expanding');
   });
   document.addEventListener('mouseup', () => {
-    cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-    cursor.style.background = 'white';
+    cursor.classList.remove('cursor-expanding');
   });
   document.addEventListener('mouseleave', () => { cursor.style.opacity = '0'; });
   document.addEventListener('mouseenter',  () => { cursor.style.opacity = '1'; });
