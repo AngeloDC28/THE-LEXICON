@@ -4,6 +4,8 @@
  */
 
 import { $, resolveImgSrc } from './core-utils.js';
+import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 export function openConnectionMatrix(entryId, archiveData, callbacks) {
   const entry = archiveData.find(e => e.id === entryId);
@@ -19,9 +21,12 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
     if (matches.length > 0) connections.set(val, { key, entries: matches });
   });
 
+  const lang = AppState.language;
+  const t = (k) => getTranslation(k, lang);
+
   let html = '';
   html += `<div class="matrix-center">
-    <p class="text-[9px] uppercase tracking-[0.2em] opacity-40 mb-2">Currently Viewing</p>
+    <p class="text-[9px] uppercase tracking-[0.2em] opacity-40 mb-2">${t('nexus_viewing')}</p>
     <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${entry.tags.brand}</p>
     <p class="text-xs font-mono uppercase opacity-60 mt-1">${entry.year} &middot; ${entry.season}</p>
     <div class="mt-3">
@@ -30,11 +35,11 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   </div>`;
 
   if (connections.size === 0) {
-    html += '<div class="matrix-section"><p class="text-[10px] uppercase tracking-[0.15em] opacity-40 text-center py-8">No shared connections found in the archive.</p></div>';
+    html += `<div class="matrix-section"><p class="text-[10px] uppercase tracking-[0.15em] opacity-40 text-center py-8">${t('nexus_no_connections')}</p></div>`;
   } else {
     connections.forEach(function(data, tagValue) {
       html += '<div class="matrix-section">';
-      html += '<p class="matrix-section-title">Shared: ' + tagValue + '</p>';
+      html += `<p class="matrix-section-title">${t('nexus_shared')}: ${tagValue}</p>`;
       html += '<div class="matrix-entries">';
       data.entries.slice(0, 12).forEach(function(rel) {
         const thumbSrc = resolveImgSrc(rel.images && rel.images[0], rel.imageUrl);

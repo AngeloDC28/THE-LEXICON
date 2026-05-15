@@ -10,7 +10,7 @@ import { AppState, updateHash } from './modules/core-state.js';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
 import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
 import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots, toggleMobileDock } from './modules/hotspots.js';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js';
 import { initDockInteractions, setStickyNote } from './modules/sticky-notes.js';
 import { switchView } from './modules/navigation.js';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
@@ -185,11 +185,6 @@ function refreshUI() {
 
   const btnNexus = $('btn-open-matrix');
   if (btnNexus) btnNexus.textContent = t('btn_view_nexus');
-
-  const btnCite       = $('btn-cite-artifact');
-  const btnCiteMobile = $('btn-cite-artifact-mobile');
-  if (btnCite)       btnCite.textContent       = t('btn_cite');
-  if (btnCiteMobile) btnCiteMobile.textContent = t('btn_cite');
 
   const btnBackGrid = $('btn-back-grid');
   if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
@@ -388,8 +383,6 @@ function setupEventListeners() {
     }
     // ────────────────────────────────────────────────────────────
 
-    // Mobile Dock Close
-    if (e.target.id === 'btn-close-dock') toggleMobileDock(false);
   });
 
   // Header Title

@@ -171,6 +171,8 @@ export function setActiveTaxonomy(type) {
 }
 \`;
 
+/*
 fs.writeFileSync('js/modules/search-engine.js', searchEngine);
 console.log('search-engine.js rewritten with accordion dropdowns.');
+*/
 console.log('All fixes applied successfully.');

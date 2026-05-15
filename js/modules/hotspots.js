@@ -88,7 +88,6 @@ export function cleanupHotspots() {
     box.classList.remove('border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
   });
   document.querySelectorAll('.hotspot-btn').forEach(btn => btn.classList.remove('active'));
-  if (window.innerWidth < 768) toggleMobileDock(false);
 }
 
 export function toggleMobileHotspots() {
@@ -103,16 +102,5 @@ export function toggleMobileHotspots() {
   } else {
     detail.classList.add('show-hotspots');
     if (btn) btn.textContent = 'HOTSPOTS_ON';
-  }
-}
-
-export function toggleMobileDock(show) {
-  const dock = $('master-dock');
-  if (!dock) return;
-  if (show) {
-    dock.classList.remove('translate-y-full', 'hidden');
-    dock.classList.add('flex');
-  } else {
-    dock.classList.add('translate-y-full');
   }
 }

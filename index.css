@@ -782,9 +782,7 @@ html.dark .cmd-item.selected {
   justify-content: center;
 }
 
-#master-dock {
-  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-}
+
 
 /* ── BOOT OVERLAY ── */
 #boot-overlay {
@@ -847,7 +845,6 @@ html.dark #boot-overlay { background: #0A0A0A; }
 .index-open .hotspot-dot,
 .index-open #btn-viewer-prev,
 .index-open #btn-viewer-next,
-.index-open #master-dock,
 .index-open #hotspot-popup {
   opacity: 0;
   visibility: hidden;
@@ -1040,7 +1037,7 @@ html.dark .taxonomy-sub-item:hover, html.dark .taxonomy-sub-item.active { backgr
 html.dark .taxonomy-group-header { border-color: rgba(255,255,255,0.2); background: #0A0A0A; }
 html.dark .taxonomy-group-header:hover, html.dark .taxonomy-group-header.active { background: #CCFF00; color: #000; }
 
-html.dark #master-dock { border-color: rgba(255,255,255,0.2); box-shadow: 0 -10px 20px rgba(0,0,0,0.5); }
+
 html.dark .image-grid .img-placeholder { background: #222; }
 html.dark .image-grid .img-placeholder::after { background: rgba(255,255,255,0.2); }
 html.dark ::-webkit-scrollbar-track { background: #0A0A0A; }
@@ -1413,4 +1410,56 @@ html.dark .active-hotspot-box {
 }
 .matrix-entry:hover img {
   filter: grayscale(0) !important;
+}
+
+/* ── RESTORED CORE STYLES (POST-AUDIT) ── */
+#custom-cursor {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: #CCFF00;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 10000;
+  transition: transform 0.05s ease-out;
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  #custom-cursor { display: block; }
+  body { cursor: none; }
+}
+
+#filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.filter-chip {
+  background: #000;
+  color: #FFF;
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border: 1px solid #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+html.dark .filter-chip {
+  background: #CCFF00;
+  color: #000;
+  border-color: #CCFF00;
+}
+
+#accent-glow {
+  background: radial-gradient(circle, rgba(204,255,0,0.15) 0%, transparent 70%);
+  transition: opacity 0.5s ease;
+}
+
+#sticky-note-panel.visible {
+  display: flex !important;
 }

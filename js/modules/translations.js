@@ -43,6 +43,12 @@ export const translations = {
     modal_terminal_access: 'Researcher Authentication',
     modal_auth_transmit: 'Request Access',
     connection_matrix_title: 'Relational Nexus',
+    nexus_viewing: 'Currently Viewing',
+    nexus_no_connections: 'No shared connections found in the archive.',
+    nexus_shared: 'Shared',
+    nexus_viewing: 'Currently Viewing',
+    nexus_no_connections: 'No shared connections found in the archive.',
+    nexus_shared: 'Shared',
     nav_folders_mobile: 'Folders',
     nav_search_mobile: 'Search',
     nav_theme_mobile: 'Theme',
@@ -140,6 +146,9 @@ export const translations = {
     search_show_labels: 'Show grid labels while scrolling',
     taxonomy_map: 'Research Index',
     related_artifacts: 'Related Artifacts',
+    nexus_viewing: 'Viewing',
+    nexus_no_connections: 'No shared connections found.',
+    nexus_shared: 'Shared',
     
     status_brand: 'Brand',
     status_year: 'Year',
@@ -147,8 +156,8 @@ export const translations = {
     status_entry: 'Entry',
     
     btn_save_folder: 'Save to Folder',
-    btn_cite: 'Cite',
     btn_back_grid: 'Back to Grid',
+    btn_view_nexus: 'View Nexus',
     btn_visualise_tax: '[ VISUALISE TAXONOMY ]',
     btn_hide_tax: '[ HIDE DATA LAYER ]',
     
@@ -228,6 +237,9 @@ export const translations = {
     search_show_labels: 'Afficher les étiquettes de grille',
     taxonomy_map: 'Carte Taxinomique',
     related_artifacts: 'Artefacts Associés',
+    nexus_viewing: 'Consultation en cours',
+    nexus_no_connections: 'Aucune connexion partagée trouvée dans l\'archive.',
+    nexus_shared: 'Partagé',
     
     status_brand: 'Marque',
     status_year: 'Année',
@@ -235,8 +247,8 @@ export const translations = {
     status_entry: 'Entrée',
     
     btn_save_folder: 'Enregistrer dans le Folder',
-    btn_cite: 'Citer',
     btn_back_grid: 'Retour à la Grille',
+    btn_view_nexus: 'Voir le Nexus',
     
     view_grid: 'Vue Grille',
     view_timeline: 'Vue Chronologie',
@@ -293,6 +305,9 @@ export const translations = {
     search_show_labels: 'Mostra etichette griglia',
     taxonomy_map: 'Mappa Tassonomica',
     related_artifacts: 'Manufatti Correlati',
+    nexus_viewing: 'Visualizzazione in corso',
+    nexus_no_connections: 'Nessuna connessione condivisa trovata nell\'archivio.',
+    nexus_shared: 'Condiviso',
     
     status_brand: 'Marca',
     status_year: 'Anno',
@@ -300,8 +315,8 @@ export const translations = {
     status_entry: 'Voce',
     
     btn_save_folder: 'Salva nel Folder',
-    btn_cite: 'Cita',
     btn_back_grid: 'Torna alla Griglia',
+    btn_view_nexus: 'Visualizza Nexus',
     
     view_grid: 'Vista Griglia',
     view_timeline: 'Vista Timeline',
@@ -361,8 +376,8 @@ export const translations = {
     status_season: 'Season',
     status_entry: 'Entry',
     btn_save_folder: 'Add to Folder',
-    btn_cite: 'Citation',
     btn_back_grid: 'Exit to Grid',
+    btn_view_nexus: 'View Nexus',
     view_grid: 'Grid Layout',
     view_timeline: 'Timeline Layout',
     view_archive_grid: 'ARCHIVE_CORE',
@@ -398,6 +413,10 @@ export const translations = {
     nav_signout: 'Salir',
     nav_about: 'Acerca de',
     nav_contact: 'Contacto',
+    btn_view_nexus: 'Ver Nexus',
+    nexus_viewing: 'Viendo Actualmente',
+    nexus_no_connections: 'No se encontraron conexiones compartidas.',
+    nexus_shared: 'Compartido',
     nav_language: 'Idioma',
     note_critique: 'CRÍTICA FORENSE',
     note_strategy: 'ESTRATEGIA DE AISLAMIENTO',

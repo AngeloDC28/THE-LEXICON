@@ -23,41 +23,32 @@ export const resolveImgSrc = (imgObj, fallback) => {
   let src = (imgObj && imgObj.src) ? imgObj.src : fallback;
   if (!src || typeof src !== 'string') return BROKEN_ASSET;
 
-  // Already absolute
+  // Already absolute or data URI
   if (src.startsWith('http') || src.startsWith('data:')) return src;
 
-  // Remove only leading "./"
+  // Normalize: remove leading ./ and ensure it starts with /
   src = src.replace(/^\.\//, '');
+  if (!src.startsWith('/')) src = '/' + src;
 
-  // Determine configured base
-  let configuredBase = null;
+  // Get base path from meta or global
+  let base = '';
   if (typeof document !== 'undefined') {
     const meta = document.querySelector('meta[name="asset-base"]');
-    if (meta) configuredBase = meta.getAttribute('content');
+    if (meta) base = meta.getAttribute('content') || '';
   }
-  if (typeof window !== 'undefined' && window.LEXICON_ASSET_BASE) configuredBase = window.LEXICON_ASSET_BASE;
-
-  // Compute site-root aware base
-  let basePath = '/';
-  if (configuredBase) {
-    basePath = configuredBase;
-  } else if (typeof window !== 'undefined') {
-    // Use the current pathname dirname so project pages served under /owner/repo/ resolve correctly
-    try {
-      const pathname = window.location.pathname || '/';
-      // Keep the leading and trailing slash
-      basePath = pathname.replace(/\/[^\/]*$/, '/');
-    } catch (e) { basePath = '/'; }
+  if (typeof window !== 'undefined' && window.LEXICON_ASSET_BASE) {
+    base = window.LEXICON_ASSET_BASE;
   }
 
-  // If src begins with a leading slash, treat as absolute path at origin
-  try {
-    const base = `${window.location.origin}${basePath}`;
-    const url = new URL(src, base);
-    return url.toString();
-  } catch (e) {
-    return `${window.location.origin}/${src}`;
+  // Handle trailing slash vs leading slash overlap
+  if (base.endsWith('/') && src.startsWith('/')) {
+    return base + src.substring(1);
   }
+  if (!base.endsWith('/') && !src.startsWith('/')) {
+    return base + '/' + src;
+  }
+  
+  return base + src;
 };
 
 export function initCustomCursor() {
