@@ -350,29 +350,6 @@ export const archiveData = [
             "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
           }
         ]
-      },
-      {
-        "src": "data/mcqueen-ss01/16.jpg",
-        "hotspots": [
-          {
-            "x": 50,
-            "y": 45,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
-          }
-        ]
       }
     ],
     "imageUrl": "data/mcqueen-ss01/01.jpg",
@@ -744,29 +721,6 @@ export const archiveData = [
             "y": 55,
             "label": "Chrome Exoskeleton Corsetry",
             "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
-          }
-        ]
-      },
-      {
-        "src": "data/mugler-aw92/16.jpg",
-        "hotspots": [
-          {
-            "x": 50,
-            "y": 45,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
           }
         ]
       }
@@ -1682,6 +1636,29 @@ export const archiveData = [
           }
         ]
       },
+                    {
+          "src": "data/chalayan-aw00/08.jpg",
+          "hotspots": [
+            {
+              "x": 50,
+              "y": 45,
+              "label": "Wearable Domestic Architecture",
+              "description": "The mobilisation of the domestic interior enforces a narrative of forced migration. Chalayan collapses the boundary between the architectural space and the biological body; demanding the wearer carry their shelter as survival infrastructure."
+            },
+            {
+              "x": 40,
+              "y": 60,
+              "label": "Structural Textile Displacement",
+              "description": "The chair cover transitions from passive domestic object to active garment; executing a total subversion of object-oriented ontology. The act of wearing the household textile operates as a radical exercise in bodily autonomy; simultaneously preserving cultural memory and enabling physical escape."
+            },
+            {
+              "x": 60,
+              "y": 30,
+              "label": "Geopolitical Body Shielding",
+              "description": "The garment functions as an architectural shield; wrapping the biological form in the remnants of a demolished domestic world. This enforced portability critiques the state mechanism that strips individuals of fixed habitation; transforming the body itself into a vehicle for institutional critique."
+            }
+          ]
+        },
       {
         "src": "data/chalayan-aw00/09.jpg",
         "hotspots": [
@@ -3219,121 +3196,6 @@ export const archiveData = [
             "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
           }
         ]
-      },
-      {
-        "src": "data/wvb-aw95/11.jpg",
-        "hotspots": [
-          {
-            "x": 50,
-            "y": 45,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
-          }
-        ]
-      },
-      {
-        "src": "data/wvb-aw95/12.jpg",
-        "hotspots": [
-          {
-            "x": 40,
-            "y": 30,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
-          },
-          {
-            "x": 50,
-            "y": 80,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
-          }
-        ]
-      },
-      {
-        "src": "data/wvb-aw95/13.jpg",
-        "hotspots": [
-          {
-            "x": 50,
-            "y": 50,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          }
-        ]
-      },
-      {
-        "src": "data/wvb-aw95/14.jpg",
-        "hotspots": [
-          {
-            "x": 60,
-            "y": 60,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
-          }
-        ]
-      },
-      {
-        "src": "data/wvb-aw95/15.jpg",
-        "hotspots": [
-          {
-            "x": 50,
-            "y": 70,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
-          }
-        ]
       }
     ],
     "imageUrl": "data/wvb-aw95/01.jpg",
@@ -4084,30 +3946,7 @@ export const archiveData = [
       {
         "src": "data/gaultier-aw93/16.jpg",
         "hotspots": [
-          {
-            "x": 50,
-            "y": 45,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-          }
-        ]
-      }
-    ],
-    "imageUrl": "data/gaultier-aw93/01.jpg",
-    "description": "",
-    "tags": {
+          
       "brand": "Jean Paul Gaultier",
       "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Queer Theory & Subcultural Systems",
@@ -4625,6 +4464,29 @@ export const archiveData = [
           }
         ]
       },
+              {
+          "src": "data/moschino-aw14/03.jpg",
+          "hotspots": [
+            {
+              "x": 50,
+              "y": 45,
+              "label": "Corporate Logo Mutation",
+              "description": "The aggressive appropriation of fast-food corporate iconography enforces a narrative of extreme symbolic exchange. Scott subverts the golden arches into a luxury signifier; executing a direct institutional critique of consumer culture and the fashion system's accelerated pace."
+            },
+            {
+              "x": 40,
+              "y": 60,
+              "label": "Quilted Surface Fetishisation",
+              "description": "The application of quilted leather to disposable packaging geometry forces a collision between high and low material hierarchies. This surface treatment operates as a calculated exercise in camp and kitsch subversion; weaponising the mundane against the prestige economy."
+            },
+            {
+              "x": 60,
+              "y": 30,
+              "label": "Synthetic Colour Field",
+              "description": "The deployment of saturated synthetic primaries directly references the visual language of fast-food retail environments. This chromatic strategy executes a precise form of corporate nihilism; collapsing the distinction between the convenience economy and the luxury commodity."
+            }
+          ]
+        },
       {
         "src": "data/moschino-aw14/04.jpg",
         "hotspots": [
