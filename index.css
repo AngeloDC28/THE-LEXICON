@@ -405,19 +405,20 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
 /* ── RE-IMPLEMENTED HOTSPOTS (Geometric Crosshairs) ── */
 .hotspot-btn {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  margin-left: -20px;
-  margin-top: -20px;
+  width: 44px;
+  height: 44px;
+  margin-left: -22px;
+  margin-top: -22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 1000;
   cursor: crosshair;
   background: transparent;
   border: none;
   padding: 0;
   pointer-events: auto;
+  transition: transform 0.2s ease;
 }
 
 .hotspot-target {
@@ -425,7 +426,8 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
   height: 14px;
   border: 2px solid #FFF;
   position: relative;
-  transition: all 0.2s ease;
+  pointer-events: none; /* Let the button handle all events */
+  transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .hotspot-target::before,
@@ -433,15 +435,16 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
   content: '';
   position: absolute;
   background: #FFF;
+  transition: background 0.2s ease;
 }
 
-/* Crosshair lines - Extended for brutalist feel */
+/* Crosshair lines */
 .hotspot-target::before { top: 50%; left: -8px; width: 30px; height: 2px; transform: translateY(-50%); }
 .hotspot-target::after { left: 50%; top: -8px; width: 2px; height: 30px; transform: translateX(-50%); }
 
 .hotspot-btn:hover .hotspot-target {
   border-color: #E6FF00;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 .hotspot-btn:hover .hotspot-target::before,
 .hotspot-btn:hover .hotspot-target::after {
@@ -451,6 +454,7 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
 .hotspot-btn.active .hotspot-target {
   background: #E6FF00;
   border-color: #000;
+  transform: scale(1.2);
 }
 .hotspot-btn.active .hotspot-target::before,
 .hotspot-btn.active .hotspot-target::after {
@@ -458,79 +462,6 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
 }
 
 
-/* ── FORENSIC LENS (HOTSPOTS) ── */
-.hotspot-btn {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  margin-top: -12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  cursor: crosshair;
-  background: transparent;
-  border: none;
-  padding: 0;
-  touch-action: manipulation;
-  pointer-events: auto;
-  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.hotspot-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50% !important;
-  background: rgba(204, 255, 0, 0.4);
-  border: 1.5px solid #CCFF00;
-  box-shadow: 0 0 10px rgba(204, 255, 0, 0.4);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s;
-  position: relative;
-}
-
-/* Crosshair markers */
-.hotspot-dot::before, .hotspot-dot::after {
-  content: '';
-  position: absolute;
-  background: #CCFF00;
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-/* Horizontal */
-.hotspot-dot::before {
-  top: 50%; left: -6px; width: 22px; height: 1px;
-  transform: translateY(-50%);
-}
-
-/* Vertical */
-.hotspot-dot::after {
-  left: 50%; top: -6px; width: 1px; height: 22px;
-  transform: translateX(-50%);
-}
-
-.hotspot-btn:hover .hotspot-dot {
-  transform: scale(1.5);
-  background: rgba(204, 255, 0, 0.8);
-  box-shadow: 0 0 20px rgba(204, 255, 0, 0.6);
-}
-
-.hotspot-btn.active .hotspot-dot {
-  background: #CCFF00;
-  animation: hotspotPulse 2s infinite ease-in-out;
-}
-
-@keyframes hotspotPulse {
-  0% { transform: scale(1); box-shadow: 0 0 5px rgba(204, 255, 0, 0.4); }
-  50% { transform: scale(1.2); box-shadow: 0 0 20px rgba(204, 255, 0, 0.8); }
-  100% { transform: scale(1); box-shadow: 0 0 5px rgba(204, 255, 0, 0.4); }
-}
-
-html.dark .hotspot-dot {
-  background: rgba(204, 255, 0, 0.1);
-  border-color: #CCFF00;
-}
 
 
 /* Info box */

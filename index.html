@@ -332,40 +332,6 @@
         </div>
 
         
-          <!-- Detail Image View -->
-          <div id="detail-image-view" class="hidden absolute inset-0 z-50 bg-bone dark:bg-darkBase flex flex-col overflow-hidden">
-            <div class="flex items-center justify-between px-4 py-2 border-b border-black/20 dark:border-white/20 shrink-0">
-              <span class="text-[9px] tracking-widest uppercase opacity-60">ARCHIVE / DETAIL VIEW</span>
-              <button id="btn-close-detail" class="text-[9px] tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black">Close</button>
-            </div>
-            <div class="flex flex-1 overflow-hidden">
-              <div class="flex-1 overflow-y-auto p-4 flex flex-col items-center">
-                <div id="detail-image-wrapper" class="relative w-full max-w-3xl">
-                  <div id="scan-line" class="absolute top-0 left-0 w-full h-[2px] bg-white/30 pointer-events-none opacity-0"></div>
-                  <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-0 bg-gradient-to-b from-transparent to-black/30"></div>
-                  <img id="detail-image" src="" alt="" class="w-full h-auto object-contain block" />
-                  <div id="active-entry-hotspots" class="absolute inset-0 pointer-events-auto"></div>
-                </div>
-              </div>
-              <div class="w-72 shrink-0 overflow-y-auto border-l border-black/20 dark:border-white/20 p-4 flex flex-col gap-4">
-                <div class="flex items-center justify-between">
-                  <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-widest flex-1 truncate"></span>
-                  <span id="btn-bookmark-entry" class="bookmark-star cursor-pointer ml-2" title="Bookmark">★</span>
-                </div>
-                <div class="flex flex-wrap gap-1">
-                  <button id="btn-save-to-folder" class="text-[9px] tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">Save to Folder</button>
-                  <button id="btn-open-matrix" class="text-[9px] tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">View Nexus</button>
-                  <button id="btn-cite-artifact" class="text-[9px] tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">Cite</button>
-                  <button id="btn-back-grid" class="text-[9px] tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">Back to Grid</button>
-                </div>
-                <div id="metadata-grid" class="grid grid-cols-2 gap-3"></div>
-                <div id="related-entries" class="border-t border-black/10 dark:border-white/10 pt-4">
-                  <h4 class="text-[9px] font-bold uppercase tracking-widest mb-3 opacity-50">Related Artifacts</h4>
-                  <div id="related-grid" class="grid grid-cols-3 gap-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
 <!-- Timeline View -->
         <div id="timeline-view" class="hidden flex-1 min-h-0">
           <div class="timeline-axis"></div>
@@ -393,7 +359,7 @@
             <div id="detail-image-sector" class="flex-1 relative flex items-center justify-center p-4 lg:p-12 border-r border-white/10">
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
-                <img id="detail-image" class="relative z-0" src="" alt="" crossorigin="anonymous" />
+                <img id="detail-image" class="relative z-0" src="" alt="" />
                 
                 <!-- Floating Analytical Payload -->
                 <div id="analytical-payload" class="hidden brutalist-node floating-payload">
