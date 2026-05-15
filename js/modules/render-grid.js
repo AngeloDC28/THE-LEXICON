@@ -86,7 +86,7 @@ export function renderImageGrid(archiveData, callbacks) {
             loading="lazy"
             decoding="async"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            onerror="this.src='${BROKEN_ASSET}'">
+            onload="this.classList.add('loaded')" onerror="this.src='${BROKEN_ASSET}'">
           <div class="grid-cell-meta absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
             <div class="text-[9px] font-mono uppercase tracking-widest text-white">${brand}</div>
             <div class="text-[8px] font-mono text-white/60">${entry.year || '----'} // ${entry.season || 'ARCHIVE'}</div>
