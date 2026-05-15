@@ -7,12 +7,97 @@
  * FIX 2: Hotspot buttons no longer have a redundant inline addEventListener;
  * delegation is handled entirely by hotspots.js initHotspotInteractions().
  * FIX 3: Related-entry images use resolveImgSrc so paths resolve correctly.
+ * ENH: fullscreen toggling (button + double-click), metadata overlay injected
+ *      into the detail-image-wrapper (anchored bottom-left) and hidden by default
+ *      when in fullscreen. CSS required for these behaviors is injected dynamically
+ *      so the change doesn't require editing index.css or index.html.
  */
 import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
 import { toggleHotspot } from './hotspots.js';
+
+// Inject small CSS fixes and UI helpers (removes forced grayscale and styles
+// fullscreen + metadata overlay). This is injected once when detail is opened.
+function injectDetailFixesCSS() {
+  if (document.getElementById('lexicon-fixes')) return;
+  const css = `
+    /* Remove enforced grayscale so images display in full colour */
+    .grid-cell img, .entry-thumbnail img, #detail-image, .recent-thumb, .node-thumb {
+      filter: none !important;
+    }
+
+    /* Fullscreen toggle button (small, unobtrusive) */
+    #btn-fullscreen-toggle {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 1200;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 6px 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+    }
+    #btn-fullscreen-toggle:focus { outline: 2px solid #CCFF00; outline-offset: 2px; }
+
+    /* Metadata overlay anchored bottom-left of the image wrapper */
+    #detail-metadata-overlay {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      z-index: 1100;
+      max-width: 46%;
+      background: var(--bg-overlay);
+      color: var(--text-main);
+      padding: 10px 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 2px 2px 0 rgba(0,0,0,0.06);
+      pointer-events: none; /* Important: don't block clicks/hotspots */
+      display: block;
+    }
+
+    /* Small metadata toggle shown in top-left so users can reveal metadata in fullscreen */
+    #btn-metadata-toggle {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      z-index: 1200;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 6px 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    /* Fullscreen state: hide the anchored overlay by default to prioritise the image */
+    #detail-image-view.fullscreen-active #detail-metadata-overlay {
+      display: none;
+    }
+    /* But allow toggling it on in fullscreen (class added when user toggles metadata) */
+    #detail-image-view.fullscreen-active.show-metadata #detail-metadata-overlay {
+      display: block;
+      pointer-events: auto; /* When explicitly shown, allow interaction if needed */
+    }
+
+    /* Minor styling for the inner metadata rows to match existing UI */
+    #detail-metadata-overlay .meta-row { margin-bottom: 6px; }
+    #detail-metadata-overlay .meta-label { font-size: 10px; text-transform: uppercase; opacity: 0.6; letter-spacing: .12em; }
+    #detail-metadata-overlay .meta-value { font-size: 12px; text-transform: uppercase; }
+  `;
+  const el = document.createElement('style');
+  el.id = 'lexicon-fixes';
+  el.appendChild(document.createTextNode(css));
+  document.head.appendChild(el);
+}
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -49,10 +134,16 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.add('detail-mode-active');
 
+  // Inject CSS fixes once per page load
+  if (typeof document !== 'undefined') injectDetailFixesCSS();
+
   renderImage(entry, callbacks);
   renderMetadata(entry);
   renderHotspots(entry, $('detail-image-wrapper'));
   renderRelatedEntries(entry, archiveData, callbacks);
+
+  // Setup fullscreen & metadata toggle UI (idempotent)
+  setupDetailControls();
 
   if (callbacks) {
     if (callbacks.updateHeaderTelemetry) callbacks.updateHeaderTelemetry(`ACCESSING_NODE: ${entry.id.toUpperCase()}`);
@@ -69,7 +160,11 @@ export function closeDetail(callbacks, archiveData) {
   AppState.selectedEntryId = null;
   updateHash(null);
   const detailView = $('detail-image-view');
-  if (detailView) detailView.classList.add('hidden');
+  if (detailView) {
+    detailView.classList.add('hidden');
+    // Ensure fullscreen classes cleared
+    detailView.classList.remove('fullscreen-active', 'show-metadata');
+  }
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.remove('detail-mode-active');
   if (callbacks && callbacks.resetMeta) callbacks.resetMeta();
@@ -131,6 +226,9 @@ function renderImage(entry, callbacks) {
     imgEl.src = currentImgSrc;
     imgEl.alt = entry.title || entry.id;
 
+    // Double-click opens fullscreen as a convenient shortcut
+    imgEl.ondblclick = () => toggleFullscreen();
+
     // Scan animation
     const scanLine = $('scan-line');
     if (scanLine) {
@@ -166,6 +264,28 @@ function renderMetadata(entry) {
       <div class="text-[10px] font-mono uppercase tracking-wide">${getTranslation(f.value, AppState.language) || '--'}</div>
     </div>`
   ).join('');
+
+  // Also render a compact metadata overlay anchored on the image wrapper
+  try {
+    let wrapper = $('detail-image-wrapper');
+    if (wrapper) {
+      let overlay = document.getElementById('detail-metadata-overlay');
+      if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'detail-metadata-overlay';
+        overlay.innerHTML = '<div id="detail-metadata-inner"></div>';
+        wrapper.appendChild(overlay);
+      }
+      const inner = overlay.querySelector('#detail-metadata-inner');
+      if (inner) {
+        inner.innerHTML = fields.map(f =>
+          `<div class="meta-row"><div class="meta-label">${f.label}</div><div class="meta-value">${getTranslation(f.value, AppState.language) || '--'}</div></div>`
+        ).join('');
+      }
+    }
+  } catch (e) {
+    console.warn('renderMetadata overlay failed', e);
+  }
 }
 
 /**
@@ -194,9 +314,10 @@ function renderHotspots(entry, container) {
     btn.setAttribute('data-index', i);
     btn.setAttribute('aria-label', `Intervention: ${spot.label}`);
     btn.innerHTML = '<span></span>';
+    // Append to the wrapper so pointer-events rules don't block these buttons
     container.appendChild(btn);
 
-    // Sidebar info box
+    // Sidebar info box (non-interactive by default)
     if (hotspotsContainer) {
       const box = document.createElement('div');
       box.className = 'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 transition-all duration-300';
@@ -244,4 +365,89 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     card.addEventListener('click', () => openDetail(item.entry.id, 0, archiveData, callbacks));
     container.appendChild(card);
   });
+}
+
+/**
+ * Fullscreen helpers
+ */
+function isFullscreenActive() {
+  return !!document.fullscreenElement || !!document.webkitFullscreenElement;
+}
+
+function toggleFullscreen() {
+  const detailView = $('detail-image-view');
+  if (!detailView) return;
+  // Use the detail-image-view element as the fullscreen element
+  if (!isFullscreenActive()) {
+    if (detailView.requestFullscreen) {
+      detailView.requestFullscreen().catch(err => console.warn('requestFullscreen failed', err));
+    } else if (detailView.webkitRequestFullscreen) {
+      detailView.webkitRequestFullscreen();
+    }
+    detailView.classList.add('fullscreen-active');
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+    detailView.classList.remove('fullscreen-active');
+    detailView.classList.remove('show-metadata');
+  }
+}
+
+// Sync UI when the browser triggers fullscreen change directly
+if (typeof document !== 'undefined') {
+  document.addEventListener('fullscreenchange', () => {
+    const detailView = $('detail-image-view');
+    if (!detailView) return;
+    if (isFullscreenActive()) {
+      detailView.classList.add('fullscreen-active');
+    } else {
+      detailView.classList.remove('fullscreen-active');
+      detailView.classList.remove('show-metadata');
+    }
+  });
+}
+
+// Create the fullscreen + metadata toggle buttons inside the image wrapper
+function setupDetailControls() {
+  try {
+    const wrapper = $('detail-image-wrapper');
+    if (!wrapper) return;
+
+    // Fullscreen button
+    let fsBtn = document.getElementById('btn-fullscreen-toggle');
+    if (!fsBtn) {
+      fsBtn = document.createElement('button');
+      fsBtn.id = 'btn-fullscreen-toggle';
+      fsBtn.setAttribute('aria-label', 'Toggle fullscreen');
+      fsBtn.textContent = 'Fullscreen';
+      fsBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleFullscreen(); });
+      wrapper.appendChild(fsBtn);
+    }
+
+    // Metadata toggle (small button) — allows showing overlay in fullscreen
+    let metaBtn = document.getElementById('btn-metadata-toggle');
+    if (!metaBtn) {
+      metaBtn = document.createElement('button');
+      metaBtn.id = 'btn-metadata-toggle';
+      metaBtn.setAttribute('aria-label', 'Toggle metadata');
+      metaBtn.textContent = 'Meta';
+      metaBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const detailView = $('detail-image-view');
+        if (!detailView) return;
+        detailView.classList.toggle('show-metadata');
+      });
+      wrapper.appendChild(metaBtn);
+    }
+
+    // Ensure the image double-click is wired (renderImage also sets ondblclick),
+    // but set a gentle cursor hint for users on desktop
+    const imgEl = $('detail-image');
+    if (imgEl) imgEl.style.cursor = 'zoom-in';
+  } catch (e) {
+    console.warn('setupDetailControls failed', e);
+  }
 }
