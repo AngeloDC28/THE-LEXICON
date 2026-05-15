@@ -5,10 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/copy-data.js",
+    "prebuild": "node .github/scripts/fix-all.js",
     "build": "vite build",
-    "preview": "vite preview",
-    "prebuild": "node .github/scripts/fix-all.js && node .github/scripts/copy-data.js"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^10.0.0"

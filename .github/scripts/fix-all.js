@@ -1,8 +1,9 @@
 const fs = require('fs');
 
 // ============================================================
-// 1. FIX IMAGE PATHS IN database.js
+// 1. FIX IMAGE PATHS IN database.js (DISABLED)
 // ============================================================
+/*
 console.log('Fixing image paths in database.js...');
 let db = fs.readFileSync('database.js', 'utf8');
 
@@ -31,6 +32,7 @@ db = db.replace(/THE-LEXICON-ASSETS\/([-\w]+)\/([-\w]+)-(\d+)\.jpg/g, (_, folder
 
 fs.writeFileSync('database.js', db);
 console.log('database.js image paths fixed.');
+*/
 
 // ============================================================
 // 2. FIX translations.js - Add Angelo's name to About section
@@ -150,7 +152,7 @@ export function renderTaxonomyGrid() {
     return '<div class="taxonomy-accordion border-b border-white/10">'
       + '<button data-taxonomy-type="' + type.key + '" class="w-full flex items-center justify-between px-3 py-2.5 text-[9px] font-mono tracking-widest uppercase transition-all border-l-2 ' + headerClass + '" aria-expanded="' + isOpen + '">'
       + '<span>' + type.label + activeLabel + '</span>'
-      + '<span class="text-[8px] opacity-50 ml-2">' + (isOpen ? '\u25b2' : '\u25bc') + '</span>'
+      + '<span class="text-[8px] opacity-50 ml-2">' + (isOpen ? '\\u25b2' : '\\u25bc') + '</span>'
       + '</button>'
       + '<div class="overflow-hidden transition-all duration-200 ' + (isOpen ? 'max-h-96 pb-1' : 'max-h-0') + '">'
       + valuesHtml
@@ -167,7 +169,7 @@ export function renderTaxonomySub(callbacks) {
 export function setActiveTaxonomy(type) {
   AppState.activeTaxonomy = AppState.activeTaxonomy === type ? null : type;
 }
-`;
+\`;
 
 fs.writeFileSync('js/modules/search-engine.js', searchEngine);
 console.log('search-engine.js rewritten with accordion dropdowns.');

@@ -328,7 +328,7 @@
               <button id="btn-dismiss-orientation" class="mt-8 text-[9px] font-bold uppercase tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black dark:hover:bg-black">[ Proceed to Archive ]</button>
             </div>
           </div>
-          <div id="taxonomy-grid" class="taxonomy-grid flex flex-wrap gap-2 mb-4"></div>             <div id="taxonomy-sub" class="taxonomy-sub hidden mb-4"></div>             <div id="image-grid" class="image-grid"></div>
+          <div id="image-grid" class="image-grid"></div>
         </div>
 
         
@@ -387,31 +387,63 @@
         </div>
 
         <!-- Detail View -->
-        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-bone dark:bg-darkBase lg:pb-0">
-          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex items-center justify-center p-2 lg:p-12">
-            <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
-              <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
-              <img id="detail-image" class="relative z-0" src="" alt="" crossorigin="anonymous" />
+        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-black lg:pb-0">
+          <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
+            <!-- LEFT: Image Sector -->
+            <div id="detail-image-sector" class="flex-1 relative flex items-center justify-center p-4 lg:p-12 border-r border-white/10">
+              <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
+                <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
+                <img id="detail-image" class="relative z-0" src="" alt="" crossorigin="anonymous" />
+                
+                <!-- Floating Analytical Payload -->
+                <div id="analytical-payload" class="hidden brutalist-node floating-payload">
+                  <span class="node-label">[ ANALYSIS ]</span>
+                  <div id="payload-content"></div>
+                </div>
+              </div>
+              
+              <!-- Navigation Controls -->
+              <button type="button" id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
+              <button type="button" id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
+              
+              <!-- Control Panel Overlay -->
+              <div class="absolute top-4 left-4 flex flex-col gap-2 z-[200]">
+                <button id="btn-tax-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
+                <button id="btn-fullscreen-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
+              </div>
             </div>
-            <button type="button" id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-2 text-3xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none">‹</button>
-            <button type="button" id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-2 text-3xl text-black dark:text-white px-3 z-[100] cursor-pointer hover:opacity-50 select-none">›</button>
-          </div>
-          <div id="sticky-note-triggers">
-            <button type="button" class="sticky-trigger focus-ring" style="background:#FF0000;" data-note="critique" aria-label="Forensic Critique"></button>
-            <button type="button" class="sticky-trigger focus-ring" style="background:#0000FF;" data-note="strategy" aria-label="Isolate Strategy"></button>
-            <button type="button" class="sticky-trigger focus-ring" style="background:#E6FF00;" data-note="provenance" aria-label="Audit Provenance"></button>
-          </div>
-          <div id="accent-glow" class="accent-glow"></div>
-          <div id="sticky-note-panel">
-            <div class="sticky-note-header">
-              <span class="sticky-note-title" id="sticky-note-title"></span>
-              <button type="button" class="sticky-note-close focus-ring" id="btn-close-sticky" aria-label="Close note">[ X ]</button>
+
+            <!-- RIGHT: Metadata Sidebar -->
+            <div id="detail-metadata-sidebar" class="hidden w-[400px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
+              <!-- Sticky Note Container (Brutalist Nodes) -->
+              <div id="sticky-note-container" class="flex flex-col gap-6 p-6">
+                <!-- Nodes injected by JS -->
+              </div>
+              
+              <!-- Core Metadata Grid -->
+              <div class="p-6 border-t border-white/10">
+                <h4 class="text-[9px] font-bold uppercase tracking-[0.2em] mb-4 text-white/40">Technical Specifications</h4>
+                <div id="metadata-grid" class="grid grid-cols-2 gap-4"></div>
+              </div>
+
+              <!-- Save / Action Panel -->
+              <div class="mt-auto p-6 border-t border-white/10 bg-white/5">
+                <div class="flex items-center justify-between mb-4">
+                  <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.2em] text-white"></span>
+                  <span id="btn-bookmark-entry" class="bookmark-star text-white" title="Bookmark">★</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <button id="btn-save-to-folder" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Save to Folder</button>
+                  <button id="btn-cite-artifact" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Cite Artifact</button>
+                  <button id="btn-back-grid" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors col-span-2">Return to Archive</button>
+                </div>
+              </div>
             </div>
-            <p class="sticky-note-body" id="sticky-note-body"></p>
           </div>
-          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-bone dark:bg-darkBase border-t border-black dark:border-white/20 px-4 py-3 flex gap-2 z-[200] shadow-[0_0_10px_rgba(0,0,0,0.06)]">
-            <button type="button" id="btn-save-folder-mobile" class="flex-1 bg-black text-white dark:bg-acid dark:text-black py-3 text-[10px] font-bold uppercase tracking-widest focus-ring">Save</button>
-            <button type="button" id="btn-cite-artifact-mobile" class="flex-1 border border-black dark:border-white/20 py-3 text-[10px] font-bold uppercase tracking-widest focus-ring">Cite</button>
+
+          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-4 py-3 flex gap-2 z-[200]">
+            <button type="button" id="btn-save-folder-mobile" class="flex-1 bg-acid text-black py-3 text-[10px] font-bold uppercase tracking-widest">Save</button>
+            <button type="button" id="btn-cite-artifact-mobile" class="flex-1 border border-white/20 text-white py-3 text-[10px] font-bold uppercase tracking-widest">Cite</button>
           </div>
         </div>
 

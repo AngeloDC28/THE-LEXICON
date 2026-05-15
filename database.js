@@ -7,7 +7,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/mcqueen-ss01/01.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -30,7 +30,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/02.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -53,7 +53,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/03.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -76,7 +76,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/04.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -99,7 +99,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/05.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -122,7 +122,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/06.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -145,7 +145,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/07.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -168,7 +168,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/08.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -191,7 +191,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/09.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -214,7 +214,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/10.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -237,7 +237,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/11.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -260,7 +260,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/12.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -283,7 +283,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/13.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -306,7 +306,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/14.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -329,7 +329,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mcqueen-ss01/15.jpg",
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -352,7 +352,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/mcqueen-ss01/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg",
     "description": "",
     "tags": {
       "brand": "Alexander McQueen",
@@ -380,7 +380,7 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "data/mugler-aw92/01.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -403,7 +403,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/02.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -426,7 +426,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/03.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -449,7 +449,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/04.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -472,7 +472,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/05.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -495,7 +495,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/06.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -518,7 +518,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/07.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -541,7 +541,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/08.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -564,7 +564,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/09.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -587,7 +587,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/10.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -610,7 +610,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/11.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -633,7 +633,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/12.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -656,7 +656,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/13.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -679,7 +679,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/14.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -702,7 +702,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/mugler-aw92/15.jpg",
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -725,7 +725,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/mugler-aw92/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-01.jpg",
     "description": "",
     "tags": {
       "brand": "Thierry Mugler",
@@ -753,7 +753,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/miyake-ss98/01.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -776,7 +776,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/02.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -799,7 +799,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/03.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -822,7 +822,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/04.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -845,7 +845,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/05.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -868,7 +868,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/06.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -891,7 +891,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/07.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -914,7 +914,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/08.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -937,7 +937,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/09.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -960,7 +960,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/10.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -983,7 +983,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/11.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1006,7 +1006,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/12.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1029,7 +1029,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/13.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1052,7 +1052,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/miyake-ss98/14.jpg",
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1075,7 +1075,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/miyake-ss98/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg",
     "description": "",
     "tags": {
       "brand": "Issey Miyake",
@@ -1103,7 +1103,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/margiela-ss89/01.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1126,7 +1126,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/02.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1149,7 +1149,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/03.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1172,7 +1172,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/04.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1195,7 +1195,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/05.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1218,7 +1218,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/06.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1241,7 +1241,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/07.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1264,7 +1264,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/08.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1287,7 +1287,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/09.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1310,7 +1310,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/10.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1333,7 +1333,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/11.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1356,7 +1356,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/12.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1379,7 +1379,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/13.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1402,7 +1402,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/14.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1425,7 +1425,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/margiela-ss89/15.jpg",
+        "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1448,7 +1448,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/margiela-ss89/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-01.jpg",
     "description": "",
     "tags": {
       "brand": "Balenciaga",
@@ -1476,7 +1476,7 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "data/chalayan-aw00/01.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1499,7 +1499,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/02.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1522,7 +1522,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/03.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1545,7 +1545,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/04.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1568,7 +1568,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/05.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1591,7 +1591,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/06.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1614,7 +1614,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/07.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1637,7 +1637,7 @@ export const archiveData = [
         ]
       },
                     {
-          "src": "data/chalayan-aw00/08.jpg",
+          "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-08.jpg",
           "hotspots": [
             {
               "x": 50,
@@ -1660,7 +1660,7 @@ export const archiveData = [
           ]
         },
       {
-        "src": "data/chalayan-aw00/09.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-09.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1683,7 +1683,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/10.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-10.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1706,7 +1706,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/11.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1729,7 +1729,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/12.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-12.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1752,7 +1752,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/13.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-13.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1775,7 +1775,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/14.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-14.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1798,7 +1798,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/chalayan-aw00/15.jpg",
+        "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-15.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1821,7 +1821,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/chalayan-aw00/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-01.jpg",
     "description": "",
     "tags": {
       "brand": "Hussein Chalayan",
@@ -1849,7 +1849,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/prada-ss96/01.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1872,7 +1872,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/02.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -1895,7 +1895,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/03.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1918,7 +1918,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/04.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -1941,7 +1941,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/05.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1964,7 +1964,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/06.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -1987,7 +1987,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/07.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2010,7 +2010,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/08.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2033,7 +2033,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/09.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2056,7 +2056,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/10.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2079,7 +2079,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/11.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2102,7 +2102,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/12.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2125,7 +2125,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/13.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2148,7 +2148,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/14.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2171,7 +2171,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/prada-ss96/15.jpg",
+        "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2194,7 +2194,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/prada-ss96/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-01.jpg",
     "description": "",
     "tags": {
       "brand": "Prada",
@@ -2222,7 +2222,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/galliano-dior-ss00/01.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2245,7 +2245,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/02.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2268,7 +2268,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/03.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2291,7 +2291,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/04.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2314,7 +2314,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/05.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2337,7 +2337,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/06.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2360,7 +2360,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/07.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2383,7 +2383,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/08.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2406,7 +2406,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/09.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2429,7 +2429,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/10.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2452,7 +2452,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/11.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2475,7 +2475,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/12.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2498,7 +2498,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/13.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2521,7 +2521,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/14.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2544,7 +2544,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/galliano-dior-ss00/15.jpg",
+        "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2567,7 +2567,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/galliano-dior-ss00/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg",
     "description": "",
     "tags": {
       "brand": "Christian Dior",
@@ -2595,7 +2595,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/owens-ss14/01.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2618,7 +2618,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/02.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2641,7 +2641,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/03.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2664,7 +2664,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/04.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2687,7 +2687,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/05.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2710,7 +2710,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/06.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2733,7 +2733,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/07.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2756,7 +2756,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/08.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2779,7 +2779,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/09.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2802,7 +2802,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/10.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2825,7 +2825,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/11.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2848,7 +2848,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/12.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -2871,7 +2871,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/13.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2894,7 +2894,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/14.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -2917,7 +2917,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/owens-ss14/15.jpg",
+        "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2940,7 +2940,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/owens-ss14/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg",
     "description": "",
     "tags": {
       "brand": "Rick Owens",
@@ -2968,7 +2968,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/wvb-aw95/01.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -2991,7 +2991,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/02.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3014,7 +3014,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/03.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3037,7 +3037,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/04.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3060,7 +3060,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/05.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3083,7 +3083,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/06.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3106,7 +3106,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/07.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3129,7 +3129,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/08.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3152,7 +3152,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/09.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3175,7 +3175,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/wvb-aw95/10.jpg",
+        "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3198,7 +3198,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/wvb-aw95/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg",
     "description": "",
     "tags": {
       "brand": "Comme des Garcons",
@@ -3226,7 +3226,7 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "data/yamamoto-aw98/01.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3249,7 +3249,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/02.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3272,7 +3272,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/03.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3295,7 +3295,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/04.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3318,7 +3318,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/05.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3341,7 +3341,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/06.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3364,7 +3364,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/07.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3387,7 +3387,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/08.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3410,7 +3410,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/09.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3433,7 +3433,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/10.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3456,7 +3456,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/11.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3479,7 +3479,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/12.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3502,7 +3502,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/13.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3525,7 +3525,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/14.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3548,7 +3548,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/yamamoto-aw98/15.jpg",
+        "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3571,7 +3571,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/yamamoto-aw98/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-01.jpg",
     "description": "",
     "tags": {
       "brand": "Yohji Yamamoto",
@@ -3599,7 +3599,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/gaultier-aw93/01.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3622,7 +3622,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/02.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3645,7 +3645,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/03.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3668,7 +3668,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/04.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3691,7 +3691,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/05.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3714,7 +3714,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/06.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3737,7 +3737,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/07.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3760,7 +3760,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/08.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3783,7 +3783,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/09.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3806,7 +3806,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/10.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3829,7 +3829,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/11.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3852,7 +3852,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/12.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -3875,7 +3875,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/13.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3898,7 +3898,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/14.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -3921,7 +3921,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/15.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3944,11 +3944,11 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/gaultier-aw93/16.jpg",
+        "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-16.jpg",
         "hotspots": []
       }
     ],
-    "imageUrl": "data/gaultier-aw93/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-01.jpg",
     "description": "",
     "tags": {
       "brand": "Jean Paul Gaultier",
@@ -3976,7 +3976,7 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "data/viktor-rolf-aw99/01.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -3999,7 +3999,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/viktor-rolf-aw99/02.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4022,7 +4022,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/viktor-rolf-aw99/03.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4045,7 +4045,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/viktor-rolf-aw99/04.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4068,7 +4068,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/viktor-rolf-aw99/05.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4091,7 +4091,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/viktor-rolf-aw99/06.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4114,7 +4114,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/viktor-rolf-aw99/07.jpg",
+        "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4137,7 +4137,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/viktor-rolf-aw99/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-01.jpg",
     "description": "",
     "tags": {
       "brand": "Viktor & Rolf",
@@ -4165,7 +4165,7 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "data/lang-aw98/01.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4188,7 +4188,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/02.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4211,7 +4211,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/03.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4234,7 +4234,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/04.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4257,7 +4257,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/05.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4280,7 +4280,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/06.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4303,7 +4303,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/07.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4326,7 +4326,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/08.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4349,7 +4349,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/09.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4372,7 +4372,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/lang-aw98/10.jpg",
+        "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4395,7 +4395,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/lang-aw98/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-01.jpg",
     "description": "",
     "tags": {
       "brand": "Helmut Lang",
@@ -4423,7 +4423,7 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "data/moschino-aw14/01.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4446,7 +4446,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/02.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4469,7 +4469,7 @@ export const archiveData = [
         ]
       },
               {
-          "src": "data/moschino-aw14/03.jpg",
+          "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-03.jpg",
           "hotspots": [
             {
               "x": 50,
@@ -4492,7 +4492,7 @@ export const archiveData = [
           ]
         },
       {
-        "src": "data/moschino-aw14/04.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-04.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4515,7 +4515,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/05.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-05.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4538,7 +4538,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/06.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4561,7 +4561,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/07.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-07.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4584,7 +4584,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/08.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-08.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4607,7 +4607,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/09.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-09.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4630,7 +4630,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/10.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-10.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4653,7 +4653,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/11.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4676,7 +4676,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/12.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-12.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4699,7 +4699,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/13.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-13.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4722,7 +4722,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/14.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-14.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4745,7 +4745,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/moschino-aw14/15.jpg",
+        "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-15.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4768,7 +4768,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/moschino-aw14/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-01.jpg",
     "description": "",
     "tags": {
       "brand": "Moschino",
@@ -4796,7 +4796,7 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "data/schiaparelli-ss21/01.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4819,7 +4819,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/02.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-02.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4842,7 +4842,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/03.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4865,7 +4865,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/04.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-04.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -4888,7 +4888,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/05.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4911,7 +4911,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/06.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4934,7 +4934,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/07.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-07.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -4957,7 +4957,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/08.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -4980,7 +4980,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/09.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-09.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -5003,7 +5003,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/10.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -5026,7 +5026,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/11.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -5049,7 +5049,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/12.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-12.jpg",
         "hotspots": [
           {
             "x": 40,
@@ -5072,7 +5072,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/13.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -5095,7 +5095,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/14.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-14.jpg",
         "hotspots": [
           {
             "x": 60,
@@ -5118,7 +5118,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "data/schiaparelli-ss21/15.jpg",
+        "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-15.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -5141,7 +5141,7 @@ export const archiveData = [
         ]
       }
     ],
-    "imageUrl": "data/schiaparelli-ss21/01.jpg",
+    "imageUrl": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-01.jpg",
     "description": "",
     "tags": {
       "brand": "Schiaparelli",

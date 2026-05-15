@@ -68,6 +68,8 @@ export const translations = {
     btn_initialize: '[ Initialize ]',
     btn_export_json: 'EXPORT_JSON',
     btn_close: '[ X Close ]',
+    btn_visualise_tax: '[ VISUALISE TAXONOMY ]',
+    btn_hide_tax: '[ TOGGLE DATA LAYER ]',
     
     // Views
     view_grid: 'Grid View',
@@ -147,6 +149,8 @@ export const translations = {
     btn_save_folder: 'Save to Folder',
     btn_cite: 'Cite',
     btn_back_grid: 'Back to Grid',
+    btn_visualise_tax: '[ VISUALISE TAXONOMY ]',
+    btn_hide_tax: '[ HIDE DATA LAYER ]',
     
     view_grid: 'Grid View',
     view_timeline: 'Timeline View',

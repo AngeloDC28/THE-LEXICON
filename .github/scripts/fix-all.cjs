@@ -1,6 +1,7 @@
 const fs = require('fs');
 
-// 1. FIX IMAGE PATHS IN database.js
+// 1. FIX IMAGE PATHS IN database.js (DISABLED)
+/*
 console.log('Fixing image paths in database.js...');
 let db = fs.readFileSync('database.js', 'utf8');
 
@@ -31,6 +32,7 @@ db = db.replace(/THE-LEXICON-ASSETS\/([-\w]+)\/([-\w]+-)(\d+)\.jpg/g, (match, fo
 
 fs.writeFileSync('database.js', db);
 console.log('database.js done.');
+*/
 
 // 2. FIX translations.js - Angelo info in About
 console.log('Updating translations.js...');
@@ -110,14 +112,14 @@ const se = [
   "    const aLabel = activeFilter ? ' [ ' + activeFilter.toUpperCase() + ' ]' : '';",
   "    const vHtml = isOpen ? values.map(val => {",
   "      const ia = AppState.filters[type.key] === val;",
-  "      return '<button data-taxonomy-type=\\"' + type.key + '\\" data-taxonomy-val=\\"' + val + '\\" class=\\"w-full text-left px-4 py-1.5 text-[9px] font-mono tracking-widest uppercase transition-all ' + (ia ? 'text-acid font-bold bg-white/5' : 'text-white/50 hover:text-white hover:bg-white/5') + '\\">' + (ia ? '[ ' : '  ') + getTranslation(val, lang) + (ia ? ' ]' : '') + '</button>';",
+  "      return '<button data-taxonomy-type=\\\"' + type.key + '\\\" data-taxonomy-val=\\\"' + val + '\\\" class=\\\"w-full text-left px-4 py-1.5 text-[9px] font-mono tracking-widest uppercase transition-all ' + (ia ? 'text-acid font-bold bg-white/5' : 'text-white/50 hover:text-white hover:bg-white/5') + '\\\">' + (ia ? '[ ' : '  ') + getTranslation(val, lang) + (ia ? ' ]' : '') + '</button>';",
   "    }).join('') : '';",
-  "    return '<div class=\\"taxonomy-accordion border-b border-white/10\\">'",
-  "      + '<button data-taxonomy-type=\\"' + type.key + '\\" class=\\"w-full flex items-center justify-between px-3 py-2.5 text-[9px] font-mono tracking-widest uppercase transition-all border-l-2 ' + hCls + '\\" aria-expanded=\\"' + isOpen + '\\">'",
+  "    return '<div class=\\\"taxonomy-accordion border-b border-white/10\\\">'",
+  "      + '<button data-taxonomy-type=\\\"' + type.key + '\\\" class=\\\"w-full flex items-center justify-between px-3 py-2.5 text-[9px] font-mono tracking-widest uppercase transition-all border-l-2 ' + hCls + '\\\" aria-expanded=\\\"' + isOpen + '\\\">'",
   "      + '<span>' + type.label + aLabel + '</span>'",
-  "      + '<span class=\\"text-[8px] opacity-50 ml-2\\">' + (isOpen ? '\u25b2' : '\u25bc') + '</span>'",
+  "      + '<span class=\\\"text-[8px] opacity-50 ml-2\\\">' + (isOpen ? '\\\\u25b2' : '\\\\u25bc') + '</span>'",
   "      + '</button>'",
-  "      + '<div class=\\"overflow-hidden transition-all duration-200 ' + (isOpen ? 'max-h-96 pb-1' : 'max-h-0') + '\\">'",
+  "      + '<div class=\\\"overflow-hidden transition-all duration-200 ' + (isOpen ? 'max-h-96 pb-1' : 'max-h-0') + '\\\">'",
   "      + vHtml + '</div></div>';",
   "  }).join('');",
   "}",
