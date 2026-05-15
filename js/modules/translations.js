@@ -82,7 +82,8 @@ export const translations = {
     modal_auth_desc: 'Enter your credentials to receive a secure access link.',
     modal_about_title: 'About',
     modal_about_body: [
-      'THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.',
+      'Created by <strong>Angelo Sanchez Dela Cruz</strong> — researcher and cultural analyst based in London.',
+        'THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.',
       'Operating strictly outside the traditional fashion media ecosystem, the directory maps the intersections of aesthetic language, historical precedent, and structural power.',
       'Designed for cultural critics and visual strategists, this system decodes the underlying mechanics of class dynamics and bodily autonomy through the lens of visionary image-making.'
     ],
