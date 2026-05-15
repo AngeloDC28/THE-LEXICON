@@ -51,6 +51,7 @@ const callbacks = {
 };
 
 // --- Initialization ---
+window.addEventListener('hashchange', handleRouting);
 document.addEventListener('DOMContentLoaded', () => {
   console.log('LEXICON_BOOT: INITIALIZING_ARCHIVE_CORE...');
   console.log('LEXICON_DATA_AUDIT: ENTRIES_DETECTED =', archiveData.length);
