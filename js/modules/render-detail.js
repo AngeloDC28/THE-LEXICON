@@ -1,8 +1,13 @@
 /**
  * render-detail.js
  * Logic for detail view, hotspots, and metadata.
+ *
+ * FIX 1: Images — set onload/onerror BEFORE setting src, so cached images
+ * don't silently miss the load event.
+ * FIX 2: Hotspot buttons no longer have a redundant inline addEventListener;
+ * delegation is handled entirely by hotspots.js initHotspotInteractions().
+ * FIX 3: Related-entry images use resolveImgSrc so paths resolve correctly.
  */
-
 import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
@@ -11,21 +16,20 @@ import { toggleHotspot } from './hotspots.js';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
-  const brand = $('status-brand');
-  const year = $('status-year');
-  const season = $('status-season');
+  const brand       = $('status-brand');
+  const year        = $('status-year');
+  const season      = $('status-season');
   const entryStatus = $('status-entry');
-
   if (entry) {
-    if (brand) brand.textContent = entry.tags.brand;
-    if (year) year.textContent = entry.year;
-    if (season) season.textContent = entry.season;
+    if (brand)       brand.textContent       = entry.tags.brand;
+    if (year)        year.textContent        = entry.year;
+    if (season)      season.textContent      = entry.season;
     if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
   } else {
     const filtered = getFilteredEntries(archiveData);
-    if (brand) brand.textContent = '--';
-    if (year) year.textContent = '--';
-    if (season) season.textContent = '--';
+    if (brand)       brand.textContent       = '--';
+    if (year)        year.textContent        = '--';
+    if (season)      season.textContent      = '--';
     if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ENTRIES';
   }
 }
@@ -35,37 +39,26 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const entry = archiveData.find((e) => e.id === entryId);
   if (!entry) return;
 
-  AppState.selectedEntryId = entryId;
-  const imgs = entry.images || [{src: entry.imageUrl}];
+  AppState.selectedEntryId   = entryId;
+  const imgs = entry.images || [{ src: entry.imageUrl }];
   AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
-  // UI state
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const detailView = $('detail-image-view');
   if (detailView) detailView.classList.remove('hidden');
-  
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.add('detail-mode-active');
 
-  // Render content
-  renderImage(entry);
+  renderImage(entry, callbacks);
   renderMetadata(entry);
   renderHotspots(entry, $('detail-image-wrapper'));
   renderRelatedEntries(entry, archiveData, callbacks);
-  
-  // Callbacks
+
   if (callbacks) {
     if (callbacks.updateHeaderTelemetry) callbacks.updateHeaderTelemetry(`ACCESSING_NODE: ${entry.id.toUpperCase()}`);
-    if (callbacks.addRecentlyViewed) callbacks.addRecentlyViewed(entryId);
-    if (callbacks.updateBookmarkUI) callbacks.updateBookmarkUI(entryId);
-    if (callbacks.updateMetaForEntry) callbacks.updateMetaForEntry(entry);
-    if (callbacks.extractAccentColor) {
-      const img = $('detail-image');
-      if (img) {
-        if (img.complete) callbacks.extractAccentColor(img);
-        else img.addEventListener('load', () => callbacks.extractAccentColor(img), { once: true });
-      }
-    }
+    if (callbacks.addRecentlyViewed)     callbacks.addRecentlyViewed(entryId);
+    if (callbacks.updateBookmarkUI)      callbacks.updateBookmarkUI(entryId);
+    if (callbacks.updateMetaForEntry)    callbacks.updateMetaForEntry(entry);
   }
 
   updateHash(`detail/${entryId}/${AppState.currentImageIndex}`);
@@ -75,64 +68,70 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
 export function closeDetail(callbacks, archiveData) {
   AppState.selectedEntryId = null;
   updateHash(null);
-
   const detailView = $('detail-image-view');
   if (detailView) detailView.classList.add('hidden');
-  
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.remove('detail-mode-active');
-
   if (callbacks && callbacks.resetMeta) callbacks.resetMeta();
   const glow = $('accent-glow');
   if (glow) glow.style.boxShadow = '';
-
   updateStatusBar(archiveData);
 }
 
 export function navigateEntry(direction, archiveData, callbacks) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (!entry) return;
-
-  const imgs = entry.images || [{src: entry.imageUrl}];
+  const imgs = entry.images || [{ src: entry.imageUrl }];
   const nextImg = AppState.currentImageIndex + direction;
-
-  // Navigate images within same entry
   if (nextImg >= 0 && nextImg < imgs.length) {
     openDetail(entry.id, nextImg, archiveData, callbacks);
     return;
   }
-
-  // Navigate between entries
   const entries = getFilteredEntries(archiveData);
   if (entries.length <= 1) return;
-
   let currentIndex = entries.findIndex(e => e.id === AppState.selectedEntryId);
   if (currentIndex === -1) return;
-
   let newIndex = currentIndex + direction;
   if (newIndex < 0) newIndex = entries.length - 1;
   if (newIndex >= entries.length) newIndex = 0;
-
   const nextEntry = entries[newIndex];
   const startImg = direction > 0 ? 0 : (nextEntry.images || [1]).length - 1;
   openDetail(nextEntry.id, startImg, archiveData, callbacks);
 }
 
-function renderImage(entry) {
-  const imgs = entry.images || [{src: entry.imageUrl}];
+/**
+ * renderImage
+ * FIX: Sets onerror and onload handlers BEFORE assigning src.
+ * This ensures the load event is caught even for cached images.
+ * extractAccentColor is called inside onload so the image is guaranteed painted.
+ */
+function renderImage(entry, callbacks) {
+  const imgs = entry.images || [{ src: entry.imageUrl }];
   const currentImgObj = imgs[AppState.currentImageIndex];
   const currentImgSrc = resolveImgSrc(currentImgObj, entry.imageUrl);
 
   const imgEl = $('detail-image');
   if (imgEl) {
-    imgEl.src = currentImgSrc;
-    imgEl.alt = entry.title || entry.id;
+    // Clear old src first to force reload event on same-URL navigation
+    imgEl.src = '';
+    imgEl.classList.remove('broken-asset');
+
     imgEl.onerror = () => {
       imgEl.src = BROKEN_ASSET;
       imgEl.classList.add('broken-asset');
     };
-    
-    // Trigger Scan Animation
+
+    imgEl.onload = () => {
+      if (callbacks && callbacks.extractAccentColor) {
+        callbacks.extractAccentColor(imgEl);
+      }
+    };
+
+    // Set src AFTER handlers are attached
+    imgEl.src = currentImgSrc;
+    imgEl.alt = entry.title || entry.id;
+
+    // Scan animation
     const scanLine = $('scan-line');
     if (scanLine) {
       scanLine.classList.add('active');
@@ -151,63 +150,60 @@ function renderImage(entry) {
 function renderMetadata(entry) {
   const grid = $('metadata-grid');
   if (!grid) return;
-
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
-
   const fields = [
-    { label: t('tax_era'), value: entry.tags.era },
-    { label: t('tax_gender'), value: entry.tags.gender },
-    { label: t('tax_politics'), value: entry.tags.politics },
-    { label: t('tax_theories'), value: entry.tags.theories },
-    { label: t('tax_materials'), value: entry.tags.materials },
-    { label: t('tax_geography'), value: entry.tags.geography }
+    { label: t('tax_era'),        value: entry.tags.era },
+    { label: t('tax_gender'),     value: entry.tags.gender },
+    { label: t('tax_politics'),   value: entry.tags.politics },
+    { label: t('tax_theories'),   value: entry.tags.theories },
+    { label: t('tax_materials'),  value: entry.tags.materials },
+    { label: t('tax_geography'),  value: entry.tags.geography }
   ];
-
-  grid.innerHTML = fields.map(f => `
-    <div>
-      <p class="text-[8px] opacity-40 uppercase tracking-widest mb-0.5">${f.label}</p>
-      <p class="text-[10px] font-bold uppercase tracking-wider">${getTranslation(f.value, AppState.language) || '--'}</p>
-    </div>
-  `).join('');
+  grid.innerHTML = fields.map(f =>
+    `<div class="space-y-1">
+      <div class="text-[9px] font-mono uppercase tracking-widest text-black/40 dark:text-white/40">${f.label}</div>
+      <div class="text-[10px] font-mono uppercase tracking-wide">${getTranslation(f.value, AppState.language) || '--'}</div>
+    </div>`
+  ).join('');
 }
 
+/**
+ * renderHotspots
+ * FIX: Buttons no longer attach their own click listeners.
+ * Click handling is delegated via the container listener in hotspots.js.
+ * This prevents the "double-fire" bug where each click triggered two handlers.
+ */
 function renderHotspots(entry, container) {
   if (!container) return;
-  
-  // Remove existing buttons
   container.querySelectorAll('.hotspot-btn').forEach(el => el.remove());
 
-  const imgs = entry.images || [{src: entry.imageUrl}];
+  const imgs = entry.images || [{ src: entry.imageUrl }];
   const currentImgObj = imgs[AppState.currentImageIndex];
-  const hotspots = currentImgObj.hotspots || entry.hotspots || [];
+  const hotspots = currentImgObj?.hotspots || entry.hotspots || [];
 
   const hotspotsContainer = $('active-entry-hotspots');
   if (hotspotsContainer) hotspotsContainer.innerHTML = '';
 
   hotspots.forEach((spot, i) => {
-    // Floating Button (Forensic Marker)
+    // Floating button — NO addEventListener; delegation in hotspots.js handles it
     const btn = document.createElement('button');
     btn.className = 'hotspot-btn focus-ring';
     btn.style.left = spot.x + '%';
-    btn.style.top = spot.y + '%';
+    btn.style.top  = spot.y + '%';
     btn.setAttribute('data-index', i);
     btn.setAttribute('aria-label', `Intervention: ${spot.label}`);
-    btn.innerHTML = '<div class="hotspot-dot"></div>';
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleHotspot(i);
-    });
+    btn.innerHTML = '<span></span>';
     container.appendChild(btn);
 
-    // Sidebar Info Box
+    // Sidebar info box
     if (hotspotsContainer) {
       const box = document.createElement('div');
       box.className = 'bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 transition-all duration-300';
       box.setAttribute('data-hotspot-index', i);
       box.innerHTML = `
-        <p class="text-[9px] font-bold uppercase tracking-widest mb-1 opacity-60">${spot.label}</p>
-        <p class="text-[10px] leading-relaxed uppercase tracking-tight">${spot.description}</p>
+        <div class="text-[10px] font-mono uppercase tracking-widest mb-1">${spot.label}</div>
+        <div class="text-[10px] font-mono leading-relaxed text-black/60 dark:text-white/60">${spot.description}</div>
       `;
       hotspotsContainer.appendChild(box);
     }
@@ -217,7 +213,6 @@ function renderHotspots(entry, container) {
 function renderRelatedEntries(entry, archiveData, callbacks) {
   const container = $('related-grid');
   if (!container) return;
-
   const currentTags = Object.values(entry.tags).flat();
   const scored = archiveData
     .filter(e => e && e.id && e.id !== entry.id)
@@ -234,19 +229,19 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
 
   container.innerHTML = '';
   scored.forEach(item => {
+    const src = resolveImgSrc(
+      item.entry.images?.[0] || { src: item.entry.imageUrl },
+      item.entry.imageUrl
+    );
     const card = document.createElement('div');
     card.className = 'group cursor-crosshair';
     card.innerHTML = `
-      <div class="aspect-[3/4] overflow-hidden border border-black/10 dark:border-white/10 mb-2">
-        <img src="${resolveImgSrc(item.entry.images && item.entry.images[0], item.entry.imageUrl)}" 
-             class="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-105 opacity-0"
-             onload="this.classList.add('loaded'); this.style.opacity='1';"
-             onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.classList.add('broken-asset');" />
-      </div>
-      <p class="text-[8px] font-bold uppercase tracking-widest opacity-60">${item.entry.tags.brand}</p>
+      <img src="${src}" alt="${item.entry.tags.brand}" loading="lazy"
+           class="w-full aspect-[3/4] object-cover grayscale group-hover:grayscale-0 transition-all"
+           onerror="this.src='${BROKEN_ASSET}'">
+      <div class="text-[9px] font-mono uppercase mt-1 tracking-widest">${item.entry.tags.brand}</div>
     `;
     card.addEventListener('click', () => openDetail(item.entry.id, 0, archiveData, callbacks));
     container.appendChild(card);
   });
 }
-

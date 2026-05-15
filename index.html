@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <script>
@@ -46,7 +46,6 @@
     .skip-link:focus {
       top: 0;
     }
-    /* Visually hidden but accessible */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -105,7 +104,8 @@
 
   <script>
     (function() {
-      const saved = localStorage.getItem('lexicon-theme');
+      var saved;
+      try { saved = localStorage.getItem('lexicon-theme'); } catch(e) {}
       if (saved === 'light') {
         document.documentElement.classList.remove('dark');
       } else {
@@ -113,13 +113,13 @@
       }
 
       // Fail-safe boot dismissal
-      setTimeout(() => {
-        const overlay = document.getElementById('boot-overlay');
-        const root = document.getElementById('app-root');
+      setTimeout(function() {
+        var overlay = document.getElementById('boot-overlay');
+        var root = document.getElementById('app-root');
         if (overlay && !overlay.classList.contains('hidden')) {
           console.warn("BOOT_FAILSAFE_TRIGGERED");
           overlay.classList.add('boot-fade-out');
-          setTimeout(() => {
+          setTimeout(function() {
             overlay.classList.add('hidden');
             if (root) root.classList.remove('opacity-0');
           }, 500);
@@ -143,7 +143,7 @@
   <a href="#image-panel" class="skip-link">Skip to Archive</a>
 
   <!-- ============================================================
-       BOOT OVERLAY (auto-dismiss after 1.2s)
+       BOOT OVERLAY
   ============================================================ -->
   <div id="boot-overlay" class="pointer-events-auto">
     <div class="boot-text" id="boot-text">THE LEXICON</div>
@@ -177,7 +177,7 @@
     <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
 
     <!-- ============================================================
-         STATUS RIBBON (Responsive)
+         STATUS RIBBON
     ============================================================ -->
     <div id="status-ribbon" class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" aria-live="polite" aria-atomic="true">
       <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
@@ -202,8 +202,6 @@
          MAIN SHELL
     ============================================================ -->
     <div class="flex flex-1 overflow-hidden main-shell">
-
-      <!-- Sidebar Backdrop (Mobile) -->
 
       <!-- LEFT: INDEX PANEL -->
       <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto flex flex-col overflow-hidden bg-overlay dark:bg-darkSurface border-r-[1px] border-black/80 dark:border-white/20">
@@ -242,6 +240,34 @@
             </div>
           </div>
         </div>
+
+        <!-- ============================================================
+             RESEARCH INDEX: Taxonomy Grid (tier 1 — category type selector)
+             Populated dynamically by renderTaxonomyGrid() in search-engine.js
+        ============================================================ -->
+        <div
+          id="taxonomy-grid"
+          class="border-b-[1px] border-black/80 dark:border-white/20 p-2 flex flex-wrap gap-1 shrink-0"
+          role="navigation"
+          aria-label="Filter by category"
+        >
+          <!-- Buttons injected by renderTaxonomyGrid() -->
+        </div>
+
+        <!-- ============================================================
+             RESEARCH INDEX: Taxonomy Sub-panel (tier 2 — value list)
+             Populated dynamically by renderTaxonomySub() in search-engine.js
+        ============================================================ -->
+        <div
+          id="taxonomy-sub"
+          class="hidden border-b-[1px] border-black/80 dark:border-white/20 p-2 shrink-0 overflow-y-auto"
+          style="max-height: 200px;"
+          role="navigation"
+          aria-label="Filter by value"
+        >
+          <!-- Buttons injected by renderTaxonomySub() -->
+        </div>
+
         <!-- Entry List -->
         <div id="entry-list" class="overflow-y-auto flex-1"></div>
 
