@@ -492,17 +492,8 @@ function setupEventListeners() {
     renderSaveFolderModal();
   });
 
-  // Sticky Notes
-  document.querySelectorAll('.sticky-trigger').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const noteType = btn.dataset.note;
-      const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
-      if (entry) setStickyNote(noteType, entry);
-    });
-  });
-  $('btn-close-sticky')?.addEventListener('click', () => {
-    $('sticky-note-panel').classList.remove('visible');
-  });
+  // Hotspot interaction is now handled in render-detail.js per-render.
+
 
   // Keyboard
   window.addEventListener('keydown', (e) => {
@@ -582,7 +573,7 @@ function renderFoldersView() {
   }
   AppState.archivalFolders.forEach(fol => {
     const card = document.createElement('div');
-    card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all group';
+    card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all';
     card.innerHTML = `
       <div class="flex items-baseline justify-between mb-4">
         <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
@@ -617,7 +608,11 @@ function renderSaveFolderModal() {
     const btn = document.createElement('button');
     btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
     btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40">${fol.lookIds ? fol.lookIds.length : 0}</span>`;
-    btn.addEventListener('click', () => saveToFolder(fol.id, AppState.selectedEntryId, callbacks));
+    btn.addEventListener('click', () => {
+      saveToFolder(fol.id, AppState.selectedEntryId, callbacks);
+      const modal = $('save-folder-modal');
+      if (modal) modal.classList.add('hidden');
+    });
     container.appendChild(btn);
   });
 }
@@ -639,3 +634,4 @@ function exportAllFolders() {
   a.setAttribute('download', 'lexicon_all_folders.json');
   a.click();
 }
+
