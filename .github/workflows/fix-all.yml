@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run fix script
-        run: node .github/scripts/fix-all.js
+        run: node .github/scripts/fix-all.cjs
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
