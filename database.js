@@ -5155,6 +5155,5 @@ export const archiveData = [
       "strategy": "By releasing the collection entirely via video during a period of global isolation, Schiaparelli engineers a masterful exercise in media transmission[cite: 2]. The brand bypasses the physical salon entirely; executing brilliant corporate signalling[cite: 2] by simultaneously aligning these extreme visual propositions with historic celebrity moments such as the United States Presidential Inauguration. This calculated spectacle mediation ensures maximum virality and press disruption[cite: 2]; establishing the house as the foremost authority on modern surrealism while dominating global editorial feeds.",
       "provenance": "Under the direction of Daniel Roseberry; Schiaparelli presented the Haute Couture Spring and Summer collection in January 2021 via digital transmission. Established within the Post-Pandemic Surrealist Current; the fashion film format operates as a radical reinvention of the house's codes. The presentation functions as a clinical inquiry into human anatomy; merging traditional techniques with molded bodily elements to challenge the fragility of mid-century dressmaking."
     },
-    "hotspots": []
-  }
+    }
 ];
