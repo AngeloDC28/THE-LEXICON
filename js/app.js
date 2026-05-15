@@ -375,7 +375,7 @@ function setupEventListeners() {
     }
 
     // Back button inside taxonomy sub-panel
-    if (e.target.id === 'btn-taxonomy-back') {
+    if (e.target.closest('[data-taxonomy-back]') || e.target.id === 'btn-taxonomy-back') {
       AppState.activeTaxonomy = null;
       renderTaxonomyGrid();
       renderTaxonomySub(callbacks);
