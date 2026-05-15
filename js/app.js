@@ -52,7 +52,10 @@ const callbacks = {
 
 // --- Initialization ---
 window.addEventListener('hashchange', handleRouting);
-document.addEventListener('DOMContentLoaded', () => {   // FIX-5: Bind UI events immediately so buttons work even if init throws   setupEventListeners();   try {
+document.addEventListener('DOMContentLoaded', () => {
+  // FIX-5: Bind UI events immediately so buttons work even if init throws
+  setupEventListeners();
+  try {
   console.log('LEXICON_BOOT: INITIALIZING_ARCHIVE_CORE...');
   console.log('LEXICON_DATA_AUDIT: ENTRIES_DETECTED =', archiveData.length);
 
@@ -610,7 +613,8 @@ function renderSaveFolderModal() {
     container.innerHTML = '<p class="text-[10px] font-mono uppercase opacity-40">No existing folders found.</p>';
     return;
   }
-function setupEventListeners    const btn = document.createElement('button');
+  AppState.archivalFolders.forEach(fol => {
+    const btn = document.createElement('button');
     btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
     btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40">${fol.lookIds ? fol.lookIds.length : 0}</span>`;
     btn.addEventListener('click', () => saveToFolder(fol.id, AppState.selectedEntryId, callbacks));

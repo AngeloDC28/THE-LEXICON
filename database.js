@@ -3945,8 +3945,12 @@ export const archiveData = [
       },
       {
         "src": "data/gaultier-aw93/16.jpg",
-        "hotspots": [
-          
+        "hotspots": []
+      }
+    ],
+    "imageUrl": "data/gaultier-aw93/01.jpg",
+    "description": "",
+    "tags": {
       "brand": "Jean Paul Gaultier",
       "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Queer Theory & Subcultural Systems",
