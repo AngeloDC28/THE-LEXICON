@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prebuild": "node .github/scripts/fix-all.js && node .github/scripts/copy-data.js"
   },
   "dependencies": {
     "firebase": "^10.0.0"
