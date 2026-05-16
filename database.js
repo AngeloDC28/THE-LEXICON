@@ -1637,7 +1637,7 @@ export const archiveData = [
         ]
       },
                     {
-          "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-08.jpg",
+          "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-08.webp",
           "hotspots": [
             {
               "x": 50,

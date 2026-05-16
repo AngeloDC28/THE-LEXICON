@@ -102,6 +102,8 @@ export const translations = {
     ],
     
     // General
+    bookmarked: 'Bookmarked',
+    bookmark_removed: 'Bookmark removed',
     loading: 'LOADING THE LEXICON',
     accept_terms: '[ ACCEPT_TERMS ]',
     cookie_notice: 'This directory uses persistent local storage (cookies) to maintain terminal state and archival folders.',

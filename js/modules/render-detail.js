@@ -223,7 +223,7 @@ function renderStickyOverlay(entry) {
 
 function renderMetadataGrid(entry) {
   const grid = $('metadata-grid');
-  if (!grid) return;
+  if (!grid || !entry.tags) return;
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
   const fields = [

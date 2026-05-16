@@ -30,7 +30,7 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
     <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${entry.tags.brand}</p>
     <p class="text-xs font-mono uppercase opacity-60 mt-1">${entry.year} &middot; ${entry.season}</p>
     <div class="mt-3">
-      ${Object.entries(entry.tags).map(function(pair) { return '<span class="matrix-tag">' + pair[1] + '</span>'; }).join('')}
+      ${Object.entries(entry.tags).map(function(pair) { return '<span class="matrix-tag">' + t(pair[1]) + '</span>'; }).join('')}
     </div>
   </div>`;
 
@@ -54,7 +54,16 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   }
 
   const content = $('matrix-content');
-  if (content) content.innerHTML = html;
+  if (content) {
+    content.innerHTML = html;
+    if (!content._matrixClickBound) {
+      content._matrixClickBound = true;
+      content.addEventListener('click', function(e) {
+        const el = e.target.closest('.matrix-entry');
+        if (el && callbacks && callbacks.openDetail) callbacks.openDetail(el.dataset.matrixEntryId);
+      });
+    }
+  }
   const matrix = $('connection-matrix');
   if (matrix) {
     matrix.classList.remove('hidden');

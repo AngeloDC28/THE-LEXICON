@@ -4,13 +4,15 @@
  */
 
 import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
+import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 export function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
 }
 
 export function setBookmarks(arr) {
-  localStorage.setItem('lexicon-bookmarks', JSON.stringify(arr));
+  try { localStorage.setItem('lexicon-bookmarks', JSON.stringify(arr)); } catch(e) {}
 }
 
 export function isBookmarked(id) {
@@ -19,12 +21,13 @@ export function isBookmarked(id) {
 
 export function toggleBookmark(id, callbacks) {
   let bm = getBookmarks();
+  const lang = AppState.language;
   if (bm.includes(id)) {
     bm = bm.filter(x => x !== id);
-    if (callbacks && callbacks.showToast) callbacks.showToast('Bookmark removed');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('bookmark_removed', lang));
   } else {
     bm.unshift(id);
-    if (callbacks && callbacks.showToast) callbacks.showToast('Bookmarked');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('bookmarked', lang));
   }
   setBookmarks(bm);
   if (callbacks && callbacks.updateBookmarkUI) callbacks.updateBookmarkUI(id);
@@ -38,7 +41,7 @@ export function addRecentlyViewed(entryId, archiveData, callbacks) {
   let recent = getRecentlyViewed().filter(id => id !== entryId);
   recent.unshift(entryId);
   if (recent.length > 8) recent = recent.slice(0, 8);
-  localStorage.setItem('lexicon-recent', JSON.stringify(recent));
+  try { localStorage.setItem('lexicon-recent', JSON.stringify(recent)); } catch(e) {}
   renderRecentlyViewed(archiveData, callbacks);
 }
 

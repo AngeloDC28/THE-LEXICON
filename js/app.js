@@ -446,8 +446,8 @@ function setupEventListeners() {
   $('btn-toggle-timeline')?.addEventListener('click', () => switchView('timeline', callbacks));
 
   // Detail
-  $('btn-close-detail')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-back-grid')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
+  $('btn-toggle-hotspots-mobile')?.addEventListener('click', toggleMobileHotspots);
   $('btn-viewer-prev')?.addEventListener('click', () => navigateEntry(-1, archiveData, callbacks));
   $('btn-viewer-next')?.addEventListener('click', () => navigateEntry(1, archiveData, callbacks));
 
