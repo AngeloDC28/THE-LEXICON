@@ -43,6 +43,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
 
   renderImage(entry, callbacks);
   renderBrutalistNodes(entry);
+  renderStickyOverlay(entry);
   renderMetadataGrid(entry);
   renderHotspots(entry, $('detail-image-wrapper'));
 
@@ -136,9 +137,8 @@ function renderBrutalistNodes(entry) {
 
   nodeTypes.forEach(type => {
     let text = entry.notes?.[type.id] || '';
-    // Clean em-dashes and fix formatting
-    text = text.replace(/—/g, ';').replace(/--/g, ';');
-    
+    text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
+
     if (text) {
       const node = document.createElement('div');
       node.className = `brutalist-node ${type.class}`;
@@ -148,6 +148,44 @@ function renderBrutalistNodes(entry) {
       `;
       container.appendChild(node);
     }
+  });
+}
+
+/**
+ * renderStickyOverlay
+ * Always-visible tricolour note cards in the top-right of the image sector.
+ * Each card collapses to just its label and expands on click.
+ */
+function renderStickyOverlay(entry) {
+  const overlay = $('sticky-notes-overlay');
+  if (!overlay) return;
+  overlay.innerHTML = '';
+
+  const lang = AppState.language;
+  const t = (k) => getTranslation(k, lang);
+
+  const nodeTypes = [
+    { id: 'provenance', label: t('note_provenance') || '[ PROVENANCE ]', cls: 'overlay-node-provenance' },
+    { id: 'critique',   label: t('note_critique')   || '[ CRITIQUE ]',   cls: 'overlay-node-critique'   },
+    { id: 'strategy',   label: t('note_strategy')   || '[ STRATEGY ]',   cls: 'overlay-node-strategy'   }
+  ];
+
+  nodeTypes.forEach(type => {
+    let text = entry.notes?.[type.id] || '';
+    text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
+    if (!text) return;
+
+    const node = document.createElement('div');
+    node.className = `sticky-overlay-node ${type.cls}`;
+    node.innerHTML = `
+      <div class="overlay-label">
+        <span>${type.label}</span>
+        <span class="overlay-chevron">▼</span>
+      </div>
+      <div class="overlay-body">${text}</div>
+    `;
+    node.addEventListener('click', () => node.classList.toggle('expanded'));
+    overlay.appendChild(node);
   });
 }
 
@@ -214,7 +252,7 @@ function showPayload(spot, permanent = false) {
   if (!payload || !content) return;
 
   let text = spot.description || '';
-  text = text.replace(/—/g, ';').replace(/--/g, ';');
+  text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
   
   content.innerHTML = `
     <div class="text-[10px] font-bold mb-2 border-b border-black/10 pb-1">${spot.label.toUpperCase()}</div>

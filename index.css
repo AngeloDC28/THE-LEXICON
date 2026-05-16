@@ -353,8 +353,10 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
 
 #analytical-payload.floating-payload {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  top: auto;
+  right: auto;
 }
 
 /* ── REFACTORED DETAIL LAYOUT ── */
@@ -1462,4 +1464,89 @@ html.dark .filter-chip {
 
 #sticky-note-panel.visible {
   display: flex !important;
+}
+
+/* ── IMAGE SIZING FIX: constrain detail image to viewport ── */
+#detail-image-sector {
+  overflow: hidden;
+  min-height: 0;
+}
+#detail-image {
+  max-height: calc(100vh - 48px) !important;
+}
+
+/* ── STICKY NOTES OVERLAY (always-visible top-right) ── */
+#sticky-notes-overlay {
+  width: 240px;
+}
+
+.sticky-overlay-node {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+  color: #000;
+}
+.sticky-overlay-node:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 #000;
+}
+.sticky-overlay-node .overlay-label {
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  font-size: 9px;
+  user-select: none;
+}
+.sticky-overlay-node .overlay-body {
+  padding: 8px 10px;
+  font-size: 8.5px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+  border-top: 2px solid rgba(0,0,0,0.3);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.sticky-overlay-node.expanded .overlay-body {
+  display: block;
+}
+.sticky-overlay-node .overlay-chevron {
+  font-size: 8px;
+  transition: transform 0.15s ease;
+  opacity: 0.6;
+}
+.sticky-overlay-node.expanded .overlay-chevron {
+  transform: rotate(180deg);
+}
+.overlay-node-provenance { background: #E6FF00 !important; }
+.overlay-node-critique   { background: #FF0000 !important; color: #fff !important; }
+.overlay-node-critique .overlay-body { color: #fff; border-top-color: rgba(255,255,255,0.3); }
+.overlay-node-critique:hover { box-shadow: 4px 4px 0 rgba(255,255,255,0.3) !important; }
+.overlay-node-strategy   { background: #0000FF !important; color: #fff !important; }
+.overlay-node-strategy .overlay-body { color: #fff; border-top-color: rgba(255,255,255,0.3); }
+.overlay-node-strategy:hover { box-shadow: 4px 4px 0 rgba(255,255,255,0.3) !important; }
+
+/* Ensure analytical payload is readable */
+#analytical-payload {
+  max-width: 300px;
+  min-width: 200px;
+}
+#payload-content {
+  font-size: 9.5px !important;
+  line-height: 1.55 !important;
+  color: #000 !important;
+}
+#payload-content .text-\[10px\] {
+  font-size: 9.5px !important;
 }

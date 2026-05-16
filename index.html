@@ -376,11 +376,14 @@
               <button type="button" id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
               <button type="button" id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
               
-              <!-- Control Panel Overlay -->
+              <!-- Control Panel Overlay (top-left) -->
               <div class="absolute top-4 left-4 flex flex-col gap-2 z-[200]">
                 <button id="btn-tax-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
                 <button id="btn-fullscreen-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
+
+              <!-- Sticky Notes Overlay (always visible, top-right) -->
+              <div id="sticky-notes-overlay" class="absolute top-4 right-4 z-[300] flex flex-col gap-1 pointer-events-auto"></div>
             </div>
 
             <!-- RIGHT: Metadata Sidebar -->
