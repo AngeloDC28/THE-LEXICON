@@ -193,8 +193,7 @@ function renderHotspots(entry, container) {
     // Interaction
     btn.addEventListener('mouseenter', () => showPayload(spot));
     btn.addEventListener('mouseleave', () => hidePayload());
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
+    btn.addEventListener('click', () => {
       showPayload(spot, true);
     });
 
