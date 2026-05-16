@@ -964,18 +964,18 @@ export const archiveData = [
     "tags": {
       "brand": "Issey Miyake",
       "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Ecological Politics & Resource Extraction",
+      "politics": "Labour Politics & Industrial Production",
       "theories": "Post-Humanism",
       "gender": "Unisex / Neutral",
-      "materials": "Elastomeric Compounds (Lycra; Spandex; Stretch Blends)",
-      "geography": "Paris (Chambre Syndicale / RTW)",
+      "materials": "Smart & Kinetic Textiles",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Modular Componentry",
-      "format": "Traditional Runway (The Linear Catwalk)"
+      "format": "Traditional Runway"
     },
     "notes": {
-      "critique": "This runway executes a radical rejection of Western tailoring traditions. By presenting a continuous red knit tube that connects multiple models in a singular web, Miyake enforces a state of mechanical fluidity[cite: 2] and collective identity. The spectacle forces an institutional critique[cite: 2] of mass production and waste. The wearer is granted absolute bodily autonomy and transgression[cite: 2], as they must literally cut their own garments from the continuous roll; transitioning the consumer from a passive participant into an active agent of the design process.",
-      "strategy": "The brand executes a brilliant display of narrative curation by turning the runway into a live manufacturing tutorial. Rather than presenting finished luxury goods, Miyake uses the physical presence of the catwalk to demonstrate the algorithmic process itself. By having models cut themselves free on stage, the press strategy shifts the editorial focus from trend-based consumption to an institutional critique of industrial waste; framing Miyake as a pioneer of technical problem-solving.",
-      "provenance": "Designer Issey Miyake presented the Spring and Summer Ready to Wear collection A-POC (A Piece of Cloth) in October 1998 within the Paris official schedule. Developed during the Deconstructionist Decade; this presentation utilized a theatrical stage performance to document a profound intervention into industrial manufacturing. The work functions as a rigorous inquiry into the relationship between the biological body and the spatial void existing within the textile."
+      "provenance": "Issey Miyake presented his Spring and Summer 1999 ready-to-wear collection A-POC (A Piece of Cloth) during Paris Fashion Week; marking the official runway debut of the A-POC manufacturing system later acquired by the Museum of Modern Art as a permanent object of design innovation. The presentation served as Miyake's final fashion show before retiring from active design to dedicate the remainder of his career to textile technology research; transferring the stewardship of his brand to a succession of protégés. Twenty-three models walked the catwalk physically interconnected within a single continuous tube of bright red jersey fabric; with supermodel Alek Wek positioned at the terminus holding the trailing length of uncut cloth.",
+      "strategy": "The A-POC process engineers garments from a single continuous piece of computer-knitted fabric; eliminating the traditional need for cuts and seams through a manufacturing logic Miyake traced to the simplest prehistoric textile forms. Dashed cut-lines encoded directly into the fabric's structure transfer the final act of construction from the designer to the wearer; who may customize sleeve length; garment length; and silhouette using scissors alone. The runway presentation literalized this collective logic by attaching all twenty-three models within a single garment; presenting the body not as an isolated individual unit but as a node within a continuous; interconnected corporeal network. This integration of wearer agency into the manufacturing system dismantles the traditional top-down hierarchy of haute couture authorship.",
+      "critique": "The A-POC system constitutes a radical reordering of the conventional fashion supply chain; compressing designer; manufacturer; and consumer into a single participatory circuit that collapses the Marxist distinction between production and consumption. The red tube connecting twenty-three bodies on the runway operates as a visceral spatial argument; the collective form evoking what critics described as something tense and fleshy from a Cronenberg film — a deliberate rejection of fashion's normative grammar of the isolated individual body moving through space. Miyake explicitly frames A-POC within the most ancient of human technological impulses; stating that all of his work stems from the simplest of ideas that go back to the earliest civilizations — making clothing from one piece of cloth; a strategy that positions Post-Human engineering not as rupture but as the return to an irreducible material truth. The system's near-zero-waste production logic further enacts a Labour Politics critique; embedding environmental ethics into the industrial process rather than appending them as a retail gesture."
     },
     "hotspots": []
   },
