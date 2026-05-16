@@ -158,18 +158,14 @@ html.dark .bg-overlay {
 /* Image Hover Parallax-ish effect */
 .grid-cell img {
   transform-origin: center center;
-  filter: grayscale(100%) contrast(1.1);
-  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1), 
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1),
               filter 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
-.grid-cell:hover img {
-  filter: grayscale(0%) contrast(1);
-}
 html.dark .grid-cell img {
-  filter: grayscale(100%) contrast(1.1) brightness(0.8);
+  filter: brightness(0.9);
 }
 html.dark .grid-cell:hover img {
-  filter: grayscale(0%) contrast(1) brightness(1);
+  filter: brightness(1);
 }
 
 /* Accessibility: Skip Links */
@@ -191,42 +187,18 @@ html.dark .grid-cell:hover img {
   top: 0;
 }
 
-/* ── FIDELITY MODES (FORENSIC VS AESTHETIC) ── */
-/* Default (Forensic): Clinical, desaturated, high-contrast */
+/* ── IMAGE TRANSITIONS ── */
 .grid-cell img,
 .entry-thumbnail img,
 #detail-image,
 .recent-thumb,
 .node-thumb {
-  filter: grayscale(1) contrast(1.1) brightness(0.95);
-  transition: filter 0.5s cubic-bezier(0.23, 1, 0.32, 1), 
+  transition: filter 0.5s cubic-bezier(0.23, 1, 0.32, 1),
               transform 1.2s cubic-bezier(0.23, 1, 0.32, 1),
               opacity 0.4s ease;
 }
 
-/* Hover reveals original data in Forensic mode */
-.grid-cell:hover img,
-.entry-thumbnail:hover img,
-.recent-thumb:hover,
-.timeline-node:hover .node-thumb {
-  filter: grayscale(0.2) contrast(1) brightness(1);
-}
-
-/* High Fidelity (Aesthetic): Full colour, natural vibrant contrast */
-body.high-fidelity .grid-cell img,
-body.high-fidelity .entry-thumbnail img,
-body.high-fidelity #main-image-viewer img,
-body.high-fidelity .recent-thumb,
-body.high-fidelity .node-thumb {
-  filter: grayscale(0) contrast(1) brightness(1) !important;
-}
-
-body.high-fidelity .grid-cell:hover img {
-  filter: none !important;
-}
-
-/* High Fidelity also removes the 'broken' desaturation unless truly broken */
-body.high-fidelity .broken-asset {
+.broken-asset {
   filter: grayscale(1) opacity(0.3);
 }
 
@@ -758,9 +730,9 @@ html.dark .cmd-item.selected {
   will-change: filter;
 }
 @keyframes forensicScan {
-  0% { filter: grayscale(1) contrast(1.2) brightness(1); }
-  50% { filter: grayscale(0.5) contrast(1.5) brightness(1.2); }
-  100% { filter: grayscale(1) contrast(1.2) brightness(1); }
+  0% { filter: contrast(1.2) brightness(1); }
+  50% { filter: contrast(1.5) brightness(1.2); }
+  100% { filter: contrast(1.2) brightness(1); }
 }
 .boot-text { position: relative; z-index: 3; }
 #boot-overlay.boot-fade-out {
@@ -1075,7 +1047,7 @@ html.dark #toast { background: #CCFF00; color: #000; }
 .recent-thumb {
   width: 36px; height: 44px; object-fit: cover; flex-shrink: 0;
   border: 1px solid rgba(0,0,0,0.3); cursor: pointer;
-  filter: grayscale(70%); transition: filter 0.2s ease;
+  transition: filter 0.2s ease;
 }
 .recent-thumb:hover { filter: none; }
 html.dark .recent-thumb { border-color: rgba(255,255,255,0.2); }
@@ -1180,10 +1152,10 @@ html.dark .node-stem { background: rgba(255,255,255,0.3); }
 .node-stem-bottom { top: -20px; }
 .node-thumb {
   width: 100%; aspect-ratio: 3/4; object-fit: cover;
-  border: 1px solid #000; filter: grayscale(1); transition: all 0.2s ease;
+  border: 1px solid #000; transition: all 0.2s ease;
 }
 html.dark .node-thumb { border-color: rgba(255,255,255,0.2); }
-.timeline-node:hover .node-thumb { filter: grayscale(0); transform: translateY(-5px); }
+.timeline-node:hover .node-thumb { transform: translateY(-5px); }
 .node-meta { font-family: 'IBM Plex Mono', monospace; font-size: 9px; margin-top: 8px; line-height: 1.2; white-space: normal; }
 .node-year { font-weight: bold; font-size: 11px; margin-bottom: 2px; display: block; }
 

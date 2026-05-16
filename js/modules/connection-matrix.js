@@ -44,7 +44,7 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
       data.entries.slice(0, 12).forEach(function(rel) {
         const thumbSrc = resolveImgSrc(rel.images && rel.images[0], rel.imageUrl);
         html += `<div class="matrix-entry" data-matrix-entry-id="${rel.id}">`;
-        html += `<img src="${thumbSrc}" alt="${rel.tags.brand}" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;filter:grayscale(70%) contrast(1.15);" loading="lazy" onerror="this.src='${BROKEN_ASSET}'; this.style.filter='none'" />`;
+        html += `<img src="${thumbSrc}" alt="${rel.tags.brand}" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;" loading="lazy" onerror="this.src='${BROKEN_ASSET}'; this.style.filter='none'" />`;
         html += `<p class="text-[10px] font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>`;
         html += `<p class="text-[9px] font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>`;
         html += '</div>';
