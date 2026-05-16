@@ -48,19 +48,6 @@ function showHotspot(index) {
   AppState.activeHotspot = index;
   console.log('LEXICON_ACTION: HOTSPOT_SELECT', index);
 
-  // Desktop: highlight sidebar info box
-  const infoBoxes = document.querySelectorAll('#active-entry-hotspots > div');
-  if (infoBoxes.length > 0) {
-    infoBoxes.forEach((box, i) => {
-      if (i === index) {
-        box.classList.add('active-hotspot-box', 'border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
-        box.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        box.classList.remove('active-hotspot-box', 'border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
-      }
-    });
-  }
-
   // Mobile: show hotspot info via payload (dock elements not present)
   const entry = _archiveData.find(e => e.id === AppState.selectedEntryId);
   if (entry && window.innerWidth < 1024) {
@@ -89,9 +76,6 @@ function showHotspot(index) {
 
 export function cleanupHotspots() {
   AppState.activeHotspot = null;
-  document.querySelectorAll('#active-entry-hotspots > div').forEach(box => {
-    box.classList.remove('border-black', 'dark:border-white', 'bg-black/10', 'dark:bg-white/10');
-  });
   document.querySelectorAll('.hotspot-btn').forEach(btn => btn.classList.remove('active'));
 }
 

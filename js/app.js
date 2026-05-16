@@ -186,8 +186,6 @@ function refreshUI() {
   const btnBackGrid = $('btn-back-grid');
   if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
 
-  const relatedTitle = $$('#related-entries h4')[0];
-  if (relatedTitle) relatedTitle.textContent = t('related_artifacts');
 
   // --- Folders View ---
   const folderTitle = $$('#folders-view h1')[0];
