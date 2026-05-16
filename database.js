@@ -10,22 +10,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "x": 48,
+            "y": 44,
+            "label": "Low Rise Trouser Waist",
+            "description": "The waistband is cut extremely low to reveal the pelvic bone and navel region; this anatomical displacement engages with Body Politics by challenging traditional sites of modesty and tailoring restraint; the structural tension between the heavy wool plaid and the exposed skin highlights a visceral corporeal presence; it refuses the coverage of conventional suiting to emphasize the raw geometry of the torso."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "x": 37,
+            "y": 20,
+            "label": "Open Standing Collar",
+            "description": "The high funnel collar is integrated into the lapel and remains unfastened to frame the neck and sternum; through Deconstructionist Logic the garment is stripped of its utilitarian closure to reveal the interiority of the silhouette; the sharp vertical lines of the plaid print accentuate the architectural rigidity of the coat; it asserts the jacket as a sculptural frame rather than a protective outer layer."
           }
         ]
       },
@@ -33,22 +27,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-02.jpg",
         "hotspots": [
           {
-            "x": 40,
+            "x": 51,
             "y": 30,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "label": "Mirror Mosaic Halter",
+            "description": "The bodice is constructed from a grid of individual mirrored tiles that create a fragmented reflective surface; this material choice engages with The Simulacrum by reflecting and distorting the environment into a pixelated image; the sharp; geometric edges of the tiles contrast with the organic curves of the human form beneath; it completes the collection's theme of the body as an object of industrial assembly."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 45,
+            "y": 70,
+            "label": "Grey Flared Trousers",
+            "description": "The trousers are tailored with a wide flare from the knee down to create a dramatic architectural base; this extension of the leg engages with Post-Humanism by exaggerating the human proportion into a non-biological silhouette; the heavy fabric provides a grounding weight to the light-reflecting bodice; it asserts a powerful; rooted stance that balances the fragility of the mirrored top."
           }
         ]
       },
@@ -57,21 +45,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "y": 25,
+            "label": "Silver Metallic Lapel",
+            "description": "The lustrous silver fabric is folded into sharp; precise lapels that capture and diffuse runway lighting; this synthetic sheen engages with Cyborg Manifestos by suggesting a skin composed of liquid metal or futuristic alloys; the clean finish of the tailoring emphasizes a machine-like perfection in the construction; it asserts the garment as a technological skin that mediates the body and the environment."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "x": 44,
+            "y": 75,
+            "label": "Tapered Silver Trousers",
+            "description": "The trousers feature a slim; tapered cut that follows the natural line of the leg while maintaining a rigid; metallic surface; through the lens of Post-Humanism the uniform materiality of the suit erases the distinction between garment and anatomy; the visible crease down the center of the leg provides a structural spine to the lower half; it completes the vision of a unified; metallicized human subject."
           }
         ]
       },
@@ -79,22 +61,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 47,
+            "y": 13,
+            "label": "White Bound Neckline",
+            "description": "The high collar is defined by a thick white border that creates a graphic break against the grey leather; this constriction engages with Body Politics by echoing orthopedic or medical restraints; the visible lacing detail at the throat suggests a surgical or fetishistic tension; it asserts a mood of restricted elegance that defines the upper silhouette."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "x": 38,
+            "y": 55,
+            "label": "Layered Mesh Overskirt",
+            "description": "The skirt is composed of translucent grey mesh panels that create a sense of ethereal; layered volume; this material transparency engages with The Grotesque and Abject by partially revealing the skeletal or limb structure beneath; the lightness of the mesh contrasts with the heavy; bound leather of the torso; it refuses the solidity of traditional skirts in favor of a spectral; atmospheric movement."
           }
         ]
       },
@@ -102,22 +78,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-05.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 70,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "x": 45,
+            "y": 40,
+            "label": "Pinstripe Long Coat",
+            "description": "The coat features an elongated pinstripe pattern that stretches the verticality of the model; this structural manipulation engages with Deconstructionist Logic by extending the proportions of a standard blazer into a gown-like form; the high side-slits reveal the trousers beneath and allow for a fluid; mobile gait; it asserts a new hybrid between formal menswear and feminine silhouette."
           },
           {
-            "x": 60,
+            "x": 31,
             "y": 85,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "label": "Flared Trouser Cuff",
+            "description": "The trousers end in a wide; bell-bottom flare that obscures the shoes and creates a solid foundation; through the lens of Post-Humanism the flare alters the human center of gravity into a wider; more stable geometric shape; the clean white textile emphasizes the purity and precision of the cut; it completes the architectural sweep of the entire striped ensemble."
           }
         ]
       },
@@ -125,22 +95,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-06.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "x": 52,
+            "y": 33,
+            "label": "Ruffled Lace Collar",
+            "description": "The top features intricate blue lace ruffles that cascade down the chest and frame the face; this texture engages with The Grotesque and Abject by mimicry of internal biological membranes or fungal growth; the open center reveals the vulnerability of the skin against the ornate fabric; it refuses the buttoned-up tradition of lace to create an aggressive; romantic exposure."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 48,
+            "y": 75,
+            "label": "Asymmetric Striped Skirt",
+            "description": "The skirt is cut with a sharp diagonal hemline that reveals the legs at varying heights; this irregular geometry engages with Deconstructionist Logic by breaking the symmetry of the human form; the vertical stripes contrast with the chaotic texture of the lace top above; it asserts a sense of structural imbalance and modern instability."
           }
         ]
       },
@@ -148,22 +112,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "x": 58,
+            "y": 25,
+            "label": "High Neck Lace",
+            "description": "The dress starts with a tightly fitted lace collar that extends to the chin to elongate the neck; this material choice engages with Body Politics by utilizing a feminine; decorative fabric to enforce a rigid; sculptural posture; the floral patterns are visible against the skin to create a secondary; organic texture; it asserts a sense of aristocratic restraint through delicate textile intervention."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "x": 25,
+            "y": 70,
+            "label": "Circular Lace Hem",
+            "description": "The skirt flares out into a full; circular shape that catches the air and creates a floating volume; through the lens of The Simulacrum the movement of the lace mimics a natural; biological organism or sea creature; the transparency of the fabric at the edge softens the boundary between the garment and the runway space; it completes the vision of the dress as a kinetic; living sculpture."
           }
         ]
       },
@@ -171,22 +129,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-08.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 48,
+            "y": 28,
+            "label": "Pleated Balsa Bodice",
+            "description": "The bodice is constructed from rigid; pleated wooden fans that extend outward from the shoulders; this structural element engages with Deconstructionist Logic by replacing textile with architectural; non-pliable materials; the geometric precision of the pleats creates a dramatic; inhuman silhouette; it refuses the soft drape of traditional fashion to assert a hard-edged; industrial beauty."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "x": 43,
+            "y": 75,
+            "label": "Beige Flared Trousers",
+            "description": "The trousers are tailored in a neutral beige fabric with a clean; pressed crease and a wide flare at the ankle; this grounding garment engages with Body Politics by providing a stable; masculine foundation to the avant-garde bodice; the color palette harmonizes with the natural wood tones of the upper half; it completes the look as a study in organic; architectural hybridity."
           }
         ]
       },
@@ -194,22 +146,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "x": 50,
+            "y": 30,
+            "label": "Strapless Mesh Bodice",
+            "description": "The top of the dress is held by a semi-transparent mesh panel that reveals the structure of the torso; through the lens of Body Politics the exposure of the skin under lace subverts the modesty of the evening gown; the contrast between the sheer mesh and the opaque ruffles highlights the fragility of the human form; it refuses a total covering to maintain a dialogue between concealment and revelation."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "y": 50,
+            "label": "Tiered Lace Ruffles",
+            "description": "The black dress is composed of multiple horizontal layers of lace that create a dense; tiered texture; this repetition engages with The Grotesque and Abject through its resemblance to dark; organic decay or excessive biological layering; the weight of the lace creates a subtle movement as the model walks; it asserts a somber; gothic romanticism that dominates the runway presence."
           }
         ]
       },
@@ -217,22 +163,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-10.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 70,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "x": 53,
+            "y": 50,
+            "label": "Woven Metallic Column",
+            "description": "The garment is woven from a stiff; metallic textile that creates a shimmering; rigid tube around the body; this material engages with Cyborg Manifestos by presenting a body encased in a protective; shimmering exoskeleton; the absence of traditional seams emphasizes the monolithic nature of the piece; it asserts the subject as a static; statuesque presence that defies the fluidity of fabric."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 72,
+            "y": 60,
+            "label": "Extended Back Hem",
+            "description": "The fabric extends into a long; trailing panel at the back to create a sense of processional weight; through Deconstructionist Logic the garment functions as both a sheath and a train to disrupt standard dress categories; the light reflects off the woven texture to create a liquid; shimmering effect during movement; it completes the transformation of the model into a metallicized; non-human entity."
           }
         ]
       },
@@ -240,22 +180,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-11.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
-          },
-          {
-            "x": 60,
+            "x": 55,
             "y": 30,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "label": "Halter Leather Top",
+            "description": "The bodice is a simple; tan leather halter that fastens at the neck and leaves the back entirely exposed; through the lens of Body Politics the leather suggests a raw; animalistic contrast to the mechanical fan skirt; the smooth surface of the hide highlights the organic curves of the model's back; it asserts a primal; biological anchor for the architectural intervention below."
+          },
+          {
+            "x": 58,
+            "y": 50,
+            "label": "Laser Cut Fan Skirt",
+            "description": "The skirt is composed of a rigid; laser-cut fan that opens out from the waist in a perfect semi-circle; this element engages with Deconstructionist Logic by utilizing the mechanics of a handheld object to construct a wearable garment; the delicate perforations in the material allow light to pass through and create shadows on the floor; it refuses the traditional wrap of a skirt to assert a purely geometric; rotating volume."
           }
         ]
       },
@@ -263,22 +197,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 52,
+            "y": 35,
+            "label": "Embroidered Floral Vine",
+            "description": "A dark; embroidered vine with large floral blossoms is applied across the torso and skirt; through Post-Humanism the embroidery acts as a biological parasite that appears to be growing directly out of the garment; the three-dimensional quality of the flowers adds a sculptural layer to the flat fabric; it completes the vision of a body reclaiming itself through a fusion with botanical nature."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "y": 71,
+            "label": "Distressed Burlap Hem",
+            "description": "The dress features a raw; frayed hemline that reveals the coarse fibers of the burlap-like textile; this material choice engages with The Grotesque and Abject by elevating a low; industrial fabric to the level of high fashion; the visible threads create a halo of decay around the model's knees; it refuses the finished edge to emphasize the material's humble; organic origins."
           }
         ]
       },
@@ -286,22 +214,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-13.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "x": 56,
+            "y": 42,
+            "label": "Brown Leather Girdle",
+            "description": "A wide brown leather girdle with multiple buckles cinches the waist and hips with aggressive force; this element engages with Body Politics by referencing orthopedic corsetry and medical correction as high-fashion fetish; the rigid leather contrasts sharply with the delicate lace undergarment; it asserts a mood of prosthetic constraint that defines the central silhouette."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "x": 67,
+            "y": 72,
+            "label": "Ruffled Lace Train",
+            "description": "A long train of tiered lace ruffles extends from the back of the leather girdle to trail on the floor; through the lens of Deconstructionist Logic the train is detached from a full dress to become a secondary; decorative appendage; the frothiness of the lace creates a romantic shadow against the hard leather above; it refuses a singular garment identity to present a hybrid of armor and lingerie."
           }
         ]
       },
@@ -309,22 +231,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Structured Bodice Restriction",
-            "description": "The severe structuring of the upper torso enforces an artificial rigidity that rejects natural anatomical curvature; manifesting the internalized mechanisms of Panoptic Surveillance. This corsetry operates not merely as aesthetic form but as a physical disciplinary apparatus. It translates the internal psychological tension of the collection into a tangible; wearable cage. The deliberate restriction of the lungs elevates the garment from mere clothing to an instrument of self-policing and normalization."
+            "x": 48,
+            "y": 30,
+            "label": "Molded Leather Cuirass",
+            "description": "The bodice is a rigid; brown leather shell that is anatomically molded to follow the contours of the chest; this piece engages with Cyborg Manifestos by replacing the soft skin with a protective; inanimate hide; the lacing details along the sides suggest a process of enclosure and permanent fixation; it completes the collection's obsession with the hard shell versus the soft interiority of the body."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
+            "x": 33,
+            "y": 90,
+            "label": "Hand Carved Wooden Prosthetics",
+            "description": "The prosthetic limbs are intricately carved from solid ash wood and feature floral vine reliefs; through the lens of Post-Humanism the medical device is transformed into a site of high craft and architectural extension; the Louis-style heel and slim ankle redesign the disabled body as a powerful; stylistic subject; it asserts the prosthetic not as a deficit but as a superior; aestheticized limb."
           }
         ]
       },
@@ -332,22 +248,33 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-15.jpg",
         "hotspots": [
           {
+            "x": 48,
+            "y": 15,
+            "label": "Shimmering Mesh Face Mask",
+            "description": "A hood of glittering mesh completely obscures the model's face to erase individual identity; this erasure engages with The Grotesque and Abject by transforming the human head into a faceless; monolithic object; the sparkle of the mesh creates a digital; static effect that disrupts the viewer's gaze; it refuses the traditional fashion portrait in favor of a totalizing; decorative objectification."
+          },
+          {
+            "x": 45,
+            "y": 75,
+            "label": "Embellished White Skirt",
+            "description": "The long white skirt is decorated with intricate silver floral motifs that echo the texture of the mask above; through Deconstructionist Logic the embellishment is dispersed across the fabric like a digital glitch or organic sprawl; the weightless quality of the fabric provides a soft contrast to the rigid mask; it completes the look of a spectral; shimmering figure that moves between the material and the digital."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-16.jpg",
+        "hotspots": [
+          {
             "x": 50,
-            "y": 70,
-            "label": "Kinetic Fabric Drape",
-            "description": "The kinetic behaviour of the draped fabric serves as a stark counterpoint to the rigid mechanical interventions; offering a visual study in Bodily Autonomy and Transgression. As the body moves; the textile records the trauma of motion through its asymmetrical folding patterns. This fluidity highlights the inherent vulnerability of the organic subject against the industrial environment. The drape operates as a visual echo of physical collapse; asserting autonomy through the chaos of movement."
+            "y": 33,
+            "label": "Belted Empire Waist",
+            "description": "A simple leather belt cinches the white cotton fabric high on the chest to create a voluminous flare below; through the lens of Body Politics the belt acts as a point of structural restraint that directs the flow of the garment; the purity of the white fabric serves as a necessary contrast to the chaotic paint spray; it completes the silhouette as a victim of a high-tech; performative assault."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Engineered Hemline Attrition",
-            "description": "The engineered attrition of the hemline deliberately sabotages the pursuit of classical perfection; engaging directly with Deconstructionist Logic (Derrida). Frayed and degraded perimeters expose the internal construction architecture; challenging the illusion of seamless luxury and exposing the structural sign system. This decay acts as a temporal marker; suggesting a garment that is simultaneously in a state of creation and destruction. The visual deterioration forces the viewer to confront the fragility of material existence."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Industrial Hardware Integration",
-            "description": "The integration of rigid; industrial fastening systems subverts the organic fluidity of the garment; operating directly within the framework of Biopolitics and Bio-Power (Foucault). This mechanical imposition acts as a mechanism of both support and subjugation; recalling the violent precision of the automotive assembly line. It forces the biological body into an uneasy negotiation with cold metallurgy; demonstrating how external power structures discipline the physical subject. Ultimately; the hardware functions as a semiotic anchor that grounds the ethereal textile in the brutal reality of physical labour."
+            "x": 50,
+            "y": 60,
+            "label": "Robotic Pigment Spray",
+            "description": "The dress surface is marked by erratic splashes of acidic yellow and black paint delivered by industrial machines; this visible trauma engages with Cyborg Manifestos to record a violent encounter between technology and craft; the drips and splatters represent the loss of human control in the creative process; it asserts the body as a passive canvas for mechanical intervention."
           }
         ]
       }
