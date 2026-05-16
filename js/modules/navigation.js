@@ -2,7 +2,13 @@ import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
+const _scrollPositions = {};
+
 export function switchView(viewId, callbacks) {
+  // Save scroll position of the current view before switching
+  const currentViewEl = $(`${AppState.currentView}-view`);
+  if (currentViewEl) _scrollPositions[AppState.currentView] = currentViewEl.scrollTop;
+
   // If we are in detail view, we might want to close it first if switching to a primary view
   // But usually detail view overlays, so we only hide it if we explicitly go to a primary view
   if (viewId !== 'detail') {
@@ -23,6 +29,9 @@ export function switchView(viewId, callbacks) {
     if (el) {
       if (v === `${viewId}-view`) {
         el.classList.remove('hidden');
+        // Restore scroll position
+        const saved = _scrollPositions[viewId];
+        if (saved !== undefined) requestAnimationFrame(() => { el.scrollTop = saved; });
       } else {
         el.classList.add('hidden');
       }

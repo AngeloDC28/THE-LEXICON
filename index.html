@@ -493,7 +493,7 @@
 
     <!-- AUTH MODAL -->
     <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4">
-      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth"></div>
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth" aria-hidden="true"></div>
       <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
         <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
         <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Terminal Access</h2>
@@ -522,11 +522,7 @@
           <h2 id="about-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
           <button type="button" data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
         </div>
-        <div id="about-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
-          <p><strong>Created by Angelo Sanchez Dela Cruz</strong> — researcher and cultural analyst based in London.</p>               <p>THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.</p>
-          <p>Operating strictly outside the traditional fashion media ecosystem, the directory maps the intersections of aesthetic language, historical precedent, and structural power.</p>
-          <p>Designed for cultural critics and visual strategists, this system decodes the underlying mechanics of class dynamics and bodily autonomy through the lens of visionary image-making.</p>
-        </div>
+        <div id="about-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
       </div>
     </div>
 

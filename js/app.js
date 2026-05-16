@@ -386,10 +386,10 @@ function setupEventListeners() {
   $('btn-folders-toggle-mobile')?.addEventListener('click', () => { switchView('folders', callbacks); toggleHamburger(); });
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle')?.addEventListener('click', toggleLanguage);
-  $('btn-auth-toggle')?.addEventListener('click', toggleAuth);
+  $('btn-auth-toggle')?.addEventListener('click', () => { toggleAuth(); setTimeout(() => $('auth-email')?.focus(), 50); });
   $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
-  $('btn-auth-toggle-mobile')?.addEventListener('click', toggleAuth);
+  $('btn-auth-toggle-mobile')?.addEventListener('click', () => { toggleAuth(); setTimeout(() => $('auth-email')?.focus(), 50); });
 
   // Modals
   $('btn-about')?.addEventListener('click', () => $('about-modal').classList.remove('hidden'));
@@ -399,6 +399,14 @@ function setupEventListeners() {
   $('btn-search-mobile')?.addEventListener('click', () => { const s = $('search-input'); if (s) { s.focus(); s.scrollIntoView({ behavior: 'smooth' }); } });
   $('btn-privacy-link')?.addEventListener('click', () => $('privacy-modal').classList.remove('hidden'));
   $('btn-terms-link')?.addEventListener('click', () => $('terms-modal').classList.remove('hidden'));
+
+  // Auth form
+  $('auth-form')?.addEventListener('submit', (e) => { e.preventDefault(); sendSignInLink(callbacks); });
+
+  // Create folder
+  const createFolder = () => { const name = $('new-folder-name')?.value?.trim(); if (name) createArchivalFolder(name, callbacks); };
+  $('btn-create-folder')?.addEventListener('click', createFolder);
+  $('new-folder-name')?.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); createFolder(); } });
 
   $('btn-hamburger')?.addEventListener('click', toggleHamburger);
   $('drawer-backdrop')?.addEventListener('click', toggleHamburger);
@@ -484,6 +492,13 @@ function setupEventListeners() {
       if (e.key === 'ArrowLeft')  navigateEntry(-1, archiveData, callbacks);
       else if (e.key === 'ArrowRight') navigateEntry(1, archiveData, callbacks);
       else if (e.key === 'Escape')     closeDetail(callbacks, archiveData);
+    }
+    // Grid cell keyboard activation
+    if ((e.key === 'Enter' || e.key === ' ') && document.activeElement?.classList.contains('grid-cell')) {
+      e.preventDefault();
+      const id  = document.activeElement.dataset.entryId;
+      const idx = document.activeElement.dataset.imgIndex || 0;
+      if (id) window.location.hash = `detail/${id}/${idx}`;
     }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();

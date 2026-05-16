@@ -52,7 +52,7 @@ export function renderImageGrid(archiveData, callbacks) {
       <div class="col-span-full flex flex-col items-center justify-center py-32 text-center">
         <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-4">Null Set Detected</div>
         <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-6">Adjust filters or search parameters</div>
-        <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">Reset System</button>
+        <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">${getTranslation('btn_reset_system', AppState.language)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
       AppState.filters = { brand: null, era: null, politics: null, theories: null,
@@ -79,6 +79,9 @@ export function renderImageGrid(archiveData, callbacks) {
         <div class="grid-cell cursor-crosshair group relative overflow-hidden"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
+             tabindex="0"
+             role="button"
+             aria-label="${brand} ${entry.year || ''}"
              style="animation-delay: ${delay}s">
           <img
             src="${src}"
@@ -86,7 +89,7 @@ export function renderImageGrid(archiveData, callbacks) {
             loading="lazy"
             decoding="async"
             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            onload="this.classList.add('loaded')" onerror="this.src='${BROKEN_ASSET}'">
+            onload="this.classList.add('loaded')" onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded')">
           <div class="grid-cell-meta absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
             <div class="text-[9px] font-mono uppercase tracking-widest text-white">${brand}</div>
             <div class="text-[8px] font-mono text-white/60">${entry.year || '----'} // ${entry.season || 'ARCHIVE'}</div>

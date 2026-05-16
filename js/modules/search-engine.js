@@ -56,7 +56,7 @@ export function getFilteredEntries(archiveData) {
   }
 
   searchCache.set(cacheKey, entries);
-  if (searchCache.size > 50) searchCache.delete(searchCache.keys().next().value);
+  if (searchCache.size > 20) searchCache.delete(searchCache.keys().next().value);
   return entries;
 }
 

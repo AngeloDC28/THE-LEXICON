@@ -69,7 +69,10 @@ export function sendSignInLink(callbacks) {
     if (callbacks && callbacks.showToast) callbacks.showToast('Valid email required.');
     return;
   }
-  
+
+  const btn = $('btn-submit-auth');
+  if (btn) { btn.disabled = true; btn.style.opacity = '0.5'; }
+
   const actionCodeSettings = {
     url: window.location.href,
     handleCodeInApp: true
@@ -83,6 +86,7 @@ export function sendSignInLink(callbacks) {
     })
     .catch((error) => {
       console.error('Auth Link Error:', error);
+      if (btn) { btn.disabled = false; btn.style.opacity = ''; }
       if (callbacks && callbacks.showToast) callbacks.showToast(error.message);
     });
 }
