@@ -23,7 +23,6 @@ export const AppState = {
   archivalFolders: [],
   activeFolderId: null,
   previousView: 'grid',
-  fidelityMode: safeLocalGet('lexicon-fidelity', 'forensic'),
   activeHotspot: null,
 };
 
@@ -33,9 +32,9 @@ export function setGridIntersectionObserver(observer) {
 }
 
 export const stickyNotes = {
-  critique:   { color: '#FF0000', title: 'FORENSIC CRITIQUE',  body: '' },
-  strategy:   { color: '#0000FF', title: 'ISOLATE STRATEGY',   body: '' },
-  provenance: { color: '#E6FF00', title: 'AUDIT PROVENANCE',   body: '' },
+  critique:   { color: '#FF0000', title: 'CRITIQUE',   body: '' },
+  strategy:   { color: '#0000FF', title: 'STRATEGY',   body: '' },
+  provenance: { color: '#E6FF00', title: 'PROVENANCE', body: '' },
 };
 
 export function updateHash(id) {

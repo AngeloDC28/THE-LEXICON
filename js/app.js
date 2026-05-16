@@ -56,13 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // FIX-5: Bind UI events immediately so buttons work even if init throws
   setupEventListeners();
   try {
-  console.log('LEXICON_BOOT: INITIALIZING_ARCHIVE_CORE...');
-  console.log('LEXICON_DATA_AUDIT: ENTRIES_DETECTED =', archiveData.length);
-
-  if (!archiveData || archiveData.length === 0) {
-    console.error('LEXICON_DATA_EXCEPTION: ARCHIVE_DATA_LOAD_FAILED_OR_EMPTY');
-    return;
-  }
+  if (!archiveData || archiveData.length === 0) return;
 
   // Initial State
   AppState.archivalFolders = fetchArchivalFolders();
@@ -314,8 +308,6 @@ function handleRouting() {
 }
 
 function setupEventListeners() {
-  console.log('EVENT_SYSTEM: Binding listeners...');
-
   // Global Click Delegation
   document.addEventListener('click', (e) => {
 
@@ -324,7 +316,6 @@ function setupEventListeners() {
     if (gridCell) {
       const id  = gridCell.dataset.entryId;
       const idx = gridCell.dataset.imgIndex || 0;
-      console.log('LEXICON_ACTION: GRID_CELL_NAV', id, idx);
       window.location.hash = `detail/${id}/${idx}`;
       return;
     }
@@ -333,7 +324,6 @@ function setupEventListeners() {
     const entryItem = e.target.closest('.entry-item');
     if (entryItem) {
       const id = entryItem.dataset.id;
-      console.log('LEXICON_ACTION: ENTRY_ITEM_NAV', id);
       window.location.hash = `detail/${id}/0`;
       return;
     }

@@ -46,7 +46,6 @@ export function toggleHotspot(index) {
 
 function showHotspot(index) {
   AppState.activeHotspot = index;
-  console.log('LEXICON_ACTION: HOTSPOT_SELECT', index);
 
   // Mobile: show hotspot info via payload (dock elements not present)
   const entry = _archiveData.find(e => e.id === AppState.selectedEntryId);

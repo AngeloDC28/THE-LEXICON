@@ -361,15 +361,7 @@ body.high-fidelity #btn-fidelity-toggle-mobile::before {
 
 /* ── REFACTORED DETAIL LAYOUT ── */
 #detail-image-view {
-  background: #000000; /* Dark shell */
-}
-
-#detail-desktop-stack {
-  display: flex;
-  flex-direction: row; /* Split screen on desktop */
-  height: 100%;
-  width: 100%;
-  padding: 0;
+  background: #000000;
 }
 
 #detail-image-container {
@@ -624,17 +616,6 @@ html.dark #detail-image-view {
   background-color: var(--bg-base);
 }
 
-#detail-desktop-stack {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
-  min-height: 0;
-  padding: 1rem; /* Subtle padding for breathing room */
-  position: relative;
-  background: var(--bg-base); /* Match background to eliminate voids */
-  overflow: hidden;
-}
 
 #detail-image-wrapper {
   position: relative;
@@ -781,9 +762,9 @@ html.dark .cmd-item.selected {
   min-height: 0;
   display: flex;
   align-items: stretch;
+  cursor: grab;
+  overflow: hidden;
 }
-
-
 
 /* ── BOOT OVERLAY ── */
 #boot-overlay {
@@ -860,7 +841,6 @@ html.dark #boot-overlay { background: #0A0A0A; }
   will-change: transform;
 }
 .dragging { cursor: grabbing !important; transition: none !important; }
-#detail-desktop-stack { cursor: grab; overflow: hidden; }
 
 /* GRAPH FULLSCREEN */
 .fullscreen-graph {
@@ -1074,7 +1054,6 @@ html.dark .skeleton {
 
 /* ── CUSTOM CURSOR ── */
 #image-grid { cursor: crosshair; }
-#detail-desktop-stack { cursor: grab; }
 .dragging { cursor: grabbing !important; }
 
 /* ── FILTER CHIPS ── */
@@ -1194,55 +1173,6 @@ html.dark .entry-item:hover::after {
   transform: translateY(5px);
   display: none !important;
 }
-#dossier-template {
-  position: fixed; left: -9999px; top: -9999px;
-  width: 1080px; height: 1920px;
-  background: #FFFFFF; overflow: hidden;
-  font-family: var(--font-mono);
-  display: flex; flex-direction: column;
-}
-#dossier-template .dossier-header {
-  padding: 60px 60px 40px;
-  border-bottom: 3px solid #000;
-}
-#dossier-template .dossier-brand {
-  font-size: 42px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.15em;
-  color: #000; line-height: 1.1;
-}
-#dossier-template .dossier-year {
-  font-size: 22px; font-weight: 500;
-  text-transform: uppercase; letter-spacing: 0.3em;
-  color: #000; margin-top: 12px; opacity: 0.6;
-}
-#dossier-template .dossier-image-wrap {
-  flex: 1; display: flex; align-items: center;
-  justify-content: center; overflow: hidden;
-  padding: 30px 60px;
-}
-#dossier-template .dossier-image-wrap img {
-  max-width: 100%; max-height: 100%;
-  object-fit: contain;
-}
-#dossier-template .dossier-footer {
-  padding: 40px 60px 60px;
-  border-top: 3px solid #000;
-}
-#dossier-template .dossier-critique {
-  font-size: 18px; line-height: 1.6;
-  text-transform: uppercase; letter-spacing: 0.04em;
-  color: #000;
-}
-#dossier-template .dossier-watermark {
-  font-size: 14px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.3em;
-  color: #000; opacity: 0.3; margin-top: 20px;
-}
-#btn-export-dossier {
-  min-width: 44px; min-height: 44px;
-  touch-action: manipulation;
-}
-
 /* ── HEADER TELEMETRY FEED ── */
 #header-telemetry {
   display: flex; align-items: center;
@@ -1428,32 +1358,6 @@ html.dark .active-hotspot-box {
 @media (hover: hover) and (pointer: fine) {
   #custom-cursor { display: block; }
   body { cursor: none; }
-}
-
-#filter-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 4px 0;
-}
-
-.filter-chip {
-  background: #000;
-  color: #FFF;
-  font-size: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 2px 6px;
-  border: 1px solid #000;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-html.dark .filter-chip {
-  background: #CCFF00;
-  color: #000;
-  border-color: #CCFF00;
 }
 
 #accent-glow {

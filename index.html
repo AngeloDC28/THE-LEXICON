@@ -373,13 +373,13 @@
               </div>
               
               <!-- Navigation Controls -->
-              <button type="button" id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
-              <button type="button" id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
+              <button type="button" id="btn-viewer-prev" aria-label="Previous image" class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
+              <button type="button" id="btn-viewer-next" aria-label="Next image" class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
               
               <!-- Control Panel Overlay (top-left) -->
               <div class="absolute top-4 left-4 flex flex-col gap-2 z-[200]">
-                <button id="btn-tax-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
-                <button id="btn-fullscreen-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
+                <button id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
+                <button id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
 
               <!-- Sticky Note Squares (top-right triggers) -->
@@ -424,8 +424,8 @@
           </div>
 
           <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-4 py-3 flex gap-2 z-[200]">
-            <button type="button" id="btn-toggle-hotspots-mobile" class="flex-1 border border-acid text-acid py-3 text-[10px] font-bold uppercase tracking-widest">Hotspots</button>
-            <button type="button" id="btn-save-folder-mobile" class="flex-1 bg-acid text-black py-3 text-[10px] font-bold uppercase tracking-widest">Save</button>
+            <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex-1 border border-acid text-acid py-3 text-[10px] font-bold uppercase tracking-widest">Hotspots</button>
+            <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex-1 bg-acid text-black py-3 text-[10px] font-bold uppercase tracking-widest">Save</button>
           </div>
         </div>
 
