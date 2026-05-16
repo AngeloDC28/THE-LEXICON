@@ -310,22 +310,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-01.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "x": 45,
+            "y": 15,
+            "label": "Curved Bicolor Headpiece",
+            "description": "The black and white lacquered headpiece rises in a sharp; flame-like curve from the model's forehead; this accessory engages with Post-Humanism by extending the skull's geometry into an unnatural; non-biological peak; the high-gloss finish creates a seamless surface that mimics industrial plastics; it refuses the organic limits of the human head to assert a stylized; alien silhouette."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 46,
+            "y": 36,
+            "label": "High-Shine PVC Bustier",
+            "description": "The rigid black PVC bustier is molded to an extreme hourglass shape with articulated breast cups; this element engages with the Cyborg Manifesto by encasing the torso in a synthetic; impenetrable shell that mimics biological form; the light reflects off the deep black surface to emphasize the artificiality of the construction; it asserts the female body as a site of industrial; fetishistic empowerment."
           },
           {
-            "x": 60,
-            "y": 30,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 45,
+            "y": 70,
+            "label": "Floral Lace Hosiery",
+            "description": "The sheer black hosiery is embroidered with oversized; opaque rose patterns that crawl up the legs; this textile choice engages with Camp and Kitsch Subversion by hyper-feminizing the limb through romantic; floral cliché; the contrast between the delicate lace and the rigid PVC above creates a tension between vulnerability and armor; it completes the look by grounding the futuristic torso in a traditional; decorative veneer."
           }
         ]
       },
@@ -333,22 +333,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 52,
+            "y": 35,
+            "label": "Hyper-Contoured Peplum Jacket",
+            "description": "The vibrant purple wool jacket features a severely cinched waist and a flared peplum that exaggerates the hips; this tailoring engages with Architectural Shielding by creating a rigid; geometric silhouette that dictates the movement of the wearer; the structural volume at the hip is achieved through internal padding and stiffened interlining; it refuses the natural slump of the body to assert a permanent; statuesque poise."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 30,
+            "y": 65,
+            "label": "Voluminous Fur Stole",
+            "description": "The oversized black fur stole is held at the waist to add massive tactile volume to the lower half of the outfit; this material choice engages with Camp and Kitsch Subversion by parodying the extreme luxury of mid-century Hollywood icons; the deep texture of the fur absorbs the light to create a dark; nebulous mass against the sharp purple tailoring; it asserts an unapologetic; theatrical decadence."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
+            "x": 62,
+            "y": 31,
+            "label": "Rosette Waist Embellishment",
+            "description": "A singular; oversized fabric rose is constructed directly into the jacket's waistline as a structural focal point; this decorative element engages with Gender Deconstruction & Fluidity by taking a symbol of soft femininity and rendering it in heavy; rigid wool; the spiral construction of the petals creates a sense of organic growth within the industrial tailoring; it completes the garment by emphasizing the artificiality of its construction."
           }
         ]
       },
@@ -356,22 +356,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-03.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 45,
+            "y": 33,
+            "label": "Sculptural Pinstripe Lapel",
+            "description": "The wide lapels of the pinstripe blazer are engineered to stand away from the body in sharp; angular wings; this structural logic engages with Gender Deconstruction & Fluidity by subverting the traditional businessman's suit into a hyper-feminized; armored silhouette; the white pinstripes accentuate the geometric trajectory of the cut; it asserts a powerful; corporate-fetishist aesthetic."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "x": 44,
+            "y": 11,
+            "label": "Pointed High-Volume Coiffure",
+            "description": "The platinum hair is styled into a rigid; vertical cone that dramatically increases the model's height; this element engages with Post-Humanism by treating the hair as a non-biological; sculptural extension of the body; the lack of visible movement in the hair suggests the use of extreme fixatives to maintain a synthetic; architectural form; it asserts the head as the apex of a meticulously designed; inhuman system."
           }
         ]
       },
@@ -379,22 +373,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
+            "x": 28,
+            "y": 55,
+            "label": "Ostrich Feather Wristlets",
+            "description": "Large masses of black ostrich feathers are attached to the cuffs to create exploding spheres of kinetic volume; this material engages with Camp and Kitsch Subversion by utilizing biological ephemera to create a costume-like; theatrical effect; the light; airy movement of the feathers contrasts with the heavy; matte fabric of the suit jacket; it asserts a sense of avian; predatory elegance."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 58,
+            "y": 9,
+            "label": "Jeweled Headpiece",
+            "description": "A silver-toned; crystal-encrusted ornament is perched atop a black velvet cap; this decorative element engages with Architectural Shielding by crowning the model with a hard; reflective crest; the sharp points of the crystals catch the stage lighting to create a radiant; defensive perimeter around the head; it completes the ensemble by providing a focal point of intense; artificial brilliance."
           }
         ]
       },
@@ -403,21 +391,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "y": 50,
+            "label": "Purple Leopard Velvet",
+            "description": "The fitted tunic is constructed from a vibrant purple velvet featuring a black leopard print pattern; this material engages with Camp and Kitsch Subversion by taking a pop-culture motif and elevating it through Haute Couture fabrication; the low-pile velvet provides a tactile; shimmering surface that highlights the contours of the body; it refuses the subtlety of traditional tailoring to assert a loud; performative presence."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 49,
+            "y": 14,
+            "label": "Oversized Leopard Headdress",
+            "description": "The tall; cylindrical hat is wrapped in the same purple leopard print and features a burst of black hair at the crown; this headpiece engages with Architectural Shielding by elongating the vertical axis of the wearer to intimidating proportions; the combination of animal print and synthetic hair emphasizes the collection's theme of artifice; it asserts the model as a fantastic; hybrid creature."
           }
         ]
       },
@@ -425,22 +407,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-06.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 52,
+            "y": 31,
+            "label": "Articulated Chrome Carapace",
+            "description": "The segmented chrome plating creates a rigid exoskeleton that follows the anatomical lines of the hips and torso; this structural choice literalizes the Cyborg Manifesto by merging industrial manufacturing with female biology; the reflective surface erases the softness of the skin to project an image of invulnerability; it asserts the body as a site of technological transcendence."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 45,
+            "y": 52,
+            "label": "Clear Perspex Jointing",
+            "description": "Transparent perspex windows are set into the metallic frame at the midriff and joints to reveal the skin beneath; this design element engages with the Cyborg Manifesto by creating a visible interface between human biological tissue and industrial hardware; the literal visibility of the navel through the plastic emphasizes the hybridity of the construction; it asserts that the cyborg is not a replacement of the human but a forensic extension of it."
           },
           {
-            "x": 60,
-            "y": 30,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
+            "x": 53,
+            "y": 15,
+            "label": "Chrome Helmet Component",
+            "description": "The model's head is partially encased in a polished metal helmet that frames the face in a circular aperture; this element engages with Post-Humanism by integrating the skull into a larger; mechanical apparatus; the high shine of the metal creates a mirror-like finish that reflects the surrounding spectacle back at the audience; it completes the transformation of the subject into a sentient; manufactured object."
           }
         ]
       },
@@ -448,22 +430,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
-          },
-          {
-            "x": 50,
-            "y": 80,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
-          },
-          {
-            "x": 60,
+            "x": 48,
             "y": 40,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "label": "Horizontal Ribbed Sheath",
+            "description": "The dress is composed of narrow; black elasticized bands that wrap horizontally around the body; this construction engages with Body Politics by mimicking medical or orthopedic binding while creating a seductive; revealing silhouette; the gaps between the ribs allow for flashes of skin during movement; it asserts a tension between the restriction of the body and the exhibition of the form."
+          },
+          {
+            "x": 63,
+            "y": 55,
+            "label": "Contrasting Satin Lining",
+            "description": "The oversized black velvet coat is lined with luminous; pale gold duchess satin; this material choice engages with Camp and Kitsch Subversion by utilizing classical symbols of opulence to frame the futuristic sheath dress; the heavy shine of the satin contrasts with the light-absorbing properties of the velvet; it completes the theatrical gesture of the reveal as the model opens the coat."
           }
         ]
       },
@@ -471,22 +447,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-08.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
+            "x": 43,
+            "y": 55,
+            "label": "Pink Duchess Satin Pouf",
+            "description": "The voluminous; bubble-shaped skirt is crafted from heavy pink duchess satin that maintains a rigid; inflated volume; this structural element engages with Camp and Kitsch Subversion by parodying the silhouette of the 18th-century court dress; the deep; irregular folds of the fabric create a dramatic play of light and shadow; it refuses the fluidity of traditional silk to assert a hard-edged; architectural femininity."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 48,
+            "y": 33,
+            "label": "Sharp Velvet Bodice Points",
+            "description": "The black velvet bodice extends into sharp; vertical points at the shoulder and neckline; this tailoring engages with Architectural Shielding by creating a jagged; aggressive perimeter around the model's head and neck; the matte texture of the velvet makes the silhouette appear as a solid; ink-black void against the pink skirt; it asserts the wearer as a dangerous; cinematic villainess."
           }
         ]
       },
@@ -494,22 +464,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "x": 47,
+            "y": 48,
+            "label": "Graphic Zebra Bodysuit",
+            "description": "The skin-tight bodysuit is printed with a bold; vertical zebra stripe that creates a hypnotic optical effect; this pattern engages with The Simulacrum by transforming the human body into a graphic; two-dimensional abstraction; the lines of the print follow the anatomical curves of the model to emphasize the extreme hourglass shape; it asserts the body as a canvas for high-contrast; visual manipulation."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 25,
+            "y": 55,
+            "label": "Expansive Velvet Cape",
+            "description": "The model wears a massive black velvet cape that fans out to the sides to dominate the stage; this element engages with Camp and Kitsch Subversion by utilizing the language of comic book superheroes and opera; the weight of the velvet creates a dramatic; sweeping movement as it trails across the floor; it completes the theatrical presence by providing an architectural backdrop for the zebra pattern."
           }
         ]
       },
@@ -517,22 +481,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-10.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 70,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 52,
+            "y": 45,
+            "label": "Leopard Jacquard Shell",
+            "description": "The structured coat is made from a dense leopard jacquard that provides a rigid; armored exterior; this textile choice engages with Gender Deconstruction & Fluidity by reinterpreting the feminine animal print as a powerful; militaristic garment; the sharp shoulder pads create a wide; defensive silhouette; it asserts a mood of aggressive; animalistic authority."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
+            "x": 32,
+            "y": 65,
+            "label": "Shocking Pink Facing",
+            "description": "The interior of the coat is lined with a high-saturation pink fabric that is revealed as the model moves; this color choice engages with Camp and Kitsch Subversion by contrasting the natural leopard exterior with a hyper-synthetic; artificial interior; the flash of pink disrupts the monochromatic palette of the leopard print; it refuses a singular; cohesive identity in favor of a dualistic; theatrical performance."
           }
         ]
       },
@@ -540,22 +498,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-11.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 18,
+            "y": 40,
+            "label": "Feathered Leopard Fan",
+            "description": "An enormous; radial fan of leopard-print feathers erupts from behind the model; this structure engages with Camp and Kitsch Subversion by literalizing the biological display behavior of a peacock through artificial materials; the sheer scale of the fan forces the model to maintain a rigid; front-facing posture; it asserts the runway as a site of extreme; competitive theatricality."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "x": 48,
+            "y": 35,
+            "label": "Sequined Bodice Insert",
+            "description": "The center of the leopard-print bodysuit features a V-shaped insert of dense; silver-white sequins; this embellishment engages with Architectural Shielding by creating a radiant; focal point that draws the eye to the center of the torso; the metallic sheen of the sequins provides a hard contrast to the soft; printed textile; it completes the vision of the body as a decorated; ceremonial object."
           }
         ]
       },
@@ -564,21 +516,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 40,
+            "y": 45,
+            "label": "Sequined Radial Pattern",
+            "description": "The gown is covered in multicolored sequins arranged in an explosive; radial firework pattern; this surface treatment engages with The Simulacrum by mimicking a momentary; light-based phenomenon in a permanent; physical medium; the glittering surface refracts the stage lighting to create a blurring; kinetic effect during movement; it refuses a static form to assert a state of continuous; artificial brilliance."
+          },
+          {
+            "x": 51,
             "y": 30,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
-          },
-          {
-            "x": 50,
-            "y": 80,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "label": "Deep V-Neckline",
+            "description": "The bodice features a sharp; plunging V-neckline that extends to the waist to expose the sternum; this cut engages with Body Politics by utilizing the vulnerability of the naked chest to contrast with the armored sparkle of the sequins; the geometric precision of the neckline emphasizes the engineered nature of the corset beneath; it asserts a provocative; calculated exposure."
           }
         ]
       },
@@ -586,22 +532,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-13.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "x": 63,
+            "y": 46,
+            "label": "Scalloped Duchess Satin Petals",
+            "description": "The scalloped duchess satin panels are engineered to fan outward from the hips like an architectural shell; through the lens of Camp and Kitsch Subversion this literalized metaphor parodies the historical pearl as a symbol of precious femininity; the rigid satin maintains a permanent; unnatural flare that resists the pull of gravity; it completes the theatrical transition from classical painting to physical sculpture."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 44,
+            "y": 45,
+            "label": "Pearl-Trimmed Powernet Bodice",
+            "description": "A sheer; flesh-colored powernet bodysuit is intricately embroidered with rows of white pearls and clear paillettes; this garment engages with Post-Humanism by creating the illusion of gems growing directly from the model's skin; the translucency of the fabric creates a visual ambiguity between the biological body and the decorative object; it asserts a state of hyper-natural; biological opulence."
           },
           {
-            "x": 70,
-            "y": 80,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
+            "x": 42,
+            "y": 27,
+            "label": "Multi-Tiered Pearl Choker",
+            "description": "Multiple strands of large pearls are tightly wound around the model's neck to form a solid; architectural collar; this accessory engages with Architectural Shielding by restricting the movement of the head and elongating the throat; the repetition of the pearls mimics the structure of an organic vertebrate; it refuses the soft; traditional drape of jewelry to assert a rigid; skeletal frame."
           }
         ]
       },
@@ -609,22 +555,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Articulated Shoulder Carapace",
-            "description": "The exaggerated shoulder proportion establishes a commanding spatial dominance; serving as a physical manifestation of Cyborg Manifestos (Haraway). It constructs an architectural exoskeleton that questions the vulnerability of the human form; blurring the boundary between organism and machine. By expanding the lateral boundaries of the silhouette; the garment demands physical space. This aggressive posture serves as a techno-optimistic deterrent against unwanted intrusion."
+            "x": 48,
+            "y": 35,
+            "label": "Gilded Chrome Cuirass",
+            "description": "The torso is encased in a polished; gold-toned chrome plate that is molded to the anatomical contours of the breasts and waist; this piece engages with the Cyborg Manifesto by replacing the soft; fleshy front of the body with an impenetrable; industrial shield; the high-gloss finish erases any trace of the human texture; it asserts the female form as a weaponized; manufactured idol."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
-          },
-          {
-            "x": 50,
+            "x": 47,
             "y": 20,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
+            "label": "Jeweled Chandelier Necklace",
+            "description": "An oversized necklace made of large; faceted crystals and gold metal drops hangs over the metallic bodice; this element engages with Camp and Kitsch Subversion by layering excessive; traditional luxury over futuristic; robotic armor; the movement of the crystals against the rigid chrome creates a rhythmic; metallic sound during the walk; it completes the image of a divine; techno-baroque entity."
+          },
+          {
+            "x": 26,
+            "y": 28,
+            "label": "Articulated Metallic Sleeves",
+            "description": "The arms are covered in segmented metallic sections that allow for movement at the elbow and wrist; this structural detail engages with Post-Humanism by mimicking the mechanics of medieval armor or modern robotics; the visible rivets and joints highlight the garment as an engineered system rather than a textile drape; it asserts a powerful; non-biological agency in the model's gestures."
           }
         ]
       },
@@ -632,22 +578,33 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-15.jpg",
         "hotspots": [
           {
+            "x": 45,
+            "y": 35,
+            "label": "Coq Feather Oversized Mantle",
+            "description": "The model is engulfed in an enormous; saturated red mantle composed entirely of dense coq feathers; this structure engages with Camp and Kitsch Subversion by exaggerating the bird-of-paradise motif to an absurd; monumental scale; the feathers create a vibrating; kinetic perimeter that masks the human proportions beneath; it refuses the logic of ready-to-wear to assert a purely spectacular; biological fantasy."
+          },
+          {
             "x": 50,
-            "y": 70,
-            "label": "Aerodynamic Glazing Visor",
-            "description": "The shielding of the face with industrial plastics enforces an aerodynamic anonymity; neutralizing The Subverted Gaze. The accessory completes the post-human transformation; replacing the human eye with a reflective barrier that denies psychoanalytic engagement. Identity is subsumed into the overarching machine aesthetic of the collection. The visor operates as a mechanism of surveillance evasion and absolute psychological detachment."
-          },
+            "y": 75,
+            "label": "Sequined Red Column",
+            "description": "A form-fitting skirt covered in blood-red sequins extends from the feathered mantle to the floor; this garment engages with Architectural Shielding by creating a monolithic; light-reflecting base for the organic chaos above; the tight fit of the sequins restricts the model's stride to a measured; rhythmic shuffle; it asserts a sense of ritualistic; ceremonial weight."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-16.jpg",
+        "hotspots": [
           {
-            "x": 60,
-            "y": 85,
-            "label": "Compressed Waist Architecture",
-            "description": "The structural compression of the abdominal zone creates a dramatic visual pivot point; illustrating the tension of Gender Deconstruction. This engineering feat redefines the center of gravity for the human silhouette while weaponizing traditional signifiers of restriction. The compression is foundational to the entire architectural balance of the garment. It visualizes the extreme pressures exerted by societal expectations on the female body."
-          },
-          {
-            "x": 40,
+            "x": 55,
             "y": 55,
-            "label": "Chrome Exoskeleton Corsetry",
-            "description": "The rigid metallic waist cincher enforces a hyper-exaggerated silhouette; operating as a profound realization of The Simulacrum (Baudrillard). The body is transformed into an impenetrable fortress; replacing biological reality with a hyper-real copy of femininity that has no original. This structural shell rejects human limitations in favour of aerodynamic fantasy. The resulting form is entirely post-human; prioritising mechanical perfection over organic truth."
+            "label": "Leopard Print Bodysuit",
+            "description": "The model wears a sheer bodysuit featuring a fragmented; gold and black leopard print; this pattern engages with The Simulacrum by presenting an artificial; digitized version of animal skin that appears to hover over the flesh; the strategic placement of the print emphasizes the muscular anatomy of the legs and hips; it asserts the body as a site of primal; yet hyper-stylized; performance."
+          },
+          {
+            "x": 32,
+            "y": 28,
+            "label": "Voluminous Ostrich Mantle",
+            "description": "A massive collar of black and purple ostrich feathers frames the model's shoulders and head; this material choice engages with Camp and Kitsch Subversion by utilizing biological matter to create a dark; cinematic aura; the height of the feathers creates a massive; dominating silhouette that commands the runway space; it completes the image of a majestic; predatory queen."
           }
         ]
       }
