@@ -382,8 +382,17 @@
                 <button id="btn-fullscreen-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
 
-              <!-- Sticky Notes Overlay (always visible, top-right) -->
-              <div id="sticky-notes-overlay" class="absolute top-4 right-4 z-[300] flex flex-col gap-1 pointer-events-auto"></div>
+              <!-- Sticky Note Squares (top-right triggers) -->
+              <div id="sticky-squares" class="absolute top-4 right-16 z-[300] flex flex-col gap-[6px] pointer-events-auto"></div>
+            </div>
+
+            <!-- Sticky Note Panel (reveals on right when a square is clicked) -->
+            <div id="sticky-note-panel" class="hidden w-[280px] flex-col overflow-y-auto border-l border-white/10 bg-black">
+              <div id="sticky-panel-header" class="flex items-center justify-between px-4 py-3 border-b border-black/20">
+                <span id="sticky-panel-label" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span>
+                <button id="btn-close-sticky-panel" class="text-[11px] font-bold leading-none hover:opacity-60">✕</button>
+              </div>
+              <div id="sticky-panel-body" class="p-5 text-[11px] font-mono leading-relaxed overflow-y-auto"></div>
             </div>
 
             <!-- RIGHT: Metadata Sidebar -->

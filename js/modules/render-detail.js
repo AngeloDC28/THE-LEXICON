@@ -153,39 +153,71 @@ function renderBrutalistNodes(entry) {
 
 /**
  * renderStickyOverlay
- * Always-visible tricolour note cards in the top-right of the image sector.
- * Each card collapses to just its label and expands on click.
+ * Tricolour square triggers (top-right of image). Clicking a square
+ * reveals its note content in the right-side #sticky-note-panel.
  */
 function renderStickyOverlay(entry) {
-  const overlay = $('sticky-notes-overlay');
-  if (!overlay) return;
-  overlay.innerHTML = '';
+  const squaresEl = $('sticky-squares');
+  if (!squaresEl) return;
+  squaresEl.innerHTML = '';
+
+  // Reset panel state for new entry
+  const panel      = $('sticky-note-panel');
+  const panelLabel = $('sticky-panel-label');
+  const panelBody  = $('sticky-panel-body');
+  const panelHdr   = $('sticky-panel-header');
+  if (panel) panel.classList.remove('visible');
 
   const lang = AppState.language;
-  const t = (k) => getTranslation(k, lang);
+  const t    = (k) => getTranslation(k, lang);
 
-  const nodeTypes = [
-    { id: 'provenance', label: t('note_provenance') || '[ PROVENANCE ]', cls: 'overlay-node-provenance' },
-    { id: 'critique',   label: t('note_critique')   || '[ CRITIQUE ]',   cls: 'overlay-node-critique'   },
-    { id: 'strategy',   label: t('note_strategy')   || '[ STRATEGY ]',   cls: 'overlay-node-strategy'   }
+  const noteTypes = [
+    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance', bg: '#E6FF00', fg: '#000' },
+    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique',   bg: '#FF0000', fg: '#fff' },
+    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy',   bg: '#0000FF', fg: '#fff' }
   ];
 
-  nodeTypes.forEach(type => {
+  let activeId = null;
+
+  const closePanel = () => {
+    if (panel) panel.classList.remove('visible');
+    squaresEl.querySelectorAll('.sticky-square').forEach(s => s.classList.remove('active'));
+    activeId = null;
+  };
+
+  const closeBtn = $('btn-close-sticky-panel');
+  if (closeBtn) closeBtn.onclick = (e) => { e.stopPropagation(); closePanel(); };
+
+  noteTypes.forEach(type => {
     let text = entry.notes?.[type.id] || '';
     text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
     if (!text) return;
 
-    const node = document.createElement('div');
-    node.className = `sticky-overlay-node ${type.cls}`;
-    node.innerHTML = `
-      <div class="overlay-label">
-        <span>${type.label}</span>
-        <span class="overlay-chevron">▼</span>
-      </div>
-      <div class="overlay-body">${text}</div>
-    `;
-    node.addEventListener('click', () => node.classList.toggle('expanded'));
-    overlay.appendChild(node);
+    const sq = document.createElement('button');
+    sq.className = `sticky-square ${type.cls}`;
+    sq.title = type.label;
+    sq.setAttribute('aria-label', type.label);
+
+    sq.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (activeId === type.id) { closePanel(); return; }
+      activeId = type.id;
+
+      squaresEl.querySelectorAll('.sticky-square').forEach(s => s.classList.remove('active'));
+      sq.classList.add('active');
+
+      if (panelHdr) {
+        panelHdr.style.background  = type.bg;
+        panelHdr.style.color       = type.fg;
+        panelHdr.style.borderColor = type.fg === '#fff' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.2)';
+      }
+      if (panelLabel) { panelLabel.textContent = type.label; panelLabel.style.color = type.fg; }
+      if (closeBtn)   closeBtn.style.color = type.fg;
+      if (panelBody)  panelBody.textContent = text;
+      if (panel)      panel.classList.add('visible');
+    });
+
+    squaresEl.appendChild(sq);
   });
 }
 
