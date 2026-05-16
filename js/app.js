@@ -396,6 +396,7 @@ function setupEventListeners() {
   $('btn-contact')?.addEventListener('click', () => $('contact-modal').classList.remove('hidden'));
   $('btn-about-mobile')?.addEventListener('click', () => { $('about-modal').classList.remove('hidden'); toggleHamburger(); });
   $('btn-contact-mobile')?.addEventListener('click', () => { $('contact-modal').classList.remove('hidden'); toggleHamburger(); });
+  $('btn-search-mobile')?.addEventListener('click', () => { const s = $('search-input'); if (s) { s.focus(); s.scrollIntoView({ behavior: 'smooth' }); } });
   $('btn-privacy-link')?.addEventListener('click', () => $('privacy-modal').classList.remove('hidden'));
   $('btn-terms-link')?.addEventListener('click', () => $('terms-modal').classList.remove('hidden'));
 

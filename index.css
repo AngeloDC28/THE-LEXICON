@@ -930,9 +930,6 @@ html.dark #sticky-note-panel {
   box-shadow: 4px 4px 0px rgba(255,255,255,0.1); 
   background: #111111; 
 }
-html.dark .sticky-note-title, html.dark .sticky-note-close, html.dark .sticky-note-body {
-  color: #F4F4F5;
-}
 
 html.dark .info-box {
   border-color: rgba(255,255,255,0.2);

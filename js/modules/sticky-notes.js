@@ -19,8 +19,8 @@ export function setStickyNote(type, entry) {
   
   if (window.innerWidth >= 768) {
     const panel = $('sticky-note-panel');
-    const titleEl = $('sticky-note-title');
-    const bodyEl = $('sticky-note-body');
+    const titleEl = $('sticky-panel-label');
+    const bodyEl = $('sticky-panel-body');
 
     if (panel && titleEl && bodyEl) {
       titleEl.textContent = getTranslation(`note_${type}`, AppState.language);
