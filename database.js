@@ -640,22 +640,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg",
         "hotspots": [
           {
+            "x": 45,
+            "y": 40,
+            "label": "Heat-Pressed Pleated Surcoat",
+            "description": "This pale green heat-pressed pleated surcoat envelopes the body in a rigid yet collapsible volume; engaging with Deleuzian concepts of the fold the garment refuses flat planar construction in favor of infinite topographical variations; the sweeping curved opening reveals the micro-pleated underlayer while maintaining a distinct architectural shell; the structure asserts the supremacy of textile engineering over traditional tailoring techniques within the collection's methodology."
+          },
+          {
             "x": 50,
-            "y": 45,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "y": 55,
+            "label": "Micro-Pleated Patterned Underlayer",
+            "description": "The micro-pleated patterned underlayer functions as a second skin adhering closely to the body's contours; this visible tension between the tight inner layer and voluminous outer shell enacts a biopolitical discourse on containment and release; the grid-like pattern distorts as the fabric stretches across the torso and legs; this layer completes the silhouette by providing a dense foundational texture against the broad sculptural strokes of the outerwear."
           }
         ]
       },
@@ -663,22 +657,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "x": 45,
+            "y": 70,
+            "label": "Concertina-Pleated Tiered Skirt",
+            "description": "The concertina-pleated tiered skirt collapses and expands horizontally to create a rigid bell-like silhouette; this structural extremity engages with cybernetic theories of self-organizing systems where material properties dictate form; the stark horizontal ridges protrude significantly from the body axis; the construction refuses traditional drape to assert the garment as an independent spatial entity."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
+            "x": 45,
+            "y": 35,
+            "label": "Integrated Pleated Bodice",
+            "description": "The integrated pleated bodice transitions seamlessly from smooth tension over the bust into the aggressive horizontal tiers below; this continuous material extrusion reflects post-humanist ideals of body-garment symbiosis; the fine vertical striations of the fabric mold tightly to the upper torso before radically shifting direction; the element completes the collection's vision of garments born from a singular industrial process rather than pieced assembly."
           }
         ]
       },
@@ -687,21 +675,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 65,
+            "label": "Bi-Color Concertina-Pleated Structure",
+            "description": "The bi-color concertina-pleated structure bisects the garment vertically through an abrupt shift from green to peach; this stark chromatic division invokes structuralist binaries while manifesting them through continuous material; the horizontal tiers maintain their rigid projection regardless of the color shift; the design asserts a visual fracture within an unbroken physical form."
+          },
+          {
+            "x": 65,
             "y": 50,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "label": "Engineered Fold Locus",
+            "description": "The engineered fold locus at the outer edge of each tier defines the maximum expansion of the pleated textile; applying object-oriented ontology these sharp edges grant the garment an agency distinct from the wearer; the rigid points of the tiers interact directly with the surrounding space; this detail refuses the softness of textile to complete a silhouette of aggressive geometric precision."
           }
         ]
       },
@@ -709,22 +691,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "x": 25,
+            "y": 45,
+            "label": "Metallic Sunburst-Pleated Outerwear",
+            "description": "The metallic sunburst-pleated outerwear creates a rigid radial carapace over the shoulders and arms; engaging with cyborg manifestos the reflective surface and architectural structure suggest an exoskeleton rather than conventional clothing; the deep ridges catch the runway lighting to emphasize the density of the fold; this element asserts a futuristic armor protecting the softer inner core."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "y": 60,
+            "label": "Corrugated Textile Shift",
+            "description": "The corrugated textile shift dress presents a horizontal ribbed texture contrasting with the radial pleats of the coat; this juxtaposition enacts a dialectic of directionality upon the body; the matte finish of the purple shift anchors the high-shine exterior; the garment completes the look by providing a linear foundation beneath the explosive volume of the outerwear."
           }
         ]
       },
@@ -733,21 +709,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "y": 65,
+            "label": "Crinkled V-Neck Tunic",
+            "description": "The crinkled V-neck tunic utilizes a deeply textured fabric that appears permanently crushed or scorched; this material degradation engages with aesthetic theories of the abject and the ruined; the irregular surface catches light unevenly across the long columnar silhouette; the textile refuses pristine finishing to assert the beauty of controlled destruction within the manufacturing process."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "x": 50,
+            "y": 25,
+            "label": "Plunging Structural V-Neck",
+            "description": "The plunging structural V-neck sharply divides the upper chest with a clean linear cut amidst the chaotic textile; this geometric intervention introduces a deconstructionist logic to the otherwise organic form; the rigid edges of the neckline maintain their shape despite the heavy crinkling of the surrounding fabric; this detail completes the garment by providing an anchor of precision against textural entropy."
           }
         ]
       },
@@ -756,21 +726,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "y": 50,
+            "label": "Elongated Ribbed Overcoat",
+            "description": "The elongated ribbed overcoat drops vertically to the lower calf in an unbroken textural column; this severe linear silhouette invokes monastic austerity while engaging with theories of minimalist reduction; the fine vertical ribbing draws the eye downward without interruption; the garment asserts a disciplined uniformity within the collection's broader morphological experiments."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
+            "x": 52,
+            "y": 4,
+            "label": "Asymmetrical Miniature Top Hat",
+            "description": "The asymmetrical miniature top hat sits precariously perched upon the crown of the head; this surrealist accessory introduces an element of the absurd into the severe presentation; the rigid black cylinder tilts off-axis; the hat refuses proportional logic to complete the silhouette with a gesture of theatrical subversion."
           }
         ]
       },
@@ -778,22 +742,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "x": 50,
+            "y": 50,
+            "label": "Translucent Crinkled Monastic Habit",
+            "description": "The translucent crinkled monastic habit completely veils the body in a fragile sheath of textured white fabric; this totalizing coverage engages with biopolitical theories regarding the erasure of the individual subject; the semi-transparent material reveals the hazy outline of the form beneath while denying direct visibility; the garment asserts a ghostly presence that prioritizes surface over underlying anatomy."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "y": 15,
+            "label": "Metallic Painted Visage",
+            "description": "The metallic painted visage replaces natural skin tone with an unbroken silver mask; this literal application of cyborg theory transforms the model into an automaton; the reflective pigment catches the blue light of the runway; the makeup completes the look by fully integrating the human face into the synthetic logic of the textiles."
           }
         ]
       },
@@ -801,22 +759,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-08.jpg",
         "hotspots": [
           {
-            "x": 50,
+            "x": 25,
             "y": 50,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
+            "label": "Continuous Extruded Tubular Knit",
+            "description": "The continuous extruded tubular knit physically links the procession of models as they walk the runway; it stretches tightly across the space between bodies to form an unbroken thread. This unbroken material manifestation engages deeply with biopolitical theories of the collective social body; it effectively dissolves individual subjectivity into a singular mechanized network. The bright red fabric pulls taut at the shoulder and hem as the models step out of sync; this reveals the intense elasticity and tensile strength required to maintain this interconnected formation. This textile architecture ultimately refuses the isolation of the traditional fashion silhouette; it asserts the collection's core thesis of mass-produced continuous creation."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "x": 42,
+            "y": 45,
+            "label": "Cut-To-Fit Garment Iteration",
+            "description": "The cut-to-fit garment iteration frames the torso precisely through pre-engineered demarcation lines snipped directly into the knit; it generates an immediate form-fitting silhouette without traditional seaming. This raw intervention into the textile invokes open-source theories of user participation; the aesthetic shifts the final act of design from the atelier to the physical cutting by the consumer. Sharp unhemmed edges are clearly visible at the neckline and armholes against the model's bare skin; this demonstrates the specific property of the textile weave that prevents the knit from unravelling once severed. The element completes the conceptual performance; it provides empirical proof of the fabric's functional autonomy."
           },
           {
-            "x": 70,
-            "y": 80,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "x": 18,
+            "y": 88,
+            "label": "Unshod Runway Procession",
+            "description": "The unshod runway procession removes all footwear from the presentation; the styling strips the silhouette back to its most basic biological foundation beneath the industrial knit. This choice engages with eco-critical and primitive theoretical frameworks; it contrasts the hyper-advanced technological production of the cloth with the exposed vulnerable human animal. The models' bare soles plant directly onto the stark white runway surface; they lack any elevation or structural support to alter their natural gait. This deliberate omission refuses the polished artifice of high fashion; the styling asserts a grounded communal reality necessary for the collection's utopian logic."
           }
         ]
       },
@@ -824,22 +782,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "x": 45,
+            "y": 30,
+            "label": "Cropped Angular-Shoulder Jacket",
+            "description": "The cropped angular-shoulder jacket creates a severe geometric frame across the upper torso; this extreme proportion engages with feminist critiques of power dressing by distorting rather than enhancing the natural shoulder line; the pale lilac fabric is stiffly pressed into sharp boxy forms; the structure asserts architectural dominance over the body's organic curves."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "y": 10,
+            "label": "Translucent Amber Headpiece",
+            "description": "The translucent amber headpiece forms a warped cylindrical volume above the face; engaging with theories of the simulacrum the synthetic material suggests a distorted memory of a traditional hat; the clear yellow plastic allows light to pass through while obscuring the top of the head; this element completes the ensemble by introducing an industrial material contrast to the woven garments."
           }
         ]
       },
@@ -848,21 +800,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "y": 50,
+            "label": "Textural Plaid Tailoring",
+            "description": "The textural plaid tailoring utilizes a highly tactile bouclé-like fabric to construct a traditional suit silhouette; this material density engages with semiotic analyses of domesticity versus professional dress; the blurry grid of the plaid is softened by the tufted surface; the garment refuses the sleekness of modern suiting to assert a hyper-tactile presence."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
+            "x": 50,
+            "y": 10,
+            "label": "Molded Dome Headwear",
+            "description": "The molded dome headwear presents a porous sponge-like texture in bright yellow; this biomorphic accessory introduces theories of organic growth intersecting with synthetic production; the thick brim casts a heavy shadow over the upper face; the hat completes the look by capping the dense suit with a surreal volumetric form."
           }
         ]
       },
@@ -870,22 +816,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-11.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "x": 35,
+            "y": 55,
+            "label": "Relaxed-Fit Crinkled Shirting",
+            "description": "The relaxed-fit crinkled shirting hangs loosely from the shoulders with a permanently rumpled texture; this aesthetic of exhaustion engages with Marxist critiques of labor and the pristine commodity; the bright red fabric features deep irregular creases throughout the sleeves and bodice; the garment asserts a lived-in materiality that rejects the polished finish of haute couture."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "x": 35,
+            "y": 7,
+            "label": "Crumpled Lacquer Headpiece",
+            "description": "The crumpled lacquer headpiece resembles a discarded plastic bag fused into a sculptural mass; this radical upcycling aesthetic invokes ecocritical theories regarding waste and value; the shiny black surface reflects runway lights haphazardly; the accessory completes the look by elevating detritus to the status of high fashion adornment."
           }
         ]
       },
@@ -893,22 +833,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
-          },
-          {
-            "x": 50,
-            "y": 80,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
-          },
-          {
-            "x": 60,
+            "x": 45,
             "y": 40,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "label": "Polka-Dot Knit Shift",
+            "description": "The polka-dot knit shift features a dense array of white spots on a pink ground woven as a single continuous tube; this construction directly implements the A-POC philosophy of mass-customizable industrial production; the simple silhouette stretches slightly over the hips while maintaining the integrity of the pattern; the garment asserts a democratization of design through its unpretentious form and advanced engineering."
+          },
+          {
+            "x": 55,
+            "y": 85,
+            "label": "Monochromatic Platform Boot",
+            "description": "The monochromatic platform boot provides a heavy grounding element in bright blue suede; this primary color blocking engages with pop art theories of visual impact; the thick sole and stark lacing create a solid geometric base; the footwear completes the youthful graphic logic of the ensemble."
           }
         ]
       },
@@ -916,22 +850,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-13.jpg",
         "hotspots": [
           {
-            "x": 50,
+            "x": 40,
             "y": 50,
-            "label": "Unbroken Knitted Matrix",
-            "description": "The continuous red textile connects multiple bodies within a singular industrial extrusion; proposing a radical intervention into Marxist Materialism. It obliterates the concept of the individual garment in favour of a communal fabric network. This unbroken thread symbolizes the interconnectedness of human experience and industrial production; rejecting alienated labour. The resulting matrix challenges the isolationist tendencies of modern luxury consumption."
+            "label": "Color-Blocked Shirting Dress",
+            "description": "The color-blocked shirting dress stitches together varying shades of lilac and purple in broad horizontal bands; this patchwork construction invokes structuralist theories of signifiers assembled to create meaning; the shifts in tone break up the long line of the garment; the textile refuses a singular surface to assert a composite identity."
           },
           {
             "x": 30,
-            "y": 20,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "y": 25,
+            "label": "Trompe L'Oeil Suspender Straps",
+            "description": "The trompe l'oeil suspender straps are integrated directly into the weave of the bodice; this clever visual trick engages with post-structuralist ideas of surface versus depth; the darker purple vertical lines mimic structural supports without functioning as such; this detail completes the garment by adding a layer of ironic utility to a simple shape."
           }
         ]
       },
@@ -939,22 +867,33 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "User-Defined Cutting Vector",
-            "description": "The incorporation of visible cut-lines transfers the final act of design from the creator to the consumer; enacting a profound redistribution of Symbolic Exchange. This interactive geometry radically democratises the bespoke tailoring process. By inviting physical intervention; the garment remains in a state of perpetual potential until severed. It is a profound meditation on agency and the decentralisation of authorial power."
+            "x": 40,
+            "y": 65,
+            "label": "Engineered Sunburst-Pleated Tunic",
+            "description": "The engineered sunburst-pleated tunic features complex radiating folds that structure the deep V-neck and flared hem; this intricate topography engages with Deleuzian concepts of becoming through infinite folding; the sheer white fabric gains opacity where the pleats dense together; the garment asserts the technical mastery of textile manipulation as the primary driver of silhouette."
           },
           {
             "x": 40,
-            "y": 40,
-            "label": "Tubular Structural Extrusion",
-            "description": "The seamless tubular construction bypasses traditional planar pattern cutting entirely; aligning with principles of Object-Oriented Ontology. This methodology mirrors organic growth processes rather than mechanical assembly; treating the textile as an independent actor. The resulting form envelops the body without restricting it; offering a fluid architectural envelope. It represents a paradigm shift from assembled clothing to grown textiles."
+            "y": 20,
+            "label": "Voluminous Crinkled Headwear",
+            "description": "The voluminous crinkled headwear forms a massive undulating halo around the face; this exaggerated proportion invokes theories of the sublime by dwarfing the human scale; the paper-like texture suggests fragility despite its massive size; the accessory completes the ethereal almost religious iconography of the look."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-15.jpg",
+        "hotspots": [
+          {
+            "x": 30,
+            "y": 55,
+            "label": "Continuous Extruded Tubular Knit",
+            "description": "The continuous extruded tubular knit physically links the models together as they process down the runway; this literal manifestation of collective identity engages heavily with biopolitical theories of the social body; the bright red fabric stretches taught between the individuals demonstrating its resilient elasticity; the material asserts the collection's core thesis that clothing can be generated as a singular unending industrial output."
           },
           {
-            "x": 50,
-            "y": 20,
-            "label": "Zero-Waste Perimeter",
-            "description": "The calculated boundaries of the knit ensure absolutely no material is discarded during production; a direct critique aligned with Ecological Politics & Resource Extraction. This absolute efficiency operates as a silent but devastating critique of industry waste. The perimeter is dictated mathematically; fusing ecological responsibility with strict geometric logic. The edge of the garment becomes a boundary of environmental consciousness."
+            "x": 40,
+            "y": 45,
+            "label": "Cut-to-Fit Garment Iteration",
+            "description": "The cut-to-fit garment iteration on the central model demonstrates how individual dresses are liberated from the continuous tube via simple scissor cuts; this interactive design paradigm invokes open-source theories of user participation in the final product; the raw edges of the red knit sit cleanly against the skin without unravelling; this element completes the conceptual performance by proving the functional viability of the A-POC system."
           }
         ]
       }
