@@ -178,6 +178,13 @@ function renderHotspots(entry, container) {
   if (!container) return;
   container.querySelectorAll('.hotspot-btn').forEach(el => el.remove());
 
+  // Reset payload state on every new entry render
+  const payloadEl = $('analytical-payload');
+  if (payloadEl) {
+    payloadEl.classList.add('hidden');
+    payloadEl.classList.remove('permanent-payload', 'expand-active');
+  }
+
   const imgs = entry.images || [{ src: entry.imageUrl }];
   const currentImgObj = imgs[AppState.currentImageIndex];
   const hotspots = currentImgObj?.hotspots || entry.hotspots || [];

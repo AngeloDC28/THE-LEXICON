@@ -473,6 +473,8 @@ function setupEventListeners() {
   $('btn-open-matrix')?.addEventListener('click', () => {
     if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
   });
+  $('btn-close-matrix')?.addEventListener('click', () => closeConnectionMatrix());
+  $('matrix-backdrop')?.addEventListener('click', () => closeConnectionMatrix());
 
   $('btn-save-to-folder')?.addEventListener('click', () => {
     if (!currentUser) { showToast('Authentication required.'); toggleAuth(); return; }
