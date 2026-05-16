@@ -162,9 +162,6 @@ function refreshUI() {
   const btnClearDir = $('btn-clear-directory');
   if (btnClearDir) btnClearDir.textContent = t('search_clear');
 
-  const btnGridLabels = $('btn-toggle-grid-meta');
-  if (btnGridLabels) btnGridLabels.textContent = t('search_show_labels');
-
   // --- Status Ribbon ---
   const statusLabels = {
     'status-brand': 'status_brand',
@@ -486,6 +483,8 @@ function setupEventListeners() {
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
+
+  $('btn-export-all-folders')?.addEventListener('click', () => exportAllFolders());
 
   // Hotspot interaction is now handled in render-detail.js per-render.
 

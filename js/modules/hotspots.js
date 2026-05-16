@@ -13,6 +13,7 @@
  */
 import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 // Module-scoped reference — set once by initHotspotInteractions(archiveData)
 let _archiveData = [];
@@ -60,18 +61,22 @@ function showHotspot(index) {
     });
   }
 
-  // Mobile: populate and show dock
+  // Mobile: show hotspot info via payload (dock elements not present)
   const entry = _archiveData.find(e => e.id === AppState.selectedEntryId);
-  if (entry) {
+  if (entry && window.innerWidth < 1024) {
     const imgs = entry.images || [{ src: entry.imageUrl }];
     const hotspots = imgs[AppState.currentImageIndex]?.hotspots || entry.hotspots || [];
     const spot = hotspots[index];
-    if (spot && window.innerWidth < 1024) {
-      const title = $('dock-title');
-      const desc  = $('dock-desc');
-      if (title) title.textContent = spot.label;
-      if (desc)  desc.textContent  = spot.description;
-      toggleMobileDock(true);
+    if (spot) {
+      const payload = $('analytical-payload');
+      const content = $('payload-content');
+      if (payload && content) {
+        let text = spot.description || '';
+        text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
+        content.innerHTML = `<div class="text-[10px] font-bold mb-1">${spot.label.toUpperCase()}</div><div class="text-[10px] leading-relaxed">${text}</div>`;
+        payload.classList.remove('hidden');
+        payload.onclick = () => payload.classList.add('hidden');
+      }
     }
   }
 
@@ -94,13 +99,14 @@ export function toggleMobileHotspots() {
   const btn    = $('btn-toggle-hotspots-mobile');
   const detail = $('detail-image-view');
   if (!detail) return;
+  const lang = AppState.language;
   const isVisible = detail.classList.contains('show-hotspots');
   if (isVisible) {
     detail.classList.remove('show-hotspots');
-    if (btn) btn.textContent = 'HOTSPOTS_OFF';
+    if (btn) btn.textContent = getTranslation('hotspots_off', lang) || 'HOTSPOTS OFF';
     cleanupHotspots();
   } else {
     detail.classList.add('show-hotspots');
-    if (btn) btn.textContent = 'HOTSPOTS_ON';
+    if (btn) btn.textContent = getTranslation('hotspots_on', lang) || 'HOTSPOTS ON';
   }
 }
