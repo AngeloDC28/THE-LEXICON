@@ -49,9 +49,11 @@ Non-English language files cover the UI and a hand-translated seed of the 30 mos
 
 `zh.json` and `ja.json` also have 2 extra keys each (`Gucci`, `Maison Margiela`) leftover from an earlier taxonomy iteration.
 
-**Fix**: run `ANTHROPIC_API_KEY=sk-... npm run translate-content`. The script (`.github/scripts/translate-content.mjs`) walks every language file, finds missing keys, and uses Claude Haiku to fill them in batches of 30. Idempotent and resumable — existing translations are never overwritten, and a mid-batch failure just means re-running picks up where it stopped.
+**Fix (free option)**: get a free Google Gemini API key at https://aistudio.google.com/app/apikey (no credit card needed) and run `GEMINI_API_KEY=AIza... npm run translate-content`. The script (`.github/scripts/translate-content.mjs`) walks every language file, finds missing keys, and uses Gemini 2.0 Flash to fill them in batches of 30. Idempotent and resumable — existing translations are never overwritten, and a mid-batch failure just means re-running picks up where it stopped.
 
-Estimated cost for a full pass across all 10 languages × ~650 missing keys at current Haiku pricing: **under $5 USD**.
+The free tier covers everything: 1500 requests/day and we only need ~200 batches across all 10 languages. The script auto-throttles to stay under the 15 RPM rate limit.
+
+**Paid alternative**: `ANTHROPIC_API_KEY=sk-... npm run translate-content` uses Claude Haiku instead (~$2–5 one-time for the full pass). Slightly higher quality on technical fashion vocabulary, but Gemini is more than adequate for general translation.
 
 ### 2.2 Orphan NOTES.md files (16 files, no broken references)
 Each entry folder in `public/THE-LEXICON-ASSETS/` contains a `NOTES.md` with editorial research notes. These aren't referenced by any entry JSON, so `check-assets.mjs` flags them as orphans (warnings, not failures). They don't break anything but they're accumulating in the asset directory.
