@@ -12,6 +12,7 @@
     "translate-content": "node .github/scripts/translate-content.mjs",
     "measure-images": "node .github/scripts/measure-images.mjs",
     "optimize-images": "node .github/scripts/optimize-images.mjs && node .github/scripts/measure-images.mjs",
+    "new-entry": "node .github/scripts/new-entry.mjs",
     "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs && node .github/scripts/measure-images.mjs",
     "build": "vite build",
     "preview": "vite preview"

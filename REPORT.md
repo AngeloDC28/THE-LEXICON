@@ -81,27 +81,28 @@ Images ship at their source resolution and encoding. A 3MB JPG costs the same to
 
 ## 3. The "add a new entry" workflow
 
+### Fast path (with scaffolder)
+
 ```bash
-# 1. Create a branch
-git checkout -b entry/galliano-dior-aw00
+# 1. Scaffold: creates JSON from template, makes asset folder, appends to order
+npm run new-entry galliano-dior-aw00
 
-# 2. Drop images into the right folder
-mkdir public/THE-LEXICON-ASSETS/galliano-dior-aw00
-# copy galliano-dior-aw00-{01..N}.jpg into that folder
+# 2. Drop images into the new folder (sequential, zero-padded)
+# public/THE-LEXICON-ASSETS/galliano-dior-aw00/galliano-dior-aw00-01.jpg ... -NN.jpg
+# Source images: any size; the optimizer will resize anything >2400px wide.
 
-# 3. Create the entry JSON from the template
-cp content/entries/_template.json content/entries/galliano-dior-aw00.json
-# fill in all fields (English source of truth)
+# 3. Edit the entry JSON — fill in title, tags, notes, image-by-image hotspots
+# content/entries/galliano-dior-aw00.json
 
-# 4. Register in the display order
-# add "galliano-dior-aw00" to content/order.json at the desired position
+# 4. Optimize images (resize >2400px, generate WebP siblings) + measure dimensions
+npm run optimize-images
 
-# 5. Sync new editorial strings into en.json
+# 5. Sync new editorial English strings into en.json so translations can target them
 npm run sync-content-keys
 
-# 6. (Optional) Translate the new editorial strings into all languages
+# 6. (Optional) Auto-translate the new strings via Anthropic (paid) or Gemini (free):
 ANTHROPIC_API_KEY=sk-... npm run translate-content
-# can also target one language: npm run translate-content -- fr
+# Skip this and non-English languages fall back to English (still works).
 
 # 7. Rebuild artifacts
 npm run build-data
@@ -111,16 +112,31 @@ npm run build-translations
 npm run check
 
 # 9. Visual check
-python -m http.server 8765     # or any static server; no node_modules needed
+python -m http.server 8765     # or any static server; no node_modules required
 
 # 10. Push + open PR
 git push -u origin entry/galliano-dior-aw00
 gh pr create --title "entry: Galliano for Dior AW00"
 ```
 
-CI runs all checks automatically. The PR is blocked from merging if anything fails.
+CI runs all checks automatically on the PR. Merge is blocked if anything fails.
 
-If you skip step 6, the entry still works — non-English languages just fall back to English for the new strings until you run the translation script.
+### Image requirements
+
+- **Format**: JPEG or PNG. The optimizer generates a WebP sibling for every image automatically.
+- **Naming**: `<entry-slug>-<NN>.jpg` with two-digit zero-padded sequence (`-01`, `-02`, ..., `-15`).
+- **Resolution**: any. Source images >2400px wide are resized to 2400px during `optimize-images`. Smaller images are left alone.
+- **Count**: minimum 1, no maximum. Typical entries have 5–16 images.
+- **One bad file ≠ blocked entry**: if a single image fails to load, the asset checker fails the build with a clear path. Replace it (or remove the reference from the entry's `images` array) and re-run.
+
+### Hotspot guidance
+
+Each image's `hotspots` array can be empty (`[]`) or contain any number of annotations:
+- `x` / `y` are percentages (0–100) of the image's width/height
+- `label` is short (3+ chars), shown on the geometric hotspot button
+- `description` is the analytical body text (30+ chars), shown when the hotspot is activated
+
+Hotspots reuse labels across an entry are fine — the same `label` appearing on multiple images is treated as one translation key, so a translation only has to be authored once.
 
 ---
 

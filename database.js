@@ -755,29 +755,6 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-08.jpg",
-        "hotspots": [
-          {
-            "x": 25,
-            "y": 50,
-            "label": "Continuous Extruded Tubular Knit",
-            "description": "The continuous extruded tubular knit physically links the procession of models as they walk the runway; it stretches tightly across the space between bodies to form an unbroken thread. This unbroken material manifestation engages deeply with biopolitical theories of the collective social body; it effectively dissolves individual subjectivity into a singular mechanized network. The bright red fabric pulls taut at the shoulder and hem as the models step out of sync; this reveals the intense elasticity and tensile strength required to maintain this interconnected formation. This textile architecture ultimately refuses the isolation of the traditional fashion silhouette; it asserts the collection's core thesis of mass-produced continuous creation."
-          },
-          {
-            "x": 42,
-            "y": 45,
-            "label": "Cut-To-Fit Garment Iteration",
-            "description": "The cut-to-fit garment iteration frames the torso precisely through pre-engineered demarcation lines snipped directly into the knit; it generates an immediate form-fitting silhouette without traditional seaming. This raw intervention into the textile invokes open-source theories of user participation; the aesthetic shifts the final act of design from the atelier to the physical cutting by the consumer. Sharp unhemmed edges are clearly visible at the neckline and armholes against the model's bare skin; this demonstrates the specific property of the textile weave that prevents the knit from unravelling once severed. The element completes the conceptual performance; it provides empirical proof of the fabric's functional autonomy."
-          },
-          {
-            "x": 18,
-            "y": 88,
-            "label": "Unshod Runway Procession",
-            "description": "The unshod runway procession removes all footwear from the presentation; the styling strips the silhouette back to its most basic biological foundation beneath the industrial knit. This choice engages with eco-critical and primitive theoretical frameworks; it contrasts the hyper-advanced technological production of the cloth with the exposed vulnerable human animal. The models' bare soles plant directly onto the stark white runway surface; they lack any elevation or structural support to alter their natural gait. This deliberate omission refuses the polished artifice of high fashion; the styling asserts a grounded communal reality necessary for the collection's utopian logic."
-          }
-        ]
-      },
-      {
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-09.jpg",
         "hotspots": [
           {
