@@ -83,6 +83,17 @@ export function imgAttrs(srcOrObj) {
   return d ? ` width="${d.w}" height="${d.h}"` : '';
 }
 
+/**
+ * webpSrc — derive the WebP sibling URL for any JPEG/PNG src.
+ * The optimize-images.mjs pass writes a .webp next to every .jpg/.png,
+ * so this is just a string substitution.
+ */
+export function webpSrc(srcOrObj) {
+  const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
+  if (!src) return '';
+  return src.replace(/\.(jpe?g|png)$/i, '.webp');
+}
+
 export function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {

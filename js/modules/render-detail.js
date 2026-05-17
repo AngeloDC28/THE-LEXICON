@@ -2,7 +2,7 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, BROKEN_ASSET } from './core-utils.js';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -37,7 +37,11 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const detailView = $('detail-image-view');
-  if (detailView) detailView.classList.remove('hidden');
+  if (detailView) {
+    detailView.classList.remove('hidden');
+    // Used by print stylesheet ::after for permalink footer
+    detailView.dataset.printUrl = window.location.origin + window.location.pathname + '#detail/' + entry.id + '/' + AppState.currentImageIndex;
+  }
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.add('detail-mode-active');
 
@@ -99,13 +103,15 @@ function renderImage(entry, callbacks) {
   const currentImgObj = imgs[AppState.currentImageIndex];
   const currentImgSrc = resolveImgSrc(currentImgObj);
 
-  const imgEl = $('detail-image');
+  const imgEl  = $('detail-image');
+  const webpEl = $('detail-image-webp');
   if (imgEl) {
     imgEl.src = '';
-    imgEl.onerror = () => { imgEl.src = BROKEN_ASSET; };
+    imgEl.onerror = () => { imgEl.src = BROKEN_ASSET; if (webpEl) webpEl.srcset = ''; };
     imgEl.onload = () => {
       if (callbacks && callbacks.extractAccentColor) callbacks.extractAccentColor(imgEl);
     };
+    if (webpEl) webpEl.srcset = resolveImgSrc({ src: webpSrc(currentImgObj) });
     imgEl.src = currentImgSrc;
     imgEl.alt = entry.title || entry.id;
   }
@@ -297,7 +303,10 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     const brand = e.tags.brand ? getTranslation(e.tags.brand, lang) : '';
     return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" title="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}">
       <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
-        <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='${BROKEN_ASSET}'" />
+        <picture>
+          <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(thumb)})}">
+          <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='${BROKEN_ASSET}'" />
+        </picture>
       </div>
       <div class="text-[8px] font-mono uppercase tracking-wider text-white/70 truncate group-hover:text-acid transition-colors">${brand}</div>
       <div class="text-[7px] font-mono text-white/40">${e.year || '----'}</div>

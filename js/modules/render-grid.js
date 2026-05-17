@@ -5,7 +5,7 @@
  * window.location.origin, fixing the broken image issue where relative paths
  * resolved incorrectly depending on the current URL.
  */
-import { $, pad, resolveImgSrc, imgAttrs, BROKEN_ASSET } from './core-utils.js';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -100,13 +100,16 @@ export function renderImageGrid(archiveData, callbacks) {
              aria-label="${brand} ${entry.year || ''}"
              style="animation-delay: ${delay}s">
           ${hotspotBadge}
-          <img
-            src="${src}"${imgAttrs(imgObj)}
-            alt="${entry.tags?.brand || entry.id}"
-            loading="lazy"
-            decoding="async"
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            onload="this.classList.add('loaded')" onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded')">
+          <picture>
+            <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
+            <img
+              src="${src}"${imgAttrs(imgObj)}
+              alt="${entry.tags?.brand || entry.id}"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              onload="this.classList.add('loaded')" onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded')">
+          </picture>
           <div class="grid-cell-meta absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
             <div class="text-[9px] font-mono uppercase tracking-widest text-white">${brand}</div>
             <div class="text-[8px] font-mono text-white/60">${entry.year || '----'} // ${entry.season || 'ARCHIVE'}</div>

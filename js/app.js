@@ -6,7 +6,7 @@
 
 import { archiveData } from '../database.js';
 import { imageDimensions } from './modules/image-dimensions.js';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions } from './modules/core-utils.js';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js';
 setImageDimensions(imageDimensions);
 import { AppState, updateHash } from './modules/core-state.js';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
@@ -816,8 +816,10 @@ function renderLightbox() {
   const current = imgs[idx];
   if (!current) return;
   const img = $('lightbox-image');
+  const webp = $('lightbox-image-webp');
   const counter = $('lightbox-counter');
   if (img) {
+    if (webp) webp.srcset = resolveImgSrc({ src: webpSrc(current) });
     img.src = resolveImgSrc(current);
     img.alt = getTranslation(entry.title || entry.id, AppState.language);
     img.style.transform = '';

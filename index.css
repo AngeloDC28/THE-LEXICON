@@ -1367,3 +1367,218 @@ html.dark .active-hotspot-box {
 #payload-content .text-\[10px\] {
   font-size: 9.5px !important;
 }
+
+/* ============================================================
+   PRINT STYLESHEET
+   For academic / editorial export. The detail page becomes a
+   single readable document: hero image at top, brand+year as
+   title, all three notes as a structured body, metadata as a
+   tagged footer. Everything else (nav, sidebars, action bars,
+   modals, telemetry) is hidden.
+============================================================ */
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  /* Reset to readable typography */
+  html, body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hide chrome */
+  #primary-header,
+  #status-ribbon,
+  #index-panel,
+  #drawer-backdrop,
+  #boot-overlay,
+  #cookie-banner,
+  #toast,
+  #custom-cursor,
+  #orientation-panel,
+  #mobile-detail-actions,
+  #mobile-notes-sheet,
+  #cmd-palette,
+  #save-folder-modal,
+  #auth-modal,
+  #about-modal,
+  #contact-modal,
+  #privacy-modal,
+  #terms-modal,
+  #cite-modal,
+  #hotspot-popup,
+  #image-lightbox,
+  #connection-matrix,
+  .skip-link,
+  #btn-fullscreen-toggle,
+  #btn-tax-toggle,
+  #sticky-squares,
+  #sticky-note-panel,
+  #btn-viewer-prev,
+  #btn-viewer-next,
+  #scan-line,
+  #accent-glow,
+  .hotspot-btn,
+  #analytical-payload,
+  #related-entries-section .text-\[8px\],
+  #aria-announcer { display: none !important; }
+
+  /* When NOT on detail page, just hide grid/timeline (don't print thumbnails) */
+  #app-root:not(.detail-mode-active) #grid-view,
+  #app-root:not(.detail-mode-active) #timeline-view,
+  #app-root:not(.detail-mode-active) #folders-view {
+    display: none !important;
+  }
+  /* Print fallback for non-detail pages */
+  #app-root:not(.detail-mode-active)::before {
+    content: 'THE LEXICON — visit a specific entry page to print.';
+    display: block;
+    font-size: 14pt;
+    padding: 2cm;
+  }
+
+  /* Detail view: linearise into a printable document */
+  #app-root, #detail-image-view, #detail-desktop-stack,
+  #detail-image-sector, #detail-image-wrapper {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #fff !important;
+    color: #000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    border: none !important;
+  }
+
+  #detail-image {
+    max-width: 100% !important;
+    max-height: 14cm !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto 0.6cm !important;
+    page-break-after: avoid;
+  }
+
+  /* Brand + year + title header above the image */
+  #detail-image-sector::before {
+    content: 'THE LEXICON';
+    display: block;
+    font-family: ui-monospace, 'Courier New', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.3em;
+    color: #666;
+    margin-bottom: 0.3cm;
+    text-transform: uppercase;
+  }
+
+  /* Show the metadata sidebar inline below the image as the article body */
+  #detail-metadata-sidebar {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    background: #fff !important;
+    color: #000 !important;
+    border: none !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  /* Sticky notes: render as labelled paragraphs */
+  .brutalist-node {
+    display: block !important;
+    background: none !important;
+    color: #000 !important;
+    border: none !important;
+    border-top: 1px solid #000 !important;
+    padding: 0.3cm 0 0.3cm !important;
+    margin: 0 !important;
+    page-break-inside: avoid;
+  }
+  .brutalist-node .node-label {
+    display: block;
+    font-family: ui-monospace, 'Courier New', monospace !important;
+    font-size: 9pt !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2em !important;
+    color: #000 !important;
+    margin-bottom: 0.15cm;
+    text-transform: uppercase;
+  }
+  .brutalist-node .node-body {
+    font-family: Georgia, serif !important;
+    font-size: 10.5pt !important;
+    color: #000 !important;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* Metadata grid as a footer */
+  #metadata-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.4cm 0.6cm !important;
+    border-top: 1px solid #000 !important;
+    padding-top: 0.3cm !important;
+    margin-top: 0.3cm !important;
+  }
+  .metadata-tag-btn {
+    background: none !important;
+    color: #000 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  .metadata-tag-btn div:first-child {
+    font-family: ui-monospace, 'Courier New', monospace !important;
+    font-size: 8pt !important;
+    letter-spacing: 0.15em !important;
+    color: #666 !important;
+    text-transform: uppercase;
+  }
+  .metadata-tag-btn div:last-child {
+    font-family: Georgia, serif !important;
+    font-size: 10pt !important;
+    color: #000 !important;
+    text-transform: none !important;
+  }
+
+  /* Related entries: list rather than thumbnails */
+  #related-entries-section { display: none !important; }
+
+  /* Save/action panel hidden in print */
+  .mt-auto.p-6.border-t.border-white\/10 { display: none !important; }
+
+  /* Title comes from the active-entry-title element */
+  #active-entry-title {
+    display: block !important;
+    color: #000 !important;
+    font-family: Georgia, serif !important;
+    font-size: 14pt !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    margin-bottom: 0.3cm;
+    padding-bottom: 0.3cm;
+    border-bottom: 2px solid #000;
+  }
+
+  /* Auto-append URL footer for citation */
+  #detail-image-view::after {
+    content: 'Permalink: ' attr(data-print-url);
+    display: block;
+    font-family: ui-monospace, 'Courier New', monospace !important;
+    font-size: 8pt !important;
+    color: #666 !important;
+    margin-top: 0.6cm !important;
+    padding-top: 0.2cm !important;
+    border-top: 1px dashed #999 !important;
+    word-break: break-all;
+  }
+}

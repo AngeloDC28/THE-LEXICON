@@ -370,7 +370,10 @@
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
                 <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]"></div>
-                <img id="detail-image" class="relative z-10" src="" alt="" />
+                <picture>
+                  <source id="detail-image-webp" type="image/webp" srcset="" />
+                  <img id="detail-image" class="relative z-10" src="" alt="" />
+                </picture>
                 
                 <!-- Floating Analytical Payload -->
                 <div id="analytical-payload" class="hidden brutalist-node floating-payload">
@@ -523,7 +526,10 @@
       <button type="button" id="btn-lightbox-prev" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white text-3xl w-12 h-12 flex items-center justify-center hover:text-acid focus-ring">‹</button>
       <button type="button" id="btn-lightbox-next" aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white text-3xl w-12 h-12 flex items-center justify-center hover:text-acid focus-ring">›</button>
       <div id="lightbox-stage" class="relative w-full h-full overflow-hidden flex items-center justify-center cursor-zoom-in">
-        <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
+        <picture>
+          <source id="lightbox-image-webp" type="image/webp" srcset="" />
+          <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
+        </picture>
       </div>
       <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-[10px] font-mono tracking-widest uppercase pointer-events-none">
         <span id="lightbox-counter">1 / 1</span> · <span class="opacity-60">CLICK TO ZOOM · ESC TO CLOSE</span>
