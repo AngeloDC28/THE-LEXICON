@@ -122,10 +122,11 @@ function refreshUI() {
   if (btnContact) btnContact.textContent = t('nav_contact').toUpperCase();
   if (btnContactMobile) btnContactMobile.textContent = t('nav_contact_mobile').toUpperCase();
 
-  const btnLang = $('btn-lang-toggle');
+  const btnLangLabel = $('btn-lang-toggle-label');
   const btnLangMobile = $('btn-lang-toggle-mobile');
-  if (btnLang) btnLang.textContent = t('nav_language').toUpperCase();
+  if (btnLangLabel) btnLangLabel.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
   if (btnLangMobile) btnLangMobile.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
+  renderLangDropdown();
 
   const btnTheme = $('btn-theme-toggle');
   const btnThemeMobile = $('btn-theme-toggle-mobile');
@@ -401,7 +402,15 @@ function setupEventListeners() {
   $('btn-folders-toggle')?.addEventListener('click', () => switchView('folders', callbacks));
   $('btn-folders-toggle-mobile')?.addEventListener('click', () => { switchView('folders', callbacks); toggleHamburger(); });
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
-  $('btn-lang-toggle')?.addEventListener('click', toggleLanguage);
+  $('btn-lang-toggle')?.addEventListener('click', toggleLangDropdown);
+  document.addEventListener('click', (e) => {
+    const dd = $('lang-dropdown');
+    if (!dd || dd.classList.contains('hidden')) return;
+    if (!e.target.closest('#lang-dropdown') && !e.target.closest('#btn-lang-toggle')) {
+      dd.classList.add('hidden');
+      $('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
+    }
+  });
   $('btn-auth-toggle')?.addEventListener('click', () => { toggleAuth(); setTimeout(() => $('auth-email')?.focus(), 50); });
   $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
@@ -584,6 +593,58 @@ function toggleTheme() {
   const isDark = document.documentElement.classList.toggle('dark');
   try { localStorage.setItem('lexicon-theme', isDark ? 'dark' : 'light'); } catch(e) {}
   refreshUI();
+}
+
+const LANG_DISPLAY = {
+  'en':    'English',
+  'en-gb': 'English (GB)',
+  'en-us': 'English (US)',
+  'fr':    'Français',
+  'it':    'Italiano',
+  'es':    'Español',
+  'de':    'Deutsch',
+  'pt':    'Português',
+  'ru':    'Русский',
+  'zh':    '中文',
+  'ja':    '日本語',
+  'ko':    '한국어'
+};
+
+function renderLangDropdown() {
+  const dd = $('lang-dropdown');
+  if (!dd) return;
+  dd.innerHTML = supportedLanguages.map(code => {
+    const name = LANG_DISPLAY[code] || code.toUpperCase();
+    const isActive = code === AppState.language;
+    const activeClass = isActive ? 'bg-black text-white dark:bg-acid dark:text-black' : 'hover:bg-black/10 dark:hover:bg-white/10';
+    return `<li><button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" class="w-full text-left px-3 py-2 text-[10px] font-mono uppercase tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3">
+      <span>${name}</span><span class="opacity-50 text-[8px]">${code.toUpperCase()}</span>
+    </button></li>`;
+  }).join('');
+  dd.querySelectorAll('[data-lang-code]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const code = btn.getAttribute('data-lang-code');
+      if (!code || code === AppState.language) {
+        dd.classList.add('hidden');
+        return;
+      }
+      AppState.language = code;
+      try { localStorage.setItem('lexicon-lang', code); } catch(e) {}
+      dd.classList.add('hidden');
+      $('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
+      refreshUI();
+      showToast(`Terminal Language: ${code.toUpperCase()}`);
+    });
+  });
+}
+
+function toggleLangDropdown() {
+  const dd = $('lang-dropdown');
+  const btn = $('btn-lang-toggle');
+  if (!dd) return;
+  const isHidden = dd.classList.contains('hidden');
+  dd.classList.toggle('hidden');
+  if (btn) btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
 }
 
 function toggleLanguage() {

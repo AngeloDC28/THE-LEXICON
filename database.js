@@ -1908,18 +1908,18 @@ export const archiveData = [
     "tags": {
       "brand": "Prada",
       "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Anti-Consumerism & Institutional Critique",
+      "politics": "Feminist Theory & The Subverted Gaze",
       "theories": "Camp and Kitsch Subversion",
       "gender": "Womenswear",
-      "materials": "Petroleum-Based Polymers (Polyester; Nylon; Acrylic)",
+      "materials": "Petroleum-Based Polymers",
       "geography": "Milan (Camera Nazionale)",
-      "anatomy": "Compressed Proportions",
-      "format": "Traditional Runway (The Linear Catwalk)"
+      "anatomy": "Sartorial Restriction",
+      "format": "Traditional Runway"
     },
     "notes": {
-      "critique": "This runway executes a masterful institutional critique[cite: 2] of established beauty standards. By utilising a palette of Formica greens and muddy browns paired with clashing geometric prints, Miuccia Prada enforces a narrative of subcultural resistance theory[cite: 2] from within the apex of the luxury system. The spectacle operates through a highly specific visual rhetoric[cite: 2] that actively rejects the male gaze. The wearer is granted bodily autonomy and transgression[cite: 2] through garments that are deliberately challenging; forcing the viewer to confront the grotesque and abject[cite: 2] hidden within the traditional bourgeois wardrobe.",
-      "strategy": "Prada executes a brilliant pivot in corporate signalling[cite: 2] by successfully marketing the anti-aesthetic. The communications strategy bypasses traditional glamour entirely; opting instead to weaponise the mundane. By transmitting these jarring, retro-futurist heritage[cite: 2] visuals directly to the press, the house forces the editorial establishment to completely recalibrate its understanding of desire. This calculated narrative curation[cite: 2] ensures maximum editorial dominance; establishing Prada not merely as a commercial manufacturer but as the ultimate intellectual authority in global fashion.",
-      "provenance": "Prada presented the Spring and Summer Ready to Wear collection Banal Eccentricity in September 1995 within the Milan official schedule. Occurring during the Deconstructionist Decade; the traditional runway format served as the definitive genesis of the Ugly Chic movement. The presentation functions as a clinical inquiry into Italian Industrial Excellence; violently shifting the paradigm of 1990s luxury away from overt sexuality towards intellectualized austerity."
+      "critique": "Ugly Chic operates as an intellectual attack on the prevailing 1990s ideals of sleek minimalism, sex appeal, and conventional beauty. By weaponising the dowdy, the modest, and the unflattering, Miuccia Prada elicits an almost questionable disgust in the normal eye and forces a recalibration of established norms. The geek-chic uniform of modest skirts and loose blouses offers women a way to actively opt out of the illusion of perfection, decentering the heteronormative male gaze through pseudo-intelligent austerity. The collection proves that desirability can be located in the unconventional, not the obvious.",
+      "strategy": "The architectural strategy hinges on deliberate wrongness. Classic separates — striped button-ups, polo shirts, knee-length skirts, straight pants — are paired with awkward color combinations and unconventional textiles. Banal prints sourced from 1970s upholstery, Formica tiles, and tablecloths are reproduced on synthetic Bri-Nylon or printed onto cotton tweeds as trompe-l'oeil. The drab palette of olive, mustard, chartreuse, ochre, brown, and lilac is anchored by chunky sandals and thick wedges now famously known as toilet-bowl heels. Every element is engineered to read as off, on purpose.",
+      "provenance": "Miuccia Prada's Spring/Summer 1996 collection, officially titled Banal Eccentricity, is remembered in fashion history as the Ugly Chic or Geek Chic collection. Prada drew direct inspiration from ordinary household objects and the 1980 Venice Biennale of Architecture, paying tribute to the postmodern design group Studio Alchimia and its exhibition The Banal Object. Regarded as a seismic sartorial shift comparable in impact to Christian Dior's 1947 New Look, this collection cemented Miuccia Prada as a cultural provocateur and established intellectual fashion as a credible position within the luxury system."
     },
     "hotspots": []
   },

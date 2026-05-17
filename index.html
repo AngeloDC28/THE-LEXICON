@@ -166,7 +166,13 @@
     <div class="hidden lg:flex items-center gap-3 lg:gap-5">
       <button id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">FOLDERS</button>
       <button id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">ACCESS</button>
-      <button id="btn-lang-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">LANGUAGES</button>
+      <div class="relative inline-block">
+        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
+          <span id="btn-lang-toggle-label">LANGUAGES</span>
+          <span class="text-[8px] opacity-60">▾</span>
+        </button>
+        <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
+      </div>
       <button id="btn-about" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">ABOUT</button>
       <button id="btn-contact" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">CONTACT</button>
       <button id="btn-theme-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">THEME</button>
