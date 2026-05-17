@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# Auto-runs `npm run preflight` before every commit so stale generated
+# artifacts, missing dimensions, or broken asset references never make it
+# into the repo. Install once with `bash .githooks/install.sh`.
+#
+# Skip with --no-verify if you ABSOLUTELY know what you're doing
+# (typically: docs-only commits, or a checkpoint while the build is
+# already known-broken). Don't make a habit of it.
+
+set -e
+
+# Only run the heavy preflight if files that affect the build are staged.
+# Pure docs / config changes don't need it.
+CHANGED=$(git diff --cached --name-only)
+NEEDS_PREFLIGHT=0
+for f in $CHANGED; do
+  case "$f" in
+    content/*|public/THE-LEXICON-ASSETS/*|js/*|database.js|index.html|index.css|package.json)
+      NEEDS_PREFLIGHT=1
+      break
+      ;;
+  esac
+done
+
+if [ "$NEEDS_PREFLIGHT" = "1" ]; then
+  echo "[pre-commit] running npm run preflight..."
+  npm run preflight
+  # If preflight regenerated any tracked artifacts, stage them so the
+  # commit reflects the consistent state.
+  git add database.js js/modules/translations.js js/modules/image-dimensions.js content/translations/en.json 2>/dev/null || true
+else
+  echo "[pre-commit] no build-affecting files staged; skipping preflight."
+fi
