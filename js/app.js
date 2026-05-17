@@ -5,7 +5,9 @@
  */
 
 import { archiveData } from '../database.js';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc } from './modules/core-utils.js';
+import { imageDimensions } from './modules/image-dimensions.js';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions } from './modules/core-utils.js';
+setImageDimensions(imageDimensions);
 import { AppState, updateHash } from './modules/core-state.js';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
 import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
@@ -219,6 +221,10 @@ function refreshUI() {
   // --- Technical specs label ---
   const techSpecsLabel = $$('#detail-metadata-sidebar h4')[0];
   if (techSpecsLabel) techSpecsLabel.textContent = t('tech_specs');
+
+  // --- Related entries label ---
+  const relatedLabel = $('related-entries-title');
+  if (relatedLabel) relatedLabel.textContent = t('related_artifacts');
 
   // --- Mobile drawer search button ---
   const btnSearchMobile = $('btn-search-mobile');
@@ -573,6 +579,9 @@ function setupEventListeners() {
   $('btn-back-grid-mobile')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-toggle-hotspots-mobile')?.addEventListener('click', toggleMobileHotspots);
   $('btn-nexus-mobile')?.addEventListener('click', () => {
+    if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
+  });
+  $('btn-related-open-nexus')?.addEventListener('click', () => {
     if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
   });
   $('btn-notes-mobile')?.addEventListener('click', () => openMobileNotes());

@@ -5,7 +5,7 @@
  * window.location.origin, fixing the broken image issue where relative paths
  * resolved incorrectly depending on the current URL.
  */
-import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
+import { $, pad, resolveImgSrc, imgAttrs, BROKEN_ASSET } from './core-utils.js';
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -101,7 +101,7 @@ export function renderImageGrid(archiveData, callbacks) {
              style="animation-delay: ${delay}s">
           ${hotspotBadge}
           <img
-            src="${src}"
+            src="${src}"${imgAttrs(imgObj)}
             alt="${entry.tags?.brand || entry.id}"
             loading="lazy"
             decoding="async"

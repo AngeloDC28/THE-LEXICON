@@ -2,7 +2,7 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
+import { $, pad, resolveImgSrc, imgAttrs, BROKEN_ASSET } from './core-utils.js';
 import { AppState, stickyNotes, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -46,6 +46,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   renderBrutalistNodes(entry);
   renderStickyOverlay(entry);
   renderMetadataGrid(entry);
+  renderRelatedEntries(entry, archiveData, callbacks);
   renderHotspots(entry, $('detail-image-wrapper'));
   setupSwipeGestures(archiveData, callbacks);
 
@@ -260,6 +261,62 @@ function renderMetadataGrid(entry) {
 }
 
 /**
+ * renderRelatedEntries
+ * Surface up to 6 related entries inline at the bottom of the metadata
+ * sidebar, scored by how many tags they share with the current entry.
+ * Tap a thumbnail → open that entry. Tap "View All Nexus" → opens the
+ * full connection matrix.
+ */
+function renderRelatedEntries(entry, archiveData, callbacks) {
+  const section = $('related-entries-section');
+  const grid    = $('related-entries-grid');
+  if (!section || !grid || !entry.tags) return;
+
+  const tagKeys = ['brand', 'era', 'politics', 'theories', 'gender', 'materials', 'geography', 'anatomy', 'format'];
+  const myTags = {};
+  for (const k of tagKeys) if (entry.tags[k]) myTags[k] = entry.tags[k];
+
+  const scored = archiveData
+    .filter(e => e.id !== entry.id && e.tags)
+    .map(e => {
+      let score = 0;
+      for (const k of tagKeys) if (myTags[k] && e.tags[k] === myTags[k]) score++;
+      return { e, score };
+    })
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 6);
+
+  if (scored.length === 0) { section.classList.add('hidden'); return; }
+  section.classList.remove('hidden');
+
+  const lang = AppState.language;
+  grid.innerHTML = scored.map(({ e, score }) => {
+    const thumb = e.images && e.images[0];
+    const src   = resolveImgSrc(thumb);
+    const brand = e.tags.brand ? getTranslation(e.tags.brand, lang) : '';
+    return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" title="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}">
+      <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
+        <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.src='${BROKEN_ASSET}'" />
+      </div>
+      <div class="text-[8px] font-mono uppercase tracking-wider text-white/70 truncate group-hover:text-acid transition-colors">${brand}</div>
+      <div class="text-[7px] font-mono text-white/40">${e.year || '----'}</div>
+    </button>`;
+  }).join('');
+
+  // Wire click delegation once
+  if (!grid._relatedClickBound) {
+    grid._relatedClickBound = true;
+    grid.addEventListener('click', (e) => {
+      const btn = e.target.closest('.related-entry-btn');
+      if (!btn) return;
+      const id = btn.dataset.relatedId;
+      if (id && callbacks?.openDetail) callbacks.openDetail(id);
+    });
+  }
+}
+
+/**
  * renderHotspots
  * Geometric crosshair targets.
  */
@@ -383,13 +440,22 @@ function setupDetailControls() {
     fsBtn.onclick = () => toggleFullscreen();
   }
 
+  // Auto-reveal the metadata sidebar on desktop so sticky notes, tech specs,
+  // and related entries are visible without a hunt. Mobile still uses the
+  // bottom-sheet pattern (sidebar would overflow a phone width).
+  const sidebar = $('detail-metadata-sidebar');
+  if (sidebar && window.innerWidth >= 1024) sidebar.classList.remove('hidden');
+
   const taxToggle = $('btn-tax-toggle');
   if (taxToggle) {
     const lang = AppState.language;
+    // Sync initial text to current sidebar state
+    taxToggle.textContent = (sidebar && sidebar.classList.contains('hidden'))
+      ? getTranslation('btn_visualise_tax', lang)
+      : getTranslation('btn_hide_tax', lang);
     taxToggle.onclick = () => {
-      const sidebar = $('detail-metadata-sidebar');
       sidebar.classList.toggle('hidden');
-      taxToggle.textContent = sidebar.classList.contains('hidden') 
+      taxToggle.textContent = sidebar.classList.contains('hidden')
         ? getTranslation('btn_visualise_tax', lang)
         : getTranslation('btn_hide_tax', lang);
     };

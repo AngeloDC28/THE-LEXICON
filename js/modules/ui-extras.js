@@ -3,7 +3,7 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
+import { $, resolveImgSrc, imgAttrs, BROKEN_ASSET } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
@@ -31,8 +31,8 @@ export function renderTimeline(archiveData, callbacks) {
           ${entries.map((e, i) => `
             <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0 translateY-10" 
                  data-id="${e.id}" style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
-              <img src="${resolveImgSrc(e.images && e.images[0])}" 
-                   class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0" 
+              <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
+                   class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0"
                    loading="lazy"
                    onload="this.classList.add('loaded'); this.parentElement.classList.add('loaded');"
                    onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.parentElement.classList.add('loaded'); this.classList.add('broken-asset');" />

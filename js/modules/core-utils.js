@@ -68,6 +68,21 @@ export function initCustomCursor() {
   document.addEventListener('mouseenter',  () => { cursor.style.opacity = '1'; });
 }
 
+/**
+ * imgAttrs — return ` width="X" height="Y"` for a given image src (or empty
+ * string if we don't have dimensions). Use it inline in template literals
+ * so every <img> ships with explicit dimensions and the browser reserves
+ * space, eliminating Cumulative Layout Shift.
+ */
+let _imgDimsMap = null;
+export function setImageDimensions(map) { _imgDimsMap = map; }
+export function imgAttrs(srcOrObj) {
+  if (!_imgDimsMap) return '';
+  const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
+  const d = _imgDimsMap[src];
+  return d ? ` width="${d.w}" height="${d.h}"` : '';
+}
+
 export function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
