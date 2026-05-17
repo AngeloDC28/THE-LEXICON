@@ -6,7 +6,6 @@
 import { $ } from './core-utils.js';
 import { AppState, taxonomyData } from './core-state.js';
 import { getTranslation } from './translations.js';
-import { getTranslation } from './translations.js';
 
 let searchCache = new Map();
 let lastCacheKey = null;

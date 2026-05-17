@@ -16,7 +16,7 @@ import { switchView } from './modules/navigation.js';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
 import { updateTelemetry, initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js';
 import { initFirebaseAuth, toggleAuth, sendSignInLink, createArchivalFolder, saveToFolder, currentUser, fetchArchivalFolders } from './modules/auth.js';
-import { addRecentlyViewed, renderRecentlyViewed, toggleBookmark, isBookmarked } from './modules/storage.js';
+import { addRecentlyViewed, toggleBookmark, isBookmarked } from './modules/storage.js';
 import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js';
 import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js';
 import { getTranslation, supportedLanguages } from './modules/translations.js';
@@ -27,10 +27,6 @@ const callbacks = {
   closeDetail: () => closeDetail(callbacks, archiveData),
   navigateEntry: (dir) => navigateEntry(dir, archiveData, callbacks),
   showToast: showToast,
-  showAnnouncement: (msg) => {
-    const announcer = $('aria-announcer');
-    if (announcer) announcer.textContent = msg;
-  },
   renderFolders: () => renderFoldersView(),
   renderFolderOptions: () => renderSaveFolderModal(),
   updateBookmarkUI: (id) => {
@@ -469,11 +465,13 @@ function setupEventListeners() {
   });
 
   // --- Orientation ---
-  $('btn-dismiss-orientation')?.addEventListener('click', () => {
+  const dismissOrientation = () => {
     const op = $('orientation-panel');
     if (op) op.classList.add('hidden');
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
-  });
+  };
+  $('btn-dismiss-orientation')?.addEventListener('click', dismissOrientation);
+  $('btn-close-orientation')?.addEventListener('click', dismissOrientation);
 
   // --- View Toggles ---
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));

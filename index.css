@@ -13,9 +13,23 @@ html.dark {
 }
 
 /* Global Utilities */
+/* .hidden uses !important so JS-driven `el.classList.add('hidden')` reliably
+   overrides any ID-level `display` rule below (e.g. #detail-image-view).
+   Side effect: this BREAKS Tailwind responsive show/hide patterns like
+   `class="hidden lg:flex"` — they cannot win against !important. For those
+   cases use the bespoke responsive utilities below instead. */
 .hidden { display: none !important; }
-.pointer-events-none { pointer-events: none !important; }
-.pointer-events-auto { pointer-events: auto !important; }
+.pointer-events-none { pointer-events: none; }
+.pointer-events-auto { pointer-events: auto; }
+
+/* Responsive show/hide helpers (avoid clashing with .hidden !important).
+   Use these instead of `class="hidden lg:flex"` etc. */
+.lexicon-desktop-only { display: none; }
+@media (min-width: 1024px) { .lexicon-desktop-only { display: flex; } }
+/* Hide below md. Uses an ID-class compound for specificity in case an
+   element with its own #id { display: ... } rule needs to be hidden on
+   mobile (e.g. #header-telemetry). */
+@media (max-width: 767px) { .lexicon-tablet-up { display: none !important; } }
 
 *, *::before, *::after {
   border-radius: 0 !important;

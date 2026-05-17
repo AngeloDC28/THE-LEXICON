@@ -7,11 +7,11 @@ import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
-export function getBookmarks() {
+function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
 }
 
-export function setBookmarks(arr) {
+function setBookmarks(arr) {
   try { localStorage.setItem('lexicon-bookmarks', JSON.stringify(arr)); } catch(e) {}
 }
 
@@ -33,7 +33,7 @@ export function toggleBookmark(id, callbacks) {
   if (callbacks && callbacks.updateBookmarkUI) callbacks.updateBookmarkUI(id);
 }
 
-export function getRecentlyViewed() {
+function getRecentlyViewed() {
   try { return JSON.parse(localStorage.getItem('lexicon-recent') || '[]'); } catch(e) { return []; }
 }
 
@@ -45,7 +45,7 @@ export function addRecentlyViewed(entryId, archiveData, callbacks) {
   renderRecentlyViewed(archiveData, callbacks);
 }
 
-export function renderRecentlyViewed(archiveData, callbacks) {
+function renderRecentlyViewed(archiveData, callbacks) {
   const recent = getRecentlyViewed();
   const container = $('recent-container');
   const row = $('recent-row');

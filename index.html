@@ -159,11 +159,11 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <button id="header-title" class="text-[11px] lg:text-[13px] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring">THE LEXICON</button>
-      <div id="header-telemetry" class="hidden md:block text-[9px] font-mono opacity-60 tracking-widest uppercase">
+      <div id="header-telemetry" class="lexicon-tablet-up text-[9px] font-mono opacity-60 tracking-widest uppercase">
         <span id="telemetry-text">ARCHIVE STATUS: STABLE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
-    <div class="hidden lg:flex items-center gap-3 lg:gap-5">
+    <div class="lexicon-desktop-only items-center gap-3 lg:gap-5">
       <button id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">FOLDERS</button>
       <button id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">ACCESS</button>
       <div class="relative inline-block">
@@ -212,7 +212,7 @@
     <div class="flex flex-1 overflow-hidden main-shell">
 
       <!-- LEFT: INDEX PANEL -->
-      <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto">
+      <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto bg-bone dark:bg-darkBase overflow-y-auto lg:overflow-visible">
 
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
@@ -242,7 +242,7 @@
                 autocomplete="off"
                 placeholder="Query brand, era, or structural intervention..."
                 aria-label="Search archive"
-                class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono placeholder:text-black/40 dark:text-white/40 focus:border-acid focus:outline-none"
+                class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:border-acid focus:outline-none"
               />
               <button type="button" id="btn-clear-directory" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-transparent px-3 py-2">Clear</button>
             </div>
@@ -315,7 +315,8 @@
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
           <!-- Orientation Panel -->
-          <div id="orientation-panel" class="mb-1 p-4 md:p-8 bg-black text-white dark:bg-acid dark:text-black font-mono">
+          <div id="orientation-panel" class="relative mb-1 p-4 md:p-8 bg-black text-white dark:bg-acid dark:text-black font-mono">
+            <button id="btn-close-orientation" type="button" aria-label="Dismiss orientation panel" class="absolute top-3 right-3 md:top-4 md:right-4 text-[14px] leading-none font-bold opacity-70 hover:opacity-100 focus:outline-none focus-visible:ring-1 focus-visible:ring-current px-2 py-1">×</button>
             <div class="max-w-3xl">
               <h2 class="text-lg md:text-xl font-bold uppercase tracking-[0.2em] mb-4">Archive Orientation</h2>
               <p class="text-xs md:text-sm leading-relaxed mb-6 opacity-90">

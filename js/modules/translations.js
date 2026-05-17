@@ -1235,7 +1235,7 @@ export const translations = {
     orientation_col2_title: '关系矩阵',
     orientation_col2_desc: '使用任意条目中的矩阵工具，可视化不同档案间的关联。',
     orientation_col3_title: '档案集合',
-    orientation_col3_desc: "通过"访问"进行认证，将档案保存至私人集合。",
+    orientation_col3_desc: '通过"访问"进行认证，将档案保存至私人集合。',
     orientation_proceed: '[ 进入档案 ]',
     connection_matrix_header: '关联矩阵_ALPHA',
     sort_label: '排序',

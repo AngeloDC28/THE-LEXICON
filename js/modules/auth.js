@@ -38,14 +38,17 @@ export function initFirebaseAuth(callbacks) {
     const btnAuth = $('btn-auth-toggle');
     const btnAuthMobile = $('btn-auth-toggle-mobile');
     
+    const lang = AppState.language;
     if (user) {
-      if (btnAuth) btnAuth.textContent = 'Sign Out';
-      if (btnAuthMobile) btnAuthMobile.textContent = 'Sign Out';
+      const txt = (getTranslation('nav_signout', lang) || 'Sign Out').toUpperCase();
+      if (btnAuth) btnAuth.textContent = txt;
+      if (btnAuthMobile) btnAuthMobile.textContent = txt;
       $('auth-modal')?.classList.add('hidden');
       fetchArchivalFolders(callbacks);
     } else {
-      if (btnAuth) btnAuth.textContent = 'Sign In';
-      if (btnAuthMobile) btnAuthMobile.textContent = 'Sign In';
+      const txt = (getTranslation('nav_signin', lang) || 'Sign In').toUpperCase();
+      if (btnAuth) btnAuth.textContent = txt;
+      if (btnAuthMobile) btnAuthMobile.textContent = txt;
       AppState.archivalFolders = [];
       if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
     }

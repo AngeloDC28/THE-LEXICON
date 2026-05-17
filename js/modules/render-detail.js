@@ -381,12 +381,7 @@ function setupDetailControls() {
         : getTranslation('btn_hide_tax', lang);
     };
   }
-  
-  const backBtn = $('btn-back-grid');
-  if (backBtn) {
-    // This will be handled by the main app controller usually, 
-    // but we ensure it works if called.
-  }
+  // Note: btn-back-grid is wired in app.js's setupEventListeners().
 }
 
 function toggleFullscreen() {
