@@ -239,17 +239,24 @@ function renderMetadataGrid(entry) {
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
   const fields = [
-    { label: t('tax_era'),        value: entry.tags.era },
-    { label: t('tax_politics'),   value: entry.tags.politics },
-    { label: t('tax_theories'),   value: entry.tags.theories },
-    { label: t('tax_materials'),  value: entry.tags.materials }
+    { key: 'era',       label: t('tax_era'),       value: entry.tags.era },
+    { key: 'politics',  label: t('tax_politics'),  value: entry.tags.politics },
+    { key: 'theories',  label: t('tax_theories'),  value: entry.tags.theories },
+    { key: 'materials', label: t('tax_materials'), value: entry.tags.materials }
   ];
-  grid.innerHTML = fields.map(f =>
-    `<div class="space-y-1">
-      <div class="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40">${f.label}</div>
-      <div class="text-[9px] font-mono uppercase tracking-wide text-white">${getTranslation(f.value, lang) || '--'}</div>
-    </div>`
-  ).join('');
+  grid.innerHTML = fields.map(f => {
+    const translated = getTranslation(f.value, lang) || '--';
+    if (!f.value) {
+      return `<div class="space-y-1">
+        <div class="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40">${f.label}</div>
+        <div class="text-[9px] font-mono uppercase tracking-wide text-white/30">--</div>
+      </div>`;
+    }
+    return `<button type="button" class="metadata-tag-btn group text-left space-y-1 hover:bg-white/5 transition-colors p-1 -m-1 focus-ring" data-tax-type="${f.key}" data-tax-value="${f.value.replace(/"/g, '&quot;')}" title="Filter archive by ${f.label}">
+      <div class="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40 group-hover:text-acid transition-colors">${f.label} ›</div>
+      <div class="text-[9px] font-mono uppercase tracking-wide text-white group-hover:text-acid transition-colors">${translated}</div>
+    </button>`;
+  }).join('');
 }
 
 /**

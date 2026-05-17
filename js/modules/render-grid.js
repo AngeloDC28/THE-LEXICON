@@ -48,11 +48,23 @@ export function renderImageGrid(archiveData, callbacks) {
   }
 
   if (entries.length === 0) {
+    const lang = AppState.language;
+    const activeFilters = Object.entries(AppState.filters).filter(([_, v]) => v);
+    const filtersList = activeFilters.length
+      ? `<div class="text-[10px] font-mono text-black/50 dark:text-white/50 mb-4 max-w-md mx-auto">
+           <div class="text-[8px] uppercase tracking-[0.2em] opacity-60 mb-2">${getTranslation('filtering_label', lang)}</div>
+           <div class="flex flex-wrap justify-center gap-1">
+             ${activeFilters.map(([k, v]) => `<span class="border border-current px-2 py-0.5 text-[9px] uppercase">${getTranslation('tax_' + k, lang)}: ${getTranslation(v, lang)}</span>`).join('')}
+             ${AppState.searchQuery ? `<span class="border border-current px-2 py-0.5 text-[9px] uppercase">"${AppState.searchQuery}"</span>` : ''}
+           </div>
+         </div>`
+      : '';
     grid.innerHTML = `
-      <div class="col-span-full flex flex-col items-center justify-center py-32 text-center">
-        <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-4">${getTranslation('null_set', AppState.language)}</div>
-        <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-6">${getTranslation('null_set_desc', AppState.language)}</div>
-        <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">${getTranslation('btn_reset_system', AppState.language)}</button>
+      <div class="col-span-full flex flex-col items-center justify-center py-24 text-center px-4">
+        <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-3">${getTranslation('null_set', lang)}</div>
+        <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-4">${getTranslation('null_set_desc', lang)}</div>
+        ${filtersList}
+        <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">${getTranslation('btn_reset_system', lang)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
       AppState.filters = { brand: null, era: null, politics: null, theories: null,
@@ -75,6 +87,10 @@ export function renderImageGrid(archiveData, callbacks) {
         ? getTranslation(entry.tags.brand, AppState.language)
         : getTranslation('brand_unknown', AppState.language);
 
+      const hotspotCount = (imgObj?.hotspots || []).length;
+      const hotspotBadge = hotspotCount > 0
+        ? `<div class="absolute top-1 right-1 z-10 bg-acid text-black text-[8px] font-bold font-mono px-1.5 py-0.5 tracking-wider leading-none" title="${hotspotCount} hotspot${hotspotCount > 1 ? 's' : ''}">◉ ${hotspotCount}</div>`
+        : '';
       html += `
         <div class="grid-cell cursor-crosshair group relative overflow-hidden"
              data-entry-id="${entry.id}"
@@ -83,6 +99,7 @@ export function renderImageGrid(archiveData, callbacks) {
              role="button"
              aria-label="${brand} ${entry.year || ''}"
              style="animation-delay: ${delay}s">
+          ${hotspotBadge}
           <img
             src="${src}"
             alt="${entry.tags?.brand || entry.id}"

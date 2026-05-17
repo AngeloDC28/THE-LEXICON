@@ -164,6 +164,9 @@
       </div>
     </div>
     <div class="lexicon-desktop-only items-center gap-3 lg:gap-5">
+      <button id="btn-cmd-palette-hint" type="button" class="kbd-hint hover:text-acid focus-ring transition-colors" aria-label="Open command palette (Cmd+K)" title="Open command palette">
+        <span>⌘</span><span>K</span>
+      </button>
       <button id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">FOLDERS</button>
       <button id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">ACCESS</button>
       <div class="relative inline-block">
@@ -466,6 +469,19 @@
 
     </div>
 
+    </div>
+
+    <!-- IMAGE LIGHTBOX -->
+    <div id="image-lightbox" class="hidden fixed inset-0 z-[9000] bg-black/95 flex items-center justify-center" role="dialog" aria-label="Image lightbox" aria-modal="true">
+      <button type="button" id="btn-close-lightbox" aria-label="Close lightbox" class="absolute top-4 right-4 z-10 text-white text-xl font-bold w-12 h-12 flex items-center justify-center hover:text-acid border border-white/30 focus-ring">×</button>
+      <button type="button" id="btn-lightbox-prev" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white text-3xl w-12 h-12 flex items-center justify-center hover:text-acid focus-ring">‹</button>
+      <button type="button" id="btn-lightbox-next" aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white text-3xl w-12 h-12 flex items-center justify-center hover:text-acid focus-ring">›</button>
+      <div id="lightbox-stage" class="relative w-full h-full overflow-hidden flex items-center justify-center cursor-zoom-in">
+        <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
+      </div>
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-[10px] font-mono tracking-widest uppercase pointer-events-none">
+        <span id="lightbox-counter">1 / 1</span> · <span class="opacity-60">CLICK TO ZOOM · ESC TO CLOSE</span>
+      </div>
     </div>
 
     <!-- HOTSPOT FLOATING POPUP (DESKTOP ONLY) -->

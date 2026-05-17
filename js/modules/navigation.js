@@ -75,33 +75,21 @@ export function switchView(viewId, callbacks) {
 }
 
 function updateNavStates(viewId) {
-  // Grid Button
-  const btnGrid = $('btn-toggle-grid');
-  if (btnGrid) {
-    if (viewId === 'grid') {
-      btnGrid.classList.add('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
-    } else {
-      btnGrid.classList.remove('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
-    }
-  }
+  const setActive = (btn, isActive) => {
+    if (!btn) return;
+    btn.classList.toggle('opacity-100', isActive);
+    btn.classList.toggle('opacity-40', !isActive);
+    btn.classList.toggle('view-active', isActive);
+  };
+  setActive($('btn-toggle-grid'),     viewId === 'grid');
+  setActive($('btn-toggle-timeline'), viewId === 'timeline');
+  setActive($('btn-folders-toggle'),  viewId === 'folders');
 
-  // Timeline Button
-  const btnTimeline = $('btn-toggle-timeline');
-  if (btnTimeline) {
-    if (viewId === 'timeline') {
-      btnTimeline.classList.add('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
-    } else {
-      btnTimeline.classList.remove('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
-    }
-  }
-
-  // Folders Button (Header)
-  const btnFolders = $('btn-folders-toggle');
-  if (btnFolders) {
-    if (viewId === 'folders') {
-      btnFolders.classList.add('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
-    } else {
-      btnFolders.classList.remove('bg-black', 'text-white', 'dark:bg-white', 'dark:text-black');
-    }
+  // Dynamic current-view label
+  const label = $('current-view-label');
+  if (label) {
+    const t = (key) => getTranslation(key, AppState.language);
+    const map = { grid: 'view_grid', timeline: 'view_timeline', folders: 'folders_title' };
+    label.textContent = t(map[viewId] || 'view_grid').toUpperCase();
   }
 }

@@ -5,7 +5,7 @@
  */
 
 import { archiveData } from '../database.js';
-import { $, $$, debounce, initCustomCursor, showToast } from './modules/core-utils.js';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc } from './modules/core-utils.js';
 import { AppState, updateHash } from './modules/core-state.js';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
 import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function refreshUI() {
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
+  syncHashFromState();
 
   // --- Header ---
   const btnAuth = $('btn-auth-toggle');
@@ -337,29 +338,68 @@ function refreshUI() {
   updateStatusBar(archiveData);
 }
 
-function handleRouting() {
-  const hash = window.location.hash;
-  if (!hash) { switchView('grid', callbacks); return; }
+let _suppressHashSync = false;
 
-  if (hash.startsWith('#detail/')) {
-    const parts = hash.replace('#detail/', '').split('/');
+function applyStateFromQuery(params) {
+  if (params.has('sort')) AppState.sortMode = params.get('sort');
+  if (params.has('q')) {
+    AppState.searchQuery = params.get('q');
+    const si = $('search-input');
+    if (si) si.value = AppState.searchQuery;
+  }
+  for (const key of Object.keys(AppState.filters)) {
+    if (params.has(key)) AppState.filters[key] = params.get(key);
+  }
+}
+
+export function syncHashFromState() {
+  if (_suppressHashSync) return;
+  // Detail view manages its own hash; don't overwrite it here.
+  if (AppState.selectedEntryId) return;
+  const params = new URLSearchParams();
+  if (AppState.sortMode && AppState.sortMode !== 'default') params.set('sort', AppState.sortMode);
+  if (AppState.searchQuery) params.set('q', AppState.searchQuery);
+  for (const [k, v] of Object.entries(AppState.filters)) {
+    if (v) params.set(k, v);
+  }
+  const view = AppState.currentView || 'grid';
+  const qs = params.toString();
+  const newHash = '#' + view + (qs ? '?' + qs : '');
+  if (window.location.hash === newHash || (view === 'grid' && !qs && !window.location.hash)) return;
+  _suppressHashSync = true;
+  history.replaceState(null, '', window.location.pathname + window.location.search + newHash);
+  setTimeout(() => { _suppressHashSync = false; }, 0);
+}
+
+function handleRouting() {
+  if (_suppressHashSync) return;
+  const raw = window.location.hash.slice(1); // strip #
+  if (!raw) { switchView('grid', callbacks); return; }
+
+  const [path, query] = raw.split('?');
+  const params = new URLSearchParams(query || '');
+
+  if (path.startsWith('detail/')) {
+    const parts = path.replace('detail/', '').split('/');
     const id  = parts[0];
     const idx = parts[1] ? parseInt(parts[1]) : 0;
     openDetail(id, idx, archiveData, callbacks);
-  } else if (hash === '#folders') {
-    switchView('folders', callbacks);
-  } else if (hash === '#timeline') {
-    switchView('timeline', callbacks);
-  } else if (hash === '#grid') {
-    switchView('grid', callbacks);
+    return;
+  }
+
+  // Apply persisted filters/sort/search BEFORE switching view
+  applyStateFromQuery(params);
+
+  if (path === 'folders')   { switchView('folders', callbacks); return; }
+  if (path === 'timeline')  { switchView('timeline', callbacks); return; }
+  if (path === 'grid' || path === '') { switchView('grid', callbacks); return; }
+
+  // Fallback: maybe it's a bare entry id
+  const entry = archiveData.find(e => e.id === path);
+  if (entry) {
+    openDetail(path, 0, archiveData, callbacks);
   } else {
-    const potentialId = hash.replace('#', '');
-    const entry = archiveData.find(e => e.id === potentialId);
-    if (entry) {
-      openDetail(potentialId, 0, archiveData, callbacks);
-    } else {
-      switchView('grid', callbacks);
-    }
+    switchView('grid', callbacks);
   }
 }
 
@@ -549,12 +589,49 @@ function setupEventListeners() {
 
   $('btn-copy-link')?.addEventListener('click', () => {
     const lang = AppState.language;
+    const btn = $('btn-copy-link');
     const url = `${window.location.origin}${window.location.pathname}#detail/${AppState.selectedEntryId}/${AppState.currentImageIndex}`;
-    navigator.clipboard?.writeText(url).then(() => {
-      showToast(getTranslation('link_copied', lang));
-    }).catch(() => {
+    const flashCopied = () => {
+      if (!btn) return;
+      const original = btn.textContent;
+      btn.textContent = '✓ ' + getTranslation('link_copied', lang).replace('.','').toUpperCase();
+      btn.classList.add('btn-copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('btn-copied');
+      }, 1500);
+    };
+    navigator.clipboard?.writeText(url).then(flashCopied).catch(() => {
       showToast(url);
     });
+  });
+
+  $('btn-cmd-palette-hint')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
+
+  // Lightbox: click the detail image to open zoomable fullscreen view
+  $('detail-image')?.addEventListener('click', () => openLightbox());
+  $('btn-close-lightbox')?.addEventListener('click', () => closeLightbox());
+  $('btn-lightbox-prev')?.addEventListener('click', () => navigateLightbox(-1));
+  $('btn-lightbox-next')?.addEventListener('click', () => navigateLightbox(1));
+  $('lightbox-stage')?.addEventListener('click', (e) => {
+    if (e.target.id === 'lightbox-stage') { closeLightbox(); return; }
+    toggleLightboxZoom(e);
+  });
+
+  // Click-to-filter from detail metadata grid: tap any tag → filter archive
+  $('metadata-grid')?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.metadata-tag-btn');
+    if (!btn) return;
+    const type  = btn.dataset.taxType;
+    const value = btn.dataset.taxValue;
+    if (!type || !value) return;
+    // Reset other filters, set this one
+    Object.keys(AppState.filters).forEach(k => AppState.filters[k] = null);
+    AppState.filters[type] = value;
+    closeDetail(callbacks, archiveData);
+    switchView('grid', callbacks);
+    refreshUI();
+    showToast(getTranslation('filtering_label', AppState.language) + ' ' + value);
   });
 
   $('btn-open-matrix')?.addEventListener('click', () => {
@@ -581,6 +658,13 @@ function setupEventListeners() {
 
   // Keyboard
   window.addEventListener('keydown', (e) => {
+    // Lightbox takes priority — Esc closes it, arrows navigate inside it
+    const lightbox = $('image-lightbox');
+    if (lightbox && !lightbox.classList.contains('hidden')) {
+      if (e.key === 'Escape')     { e.preventDefault(); closeLightbox(); return; }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); navigateLightbox(-1); return; }
+      if (e.key === 'ArrowRight') { e.preventDefault(); navigateLightbox(1); return; }
+    }
     if (AppState.selectedEntryId) {
       if (e.key === 'ArrowLeft')  navigateEntry(-1, archiveData, callbacks);
       else if (e.key === 'ArrowRight') navigateEntry(1, archiveData, callbacks);
@@ -618,6 +702,78 @@ function setupEventListeners() {
 
   // Custom Refresh Event
   document.addEventListener('lexicon-refresh', refreshUI);
+}
+
+// ── LIGHTBOX ──
+let _lightboxZoomed = false;
+function openLightbox() {
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+  if (!entry || !entry.images?.length) return;
+  const box = $('image-lightbox');
+  if (!box) return;
+  box.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+  _lightboxZoomed = false;
+  renderLightbox();
+}
+function closeLightbox() {
+  const box = $('image-lightbox');
+  if (!box) return;
+  box.classList.add('hidden');
+  document.body.style.overflow = '';
+  const img = $('lightbox-image');
+  if (img) { img.style.transform = ''; img.style.cursor = ''; }
+  _lightboxZoomed = false;
+}
+function renderLightbox() {
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+  if (!entry) return;
+  const idx = AppState.currentImageIndex;
+  const imgs = entry.images || [];
+  const current = imgs[idx];
+  if (!current) return;
+  const img = $('lightbox-image');
+  const counter = $('lightbox-counter');
+  if (img) {
+    img.src = resolveImgSrc(current);
+    img.alt = getTranslation(entry.title || entry.id, AppState.language);
+    img.style.transform = '';
+  }
+  if (counter) counter.textContent = (idx + 1) + ' / ' + imgs.length;
+  _lightboxZoomed = false;
+  $('lightbox-stage').style.cursor = 'zoom-in';
+}
+function navigateLightbox(direction) {
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+  if (!entry) return;
+  const imgs = entry.images || [];
+  if (imgs.length <= 1) return;
+  let next = AppState.currentImageIndex + direction;
+  if (next < 0) next = imgs.length - 1;
+  if (next >= imgs.length) next = 0;
+  AppState.currentImageIndex = next;
+  renderLightbox();
+}
+function toggleLightboxZoom(e) {
+  const img = $('lightbox-image');
+  const stage = $('lightbox-stage');
+  if (!img || !stage) return;
+  if (_lightboxZoomed) {
+    img.style.transform = '';
+    stage.style.cursor = 'zoom-in';
+    _lightboxZoomed = false;
+  } else {
+    // Zoom 2.5× toward click point
+    const rect = img.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+    const originX = (offsetX / rect.width) * 100;
+    const originY = (offsetY / rect.height) * 100;
+    img.style.transformOrigin = `${originX}% ${originY}%`;
+    img.style.transform = 'scale(2.5)';
+    stage.style.cursor = 'zoom-out';
+    _lightboxZoomed = true;
+  }
 }
 
 function openMobileNotes() {
