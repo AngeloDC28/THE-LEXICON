@@ -24,6 +24,7 @@ export const AppState = {
   activeFolderId: null,
   previousView: 'grid',
   activeHotspot: null,
+  sortMode: 'default',
 };
 
 export let gridIntersectionObserver = null;

@@ -4,6 +4,8 @@
  */
 
 import { $ } from './core-utils.js';
+import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 let cmdSelectedIndex = -1;
 let cmdResults = [];
@@ -29,7 +31,7 @@ export function renderCmdResults(query, archiveData) {
   if (!container) return;
   cmdSelectedIndex = -1;
   if (!query.trim()) {
-    container.innerHTML = '<div class="p-4 text-xs opacity-50 uppercase text-center">Start typing to search...</div>';
+    container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_placeholder', AppState.language)}</div>`;
     cmdResults = [];
     return;
   }
@@ -49,7 +51,7 @@ export function renderCmdResults(query, archiveData) {
   }).slice(0, 10);
 
   if (cmdResults.length === 0) {
-    container.innerHTML = '<div class="p-4 text-xs opacity-50 uppercase text-center">No matching records found.</div>';
+    container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_no_results', AppState.language)}</div>`;
     return;
   }
 

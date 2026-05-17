@@ -50,8 +50,8 @@ export function renderImageGrid(archiveData, callbacks) {
   if (entries.length === 0) {
     grid.innerHTML = `
       <div class="col-span-full flex flex-col items-center justify-center py-32 text-center">
-        <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-4">Null Set Detected</div>
-        <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-6">Adjust filters or search parameters</div>
+        <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-4">${getTranslation('null_set', AppState.language)}</div>
+        <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-6">${getTranslation('null_set_desc', AppState.language)}</div>
         <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">${getTranslation('btn_reset_system', AppState.language)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
@@ -116,7 +116,7 @@ export function renderEntryList(archiveData, callbacks) {
   }
 
   if (count === 0) {
-    container.innerHTML = '<p class="text-[10px] font-mono text-black/40 dark:text-white/40 p-4">No results</p>';
+    container.innerHTML = `<p class="text-[10px] font-mono text-black/40 dark:text-white/40 p-4">${getTranslation('no_results', AppState.language)}</p>`;
     return;
   }
 

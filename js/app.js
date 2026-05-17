@@ -177,6 +177,9 @@ function refreshUI() {
   const btnNexus = $('btn-open-matrix');
   if (btnNexus) btnNexus.textContent = t('btn_view_nexus');
 
+  const btnCopyLink = $('btn-copy-link');
+  if (btnCopyLink) btnCopyLink.textContent = t('btn_copy_link');
+
   const btnBackGrid = $('btn-back-grid');
   if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
 
@@ -257,6 +260,19 @@ function refreshUI() {
   const termsBody = $('terms-modal-body');
   if (termsBody) {
     termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
+  }
+
+  // --- Sort Button ---
+  const sortBtn = $('btn-sort-cycle');
+  if (sortBtn) {
+    const sortLabels = {
+      'default':   t('sort_default'),
+      'year-asc':  t('sort_year_asc'),
+      'year-desc': t('sort_year_desc'),
+      'brand-az':  t('sort_brand_az')
+    };
+    const currentSortLabel = sortLabels[AppState.sortMode || 'default'] || t('sort_default');
+    sortBtn.textContent = `${t('sort_label')}: ${currentSortLabel}`;
   }
 
   // --- Taxonomy ---
@@ -454,6 +470,14 @@ function setupEventListeners() {
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));
   $('btn-toggle-timeline')?.addEventListener('click', () => switchView('timeline', callbacks));
 
+  // Sort cycle
+  $('btn-sort-cycle')?.addEventListener('click', () => {
+    const modes = ['default', 'year-asc', 'year-desc', 'brand-az'];
+    const idx = modes.indexOf(AppState.sortMode || 'default');
+    AppState.sortMode = modes[(idx + 1) % modes.length];
+    refreshUI();
+  });
+
   // Detail
   $('btn-back-grid')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-toggle-hotspots-mobile')?.addEventListener('click', toggleMobileHotspots);
@@ -464,6 +488,16 @@ function setupEventListeners() {
     if (AppState.selectedEntryId) toggleBookmark(AppState.selectedEntryId, callbacks);
   });
 
+  $('btn-copy-link')?.addEventListener('click', () => {
+    const lang = AppState.language;
+    const url = `${window.location.origin}${window.location.pathname}#detail/${AppState.selectedEntryId}/${AppState.currentImageIndex}`;
+    navigator.clipboard?.writeText(url).then(() => {
+      showToast(getTranslation('link_copied', lang));
+    }).catch(() => {
+      showToast(url);
+    });
+  });
+
   $('btn-open-matrix')?.addEventListener('click', () => {
     if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
   });
@@ -471,12 +505,12 @@ function setupEventListeners() {
   $('matrix-backdrop')?.addEventListener('click', () => closeConnectionMatrix());
 
   $('btn-save-to-folder')?.addEventListener('click', () => {
-    if (!currentUser) { showToast('Authentication required.'); toggleAuth(); return; }
+    if (!currentUser) { showToast(getTranslation('auth_required', AppState.language)); toggleAuth(); return; }
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
   $('btn-save-folder-mobile')?.addEventListener('click', () => {
-    if (!currentUser) { showToast('Authentication required.'); toggleAuth(); return; }
+    if (!currentUser) { showToast(getTranslation('auth_required', AppState.language)); toggleAuth(); return; }
     $('save-folder-modal').classList.remove('hidden');
     renderSaveFolderModal();
   });
@@ -566,7 +600,7 @@ function renderFoldersView() {
   if (!container) return;
   container.innerHTML = '';
   if (AppState.archivalFolders.length === 0) {
-    container.innerHTML = '<p class="text-[10px] font-mono uppercase opacity-40">No Archival Folders Detected.</p>';
+    container.innerHTML = `<p class="text-[10px] font-mono uppercase opacity-40">${getTranslation('folder_no_detected', AppState.language)}</p>`;
     return;
   }
   AppState.archivalFolders.forEach(fol => {
@@ -577,9 +611,9 @@ function renderFoldersView() {
         <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
         <button class="btn-export-fol text-[9px] font-mono uppercase opacity-40 group-hover:opacity-100 underline">EXPORT_JSON</button>
       </div>
-      <p class="text-[10px] font-mono opacity-60 mb-4">${fol.notes ? fol.notes : 'No observations logged.'}</p>
+      <p class="text-[10px] font-mono opacity-60 mb-4">${fol.notes ? fol.notes : getTranslation('no_obs_logged', AppState.language)}</p>
       <div class="flex gap-6 text-[9px] font-mono uppercase opacity-50">
-        <span>${fol.lookIds ? fol.lookIds.length : 0} Artifacts Audited</span>
+        <span>${fol.lookIds ? fol.lookIds.length : 0} ${getTranslation('artifacts_count', AppState.language)}</span>
         <span>${new Date(fol.createdAt).toLocaleDateString()}</span>
       </div>
     `;
@@ -599,7 +633,7 @@ function renderSaveFolderModal() {
   if (!container) return;
   container.innerHTML = '';
   if (AppState.archivalFolders.length === 0) {
-    container.innerHTML = '<p class="text-[10px] font-mono uppercase opacity-40">No existing folders found.</p>';
+    container.innerHTML = `<p class="text-[10px] font-mono uppercase opacity-40">${getTranslation('folder_no_existing', AppState.language)}</p>`;
     return;
   }
   AppState.archivalFolders.forEach(fol => {

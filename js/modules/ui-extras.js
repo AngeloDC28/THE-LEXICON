@@ -63,7 +63,7 @@ export function renderFilterChips(callbacks) {
   
   let chips = [];
   if (AppState.searchQuery) {
-    chips.push({ label: `SEARCH: ${AppState.searchQuery}`, type: 'search', value: '' });
+    chips.push({ label: `${getTranslation('search_prefix', AppState.language)}: ${AppState.searchQuery}`, type: 'search', value: '' });
   }
 
   Object.entries(AppState.filters).forEach(([type, val]) => {
@@ -75,7 +75,7 @@ export function renderFilterChips(callbacks) {
   });
 
   if (chips.length === 0) {
-    container.innerHTML = '<span class="text-[8px] opacity-20 uppercase tracking-widest">No active filters</span>';
+    container.innerHTML = `<span class="text-[8px] opacity-20 uppercase tracking-widest">${getTranslation('no_active_filters', AppState.language)}</span>`;
     return;
   }
 

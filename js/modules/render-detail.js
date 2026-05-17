@@ -42,10 +42,12 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   if (appRoot) appRoot.classList.add('detail-mode-active');
 
   renderImage(entry, callbacks);
+  preloadAdjacentImages(entry);
   renderBrutalistNodes(entry);
   renderStickyOverlay(entry);
   renderMetadataGrid(entry);
   renderHotspots(entry, $('detail-image-wrapper'));
+  setupSwipeGestures(archiveData, callbacks);
 
   // Setup control panel listeners
   setupDetailControls();
@@ -110,7 +112,13 @@ function renderImage(entry, callbacks) {
   const titleEl = $('active-entry-title');
   if (titleEl) {
     const brand = getTranslation(entry.tags.brand, AppState.language);
-    titleEl.textContent = `${brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]`;
+    const currentImgObj2 = imgs[AppState.currentImageIndex];
+    const hotspotCount = (currentImgObj2?.hotspots || entry.hotspots || []).length;
+    const annLabel = hotspotCount === 1
+      ? getTranslation('hotspot_annotation', AppState.language)
+      : getTranslation('hotspot_annotations', AppState.language);
+    const hotspotSuffix = hotspotCount > 0 ? ` · ${hotspotCount} ${annLabel}` : '';
+    titleEl.textContent = `${brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]${hotspotSuffix}`;
   }
 }
 
@@ -310,6 +318,50 @@ function hidePayload() {
   const payload = $('analytical-payload');
   if (!payload || payload.classList.contains('permanent-payload')) return;
   payload.classList.add('hidden');
+}
+
+function preloadAdjacentImages(entry) {
+  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const idx = AppState.currentImageIndex;
+  [-1, 1].forEach(offset => {
+    const adj = imgs[idx + offset];
+    if (adj) {
+      const img = new Image();
+      img.src = resolveImgSrc(adj, entry.imageUrl);
+    }
+  });
+}
+
+let swipeTouchStartX = null;
+let swipeTouchStartY = null;
+let swipeCallbackRef = null;
+
+function setupSwipeGestures(archiveData, callbacks) {
+  const wrapper = $('detail-image-wrapper');
+  if (!wrapper) return;
+
+  if (swipeCallbackRef) {
+    wrapper.removeEventListener('touchstart', swipeCallbackRef.start);
+    wrapper.removeEventListener('touchend', swipeCallbackRef.end);
+  }
+
+  const onStart = (e) => {
+    swipeTouchStartX = e.touches[0].clientX;
+    swipeTouchStartY = e.touches[0].clientY;
+  };
+  const onEnd = (e) => {
+    if (swipeTouchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - swipeTouchStartX;
+    const dy = e.changedTouches[0].clientY - swipeTouchStartY;
+    swipeTouchStartX = null;
+    swipeTouchStartY = null;
+    if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return;
+    navigateEntry(dx < 0 ? 1 : -1, archiveData, callbacks);
+  };
+
+  wrapper.addEventListener('touchstart', onStart, { passive: true });
+  wrapper.addEventListener('touchend', onEnd, { passive: true });
+  swipeCallbackRef = { start: onStart, end: onEnd };
 }
 
 function setupDetailControls() {

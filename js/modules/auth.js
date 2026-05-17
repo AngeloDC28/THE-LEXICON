@@ -5,6 +5,7 @@
 
 import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
+import { getTranslation } from './translations.js';
 
 export let currentUser = null;
 
@@ -21,12 +22,12 @@ export function initFirebaseAuth(callbacks) {
       window.signInWithEmailLink(window.firebaseAuth, email, window.location.href)
         .then(() => {
           window.localStorage.removeItem('emailForSignIn');
-          if (callbacks && callbacks.showToast) callbacks.showToast('Authentication Successful.');
+          if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_success', AppState.language));
           window.history.replaceState(null, '', window.location.pathname);
         })
         .catch((error) => {
           console.error('Error signing in', error);
-          if (callbacks && callbacks.showToast) callbacks.showToast('Authentication Failed.');
+          if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_failed', AppState.language));
         });
     }
   }
@@ -115,14 +116,14 @@ export async function createArchivalFolder(name, callbacks) {
       createdAt: new Date().toISOString(),
       lookIds: []
     });
-    if (callbacks && callbacks.showToast) callbacks.showToast('New Folder Initialized.');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_new', AppState.language));
     fetchArchivalFolders(callbacks);
     
     const input = $('new-folder-name');
     if (input) input.value = '';
   } catch (err) {
     console.error("Create Folder Error:", err);
-    if (callbacks && callbacks.showToast) callbacks.showToast('Initialization failed.');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_new_failed', AppState.language));
   }
 }
 
@@ -133,11 +134,11 @@ export async function saveToFolder(folderId, entryId, callbacks) {
     await window.updateDoc(docRef, {
       lookIds: window.arrayUnion(entryId)
     });
-    if (callbacks && callbacks.showToast) callbacks.showToast('Artifact Synced to Folder.');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_sync_success', AppState.language));
     if (callbacks && callbacks.closeModal) callbacks.closeModal('save-folder');
     fetchArchivalFolders(callbacks);
   } catch (err) {
     console.error("Save to Folder Error:", err);
-    if (callbacks && callbacks.showToast) callbacks.showToast('Sync failed.');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_sync_failed', AppState.language));
   }
 }

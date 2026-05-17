@@ -84,3 +84,20 @@ export function showToast(message) {
   toast.classList.add('visible');
   setTimeout(() => toast.classList.remove('visible'), 3000);
 }
+
+const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+export function trapFocus(element) {
+  const els = Array.from(element.querySelectorAll(FOCUSABLE)).filter(el => !el.closest('[hidden]'));
+  if (!els.length) return () => {};
+  const first = els[0];
+  const last  = els[els.length - 1];
+  setTimeout(() => first.focus(), 0);
+  const handler = (e) => {
+    if (e.key !== 'Tab') return;
+    if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+    else            { if (document.activeElement === last)  { e.preventDefault(); first.focus(); } }
+  };
+  element.addEventListener('keydown', handler);
+  return () => element.removeEventListener('keydown', handler);
+}

@@ -6,6 +6,7 @@
 import { $ } from './core-utils.js';
 import { AppState, taxonomyData } from './core-state.js';
 import { getTranslation } from './translations.js';
+import { getTranslation } from './translations.js';
 
 let searchCache = new Map();
 let lastCacheKey = null;
@@ -14,7 +15,7 @@ export function getFilteredEntries(archiveData) {
   const q = (AppState.searchQuery || '').toLowerCase();
   const folId = AppState.activeFolderId;
   const filterKey = JSON.stringify(AppState.filters);
-  const cacheKey = `${q}|${folId}|${filterKey}`;
+  const cacheKey = `${q}|${folId}|${filterKey}|${AppState.sortMode}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -54,6 +55,12 @@ export function getFilteredEntries(archiveData) {
       return searchable.includes(q);
     });
   }
+
+  // 4. Sort
+  const mode = AppState.sortMode || 'default';
+  if (mode === 'year-asc')  entries = [...entries].sort((a, b) => (a.year || 0) - (b.year || 0));
+  else if (mode === 'year-desc') entries = [...entries].sort((a, b) => (b.year || 0) - (a.year || 0));
+  else if (mode === 'brand-az')  entries = [...entries].sort((a, b) => (a.tags?.brand || '').localeCompare(b.tags?.brand || ''));
 
   searchCache.set(cacheKey, entries);
   if (searchCache.size > 20) searchCache.delete(searchCache.keys().next().value);
