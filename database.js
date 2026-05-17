@@ -1562,21 +1562,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
-          },
-          {
-            "x": 60,
             "y": 30,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "label": "Crisp Cotton Button-Down",
+            "description": "The crisp cotton button-down fits closely to the torso with strict utilitarian precision; it standardizes the upper body in a uniform-like block of solid white. This deliberate austerity engages with anti-fashion theories by stripping the garment of traditional luxury embellishments. The severe point collar and opaque textile mask the décolletage entirely; the short sleeves end bluntly at the bicep. The piece refuses the overt sex appeal of the decade to assert a rigid and pragmatic modesty."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Drab Pencil Skirt",
+            "description": "The drab pencil skirt drops to the knee in a flat shade of muted brown; it restricts the lower body within a simple cylindrical column. This specific length and color palette invokes the concept of ugly chic to subvert the male gaze. The textile features a subtle sheen that highlights the visible darting around the hips; it lacks any thigh-high slits or dramatic draping. The garment completes the librariancore aesthetic by enforcing a deliberately dowdy silhouette."
           }
         ]
       },
@@ -1584,22 +1578,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-02.jpg",
         "hotspots": [
           {
-            "x": 40,
+            "x": 50,
             "y": 30,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
+            "label": "Lilac Utilitarian Blouse",
+            "description": "The lilac utilitarian blouse features stiff epaulettes and a structured chest pocket; it introduces military-inspired hardware to a soft pastel textile. This contradictory pairing engages with postmodern irony by blurring the boundaries between hyper-feminine colors and rigid functionalism. The long sleeves are buttoned tightly at the wrist; the collar is fastened strictly to the throat. The garment refuses relaxed styling to assert an uptight and disciplined upper silhouette."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
+            "y": 55,
+            "label": "Graphic Striped Pencil Skirt",
+            "description": "The graphic striped pencil skirt utilizes harsh vertical lines in blue and brown; it creates a stark visual disruption against the solid blouse. This awkward pattern-mixing applies aesthetic theories of banal eccentricity to challenge conventional styling rules. The stark geometry of the print draws the eye downward along the strict knee-length cut. The skirt completes the ensemble by grounding the look in a jarring and retro-domestic textile."
           }
         ]
       },
@@ -1608,21 +1596,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "y": 35,
+            "label": "Collared Shirtdress Bodice",
+            "description": "The collared shirtdress bodice applies the strict architecture of a men's button-down to a full-body garment; it flattens the chest under an unbroken line of dark buttons. This structural modesty engages directly with feminist theories regarding the subversion of the heteronormative gaze. The flat brown textile mimics industrial workwear; the pointed collar points sharply downward toward the chest pocket. The garment refuses seductive contouring to assert an intellectual and unapproachable posture."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "x": 50,
+            "y": 43,
+            "label": "Circular Gold Belt Buckle",
+            "description": "The circular gold belt buckle cinches the waist firmly with a heavy metallic ring; it provides the sole point of hardware on the monochromatic dress. This minimalist intervention invokes postmodern design principles by elevating a mundane fastening mechanism into a focal point. The thick brown strap matches the dress fabric exactly; the metallic circle interrupts the vertical button placket. The accessory completes the silhouette by enforcing strict mid-body compartmentalization."
           }
         ]
       },
@@ -1630,22 +1612,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "x": 50,
+            "y": 35,
+            "label": "Chartreuse Knit Polo",
+            "description": "The chartreuse knit polo hugs the upper torso with a soft but muted green textile; it introduces a deliberately unflattering tone to the top half of the body. This color selection applies the aesthetic philosophy of ugly chic to challenge the era's reliance on sleek monochromatic minimalism. The small collar and short sleeves mimic traditional sportswear; the fine knit clings slightly to the ribs without overtly sexualizing the form. The garment refuses traditional luxury palettes to assert the intellectual value of awkward colorways."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
+            "y": 65,
+            "label": "Formica-Print Straight Trousers",
+            "description": "The Formica-print straight trousers cover the legs in a chaotic grid of white and mustard yellow; they disrupt the lower silhouette with intense graphic noise. This textile engages with postmodernism by translating banal interior domestic surfaces into high fashion garments. The fabric falls in a straight line from the hip to the ankle; the rigid grid pattern warps slightly over the knees. The piece completes the eccentric uniform by prioritizing jarring visual irony over classical elegance."
           }
         ]
       },
@@ -1654,21 +1630,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "y": 35,
+            "label": "Purple Formica-Print Jacket",
+            "description": "The purple Formica-print jacket drapes over the shoulders with a boxy and unstructured fit; it envelops the upper body in a synthetic geometric pattern. This textile application leverages postmodern theories of bad taste by elevating cheap upholstery motifs to runway status. The white crosshatch grid creates a stiff visual texture across the deep violet background; the lapels fall softly without rigid interfacing. The garment asserts a deliberate dowdiness that rejects the hyper-tailored power dressing of the previous decade."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "x": 50,
+            "y": 58,
+            "label": "Printed Cotton Briefs",
+            "description": "The printed cotton briefs expose the entire leg while maintaining a high waistline; they introduce a jarring moment of undress beneath the heavy jacket. This exposure subverts the male gaze by presenting underwear as a flatly unsexy and domestic base layer rather than lingerie. The mustard and white grid pattern clashes violently with the purple outerwear; the thick cut provides full coverage across the hips. The styling refuses traditional pant silhouettes to complete a narrative of eccentric domestic vulnerability."
           }
         ]
       },
@@ -1677,21 +1647,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
-          },
-          {
-            "x": 60,
             "y": 30,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
+            "label": "Mustard Formica-Print Jacket",
+            "description": "The mustard Formica-print jacket establishes a rigid boxy frame around the torso; it utilizes a dull golden hue heavily intersected by white geometric lines. This deliberate use of domestic patterns invokes the banal object to synthesize interior design with wearable anti-fashion. The jacket hangs open to reveal a contrasting purple layer beneath; the sleeves end bluntly at the wrist. The piece asserts the supremacy of awkward intellectual styling over conventional beauty."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Mustard Formica-Print Skirt",
+            "description": "The mustard Formica-print skirt drops to the mid-thigh in a stiff A-line shape; it mirrors the exact upholstery textile of the jacket above. This coordinated application of drab textiles engages with theories of deliberate wrongness to construct a uniform of mundane eccentricity. The grid pattern distorts slightly across the hips; the rigid fabric creates a bell-like void around the legs. The garment completes the suit by fully committing the body to a jarring synthetic aesthetic."
           }
         ]
       },
@@ -1699,22 +1663,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-07.jpg",
         "hotspots": [
           {
-            "x": 40,
+            "x": 50,
             "y": 30,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "label": "Striped V-Neck Knitwear",
+            "description": "The striped V-neck knitwear clings to the upper body with horizontal bands of muted earth tones; it breaks up the torso with continuous linear noise. This styling applies the librariancore aesthetic to promote a pseudo-intelligent and purposely unglamorous identity. The thin knit features alternating lines of brown and white; the deep V-neck exposes the collarbone without suggesting overt sensuality. The garment refuses sleek modernism to assert a nostalgic and slightly awkward modesty."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "y": 55,
+            "label": "Color-Blocked Knee-Length Skirt",
+            "description": "The color-blocked knee-length skirt falls in a relaxed column of dark fabric; it is abruptly truncated by a thick band of white at the hem. This structural block engages with postmodern minimalism by interrupting a classic silhouette with a stark geometric boundary. The dark textile absorbs light across the thighs; the white hem visually slices the leg precisely at the knee. The piece completes the dowdy proportion play by intentionally truncating the vertical line of the lower body."
           }
         ]
       },
@@ -1723,21 +1681,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 35,
+            "label": "Unfastened Mid-Length Coat",
+            "description": "The unfastened mid-length coat flanks the torso with crisp white architectural panels; it frames the exposed midriff within a severe tailored boundary. This layered construction subverts traditional outerwear norms by pairing clinical tailoring with athletic undergarments. The stiff collar stands slightly away from the neck; the long hem reaches down to completely cover the back of the thighs. The garment asserts a protective utilitarian shell that deliberately contrasts with the vulnerable bare skin beneath."
+          },
+          {
+            "x": 50,
             "y": 50,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
+            "label": "Ribbed Cycling Shorts",
+            "description": "The ribbed cycling shorts grip the upper thighs and hips tightly in a dull brown textile; they truncate the leg line severely above the knee. This integration of banal activewear into high fashion engages with postmodern irony to dismantle the boundaries of luxury dressing. The dark brown fabric features a highly visible black piping at the hem; the tight fit outlines the musculature of the legs entirely. The piece refuses traditional skirt or trouser formats to complete the eccentric hybridity of the silhouette."
           }
         ]
       },
@@ -1745,22 +1697,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
+            "x": 50,
+            "y": 30,
+            "label": "Contrast-Collar Knit Polo",
+            "description": "The contrast-collar knit polo tightly encases the torso in deep black fabric; it is abruptly punctuated by a bright blue and purple neckline. This jarring color block engages with theories of ugly chic by injecting a sudden synthetic hue into an otherwise somber garment. The bright purple placket runs vertically down the chest; the blue collar sits flatly against the clavicle. The garment refuses monochromatic harmony to assert a deliberate and intellectual awkwardness."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "y": 65,
+            "label": "Tapered Black Trousers",
+            "description": "The tapered black trousers drop seamlessly from the waist to the ankle; they swallow the lower body in an unbroken void of dark textile. This ultra-basic construction invokes anti-fashion aesthetics by relying on the most mundane possible garment format. The fabric lacks any visible pleating or dramatic flare; the hem breaks cleanly over the top of the foot. The trousers complete the ensemble by grounding the eccentric collar in a foundation of absolute banality."
           }
         ]
       },
@@ -1769,21 +1715,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
+            "y": 30,
+            "label": "Chartreuse Ribbed Knit",
+            "description": "The chartreuse ribbed knit clings to the upper body in a highly textured and deliberately drab shade of olive-green; it covers the torso with strict utilitarian efficiency. This color choice actively embraces the ugly palette to subvert the male gaze and reject conventional ideas of prettiness. The fine vertical ribbing stretches over the bust; the small collar and buttoned placket mimic banal domestic workwear. The top asserts the intellectual value of unappealing colors within the realm of luxury fashion."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
+            "x": 50,
+            "y": 60,
+            "label": "Button-Front Midi Skirt",
+            "description": "The button-front midi skirt falls rigidly past the knee in a stiff beige fabric; it features a prominent central placket that splits open during movement. This specific length and construction invokes librariancore to promote a pseudo-intelligent and modest feminine archetype. The flat beige textile mimics office-wear; the visible buttons run the entire length of the front seam. The garment refuses sleek sensuality to complete a silhouette defined by purposeful dowdiness."
           }
         ]
       },
@@ -1792,21 +1732,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "y": 35,
+            "label": "Collared Safari-Style Jacket",
+            "description": "The collared safari-style jacket structures the torso with stiff white cotton; it features prominent chest pockets and a severe buttoned front. This utilitarian design engages with anti-fashion minimalism by stripping the outerwear of any decorative luxury markers. The crisp collar points sharply downward; the long sleeves end bluntly at the wrist without folded cuffs. The piece asserts a clinical and functional aesthetic that prioritizes pragmatic cover over allure."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "x": 50,
+            "y": 44,
+            "label": "Circular Hardware Belt",
+            "description": "The circular hardware belt cinches the waistline tightly over the white jacket; it introduces a singular geometric interruption to the pale textile. This styling choice applies postmodern logic by using a chunky mundane fastening tool as the primary visual focus. The thick white strap matches the jacket precisely; the heavy metallic ring sits directly on the center axis of the body. The accessory completes the look by aggressively compartmentalizing the upper and lower halves of the uniform."
           }
         ]
       },
@@ -1814,22 +1748,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
+            "x": 50,
+            "y": 40,
+            "label": "Geometric Formica-Print Coat",
+            "description": "The geometric Formica-print coat envelopes the body in a chaotic grid of olive and mustard yellow; it creates a stiff external carapace of synthetic patterning. This textile directly translates domestic interior linoleum into wearable art to fulfill the collection's mandate of eccentric banality. The white squares overlap unevenly across the dull green background; the rigid fabric falls cleanly to the knee without draping. The outerwear refuses traditional elegance to assert a bold intellectual irony."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
+            "y": 60,
+            "label": "Floral Geometric Underlayer",
+            "description": "The floral geometric underlayer peeks out just beneath the coat's hemline; it introduces a conflicting pattern of purple blossoms against the harsh grid. This deliberate pattern-clashing subverts traditional rules of styling by embracing a purposefully ugly visual dissonance. The soft purple flowers break up the rigid white and olive squares; the hemline sits exactly parallel to the coat above it. The detail completes the ensemble by maximizing the chaotic and eccentric noise of the overall silhouette."
           }
         ]
       },
@@ -1838,21 +1766,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "y": 40,
+            "label": "Luminous Synthetic Overcoat",
+            "description": "The luminous synthetic overcoat cloaks the torso in a stiff pearlescent white textile; it creates a rigid and boxy outer shell that ignores the natural waistline entirely. This material application engages with postmodern artificiality by utilizing shiny synthetic fibers to construct formal outerwear. The reflective fabric catches the light to highlight the sharp vertical seams; the severe collar frames the neck tightly. The garment asserts a futuristic yet banal aesthetic that rejects natural organic fibers."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "x": 50,
+            "y": 65,
+            "label": "Graphic Color-Blocked Hem",
+            "description": "The graphic color-blocked hem truncates the white coat with a massive horizontal band of flat brown fabric; it visually chops the lower leg in half. This jarring geometric intervention applies the logic of ugly chic by disrupting a clean silhouette with an awkward block of drab color. The thick brown stripe sits between two parallel lines of white; the blocky section weighs down the bottom edge of the stiff coat. The design refuses vertical fluidity to complete the look with a harsh architectural boundary."
           }
         ]
       },
@@ -1860,22 +1782,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Compressed Torso Silhouette",
-            "description": "The awkward; restrictive proportioning deliberately sabotages the fluidity expected of high fashion; an exercise in Brutalist Information Architecture applied to the body. The form enforces a rigid; almost institutional posture. The truncation of the natural waistline creates a stunted; infantile proportion that subverts adult sexuality. It is an architectural translation of psychological repression."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "x": 50,
+            "y": 25,
+            "label": "Contrast White Yoke",
+            "description": "The contrast white yoke forms a stark geometric block across the chest and shoulders; it interrupts the shiny brown dress with matte clinical cotton. This application invokes the librariancore aesthetic by mimicking the severe collars of modest clerical or academic uniforms. The bright white fabric features a small pointed collar and a short button placket; it sits rigidly against the softer brown textile below. The detail asserts an intellectual severity that protects the upper chest from view."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
+            "y": 55,
+            "label": "Luminous Brown Shift",
+            "description": "The luminous brown shift falls in a relaxed A-line to the knee; it covers the hips in a highly reflective synthetic material. This textile choice engages with the subversion of luxury by utilizing a fabric that resembles cheap nylon lining rather than premium silk. The shiny surface highlights the subtle wrinkles and folds around the waist; a matte olive band borders the bottom hem cleanly. The garment completes the deliberately dowdy aesthetic by championing a historically unappealing color palette."
           }
         ]
       },
@@ -1884,21 +1800,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Institutional Colour Palette",
-            "description": "The deployment of muddy browns; acid greens; and clinical beiges references institutional rather than aspirational environments; subverting Class Distinctions and Signalling. These colours evoke the hospital; the school uniform; and the bureaucratic office. By elevating these tones; the collection critiques the arbitrary nature of luxury colour theory. The palette demands intellectual engagement over immediate sensual gratification."
+            "y": 40,
+            "label": "Luminous Synthetic Overcoat",
+            "description": "The luminous synthetic overcoat shapes the body into an inflexible pearlescent column; it utilizes a highly reflective fabric to build a stark architectural frame. This artificial material engages with the concept of the banal object by transforming everyday synthetic fibers into high fashion structures. The crisp lapels and sharp shoulder pads create a severe rectangular upper silhouette; the sleeves hang straight down without contouring. The outerwear refuses soft femininity to assert a rigid and clinical barrier."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Banal Textile Subversion",
-            "description": "The utilization of stiff; unyielding synthetics commonly found in upholstery redefines luxury materiality through Camp and Kitsch Subversion. The fabric resists the body rather than conforming to it; creating a persistent frictional awareness. This discomfort is engineered to keep the wearer conscious of the garment at all times. It is a complete rejection of the invisible comfort expected of premium tailoring."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Discordant Geometric Print",
-            "description": "The revival of culturally reviled retro patterns constitutes a deliberate aesthetic affront; navigating the complex dynamics of Habitus and Field (Bourdieu). This strategy requires advanced cultural literacy to decode as luxury rather than thrift. The jarring palette induces a mild visual nausea that actively resists traditional beauty standards. It is a masterclass in the weaponization of bad taste to exclude the uninitiated."
+            "x": 50,
+            "y": 50,
+            "label": "Contrast Vertical Placket",
+            "description": "The contrast vertical placket bisects the entire coat with a thick unbroken line of matte brown fabric; it creates a harsh visual boundary down the center of the body. This bold geometric slash applies postmodern irony by drawing intense focus to the mundane functional mechanism of the button closure. The drab brown stripe contrasts violently with the shiny white textile; the small buttons are evenly spaced along the dark vertical track. The detail completes the design by enforcing strict bilateral symmetry upon the eccentric silhouette."
           }
         ]
       }
