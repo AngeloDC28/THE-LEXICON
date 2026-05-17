@@ -929,22 +929,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-01.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
-          },
-          {
-            "x": 60,
+            "x": 68,
             "y": 30,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "label": "Articulated Sequined Sleeve Carapace",
+            "description": "The high-gloss sequined textile coats the arm in a rigid cylindrical volume that completely overrides natural anatomical curvature; this intense light-refracting surface engages with Baudrillard's theory of the simulacrum by replacing organic texture with a hyperreal synthetic shield; the dense grid of sequins catches the runway lighting to create an illusion of liquid armour; this intervention asserts the body as a post-human canvas engineered for maximum visual interference."
+          },
+          {
+            "x": 50,
+            "y": 43,
+            "label": "Geometric Metallic Belt Buckle",
+            "description": "The geometric metallic belt buckle anchors the waist with a stark symmetrical emblem; engaging with theories of techno-functionalism this piece operates visually like a docking mechanism rather than a traditional closure; the polished gold-tone hardware interrupts the matte black suiting with clinical precision; this accessory completes the silhouette by injecting industrial machinery directly into the central axis of the body."
+          },
+          {
+            "x": 48,
+            "y": 8,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor wraps horizontally across the upper face to obscure the ocular zone; this optical shielding activates surveillance theory by rendering the wearer simultaneously hyper-visible and anonymous; the clear polymer frame sits aggressively away from the brow bone; the accessory asserts a prosthetic logic that demands a mediated interaction with the environment."
           }
         ]
       },
@@ -952,22 +952,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "x": 28,
+            "y": 48,
+            "label": "Rigid Contrast Cuff Extension",
+            "description": "The rigid contrast cuff extension protrudes bluntly from the wrist line to extend the arm's geometry; this deliberate elongation engages with post-human theories regarding bodily borders and limits; the glossy black cylinder terminates in a sharp white band that mimics robotic jointing; this detail refuses classical tailoring proportions to assert a mechanized modularity."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 45,
+            "y": 42,
+            "label": "Geometric Metallic Belt Buckle",
+            "description": "The geometric metallic belt buckle interrupts the monochromatic suiting with a harsh structural focal point; this hardware application invokes cybernetic concepts of the plugged-in body; the angular gold and silver facets reflect the surrounding light intensely; the element completes the garment's architecture by serving as a visual linchpin for the severe planar logic of the torso."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "x": 43,
+            "y": 7,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor creates a distinct barrier between the face and the observer; this protective eyewear engages directly with techno-political paradigms of environmental hostility; the thick translucent arms grip the skull tightly behind the ears; this shielding asserts a necessary defensiveness within the collection's hyper-modern landscape."
           }
         ]
       },
@@ -975,22 +975,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-03.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 45,
+            "y": 35,
+            "label": "High-Gloss Polyurethane Paneling",
+            "description": "The high-gloss polyurethane paneling constructs a rigid exterior shell via intersecting diagonal seams; this material strategy invokes post-humanist ideals of the engineered body; the brilliant blue synthetic coating reflects light sharply off the flat planar sections over the bust and hips; the garment refuses traditional drape to assert an unyielding geometric carapace."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "x": 54,
+            "y": 85,
+            "label": "Articulated Industrial Sandal Hardware",
+            "description": "The articulated industrial sandal hardware binds the ankle and foot in a complex network of silver metallic strapping; this heavy footwear directly applies Haraway's Cyborg Manifesto by merging high fashion with extreme athletic technology; the thick buckles and riveted bands mimic snowboarding bindings precisely; this prosthetic extension completes the look by grounding the sleek dress with aggressive mechanical weight."
           },
           {
-            "x": 70,
-            "y": 80,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "x": 46,
+            "y": 7,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor standardizes the model's gaze beneath a curved synthetic lens; this framing device engages with theories of digital identity by erasing organic facial nuance; the clear material sits starkly against the bare skin; the eyewear asserts a uniform code of anonymity across the collection."
           }
         ]
       },
@@ -998,22 +998,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "x": 45,
+            "y": 30,
+            "label": "Asymmetrical Draped Bodice",
+            "description": "The asymmetrical draped bodice manipulates a bright white technical fabric into tight diagonal folds across the chest; this method engages with classical statuary aesthetics while corrupting them through synthetic materials; the high-sheen textile wraps sharply from one shoulder down to the opposing hip; the construction refuses romantic softness to assert a highly calculated tension over the anatomy."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "x": 42,
+            "y": 7,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor imposes an alien geometry upon the upper half of the face; this hardware engages with concepts of hyperreality by filtering the wearer's vision through industrial plastic; the severe lines of the goggles contrast sharply with the draped white fabric below; this element completes the silhouette by transforming a minimalist dress into a piece of protective gear."
           }
         ]
       },
@@ -1021,22 +1015,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-05.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 70,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "x": 52,
+            "y": 65,
+            "label": "Liquid Metallic Trouser Textile",
+            "description": "The liquid metallic trouser textile cloaks the legs in a highly reflective crinkled material; this surface treatment engages with Baudrillard's hyperreality by simulating a state of constant fluidity; the stark silver highlights warp dramatically over the knee and thigh as the body moves; the trousers assert a synthetic vitality that supersedes the organic skin beneath."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "x": 37,
+            "y": 15,
+            "label": "Structured Metallic Epaulette",
+            "description": "The structured metallic epaulette extends the shoulder line horizontally with a rigid boxy mass; this architectural shielding engages with the politics of space by physically widening the wearer's footprint; the textured silver fabric is heavily reinforced to maintain its sharp angles; this planar distortion completes the jacket by instilling an aggressive militaristic posture."
           },
           {
-            "x": 40,
-            "y": 55,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 48,
+            "y": 44,
+            "label": "Geometric Metallic Belt Buckle",
+            "description": "The geometric metallic belt buckle bisects the high-shine garments with an injection of solid hardware; this central anchor invokes theories of the machine-body interface; the matte metallic finish contrasts with the liquid texture of the surrounding fabric; this detail refuses the chaotic crinkle of the textile to assert clinical control at the waist."
           }
         ]
       },
@@ -1044,22 +1038,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-06.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
-          },
-          {
-            "x": 60,
+            "x": 47,
             "y": 30,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "label": "Studded Diagonal Cross-Body Harness",
+            "description": "The studded diagonal cross-body harness bisects the stark white tunic with a heavy industrial strap; this utilitarian intervention invokes theories of techno-politics by referencing military tactical gear; the gold metallic hardware lines the thick black webbing with aggressive symmetry; the element refuses decorative softness to assert a posture of disciplined readiness."
+          },
+          {
+            "x": 30,
+            "y": 48,
+            "label": "Oversized Folded Cuff",
+            "description": "The oversized folded cuff hangs stiffly from the wrist to enlarge the hand's silhouette dramatically; this distortion of scale engages with theories of prosthetic extension; the stark white fabric holds a sharp crease that mimics paper architecture; the cuff completes the severe geometry of the upper body by terminating the sleeve with an unyielding block."
           }
         ]
       },
@@ -1067,22 +1055,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 35,
+            "y": 35,
+            "label": "Woven Geometric Brocade Textile",
+            "description": "The woven geometric brocade textile covers the jacket with dense intersecting circular patterns; this dense surface mapping engages with digital theories of pixelation and grid structures; the muted olive and black tones create a camouflage-like visual noise; the material asserts a retro-futurist logic by applying archaic weaving techniques to cybernetic aesthetics."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "x": 43,
+            "y": 8,
+            "label": "Opaque Black Shield Visor",
+            "description": "The opaque black shield visor completely redacts the wearer's eyes behind a solid synthetic barrier; this total ocular denial invokes extreme forms of surveillance evasion; the dark curved lenses sit heavily upon the cheekbones; the accessory refuses eye contact to assert the wearer as an impenetrable autonomous unit."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "x": 43,
+            "y": 43,
+            "label": "Geometric Metallic Belt Buckle",
+            "description": "The geometric metallic belt buckle tightly cinches the busy patterned jacket to define the waist; this hardware piece functions as a theoretical anchor point for the simulated body; the heavy metal squares interrupt the soft drape of the fabric forcefully; the element completes the look by linking the traditional garment back to the industrial themes of the collection."
           }
         ]
       },
@@ -1091,21 +1079,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 25,
+            "label": "Rigid Architectural Shoulder Carapace",
+            "description": "The rigid architectural shoulder carapace extends laterally to disguise the natural slope of the clavicle; this volumetric expansion relies on internal scaffolding to engage with theories of architectural shielding; the stark black synthetic fabric is pulled taut over unseen structural supports; this geometric abstraction completes the upper silhouette by transforming the human torso into an imposing spatial monolith."
+          },
+          {
+            "x": 48,
             "y": 50,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "label": "High-Gloss Polyurethane Skirting",
+            "description": "The high-gloss polyurethane skirting drops straight down from the waist with minimal drape; this application of synthetic polymer engages with theories of corporeal containment; the dense black material reflects light purely as structural highlights rather than soft texture; the garment refuses traditional movement to assert a strictly controlled lower body silhouette."
           }
         ]
       },
@@ -1113,22 +1095,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "x": 45,
+            "y": 38,
+            "label": "Exaggerated Molded Hip Peplum",
+            "description": "The exaggerated molded hip peplum protrudes sharply from the natural waistline in a rigid geometric shelf; this severe planar distortion engages with feminist critiques of bodily regulation by creating an impossible hyper-structured silhouette; the thick black textile maintains its cantilevered position without visible external support; this structural extremity asserts the supremacy of the garment's architecture over the organic human form beneath."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "x": 35,
+            "y": 17,
+            "label": "Rigid Architectural Shoulder Carapace",
+            "description": "The rigid architectural shoulder carapace vaults upward in aggressive triangular points; this internal scaffolding invokes the concept of defensive biological armour; the matte fabric stretches tightly across these jutting peaks; the construction completes the hourglass geometry by forcibly mirroring the jutting hips below."
           },
           {
-            "x": 50,
-            "y": 20,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 45,
+            "y": 50,
+            "label": "Segmented Polyurethane Skirting",
+            "description": "The segmented polyurethane skirting layers horizontal panels of croc-embossed synthetic material; this segmentation mimics reptilian scales to engage with post-human ideas of interspecies splicing; the glossy panels overlap neatly without fluid movement; this intervention asserts a hard tactile barrier over the thighs."
           }
         ]
       },
@@ -1136,22 +1118,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-10.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 70,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "x": 35,
+            "y": 28,
+            "label": "Croc-Embossed Asymmetrical Paneling",
+            "description": "The croc-embossed asymmetrical paneling fuses organic animal textures with severe industrial tailoring; this material hybridity engages heavily with Haraway's ideas of the chimeric cyborg; the high-gloss faux-leather sections meet matte black fabric at sharp linear intersections across the chest; the design refuses symmetrical balance to assert an unpredictable morphological layout."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 48,
+            "y": 52,
+            "label": "Segmented Polyurethane Skirting",
+            "description": "The segmented polyurethane skirting wraps the hips in tight restrictive horizontal bands; this structural logic mimics mediaeval plate armour updated in petroleum-based polymers; the wide leather belt mechanism locks the top tier firmly into place; the garment completes the silhouette by enforcing absolute rigidity at the core of the body."
           },
           {
-            "x": 40,
-            "y": 55,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "x": 47,
+            "y": 7,
+            "label": "Opaque Black Shield Visor",
+            "description": "The opaque black shield visor dominates the facial landscape with a thick unreflective black surface; this accessory activates themes of architectural shielding against constant surveillance; the stark black frame creates a severe horizontal line across the brow; this piece asserts ultimate detachment from the spectator."
           }
         ]
       },
@@ -1159,22 +1141,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-11.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 45,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 47,
+            "y": 35,
+            "label": "Draped Metallic Chainmail Textile",
+            "description": "The draped metallic chainmail textile wraps the torso in a fluid but heavy industrial skin; this material application engages with corporeal interventions by treating armour as a malleable second skin; the gold links catch individual points of light as they slump heavily across the hip and bust; the textile asserts a retro-futurist heritage by fusing medieval defensive construction with disco-era glamour."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "x": 38,
+            "y": 20,
+            "label": "Asymmetrical Contrast Shoulder Strap",
+            "description": "The asymmetrical contrast shoulder strap cuts diagonally across the clavicle in solid black leather; this sharp structural line interrupts the fluid drape of the chainmail; engaging with deconstructivist principles the strap appears to arbitrarily anchor the heavy metallic mass; this detail completes the dress by injecting a harsh geometric focal point into the organic folds."
           }
         ]
       },
@@ -1183,21 +1159,21 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 40,
-            "y": 30,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "y": 75,
+            "label": "Segmented Prosthetic Leg Armour",
+            "description": "The segmented prosthetic leg armour encases the lower limbs in articulated white polymer panels; this extreme structural addition directly channels Haraway's Cyborg Manifesto by physically merging human anatomy with robotic componentry; the distinct mechanical joints sit visibly over the knee and shin to mimic external exoskeletal supports; this configuration completely refuses traditional hosiery in favour of militarized techno-politics."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
-          },
-          {
-            "x": 60,
+            "x": 45,
             "y": 40,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "label": "Digital Schematic Print Top",
+            "description": "The digital schematic print top features a chaotic matrix of circuit-board-like patterns stretching across the draped textile; this specific graphic application engages with media theory regarding the corporeal absorption of data; the intricate grey and white lines distort over the physical folds of the torso; the garment asserts the female body as an active node within a sprawling digital network."
+          },
+          {
+            "x": 42,
+            "y": 7,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor shields the eyes behind a tinted yellow lens; this visual filter invokes theories of hyperreality where the environment is constantly colour-corrected; the heavy polymer arms lock securely over the ears; the accessory completes the mechanized aesthetic by equipping the wearer with specialized sensory hardware."
           }
         ]
       },
@@ -1205,22 +1181,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-13.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "x": 52,
+            "y": 75,
+            "label": "Segmented Prosthetic Leg Armour",
+            "description": "The segmented prosthetic leg armour coats the legs in high-shine gold metallic plating; this literal mechanization of the limb engages directly with post-humanist visions of the augmented body; the articulated plates overlap tightly from thigh to ankle to allow movement while maintaining a rigid robotic facade; the component completes the collection's vision of the futuristic soldier navigating a hyperreal landscape."
           },
           {
-            "x": 30,
+            "x": 48,
             "y": 20,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "label": "High-Gloss Asymmetrical Chest Panel",
+            "description": "The high-gloss asymmetrical chest panel overlays the schematic print with a slab of solid black polyurethane; this dark planar insertion engages with architectural theories of void spaces on the body; the shiny wet-look material creates a stark textural contrast against the soft white draping; this element refuses structural balance to assert a fractured and modular silhouette."
           },
           {
-            "x": 70,
-            "y": 80,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 48,
+            "y": 7,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor glazes the upper face with an amber-tinted curvature; this synthetic modification of sight invokes Baudrillard's concepts of the mediated gaze; the thick rimless edge sits dangerously close to the cheek; the eyewear completes the look by fully integrating the head into the technological apparatus of the garments."
           }
         ]
       },
@@ -1228,22 +1204,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Structured Shoulder Projection",
-            "description": "The acute angle of the shoulder projection severs the arm from natural anatomical flow; a physical manifestation of Digital Dualism. This creates a severe; aerodynamic profile that speaks to acceleration and digital velocity. The silhouette is fundamentally aggressive; designed to cut through spatial resistance in both physical and virtual realms. It reflects a societal shift towards militarized and protected urban identities."
+            "x": 45,
+            "y": 28,
+            "label": "Rigid Leather Vest Armature",
+            "description": "The rigid leather vest armature clamps over the torso with heavy black panels and wide lapels; this structural shell functions as an external carapace linking fashion directly to industrial design logic; the thick material sits away from the body to create artificial volume at the shoulders; the piece asserts a defensive posture by shielding the delicate printed silk beneath."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
+            "x": 42,
+            "y": 75,
+            "label": "Segmented Prosthetic Leg Armour",
+            "description": "The segmented prosthetic leg armour constructs an entirely metallic silhouette for the lower half of the body; engaging with cyborg feminism this hardware physically overwrites the organic flesh; the interconnected golden plates reflect the runway lights brilliantly off every mechanical joint; this extreme bodily intervention completely refuses the concept of bare skin."
           },
           {
-            "x": 50,
-            "y": 20,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
+            "x": 43,
+            "y": 7,
+            "label": "Transparent Polyurethane Visor",
+            "description": "The transparent polyurethane visor caps the ensemble with its signature protective framing; this continuous motif across the collection reinforces the techno-political theme of constant surveillance; the clear amber lens provides a minimal barrier without sacrificing aesthetic aggression; the visor asserts the absolute necessity of headgear in this synthetic future."
           }
         ]
       },
@@ -1251,22 +1227,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-15.jpg",
         "hotspots": [
           {
-            "x": 50,
+            "x": 35,
+            "y": 25,
+            "label": "Geometric Metallic Outerwear Shell",
+            "description": "The geometric metallic outerwear shell wraps the upper body in sharp golden facets; this boxy garment engages with architectural theories of the habitable structure; the stiff metallic fabric is creased heavily to create rigid lines that jut away from the chest and arms; this planar distortion completes the torso by encasing it in a brilliant defensive volume."
+          },
+          {
+            "x": 52,
             "y": 70,
-            "label": "Synthetic Membrane Paneling",
-            "description": "The integration of neoprene and technical synthetics introduces scuba technologies into high fashion; exploring the frontiers of Post-Humanism. This membrane insulates and isolates the wearer; creating a closed biological loop. The material choice prioritizes performance and protection over tactile comfort. It anticipates an environment where atmospheric defense is a daily necessity for the post-human subject."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Mechanised Postural Support",
-            "description": "The internal scaffolding forces the spine into a rigid; hyper-alert alignment; demonstrating the physical toll of Algorithmic Determinism. This postural engineering eliminates casual slouching; mandating a performative state of readiness. The body is effectively hijacked by the garment; becoming a secondary component to the structural shell. It is a clear manifestation of technological forces dictating biological behaviour."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Articulated Leg Armour",
-            "description": "The rigid metallic casing replaces organic curvature with a mechanised carapace; embodying the core tenets of Techno-Optimism and Accelerationism. This subverts the traditional exposure of the leg; offering instead a defensive; robotic shield. The segmentation allows for biological movement while maintaining an inorganic facade. It is a profound exploration of bodily augmentation designed to survive a hyper-accelerated future."
+            "label": "Segmented Prosthetic Leg Armour",
+            "description": "The segmented prosthetic leg armour dominates the lower visual field with its complex interlocking gold machinery; this literal application of prosthetic extension transforms the model into a fully integrated machine-organism; the heavy riveted plates align perfectly with the knee and ankle joints to maintain locomotion; the armour asserts the absolute triumph of synthetic engineering over the vulnerability of the natural body."
           }
         ]
       }
