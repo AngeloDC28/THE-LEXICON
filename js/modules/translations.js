@@ -149,6 +149,7 @@ export const translations = {
     "create_new_folder": "Create New Folder",
     "email_label": "Email Address",
     "send_link_btn": "Send Link",
+    "folders_initialized": "Folders Initialized",
     "filtering_label": "Filtering:",
     "browsing_label": "Browsing",
     "image_unavailable": "Image unavailable",
