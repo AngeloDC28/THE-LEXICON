@@ -165,6 +165,31 @@ function refreshUI() {
     if (el) el.textContent = t(key);
   });
 
+  // --- View switcher ---
+  const btnGrid     = $('btn-toggle-grid');
+  const btnTimeline = $('btn-toggle-timeline');
+  if (btnGrid)     btnGrid.textContent     = t('label_grid_view');
+  if (btnTimeline) btnTimeline.textContent = t('label_timeline');
+
+  // --- Orientation panel ---
+  const oriTitle = $$('#orientation-panel h2')[0];
+  if (oriTitle) oriTitle.textContent = t('orientation_title');
+  const oriDesc = $$('#orientation-panel > div > p')[0];
+  if (oriDesc) oriDesc.textContent = t('orientation_desc');
+  const oriHeadings = $$('#orientation-panel h3');
+  const oriParas    = $$('#orientation-panel .grid p');
+  const oriKeys = [
+    ['orientation_col1_title','orientation_col1_desc'],
+    ['orientation_col2_title','orientation_col2_desc'],
+    ['orientation_col3_title','orientation_col3_desc']
+  ];
+  oriKeys.forEach(([hKey, pKey], i) => {
+    if (oriHeadings[i]) oriHeadings[i].textContent = t(hKey);
+    if (oriParas[i])    oriParas[i].textContent    = t(pKey);
+  });
+  const btnDismissOri = $('btn-dismiss-orientation');
+  if (btnDismissOri) btnDismissOri.textContent = t('orientation_proceed');
+
   // --- Active Entry Detail ---
   const btnSaveFolder       = $('btn-save-to-folder');
   const btnSaveFolderMobile = $('btn-save-folder-mobile');
@@ -179,6 +204,24 @@ function refreshUI() {
 
   const btnBackGrid = $('btn-back-grid');
   if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
+
+  const btnFullscreen = $('btn-fullscreen-toggle');
+  if (btnFullscreen) btnFullscreen.textContent = '[ ' + t('btn_fullscreen') + ' ]';
+
+  const payloadLabel = $$('#analytical-payload .node-label')[0];
+  if (payloadLabel) payloadLabel.textContent = '[ ' + t('label_analysis') + ' ]';
+
+  // --- Mobile detail actions ---
+  const btnHotspotsMobile = $('btn-toggle-hotspots-mobile');
+  if (btnHotspotsMobile) btnHotspotsMobile.textContent = t('btn_hotspots_mobile');
+
+  // --- Technical specs label ---
+  const techSpecsLabel = $$('#detail-metadata-sidebar h4')[0];
+  if (techSpecsLabel) techSpecsLabel.textContent = t('tech_specs');
+
+  // --- Mobile drawer search button ---
+  const btnSearchMobile = $('btn-search-mobile');
+  if (btnSearchMobile) btnSearchMobile.textContent = t('btn_search_mobile');
 
 
   // --- Folders View ---
@@ -631,7 +674,7 @@ function renderLangDropdown() {
       dd.classList.add('hidden');
       $('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
       refreshUI();
-      showToast(`Terminal Language: ${code.toUpperCase()}`);
+      showToast(getTranslation('toast_language', code) + ' ' + code.toUpperCase());
     });
   });
 }
@@ -651,7 +694,7 @@ function toggleLanguage() {
   AppState.language = supportedLanguages[idx];
   try { localStorage.setItem('lexicon-lang', AppState.language); } catch(e) {}
   refreshUI();
-  showToast(`Terminal Language: ${AppState.language.toUpperCase()}`);
+  showToast(getTranslation('toast_language', AppState.language) + ' ' + AppState.language.toUpperCase());
 }
 
 function renderFoldersView() {
@@ -681,7 +724,7 @@ function renderFoldersView() {
       AppState.activeFolderId = fol.id;
       switchView('grid', callbacks);
       refreshUI();
-      showToast(`Browsing ${fol.name}`);
+      showToast(getTranslation('toast_browsing', AppState.language) + ' ' + fol.name);
     });
     container.appendChild(card);
   });

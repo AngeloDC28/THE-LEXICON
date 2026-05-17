@@ -16,7 +16,7 @@ export function initFirebaseAuth(callbacks) {
   if (window.isSignInWithEmailLink(window.firebaseAuth, window.location.href)) {
     let email = window.localStorage.getItem('emailForSignIn');
     if (!email) {
-      email = window.prompt('Please provide your email for confirmation');
+      email = window.prompt(getTranslation('auth_email_prompt', AppState.language));
     }
     if (email) {
       window.signInWithEmailLink(window.firebaseAuth, email, window.location.href)
@@ -57,7 +57,7 @@ export function initFirebaseAuth(callbacks) {
 
 export function toggleAuth() {
   if (currentUser) {
-    if (confirm('Terminate secure session?')) {
+    if (confirm(getTranslation('auth_signout_confirm', AppState.language))) {
       window.signOut(window.firebaseAuth);
     }
   } else {
@@ -70,7 +70,7 @@ export function toggleAuth() {
 export function sendSignInLink(callbacks) {
   const email = $('auth-email')?.value;
   if (!email) {
-    if (callbacks && callbacks.showToast) callbacks.showToast('Valid email required.');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_email_invalid', AppState.language));
     return;
   }
 

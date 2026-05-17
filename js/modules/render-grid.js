@@ -42,7 +42,7 @@ export function renderImageGrid(archiveData, callbacks) {
   if (AppState.activeFolderId) {
     if (folIndicator) folIndicator.classList.remove('hidden');
     const fol = AppState.archivalFolders.find(v => v.id === AppState.activeFolderId);
-    if (folName) folName.textContent = fol ? fol.name : 'Unknown Folder';
+    if (folName) folName.textContent = fol ? fol.name : getTranslation('folder_unknown', AppState.language);
   } else {
     if (folIndicator) folIndicator.classList.add('hidden');
   }
