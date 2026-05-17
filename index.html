@@ -433,6 +433,7 @@
                 <div class="grid grid-cols-1 gap-2">
                   <button id="btn-open-matrix" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">View Nexus</button>
                   <button id="btn-save-to-folder" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Save to Folder</button>
+                  <button id="btn-cite-entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Cite Entry</button>
                   <button id="btn-copy-link" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">[ Copy Link ]</button>
                   <button id="btn-back-grid" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Return to Archive</button>
                 </div>
@@ -478,6 +479,42 @@
 
     </div>
 
+    </div>
+
+    <!-- CITE ENTRY MODAL -->
+    <div id="cite-modal" class="hidden fixed inset-0 z-[6000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="cite-modal-title">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="cite"></div>
+      <div class="relative w-full max-w-xl bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[85vh] overflow-y-auto">
+        <button type="button" data-modal-close="cite" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close">X</button>
+        <h2 id="cite-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-1 border-b border-black dark:border-white pb-2">Cite This Entry</h2>
+        <p class="text-[10px] font-mono opacity-60 uppercase tracking-wide mb-5">For academic and editorial reference.</p>
+
+        <div class="space-y-5">
+          <div>
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">Chicago Footnote</span>
+              <button data-cite-copy="chicago" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">Copy</button>
+            </div>
+            <pre id="cite-chicago" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+          </div>
+
+          <div>
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">BibTeX</span>
+              <button data-cite-copy="bibtex" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">Copy</button>
+            </div>
+            <pre id="cite-bibtex" class="text-[11px] font-mono leading-relaxed whitespace-pre bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 overflow-x-auto"></pre>
+          </div>
+
+          <div>
+            <div class="flex items-baseline justify-between mb-2">
+              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">Permalink</span>
+              <button data-cite-copy="url" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">Copy</button>
+            </div>
+            <pre id="cite-url" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-all bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- IMAGE LIGHTBOX -->

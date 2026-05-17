@@ -205,6 +205,22 @@ function refreshUI() {
   const btnCopyLink = $('btn-copy-link');
   if (btnCopyLink) btnCopyLink.textContent = t('btn_copy_link');
 
+  const btnCite = $('btn-cite-entry');
+  if (btnCite) btnCite.textContent = t('btn_cite_entry');
+  const citeTitle = $('cite-modal-title');
+  if (citeTitle) citeTitle.textContent = t('cite_modal_title');
+  const citeSub = $$('#cite-modal h2 + p')[0];
+  if (citeSub) citeSub.textContent = t('cite_modal_subtitle');
+  const citeLabels = $$('#cite-modal .text-\\[10px\\].font-bold');
+  if (citeLabels.length >= 3) {
+    citeLabels[0].textContent = t('cite_chicago_label');
+    citeLabels[1].textContent = t('cite_bibtex_label');
+    citeLabels[2].textContent = t('cite_url_label');
+  }
+  document.querySelectorAll('.cite-copy-btn').forEach(b => {
+    if (!b.classList.contains('btn-copied')) b.textContent = t('cite_copy');
+  });
+
   const btnBackGrid = $('btn-back-grid');
   if (btnBackGrid) btnBackGrid.textContent = t('btn_back_grid');
 
@@ -617,6 +633,22 @@ function setupEventListeners() {
 
   $('btn-cmd-palette-hint')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
 
+  // Cite Entry modal: build BibTeX + Chicago + permalink for the active entry
+  $('btn-cite-entry')?.addEventListener('click', () => openCiteModal());
+  document.querySelectorAll('.cite-copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const which = btn.dataset.citeCopy;
+      const el = $('cite-' + which);
+      if (!el) return;
+      navigator.clipboard?.writeText(el.textContent).then(() => {
+        const original = btn.textContent;
+        btn.textContent = '✓ Copied';
+        btn.classList.add('btn-copied');
+        setTimeout(() => { btn.textContent = original; btn.classList.remove('btn-copied'); }, 1400);
+      });
+    });
+  });
+
   // Lightbox: click the detail image to open zoomable fullscreen view
   $('detail-image')?.addEventListener('click', () => openLightbox());
   $('btn-close-lightbox')?.addEventListener('click', () => closeLightbox());
@@ -711,6 +743,48 @@ function setupEventListeners() {
 
   // Custom Refresh Event
   document.addEventListener('lexicon-refresh', refreshUI);
+}
+
+// ── CITATIONS ──
+function openCiteModal() {
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+  if (!entry) return;
+  const modal = $('cite-modal');
+  if (!modal) return;
+
+  const url   = `${window.location.origin}${window.location.pathname}#detail/${entry.id}/0`;
+  const brand = entry.tags?.brand || entry.id;
+  const year  = entry.year || '';
+  const season = entry.season ? entry.season + ' ' : '';
+  // "Comme des Garçons SS 1997: Body Meets Dress; Dress Meets Body"
+  const collectionTitle = entry.title
+    ? entry.title
+    : `${brand} ${season}${year}`.trim();
+  const subtitle = entry.subtitle ? `: ${entry.subtitle}` : '';
+  const fullTitle = collectionTitle + subtitle;
+  const accessDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+  // Chicago Manual of Style 17th ed. note format for a web entry
+  // — author/curator (if known), "Entry Title," Site Name, accessed Date, URL.
+  const chicago =
+    `"${fullTitle}," THE LEXICON: Forensic Archive of Visual Culture, accessed ${accessDate}, ${url}.`;
+
+  // BibTeX @misc with stable citekey: lexicon-<id>
+  const citekey = `lexicon-${entry.id}`;
+  const bibtex =
+    `@misc{${citekey},\n` +
+    `  title        = {{${fullTitle.replace(/[{}]/g,'')}}},\n` +
+    `  howpublished = {{THE LEXICON: Forensic Archive of Visual Culture}},\n` +
+    `  year         = {${year}},\n` +
+    `  note         = {Entry ID: ${entry.id}. Accessed ${accessDate}.},\n` +
+    `  url          = {${url}}\n` +
+    `}`;
+
+  if ($('cite-chicago')) $('cite-chicago').textContent = chicago;
+  if ($('cite-bibtex'))  $('cite-bibtex').textContent  = bibtex;
+  if ($('cite-url'))     $('cite-url').textContent     = url;
+
+  modal.classList.remove('hidden');
 }
 
 // ── LIGHTBOX ──
