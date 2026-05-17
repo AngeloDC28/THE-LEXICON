@@ -70,31 +70,46 @@ const LANG_NAMES = {
   ja: 'Japanese', ko: 'Korean'
 };
 
-const BATCH_SIZE = 30;
+const BATCH_SIZE = 15;
 const ANTHROPIC_MODEL = 'claude-haiku-4-5-20251001';
-const GEMINI_MODEL    = 'gemini-2.0-flash';
+// gemini-2.5-flash-lite is the right default for bulk translation: free tier
+// allows ~1000 RPD instead of ~20 RPD on gemini-2.5-flash. Quality is slightly
+// lower but adequate for short editorial strings; the tightened prompt +
+// markdown-stripping parser absorb the verbose output style.
+// Override with GEMINI_MODEL env var if you want the full model (slower passes,
+// stricter daily cap, marginally better nuance on long descriptions).
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 // Free tier rate limit: 15 RPM = wait 4.2s between requests. Leave headroom.
 const GEMINI_INTER_REQUEST_DELAY_MS = 4500;
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 function buildPrompt(keys, langName) {
   const numbered = keys.map((k, i) => `${i+1}. ${k}`).join('\n');
-  return `Translate the following English fashion/art-criticism strings to ${langName}. ` +
-         `These appear in a fashion archive UI (entry titles, hotspot labels, critical essays). ` +
-         `Preserve specialised terms (designer names, brand names, technical fabric names) when ` +
-         `they would be untranslated in industry usage. Keep the same numbered format. ` +
-         `Output ONLY the numbered translations, nothing else.\n\n${numbered}`;
+  return `Translate the following English strings from a fashion archive UI (entry titles, ` +
+         `hotspot labels, critical essays, taxonomy values) into ${langName}.\n\n` +
+         `OUTPUT RULES — follow exactly:\n` +
+         `- One translation per input. Prefix each line with the matching input number followed ` +
+         `by a period and a space, like:  1. <translation>  then  2. <translation>  etc.\n` +
+         `- No introductions, no explanations, no markdown bolds (no asterisks), no notes.\n` +
+         `- Preserve designer/brand names, technical fabric names, and academic theorist names ` +
+         `(Foucault, Barthes, Bourdieu, etc.) when industry usage keeps them in their original form.\n` +
+         `- Preserve in-line citation markers like [cite: 3] verbatim.\n` +
+         `- Output exactly ${keys.length} numbered lines, in order, no more, no less.\n\n` +
+         `INPUT:\n${numbered}`;
 }
 
 function parseNumberedResponse(text, keys) {
   const out = {};
-  const lines = text.split(/\n/);
-  for (const line of lines) {
-    const m = line.match(/^(\d+)\.\s*(.+)$/);
-    if (m) {
-      const i = parseInt(m[1], 10) - 1;
-      if (keys[i]) out[keys[i]] = m[2].trim();
-    }
+  // Accept "1. translation", "1) translation", and the occasional "N. 1. translation"
+  // / "N. 1) translation" the model emits when it gets confused by templates.
+  const lineRe = /^\s*(?:N\.\s*)?(\d+)[.)]\s*(.+?)\s*$/;
+  for (const line of text.split(/\n/)) {
+    const m = line.match(lineRe);
+    if (!m) continue;
+    const i = parseInt(m[1], 10) - 1;
+    if (!keys[i]) continue;
+    let val = m[2].replace(/^\*\*(.+)\*\*$/, '$1').replace(/^["“'](.+)["”']$/, '$1').trim();
+    if (val) out[keys[i]] = val;
   }
   return out;
 }
@@ -125,18 +140,24 @@ async function translateBatchGemini(keys, langName) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
       contents: [{ parts: [{ text: buildPrompt(keys, langName) }] }],
-      generationConfig: { maxOutputTokens: 8000, temperature: 0.2 }
+      generationConfig: { maxOutputTokens: 32000, temperature: 0.2 }
     })
   });
   if (!res.ok) {
     const err = await res.text();
-    // 429 → quota exhausted. Surface a clear message.
-    if (res.status === 429) throw new Error(`Gemini quota hit (429). Wait a minute, or until the daily quota resets, then re-run. Body: ${err}`);
+    if (res.status === 429) throw new Error(`Gemini quota hit (429). Wait, then re-run. Body: ${err}`);
     throw new Error(`Gemini API ${res.status}: ${err}`);
   }
   const json = await res.json();
   const text = json.candidates?.[0]?.content?.parts?.map(p => p.text).join('') || '';
-  return parseNumberedResponse(text, keys);
+  const finish = json.candidates?.[0]?.finishReason || '';
+  const parsed = parseNumberedResponse(text, keys);
+  // If parsing dropped most of the batch, surface a snippet so we can diagnose
+  if (Object.keys(parsed).length < keys.length / 2) {
+    const snippet = (text || '<empty>').slice(0, 400).replace(/\n/g, ' ⏎ ');
+    console.warn(`    LOW-YIELD batch (${Object.keys(parsed).length}/${keys.length}, finishReason=${finish}). Snippet: ${snippet}`);
+  }
+  return parsed;
 }
 
 async function translateBatch(keys, langName) {

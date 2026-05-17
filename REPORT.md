@@ -49,11 +49,11 @@ Non-English language files cover the UI and a hand-translated seed of the 30 mos
 
 `zh.json` and `ja.json` also have 2 extra keys each (`Gucci`, `Maison Margiela`) leftover from an earlier taxonomy iteration.
 
-**Fix (free option)**: get a free Google Gemini API key at https://aistudio.google.com/app/apikey (no credit card needed) and run `GEMINI_API_KEY=AIza... npm run translate-content`. The script (`.github/scripts/translate-content.mjs`) walks every language file, finds missing keys, and uses Gemini 2.0 Flash to fill them in batches of 30. Idempotent and resumable — existing translations are never overwritten, and a mid-batch failure just means re-running picks up where it stopped.
+**Primary strategy (zero cost, zero infra): browser-native translation.** Every modern browser ships built-in translation (Chrome → Google Translate, Edge → Microsoft Translator, Safari → Apple Translate, Firefox → Mozilla local model). The site sets `<html lang="en">` so when a non-English visitor lands, the browser offers a one-click full-page translation into their preferred language. Quality is on par with paid APIs, covers 100+ languages instead of our 11, and costs literally nothing.
 
-The free tier covers everything: 1500 requests/day and we only need ~200 batches across all 10 languages. The script auto-throttles to stay under the 15 RPM rate limit.
+The site's existing per-language JSON files (`content/translations/<lang>.json`) handle UI strings (nav, buttons, labels) — those are pre-translated and switch via the Language menu. Editorial content (entry titles, hotspot labels and descriptions, sticky-note paragraphs) falls through to English in non-English locales and is translated by the browser on demand.
 
-**Paid alternative**: `ANTHROPIC_API_KEY=sk-... npm run translate-content` uses Claude Haiku instead (~$2–5 one-time for the full pass). Slightly higher quality on technical fashion vocabulary, but Gemini is more than adequate for general translation.
+**Optional pre-translation pipeline (if you want editorial content baked into the JSON):** `GEMINI_API_KEY=... npm run translate-content` calls Google Gemini to fill in missing keys. Get a free key at https://aistudio.google.com/app/apikey. The catch: free-tier quota for `gemini-2.5-flash-lite` is 20 requests/day on a new project, so completing a full ~400-batch pass takes ~3 weeks of daily re-runs — idempotent and resumable, but slow. For a one-shot completion, the paid path is `ANTHROPIC_API_KEY=... npm run translate-content` (~$2–5).
 
 ### 2.2 Orphan NOTES.md files (16 files, no broken references)
 Each entry folder in `public/THE-LEXICON-ASSETS/` contains a `NOTES.md` with editorial research notes. These aren't referenced by any entry JSON, so `check-assets.mjs` flags them as orphans (warnings, not failures). They don't break anything but they're accumulating in the asset directory.
