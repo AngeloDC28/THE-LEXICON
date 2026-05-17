@@ -112,10 +112,11 @@ export function renderTaxonomySub(callbacks) {
   grid.classList.add('hidden');
 
   const values = taxonomyData[type];
+  const lang = AppState.language;
   container.innerHTML = `
     <div class="taxonomy-sub-header flex items-center gap-4 mb-2">
-      <span class="text-xs tracking-widest uppercase opacity-60">REFINE BY: ${type.toUpperCase()}</span>
-      <button class="text-xs tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-taxonomy-back="1">&larr; BACK</button>
+      <span class="text-xs tracking-widest uppercase opacity-60">${getTranslation('refine_by', lang)}: ${getTranslation('tax_' + type, lang)}</span>
+      <button class="text-xs tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-taxonomy-back="1">&#8592; ${getTranslation('btn_back', lang)}</button>
     </div>
     <div class="taxonomy-sub-values flex flex-wrap gap-2">
       ${values.map(val => {

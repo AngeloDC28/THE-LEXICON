@@ -23,7 +23,7 @@ export function updateStatusBar(archiveData) {
     if (brand)       brand.textContent       = '--';
     if (year)        year.textContent        = '--';
     if (season)      season.textContent      = '--';
-    if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ENTRIES';
+    if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ' + getTranslation('label_entries', AppState.language);
   }
 }
 
@@ -138,9 +138,9 @@ function renderBrutalistNodes(entry) {
   const t = (k) => getTranslation(k, lang);
 
   const nodeTypes = [
-    { id: 'provenance', label: '[ PROVENANCE ]', class: 'node-provenance' },
-    { id: 'critique',   label: '[ CRITIQUE ]',   class: 'node-critique'   },
-    { id: 'strategy',   label: '[ STRATEGY ]',   class: 'node-strategy'   }
+    { id: 'provenance', label: '[ ' + t('note_provenance') + ' ]', class: 'node-provenance' },
+    { id: 'critique',   label: '[ ' + t('note_critique')   + ' ]', class: 'node-critique'   },
+    { id: 'strategy',   label: '[ ' + t('note_strategy')   + ' ]', class: 'node-strategy'   }
   ];
 
   nodeTypes.forEach(type => {

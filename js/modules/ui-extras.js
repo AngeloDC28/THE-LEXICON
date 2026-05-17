@@ -25,7 +25,7 @@ export function renderTimeline(archiveData, callbacks) {
       <div class="flex-shrink-0 w-64 h-full border-r border-black/10 dark:border-white/10 flex flex-col p-4 bg-overlay/20 dark:bg-darkSurface/20">
         <div class="flex justify-between items-baseline mb-6 shrink-0">
           <h3 class="text-3xl font-bold font-mono tracking-tighter text-acid">${year}</h3>
-          <span class="text-[8px] uppercase tracking-widest opacity-40">${entries.length} Artifacts</span>
+          <span class="text-[8px] uppercase tracking-widest opacity-40">${entries.length} ${getTranslation('label_artifacts', AppState.language)}</span>
         </div>
         <div class="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar">
           ${entries.map((e, i) => `
