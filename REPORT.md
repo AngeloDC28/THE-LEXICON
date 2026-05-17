@@ -42,12 +42,16 @@ Everything in the original report has shipped. In order:
 
 Known issues in the current codebase, in order of practical impact:
 
-### 2.1 Translation drift (13 active warnings)
-All non-English language files are missing between 29 and 48 keys that exist in `en.json`. The runtime falls back to English for missing keys — nothing breaks — but the intended multilingual experience degrades silently. The missing keys are mostly the newer taxonomy labels (`tax_brand`, `tax_era`, etc.) and note field labels (`note_critique`, `note_strategy`, `note_provenance`).
+### 2.1 Translation drift (13 active warnings, ~650 keys/language missing)
+`en.json` is now the source of truth for **all** translatable strings — UI labels (216 keys), taxonomy values (73 keys), entry titles + subtitles + hotspot labels + hotspot descriptions + note paragraphs (533 keys synced from entries by `sync-content-keys.mjs`). That's 762 total keys.
 
-`zh.json` and `ja.json` also have 5 extra keys each (`Gucci`, `Prada`, `Maison Margiela`, etc.) that no longer exist in `en.json` — leftover from an earlier taxonomy iteration.
+Non-English language files cover the UI and a hand-translated seed of the 30 most-frequent hotspot labels across all 11 languages. The remaining 600–650 keys per language are editorial content that falls back to English at runtime — nothing breaks, but the intended multilingual experience degrades for those keys.
 
-**Fix**: add the missing keys to each language file. The English fallback text is already in `en.json`; pasting it as a placeholder keeps CI clean while awaiting proper translation.
+`zh.json` and `ja.json` also have 2 extra keys each (`Gucci`, `Maison Margiela`) leftover from an earlier taxonomy iteration.
+
+**Fix**: run `ANTHROPIC_API_KEY=sk-... npm run translate-content`. The script (`.github/scripts/translate-content.mjs`) walks every language file, finds missing keys, and uses Claude Haiku to fill them in batches of 30. Idempotent and resumable — existing translations are never overwritten, and a mid-batch failure just means re-running picks up where it stopped.
+
+Estimated cost for a full pass across all 10 languages × ~650 missing keys at current Haiku pricing: **under $5 USD**.
 
 ### 2.2 Orphan NOTES.md files (16 files, no broken references)
 Each entry folder in `public/THE-LEXICON-ASSETS/` contains a `NOTES.md` with editorial research notes. These aren't referenced by any entry JSON, so `check-assets.mjs` flags them as orphans (warnings, not failures). They don't break anything but they're accumulating in the asset directory.
@@ -85,26 +89,36 @@ mkdir public/THE-LEXICON-ASSETS/galliano-dior-aw00
 
 # 3. Create the entry JSON from the template
 cp content/entries/_template.json content/entries/galliano-dior-aw00.json
-# fill in all fields
+# fill in all fields (English source of truth)
 
 # 4. Register in the display order
 # add "galliano-dior-aw00" to content/order.json at the desired position
 
-# 5. Rebuild artifacts
-npm run build-data
+# 5. Sync new editorial strings into en.json
+npm run sync-content-keys
 
-# 6. Validate locally (catches schema errors, broken asset paths)
+# 6. (Optional) Translate the new editorial strings into all languages
+ANTHROPIC_API_KEY=sk-... npm run translate-content
+# can also target one language: npm run translate-content -- fr
+
+# 7. Rebuild artifacts
+npm run build-data
+npm run build-translations
+
+# 8. Validate locally (catches schema errors, broken asset paths, drift)
 npm run check
 
-# 7. Visual check
+# 9. Visual check
 python -m http.server 8765     # or any static server; no node_modules needed
 
-# 8. Push + open PR
+# 10. Push + open PR
 git push -u origin entry/galliano-dior-aw00
 gh pr create --title "entry: Galliano for Dior AW00"
 ```
 
 CI runs all checks automatically. The PR is blocked from merging if anything fails.
+
+If you skip step 6, the entry still works — non-English languages just fall back to English for the new strings until you run the translation script.
 
 ---
 
@@ -112,7 +126,7 @@ CI runs all checks automatically. The PR is blocked from merging if anything fai
 
 | Task | Effort | Impact |
 |---|---|---|
-| Fill in missing translation keys (13 warnings) | 2–4 hrs | Multilingual UX works as designed |
+| Run `npm run translate-content` with an Anthropic API key | 5 min + ~$5 | Multilingual UX fully populated across all 11 languages |
 | Incorporate NOTES.md content into entry JSON, delete `.md` files | 2 hrs | Clean asset directory, richer entry notes |
 | Delete `fix-all.js` | 1 min | Remove dead code |
 | Add `dimensions` to image objects + render with `width`/`height` | 3 hrs | Eliminate layout shift |

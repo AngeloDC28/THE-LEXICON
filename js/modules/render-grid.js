@@ -120,10 +120,13 @@ export function renderEntryList(archiveData, callbacks) {
     return;
   }
 
+  const lang = AppState.language;
   container.innerHTML = filtered.map(entry => {
-    const brand = (entry.tags && entry.tags.brand) ? entry.tags.brand : 'UNKNOWN BRAND';
+    const brand = (entry.tags && entry.tags.brand)
+      ? getTranslation(entry.tags.brand, lang)
+      : getTranslation('brand_unknown', lang);
     const year  = entry.year  || '----';
-    const title = entry.title || 'Untitled Entry';
+    const title = entry.title ? getTranslation(entry.title, lang) : getTranslation('entry_untitled', lang);
     return `
       <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-2.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
            data-id="${entry.id}">

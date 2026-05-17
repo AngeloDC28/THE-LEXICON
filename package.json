@@ -8,6 +8,8 @@
     "check": "node .github/scripts/check.mjs && node .github/scripts/validate-entries.mjs && node .github/scripts/check-assets.mjs && node .github/scripts/validate-translations.mjs",
     "build-data": "node .github/scripts/build-data.mjs",
     "build-translations": "node .github/scripts/build-translations.mjs",
+    "sync-content-keys": "node .github/scripts/sync-content-keys.mjs",
+    "translate-content": "node .github/scripts/translate-content.mjs",
     "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs",
     "build": "vite build",
     "preview": "vite preview"

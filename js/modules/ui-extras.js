@@ -37,8 +37,8 @@ export function renderTimeline(archiveData, callbacks) {
                    onload="this.classList.add('loaded'); this.parentElement.classList.add('loaded');"
                    onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.parentElement.classList.add('loaded'); this.classList.add('broken-asset');" />
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
-                <p class="text-[9px] text-white font-bold uppercase tracking-wider truncate">${e.tags.brand}</p>
-                <p class="text-[7px] text-white/60 uppercase truncate">${e.title}</p>
+                <p class="text-[9px] text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
+                <p class="text-[7px] text-white/60 uppercase truncate">${getTranslation(e.title, AppState.language)}</p>
               </div>
             </div>
           `).join('')}

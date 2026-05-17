@@ -144,7 +144,9 @@ function renderBrutalistNodes(entry) {
   ];
 
   nodeTypes.forEach(type => {
-    let text = entry.notes?.[type.id] || '';
+    let rawText = entry.notes?.[type.id] || '';
+    if (!rawText) return;
+    let text = getTranslation(rawText, lang);
     text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
 
     if (text) {
@@ -197,7 +199,9 @@ function renderStickyOverlay(entry) {
   if (closeBtn) closeBtn.onclick = (e) => { e.stopPropagation(); closePanel(); };
 
   noteTypes.forEach(type => {
-    let text = entry.notes?.[type.id] || '';
+    let rawText = entry.notes?.[type.id] || '';
+    if (!rawText) return;
+    let text = getTranslation(rawText, lang);
     text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
     if (!text) return;
 
@@ -291,11 +295,13 @@ function showPayload(spot, permanent = false) {
   const content = $('payload-content');
   if (!payload || !content) return;
 
-  let text = spot.description || '';
+  const lang = AppState.language;
+  const label = getTranslation(spot.label, lang);
+  let text = getTranslation(spot.description || '', lang);
   text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
-  
+
   content.innerHTML = `
-    <div class="text-[10px] font-bold mb-2 border-b border-black/10 pb-1">${spot.label.toUpperCase()}</div>
+    <div class="text-[10px] font-bold mb-2 border-b border-black/10 pb-1">${label.toUpperCase()}</div>
     <div class="text-[10px] leading-relaxed">${text}</div>
   `;
   payload.classList.remove('hidden');

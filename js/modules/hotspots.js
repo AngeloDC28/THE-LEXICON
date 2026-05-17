@@ -57,9 +57,11 @@ function showHotspot(index) {
       const payload = $('analytical-payload');
       const content = $('payload-content');
       if (payload && content) {
-        let text = spot.description || '';
+        const lang = AppState.language;
+        const label = getTranslation(spot.label, lang);
+        let text = getTranslation(spot.description || '', lang);
         text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
-        content.innerHTML = `<div class="text-[10px] font-bold mb-1">${spot.label.toUpperCase()}</div><div class="text-[10px] leading-relaxed">${text}</div>`;
+        content.innerHTML = `<div class="text-[10px] font-bold mb-1">${label.toUpperCase()}</div><div class="text-[10px] leading-relaxed">${text}</div>`;
         payload.classList.remove('hidden');
         payload.onclick = () => payload.classList.add('hidden');
       }
