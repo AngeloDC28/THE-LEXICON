@@ -1,0 +1,36 @@
+{
+  "id": "REPLACE-WITH-KEBAB-CASE-ID",
+  "title": "Brand Name SS/AW YYYY",
+  "subtitle": "Optional show title",
+  "year": 2026,
+  "season": "SS",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/REPLACE-WITH-ID/REPLACE-WITH-ID-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Short label (3+ chars)",
+          "description": "Long-form analysis of this hotspot, minimum 30 characters. Reference at least one tag from the entry where possible."
+        }
+      ]
+    }
+  ],
+  "tags": {
+    "brand": "Brand Name",
+    "era": "YYYY to YYYY; Era Title",
+    "politics": "Body Politics & Corporeal Interventions",
+    "theories": "Post-Humanism",
+    "gender": "Womenswear",
+    "materials": "Biological Ephemera",
+    "geography": "London (BFC)",
+    "anatomy": "Prosthetic Extension",
+    "format": "Theatrical Stage Performance"
+  },
+  "notes": {
+    "provenance": "Historical context of the show, presentation venue, designers/collaborators, and key biographical/industry facts. Minimum 50 characters.",
+    "strategy": "Designer's structural/technical/process logic behind the work. Minimum 50 characters.",
+    "critique": "Theoretical/cultural reading of what the work does and means. Minimum 50 characters."
+  }
+}

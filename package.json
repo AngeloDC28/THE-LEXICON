@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "check": "node .github/scripts/check.mjs",
-    "prebuild": "node .github/scripts/check.mjs && node .github/scripts/fix-all.js",
+    "check": "node .github/scripts/check.mjs && node .github/scripts/validate-entries.mjs && node .github/scripts/check-assets.mjs",
+    "build-data": "node .github/scripts/build-data.mjs",
+    "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/fix-all.js",
     "build": "vite build",
     "preview": "vite preview"
   },

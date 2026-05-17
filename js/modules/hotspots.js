@@ -50,8 +50,8 @@ function showHotspot(index) {
   // Mobile: show hotspot info via payload (dock elements not present)
   const entry = _archiveData.find(e => e.id === AppState.selectedEntryId);
   if (entry && window.innerWidth < 1024) {
-    const imgs = entry.images || [{ src: entry.imageUrl }];
-    const hotspots = imgs[AppState.currentImageIndex]?.hotspots || entry.hotspots || [];
+    const imgs = entry.images;
+    const hotspots = imgs[AppState.currentImageIndex]?.hotspots || [];
     const spot = hotspots[index];
     if (spot) {
       const payload = $('analytical-payload');

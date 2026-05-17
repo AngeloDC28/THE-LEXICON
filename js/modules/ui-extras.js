@@ -31,7 +31,7 @@ export function renderTimeline(archiveData, callbacks) {
           ${entries.map((e, i) => `
             <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0 translateY-10" 
                  data-id="${e.id}" style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
-              <img src="${resolveImgSrc(e.images && e.images[0], e.imageUrl)}" 
+              <img src="${resolveImgSrc(e.images && e.images[0])}" 
                    class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0" 
                    loading="lazy"
                    onload="this.classList.add('loaded'); this.parentElement.classList.add('loaded');"
@@ -118,14 +118,14 @@ export function updateMetaForEntry(entry) {
   if (ogDesc) ogDesc.content = `Analyzing architectural details of ${entry.tags.brand} (${entry.year}) within the forensic archival database.`;
 
   const ogImg = document.querySelector('meta[property="og:image"]');
-  if (ogImg) ogImg.content = resolveImgSrc(entry.images && entry.images[0], entry.imageUrl);
+  if (ogImg) ogImg.content = resolveImgSrc(entry.images && entry.images[0]);
 
   // Twitter Tags
   const twTitle = document.querySelector('meta[name="twitter:title"]');
   if (twTitle) twTitle.content = title;
 
   const twImg = document.querySelector('meta[name="twitter:image"]');
-  if (twImg) twImg.content = resolveImgSrc(entry.images && entry.images[0], entry.imageUrl);
+  if (twImg) twImg.content = resolveImgSrc(entry.images && entry.images[0]);
 }
 
 export function resetMeta() {

@@ -32,7 +32,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   if (!entry) return;
 
   AppState.selectedEntryId   = entryId;
-  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const imgs = entry.images;
   AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -75,7 +75,7 @@ export function closeDetail(callbacks, archiveData) {
 export function navigateEntry(direction, archiveData, callbacks) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (!entry) return;
-  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const imgs = entry.images;
   const nextImg = AppState.currentImageIndex + direction;
   if (nextImg >= 0 && nextImg < imgs.length) {
     openDetail(entry.id, nextImg, archiveData, callbacks);
@@ -94,9 +94,9 @@ export function navigateEntry(direction, archiveData, callbacks) {
 }
 
 function renderImage(entry, callbacks) {
-  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const imgs = entry.images;
   const currentImgObj = imgs[AppState.currentImageIndex];
-  const currentImgSrc = resolveImgSrc(currentImgObj, entry.imageUrl);
+  const currentImgSrc = resolveImgSrc(currentImgObj);
 
   const imgEl = $('detail-image');
   if (imgEl) {
@@ -113,7 +113,7 @@ function renderImage(entry, callbacks) {
   if (titleEl) {
     const brand = getTranslation(entry.tags.brand, AppState.language);
     const currentImgObj2 = imgs[AppState.currentImageIndex];
-    const hotspotCount = (currentImgObj2?.hotspots || entry.hotspots || []).length;
+    const hotspotCount = (currentImgObj2?.hotspots || []).length;
     const annLabel = hotspotCount === 1
       ? getTranslation('hotspot_annotation', AppState.language)
       : getTranslation('hotspot_annotations', AppState.language);
@@ -263,9 +263,9 @@ function renderHotspots(entry, container) {
     payloadEl.classList.remove('permanent-payload', 'expand-active');
   }
 
-  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const imgs = entry.images;
   const currentImgObj = imgs[AppState.currentImageIndex];
-  const hotspots = currentImgObj?.hotspots || entry.hotspots || [];
+  const hotspots = currentImgObj?.hotspots || [];
 
   hotspots.forEach((spot, i) => {
     const btn = document.createElement('button');
@@ -321,13 +321,13 @@ function hidePayload() {
 }
 
 function preloadAdjacentImages(entry) {
-  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const imgs = entry.images;
   const idx = AppState.currentImageIndex;
   [-1, 1].forEach(offset => {
     const adj = imgs[idx + offset];
     if (adj) {
       const img = new Image();
-      img.src = resolveImgSrc(adj, entry.imageUrl);
+      img.src = resolveImgSrc(adj);
     }
   });
 }

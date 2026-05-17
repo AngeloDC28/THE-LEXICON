@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lexicon entry",
+  "description": "Shape of one entry under content/entries/<id>.json. Enforced by .github/scripts/validate-entries.mjs (zero-dep) and consumable by ajv if you ever want richer validation.",
+  "type": "object",
+  "required": ["id", "title", "year", "season", "images", "tags", "notes"],
+  "additionalProperties": false,
+  "properties": {
+    "id":       { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Must equal the JSON filename (sans .json) and match content/order.json." },
+    "title":    { "type": "string", "minLength": 3 },
+    "subtitle": { "type": "string" },
+    "year":     { "type": "integer", "minimum": 1800, "maximum": 2100 },
+    "season":   { "enum": ["SS", "AW", "Cruise", "Pre-Fall", "Couture-SS", "Couture-AW"] },
+    "images": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["src"],
+        "properties": {
+          "src":      { "type": "string", "pattern": "^THE-LEXICON-ASSETS/" },
+          "hotspots": { "type": "array", "items": { "$ref": "#/$defs/hotspot" } }
+        }
+      }
+    },
+    "tags": {
+      "type": "object",
+      "required": ["brand", "era", "politics", "theories", "gender", "materials", "geography", "anatomy", "format"],
+      "additionalProperties": false,
+      "properties": {
+        "brand":     { "type": "string", "minLength": 2 },
+        "era":       { "type": "string" },
+        "politics":  { "type": "string" },
+        "theories":  { "type": "string" },
+        "gender":    { "type": "string" },
+        "materials": { "type": "string" },
+        "geography": { "type": "string" },
+        "anatomy":   { "type": "string" },
+        "format":    { "type": "string" }
+      }
+    },
+    "notes": {
+      "type": "object",
+      "required": ["provenance", "strategy", "critique"],
+      "properties": {
+        "provenance": { "type": "string", "minLength": 50 },
+        "strategy":   { "type": "string", "minLength": 50 },
+        "critique":   { "type": "string", "minLength": 50 }
+      }
+    }
+  },
+  "$defs": {
+    "hotspot": {
+      "type": "object",
+      "required": ["x", "y", "label", "description"],
+      "properties": {
+        "x":           { "type": "number", "minimum": 0, "maximum": 100 },
+        "y":           { "type": "number", "minimum": 0, "maximum": 100 },
+        "label":       { "type": "string", "minLength": 3 },
+        "description": { "type": "string", "minLength": 30 }
+      }
+    }
+  }
+}

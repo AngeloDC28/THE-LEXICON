@@ -66,10 +66,10 @@ export function renderImageGrid(archiveData, callbacks) {
 
   let html = '';
   entries.forEach((entry, index) => {
-    const imgs = entry.images || [{ src: entry.imageUrl }];
+    const imgs = entry.images;
     imgs.forEach((imgObj, i) => {
       // FIX: use resolveImgSrc so all paths become absolute URLs
-      const src   = resolveImgSrc(imgObj, entry.imageUrl);
+      const src   = resolveImgSrc(imgObj);
       const delay = (index % 10) * 0.05;
       const brand = (entry.tags && entry.tags.brand)
         ? getTranslation(entry.tags.brand, AppState.language)

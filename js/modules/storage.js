@@ -58,7 +58,7 @@ function renderRecentlyViewed(archiveData, callbacks) {
   recent.forEach(id => {
     const entry = archiveData.find(e => e.id === id);
     if (!entry) return;
-    const thumbSrc = resolveImgSrc(entry.images && entry.images[0], entry.imageUrl);
+    const thumbSrc = resolveImgSrc(entry.images && entry.images[0]);
     html += `
       <img src="${thumbSrc}" 
            alt="${entry.tags.brand}" 
