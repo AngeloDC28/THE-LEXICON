@@ -24,3 +24,18 @@ jobs:
             git --no-pager diff database.js | head -40
             exit 1
           fi
+      - name: Validate entries against JSON schema
+        run: node .github/scripts/validate-entries.mjs
+      - name: Check asset references
+        run: node .github/scripts/check-assets.mjs
+      - name: Validate translations
+        run: node .github/scripts/validate-translations.mjs
+      - name: Regenerate translations.js from content/translations/*.json
+        run: node .github/scripts/build-translations.mjs
+      - name: Fail if translations.js is out of sync with translation JSONs
+        run: |
+          if ! git diff --quiet js/modules/translations.js; then
+            echo "::error::translations.js is stale. Run \`npm run build-translations\` and commit the result."
+            git --no-pager diff js/modules/translations.js | head -40
+            exit 1
+          fi
