@@ -530,7 +530,16 @@ function setupEventListeners() {
 
   // Detail
   $('btn-back-grid')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
+  $('btn-back-grid-mobile')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-toggle-hotspots-mobile')?.addEventListener('click', toggleMobileHotspots);
+  $('btn-nexus-mobile')?.addEventListener('click', () => {
+    if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
+  });
+  $('btn-notes-mobile')?.addEventListener('click', () => openMobileNotes());
+  $('btn-close-mobile-notes')?.addEventListener('click', () => $('mobile-notes-sheet')?.classList.add('hidden'));
+  document.querySelectorAll('.mobile-note-tab').forEach(tab => {
+    tab.addEventListener('click', () => showMobileNote(tab.dataset.mobileNote));
+  });
   $('btn-viewer-prev')?.addEventListener('click', () => navigateEntry(-1, archiveData, callbacks));
   $('btn-viewer-next')?.addEventListener('click', () => navigateEntry(1, archiveData, callbacks));
 
@@ -609,6 +618,53 @@ function setupEventListeners() {
 
   // Custom Refresh Event
   document.addEventListener('lexicon-refresh', refreshUI);
+}
+
+function openMobileNotes() {
+  const sheet = $('mobile-notes-sheet');
+  if (!sheet) return;
+  sheet.classList.remove('hidden');
+  // Default to provenance tab
+  showMobileNote('provenance');
+}
+
+function showMobileNote(type) {
+  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+  if (!entry || !entry.notes) return;
+  const lang = AppState.language;
+  const labels = {
+    provenance: getTranslation('note_provenance', lang),
+    critique:   getTranslation('note_critique', lang),
+    strategy:   getTranslation('note_strategy', lang)
+  };
+  const colors = {
+    provenance: { bg: '#E6FF00', fg: '#000' },
+    critique:   { bg: '#FF0000', fg: '#fff' },
+    strategy:   { bg: '#0000FF', fg: '#fff' }
+  };
+  let raw = entry.notes[type] || '';
+  let text = getTranslation(raw, lang).replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
+  const titleEl = $('mobile-notes-title');
+  const bodyEl  = $('mobile-notes-body');
+  if (titleEl) {
+    titleEl.textContent = labels[type] || type.toUpperCase();
+    const hdr = titleEl.parentElement;
+    if (hdr && colors[type]) {
+      hdr.style.background = colors[type].bg;
+      hdr.style.color      = colors[type].fg;
+    }
+  }
+  if (bodyEl) bodyEl.textContent = text || '—';
+  // Visual active state on tabs
+  document.querySelectorAll('.mobile-note-tab').forEach(t => {
+    if (t.dataset.mobileNote === type) {
+      t.style.background = colors[type].bg;
+      t.style.color      = colors[type].fg;
+    } else {
+      t.style.background = '';
+      t.style.color      = '';
+    }
+  });
 }
 
 function toggleHamburger() {

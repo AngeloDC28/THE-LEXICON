@@ -220,6 +220,18 @@
           <button type="button" id="btn-show-bookmarks" class="text-[9px] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity">★ Saved</button>
         </div>
 
+        <!-- Mobile Quick Nav (top of drawer, immediately visible) -->
+        <div id="mobile-quick-nav" class="lg:hidden border-b-[1px] border-black/80 dark:border-white/20 shrink-0 bg-overlay dark:bg-darkSurface">
+          <div class="grid grid-cols-3 gap-px bg-black/10 dark:bg-white/10">
+            <button type="button" id="btn-folders-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Folders</button>
+            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Access</button>
+            <button type="button" id="btn-lang-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Lang</button>
+            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Theme</button>
+            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">About</button>
+            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Contact</button>
+          </div>
+        </div>
+
         <!-- Recently Viewed -->
         <div id="recent-container" class="border-b-[1px] border-black/80 dark:border-white/20 shrink-0 hidden">
           <div class="px-3 pt-2 pb-1 flex items-center justify-between">
@@ -279,22 +291,6 @@
 
         <!-- Entry List -->
         <div id="entry-list" class="overflow-y-auto flex-1"></div>
-
-        
-        <!-- Mobile Drawer: About / Contact -->
-        <div class="lg:hidden border-t-[1px] border-black/80 dark:border-white/20 px-4 py-6 flex flex-col gap-4 shrink-0 bg-bone dark:bg-darkBase">
-          <div class="flex gap-2">
-            <button type="button" id="btn-folders-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Folders</button>
-            <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Search</button>
-          </div>
-          <div class="grid grid-cols-2 gap-2">
-            <button type="button" id="btn-lang-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Lang</button>
-            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Theme</button>
-            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Auth</button>
-            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">About</button>
-            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Contact</button>
-          </div>
-        </div>
 
       </div>
 
@@ -432,9 +428,36 @@
             </div>
           </div>
 
-          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-4 py-3 flex gap-2 z-[200]">
-            <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex-1 border border-acid text-acid py-3 text-[10px] font-bold uppercase tracking-widest">Hotspots</button>
-            <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex-1 bg-acid text-black py-3 text-[10px] font-bold uppercase tracking-widest">Save</button>
+          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]">
+            <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+              <span class="text-[14px] leading-none">‹</span><span>Back</span>
+            </button>
+            <button type="button" id="btn-notes-mobile" aria-label="View notes" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+              <span class="text-[12px] leading-none">▦</span><span>Notes</span>
+            </button>
+            <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex flex-col items-center justify-center gap-0.5 border border-acid text-acid py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+              <span class="text-[12px] leading-none">◉</span><span>Hotspots</span>
+            </button>
+            <button type="button" id="btn-nexus-mobile" aria-label="Open Nexus" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+              <span class="text-[12px] leading-none">◈</span><span>Nexus</span>
+            </button>
+            <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex flex-col items-center justify-center gap-0.5 bg-acid text-black py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+              <span class="text-[12px] leading-none">★</span><span>Save</span>
+            </button>
+          </div>
+
+          <!-- Mobile Notes Sheet (slides up from bottom on mobile) -->
+          <div id="mobile-notes-sheet" class="lg:hidden hidden fixed inset-x-0 bottom-0 z-[300] bg-bone dark:bg-darkBase border-t-2 border-acid max-h-[70vh] flex flex-col">
+            <div class="flex items-center justify-between px-4 py-3 border-b border-black/20 dark:border-white/20 bg-black text-white">
+              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.2em]" id="mobile-notes-title">Forensic Notes</span>
+              <button type="button" id="btn-close-mobile-notes" aria-label="Close notes" class="text-lg font-bold leading-none px-2">×</button>
+            </div>
+            <div class="grid grid-cols-3 gap-px bg-black/20 dark:bg-white/20 shrink-0">
+              <button type="button" data-mobile-note="provenance" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 bg-bone dark:bg-darkBase active:bg-yellow-300">Provenance</button>
+              <button type="button" data-mobile-note="critique" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 bg-bone dark:bg-darkBase active:bg-red-500 active:text-white">Critique</button>
+              <button type="button" data-mobile-note="strategy" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 bg-bone dark:bg-darkBase active:bg-blue-600 active:text-white">Strategy</button>
+            </div>
+            <div id="mobile-notes-body" class="flex-1 overflow-y-auto p-5 text-[12px] leading-relaxed font-mono"></div>
           </div>
         </div>
 
