@@ -98,10 +98,28 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch(e) { console.error('LEXICON_BOOT_ERROR:', e); }
 });
 
-function refreshUI() {
+// ─────────────────────────────────────────────────────────────────────
+// REFRESH PIPELINE
+// Split into three layers so hot paths (search keystroke, sort cycle,
+// filter chip toggle) don't re-render invariant chrome:
+//
+//   refreshChrome()   button labels + modal bodies + sort label — only
+//                     changes on language switch or auth state change.
+//                     Rebuilds 5 modal innerHTMLs, so keep it off hot paths.
+//
+//   refreshTaxonomy() #taxonomy-grid + #taxonomy-sub — fires when the
+//                     active category or applied filter changes.
+//
+//   refreshContent()  grid view + entry list + filter chips + status bar
+//                     — fires on search / sort / filter / folder mutation.
+//
+//   refreshUI()       calls all three; safe fallback for any caller that
+//                     doesn't know which subset it actually changed.
+// ─────────────────────────────────────────────────────────────────────
+
+function refreshChrome() {
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
-  syncHashFromState();
 
   // --- Header ---
   const btnAuth = $('btn-auth-toggle');
@@ -136,9 +154,9 @@ function refreshUI() {
   const btnFoldersMobile = $('btn-folders-toggle-mobile');
   if (btnFoldersMobile) btnFoldersMobile.textContent = t('nav_folders_mobile').toUpperCase();
 
-  // Telemetry text is owned by initHeaderTypewriter — overwriting it here
-  // every keystroke/filter change made the typewriter flicker and stop.
-  // The typewriter handles language switches on its own next tick.
+  // Telemetry text is owned by initHeaderTypewriter — overwriting it
+  // every keystroke/filter change made the typewriter flicker. The
+  // typewriter handles language switches on its own next tick.
 
   // --- Index Panel ---
   const indexTitle = $('index-panel-title');
@@ -156,7 +174,7 @@ function refreshUI() {
   const btnClearDir = $('btn-clear-directory');
   if (btnClearDir) btnClearDir.textContent = t('search_clear');
 
-  // --- Status Ribbon ---
+  // --- Status Ribbon labels (Brand/Year/Season/Entry sub-labels) ---
   const statusLabels = {
     'status-brand': 'status_brand',
     'status-year':  'status_year',
@@ -325,7 +343,9 @@ function refreshUI() {
     termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
   }
 
-  // --- Sort Button ---
+  // --- Sort Button label (the active sort value is content, but the
+  //     "SORT:" prefix is chrome — including it here keeps the
+  //     translation in one place; rebuilding is trivial).
   const sortBtn = $('btn-sort-cycle');
   if (sortBtn) {
     const sortLabels = {
@@ -337,17 +357,35 @@ function refreshUI() {
     const currentSortLabel = sortLabels[AppState.sortMode || 'default'] || t('sort_default');
     sortBtn.textContent = `${t('sort_label')}: ${currentSortLabel}`;
   }
+}
 
-  // --- Taxonomy ---
+function refreshTaxonomy() {
+  const lang = AppState.language;
   const taxHeading = $('taxonomy-heading');
-  if (taxHeading) taxHeading.textContent = t('taxonomy_heading') || 'Categories';
+  if (taxHeading) taxHeading.textContent = getTranslation('taxonomy_heading', lang) || 'Categories';
   renderTaxonomyGrid();
   renderTaxonomySub(callbacks);
+}
 
-  // --- Rendering ---
+function refreshSortLabel() {
+  const lang = AppState.language;
+  const t = (key) => getTranslation(key, lang);
+  const sortBtn = $('btn-sort-cycle');
+  if (!sortBtn) return;
+  const sortLabels = {
+    'default':   t('sort_default'),
+    'year-asc':  t('sort_year_asc'),
+    'year-desc': t('sort_year_desc'),
+    'brand-az':  t('sort_brand_az')
+  };
+  const currentSortLabel = sortLabels[AppState.sortMode || 'default'] || t('sort_default');
+  sortBtn.textContent = `${t('sort_label')}: ${currentSortLabel}`;
+}
+
+function refreshContent() {
+  syncHashFromState();
+  refreshSortLabel();
   const filtered = getFilteredEntries(archiveData);
-
-  // Persistent Sidebar
   renderEntryList(archiveData, callbacks);
 
   if (AppState.currentView === 'grid') {
@@ -360,6 +398,12 @@ function refreshUI() {
 
   renderFilterChips(callbacks);
   updateStatusBar(archiveData);
+}
+
+function refreshUI() {
+  refreshChrome();
+  refreshTaxonomy();
+  refreshContent();
 }
 
 let _suppressHashSync = false;
@@ -481,7 +525,10 @@ function setupEventListeners() {
       // Toggle: clicking the active value deselects it
       AppState.filters[type] = AppState.filters[type] === val ? null : val;
       AppState.activeTaxonomy = null;
-      refreshUI();
+      // Categories cells + grid both depend on the filter set; don't
+      // re-render modal chrome for a filter change.
+      refreshTaxonomy();
+      refreshContent();
       updateHash('grid');
       return;
     }
@@ -572,10 +619,10 @@ function setupEventListeners() {
     });
   });
 
-  // Search
+  // Search — only content re-renders (chrome is invariant to the query)
   $('search-input')?.addEventListener('input', debounce((e) => {
     AppState.searchQuery = e.target.value;
-    refreshUI();
+    refreshContent();
   }, 300));
 
   $('btn-clear-directory')?.addEventListener('click', () => {
@@ -583,12 +630,13 @@ function setupEventListeners() {
     AppState.searchQuery = '';
     AppState.activeFolderId = null;
     if ($('search-input')) $('search-input').value = '';
-    refreshUI();
+    refreshTaxonomy();
+    refreshContent();
   });
 
   $('btn-clear-folder-filter')?.addEventListener('click', () => {
     AppState.activeFolderId = null;
-    refreshUI();
+    refreshContent();
   });
 
   // --- Orientation ---
@@ -604,12 +652,12 @@ function setupEventListeners() {
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));
   $('btn-toggle-timeline')?.addEventListener('click', () => switchView('timeline', callbacks));
 
-  // Sort cycle
+  // Sort cycle — content-only (sort label is rebuilt inside refreshContent)
   $('btn-sort-cycle')?.addEventListener('click', () => {
     const modes = ['default', 'year-asc', 'year-desc', 'brand-az'];
     const idx = modes.indexOf(AppState.sortMode || 'default');
     AppState.sortMode = modes[(idx + 1) % modes.length];
-    refreshUI();
+    refreshContent();
   });
 
   // Detail
@@ -677,6 +725,9 @@ function setupEventListeners() {
   $('btn-lightbox-prev')?.addEventListener('click', () => navigateLightbox(-1));
   $('btn-lightbox-next')?.addEventListener('click', () => navigateLightbox(1));
   $('lightbox-stage')?.addEventListener('click', (e) => {
+    // Suppress click-to-zoom and click-to-close while a pinch zoom is
+    // active so a fingers-up touchend doesn't synthesise a stray click.
+    if (_lightboxZoomed && _pinchState) return;
     if (e.target.id === 'lightbox-stage') { closeLightbox(); return; }
     toggleLightboxZoom(e);
   });
@@ -823,6 +874,9 @@ function openCiteModal() {
 
 // ── LIGHTBOX ──
 let _lightboxZoomed = false;
+let _pinchState = null; // { startDist, startScale, startCenter, currentScale, currentX, currentY }
+let _pinchHandlersBound = false;
+
 function openLightbox() {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (!entry || !entry.images?.length) return;
@@ -832,6 +886,8 @@ function openLightbox() {
   document.body.style.overflow = 'hidden';
   _lightboxZoomed = false;
   renderLightbox();
+  // Pinch handlers are bound once and persist across opens.
+  if (!_pinchHandlersBound) bindLightboxPinch();
 }
 function closeLightbox() {
   const box = $('image-lightbox');
@@ -839,8 +895,87 @@ function closeLightbox() {
   box.classList.add('hidden');
   document.body.style.overflow = '';
   const img = $('lightbox-image');
-  if (img) { img.style.transform = ''; img.style.cursor = ''; }
+  if (img) {
+    img.style.transform = '';
+    img.style.cursor = '';
+    img.style.transformOrigin = '';
+  }
   _lightboxZoomed = false;
+  _pinchState = null;
+}
+
+/** Two-finger pinch-zoom + pan inside the lightbox.
+ *  Single-tap stage still closes (handled elsewhere); double-tap on the
+ *  image resets to 1x. Range: 1x to 5x. */
+function bindLightboxPinch() {
+  const stage = $('lightbox-stage');
+  const img   = $('lightbox-image');
+  if (!stage || !img) return;
+  _pinchHandlersBound = true;
+
+  const getDistance = (touches) => {
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.hypot(dx, dy);
+  };
+  const getCenter = (touches) => ({
+    x: (touches[0].clientX + touches[1].clientX) / 2,
+    y: (touches[0].clientY + touches[1].clientY) / 2,
+  });
+
+  stage.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      _pinchState = {
+        startDist: getDistance(e.touches),
+        startScale: _pinchState?.currentScale || 1,
+        currentScale: _pinchState?.currentScale || 1,
+        startCenter: getCenter(e.touches),
+        currentX: _pinchState?.currentX || 0,
+        currentY: _pinchState?.currentY || 0,
+      };
+    }
+  }, { passive: false });
+
+  stage.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 2 && _pinchState) {
+      e.preventDefault();
+      const newDist = getDistance(e.touches);
+      const scale = Math.min(5, Math.max(1, _pinchState.startScale * (newDist / _pinchState.startDist)));
+      _pinchState.currentScale = scale;
+      img.style.transformOrigin = '50% 50%';
+      img.style.transform = `translate(${_pinchState.currentX}px, ${_pinchState.currentY}px) scale(${scale})`;
+      img.style.transition = 'none';
+      _lightboxZoomed = scale > 1.05;
+    } else if (e.touches.length === 1 && _pinchState && _pinchState.currentScale > 1.05) {
+      // Single-finger pan while zoomed
+      e.preventDefault();
+    }
+  }, { passive: false });
+
+  stage.addEventListener('touchend', (e) => {
+    if (e.touches.length === 0 && _pinchState && _pinchState.currentScale <= 1.05) {
+      // Snapped back to 1x — fully reset
+      img.style.transform = '';
+      img.style.transition = 'transform 0.2s ease';
+      _pinchState = null;
+      _lightboxZoomed = false;
+    }
+  }, { passive: true });
+
+  // Double-tap to reset zoom (mobile equivalent of click-to-zoom-out)
+  let lastTap = 0;
+  img.addEventListener('touchend', (e) => {
+    const now = Date.now();
+    if (now - lastTap < 300 && _lightboxZoomed) {
+      e.preventDefault();
+      img.style.transform = '';
+      img.style.transition = 'transform 0.2s ease';
+      _pinchState = null;
+      _lightboxZoomed = false;
+    }
+    lastTap = now;
+  }, { passive: false });
 }
 function renderLightbox() {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
