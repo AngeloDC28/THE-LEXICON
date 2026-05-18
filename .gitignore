@@ -30,3 +30,7 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+# Temp scratch files
+*.tmp
+.commit-msg.tmp
