@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "mcqueen-ss99",
   "title": "Alexander McQueen SS 1999",
   "subtitle": "No. 13",

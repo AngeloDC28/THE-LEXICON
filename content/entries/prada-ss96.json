@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "prada-ss96",
   "title": "Prada SS 1996",
   "subtitle": "Banal Eccentricity",

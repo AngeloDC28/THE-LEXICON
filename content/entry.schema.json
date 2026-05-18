@@ -6,6 +6,7 @@
   "required": ["id", "title", "year", "season", "images", "tags", "notes"],
   "additionalProperties": false,
   "properties": {
+    "$schema":  { "type": "string", "description": "Points to entry.schema.json — enables editor autocomplete. Not validated at runtime." },
     "id":       { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Must equal the JSON filename (sans .json) and match content/order.json." },
     "title":    { "type": "string", "minLength": 3 },
     "subtitle": { "type": "string" },

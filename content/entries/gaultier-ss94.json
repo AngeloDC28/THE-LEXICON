@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "gaultier-ss94",
   "title": "Jean Paul Gaultier SS 1994",
   "subtitle": "Les Tatouages",

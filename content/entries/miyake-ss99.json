@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "miyake-ss99",
   "title": "Issey Miyake SS 1999",
   "subtitle": "A-POC",

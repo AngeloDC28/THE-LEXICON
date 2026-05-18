@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "lang-aw98",
   "title": "Helmut Lang AW 1998",
   "subtitle": "Séance de Travail",

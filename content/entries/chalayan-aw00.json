@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "chalayan-aw00",
   "title": "Hussein Chalayan AW 2000",
   "subtitle": "After Words",

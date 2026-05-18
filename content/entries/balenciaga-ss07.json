@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "balenciaga-ss07",
   "title": "Balenciaga SS 2007",
   "subtitle": "Robotic Articulation",

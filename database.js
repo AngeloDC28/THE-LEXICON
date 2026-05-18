@@ -5,6 +5,7 @@
  */
 export const archiveData = [
   {
+    "$schema": "../entry.schema.json",
     "id": "mcqueen-ss99",
     "title": "Alexander McQueen SS 1999",
     "subtitle": "No. 13",
@@ -302,6 +303,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "mugler-aw95",
     "title": "Thierry Mugler AW 1995",
     "subtitle": "Anniversaire",
@@ -629,6 +631,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "miyake-ss99",
     "title": "Issey Miyake SS 1999",
     "subtitle": "A-POC",
@@ -892,6 +895,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "balenciaga-ss07",
     "title": "Balenciaga SS 2007",
     "subtitle": "Robotic Articulation",
@@ -1232,6 +1236,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "chalayan-aw00",
     "title": "Hussein Chalayan AW 2000",
     "subtitle": "After Words",
@@ -1518,6 +1523,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "prada-ss96",
     "title": "Prada SS 1996",
     "subtitle": "Banal Eccentricity",
@@ -1798,6 +1804,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "galliano-dior-ss00",
     "title": "John Galliano for Dior Couture SS 2000",
     "subtitle": "Clochard",
@@ -2168,6 +2175,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "owens-ss14",
     "title": "Rick Owens SS 2014",
     "subtitle": "Vicious",
@@ -2538,6 +2546,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "garcons-ss97",
     "title": "Comme des Garçons SS 1997",
     "subtitle": "Body Meets Dress; Dress Meets Body",
@@ -2813,6 +2822,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "yamamoto-aw98",
     "title": "Yohji Yamamoto AW 1998",
     "subtitle": "",
@@ -3183,6 +3193,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "gaultier-ss94",
     "title": "Jean Paul Gaultier SS 1994",
     "subtitle": "Les Tatouages",
@@ -3557,6 +3568,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "viktor-rolf-aw99",
     "title": "Viktor & Rolf AW 1999",
     "subtitle": "Russian Doll",
@@ -3743,6 +3755,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "lang-aw98",
     "title": "Helmut Lang AW 1998",
     "subtitle": "Séance de Travail",
@@ -3998,6 +4011,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "moschino-aw14",
     "title": "Moschino AW 2014",
     "subtitle": "",
@@ -4368,6 +4382,7 @@ export const archiveData = [
     }
   },
   {
+    "$schema": "../entry.schema.json",
     "id": "schiaparelli-ss21",
     "title": "Schiaparelli Haute Couture SS 2021",
     "subtitle": "",

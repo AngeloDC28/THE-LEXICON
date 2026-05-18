@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "schiaparelli-ss21",
   "title": "Schiaparelli Haute Couture SS 2021",
   "subtitle": "",

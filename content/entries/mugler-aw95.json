@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "mugler-aw95",
   "title": "Thierry Mugler AW 1995",
   "subtitle": "Anniversaire",

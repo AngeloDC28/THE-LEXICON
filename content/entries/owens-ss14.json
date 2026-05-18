@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "owens-ss14",
   "title": "Rick Owens SS 2014",
   "subtitle": "Vicious",

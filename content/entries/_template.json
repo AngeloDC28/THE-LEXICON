@@ -1,4 +1,5 @@
 {
+  "$schema": "../entry.schema.json",
   "id": "REPLACE-WITH-KEBAB-CASE-ID",
   "title": "Brand Name SS/AW YYYY",
   "subtitle": "Optional show title",
