@@ -58,6 +58,137 @@
       white-space: nowrap;
       border-width: 0;
     }
+
+    /* ============================================================
+       TAXONOMY CELL GRID (bottom-left filter table)
+       2-column grid; last cell (Format & Medium) spans both columns.
+       Mimics a research-style data table with crisp hairline borders.
+    ============================================================ */
+    .taxonomy-cell-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .dark .taxonomy-cell-grid {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .taxonomy-cell {
+      background: #FAF9F6;
+      color: #000;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      text-align: left;
+      padding: 12px 14px;
+      min-height: 44px;
+      border: none;
+      margin: 0 1px 1px 0;
+      cursor: pointer;
+      transition: background-color 0.15s, color 0.15s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dark .taxonomy-cell {
+      background: #0A0A0A;
+      color: #fff;
+    }
+    .taxonomy-cell:hover,
+    .taxonomy-cell:focus-visible {
+      background: #000;
+      color: #CCFF00;
+      outline: none;
+    }
+    .dark .taxonomy-cell:hover,
+    .dark .taxonomy-cell:focus-visible {
+      background: #CCFF00;
+      color: #000;
+    }
+    .taxonomy-cell--full {
+      grid-column: 1 / -1;
+      margin-right: 0;
+    }
+    .taxonomy-cell-filter {
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-transform: none;
+      opacity: 0.7;
+      font-size: 9px;
+    }
+    /* Active state when this category is the focused sub-panel */
+    .taxonomy-cell[aria-pressed="true"] {
+      background: #000;
+      color: #CCFF00;
+    }
+    .dark .taxonomy-cell[aria-pressed="true"] {
+      background: #CCFF00;
+      color: #000;
+    }
+
+    /* ============================================================
+       ENTRY LIST SCROLL POLISH
+       Subtle scrollbar that doesn't clash with the monospace aesthetic.
+    ============================================================ */
+    #entry-list {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+      scroll-behavior: smooth;
+      overscroll-behavior: contain;
+    }
+    .dark #entry-list {
+      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    }
+    #entry-list::-webkit-scrollbar {
+      width: 6px;
+    }
+    #entry-list::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    #entry-list::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0;
+    }
+    .dark #entry-list::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    #entry-list::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .dark #entry-list::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Apply the same scrollbar treatment to the taxonomy sub-panel */
+    #taxonomy-sub {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+    }
+    .dark #taxonomy-sub {
+      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    }
+    #taxonomy-sub::-webkit-scrollbar { width: 6px; }
+    #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.3); }
+    .dark #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); }
+
+    /* ============================================================
+       MOBILE TWEAKS
+       Slightly larger tap targets, taxonomy cells stay readable.
+    ============================================================ */
+    @media (max-width: 1023px) {
+      .taxonomy-cell {
+        min-height: 48px;
+        padding: 14px 14px;
+        font-size: 11px;
+      }
+      /* Cap taxonomy section height on mobile so entry list keeps usable space */
+      #taxonomy-section {
+        max-height: 50vh;
+        overflow-y: auto;
+      }
+    }
   </style>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -215,7 +346,7 @@
     <div class="flex flex-1 overflow-hidden main-shell">
 
       <!-- LEFT: INDEX PANEL -->
-      <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto bg-bone dark:bg-darkBase overflow-y-auto lg:overflow-visible">
+      <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto bg-bone dark:bg-darkBase overflow-y-auto lg:overflow-hidden flex flex-col">
 
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
@@ -265,35 +396,40 @@
           </div>
         </div>
 
-        <!-- ============================================================
-             RESEARCH INDEX: Taxonomy Grid (tier 1 — category type selector)
-             Populated dynamically by renderTaxonomyGrid() in search-engine.js
-        ============================================================ -->
-        <div
-          id="taxonomy-grid"
-          class="border-b-[1px] border-black/80 dark:border-white/20 p-2 flex flex-wrap gap-1 shrink-0"
-          role="navigation"
-          aria-label="Filter by category"
-        >
-          <!-- Buttons injected by renderTaxonomyGrid() -->
-        </div>
+        <!-- Entry List (scrolls between search above and taxonomy below) -->
+        <div id="entry-list" class="overflow-y-auto flex-1 min-h-0 border-b-[1px] border-black/80 dark:border-white/20"></div>
 
         <!-- ============================================================
-             RESEARCH INDEX: Taxonomy Sub-panel (tier 2 — value list)
-             Populated dynamically by renderTaxonomySub() in search-engine.js
+             RESEARCH INDEX: Taxonomy section (bottom-left, fixed)
+             Tier 1 = category grid; Tier 2 = value list overlay
+             Populated by renderTaxonomyGrid() / renderTaxonomySub()
         ============================================================ -->
-        <div
-          id="taxonomy-sub"
-          class="hidden border-b-[1px] border-black/80 dark:border-white/20 p-2 shrink-0 overflow-y-auto"
-          style="max-height: 200px;"
-          role="navigation"
-          aria-label="Filter by value"
-        >
-          <!-- Buttons injected by renderTaxonomySub() -->
-        </div>
+        <div id="taxonomy-section" class="shrink-0 border-t-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase">
+          <!-- Sub-panel (tier 2: values) appears above the grid when a cell is tapped -->
+          <div
+            id="taxonomy-sub"
+            class="hidden border-b-[1px] border-black/80 dark:border-white/20 p-3 overflow-y-auto bg-bone dark:bg-darkBase"
+            style="max-height: 280px;"
+            role="navigation"
+            aria-label="Filter by value"
+          >
+            <!-- Buttons injected by renderTaxonomySub() -->
+          </div>
 
-        <!-- Entry List -->
-        <div id="entry-list" class="overflow-y-auto flex-1"></div>
+          <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between">
+            <span id="taxonomy-heading" class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">Taxonomy</span>
+            <span id="taxonomy-hint" class="text-[8px] font-mono uppercase tracking-wider opacity-40 hidden md:inline">Tap to filter</span>
+          </div>
+
+          <div
+            id="taxonomy-grid"
+            class="taxonomy-cell-grid"
+            role="navigation"
+            aria-label="Filter by category"
+          >
+            <!-- Cells injected by renderTaxonomyGrid() -->
+          </div>
+        </div>
 
       </div>
 

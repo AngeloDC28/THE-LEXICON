@@ -73,6 +73,8 @@ export function renderTaxonomyGrid() {
   const lang = AppState.language;
   const t = (key) => getTranslation(key, lang);
 
+  // Render order matches the user's intended layout: two columns per row,
+  // last cell ("Format & Medium") spans both columns.
   const types = [
     { key: 'brand',     label: t('tax_brand') },
     { key: 'era',       label: t('tax_era') },
@@ -82,16 +84,23 @@ export function renderTaxonomyGrid() {
     { key: 'materials', label: t('tax_materials') },
     { key: 'geography', label: t('tax_geography') },
     { key: 'anatomy',   label: t('tax_anatomy') },
-    { key: 'format',    label: t('tax_format') }
+    { key: 'format',    label: t('tax_format'), span: true }
   ];
 
   container.innerHTML = types.map(type => {
     const isActive = AppState.activeTaxonomy === type.key;
-    const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : '';
+    const isFiltered = AppState.filters && AppState.filters[type.key];
+    const activeClass = isActive
+      ? 'bg-black text-white dark:bg-white dark:text-black'
+      : (isFiltered ? 'bg-acid text-black' : '');
+    const spanClass = type.span ? 'taxonomy-cell--full' : '';
+    const activeLabel = isFiltered ? ` <span class="taxonomy-cell-filter">· ${getTranslation(AppState.filters[type.key], lang)}</span>` : '';
     return `<button
-      class="taxonomy-btn border border-current px-3 py-1 text-xs tracking-widest uppercase hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors ${activeClass}"
+      type="button"
+      class="taxonomy-cell ${spanClass} ${activeClass}"
       data-taxonomy-type="${type.key}"
-    >${type.label}</button>`;
+      aria-pressed="${isActive}"
+    >${type.label}${activeLabel}</button>`;
   }).join('');
 }
 
@@ -103,27 +112,34 @@ export function renderTaxonomySub(callbacks) {
   const type = AppState.activeTaxonomy;
   if (!type || !taxonomyData[type]) {
     container.classList.add('hidden');
-    grid.classList.remove('hidden');
     return;
   }
 
-  // Show sub, hide grid
+  // Show sub-panel ABOVE the grid (grid stays visible — they're stacked).
   container.classList.remove('hidden');
-  grid.classList.add('hidden');
 
   const values = taxonomyData[type];
   const lang = AppState.language;
+  const currentFilter = AppState.filters[type];
   container.innerHTML = `
-    <div class="taxonomy-sub-header flex items-center gap-4 mb-2">
-      <span class="text-xs tracking-widest uppercase opacity-60">${getTranslation('refine_by', lang)}: ${getTranslation('tax_' + type, lang)}</span>
-      <button class="text-xs tracking-widest uppercase border border-current px-2 py-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors" data-taxonomy-back="1">&#8592; ${getTranslation('btn_back', lang)}</button>
+    <div class="taxonomy-sub-header flex items-center justify-between gap-3 mb-3 pb-2 border-b border-black/10 dark:border-white/10">
+      <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-70">
+        ${getTranslation('tax_' + type, lang)}${currentFilter ? ` <span class="opacity-50 font-normal normal-case tracking-normal">· ${getTranslation(currentFilter, lang)}</span>` : ''}
+      </span>
+      <button class="text-[9px] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
     </div>
-    <div class="taxonomy-sub-values flex flex-wrap gap-2">
+    <div class="taxonomy-sub-values flex flex-wrap gap-1.5">
+      ${currentFilter ? `<button
+        class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border border-acid bg-acid text-black hover:opacity-80 transition-opacity"
+        data-taxonomy-type="${type}"
+        data-taxonomy-val="${currentFilter}"
+        title="Clear this filter"
+      >× ${getTranslation('btn_clear', lang) || 'Clear'}</button>` : ''}
       ${values.map(val => {
-        const isActive = AppState.filters[type] === val;
-        const activeClass = isActive ? 'bg-black text-white dark:bg-white dark:text-black' : 'border-black/30 dark:border-white/30';
+        const isActive = currentFilter === val;
+        if (isActive) return '';
         return `<button
-          class="taxonomy-val-btn border border-current px-3 py-1 text-xs tracking-widest uppercase hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors ${activeClass}"
+          class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border border-black/30 dark:border-white/30 hover:border-black dark:hover:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           data-taxonomy-type="${type}"
           data-taxonomy-val="${val}"
         >${getTranslation(val, AppState.language)}</button>`;

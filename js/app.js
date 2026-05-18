@@ -339,6 +339,8 @@ function refreshUI() {
   }
 
   // --- Taxonomy ---
+  const taxHeading = $('taxonomy-heading');
+  if (taxHeading) taxHeading.textContent = t('taxonomy_heading') || 'Taxonomy';
   renderTaxonomyGrid();
   renderTaxonomySub(callbacks);
 
