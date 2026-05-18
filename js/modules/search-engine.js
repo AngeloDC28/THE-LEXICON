@@ -109,6 +109,7 @@ export function renderTaxonomyGrid() {
       class="taxonomy-cell ${spanClass} ${activeClass}"
       data-taxonomy-type="${type.key}"
       aria-pressed="${isActive}"
+      aria-current="${isFiltered ? 'true' : 'false'}"
     >${type.label}${activeLabel}</button>`;
   }).join('');
 }

@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'  # primes npm cache for future steps that need it
       - name: Parse + duplicate-import scan
         run: node .github/scripts/check.mjs
       - name: Regenerate database.js from content/entries/*.json

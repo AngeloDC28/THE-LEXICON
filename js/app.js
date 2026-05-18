@@ -13,10 +13,10 @@ import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTax
 import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
 import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
 import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js';
-import { initDockInteractions, setStickyNote } from './modules/sticky-notes.js';
+// sticky-notes module reserved for future use; previous exports were dead.
 import { switchView } from './modules/navigation.js';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
-import { updateTelemetry, initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js';
 import { initFirebaseAuth, toggleAuth, sendSignInLink, createArchivalFolder, saveToFolder, currentUser, fetchArchivalFolders } from './modules/auth.js';
 import { addRecentlyViewed, toggleBookmark, isBookmarked } from './modules/storage.js';
 import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js';
@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderTypewriter();
   // Pass archiveData to hotspots so it doesn't need to import database.js itself
   initHotspotInteractions(archiveData);
-  initDockInteractions();
   initFirebaseAuth(callbacks);
 
   // Listeners
@@ -456,8 +455,13 @@ function setupEventListeners() {
     }
 
     // ── Taxonomy Navigation ──────────────────────────────────────
+    // Scope to the taxonomy section so unrelated buttons elsewhere with
+    // overlapping data-attributes (filter chips, metadata tags, etc.)
+    // don't accidentally toggle the filter panel.
+    const inTaxonomy = e.target.closest('#taxonomy-grid, #taxonomy-sub');
+
     // Tier 1: category type button (has data-taxonomy-type but NOT data-taxonomy-val)
-    const taxType = e.target.closest('[data-taxonomy-type]');
+    const taxType = inTaxonomy ? e.target.closest('[data-taxonomy-type]') : null;
     if (taxType && !taxType.dataset.taxonomyVal) {
       const type = taxType.dataset.taxonomyType;
       setActiveTaxonomy(type);
@@ -467,6 +471,8 @@ function setupEventListeners() {
     }
 
     // Tier 2: value button (has both data-taxonomy-type and data-taxonomy-val)
+    // Allow these from anywhere — chips outside the taxonomy section
+    // (e.g., metadata-tag-btn on detail view) should still apply filters.
     const taxVal = e.target.closest('[data-taxonomy-val]');
     if (taxVal) {
       const type = taxVal.dataset.taxonomyType;
@@ -708,9 +714,21 @@ function setupEventListeners() {
       if (e.key === 'ArrowLeft')  { e.preventDefault(); navigateLightbox(-1); return; }
       if (e.key === 'ArrowRight') { e.preventDefault(); navigateLightbox(1); return; }
     }
+    // Generic: Escape closes any open dialog-style modal
+    if (e.key === 'Escape') {
+      const openModal = document.querySelector('.modal-backdrop:not(.hidden), [role="dialog"]:not(.hidden)');
+      if (openModal && openModal.id !== 'image-lightbox') {
+        openModal.classList.add('hidden');
+        e.preventDefault();
+        return;
+      }
+    }
+    // Don't swallow typing in form fields
+    const tag = document.activeElement?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
     if (AppState.selectedEntryId) {
-      if (e.key === 'ArrowLeft')  navigateEntry(-1, archiveData, callbacks);
-      else if (e.key === 'ArrowRight') navigateEntry(1, archiveData, callbacks);
+      if (e.key === 'ArrowLeft')       { e.preventDefault(); navigateEntry(-1, archiveData, callbacks); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); navigateEntry(1, archiveData, callbacks); }
       else if (e.key === 'Escape')     closeDetail(callbacks, archiveData);
     }
     // Grid cell keyboard activation
@@ -921,11 +939,15 @@ function toggleHamburger() {
     panel.classList.add('-translate-x-full');
     backdrop.classList.add('hidden');
     btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   } else {
     panel.classList.add('translate-x-0');
     panel.classList.remove('-translate-x-full');
     backdrop.classList.remove('hidden');
     btn.setAttribute('aria-expanded', 'true');
+    // Prevent body scroll behind the mobile drawer; desktop is unaffected
+    // because the drawer transform is a no-op at lg breakpoint.
+    if (window.innerWidth < 1024) document.body.style.overflow = 'hidden';
   }
 }
 

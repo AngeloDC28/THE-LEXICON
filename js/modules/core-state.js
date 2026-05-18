@@ -40,11 +40,8 @@ export function setGridIntersectionObserver(observer) {
   gridIntersectionObserver = observer;
 }
 
-export const stickyNotes = {
-  critique:   { color: '#FF0000', title: 'CRITIQUE',   body: '' },
-  strategy:   { color: '#0000FF', title: 'STRATEGY',   body: '' },
-  provenance: { color: '#E6FF00', title: 'PROVENANCE', body: '' },
-};
+// (stickyNotes export removed — render-detail.js uses its own internal
+// colors map and no other module reads this. See audit pass 2.)
 
 export function updateHash(id) {
   if (id) {

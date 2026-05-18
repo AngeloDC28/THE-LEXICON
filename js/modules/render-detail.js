@@ -3,7 +3,7 @@
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
 import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
-import { AppState, stickyNotes, updateHash } from './core-state.js';
+import { AppState, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
 
@@ -14,7 +14,7 @@ export function updateStatusBar(archiveData) {
   const season      = $('status-season');
   const entryStatus = $('status-entry');
   if (entry) {
-    if (brand)       brand.textContent       = entry.tags.brand;
+    if (brand)       brand.textContent       = entry.tags?.brand || '--';
     if (year)        year.textContent        = entry.year;
     if (season)      season.textContent      = entry.season;
     if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
@@ -31,8 +31,12 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const entry = archiveData.find((e) => e.id === entryId);
   if (!entry) return;
 
-  AppState.selectedEntryId   = entryId;
   const imgs = entry.images;
+  if (!imgs?.length) {
+    console.warn(`[openDetail] entry ${entryId} has no images; aborting render.`);
+    return;
+  }
+  AppState.selectedEntryId   = entryId;
   AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -290,7 +294,9 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
   for (const k of tagKeys) if (entry.tags[k]) myTags[k] = entry.tags[k];
 
   const scored = archiveData
-    .filter(e => e.id !== entry.id && e.tags)
+    // Skip entries that lack tags OR a usable cover image (drafts) so
+    // the related panel never renders a broken-image card.
+    .filter(e => e.id !== entry.id && e.tags && e.images?.[0]?.src)
     .map(e => {
       let score = 0;
       for (const k of tagKeys) if (myTags[k] && e.tags[k] === myTags[k]) score++;
@@ -464,16 +470,14 @@ function setupDetailControls() {
 
   const taxToggle = $('btn-tax-toggle');
   if (taxToggle) {
-    const lang = AppState.language;
+    const labelFor = (hidden) => getTranslation(hidden ? 'btn_visualise_tax' : 'btn_hide_tax', AppState.language);
     // Sync initial text to current sidebar state
-    taxToggle.textContent = (sidebar && sidebar.classList.contains('hidden'))
-      ? getTranslation('btn_visualise_tax', lang)
-      : getTranslation('btn_hide_tax', lang);
+    taxToggle.textContent = labelFor(sidebar && sidebar.classList.contains('hidden'));
+    // Re-fetch language on each click so toggling reflects the current
+    // locale, not whatever was active when this handler was bound.
     taxToggle.onclick = () => {
       sidebar.classList.toggle('hidden');
-      taxToggle.textContent = sidebar.classList.contains('hidden')
-        ? getTranslation('btn_visualise_tax', lang)
-        : getTranslation('btn_hide_tax', lang);
+      taxToggle.textContent = labelFor(sidebar.classList.contains('hidden'));
     };
   }
   // Note: btn-back-grid is wired in app.js's setupEventListeners().
