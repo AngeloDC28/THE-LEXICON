@@ -1816,21 +1816,21 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
-          },
-          {
-            "x": 60,
             "y": 30,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "label": "Layered Tulle Ruffle Coat",
+            "description": "The layered tulle ruffle coat engulfs the upper body in an excessive volume of frayed and distressed burgundy netting; it obscures the natural shoulder line beneath a chaotic structural mass. This extreme accumulation engages with theories of poverty chic by mimicking the desperate layering of scavenged garments against the cold. The sheer textile is bunched and knotted haphazardly around the neck and bust; the edges remain unfinished and raw. The outerwear asserts a grotesque opulence that deliberately mocks the aesthetics of destitution."
+          },
+          {
+            "x": 55,
+            "y": 70,
+            "label": "Low-Slung Wide-Leg Trousers",
+            "description": "The low-slung wide-leg trousers hang dangerously off the hips to expose the lower abdomen; they disrupt traditional haute couture tailoring with an ill-fitting slouched silhouette. This dropped waistline applies deconstructionist logic to challenge the rigid corporeal discipline usually demanded by elite fashion houses. The heavy denim-like textile pools thickly around the ankles; a makeshift fabric belt sits loosely unbuckled at the hip. The garment completes the silhouette by enforcing an aesthetic of deliberate neglect."
+          },
+          {
+            "x": 48,
+            "y": 20,
+            "label": "Paled Theatrical Visage",
+            "description": "The paled theatrical visage covers the model's face in stark white foundation punctuated by heavily smeared black eye makeup; it creates a ghostly and unsettling mask. This cosmetic styling invokes theories of melodrama by translating the physical toll of extreme hardship into an artificial runway pantomime. The stark white skin contrasts violently with the dark burgundy layers framing the head. This element refuses naturalistic beauty to complete the look with an unsettling tragicomic theatricality."
           }
         ]
       },
@@ -1839,21 +1839,21 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 40,
-            "y": 30,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "y": 15,
+            "label": "Sculptural Found-Object Headpiece",
+            "description": "The sculptural found-object headpiece balances asymmetrically upon the skull with protruding feathers and shredded materials; it extends the vertical axis of the body dramatically. This accessory engages with the aestheticization of refuse by elevating scavenged detritus to the status of elite millinery. The jagged organic elements jut outward from a crushed dark base; they cast chaotic shadows over the face. The piece asserts a survivalist resourcefulness weaponized as high-fashion spectacle."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "x": 45,
+            "y": 55,
+            "label": "Deconstructed Silk Chiffon Dress",
+            "description": "The deconstructed silk chiffon dress wraps the torso and legs in a tattered matrix of sheer brown fabric; it exposes the underlying anatomy through ragged asymmetric tears. This material manipulation utilizes deconstructionist methodologies to mimic the natural decay of abandoned clothing. The bias-cut textile clings irregularly to the hips before disintegrating into frayed trailing edges at the hem. The garment refuses traditional couture perfection to assert a calculated and highly engineered ruination."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "x": 43,
+            "y": 48,
+            "label": "Oversized Utility Safety Pins",
+            "description": "The oversized utility safety pins cluster around the waistline to forcibly yoke disparate layers of fabric together; they replace classical hidden closures with crude mechanical hardware. This functional substitution invokes class dynamics by appropriating the emergency repair tactics of the impoverished. The bright gold-tone metal interrupts the muted brown chiffon sharply; various trinkets and keys dangle from the clasps. The detail completes the ensemble by cementing the illusion of a frantically assembled wardrobe."
           }
         ]
       },
@@ -1861,22 +1861,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-03.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 50,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "x": 45,
+            "y": 70,
+            "label": "Shredded Foil-Embellished Skirt",
+            "description": "The shredded foil-embellished skirt fractures the lower silhouette into a cascade of tattered black fabric and highly reflective silver strips; it creates a chaotic and kinetic volume around the legs. This surface treatment applies theories of poverty chic by mimicking the visual texture of shredded trash bags or scavenged industrial foil. The metallic elements catch the runway lighting violently as the bias-cut fabric shifts; the hem trails unevenly across the floor. The garment asserts a glamorous interpretation of urban decay."
           },
           {
-            "x": 30,
+            "x": 32,
+            "y": 36,
+            "label": "Suspended Miniature Glass Bottles",
+            "description": "The suspended miniature glass bottles dangle from crude strings attached directly to the bodice; they introduce heavy three-dimensional objects into the garment's drape. This literal application of refuse engages with institutional critique by forcing the haute couture client to wear the literal markers of street-level substance abuse. The green glass catches the light against the dark fabric of the chest; the raw twine cuts into the silk beneath it. The accessory refuses ornamental subtlety to complete the tragic narrative of the collection."
+          },
+          {
+            "x": 35,
             "y": 20,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "label": "Netted Mourning Veil",
+            "description": "The netted mourning veil obscures the face behind a rigid black grid topped with dark plumage; it creates a severe barrier between the model and the audience. This headwear invokes concepts of melodrama by referencing Victorian grieving attire distorted through a lens of total destitution. The thick netting casts sharp shadows across the stark white theatrical makeup; the oversized structure dwarfs the skull. The piece asserts a morbid theatricality that elevates the styling from mere clothing to performance art."
           }
         ]
       },
@@ -1884,22 +1884,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
-          },
-          {
             "x": 50,
-            "y": 20,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "y": 55,
+            "label": "Straitjacket-Inspired Linen Coat",
+            "description": "The straitjacket-inspired linen coat binds the torso tightly with elongated sleeves wrapped and tied around the upper body; it restricts the wearer's arms entirely. This sartorial restriction engages with theories of institutional critique by transforming medical confinement apparatuses into luxury outerwear. The heavy white fabric is punctured by oversized brass grommets; thick rope crisscrosses the front closure tightly. The garment refuses physical agency to assert a disturbing narrative of psychological captivity."
+          },
+          {
+            "x": 45,
+            "y": 75,
+            "label": "Crude Nautical Rope Lacing",
+            "description": "The crude nautical rope lacing weaves violently through the coat and trails heavily onto the runway floor; it replaces fine tailoring hardware with rough industrial cordage. This material substitution applies the aesthetic philosophy of poverty chic by elevating dockside debris to the level of haute couture fastening. The thick braided hemp frays at the ends; it binds the lower panels of the coat together haphazardly. The detail completes the ensemble by emphasizing a desperate and primitive mode of construction."
+          },
+          {
+            "x": 42,
+            "y": 15,
+            "label": "Inflated Balloon Headpiece",
+            "description": "The inflated balloon headpiece twists brightly colored latex around the model's distressed hair; it introduces a jarring burst of neon into the monochromatic white look. This bizarre styling choice invokes theories of the absurd by juxtaposing cheerful party favors with the grim reality of a straitjacket. The yellow and orange tubes hover erratically above the stark white face makeup; they fight against the severe mood of the tailoring. The accessory asserts a manic energy that heightens the psychological tension of the silhouette."
           }
         ]
       },
@@ -1908,21 +1908,21 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "y": 50,
+            "label": "Volumetric Tulle Crinoline",
+            "description": "The volumetric tulle crinoline explodes from the waistline in massive asymmetric tiers of beige netting; it totally swallows the lower body in a chaotic cloud of sheer fabric. This structural extreme applies deconstructionist logic to the classic Dior silhouette by rendering the traditional ballgown as a frantic disorganized mess. The stiff layers jut out at irregular angles; the edges appear violently hacked rather than hemmed. The garment refuses structural restraint to assert a silhouette of frantic overcompensation."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "x": 28,
+            "y": 30,
+            "label": "Makeshift Plaster Cast Armband",
+            "description": "The makeshift plaster cast armband encases the right forearm in a rigid white cylinder; it forcibly bends the elbow into a static protective posture. This medical intervention engages with the aestheticization of trauma by presenting physical injury as a decorative luxury accessory. The bright white plaster stands out starkly against the beige tulle; it completely immobilizes the wrist and hand. The styling completes the tragicomic narrative by forcing the model into a pantomime of suffering."
           },
           {
-            "x": 40,
-            "y": 55,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "x": 48,
+            "y": 15,
+            "label": "Scavenged Cardboard Crown",
+            "description": "The scavenged cardboard crown sits precariously atop the head with crude cutouts and raw corrugated edges; it mimics the regalia of royalty using the cheapest available urban refuse. This headwear invokes class dynamics by highlighting the delusional grandeur often associated with extreme marginalization. The dull beige paper blends seamlessly with the tulle of the dress below; it is pinned hastily into the blonde hair. The piece asserts a cynical mockery of elite hierarchies."
           }
         ]
       },
@@ -1931,21 +1931,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "y": 70,
+            "label": "Bias-Cut Sheer Pleated Gown",
+            "description": "The bias-cut sheer pleated gown drapes closely over the anatomy before flaring into a micro-pleated skirt; it exposes the body entirely beneath a thin veil of beige fabric. This material vulnerability engages with theories of poverty chic by simulating the degradation of a once-fine garment worn down to its structural skeleton. The delicate pleats warp and stretch unevenly over the hips; the sheer torso reveals the undergarments completely. The garment refuses protective coverage to assert an aesthetic of total exposure and fragility."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "x": 45,
+            "y": 35,
+            "label": "Knotted Tulle Shoulder Drape",
+            "description": "The knotted tulle shoulder drape wraps asymmetrically across the chest and fastens in a crude lump at the collarbone; it functions as a makeshift shawl. This styling technique applies deconstructionist assembly by repurposing a scrap of bridal netting into emergency insulation. The stiff fabric stands away from the neck; it trails loosely behind the model's right arm. The detail completes the silhouette by introducing an element of rushed desperate layering over the fragile gown."
           }
         ]
       },
@@ -1953,22 +1947,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "x": 50,
+            "y": 35,
+            "label": "Asymmetrical Deconstructed Bodice",
+            "description": "The asymmetrical deconstructed bodice warps pale green and white fabric into a chaotic knot across the torso; it entirely disguises the natural bust line. This structural logic utilizes deconstruction to mimic a garment hastily pinned together from scavenged bedsheets. The stiff fabric points outward at the shoulders; crude ties and visible safety pins hold the center axis shut. The garment refuses traditional tailoring to assert a posture of erratic survivalism."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "y": 55,
+            "label": "Striped Knit Under-Shorts",
+            "description": "The striped knit under-shorts peek out from beneath the fractured hemline of the overskirt; they introduce a jarringly domestic foundation layer to the chaotic ensemble. This layered exposure engages with class dynamics by revealing the private utilitarian garments usually hidden by haute couture. The horizontal black and grey stripes stretch tightly over the thighs; a crude red band trims the bottom edge. The piece completes the look by emphasizing the haphazard accumulation of mismatched clothing."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "x": 58,
+            "y": 80,
+            "label": "Knee-High Leather Combat Boots",
+            "description": "The knee-high leather combat boots ground the chaotic draped fabrics in rigid militant hardware; they lace tightly up the calf to form a severe protective shell. This footwear applies an aesthetic of urban warfare to the otherwise delicate and tattered textiles above. The thick black leather contrasts violently with the pale green fabrics; multiple buckles lock the laces in place. The boots assert a heavy utilitarian readiness amidst the theatrical decay."
           }
         ]
       },
@@ -1977,21 +1971,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "y": 40,
+            "label": "Grime-Stained Asymmetrical Dress",
+            "description": "The grime-stained asymmetrical dress drapes a light beige textile over the body violently smeared with neon yellow and green pigments; it simulates chemical contamination or extreme urban filth. This surface manipulation directly engages with the aestheticization of poverty by treating realistic dirt as a painted luxury motif. The fabric bunches awkwardly at the right shoulder; the hemline is torn and uneven across the thighs. The garment refuses pristine finishing to assert the romanticization of decay."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "x": 50,
+            "y": 52,
+            "label": "Exposed Ribbed Under-Corset",
+            "description": "The exposed ribbed under-corset protrudes from the open slash of the overdress; it introduces a dark heavy knit into the center of the pale silhouette. This structural revelation utilizes deconstructionist methods to turn the inside of the garment outward. The thick brown ribbing clings tightly to the lower abdomen and upper thighs; it ends bluntly with a frayed edge. The detail completes the look by suggesting a desperate accumulation of thermal layers."
           }
         ]
       },
@@ -2000,21 +1988,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 60,
-            "y": 60,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "y": 35,
+            "label": "Safety-Pinned Silk Bodice",
+            "description": "The safety-pinned silk bodice stretches a vivid red textile across the torso using a visible network of golden hardware and crisscrossing straps; it entirely replaces traditional seaming with emergency fasteners. This functional substitution engages with anti-consumerist aesthetics by mimicking the desperate repairs of those unable to afford new garments. The bright silk wrinkles tightly against the tension of the pins; raw edges are exposed along the neckline. The garment asserts a deliberate state of ongoing ruin and frantic assembly."
           },
           {
-            "x": 40,
-            "y": 40,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
-          },
-          {
-            "x": 50,
-            "y": 20,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "x": 60,
+            "y": 65,
+            "label": "Fractured Chiffon Overskirt",
+            "description": "The fractured chiffon overskirt drops from the hip in long irregular trailing panels; it completely exposes the left leg up to the upper thigh. This extreme bias-cut fluidity invokes theories of melodrama by rendering the fabric as a tattered fragile web easily caught by the wind. The sheer red material pools lightly on the runway floor; small red plastic baubles are sewn randomly into the fraying edges. The skirt completes the silhouette with an air of tragic vulnerability."
           }
         ]
       },
@@ -2022,22 +2004,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-10.jpg",
         "hotspots": [
           {
-            "x": 50,
-            "y": 70,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "x": 45,
+            "y": 45,
+            "label": "Multi-Strapped Deconstructed Gown",
+            "description": "The multi-strapped deconstructed gown wraps the body in stark white fabric held together by an excessive network of functional buckles and thick webbing; it mimics the aesthetic of medical restraints. This sartorial restriction applies institutional critique by fashioning high-end couture from the visual language of psychiatric confinement. The stiff material bunches diagonally across the hips; the heavy metal buckles hang loosely at the waist. The garment refuses graceful draping to assert a posture of forced containment."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "x": 48,
+            "y": 80,
+            "label": "High-Laced Tattered Knee Boots",
+            "description": "The high-laced tattered knee boots encase the lower legs in white leather adorned with loose hanging straps and raw edges; they continue the theme of institutional restraint down to the footwear. This design engages with the appropriation of poverty by scuffing and distressing premium leather to mimic scavenged military surplus. The tight lacing restricts the calf completely; the pointed toes strike a sharp aggressive profile against the floor. The boots complete the ensemble by grounding the chaotic strapping in a severe foundation."
           }
         ]
       },
@@ -2045,22 +2021,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-11.jpg",
         "hotspots": [
           {
-            "x": 50,
+            "x": 45,
             "y": 45,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "label": "Distressed Oversized Knit Cardigan",
+            "description": "The distressed oversized knit cardigan swallows the torso in a massive heavy-gauge white yarn; it features violently frayed edges and massive dropped shoulders. This extreme accumulation of material engages with theories of poverty chic by simulating the desperate hoarding of oversized donated clothing. The thick knit droops heavily to the knees; giant mismatched buttons and safety pins hang uselessly from the lapels. The outerwear asserts a grotesque caricature of warmth and protection."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "x": 55,
+            "y": 70,
+            "label": "Frayed Lace Slip Dress",
+            "description": "The frayed lace slip dress exposes delicate lingerie detailing beneath the heavy ruin of the outerwear; it drops an uneven raw hemline to the mid-calf. This layered exposure utilizes deconstructionist methodologies to blur the lines between intimate apparel and public armor. The sheer white lace is torn violently across the thighs; crude twine crisscrosses over the delicate fabric like a makeshift corset. The garment refuses pristine elegance to complete the silhouette with a deeply tragic and vulnerable core."
           }
         ]
       },
@@ -2068,22 +2038,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "x": 45,
+            "y": 15,
+            "label": "Sculptural Newspaper-Wrapped Hat",
+            "description": "The sculptural newspaper-wrapped hat builds an immense asymmetrical tower atop the head using crushed paper and wide brim forms; it drastically alters the body's center of gravity. This accessory engages with the aestheticization of refuse by utilizing literal trash to mimic the grandeur of elite millinery. The pale beige paper catches the runway light against its sharp chaotic folds; it completely overshadows the face beneath. The headpiece asserts a cynical parody of haute couture traditions."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
+            "x": 55,
+            "y": 50,
+            "label": "Paint-Smeared Asymmetrical Gown",
+            "description": "The paint-smeared asymmetrical gown drapes a sleek white textile over the body heavily vandalized with streaks of pink and yellow pigment; it forces a high-slit opening up the left thigh. This surface manipulation invokes class dynamics by actively defiling a luxury item to resemble something salvaged from a chemical spill. The fabric wraps tightly across the waist via corset lacing; the right shoulder features a bizarre padded growth. The garment completes the look by fusing extreme elegance with violent contamination."
           }
         ]
       },
@@ -2091,22 +2055,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-13.jpg",
         "hotspots": [
           {
+            "x": 55,
+            "y": 35,
+            "label": "Cropped Asymmetrical Straightjacket",
+            "description": "The cropped asymmetrical straightjacket binds the upper body in stark white leather featuring severely elongated sleeves and misplaced button closures; it intentionally distorts natural human proportions. This structural restriction applies institutional critique by turning medical restraint into a high-fashion blouson. One sleeve extends past the hand entirely while the opposite shoulder is left bare; the collar folds awkwardly across the chest. The garment refuses ergonomic logic to assert a narrative of psychological distress."
+          },
+          {
             "x": 50,
-            "y": 50,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "y": 70,
+            "label": "Oversized Grime-Stained Trousers",
+            "description": "The oversized grime-stained trousers swallow the legs in massive volumes of filthy pale yellow fabric; they drag heavily upon the runway floor. This deliberate mis-sizing engages with the appropriation of poverty by mimicking the ill-fitting garments scavenged by the homeless. The textile is covered in dark soot-like smears and severe horizontal tears; newspaper print lines the inner cuffs. The trousers complete the silhouette by dragging the pristine white jacket down into literal urban filth."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "x": 45,
+            "y": 46,
+            "label": "Suspended Avian Taxidermy",
+            "description": "The suspended avian taxidermy dangles morbidly from a makeshift sash tied roughly around the waist; it introduces a literal dead animal into the styling composition. This bizarre accessory invokes theories of the absurd and extreme survivalism by treating a carcass as a wearable trinket. The dark feathers contrast sharply with the pale yellow trousers; the bird hangs limply alongside discarded reading glasses. The detail asserts a grotesque reality that pushes the boundaries of acceptable luxury spectacle."
           }
         ]
       },
@@ -2114,22 +2078,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Utilitarian Safety Hardware",
-            "description": "Substituting fine jewelry clasps with mundane utilitarian hardware subverts traditional codes of luxury; a stark manifestation of Subcultural Resistance Theory. The garment leverages punk vernacular within the most exclusive tier of fashion production. This inclusion of the everyday serves to mock the preciousness of haute couture. It is a deliberate contamination of the sacred space of the Dior archive."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
-          },
-          {
             "x": 50,
-            "y": 20,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
+            "y": 55,
+            "label": "Bias-Cut Newspaper Print Gown",
+            "description": "The bias-cut newspaper print gown drapes sheer grey silk chiffon tightly across the anatomy; it features custom typography detailing the designer's own press clippings. This iconic textile directly engages with institutional critique by transforming the media's commentary on fashion into the physical garment itself. The bias-cut technique forces the fabric to cling sensually to the hips before falling into a high asymmetrical slit; the text warps and distorts over the curves of the body. The dress asserts a hyper-self-aware vanity masked as urban detritus."
+          },
+          {
+            "x": 60,
+            "y": 65,
+            "label": "Frayed Ruffle Cascades",
+            "description": "The frayed ruffle cascades spiral down the length of the gown in violently torn strips of the newspaper printed silk; they destroy the clean silhouette of the bias-cut slip. This structural manipulation applies deconstructionist methodology to mimic a garment shredded by the harsh realities of street life. The raw edges curl inward and fray extensively; they flap wildly as the model walks. The detail completes the garment by ensuring the luxurious silk mimics the chaotic texture of actual garbage."
           }
         ]
       },
@@ -2138,40 +2096,34 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Frayed Edge Degradation",
-            "description": "The intentional unravelling of the silk edges mimics the decay of poverty through exhaustive manual labour; engaging the uncomfortable ethics of The Society of the Spectacle (Debord). This synthetic erosion is precise and calibrated; unlike the chaotic decay it references. The fraying operates as a performative signifier of suffering for the consumption of the elite. It raises severe ethical questions regarding the aestheticization of hardship."
+            "y": 40,
+            "label": "Sheer Distressed Organza Shirting",
+            "description": "The sheer distressed organza shirting balloons over the torso in a dark crimson haze; it is violently torn across the chest and sleeves to reveal the skin beneath. This material vulnerability invokes theories of poverty chic by presenting a delicate luxury textile in a state of absolute ruin. The oversized fit hangs completely off the right shoulder; the fabric looks as though it has melted or rotted away in patches. The garment refuses traditional elegance to assert a romanticized vision of decay."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Bias-Cut Fluidity",
-            "description": "The flawless bias construction ensures the garment cascades over the body in direct contradiction to its impoverished signifiers; an exercise in Visual Rhetoric. This technical mastery betrays the couture origin hidden beneath the chaotic surface. The fluidity of the drape seduces the eye; masking the harshness of the visual message. It is the ultimate tension between classical beauty and contemporary trauma."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Deconstructed Newsprint Silk",
-            "description": "The translation of disposable newspaper into haute couture silk represents a calculated Institutional Critique. It forces the elite consumer to wear the semiotics of destitution; initiating a deeply cynical dialogue regarding Trickle-Down and Bubble-Up Dynamics. The painstaking reproduction of cheap ink on premium fibre is a profound irony. It collapses the distance between the street and the atelier into a single textile."
+            "x": 48,
+            "y": 52,
+            "label": "Oversized Industrial Leather Belt",
+            "description": "The oversized industrial leather belt wraps crudely around the waist and hangs long past the hips; it features a massive heavy-duty metal buckle. This functional hardware engages with the aestheticization of refuse by utilizing a strap seemingly scavenged from factory machinery to hold up the sagging garments. The thick brown leather violently cinches the delicate red organza; the long tail flaps uncontrollably against the trousers. The accessory completes the silhouette by injecting a heavy militant anchor into the ethereal sheer fabrics."
           }
         ]
       }
     ],
     "tags": {
-      "brand": "Christian Dior",
+      "brand": "Christian Dior | John Galliano",
       "era": "2000 to 2009; The Global Conglomerate Era",
-      "politics": "Class Dynamics & Anti-Elitism",
-      "theories": "The Society of the Spectacle (Debord)",
+      "politics": "Class Dynamics & Anti-Elitism (Appropriation of Poverty) | Anti-Consumerism & Institutional Critique",
+      "theories": "Aesthetic Philosophy (Poverty Chic / Melodrama) | Deconstruction",
       "gender": "Womenswear",
-      "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
-      "geography": "Paris (Federation de la Haute Couture)",
-      "anatomy": "Bias-Cut Fluidity",
+      "materials": "Silk Chiffon | Linen | Newspaper Print | Found/Repurposed Objects (Nautical Ropes, Tin Openers, Glass Bottles)",
+      "geography": "Paris (Chambre Syndicale / Haute Couture)",
+      "anatomy": "Deconstructed Assembly | Bias-Cut Fluidity | Sartorial Restriction (Straitjackets)",
       "format": "Theatrical Stage Performance"
     },
     "notes": {
-      "critique": "This runway executes a deeply polarising exercise in class dynamics & anti-elitism[cite: 2]. By meticulously distressing the finest luxury fabrics to resemble scavenged rags and newspaper, Galliano enforces a narrative of trickle-down and bubble-up dynamics[cite: 2] taken to an unethical extreme. The spectacle forces a severe institutional critique[cite: 2] of fashion's parasitic relationship with vulnerable demographics. The wearer is cloaked in an artificial poverty; executing a radical and highly criticised subversion of traditional French Bourgeois Tradition[cite: 2] where trauma is explicitly converted into a commodity.",
-      "strategy": "Dior completely embraces extreme narrative curation[cite: 2] designed to generate immediate outrage and global headlines. The runway operates as an exercise in calculated censorship & provocation[cite: 2]; generating a massive media backlash that ironically serves to cement Galliano's status as a peerless provocateur. The strategic communication relies on leveraging this moral panic to dominate the seasonal press cycle; ensuring the corporate house remains at the absolute centre of the cultural conversation and confirming that no subject matter is safe from structural commercialisation.",
-      "provenance": "John Galliano presented the Christian Dior Haute Couture Spring and Summer collection Clochard in January 2000 within the official Paris schedule. Defined by the Global Conglomerate Era; the traditional runway format operates as a controversial intersection of absolute luxury and extreme poverty. The presentation functions as a clinical inquiry into the aestheticization of destitution; translating the survival mechanisms of homeless populations into the lexicon of haute couture."
+      "provenance": "This entry refers to John Galliano's highly controversial Spring/Summer 2000 Haute Couture collection for Christian Dior, infamously known as the \"Clochard\" (tramp) or \"Homeless Chic\" show. The collection was directly inspired by the sans-abris (homeless individuals) living along the banks of the Seine in Paris. Galliano romantically and problematically described them as a \"world of fantastic characters who live there, I believe through choice\". This collection is historically significant for introducing Galliano's iconic \"Christian Dior Daily\" newspaper print.",
+      "strategy": "Deconstructed Assembly: Borrowing heavily from the deconstructionist techniques pioneered by designers like Martin Margiela, Galliano's models wore unstructured, torn, and strangely layered garments. The collection featured frayed and stretched fabrics attached to one another, with nautical ropes replacing traditional belts. Bias-Cut Newspaper Print: Galliano took press clippings from the International Herald Tribune—specifically incorporating reviews of his own past collections—and printed them onto silk chiffon. He used his signature bias-cut technique to drape this fabric, lending \"pictures of distress a perversely sensual air\". The Aestheticization of Refuse: Galliano accessorized the looks with literal junk and household items. Models walked down the runway with oversized pins yoking string vests to belts, while chains dangled with broken spectacles, tin openers, electrical plugs, and miniature bottles of Jack Daniels. Theatrical Styling: The styling completely embraced melodrama and destitution. Models' faces were made up to look smeared with grime and sweat, and their hair was threaded with tissue. Other looks featured boyish girls with faces painted like Charlie Chaplin dangling old kit bags, as well as diaphanous linen gowns engineered to look like straitjackets.",
+      "critique": "Poverty Chic and the Limits of Spectacle: The SS2000 collection represents the extreme zenith of \"poverty chic,\" appropriating the visual markers of economic vulnerability and absolute destitution for the consumption of the global elite. By translating the tragedy of homelessness into a highly commercialized fashion spectacle, Galliano tested the boundaries of what is socially appropriate to stage. Socio-Political Backlash: The collection generated immediate and fierce outrage. Protesters picketed Dior's offices at 30 Avenue Montaigne, furious at what they saw as Galliano's profound cynicism. The media echoed this anger; New York Times critic Maureen Dowd famously summarized the grotesque irony of the show, writing: \"Dior models who starve themselves posed as the starving\". Margiela vs. Galliano (The Ragpicker vs. The Woman of Fashion): Fashion critics, including Alexander Fury, noted that the collection's frayed, decomposed roots lay in Margiela's brand of deconstruction. However, while Margiela acted as a \"poetic ragpicker\" genuinely questioning the capitalist fashion system through anonymity and recycling, Galliano utilized these same deconstructive aesthetics to enhance an environment of pure materialistic lavishness and theatrical melodrama."
     }
   },
   {
@@ -2186,22 +2138,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg",
         "hotspots": [
           {
+            "x": 35,
+            "y": 32,
+            "label": "Geometric Ventilated Leather Cutouts",
+            "description": "The geometric ventilated leather cutouts pierce the chest panels of the stark white vest to reveal the solid fabric beneath. This structural intervention engages with theories of architectural shielding by mimicking the brise-soleil of Brutalist concrete facades. The strict rectangular slots create a rigid grid against the natural curves of the torso. This element refuses traditional ornamental lacework to assert a highly militarized and functional approach to bodily ventilation."
+          },
+          {
             "x": 50,
-            "y": 45,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+            "y": 5,
+            "label": "Utilitarian Fabric Headwrap",
+            "description": "The utilitarian fabric headwrap binds the skull tightly in a stark white textile. This styling choice invokes subcultural systems by referencing athletic sweatbands and urban street uniform codes. The strict horizontal band flattens the hair against the forehead while highlighting the model's intense facial expression. The accessory completes the silhouette by framing the face as an active site of resistance rather than a passive canvas for beauty."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+            "x": 48,
+            "y": 92,
+            "label": "Monolithic Leather Sneaker Boot",
+            "description": "The monolithic leather sneaker boot encases the foot and ankle in a heavily padded white shell. This footwear strategy applies theories of monolithic massing to ground the body in an aggressively exaggerated foundation. The thick geometric sole and oversized tongue dwarf the natural proportions of the lower leg. This piece asserts a posture of combative readiness that prioritizes kinetic impact over delicate grace."
           }
         ]
       },
@@ -2209,22 +2161,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+            "y": 12,
+            "label": "Aggressive Facial Choreography",
+            "description": "The aggressive facial choreography contorts the model's features into a visible scowl. This kinetic performance engages directly with body politics by rejecting the passive heteronormative gaze historically demanded of runway models. The tense jaw and furrowed brow project a visceral defensive energy outward toward the audience. This somatic display asserts an intersectional defiance that reclaims the runway space for active marginalized bodies."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+            "x": 45,
+            "y": 45,
+            "label": "Asymmetrical Suspended Drape Tunic",
+            "description": "The asymmetrical suspended drape tunic falls from a cowl neckline into an uneven cascading hem. This structural logic utilizes monolithic massing to obscure the specific anatomy of the torso. The stiff off-white fabric holds its shape rigidly away from the hips rather than clinging to the skin. The garment refuses classical tailoring to complete a silhouette resembling a nomadic protective shroud."
           }
         ]
       },
@@ -2232,22 +2178,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-03.jpg",
         "hotspots": [
           {
+            "x": 49,
+            "y": 4,
+            "label": "Kinetic Somatic Gesture",
+            "description": "The kinetic somatic gesture captures the model pulling her hands forcefully through her hair. This performative action engages with queer theory and subcultural systems by introducing raw emotional labor into the presentation of the garment. The raised elbows create sharp geometric angles that temporarily alter the upper silhouette of the body. This movement refuses static mannequinesque posing to assert a lived-in and deeply visceral physical presence."
+          },
+          {
             "x": 50,
-            "y": 50,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+            "y": 45,
+            "label": "Monolithic Cotton Shift",
+            "description": "The monolithic cotton shift envelopes the torso in a flat beige field devoid of visible hardware or tailoring darts. This minimalist construction invokes the concept of the body in crisis by offering a completely unrestrictive and egalitarian covering. The hem is split at the sides to allow maximum mobility for the legs. The garment asserts a brutalist simplicity that prioritizes the kinetic action of the wearer over decorative complexity."
           }
         ]
       },
@@ -2255,22 +2195,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
-          },
-          {
             "x": 50,
-            "y": 20,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
+            "y": 35,
+            "label": "Horizontal Torsional Strapping",
+            "description": "The horizontal torsional strapping wraps the dark brown tunic in multiple thick bands across the bust and midriff. This sartorial intervention applies theories of bodily discipline and restraint to an otherwise loose garment. The flat fabric belts compress the volume of the structured top against the ribcage. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
+          },
+          {
+            "x": 57,
+            "y": 88,
+            "label": "Monolithic Leather Sneaker Boot",
+            "description": "The monolithic leather sneaker boot anchors the dark look with a massive black padded exterior. This footwear utilizes architectural shielding to protect the ankle and instep completely. The stark white sole creates a harsh geometric baseline against the runway floor. This element completes the ensemble by enforcing a heavy and aggressive stride."
           }
         ]
       },
@@ -2279,21 +2213,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+            "y": 22,
+            "label": "Sculptural Cowl Neckline",
+            "description": "The sculptural cowl neckline pools heavy white fabric erratically around the collarbone. This volume engages with theories of suspended drape by allowing gravity and kinetic motion to dictate the garment's final shape. The thick textile stands slightly away from the throat to provide a rigid protective barrier. The construction asserts a defensive posture while maintaining an unyielding brutalist aesthetic."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+            "x": 70,
+            "y": 58,
+            "label": "Elongated Asymmetrical Tail",
+            "description": "The elongated asymmetrical tail drops sharply on one side of the tunic to brush against the calf. This uneven distribution of fabric invokes post-binary identity frameworks by dismantling symmetrical tailoring rules. The heavy white material swings outward violently with the model's step. The hemline completes the silhouette by introducing erratic spatial disruption to the lower half of the body."
           }
         ]
       },
@@ -2301,22 +2229,22 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-06.jpg",
         "hotspots": [
           {
+            "x": 41,
+            "y": 38,
+            "label": "Exposed Asymmetrical Zipper",
+            "description": "The exposed asymmetrical zipper slices diagonally across the dense black tunic from the collar to the lower hip. This functional hardware engages with the concept of industrial brutalism by highlighting a crude mechanical closure. The bright silver teeth stand out sharply against the matte black textile. The detail refuses hidden couture seaming to assert a harsh utilitarian pragmatism."
+          },
+          {
+            "x": 29,
+            "y": 50,
+            "label": "Gathered Drawstring Flank",
+            "description": "The gathered drawstring flank pulls the excess material of the tunic tightly against the outer thigh using thick hanging cords. This manipulation invokes theories of modular adaptability meant for bodies in active crisis. The resulting horizontal wrinkles create a dense textural armor over the hip bone. The garment completes its form by allowing the wearer to physically alter its spatial massing."
+          },
+          {
             "x": 50,
-            "y": 45,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+            "y": 6,
+            "label": "Utilitarian Fabric Headwrap",
+            "description": "The utilitarian fabric headwrap encases the skull completely in a dark tight-fitting textile. This accessory applies intersectional subcultural codes referencing durags and protective street gear. The black fabric eliminates the distraction of hair to force direct engagement with the model's intense gaze. The piece asserts a communal and defensive identity intrinsic to the nomadic urban tribe."
           }
         ]
       },
@@ -2324,22 +2252,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+            "y": 35,
+            "label": "Washed Leather Carapace",
+            "description": "The washed leather carapace coats the upper body in a highly textured and battered black hide. This material choice engages directly with subcultural origins by elevating punk and goth staple fabrics to the runway. The dull sheen of the treated skin catches the light unevenly across the bust and arms. The outerwear asserts a tough resilient shield designed for aggressive urban survival."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+            "x": 34,
+            "y": 56,
+            "label": "Trailing Side Lacings",
+            "description": "The trailing side lacings dangle loosely from the lower edge of the leather jacket down to the knee. This structural choice invokes the aesthetic of a body in crisis through the appearance of unraveling or unfinished bindings. The thin black cords whip violently through the air as the model stomps forward. The detail refuses clean finishing to complete the silhouette with a sense of frantic kinetic energy."
           }
         ]
       },
@@ -2348,21 +2270,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+            "y": 15,
+            "label": "Sheer Monastic Veil",
+            "description": "The sheer monastic veil drapes over the head and shoulders in a dark translucent fabric. This headwear engages with queer theory by subverting traditional religious or mournful iconography into a powerful subcultural statement. The fine mesh partially obscures the face while allowing the aggressive expression to remain visible. The accessory asserts a ghostly but imposing architectural volume around the skull."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
+            "x": 50,
+            "y": 40,
+            "label": "Layered Leather Plastron",
+            "description": "The layered leather plastron protects the chest with overlapping panels of matte black hide. This construction utilizes theories of architectural shielding by mimicking tactical body armor. The stiff material forms a flat impenetrable plane across the torso. The garment completes the dark uniform by enforcing a rigid and highly defended core."
           }
         ]
       },
@@ -2370,22 +2286,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
+            "x": 30,
+            "y": 54,
+            "label": "Clustered Spherical Embellishments",
+            "description": "The clustered spherical embellishments hang heavily from the asymmetric hemline in dense black orbs. This decorative intervention engages with post-binary identity by appending absurd exaggerated volumes to an otherwise austere militaristic tunic. The plush balls bounce violently against the thighs with every aggressive step. The detail refuses severe minimalism to assert a playful yet chaotic subversion of the brutalist silhouette."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+            "y": 12,
+            "label": "Aggressive Facial Choreography",
+            "description": "The aggressive facial choreography is manifested through bared teeth and a fiercely wrinkled snout. This performative action applies intersectional activism by dismantling the polite submissive facade traditionally expected of black women in high fashion spaces. The raw kinetic energy of the face matches the forceful stomping of the feet. This display completes the presentation by turning the body itself into a weaponized political statement."
           }
         ]
       },
@@ -2393,22 +2303,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-10.jpg",
         "hotspots": [
           {
+            "x": 67,
+            "y": 22,
+            "label": "Contrast Structural Sash",
+            "description": "The contrast structural sash cuts across the collarbone in a muted coral tone before draping over the left shoulder. This geometric insertion engages with theories of suspended drape by anchoring the heavy beige fabric with a single distinct visual line. The flat strap pulls the excess volume of the tunic upward. The element asserts a rare moment of color within the collection to highlight the asymmetrical tension of the garment."
+          },
+          {
             "x": 50,
-            "y": 70,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+            "y": 40,
+            "label": "Asymmetrical Suspended Drape Tunic",
+            "description": "The asymmetrical suspended drape tunic falls heavily across the torso in a sweeping diagonal mass. This application of monolithic massing obscures the natural waistline completely. The dense cotton folds upon itself to create a thick protective barrier. The garment refuses traditional bodily contouring to complete a silhouette defined entirely by gravity and motion."
           }
         ]
       },
@@ -2417,21 +2321,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Percussive Structural Reinforcement",
-            "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
-          },
-          {
-            "x": 60,
             "y": 30,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+            "label": "Wrapped Torso Carapace",
+            "description": "The wrapped torso carapace binds the upper body in tightly folded layers of muted khaki fabric. This structural logic utilizes architectural shielding to create a thick multi-dimensional defense over the vital organs. The diagonal seams pull the textile securely against the bust. The piece asserts a nomadic utilitarianism designed for immediate kinetic deployment."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Layered Asymmetrical Overskirt",
+            "description": "The layered asymmetrical overskirt sits heavily on the hips with an exposed horizontal zipper detail. This functional hardware engages with the concept of the body in crisis by suggesting modular utility and emergency storage. The thick fabric drops unevenly across the upper thighs. The garment completes the lower silhouette by providing a sturdy unrestrictive base for aggressive movement."
           }
         ]
       },
@@ -2439,22 +2337,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-12.jpg",
         "hotspots": [
           {
-            "x": 40,
+            "x": 45,
             "y": 30,
-            "label": "Volumetric Kinetic Shell",
-            "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+            "label": "Geometric Contrast Paneling",
+            "description": "The geometric contrast paneling intersects the dark grey tunic with stark white architectural blocks. This visual strategy engages with brutalist aesthetics by treating the body as a flat structural facade. The thick intersecting lines mimic structural scaffolding or warning signage. The design refuses organic fluidity to assert a harsh and highly calculated planar geometry."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Suspended Drop-Crotch Drape",
-            "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
-          },
-          {
-            "x": 60,
+            "x": 45,
             "y": 40,
-            "label": "Asymmetrical Tunic Paneling",
-            "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
+            "label": "Rigid Fabric Obi Belt",
+            "description": "The rigid fabric obi belt binds the midsection with layered white bands and a thick hanging strap. This sartorial intervention applies subcultural systems by hybridizing martial arts uniforms with urban streetwear. The stiff structure compresses the tunic securely against the natural waist. The accessory completes the silhouette by locking the monumental volumes into a strictly disciplined core."
           }
         ]
       },
@@ -2531,18 +2423,18 @@ export const archiveData = [
     "tags": {
       "brand": "Rick Owens",
       "era": "2010 to 2019; The Digital and Streetwear Pivot",
-      "politics": "Racial Identity & Representation",
-      "theories": "Subcultural Resistance Theory",
-      "gender": "Conceptual / Post-Binary Form",
-      "materials": "Bovine & Exotic Skins (Leather; Suede; Vachetta)",
+      "politics": "Activism & Crisis Response (Anti-Racism) | Body Politics & Corporeal Interventions | Queer Theory & Subcultural Systems | Surveillance & Architectural Shielding",
+      "theories": "Identity and Subjectivity | Intersectionality",
+      "gender": "Womenswear",
+      "materials": "Heavy/Untreated Fabrics (Washed Leather; Densely Woven Wools; Crisp Cottons)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "anatomy": "Suspended Drape",
-      "format": "Performance Art / Live Action"
+      "anatomy": "Monolithic Massing | Suspended Drape | Architectural Shielding and Armour",
+      "format": "Theatrical Stage Performance / Performance Art"
     },
     "notes": {
-      "critique": "This runway executes an aggressive rejection of the European fashion hierarchy. By replacing the passive, linear catwalk with syncopated step routines, Owens enforces a state of extreme kinetic state and movement[cite: 2]. The spectacle forces a severe institutional critique[cite: 2] of industry casting norms and the historical fetishisation of frailty. The performers operate with absolute bodily autonomy and transgression[cite: 2]; weaponising their physical presence to subvert the traditional, submissive gaze applied to womenswear[cite: 2].",
-      "strategy": "Owens executes a masterful exercise in press disruption by fundamentally changing the subject of the review. The communications strategy bypasses the commercial garment entirely; focusing instead on the sheer mechanical fluidity[cite: 2] of the collective body. By transmitting this aggressive, unapologetic visual rhetoric[cite: 2] to the media, the brand generated a viral shockwave that forced global editorial platforms to confront their own lack of diversity. The strategic brilliance lies in deploying raw performance as a corporate signalling[cite: 2] mechanism; proving that true avant-garde dominance requires structural risk.",
-      "provenance": "Rick Owens presented the Spring and Summer Ready to Wear collection Vicious in September 2013 within the Paris official schedule. Positioned during the Digital and Streetwear Pivot of the 2010s; the performance art format functioned as a profound dismantling of the traditional runway. The presentation operates as a clinical inquiry into kinetic energy and collective power by deploying step-dance teams to alter the spatial dynamics of the fashion calendar."
+      "provenance": "This entry refers to Rick Owens's Spring/Summer 2014 collection, officially titled \"Vicious\". Instead of casting traditional fashion models, Owens hired forty professional \"stepping\" dancers to present the garments. Stepping is a hybrid of step dancing, cheerleading, and military drill that originally evolved in African-American colleges.",
+      "strategy": "Brutalist Soul: Owens's structural strategy for his garments mirrors Brutalist architecture, utilizing a stark, almost monastic color palette of \"dust and bone\" alongside long, dramatic drapes. Monolithic Massing: His designs favor monumental, sculptural silhouettes built from heavy, often untreated fabrics like washed leather, crisp cottons, and densely woven wools. The garments function less like traditional clothing and more like a \"second skin for a nomadic tribe\". Architectural Shielding: By employing sweeping lines, exaggerated shoulders, and architectural cut-outs, Owens sculpts space with a powerful hand, turning the wearer into a \"walking monument of carefully considered forms and voids\". These heavy leather forms act as physical armor, offering protection and distance through their robust materiality. Visceral Wearability: Unlike avant-garde pieces that remain on a pedestal, Owens engineers his complex, Brutalist garments to be lived-in and walked-in, functioning as a daily uniform for the modern urbanite.",
+      "critique": "Combating Exclusion and Racism: The runway presentation of \"Vicious\" was a highly charged socio-political statement. By having forty dancers pound the runway with aggressive \"grit faces\" rather than traditional, passive pouting lips, the collection served as a direct critique of the culture of exclusion, elitism, and racism that is deeply prevalent in the fashion industry. Subcultural Roots and Post-Binary Identity: Owens's overarching political framework is deeply queer and rooted in the goth and punk subcultures of Los Angeles and Paris. He utilizes these subcultural origins to offer a post-binary vision of masculinity and femininity that is grounded in the reality of the \"body in crisis\". Redefining the Avant-Garde: By treating clothing as philosophy, Owens acts as an architect of a new fashion language. He establishes that garments can possess immense strength while simultaneously housing quiet vulnerability, transforming the \"unwearable\" into a visceral expression of human lifestyle and defiance."
     }
   },
   {
@@ -2558,21 +2450,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
+            "y": 35,
+            "label": "Sheer Red Stretch Bodice",
+            "description": "The sheer red stretch bodice clings tightly to the upper torso to fully expose the natural anatomy beneath; it contrasts sharply with the extreme artificial volumes positioned below. This material transparency engages with feminist ideology by confronting the viewer directly with the unedited female form; the thin synthetic mesh offers no structural support. The tight crew neckline and short sleeves mimic a basic t-shirt silhouette; this mundane upper formatting highlights the radical lower half. The top refuses conventional modesty protocols to assert the biological body as merely one layer within the overall sculptural composition."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
+            "x": 50,
+            "y": 50,
+            "label": "Toroidal Hip Protuberance",
+            "description": "The toroidal hip protuberance encircles the pelvis in a massive padded tube; it entirely obliterates the natural waistline to enforce a synthetic spatial boundary. This engineered distortion utilizes theories of the grotesque to challenge idealized Western beauty standards; the bright red fabric stretches tautly over the hidden internal batting. The heavy ring drops the visual center of gravity drastically downward; it stands entirely rigid regardless of the wearer's movement. The construction asserts an autonomous architectural presence that the human form is forced to inhabit."
           }
         ]
       },
@@ -2580,22 +2466,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
+            "y": 40,
+            "label": "Textured Asymmetrical Padded Jacket",
+            "description": "The textured asymmetrical padded jacket envelopes the upper body in a violently crinkled bright orange textile; it obscures the shoulders and arms within an oversized geometric mass. This tectonic craft engages with post-humanism by generating a silhouette completely divorced from mammalian anatomy; the stiff fabric holds its shape rigidly away from the torso. The irregular quilting creates a deeply tactile surface terrain; the oversized lapels fold heavily over the chest. The outerwear refuses somatic conformity to complete a purely alien morphology."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
+            "x": 51,
+            "y": 88,
+            "label": "Utilitarian Leather Ballet Flat",
+            "description": "The utilitarian leather ballet flat grounds the extreme upper volumes in a simple unadorned black silhouette; it anchors the foot without any elevating heel. This footwear strategy applies anti-fashion aesthetics to ensure the body remains firmly planted while bearing the weight of the structural distortions. The soft leather molds strictly to the natural shape of the foot; a simple string tie secures the bridge. The shoe refuses the hyper-feminine stiletto to assert a pragmatic and subverted posture."
           }
         ]
       },
@@ -2604,21 +2484,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
+            "y": 35,
+            "label": "Paneled Sheer Stretch Blouse",
+            "description": "The paneled sheer stretch blouse pieces together semi-translucent blocks of blue and yellow fabric; it clings directly to the torso to reveal the skin underneath. This structural logic engages with theories of body politics by rendering the chest hyper-visible against the looming padded collar. The fabric pulls tightly across the bust to highlight the tension between the synthetic stretch and the biological form; the uneven button placket runs askew down the stomach. The garment refuses traditional opaque tailoring to assert a fluid boundary between flesh and dress."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
+            "x": 50,
+            "y": 25,
+            "label": "Engineered Cervical Protuberance",
+            "description": "The engineered cervical protuberance swells outward from the nape of the neck to shroud the lower jaw; it creates an abnormal massing at the top of the spine. This internal padding utilizes the concept of the abject to render a familiar body part suddenly alien; the soft pastel fabric stretches smoothly over the hidden down insert. The bulge alters the natural posture of the model significantly; the fabric wraps tightly around the throat to secure the mass. The element completes the silhouette by challenging the hierarchical dominance of the head."
           }
         ]
       },
@@ -2627,21 +2501,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 60,
-            "y": 60,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
+            "y": 30,
+            "label": "Asymmetrical Shoulder Protuberance",
+            "description": "The asymmetrical shoulder protuberance erupts from the right clavicle to dwarf the neck and head; it violently displaces the bilateral symmetry of the human frame. This structural addition applies post-humanist theory to construct a chimeric anatomy; the tight printed fabric is forced to accommodate the massive underlying down pad. The fluid pastel graphics warp entirely around the curved mass; the fabric pulls tightly against the collarbone to support the heavy internal batting. The intervention refuses classical proportion to assert the body as a mutable and malleable site."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
+            "y": 60,
+            "label": "Abstract Stretch Tube Dress",
+            "description": "The abstract stretch tube dress maps a chaotic terrain of blue and orange forms across the torso and legs; it visually flattens the extreme three-dimensional lumps built into the silhouette. This textile application engages with psychedelic aesthetics to disorient the viewer's perception of depth and volume; the synthetic material clings to every dip and bulge tightly. The pattern stretches to near transparency over the widest points of the padding; the hem tapers inward to restrict the stride. The garment asserts a totalizing synthetic skin that traps the deformed anatomy within."
           }
         ]
       },
@@ -2650,21 +2518,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
+            "y": 35,
+            "label": "Textured Cropped Shrug",
+            "description": "The textured cropped shrug covers the upper chest in a deeply crinkled brown fabric; it truncates the torso severely just below the bust. This spatial division engages with theories of gender deconstruction by ignoring traditional zones of feminine emphasis; the stiff material forms an architectural box around the shoulders. The short sleeves flare slightly away from the arms; the front opening lacks any functional closures. The piece refuses fluid drape to assert a harsh and protective upper carapace."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
+            "x": 50,
+            "y": 65,
+            "label": "Volumetric Padded Balloon Skirt",
+            "description": "The volumetric padded balloon skirt swells outward from the high waist into a massive red sphere; it entirely swallows the lower half of the body. This displaced anatomy utilizes the grotesque to magnify the hips to absurd and non-functional proportions; the heavy synthetic batting forces the bright red fabric into a taut tension structure. The hem tapers sharply inward at the knee to exaggerate the central mass; the sheer volume requires significant physical effort to maneuver down the runway. The garment completes the silhouette by dominating the physical space around the wearer."
           }
         ]
       },
@@ -2673,21 +2535,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
+            "y": 35,
+            "label": "Contrast Opacity Stretch Bodice",
+            "description": "The contrast opacity stretch bodice merges a highly transparent central panel with densely knitted white cap sleeves; it acts as a bizarre second skin that selectively exposes the bust. This material strategy engages with feminist body politics by simultaneously revealing and concealing the biological form; the sheer mesh offers zero structural support. The opaque knit sleeves mimic traditional sportswear; the neckline sits high against the clavicle. The garment refuses unified coverage to assert a fragmented approach to modesty."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
+            "x": 50,
+            "y": 65,
+            "label": "Volumetric Padded Balloon Skirt",
+            "description": "The volumetric padded balloon skirt inflates dramatically below the natural waist to form an unyielding white globe; it obscures the hips and thighs entirely. This tectonic craft leverages theories of the abject to transform the lower body into an alien pod; the smooth white fabric is pulled drum-tight over the hidden internal scaffolding. The gathered hem forces the massive volume back inward; slight horizontal seams trace across the widest circumference of the sphere. The piece completes the angelic yet monstrous aesthetic of the ensemble."
           }
         ]
       },
@@ -2695,22 +2551,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
+            "y": 40,
+            "label": "Gingham Stretch Tube Dress",
+            "description": "The gingham stretch tube dress wraps the torso in a classic red and white domestic pattern; it forces a traditionally innocent print to stretch over monstrous underlying structures. This juxtaposition engages with the grotesque by corrupting the nostalgic signifiers of picnic blankets and domesticity; the squares warp violently over the right hip and abdomen. The tight fit highlights the extreme tension required to hold the padding in place; a high cowl neckline bunches loosely under the chin. The garment refuses traditional feminine silhouettes to assert a corrupted and mutant form."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
+            "x": 35,
+            "y": 45,
+            "label": "Lateral Pelvic Protuberance",
+            "description": "The lateral pelvic protuberance juts out aggressively from the right hip bone; it creates a massive hard-edged shelf that ruins the bilateral symmetry of the legs. This engineered distortion applies post-humanist theory to propose a radical evolutionary mutation; the gingham fabric stretches to its absolute limit across the apex of the bulge. The unnatural weight shifts the entire drape of the dress; the protrusion casts a dark shadow over the right thigh. The element completes the silhouette by demanding an abnormal amount of lateral space."
           }
         ]
       },
@@ -2719,21 +2569,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
+            "y": 25,
+            "label": "Gingham Funnel Neckline",
+            "description": "The gingham funnel neckline rises high to obscure the throat and jaw; it creates a rigid synthetic tube that isolates the head from the torso. This structural construction engages with theories of displacement by drawing focus upward away from the monstrous lower body; the black and white grid remains relatively undistorted here compared to the hips. The tight collar restricts the movement of the neck; the cap sleeves terminate bluntly at the shoulder joint. The detail asserts a clinical and suffocating closure to the upper silhouette."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
+            "x": 65,
+            "y": 55,
+            "label": "Lateral Pelvic Protuberance",
+            "description": "The lateral pelvic protuberance forces the left side of the dress to balloon outward in an immense asymmetrical mass; it mimics a grotesque biological swelling. This internal padding leverages feminist ideology to actively repel the male gaze through deliberate and shocking deformity; the black and white gingham pattern stretches chaotically over the dense synthetic down. The protrusion hangs heavy past the mid-thigh; the right side of the skirt falls flat to highlight the violent imbalance. The padding refuses somatic conformity to complete a deeply alien presence."
           }
         ]
       },
@@ -2741,22 +2585,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Asymmetrical Synthetic Mass",
-            "description": "The insertion of synthetic mass disrupts the culturally mandated hourglass silhouette; plunging the viewer into the realm of The Grotesque and Abject. This radical corporeal intervention challenges established norms of female desirability. The resulting tumors and lumps suggest a body in revolt against its own boundaries. It is a profound visualization of the physical manifestations of psychological trauma."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
+            "x": 50,
+            "y": 35,
+            "label": "Crinkled Sheer Organza Crop",
+            "description": "The crinkled sheer organza crop covers the chest in a bright red highly textured cloud; it floats away from the body rather than clinging to it. This material manipulation engages with the abject by resembling scorched or shriveled synthetic skin; the raw hemline exposes a sliver of the midriff beneath. The stiff fabric maintains its erratic volume through intense heat-pressing; the sleeves billow outward without internal padding. The garment asserts a fragile yet chaotic barrier over the upper anatomy."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
+            "y": 60,
+            "label": "Crinkled Paper-Textured Balloon Skirt",
+            "description": "The crinkled paper-textured balloon skirt inflates diagonally across the lower body; it utilizes a stiff beige textile that mimics packing material or raw parchment. This tectonic craft invokes post-humanism by transforming the human base into an industrial parcel; the irregular shape droops heavily toward the left knee. The sharp creases catch the runway light to emphasize the stiff unyielding volume; the waistband is finished with a stark white binding. The skirt refuses fluid movement to assert a harsh and noisy physical presence."
           }
         ]
       },
@@ -2765,60 +2603,107 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Banal Gingham Signifier",
-            "description": "The use of domestic; banal gingham anchors the grotesque structural distortions in everyday reality; manipulating Structuralism and Sign Systems. The contrast between familiar pattern and alien form amplifies the psychological tension of the garment. The gingham domesticates the monster; rendering the horrifying intimate and approachable. It is a masterful manipulation of semiotic dissonance."
+            "y": 35,
+            "label": "Crinkled Sheer Organza Bodice",
+            "description": "The crinkled sheer organza bodice warps a translucent purple fabric into an intricate three-dimensional terrain; it obscures the bust behind stiff floral-like clusters. This surface topography applies theories of the grotesque to organic motifs by rendering them alien and synthetic; the dark mesh reveals flashes of pale skin through its chaotic folds. The material is bunched and tacked to create permanent artificial volume; the long sleeves end in slightly flared ruffled cuffs. The top asserts an erratic and unruly upper silhouette."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Distorted Lumbar Protrusion",
-            "description": "The engineered swelling at the lower back forces an unnatural posture that mimics spinal deformity; challenging the parameters of Gender Deconstruction. This architectural load shifts the center of balance; requiring physical compensation from the wearer. The garment dictates movement; functioning as a soft orthopedic brace. It visualizes the unseen emotional burdens carried by the subject."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Stretched Biomorphic Membrane",
-            "description": "The tight elastic exterior strains against the internal padding; threatening to rupture; an exploration of Psychoanalytic Theory (Lacanian) regarding the contained self. This tension between containment and expansion creates a persistent anxiety within the silhouette. The membrane mimics stretched skin over swelling tissue; blurring the line between garment and anatomy. It is a study in the limits of structural and psychic containment."
+            "x": 50,
+            "y": 65,
+            "label": "Crinkled Paper-Textured Balloon Skirt",
+            "description": "The crinkled paper-textured balloon skirt expands into a massive beige teardrop shape; it anchors the look with an incredibly heavy and stiff lower volume. This displaced anatomy engages with the concept of independent garment entity; the skirt appears to engulf the model rather than being worn by her. The sharp crinkles in the fabric suggest a garment that has been crushed and re-inflated; the hem curves drastically upward in the front to expose the bare knees. The piece completes the ensemble by enforcing an extreme and restrictive spatial footprint."
           }
         ]
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-11.jpg",
-        "hotspots": []
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Textured Bouclé Crop Top",
+            "description": "The textured bouclé crop top covers the torso in a vibrant lime-green mass of tight synthetic loops; it creates a thick spongy barrier over the chest. This extreme tactility engages with post-humanist themes by mimicking moss or artificial turf growing directly upon the wearer; the sleeveless cut leaves the arms entirely bare and vulnerable against the heavy body. The thick fabric is bunched heavily at the front; the high neckline completely surrounds the clavicle. The garment refuses smooth luxury to assert a bizarre biomorphic texture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Crinkled Paper-Textured Balloon Skirt",
+            "description": "The crinkled paper-textured balloon skirt drops asymmetrically from the waist to form a stiff cavernous bell; it utilizes the signature crushed beige material of the collection. This structural logic utilizes feminist critique to obliterate the traditional waist-to-hip ratio; the massive skirt forces the viewer to confront an abstract geometric form rather than a human body. The hem arches high in the front and dips low in the back; the paper-like fabric holds deep permanent wrinkles throughout its surface. The skirt asserts the primacy of the garment's internal architecture over the wearer's anatomy."
+          }
+        ]
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-12.jpg",
-        "hotspots": []
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Sheer Layered Stretch Tunic",
+            "description": "The sheer layered stretch tunic pulls a fine lilac mesh tightly over a matching opaque underlayer; it features prominent erratic seam lines tracking across the bust. This tectonic craft engages with the concept of the body as a stitched-together entity; the visible raw seams look like surgical scars running across the synthetic skin. The high neckline hugs the throat severely; the sleeves are completely absent to emphasize the narrow upper torso. The garment refuses seamless elegance to assert a visibly engineered and slightly traumatic construction."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Bilateral Pelvic Protuberance",
+            "description": "The bilateral pelvic protuberance forces both hips to flare outward into massive shelf-like structures; it violently alters the lower silhouette into a brutal rectangular block. This engineered distortion applies theories of the grotesque to completely dismantle the biological reality of the pelvis; the fine lilac mesh stretches dangerously thin over the hard edges of the hidden down pads. The skirt drops straight down from the widest point of the padding; the underlying opaque layer ends abruptly mid-thigh beneath the sheer mesh overskirt. The element completes the look by trapping the body inside an uncompromising geometric box."
+          }
+        ]
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-13.jpg",
-        "hotspots": []
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Asymmetrical Torso Protuberance",
+            "description": "The asymmetrical torso protuberance twists a large mass of padded white fabric around the left shoulder and chest; it creates a heavy diagonal burden that the model must carry. This structural addition engages with post-humanist displacement by placing a massive tumor-like growth directly over the heart; the crisp white textile is ruched and gathered to contain the internal batting. The crisp white fabric mimics a straightjacket or hospital bedding; the diagonal folds pull tightly across the ribcage to secure the padding. The dress asserts a clinical yet deeply unsettling morphological shift."
+          }
+        ]
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-14.jpg",
-        "hotspots": []
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 28,
+            "label": "Asymmetrical Chest Protuberance",
+            "description": "The asymmetrical chest protuberance swells from the right pectoral into a large padded red mound; it visually consumes the neckline and collarbone. This internal padding utilizes feminist ideology to actively disfigure the traditional décolletage; the soft jersey fabric is pulled across the lump to create deep tension lines radiating outward. The high cowl neck is forced askew by the underlying mass; the left side of the torso remains completely flat in stark opposition to the bloated right side. The garment refuses sensual contouring to complete a silhouette defined by an intrusive autonomous growth."
+          }
+        ]
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-15.jpg",
-        "hotspots": []
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 20,
+            "label": "Engineered Cervical Protuberance",
+            "description": "The engineered cervical protuberance swells dramatically behind the neck beneath the collar of the red jacket; it forces the head forward into a permanent stoop. This displaced anatomy engages with the abject by mimicking severe spinal curvature or a parasitic attachment; the crisp red fabric covers the internal down pad seamlessly. The unbuttoned jacket splits open over the stomach but remains anchored to this massive dorsal hump; a singular black button sits dangerously strained at the sternum. The structure asserts a physical burden that dictates the entire posture of the wearer."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Sheer Asymmetrical Midi Skirt",
+            "description": "The sheer asymmetrical midi skirt drops below the heavy jacket in a light translucent red layer; it provides a stark textural contrast to the dense padding above. This material choice applies deconstructionist theory by pairing a seemingly unfinished delicate undergarment with the heavy structural outerwear; the raw hem trails unevenly around the calves. The fabric shifts fluidly with the model's stride; the transparency reveals the silhouette of the legs beneath the heavy upper carapace. The skirt completes the look by offering a brief moment of organic movement beneath the engineered distortion."
+          }
+        ]
       }
     ],
     "tags": {
-      "brand": "Comme des Garcons",
-      "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Body Politics & Corporeal Interventions",
-      "theories": "Bodily Autonomy and Transgression",
+      "brand": "Comme des Garçons | Rei Kawakubo",
+      "era": "1990–1999; The Deconstructionist Decade",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+      "theories": "Post-Humanism | The Grotesque and Abject | Feminist Ideology | Deconstruction",
       "gender": "Womenswear",
-      "materials": "Elastomeric Compounds (Lycra; Spandex; Stretch Blends)",
-      "geography": "Paris (Chambre Syndicale / RTW)",
-      "anatomy": "Displaced Anatomy and Padding",
-      "format": "Traditional Runway (The Linear Catwalk)"
+      "materials": "Down / Synthetic Batting",
+      "geography": "Paris",
+      "anatomy": "Radical Asymmetry | Displaced Anatomy | Structural Construction (Tectonic Craft)",
+      "format": "Traditional Runway"
     },
     "notes": {
-      "critique": "This runway executes a total rejection of traditional bodily proportions. By inserting asymmetrical, down-filled pads into elastomeric compounds (Lycra; Spandex; Stretch Blends)[cite: 2], Kawakubo enforces a state of radical asymmetry[cite: 2] and bodily obfuscation[cite: 2]. The spectacle forces a severe institutional critique[cite: 2] of how women's bodies are policed and commodified. The wearer exercises absolute bodily autonomy and transgression[cite: 2] by wearing parasitic distortions that challenge the viewer to redefine beauty outside of reproductive fitness and the male gaze.",
-      "strategy": "Kawakubo engineers a masterful exercise in press disruption by presenting garments that actively resist commercial styling. The communications strategy bypasses conventional merchandising entirely. By forcing the fashion media to publish images of severe displaced anatomy and padding[cite: 2], the house executes a profound disruption of the seasonal trend cycle. This calculated visual rhetoric[cite: 2] ensures the collection is not consumed as mere clothing but debated as contemporary art; permanently embedding the brand within high-level academic and global institutional archives.",
-      "provenance": "Comme des Garçons presented the Spring and Summer Ready to Wear collection Body Meets Dress, Dress Meets Body in October 1996 on the Paris catwalk. Developed during the Deconstructionist Decade; this traditional runway format operates as the absolute apex of morphological sabotage. The presentation functions as a clinical inquiry into the relationship between the garment and the human form; permanently severing Western fashion from the hourglass silhouette. \"Body Meets Dress, Dress Meets Body\" is Rei Kawakubo's most radical single statement — a collection that dismantled the relationship between garment and body so completely that it remains, nearly three decades later, the benchmark against which all conceptual fashion is measured. Vogue selected it as one of the 25 most unforgettable shows of the 1990s. The Metropolitan Museum of Art, the Museum of Modern Art, the Kyoto Costume Institute, and the National Gallery of Victoria all hold pieces from the collection. It is among the most sought-after and least available bodies of work in the secondary market for archival fashion. The show took place in silence. There was no music, no runway in the conventional sense. Guests sat in a square formation at the Musée national des Arts d'Afrique et d'Océanie in Paris, and the models walked through the enclosed space. The absence of spectacle was itself the spectacle — a refusal of the theatrical apparatus that every other designer of the period relied upon. Days earlier, in Milan, Tom Ford had sent Amazonian supermodels down the Gucci runway in nothing but logo-embellished thongs and an amber glow. In the same Paris season, John Galliano debuted at Dior and Alexander McQueen unveiled his first Givenchy collection. Kawakubo's padded gingham slips were a direct, devastating counterpoint. The collection's method was the insertion of kidney-shaped pillows — filled with goose down or polyurethane — into pockets sewn into the linings of garments. These pads distorted the body at the abdomen, the hips, the back, the shoulders: places that were sometimes conventionally sexualised (breasts, hips) and sometimes not (shoulder blades, the small of the back). The effect was to produce silhouettes that were recognisably human but uncategorisable — neither pregnant, nor deformed, nor corseted, nor padded in any way that historical precedent could easily absorb. The garments had pockets designed so that the padding could be repositioned or removed entirely, meaning the same dress could produce radically different silhouettes on different bodies or on different days. The clothes were not fixed propositions; they were systems for producing form. The fabrics were predominantly stretch nylon-urethane and stretch polyester, which clung to the padded forms and amplified the distortions. The dominant pattern was gingham — in pale pink, baby blue, navy, and beige — a fabric loaded with associations of domesticity, girlhood, and an almost infantilised femininity. The collision between the gingham's connotations of innocence and the grotesque bodily distortions it was stretched over was the collection's central semiotic tension. The collection also featured minimal use of Kawakubo's signature black, a deliberate departure that made the distortions more visible and more confrontational. The critical response was divided. The art press, style magazines, and newspaper critics largely praised the collection as a landmark challenge to ideals of beauty. The fashion glossies were more ambivalent: some photographed the pieces with the padding removed, effectively neutralising the collection's argument. Fashionistas and store clerks compared the pads to tumours. Suzy Menkes recalled feeling \"rather uncomfortable.\" Francesca Granata, writing in *Experimental Fashion*, later argued that the collection explored the relationship between \"the pregnant body, the female body and the disabled body — three types of bodies that deviate from the norm.\" Kawakubo herself was characteristically terse: \"After extensive searching and thinking out for new ideas, just before time ran out, I realised that the clothes could be the body and the body could be the clothes.\" She also stated: \"I didn't expect them to be easy garments to be worn everyday, but Comme des Garçons clothes should always be the new to the world and inspiring. It is more important, I think, to translate thought into action rather than to worry about if one's clothes are worn in the end.\" The collection's afterlife extended beyond the runway. In October 1997, the garments became costumes for *Scenario*, a collaboration between Kawakubo and choreographer Merce Cunningham at the Brooklyn Academy of Music. Cunningham's dancers performed against an all-white stage, lit with fluorescent lighting, to music by Takehisa Kosugi and Thurston Moore. The performance was structured in three movements, distinguished by changes in colour and pattern — gingham and striped blue/green, then all black, then all red — while the padding understructure remained constant. Cunningham noted that the costumes produced unexpected images when the body turned: \"If you saw the person from the front, you expect a certain familiar image. But when a person turns around, you see a totally different image.\" The CDG advertising imagery, shot by Kishin Shinoyama and art-directed by Tsuguya Inoue for Six magazine, juxtaposed the garments with photographs of seafood and crustaceans, suggesting genetic origins and evolutionary mutation. The collection is significant as the most compressed and uncompromising articulation of Kawakubo's central project: the refusal to accept the body as a limitation, and the insistence that clothing is not decoration applied to a fixed form but a means of producing new forms entirely. It is essential to any archive concerned with the body in fashion, the politics of beauty, feminist critique through design, and the relationship between fashion and performance."
+      "provenance": "This entry refers to Rei Kawakubo's seminal Spring/Summer 1997 collection for Comme des Garçons, officially titled \"Body Meets Dress, Dress Meets Body\". It was quickly dubbed the \"lumps and bumps\" or \"Bump\" collection by the fashion press due to its shocking, unprecedented silhouettes. This collection remains one of the most culturally significant moments in fashion history, frequently cited in museum exhibitions and academic discourse for its profound questioning of the traditional human silhouette.",
+      "strategy": "Displaced Anatomy & Internal Padding: Rather than using clothing to complement the body's natural lines, Kawakubo deliberately disfigured the traditional silhouette by engineering garments with strategically placed, asymmetrical internal padding made of down or synthetic batting. Engineered Protuberances: The garments featured precise, architectural additions that created bulbous, hard-edged protrusions. For instance, a dress might feature a bulge extending 25-30 centimeters from the hip, or an asymmetric hump positioned over the shoulder blade measuring 15 to 20 centimeters in height. Obliteration of the Waistline: The traditional waistline, which serves as the primary reference point for the human silhouette, was frequently obliterated entirely and replaced by a continuous, undulating surface. Tectonic Craft: The structural mastery of the collection lay in how the outer fabric was manipulated. The seams and darting, typically used to contour fabric to the body, were instead engineered to contain these engineered distortions, creating a taut, stretched surface pulled tightly over the internal sculptural forms.",
+      "critique": "Post-Humanism & The Grotesque: By challenging the notion of what a human body should look like, the collection is a definitive example of \"posthuman fashion\". The garments push the boundary between the human and non-human, utilizing grotesque, alien-like forms to decenter the idealized, classical body. Reclaiming Personal Space & Feminist Ideology: The collection functioned as a direct feminist critique of Western beauty ideals. By refusing to create clothing as a flattering accoutrement, Kawakubo reclaimed the body from the male gaze. The implicit message behind the engineered distortion was the feminist sentiment that women should be admired for their minds and intellect rather than their physical bodies. Clothing as an Autonomous Entity: \"Body Meets Dress, Dress Meets Body\" completely reversed the traditional relationship between wearer and garment. Rather than the clothing passively conforming to a preconceived biological shape, the lumps and bumps seemed to force the boundaries between the body and the dress, turning the garment into an independent sculptural entity that the body must react to and inhabit. Intellectual Disruption: The collection represents Kawakubo's mastery of intellectual disruption. By demonstrating that any departure from a crystallized standard of perfection should not be viewed as a flaw, she successfully dismantled the parameters prescribing what is considered \"high\" and \"low\" or \"beautiful\" and \"ugly\" in fashion."
     }
   },
   {
@@ -2834,21 +2719,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "y": 65,
+            "label": "Voluminous Parachute Taffeta Skirt",
+            "description": "The voluminous parachute taffeta skirt swells from the hip in deep erratic folds; it creates a massive bell-shaped silhouette reaching down to the floor. This structural logic engages with theories of architectural shielding by isolating the lower body within an impenetrable void. The dark lustrous textile catches the light randomly across its chaotic surface; a large structural bow sits awkwardly upon the hip to weigh down the drape. The garment asserts a protective and imposing spatial volume that actively contests the biological form."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
-          },
-          {
-            "x": 60,
+            "x": 50,
             "y": 30,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "label": "Asymmetrical Knitted Wrap",
+            "description": "The asymmetrical knitted wrap envelopes the torso and shoulders in a thick matte black textile; it obscures the bust and natural waistline entirely. This material application invokes the aesthetic philosophy of wabi-sabi by replacing pristine tailoring with a comforting but slightly disjointed drape. The heavy fabric falls heavily off the right shoulder while remaining securely wrapped around the neck. The piece completes the silhouette by introducing a heavy tactile armor over the upper body."
           }
         ]
       },
@@ -2856,22 +2735,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
+            "x": 50,
+            "y": 35,
+            "label": "Elongated Ribbed Knit Turtleneck",
+            "description": "The elongated ribbed knit turtleneck clings directly to the upper body before dropping below the hips; it functions as an extended synthetic skin rather than a traditional sweater. This material strategy engages with theories of kinetic state and movement by utilizing a highly elastic fabric that resists and delays the body's natural stride. The dark grey knit features slightly exaggerated sleeves that bunch around the wrists; the high collar completely obscures the throat. The garment asserts a fluid yet restrictive modesty."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
+            "y": 70,
+            "label": "Gathered Jersey Maxi Skirt",
+            "description": "The gathered jersey maxi skirt drops from the dropped waist of the turtleneck in hundreds of fine vertical pleats; it creates an immense sweeping bell shape. This volume utilizes suspended drape to generate kinetic energy; the heavy fabric swings outward significantly as the model walks. The dark grey textile matches the top precisely to create an unbroken monochromatic column; the hem drags slightly against the runway floor. The piece completes the \"delayed\" reaction aesthetic by forcing the wearer to drag the heavy cloth through space."
           }
         ]
       },
@@ -2880,21 +2753,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "y": 35,
+            "label": "Deconstructed Peplum Tailoring",
+            "description": "The deconstructed peplum tailoring breaks the classical tailored jacket into fragmented angular flaps across the midriff; it exposes the stomach beneath a dark wool shell. This structural intervention engages with theories of imperfect beauty by intentionally failing to close the garment seamlessly. The crisp black textile maintains rigid sharp lapels despite the chaotic lower edge; the sleeves end bluntly over the hands. The jacket refuses polished formality to assert a slightly damaged yet commanding posture."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "x": 50,
+            "y": 65,
+            "label": "Tapered Wool Midi Skirt",
+            "description": "The tapered wool midi skirt falls straight from the hips and narrows slightly at the ankle; it restricts the lower body into a severe black column. This simple format provides a static woven baseline that contrasts with the active kinetic pieces elsewhere in the collection. The dense fabric absorbs light completely; it lacks any visible pleating or functional slitting. The garment completes the severe uniform by enforcing a highly disciplined and abbreviated stride."
           }
         ]
       },
@@ -2902,22 +2769,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "x": 50,
+            "y": 35,
+            "label": "Asymmetrical Knitted Torso Wrap",
+            "description": "The asymmetrical knitted torso wrap entirely consumes the upper body and arms within a single massive tube of black fabric; it obliterates all natural contours of the shoulders and bust. This structural logic utilizes monolithic massing to transform the wearer into a solid geometric block. The heavy jersey creates deep irregular folds as it hangs under its own immense weight; the neckline droops loosely over the clavicle. The piece asserts clothing as armor by creating a thick tactile barrier against unwelcome eyes."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
+            "y": 75,
+            "label": "Exposed Wide-Leg Trousers",
+            "description": "The exposed wide-leg trousers peak out from beneath the massive hem of the knit wrap; they introduce a tailored woven element beneath the heavy drape. This layered construction applies the tension of mixing active stretch materials with static suiting. The dark grey fabric falls loosely over thick combat-style boots; a sharp crease runs down the center of the leg. The detail completes the silhouette by anchoring the abstract upper volume with grounded pragmatic tailoring."
           }
         ]
       },
@@ -2926,21 +2787,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 45,
+            "label": "Oversized Hand-Knit Carapace",
+            "description": "The oversized hand-knit carapace engulfs the model in a massive heavy-gauge white yarn; it completely swallows the arms and drops past the knees. This extreme accumulation of material engages with the aesthetic of \"loving-hands-made-at-home\" craft pushed to monumental proportions. The dense texture creates a protective cloud-like buffer; the sleeves bunch up massively at the elbows. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
+          },
+          {
+            "x": 50,
             "y": 70,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "label": "Shearling-Trimmed Tunic Layer",
+            "description": "The shearling-trimmed tunic layer drops beneath the knit coat in a straight column of off-white textile; it features a prominent vertical strip of fuzzy texture running down the center. This material integration mixes soft organic fibers with the heavy synthetic-looking knit. The fabric falls cleanly to the ankle; it lacks any shaping or waist definition. The garment completes the severe monochromatic look by adding a secondary layer of defensive insulation."
           }
         ]
       },
@@ -2949,21 +2804,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
+            "y": 20,
+            "label": "Hyper-Exaggerated Picture Hat",
+            "description": "The hyper-exaggerated picture hat dwarfs the skull with an immense wide brim made of stiff white fabric; it dominates the visual space around the head entirely. This structural extreme applies the theatrical surrealism noted in the collection's lookbook. The massive disc requires the model to physically balance its weight; the crown features a gathered ruched texture. The accessory asserts a dramatic historical reference pushed to an absurd architectural limit."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
+            "x": 50,
+            "y": 65,
+            "label": "Bamboo Cage Skirt Framework",
+            "description": "The bamboo cage skirt framework is worn entirely on the outside of the white gown; it utilizes literal solid wood scaffolding to build a 19th-century crinoline shape. This internal framework brought to the exterior engages directly with deconstructionist methodology. The long wooden canes radiate outward from the waist to hold the sheer outer fabric in a massive bell shape; the model's hands hover near the structure to manage its kinetic bounce. The structure refuses hidden support to assert the mechanical reality of extreme fashion silhouettes."
           }
         ]
       },
@@ -2971,22 +2820,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "x": 50,
+            "y": 45,
+            "label": "Elongated Ribbed Knit Tunic",
+            "description": "The elongated ribbed knit tunic stretches over the torso and drops past the knees; it functions as a dark heavy cylinder encasing the body. This material strategy engages with theories of kinetic state by applying dense elastic fabric that resists biological movement. The thick black ribbing provides a highly tactile vertical texture; the oversized sleeves are folded back upon themselves into massive chunky cuffs. The garment asserts a posture of strict modesty while physically weighing down the wearer."
           },
           {
             "x": 50,
             "y": 80,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "label": "Straight-Leg Tailored Trousers",
+            "description": "The straight-leg tailored trousers extend beneath the heavy knit tunic in a dark grey woven fabric; they present a stark contrast to the stretchy upper layer. This pairing invokes the collection's core strategy of mixing active knits with static historical tailoring. The pants drop cleanly to the ankle with a sharp front crease; they rest upon heavy practical footwear. The piece completes the severe defensive silhouette by fully covering the legs."
           }
         ]
       },
@@ -2995,21 +2838,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
+            "y": 30,
+            "label": "Deconstructed Wool Riding Jacket",
+            "description": "The deconstructed wool riding jacket features a classic brown tweed texture manipulated into a disjointed shape; it hangs open to reveal the knitwear beneath. This structural intervention engages with wabi-sabi by taking a historically formal 20th-century garment and presenting it in a state of subtle ruin. The stiff fabric curves away from the waistline; the button placket runs uselessly along the side seam. The outerwear refuses pristine closure to assert an aesthetic of relaxed imperfection."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
+            "x": 50,
+            "y": 55,
+            "label": "Horizontally Striped Knit Midi Skirt",
+            "description": "The horizontally striped knit midi skirt stretches tightly over the hips and drops into a heavy ribbed hem; it creates a textured cocoon around the lower body. This material application utilizes the \"delayed\" stretch reaction to force the wearer to drag the heavy cloth through space. The dark base color is shot through with thin erratic lines of gold and beige; the knit bunches slightly around the knees. The garment completes the look by adding heavy kinetic resistance to the stride."
           }
         ]
       },
@@ -3017,22 +2854,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
+            "x": 50,
+            "y": 28,
+            "label": "Oversized Faux-Fur Cowl",
+            "description": "The oversized faux-fur cowl wraps the neck and shoulders in a massive black textured ring; it creates a thick protective barrier around the head. This extreme accumulation of material engages with theories of architectural shielding and the romanticization of cold-weather survival gear. The dense black fibers absorb light to create a heavy visual void over the chest; it entirely obscures the natural slope of the shoulders. The accessory asserts a luxurious but highly defensive posture."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "y": 48,
+            "label": "Tiered Pinstripe Peplum Tunic",
+            "description": "The tiered pinstripe peplum tunic features a complex architectural structure built from stiff dark fabric; it drops into layered angular ruffles over the hips. This historical referencing applies 20th-century tailoring motifs to a modern elongated silhouette. The subtle vertical stripes contrast with the horizontal cuts of the peplum; the waist is cinched slightly to emphasize the flare below. The garment completes the severe look by injecting precise woven geometry beneath the chaotic fur."
           }
         ]
       },
@@ -3041,21 +2872,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 50,
+            "label": "Asymmetrical Ribbed Knit Cape",
+            "description": "The asymmetrical ribbed knit cape drapes diagonally across the body; it drops from the right shoulder down to the left calf in a massive heavy sweep of fabric. This structural logic utilizes monolithic massing to create a protective armor-like shell over the front of the body. The thick black ribbing stretches under its own weight; the wide lapels fold open slightly over the chest. The piece refuses balanced tailoring to assert a silhouette defined entirely by suspended gravity."
+          },
+          {
+            "x": 55,
             "y": 70,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
+            "label": "Wide-Leg Jersey Trousers",
+            "description": "The wide-leg jersey trousers drop softly from beneath the heavy cape in a smooth dark grey fabric; they allow the legs mobility against the restrictive knit above. This material choice engages with the kinetic tension between heavy outer layers and fluid undergarments. The fabric pools slightly around the ankle; the wide cut obscures the knee entirely. The trousers complete the look by anchoring the massive asymmetrical drape."
           }
         ]
       },
@@ -3064,21 +2889,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 15,
+            "label": "Wide-Brimmed Textured Hat",
+            "description": "The wide-brimmed textured hat features a flat rigid disk covered in a mottled grey and black fabric; it casts a severe shadow over the upper face. This accessory applies the theatrical surrealism noted in the lookbook by imposing an exaggerated horizontal plane atop the head. The stiff brim tilts slightly downward; the crown features a gathered ruched detail. The hat asserts a dramatic historical reference that functions as an immediate architectural shield for the eyes."
+          },
+          {
+            "x": 48,
             "y": 45,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "label": "Ruched Black Tube Dress",
+            "description": "The ruched black tube dress tightly binds the torso and hips in a dark opaque stretch fabric; it features diagonal tension lines wrapping around the body. This material strategy utilizes the \"delayed\" reaction of the knit to firmly contest biological movement by restricting the stride. The strapless neckline drops straight across the bust; the long black opera gloves integrate the arms into the dark silhouette. The garment asserts a sleek but highly restrictive monolithic form."
           }
         ]
       },
@@ -3086,22 +2905,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
+            "x": 50,
+            "y": 45,
+            "label": "Deconstructed Architectural Blazer",
+            "description": "The deconstructed architectural blazer features sharp classic lapels resting above a chaotic tiered and fragmented hemline; it breaks the traditional suit jacket into angular floating planes. This structural intervention engages with theories of imperfect beauty by intentionally destabilizing formal woven attire. The matte black fabric holds a rigid shape despite the drastic cutouts over the hips; the sleeves end sharply over the black gloves. The jacket refuses polished formality to assert a slightly damaged yet commanding posture."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
+            "y": 70,
+            "label": "Tapered Black Midi Skirt",
+            "description": "The tapered black midi skirt falls from the chaotic hem of the jacket into a strict and simple dark column; it truncates just below the knee. This simple format provides a static woven baseline that contrasts with the architectural action happening above. The dense fabric absorbs light completely to create a flat visual block; it lacks any visible pleating. The garment completes the severe uniform by enforcing a highly disciplined and abbreviated silhouette."
           }
         ]
       },
@@ -3110,21 +2923,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "y": 45,
+            "label": "Golden Faux-Fur Stole",
+            "description": "The golden faux-fur stole wraps the neck and drops heavily down the front of the body in two massive textured tails; it introduces a violent burst of bright color against the dark collection. This extreme accumulation of material engages with the aesthetic of \"loving-hands-made-at-home\" craft pushed to luxurious extremes. The long yellow and black fibers mimic animal pelt but clearly assert their synthetic origin; the model clutches the stole tightly to her chest. The accessory asserts a protective and imposing tactical barrier."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "x": 50,
+            "y": 65,
+            "label": "Ribbed Knit Midi Dress",
+            "description": "The ribbed knit midi dress hugs the lower body in a thick dark grey cylinder; it finishes in a bulky folded cuff just below the knee. This material application utilizes the \"delayed\" stretch reaction to force the wearer to drag the heavy cloth through space. The dark base color contrasts completely with the bright stole above; the tight knit bunches slightly around the thighs. The garment completes the look by adding heavy kinetic resistance to the stride."
           }
         ]
       },
@@ -3132,22 +2939,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Unfinished Seam Exposure",
-            "description": "The refusal to seal the seams exposes the temporal nature of the garment; invoking the spectre of Hauntology (Fisher). This deliberate imperfection acknowledges the inevitable degradation of material; opposing the static perfection of couture. The fraying threads serve as a memento mori for the textile. It embraces the ghostly presence of the garment's future dissolution."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "x": 50,
+            "y": 20,
+            "label": "Oversized Fuzzy Dome Hat",
+            "description": "The oversized fuzzy dome hat envelopes the skull in a massive bell-shaped structure of thick mustard-brown synthetic fibers; it drastically alters the proportions of the head. This accessory applies the theatrical surrealism noted in the lookbook by transforming the model into a bizarre organic-looking character. The dense texture resembles 1970s shag carpeting; the wide brim completely hides the ears and forehead. The piece asserts a playful but highly defensive architectural shield."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
+            "y": 55,
+            "label": "Striped Mohair Tunic",
+            "description": "The striped mohair tunic drops heavily from the shoulders in broad horizontal bands of orange, green, and blue; it creates a massive textured rectangle over the body. This material strategy engages with wabi-sabi through the use of a seemingly hand-knit domestic craft aesthetic. The fuzzy fibers blur the lines between the bold colors; the long sleeves drag past the hands. The garment refuses tailored structure to assert a cocoon-like armor of warmth and nostalgia."
           }
         ]
       },
@@ -3156,40 +2957,34 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Independent Spatial Volume",
-            "description": "The air trapped between the body and the fabric becomes an integral component of the design; a sartorial approach to Object-Oriented Ontology. This negative space allows the garment to shift and reconfigure autonomously during movement. The wearer is hidden within a nomadic architectural structure. It is a profound meditation on absence; presence; and the autonomy of the object."
+            "y": 45,
+            "label": "Oversized Hand-Knit Cardigan",
+            "description": "The oversized hand-knit cardigan hangs completely off the shoulders to trap the arms inside massive thick yellow sleeves; it functions as a heavy mobile blanket rather than a fitted sweater. This extreme accumulation of material engages with the aesthetic of domestic craft pushed to monumental proportions. The dense yarn creates a protective tactile buffer; the bright mustard color commands absolute visual attention against the stark runway. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Displaced Tailoring Axis",
-            "description": "The rotation of traditional tailoring seams disrupts the expected geometry of the garment; engaging in a profound Symbolic Exchange. Armholes drop to the waist; collars shift to the shoulder. This disorientation forces a re-evaluation of how clothing constructs identity. It dismantles the logic of the suit to rebuild it as abstract sculpture."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Asymmetrical Woolen Massing",
-            "description": "The massive manipulation of fabric ignores the underlying skeletal structure entirely; a direct application of Deconstructionist Logic (Derrida). The garment operates as an independent spatial entity that the body merely inhabits. This rejection of Western tailoring principles proposes a new relationship between flesh and cloth. The volume dismantles the binary between the body and the space it occupies."
+            "x": 50,
+            "y": 60,
+            "label": "Grey Ribbed Jersey Midi Dress",
+            "description": "The grey ribbed jersey midi dress drops softly beneath the heavy cardigan in a simple unadorned column; it provides a quiet monochromatic base for the extreme knitwear above. This material choice engages with the kinetic tension between heavy outer layers and fluid undergarments. The fabric falls cleanly past the knee; the neckline features subtle button hardware. The piece completes the silhouette by anchoring the massive asymmetrical drape of the yellow coat."
           }
         ]
       }
     ],
     "tags": {
       "brand": "Yohji Yamamoto",
-      "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Globalisation & Cultural Hybridity",
-      "theories": "Deconstructionist Logic (Derrida)",
-      "gender": "Conceptual / Post-Binary Form",
-      "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
+      "era": "1990–1999; The Deconstructionist Decade",
+      "politics": "Yohji Yamamoto",
+      "theories": "Aesthetic Philosophy (Wabi-sabi / Imperfect Beauty)",
+      "gender": "Womenswear",
+      "materials": "Knits (Handmade aesthetic) | Luxurious Jerseys | Woven Materials | Solid Wood (Bamboo/Canes)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "anatomy": "Monolithic Massing",
-      "format": "Traditional Runway (The Linear Catwalk)"
+      "anatomy": "Kinetic State and Movement | Suspended Drape | Scaffolding and Internal Frameworks",
+      "format": "Traditional Runway"
     },
     "notes": {
-      "critique": "This runway executes a masterful manipulation of spatial volume and nineteenth-century proportions. Yamamoto experiments with the delayed reaction of textiles against the human form; challenging normative movement. The spectacle forces a severe institutional critique[cite: 2] of historical womenswear through the finale gown. The wearer is enveloped in an immense bamboo cage strapped to the waist; executing a radical exercise in bodily autonomy and transgression[cite: 2] by demanding unprecedented spatial dominance over the audience.",
-      "strategy": "Yamamoto enforces a rigid visual rhetoric that rejects the rapid acceleration of the digital fashion era. The communications strategy focuses on the absolute physical presence of the textile; forcing the audience to wait as models navigate the stage in restrictive volumes. By transmitting these slow, deliberate movements to the press, the house asserts its dominance as a defender of artisanal craftsmanship; ensuring its position within the global institutional archive as a site of temporal resistance.",
-      "provenance": "Yohji Yamamoto presented the Autumn and Winter Ready to Wear collection in March 1998 within the Paris official schedule. Situated within the Deconstructionist Decade; the traditional runway format operates as a sublime exploration of physical stretch and delayed movement. The presentation functions as a clinical inquiry into structural volume; culminating in a finale that fundamentally weaponized the traditional bridal silhouette through the use of an immense bamboo cage."
+      "provenance": "This entry covers Yohji Yamamoto's Autumn/Winter 1998 collection, characterized as a relatively sporty runway presentation that merged 20th-century historical silhouettes with modern stretch fabrics. The season's accompanying lookbook was shot in a setting that was \"desolate yet refreshing,\" resembling a countryside farm juxtaposed with modern architectural objects. Through flamboyant modeling, the lookbook mirrored the surreal aesthetics of The Wizard of Oz and Alice in Wonderland. The runway famously featured supermodel Angela Lindvall leaping down the catwalk in a knit ball skirt and ribbed turtleneck, and culminated in a dramatic, hyper-exaggerated bridal finale.",
+      "strategy": "Kinetic State and \"Stretch\": The foundational structural logic of the AW1998 collection was an exploration of \"stretch\" and movement. Yamamoto heavily utilized knits—both of a \"loving-hands-made-at-home variety\" and luxurious fluid jerseys—to explore new draping possibilities, combining these active materials with more static woven fabrics. The \"Delayed\" Reaction: Yamamoto's primary mechanical strategy for this collection was to actively experiment with the \"delayed\" reaction of certain fabrics, engineering the garments to intentionally contest and resist the natural movements of the wearer's body. Historical Referencing (20th vs 19th Century): For the majority of the collection, Yamamoto referenced 20th-century silhouettes, engineering looks like pre-World War II cargo-pocket peplums. Scaffolding and The Caged Finale: For the show's finale, the structural strategy shifted abruptly to hyper-exaggerated 19th-century proportions. The bridal gown featured a massive cream skirt supported by a visible internal framework—a bamboo cage strapped around the waist with canes radiating outward—paired with a vast My Fair Lady picture hat and subversively grounded with heavy Doc Martens.",
+      "critique": "Kinetic Subversion: By deliberately engineering fabrics that possess a \"delayed\" reaction to contest biological movement, Yamamoto subverts the traditional Western expectation that clothing must seamlessly conform to the body. Instead, the garment asserts its own structural autonomy and weight, forcing the wearer to negotiate with the spatial environment it creates. The Art of Imperfection (Wabi-Sabi): This collection reflects Yamamoto's overarching aesthetic philosophy that \"perfection is ugly\". By incorporating raw finishes and exploring the natural contraction and aging of fabrics, he finds beauty in \"scars, failure, disorder, [and] distortion\". Clothing as Armor: Consistent with his broader oeuvre, the voluminous, untailored drapes in this collection function as a form of psychological and architectural shielding. Yamamoto treats clothing as a protective \"armor\" that guards the wearer's body from \"unwelcome eyes,\" establishing a safe, emotional distance between the individual and the outside world."
     }
   },
   {
@@ -3205,21 +3000,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "y": 40,
+            "label": "Trompe L'Oeil Bodice",
+            "description": "The trompe l'oeil bodice utilizes a printed mesh underlayer to simulate a heavily tattooed torso beneath a structured corset; it blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The corset features an 18th-century brocade pattern overlaid with heavy black lacing; it flattens rather than enhances the bust. The garment asserts a postmodern sensibility by layering historical restriction over simulated subcultural rebellion."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "x": 50,
+            "y": 65,
+            "label": "Draped Wool Culottes",
+            "description": "The draped wool culottes gather heavily at the waist and drop into a wide unstructured volume; they mimic the silhouette of a sarong or traditional dhoti. This structural logic relies on historical pastiche to introduce a fluid non-Western drape into the tailored ensemble. The dark brown fabric features an oversized knot sitting prominently below the corset; the wide legs hang loosely around the calves. The piece completes the \"Global Village Chic\" aesthetic by fusing an 18th-century jacket with a relaxed globalized lower half."
           }
         ]
       },
@@ -3227,22 +3016,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-02.jpg",
         "hotspots": [
           {
-            "x": 40,
+            "x": 50,
             "y": 30,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "label": "Classic Pinstripe Shirting",
+            "description": "The classic pinstripe shirting is tailored with severe traditional precision; it provides a crisp white foundation beneath the dark waistcoat. This garment choice engages with gender fluidity by placing a staple of masculine corporate wear directly onto a female body without altering its strict proportions. The collar is buttoned tightly to the throat; the cuffs extend bluntly past the wrists. The piece asserts a rigid formality that deliberately contrasts with the heavy facial jewelry and subcultural styling."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+            "y": 65,
+            "label": "Voluminous Wide-Leg Trousers",
+            "description": "The voluminous wide-leg trousers drop from the waist in a massive dark bell shape; they obscure the legs entirely beneath heavy flowing fabric. This structural extreme applies historical pastiche by mimicking the sweeping volume of a 19th-century skirt while maintaining a bifurcated trouser format. The dark textile absorbs light completely to create a flat monumental base; the hem sweeps dangerously close to the runway floor. The garment completes the androgynous silhouette by blurring the visual boundaries between a skirt and a suit pant."
           }
         ]
       },
@@ -3251,21 +3034,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "y": 30,
+            "label": "Layered Tailored Outerwear",
+            "description": "The layered tailored outerwear stacks a severe dark pinstripe blazer over a cropped denim waistcoat and a classic button-down shirt; it constructs a dense architectural upper body. This material strategy engages with postmodern pastiche by forcing contradictory masculine archetypes—the corporate banker, the blue-collar worker, and the formal gentleman—to occupy the same physical space. The blazer hangs open to reveal the intricate layering; the denim vest sits tightly against the torso. The ensemble asserts a complex and highly constructed approach to gender fluidity."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "x": 50,
+            "y": 65,
+            "label": "Deconstructed Denim Kilt",
+            "description": "The deconstructed denim kilt wraps the lower body in a heavily pleated blue jean fabric; it features raw violently frayed edges running vertically down the thigh. This structural intervention utilizes subcultural systems to subvert traditional menswear by putting a male model in a skirt format associated with punk rebellion. The thick denim holds rigid knife pleats; a massive oversized safety pin dangles functionally from the frayed opening. The garment refuses orthodox beauty standards to assert a rugged and aggressive androgyny."
           }
         ]
       },
@@ -3273,22 +3050,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "x": 50,
+            "y": 30,
+            "label": "Draped Jersey Tunic",
+            "description": "The draped jersey tunic hangs loosely over the torso in a solid black stretch fabric; it obscures the bust and waistline behind a soft unstructured volume. This simple format provides a quiet baseline that highlights the extreme facial styling and heavy metallic jewelry. The neckline drops softly over the collarbone; the long sleeves are pushed up roughly above the elbows. The garment asserts a relaxed almost monastic simplicity amidst the dense globalized pastiche of the collection."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "y": 65,
+            "label": "Asymmetrical Knotted Overskirt",
+            "description": "The asymmetrical knotted overskirt wraps tightly around the hips and ties into a massive heavy lump at the center axis; it creates a chaotic disruption of the lower silhouette. This material application relies on the illusion of a hastily tied sarong to introduce a fluid non-Western drape into the dark ensemble. The black fabric bunches heavily beneath the knot; the hem drops unevenly over opaque black tights. The piece completes the \"Global Village Chic\" aesthetic by prioritizing informal draping over severe tailoring."
           }
         ]
       },
@@ -3297,21 +3068,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "y": 35,
+            "label": "Flattened Pearl-Trimmed Corset",
+            "description": "The flattened pearl-trimmed corset binds the midriff tightly with exposed boning and delicate pearl embellishments; it restricts the natural curve of the waist while deliberately flattening the bust. This sartorial restriction applies gender deconstruction by utilizing a historically hyper-feminine undergarment to create a more androgynous tubular torso. The vertical stripes of pearls follow the rigid internal framework; it sits over the draped fabric of the skirt rather than beneath it. The garment refuses soft contouring to assert a severe structural boundary."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "x": 50,
+            "y": 65,
+            "label": "Liquid Satin Sarong Skirt",
+            "description": "The liquid satin sarong skirt gathers into a massive reflective knot just below the corset; it drapes heavily over the legs in a highly lustrous bronze textile. This structural logic utilizes historical pastiche to mimic traditional Southeast Asian draping techniques using high-end Parisian luxury fabrics. The high-shine material highlights the deep fluid folds radiating from the central knot; the asymmetrical hem exposes the lower calves. The piece completes the globalized collage by anchoring the rigid corset with a chaotic and fluid lower volume."
           }
         ]
       },
@@ -3320,21 +3085,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "y": 35,
+            "label": "Open-Front Corseted Blouse",
+            "description": "The open-front corseted blouse clings tightly to the upper body in crisp white cotton before splitting open across the stomach; it features subtle corsetry hook-and-eye closures running down the center. This material manipulation engages with the subversion of orthodox beauty by exposing the simulated tattooed skin beneath. The high collar and long sleeves mimic a traditional button-down; the tight fit emphasizes the bust before violently cutting away. The garment asserts a rigid formal shell deliberately fractured to reveal a subcultural underlayer."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+            "x": 50,
+            "y": 65,
+            "label": "Reconstructed Dual-Wash Denim Trousers",
+            "description": "The reconstructed dual-wash denim trousers fuse two completely different washes of blue jeans into a single wide-leg garment; they drop heavily from a low unfastened waistband. This tectonic craft utilizes deconstruction to visually slice the lower body in half. The front panel features a classic faded blue denim completely unbuttoned to reveal white undergarments; the back and side panels transition into a stark white textile. The piece refuses cohesive tailoring to complete a silhouette defined by extreme collage."
           }
         ]
       },
@@ -3342,22 +3101,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "x": 50,
+            "y": 35,
+            "label": "Rigid 18th-Century Frock Coat",
+            "description": "The rigid 18th-century frock coat structures the upper body with a long flared silhouette and a high collar; it features an excessive row of large self-fabric buttons running down the center seam. This garment engages with historical pastiche by translating the formal menswear of the French court into a stark modern textile. The stiff lavender fabric stands away from the hips; the sleeves end in massive folded red cuffs that swallow the hands. The coat asserts a theatrical and heavily structured armor that dominates the upper silhouette."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "y": 65,
+            "label": "Printed Trompe L'Oeil Leggings",
+            "description": "The printed trompe l'oeil leggings tightly encase the legs in a light fabric covered in chaotic red and blue graphic motifs; they create the deliberate illusion of heavily tattooed skin. This material strategy utilizes body politics to merge the garment entirely with the biological form. The tight fit highlights the musculature of the legs beneath the long stiff coat; the graphics mimic urban graffiti and traditional ink. The garment completes the postmodern collage by pairing rigid historical tailoring with simulated subcultural body modification."
           }
         ]
       },
@@ -3366,21 +3119,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+            "y": 30,
+            "label": "Minimalist White Tailoring",
+            "description": "The minimalist white tailoring structures the upper body with a clean unadorned jacket; it hangs open to expose the bare midriff entirely. This simple format engages with the subversion of orthodox beauty by providing a stark clinical frame around the heavy subcultural styling and facial piercings. The crisp white fabric features a simple single-button closure left undone; the sleeves end cleanly at the wrist without cuffs. The garment refuses complex detailing to assert a quiet backdrop for the chaotic lower volume."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "x": 50,
+            "y": 65,
+            "label": "Patchwork Denim Crinoline Skirt",
+            "description": "The patchwork denim crinoline skirt explodes outward from the waist in a massive structured dome; it stitches together dozens of different denim scraps into a highly textured volume. This structural extreme applies historical pastiche by taking the monumental bell shape of a 19th-century ballgown and rendering it in heavy blue-collar fabric. The visible seams between the patches highlight the complex internal scaffolding required to hold the shape; the model lifts the heavy hem to walk. The piece completes the globalized collage by fusing royal proportions with worker's textiles."
           }
         ]
       },
@@ -3388,22 +3135,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "x": 50,
+            "y": 35,
+            "label": "Satin Frock Coat Vest",
+            "description": "The satin frock coat vest drops heavily to the knee in a highly reflective mauve textile; it features an excessive row of buttons and stiff tailored pockets. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its long vertical panels; it hangs open to reveal a heavily printed underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "y": 55,
+            "label": "Printed Silk Sarong",
+            "description": "The printed silk sarong gathers loosely at the waist and drops into fluid sheer layers over the legs; it features delicate floral motifs in muted pastel tones. This material application relies on the illusion of a hastily tied wrap to introduce a non-Western drape into the tailored ensemble. The sheer fabric reveals the opaque metallic leggings beneath; the massive knot sits prominently below the waistline. The piece completes the \"Global Village Chic\" aesthetic by fusing rigid European outerwear with relaxed globalized draping."
           }
         ]
       },
@@ -3412,21 +3153,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "y": 35,
+            "label": "Trompe L'Oeil Bodice",
+            "description": "The trompe l'oeil bodice utilizes a printed second-skin mesh to simulate a heavily tattooed torso beneath a structured white coat; it completely blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The mesh features dense brown and red motifs mimicking bloody or scarred skin; it clings tightly to the bust without any structural support. The garment asserts a postmodern sensibility by forcing the viewer to question what is flesh and what is fabric."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+            "x": 55,
+            "y": 80,
+            "label": "Metallic Knee Armor",
+            "description": "The metallic knee armor clamps over the left leg in a rigid segmented metal shell; it introduces literal protective hardware into the fluid ensemble. This structural intervention utilizes scaffolding and internal frameworks to reference the armored figure of Joan of Arc. The shiny silver metal is strapped tightly around the thigh and calf; it features articulated joints to allow movement. The accessory refuses delicate feminine styling to complete a silhouette defined by heavy militant aggression."
           }
         ]
       },
@@ -3435,21 +3170,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-          },
-          {
-            "x": 60,
             "y": 30,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "label": "Trompe L'Oeil Crop Top",
+            "description": "The trompe l'oeil crop top utilizes a sheer stretch mesh printed with dense blue and red motifs to simulate a heavily tattooed chest and arms; it clings tightly to the body like a synthetic second skin. This material strategy engages directly with body politics by forcing the high-fashion consumer to confront subcultural body modification. The tight fit highlights the natural anatomy beneath the print; the hem truncates sharply above the navel to expose a matching tattoo on the stomach. The garment asserts a radical subversion of traditional polished beauty standards."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Printed Low-Slung Trousers",
+            "description": "The printed low-slung trousers drop dangerously far below the hip bones to expose the abdomen entirely; they feature a chaotic mix of denim textures and heavy graphic prints. This structural logic relies on subcultural systems to mimic the sagging oversized silhouettes of 1990s streetwear. The fabric bunches heavily around the waist with a makeshift tied belt; the wide legs drag over the footwear. The piece completes the ensemble by grounding the simulated tattoos in an aggressive and highly relaxed urban silhouette."
           }
         ]
       },
@@ -3457,22 +3186,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+            "x": 50,
+            "y": 45,
+            "label": "Pinstripe Draped Tunic",
+            "description": "The pinstripe draped tunic wraps the torso in a dark tailored fabric that falls open beneath the bust; it twists a classic corporate textile into a fluid unstructured shape. This material manipulation engages with gender deconstruction by warping a symbol of masculine power dressing into a soft draped garment. The thin white stripes curve chaotically over the chest; the massive knot at the sternum drops into long trailing panels. The piece asserts a postmodern pastiche by entirely destroying the intended function of the suiting fabric."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+            "y": 65,
+            "label": "Trompe L'Oeil Patchwork Leggings",
+            "description": "The trompe l'oeil patchwork leggings tightly encase the legs in a mesh printed with snippets of international currency and chaotic motifs; they create the deliberate illusion of a heavily tattooed lower body. This material application utilizes the concept of \"Global Village Chic\" to literally wrap the body in globalized financial iconography. The tight fit highlights the musculature of the legs beneath the dark tunic; the colors clash violently with the pinstripe fabric above. The garment completes the silhouette by merging flesh and graphic design completely."
           }
         ]
       },
@@ -3481,21 +3204,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "y": 35,
+            "label": "Trompe L'Oeil Currency Bodice",
+            "description": "The trompe l'oeil currency bodice utilizes a sheer second-skin mesh printed with oversized snippets of international banknotes; it simulates a torso completely covered in financial iconography. This material strategy engages with the commodification of pluralism by literally transforming global currency into a wearable tattoo illusion. The dark brown and beige prints stretch tightly over the bust; the long sleeves extend the tattoo effect down to the wrists. The garment asserts a highly cynical postmodern irony regarding the commercialization of subcultural aesthetics."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "x": 50,
+            "y": 65,
+            "label": "Patchwork Graphic Culottes",
+            "description": "The patchwork graphic culottes gather heavily at the waist and drop into wide unstructured legs; they stitch together dozens of contrasting graphic prints and denim scraps. This structural extreme applies historical pastiche by mimicking the volume of a traditional dhoti using heavy Western workwear fabrics. The dense collage of patterns includes flags crests and geometric shapes; the thick material hangs heavily around the calves. The piece completes the silhouette by enforcing an aesthetic of extreme globalized clutter."
           }
         ]
       },
@@ -3503,22 +3220,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Neo-Tribal Piercing Hardware",
-            "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "x": 50,
+            "y": 35,
+            "label": "Trompe L'Oeil Bodice",
+            "description": "The trompe l'oeil bodice utilizes a printed mesh underlayer to simulate a heavily tattooed torso beneath a dark velvet cropped jacket; it blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The dense red and brown motifs mimic bruised or bloody skin; the jacket hangs open to ensure the illusion is fully visible. The garment asserts a postmodern sensibility by layering rich historical textiles over simulated subcultural rebellion."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+            "y": 65,
+            "label": "Printed Sarong Skirt",
+            "description": "The printed sarong skirt wraps the hips in a fluid fabric covered in a chaotic mix of checkered grids and classical motifs; it drops heavily into an asymmetrical hem. This structural logic utilizes historical pastiche to introduce a non-Western drape into the tailored ensemble. The massive knot sits prominently below the waistline; the fabric features an intricate collage of dark blue white and gold patterns. The piece completes the globalized collage by anchoring the rigid jacket with a chaotic and fluid lower volume."
           }
         ]
       },
@@ -3527,21 +3238,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Deconstructed Corsetry Framework",
-            "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+            "y": 35,
+            "label": "Trompe L'Oeil Mesh Sleeves",
+            "description": "The trompe l'oeil mesh sleeves emerge from beneath the heavy red tunic to cover the arms in simulated dark tattoos; they cling tightly to the skin to complete the body illusion. This material strategy engages directly with body politics by forcing the high-fashion consumer to confront subcultural body modification. The sheer fabric stretches over the biceps and forearms; the dark blue and black motifs mimic traditional ink. The detail asserts a radical subversion of traditional polished beauty standards by suggesting the model is heavily modified underneath the formal wear."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Cultural Hybridity Layering",
-            "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-          },
-          {
-            "x": 40,
+            "x": 50,
             "y": 55,
-            "label": "Trompe-l-Oeil Mesh Epidermis",
-            "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+            "label": "Draped Asymmetrical Tunic",
+            "description": "The draped asymmetrical tunic wraps the torso and legs in a heavy dark red fabric; it features a massive knot sitting prominently on the left thigh. This structural intervention utilizes historical pastiche to mimic the silhouette of a tied sarong using thick tailored cloth. The fabric pulls tightly across the hips before falling into a long dragging panel; the subtle grid pattern on the fabric adds a layer of formal suiting texture. The piece completes the \"Global Village Chic\" aesthetic by fusing rigid European textiles with relaxed globalized draping."
           }
         ]
       },
@@ -3552,19 +3257,19 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Jean Paul Gaultier",
-      "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Queer Theory & Subcultural Systems",
-      "theories": "Queer Performativity (Butler)",
-      "gender": "Conceptual / Post-Binary Form",
-      "materials": "Fine Precious Metallics (Gold; Silver; Copper Thread)",
+      "era": "1990–1999; The Deconstructionist Decade",
+      "politics": "Globalization & Cultural Hybridity | Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+      "theories": "Postmodernism | Cultural Appropriation vs. Pluralism (Global Village Chic) | Identity and Subjectivity",
+      "gender": "Womenswear & Menswear (Gender Fluidity)",
+      "materials": "Second-Skin Mesh / Sheer Tulle | Denim | 18th-Century Brocade | Chainmail & Metal | Found Objects (Piercings, Heavy Jewelry)",
       "geography": "Paris (Chambre Syndicale / RTW)",
-      "anatomy": "Topographic Layering",
-      "format": "Traditional Runway (The Linear Catwalk)"
+      "anatomy": "Trompe l'Oeil (Body Illusion) | Historical Pastiche | Sartorial Restriction (Flattened Corsets) | Scaffolding and Internal Frameworks (Armor)",
+      "format": "Traditional Runway"
     },
     "notes": {
-      "critique": "This runway executes a total collapse of geographical and historical borders. By synthesising tribal body art with traditional French tailoring, Gaultier enforces a narrative of extreme cultural hybridity[cite: 2]. The spectacle forces a severe institutional critique[cite: 2] of European sartorial purity. The casting relies heavily on street scouting; allowing the wearers to exercise absolute bodily autonomy and transgression[cite: 2] by displaying genuine physical modifications that actively subvert the sterile perfection traditionally demanded by the haute bourgeoisie.",
-      "strategy": "Gaultier engineers a highly effective exercise in press disruption by aggressively integrating marginalised street cultures into the apex of the luxury calendar. The communications strategy bypasses traditional aristocratic signalling; opting instead to weaponise shock value[cite: 2] through the hyper-visibility of tattoos; piercings; and fluid casting. This calculated visual rhetoric[cite: 2] ensures maximum media saturation; cementing the house as a pioneer of radical inclusivity and forcing global editorial platforms to document aesthetics previously deemed unacceptable for high-fashion syndication.",
-      "provenance": "Jean Paul Gaultier presented the Spring and Summer Ready to Wear collection Les Tatouages in October 1993 on the Paris linear catwalk. Occurring during the Deconstructionist Decade; the presentation operates as a seminal document of globalized subculture. The work functions as a clinical inquiry into non-Western body modification; merging underground piercing and tattoo iconography with eighteenth century corsetry to forge a unified; pan-cultural aesthetic. \"Les Tatouages\" is widely regarded as Jean Paul Gaultier's defining collection — the crystallisation of every obsession that had animated his career to that point — and was selected by Vogue as one of the 25 most unforgettable shows of the 1990s. Presented in the Galerie Vivienne, a grand 19th-century Parisian arcade that also housed Gaultier's flagship store, the show comprised nearly 100 looks and unfolded in an atmosphere thick with incense and drifting, mystical music. The collection was a maximalist counterpoint to the monochrome severity of the preceding season's \"Chic Rabbis.\" Where AW 1993 had drawn from a single religious visual system and worked in tonal restraint, SS 1994 exploded outward in every direction: Indian mysticism, 18th-century silhouettes, 13th-century martyrdom, haute couture construction, punk, fetish wear, denim workwear, and — at its core — the tattooed and adorned body as both canvas and garment. Gaultier's method was a picaresque collage of time and place, fusing disparate cultural sign systems into looks that could not be reduced to any single source. The collection's central conceit was the confusion between skin and fabric. Gaultier had been attending tattoo conventions and had encountered the transgressive work of Los Angeles–based performance artist Ron Athey. He spoke of seeing an older woman in a sheer blouse whose bra turned out to be a tattoo — a moment of perceptual slippage that became the leitmotif of the collection. Trompe l'oeil tattoo prints on second-skin mesh created the illusion of inked bodies; actual tattoos on models blurred the line further. Designs were also stencilled directly onto the models' skin. The tattoo-currency motif — intricate prints replicating the patterns of European banknotes — echoed a technique Martin Margiela, Gaultier's former protégé, had pioneered in his debut collection of 1989. The casting was as radical as the clothes. Gaultier placed the definitive supermodels of the era — Naomi Campbell, Christy Turlington, Nadja Auermann, Yasmeen Ghauri, Tatjana Patitz, Kirsten Owen — alongside individuals drawn from his personal orbit and from the street: Rossy de Palma (the Almodóvar favourite), Ève Salvail (with her shaved head and dragon tattoo), Jenny Shimizu, Stella Tennant (in one of her first Paris appearances, rendered almost unrecognisable), Vladimir McCrary, Tanel Bedrossiantz (who would become Gaultier's male muse for over two decades), and Laetitia Casta. Men walked in skirts and sarongs. The spectrum of race, gender, age, and body type on display was instinctive but deliberate — a statement about the \"global village\" street culture of Paris that Gaultier cited as his primary inspiration. The finale remains one of the most iconic sequences in fashion show history: shimmering saints in heavenly crowns, followed by models with one arm sheathed in medieval armour, evoking Joan of Arc — the most iconic French saint — in a fusion of chainmail replicated in silver sequins, fine metallic knitwear, loops of metal, and actual armour panels worn over deconstructed corset dresses. The collection is significant on multiple levels: as the apotheosis of Gaultier's postmodern semiotic method; as a landmark in the representation of diversity on a high-fashion runway; as a document of early-1990s cross-cultural aesthetics and their attendant tensions around appropriation; and as the origin point for the tattoo-print mesh garment — a piece that has become one of the most recognisable and widely imitated fashion archetypes of the past three decades. It is essential to any archive concerned with the intersection of fashion, the body, subcultural identity, and the politics of representation."
+      "provenance": "This entry refers to Jean Paul Gaultier's seminal Spring/Summer 1994 ready-to-wear show, officially titled \"Les Tatouages\" (Tattoos). The collection was heavily inspired by Gaultier's fascination with body art and his attendance at tattoo conventions, as well as his discovery of the transgressive Los Angeles performance artist Ron Athey. Gaultier was also inspired after seeing an older woman wearing a sheer blouse over what he thought was a bra, only to realize her \"bra\" and pierced nipples were actually a trompe l'oeil tattoo. The fashion press widely celebrated the show as a \"startling vision of cross-cultural harmony,\" with Vogue famously dubbing it \"Global Village Chic.\"",
+      "strategy": "Trompe L'Oeil & Body Illusion: The core structural strategy of \"Les Tatouages\" relied on garments constructed from signature second-skin mesh and sheer stretch tulle. These pieces were printed with dense, layered motifs—ranging from tribal tattoos and intricate Indian henna patterns to snippets of international banknotes and Eastern European currency—creating the deliberate illusion of tattooed skin. Historical Pastiche & Collage: Reflecting the globalized collage of the Parisian streets, Gaultier melded 18th-century court silhouettes (like brocade frock coats and waistcoats) with heavy, patchworked denim, printed kilts, sarongs, and fetishwear. Armor & Chainmail: Fusing the masculine and the feminine, the show's finale heavily referenced the armored figure of Joan of Arc. Gaultier utilized slices of chainmail recreated in silver sequins, metallic knitwear, and actual physical panels taken from suits of armor, which were layered over deconstructed medieval gowns and flattened corsets.",
+      "critique": "The Postmodern Sensibility: The collection serves as a perfect example of postmodern fashion, playfully asserting the idea that \"nothing is original\" by dismantling and rebuilding how men and women dress. By surrendering cognitive command of the past, Gaultier seamlessly wove together elements of Eastern mysticism, punk rebellion, and classical French history. Commodification of Pluralism vs. Cultural Appropriation: While praised at the time for its multiculturalism, critical theory notes that the collection exemplifies the \"commodification of pluralism\". By uprooting deeply meaningful, regionally specific cultural products (such as traditional African tribal prints and Indian bridal henna) and transforming them into mere markers of Western \"exoticism,\" the collection allowed luxury consumers to play with ethnic identity without engaging with the complex realities of structural inequality or marginalization. Subverting Orthodox Beauty: Before this 1994 show, tattoos and body piercings were rarely seen in high fashion. By bringing subcultural body modification to the Parisian catwalk, Gaultier radically subverted traditional, polished beauty standards. Democratization of the Runway: Gaultier further challenged industry norms through his casting. He actively utilized street casting to create a radically diverse lineup that defied easy categorization regarding gender, race, and body shape, utilizing muses like the unconventionally beautiful Rossy de Palma, androgynous model Jenny Shimizu, and his long-time male muse Tanel Bedrossiantz alongside traditional supermodels."
     }
   },
   {
@@ -3581,20 +3286,8 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Accumulated Utilitarian Burlap",
-            "description": "The progressive stacking of stiff; utilitarian fabrics obliterates the human form beneath overwhelming mass; enacting a violent Symbolic Exchange. The act of dressing becomes an act of burial and architectural enclosure. The use of rough burlap directly contradicts the expectations of haute couture delicacy. It transforms the model into a structural monument rather than a biological entity."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Hyper-Scaled Ruffle Applique",
-            "description": "The excessive scaling of traditional decorative elements renders them aggressive and suffocating; a manifestation of Psychoanalytic Theory (Lacanian) regarding the burden of the Real. The detail subverts its romantic origin to become a mechanism of entrapment. What is typically light and frivolous becomes heavy and load-bearing. It is a satirical commentary on the suffocating nature of traditional femininity."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Suffocating Collar Architecture",
-            "description": "The extreme elevation of the neckline entirely engulfs the jaw and neck; severing the head from the body in an act of Bodily Autonomy and Transgression. This structural isolation limits sensory input and physical mobility. The collar operates as a wearable pillory; enforcing a rigid and terrified posture. It is the architectural visualization of high-fashion anxiety."
+            "label": "Frayed Hessian Minidress",
+            "description": "The frayed hessian minidress provides the foundational layer of the entire performance; it covers the torso in a raw scratchy jute textile. This material selection engages with institutional critique by presenting the cheapest agricultural sackcloth as the literal baseline of haute couture. The edges are violently frayed at the neckline and hem to emphasize the unrefined nature of the textile. This garment asserts a brutal material honesty before the subsequent accumulation of luxury layers."
           }
         ]
       },
@@ -3602,22 +3295,10 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Hyper-Scaled Ruffle Applique",
-            "description": "The excessive scaling of traditional decorative elements renders them aggressive and suffocating; a manifestation of Psychoanalytic Theory (Lacanian) regarding the burden of the Real. The detail subverts its romantic origin to become a mechanism of entrapment. What is typically light and frivolous becomes heavy and load-bearing. It is a satirical commentary on the suffocating nature of traditional femininity."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Suffocating Collar Architecture",
-            "description": "The extreme elevation of the neckline entirely engulfs the jaw and neck; severing the head from the body in an act of Bodily Autonomy and Transgression. This structural isolation limits sensory input and physical mobility. The collar operates as a wearable pillory; enforcing a rigid and terrified posture. It is the architectural visualization of high-fashion anxiety."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Radial Concentric Layering",
-            "description": "The concentric build-up of garments mimics the rings of a tree; recording the passage of the performance in material layers through Narrative Curation. Each layer adds physical weight and semantic density to the silhouette. The final form is a dense accumulation of history and labour. It proposes that fashion is an additive process of encumbrance."
+            "y": 55,
+            "label": "Crystal-Embellished A-Line Dress",
+            "description": "The crystal-embellished A-line dress envelopes the body in a dense matrix of reflective diamante and metallic sequins; it completely obscures the rough hessian underlayer. This material application utilizes haptic visuality to sharply contrast the scratchy jute with cold hard luxury embellishments. The heavy fabric falls rigidly from the high shoulders to the knee. The garment refuses soft fluidity to assert an armor of overwhelming opulent weight."
           }
         ]
       },
@@ -3627,20 +3308,8 @@ export const archiveData = [
           {
             "x": 50,
             "y": 50,
-            "label": "Suffocating Collar Architecture",
-            "description": "The extreme elevation of the neckline entirely engulfs the jaw and neck; severing the head from the body in an act of Bodily Autonomy and Transgression. This structural isolation limits sensory input and physical mobility. The collar operates as a wearable pillory; enforcing a rigid and terrified posture. It is the architectural visualization of high-fashion anxiety."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Radial Concentric Layering",
-            "description": "The concentric build-up of garments mimics the rings of a tree; recording the passage of the performance in material layers through Narrative Curation. Each layer adds physical weight and semantic density to the silhouette. The final form is a dense accumulation of history and labour. It proposes that fashion is an additive process of encumbrance."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Accumulated Utilitarian Burlap",
-            "description": "The progressive stacking of stiff; utilitarian fabrics obliterates the human form beneath overwhelming mass; enacting a violent Symbolic Exchange. The act of dressing becomes an act of burial and architectural enclosure. The use of rough burlap directly contradicts the expectations of haute couture delicacy. It transforms the model into a structural monument rather than a biological entity."
+            "label": "Couture Embellished Sackcloth Coat",
+            "description": "The couture embellished sackcloth coat fuses the raw jute of the foundational layer with intricate beadwork and heavy embroidery; it introduces intense material tension to the silhouette. This hybrid construction applies postmodernism by collapsing the binary between \"low\" agricultural textiles and \"high\" Parisian craft. The stiff fabric is tailored with structured shoulders and a flared skirt. The piece asserts that the process of couture can elevate even the most banal materials into objects of intense luxury."
           }
         ]
       },
@@ -3648,22 +3317,10 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Radial Concentric Layering",
-            "description": "The concentric build-up of garments mimics the rings of a tree; recording the passage of the performance in material layers through Narrative Curation. Each layer adds physical weight and semantic density to the silhouette. The final form is a dense accumulation of history and labour. It proposes that fashion is an additive process of encumbrance."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Accumulated Utilitarian Burlap",
-            "description": "The progressive stacking of stiff; utilitarian fabrics obliterates the human form beneath overwhelming mass; enacting a violent Symbolic Exchange. The act of dressing becomes an act of burial and architectural enclosure. The use of rough burlap directly contradicts the expectations of haute couture delicacy. It transforms the model into a structural monument rather than a biological entity."
-          },
-          {
             "x": 50,
-            "y": 20,
-            "label": "Hyper-Scaled Ruffle Applique",
-            "description": "The excessive scaling of traditional decorative elements renders them aggressive and suffocating; a manifestation of Psychoanalytic Theory (Lacanian) regarding the burden of the Real. The detail subverts its romantic origin to become a mechanism of entrapment. What is typically light and frivolous becomes heavy and load-bearing. It is a satirical commentary on the suffocating nature of traditional femininity."
+            "y": 50,
+            "label": "Sequined Floral Brocade Overcoat",
+            "description": "The sequined floral brocade overcoat adds another massive layer of volume over the preceding garments; it features a bright yellow and purple pastel pattern heavily encrusted with reflective media. This structural logic utilizes sequential layering to physically expand the model's footprint on the pedestal. The oversized sleeves are pushed up to reveal the cuffs of the layers beneath; the front hangs open to expose the complex puzzle of the accumulated clothing. The outerwear asserts the visual fatigue of relentless overproduction."
           }
         ]
       },
@@ -3672,21 +3329,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Accumulated Utilitarian Burlap",
-            "description": "The progressive stacking of stiff; utilitarian fabrics obliterates the human form beneath overwhelming mass; enacting a violent Symbolic Exchange. The act of dressing becomes an act of burial and architectural enclosure. The use of rough burlap directly contradicts the expectations of haute couture delicacy. It transforms the model into a structural monument rather than a biological entity."
+            "y": 50,
+            "label": "Heavy Lace Applique Overcoat",
+            "description": "The heavy lace applique overcoat wraps the accumulating silhouette in a dense floral textile; it is heavily embellished with dark metallic beading along the hemline. This material addition engages with the sedimentation of fashion by literally piling historical decorative techniques on top of one another. The wide sleeves bunch heavily around the wrists; the thick collar stands rigid against the neck. The garment refuses lightweight mobility to complete the physical encasement of the wearer."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Hyper-Scaled Ruffle Applique",
-            "description": "The excessive scaling of traditional decorative elements renders them aggressive and suffocating; a manifestation of Psychoanalytic Theory (Lacanian) regarding the burden of the Real. The detail subverts its romantic origin to become a mechanism of entrapment. What is typically light and frivolous becomes heavy and load-bearing. It is a satirical commentary on the suffocating nature of traditional femininity."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Suffocating Collar Architecture",
-            "description": "The extreme elevation of the neckline entirely engulfs the jaw and neck; severing the head from the body in an act of Bodily Autonomy and Transgression. This structural isolation limits sensory input and physical mobility. The collar operates as a wearable pillory; enforcing a rigid and terrified posture. It is the architectural visualization of high-fashion anxiety."
+            "x": 45,
+            "y": 50,
+            "label": "Intricate Beaded Glove Accessory",
+            "description": "The intricate beaded glove accessory extends the heavy embellishment directly onto the model's hand; it features a dense cluster of multi-colored crystals and jewels. This styling choice invokes the sheer excess of haute couture detailing. The heavy gems drip from the fingers like a physical manifestation of wealth. The accessory completes the look by ensuring no part of the anatomy remains untouched by the opulent accumulation."
           }
         ]
       },
@@ -3695,21 +3346,9 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Hyper-Scaled Ruffle Applique",
-            "description": "The excessive scaling of traditional decorative elements renders them aggressive and suffocating; a manifestation of Psychoanalytic Theory (Lacanian) regarding the burden of the Real. The detail subverts its romantic origin to become a mechanism of entrapment. What is typically light and frivolous becomes heavy and load-bearing. It is a satirical commentary on the suffocating nature of traditional femininity."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Suffocating Collar Architecture",
-            "description": "The extreme elevation of the neckline entirely engulfs the jaw and neck; severing the head from the body in an act of Bodily Autonomy and Transgression. This structural isolation limits sensory input and physical mobility. The collar operates as a wearable pillory; enforcing a rigid and terrified posture. It is the architectural visualization of high-fashion anxiety."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Radial Concentric Layering",
-            "description": "The concentric build-up of garments mimics the rings of a tree; recording the passage of the performance in material layers through Narrative Curation. Each layer adds physical weight and semantic density to the silhouette. The final form is a dense accumulation of history and labour. It proposes that fashion is an additive process of encumbrance."
+            "y": 50,
+            "label": "Towering Crystal-Encrusted Carapace",
+            "description": "The towering crystal-encrusted carapace raises the shoulder line drastically above the model's head; it consumes her entire upper body in a massive reflective pyramid. This structural extreme applies monolithic massing to parody the ludicrous inaccessibility of haute couture. The stiff fabric is covered entirely in silver sequins and diamante; it leaves only a small opening for the face. The garment asserts a final suffocating layer that transforms the human form into a static glittering monument."
           }
         ]
       },
@@ -3717,41 +3356,29 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Suffocating Collar Architecture",
-            "description": "The extreme elevation of the neckline entirely engulfs the jaw and neck; severing the head from the body in an act of Bodily Autonomy and Transgression. This structural isolation limits sensory input and physical mobility. The collar operates as a wearable pillory; enforcing a rigid and terrified posture. It is the architectural visualization of high-fashion anxiety."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Radial Concentric Layering",
-            "description": "The concentric build-up of garments mimics the rings of a tree; recording the passage of the performance in material layers through Narrative Curation. Each layer adds physical weight and semantic density to the silhouette. The final form is a dense accumulation of history and labour. It proposes that fashion is an additive process of encumbrance."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Accumulated Utilitarian Burlap",
-            "description": "The progressive stacking of stiff; utilitarian fabrics obliterates the human form beneath overwhelming mass; enacting a violent Symbolic Exchange. The act of dressing becomes an act of burial and architectural enclosure. The use of rough burlap directly contradicts the expectations of haute couture delicacy. It transforms the model into a structural monument rather than a biological entity."
+            "y": 50,
+            "label": "Colossal Rosette Cocoon-Coat",
+            "description": "The colossal rosette cocoon-coat represents the final heaviest layer of the performance; it completely engulfs the model in a massive beige structure topped with a giant fabric rose. This displaced anatomy utilizes internal scaffolding to create a silhouette that shrinks the model's head to the size of a walnut. The immense weight of the accumulated 70 kilograms of clothing is visibly anchored within this final shell. The coat completes the presentation by turning the wearer into a fully immobilized object of performance art."
           }
         ]
       }
     ],
     "tags": {
       "brand": "Viktor & Rolf",
-      "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Anti-Consumerism & Institutional Critique",
-      "theories": "The Simulacrum (Baudrillard)",
+      "era": "1990–1999; The Deconstructionist Decade",
+      "politics": "Anti-Consumerism & Institutional Critique | Labour Politics & Industrial Production",
+      "theories": "Conceptual Fashion | Aesthetic Philosophy | Postmodernism",
       "gender": "Womenswear",
-      "materials": "Animal Protein Fibres (Wool; Silk; Hair; Shearling)",
-      "geography": "Paris (Federation de la Haute Couture)",
-      "anatomy": "Monolithic Massing",
-      "format": "Theatrical Stage Performance"
+      "materials": "Heavy/Untreated Fabrics (Jute / Hessian Sackcloth) | Luxurious Textiles (Silk Satin; Brocade; Lace) | Reflective & Refractive Media (Crystals; Diamante; Metallic Sequins)",
+      "geography": "Paris (Chambre Syndicale / Haute Couture)",
+      "anatomy": "Monolithic Massing | Scaffolding and Internal Frameworks (Sequential Layering)",
+      "format": "Theatrical Stage Performance / Performance Art"
     },
     "notes": {
-      "critique": "This runway executes a total subversion of the traditional fashion parade. By fixing the model in a state of structural stasis[cite: 2] while the designers manually clothe her, the spectacle forces an institutional critique[cite: 2] of the designer as an active, visible performer. The wearer is systematically stripped of bodily autonomy and transgression[cite: 2]; transitioning from a human subject into a passive, monumental armature designed to support immense topographic layering[cite: 2] and monolithic massing.",
-      "strategy": "Viktor & Rolf engineer a highly effective exercise in narrative curation[cite: 2] by deliberately sabotaging the frenetic pace of the seasonal calendar. The communications strategy bypasses the rapid consumption of traditional linear catwalks; opting instead to build a singular, towering image over an extended duration. This calculated visual rhetoric[cite: 2] forces the attending press to engage in sustained observation; guaranteeing the resulting silhouette dominates the editorial cycle and cements the duo as a formidable intellectual force within the haute couture syndicate.",
-      "provenance": "Viktor and Rolf presented the Haute Couture Autumn and Winter collection Russian Doll in July 1999 within the Paris official schedule. Defined by the Deconstructionist Decade; the performance art format operates as a profound intervention into the mechanics of the couture salon. The presentation functions as a clinical inquiry into accumulation and extreme weight; layering ten distinct garments onto a single model situated on a rotating plinth."
+      "provenance": "This entry refers to Viktor & Rolf's Autumn/Winter 1999 Haute Couture show, officially titled the \"Russian Doll\" collection. Instead of a traditional runway procession, the 15-minute presentation featured a single model, Maggie Rizer, standing on a rotating turntable pedestal like a \"toy ballerina in a music box.\" Throughout the show, the two designers, dressed entirely in black, acted as petites mains and painstakingly dressed Rizer in real-time in front of the audience. The presentation was a massive critical success, with Vogue editor André Leon Talley famously dubbing it \"the Viagra of couture week.\"",
+      "strategy": "Sequential Layering (The Matryoshka Effect): The primary structural logic mirrored a Russian Matryoshka doll. Rizer began the show wearing only a frayed, raw minidress made of hessian sackcloth/jute. The designers systematically added nine to ten layers of couture garments on top of one another. Interconnected Componentry: The layering was not random; each successive garment was engineered to fit over the previous ones, acting as \"pieces in a puzzle\" where each new layer completed or mirrored a detail from the preceding tier. Material Tension: Viktor & Rolf deliberately contrasted unfinished, unconventional fabrics (like the frayed jute) with highly traditional, opulent couture materials, incorporating silk satin, heavy brocade, delicate lace, and intricate crystal and diamante embroidery. Monolithic Massing: As the layers accumulated, the model's physicality was engulfed by the sheer mass of the garments (weighing in excess of 70 kilograms). The final silhouette was a towering, bulbous cocoon-coat featuring shoulder pads raised high above her head and a colossal rose embellishment, making her head appear \"shrunk to the size of a walnut.\"",
+      "critique": "Institutional Critique & The Speed of Fashion: The \"Russian Doll\" collection functioned as a profound commentary on the relentless cycle of consumption and the breakneck speed of the fashion industry. The staggering accumulation of clothes visually represented the \"sedimentation of fashion\" and the burden of constant overproduction. Parody vs. Homage: The performance walked a fine line between satire and reverence. While the absurd, immobilizing weight of the final layered silhouette parodied the ludicrous inaccessibility of haute couture, the meticulous, real-time dressing process paid genuine homage to couture as a highly crafted \"laboratory of ideas.\" Subverting the Catwalk: By stripping away the traditional linear catwalk procession and forcing the audience to watch the intimate, backstage act of dressing, Viktor & Rolf transformed the models from passive hangers into participants of performance art. Materiality Over Immateriality: While heavily conceptual, critics note that the collection was an exercise in haptic visuality. By highlighting the heavy weight of the clothes, the visible warmth experienced by the model, and the tactile differences between raw jute and fine lace, the designers anchored their abstract intellectual concepts firmly within the tangible, physical reality of the garments and the human body."
     }
   },
   {
@@ -3767,21 +3394,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
-          },
-          {
-            "x": 40,
-            "y": 60,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
-          },
-          {
-            "x": 60,
             "y": 30,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
+            "label": "Sheer Silk T-Shirt",
+            "description": "The sheer silk t-shirt clings loosely to the upper body in a translucent dark mesh; it exposes the torso entirely beneath a veil of fragile synthetic material. This material application engages with theories of psychological eroticism by pairing a deeply vulnerable transparent layer with the austere minimalism of the overall silhouette. The wide neckline hangs casually over the collarbone; the short sleeves drop softly without structured tailoring. The garment refuses traditional modesty to assert a quiet but potent sensuality."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Asymmetrical Padded Skirt",
+            "description": "The asymmetrical padded skirt drops from the waist in a dark textured fabric before pooling heavily over the left hip into a massive bulbous volume. This engineered distortion applies subtle deconstruction to a minimal silhouette by violently shifting the center of gravity to one side. The dark textile absorbs light completely; it creates a strict tubular shape over the right leg to emphasize the extreme protrusion on the left. The piece completes the \"casual drama\" aesthetic by anchoring the sheer top with a chaotic and unyielding lower mass."
           }
         ]
       },
@@ -3789,22 +3410,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-02.jpg",
         "hotspots": [
           {
-            "x": 40,
+            "x": 50,
             "y": 30,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
+            "label": "High-Shine Leather Blazer",
+            "description": "The high-shine leather blazer structures the torso in a rigid boxy frame of highly reflective black hide. This outerwear choice engages with theories of urban armor by elevating a protective utilitarian material into severe luxury tailoring. The crisp lapels and sharp shoulders create an imposing rectangular upper silhouette; the dark surface catches the studio lighting sharply across its slick finish. The jacket asserts an aggressive militant posture that functions as psychological shielding against the modern city."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
+            "y": 70,
+            "label": "High-Shine Leather Trousers",
+            "description": "The high-shine leather trousers drop cleanly to the ankle in the exact same reflective black hide as the blazer; they complete the severe monochromatic uniform. This material consistency utilizes the concept of quiet luxury by rejecting complex detailing in favor of sheer material impact. The straight leg cuts a sharp vertical line; the fabric pools slightly over heavy dark footwear. The trousers complete the look by enforcing a strictly disciplined and heavily armored kinetic state."
           }
         ]
       },
@@ -3813,21 +3428,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
+            "y": 45,
+            "label": "Off-White Ballistic Vest Layer",
+            "description": "The off-white ballistic vest layer wraps the torso in a thick rigid shell of protective padding; it mimics military or police tactical gear. This functional hardware engages directly with institutional critique by transforming a tool of violent crisis response into a sleek high-fashion staple. The crisp white textile sits flatly against the chest; the high collar provides defense for the neck. The garment refuses traditional luxury ornamentation to assert the supreme value of utilitarian survivalism."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
+            "x": 50,
+            "y": 70,
+            "label": "Relaxed Tailored White Trousers",
+            "description": "The relaxed tailored white trousers fall loosely from the waist in a crisp unblemished cotton fabric; they provide a soft moving base beneath the rigid armor above. This pairing utilizes quiet luxury to ground the extreme technical vest in accessible everyday menswear. The wide leg obscures the knee entirely; the hem rests cleanly upon white footwear. The piece completes the silhouette by neutralizing the militaristic top half with effortless urban drape."
           }
         ]
       },
@@ -3835,22 +3444,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
+            "x": 50,
+            "y": 30,
+            "label": "Off-White Tailored Suit Jacket",
+            "description": "The off-white tailored suit jacket structures the upper body with a clean pristine cotton blend; it features classic lapels and a relaxed slightly boxy fit. This minimalist outerwear engages with the aesthetic of quiet luxury by stripping away all non-essential detailing. The pale fabric absorbs the bright studio lighting smoothly; the jacket hangs open casually over a high-necked underlayer. The garment asserts a posture of effortless and approachable elegance."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
+            "y": 60,
+            "label": "Matching Tailored White Trousers",
+            "description": "The matching tailored white trousers drop in a fluid uncreased line from the hip; they complete the monochromatic pale uniform. This simple format applies the concept of democratizing the spectacle by presenting a highly accessible and wearable ensemble during the internet live-stream. The fabric moves easily with the model's stride; the wide leg drops softly over bright white footwear. The trousers complete the silhouette by enforcing an unbroken vertical column of light fabric."
           }
         ]
       },
@@ -3859,21 +3462,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
+            "y": 35,
+            "label": "Metallic Silver Utilitarian Parka",
+            "description": "The metallic silver utilitarian parka drops heavily to the knee; it exposes a highly reflective inner lining that contrasts with the dull brown exterior. This outerwear choice engages with theories of urban armor by updating classic trench coats with advanced performative textiles. The stiff fabric creates a bulky protective shell around the torso; functional drawstring cords dangle loosely from the waist and hem. The jacket asserts a pragmatic technical dominance over the sleek tailoring beneath."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
+            "x": 50,
+            "y": 65,
+            "label": "Dark Navy Tailored Trousers",
+            "description": "The dark navy tailored trousers fall straight to the ankle with a sharp vertical crease; they provide a strict formal baseline against the chaotic metallic parka. This structural logic utilizes subtle deconstruction by mixing high-performance outerwear with traditional formalwear. The dense fabric cuts a clean line over bright white sneakers. The trousers complete the look by anchoring the futuristic jacket with a deeply traditional lower silhouette."
           }
         ]
       },
@@ -3882,21 +3479,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
+            "y": 35,
+            "label": "Off-White Ballistic Vest Outerwear",
+            "description": "The off-white ballistic vest outerwear engulfs the upper body in a massive thick shell of protective padding; it completely replaces the need for a traditional winter coat. This functional hardware engages directly with institutional critique by elevating a tool of violent crisis response into a sleek high-fashion staple. The crisp white textile is heavily quilted and structured; thick panels wrap around the neck and shoulders. The garment asserts the supreme value of utilitarian survivalism in the modern urban environment."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
+            "x": 50,
+            "y": 65,
+            "label": "Relaxed Tailored White Trousers",
+            "description": "The relaxed tailored white trousers fall loosely from beneath the heavy vest in a crisp unblemished fabric; they provide a soft moving base beneath the rigid armor above. This pairing utilizes quiet luxury to ground the extreme technical outerwear in accessible everyday menswear. The wide leg drops straight to the ankle; the hem rests heavily upon dark footwear. The piece completes the silhouette by neutralizing the militaristic top half with effortless urban drape."
           }
         ]
       },
@@ -3904,22 +3495,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
+            "x": 50,
+            "y": 35,
+            "label": "High-Collar Beige Outerwear",
+            "description": "The high-collar beige outerwear structures the upper body with a long flared silhouette and a massive protective collar; it frames the face securely within a stiff structural ring. This garment engages with theories of urban armor by extending the jacket upward to function as a physical shield against the environment. The muted khaki fabric is lined with white fleece for deep insulation; it hangs open to reveal a soft minimal underlayer. The coat asserts a theatrical yet highly functional defensive posture."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
+            "y": 65,
+            "label": "Light Grey Tailored Trousers",
+            "description": "The light grey tailored trousers drop straight to the ankle with a crisp vertical crease; they introduce a subtle neutral tone against the beige coat. This material strategy utilizes quiet luxury to maintain an austere and unflashy palette. The fabric falls cleanly without any excess bunching or draping; the hem breaks precisely over bright white sneakers. The trousers complete the ensemble by providing a formal static baseline for the heavy kinetic outerwear."
           }
         ]
       },
@@ -3928,21 +3513,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
+            "y": 35,
+            "label": "Layered Metallic Technical Parka",
+            "description": "The layered metallic technical parka stacks a heavy beige outer shell over a highly reflective silver inner lining; it creates a complex architectural volume over the upper body. This material strategy engages with postmodern pastiche by forcing high-performance synthetic textiles into classic outerwear silhouettes. The blazer hangs open to reveal the bright silver layers; the hood is lined with a thick ring of faux fur. The ensemble asserts a complex and highly constructed approach to winter survival gear."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
+            "x": 50,
+            "y": 65,
+            "label": "Grime-Stained Khaki Denim",
+            "description": "The grime-stained khaki denim trousers feature dark aggressive smudges and stains across the thighs and knees; they simulate heavy mechanical wear and tear. This surface manipulation utilizes subcultural systems to subvert traditional luxury menswear by putting a model in pants associated with industrial labor. The thick denim holds a stiff shape; the hem rests casually over white sneakers. The garment refuses orthodox beauty standards to assert a rugged and utilitarian edge."
           }
         ]
       },
@@ -3950,22 +3529,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Utilitarian Restraint Harness",
-            "description": "The integration of subcultural restraint equipment into daily wear strips it of explicit sexual context; introducing Corporate Nihilism to the underground. It introduces a structural minimalism that speaks to urban survival and protection. The harness maps the body mathematically; dividing it into zones of tension and release. It functions as emotional armor for the modern metropolis."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
+            "x": 50,
+            "y": 35,
+            "label": "Sheer Yellow Silk Tunic",
+            "description": "The sheer yellow silk tunic drapes heavily over the torso in an asymmetrical slice of translucent bright fabric; it drops low off the right shoulder and trails down to the knee. This material application engages with psychological eroticism by creating a delicate fragile veil over the body that shifts violently with kinetic movement. The bright yellow color contrasts sharply with the muted tones of the rest of the collection; the fabric lacks any rigid seaming. The piece asserts a sudden moment of fluid unconstructed sensuality."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
+            "y": 65,
+            "label": "Beige Stretch Trousers",
+            "description": "The beige stretch trousers drop seamlessly from the waist to the ankle; they swallow the lower body in an unbroken line of soft textile. This ultra-basic construction invokes anti-fashion aesthetics by relying on the most mundane possible garment format to ground the chaotic yellow drape above. The fabric lacks any visible pleating or dramatic flare; the hem breaks cleanly over transparent footwear. The trousers complete the ensemble by rooting the eccentric upper volume in absolute banality."
           }
         ]
       },
@@ -3974,40 +3547,34 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Technical Military Synthetic",
-            "description": "The adoption of military-grade synthetics for luxury tailoring rejects the primacy of traditional organic fibres; aligning with the principles of Post-Humanism. This choice heralds an era of functionalist aesthetic dominance. The material is chosen for its acoustic properties and durability rather than its drape. It prepares the wearer for an environment defined by friction and hyper-speed."
+            "y": 25,
+            "label": "Architectural Black Funnel Collar",
+            "description": "The architectural black funnel collar explodes upward from the neckline of the dark coat into a massive undulating sculptural frame; it entirely dwarfs the head and neck. This structural extreme applies theories of architectural shielding by constructing a literal protective wall around the wearer's face. The stiff black fabric holds its shape rigidly against gravity; the front opening drops sharply to reveal a classic tailored lapel beneath. The piece asserts a dramatic historical reference pushed to an absurd technical limit."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Minimalist Linear Fastening",
-            "description": "The elimination of decorative buttons in favour of concealed zippers and strict geometric lines enforces a severe clinical aesthetic; a study in Digital Dualism. This reductionism purges the garment of historical nostalgia. The fastening becomes purely functional; an engineering solution rather than an embellishment. It reflects the optimization protocols of digital architecture."
-          },
-          {
-            "x": 40,
+            "x": 50,
             "y": 55,
-            "label": "Aerodynamic Torso Compression",
-            "description": "The severe; flat-fronted cut of the jacket minimizes wind resistance and emotional availability; responding directly to Algorithmic Determinism. The silhouette is sealed; rejecting interaction and projecting sterile efficiency. This compression aligns the human body with the aesthetics of the server rack and the bullet train. It is the ultimate expression of nineties techno-nihilism."
+            "label": "Monolithic Black Overcoat",
+            "description": "The monolithic black overcoat drops heavily from the massive collar to the knee; it encases the entire torso and upper legs in a strict opaque void. This garment choice engages with the minimalist aesthetic by utilizing a single unbroken color to create maximum visual weight. The dark fabric falls cleanly without any horizontal breaks; a single row of buttons runs down the right edge. The coat completes the severe uniform by enforcing a highly disciplined and abbreviated silhouette."
           }
         ]
       }
     ],
     "tags": {
       "brand": "Helmut Lang",
-      "era": "1990 to 1999; The Deconstructionist Decade",
-      "politics": "Anti-Consumerism & Institutional Critique",
-      "theories": "Techno-Optimism and Accelerationism",
-      "gender": "Unisex / Neutral",
-      "materials": "Petroleum-Based Polymers (Polyester; Nylon; Acrylic)",
-      "geography": "Digital / Meta-Geographic Space",
-      "anatomy": "Tailored Rigidity",
-      "format": "Lookbook / Still Photography Series"
+      "era": "1990–1999; The Deconstructionist Decade",
+      "politics": "Anti-Consumerism & Institutional Critique | Activism & Crisis Response (Democratization of Fashion)",
+      "theories": "Postmodernism | Aesthetic Philosophy (Minimalism / Quiet Luxury)",
+      "gender": "Menswear & Womenswear",
+      "materials": "Technical & Performative Systems | Sheer Layers | Silk Grey & Off-White Finishes",
+      "geography": "Digital / New York (Headquarters Relocation)",
+      "anatomy": "Asymmetrical Sleeves | Sartorial Restriction / Scaffolding and Internal Frameworks (Ballistic Vests) | Utilitarianism",
+      "format": "CD-ROM | Lookbook / Still Photography Series"
     },
     "notes": {
-      "critique": "This presentation executes a total subversion of the physical spectacle. By reducing the collection to digital data files, Lang enforces a state of hyperreality[cite: 2] where the mediated image supersedes the tangible garment. The non-spectacle forces a severe institutional critique[cite: 2] of the antiquated fashion system. The audience is subjected to early algorithmic determinism[cite: 2]; consuming the American Minimalist (Nineties) aesthetic through a computer monitor rather than through bodily proximity. This mechanism democratises access while simultaneously intensifying structural alienation.",
-      "strategy": "Lang engineers a historically unprecedented exercise in press disruption[cite: 2] by moving his show schedule ahead of the European calendar and broadcasting purely online. The communications strategy bypasses the physical attendance of editors entirely. By relying purely on remote transmission, the brand executes a masterclass in corporate signalling[cite: 2]; positioning itself as the absolute architect of the impending digital millennium. This calculated visual rhetoric[cite: 2] not only dominated the immediate editorial cycle but permanently forced global institutional systems to restructure the international fashion calendar.",
-      "provenance": "Helmut Lang presented the Autumn and Winter Ready to Wear collection in 1998 within a meta-geographic digital space. Situated at the end of the Deconstructionist Decade; the interactive web experience operates as a foundational rupture in fashion presentation mechanics. The project functions as a clinical inquiry into technological mediation; permanently severing the garment from the elite; exclusionary space of the traditional Paris salon."
+      "provenance": "This entry refers to Helmut Lang's Fall/Winter 1998 collection, historically renowned as the first fashion collection to bypass a physical runway and be presented entirely via the internet and CD-ROM. Lang was in the process of relocating his headquarters from Europe to New York and was scheduled to hold the city's first combined men's and women's runway show. However, fearing the overwhelming industry hype would ruin the intimate \"séance de travail\" (work session) presentation format he had cultivated since 1988, he canceled the physical show and moved it online. To promote this unprecedented digital shift, Lang utilized over 1,000 New York taxi-top advertisements. The physical CD-ROMs sent to the press featured a metallic gold exterior encased in a minimal, transparent shell.",
+      "strategy": "Utilitarian Minimalism: The collection consisted of 81 looks that merged menswear and womenswear. The aesthetic was defined by what would now be termed \"quiet luxury\" or \"casual drama,\" utilizing a muted palette of white, khaki, yellow, olive green, and signature black. Subtle Deconstruction: The garments featured intricate details displayed rather plainly, prioritizing sheer layers, asymmetrical sleeves, and clean, architectural lines. Technical Integration (The Ballistic Vest): A defining structural element of this season was Lang's continued exploration of his iconic ballistic/bulletproof vest. Transforming a strictly technical, non-fashion garment into a piece of subtle elegance, the FW98 collection featured the vest rendered in elevated finishes like off-white and silk grey.",
+      "critique": "Democratizing the Spectacle: By broadcasting his collection directly to the internet, Lang performed a massive institutional critique of the fashion hierarchy. He stripped away the elitist, gatekept nature of the traditional runway (usually reserved only for wealthy clients and top editors) and opened the experience up directly to the end consumer. The Medium is the Message: The technological disruption of the show was so profound that contemporary fashion critics spent more time reviewing the implications of live-streaming than the actual clothes themselves. Lang's foresight proved that cyberspace would fundamentally alter how fashion was consumed, communicated, and experienced globally. Urban Armor: Lang's elevation of the bulletproof vest and sturdy workwear elements served as a commentary on modern city life. It reflected a psychological need for protective, utilitarian \"armor\" tailored for the urban landscape, proving that function could seamlessly become high-fashion décor. Psychological Eroticism: As fashion critic Cathy Horyn noted, Lang's minimalism was never parochial; it possessed \"a rush of sin\". His austere, precise designs were charged with a distinct, subtle eroticism and psychological depth rooted in his Viennese heritage, showcasing an aesthetic that articulated identity through absolute restraint and powerful presence."
     }
   },
   {
@@ -4023,21 +3590,21 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "y": 25,
+            "label": "Heavy Gold Chain Accumulation",
+            "description": "The heavy gold chain accumulation completely obscures the upper chest beneath a dense metallic web; it introduces extreme hardware weight to the cropped silhouette. This accessory styling engages with subcultural systems by appropriating the opulent visual codes of 1980s hip-hop culture. The thick links and oversized padlocks reflect the runway lighting fiercely; they clatter against the metallic jacket beneath. This element asserts a hyper-commercialized luxury that merges urban streetwear history with traditional Italian excess."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
-          },
-          {
-            "x": 60,
+            "x": 35,
             "y": 30,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
+            "label": "Metallic Gold Cropped Jacket",
+            "description": "The metallic gold cropped jacket provides a rigid tailored frame around the torso; it truncates sharply above the navel to expose the midriff. This material application relies on the simulacrum by rendering a classic bouclé suit silhouette in an aggressively flashy reflective textile. The structural shoulders and zipper details maintain a strict shape despite the high-shine finish. The garment refuses understated elegance to complete an aesthetic of deliberate downmarket irony."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Quilted Vinyl Zip Skirt",
+            "description": "The quilted vinyl zip skirt gathers into a dark glossy volume around the hips; it utilizes a center zipper that dissects the front profile. This fabric choice engages with consumer culture by mimicking cheap shiny garbage bags or downmarket synthetic materials. The dark brown surface reflects the light with a wet liquid appearance; the elasticized hem pulls the volume inward sharply above the knee. The piece asserts an unapologetic and bold rejection of traditional luxury textiles."
           }
         ]
       },
@@ -4045,22 +3612,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "x": 50,
+            "y": 35,
+            "label": "Graphic Fast-Food Knitwear",
+            "description": "The graphic fast-food knitwear drapes over the upper body in a saturated tomato-red tone; it features a massive yellow logo distorted into a heart shape. This visual strategy utilizes consumer culture theories by directly mimicking the ubiquitous branding of global fast-food chains. The flat intarsia knit mimics the cheap mass-produced textiles of a service uniform; a bold slogan dominates the lower hemline. The garment asserts a satirical equivalence between the mass consumption of cheap calories and high-end luxury goods."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "y": 60,
+            "label": "Logo-Banded Mini Skirt",
+            "description": "The logo-banded mini skirt restricts the lower silhouette into a simple red tube; it is abruptly truncated by a thick yellow band bearing the house's name. This structural logic engages with late-capitalist commodification by stamping the body with literal corporate signage. The dense knit holds a tight shape over the thighs; the contrast trim sits sharply against the bare knees. The piece completes the runway ensemble by functioning as a literal billboard for the brand."
           }
         ]
       },
@@ -4069,21 +3630,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Corporate Logo Mutation",
-            "description": "The aggressive appropriation of fast-food corporate iconography enforces a narrative of extreme symbolic exchange. Scott subverts the golden arches into a luxury signifier; executing a direct institutional critique of consumer culture and the fashion system's accelerated pace."
+            "y": 40,
+            "label": "Quilted Fast-Food Handbag",
+            "description": "The quilted fast-food handbag rests centrally upon a service tray; it transforms a classic luxury accessory into a literal meal replacement. This object engages heavily with postmodern irony by fusing the esteemed leatherwork of traditional Parisian houses with the disposable packaging of a children's fast-food box. The bright red leather is heavily stitched with a diamond grid; the yellow logo sits prominently on the front flap. The accessory asserts the absolute absurdity of luxury commodification by presenting the handbag as a ready-to-consume product."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Quilted Surface Fetishisation",
-            "description": "The application of quilted leather to disposable packaging geometry forces a collision between high and low material hierarchies. This surface treatment operates as a calculated exercise in camp and kitsch subversion; weaponising the mundane against the prestige economy."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Synthetic Colour Field",
-            "description": "The deployment of saturated synthetic primaries directly references the visual language of fast-food retail environments. This chromatic strategy executes a precise form of corporate nihilism; collapsing the distinction between the convenience economy and the luxury commodity."
+            "x": 50,
+            "y": 55,
+            "label": "Striped Service Uniform Dress",
+            "description": "The striped service uniform dress falls to the knee in a relaxed pale yellow cotton; it is violently bisected by a bright red button placket. This tailoring approach applies camp aesthetics by elevating the mundane attire of minimum-wage labor into a coveted runway garment. The crisp collar and short sleeves maintain the strict formatting of institutional workwear; the hem features a high slit for mobility. The garment refuses haute couture elitism to assert a deeply democratic and recognizable pop-cultural silhouette."
           }
         ]
       },
@@ -4091,22 +3646,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-04.jpg",
         "hotspots": [
           {
+            "x": 40,
+            "y": 35,
+            "label": "Quilted Denim-Tone Jacket",
+            "description": "The quilted denim-tone jacket builds a boxy volume around the shoulders and chest; it mimics the visual texture of blue jeans through a soft padded textile. This material intervention engages with subcultural systems by elevating a staple of 1990s streetwear into a highly crafted runway item. The thick diamond stitching creates a rigid architectural shell; the sleeves are pushed up to reveal heavy metallic hardware. The outerwear asserts a hybridized aesthetic that fuses hip-hop styling with classic luxury codes."
+          },
+          {
             "x": 50,
-            "y": 50,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
-          },
-          {
-            "x": 30,
-            "y": 20,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "y": 45,
+            "label": "Metallic Lettering Chain Belt",
+            "description": "The metallic lettering chain belt cinches the waist loosely with massive gold typography; it spells out the brand's name across the midriff. This accessory utilizes theories of hyper-capitalism by transforming the wearer's body into a mobile advertisement. The heavy gold letters hang freely from a thick linking chain; they overlap the quilted trousers beneath. The piece completes the ensemble by enforcing an aesthetic of unapologetic and loud consumerism."
           }
         ]
       },
@@ -4114,22 +3663,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-05.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "x": 50,
+            "y": 25,
+            "label": "Glossy Vinyl Puffer Jacket",
+            "description": "The glossy vinyl puffer jacket inflates around the upper torso into a massive dark brown volume; it truncates sharply above the exposed abdomen. This material choice engages with the simulacrum by utilizing a synthetic plastic finish that mimics wet liquid or melting chocolate. The thick padding creates a harsh horizontal boundary across the ribs; the high collar frames the neck completely. The outerwear asserts an exaggerated and protective barrier that drastically contrasts with the bare skin below."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "y": 60,
+            "label": "Metallic Leather Chap Trousers",
+            "description": "The metallic leather chap trousers encase the legs in highly reflective gold tubes; they attach to a matching waistband while leaving the upper thighs entirely exposed. This structural extreme applies camp theory by merging Western rodeo gear with hyper-commercialized urban luxury. The stiff material wrinkles sharply around the knees; heavy chains connect the disjointed panels. The garment refuses practical utility to complete a deeply theatrical and provocative lower silhouette."
           }
         ]
       },
@@ -4138,21 +3681,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "y": 45,
+            "label": "Hardware-Embellished Strap Dress",
+            "description": "The hardware-embellished strap dress binds the torso and hips in a dense matrix of black leather belts; it features dozens of gold metallic letters spelling out the brand's name. This structural logic engages with fetishwear subcultures by utilizing bondage techniques to construct a rigid outer shell. The horizontal straps overlap tightly to form a solid silhouette; the heavy buckles sit prominently along the left side. The garment asserts a highly commodified vision of restriction and bodily discipline."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
+            "x": 50,
+            "y": 80,
+            "label": "Hardware-Embellished Leather Boots",
+            "description": "The hardware-embellished leather boots stretch above the knee to encase the calves in black leather; they mirror the exact strapping mechanism of the dress above. This footwear application utilizes postmodern repetition to brand every available surface of the human form. The tight straps cut into the soft leather underneath; the golden typography reflects the runway lighting intensely. The accessory completes the look by anchoring the militant bondage aesthetic firmly to the floor."
           }
         ]
       },
@@ -4161,21 +3698,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "y": 35,
+            "label": "Character-Print Knit Tunic",
+            "description": "The character-print knit tunic drops heavily from the shoulders in a bright yellow textile; it features an oversized hyper-recognizable cartoon face across the torso. This graphic appropriation engages with late-capitalist consumerism by elevating cheap children's media into a luxury context. The flat knit fabric is covered in irregular black spots; the hem falls cleanly to the mid-thigh. The garment refuses mature sophistication to assert an aesthetic of playful downmarket irony."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
-          },
-          {
-            "x": 60,
+            "x": 35,
             "y": 30,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "label": "Character-Print Leather Backpack",
+            "description": "The character-print leather backpack hangs casually over the right shoulder; it translates the cartoon motif onto a structured luxury bag. This accessory utilizes the simulacrum by rendering a mundane schoolyard object in premium materials. The yellow leather features black spots and heavy zipper hardware; the thick brown straps contrast with the bright base. The piece completes the infantilized uniform by ensuring the pop-culture branding is visible from all angles."
           }
         ]
       },
@@ -4183,22 +3714,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-08.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
-          },
-          {
             "x": 50,
-            "y": 80,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "y": 35,
+            "label": "Spotted Faux-Fur Outerwear",
+            "description": "The spotted faux-fur outerwear creates a massive plush volume around the upper body; it features a bright yellow base punctuated by large black circles. This material strategy engages with camp aesthetics by transforming a cartoon sponge motif into an opulent synthetic pelt. The thick fibers completely obscure the natural shoulder line; the jacket hangs open to reveal the dark garments underneath. The outerwear asserts a joyful and tactile absurdity that mocks traditional luxury fur coats."
           },
           {
-            "x": 60,
-            "y": 40,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "x": 30,
+            "y": 55,
+            "label": "Spotted Drawstring Bucket Bag",
+            "description": "The spotted drawstring bucket bag dangles from the right hand; it matches the bright yellow and black pattern of the heavy coat. This accessory applies theories of mass commercialization by offering a highly branded and recognizable product silhouette. The smooth leather base contrasts with the fuzzy jacket above; the black drawstring pulls the top opening shut tightly. The piece completes the ensemble by functioning as a literal piece of carrying merchandise."
           }
         ]
       },
@@ -4207,21 +3732,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "y": 25,
+            "label": "Character-Print Cropped Knit",
+            "description": "The character-print cropped knit truncates sharply across the lower ribs in a vibrant yellow textile; it isolates a cartoon face across the bust. This sartorial intervention utilizes consumer culture theories by fracturing a recognizable pop-culture icon across a fragmented garment. The high neckline and long sleeves provide strict coverage above the exposed midriff; the black spots litter the bright background. The top asserts a hyper-commodified identity that relies on instant global recognition."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "x": 35,
+            "y": 70,
+            "label": "Trailing Knit Scarf Accessory",
+            "description": "The trailing knit scarf accessory drops from the neck entirely down to the runway floor; it provides a long sweeping vertical line beside the exposed leg. This structural addition engages with camp theatricality by extending a simple winter accessory into an exaggerated dramatic train. The soft yellow fabric mimics the exact spotting of the cropped sweater; it drags heavily against the white floor. The detail completes the silhouette by introducing fluid movement to an otherwise tight and abbreviated look."
           }
         ]
       },
@@ -4229,22 +3748,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-10.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "x": 50,
+            "y": 50,
+            "label": "Packaging-Print Silk Gown",
+            "description": "The packaging-print silk gown drops to the floor in a massive volume of printed fabric; it transforms the wearer into a literal candy wrapper. This graphic appropriation engages directly with anti-consumerism by equating the consumption of high fashion with the disposal of cheap junk food. The white silk is covered in nutritional facts and corporate branding typography; the crisp red trim borders the hem and collar. The garment refuses traditional eveningwear elegance to assert a deeply cynical and satirical narrative."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
+            "y": 40,
+            "label": "Oversized Silk Waist Bow",
+            "description": "The oversized silk waist bow cinches the midsection with a colossal knot of printed fabric; it protrudes drastically from the stomach. This structural extreme utilizes postmodern irony by blowing up a delicate feminine detail to absurd packaging-like proportions. The stiff silk holds its shape perfectly without drooping; the wide ribbons hang down over the skirt beneath. The piece completes the look by emphasizing the illusion of a newly wrapped and commodified product."
           }
         ]
       },
@@ -4253,21 +3766,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "y": 60,
+            "label": "Cereal-Print Silk Dress",
+            "description": "The cereal-print silk dress tightly encases the torso and thighs in a vibrant blue textile; it features photorealistic prints of a popular breakfast food. This visual strategy utilizes the simulacrum to plaster the lowest denominator of supermarket aesthetics onto premium eveningwear. The tight fit highlights the bright loops of cereal and the cartoon mascot; the hem falls cleanly to the knee. The garment asserts a joyful but highly critical reflection on globalized junk culture."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
-          },
-          {
-            "x": 40,
-            "y": 55,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "x": 50,
+            "y": 40,
+            "label": "Massive Structural Front Bow",
+            "description": "The massive structural front bow explodes from the waistline in a rigid geometric configuration; it completely consumes the midriff in bright blue printed silk. This architectural intervention applies camp theory by maximizing a decorative element until it becomes a dominant spatial obstruction. The stiff loops hold deep permanent creases; the fabric mimics the exact cereal pattern of the dress behind it. The detail completes the silhouette by forcing the viewer to confront the absurdity of the packaging motif."
           }
         ]
       },
@@ -4277,20 +3784,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
+            "label": "Candy-Print Volumetric Dress",
+            "description": "The candy-print volumetric dress balloons outward from the waist in a bright yellow bell shape; it features large photorealistic gummy bears scattered across the textile. This graphic application engages with late-capitalist commodification by plastering literal sugar products across a high-fashion silhouette. The stiff fabric holds a rigid dome shape; the red and green typography mimics cheap plastic wrappers. The garment refuses serious luxury to assert an aesthetic of pure infantile consumerism."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "x": 50,
+            "y": 25,
+            "label": "Sculptural Folded Silk Bodice",
+            "description": "The sculptural folded silk bodice wraps the upper torso in a complex origami-like structure; it creates an enormous ruffled neckline that frames the face. This structural logic utilizes historical pastiche by applying traditional couture draping techniques to an utterly banal printed fabric. The stiff yellow silk stands away from the chest completely; the sharp folds generate deep shadows across the brand typography. The piece completes the dress by elevating junk food imagery through masterful architectural manipulation."
           }
         ]
       },
@@ -4298,22 +3799,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-13.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "x": 50,
+            "y": 60,
+            "label": "Confectionery-Wrapper Silk Gown",
+            "description": "The confectionery-wrapper silk gown cascades to the floor in a sleek dark brown textile; it features massive white typography spelling out a famous chocolate brand. This material strategy engages heavily with the simulacrum by designing a dress that literally functions as a candy wrapper. The fluid fabric pools around the feet in a small train; the barcode and nutritional information run vertically down the side seams. The garment asserts a satirical equivalence between human bodies and consumable goods."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
+            "y": 25,
+            "label": "Folded Wrapper Neckline Construction",
+            "description": "The folded wrapper neckline construction wraps the bust in an asymmetrical origami fold; it exposes the left shoulder while completely obscuring the right. This architectural detail applies camp theatricality by mimicking the torn edge of an opened candy bar. The stiff brown silk holds a sharp diagonal crease; the bright white lettering is distorted across the fold. The detail completes the silhouette by ensuring the packaging illusion remains entirely intact."
           }
         ]
       },
@@ -4322,21 +3817,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Appropriated Corporate Iconography",
-            "description": "The mutation of the McDonald's logo into a luxury monogram executes a precise semiotic sabotage; operating entirely within the realm of Hyperreality. It conflates the immediacy of fast food with the perceived exclusivity of heritage fashion. This collision of low-brow consumption and high-brow pricing highlights the absurdity of brand worship. It is a cynical and brilliant manipulation of the signifier."
+            "y": 65,
+            "label": "Nutritional-Label Print Ballgown",
+            "description": "The nutritional-label print ballgown expands into a colossal bell shape; it is constructed entirely from white silk printed with black dietary information. This literal graphic appropriation acts as a massive institutional critique by mocking the fashion industry's notorious obsession with caloric restriction. The stiff fabric features deep voluminous pleats; the bold text lists fat content and serving sizes across the entire skirt. The garment refuses traditional bridal purity to assert a highly cynical and provocative closing statement."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
+            "x": 50,
+            "y": 30,
+            "label": "Bridal Floral Bouquet Accessory",
+            "description": "The bridal floral bouquet accessory rests cleanly in the model's hands; it provides a stark natural contrast to the heavily industrialized print of the dress. This styling choice engages with postmodern irony by fusing a sacred romantic tradition with a dress covered in junk food data. The tight cluster of white flowers sits directly over the word \"Fats\"; the green stems introduce the only organic color to the ensemble. The piece completes the look by solidifying the parody of the traditional haute couture bridal finale."
           }
         ]
       },
@@ -4344,48 +3833,42 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-15.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Quilted Leather Box Structure",
-            "description": "Rendering a disposable fast-food box in premium quilted leather mocks the arbitrary valuation of luxury goods; a direct critique utilizing Marxist Materialism. The object becomes a self-aware critique of commodity fetishism. The meticulous craftsmanship applied to a symbol of cheap mass-production generates profound irony. It challenges the consumer to justify the financial extraction."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Primary Colour Saturation",
-            "description": "The aggressive use of synthetic red and yellow triggers base psychological responses associated with hunger and urgency; demonstrating the manipulative power of The Society of the Spectacle (Debord). This chromatic manipulation bypasses intellectual engagement for immediate visceral reaction. The palette is fundamentally unrefined; rejecting the subtle nuances of traditional luxury colour theory. It is the visual equivalent of an advertising jingle."
+            "x": 50,
+            "y": 30,
+            "label": "Striped Service Uniform Shirting",
+            "description": "The striped service uniform shirting provides a crisp pale yellow foundation for the upper body; it features a classic pointed collar and a neat button placket. This tailoring approach engages with downmarket irony by elevating the cheap polyester blend of a fast-food uniform into high fashion. The thin white stripes run vertically over the torso; the long sleeves are buttoned neatly at the wrists. The garment asserts a hyper-recognizable utilitarian aesthetic that bridges the gap between labor and luxury."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Heritage Chain Subversion",
-            "description": "The deployment of heavy gold chains entwined with plastic detritus corrupts the Chanel-esque vernacular; a masterful performance of Camp and Kitsch Subversion. The signifiers of old-money elegance are violently merged with the aesthetics of excess and waste. This hardware functions as a parasitic invasion of the luxury archive. It is a brilliant deconstruction of elite visual codes."
+            "y": 40,
+            "label": "Oversized Plastic Chain Belt",
+            "description": "The oversized plastic chain belt cinches the waist securely over the bright red trousers; it utilizes bright yellow interlocking links to mimic heavy metal hardware. This material substitution applies camp theory by replacing traditional gold or silver with cheap commercial plastic. The thick links drape cleanly across the hips; the bright yellow tone perfectly matches the corporate color scheme of the ensemble. The accessory completes the look by injecting a final playful nod to 1990s streetwear styling."
           }
         ]
       }
     ],
     "tags": {
       "brand": "Moschino",
-      "era": "2010 to 2019; The Digital and Streetwear Pivot",
-      "politics": "Anti-Consumerism & Institutional Critique",
-      "theories": "Camp and Kitsch Subversion",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Anti-Consumerism & Institutional Critique | Globalization & Cultural Hybridity",
+      "theories": "Postmodernism | Consumer Culture & Capitalism | The Simulacrum (Downmarket Irony / Counterfeit Chic) | Camp",
       "gender": "Womenswear",
-      "materials": "Petroleum-Based Polymers (Polyester; Nylon; Acrylic)",
+      "materials": "Quilted Leather | Heavy Gold Chains | Silk & Satin (Gowns) | Plastic & Vinyl (Accessories)",
       "geography": "Milan (Camera Nazionale)",
-      "anatomy": "Compressed Proportions",
-      "format": "Traditional Runway (The Linear Catwalk)"
+      "anatomy": "1980s / 1990s Hip-Hop Silhouettes | Classic Tailoring (Bouclé Suits) | Exaggerated Volumetric Gowns",
+      "format": "\"See Now, Buy Now\" / Digital Capsule (\"Fash Fashion: Next Day After The Runway\")"
     },
     "notes": {
-      "critique": "This runway executes a highly calculated intersection of high and low culture. By appropriating the iconic golden arches and substituting the corporate signage with Moschino branding, Scott enforces a narrative of extreme corporate nihilism[cite: 2]. The spectacle forces a severe institutional critique[cite: 2] of the fashion industry's aggressively accelerated pace; literally visualising the concept of fast fashion. The wearer is transformed into a walking billboard; executing an exercise in symbolic exchange[cite: 2] where the cheap, ubiquitous packaging of calorie-dense food is suddenly elevated to an exclusive status symbol.",
-      "strategy": "Moschino engineers a masterclass in modern press disruption[cite: 2] by pioneering the immediate consumer gratification model. The communications strategy deliberately bypasses the traditional six-month editorial gestation period; opting instead to release a capsule collection of phone cases and accessories online the exact moment the runway concluded. This calculated narrative curation[cite: 2] ensures absolute virality. By weaponising the emerging power of the digital landscape, the brand forces global editorial platforms to react instantly to the spectacle; cementing the house as an absolute authority in digital transmission and internet culture.",
-      "provenance": "Under the direction of Jeremy Scott; Moschino presented the Autumn and Winter Ready to Wear collection in February 2014 within the Milan official schedule. Positioned during the Digital and Streetwear Pivot; the traditional runway format operates as a hyper-literal translation of global junk culture. The presentation functions as a clinical inquiry into mass consumption; fusing American fast food iconography with the rigid heritage of Italian tailoring."
+      "provenance": "This entry refers to Jeremy Scott's highly anticipated debut collection as creative director for the Italian house Moschino for the Autumn/Winter 2014 season. The show was a hyperactive ode to American pop culture, heavily featuring motifs from McDonald's, SpongeBob SquarePants, Froot Loops, Budweiser, and Hershey's chocolate. Obliterating the traditional six-month fashion cycle, Scott introduced a capsule collection titled \"Fash Fashion: Next Day After The Runway.\" Key pieces (like the French Fry phone case and \"M\" logo sweaters) were made available to purchase online and in-store the very next morning, perfectly mirroring the instant gratification of fast food.",
+      "strategy": "High/Low Mashup & \"Fauxchino\": Scott's primary strategy was fusing the rigid, traditional codes of haute luxury with the lowest denominators of American junk culture. He engineered \"mutant hybrids,\" such as taking a classic, tailored Chanel-esque bouclé suit and color-blocking it with the tomato-red and mustard-yellow of a fast-food uniform. Literal Graphic Appropriation: Scott twisted the iconic golden arches of the McDonald's logo into Moschino's signature heart shape. This logo was plastered across quilted cross-body bags (shaped like Happy Meal boxes) and serving trays. Streetwear & Subcultural Silhouettes: Tapping into Moschino's 1990s hip-hop heritage (famously worn by The Notorious B.I.G. and Lil' Kim), the collection featured 80s and 90s streetwear silhouettes, including heavy gold chain accessories, leather overalls, padded jackets, and denim. Sartorial Kitsch & Eveningwear: For the finale, Scott parodied traditional evening gowns by transforming the models into literal candy wrappers and snacks. Jourdan Dunn wore a dress mimicking a Hershey's Kisses wrapper, Lily McMenamy wore a Budweiser \"King of Beers\" gown, and Lindsey Wixson closed the show in a wedding dress printed entirely with a nutritional facts label.",
+      "critique": "The Ultimate \"Fast Fashion\" Critique: By transforming the minimum-wage uniform of a fast-food worker into a highly coveted luxury item costing thousands of dollars, the AW2014 collection acted as a surreal and satirical commentary on late-capitalist consumerism. It was a literal manifestation of \"fast fashion,\" directly equating the consumption of disposable junk food with the consumption of luxury trends. Downmarket Irony & Commodification: Scott masterfully utilized \"downmarket irony\" (the trend of luxury brands creating designs that mimic cheap, everyday items). By elevating \"trash\" to the runway, he proved that within the hyper-modern fashion system, luxury and mundane utility are merely different sides of the same capitalist coin, perfectly understood in any global market from \"Mumbai to Los Angeles.\" Subverting Fashion's Pretensions: By plastering calorie-dense junk food packaging across high-fashion eveningwear, Scott actively mocked the fashion industry's notorious elitism and fear of fat. The collection refused to take itself too seriously, successfully reigniting founder Franco Moschino's original ethos of using fashion as a joyful, irreverent form of protest and commentary."
     }
   },
   {
     "$schema": "../entry.schema.json",
     "id": "schiaparelli-ss21",
     "title": "Schiaparelli Haute Couture SS 2021",
-    "subtitle": "",
+    "subtitle": "231 Seconds of Haute Couture",
     "year": 2021,
     "season": "SS",
     "images": [
@@ -4394,21 +3877,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "y": 25,
+            "label": "Monolithic Hooded Silk Blouson",
+            "description": "The monolithic hooded silk blouson engulfs the upper body in an immense bulbous volume of crisp black fabric; it completely overrides the natural anatomy. This structural extreme engages with theories of architectural shielding by offering an aggressive protective carapace against the environment. The gathered folds and hidden internal scaffolding allow the hood to rise unnaturally high above the skull; the dense dark material absorbs light completely. The outerwear asserts a defensive and highly theatrical posture that dwarfs the human form."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "x": 50,
+            "y": 68,
+            "label": "Molded Padlock Handbag",
+            "description": "The molded padlock handbag utilizes solid golden brass to craft a surreal heavy-duty accessory; it mimics a literal lock scaled to absurd proportions. This object engages directly with surrealist heritage by elevating a banal functional item into a luxury fetish object. The reflective gold surface mimics the appearance of molten metal frozen in place; the model grips it tightly against her thigh. The accessory completes the look by injecting a stark heavy piece of hardware against the fluid dark tailoring."
           }
         ]
       },
@@ -4416,22 +3893,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-02.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+            "x": 50,
+            "y": 45,
+            "label": "Molded Leather Muscle Cuirass",
+            "description": "The molded leather muscle cuirass aggressively redefines the female torso into a hyper-masculine anatomical plate; it features highly defined six-pack abdominals and rigid pectoral structures. This material manipulation utilizes body politics to radically challenge gendered expectations of high fashion by applying heroic nudity. The dark glossy leather mimics wet liquid or polished bronze armor; it completely flattens the natural bustline. The garment refuses traditional soft feminine tailoring to assert an imposing warrior-like presence."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+            "y": 75,
+            "label": "Colossal Pink Silk Waist Bow",
+            "description": "The colossal pink silk waist bow explodes from the midriff in a massive geometric configuration; it deliberately parodies the \"cupcake\" trope associated with traditional haute couture. This structural extreme applies camp theory by maximizing a delicate feminine detail until it becomes a dominant and slightly absurd spatial obstruction. The bright pink fabric holds deep rigid creases; it sharply contrasts with the dark militant cuirass above it. The piece asserts a joyful but highly critical reflection on couture embellishment."
           }
         ]
       },
@@ -4440,21 +3911,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "y": 40,
+            "label": "Voluminous Gathered Silk Sleeves",
+            "description": "The voluminous gathered silk sleeves erupt from the shoulders in massive crisp white spirals; they dwarf the slim black bodice entirely. This structural intervention utilizes monolithic massing to drastically extend the lateral footprint of the wearer. The dry hand taffeta holds deep circular folds that mimic unfurling shells or classical statuary drapery; they fall heavily toward the hip. The garment asserts an overwhelming architectural volume that completely restricts the kinetic motion of the arms."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "x": 55,
+            "y": 15,
+            "label": "Surrealist Molded Brass Earrings",
+            "description": "The surrealist molded brass earrings hang heavily from the lobes into oversized gleaming golden forms; they introduce literal anatomical fragments as adornment. This styling choice engages directly with the house's surrealist legacy by utilizing disembodied body parts as jewelry. The heavy metallic finish contrasts sharply with the soft blonde hair and bright red lip; they pull downward under their own weight. The accessory completes the silhouette by framing the stark face with opulent bizarre hardware."
           }
         ]
       },
@@ -4462,22 +3927,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-04.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "x": 50,
+            "y": 30,
+            "label": "Surrealist Gathered Silk Collar",
+            "description": "The surrealist gathered silk collar frames the head within a massive rigid white halo; it utilizes dense gathering to build a stiff protective perimeter around the face. This architectural shielding applies the concept of monolithic massing by transforming the neckline into a colossal structural monument. The crisp dry taffeta holds its shape perfectly against gravity; it mimics the appearance of a ruffled classical ruff blown up to an absurd scale. The outerwear refuses delicate finishing to assert a highly theatrical and defensive upper silhouette."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+            "y": 65,
+            "label": "Stone-Washed Silk Duchess Trousers",
+            "description": "The stone-washed silk duchess trousers mimic the silhouette of utilitarian denim jeans but are rendered in a highly structured couture fabric; they drop loosely into a gathered cuff at the ankle. This material strategy engages with postmodern pastiche by elevating the most banal casual garment into the realm of high fashion via luxurious textiles. The bright white fabric catches the light smoothly without denim's typical rough texture; prominent cargo-style pockets sit on the hips. The garment asserts a \"disobedient\" approach to traditional couture hemlines."
           }
         ]
       },
@@ -4486,21 +3945,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-          },
-          {
-            "x": 40,
             "y": 55,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "label": "Liquid Fuchsia Silk Train",
+            "description": "The liquid fuchsia silk train spreads across the floor in a massive highly reflective pool; it utilizes a glossy metallic textile to create a striking wet-look finish. This structural extreme applies the joy of peacocking by maximizing spatial volume and vibrant color in response to post-pandemic austerity. The heavy fabric falls tightly from the high waist before expanding dramatically; the deep folds catch intense highlights from the runway lighting. The gown asserts an unapologetic and highly theatrical glamour."
+          },
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Plunging Halter Neckline",
+            "description": "The plunging halter neckline cuts sharply down the center of the torso to expose the sternum entirely; it relies on rigid internal framework to maintain the severe V-shape without gaping. This sartorial choice engages with anatomical interaction by framing the bare skin with severe architectural lines rather than soft contouring. The bright pink straps pull tightly around the back of the neck; the side panels hold the fabric taut across the bust. The detail completes the dramatic silhouette with a sharp precise structural boundary."
           }
         ]
       },
@@ -4509,21 +3962,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+            "y": 50,
+            "label": "Sculptural Golden Baby Accessory",
+            "description": "The sculptural golden baby accessory is cradled against the chest as a literal piece of wearable art; it portrays an infant actively nursing. This striking tableau engages with feminist ideology by elevating the biological act of motherhood into an iconic monumental work of surrealist haute couture. The gleaming brass figure is highly detailed and reflects light fiercely against the dark dress; it replaces traditional handbags or jewelry entirely. The piece asserts a radical subversion of polite couture tropes by displaying primal biology cast in gold."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+            "x": 50,
+            "y": 40,
+            "label": "Sleeveless Black Hooded Sheath",
+            "description": "The sleeveless black hooded sheath provides a stark unadorned background for the dramatic golden accessory; it features a clean front zipper completely fastened to the throat. This tailoring approach utilizes minimalist discipline to contrast the heavy surrealism of the sculpted child. The dark fabric falls cleanly over the body without gathering or draping; the hood creates a strict frame around the severe facial styling. The garment completes the look by functioning as a quiet monolithic pedestal for the central artwork."
           }
         ]
       },
@@ -4531,22 +3978,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-07.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "x": 50,
+            "y": 35,
+            "label": "Golden Bugle-Bead Hair Embroidery",
+            "description": "The golden bugle-bead hair embroidery cascades from the shoulders in dense shimmering metallic waves; it meticulously recreates the texture of long flowing hair using thousands of individual beads. This unparalleled embellishment engages directly with the house's surrealist heritage by referencing Schiaparelli's historical 1938 hair-embroidered veil. The thick heavy strips of gold contrast violently with the matte black fabric of the jacket beneath; they catch light kinetically as the model moves. The detail asserts an unapologetic and barbaric approach to luxury embroidery."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "y": 90,
+            "label": "Molded Golden Toe Boots",
+            "description": "The molded golden toe boots feature a solid brass cast of a human foot resting over the toe box of a black leather boot; they apply surrealist anatomical interaction directly to the footwear. This design choice utilizes trompe l'oeil to blur the boundary between the biological body and the protective shoe. The bright gold toes shine starkly against the dark leather and runway floor; the boot rises tightly above the knee. The accessory completes the silhouette by extending the surrealist anatomy from head to toe."
           }
         ]
       },
@@ -4556,20 +3997,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 50,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+            "label": "Sequined Tiger-Stripe Gown",
+            "description": "The sequined tiger-stripe gown maps an intricate animal print across the body using thousands of tiny reflective paillettes; it creates a liquid golden and black surface that slinks over the anatomy. This material application engages with the joy of peacocking by reviving pure unadulterated glamour for the post-pandemic era. The dense beadwork creates a heavy but fluid drape that pools into a long sweeping train; the pattern follows the curves of the body seamlessly. The garment asserts a high-octane theatricality through meticulous unyielding craftsmanship."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+            "x": 48,
+            "y": 10,
+            "label": "Oversized Abstract Brass Earring",
+            "description": "The oversized abstract brass earring hangs from the right lobe as a massive heavy golden plaque; it features cutouts mimicking an animalistic motif. This styling choice utilizes the house's signature surrealist componentry to introduce a jarring asymmetrical weight to the portrait. The thick metal reflects light fiercely; it dwarfs the natural ear entirely. The piece completes the ensemble by providing a bold rigid focal point against the fluid slinking gown."
           }
         ]
       },
@@ -4577,22 +4012,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-09.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-          },
-          {
-            "x": 40,
-            "y": 40,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+            "x": 50,
+            "y": 30,
+            "label": "Woven Pink Silk Muscle Dress",
+            "description": "The woven pink silk muscle dress utilizes an intricate basket-weave technique to construct a vivid fuchsia bodice; it mimics a ripped muscular physique through subtle textile manipulation rather than molded leather. This structural strategy engages with gender deconstruction by applying heroic male musculature to a bright pink feminine silhouette. The tight weave highlights a defined six-pack and pectoral muscles; the long sleeves end in simple cuffs. The garment refuses traditional soft draping to assert a highly engineered and powerful upper carapace."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "y": 15,
+            "label": "Oversized Golden Padlock Earrings",
+            "description": "The oversized golden padlock earrings dangle heavily from the ears; they utilize massive functional lock shapes as elite adornment. This accessory engages with the surrealist strategy of transforming banal hardware into luxury fetish objects. The bright yellow gold shines starkly against the dark skin and pink fabric; the keyholes are rendered in glossy black. The piece completes the silhouette by adding a dense mechanical weight to the face."
           }
         ]
       },
@@ -4601,21 +4030,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-          },
-          {
-            "x": 60,
-            "y": 85,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "y": 20,
+            "label": "Surrealist Eye-Motif Eyewear",
+            "description": "The surrealist eye-motif eyewear covers the face with an immense mask constructed entirely from black pearls and rhinestones; it features two hyper-realistic painted eyes staring outward. This accessory engages directly with the house's surrealist heritage by utilizing disembodied anatomy to create a deeply unsettling and theatrical barrier. The intricate beadwork radiates outward in concentric circles; it completely obscures the model's actual gaze. The piece asserts a voyeuristic tension by staring back aggressively at the audience."
           },
           {
             "x": 40,
-            "y": 55,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+            "y": 70,
+            "label": "Pearl-Encrusted Nose Clutch",
+            "description": "The pearl-encrusted nose clutch is grasped tightly against the body; it is a rigid handbag covered entirely in black beadwork and features a massive golden brass nose as its clasp. This object utilizes surrealist componentry to elevate a functional clasp into a literal anatomical fragment. The heavy metallic nose sits prominently in the center of the dark swirling beads; the bag maintains a stiff circular shape. The accessory completes the look by reiterating the theme of fragmented anatomy."
           }
         ]
       },
@@ -4624,21 +4047,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "y": 50,
+            "label": "Crystal-Encrusted Nude Illusion Gown",
+            "description": "The crystal-encrusted nude illusion gown clings tightly to the body as a second skin; it is entirely paved in tiny reflective stones mimicking a shimmering golden anatomy. This extreme material application utilizes over 100,000 crystals to achieve a wet-look trompe l'oeil effect. The dense beadwork creates a heavy but perfectly fluid drape that stretches tightly across the hips; the long sleeves extend completely over the hands. The garment asserts a hyper-luxurious execution of heroic nudity."
           },
           {
-            "x": 40,
-            "y": 60,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-          },
-          {
-            "x": 60,
-            "y": 30,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "x": 50,
+            "y": 10,
+            "label": "Oversized Golden Swirl Earrings",
+            "description": "The oversized golden swirl earrings hang from the ears in massive concentric metallic loops; they frame the face with heavy architectural hardware. This styling choice applies surrealist scale distortion to elevate traditional hoop earrings into monumental structures. The thick gold catches the light dramatically against the dark hair; they rest heavily upon the shoulders. The piece completes the look by grounding the shimmering dress with solid unyielding metal."
           }
         ]
       },
@@ -4646,22 +4063,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-12.jpg",
         "hotspots": [
           {
-            "x": 40,
-            "y": 30,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+            "x": 50,
+            "y": 60,
+            "label": "Volumetric Red Silk Train",
+            "description": "The volumetric red silk train engulfs the back of the figure in a massive cascading wave of bright crimson fabric; it trails heavily across the floor. This structural extreme applies monolithic massing to create a deeply dramatic and highly traditional couture silhouette that contrasts with the severe bodice. The stiff silk holds deep rigid folds that refuse soft fluidity; the intense color dominates the lower visual field. The garment asserts an unapologetic and bold return to the joy of peacocking."
           },
           {
             "x": 50,
-            "y": 80,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-          },
-          {
-            "x": 60,
-            "y": 40,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+            "y": 15,
+            "label": "Surrealist Golden Snake Necklace",
+            "description": "The surrealist golden snake necklace coils tightly around the throat and cascades down the chest; it mimics multiple serpentine bodies cast in solid brass. This accessory engages with surrealism by transforming a fearsome reptile into a rigid luxury choke collar. The bright gold links feature dark enamel detailing; the heavy metal sits starkly against the bare skin. The piece completes the silhouette by injecting a barbaric and slightly dangerous adornment to the elegant gown."
           }
         ]
       },
@@ -4670,21 +4081,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 50,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "y": 30,
+            "label": "Golden Brass Female Cuirass",
+            "description": "The golden brass female cuirass is a solid metallic breastplate molded directly to the female form; it exposes the back and sides while strictly shielding the front torso. This material manipulation utilizes body politics to merge ancient Greek armor concepts with modern heroic nudity. The highly polished surface reflects the studio lighting like a molten mirror; the rigid form flattens the natural bustline into a severe architectural shape. The garment refuses soft textile traditions entirely to assert a literal suit of armor."
           },
           {
-            "x": 30,
-            "y": 20,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-          },
-          {
-            "x": 70,
-            "y": 80,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "x": 50,
+            "y": 70,
+            "label": "Sheer Tulle Paneled Trousers",
+            "description": "The sheer tulle paneled trousers feature thick black wool upper panels dropping into translucent black mesh over the legs; they create a disjointed and hyper-modern lower silhouette. This tailoring approach applies post-pandemic subversion by omitting the expected ballgown skirt entirely in favor of an edgy bifurcated garment. The opaque panels mimic cargo pockets; the sheer fabric exposes the legs completely down to the heavy boots. The piece completes the warrior aesthetic by prioritizing mobility over traditional elegance."
           }
         ]
       },
@@ -4692,22 +4097,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-14.jpg",
         "hotspots": [
           {
-            "x": 60,
-            "y": 60,
-            "label": "Hyper-Real Muscular Simulation",
-            "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-          },
-          {
-            "x": 40,
+            "x": 50,
             "y": 40,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "label": "Colossal White Silk Rosette",
+            "description": "The colossal white silk rosette erupts from the shoulders and back in a massive pleated halo; it frames the entire upper body within a stiff rigid flower motif. This structural extreme applies monolithic massing by transforming a delicate floral detail into an overwhelming architectural volume. The crisp white fabric is heavily gathered to maintain the deep radiating folds; it dwarfs the model's head entirely. The outerwear refuses subtle embellishment to assert a dominant and highly theatrical spatial presence."
           },
           {
             "x": 50,
-            "y": 20,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+            "y": 65,
+            "label": "Sculptural Draped Silk Dress",
+            "description": "The sculptural draped silk dress drops tightly over the torso with heavy ruched detailing at the bust; it provides a severe and structured core beneath the massive rosette. This material strategy engages with anatomical interaction by utilizing stiff fabrics to create a hard-edged tailored silhouette rather than a soft fluid drape. The stark white textile mimics classical marble statuary; the high slit restricts the stride. The garment completes the look by anchoring the chaotic upper volume with a strictly disciplined base."
           }
         ]
       },
@@ -4716,40 +4115,34 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 70,
-            "label": "Rigid Exoskeletal Moulding",
-            "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+            "y": 65,
+            "label": "Stone-Washed Silk Duchess Cargo Trousers",
+            "description": "The stone-washed silk duchess cargo trousers mimic the utilitarian silhouette of wide-leg cargo pants but are crafted from pristine white haute couture fabric; they feature massive patch pockets down the legs. This structural strategy engages with postmodern pastiche by elevating the most banal casual garment into the realm of elite fashion. The stiff fabric holds a rigid wide shape; the hems drag heavily over the thick black boots. The garment asserts a disobedient approach to traditional couture hemlines by omitting the skirt entirely."
           },
           {
-            "x": 60,
-            "y": 85,
-            "label": "Gilded Biological Armour",
-            "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-          },
-          {
-            "x": 40,
+            "x": 50,
             "y": 55,
-            "label": "Anatomical Brass Breastplate",
-            "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+            "label": "Multiple Golden Padlock Embellishments",
+            "description": "The multiple golden padlock embellishments are fastened to the flaps of every cargo pocket; they replace traditional buttons with heavy functional hardware. This styling choice utilizes the house's surrealist heritage by elevating banal security items into prominent luxury fetish objects. The bright yellow brass catches the light starkly against the crisp white textile; a massive version of the padlock functions as a central handbag. The accessory completes the look by branding the utilitarian trousers with unmistakable high-end hardware."
           }
         ]
       }
     ],
     "tags": {
-      "brand": "Schiaparelli",
-      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
-      "politics": "Feminist Theory & The Subverted Gaze",
-      "theories": "Hyperreality",
+      "brand": "Schiaparelli | Daniel Roseberry",
+      "era": "2020–Present; The Post-Pandemic Era",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+      "theories": "Aesthetic Philosophy | Surrealism | Postmodernism",
       "gender": "Womenswear",
-      "materials": "Fine Precious Metallics (Gold; Silver; Copper Thread)",
-      "geography": "Paris (Federation de la Haute Couture)",
-      "anatomy": "Prosthetic Extension",
-      "format": "Gallery / Museum Installation"
+      "materials": "Molded Leather | Silk-Velvet bonded to Neoprene | Crisp Dry Hand Taffeta | Stone-Washed Silk Duchess | Metal / Golden Brass / Resin | Rhinestones / Crystals",
+      "geography": "Paris (Chambre Syndicale / Haute Couture)",
+      "anatomy": "Anatomical Interaction | Monolithic Massing | Prosthetic Extension | Architectural Shielding and Armour | Displaced Anatomy and Padding",
+      "format": "Short Film (231 Seconds of Haute Couture)"
     },
     "notes": {
-      "critique": "Roseberry executes a severe institutional critique[cite: 2] of the delicate, fragile nature of traditional couture. By integrating muscular, hyper-masculinised breastplates and exposed anatomical structures onto the female form, he enforces a strict narrative of Feminist Theory & The Subverted Gaze[cite: 2]. The wearer exercises absolute bodily autonomy and transgression[cite: 2] through these protective, metallic carapaces. The juxtaposition of delicate silk faille against rigid body parts creates a profound exploration of The Grotesque and Abject[cite: 2]; treating the biological body as an architectural foundation for armour rather than a vessel for romanticised decoration.",
-      "strategy": "By releasing the collection entirely via video during a period of global isolation, Schiaparelli engineers a masterful exercise in media transmission[cite: 2]. The brand bypasses the physical salon entirely; executing brilliant corporate signalling[cite: 2] by simultaneously aligning these extreme visual propositions with historic celebrity moments such as the United States Presidential Inauguration. This calculated spectacle mediation ensures maximum virality and press disruption[cite: 2]; establishing the house as the foremost authority on modern surrealism while dominating global editorial feeds.",
-      "provenance": "Under the direction of Daniel Roseberry; Schiaparelli presented the Haute Couture Spring and Summer collection in January 2021 via digital transmission. Established within the Post-Pandemic Surrealist Current; the fashion film format operates as a radical reinvention of the house's codes. The presentation functions as a clinical inquiry into human anatomy; merging traditional techniques with molded bodily elements to challenge the fragility of mid-century dressmaking."
+      "provenance": "This entry refers to Daniel Roseberry's third haute couture collection as artistic director for the Parisian house of Schiaparelli, presented digitally during the Covid-19 pandemic via a short film titled 231 Seconds of Haute Couture. The collection launched just days after Roseberry gained global attention for dressing Lady Gaga in a custom Schiaparelli gown and golden dove brooch to sing the national anthem at President Joe Biden's inauguration. Roseberry sought to challenge the traditional cliches of haute couture, explicitly rejecting polite fairy-tale princess dresses in favor of a bold, disobedient exploration of human anatomy.",
+      "strategy": "The collection's core structural strategy was the creation of sculptural cuirasses and molded leather bustiers designed to mimic ripped human physiques, resembling ancient Greek bronze armor with hyper-defined abdominals and nipples, introducing heroic nudity into high fashion. Deeply rooted in founder Elsa Schiaparelli's surrealist legacy, Roseberry integrated disembodied body parts directly into garments and accessories including box-frame handbags with snap closures shaped like noses, prosthetic nail-glove hybrids, and oversized golden brass jewelry molded into ears, teeth, and eyes. To redefine couture, Roseberry deliberately omitted traditional skirts, instead elevating utilitarian garments: blouson leather pants with elastic waists, bomber jackets, and denim jeans rendered in stone-washed silk duchess embellished with dangling gold padlocks. Embroidery and beading were treated not as delicate accents but as raw, barbaric jewelry, including a basket-weave wool cape covered in thousands of gold bugle beads referencing Schiaparelli's 1938 hair-embroidered veil and a gown shimmering with over 100,000 Swarovski crystals.",
+      "critique": "By applying traditionally masculine ergonomics such as muscular abs and broad chest plates to the female body, the collection radically challenged gendered expectations of high fashion. As Roseberry quipped: if you want to look like a cupcake, you can go somewhere else. The collection reframes female empowerment through physical power and architectural shielding, transforming the wearer into a warrior rather than a passive object of beauty. The collection exemplifies the second coming of surrealism in fashion, acting as a psychological response to the unprecedented strangeness and uncertainty of the post-pandemic era. A standout conceptual look featured a model in a pristine sleeveless hooded dress carrying a sculpted gold baby being breastfed, elevating the biological act of motherhood into an iconic monumental work of sculptural art and seamlessly merging biological function with surrealist haute couture."
     }
   }
 ];

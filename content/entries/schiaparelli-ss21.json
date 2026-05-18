@@ -2,7 +2,7 @@
   "$schema": "../entry.schema.json",
   "id": "schiaparelli-ss21",
   "title": "Schiaparelli Haute Couture SS 2021",
-  "subtitle": "",
+  "subtitle": "231 Seconds of Haute Couture",
   "year": 2021,
   "season": "SS",
   "images": [
@@ -11,21 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "y": 25,
+          "label": "Monolithic Hooded Silk Blouson",
+          "description": "The monolithic hooded silk blouson engulfs the upper body in an immense bulbous volume of crisp black fabric; it completely overrides the natural anatomy. This structural extreme engages with theories of architectural shielding by offering an aggressive protective carapace against the environment. The gathered folds and hidden internal scaffolding allow the hood to rise unnaturally high above the skull; the dense dark material absorbs light completely. The outerwear asserts a defensive and highly theatrical posture that dwarfs the human form."
         },
         {
-          "x": 40,
-          "y": 60,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-        },
-        {
-          "x": 60,
-          "y": 30,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "x": 50,
+          "y": 68,
+          "label": "Molded Padlock Handbag",
+          "description": "The molded padlock handbag utilizes solid golden brass to craft a surreal heavy-duty accessory; it mimics a literal lock scaled to absurd proportions. This object engages directly with surrealist heritage by elevating a banal functional item into a luxury fetish object. The reflective gold surface mimics the appearance of molten metal frozen in place; the model grips it tightly against her thigh. The accessory completes the look by injecting a stark heavy piece of hardware against the fluid dark tailoring."
         }
       ]
     },
@@ -33,22 +27,16 @@
       "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-02.jpg",
       "hotspots": [
         {
-          "x": 40,
-          "y": 30,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+          "x": 50,
+          "y": 45,
+          "label": "Molded Leather Muscle Cuirass",
+          "description": "The molded leather muscle cuirass aggressively redefines the female torso into a hyper-masculine anatomical plate; it features highly defined six-pack abdominals and rigid pectoral structures. This material manipulation utilizes body politics to radically challenge gendered expectations of high fashion by applying heroic nudity. The dark glossy leather mimics wet liquid or polished bronze armor; it completely flattens the natural bustline. The garment refuses traditional soft feminine tailoring to assert an imposing warrior-like presence."
         },
         {
           "x": 50,
-          "y": 80,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
-        },
-        {
-          "x": 60,
-          "y": 40,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+          "y": 75,
+          "label": "Colossal Pink Silk Waist Bow",
+          "description": "The colossal pink silk waist bow explodes from the midriff in a massive geometric configuration; it deliberately parodies the \"cupcake\" trope associated with traditional haute couture. This structural extreme applies camp theory by maximizing a delicate feminine detail until it becomes a dominant and slightly absurd spatial obstruction. The bright pink fabric holds deep rigid creases; it sharply contrasts with the dark militant cuirass above it. The piece asserts a joyful but highly critical reflection on couture embellishment."
         }
       ]
     },
@@ -57,21 +45,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "y": 40,
+          "label": "Voluminous Gathered Silk Sleeves",
+          "description": "The voluminous gathered silk sleeves erupt from the shoulders in massive crisp white spirals; they dwarf the slim black bodice entirely. This structural intervention utilizes monolithic massing to drastically extend the lateral footprint of the wearer. The dry hand taffeta holds deep circular folds that mimic unfurling shells or classical statuary drapery; they fall heavily toward the hip. The garment asserts an overwhelming architectural volume that completely restricts the kinetic motion of the arms."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "x": 55,
+          "y": 15,
+          "label": "Surrealist Molded Brass Earrings",
+          "description": "The surrealist molded brass earrings hang heavily from the lobes into oversized gleaming golden forms; they introduce literal anatomical fragments as adornment. This styling choice engages directly with the house's surrealist legacy by utilizing disembodied body parts as jewelry. The heavy metallic finish contrasts sharply with the soft blonde hair and bright red lip; they pull downward under their own weight. The accessory completes the silhouette by framing the stark face with opulent bizarre hardware."
         }
       ]
     },
@@ -79,22 +61,16 @@
       "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-04.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-        },
-        {
-          "x": 40,
-          "y": 40,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "x": 50,
+          "y": 30,
+          "label": "Surrealist Gathered Silk Collar",
+          "description": "The surrealist gathered silk collar frames the head within a massive rigid white halo; it utilizes dense gathering to build a stiff protective perimeter around the face. This architectural shielding applies the concept of monolithic massing by transforming the neckline into a colossal structural monument. The crisp dry taffeta holds its shape perfectly against gravity; it mimics the appearance of a ruffled classical ruff blown up to an absurd scale. The outerwear refuses delicate finishing to assert a highly theatrical and defensive upper silhouette."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+          "y": 65,
+          "label": "Stone-Washed Silk Duchess Trousers",
+          "description": "The stone-washed silk duchess trousers mimic the silhouette of utilitarian denim jeans but are rendered in a highly structured couture fabric; they drop loosely into a gathered cuff at the ankle. This material strategy engages with postmodern pastiche by elevating the most banal casual garment into the realm of high fashion via luxurious textiles. The bright white fabric catches the light smoothly without denim's typical rough texture; prominent cargo-style pockets sit on the hips. The garment asserts a \"disobedient\" approach to traditional couture hemlines."
         }
       ]
     },
@@ -103,21 +79,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-        },
-        {
-          "x": 60,
-          "y": 85,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-        },
-        {
-          "x": 40,
           "y": 55,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "label": "Liquid Fuchsia Silk Train",
+          "description": "The liquid fuchsia silk train spreads across the floor in a massive highly reflective pool; it utilizes a glossy metallic textile to create a striking wet-look finish. This structural extreme applies the joy of peacocking by maximizing spatial volume and vibrant color in response to post-pandemic austerity. The heavy fabric falls tightly from the high waist before expanding dramatically; the deep folds catch intense highlights from the runway lighting. The gown asserts an unapologetic and highly theatrical glamour."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Plunging Halter Neckline",
+          "description": "The plunging halter neckline cuts sharply down the center of the torso to expose the sternum entirely; it relies on rigid internal framework to maintain the severe V-shape without gaping. This sartorial choice engages with anatomical interaction by framing the bare skin with severe architectural lines rather than soft contouring. The bright pink straps pull tightly around the back of the neck; the side panels hold the fabric taut across the bust. The detail completes the dramatic silhouette with a sharp precise structural boundary."
         }
       ]
     },
@@ -126,21 +96,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+          "y": 50,
+          "label": "Sculptural Golden Baby Accessory",
+          "description": "The sculptural golden baby accessory is cradled against the chest as a literal piece of wearable art; it portrays an infant actively nursing. This striking tableau engages with feminist ideology by elevating the biological act of motherhood into an iconic monumental work of surrealist haute couture. The gleaming brass figure is highly detailed and reflects light fiercely against the dark dress; it replaces traditional handbags or jewelry entirely. The piece asserts a radical subversion of polite couture tropes by displaying primal biology cast in gold."
         },
         {
-          "x": 40,
-          "y": 60,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
-        },
-        {
-          "x": 60,
-          "y": 30,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+          "x": 50,
+          "y": 40,
+          "label": "Sleeveless Black Hooded Sheath",
+          "description": "The sleeveless black hooded sheath provides a stark unadorned background for the dramatic golden accessory; it features a clean front zipper completely fastened to the throat. This tailoring approach utilizes minimalist discipline to contrast the heavy surrealism of the sculpted child. The dark fabric falls cleanly over the body without gathering or draping; the hood creates a strict frame around the severe facial styling. The garment completes the look by functioning as a quiet monolithic pedestal for the central artwork."
         }
       ]
     },
@@ -148,22 +112,16 @@
       "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-07.jpg",
       "hotspots": [
         {
-          "x": 40,
-          "y": 30,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "x": 50,
+          "y": 35,
+          "label": "Golden Bugle-Bead Hair Embroidery",
+          "description": "The golden bugle-bead hair embroidery cascades from the shoulders in dense shimmering metallic waves; it meticulously recreates the texture of long flowing hair using thousands of individual beads. This unparalleled embellishment engages directly with the house's surrealist heritage by referencing Schiaparelli's historical 1938 hair-embroidered veil. The thick heavy strips of gold contrast violently with the matte black fabric of the jacket beneath; they catch light kinetically as the model moves. The detail asserts an unapologetic and barbaric approach to luxury embroidery."
         },
         {
           "x": 50,
-          "y": 80,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-        },
-        {
-          "x": 60,
-          "y": 40,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "y": 90,
+          "label": "Molded Golden Toe Boots",
+          "description": "The molded golden toe boots feature a solid brass cast of a human foot resting over the toe box of a black leather boot; they apply surrealist anatomical interaction directly to the footwear. This design choice utilizes trompe l'oeil to blur the boundary between the biological body and the protective shoe. The bright gold toes shine starkly against the dark leather and runway floor; the boot rises tightly above the knee. The accessory completes the silhouette by extending the surrealist anatomy from head to toe."
         }
       ]
     },
@@ -173,20 +131,14 @@
         {
           "x": 50,
           "y": 50,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+          "label": "Sequined Tiger-Stripe Gown",
+          "description": "The sequined tiger-stripe gown maps an intricate animal print across the body using thousands of tiny reflective paillettes; it creates a liquid golden and black surface that slinks over the anatomy. This material application engages with the joy of peacocking by reviving pure unadulterated glamour for the post-pandemic era. The dense beadwork creates a heavy but fluid drape that pools into a long sweeping train; the pattern follows the curves of the body seamlessly. The garment asserts a high-octane theatricality through meticulous unyielding craftsmanship."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+          "x": 48,
+          "y": 10,
+          "label": "Oversized Abstract Brass Earring",
+          "description": "The oversized abstract brass earring hangs from the right lobe as a massive heavy golden plaque; it features cutouts mimicking an animalistic motif. This styling choice utilizes the house's signature surrealist componentry to introduce a jarring asymmetrical weight to the portrait. The thick metal reflects light fiercely; it dwarfs the natural ear entirely. The piece completes the ensemble by providing a bold rigid focal point against the fluid slinking gown."
         }
       ]
     },
@@ -194,22 +146,16 @@
       "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-09.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-        },
-        {
-          "x": 40,
-          "y": 40,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+          "x": 50,
+          "y": 30,
+          "label": "Woven Pink Silk Muscle Dress",
+          "description": "The woven pink silk muscle dress utilizes an intricate basket-weave technique to construct a vivid fuchsia bodice; it mimics a ripped muscular physique through subtle textile manipulation rather than molded leather. This structural strategy engages with gender deconstruction by applying heroic male musculature to a bright pink feminine silhouette. The tight weave highlights a defined six-pack and pectoral muscles; the long sleeves end in simple cuffs. The garment refuses traditional soft draping to assert a highly engineered and powerful upper carapace."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "y": 15,
+          "label": "Oversized Golden Padlock Earrings",
+          "description": "The oversized golden padlock earrings dangle heavily from the ears; they utilize massive functional lock shapes as elite adornment. This accessory engages with the surrealist strategy of transforming banal hardware into luxury fetish objects. The bright yellow gold shines starkly against the dark skin and pink fabric; the keyholes are rendered in glossy black. The piece completes the silhouette by adding a dense mechanical weight to the face."
         }
       ]
     },
@@ -218,21 +164,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-        },
-        {
-          "x": 60,
-          "y": 85,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "y": 20,
+          "label": "Surrealist Eye-Motif Eyewear",
+          "description": "The surrealist eye-motif eyewear covers the face with an immense mask constructed entirely from black pearls and rhinestones; it features two hyper-realistic painted eyes staring outward. This accessory engages directly with the house's surrealist heritage by utilizing disembodied anatomy to create a deeply unsettling and theatrical barrier. The intricate beadwork radiates outward in concentric circles; it completely obscures the model's actual gaze. The piece asserts a voyeuristic tension by staring back aggressively at the audience."
         },
         {
           "x": 40,
-          "y": 55,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+          "y": 70,
+          "label": "Pearl-Encrusted Nose Clutch",
+          "description": "The pearl-encrusted nose clutch is grasped tightly against the body; it is a rigid handbag covered entirely in black beadwork and features a massive golden brass nose as its clasp. This object utilizes surrealist componentry to elevate a functional clasp into a literal anatomical fragment. The heavy metallic nose sits prominently in the center of the dark swirling beads; the bag maintains a stiff circular shape. The accessory completes the look by reiterating the theme of fragmented anatomy."
         }
       ]
     },
@@ -241,21 +181,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "y": 50,
+          "label": "Crystal-Encrusted Nude Illusion Gown",
+          "description": "The crystal-encrusted nude illusion gown clings tightly to the body as a second skin; it is entirely paved in tiny reflective stones mimicking a shimmering golden anatomy. This extreme material application utilizes over 100,000 crystals to achieve a wet-look trompe l'oeil effect. The dense beadwork creates a heavy but perfectly fluid drape that stretches tightly across the hips; the long sleeves extend completely over the hands. The garment asserts a hyper-luxurious execution of heroic nudity."
         },
         {
-          "x": 40,
-          "y": 60,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-        },
-        {
-          "x": 60,
-          "y": 30,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "x": 50,
+          "y": 10,
+          "label": "Oversized Golden Swirl Earrings",
+          "description": "The oversized golden swirl earrings hang from the ears in massive concentric metallic loops; they frame the face with heavy architectural hardware. This styling choice applies surrealist scale distortion to elevate traditional hoop earrings into monumental structures. The thick gold catches the light dramatically against the dark hair; they rest heavily upon the shoulders. The piece completes the look by grounding the shimmering dress with solid unyielding metal."
         }
       ]
     },
@@ -263,22 +197,16 @@
       "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-12.jpg",
       "hotspots": [
         {
-          "x": 40,
-          "y": 30,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+          "x": 50,
+          "y": 60,
+          "label": "Volumetric Red Silk Train",
+          "description": "The volumetric red silk train engulfs the back of the figure in a massive cascading wave of bright crimson fabric; it trails heavily across the floor. This structural extreme applies monolithic massing to create a deeply dramatic and highly traditional couture silhouette that contrasts with the severe bodice. The stiff silk holds deep rigid folds that refuse soft fluidity; the intense color dominates the lower visual field. The garment asserts an unapologetic and bold return to the joy of peacocking."
         },
         {
           "x": 50,
-          "y": 80,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
-        },
-        {
-          "x": 60,
-          "y": 40,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
+          "y": 15,
+          "label": "Surrealist Golden Snake Necklace",
+          "description": "The surrealist golden snake necklace coils tightly around the throat and cascades down the chest; it mimics multiple serpentine bodies cast in solid brass. This accessory engages with surrealism by transforming a fearsome reptile into a rigid luxury choke collar. The bright gold links feature dark enamel detailing; the heavy metal sits starkly against the bare skin. The piece completes the silhouette by injecting a barbaric and slightly dangerous adornment to the elegant gown."
         }
       ]
     },
@@ -287,21 +215,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "y": 30,
+          "label": "Golden Brass Female Cuirass",
+          "description": "The golden brass female cuirass is a solid metallic breastplate molded directly to the female form; it exposes the back and sides while strictly shielding the front torso. This material manipulation utilizes body politics to merge ancient Greek armor concepts with modern heroic nudity. The highly polished surface reflects the studio lighting like a molten mirror; the rigid form flattens the natural bustline into a severe architectural shape. The garment refuses soft textile traditions entirely to assert a literal suit of armor."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "x": 50,
+          "y": 70,
+          "label": "Sheer Tulle Paneled Trousers",
+          "description": "The sheer tulle paneled trousers feature thick black wool upper panels dropping into translucent black mesh over the legs; they create a disjointed and hyper-modern lower silhouette. This tailoring approach applies post-pandemic subversion by omitting the expected ballgown skirt entirely in favor of an edgy bifurcated garment. The opaque panels mimic cargo pockets; the sheer fabric exposes the legs completely down to the heavy boots. The piece completes the warrior aesthetic by prioritizing mobility over traditional elegance."
         }
       ]
     },
@@ -309,22 +231,16 @@
       "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-14.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Hyper-Real Muscular Simulation",
-          "description": "The hammered metal simulates an idealized; hyper-real abdominal structure; a study in The Simulacrum (Baudrillard). The garment becomes a sculptural substitute for the biological body. This simulation highlights the impossibility of achieving such perfection organically. It forces a dialogue between the flawed human reality and the idealized metallic avatar."
-        },
-        {
-          "x": 40,
+          "x": 50,
           "y": 40,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "label": "Colossal White Silk Rosette",
+          "description": "The colossal white silk rosette erupts from the shoulders and back in a massive pleated halo; it frames the entire upper body within a stiff rigid flower motif. This structural extreme applies monolithic massing by transforming a delicate floral detail into an overwhelming architectural volume. The crisp white fabric is heavily gathered to maintain the deep radiating folds; it dwarfs the model's head entirely. The outerwear refuses subtle embellishment to assert a dominant and highly theatrical spatial presence."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
+          "y": 65,
+          "label": "Sculptural Draped Silk Dress",
+          "description": "The sculptural draped silk dress drops tightly over the torso with heavy ruched detailing at the bust; it provides a severe and structured core beneath the massive rosette. This material strategy engages with anatomical interaction by utilizing stiff fabrics to create a hard-edged tailored silhouette rather than a soft fluid drape. The stark white textile mimics classical marble statuary; the high slit restricts the stride. The garment completes the look by anchoring the chaotic upper volume with a strictly disciplined base."
         }
       ]
     },
@@ -333,39 +249,33 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Rigid Exoskeletal Moulding",
-          "description": "The leather is moulded under extreme pressure to lock the body into a permanent; static pose; a brilliant execution of Object-Oriented Ontology in fashion. The material memory overrides the kinetic intent of the wearer. This structural dominance reduces the human to a mere armature for the display of craft. The garment asserts its own physical agency over the biological subject."
+          "y": 65,
+          "label": "Stone-Washed Silk Duchess Cargo Trousers",
+          "description": "The stone-washed silk duchess cargo trousers mimic the utilitarian silhouette of wide-leg cargo pants but are crafted from pristine white haute couture fabric; they feature massive patch pockets down the legs. This structural strategy engages with postmodern pastiche by elevating the most banal casual garment into the realm of elite fashion. The stiff fabric holds a rigid wide shape; the hems drag heavily over the thick black boots. The garment asserts a disobedient approach to traditional couture hemlines by omitting the skirt entirely."
         },
         {
-          "x": 60,
-          "y": 85,
-          "label": "Gilded Biological Armour",
-          "description": "The application of pure gold leaf over biomorphic shapes elevates the grotesque into the realm of the sacred; a radical interpretation of Radical Romanticism. The preciousness of the material demands reverence; while the strange anatomical forms provoke unease. This tension between disgust and awe is the core mechanism of the surrealist intervention. It transforms the body into a reliquary."
-        },
-        {
-          "x": 40,
+          "x": 50,
           "y": 55,
-          "label": "Anatomical Brass Breastplate",
-          "description": "The externalization of the female form in rigid metal challenges the soft vulnerability of flesh; engaging deeply with The Mirror Stage of psychoanalytic theory. The surrealist prosthetic acts as both a protective shield and an aggressive display. It weaponizes the sexual characteristics of the body; turning them into impenetrable armour. The breastplate proposes a cyborgian future fused with classical antiquity."
+          "label": "Multiple Golden Padlock Embellishments",
+          "description": "The multiple golden padlock embellishments are fastened to the flaps of every cargo pocket; they replace traditional buttons with heavy functional hardware. This styling choice utilizes the house's surrealist heritage by elevating banal security items into prominent luxury fetish objects. The bright yellow brass catches the light starkly against the crisp white textile; a massive version of the padlock functions as a central handbag. The accessory completes the look by branding the utilitarian trousers with unmistakable high-end hardware."
         }
       ]
     }
   ],
   "tags": {
-    "brand": "Schiaparelli",
-    "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
-    "politics": "Feminist Theory & The Subverted Gaze",
-    "theories": "Hyperreality",
+    "brand": "Schiaparelli | Daniel Roseberry",
+    "era": "2020–Present; The Post-Pandemic Era",
+    "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+    "theories": "Aesthetic Philosophy | Surrealism | Postmodernism",
     "gender": "Womenswear",
-    "materials": "Fine Precious Metallics (Gold; Silver; Copper Thread)",
-    "geography": "Paris (Federation de la Haute Couture)",
-    "anatomy": "Prosthetic Extension",
-    "format": "Gallery / Museum Installation"
+    "materials": "Molded Leather | Silk-Velvet bonded to Neoprene | Crisp Dry Hand Taffeta | Stone-Washed Silk Duchess | Metal / Golden Brass / Resin | Rhinestones / Crystals",
+    "geography": "Paris (Chambre Syndicale / Haute Couture)",
+    "anatomy": "Anatomical Interaction | Monolithic Massing | Prosthetic Extension | Architectural Shielding and Armour | Displaced Anatomy and Padding",
+    "format": "Short Film (231 Seconds of Haute Couture)"
   },
   "notes": {
-    "critique": "Roseberry executes a severe institutional critique[cite: 2] of the delicate, fragile nature of traditional couture. By integrating muscular, hyper-masculinised breastplates and exposed anatomical structures onto the female form, he enforces a strict narrative of Feminist Theory & The Subverted Gaze[cite: 2]. The wearer exercises absolute bodily autonomy and transgression[cite: 2] through these protective, metallic carapaces. The juxtaposition of delicate silk faille against rigid body parts creates a profound exploration of The Grotesque and Abject[cite: 2]; treating the biological body as an architectural foundation for armour rather than a vessel for romanticised decoration.",
-    "strategy": "By releasing the collection entirely via video during a period of global isolation, Schiaparelli engineers a masterful exercise in media transmission[cite: 2]. The brand bypasses the physical salon entirely; executing brilliant corporate signalling[cite: 2] by simultaneously aligning these extreme visual propositions with historic celebrity moments such as the United States Presidential Inauguration. This calculated spectacle mediation ensures maximum virality and press disruption[cite: 2]; establishing the house as the foremost authority on modern surrealism while dominating global editorial feeds.",
-    "provenance": "Under the direction of Daniel Roseberry; Schiaparelli presented the Haute Couture Spring and Summer collection in January 2021 via digital transmission. Established within the Post-Pandemic Surrealist Current; the fashion film format operates as a radical reinvention of the house's codes. The presentation functions as a clinical inquiry into human anatomy; merging traditional techniques with molded bodily elements to challenge the fragility of mid-century dressmaking."
+    "provenance": "This entry refers to Daniel Roseberry's third haute couture collection as artistic director for the Parisian house of Schiaparelli, presented digitally during the Covid-19 pandemic via a short film titled 231 Seconds of Haute Couture. The collection launched just days after Roseberry gained global attention for dressing Lady Gaga in a custom Schiaparelli gown and golden dove brooch to sing the national anthem at President Joe Biden's inauguration. Roseberry sought to challenge the traditional cliches of haute couture, explicitly rejecting polite fairy-tale princess dresses in favor of a bold, disobedient exploration of human anatomy.",
+    "strategy": "The collection's core structural strategy was the creation of sculptural cuirasses and molded leather bustiers designed to mimic ripped human physiques, resembling ancient Greek bronze armor with hyper-defined abdominals and nipples, introducing heroic nudity into high fashion. Deeply rooted in founder Elsa Schiaparelli's surrealist legacy, Roseberry integrated disembodied body parts directly into garments and accessories including box-frame handbags with snap closures shaped like noses, prosthetic nail-glove hybrids, and oversized golden brass jewelry molded into ears, teeth, and eyes. To redefine couture, Roseberry deliberately omitted traditional skirts, instead elevating utilitarian garments: blouson leather pants with elastic waists, bomber jackets, and denim jeans rendered in stone-washed silk duchess embellished with dangling gold padlocks. Embroidery and beading were treated not as delicate accents but as raw, barbaric jewelry, including a basket-weave wool cape covered in thousands of gold bugle beads referencing Schiaparelli's 1938 hair-embroidered veil and a gown shimmering with over 100,000 Swarovski crystals.",
+    "critique": "By applying traditionally masculine ergonomics such as muscular abs and broad chest plates to the female body, the collection radically challenged gendered expectations of high fashion. As Roseberry quipped: if you want to look like a cupcake, you can go somewhere else. The collection reframes female empowerment through physical power and architectural shielding, transforming the wearer into a warrior rather than a passive object of beauty. The collection exemplifies the second coming of surrealism in fashion, acting as a psychological response to the unprecedented strangeness and uncertainty of the post-pandemic era. A standout conceptual look featured a model in a pristine sleeveless hooded dress carrying a sculpted gold baby being breastfed, elevating the biological act of motherhood into an iconic monumental work of sculptural art and seamlessly merging biological function with surrealist haute couture."
   }
 }

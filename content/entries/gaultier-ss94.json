@@ -11,21 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "y": 40,
+          "label": "Trompe L'Oeil Bodice",
+          "description": "The trompe l'oeil bodice utilizes a printed mesh underlayer to simulate a heavily tattooed torso beneath a structured corset; it blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The corset features an 18th-century brocade pattern overlaid with heavy black lacing; it flattens rather than enhances the bust. The garment asserts a postmodern sensibility by layering historical restriction over simulated subcultural rebellion."
         },
         {
-          "x": 40,
-          "y": 60,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-        },
-        {
-          "x": 60,
-          "y": 30,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "x": 50,
+          "y": 65,
+          "label": "Draped Wool Culottes",
+          "description": "The draped wool culottes gather heavily at the waist and drop into a wide unstructured volume; they mimic the silhouette of a sarong or traditional dhoti. This structural logic relies on historical pastiche to introduce a fluid non-Western drape into the tailored ensemble. The dark brown fabric features an oversized knot sitting prominently below the corset; the wide legs hang loosely around the calves. The piece completes the \"Global Village Chic\" aesthetic by fusing an 18th-century jacket with a relaxed globalized lower half."
         }
       ]
     },
@@ -33,22 +27,16 @@
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-02.jpg",
       "hotspots": [
         {
-          "x": 40,
+          "x": 50,
           "y": 30,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "label": "Classic Pinstripe Shirting",
+          "description": "The classic pinstripe shirting is tailored with severe traditional precision; it provides a crisp white foundation beneath the dark waistcoat. This garment choice engages with gender fluidity by placing a staple of masculine corporate wear directly onto a female body without altering its strict proportions. The collar is buttoned tightly to the throat; the cuffs extend bluntly past the wrists. The piece asserts a rigid formality that deliberately contrasts with the heavy facial jewelry and subcultural styling."
         },
         {
           "x": 50,
-          "y": 80,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-        },
-        {
-          "x": 60,
-          "y": 40,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+          "y": 65,
+          "label": "Voluminous Wide-Leg Trousers",
+          "description": "The voluminous wide-leg trousers drop from the waist in a massive dark bell shape; they obscure the legs entirely beneath heavy flowing fabric. This structural extreme applies historical pastiche by mimicking the sweeping volume of a 19th-century skirt while maintaining a bifurcated trouser format. The dark textile absorbs light completely to create a flat monumental base; the hem sweeps dangerously close to the runway floor. The garment completes the androgynous silhouette by blurring the visual boundaries between a skirt and a suit pant."
         }
       ]
     },
@@ -57,21 +45,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "y": 30,
+          "label": "Layered Tailored Outerwear",
+          "description": "The layered tailored outerwear stacks a severe dark pinstripe blazer over a cropped denim waistcoat and a classic button-down shirt; it constructs a dense architectural upper body. This material strategy engages with postmodern pastiche by forcing contradictory masculine archetypes—the corporate banker, the blue-collar worker, and the formal gentleman—to occupy the same physical space. The blazer hangs open to reveal the intricate layering; the denim vest sits tightly against the torso. The ensemble asserts a complex and highly constructed approach to gender fluidity."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "x": 50,
+          "y": 65,
+          "label": "Deconstructed Denim Kilt",
+          "description": "The deconstructed denim kilt wraps the lower body in a heavily pleated blue jean fabric; it features raw violently frayed edges running vertically down the thigh. This structural intervention utilizes subcultural systems to subvert traditional menswear by putting a male model in a skirt format associated with punk rebellion. The thick denim holds rigid knife pleats; a massive oversized safety pin dangles functionally from the frayed opening. The garment refuses orthodox beauty standards to assert a rugged and aggressive androgyny."
         }
       ]
     },
@@ -79,22 +61,16 @@
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-04.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-        },
-        {
-          "x": 40,
-          "y": 40,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "x": 50,
+          "y": 30,
+          "label": "Draped Jersey Tunic",
+          "description": "The draped jersey tunic hangs loosely over the torso in a solid black stretch fabric; it obscures the bust and waistline behind a soft unstructured volume. This simple format provides a quiet baseline that highlights the extreme facial styling and heavy metallic jewelry. The neckline drops softly over the collarbone; the long sleeves are pushed up roughly above the elbows. The garment asserts a relaxed almost monastic simplicity amidst the dense globalized pastiche of the collection."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "y": 65,
+          "label": "Asymmetrical Knotted Overskirt",
+          "description": "The asymmetrical knotted overskirt wraps tightly around the hips and ties into a massive heavy lump at the center axis; it creates a chaotic disruption of the lower silhouette. This material application relies on the illusion of a hastily tied sarong to introduce a fluid non-Western drape into the dark ensemble. The black fabric bunches heavily beneath the knot; the hem drops unevenly over opaque black tights. The piece completes the \"Global Village Chic\" aesthetic by prioritizing informal draping over severe tailoring."
         }
       ]
     },
@@ -103,21 +79,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "y": 35,
+          "label": "Flattened Pearl-Trimmed Corset",
+          "description": "The flattened pearl-trimmed corset binds the midriff tightly with exposed boning and delicate pearl embellishments; it restricts the natural curve of the waist while deliberately flattening the bust. This sartorial restriction applies gender deconstruction by utilizing a historically hyper-feminine undergarment to create a more androgynous tubular torso. The vertical stripes of pearls follow the rigid internal framework; it sits over the draped fabric of the skirt rather than beneath it. The garment refuses soft contouring to assert a severe structural boundary."
         },
         {
-          "x": 60,
-          "y": 85,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-        },
-        {
-          "x": 40,
-          "y": 55,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "x": 50,
+          "y": 65,
+          "label": "Liquid Satin Sarong Skirt",
+          "description": "The liquid satin sarong skirt gathers into a massive reflective knot just below the corset; it drapes heavily over the legs in a highly lustrous bronze textile. This structural logic utilizes historical pastiche to mimic traditional Southeast Asian draping techniques using high-end Parisian luxury fabrics. The high-shine material highlights the deep fluid folds radiating from the central knot; the asymmetrical hem exposes the lower calves. The piece completes the globalized collage by anchoring the rigid corset with a chaotic and fluid lower volume."
         }
       ]
     },
@@ -126,21 +96,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "y": 35,
+          "label": "Open-Front Corseted Blouse",
+          "description": "The open-front corseted blouse clings tightly to the upper body in crisp white cotton before splitting open across the stomach; it features subtle corsetry hook-and-eye closures running down the center. This material manipulation engages with the subversion of orthodox beauty by exposing the simulated tattooed skin beneath. The high collar and long sleeves mimic a traditional button-down; the tight fit emphasizes the bust before violently cutting away. The garment asserts a rigid formal shell deliberately fractured to reveal a subcultural underlayer."
         },
         {
-          "x": 40,
-          "y": 60,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-        },
-        {
-          "x": 60,
-          "y": 30,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+          "x": 50,
+          "y": 65,
+          "label": "Reconstructed Dual-Wash Denim Trousers",
+          "description": "The reconstructed dual-wash denim trousers fuse two completely different washes of blue jeans into a single wide-leg garment; they drop heavily from a low unfastened waistband. This tectonic craft utilizes deconstruction to visually slice the lower body in half. The front panel features a classic faded blue denim completely unbuttoned to reveal white undergarments; the back and side panels transition into a stark white textile. The piece refuses cohesive tailoring to complete a silhouette defined by extreme collage."
         }
       ]
     },
@@ -148,22 +112,16 @@
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-07.jpg",
       "hotspots": [
         {
-          "x": 40,
-          "y": 30,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "x": 50,
+          "y": 35,
+          "label": "Rigid 18th-Century Frock Coat",
+          "description": "The rigid 18th-century frock coat structures the upper body with a long flared silhouette and a high collar; it features an excessive row of large self-fabric buttons running down the center seam. This garment engages with historical pastiche by translating the formal menswear of the French court into a stark modern textile. The stiff lavender fabric stands away from the hips; the sleeves end in massive folded red cuffs that swallow the hands. The coat asserts a theatrical and heavily structured armor that dominates the upper silhouette."
         },
         {
           "x": 50,
-          "y": 80,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-        },
-        {
-          "x": 60,
-          "y": 40,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "y": 65,
+          "label": "Printed Trompe L'Oeil Leggings",
+          "description": "The printed trompe l'oeil leggings tightly encase the legs in a light fabric covered in chaotic red and blue graphic motifs; they create the deliberate illusion of heavily tattooed skin. This material strategy utilizes body politics to merge the garment entirely with the biological form. The tight fit highlights the musculature of the legs beneath the long stiff coat; the graphics mimic urban graffiti and traditional ink. The garment completes the postmodern collage by pairing rigid historical tailoring with simulated subcultural body modification."
         }
       ]
     },
@@ -172,21 +130,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+          "y": 30,
+          "label": "Minimalist White Tailoring",
+          "description": "The minimalist white tailoring structures the upper body with a clean unadorned jacket; it hangs open to expose the bare midriff entirely. This simple format engages with the subversion of orthodox beauty by providing a stark clinical frame around the heavy subcultural styling and facial piercings. The crisp white fabric features a simple single-button closure left undone; the sleeves end cleanly at the wrist without cuffs. The garment refuses complex detailing to assert a quiet backdrop for the chaotic lower volume."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "x": 50,
+          "y": 65,
+          "label": "Patchwork Denim Crinoline Skirt",
+          "description": "The patchwork denim crinoline skirt explodes outward from the waist in a massive structured dome; it stitches together dozens of different denim scraps into a highly textured volume. This structural extreme applies historical pastiche by taking the monumental bell shape of a 19th-century ballgown and rendering it in heavy blue-collar fabric. The visible seams between the patches highlight the complex internal scaffolding required to hold the shape; the model lifts the heavy hem to walk. The piece completes the globalized collage by fusing royal proportions with worker's textiles."
         }
       ]
     },
@@ -194,22 +146,16 @@
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-09.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-        },
-        {
-          "x": 40,
-          "y": 40,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "x": 50,
+          "y": 35,
+          "label": "Satin Frock Coat Vest",
+          "description": "The satin frock coat vest drops heavily to the knee in a highly reflective mauve textile; it features an excessive row of buttons and stiff tailored pockets. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its long vertical panels; it hangs open to reveal a heavily printed underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "y": 55,
+          "label": "Printed Silk Sarong",
+          "description": "The printed silk sarong gathers loosely at the waist and drops into fluid sheer layers over the legs; it features delicate floral motifs in muted pastel tones. This material application relies on the illusion of a hastily tied wrap to introduce a non-Western drape into the tailored ensemble. The sheer fabric reveals the opaque metallic leggings beneath; the massive knot sits prominently below the waistline. The piece completes the \"Global Village Chic\" aesthetic by fusing rigid European outerwear with relaxed globalized draping."
         }
       ]
     },
@@ -218,21 +164,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "y": 35,
+          "label": "Trompe L'Oeil Bodice",
+          "description": "The trompe l'oeil bodice utilizes a printed second-skin mesh to simulate a heavily tattooed torso beneath a structured white coat; it completely blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The mesh features dense brown and red motifs mimicking bloody or scarred skin; it clings tightly to the bust without any structural support. The garment asserts a postmodern sensibility by forcing the viewer to question what is flesh and what is fabric."
         },
         {
-          "x": 60,
-          "y": 85,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-        },
-        {
-          "x": 40,
-          "y": 55,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+          "x": 55,
+          "y": 80,
+          "label": "Metallic Knee Armor",
+          "description": "The metallic knee armor clamps over the left leg in a rigid segmented metal shell; it introduces literal protective hardware into the fluid ensemble. This structural intervention utilizes scaffolding and internal frameworks to reference the armored figure of Joan of Arc. The shiny silver metal is strapped tightly around the thigh and calf; it features articulated joints to allow movement. The accessory refuses delicate feminine styling to complete a silhouette defined by heavy militant aggression."
         }
       ]
     },
@@ -241,21 +181,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
-        },
-        {
-          "x": 40,
-          "y": 60,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-        },
-        {
-          "x": 60,
           "y": 30,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "label": "Trompe L'Oeil Crop Top",
+          "description": "The trompe l'oeil crop top utilizes a sheer stretch mesh printed with dense blue and red motifs to simulate a heavily tattooed chest and arms; it clings tightly to the body like a synthetic second skin. This material strategy engages directly with body politics by forcing the high-fashion consumer to confront subcultural body modification. The tight fit highlights the natural anatomy beneath the print; the hem truncates sharply above the navel to expose a matching tattoo on the stomach. The garment asserts a radical subversion of traditional polished beauty standards."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Printed Low-Slung Trousers",
+          "description": "The printed low-slung trousers drop dangerously far below the hip bones to expose the abdomen entirely; they feature a chaotic mix of denim textures and heavy graphic prints. This structural logic relies on subcultural systems to mimic the sagging oversized silhouettes of 1990s streetwear. The fabric bunches heavily around the waist with a makeshift tied belt; the wide legs drag over the footwear. The piece completes the ensemble by grounding the simulated tattoos in an aggressive and highly relaxed urban silhouette."
         }
       ]
     },
@@ -263,22 +197,16 @@
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-12.jpg",
       "hotspots": [
         {
-          "x": 40,
-          "y": 30,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+          "x": 50,
+          "y": 45,
+          "label": "Pinstripe Draped Tunic",
+          "description": "The pinstripe draped tunic wraps the torso in a dark tailored fabric that falls open beneath the bust; it twists a classic corporate textile into a fluid unstructured shape. This material manipulation engages with gender deconstruction by warping a symbol of masculine power dressing into a soft draped garment. The thin white stripes curve chaotically over the chest; the massive knot at the sternum drops into long trailing panels. The piece asserts a postmodern pastiche by entirely destroying the intended function of the suiting fabric."
         },
         {
           "x": 50,
-          "y": 80,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
-        },
-        {
-          "x": 60,
-          "y": 40,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
+          "y": 65,
+          "label": "Trompe L'Oeil Patchwork Leggings",
+          "description": "The trompe l'oeil patchwork leggings tightly encase the legs in a mesh printed with snippets of international currency and chaotic motifs; they create the deliberate illusion of a heavily tattooed lower body. This material application utilizes the concept of \"Global Village Chic\" to literally wrap the body in globalized financial iconography. The tight fit highlights the musculature of the legs beneath the dark tunic; the colors clash violently with the pinstripe fabric above. The garment completes the silhouette by merging flesh and graphic design completely."
         }
       ]
     },
@@ -287,21 +215,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "y": 35,
+          "label": "Trompe L'Oeil Currency Bodice",
+          "description": "The trompe l'oeil currency bodice utilizes a sheer second-skin mesh printed with oversized snippets of international banknotes; it simulates a torso completely covered in financial iconography. This material strategy engages with the commodification of pluralism by literally transforming global currency into a wearable tattoo illusion. The dark brown and beige prints stretch tightly over the bust; the long sleeves extend the tattoo effect down to the wrists. The garment asserts a highly cynical postmodern irony regarding the commercialization of subcultural aesthetics."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "x": 50,
+          "y": 65,
+          "label": "Patchwork Graphic Culottes",
+          "description": "The patchwork graphic culottes gather heavily at the waist and drop into wide unstructured legs; they stitch together dozens of contrasting graphic prints and denim scraps. This structural extreme applies historical pastiche by mimicking the volume of a traditional dhoti using heavy Western workwear fabrics. The dense collage of patterns includes flags crests and geometric shapes; the thick material hangs heavily around the calves. The piece completes the silhouette by enforcing an aesthetic of extreme globalized clutter."
         }
       ]
     },
@@ -309,22 +231,16 @@
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-14.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Neo-Tribal Piercing Hardware",
-          "description": "Integrating facial and bodily piercings into the styling challenges bourgeois conventions of beauty; establishing a visual dialectic of Queer Performativity (Butler). The presentation asserts the validity of marginalized visual codes within a high-fashion context. The metal hardware functions as both decoration and structural anchor. It visualizes the pain and resilience inherent in subcultural existence."
-        },
-        {
-          "x": 40,
-          "y": 40,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "x": 50,
+          "y": 35,
+          "label": "Trompe L'Oeil Bodice",
+          "description": "The trompe l'oeil bodice utilizes a printed mesh underlayer to simulate a heavily tattooed torso beneath a dark velvet cropped jacket; it blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The dense red and brown motifs mimic bruised or bloody skin; the jacket hangs open to ensure the illusion is fully visible. The garment asserts a postmodern sensibility by layering rich historical textiles over simulated subcultural rebellion."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
+          "y": 65,
+          "label": "Printed Sarong Skirt",
+          "description": "The printed sarong skirt wraps the hips in a fluid fabric covered in a chaotic mix of checkered grids and classical motifs; it drops heavily into an asymmetrical hem. This structural logic utilizes historical pastiche to introduce a non-Western drape into the tailored ensemble. The massive knot sits prominently below the waistline; the fabric features an intricate collage of dark blue white and gold patterns. The piece completes the globalized collage by anchoring the rigid jacket with a chaotic and fluid lower volume."
         }
       ]
     },
@@ -333,21 +249,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Deconstructed Corsetry Framework",
-          "description": "The externalization of the corset turns intimate support garments into aggressive outerwear; a masterful reversal of The Subverted Gaze. This inversion of public and private spheres is a classic Gaultier subversion. The structural boning is highlighted rather than hidden; celebrating the mechanics of restriction. It reclaims an instrument of female oppression as a tool of sexual empowerment."
+          "y": 35,
+          "label": "Trompe L'Oeil Mesh Sleeves",
+          "description": "The trompe l'oeil mesh sleeves emerge from beneath the heavy red tunic to cover the arms in simulated dark tattoos; they cling tightly to the skin to complete the body illusion. This material strategy engages directly with body politics by forcing the high-fashion consumer to confront subcultural body modification. The sheer fabric stretches over the biceps and forearms; the dark blue and black motifs mimic traditional ink. The detail asserts a radical subversion of traditional polished beauty standards by suggesting the model is heavily modified underneath the formal wear."
         },
         {
-          "x": 60,
-          "y": 85,
-          "label": "Cultural Hybridity Layering",
-          "description": "The chaotic stacking of disparate global textiles creates a dizzying post-modern pastiche; navigating the complexities of Intersectionality. Tartans; denims; and ethnic prints clash in a deliberate rejection of purist aesthetics. This layering visualizes the friction and energy of globalised urban centers. It is a sartorial manifestation of cultural collision and synthetic identity construction."
-        },
-        {
-          "x": 40,
+          "x": 50,
           "y": 55,
-          "label": "Trompe-l-Oeil Mesh Epidermis",
-          "description": "The second-skin mesh dissolves the boundary between epidermis and textile; operating as a brilliant critique of Mythology and Contemporary Lore (Barthes). It commodifies subcultural body modification while questioning the permanence of identity markers. The printed tattoos act as a removable heritage; a hyper-real simulation of tribal belonging. It is a profound exploration of how cultural signifiers are appropriated by the mainstream."
+          "label": "Draped Asymmetrical Tunic",
+          "description": "The draped asymmetrical tunic wraps the torso and legs in a heavy dark red fabric; it features a massive knot sitting prominently on the left thigh. This structural intervention utilizes historical pastiche to mimic the silhouette of a tied sarong using thick tailored cloth. The fabric pulls tightly across the hips before falling into a long dragging panel; the subtle grid pattern on the fabric adds a layer of formal suiting texture. The piece completes the \"Global Village Chic\" aesthetic by fusing rigid European textiles with relaxed globalized draping."
         }
       ]
     },
@@ -358,18 +268,18 @@
   ],
   "tags": {
     "brand": "Jean Paul Gaultier",
-    "era": "1990 to 1999; The Deconstructionist Decade",
-    "politics": "Queer Theory & Subcultural Systems",
-    "theories": "Queer Performativity (Butler)",
-    "gender": "Conceptual / Post-Binary Form",
-    "materials": "Fine Precious Metallics (Gold; Silver; Copper Thread)",
+    "era": "1990–1999; The Deconstructionist Decade",
+    "politics": "Globalization & Cultural Hybridity | Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+    "theories": "Postmodernism | Cultural Appropriation vs. Pluralism (Global Village Chic) | Identity and Subjectivity",
+    "gender": "Womenswear & Menswear (Gender Fluidity)",
+    "materials": "Second-Skin Mesh / Sheer Tulle | Denim | 18th-Century Brocade | Chainmail & Metal | Found Objects (Piercings, Heavy Jewelry)",
     "geography": "Paris (Chambre Syndicale / RTW)",
-    "anatomy": "Topographic Layering",
-    "format": "Traditional Runway (The Linear Catwalk)"
+    "anatomy": "Trompe l'Oeil (Body Illusion) | Historical Pastiche | Sartorial Restriction (Flattened Corsets) | Scaffolding and Internal Frameworks (Armor)",
+    "format": "Traditional Runway"
   },
   "notes": {
-    "critique": "This runway executes a total collapse of geographical and historical borders. By synthesising tribal body art with traditional French tailoring, Gaultier enforces a narrative of extreme cultural hybridity[cite: 2]. The spectacle forces a severe institutional critique[cite: 2] of European sartorial purity. The casting relies heavily on street scouting; allowing the wearers to exercise absolute bodily autonomy and transgression[cite: 2] by displaying genuine physical modifications that actively subvert the sterile perfection traditionally demanded by the haute bourgeoisie.",
-    "strategy": "Gaultier engineers a highly effective exercise in press disruption by aggressively integrating marginalised street cultures into the apex of the luxury calendar. The communications strategy bypasses traditional aristocratic signalling; opting instead to weaponise shock value[cite: 2] through the hyper-visibility of tattoos; piercings; and fluid casting. This calculated visual rhetoric[cite: 2] ensures maximum media saturation; cementing the house as a pioneer of radical inclusivity and forcing global editorial platforms to document aesthetics previously deemed unacceptable for high-fashion syndication.",
-    "provenance": "Jean Paul Gaultier presented the Spring and Summer Ready to Wear collection Les Tatouages in October 1993 on the Paris linear catwalk. Occurring during the Deconstructionist Decade; the presentation operates as a seminal document of globalized subculture. The work functions as a clinical inquiry into non-Western body modification; merging underground piercing and tattoo iconography with eighteenth century corsetry to forge a unified; pan-cultural aesthetic. \"Les Tatouages\" is widely regarded as Jean Paul Gaultier's defining collection — the crystallisation of every obsession that had animated his career to that point — and was selected by Vogue as one of the 25 most unforgettable shows of the 1990s. Presented in the Galerie Vivienne, a grand 19th-century Parisian arcade that also housed Gaultier's flagship store, the show comprised nearly 100 looks and unfolded in an atmosphere thick with incense and drifting, mystical music. The collection was a maximalist counterpoint to the monochrome severity of the preceding season's \"Chic Rabbis.\" Where AW 1993 had drawn from a single religious visual system and worked in tonal restraint, SS 1994 exploded outward in every direction: Indian mysticism, 18th-century silhouettes, 13th-century martyrdom, haute couture construction, punk, fetish wear, denim workwear, and — at its core — the tattooed and adorned body as both canvas and garment. Gaultier's method was a picaresque collage of time and place, fusing disparate cultural sign systems into looks that could not be reduced to any single source. The collection's central conceit was the confusion between skin and fabric. Gaultier had been attending tattoo conventions and had encountered the transgressive work of Los Angeles–based performance artist Ron Athey. He spoke of seeing an older woman in a sheer blouse whose bra turned out to be a tattoo — a moment of perceptual slippage that became the leitmotif of the collection. Trompe l'oeil tattoo prints on second-skin mesh created the illusion of inked bodies; actual tattoos on models blurred the line further. Designs were also stencilled directly onto the models' skin. The tattoo-currency motif — intricate prints replicating the patterns of European banknotes — echoed a technique Martin Margiela, Gaultier's former protégé, had pioneered in his debut collection of 1989. The casting was as radical as the clothes. Gaultier placed the definitive supermodels of the era — Naomi Campbell, Christy Turlington, Nadja Auermann, Yasmeen Ghauri, Tatjana Patitz, Kirsten Owen — alongside individuals drawn from his personal orbit and from the street: Rossy de Palma (the Almodóvar favourite), Ève Salvail (with her shaved head and dragon tattoo), Jenny Shimizu, Stella Tennant (in one of her first Paris appearances, rendered almost unrecognisable), Vladimir McCrary, Tanel Bedrossiantz (who would become Gaultier's male muse for over two decades), and Laetitia Casta. Men walked in skirts and sarongs. The spectrum of race, gender, age, and body type on display was instinctive but deliberate — a statement about the \"global village\" street culture of Paris that Gaultier cited as his primary inspiration. The finale remains one of the most iconic sequences in fashion show history: shimmering saints in heavenly crowns, followed by models with one arm sheathed in medieval armour, evoking Joan of Arc — the most iconic French saint — in a fusion of chainmail replicated in silver sequins, fine metallic knitwear, loops of metal, and actual armour panels worn over deconstructed corset dresses. The collection is significant on multiple levels: as the apotheosis of Gaultier's postmodern semiotic method; as a landmark in the representation of diversity on a high-fashion runway; as a document of early-1990s cross-cultural aesthetics and their attendant tensions around appropriation; and as the origin point for the tattoo-print mesh garment — a piece that has become one of the most recognisable and widely imitated fashion archetypes of the past three decades. It is essential to any archive concerned with the intersection of fashion, the body, subcultural identity, and the politics of representation."
+    "provenance": "This entry refers to Jean Paul Gaultier's seminal Spring/Summer 1994 ready-to-wear show, officially titled \"Les Tatouages\" (Tattoos). The collection was heavily inspired by Gaultier's fascination with body art and his attendance at tattoo conventions, as well as his discovery of the transgressive Los Angeles performance artist Ron Athey. Gaultier was also inspired after seeing an older woman wearing a sheer blouse over what he thought was a bra, only to realize her \"bra\" and pierced nipples were actually a trompe l'oeil tattoo. The fashion press widely celebrated the show as a \"startling vision of cross-cultural harmony,\" with Vogue famously dubbing it \"Global Village Chic.\"",
+    "strategy": "Trompe L'Oeil & Body Illusion: The core structural strategy of \"Les Tatouages\" relied on garments constructed from signature second-skin mesh and sheer stretch tulle. These pieces were printed with dense, layered motifs—ranging from tribal tattoos and intricate Indian henna patterns to snippets of international banknotes and Eastern European currency—creating the deliberate illusion of tattooed skin. Historical Pastiche & Collage: Reflecting the globalized collage of the Parisian streets, Gaultier melded 18th-century court silhouettes (like brocade frock coats and waistcoats) with heavy, patchworked denim, printed kilts, sarongs, and fetishwear. Armor & Chainmail: Fusing the masculine and the feminine, the show's finale heavily referenced the armored figure of Joan of Arc. Gaultier utilized slices of chainmail recreated in silver sequins, metallic knitwear, and actual physical panels taken from suits of armor, which were layered over deconstructed medieval gowns and flattened corsets.",
+    "critique": "The Postmodern Sensibility: The collection serves as a perfect example of postmodern fashion, playfully asserting the idea that \"nothing is original\" by dismantling and rebuilding how men and women dress. By surrendering cognitive command of the past, Gaultier seamlessly wove together elements of Eastern mysticism, punk rebellion, and classical French history. Commodification of Pluralism vs. Cultural Appropriation: While praised at the time for its multiculturalism, critical theory notes that the collection exemplifies the \"commodification of pluralism\". By uprooting deeply meaningful, regionally specific cultural products (such as traditional African tribal prints and Indian bridal henna) and transforming them into mere markers of Western \"exoticism,\" the collection allowed luxury consumers to play with ethnic identity without engaging with the complex realities of structural inequality or marginalization. Subverting Orthodox Beauty: Before this 1994 show, tattoos and body piercings were rarely seen in high fashion. By bringing subcultural body modification to the Parisian catwalk, Gaultier radically subverted traditional, polished beauty standards. Democratization of the Runway: Gaultier further challenged industry norms through his casting. He actively utilized street casting to create a radically diverse lineup that defied easy categorization regarding gender, race, and body shape, utilizing muses like the unconventionally beautiful Rossy de Palma, androgynous model Jenny Shimizu, and his long-time male muse Tanel Bedrossiantz alongside traditional supermodels."
   }
 }
