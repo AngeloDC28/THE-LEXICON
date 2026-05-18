@@ -1,29 +1,37 @@
 {
   "$schema": "../entry.schema.json",
   "id": "van-herpen-aw11",
-  "title": "Iris van Herpen AW 2011",
+  "title": "Iris van Herpen AW 2011 Couture",
   "subtitle": "Capriole",
   "year": 2011,
-  "season": "AW",
+  "season": "Couture-AW",
   "images": [
-    {
-      "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg"
-    }
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-02.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-03.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-04.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-05.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-06.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-07.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-08.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-09.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-10.jpg" },
+    { "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-11.jpg" }
   ],
   "tags": {
     "brand": "Iris van Herpen",
     "era": "2010–2019; The Digital and Streetwear Pivot",
-    "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Ecological Politics & Resource Extraction",
+    "politics": "Ecological Politics & Resource Extraction | Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities",
     "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Object-Oriented Ontology | Techno-Optimism and Accelerationism",
     "gender": "Womenswear",
-    "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Structural Composites",
+    "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Additive Manufacturing",
     "geography": "Paris (Fédération de la Haute Couture)",
-    "anatomy": "Prosthetic Extension | Geometric Abstraction | Scaffolding and Internal Frameworks | Weight and Gravity Defiance",
-    "format": "Theatrical Stage Performance"
+    "anatomy": "Prosthetic Extension | Scaffolding and Internal Frameworks | Architectural Shielding and Armour | Clinical Exposure and Nudity",
+    "format": "Traditional Runway"
   },
   "notes": {
-    "provenance": "Iris van Herpen's AW 2011 Haute Couture collection 'Capriole' was presented in Paris and featured a landmark collaboration with architect and computational designer Daniel Widrig. The collection used selective laser sintering — an industrial 3D printing process — to produce garments that were impossible to construct by hand. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
-    "strategy": "Van Herpen worked with Widrig to translate computational fluid dynamics simulations — the mathematical modelling of liquid motion — into wearable structures. The 3D-printed pieces captured the frozen geometry of a splash or an explosion at the moment of maximum extension, producing silhouettes that appeared simultaneously rigid and liquid. The manufacturing process replaced the atelier with the machine: each piece was grown rather than sewn.",
-    "critique": "The 'Capriole' collection was one of the first instances in which additive manufacturing — 3D printing — was used as the primary production method for Haute Couture. This placed van Herpen at the intersection of fashion, architecture, and engineering, and constituted a fundamental challenge to the couture system's reliance on handcraft as the marker of luxury value. The work proposed that the most radical couture of the 21st century would be produced not by petites mains but by machines operating beyond the limits of human dexterity."
+    "provenance": "Iris van Herpen's Autumn/Winter 2011 Haute Couture collection, officially titled 'Capriole', marked her debut Haute Couture collection in Paris. The collection famously featured the introduction of her 3D-printed 'skeleton' dress on the runway as Look 1, cementing her reputation as a pioneer who merged high technology with the artisanal craftsmanship of couture.",
+    "strategy": "The core structural intervention of the skeleton dress, created in collaboration with architect Isaïe Bloch, was a literal reversal of human anatomy — rendered in white polyamide, the dress functioned as a haunting exoskeleton, making it appear as if the body had been turned inside out by wearing its bones on the exterior. Van Herpen fundamentally altered fashion construction by utilizing rapid prototyping and 3D printing; this technology allowed her to materialize complex digitally designed 3D folds and structures that would be physically impossible to replicate by hand or with traditional needle and thread. Her structural blueprint relied on observing complex organic forms in nature — fossils, shells, and bone structures — and engineering them out of distinctly cold inorganic rigid plastic materials. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
+    "critique": "Van Herpen's work serves as the ultimate sartorial manifestation of posthumanism — by merging human flesh with rigid digital polymers, she blurs the boundaries between humans and machines, organic and artificial. She decenters the human subject, proposing instead a hybrid figure deeply entangled in a 'nature-culture continuum' where technology itself is viewed as a living self-organizing entity. Philosophers frequently analyze van Herpen's extreme silhouettes through Gilles Deleuze and Félix Guattari's concept of the 'body without organs' — by applying grotesque alienating non-normative forms to the female figure, van Herpen actively de-organizes and de-stratifies the socially disciplined body. Her exoskeletons liberate the wearer from conventional beauty ideals, initiating a dynamic process of 'becoming' other than strictly human. While hailed as futuristic, the 3D-printed plastics used in this collection present a unique theoretical and conservational paradox: the advanced polyamide used to print the Capriole skeleton dress is highly susceptible to rapid degradation. Fashion archivists note that the dress has already begun to shift from pristine white to a yellowish coloration, proving that even cutting-edge synthetic materials possess a transient ephemeral lifespan that continually alters the artifact's visual reality."
   }
 }

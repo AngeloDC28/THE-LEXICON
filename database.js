@@ -4148,204 +4148,1153 @@ export const archiveData = [
   {
     "$schema": "../entry.schema.json",
     "id": "margiela-aw00",
-    "title": "Maison Margiela AW 2000",
-    "subtitle": "Flat",
+    "title": "Maison Martin Margiela AW 2000",
+    "subtitle": "Oversize",
     "year": 2000,
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.jpg"
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ultra-Oversized Vintage Leather Carapace",
+            "description": "The ultra-oversized vintage leather carapace envelopes the body in a massive shiny hide; it completely dwarfs the natural shoulder line and arms. This structural extreme applies menswear grading at an Italian size 78 to deliberately obliterate the slim silhouettes dominating the era. The deadstock leather exhibits a unique sheen and stiffness derived from years of undisturbed aging; the heavy silver hardware sits awkwardly over the hip rather than the waist. The outerwear asserts a monolithic massing that forces the model to negotiate the garment's autonomous weight."
+          },
+          {
+            "x": 55,
+            "y": 60,
+            "label": "Detached Animal Tail Accessory",
+            "description": "The detached animal tail accessory dangles limply from the hem of the oversized leather jacket; it introduces a visceral organic element to the synthetic sheen of the hide. This styling choice engages with horror-tinged surrealism by appending a literal dead animal part to the silhouette. The striped fur contrasts sharply with the dark jacket and black skirt below; it functions as an unsettling and unnecessary organic zipper pull. The piece completes the silhouette by injecting a jarring moment of the abject."
+          },
+          {
+            "x": 48,
+            "y": 10,
+            "label": "Ocular-Obscuring Fringe Wig",
+            "description": "The ocular-obscuring fringe wig covers the model's eyes entirely with a heavy curtain of black hair; it creates a severe horizontal barrier across the face. This styling strategy utilizes anonymity to actively decentralize the human identity and reject the cult of the supermodel. The dark hair blends seamlessly into the shadows of the warehouse setting; the mouth remains visible but emotionally detached. The accessory asserts that the sculptural integrity of the clothing is the only subject worthy of the audience's gaze."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Folded-Waist Oversized Denim",
+            "description": "The folded-waist oversized denim wraps the midsection in a massive accumulation of blue jean fabric; it utilizes a simple hook and eye to secure the excessive size 78 cloth. This sartorial fastening applies deconstructionist logic by turning the functional necessity of altering a giant garment into an elegant design feature. The pale denim crosses asymmetrically over the groin; the heavy legs pool thickly around the feet. The garment refuses traditional tailoring to assert a relaxed but highly considered approach to extreme volume."
+          },
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Ultra-Oversized Grey Wool Outerwear",
+            "description": "The ultra-oversized grey wool outerwear engulfs the upper body in a massive tailored frame; it is treated with hot molding to retain a three-dimensional shape independent of the wearer. This structural logic engages with object-oriented ontology by granting the coat a structural autonomy that forces the model to swim inside it. The sleeves push up heavily around the wrists; the lapels fold deeply over the chest. The coat completes the silhouette by contrasting the casual denim below with an absurdly scaled formal piece."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Double-Breasted Wool Monolith",
+            "description": "The double-breasted wool monolith structures the upper body into a massive severe rectangle; it utilizes deep grey felt to create a heavy unyielding surface. This tailoring extreme applies menswear grading to obliterate the feminine form completely beneath the oversized shell. The deep hot-molded folds hold their shape regardless of the wearer's movement; the oversized buttons sit disproportionately low on the thighs. The outerwear asserts a deeply formal but deeply uncomfortable proportion."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "Ocular-Obscuring Fringe Wig",
+            "description": "The ocular-obscuring fringe wig drops a thick curtain of black hair over the eyes; it isolates the lower half of the face in stark contrast to the massive coat. This application of anonymity serves as a direct critique of the fashion industry's reliance on recognizable models to sell garments. The black hair melts into the deep shadows of the collar; the heavy silver earrings reflect the minimal lighting. The styling ensures the audience focuses entirely on the architecture of the double-breasted coat."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ultra-Oversized White Denim Chore Jacket",
+            "description": "The ultra-oversized white denim chore jacket envelopes the torso in a stiff pale textile; it features massive drop shoulders that obscure the arms entirely. This material application utilizes deadstock fabric to inject a stiff aged texture into the silhouette. The bright white jacket catches the dramatic spotlighting starkly against the dark background; the unbuttoned front reveals a soft grey underlayer. The garment refuses sleek modernism to assert a posture of utilitarian labor pushed to an absurd scale."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Raw-Hem Pale Yellow Skirt",
+            "description": "The raw-hem pale yellow skirt drops rigidly from beneath the heavy jacket to the mid-calf; it features a stark unhemmed edge. This deconstructed assembly engages with the aesthetic of poverty chic by contrasting the massive tailored jacket with a simple unfinished lower garment. The pale yellow fabric lacks any visible pleating or gathering; the yellow string detail hangs limply from the waist. The skirt completes the look by adding a subtle but jarring block of color to the austere top half."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ultra-Oversized Distressed Wool Knit",
+            "description": "The ultra-oversized distressed wool knit engulfs the torso in a massive red v-neck vest; it features violently frayed edges across the hem and armholes. This structural intervention utilizes deconstruction to mimic the rapid decay of a cozy domestic garment scaled up to monstrous proportions. The deep red yarn sits starkly against the black underlayer; the armholes drop significantly below the natural waistline. The garment asserts a horror-tinged surrealism by transforming a familiar sweater into an imposing degraded shell."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Exaggerated White Shirt Collar",
+            "description": "The exaggerated white shirt collar flares upward and outward from the deep v-neck; it provides a crisp formal contrast to the decaying red knit. This styling choice applies historical pastiche by mimicking the severe collars of 19th-century menswear scaled to match the size 78 grading. The bright white fabric frames the neck tightly before spreading wide; the points of the collar rest upon the shoulders of the vest. The detail completes the ensemble by forcing an element of extreme formality into the ruined knitwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Polka-Dot Raw Canvas Tunic",
+            "description": "The polka-dot raw canvas tunic hangs flatly over the torso in a stiff rectangular shape; it features faded holographic dots scattered unevenly across the textile. This material application engages with the materiality of time by utilizing a deadstock fabric that appears sun-bleached and slightly degraded. The stiff canvas holds no drape or contouring; the armholes are cut sharply to expose the bare shoulders. The garment asserts a deeply unglamorous and slightly tragic aesthetic."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Asymmetrical Layered Grey Skirt",
+            "description": "The asymmetrical layered grey skirt drops beneath the canvas tunic in an uneven column of soft fabric; it introduces a subtle shift in texture to the lower body. This simple format provides a quiet baseline against the stiff printed top. The grey textile falls cleanly to the knee; the hem trails slightly longer on the right side. The skirt completes the look by grounding the stiff canvas in a comfortable domestic drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Ultra-Oversized Frayed Black Cardigan",
+            "description": "The ultra-oversized frayed black cardigan swallows the torso in a massive heavy-gauge knit; it features long drooping sleeves that entirely cover the hands. This material strategy engages with monolithic massing by transforming a soft domestic garment into a suffocating architectural shell. The dark yarn absorbs light to create a heavy visual void over the white layers beneath; the hem is violently unraveled and irregular. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Deconstructed Layered Shirting",
+            "description": "The deconstructed layered shirting stacks multiple white button-downs haphazardly beneath the heavy black cardigan; it creates an uneven cascade of white fabric over the grey skirt. This layering technique utilizes deconstructionist assembly to confuse the boundaries of individual garments. The crisp white fabric wrinkles and bunches beneath the heavy weight of the knitwear; a loose white thread dangles from the chest. The detail completes the silhouette by injecting a chaotic formal element into the relaxed knitwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Folded-Waist Oversized Pinstripe Trousers",
+            "description": "The folded-waist oversized pinstripe trousers utilize a deep cross-over fold to secure the massive size 78 fabric tightly to the model's hips; they swallow the lower body in dark suiting material. This sartorial fastening applies deconstructionist logic by turning the functional necessity of altering a giant garment into an elegant design feature. The dark fabric is marked with subtle vertical stripes; the heavy legs pool thickly over the black footwear. The garment refuses traditional tailoring to assert a highly considered approach to extreme volume."
+          },
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Slouching Black Jersey Tunic",
+            "description": "The slouching black jersey tunic falls softly over the upper body before tucking heavily into the folded waistline; it provides a fluid unstructured top layer. This material choice introduces a soft kinetic movement that contrasts with the severe tailoring of the trousers. The dark fabric absorbs the harsh spotlighting completely; the long sleeves are pushed up to the elbows. The tunic asserts a relaxed and intimate posture above the massive formal trousers."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ultra-Oversized Minimalist Wool Coat",
+            "description": "The ultra-oversized minimalist wool coat envelopes the figure in a smooth black shell without any visible lapels or hardware; it drops cleanly from the high shoulders to the mid-calf. This structural logic utilizes monolithic massing and hot molding to create a stark uninterrupted void that dominates the visual space. The stiff black fabric holds its shape securely away from the body; the sleeves completely hide the arms. The outerwear asserts a deeply formal but inherently unsettling proportion."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Ocular-Obscuring Fringe Wig",
+            "description": "The ocular-obscuring fringe wig drops a thick curtain of brown hair over the eyes; it creates an absolute barrier between the wearer and the audience. This application of anonymity serves as a direct critique of the fashion industry's reliance on recognizable models. The brown hair sits starkly against the deep black of the coat; the chin and jawline remain visible but emotionally detached. The styling ensures the audience focuses entirely on the imposing black monolith."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ultra-Oversized Double-Breasted Topcoat",
+            "description": "The ultra-oversized double-breasted topcoat structures the body into a massive grey rectangle; it utilizes deep felt to create a heavy unyielding surface. This tailoring extreme applies menswear grading to obliterate the feminine form completely beneath the oversized shell. The deep hot-molded folds hold their shape regardless of the wearer's movement; the oversized lapels and buttons sit disproportionately low on the torso. The outerwear asserts an imposing formal architecture that forces the model to negotiate its weight."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Ocular-Obscuring Fringe Wig",
+            "description": "The ocular-obscuring fringe wig covers the model's eyes entirely with a heavy curtain of dark hair; it creates a severe horizontal barrier across the face. This styling strategy utilizes anonymity to actively decentralize the human identity and reject the cult of the supermodel. The dark hair blends smoothly with the shadows of the coat collar; the lower face is illuminated strictly by the runway spotlight. The accessory asserts that the sculptural integrity of the oversized coat is the primary subject of the presentation."
+          }
+        ]
       }
     ],
     "tags": {
       "brand": "Maison Margiela",
       "era": "2000–2009; The Global Conglomerate Era",
-      "politics": "Anti-Consumerism & Institutional Critique | Labour Politics & Industrial Production",
-      "theories": "Deconstructionist Logic (Derrida) | Institutional Critique | Symbolic Exchange",
+      "politics": "Anti-Consumerism & Institutional Critique | Gender Deconstruction & Fluidity",
+      "theories": "Deconstructionist Logic (Derrida) | Aesthetic Philosophy | Object-Oriented Ontology",
       "gender": "Womenswear",
-      "materials": "Deadstock & Surplus Inventory | Artificially Degraded Textiles",
+      "materials": "Deadstock & Surplus Inventory | Animal Protein Fibres | Bovine & Exotic Skins",
       "geography": "Paris (Chambre Syndicale)",
-      "anatomy": "Deconstructed Assembly | Negative Space and Void | Structural Stasis",
-      "format": "Static Presentation"
+      "anatomy": "Monolithic Massing | Deconstructed Assembly | Scaffolding and Internal Frameworks",
+      "format": "Traditional Runway"
     },
     "notes": {
-      "provenance": "Maison Margiela's AW 2000 collection, titled 'Flat', was presented at La Samaritaine department store in Paris. Martin Margiela pinned garments flat against the wall rather than presenting them on moving bodies, rendering the clothes as two-dimensional architectural objects rather than wearable garments. The intervention collapsed the distinction between retail space and gallery.",
-      "strategy": "The 'Flat' presentation stripped the garment of its primary function — to be worn — by removing the body entirely. Each piece was displayed as though ironed and mounted, revealing seam construction, internal boning, and structural logic that would normally be concealed beneath a moving silhouette. The approach treated garment-making as a form of technical drawing.",
-      "critique": "By presenting clothes without bodies, Margiela executed a radical institutional critique of the fashion show format itself. The gesture challenged the spectacle of the runway, the hierarchy of the model, and the commercial imperative of desire-generation. The 'Flat' collection argued that the garment is complete without the body — a deeply anti-humanist and anti-consumerist position."
+      "provenance": "Maison Martin Margiela's Autumn/Winter 2000 collection served as the second half of his ambitious 'oversized' cycle, building upon the Spring/Summer 2000 presentation. The show was staged in a freezing, disused train warehouse in Paris — a stark departure from the luxurious tents near the Louvre that typically housed fashion week shows. The runway utilized a dramatic 'lights out' effect, plunging the space into darkness between looks to act as a visual palate cleanser, forcing the audience to focus intimately on a single monolithic garment at a time. The collection was famously documented by Austrian artist and photographer Marina Faust.",
+      "strategy": "Margiela's core structural strategy was to draft women's garments using heavily exaggerated menswear sizing, pushing the previous season's Italian size 74 to a brutal size 78 (roughly 14XL). To ensure the models were 'swimming' inside the garments rather than the fabric hanging limp, the Maison utilized a technique called 'hot molding' — heat was applied to garments while draped over extra-large mannequins, setting the fabric so it autonomously retained a massive three-dimensional shape even when worn by a smaller frame. The atelier sourced vintage deadstock fabrics that had been undisturbed for years; these aged textiles, possessing a distinct drape and 'mood' due to time, were used to craft entirely new silhouettes including an oversized leather biker jacket. Consistent with his signature aesthetic, Margiela exposed the hidden interior architecture of the garments — bust darts and internal blazer structures were deliberately displaced and presented on the exterior. To make the size 78 trousers wearable, the excess cloth at the waist was simply folded over itself and looped with a hook and eye, turning a structural necessity into an elegant design feature.",
+      "critique": "Margiela's monolithic gargantuan shapes acted as a direct contrarian attack on the prevailing fashion trends of the early 2000s — aggressively dominated by ultra-slim silhouettes and low-rise skinny jeans. Due to the low lighting and the heavy cumbersome nature of the garments, models walked at an incredibly slow pace, subverting the fast-paced 'speed walking' of the typical catwalk and replacing it with a creeping, intimate, slightly uneasy 'horror-tinged surrealism'. Margiela continued his philosophical dedication to anonymity by obscuring the models' faces with wigs whose exaggerated bangs covered the eyes, decentralizing human identity and redirecting the audience's gaze entirely toward the sculptural integrity of the clothing. By sourcing undisturbed vintage deadstock fabrics, Margiela functioned as a 'poetic ragpicker' capturing the silent testament of a fabric's past life — honoring the natural degradation and settling of the material and proving that true luxury is found not in pristine novelty but in the history and process embedded within the cloth."
     }
   },
   {
     "$schema": "../entry.schema.json",
     "id": "westwood-aw81",
     "title": "Vivienne Westwood AW 1981",
-    "subtitle": "Pirate",
+    "subtitle": "Pirates",
     "year": 1981,
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-01.jpg"
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Stiffened Felt Tricorne Hat",
+            "description": "The stiffened felt tricorne hat dramatically extends the vertical axis of the head while mimicking 18th-century naval headwear. This accessory applies historical pastiche to inject a sense of grand theatricality into a modern runway context. The thick grey felt is structured rigidly to hold the high crown and pinned brim; a heavy tassel dangles from the side. The piece asserts a playful subversion of elite military history."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Metallic Double-Breasted Jacket",
+            "description": "The metallic double-breasted jacket features a rigid structural silhouette and a highly reflective bronze-toned fabric. This material choice engages with subcultural systems by utilizing flashy club-kid textiles in place of traditional wool suiting. The jacket is adorned with two columns of prominent brass buttons; the lapels are folded back broadly over the chest. The garment refuses subtle tailoring to assert a posture of aggressive New Romantic flamboyance."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Gathered Metallic Breeches",
+            "description": "The gathered metallic breeches drop just below the knee in the same reflective textile as the jacket. This structural logic utilizes historical pastiche to introduce a fluid non-modern drape into the lower silhouette. The fabric bunches heavily around the waist and hips; it is abruptly truncated by thick gathered cuffs at the calf. The piece completes the ensemble by forcing a historically masculine garment to adopt a flamboyant and slightly absurd volume."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Ruffled Poet Shirt",
+            "description": "The ruffled poet shirt expands outward from the chest and cuffs in massive cascades of crisp white fabric. This structural intervention engages with gender fluidity by applying a historically hyper-masculine aristocratic silhouette to an androgynous aesthetic. The dense gathering at the shoulders creates significant volume; the sharp pointed collar stands rigidly against the neck. The garment asserts an aesthetic of romantic escapism that directly counters the harshness of late 70s punk."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Striped Gathered Trousers",
+            "description": "The striped gathered trousers feature dark vertical lines over a muted fabric, dropping loosely from a tight waistband. This material strategy utilizes historical pastiche to reference 18th-century undergarments or sailor's slops. The fabric billows softly around the thighs before tapering toward the ankle. The trousers complete the look by anchoring the flamboyant upper ruffles with a slightly more utilitarian domestic drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Cropped Double-Breasted Tailcoat",
+            "description": "The cropped double-breasted tailcoat provides a rigid tailored frame around the torso in stark black wool; it truncates sharply at the natural waist while leaving the back panels to trail. This tailoring approach applies historical pastiche by dissecting the formal menswear of the 18th-century court into a subcultural club garment. The deep lapels are folded flat; the sleeves are pushed up violently to reveal ruffled white cuffs beneath. The outerwear asserts a hybridized aesthetic that fuses aristocratic history with reckless DIY styling."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Gathered Drop-Crotch Breeches",
+            "description": "The gathered drop-crotch breeches hang heavily around the hips in a stark white textile; they feature a massive gathered waistband and a drastically lowered inseam. This structural extreme applies the theatrical surrealism of the Blitz Kids by forcing the lower body into an impossibly exaggerated drape. The fabric pools thickly around the upper thighs before tightening above the knee. The garment refuses modern tailoring protocols to complete a silhouette defined by flamboyant restriction."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-04.jpg",
+        "hotspots": [
+          {
+            "x": 65,
+            "y": 55,
+            "label": "Gingham Empire-Waist Gown",
+            "description": "The gingham empire-waist gown drops from just beneath the bust in a soft continuous volume of pale checked fabric. This structural logic utilizes historical pastiche to mimic the relaxed neoclassicism of early 19th-century womenswear. The fine checked pattern invokes a domestic almost pastoral aesthetic; the neckline falls into a soft scoop. The garment asserts a sense of naive romanticism that completely rejects the aggressive bondage motifs of the designer's earlier work."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Striped Asymmetrical Waistcoat",
+            "description": "The striped asymmetrical waistcoat is worn entirely unfastened over a bare chest; it features broad vertical stripes and an uneven hemline. This material application engages with queer theory by placing a piece of formal menswear on a male model while simultaneously stripping him of an undershirt. The fabric hangs loosely to reveal the torso; a wide cummerbund wraps tightly around the natural waist below. The piece asserts an unapologetic and sensual subversion of masculine dressing codes."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 20,
+            "label": "Striped Turban Headwrap",
+            "description": "The striped turban headwrap engulfs the head in a massive volume of gathered patterned fabric; it obscures the hair and dramatically alters the skull's proportions. This accessory utilizes subcultural appropriation by pulling non-Western historical motifs into the London club scene. The dark striped material is twisted into a heavy chaotic knot; the trailing ends fall over the shoulders. The headwear asserts a flamboyant theatricality necessary for standing out in the crowded Blitz club."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Gathered Striped Trousers",
+            "description": "The gathered striped trousers drop from a massive wrapped waist sash in dense vertical lines; they create a fluid but heavy silhouette around the legs. This structural logic relies on the illusion of historical seafarer garments. The dark stripes match the turban and sleeves precisely; the fabric bunches over white knit leg warmers at the ankle. The piece completes the ensemble by emphasizing the theatricality of an overly large un-tailored fit."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Sleeveless Striped Waistcoat",
+            "description": "The sleeveless striped waistcoat is worn open over a bare chest; it features contrasting white lapels dotted with dark brass buttons. This material application engages with gender fluidity by presenting a male model in a state of stylized undress beneath formal wear. The vertical stripes add a harsh geometric noise against the pale skin; the deep armholes allow completely unrestricted movement. The garment asserts a posture of confident and theatrical exposure."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Asymmetrical Striped Trousers",
+            "description": "The asymmetrical striped trousers gather thickly at the waist beneath a wide spotted cummerbund; they drop in a relaxed fit to the mid-calf. This structural logic utilizes historical pastiche to mimic the loose slops of 18th-century pirates. The fabric matches the waistcoat to create a jarringly coordinated uniform; the wide legs are abruptly truncated by heavy strapped footwear. The garment completes the silhouette by enforcing an aesthetic of historical reenactment filtered through subcultural rebellion."
+          }
+        ]
       }
     ],
     "tags": {
       "brand": "Vivienne Westwood",
       "era": "1980–1989; The Post-Modern Shift",
-      "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique | Censorship & Provocation",
+      "politics": "Queer Theory & Subcultural Systems | Class Dynamics & Anti-Elitism",
       "theories": "Subcultural Resistance Theory | Camp and Kitsch Subversion | Mythology and Contemporary Lore (Barthes)",
-      "gender": "Menswear & Womenswear",
-      "materials": "Animal Protein Fibres | Plant-Based Cellulose",
-      "geography": "London (BFC)",
-      "anatomy": "Radical Asymmetry | Topographic Layering | Bias-Cut Fluidity",
+      "gender": "Unisex / Neutral",
+      "materials": "Plant-Based Cellulose | Animal Protein Fibres | Bovine & Exotic Skins",
+      "geography": "London (BFC) | London Underground / Club Culture",
+      "anatomy": "Radical Asymmetry | Suspended Drape | Deconstructed Assembly",
       "format": "Traditional Runway"
     },
     "notes": {
-      "provenance": "Vivienne Westwood and Malcolm McLaren's AW 1981 'Pirate' collection was the first official Westwood runway show, presented at Olympia in London. It marked a decisive break from the punk era and introduced the 'New Romantic' silhouette — voluminous shirting, asymmetric drape, and a romanticised piracy aesthetic drawn from 17th and 18th century seafaring costume. The show launched Westwood's identity as a designer rooted in historical revisionism.",
-      "strategy": "Westwood constructed the Pirate collection by looting historical dress archives — specifically Elizabethan and early colonial seafaring costume — and translating them into wearable street garments. The signature squiggle print, the off-shoulder shirting, and the volumetric trouser were all derived from archival tailoring rather than contemporary fashion. The technique established Westwood's working method of treating fashion history as a living toolkit.",
-      "critique": "The Pirate collection positioned subcultural provocation not through destruction — as punk had done — but through historical fantasy and romantic excess. It argued that resistance could be encoded through costume and historical performance. The show was a foundational moment for British eccentricity as a formal design language, and it established the runway as a site of theatrical world-building rather than commercial product demonstration."
+      "provenance": "Vivienne Westwood's seminal Autumn/Winter 1981–1982 collection, officially titled 'Pirates', was her very first runway collection — initiating her transition from a boutique subcultural outfitter to a globally recognized runway designer. Created in collaboration with Malcolm McLaren, the collection was deeply intertwined with the London club scene, specifically the 'Blitz Kids' who frequented the Blitz club. The duo directly dressed bands like Bow Wow Wow, and the aesthetic heavily influenced the artist Adam Ant, establishing the collection as the definitive genesis of the New Romantic movement.",
+      "strategy": "Rejecting the aggressive harsh constraints of her earlier punk aesthetic, Westwood turned to theatrical historical romanticism. The structural strategy of Pirates included voluminous flowy pirate and poet shirts, breeches, and dramatic sashes. A key mechanical feature of the garments was their asymmetrical necklines, introducing a deliberate off-kilter fluidity to the drape. The collection relied on a rich eclectic mix of textiles, engineering looks out of figured cotton, rayon ensembles, and printed plain weave cotton shirts; accessories were equally theatrical, featuring muslin stockings and hats crafted from stiffened felt trimmed with leather and braid. The visual styling was heavily gender-fluid — men were presented wearing dramatic cosmetics alongside ruffled shirts, shiny rayon waistcoats, and tight pants, blurring the boundaries between masculine and feminine dress.",
+      "critique": "The Pirates collection and the resulting New Romantic movement were conceived as a direct cultural retaliation to punk. By 1981 the punk scene had become increasingly violent and co-opted by neo-Nazis and skinheads; Westwood sought to 'destroy the word conformity' by pivoting toward an entirely new extravagant aesthetic. The flamboyant theatricality functioned as a form of psychological escapism, allowing British youth to momentarily forget their relative poverty and serving as a glamorous distraction from the UK's severe economic recession and the lingering effects of the Winter of Discontent. While the New Romantic look celebrated extreme individualism and the DIY ethic of punk, Westwood's insistence on strict creative control caused friction — famously, Boy George left Bow Wow Wow to form Culture Club specifically because he resented Westwood attempting to dictate how he dressed. Despite its hyper-localized roots in London club culture, Pirates proved that subcultural streetwear could dictate high fashion — its asymmetrical earth-colored historically-referenced separates became one of the few worldwide fashion trends to emerge purely from London since the 1960s youthquake."
     }
   },
   {
     "$schema": "../entry.schema.json",
-    "id": "raf-simons-aw01",
+    "id": "simons-aw01",
     "title": "Raf Simons AW 2001",
-    "subtitle": "Riot Riot Riot",
+    "subtitle": "Riot, Riot, Riot!",
     "year": 2001,
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/raf-simons-aw01/raf-simons-aw01-01.jpg"
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Oversized Fostex MA-1 Bomber",
+            "description": "The oversized Fostex MA-1 bomber swallows the upper body in a massive dark nylon shell; it drops below the hips to obscure the natural waistline completely. This structural choice engages with theories of monolithic massing by transforming standard-issue military surplus into an imposing architectural volume. The jacket is heavily padded to create a rigid defensive barrier against the cold; the zipper runs vertically down the center axis but remains unfastened. The outerwear asserts a utilitarian aesthetic that rejects the slim tailoring previously associated with the designer."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Graphic Wrapped Balaclava",
+            "description": "The graphic wrapped balaclava obscures the lower face and neck tightly behind a pale grey jersey scarf; it leaves only the eyes visible beneath the dark hood. This accessory utilizes architectural shielding to enforce a sense of militant anonymity and isolation. The soft fabric contrasts with the heavy nylon of the bomber jacket; a subtle dark graphic is visible across the bridge of the nose. The styling detail completes the controversial terrorist-chic aesthetic by masking the model's identity entirely."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Layered Wool Midi Skirt",
+            "description": "The layered wool midi skirt drops below the heavy bomber jacket in a stiff pale beige textile; it bifurcates over dark pinstripe trousers. This sartorial choice applies gender deconstruction by introducing a traditionally feminine silhouette into an aggressively masculine military ensemble. The thick fabric is cleanly tailored with a sharp front slit to allow kinetic mobility; the hem falls bluntly to the knee. The garment asserts a hybridized and deeply subversive approach to winter layering."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Patch-Embellished Camouflage Bomber",
+            "description": "The patch-embellished camouflage bomber constructs a massive upper carapace using a cheap Fostex military jacket; it is heavily modified with raw printed fabric patches tacked onto the chest and sleeves. This material application engages with postmodern DIY collage by treating the military garment as a blank canvas for subcultural signifiers. The patches feature obscure band flyers and distressed graphics relating to youth alienation; the camouflage pattern blends the model into the dystopian warehouse setting. The jacket asserts the definitive blueprint for modern high-end streetwear."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "Black Hoodie Underlayer",
+            "description": "The black hoodie underlayer pulls tightly over the head beneath the heavy bomber jacket; it frames the face securely within a dark void. This layering strategy utilizes Eastern European street style influences where garments are simply stacked for warmth. The soft cotton jersey provides a quiet base beneath the noisy graphic exterior; the hood adds an extra layer of protective anonymity. The piece completes the silhouette by reinforcing the sullen isolated energy of the youth subculture theme."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Monolithic Nylon Trench Coat",
+            "description": "The monolithic nylon trench coat drops heavily from the shoulders to the mid-calf in a slick dark textile; it hangs open to reveal the bright layers beneath. This outerwear utilizes monolithic massing to create a long unbroken column of dark fabric that swallows the natural human silhouette. The wide lapels and double-breasted button format mimic formal menswear; the synthetic material introduces a slightly cheap industrial sheen. The coat asserts a protective utilitarian barrier against the damp environment."
+          },
+          {
+            "x": 55,
+            "y": 35,
+            "label": "Striped Funnel-Neck Knit",
+            "description": "The striped funnel-neck knit hugs the torso tightly beneath the massive trench coat; it features aggressive horizontal bands of red and black. This material choice engages with subcultural systems by referencing the grunge aesthetics of 1990s alternative rock such as Kurt Cobain's iconic sweaters. The high collar pulls up tightly over the throat to obscure the neck; the bright red stripes provide a jarring visual contrast to the muted outerwear. The garment completes the look by injecting a flash of rebellious youth culture into the somber layering."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Oversized Synthetic Parka",
+            "description": "The oversized synthetic parka engulfs the upper body in a massive dark blue shell; it features a heavy protective collar standing rigidly against the neck. This structural intervention utilizes architectural shielding to isolate the wearer within a thick insulated volume. The dark fabric falls past the knees to cover the layered leather skirt beneath; the sleeves are pushed up roughly to expose the hands. The outerwear asserts a nomadic and highly practical aesthetic inspired by Eastern European flea markets."
+          },
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Layered White Turtleneck",
+            "description": "The layered white turtleneck provides a stark bright focal point beneath the dark collar of the parka; it isolates the head within a crisp white frame. This simple styling choice applies sequential layering to emphasize the model's pale features against the harsh industrial lighting. The soft cotton fabric fits snugly against the throat; a dark crewneck is layered directly over it. The detail completes the Russian-doll stacking effect essential to the collection's survivalist theme."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Oversized Graphic Hoodie",
+            "description": "The oversized graphic hoodie completely consumes the upper torso and drops heavily below the crotch; it features extremely long sleeves that entirely swallow the model's hands. This material strategy engages with monolithic massing by transforming a basic casual garment into a dominating spatial volume. The dark fabric is punctuated by a stark white circular graphic featuring gothic typography referencing Antwerp; the hood rests thickly against the nape of the neck. The garment asserts a deeply isolated and slouched posture indicative of teenage angst."
+          },
+          {
+            "x": 45,
+            "y": 75,
+            "label": "Relaxed Straight-Leg Denim",
+            "description": "The relaxed straight-leg denim drops fluidly from beneath the massive hoodie in a dark blue wash; the hem breaks cleanly over heavy black footwear. This structural choice rejects the ultra-slim tailoring of the era in favor of a baggy comfortable silhouette. The dark jeans provide a quiet utilitarian base for the aggressive upper volume; they lack any severe distressing or obvious branding. The trousers complete the look by anchoring the rebellious streetwear aesthetic in accessible everyday reality."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Fitted Plaid Button-Down",
+            "description": "The fitted plaid button-down hugs the torso tightly with a classic dark grid pattern; it is tucked sharply into the matching trousers to emphasize a rare moment of slim tailoring within the collection. This material application engages with subcultural systems by subverting a traditional working-class flannel into a sleek high-fashion top. The dark blue and green squares absorb the runway lighting; the sleeves end cleanly at the wrist. The garment asserts a disciplined base layer that contrasts with the oversized outerwear seen elsewhere in the show."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Popped Contrast Collar",
+            "description": "The popped contrast collar stands rigidly against the neck in a bright white fabric; it is worn aggressively flipped up to shield the throat. This styling detail utilizes architectural shielding on a micro-scale to provide a slight defensive barrier around the face. The stark white fabric contrasts sharply with the dark plaid pattern below; it frames the model's gaunt features perfectly. The element completes the look by injecting a sense of tense uptight formality into the casual flannel."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Sleeveless Hooded Waistcoat",
+            "description": "The sleeveless hooded waistcoat hangs open over the striped sweater in a muted olive-green textile; it introduces an extra layer of unstructured insulation without restricting the arms. This structural choice engages with the DIY-collage aesthetic by randomly stacking disjointed garments to create new protective volumes. The stiff fabric droops heavily over the shoulders; the oversized hood acts as a massive framing device for the head. The piece asserts a scavenged survivalist quality."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Elongated Striped Turtleneck",
+            "description": "The elongated striped turtleneck drops well below the waistline in alternating bands of pale brown and dark brown; it functions as a long tubular tunic rather than a standard sweater. This material strategy utilizes sequential layering to elongate the torso unnaturally beneath the cropped waistcoat. The soft knit fabric clings to the ribs before falling straight down; the sleeves are pushed up past the wrists. The garment completes the silhouette by injecting a subtle grunge motif into the heavy military layering."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-09.jpg",
+        "hotspots": [
+          {
+            "x": 45,
+            "y": 40,
+            "label": "Oversized Camouflage Parka",
+            "description": "The oversized camouflage parka swallows the upper body in a massive patterned shell; it features a thick dark collar standing rigidly against the neck. This outerwear choice engages directly with subcultural appropriation by elevating cheap military surplus into an imposing runway centerpiece. The green and brown print effectively camouflages the body against the industrial scaffolding of the warehouse setting; the heavy fabric is unfastened to reveal the black layers beneath. The jacket asserts the definitive silhouette of high-end youth streetwear."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Layered Nylon Tunic Skirt",
+            "description": "The layered nylon tunic skirt drops from beneath the camo parka to the mid-calf in a slick black synthetic textile; it bifurcates slightly to reveal the trousers beneath. This structural intervention utilizes gender deconstruction by introducing a dress-like volume into a harsh masculine uniform. The shiny fabric catches the runway lights sharply; it adds a liquid kinetic movement to the otherwise rigid ensemble. The garment completes the Riot aesthetic by stacking multiple disjointed layers into a cohesive protective shell."
+          }
+        ]
       }
     ],
     "tags": {
       "brand": "Raf Simons",
       "era": "2000–2009; The Global Conglomerate Era",
-      "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique | Activism & Crisis Response",
-      "theories": "Subcultural Resistance Theory | Hauntology (Fisher) | The Grotesque and Abject | Psychoanalytic Theory (Lacanian)",
+      "politics": "Activism & Crisis Response | Queer Theory & Subcultural Systems | Globalisation & Cultural Hybridity",
+      "theories": "Subcultural Resistance Theory | Hauntology (Fisher) | Camp and Kitsch Subversion | Institutional Critique",
       "gender": "Menswear",
-      "materials": "Petroleum-Based Polymers | Plant-Based Cellulose | Artificially Degraded Textiles",
-      "geography": "Paris (Chambre Syndicale)",
-      "anatomy": "Sartorial Restriction | Compressed Proportions | Deconstructed Assembly",
-      "format": "Traditional Runway"
+      "materials": "High-Performance Textiles | Petroleum-Based Polymers | Animal Protein Fibres | Plant-Based Cellulose",
+      "geography": "Paris (Chambre Syndicale) | Subcultural Origin",
+      "anatomy": "Monolithic Massing | Scaffolding and Internal Frameworks | Architectural Shielding and Armour",
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
-      "provenance": "Raf Simons' AW 2001 collection 'Riot Riot Riot' was presented in Paris and widely regarded as the designer's most radical statement in menswear. The show featured models in tight black silhouettes walking through a deliberately compressed, claustrophobic set, evoking concrete brutalism and youth riot culture. Named in part after Kathleen Hanna's Bikini Kill, the collection drew on youth subculture, post-punk aggression, and the psychological pressure of adolescent identity.",
-      "strategy": "Simons compressed garment silhouettes to their absolute minimum — narrow trousers, short jackets, tight knitwear — creating a body-as-projectile aesthetic. The palette was almost exclusively black, punctuated by aggressive graphic prints sourced from punk, industrial music, and protest graphics. Each look was constructed as a uniform of resistance: anonymising, kinetic, and deliberately anti-luxurious.",
-      "critique": "Riot Riot Riot functioned as a manifesto for a generation of young men alienated from traditional masculinity and the emerging luxury menswear market. Simons channelled the energy of youth riot culture into a formal language of tailoring, arguing that clothes could carry political charge without explicit slogan or spectacle. The collection established Simons as the defining voice in post-millennium menswear and his influence on contemporary fashion — from Hedi Slimane to Virgil Abloh — remains foundational."
+      "provenance": "Raf Simons's monumental Autumn/Winter 2001 menswear collection, officially titled 'Riot! Riot! Riot!', marked a highly anticipated return after Simons took a one-year sabbatical from the fashion industry to teach at a design school in Vienna and consult on an art collection. The presentation was staged in a damp, eerie warehouse filled with scaffolding, fog, and flashing lights, accompanied by a harsh industrial techno and electro soundtrack.",
+      "strategy": "Prior to this collection, Simons was celebrated for inventing the emphatically narrow tailored menswear silhouette that defined late-1990s fashion. With Riot! Riot! Riot! he completely abandoned these gangly slim shapes in favor of aggressive hyper-oversized bulky volumes. The structural strategy was heavily inspired by the everyday dress code of Eastern European youth — Simons noted observing young people from Ukraine and Romania at Viennese flea markets who would simply lay layer by layer to create their own volumes against the cold. Models were wrapped in distressed sweatshirts, thick cable knits, long black coats, and sleeveless hoodies. The collection's most iconic structural intervention involved taking standard-issue inexpensive Fostex MA-1 camouflage bomber jackets and elevating them via DIY customization — Simons tacked on patches featuring Joy Division and Sonic Youth concert flyers, Christiane F. movie posters, Bauhaus artwork, and news clippings detailing the disappearance of Manic Street Preachers guitarist Richey Edwards. He utilized heavy layering and balaclavas to obscure the models' faces, creating an environment of unfamiliarity, mystery, and physical shielding.",
+      "critique": "This collection is historically credited as the definitive moment that shaped the relationship between youth streetwear and high-end luxury fashion. By introducing a baggier menacing look plastered with postmodern graphic mishmash, Simons laid the exact blueprint for the heavy graphics and oversized layering used decades later by designers like Virgil Abloh at Off-White and Demna Gvasalia at Vetements and Balenciaga. At the time of release the collection's aggressively dark dystopian aesthetic was highly controversial — because models marched down the runway completely hooded and wrapped in bulky garments, the press dubbed the look 'fashionable terrorists' or 'terrorist chic', a moniker that took on a heavier criticized resonance when the September 11 attacks occurred just months later. The collection served as a profound psychological reflection of teenage rebellion, angst, and isolation — by heavily referencing tragic isolated musicians like Ian Curtis and Richey Edwards, Simons connected his garments directly to the raw emotional reality of youth subcultures feeling detached from mainstream society. The patched camo bomber has transcended its status as mere clothing to become a cornerstone cultural artifact, worn by Kanye West, Rihanna, and Drake, with the Riot jacket now fetching upwards of $47,000 USD on the secondary market — single-handedly helping transform the niche hobby of collecting vintage fashion into a lucrative high-stakes archive business model."
     }
   },
   {
     "$schema": "../entry.schema.json",
     "id": "undercover-ss03",
     "title": "Undercover SS 2003",
-    "subtitle": "But Beautiful III",
+    "subtitle": "Scab",
     "year": 2003,
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.jpg"
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Deconstructed Patchwork Outerwear",
+            "description": "The deconstructed patchwork outerwear features dozens of frayed off-white fabric scraps painstakingly hand-stitched over a loose jacket frame; it replicates the chaotic layering of a biological scab. This structural logic utilizes deconstructionist assembly to elevate the aesthetic of crust punk into a highly considered couture technique. The loose threads dangle violently from every seam; the raw edges overlap in an uneven asymmetrical terrain. The garment asserts a paradox of destruction and repair by intentionally ruining the fabric only to heavily reinforce it."
+          },
+          {
+            "x": 48,
+            "y": 10,
+            "label": "Torn Facial Netting",
+            "description": "The torn facial netting drapes over the forehead and eyes in a dark fragile web; it introduces an element of bodily obfuscation and unsettling theatricality. This accessory engages with the concept of the body in crisis by mimicking a surgical bandage or a degraded mourning veil. The dark threads cling to the skin uncomfortably; the model's gaze is partially trapped behind the ruin. The piece completes the silhouette by ensuring the scab aesthetic extends directly to the model's face."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Patchwork Striped Trousers",
+            "description": "The patchwork striped trousers feature uneven bands of white and pale blue fabric roughly joined together; they drop softly into a relaxed fit. This material application relies on the illusion of frugality and DIY repair to inject anti-capitalist ideology into the runway ensemble. The fabric lacks strict tailoring or defined hems; a dark belt provides the only structural anchor. The garment asserts an anti-fashion stance by celebrating the messy reality of hand-mended clothing."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Deconstructed Frayed Blazer",
+            "description": "The deconstructed frayed blazer is entirely consumed by the scab technique; it features rectangular patches of pale fabric stitched over a lightweight beige frame. This material intervention utilizes subcultural appropriation to force high fashion to confront the crust punk ethos of extreme DIY repair. The lapels are limp and unstructured; the patches feature raw unhemmed edges that add a fuzzy degraded texture to the surface. The outerwear asserts a philosophy of healing and distortion by treating the garment as an active recovering wound."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Heavily Patched Trousers",
+            "description": "The heavily patched trousers mirror the exact texture of the blazer using dozens of small rectangular scraps; they create a dense unyielding protective layer over the legs. This structural extreme applies the crust punk aesthetic of reinforcing denim until it becomes completely stiff with thread and added fabric. The pale colors absorb the runway lighting softly; heavy brass bells hang from a D-ring at the hip. The trousers complete the ensemble by forcing the body to negotiate the heavy weight of the accumulated repairs."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Folded-Bodice Slip Dress",
+            "description": "The folded-bodice slip dress features sharp white panels aggressively folded back over the bust; it exposes a delicate underlayer of faded floral prints. This structural logic engages with deconstructionist assembly by manipulating a simple slip into an asymmetrical heavily pinned garment. The white fabric cuts a stark horizontal line against the soft drape below; the shoulder straps hang loosely off the arms. The garment asserts an aesthetic of hasty customization and makeshift elegance."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Faded Lace Midi Skirt",
+            "description": "The faded lace midi skirt drops softly from the waist in a pale grey and white textile; it provides a quiet romantic baseline against the aggressive scab elements of the collection. This material application utilizes a surprisingly lightweight and delicate fabric to contrast the heavy crust punk hardware seen elsewhere. The hem falls cleanly to the ankle without excessive fraying; subtle floral motifs are woven into the lace. The piece completes the look by injecting a fragile femininity into the brutalist runway presentation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Deconstructed Black Vest",
+            "description": "The deconstructed black vest is worn entirely open over the bare chest; it features violently hacked armholes and a jagged asymmetrical hem. This sartorial intervention engages with subcultural systems by utilizing a staple of punk rock uniforms — the sleeveless jacket — and rendering it in high-end Parisian materials. The dark fabric is heavily trimmed with neon green piping and silver hardware; it lacks any functional closure. The outerwear asserts an unapologetic and rebellious posture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Micro-Pleated Maxi Skirt",
+            "description": "The micro-pleated maxi skirt drops heavily to the floor in dense black fabric; it provides a formal sweeping volume beneath the chaotic vest. This structural choice introduces a sudden moment of elegant fluid drape into an otherwise stiff and heavily patched collection. The deep black pleats catch the light subtly as they swing with the model's stride; a bright silver zipper cuts diagonally across the hip. The skirt completes the silhouette by anchoring the aggressive punk styling with dramatic sweeping length."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Deconstructed Utility Vest",
+            "description": "The deconstructed utility vest features dozens of small beige patches hastily sewn together; it creates a stiff protective shell over the torso with raw hanging white ribbons. This material strategy utilizes the literal interpretation of a scab to construct a garment entirely out of mended fragments. The front features classic cargo pockets; a heavy brass belt cinches the natural waist. The top asserts a survivalist aesthetic prioritizing extreme DIY resourcefulness."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Relaxed Beige Trousers",
+            "description": "The relaxed beige trousers drop fluidly from beneath the heavy utility vest; they feature subtle white patches stitched sparsely along the shins. This structural application provides a quiet utilitarian base for the busy upper half. The light fabric moves easily with the stride; a large hessian pouch featuring crust punk graphics dangles prominently from a D-ring on the hip. The trousers complete the look by enforcing the nomadic functionality of the crust punk uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Bright Pink Tulle Burqa",
+            "description": "The bright pink tulle burqa engulfs the entire figure in a massive translucent volume; it obscures the face and body completely behind layers of neon netting. This structural extreme engages directly with post-9/11 activism by recontextualizing a highly stigmatized garment as a symbol of gentle mysterious protection. The sheer fabric reveals the tailored garments underneath; the eye-slit is bordered by a harsh red band. The outerwear asserts a daring and provocative anti-war statement that champions cultural pluralism."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Deep Red Tulle Burqa",
+            "description": "The deep red tulle burqa drapes heavily over the model in a shocking sheer red veil; it introduces a profound visual disruption to the runway finale. This garment utilizes bodily obfuscation to force the audience to confront Islamophobia and xenophobia directly. The translucent layers feature subtle crescent moon graphics related to the crust punk band Sedition; the eye-slit is tightly framed. The piece completes the political intervention by flooding the catwalk with an undeniable and unapologetic presence."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Subcultural Graphic Halter Top",
+            "description": "The subcultural graphic halter top features a stark black and white geometric pattern mimicking ethnic or tribal motifs; it hangs loosely from the neck via thin white ribbons. This graphic appropriation engages with cultural pluralism by merging crust punk DIY construction with non-Western aesthetics. The fabric is heavily textured like a thick rug or blanket; the back and shoulders are left entirely bare. The garment asserts a highly specific subcultural identity grounded in globalized references."
+          },
+          {
+            "x": 30,
+            "y": 35,
+            "label": "Tribal-Inspired Metal Bangles",
+            "description": "The tribal-inspired metal bangles stack heavily up both forearms in solid silver bands; they introduce dense tactile hardware into the silhouette. This accessory utilizes cultural hybridity by referencing traditional Datooga jewelry from Tanzania within a punk framework. The shiny metal reflects light fiercely; they compress the skin slightly and force a rigid posture in the arms. The piece completes the ensemble by emphasizing a deep appreciation for marginalized global cultures."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Graphic Patched Tunic",
+            "description": "The graphic patched tunic utilizes a sleek black textile violently interrupted by dozens of shiny rectangular patches; each patch features subtle subcultural iconography. This material manipulation engages with the scab technique by plastering a smooth surface with rigid artificial wounds. The high neckline hugs the throat; the asymmetrical hem exposes a complex multi-layered undergarment. The top asserts an unsettling and heavily branded aesthetic that disrupts the clean black silhouette."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Heavily Frayed Patchwork Trousers",
+            "description": "The heavily frayed patchwork trousers are entirely constructed from thick black threads, shredded denim, and hanging cords; they look as though they are actively falling apart. This structural extreme applies crust punk anti-fashion by elevating absolute degradation onto the haute couture runway. The dense mass of fabric completely hides the shape of the legs; bright red and white threads flash through the dark ruin. The garment refuses traditional tailoring to complete a silhouette defined by absolute destruction."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Asymmetrical Tailored Canvas Jacket",
+            "description": "The asymmetrical tailored canvas jacket features a stiff off-white textile heavily adorned with brass studs down the right arm; it hangs open to reveal trailing white ribbons and raw fabric panels. This structural intervention engages with deconstructionist assembly by manipulating a formal jacket into a chaotic punk-inspired garment. The left lapel features a bright red zipper track completely disconnected from its partner; the hem drops violently on the left side into a long sweeping train. The outerwear asserts a posture of calculated structural failure."
+          },
+          {
+            "x": 50,
+            "y": 80,
+            "label": "Brass-Studded Open-Toe Boots",
+            "description": "The brass-studded open-toe boots rise tightly over the calf in a pale beige canvas; they are completely covered in the same heavy metal hardware as the jacket sleeve. This footwear application utilizes crust punk componentry to weaponize the silhouette. The bright studs reflect the runway lighting starkly; the open toe reveals bare skin amidst the heavy armor. The accessory completes the look by anchoring the asymmetrical volume with a violent and highly tactile base."
+          }
+        ]
       }
     ],
     "tags": {
       "brand": "Undercover",
       "era": "2000–2009; The Global Conglomerate Era",
-      "politics": "Queer Theory & Subcultural Systems | Censorship & Provocation | Anti-Consumerism & Institutional Critique",
-      "theories": "Subcultural Resistance Theory | The Grotesque and Abject | Camp and Kitsch Subversion | Hauntology (Fisher)",
+      "politics": "Activism & Crisis Response | Queer Theory & Subcultural Systems | Globalisation & Cultural Hybridity | Post-Colonialism & Diasporic Narratives",
+      "theories": "Deconstructionist Logic (Derrida) | Subcultural Resistance Theory | Post-Colonial Critique | The Grotesque and Abject",
       "gender": "Womenswear",
-      "materials": "Artificially Degraded Textiles | Domestic Found Objects | Plant-Based Cellulose",
-      "geography": "Paris (Chambre Syndicale)",
-      "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
+      "materials": "Plant-Based Cellulose | Artificially Degraded Textiles | Assembled Non-Textile Hardware | Upcycled Industrial Waste",
+      "geography": "Paris (Chambre Syndicale) | Tokyo Avant-Garde",
+      "anatomy": "Deconstructed Assembly | Radical Asymmetry | Bodily Obfuscation | Surface Erosion and Degradation",
       "format": "Traditional Runway"
     },
     "notes": {
-      "provenance": "Jun Takahashi's Undercover SS 2003 collection 'But Beautiful III' was the designer's Paris debut and was immediately embraced as a watershed moment in conceptual fashion. Presented at Paris Fashion Week, the collection fused elements of horror, Dadaism, children's books, and darkly romantic illustration into a single coherent visual world. The show arrived at a moment when the Tokyo avant-garde was entering formal Parisian institutional territory for the first time.",
-      "strategy": "Takahashi constructed the 'But Beautiful III' collection by layering incongruous reference systems — fairytale illustration, horror film stills, craft textile traditions, and subcultural streetwear — into garments that defied singular reading. Each piece functioned as a collage: printed imagery was burned or distorted, fabric was deliberately frayed or distressed, and silhouettes were engineered to suggest both innocence and menace simultaneously.",
-      "critique": "The 'But Beautiful' series — of which SS03 was the third and most internationally visible chapter — argued for a mode of fashion that refused the commercial imperative of desirability. Takahashi's work was beautiful precisely because it was also disturbing: it held the viewer in an unresolved tension between attraction and repulsion. The Paris debut confirmed that the Tokyo avant-garde tradition — rooted in Comme des Garçons and Yohji Yamamoto — had produced a genuinely new generation of conceptual designers."
+      "provenance": "Jun Takahashi's monumental Spring/Summer 2003 collection for Undercover, officially titled 'SCAB', marked his highly anticipated debut at Paris Fashion Week. Fellow Japanese avant-garde pioneer Rei Kawakubo personally championed the show, marking it as a must-see event for international journalists and critics. Staged in the tense, fearful socio-political climate shortly following the 9/11 attacks, the show culminated in a profoundly shocking finale that brought the audience to a standing ovation and cemented SCAB as Takahashi's magnum opus. It is now considered a 'holy grail' collection among fashion archivists.",
+      "strategy": "The foundational structural logic of the collection was the literal interpretation of a 'scab'. Takahashi engineered garments where individual frayed patches and ethnic fabrics were painstakingly hand-stitched over one another to replicate human scabs, resulting in garments covered in loose hanging threads and raw asymmetrical edges. Takahashi integrated heavy hardware and utilitarian details characteristic of crust punk — encircling zippers, buckles, and D-rings embellished the waists of cargo pants. Rather than relying solely on rigid heavy denim as typical in punk aesthetics, Takahashi utilized surprisingly lightweight stretchy cotton for bottoms, fusing them with intricate knit panelling that transitioned down the leg into the dense patchwork. The collection heavily appropriated graphics from the UK crust punk band Sedition, specifically incorporating the inverted crescent moon from their 1993 Earth Beat LP across garments and hessian pouches. For the finale, the lights went out and models emerged completely obfuscated in brightly multi-colored patchwork burqas.",
+      "critique": "Heavily influenced by his youth in the UK punk scene and his time as the frontman for the Tokyo Sex Pistols, Takahashi used SCAB to force high fashion to confront crust punk — by elevating aesthetics of frugality, decay, and DIY repair onto the luxurious Parisian catwalk, he championed an anti-capitalist anti-establishment ideology. Philosophically, a scab is a distortion — a natural protective crust that forms as the body responds to a wound or displacement; in a deconstructivist lens the tattered clothing and holes juxtaposed with the reinforced heavy patching represented the paradox of destruction and repair, mirroring Undercover's intent to rebuild and subvert the traditional fashion industry. The inclusion of the burqa was a radical daring political intervention — in a post-9/11 world steeped in Islamophobia and war, Takahashi recontextualized the burqa, often framed by Western media as a sign of absolute terror or repression, as a symbol of gentle mysterious protection and punk rebellion against hegemonic norms. It functioned as a non-aggressive yet incredibly powerful anti-war statement. During a period when the West was highly suspicious of foreign aesthetics, Takahashi actively celebrated globalism by embedding ethnic patterns such as Datooga-inspired full-arm bangles from Tanzania within the crust punk framework, demonstrating a profound appreciation for marginalized cultures."
     }
   },
   {
     "$schema": "../entry.schema.json",
     "id": "adrover-aw00",
     "title": "Miguel Adrover AW 2000",
-    "subtitle": "Duvet",
+    "subtitle": "Midtown",
     "year": 2000,
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg"
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Deconstructed Pinstripe Skirt Suit",
+            "description": "The deconstructed pinstripe skirt suit wraps the body in a dark fluid textile that subverts classic tailoring protocols; it features a twisted button placket and asymmetrical draping. This structural logic engages with post-modern pastiche by dismantling the rigid corporate uniform of the era into a relaxed almost bohemian silhouette. The fabric hangs loosely around the hips; a large knotted fabric bow sits prominently at the waist. The garment asserts a posture of quiet rebellion against polished Wall Street aesthetics."
+          },
+          {
+            "x": 48,
+            "y": 20,
+            "label": "Decorative Forehead Jewelry",
+            "description": "The decorative forehead jewelry frames the face with intricate metallic chains and a central gemstone; it introduces a non-Western cultural motif to the formal suiting. This accessory utilizes subcultural appropriation to blend downtown NYC club aesthetics with globalized references. The silver hardware rests flush against the skin and hair; it drops delicate chains over the ears. The piece completes the ensemble by asserting a highly individualized and exoticized identity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Sartorial T-Shirt Harness",
+            "description": "The sartorial t-shirt harness layers a rigid black waistcoat directly over a crisp white button-down and a sheer underlayer; it constructs a dense architectural core. This material strategy engages with deconstructionist assembly by visibly stacking foundational garments as outerwear. The dark vest ends in sharp pointed lapels at the waist; a large silver pendant hangs heavily from the neck. The top asserts a complex hybridized approach to gendered formalwear."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Voluminous Wide-Leg Trousers",
+            "description": "The voluminous wide-leg trousers swallow the lower body in a massive dark bell shape; they obscure the legs entirely beneath heavy flowing fabric. This structural extreme applies historical pastiche by mimicking the sweeping volume of a 19th-century skirt while maintaining a bifurcated trouser format. The dark textile absorbs light completely to create a flat monumental base; the hem sweeps dangerously close to the runway floor. The garment completes the androgynous silhouette by blurring the visual boundaries between a skirt and a suit pant."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Upcycled Denim Waistcoat",
+            "description": "The upcycled denim waistcoat is layered aggressively over a striped button-down and beneath a dark pinstripe blazer; it introduces a raw utilitarian textile into formal suiting. This application utilizes the fashion readymade to elevate working-class materials into a luxury context. The pale blue denim features traditional brass buttons; the lapels are folded back tightly. The piece asserts an aesthetic of downtown DIY collage."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Deconstructed Denim Kilt",
+            "description": "The deconstructed denim kilt wraps the lower body in a heavily pleated blue jean fabric; it features raw violently frayed edges running vertically down the thigh. This structural intervention utilizes subcultural systems to subvert traditional menswear by putting a male model in a skirt format associated with punk rebellion. The thick denim holds rigid knife pleats; a massive oversized safety pin dangles functionally from the frayed opening. The garment refuses orthodox beauty standards to assert a rugged and aggressive androgyny."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Relaxed V-Neck Tunic",
+            "description": "The relaxed v-neck tunic drapes loosely over the torso in a solid black fabric; it obscures the natural waistline completely. This simple format provides a quiet baseline that highlights the heavy metallic jewelry and facial styling. The soft textile absorbs light to create a flat upper silhouette; the neckline drops softly over the collarbone. The garment asserts a relaxed almost monastic simplicity amidst the dense globalized pastiche of the collection."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Asymmetrical Knotted Overskirt",
+            "description": "The asymmetrical knotted overskirt wraps tightly around the hips and ties into a massive heavy lump at the center axis; it creates a chaotic disruption of the lower silhouette. This material application relies on the illusion of a hastily tied sarong to introduce a fluid non-Western drape into the dark ensemble. The black fabric bunches heavily beneath the knot; the hem drops unevenly over opaque black tights. The piece completes the aesthetic by prioritizing informal draping over severe tailoring."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Flattened Pearl-Trimmed Corset",
+            "description": "The flattened pearl-trimmed corset binds the midriff tightly with exposed boning and delicate pearl embellishments; it restricts the natural curve of the waist while deliberately flattening the bust. This sartorial restriction applies gender deconstruction by utilizing a historically hyper-feminine undergarment to create a more androgynous tubular torso. The vertical stripes of pearls follow the rigid internal framework; it sits over the draped fabric of the skirt rather than beneath it. The garment refuses soft contouring to assert a severe structural boundary."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Liquid Satin Sarong Skirt",
+            "description": "The liquid satin sarong skirt gathers into a massive reflective knot just below the corset; it drapes heavily over the legs in a highly lustrous bronze textile. This structural logic utilizes historical pastiche to mimic traditional Southeast Asian draping techniques using high-end luxury fabrics. The high-shine material highlights the deep fluid folds radiating from the central knot; the asymmetrical hem exposes the lower calves. The piece completes the globalized collage by anchoring the rigid corset with a chaotic and fluid lower volume."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Open-Front Corseted Blouse",
+            "description": "The open-front corseted blouse clings tightly to the upper body in crisp white cotton before splitting open across the stomach; it features subtle corsetry hook-and-eye closures running down the center. This material manipulation engages with the subversion of orthodox beauty by exposing the simulated tattooed skin beneath. The high collar and long sleeves mimic a traditional button-down; the tight fit emphasizes the bust before violently cutting away. The garment asserts a rigid formal shell deliberately fractured to reveal a subcultural underlayer."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Reconstructed Dual-Wash Denim",
+            "description": "The reconstructed dual-wash denim trousers fuse two completely different washes of blue jeans into a single wide-leg garment; they drop heavily from a low unfastened waistband. This tectonic craft utilizes deconstruction to visually slice the lower body in half. The front panel features a classic faded blue denim completely unbuttoned to reveal white undergarments; the back and side panels transition into a stark white textile. The piece refuses cohesive tailoring to complete a silhouette defined by extreme collage."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Rigid 18th-Century Frock Coat",
+            "description": "The rigid 18th-century frock coat structures the upper body with a long flared silhouette and a high collar; it features an excessive row of large self-fabric buttons running down the center seam. This garment engages with historical pastiche by translating the formal menswear of the French court into a stark modern textile. The stiff lavender fabric stands away from the hips; the sleeves end in massive folded red cuffs that swallow the hands. The coat asserts a theatrical and heavily structured armor that dominates the upper silhouette."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Printed Trompe L'Oeil Leggings",
+            "description": "The printed trompe l'oeil leggings tightly encase the legs in a light fabric covered in chaotic red and blue graphic motifs; they create the deliberate illusion of heavily tattooed skin. This material strategy utilizes body politics to merge the garment entirely with the biological form. The tight fit highlights the musculature of the legs beneath the long stiff coat; the graphics mimic urban graffiti and traditional ink. The garment completes the postmodern collage by pairing rigid historical tailoring with simulated subcultural body modification."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Minimalist White Tailoring",
+            "description": "The minimalist white tailoring structures the upper body with a clean unadorned jacket; it hangs open to expose the bare midriff entirely. This simple format engages with the subversion of orthodox beauty by providing a stark clinical frame around the heavy subcultural styling and facial piercings. The crisp white fabric features a simple single-button closure left undone; the sleeves end cleanly at the wrist without cuffs. The garment refuses complex detailing to assert a quiet backdrop for the chaotic lower volume."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Patchwork Denim Crinoline Skirt",
+            "description": "The patchwork denim crinoline skirt explodes outward from the waist in a massive structured dome; it stitches together dozens of different denim scraps into a highly textured volume. This structural extreme applies historical pastiche by taking the monumental bell shape of a 19th-century ballgown and rendering it in heavy blue-collar fabric. The visible seams between the patches highlight the complex internal scaffolding required to hold the shape; the model lifts the heavy hem to walk. The piece completes the globalized collage by fusing royal proportions with worker's textiles."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Satin Frock Coat Vest",
+            "description": "The satin frock coat vest drops heavily to the knee in a highly reflective mauve textile; it features an excessive row of buttons and stiff tailored pockets. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its long vertical panels; it hangs open to reveal a heavily printed underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Printed Silk Sarong",
+            "description": "The printed silk sarong gathers loosely at the waist and drops into fluid sheer layers over the legs; it features delicate floral motifs in muted pastel tones. This material application relies on the illusion of a hastily tied wrap to introduce a non-Western drape into the tailored ensemble. The sheer fabric reveals the opaque metallic leggings beneath; the massive knot sits prominently below the waistline. The piece completes the aesthetic by fusing rigid European outerwear with relaxed globalized draping."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Trompe L'Oeil Bodice",
+            "description": "The trompe l'oeil bodice utilizes a printed second-skin mesh to simulate a heavily tattooed torso beneath a structured white coat; it completely blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The mesh features dense brown and red motifs mimicking bloody or scarred skin; it clings tightly to the bust without any structural support. The garment asserts a postmodern sensibility by forcing the viewer to question what is flesh and what is fabric."
+          },
+          {
+            "x": 55,
+            "y": 80,
+            "label": "Metallic Knee Armor",
+            "description": "The metallic knee armor clamps over the left leg in a rigid segmented metal shell; it introduces literal protective hardware into the fluid ensemble. This structural intervention utilizes scaffolding and internal frameworks to reference the armored figure of Joan of Arc. The shiny silver metal is strapped tightly around the thigh and calf; it features articulated joints to allow movement. The accessory refuses delicate feminine styling to complete a silhouette defined by heavy militant aggression."
+          }
+        ]
       }
     ],
     "tags": {
       "brand": "Miguel Adrover",
       "era": "2000–2009; The Global Conglomerate Era",
-      "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Post-Colonialism & Diasporic Narratives",
-      "theories": "Institutional Critique | Symbolic Exchange | Marxist Materialism | The Simulacrum (Baudrillard)",
+      "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems | Ecological Politics & Resource Extraction",
+      "theories": "Symbolic Exchange | Camp and Kitsch Subversion | Subcultural Resistance Theory | Marxist Materialism",
       "gender": "Womenswear",
-      "materials": "Domestic Found Objects | Upcycled Industrial Waste | Deadstock & Surplus Inventory",
-      "geography": "New York (CFDA)",
-      "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
-      "format": "Traditional Runway"
+      "materials": "Upcycled Industrial Waste | Deadstock & Surplus Inventory | Plant-Based Cellulose | Domestic Found Objects",
+      "geography": "New York (CFDA) | Subcultural Origin",
+      "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Modular Componentry",
+      "format": "Guerrilla / Street Presentation"
     },
     "notes": {
-      "provenance": "Miguel Adrover's AW 2000 'Duvet' collection was presented in New York and became one of the most discussed American debuts of the decade. The Mallorcan-born designer sourced material directly from the street — most iconically, a duvet belonging to the late Quentin Crisp, purchased from his Lower East Side apartment after his death. The garment made from this bedsheet became the show's defining image and positioned Adrover as a radical anti-fashion voice in a city dominated by corporate minimalism.",
-      "strategy": "Adrover's working method inverted the conventional luxury supply chain by treating domestic refuse and found street objects as primary material. The Quentin Crisp duvet-coat required no manufacturing process beyond cutting and minimal stitching — the found object became the finished garment. This approach collapsed the categories of waste, memory, and luxury into a single textile surface, arguing that provenance and narrative constituted material value.",
-      "critique": "The 'Duvet' collection enacted a profound critique of American fashion's corporate aesthetic by sourcing from the street rather than the atelier. Adrover's use of Quentin Crisp's bedsheet — the property of a queer icon and social outcast — was also a political act: it materialised marginalised biography as high-fashion garment. The show argued that the most radical gesture in New York fashion was not innovation but appropriation — the elevation of discarded everyday life into the formal language of the runway."
+      "provenance": "Miguel Adrover's monumental Fall/Winter 2000 'Midtown' collection — his second-ever runway show — catapulted him to sudden stardom. Staged during New York Fashion Week, the show operated as a purely underground DIY event: it was held at the Clemente Soto Vélez Cultural Center on the Lower East Side, completely off-schedule, with entry passes consisting of one-dollar bills stamped with the venue's address. The presentation was a massive critical success — Adrover was labeled 'New York's New Star' on the cover of Women's Wear Daily and eventually won the CFDA Perry Ellis Award for Emerging Talent. However the rebellious nature of his designs immediately sparked corporate backlash; Burberry threatened a lawsuit demanding Adrover never use their plaid patterning again.",
+      "strategy": "Adrover's core structural methodology was the radical repurposing and upcycling of preexisting garments — a technique directly compared to Marcel Duchamp's readymades and Robert Rauschenberg's combine paintings. He integrated discarded everyday objects and iconic luxury pieces from his urban environment directly into his clothing compositions. Adrover engineered new avant-garde silhouettes by slicing up hyper-recognizable luxury goods: he famously took a classic Burberry trench coat and reconstructed it inside-out and backwards to create a plaid dress, and dismantled a Louis Vuitton bag to craft a miniskirt. He utilized distinctly non-fashion items to build the internal architecture of his garments — most notably using New York Yankees baseball caps as structural shoulder pads beneath a navy sweater. He also deconstructed two pairs of trousers, resewing one pair into a cropped jacket paired with Hermès belts. The collection's most poignant and famous piece was a tailored striped overcoat constructed entirely out of a discarded stained mattress that had belonged to Adrover's recently deceased neighbor, the famous queer writer and raconteur Quentin Crisp; Adrover distressed the fabric further by burning it on a stove in his East 3rd Street basement.",
+      "critique": "During an era dominated by corporate fashion conglomerates and an obsession with polished logo-heavy luxury, Adrover's collection served as a sharp critique of capitalist consumerism and fashion's growing homogeneity. By illegally appropriating the ultimate status symbols of the time (Burberry, Louis Vuitton), he hijacked their cultural cachet while simultaneously mocking the industry's logo-mania. Adrover actively championed imperfection, decay, and raw honesty — by transforming the stained abandoned mattress of Quentin Crisp into a beautifully tailored garment, he elevated urban detritus into poetic invention, proving that the histories, memories, and physical wear embedded within an object hold more profound value than pristine mass-produced commercial clothing. The collection functioned as a love letter to the gritty reality of downtown New York City culture — the juxtaposition of European luxury goods with the ubiquitous working-class NY Yankees cap highlighted the contrasting socio-economic realities of the city, celebrating the authentic street style and rampant bootleg culture of the era. Long before sustainability became an industry buzzword, Adrover was a trailblazer for circular design, operating under severe financial constraints and turning those limitations into a profound strength by proving that luxury upcycling could yield garments worthy of high-fashion runways and museum archives."
     }
   },
   {
     "$schema": "../entry.schema.json",
     "id": "van-herpen-aw11",
-    "title": "Iris van Herpen AW 2011",
+    "title": "Iris van Herpen AW 2011 Couture",
     "subtitle": "Capriole",
     "year": 2011,
-    "season": "AW",
+    "season": "Couture-AW",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-02.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-03.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-04.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-05.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-06.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-07.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-08.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-09.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-10.jpg"
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-11.jpg"
       }
     ],
     "tags": {
       "brand": "Iris van Herpen",
       "era": "2010–2019; The Digital and Streetwear Pivot",
-      "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Ecological Politics & Resource Extraction",
+      "politics": "Ecological Politics & Resource Extraction | Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities",
       "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Object-Oriented Ontology | Techno-Optimism and Accelerationism",
       "gender": "Womenswear",
-      "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Structural Composites",
+      "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Additive Manufacturing",
       "geography": "Paris (Fédération de la Haute Couture)",
-      "anatomy": "Prosthetic Extension | Geometric Abstraction | Scaffolding and Internal Frameworks | Weight and Gravity Defiance",
-      "format": "Theatrical Stage Performance"
+      "anatomy": "Prosthetic Extension | Scaffolding and Internal Frameworks | Architectural Shielding and Armour | Clinical Exposure and Nudity",
+      "format": "Traditional Runway"
     },
     "notes": {
-      "provenance": "Iris van Herpen's AW 2011 Haute Couture collection 'Capriole' was presented in Paris and featured a landmark collaboration with architect and computational designer Daniel Widrig. The collection used selective laser sintering — an industrial 3D printing process — to produce garments that were impossible to construct by hand. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
-      "strategy": "Van Herpen worked with Widrig to translate computational fluid dynamics simulations — the mathematical modelling of liquid motion — into wearable structures. The 3D-printed pieces captured the frozen geometry of a splash or an explosion at the moment of maximum extension, producing silhouettes that appeared simultaneously rigid and liquid. The manufacturing process replaced the atelier with the machine: each piece was grown rather than sewn.",
-      "critique": "The 'Capriole' collection was one of the first instances in which additive manufacturing — 3D printing — was used as the primary production method for Haute Couture. This placed van Herpen at the intersection of fashion, architecture, and engineering, and constituted a fundamental challenge to the couture system's reliance on handcraft as the marker of luxury value. The work proposed that the most radical couture of the 21st century would be produced not by petites mains but by machines operating beyond the limits of human dexterity."
+      "provenance": "Iris van Herpen's Autumn/Winter 2011 Haute Couture collection, officially titled 'Capriole', marked her debut Haute Couture collection in Paris. The collection famously featured the introduction of her 3D-printed 'skeleton' dress on the runway as Look 1, cementing her reputation as a pioneer who merged high technology with the artisanal craftsmanship of couture.",
+      "strategy": "The core structural intervention of the skeleton dress, created in collaboration with architect Isaïe Bloch, was a literal reversal of human anatomy — rendered in white polyamide, the dress functioned as a haunting exoskeleton, making it appear as if the body had been turned inside out by wearing its bones on the exterior. Van Herpen fundamentally altered fashion construction by utilizing rapid prototyping and 3D printing; this technology allowed her to materialize complex digitally designed 3D folds and structures that would be physically impossible to replicate by hand or with traditional needle and thread. Her structural blueprint relied on observing complex organic forms in nature — fossils, shells, and bone structures — and engineering them out of distinctly cold inorganic rigid plastic materials. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
+      "critique": "Van Herpen's work serves as the ultimate sartorial manifestation of posthumanism — by merging human flesh with rigid digital polymers, she blurs the boundaries between humans and machines, organic and artificial. She decenters the human subject, proposing instead a hybrid figure deeply entangled in a 'nature-culture continuum' where technology itself is viewed as a living self-organizing entity. Philosophers frequently analyze van Herpen's extreme silhouettes through Gilles Deleuze and Félix Guattari's concept of the 'body without organs' — by applying grotesque alienating non-normative forms to the female figure, van Herpen actively de-organizes and de-stratifies the socially disciplined body. Her exoskeletons liberate the wearer from conventional beauty ideals, initiating a dynamic process of 'becoming' other than strictly human. While hailed as futuristic, the 3D-printed plastics used in this collection present a unique theoretical and conservational paradox: the advanced polyamide used to print the Capriole skeleton dress is highly susceptible to rapid degradation. Fashion archivists note that the dress has already begun to shift from pristine white to a yellowish coloration, proving that even cutting-edge synthetic materials possess a transient ephemeral lifespan that continually alters the artifact's visual reality."
     }
   },
   {
     "$schema": "../entry.schema.json",
     "id": "pugh-aw06",
     "title": "Gareth Pugh AW 2006",
-    "subtitle": "",
+    "subtitle": "Solo Debut",
     "year": 2006,
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-01.jpg"
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Cellophane Fringe Carapace",
+            "description": "The cellophane fringe carapace engulfs the torso in an immense mass of reflective gold plastic strips; it creates a chaotic kinetic volume that obscures the natural anatomy entirely. This material application engages with the anti-commercial ethos of London's underground club scene by utilizing literal garbage to construct runway spectacle. The shiny fringes catch the light violently as they shift with movement; the heavy layer drops well past the hips. The garment asserts a playful but highly defensive architectural shield against the environment."
+          },
+          {
+            "x": 48,
+            "y": 8,
+            "label": "Geometric Fringe Headpiece",
+            "description": "The geometric fringe headpiece isolates the face within a harsh frame of synthetic black strips; it flattens the upper skull into an unnatural rectangular block. This accessory utilizes subcultural theatricality to transform the model into an unsettling apocalyptic figure. The black fringe drops vertically over the ears to contrast sharply with the stark white facial makeup. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Pneumatic PVC Puffer",
+            "description": "The pneumatic PVC puffer balloons around the chest and neck into massive rigid geometric volumes; it physically forces the arms away from the sides. This structural extreme applies posthumanist theory by mutating the human form into an aggressive unyielding piece of architecture. The glossy black plastic mimics industrial refuse bags; the collar rises dangerously high to swallow the jawline. The outerwear asserts an oppressive and dystopian presence that severely restricts mobility."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "High-Gloss Latex Trousers",
+            "description": "The high-gloss latex trousers tightly encase the legs in a highly reflective black skin; they provide a sleek contrasting baseline for the massive inflated outerwear. This material choice engages directly with fetishwear subcultures common in the Peckham club scene. The synthetic fabric wrinkles sharply at the knee; it reflects the stark runway lighting to mimic liquid tar. The garment completes the apocalyptic uniform by grounding the floating balloon shapes in severe tactile restriction."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Foam Football Headpiece",
+            "description": "The foam football headpiece mounts multiple black spheres atop the skull; it distorts the silhouette into an absurd alien geometry. This styling detail utilizes the aesthetic of the !WOWWOW! creative squat by transforming cheap banal sporting goods into avant-garde sculpture. The matte black foam absorbs light entirely; the spheres cluster erratically over the stark white makeup. The accessory asserts the collection's signature tension between dark menacing themes and playful club-kid humor."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Accordion-Pleated Collar Shield",
+            "description": "The accordion-pleated collar shield radiates from the neck in a massive rigid disk of dense black fabric; it physically separates the head from the rest of the body. This structural logic engages with architectural shielding by building an impenetrable circular wall around the throat. The stiff pleats hold deep shadows that absorb the runway lighting; the scale of the collar completely dwarfs the model's face. The garment asserts an imposing theatricality reminiscent of extreme Elizabethan ruffs filtered through a dystopian lens."
+          },
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Harlequin Perspex Bodysuit",
+            "description": "The harlequin Perspex bodysuit encases the torso and arms in a rigid mosaic of black and transparent diamonds; it functions as a highly constructed synthetic second skin. This material application utilizes unconventional componentry to create a garment that acts more like modern chainmail than traditional fabric. The clear panels reveal bare skin beneath the dark plastic armor; the sleeves bunch stiffly at the elbows. The piece completes the silhouette by merging historical court jester motifs with sci-fi industrial materials."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Molded Leather Hip Panniers",
+            "description": "The molded leather hip panniers explode outward from the waist into hard bulbous protrusions; they violently disrupt the natural curve of the hips. This engineered distortion applies theories of anatomical interaction by forcing the female body into an unnatural geometric shape. The stiff black leather maintains its volume without underlying scaffolding; the smooth surface contrasts with the fragmented bodysuit above. The garment refuses traditional tailoring to assert a heavy burdensome architecture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Volumetric Tulle Ruffle Cape",
+            "description": "The volumetric tulle ruffle cape erupts from the shoulders in two massive pleated semi-circles; it drastically widens the upper silhouette into a colossal butterfly-like shape. This structural extreme utilizes monolithic massing to create a garment that dominates the physical space around the wearer. The dense black netting is layered obsessively to achieve rigid structure without solid scaffolding; the deep V-neck exposes the pale chest. The outerwear asserts an overwhelming theatrical presence that completely swallows the human frame."
+          },
+          {
+            "x": 50,
+            "y": 80,
+            "label": "High-Gloss Latex Trousers",
+            "description": "The high-gloss latex trousers drop tightly down the legs in a reflective wet-look synthetic; they act as a severe anchor for the massive tulle structure above. This material choice engages with subcultural fetish aesthetics by utilizing restrictive rubber. The tight fit highlights the extreme contrast in volume between the upper and lower halves of the body; the hem ends bluntly over heavy combat boots. The garment completes the apocalyptic look by ensuring the lower body remains tightly protected."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Horned Foam Headpiece",
+            "description": "The horned foam headpiece twists thick black foam into aggressive protruding spikes; it transforms the model into a demonic alien figure. This accessory engages directly with the lineage of fashion-as-performance-art popularized by Leigh Bowery. The matte black texture absorbs light completely against the stark white face; the heavy shape forces the model to balance carefully. The piece asserts the collection's core theme of dark menacing theatricality mixed with club-kid absurdity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Metallic Checkerboard Cape",
+            "description": "The metallic checkerboard cape wraps the entire body in a massive grid of highly reflective gold and matte black squares; it functions as a towering unyielding monolith. This material application engages with the anti-commercial ethos of the collection by creating a heavy cumbersome shape entirely unsuited for practical wear. The stiff fabric holds sharp geometric folds that drop heavily to the floor; the waist is cinched violently to control the immense volume. The garment asserts a chaotic architectural presence that visually fractures the body."
+          },
+          {
+            "x": 48,
+            "y": 8,
+            "label": "Asymmetrical Foam Headpiece",
+            "description": "The asymmetrical foam headpiece tilts dangerously off the skull in a lopsided mass of dense black material; it refuses any semblance of traditional balance. This styling choice utilizes subcultural theatricality to further distort the human silhouette. The dark foam rests heavily over the right ear; the stark white facial makeup creates a jarring contrast against the black mass. The accessory completes the look by injecting a sense of unbalanced unease into the apocalyptic ensemble."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Faux-Fur Ruffled Coat",
+            "description": "The faux-fur ruffled coat engulfs the torso in dense black pelts bordered by heavily cascading ruffles; it creates a deeply textural and oppressive volume. This structural logic utilizes monolithic massing to suggest a figure burdened by heavy layers of scavenged material. The dark synthetic fur completely obscures the arms and shoulders; the central ruffles snake down the front in a chaotic asymmetrical path. The outerwear asserts a somber dystopian aesthetic that relies entirely on shadow and dense texture."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Asymmetrical Foam Headpiece",
+            "description": "The asymmetrical foam headpiece perches awkwardly upon the head in a swollen lumpy mass; it drastically alters the shape of the skull. This accessory applies the performance art aesthetics of the London underground scene to elevate a runway look into a bizarre character study. The matte black foam absorbs the harsh runway lighting; it looms over the stark white painted face. The piece completes the silhouette by enforcing an unsettling top-heavy proportion."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Pneumatic Synthetic Bodysuit",
+            "description": "The pneumatic synthetic bodysuit encases the torso in tight black spandex while appending massive inflatable black spheres to the head, arms, and back; it completely mutates the human form into a bizarre cellular structure. This extreme anatomical interaction utilizes posthumanist theory to merge the biological body with absurd synthetic appendages. The tight black fabric highlights the rigid connection points of the heavy balloons; the hands are completely trapped within the lateral spheres. The garment asserts the ultimate victory of avant-garde architecture over the natural body."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Obfuscating Balaclava",
+            "description": "The obfuscating balaclava covers the entire head and neck in dark fabric leaving only a small horizontal slit for the eyes; it serves as the base for the massive vertical balloon stack. This styling detail engages with bodily obfuscation to erase the model's humanity entirely. The tight mask creates a sense of militant anonymity; the intense gaze is the only biological element remaining. The accessory completes the apocalyptic look by ensuring total protection and isolation from the environment."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Chunky Hand-Knit Tunic",
+            "description": "The chunky hand-knit tunic hangs heavily over the torso in a massive web of thick black yarn; it features violently shredded holes and trailing threads. This material strategy engages with the anti-consumerist squatter aesthetic of the !WOWWOW! collective by elevating a degraded ruined textile to high fashion. The oversized armholes reveal the bare skin beneath; the heavy knit bunches awkwardly at the neck. The garment asserts a posture of extreme frugality and survivalist DIY construction."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "High-Gloss Latex Thigh Boots",
+            "description": "The high-gloss latex thigh boots pull tightly over the legs to act as a sleek reflective second skin; they provide a sharp textural contrast to the matte shredded yarn above. This footwear choice applies the fetishistic codes of the London club scene to ground the chaotic upper body. The wet-look material bunches slightly behind the knee; the thick platform soles elevate the model significantly. The accessory completes the look by anchoring the distressed tunic with severe synthetic armor."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Exaggerated Ruffled Collar",
+            "description": "The exaggerated ruffled collar frames the head in a dense circular explosion of pleated black tulle; it physically isolates the skull from the body. This structural logic utilizes historical pastiche by mutating an Elizabethan ruff into a dark menacing piece of club wear. The stiff netting holds rigid geometric shadows; it rests heavily upon the shoulders of the checkerboard bodysuit. The garment asserts an oppressive theatricality that severely restricts the movement of the neck."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Harlequin Stretch Bodysuit",
+            "description": "The harlequin stretch bodysuit encases the torso and arms in a tight grid of metallic gold and matte black diamonds; it functions as a highly visible graphic second skin. This material application engages directly with the performative humor of the collection by referencing traditional court jesters. The tight synthetic fabric highlights the natural musculature beneath; it features a high cut over the hips. The piece completes the silhouette by contrasting the massive architectural collar with a sleek unpadded base."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Elongated Cone Hat",
+            "description": "The elongated cone hat points sharply upward in a matching gold and black harlequin pattern; it extends the vertical axis of the body dramatically. This accessory utilizes surrealist proportion play to transform the model into an absurd chess piece. The stiff fabric holds a perfect conical shape; it rests upon a tight black hood that obscures the hairline. The hat asserts the playful yet severe theatricality required of authentic performance art."
+          }
+        ]
       }
     ],
     "tags": {
       "brand": "Gareth Pugh",
       "era": "2000–2009; The Global Conglomerate Era",
-      "politics": "Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Censorship & Provocation",
-      "theories": "The Grotesque and Abject | Camp and Kitsch Subversion | Bodily Autonomy and Transgression | Brutalist Information Architecture",
+      "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique",
+      "theories": "Post-Humanism | Camp and Kitsch Subversion | The Grotesque and Abject | Subcultural Resistance Theory",
       "gender": "Conceptual / Post-Binary Form",
-      "materials": "Petroleum-Based Polymers | Thermoplastic Membranes | Industrial Coatings | Assembled Non-Textile Hardware",
-      "geography": "London (BFC)",
-      "anatomy": "Monolithic Massing | Bodily Obfuscation | Scaffolding and Internal Frameworks | Architectural Shielding and Armour",
-      "format": "Traditional Runway"
+      "materials": "Petroleum-Based Polymers | Thermoplastic Membranes | Elastomeric Compounds | Industrial Coatings | Assembled Non-Textile Hardware",
+      "geography": "London (BFC) | London Underground / Club Culture",
+      "anatomy": "Monolithic Massing | Bodily Obfuscation | Architectural Shielding and Armour | Prosthetic Extension",
+      "format": "Performance Art / Live Action"
     },
     "notes": {
-      "provenance": "Gareth Pugh's AW 2006 collection was presented as part of his second London Fashion Week season, shortly after his graduate debut from Central Saint Martins attracted intense industry attention. The show consolidated Pugh's identity as the defining voice of post-millennium British gothic fashion — massive black volumes, inflated geometric forms, and a total suppression of the recognisable human body beneath architectural textile structures. The collection was championed by i-D, Dazed & Confused, and Nicola Formichetti.",
-      "strategy": "Pugh engineered each look around the principle of bodily obfuscation — the garment as total environment rather than complement to the body. Inflated PVC sections, rigid geometric panniers, and heavily structured black volumes removed the conventional markers of gender, anatomy, and movement from the silhouette. The construction demanded internal armature: wire frames, boning, and inflation mechanisms that transformed the body into a carrier for sculptural form.",
-      "critique": "Pugh's AW 2006 collection enacted a radical refusal of fashion's traditional compact with desire. Where conventional fashion makes the body more visible and more legible — more desirable — Pugh's work made it invisible, replacing legible anatomy with an alien geometric mass. This constituted a profound challenge to the commercial logic of the London fashion system and positioned the runway as a site of formal experimentation rather than commercial proposition."
+      "provenance": "Gareth Pugh's Autumn/Winter 2006 Ready-to-Wear collection was a landmark moment serving as his highly anticipated solo debut at London Fashion Week. Pugh was able to stage the show after being awarded the prestigious New Generation sponsorship. Prior to this solo runway Pugh had built massive hype showing with the Fashion East group, drawing heavy inspiration from his immersion in London's extreme underground club scene — specifically his time living and working in the !WOWWOW! creative squat in Peckham.",
+      "strategy": "As fashion critic Sarah Mower noted in her review of this debut, 'Pugh has a thing about balloons'. Pugh utilized PVC inflated into voluminous coats, continuing to develop the pneumatic beach-ball fabric balloons that defined his 2003 Central Saint Martins graduation collection. He built his garments using materials entirely divorced from traditional luxury — knitted refuse sacks, parachute silk, shiny latex, cellophane fringing, foam footballs, and Perspex discs linked together to mimic chainmail. The structural logic of the collection involved 'nonsensically shaped wearable sculptures' designed to aggressively distort the human body almost beyond recognition. The models' frail bodies were swamped and extended by immense geometric shapes such as cuboid shoulders, while their faces were frequently obscured by impenetrable black masks and shiny latex.",
+      "critique": "This collection firmly entrenched Pugh in the lineage of fashion-as-performance-art, drawing direct comparisons to the 1980s club culture of Leigh Bowery as well as the theatricality of Alexander McQueen and Vivienne Westwood. At this point in his career his focus was entirely on experimental avant-garde spectacle; he famously struggled to make ends meet and had yet to sell a single wearable commercial dress. Theorists note that Pugh's models appeared profoundly uneasy with their environment, looking as though they were literally 'carrying fragments of the city on their shoulders' — the heavy oppressive architectural designs evoked an apocalyptic sci-fi future where the human body is forced to organically merge with or shield itself from the debris of the urban landscape. Despite the menacing dystopian and monochromatic appearance of the inflated volumes, the collection retained a playful club-kid humor; Pugh himself summarized the philosophical core of his designs by stating they are fundamentally 'about the struggle between lightness and darkness'."
     }
   },
   {

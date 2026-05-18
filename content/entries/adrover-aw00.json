@@ -2,28 +2,95 @@
   "$schema": "../entry.schema.json",
   "id": "adrover-aw00",
   "title": "Miguel Adrover AW 2000",
-  "subtitle": "Duvet",
+  "subtitle": "Midtown",
   "year": 2000,
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg"
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg",
+      "hotspots": [
+        { "x": 50, "y": 45, "label": "Deconstructed Pinstripe Skirt Suit", "description": "The deconstructed pinstripe skirt suit wraps the body in a dark fluid textile that subverts classic tailoring protocols; it features a twisted button placket and asymmetrical draping. This structural logic engages with post-modern pastiche by dismantling the rigid corporate uniform of the era into a relaxed almost bohemian silhouette. The fabric hangs loosely around the hips; a large knotted fabric bow sits prominently at the waist. The garment asserts a posture of quiet rebellion against polished Wall Street aesthetics." },
+        { "x": 48, "y": 20, "label": "Decorative Forehead Jewelry", "description": "The decorative forehead jewelry frames the face with intricate metallic chains and a central gemstone; it introduces a non-Western cultural motif to the formal suiting. This accessory utilizes subcultural appropriation to blend downtown NYC club aesthetics with globalized references. The silver hardware rests flush against the skin and hair; it drops delicate chains over the ears. The piece completes the ensemble by asserting a highly individualized and exoticized identity." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-02.jpg",
+      "hotspots": [
+        { "x": 50, "y": 35, "label": "Sartorial T-Shirt Harness", "description": "The sartorial t-shirt harness layers a rigid black waistcoat directly over a crisp white button-down and a sheer underlayer; it constructs a dense architectural core. This material strategy engages with deconstructionist assembly by visibly stacking foundational garments as outerwear. The dark vest ends in sharp pointed lapels at the waist; a large silver pendant hangs heavily from the neck. The top asserts a complex hybridized approach to gendered formalwear." },
+        { "x": 50, "y": 65, "label": "Voluminous Wide-Leg Trousers", "description": "The voluminous wide-leg trousers swallow the lower body in a massive dark bell shape; they obscure the legs entirely beneath heavy flowing fabric. This structural extreme applies historical pastiche by mimicking the sweeping volume of a 19th-century skirt while maintaining a bifurcated trouser format. The dark textile absorbs light completely to create a flat monumental base; the hem sweeps dangerously close to the runway floor. The garment completes the androgynous silhouette by blurring the visual boundaries between a skirt and a suit pant." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-03.jpg",
+      "hotspots": [
+        { "x": 50, "y": 30, "label": "Upcycled Denim Waistcoat", "description": "The upcycled denim waistcoat is layered aggressively over a striped button-down and beneath a dark pinstripe blazer; it introduces a raw utilitarian textile into formal suiting. This application utilizes the fashion readymade to elevate working-class materials into a luxury context. The pale blue denim features traditional brass buttons; the lapels are folded back tightly. The piece asserts an aesthetic of downtown DIY collage." },
+        { "x": 50, "y": 65, "label": "Deconstructed Denim Kilt", "description": "The deconstructed denim kilt wraps the lower body in a heavily pleated blue jean fabric; it features raw violently frayed edges running vertically down the thigh. This structural intervention utilizes subcultural systems to subvert traditional menswear by putting a male model in a skirt format associated with punk rebellion. The thick denim holds rigid knife pleats; a massive oversized safety pin dangles functionally from the frayed opening. The garment refuses orthodox beauty standards to assert a rugged and aggressive androgyny." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-04.jpg",
+      "hotspots": [
+        { "x": 50, "y": 30, "label": "Relaxed V-Neck Tunic", "description": "The relaxed v-neck tunic drapes loosely over the torso in a solid black fabric; it obscures the natural waistline completely. This simple format provides a quiet baseline that highlights the heavy metallic jewelry and facial styling. The soft textile absorbs light to create a flat upper silhouette; the neckline drops softly over the collarbone. The garment asserts a relaxed almost monastic simplicity amidst the dense globalized pastiche of the collection." },
+        { "x": 50, "y": 55, "label": "Asymmetrical Knotted Overskirt", "description": "The asymmetrical knotted overskirt wraps tightly around the hips and ties into a massive heavy lump at the center axis; it creates a chaotic disruption of the lower silhouette. This material application relies on the illusion of a hastily tied sarong to introduce a fluid non-Western drape into the dark ensemble. The black fabric bunches heavily beneath the knot; the hem drops unevenly over opaque black tights. The piece completes the aesthetic by prioritizing informal draping over severe tailoring." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-05.jpg",
+      "hotspots": [
+        { "x": 50, "y": 35, "label": "Flattened Pearl-Trimmed Corset", "description": "The flattened pearl-trimmed corset binds the midriff tightly with exposed boning and delicate pearl embellishments; it restricts the natural curve of the waist while deliberately flattening the bust. This sartorial restriction applies gender deconstruction by utilizing a historically hyper-feminine undergarment to create a more androgynous tubular torso. The vertical stripes of pearls follow the rigid internal framework; it sits over the draped fabric of the skirt rather than beneath it. The garment refuses soft contouring to assert a severe structural boundary." },
+        { "x": 50, "y": 65, "label": "Liquid Satin Sarong Skirt", "description": "The liquid satin sarong skirt gathers into a massive reflective knot just below the corset; it drapes heavily over the legs in a highly lustrous bronze textile. This structural logic utilizes historical pastiche to mimic traditional Southeast Asian draping techniques using high-end luxury fabrics. The high-shine material highlights the deep fluid folds radiating from the central knot; the asymmetrical hem exposes the lower calves. The piece completes the globalized collage by anchoring the rigid corset with a chaotic and fluid lower volume." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-06.jpg",
+      "hotspots": [
+        { "x": 50, "y": 30, "label": "Open-Front Corseted Blouse", "description": "The open-front corseted blouse clings tightly to the upper body in crisp white cotton before splitting open across the stomach; it features subtle corsetry hook-and-eye closures running down the center. This material manipulation engages with the subversion of orthodox beauty by exposing the simulated tattooed skin beneath. The high collar and long sleeves mimic a traditional button-down; the tight fit emphasizes the bust before violently cutting away. The garment asserts a rigid formal shell deliberately fractured to reveal a subcultural underlayer." },
+        { "x": 50, "y": 65, "label": "Reconstructed Dual-Wash Denim", "description": "The reconstructed dual-wash denim trousers fuse two completely different washes of blue jeans into a single wide-leg garment; they drop heavily from a low unfastened waistband. This tectonic craft utilizes deconstruction to visually slice the lower body in half. The front panel features a classic faded blue denim completely unbuttoned to reveal white undergarments; the back and side panels transition into a stark white textile. The piece refuses cohesive tailoring to complete a silhouette defined by extreme collage." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-07.jpg",
+      "hotspots": [
+        { "x": 50, "y": 35, "label": "Rigid 18th-Century Frock Coat", "description": "The rigid 18th-century frock coat structures the upper body with a long flared silhouette and a high collar; it features an excessive row of large self-fabric buttons running down the center seam. This garment engages with historical pastiche by translating the formal menswear of the French court into a stark modern textile. The stiff lavender fabric stands away from the hips; the sleeves end in massive folded red cuffs that swallow the hands. The coat asserts a theatrical and heavily structured armor that dominates the upper silhouette." },
+        { "x": 50, "y": 65, "label": "Printed Trompe L'Oeil Leggings", "description": "The printed trompe l'oeil leggings tightly encase the legs in a light fabric covered in chaotic red and blue graphic motifs; they create the deliberate illusion of heavily tattooed skin. This material strategy utilizes body politics to merge the garment entirely with the biological form. The tight fit highlights the musculature of the legs beneath the long stiff coat; the graphics mimic urban graffiti and traditional ink. The garment completes the postmodern collage by pairing rigid historical tailoring with simulated subcultural body modification." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-08.jpg",
+      "hotspots": [
+        { "x": 50, "y": 30, "label": "Minimalist White Tailoring", "description": "The minimalist white tailoring structures the upper body with a clean unadorned jacket; it hangs open to expose the bare midriff entirely. This simple format engages with the subversion of orthodox beauty by providing a stark clinical frame around the heavy subcultural styling and facial piercings. The crisp white fabric features a simple single-button closure left undone; the sleeves end cleanly at the wrist without cuffs. The garment refuses complex detailing to assert a quiet backdrop for the chaotic lower volume." },
+        { "x": 50, "y": 65, "label": "Patchwork Denim Crinoline Skirt", "description": "The patchwork denim crinoline skirt explodes outward from the waist in a massive structured dome; it stitches together dozens of different denim scraps into a highly textured volume. This structural extreme applies historical pastiche by taking the monumental bell shape of a 19th-century ballgown and rendering it in heavy blue-collar fabric. The visible seams between the patches highlight the complex internal scaffolding required to hold the shape; the model lifts the heavy hem to walk. The piece completes the globalized collage by fusing royal proportions with worker's textiles." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-09.jpg",
+      "hotspots": [
+        { "x": 50, "y": 35, "label": "Satin Frock Coat Vest", "description": "The satin frock coat vest drops heavily to the knee in a highly reflective mauve textile; it features an excessive row of buttons and stiff tailored pockets. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its long vertical panels; it hangs open to reveal a heavily printed underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath." },
+        { "x": 50, "y": 55, "label": "Printed Silk Sarong", "description": "The printed silk sarong gathers loosely at the waist and drops into fluid sheer layers over the legs; it features delicate floral motifs in muted pastel tones. This material application relies on the illusion of a hastily tied wrap to introduce a non-Western drape into the tailored ensemble. The sheer fabric reveals the opaque metallic leggings beneath; the massive knot sits prominently below the waistline. The piece completes the aesthetic by fusing rigid European outerwear with relaxed globalized draping." }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-10.jpg",
+      "hotspots": [
+        { "x": 50, "y": 35, "label": "Trompe L'Oeil Bodice", "description": "The trompe l'oeil bodice utilizes a printed second-skin mesh to simulate a heavily tattooed torso beneath a structured white coat; it completely blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The mesh features dense brown and red motifs mimicking bloody or scarred skin; it clings tightly to the bust without any structural support. The garment asserts a postmodern sensibility by forcing the viewer to question what is flesh and what is fabric." },
+        { "x": 55, "y": 80, "label": "Metallic Knee Armor", "description": "The metallic knee armor clamps over the left leg in a rigid segmented metal shell; it introduces literal protective hardware into the fluid ensemble. This structural intervention utilizes scaffolding and internal frameworks to reference the armored figure of Joan of Arc. The shiny silver metal is strapped tightly around the thigh and calf; it features articulated joints to allow movement. The accessory refuses delicate feminine styling to complete a silhouette defined by heavy militant aggression." }
+      ]
     }
   ],
   "tags": {
     "brand": "Miguel Adrover",
     "era": "2000–2009; The Global Conglomerate Era",
-    "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Post-Colonialism & Diasporic Narratives",
-    "theories": "Institutional Critique | Symbolic Exchange | Marxist Materialism | The Simulacrum (Baudrillard)",
+    "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems | Ecological Politics & Resource Extraction",
+    "theories": "Symbolic Exchange | Camp and Kitsch Subversion | Subcultural Resistance Theory | Marxist Materialism",
     "gender": "Womenswear",
-    "materials": "Domestic Found Objects | Upcycled Industrial Waste | Deadstock & Surplus Inventory",
-    "geography": "New York (CFDA)",
-    "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
-    "format": "Traditional Runway"
+    "materials": "Upcycled Industrial Waste | Deadstock & Surplus Inventory | Plant-Based Cellulose | Domestic Found Objects",
+    "geography": "New York (CFDA) | Subcultural Origin",
+    "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Modular Componentry",
+    "format": "Guerrilla / Street Presentation"
   },
   "notes": {
-    "provenance": "Miguel Adrover's AW 2000 'Duvet' collection was presented in New York and became one of the most discussed American debuts of the decade. The Mallorcan-born designer sourced material directly from the street — most iconically, a duvet belonging to the late Quentin Crisp, purchased from his Lower East Side apartment after his death. The garment made from this bedsheet became the show's defining image and positioned Adrover as a radical anti-fashion voice in a city dominated by corporate minimalism.",
-    "strategy": "Adrover's working method inverted the conventional luxury supply chain by treating domestic refuse and found street objects as primary material. The Quentin Crisp duvet-coat required no manufacturing process beyond cutting and minimal stitching — the found object became the finished garment. This approach collapsed the categories of waste, memory, and luxury into a single textile surface, arguing that provenance and narrative constituted material value.",
-    "critique": "The 'Duvet' collection enacted a profound critique of American fashion's corporate aesthetic by sourcing from the street rather than the atelier. Adrover's use of Quentin Crisp's bedsheet — the property of a queer icon and social outcast — was also a political act: it materialised marginalised biography as high-fashion garment. The show argued that the most radical gesture in New York fashion was not innovation but appropriation — the elevation of discarded everyday life into the formal language of the runway."
+    "provenance": "Miguel Adrover's monumental Fall/Winter 2000 'Midtown' collection — his second-ever runway show — catapulted him to sudden stardom. Staged during New York Fashion Week, the show operated as a purely underground DIY event: it was held at the Clemente Soto Vélez Cultural Center on the Lower East Side, completely off-schedule, with entry passes consisting of one-dollar bills stamped with the venue's address. The presentation was a massive critical success — Adrover was labeled 'New York's New Star' on the cover of Women's Wear Daily and eventually won the CFDA Perry Ellis Award for Emerging Talent. However the rebellious nature of his designs immediately sparked corporate backlash; Burberry threatened a lawsuit demanding Adrover never use their plaid patterning again.",
+    "strategy": "Adrover's core structural methodology was the radical repurposing and upcycling of preexisting garments — a technique directly compared to Marcel Duchamp's readymades and Robert Rauschenberg's combine paintings. He integrated discarded everyday objects and iconic luxury pieces from his urban environment directly into his clothing compositions. Adrover engineered new avant-garde silhouettes by slicing up hyper-recognizable luxury goods: he famously took a classic Burberry trench coat and reconstructed it inside-out and backwards to create a plaid dress, and dismantled a Louis Vuitton bag to craft a miniskirt. He utilized distinctly non-fashion items to build the internal architecture of his garments — most notably using New York Yankees baseball caps as structural shoulder pads beneath a navy sweater. He also deconstructed two pairs of trousers, resewing one pair into a cropped jacket paired with Hermès belts. The collection's most poignant and famous piece was a tailored striped overcoat constructed entirely out of a discarded stained mattress that had belonged to Adrover's recently deceased neighbor, the famous queer writer and raconteur Quentin Crisp; Adrover distressed the fabric further by burning it on a stove in his East 3rd Street basement.",
+    "critique": "During an era dominated by corporate fashion conglomerates and an obsession with polished logo-heavy luxury, Adrover's collection served as a sharp critique of capitalist consumerism and fashion's growing homogeneity. By illegally appropriating the ultimate status symbols of the time (Burberry, Louis Vuitton), he hijacked their cultural cachet while simultaneously mocking the industry's logo-mania. Adrover actively championed imperfection, decay, and raw honesty — by transforming the stained abandoned mattress of Quentin Crisp into a beautifully tailored garment, he elevated urban detritus into poetic invention, proving that the histories, memories, and physical wear embedded within an object hold more profound value than pristine mass-produced commercial clothing. The collection functioned as a love letter to the gritty reality of downtown New York City culture — the juxtaposition of European luxury goods with the ubiquitous working-class NY Yankees cap highlighted the contrasting socio-economic realities of the city, celebrating the authentic street style and rampant bootleg culture of the era. Long before sustainability became an industry buzzword, Adrover was a trailblazer for circular design, operating under severe financial constraints and turning those limitations into a profound strength by proving that luxury upcycling could yield garments worthy of high-fashion runways and museum archives."
   }
 }
