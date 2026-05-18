@@ -1956,5 +1956,253 @@ export const imageDimensions = {
   "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-06.jpg": {
     "w": 1365,
     "h": 2048
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-02.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-03.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-04.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-05.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-06.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-07.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-08.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-09.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-10.webp": {
+    "w": 1152,
+    "h": 1728
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.webp": {
+    "w": 1920,
+    "h": 2893
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-02.webp": {
+    "w": 1920,
+    "h": 2978
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-03.webp": {
+    "w": 1920,
+    "h": 2930
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-04.webp": {
+    "w": 1920,
+    "h": 2915
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-05.webp": {
+    "w": 1920,
+    "h": 2940
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-06.webp": {
+    "w": 1920,
+    "h": 2900
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-07.webp": {
+    "w": 1920,
+    "h": 2909
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-08.webp": {
+    "w": 1920,
+    "h": 2936
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-09.webp": {
+    "w": 1920,
+    "h": 2869
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-10.webp": {
+    "w": 1920,
+    "h": 2869
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-01.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-02.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-03.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-04.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-05.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-06.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-07.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-08.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-09.webp": {
+    "w": 1920,
+    "h": 2877
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-01.webp": {
+    "w": 1855,
+    "h": 2808
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-02.webp": {
+    "w": 1867,
+    "h": 2878
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-03.webp": {
+    "w": 1920,
+    "h": 2880
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-04.webp": {
+    "w": 1920,
+    "h": 2880
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-05.webp": {
+    "w": 1920,
+    "h": 2880
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-07.webp": {
+    "w": 1920,
+    "h": 2880
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-08.webp": {
+    "w": 1920,
+    "h": 2880
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-09.webp": {
+    "w": 1920,
+    "h": 2880
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-02.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-03.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-04.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-05.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-06.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-07.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-08.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-09.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-10.webp": {
+    "w": 418,
+    "h": 625
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-03.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-04.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-05.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-06.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-07.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-08.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-09.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-10.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-11.webp": {
+    "w": 1772,
+    "h": 2658
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-04.webp": {
+    "w": 980,
+    "h": 653
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-05.webp": {
+    "w": 640,
+    "h": 641
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-06.webp": {
+    "w": 1365,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-04.jpg": {
+    "w": 980,
+    "h": 653
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-05.jpg": {
+    "w": 640,
+    "h": 641
   }
 };
