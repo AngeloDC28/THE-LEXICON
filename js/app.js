@@ -550,8 +550,12 @@ function setupEventListeners() {
     AppState.searchQuery = '';
     AppState.activeFolderId = null;
     if ($('search-input')) $('search-input').value = '';
+    // switchView triggers onUpdate→refreshUI at the end; no separate
+    // refreshUI() needed here. But the categories cells reflect the
+    // (now-empty) filter set, which switchView doesn't touch — flip
+    // them via refreshTaxonomy after switchView's refreshUI runs.
     switchView('grid', callbacks);
-    refreshUI();
+    refreshTaxonomy();
     updateHash('grid');
   });
 
@@ -606,16 +610,27 @@ function setupEventListeners() {
     toggle?.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
   });
 
+  // Focus-restore: track the last element focused OUTSIDE any modal.
+  // When a modal closes, restore focus there so keyboard users don't
+  // get stranded at the document body.
+  document.addEventListener('focusin', (e) => {
+    if (!e.target.closest?.('[role="dialog"], .modal-backdrop, #image-lightbox')) {
+      _lastNonModalFocus = e.target;
+    }
+  }, true);
+
   document.querySelectorAll('[data-modal-backdrop]').forEach(el => {
     el.addEventListener('click', () => {
       const modalId = el.getAttribute('data-modal-backdrop');
       $(modalId + '-modal').classList.add('hidden');
+      restoreFocus();
     });
   });
   document.querySelectorAll('[data-modal-close]').forEach(el => {
     el.addEventListener('click', () => {
       const modalId = el.getAttribute('data-modal-close');
       $(modalId + '-modal').classList.add('hidden');
+      restoreFocus();
     });
   });
 
@@ -743,8 +758,10 @@ function setupEventListeners() {
     Object.keys(AppState.filters).forEach(k => AppState.filters[k] = null);
     AppState.filters[type] = value;
     closeDetail(callbacks, archiveData);
+    // switchView's onUpdate already calls refreshUI; just refresh the
+    // category cells to reflect the new active filter.
     switchView('grid', callbacks);
-    refreshUI();
+    refreshTaxonomy();
     showToast(getTranslation('filtering_label', AppState.language) + ' ' + value);
   });
 
@@ -784,6 +801,7 @@ function setupEventListeners() {
       const openModal = document.querySelector('.modal-backdrop:not(.hidden), [role="dialog"]:not(.hidden)');
       if (openModal && openModal.id !== 'image-lightbox') {
         openModal.classList.add('hidden');
+        restoreFocus();
         e.preventDefault();
         return;
       }
@@ -872,6 +890,17 @@ function openCiteModal() {
   modal.classList.remove('hidden');
 }
 
+// ── FOCUS RESTORE ──
+// Last element focused outside any modal — updated by focusin listener
+// in setupEventListeners(). restoreFocus() returns focus there after a
+// modal/lightbox closes so keyboard users don't lose their place.
+let _lastNonModalFocus = null;
+function restoreFocus() {
+  if (_lastNonModalFocus && document.body.contains(_lastNonModalFocus)) {
+    try { _lastNonModalFocus.focus(); } catch (e) { /* element no longer focusable */ }
+  }
+}
+
 // ── LIGHTBOX ──
 let _lightboxZoomed = false;
 let _pinchState = null; // { startDist, startScale, startCenter, currentScale, currentX, currentY }
@@ -902,6 +931,7 @@ function closeLightbox() {
   }
   _lightboxZoomed = false;
   _pinchState = null;
+  restoreFocus();
 }
 
 /** Two-finger pinch-zoom + pan inside the lightbox.
@@ -1131,9 +1161,12 @@ function renderLangDropdown() {
     const name = LANG_DISPLAY[code] || code.toUpperCase();
     const isActive = code === AppState.language;
     const activeClass = isActive ? 'bg-black text-white dark:bg-acid dark:text-black' : 'hover:bg-black/10 dark:hover:bg-white/10';
-    return `<li><button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" class="w-full text-left px-3 py-2 text-[10px] font-mono uppercase tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3">
+    // ARIA spec: role="option" must be a direct child of role="listbox"
+    // — no <li> wrapper. The <ul> container is rendered with display:block
+    // styling so removing the <li> doesn't change visuals.
+    return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" class="w-full text-left px-3 py-2 text-[10px] font-mono uppercase tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3">
       <span>${name}</span><span class="opacity-50 text-[8px]">${code.toUpperCase()}</span>
-    </button></li>`;
+    </button>`;
   }).join('');
   dd.querySelectorAll('[data-lang-code]').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1195,8 +1228,8 @@ function renderFoldersView() {
     card.addEventListener('click', (e) => {
       if (e.target.classList.contains('btn-export-fol')) { e.stopPropagation(); exportFolder(fol.id); return; }
       AppState.activeFolderId = fol.id;
+      // switchView's onUpdate already triggers refreshUI; no duplicate needed.
       switchView('grid', callbacks);
-      refreshUI();
       showToast(getTranslation('toast_browsing', AppState.language) + ' ' + fol.name);
     });
     container.appendChild(card);

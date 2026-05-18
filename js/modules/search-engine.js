@@ -149,7 +149,7 @@ export function renderTaxonomySub(callbacks) {
       <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-70">
         ${getTranslation('tax_' + type, lang)}${currentFilter ? ` <span class="opacity-50 font-normal normal-case tracking-normal">· ${getTranslation(currentFilter, lang)}</span>` : ''}
       </span>
-      <button class="text-[9px] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
+      <button class="focus-ring text-[9px] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
     </div>
     <div class="taxonomy-sub-values flex flex-wrap gap-1.5">
       ${currentFilter ? `<button

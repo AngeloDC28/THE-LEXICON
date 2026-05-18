@@ -96,14 +96,24 @@
       background: #0A0A0A;
       color: #fff;
     }
-    .taxonomy-cell:hover,
-    .taxonomy-cell:focus-visible {
+    .taxonomy-cell:hover {
       background: #000;
       color: #CCFF00;
-      outline: none;
     }
-    .dark .taxonomy-cell:hover,
+    .dark .taxonomy-cell:hover {
+      background: #CCFF00;
+      color: #000;
+    }
+    /* Distinct focus ring — visible to keyboard users even when the
+       cell already has a hover-equivalent background. */
+    .taxonomy-cell:focus-visible {
+      outline: 2px solid #CCFF00;
+      outline-offset: -2px;
+      background: #000;
+      color: #CCFF00;
+    }
     .dark .taxonomy-cell:focus-visible {
+      outline-color: #000;
       background: #CCFF00;
       color: #000;
     }

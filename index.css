@@ -443,6 +443,13 @@ html.dark .grid-cell:hover img {
   pointer-events: auto;
   transition: transform 0.2s ease;
 }
+.hotspot-btn:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+}
+.hotspot-btn:focus-visible .hotspot-target {
+  border-color: #CCFF00;
+}
 
 .hotspot-target {
   width: 14px;
