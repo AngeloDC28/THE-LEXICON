@@ -5044,37 +5044,161 @@ export const archiveData = [
     "season": "Couture-AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Laser-Cut Layered Carapace",
+            "description": "The laser-cut layered carapace envelops the body in a dense accumulation of pointed black synthetic fins; it functions as a rigid defensive shield obscuring the torso. This structural construction applies new materialism by utilizing advanced laser-cutting technology to mimic the sharp protective scales of natural predators. The dark material absorbs light heavily; the sharp triangular points jut aggressively away from the hips and chest. The garment asserts a hostile posthuman posture."
+          },
+          {
+            "x": 50,
+            "y": 90,
+            "label": "Sculptural Platform Bootie",
+            "description": "The sculptural platform bootie elevates the model significantly on a heavy wedge heel featuring a deep V-shaped vamp. This footwear strategy provides a solid structural anchor for the massive kinetic volumes above. The smooth black leather contrasts with the chaotic texture of the dress; the shape alters the natural kinetic flow of the stride. The piece completes the silhouette by enforcing an alien and highly stylized stance."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-02.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "3D-Printed Fractal Column",
+            "description": "The 3D-printed fractal column encases the entire body in a stark white gradient of rigid geometric shards; it entirely overrides the natural curves of the human form. This material application engages with posthumanism by proving that advanced digital fabrication can construct silhouettes impossible to achieve via traditional sewing. The sharp pointed fins are tightly clustered at the waist and explode outward at the shoulders and hem; the grey shading emphasizes the deep three-dimensional valleys between the plastic scales. The garment asserts a purely synthetic architecture that traps the biological wearer inside."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-03.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "3D-Printed Exoskeleton Dress",
+            "description": "The 3D-printed exoskeleton dress maps a complex bone-like structure across the torso and hips in white polyamide; it is the definitive example of inside-out anatomy. This structural logic utilizes the body-without-organs concept by stripping away soft tissue to expose a rigid alien skeletal framework. The intricate web of synthetic bones hovers slightly away from the bare skin; the material is highly susceptible to rapid degradation, highlighting the fragility of cutting-edge technology. The garment asserts a chillingly clinical but beautiful process of posthuman becoming."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-04.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Pleated Radial Collar",
+            "description": "The pleated radial collar spirals around the neck in a massive rigid vortex of translucent gold fabric; it drastically widens the upper silhouette into a colossal architectural shield. This structural extreme applies the nature-culture continuum by mimicking the unfolding geometry of a shell or flower using synthetic stiffened materials. The sharp pleats hold rigid shadows; the structure completely isolates the head from the rest of the body. The piece asserts an overwhelming theatrical presence that dwarfs the wearer's anatomy."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Pleated Rigid Bell Skirt",
+            "description": "The pleated rigid bell skirt drops from the waist into a stiff geometric dome; it echoes the exact texture and volume of the collar above. This structural choice provides a solid unyielding base that balances the massive upper protrusion. The metallic gold fabric catches the runway lights sharply; the thick black binding borders every edge of the pleating. The garment completes the look by trapping the torso in a tight rigid column between two explosive synthetic volumes."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-05.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Voluminous Metallic Organza Cloud",
+            "description": "The voluminous metallic organza cloud consumes the lower torso in a massive chaotic explosion of sheer bronze fabric; it forces the arms to rest upon the structure itself. This structural logic utilizes monolithic massing to create a garment that entirely dominates the physical space around the wearer. The stiff synthetic fabric is gathered and scrunched obsessively to hold a rigid volume without solid internal scaffolding. The skirt asserts an overwhelming organic texture that mimics a sprawling fungus or coral reef."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Textured Bronze Bodice",
+            "description": "The textured bronze bodice covers the chest in a dense crust of ruched metallic fabric; it provides a tight textured core above the massive skirt. This material strategy engages with new materialism by creating a surface that appears almost mineral or geological in nature. The high neckline hugs the throat; the armholes are cut sharply to expose the bare shoulders. The top completes the silhouette by contrasting the explosive volume below with a strict tactile barrier."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-06.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Laced Leather Exoskeleton Suit",
+            "description": "The laced leather exoskeleton suit tightly binds the entire body in a complex network of pale beige leather strips; it creates the illusion of a fragmented second skin. This material application engages directly with body politics by forcing the viewer to confront a heavily restricted and bound physical form. The thin strips run horizontally over the torso and crisscross deeply down the legs; the gaps between the lacing expose sheer mesh beneath. The garment asserts a highly engineered and slightly fetishistic approach to architectural shielding."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-07.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Ruched Metallic Peplum Bodice",
+            "description": "The ruched metallic peplum bodice structures the upper body in a complex series of stiff tiered folds; it mimics the segmented carapace of an insect. This structural logic engages with the nature-culture continuum by translating biological armor into high-gloss bronze synthetic fabric. The dense gathering is outlined with dark rigid piping; the shoulders are completely overwhelmed by the explosive folds. The top asserts a hostile posthuman posture that redefines the natural waistline."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Curved Structural Extensions",
+            "description": "The curved structural extensions drop from the hemline of the skirt to hook inward around the knees; they introduce literal rigid appendages into the silhouette. This application of prosthetic extension utilizes new materialism to build forms impossible in traditional soft tailoring. The curved tubes are heavily ruched to match the bodice above; they function as a bizarre synthetic root system. The detail completes the look by forcing the lower body into a highly restricted kinetic state."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-08.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Layered Laser-Cut Leather Dress",
+            "description": "The layered laser-cut leather dress wraps the torso and hips in hundreds of undulating beige leather strips; it builds a dense topographic volume that completely obscures the natural silhouette. This tectonic craft engages with the body-without-organs concept by turning the dress into a self-organizing alien texture. The laser-cut edges expose golden metallic underlayers; the stiff fabric holds deep wave-like ridges that catch the light smoothly. The garment asserts a heavy luxurious armor that redefines traditional female contouring."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-09.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Extruded Wire Carapace",
+            "description": "The extruded wire carapace forces the upper silhouette to expand laterally in a massive web of rigid black filaments; it creates a transparent but impenetrable architectural shield. This material intervention engages with posthumanism by literally caging the body within an industrial synthetic network. The thick plastic wires bow outward from the waist and shoulders to form an immense butterfly-like shape; the sheer construction exposes the tight black bodysuit beneath. The outerwear asserts an oppressive and dystopian presence."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Wire-Frame Facial Obfuscation",
+            "description": "The wire-frame facial obfuscation covers the eyes in chaotic loops of the same rigid black plastic used on the body; it visually links the head directly to the structural logic of the garment. This accessory applies the concept of de-organizing the socially disciplined body by erasing the model's gaze completely. The dark loops cast chaotic shadows over the face; they mimic the erratic flight paths of insects. The piece completes the silhouette by enforcing an unsettling alien anonymity."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-10.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 25,
+            "label": "3D-Printed Radial Bodice",
+            "description": "The 3D-printed radial bodice constructs a massive white geometric shell around the chest and shoulders; it features deep circular voids exposing the skin beneath. This structural logic engages with organic/inorganic hybridity by using rapid prototyping to mimic cross-sections of bone or porous coral. The crisp white polyamide holds precise rigid details impossible to sew by hand; the weight is supported entirely by the model's torso. The top asserts a process of becoming other than strictly human."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Fringed White Leather Skirt",
+            "description": "The fringed white leather skirt drops tightly from the waist to the mid-thigh; it is bordered by a long cascade of transparent synthetic filaments. This material choice introduces kinetic fluidity beneath the rigid 3D-printed structure above. The smooth white leather provides a quiet base; the clear fringes catch the light sharply as they sway with movement. The piece completes the look by grounding the alien architecture with a slightly more traditional tailored element."
+          }
+        ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-11.jpg"
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Coiled Synthetic Tube Carapace",
+            "description": "The coiled synthetic tube carapace engulfs the upper body in a chaotic knot of thick glossy metallic hoses; it completely replaces the torso with an industrial tangle. This structural extreme applies posthumanist theory by mutating the human form into a grotesque piece of plumbing architecture. The heavy tubes weave randomly around each other to form a solid mass; the dark reflective surface mimics liquid mercury or an oil slick. The outerwear asserts an oppressive and disturbing presence that severely restricts mobility."
+          }
+        ]
       }
     ],
     "tags": {
