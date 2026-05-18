@@ -169,7 +169,13 @@ function refreshChrome() {
   if (recentTitle) recentTitle.textContent = t('index_recent');
 
   const searchInput = $('search-input');
-  if (searchInput) searchInput.placeholder = t('search_placeholder');
+  if (searchInput) {
+    // Mobile gets a shorter placeholder so it doesn't truncate behind
+    // the CLEAR button — the full prompt only fits on desktop.
+    const fullPh  = t('search_placeholder');
+    const shortPh = t('search_placeholder_short') || 'Search archive…';
+    searchInput.placeholder = window.innerWidth < 768 ? shortPh : fullPh;
+  }
 
   const btnClearDir = $('btn-clear-directory');
   if (btnClearDir) btnClearDir.textContent = t('search_clear');
@@ -213,9 +219,19 @@ function refreshChrome() {
 
   // --- Active Entry Detail ---
   const btnSaveFolder       = $('btn-save-to-folder');
-  const btnSaveFolderMobile = $('btn-save-folder-mobile');
-  if (btnSaveFolder)       btnSaveFolder.textContent       = t('btn_save_folder');
-  if (btnSaveFolderMobile) btnSaveFolderMobile.textContent = t('btn_save_folder');
+  if (btnSaveFolder) btnSaveFolder.textContent = t('btn_save_folder');
+  // Mobile action-bar buttons use icon + short label structure. Target
+  // only the .btn-label-mobile child so the icon span is preserved and
+  // the short label doesn't wrap at 65px column width.
+  const setMobileLabel = (btnId, shortKey) => {
+    const span = document.querySelector('#' + btnId + ' .btn-label-mobile');
+    if (span) span.textContent = t(shortKey);
+  };
+  setMobileLabel('btn-save-folder-mobile',     'btn_save_mobile');
+  setMobileLabel('btn-notes-mobile',           'btn_notes_mobile');
+  setMobileLabel('btn-toggle-hotspots-mobile', 'btn_hotspots_mobile_short');
+  setMobileLabel('btn-nexus-mobile',           'btn_nexus_mobile');
+  setMobileLabel('btn-back-grid-mobile',       'btn_back_mobile');
 
   const btnNexus = $('btn-open-matrix');
   if (btnNexus) btnNexus.textContent = t('btn_view_nexus');
@@ -249,8 +265,8 @@ function refreshChrome() {
   if (payloadLabel) payloadLabel.textContent = '[ ' + t('label_analysis') + ' ]';
 
   // --- Mobile detail actions ---
-  const btnHotspotsMobile = $('btn-toggle-hotspots-mobile');
-  if (btnHotspotsMobile) btnHotspotsMobile.textContent = t('btn_hotspots_mobile');
+  // (btn-toggle-hotspots-mobile label handled by setMobileLabel above — DON'T
+  // overwrite the whole textContent here, that destroys the icon+label structure.)
 
   // --- Technical specs label ---
   const techSpecsLabel = $$('#detail-metadata-sidebar h4')[0];

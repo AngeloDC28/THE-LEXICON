@@ -581,8 +581,11 @@
               <button type="button" id="btn-viewer-prev" aria-label="Previous image" class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
               <button type="button" id="btn-viewer-next" aria-label="Next image" class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
               
-              <!-- Control Panel Overlay (top-left) -->
-              <div class="absolute top-4 left-4 flex flex-col gap-2 z-[200]">
+              <!-- Control Panel Overlay (top-left)
+                   On mobile these get hidden — the metadata sidebar is
+                   already inline below the image and fullscreen is rarely
+                   useful on a phone-sized image. -->
+              <div class="hidden lg:flex absolute top-4 left-4 flex-col gap-2 z-[200]">
                 <button id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
                 <button id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
@@ -641,19 +644,19 @@
 
           <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]">
             <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
-              <span class="text-[14px] leading-none">‹</span><span>Back</span>
+              <span class="text-[14px] leading-none">‹</span><span class="btn-label-mobile">Back</span>
             </button>
             <button type="button" id="btn-notes-mobile" aria-label="View notes" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
-              <span class="text-[12px] leading-none">▦</span><span>Notes</span>
+              <span class="text-[12px] leading-none">▦</span><span class="btn-label-mobile">Notes</span>
             </button>
             <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex flex-col items-center justify-center gap-0.5 border border-acid text-acid py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
-              <span class="text-[12px] leading-none">◉</span><span>Hotspots</span>
+              <span class="text-[12px] leading-none">◉</span><span class="btn-label-mobile">Hotspots</span>
             </button>
             <button type="button" id="btn-nexus-mobile" aria-label="Open Nexus" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
-              <span class="text-[12px] leading-none">◈</span><span>Nexus</span>
+              <span class="text-[12px] leading-none">◈</span><span class="btn-label-mobile">Nexus</span>
             </button>
             <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex flex-col items-center justify-center gap-0.5 bg-acid text-black py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
-              <span class="text-[12px] leading-none">★</span><span>Save</span>
+              <span class="text-[12px] leading-none">★</span><span class="btn-label-mobile">Save</span>
             </button>
           </div>
 
