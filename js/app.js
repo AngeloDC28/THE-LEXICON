@@ -8,7 +8,7 @@ import { archiveData } from '../database.js';
 import { imageDimensions } from './modules/image-dimensions.js';
 import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js';
 setImageDimensions(imageDimensions);
-import { AppState, updateHash } from './modules/core-state.js';
+import { AppState, updateHash, emptyFilters } from './modules/core-state.js';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
 import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
 import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
@@ -492,7 +492,7 @@ function setupEventListeners() {
 
   // Header Title
   $('header-title')?.addEventListener('click', () => {
-    AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
+    AppState.filters = emptyFilters();
     AppState.searchQuery = '';
     AppState.activeFolderId = null;
     if ($('search-input')) $('search-input').value = '';
@@ -559,7 +559,7 @@ function setupEventListeners() {
   }, 300));
 
   $('btn-clear-directory')?.addEventListener('click', () => {
-    AppState.filters = { brand: null, era: null, politics: null, theories: null, gender: null, materials: null, geography: null, format: null, anatomy: null };
+    AppState.filters = emptyFilters();
     AppState.searchQuery = '';
     AppState.activeFolderId = null;
     if ($('search-input')) $('search-input').value = '';

@@ -6,7 +6,7 @@
  * resolved incorrectly depending on the current URL.
  */
 import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
-import { AppState, gridIntersectionObserver, setGridIntersectionObserver } from './core-state.js';
+import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
 
@@ -67,8 +67,7 @@ export function renderImageGrid(archiveData, callbacks) {
         <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">${getTranslation('btn_reset_system', lang)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
-      AppState.filters = { brand: null, era: null, politics: null, theories: null,
-        gender: null, materials: null, geography: null, format: null, anatomy: null };
+      AppState.filters = emptyFilters();
       AppState.searchQuery = '';
       if ($('search-input')) $('search-input').value = '';
       if (callbacks && callbacks.onUpdate) callbacks.onUpdate();

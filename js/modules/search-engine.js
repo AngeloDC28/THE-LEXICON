@@ -31,10 +31,19 @@ export function getFilteredEntries(archiveData) {
   }
 
   // 2. Filter by taxonomy tags
+  // Tags can be single-value (era, brand) or pipe-separated multi-value
+  // (politics, theories, materials, anatomy, etc.). An entry matches a filter
+  // if the filter value equals the whole tag OR appears as one of its
+  // ' | '-separated parts (trim-tolerant).
   entries = entries.filter(entry => {
     if (!entry.tags) return false;
     for (const [key, val] of Object.entries(AppState.filters)) {
-      if (val && entry.tags[key] !== val) return false;
+      if (!val) continue;
+      const tag = entry.tags[key];
+      if (!tag) return false;
+      if (tag === val) continue;
+      const parts = tag.split('|').map(s => s.trim());
+      if (!parts.includes(val)) return false;
     }
     return true;
   });

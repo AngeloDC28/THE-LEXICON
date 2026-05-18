@@ -11,7 +11,7 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   const entry = archiveData.find(e => e.id === entryId);
   if (!entry) return;
 
-  const tagKeys = ['politics', 'theories', 'era', 'form', 'format', 'brand'];
+  const tagKeys = ['politics', 'theories', 'era', 'format', 'brand', 'materials', 'geography', 'anatomy'];
   const connections = new Map();
 
   tagKeys.forEach(key => {

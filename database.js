@@ -2110,7 +2110,7 @@ export const archiveData = [
       }
     ],
     "tags": {
-      "brand": "Christian Dior | John Galliano",
+      "brand": "Christian Dior",
       "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Class Dynamics & Anti-Elitism (Appropriation of Poverty) | Anti-Consumerism & Institutional Critique",
       "theories": "Aesthetic Philosophy (Poverty Chic / Melodrama) | Deconstruction",
@@ -2690,8 +2690,8 @@ export const archiveData = [
       }
     ],
     "tags": {
-      "brand": "Comme des Garçons | Rei Kawakubo",
-      "era": "1990–1999; The Deconstructionist Decade",
+      "brand": "Comme des Garçons",
+      "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
       "theories": "Post-Humanism | The Grotesque and Abject | Feminist Ideology | Deconstruction",
       "gender": "Womenswear",
@@ -2972,7 +2972,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Yohji Yamamoto",
-      "era": "1990–1999; The Deconstructionist Decade",
+      "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Yohji Yamamoto",
       "theories": "Aesthetic Philosophy (Wabi-sabi / Imperfect Beauty)",
       "gender": "Womenswear",
@@ -3257,7 +3257,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Jean Paul Gaultier",
-      "era": "1990–1999; The Deconstructionist Decade",
+      "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Globalization & Cultural Hybridity | Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
       "theories": "Postmodernism | Cultural Appropriation vs. Pluralism (Global Village Chic) | Identity and Subjectivity",
       "gender": "Womenswear & Menswear (Gender Fluidity)",
@@ -3366,7 +3366,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Viktor & Rolf",
-      "era": "1990–1999; The Deconstructionist Decade",
+      "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Anti-Consumerism & Institutional Critique | Labour Politics & Industrial Production",
       "theories": "Conceptual Fashion | Aesthetic Philosophy | Postmodernism",
       "gender": "Womenswear",
@@ -3562,7 +3562,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Helmut Lang",
-      "era": "1990–1999; The Deconstructionist Decade",
+      "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Anti-Consumerism & Institutional Critique | Activism & Crisis Response (Democratization of Fashion)",
       "theories": "Postmodernism | Aesthetic Philosophy (Minimalism / Quiet Luxury)",
       "gender": "Menswear & Womenswear",
@@ -3849,7 +3849,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Moschino",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Anti-Consumerism & Institutional Critique | Globalization & Cultural Hybridity",
       "theories": "Postmodernism | Consumer Culture & Capitalism | The Simulacrum (Downmarket Irony / Counterfeit Chic) | Camp",
       "gender": "Womenswear",
@@ -4129,8 +4129,8 @@ export const archiveData = [
       }
     ],
     "tags": {
-      "brand": "Schiaparelli | Daniel Roseberry",
-      "era": "2020–Present; The Post-Pandemic Era",
+      "brand": "Schiaparelli",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
       "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
       "theories": "Aesthetic Philosophy | Surrealism | Postmodernism",
       "gender": "Womenswear",
@@ -4332,7 +4332,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Maison Margiela",
-      "era": "2000–2009; The Global Conglomerate Era",
+      "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Anti-Consumerism & Institutional Critique | Gender Deconstruction & Fluidity",
       "theories": "Deconstructionist Logic (Derrida) | Aesthetic Philosophy | Object-Oriented Ontology",
       "gender": "Womenswear",
@@ -4466,7 +4466,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Vivienne Westwood",
-      "era": "1980–1989; The Post-Modern Shift",
+      "era": "1980 to 1989; The Post-Modern Shift",
       "politics": "Queer Theory & Subcultural Systems | Class Dynamics & Anti-Elitism",
       "theories": "Subcultural Resistance Theory | Camp and Kitsch Subversion | Mythology and Contemporary Lore (Barthes)",
       "gender": "Unisex / Neutral",
@@ -4634,7 +4634,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Raf Simons",
-      "era": "2000–2009; The Global Conglomerate Era",
+      "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Activism & Crisis Response | Queer Theory & Subcultural Systems | Globalisation & Cultural Hybridity",
       "theories": "Subcultural Resistance Theory | Hauntology (Fisher) | Camp and Kitsch Subversion | Institutional Critique",
       "gender": "Menswear",
@@ -4824,7 +4824,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Undercover",
-      "era": "2000–2009; The Global Conglomerate Era",
+      "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Activism & Crisis Response | Queer Theory & Subcultural Systems | Globalisation & Cultural Hybridity | Post-Colonialism & Diasporic Narratives",
       "theories": "Deconstructionist Logic (Derrida) | Subcultural Resistance Theory | Post-Colonial Critique | The Grotesque and Abject",
       "gender": "Womenswear",
@@ -5020,7 +5020,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Miguel Adrover",
-      "era": "2000–2009; The Global Conglomerate Era",
+      "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems | Ecological Politics & Resource Extraction",
       "theories": "Symbolic Exchange | Camp and Kitsch Subversion | Subcultural Resistance Theory | Marxist Materialism",
       "gender": "Womenswear",
@@ -5203,7 +5203,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Iris van Herpen",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Ecological Politics & Resource Extraction | Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities",
       "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Object-Oriented Ontology | Techno-Optimism and Accelerationism",
       "gender": "Womenswear",
@@ -5406,7 +5406,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Gareth Pugh",
-      "era": "2000–2009; The Global Conglomerate Era",
+      "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique",
       "theories": "Post-Humanism | Camp and Kitsch Subversion | The Grotesque and Abject | Subcultural Resistance Theory",
       "gender": "Conceptual / Post-Binary Form",
@@ -5435,7 +5435,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Vetements",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems",
       "theories": "Institutional Critique | The Simulacrum (Baudrillard) | Subcultural Resistance Theory | Corporate Nihilism",
       "gender": "Unisex / Neutral",
@@ -5464,7 +5464,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Hood By Air",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Queer Theory & Subcultural Systems | Racial Identity & Representation | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
       "theories": "Queer Performativity (Butler) | Subcultural Resistance Theory | The Subverted Gaze | Intersectionality",
       "gender": "Conceptual / Post-Binary Form",
@@ -5493,7 +5493,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Junya Watanabe",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Labour Politics & Industrial Production | Anti-Consumerism & Institutional Critique | Globalisation & Cultural Hybridity",
       "theories": "Postmodern Pastiche | Symbolic Exchange | Trickle-Down and Bubble-Up Dynamics | Globalisation and Diaspora",
       "gender": "Menswear",
@@ -5522,7 +5522,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Craig Green",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Body Politics & Corporeal Interventions | Labour Politics & Industrial Production",
       "theories": "Object-Oriented Ontology | Structural Stasis | Bodily Autonomy and Transgression | Post-Humanism",
       "gender": "Menswear",
@@ -5551,7 +5551,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Gucci",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Gender Deconstruction & Fluidity",
       "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Camp and Kitsch Subversion | The Simulacrum (Baudrillard) | Radical Romanticism",
       "gender": "Womenswear",
@@ -5580,7 +5580,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Thom Browne",
-      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity | Body Politics & Corporeal Interventions",
       "theories": "Queer Performativity (Butler) | Camp and Kitsch Subversion | Habitus and Field (Bourdieu) | Class Distinctions and Signalling",
       "gender": "Menswear",
@@ -5609,7 +5609,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Loewe",
-      "era": "2020–Present; The Post-Pandemic and Surrealist Current",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
       "politics": "Body Politics & Corporeal Interventions | Anti-Consumerism & Institutional Critique",
       "theories": "The Simulacrum (Baudrillard) | Radical Romanticism | Camp and Kitsch Subversion | Object-Oriented Ontology",
       "gender": "Womenswear",
@@ -5638,7 +5638,7 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Marine Serre",
-      "era": "2020–Present; The Post-Pandemic and Surrealist Current",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
       "politics": "Ecological Politics & Resource Extraction | Anti-Consumerism & Institutional Critique | Body Politics & Corporeal Interventions",
       "theories": "Marxist Materialism | Symbolic Exchange | Biopolitics and Bio-Power (Foucault) | Post-Humanism",
       "gender": "Womenswear",

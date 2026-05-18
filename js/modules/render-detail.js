@@ -106,12 +106,19 @@ function renderImage(entry, callbacks) {
   const imgEl  = $('detail-image');
   const webpEl = $('detail-image-webp');
   if (imgEl) {
-    imgEl.src = '';
     imgEl.onerror = () => { imgEl.src = BROKEN_ASSET; if (webpEl) webpEl.srcset = ''; };
     imgEl.onload = () => {
       if (callbacks && callbacks.extractAccentColor) callbacks.extractAccentColor(imgEl);
     };
     if (webpEl) webpEl.srcset = resolveImgSrc({ src: webpSrc(currentImgObj) });
+    // Apply known dimensions to prevent CLS while the new image loads.
+    const dims = imgAttrs(currentImgObj);
+    if (dims) {
+      const w = dims.match(/width="(\d+)"/);
+      const h = dims.match(/height="(\d+)"/);
+      if (w) imgEl.setAttribute('width', w[1]);
+      if (h) imgEl.setAttribute('height', h[1]);
+    }
     imgEl.src = currentImgSrc;
     imgEl.alt = entry.title || entry.id;
   }

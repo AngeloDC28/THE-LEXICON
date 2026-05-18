@@ -9,16 +9,24 @@ function safeLocalGet(key, fallback) {
   try { return localStorage.getItem(key) || fallback; } catch(e) { return fallback; }
 }
 
+// Single source of truth for the taxonomy axes. Anywhere that resets or
+// iterates over filter keys MUST derive from this list, never hardcode.
+export const FILTER_KEYS = [
+  'brand', 'era', 'politics', 'theories',
+  'gender', 'materials', 'geography', 'anatomy', 'format'
+];
+
+export function emptyFilters() {
+  return Object.fromEntries(FILTER_KEYS.map(k => [k, null]));
+}
+
 export const AppState = {
   currentView: 'grid',
   selectedEntryId: null,
   currentImageIndex: 0,
   activeTaxonomy: null,
   language: safeLocalGet('lexicon-lang', 'en'),
-  filters: {
-    brand: null, era: null, politics: null, theories: null,
-    gender: null, materials: null, geography: null, format: null, anatomy: null
-  },
+  filters: emptyFilters(),
   searchQuery: '',
   archivalFolders: [],
   activeFolderId: null,
