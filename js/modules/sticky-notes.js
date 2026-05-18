@@ -16,7 +16,7 @@ export function setStickyNote(type, entry) {
   if (!noteData) return;
 
   const body = entry.notes?.[type] || 'NO_DATA_AVAILABLE_FOR_THIS_PARAMETER';
-  
+
   if (window.innerWidth >= 768) {
     const panel = $('sticky-note-panel');
     const titleEl = $('sticky-note-title');

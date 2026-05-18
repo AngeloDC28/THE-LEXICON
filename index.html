@@ -1,15 +1,16 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script>
-    window.onerror = function(msg, url, lineNo, columnNo, error) {
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
       console.error("LEXICON_CORE_EXCEPTION:", msg, "at line", lineNo, error);
     };
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>THE LEXICON | Forensic Visual Culture Archive</title>
-  
+
   <!-- 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -19,10 +20,13 @@
   <meta name="theme-color" content="#000000">
 
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture." />
-  <meta name="keywords" content="fashion archive, visual culture, subcultural theory, forensic analysis, cultural directory" />
+  <meta name="description"
+    content="A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture." />
+  <meta name="keywords"
+    content="fashion archive, visual culture, subcultural theory, forensic analysis, cultural directory" />
   <meta property="og:title" content="THE LEXICON" />
-  <meta property="og:description" content="A high-density research terminal engineered for the forensic analysis of visual culture." />
+  <meta property="og:description"
+    content="A high-density research terminal engineered for the forensic analysis of visual culture." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thelexicon.xyz/" />
   <meta property="og:image" content="https://thelexicon.xyz/og-image.jpg" />
@@ -43,9 +47,11 @@
       z-index: 10000;
       transition: top 0.2s;
     }
+
     .skip-link:focus {
       top: 0;
     }
+
     .sr-only {
       position: absolute;
       width: 1px;
@@ -78,8 +84,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
+    rel="stylesheet" />
 
   <script>
     tailwind.config = {
@@ -103,9 +108,9 @@
   </script>
 
   <script>
-    (function() {
+    (function () {
       var saved;
-      try { saved = localStorage.getItem('lexicon-theme'); } catch(e) {}
+      try { saved = localStorage.getItem('lexicon-theme'); } catch (e) { }
       if (saved === 'light') {
         document.documentElement.classList.remove('dark');
       } else {
@@ -113,13 +118,13 @@
       }
 
       // Fail-safe boot dismissal
-      setTimeout(function() {
+      setTimeout(function () {
         var overlay = document.getElementById('boot-overlay');
         var root = document.getElementById('app-root');
         if (overlay && !overlay.classList.contains('hidden')) {
           console.warn("BOOT_FAILSAFE_TRIGGERED");
           overlay.classList.add('boot-fade-out');
-          setTimeout(function() {
+          setTimeout(function () {
             overlay.classList.add('hidden');
             if (root) root.classList.remove('opacity-0');
           }, 500);
@@ -152,23 +157,34 @@
   <!-- ============================================================
        PRIMARY NAVIGATION
   ============================================================ -->
-  <header id="primary-header" class="bg-black text-white flex items-center justify-between px-3 py-2 lg:px-5 lg:py-3 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
+  <header id="primary-header"
+    class="bg-black text-white flex items-center justify-between px-3 py-2 lg:px-5 lg:py-3 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
     <div class="flex items-center gap-4 lg:gap-6">
       <button id="btn-hamburger" class="lg:hidden text-white hover:text-acid focus-ring" aria-label="Toggle Menu">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
       </button>
-      <button id="header-title" class="text-[11px] lg:text-[13px] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring">THE LEXICON</button>
+      <button id="header-title"
+        class="text-[11px] lg:text-[13px] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring">THE
+        LEXICON</button>
       <div id="header-telemetry" class="hidden md:block text-[9px] font-mono opacity-60 tracking-widest uppercase">
         <span id="telemetry-text">ARCHIVE STATUS: STABLE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
     <div class="flex items-center gap-3 lg:gap-5">
-      <button id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">FOLDERS</button>
-      <button id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">ACCESS</button>
-      <button id="btn-lang-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">LANGUAGES</button>
-      <button id="btn-about" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">ABOUT</button>
-      <button id="btn-contact" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">CONTACT</button>
-      <button id="btn-theme-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">THEME</button>
+      <button id="btn-folders-toggle"
+        class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">FOLDERS</button>
+      <button id="btn-auth-toggle"
+        class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">ACCESS</button>
+      <button id="btn-lang-toggle"
+        class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">LANGUAGES</button>
+      <button id="btn-about"
+        class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">ABOUT</button>
+      <button id="btn-contact"
+        class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">CONTACT</button>
+      <button id="btn-theme-toggle"
+        class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">THEME</button>
     </div>
   </header>
 
@@ -180,22 +196,29 @@
     <!-- ============================================================
          STATUS RIBBON
     ============================================================ -->
-    <div id="status-ribbon" class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" aria-live="polite" aria-atomic="true">
+    <div id="status-ribbon"
+      class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0"
+      aria-live="polite" aria-atomic="true">
       <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Brand</span>
-        <span id="status-brand" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-brand"
+          class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 md:border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Year</span>
-        <span id="status-year" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-year"
+          class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
-      <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
+      <div
+        class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Season</span>
-        <span id="status-season" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-season"
+          class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 overflow-hidden">
         <span class="text-[8px] uppercase tracking-[0.3em] opacity-40 block">Entry</span>
-        <span id="status-entry" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-entry"
+          class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
     </div>
 
@@ -205,12 +228,16 @@
     <div class="flex flex-1 overflow-hidden main-shell">
 
       <!-- LEFT: INDEX PANEL -->
-      <div id="index-panel" class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto">
+      <div id="index-panel"
+        class="w-[85%] lg:w-[40%] fixed inset-y-0 left-0 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 lg:relative lg:inset-auto lg:z-auto">
 
         <!-- Index Header -->
-        <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
+        <div
+          class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
           <span id="index-panel-title" class="text-xs font-bold uppercase tracking-[0.15em]">Research Index</span>
-          <button type="button" id="btn-show-bookmarks" class="text-[9px] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity">★ Saved</button>
+          <button type="button" id="btn-show-bookmarks"
+            class="text-[9px] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity">★
+            Saved</button>
         </div>
 
         <!-- Recently Viewed -->
@@ -223,21 +250,18 @@
 
         <!-- Search -->
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
-          <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
+          <div id="active-folder-indicator"
+            class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
             <span>Filtering: <span id="active-folder-name"></span></span>
             <button id="btn-clear-folder-filter" class="underline">[ CLEAR_FILTER ]</button>
           </div>
           <div class="flex flex-col gap-2">
             <div class="flex gap-2 items-stretch">
-              <input
-                id="search-input"
-                type="search"
-                autocomplete="off"
-                placeholder="Query brand, era, or structural intervention..."
-                aria-label="Search archive"
-                class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono placeholder:text-black/40 dark:text-white/40 focus:border-acid focus:outline-none"
-              />
-              <button type="button" id="btn-clear-directory" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-transparent px-3 py-2">Clear</button>
+              <input id="search-input" type="search" autocomplete="off"
+                placeholder="Query brand, era, or structural intervention..." aria-label="Search archive"
+                class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono placeholder:text-black/40 dark:text-white/40 focus:border-acid focus:outline-none" />
+              <button type="button" id="btn-clear-directory"
+                class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-transparent px-3 py-2">Clear</button>
             </div>
             <div id="filter-chips" class="flex flex-wrap gap-1 mt-1"></div>
           </div>
@@ -247,12 +271,9 @@
              RESEARCH INDEX: Taxonomy Grid (tier 1 — category type selector)
              Populated dynamically by renderTaxonomyGrid() in search-engine.js
         ============================================================ -->
-        <div
-          id="taxonomy-grid"
+        <div id="taxonomy-grid"
           class="border-b-[1px] border-black/80 dark:border-white/20 p-2 flex flex-wrap gap-1 shrink-0"
-          role="navigation"
-          aria-label="Filter by category"
-        >
+          role="navigation" aria-label="Filter by category">
           <!-- Buttons injected by renderTaxonomyGrid() -->
         </div>
 
@@ -260,32 +281,36 @@
              RESEARCH INDEX: Taxonomy Sub-panel (tier 2 — value list)
              Populated dynamically by renderTaxonomySub() in search-engine.js
         ============================================================ -->
-        <div
-          id="taxonomy-sub"
+        <div id="taxonomy-sub"
           class="hidden border-b-[1px] border-black/80 dark:border-white/20 p-2 shrink-0 overflow-y-auto"
-          style="max-height: 200px;"
-          role="navigation"
-          aria-label="Filter by value"
-        >
+          style="max-height: 200px;" role="navigation" aria-label="Filter by value">
           <!-- Buttons injected by renderTaxonomySub() -->
         </div>
 
         <!-- Entry List -->
         <div id="entry-list" class="overflow-y-auto flex-1"></div>
 
-        
+
         <!-- Mobile Drawer: About / Contact -->
-        <div class="lg:hidden border-t-[1px] border-black/80 dark:border-white/20 px-4 py-6 flex flex-col gap-4 shrink-0 bg-bone dark:bg-darkBase">
+        <div
+          class="lg:hidden border-t-[1px] border-black/80 dark:border-white/20 px-4 py-6 flex flex-col gap-4 shrink-0 bg-bone dark:bg-darkBase">
           <div class="flex gap-2">
-            <button type="button" id="btn-folders-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Folders</button>
-            <button type="button" id="btn-search-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Search</button>
+            <button type="button" id="btn-folders-toggle-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Folders</button>
+            <button type="button" id="btn-search-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Search</button>
           </div>
           <div class="grid grid-cols-2 gap-2">
-            <button type="button" id="btn-lang-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Lang</button>
-            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Theme</button>
-            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Auth</button>
-            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">About</button>
-            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Contact</button>
+            <button type="button" id="btn-lang-toggle-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Lang</button>
+            <button type="button" id="btn-theme-toggle-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Theme</button>
+            <button type="button" id="btn-auth-toggle-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Auth</button>
+            <button type="button" id="btn-about-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">About</button>
+            <button type="button" id="btn-contact-mobile"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.12em] border border-black/20 dark:border-white/20 px-3 py-4 min-h-[50px]">Contact</button>
           </div>
         </div>
 
@@ -294,47 +319,60 @@
       <!-- RIGHT: IMAGE GRID PANEL -->
       <div id="image-panel" class="w-full lg:w-[60%] overflow-y-auto bg-bone dark:bg-darkBase flex flex-col min-h-0">
         <!-- View Controls -->
-        <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between bg-bone dark:bg-darkBase shrink-0">
+        <div
+          class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between bg-bone dark:bg-darkBase shrink-0">
           <div class="flex items-center gap-6 lg:gap-8">
-            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.15em] opacity-100" title="Switch to Grid View">Grid View</button>
-            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.15em] opacity-40 hover:opacity-100" title="Switch to Evolution Matrix">Timeline</button>
+            <button type="button" id="btn-toggle-grid"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.15em] opacity-100"
+              title="Switch to Grid View">Grid View</button>
+            <button type="button" id="btn-toggle-timeline"
+              class="text-[10px] font-bold font-mono uppercase tracking-[0.15em] opacity-40 hover:opacity-100"
+              title="Switch to Evolution Matrix">Timeline</button>
           </div>
           <div class="flex items-center">
-            <span id="current-view-label" class="text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">ARCHIVE_GRID</span>
+            <span id="current-view-label"
+              class="text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">ARCHIVE_GRID</span>
           </div>
         </div>
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
           <!-- Orientation Panel -->
-          <div id="orientation-panel" class="mb-1 p-4 md:p-8 bg-black text-white dark:bg-acid dark:text-black font-mono">
+          <div id="orientation-panel"
+            class="mb-1 p-4 md:p-8 bg-black text-white dark:bg-acid dark:text-black font-mono">
             <div class="max-w-3xl">
               <h2 class="text-lg md:text-xl font-bold uppercase tracking-[0.2em] mb-4">Archive Orientation</h2>
               <p class="text-xs md:text-sm leading-relaxed mb-6 opacity-90">
-                THE LEXICON is a cultural research system for students, critics, and historians. It maps the intersections of aesthetic language and structural power through a forensic audit of visual culture.
+                THE LEXICON is a cultural research system for students, critics, and historians. It maps the
+                intersections of aesthetic language and structural power through a forensic audit of visual culture.
               </p>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-current pt-6">
                 <div>
                   <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Research Index</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Query the directory by brand, era, or theory to isolate specific archival nodes.</p>
+                  <p class="text-[10px] leading-relaxed opacity-80">Query the directory by brand, era, or theory to
+                    isolate specific archival nodes.</p>
                 </div>
                 <div>
                   <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Relational Nexus</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Use the Nexus tool in any entry to visualize connections between disparate artifacts.</p>
+                  <p class="text-[10px] leading-relaxed opacity-80">Use the Nexus tool in any entry to visualize
+                    connections between disparate artifacts.</p>
                 </div>
                 <div>
                   <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Archival Collections</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Authenticate via 'Access' to save artifacts into private collections for ongoing study.</p>
+                  <p class="text-[10px] leading-relaxed opacity-80">Authenticate via 'Access' to save artifacts into
+                    private collections for ongoing study.</p>
                 </div>
               </div>
-              <button id="btn-dismiss-orientation" class="mt-8 text-[9px] font-bold uppercase tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black dark:hover:bg-black">[ Proceed to Archive ]</button>
+              <button id="btn-dismiss-orientation"
+                class="mt-8 text-[9px] font-bold uppercase tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black dark:hover:bg-black">[
+                Proceed to Archive ]</button>
             </div>
           </div>
           <div id="image-grid" class="image-grid"></div>
         </div>
 
-        
-<!-- Timeline View -->
+
+        <!-- Timeline View -->
         <div id="timeline-view" class="hidden flex-1 min-h-0">
           <div class="timeline-axis"></div>
           <div id="timeline-matrix" class="flex h-full items-center"></div>
@@ -346,7 +384,9 @@
             <div class="flex items-baseline justify-between mb-8 border-b border-black dark:border-white pb-4">
               <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Folders</h1>
               <div class="flex gap-4">
-                <button id="btn-export-all-folders" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[ Export Database ]</button>
+                <button id="btn-export-all-folders"
+                  class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[
+                  Export Database ]</button>
                 <span id="folders-count" class="text-[10px] font-mono opacity-50 uppercase">0 Folders Initialized</span>
               </div>
             </div>
@@ -355,69 +395,93 @@
         </div>
 
         <!-- Detail View -->
-        <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-black lg:pb-0">
+        <div id="detail-image-view"
+          class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-black lg:pb-0">
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
             <!-- LEFT: Image Sector -->
-            <div id="detail-image-sector" class="flex-1 relative flex items-center justify-center p-4 lg:p-12 border-r border-white/10">
+            <div id="detail-image-sector"
+              class="flex-1 relative flex items-center justify-center p-4 lg:p-12 border-r border-white/10">
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
-                <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
-                <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]"></div>
+                <div id="scan-line"
+                  class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none">
+                </div>
+                <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]">
+                </div>
                 <img id="detail-image" class="relative z-10" src="" alt="" />
-                
+
                 <!-- Floating Analytical Payload -->
                 <div id="analytical-payload" class="hidden brutalist-node floating-payload">
                   <span class="node-label">[ ANALYSIS ]</span>
                   <div id="payload-content"></div>
                 </div>
               </div>
-              
+
               <!-- Navigation Controls -->
-              <button type="button" id="btn-viewer-prev" class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
-              <button type="button" id="btn-viewer-next" class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
-              
+              <button type="button" id="btn-viewer-prev"
+                class="absolute top-1/2 -translate-y-1/2 left-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">‹</button>
+              <button type="button" id="btn-viewer-next"
+                class="absolute top-1/2 -translate-y-1/2 right-4 text-3xl text-white px-3 z-[100] cursor-pointer hover:text-acid select-none opacity-40 hover:opacity-100 transition-all">›</button>
+
               <!-- Control Panel Overlay -->
               <div class="absolute top-4 left-4 flex flex-col gap-2 z-[200]">
-                <button id="btn-tax-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
-                <button id="btn-fullscreen-toggle" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
+                <button id="btn-tax-toggle"
+                  class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[
+                  VISUALISE TAXONOMY ]</button>
+                <button id="btn-fullscreen-toggle"
+                  class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[
+                  FULLSCREEN ]</button>
               </div>
             </div>
 
             <!-- RIGHT: Metadata Sidebar -->
-            <div id="detail-metadata-sidebar" class="hidden w-[400px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
+            <div id="detail-metadata-sidebar"
+              class="hidden w-[400px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
               <!-- Sticky Note Container (Brutalist Nodes) -->
               <div id="sticky-note-container" class="flex flex-col gap-6 p-6">
                 <!-- Nodes injected by JS -->
               </div>
-              
+
               <!-- Core Metadata Grid -->
               <div class="p-6 border-t border-white/10">
-                <h4 class="text-[9px] font-bold uppercase tracking-[0.2em] mb-4 text-white/40">Technical Specifications</h4>
+                <h4 class="text-[9px] font-bold uppercase tracking-[0.2em] mb-4 text-white/40">Technical Specifications
+                </h4>
                 <div id="metadata-grid" class="grid grid-cols-2 gap-4"></div>
               </div>
 
               <!-- Save / Action Panel -->
               <div class="mt-auto p-6 border-t border-white/10 bg-white/5">
                 <div class="flex items-center justify-between mb-4">
-                  <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.2em] text-white"></span>
+                  <span id="active-entry-title"
+                    class="text-[10px] font-bold uppercase tracking-[0.2em] text-white"></span>
                   <span id="btn-bookmark-entry" class="bookmark-star text-white" title="Bookmark">★</span>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
-                  <button id="btn-open-matrix" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">View Nexus</button>
-                  <button id="btn-save-to-folder" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Save to Folder</button>
-                  <button id="btn-back-grid" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Return to Archive</button>
+                  <button id="btn-open-matrix"
+                    class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">View
+                    Nexus</button>
+                  <button id="btn-save-to-folder"
+                    class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Save
+                    to Folder</button>
+                  <button id="btn-back-grid"
+                    class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Return
+                    to Archive</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-4 py-3 flex gap-2 z-[200]">
-            <button type="button" id="btn-toggle-hotspots-mobile" class="flex-1 border border-acid text-acid py-3 text-[10px] font-bold uppercase tracking-widest">Hotspots</button>
-            <button type="button" id="btn-save-folder-mobile" class="flex-1 bg-acid text-black py-3 text-[10px] font-bold uppercase tracking-widest">Save</button>
+          <div id="mobile-detail-actions"
+            class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-4 py-3 flex gap-2 z-[200]">
+            <button type="button" id="btn-toggle-hotspots-mobile"
+              class="flex-1 border border-acid text-acid py-3 text-[10px] font-bold uppercase tracking-widest">Hotspots</button>
+            <button type="button" id="btn-save-folder-mobile"
+              class="flex-1 bg-acid text-black py-3 text-[10px] font-bold uppercase tracking-widest">Save</button>
           </div>
         </div>
 
         <!-- Sticky Note Modal (Legacy Support) -->
-        <div id="sticky-note-panel" class="hidden fixed bottom-24 right-4 w-72 bg-acid text-black p-4 z-[500] border-2 border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] font-mono">
+        <div id="sticky-note-panel"
+          class="hidden fixed bottom-24 right-4 w-72 bg-acid text-black p-4 z-[500] border-2 border-black shadow-[8px_8px_0_0_rgba(0,0,0,1)] font-mono">
           <div class="flex justify-between items-baseline mb-2">
             <h3 id="sticky-note-title" class="text-[10px] font-bold uppercase tracking-widest"></h3>
             <button data-modal-close="sticky-note" class="text-xs hover:scale-110 transition-transform">×</button>
@@ -429,158 +493,218 @@
 
     </div>
 
-    </div>
+  </div>
 
-    <!-- HOTSPOT FLOATING POPUP (DESKTOP ONLY) -->
-    <div id="hotspot-popup" class="hidden fixed z-50 info-box p-4 max-w-xs">
-      <div class="flex items-start justify-between mb-1">
-        <p id="hotspot-label" class="text-[11px] font-bold uppercase tracking-wider"></p>
-        <button type="button" id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-70 focus-ring" aria-label="Close">X</button>
+  <!-- HOTSPOT FLOATING POPUP (DESKTOP ONLY) -->
+  <div id="hotspot-popup" class="hidden fixed z-50 info-box p-4 max-w-xs">
+    <div class="flex items-start justify-between mb-1">
+      <p id="hotspot-label" class="text-[11px] font-bold uppercase tracking-wider"></p>
+      <button type="button" id="btn-close-popup" class="text-xs font-bold ml-3 hover:opacity-70 focus-ring"
+        aria-label="Close">X</button>
+    </div>
+    <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="hidden"></div>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner"
+    class="hidden fixed bottom-4 right-4 z-[10000] bg-bone dark:bg-darkBase border border-black dark:border-white p-4 shadow-2xl max-w-sm">
+    <p id="cookie-notice-text" class="text-[10px] uppercase font-mono tracking-wide mb-2 leading-relaxed">This directory
+      uses persistent local storage (cookies) to maintain terminal state and archive context.</p>
+    <div class="flex gap-4 mb-3">
+      <button type="button" id="btn-privacy-link"
+        class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100">Privacy</button>
+      <button type="button" id="btn-terms-link"
+        class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100">Terms</button>
+    </div>
+    <button id="btn-accept-cookies"
+      class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-8">Accept</button>
+  </div>
+
+  <!-- JSON-LD Structured Data -->
+  <script id="json-ld"
+    type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture."}</script>
+
+  <!-- SAVE TO FOLDER MODAL -->
+  <div id="save-folder-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="save-folder"></div>
+    <div
+      class="relative w-full max-w-md bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[80vh]">
+      <button type="button" data-modal-close="save-folder"
+        class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring"
+        aria-label="Close">X</button>
+      <h2
+        class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">
+        Save to Archival Folder</h2>
+      <div class="flex-1 overflow-y-auto mb-6 space-y-2" id="folder-list-container"></div>
+      <div class="border-t border-black dark:border-white pt-4">
+        <label for="new-folder-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New
+          Folder</label>
+        <div class="flex gap-2">
+          <input type="text" id="new-folder-name"
+            class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none"
+            placeholder="FOLDER_TITLE" />
+          <button type="button" id="btn-create-folder"
+            class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 text-[10px] font-bold uppercase tracking-widest">Create</button>
+        </div>
       </div>
-      <p id="hotspot-desc" class="text-[11px] leading-relaxed mt-1"></p>
     </div>
+  </div>
 
-    <!-- TOAST -->
-    <div id="toast" class="hidden"></div>
-
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="hidden fixed bottom-4 right-4 z-[10000] bg-bone dark:bg-darkBase border border-black dark:border-white p-4 shadow-2xl max-w-sm">
-      <p id="cookie-notice-text" class="text-[10px] uppercase font-mono tracking-wide mb-2 leading-relaxed">This directory uses persistent local storage (cookies) to maintain terminal state and archive context.</p>
-      <div class="flex gap-4 mb-3">
-        <button type="button" id="btn-privacy-link" class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100">Privacy</button>
-        <button type="button" id="btn-terms-link" class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100">Terms</button>
+  <!-- COMMAND PALETTE (CMD+K) -->
+  <div id="cmd-palette" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-md" id="cmd-palette-backdrop"></div>
+    <div
+      class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border-[1px] border-black/80 dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
+      <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
+        <span class="text-xl font-bold font-mono">></span>
+        <input type="text" id="cmd-input"
+          class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30" />
+        <span
+          class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
       </div>
-      <button id="btn-accept-cookies" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-8">Accept</button>
+      <div id="cmd-results" class="overflow-y-auto flex-1 font-mono"></div>
     </div>
+  </div>
 
-    <!-- JSON-LD Structured Data -->
-    <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture."}</script>
-
-    <!-- SAVE TO FOLDER MODAL -->
-    <div id="save-folder-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4">
-      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="save-folder"></div>
-      <div class="relative w-full max-w-md bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[80vh]">
-        <button type="button" data-modal-close="save-folder" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close">X</button>
-        <h2 class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Save to Archival Folder</h2>
-        <div class="flex-1 overflow-y-auto mb-6 space-y-2" id="folder-list-container"></div>
-        <div class="border-t border-black dark:border-white pt-4">
-          <label for="new-folder-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
-          <div class="flex gap-2">
-            <input type="text" id="new-folder-name" class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none" placeholder="FOLDER_TITLE" />
-            <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 text-[10px] font-bold uppercase tracking-widest">Create</button>
+  <!-- AUTH MODAL -->
+  <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth"></div>
+    <div
+      class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
+      <button type="button" data-modal-close="auth"
+        class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring"
+        aria-label="Close modal">X</button>
+      <h2
+        class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">
+        Terminal Access</h2>
+      <div id="auth-form-container">
+        <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your credentials
+          to receive a magic link for terminal access.</p>
+        <form id="auth-form" class="space-y-4">
+          <div>
+            <label for="auth-email" class="block text-[10px] font-bold uppercase tracking-widest mb-1">Email
+              Address</label>
+            <input type="email" id="auth-email"
+              class="w-full bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none focus:ring-1" />
           </div>
-        </div>
+          <button type="submit" id="btn-submit-auth"
+            class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:bg-transparent">Send
+            Link</button>
+        </form>
+        <p id="auth-message" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
+      </div>
+      <div id="auth-success-container" class="hidden">
+        <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Link
+          transmitted. Check your inbox to complete initialization.</p>
       </div>
     </div>
+  </div>
 
-    <!-- COMMAND PALETTE (CMD+K) -->
-    <div id="cmd-palette" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4">
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-md" id="cmd-palette-backdrop"></div>
-      <div class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border-[1px] border-black/80 dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
-        <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
-          <span class="text-xl font-bold font-mono">></span>
-          <input type="text" id="cmd-input" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30" />
-          <span class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
-        </div>
-        <div id="cmd-results" class="overflow-y-auto flex-1 font-mono"></div>
+  <!-- ABOUT MODAL -->
+  <div id="about-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog"
+    aria-modal="true" aria-labelledby="about-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="about" aria-hidden="true"></div>
+    <div
+      class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+      <div class="flex items-start justify-between mb-8">
+        <h2 id="about-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About
+        </h2>
+        <button type="button" data-modal-close="about"
+          class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close
+          ]</button>
+      </div>
+      <div id="about-modal-body"
+        class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
+        <p><strong>Created by Angelo Sanchez Dela Cruz</strong> — researcher and cultural analyst based in London.</p>
+        <p>THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and
+          subcultural theory.</p>
+        <p>Operating strictly outside the traditional fashion media ecosystem, the directory maps the intersections of
+          aesthetic language, historical precedent, and structural power.</p>
+        <p>Designed for cultural critics and visual strategists, this system decodes the underlying mechanics of class
+          dynamics and bodily autonomy through the lens of visionary image-making.</p>
       </div>
     </div>
+  </div>
 
-    <!-- AUTH MODAL -->
-    <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4">
-      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth"></div>
-      <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
-        <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
-        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Terminal Access</h2>
-        <div id="auth-form-container">
-          <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your credentials to receive a magic link for terminal access.</p>
-          <form id="auth-form" class="space-y-4">
-            <div>
-              <label for="auth-email" class="block text-[10px] font-bold uppercase tracking-widest mb-1">Email Address</label>
-              <input type="email" id="auth-email" class="w-full bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none focus:ring-1" />
-            </div>
-            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:bg-transparent">Send Link</button>
-          </form>
-          <p id="auth-message" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
-        </div>
-        <div id="auth-success-container" class="hidden">
-          <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Link transmitted. Check your inbox to complete initialization.</p>
-        </div>
+  <!-- CONTACT MODAL -->
+  <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog"
+    aria-modal="true" aria-labelledby="contact-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="contact" aria-hidden="true"></div>
+    <div
+      class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+      <div class="flex items-start justify-between mb-8">
+        <h2 id="contact-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">
+          Contact</h2>
+        <button type="button" data-modal-close="contact"
+          class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close
+          ]</button>
+      </div>
+      <div id="contact-modal-body"
+        class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
+        <p>System Communications</p>
+        <p>Email: <a href="mailto:info@thelexicon.xyz"
+            class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
+        <p>Location: London, United Kingdom</p>
       </div>
     </div>
+  </div>
 
-    <!-- ABOUT MODAL -->
-    <div id="about-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="about-modal-title">
-      <div class="absolute inset-0 bg-black/70" data-modal-backdrop="about" aria-hidden="true"></div>
-      <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
-        <div class="flex items-start justify-between mb-8">
-          <h2 id="about-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
-          <button type="button" data-modal-close="about" class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
-        </div>
-        <div id="about-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
-          <p><strong>Created by Angelo Sanchez Dela Cruz</strong> — researcher and cultural analyst based in London.</p>               <p>THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.</p>
-          <p>Operating strictly outside the traditional fashion media ecosystem, the directory maps the intersections of aesthetic language, historical precedent, and structural power.</p>
-          <p>Designed for cultural critics and visual strategists, this system decodes the underlying mechanics of class dynamics and bodily autonomy through the lens of visionary image-making.</p>
-        </div>
+  <!-- PRIVACY MODAL -->
+  <div id="privacy-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog"
+    aria-modal="true" aria-labelledby="privacy-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="privacy" aria-hidden="true"></div>
+    <div
+      class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+      <div class="flex items-start justify-between mb-8">
+        <h2 id="privacy-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">
+          Privacy Protocol</h2>
+        <button type="button" data-modal-close="privacy"
+          class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close
+          ]</button>
       </div>
+      <div id="privacy-modal-body"
+        class="font-mono text-[10px] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
     </div>
+  </div>
 
-    <!-- CONTACT MODAL -->
-    <div id="contact-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
-      <div class="absolute inset-0 bg-black/70" data-modal-backdrop="contact" aria-hidden="true"></div>
-      <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
-        <div class="flex items-start justify-between mb-8">
-          <h2 id="contact-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Contact</h2>
-          <button type="button" data-modal-close="contact" class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
-        </div>
-        <div id="contact-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
-          <p>System Communications</p>
-          <p>Email: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
-          <p>Location: London, United Kingdom</p>
-        </div>
+  <!-- TERMS MODAL -->
+  <div id="terms-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog"
+    aria-modal="true" aria-labelledby="terms-modal-title">
+    <div class="absolute inset-0 bg-black/70" data-modal-backdrop="terms" aria-hidden="true"></div>
+    <div
+      class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
+      <div class="flex items-start justify-between mb-8">
+        <h2 id="terms-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Terms of
+          Service</h2>
+        <button type="button" data-modal-close="terms"
+          class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close
+          ]</button>
       </div>
+      <div id="terms-modal-body"
+        class="font-mono text-[10px] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
     </div>
+  </div>
 
-    <!-- PRIVACY MODAL -->
-    <div id="privacy-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
-      <div class="absolute inset-0 bg-black/70" data-modal-backdrop="privacy" aria-hidden="true"></div>
-      <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
-        <div class="flex items-start justify-between mb-8">
-          <h2 id="privacy-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Privacy Protocol</h2>
-          <button type="button" data-modal-close="privacy" class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
-        </div>
-        <div id="privacy-modal-body" class="font-mono text-[10px] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
+  <!-- CONNECTION MATRIX (RELATIONAL NEXUS) -->
+  <div id="connection-matrix" class="hidden">
+    <div class="matrix-backdrop" id="matrix-backdrop"></div>
+    <div class="matrix-panel">
+      <div class="matrix-header">
+        <span class="text-[10px] font-mono font-bold tracking-[0.2em]">CONNECTION_MATRIX_ALPHA</span>
+        <button type="button" id="btn-close-matrix" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
       </div>
+      <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
     </div>
+  </div>
 
-    <!-- TERMS MODAL -->
-    <div id="terms-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
-      <div class="absolute inset-0 bg-black/70" data-modal-backdrop="terms" aria-hidden="true"></div>
-      <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
-        <div class="flex items-start justify-between mb-8">
-          <h2 id="terms-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Terms of Service</h2>
-          <button type="button" data-modal-close="terms" class="text-sm font-bold font-мono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
-        </div>
-        <div id="terms-modal-body" class="font-mono text-[10px] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
-      </div>
-    </div>
-
-    <!-- CONNECTION MATRIX (RELATIONAL NEXUS) -->
-    <div id="connection-matrix" class="hidden">
-      <div class="matrix-backdrop" id="matrix-backdrop"></div>
-      <div class="matrix-panel">
-        <div class="matrix-header">
-          <span class="text-[10px] font-mono font-bold tracking-[0.2em]">CONNECTION_MATRIX_ALPHA</span>
-          <button type="button" id="btn-close-matrix" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
-        </div>
-        <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
-      </div>
-    </div>
-
-    <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js"></script>
+  <!-- MAIN ENTRY POINT -->
+  <script type="module" src="js/app.js"></script>
 
   </div>
 
 </body>
+
 </html>
