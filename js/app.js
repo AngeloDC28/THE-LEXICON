@@ -340,7 +340,7 @@ function refreshUI() {
 
   // --- Taxonomy ---
   const taxHeading = $('taxonomy-heading');
-  if (taxHeading) taxHeading.textContent = t('taxonomy_heading') || 'Taxonomy';
+  if (taxHeading) taxHeading.textContent = t('taxonomy_heading') || 'Categories';
   renderTaxonomyGrid();
   renderTaxonomySub(callbacks);
 
@@ -545,6 +545,19 @@ function setupEventListeners() {
 
   $('btn-hamburger')?.addEventListener('click', toggleHamburger);
   $('drawer-backdrop')?.addEventListener('click', toggleHamburger);
+
+  // Categories header is a collapse toggle on mobile (CSS uses the
+  // .taxonomy-expanded class on #taxonomy-section). No-op visually on
+  // desktop because the grid is always shown there.
+  $('btn-taxonomy-collapse')?.addEventListener('click', () => {
+    if (window.innerWidth >= 1024) return;
+    const section = $('taxonomy-section');
+    const toggle  = $('btn-taxonomy-collapse');
+    if (!section) return;
+    const willExpand = !section.classList.contains('taxonomy-expanded');
+    section.classList.toggle('taxonomy-expanded', willExpand);
+    toggle?.setAttribute('aria-expanded', willExpand ? 'true' : 'false');
+  });
 
   document.querySelectorAll('[data-modal-backdrop]').forEach(el => {
     el.addEventListener('click', () => {

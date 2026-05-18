@@ -175,7 +175,7 @@
 
     /* ============================================================
        MOBILE TWEAKS
-       Slightly larger tap targets, taxonomy cells stay readable.
+       Larger tap targets, collapsible categories, no pull-to-refresh.
     ============================================================ */
     @media (max-width: 1023px) {
       .taxonomy-cell {
@@ -183,11 +183,32 @@
         padding: 14px 14px;
         font-size: 11px;
       }
-      /* Cap taxonomy section height on mobile so entry list keeps usable space */
-      #taxonomy-section {
-        max-height: 50vh;
+      /* Categories collapses to header-only by default on mobile, freeing
+         ~280px for the entry list. User taps the header to expand. */
+      #taxonomy-section:not(.taxonomy-expanded) #taxonomy-grid {
+        display: none;
+      }
+      #taxonomy-section:not(.taxonomy-expanded) #taxonomy-sub {
+        display: none !important;
+      }
+      #taxonomy-section.taxonomy-expanded {
+        max-height: 60vh;
         overflow-y: auto;
       }
+      #taxonomy-section.taxonomy-expanded #taxonomy-chevron {
+        transform: rotate(180deg);
+      }
+      /* Mobile drawer should never bounce-scroll into pull-to-refresh */
+      #index-panel { overscroll-behavior: contain; }
+    }
+
+    /* Block native pull-to-refresh on key interactive surfaces — users
+       horizontal-swiping images shouldn't accidentally reload the page. */
+    #grid-view,
+    #image-lightbox,
+    #detail-image-wrapper {
+      overscroll-behavior-y: contain;
+      touch-action: pan-x pan-y pinch-zoom;
     }
   </style>
 
@@ -416,10 +437,22 @@
             <!-- Buttons injected by renderTaxonomySub() -->
           </div>
 
-          <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between">
-            <span id="taxonomy-heading" class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">Taxonomy</span>
-            <span id="taxonomy-hint" class="text-[8px] font-mono uppercase tracking-wider opacity-40 hidden md:inline">Tap to filter</span>
-          </div>
+          <!-- Header doubles as a collapse toggle on mobile (taxonomy-collapsed
+               class on the section hides #taxonomy-grid). On lg+ the toggle is
+               a no-op visually because the grid is always shown. -->
+          <button
+            type="button"
+            id="btn-taxonomy-collapse"
+            class="w-full px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between text-left lg:cursor-default"
+            aria-expanded="false"
+            aria-controls="taxonomy-grid"
+          >
+            <span id="taxonomy-heading" class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">Categories</span>
+            <span class="flex items-center gap-2">
+              <span id="taxonomy-hint" class="text-[8px] font-mono uppercase tracking-wider opacity-40 hidden md:inline">Tap to filter</span>
+              <span id="taxonomy-chevron" class="lg:hidden text-[10px] opacity-60 transition-transform" aria-hidden="true">▾</span>
+            </span>
+          </button>
 
           <div
             id="taxonomy-grid"

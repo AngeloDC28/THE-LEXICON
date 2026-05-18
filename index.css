@@ -369,6 +369,25 @@ html.dark .grid-cell:hover img {
   right: auto;
 }
 
+/* Mobile: hotspot analysis renders as a bottom sheet that spans the
+   full width — easier to read than a 320px floating card on a phone. */
+@media (max-width: 767px) {
+  #analytical-payload.floating-payload {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    max-width: 100% !important;
+    border-width: 4px 0 0 0 !important;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.4) !important;
+    margin: 0 !important;
+    max-height: 50vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 2000;
+  }
+}
+
 /* ── REFACTORED DETAIL LAYOUT ── */
 #detail-image-view {
   background: #000000;

@@ -33,7 +33,7 @@ export const translations = {
     "tax_geography": "Geography",
     "tax_anatomy": "Form & Anatomy",
     "tax_format": "Format & Medium",
-    "taxonomy_heading": "Taxonomy",
+    "taxonomy_heading": "Categories",
     "taxonomy_map": "Research Index",
     "related_artifacts": "Related Artifacts",
     "telemetry_status": "ARCHIVE STATUS: STABLE",
