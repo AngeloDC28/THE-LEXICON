@@ -107,7 +107,7 @@ export function renderImageGrid(archiveData, callbacks) {
               loading="lazy"
               decoding="async"
               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              onload="this.classList.add('loaded')" onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded')">
+              onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
           </picture>
           <div class="grid-cell-meta absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
             <div class="text-[9px] font-mono uppercase tracking-widest text-white">${brand}</div>
@@ -124,6 +124,14 @@ export function renderImageGrid(archiveData, callbacks) {
 export function renderEntryList(archiveData, callbacks) {
   const container = $('entry-list');
   if (!container) return;
+  // Mobile: skip the heavy entry-list rebuild while the drawer is
+  // hidden (every search keystroke was re-rendering a list nobody could
+  // see). Re-renders fire normally once the drawer opens via
+  // toggleHamburger → callbacks.onUpdate.
+  const panel = $('index-panel');
+  if (window.innerWidth < 1024 && panel && panel.classList.contains('-translate-x-full')) {
+    return;
+  }
   const filtered = getFilteredEntries(archiveData);
   const total    = archiveData.length;
   const count    = filtered.length;

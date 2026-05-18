@@ -103,7 +103,8 @@ export const taxonomyData = {
     'Camp and Kitsch Subversion','Object-Oriented Ontology','Radical Romanticism',
     'Brutalist Information Architecture','The Grotesque and Abject',
     'Cyborg Manifestos (Haraway)','Post-Humanism','Algorithmic Determinism',
-    'Digital Dualism','Techno-Optimism and Accelerationism','Remediation','Hyperreality'
+    'Digital Dualism','Techno-Optimism and Accelerationism','Remediation','Hyperreality',
+    'Postmodern Pastiche'
   ],
   gender: [
     'Menswear','Womenswear','Unisex / Neutral','Conceptual / Post-Binary Form'

@@ -6,6 +6,7 @@
 import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
+import { invalidateSearchCache } from './search-engine.js';
 
 export let currentUser = null;
 
@@ -102,7 +103,10 @@ export async function fetchArchivalFolders(callbacks) {
     const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
     const querySnapshot = await window.getDocs(q);
     AppState.archivalFolders = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    
+    // Folder set changed — clear cached filter results so the next
+    // getFilteredEntries call recomputes against current membership.
+    invalidateSearchCache();
+
     if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
     if (callbacks && callbacks.renderFolderOptions) callbacks.renderFolderOptions();
   } catch (err) {

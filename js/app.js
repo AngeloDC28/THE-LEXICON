@@ -136,8 +136,9 @@ function refreshUI() {
   const btnFoldersMobile = $('btn-folders-toggle-mobile');
   if (btnFoldersMobile) btnFoldersMobile.textContent = t('nav_folders_mobile').toUpperCase();
 
-  const telemetry = $('telemetry-text');
-  if (telemetry) telemetry.textContent = t('telemetry_status');
+  // Telemetry text is owned by initHeaderTypewriter — overwriting it here
+  // every keystroke/filter change made the typewriter flicker and stop.
+  // The typewriter handles language switches on its own next tick.
 
   // --- Index Panel ---
   const indexTitle = $('index-panel-title');
@@ -948,6 +949,9 @@ function toggleHamburger() {
     // Prevent body scroll behind the mobile drawer; desktop is unaffected
     // because the drawer transform is a no-op at lg breakpoint.
     if (window.innerWidth < 1024) document.body.style.overflow = 'hidden';
+    // Drawer was just opened on mobile — re-render the entry list it
+    // skipped while hidden (see render-grid.js renderEntryList guard).
+    if (window.innerWidth < 1024) document.dispatchEvent(new CustomEvent('lexicon-refresh'));
   }
 }
 

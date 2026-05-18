@@ -37,7 +37,7 @@ export function renderTimeline(archiveData, callbacks) {
                      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0"
                      loading="lazy"
                      onload="this.classList.add('loaded'); this.closest('.timeline-item').classList.add('loaded');"
-                     onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded'); this.closest('.timeline-item').classList.add('loaded'); this.classList.add('broken-asset');" />
+                     onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');this.closest('.timeline-item').classList.add('loaded');this.classList.add('broken-asset');" />
               </picture>
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
                 <p class="text-[9px] text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
@@ -99,11 +99,10 @@ export function renderFilterChips(callbacks) {
       } else {
         AppState.filters[type] = null;
       }
+      // switchView('grid') already calls callbacks.onUpdate → refreshUI(),
+      // so no separate lexicon-refresh dispatch is needed. Removing it
+      // eliminates a double-refresh on every chip click.
       if (callbacks && callbacks.switchView) callbacks.switchView('grid');
-      // refreshUI called by app.js via delegation usually, but here we just update state
-      // Actually app.js needs to know. For now we assume refreshUI is handled.
-      const event = new CustomEvent('lexicon-refresh');
-      document.dispatchEvent(event);
     });
   });
 }

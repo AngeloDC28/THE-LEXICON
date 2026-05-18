@@ -8,13 +8,24 @@ import { AppState, taxonomyData } from './core-state.js';
 import { getTranslation } from './translations.js';
 
 let searchCache = new Map();
-let lastCacheKey = null;
+
+/** Call after any folder mutation (create/delete/save/remove) so the
+ * filtered-entry cache doesn't return stale results when an entry is
+ * added to or removed from the currently active folder. */
+export function invalidateSearchCache() {
+  searchCache.clear();
+}
 
 export function getFilteredEntries(archiveData) {
   const q = (AppState.searchQuery || '').toLowerCase();
   const folId = AppState.activeFolderId;
   const filterKey = JSON.stringify(AppState.filters);
-  const cacheKey = `${q}|${folId}|${filterKey}|${AppState.sortMode}`;
+  // Fold folder membership into the cache key so adding/removing entries
+  // from the active folder produces a different key and forces a recompute.
+  const folRev = folId
+    ? (AppState.archivalFolders.find(f => f.id === folId)?.lookIds || []).length
+    : 0;
+  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -22,11 +33,13 @@ export function getFilteredEntries(archiveData) {
 
   let entries = archiveData;
 
-  // 1. Filter by folder if active
+  // 1. Filter by folder if active. Guard lookIds in case a legacy or
+  // imported folder document is missing the array.
   if (folId) {
     const fol = AppState.archivalFolders.find(v => v.id === folId);
     if (fol) {
-      entries = entries.filter(e => fol.lookIds.includes(e.id));
+      const ids = fol.lookIds || [];
+      entries = entries.filter(e => ids.includes(e.id));
     }
   }
 

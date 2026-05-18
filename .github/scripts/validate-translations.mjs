@@ -30,12 +30,21 @@ for (const [k, v] of Object.entries(en)) {
   }
 }
 
+// Some locales legitimately add brand-name transliterations that don't
+// exist in en.json (Chinese, Japanese, Korean). These ARE rendered via
+// getTranslation(entry.tags.brand, lang), so they're not drift — they're
+// intentional locale-specific overrides. Whitelist them.
+const ALLOWED_EXTRA_KEYS = new Set([
+  'Gucci', 'Maison Margiela',
+  // Add other intentional per-locale brand transliterations here.
+]);
+
 for (const lang of ORDER) {
   if (lang === 'en') continue;
   const data = JSON.parse(readFileSync(join(DIR, lang + '.json'), 'utf8'));
   const keys = new Set(Object.keys(data));
   const missing = [...enKeys].filter(k => !keys.has(k));
-  const extra   = [...keys].filter(k => !enKeys.has(k));
+  const extra   = [...keys].filter(k => !enKeys.has(k) && !ALLOWED_EXTRA_KEYS.has(k));
   if (missing.length) warnings.push(`${lang}.json: missing ${missing.length} key(s) (falls back to en) — ${missing.slice(0,3).join(', ')}${missing.length>3?', ...':''}`);
   if (extra.length)   warnings.push(`${lang}.json: ${extra.length} extra key(s) not in en — ${extra.slice(0,3).join(', ')}${extra.length>3?', ...':''}`);
 }

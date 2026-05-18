@@ -66,7 +66,7 @@ function renderRecentlyViewed(archiveData, callbacks) {
            data-recent-id="${id}" 
            loading="lazy" 
            onload="this.classList.add('loaded'); this.style.opacity='1';"
-           onerror="this.src='${BROKEN_ASSET}'; this.classList.add('loaded');" />
+           onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');" />
     `;
   });
   row.innerHTML = html;

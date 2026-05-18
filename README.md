@@ -53,7 +53,7 @@ npm run preflight                        # sync keys + build + validate (always 
 git add . && git commit -m "entry: ..."
 ```
 
-See **REPORT.md** for the full workflow including translation and PR opening.
+See **NEW_ENTRY_GUIDE.md** for the full research/writing workflow.
 
 ## Common commands
 
