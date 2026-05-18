@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "loewe-ss23",
+  "title": "Loewe SS 2023",
+  "subtitle": "",
+  "year": 2023,
+  "season": "SS",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Loewe",
+    "era": "2020–Present; The Post-Pandemic and Surrealist Current",
+    "politics": "Body Politics & Corporeal Interventions | Anti-Consumerism & Institutional Critique",
+    "theories": "The Simulacrum (Baudrillard) | Radical Romanticism | Camp and Kitsch Subversion | Object-Oriented Ontology",
+    "gender": "Womenswear",
+    "materials": "Animal Protein Fibres | Plant-Based Cellulose | Thermoplastic Membranes",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Geometric Abstraction | Planar Distortion | Displaced Anatomy and Padding | Structural Stasis",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Jonathan Anderson's SS 2023 Loewe collection was presented in Paris and extended his ongoing exploration of trompe l'oeil and hyper-realistic surface illusion in fashion. The collection featured garments that simulated other materials with extraordinary fidelity — knitwear engineered to appear as printed denim, leather tooled to read as woven basketry, and tailoring constructed to create the visual impression of pixelation or digital glitch. The show reinforced Loewe's position as the most formally experimental of the major European luxury houses under Anderson's direction.",
+    "strategy": "Anderson's design process for SS 2023 centred on the systematic confusion of material categories — specifically the simulation of one textile by another. The trompe l'oeil knitwear was produced through extraordinary technical labour: each piece required hand-knitting at a scale and tension that produced convincing optical mimicry of printed fabric. The pixelated tailoring was constructed by assembling dozens of precisely cut fabric blocks in graduating tones, producing an effect of digital rendering in analogue material.",
+    "critique": "The SS 2023 collection constituted Anderson's most sustained engagement with questions of authenticity and simulation. In an era saturated with digitally generated imagery, Anderson's insistence on achieving digital aesthetics through artisanal means was a paradoxical position: a critique of digital culture executed through the most labour-intensive techniques of the pre-digital atelier. The collection proposed that luxury's defining characteristic in the post-digital age was not rarity of material but intensity of craft invested in the production of convincing illusion."
+  }
+}

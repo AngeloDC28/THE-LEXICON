@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "adrover-aw00",
+  "title": "Miguel Adrover AW 2000",
+  "subtitle": "Duvet",
+  "year": 2000,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Miguel Adrover",
+    "era": "2000–2009; The Global Conglomerate Era",
+    "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Post-Colonialism & Diasporic Narratives",
+    "theories": "Institutional Critique | Symbolic Exchange | Marxist Materialism | The Simulacrum (Baudrillard)",
+    "gender": "Womenswear",
+    "materials": "Domestic Found Objects | Upcycled Industrial Waste | Deadstock & Surplus Inventory",
+    "geography": "New York (CFDA)",
+    "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Miguel Adrover's AW 2000 'Duvet' collection was presented in New York and became one of the most discussed American debuts of the decade. The Mallorcan-born designer sourced material directly from the street — most iconically, a duvet belonging to the late Quentin Crisp, purchased from his Lower East Side apartment after his death. The garment made from this bedsheet became the show's defining image and positioned Adrover as a radical anti-fashion voice in a city dominated by corporate minimalism.",
+    "strategy": "Adrover's working method inverted the conventional luxury supply chain by treating domestic refuse and found street objects as primary material. The Quentin Crisp duvet-coat required no manufacturing process beyond cutting and minimal stitching — the found object became the finished garment. This approach collapsed the categories of waste, memory, and luxury into a single textile surface, arguing that provenance and narrative constituted material value.",
+    "critique": "The 'Duvet' collection enacted a profound critique of American fashion's corporate aesthetic by sourcing from the street rather than the atelier. Adrover's use of Quentin Crisp's bedsheet — the property of a queer icon and social outcast — was also a political act: it materialised marginalised biography as high-fashion garment. The show argued that the most radical gesture in New York fashion was not innovation but appropriation — the elevation of discarded everyday life into the formal language of the runway."
+  }
+}

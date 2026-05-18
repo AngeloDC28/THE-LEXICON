@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "gucci-aw18",
+  "title": "Gucci AW 2018",
+  "subtitle": "Cyborg",
+  "year": 2018,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Gucci",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Gender Deconstruction & Fluidity",
+    "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Camp and Kitsch Subversion | The Simulacrum (Baudrillard) | Radical Romanticism",
+    "gender": "Womenswear",
+    "materials": "Fine Precious Metallics | Biological Ephemera | Bovine & Exotic Skins | 3D Printed Polymers",
+    "geography": "Milan (Camera Nazionale)",
+    "anatomy": "Prosthetic Extension | Displaced Anatomy and Padding | Bodily Obfuscation",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Alessandro Michele's AW 2018 Gucci collection, titled 'Cyborg', was presented at the Palazzo Delle Scintille in Milan and staged as a theatrical meditation on the post-human body. Models carried their own severed heads — realised as prosthetic replicas — under their arms, and walked alongside live baby dragons. The show was accompanied by Michele's written statement on the dissolution of the body's boundaries and Donna Haraway's cyborg theory. The 'Cyborg' collection was the commercial and critical apex of Michele's Gucci tenure.",
+    "strategy": "Michele constructed the 'Cyborg' collection by combining hyper-maximalist decorative accumulation — the signature of his Gucci tenure — with specific prosthetic interventions that extended, doubled, or displaced the model's body. The severed head props were engineered to be photo-realistic replicas of each model's face, creating an uncanny doubling effect. The dragon accessories were sourced from theatrical prop-makers and introduced a fantasy register that made literal the collection's post-human premise.",
+    "critique": "The 'Cyborg' collection constituted a sustained engagement with Donna Haraway's argument that the cyborg — the hybrid of organism and machine — offers a more honest account of the contemporary body than any purely biological or purely technological model. Michele's fashion proposed that luxury itself was a cyborg practice: the body enhanced, extended, and reimagined through material addition. The show was also a critique of fashion's obsession with the naturalised body, replacing it with an explicitly constructed, multiplied, and decapitated alternative."
+  }
+}

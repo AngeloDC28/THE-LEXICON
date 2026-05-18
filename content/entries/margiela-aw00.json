@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "margiela-aw00",
+  "title": "Maison Margiela AW 2000",
+  "subtitle": "Flat",
+  "year": 2000,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Maison Margiela",
+    "era": "2000–2009; The Global Conglomerate Era",
+    "politics": "Anti-Consumerism & Institutional Critique | Labour Politics & Industrial Production",
+    "theories": "Deconstructionist Logic (Derrida) | Institutional Critique | Symbolic Exchange",
+    "gender": "Womenswear",
+    "materials": "Deadstock & Surplus Inventory | Artificially Degraded Textiles",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Deconstructed Assembly | Negative Space and Void | Structural Stasis",
+    "format": "Static Presentation"
+  },
+  "notes": {
+    "provenance": "Maison Margiela's AW 2000 collection, titled 'Flat', was presented at La Samaritaine department store in Paris. Martin Margiela pinned garments flat against the wall rather than presenting them on moving bodies, rendering the clothes as two-dimensional architectural objects rather than wearable garments. The intervention collapsed the distinction between retail space and gallery.",
+    "strategy": "The 'Flat' presentation stripped the garment of its primary function — to be worn — by removing the body entirely. Each piece was displayed as though ironed and mounted, revealing seam construction, internal boning, and structural logic that would normally be concealed beneath a moving silhouette. The approach treated garment-making as a form of technical drawing.",
+    "critique": "By presenting clothes without bodies, Margiela executed a radical institutional critique of the fashion show format itself. The gesture challenged the spectacle of the runway, the hierarchy of the model, and the commercial imperative of desire-generation. The 'Flat' collection argued that the garment is complete without the body — a deeply anti-humanist and anti-consumerist position."
+  }
+}

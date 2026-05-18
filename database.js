@@ -4144,5 +4144,440 @@ export const archiveData = [
       "strategy": "The collection's core structural strategy was the creation of sculptural cuirasses and molded leather bustiers designed to mimic ripped human physiques, resembling ancient Greek bronze armor with hyper-defined abdominals and nipples, introducing heroic nudity into high fashion. Deeply rooted in founder Elsa Schiaparelli's surrealist legacy, Roseberry integrated disembodied body parts directly into garments and accessories including box-frame handbags with snap closures shaped like noses, prosthetic nail-glove hybrids, and oversized golden brass jewelry molded into ears, teeth, and eyes. To redefine couture, Roseberry deliberately omitted traditional skirts, instead elevating utilitarian garments: blouson leather pants with elastic waists, bomber jackets, and denim jeans rendered in stone-washed silk duchess embellished with dangling gold padlocks. Embroidery and beading were treated not as delicate accents but as raw, barbaric jewelry, including a basket-weave wool cape covered in thousands of gold bugle beads referencing Schiaparelli's 1938 hair-embroidered veil and a gown shimmering with over 100,000 Swarovski crystals.",
       "critique": "By applying traditionally masculine ergonomics such as muscular abs and broad chest plates to the female body, the collection radically challenged gendered expectations of high fashion. As Roseberry quipped: if you want to look like a cupcake, you can go somewhere else. The collection reframes female empowerment through physical power and architectural shielding, transforming the wearer into a warrior rather than a passive object of beauty. The collection exemplifies the second coming of surrealism in fashion, acting as a psychological response to the unprecedented strangeness and uncertainty of the post-pandemic era. A standout conceptual look featured a model in a pristine sleeveless hooded dress carrying a sculpted gold baby being breastfed, elevating the biological act of motherhood into an iconic monumental work of sculptural art and seamlessly merging biological function with surrealist haute couture."
     }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "margiela-aw00",
+    "title": "Maison Margiela AW 2000",
+    "subtitle": "Flat",
+    "year": 2000,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Maison Margiela",
+      "era": "2000–2009; The Global Conglomerate Era",
+      "politics": "Anti-Consumerism & Institutional Critique | Labour Politics & Industrial Production",
+      "theories": "Deconstructionist Logic (Derrida) | Institutional Critique | Symbolic Exchange",
+      "gender": "Womenswear",
+      "materials": "Deadstock & Surplus Inventory | Artificially Degraded Textiles",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Deconstructed Assembly | Negative Space and Void | Structural Stasis",
+      "format": "Static Presentation"
+    },
+    "notes": {
+      "provenance": "Maison Margiela's AW 2000 collection, titled 'Flat', was presented at La Samaritaine department store in Paris. Martin Margiela pinned garments flat against the wall rather than presenting them on moving bodies, rendering the clothes as two-dimensional architectural objects rather than wearable garments. The intervention collapsed the distinction between retail space and gallery.",
+      "strategy": "The 'Flat' presentation stripped the garment of its primary function — to be worn — by removing the body entirely. Each piece was displayed as though ironed and mounted, revealing seam construction, internal boning, and structural logic that would normally be concealed beneath a moving silhouette. The approach treated garment-making as a form of technical drawing.",
+      "critique": "By presenting clothes without bodies, Margiela executed a radical institutional critique of the fashion show format itself. The gesture challenged the spectacle of the runway, the hierarchy of the model, and the commercial imperative of desire-generation. The 'Flat' collection argued that the garment is complete without the body — a deeply anti-humanist and anti-consumerist position."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "westwood-aw81",
+    "title": "Vivienne Westwood AW 1981",
+    "subtitle": "Pirate",
+    "year": 1981,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Vivienne Westwood",
+      "era": "1980–1989; The Post-Modern Shift",
+      "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique | Censorship & Provocation",
+      "theories": "Subcultural Resistance Theory | Camp and Kitsch Subversion | Mythology and Contemporary Lore (Barthes)",
+      "gender": "Menswear & Womenswear",
+      "materials": "Animal Protein Fibres | Plant-Based Cellulose",
+      "geography": "London (BFC)",
+      "anatomy": "Radical Asymmetry | Topographic Layering | Bias-Cut Fluidity",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Vivienne Westwood and Malcolm McLaren's AW 1981 'Pirate' collection was the first official Westwood runway show, presented at Olympia in London. It marked a decisive break from the punk era and introduced the 'New Romantic' silhouette — voluminous shirting, asymmetric drape, and a romanticised piracy aesthetic drawn from 17th and 18th century seafaring costume. The show launched Westwood's identity as a designer rooted in historical revisionism.",
+      "strategy": "Westwood constructed the Pirate collection by looting historical dress archives — specifically Elizabethan and early colonial seafaring costume — and translating them into wearable street garments. The signature squiggle print, the off-shoulder shirting, and the volumetric trouser were all derived from archival tailoring rather than contemporary fashion. The technique established Westwood's working method of treating fashion history as a living toolkit.",
+      "critique": "The Pirate collection positioned subcultural provocation not through destruction — as punk had done — but through historical fantasy and romantic excess. It argued that resistance could be encoded through costume and historical performance. The show was a foundational moment for British eccentricity as a formal design language, and it established the runway as a site of theatrical world-building rather than commercial product demonstration."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "raf-simons-aw01",
+    "title": "Raf Simons AW 2001",
+    "subtitle": "Riot Riot Riot",
+    "year": 2001,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/raf-simons-aw01/raf-simons-aw01-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Raf Simons",
+      "era": "2000–2009; The Global Conglomerate Era",
+      "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique | Activism & Crisis Response",
+      "theories": "Subcultural Resistance Theory | Hauntology (Fisher) | The Grotesque and Abject | Psychoanalytic Theory (Lacanian)",
+      "gender": "Menswear",
+      "materials": "Petroleum-Based Polymers | Plant-Based Cellulose | Artificially Degraded Textiles",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Sartorial Restriction | Compressed Proportions | Deconstructed Assembly",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Raf Simons' AW 2001 collection 'Riot Riot Riot' was presented in Paris and widely regarded as the designer's most radical statement in menswear. The show featured models in tight black silhouettes walking through a deliberately compressed, claustrophobic set, evoking concrete brutalism and youth riot culture. Named in part after Kathleen Hanna's Bikini Kill, the collection drew on youth subculture, post-punk aggression, and the psychological pressure of adolescent identity.",
+      "strategy": "Simons compressed garment silhouettes to their absolute minimum — narrow trousers, short jackets, tight knitwear — creating a body-as-projectile aesthetic. The palette was almost exclusively black, punctuated by aggressive graphic prints sourced from punk, industrial music, and protest graphics. Each look was constructed as a uniform of resistance: anonymising, kinetic, and deliberately anti-luxurious.",
+      "critique": "Riot Riot Riot functioned as a manifesto for a generation of young men alienated from traditional masculinity and the emerging luxury menswear market. Simons channelled the energy of youth riot culture into a formal language of tailoring, arguing that clothes could carry political charge without explicit slogan or spectacle. The collection established Simons as the defining voice in post-millennium menswear and his influence on contemporary fashion — from Hedi Slimane to Virgil Abloh — remains foundational."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "undercover-ss03",
+    "title": "Undercover SS 2003",
+    "subtitle": "But Beautiful III",
+    "year": 2003,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Undercover",
+      "era": "2000–2009; The Global Conglomerate Era",
+      "politics": "Queer Theory & Subcultural Systems | Censorship & Provocation | Anti-Consumerism & Institutional Critique",
+      "theories": "Subcultural Resistance Theory | The Grotesque and Abject | Camp and Kitsch Subversion | Hauntology (Fisher)",
+      "gender": "Womenswear",
+      "materials": "Artificially Degraded Textiles | Domestic Found Objects | Plant-Based Cellulose",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Jun Takahashi's Undercover SS 2003 collection 'But Beautiful III' was the designer's Paris debut and was immediately embraced as a watershed moment in conceptual fashion. Presented at Paris Fashion Week, the collection fused elements of horror, Dadaism, children's books, and darkly romantic illustration into a single coherent visual world. The show arrived at a moment when the Tokyo avant-garde was entering formal Parisian institutional territory for the first time.",
+      "strategy": "Takahashi constructed the 'But Beautiful III' collection by layering incongruous reference systems — fairytale illustration, horror film stills, craft textile traditions, and subcultural streetwear — into garments that defied singular reading. Each piece functioned as a collage: printed imagery was burned or distorted, fabric was deliberately frayed or distressed, and silhouettes were engineered to suggest both innocence and menace simultaneously.",
+      "critique": "The 'But Beautiful' series — of which SS03 was the third and most internationally visible chapter — argued for a mode of fashion that refused the commercial imperative of desirability. Takahashi's work was beautiful precisely because it was also disturbing: it held the viewer in an unresolved tension between attraction and repulsion. The Paris debut confirmed that the Tokyo avant-garde tradition — rooted in Comme des Garçons and Yohji Yamamoto — had produced a genuinely new generation of conceptual designers."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "adrover-aw00",
+    "title": "Miguel Adrover AW 2000",
+    "subtitle": "Duvet",
+    "year": 2000,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Miguel Adrover",
+      "era": "2000–2009; The Global Conglomerate Era",
+      "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Post-Colonialism & Diasporic Narratives",
+      "theories": "Institutional Critique | Symbolic Exchange | Marxist Materialism | The Simulacrum (Baudrillard)",
+      "gender": "Womenswear",
+      "materials": "Domestic Found Objects | Upcycled Industrial Waste | Deadstock & Surplus Inventory",
+      "geography": "New York (CFDA)",
+      "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Miguel Adrover's AW 2000 'Duvet' collection was presented in New York and became one of the most discussed American debuts of the decade. The Mallorcan-born designer sourced material directly from the street — most iconically, a duvet belonging to the late Quentin Crisp, purchased from his Lower East Side apartment after his death. The garment made from this bedsheet became the show's defining image and positioned Adrover as a radical anti-fashion voice in a city dominated by corporate minimalism.",
+      "strategy": "Adrover's working method inverted the conventional luxury supply chain by treating domestic refuse and found street objects as primary material. The Quentin Crisp duvet-coat required no manufacturing process beyond cutting and minimal stitching — the found object became the finished garment. This approach collapsed the categories of waste, memory, and luxury into a single textile surface, arguing that provenance and narrative constituted material value.",
+      "critique": "The 'Duvet' collection enacted a profound critique of American fashion's corporate aesthetic by sourcing from the street rather than the atelier. Adrover's use of Quentin Crisp's bedsheet — the property of a queer icon and social outcast — was also a political act: it materialised marginalised biography as high-fashion garment. The show argued that the most radical gesture in New York fashion was not innovation but appropriation — the elevation of discarded everyday life into the formal language of the runway."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "van-herpen-aw11",
+    "title": "Iris van Herpen AW 2011",
+    "subtitle": "Capriole",
+    "year": 2011,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Iris van Herpen",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Ecological Politics & Resource Extraction",
+      "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Object-Oriented Ontology | Techno-Optimism and Accelerationism",
+      "gender": "Womenswear",
+      "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Structural Composites",
+      "geography": "Paris (Fédération de la Haute Couture)",
+      "anatomy": "Prosthetic Extension | Geometric Abstraction | Scaffolding and Internal Frameworks | Weight and Gravity Defiance",
+      "format": "Theatrical Stage Performance"
+    },
+    "notes": {
+      "provenance": "Iris van Herpen's AW 2011 Haute Couture collection 'Capriole' was presented in Paris and featured a landmark collaboration with architect and computational designer Daniel Widrig. The collection used selective laser sintering — an industrial 3D printing process — to produce garments that were impossible to construct by hand. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
+      "strategy": "Van Herpen worked with Widrig to translate computational fluid dynamics simulations — the mathematical modelling of liquid motion — into wearable structures. The 3D-printed pieces captured the frozen geometry of a splash or an explosion at the moment of maximum extension, producing silhouettes that appeared simultaneously rigid and liquid. The manufacturing process replaced the atelier with the machine: each piece was grown rather than sewn.",
+      "critique": "The 'Capriole' collection was one of the first instances in which additive manufacturing — 3D printing — was used as the primary production method for Haute Couture. This placed van Herpen at the intersection of fashion, architecture, and engineering, and constituted a fundamental challenge to the couture system's reliance on handcraft as the marker of luxury value. The work proposed that the most radical couture of the 21st century would be produced not by petites mains but by machines operating beyond the limits of human dexterity."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "pugh-aw06",
+    "title": "Gareth Pugh AW 2006",
+    "subtitle": "",
+    "year": 2006,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Gareth Pugh",
+      "era": "2000–2009; The Global Conglomerate Era",
+      "politics": "Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Censorship & Provocation",
+      "theories": "The Grotesque and Abject | Camp and Kitsch Subversion | Bodily Autonomy and Transgression | Brutalist Information Architecture",
+      "gender": "Conceptual / Post-Binary Form",
+      "materials": "Petroleum-Based Polymers | Thermoplastic Membranes | Industrial Coatings | Assembled Non-Textile Hardware",
+      "geography": "London (BFC)",
+      "anatomy": "Monolithic Massing | Bodily Obfuscation | Scaffolding and Internal Frameworks | Architectural Shielding and Armour",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Gareth Pugh's AW 2006 collection was presented as part of his second London Fashion Week season, shortly after his graduate debut from Central Saint Martins attracted intense industry attention. The show consolidated Pugh's identity as the defining voice of post-millennium British gothic fashion — massive black volumes, inflated geometric forms, and a total suppression of the recognisable human body beneath architectural textile structures. The collection was championed by i-D, Dazed & Confused, and Nicola Formichetti.",
+      "strategy": "Pugh engineered each look around the principle of bodily obfuscation — the garment as total environment rather than complement to the body. Inflated PVC sections, rigid geometric panniers, and heavily structured black volumes removed the conventional markers of gender, anatomy, and movement from the silhouette. The construction demanded internal armature: wire frames, boning, and inflation mechanisms that transformed the body into a carrier for sculptural form.",
+      "critique": "Pugh's AW 2006 collection enacted a radical refusal of fashion's traditional compact with desire. Where conventional fashion makes the body more visible and more legible — more desirable — Pugh's work made it invisible, replacing legible anatomy with an alien geometric mass. This constituted a profound challenge to the commercial logic of the London fashion system and positioned the runway as a site of formal experimentation rather than commercial proposition."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "vetements-aw15",
+    "title": "Vetements AW 2015",
+    "subtitle": "",
+    "year": 2015,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Vetements",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems",
+      "theories": "Institutional Critique | The Simulacrum (Baudrillard) | Subcultural Resistance Theory | Corporate Nihilism",
+      "gender": "Unisex / Neutral",
+      "materials": "Petroleum-Based Polymers | Artificially Degraded Textiles | Deadstock & Surplus Inventory",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Compressed Proportions | Radical Asymmetry | Surface Erosion and Degradation | Topographic Layering",
+      "format": "Salon / Intimate Appointment"
+    },
+    "notes": {
+      "provenance": "Vetements' AW 2015 collection — the collective's first major Paris show — was presented in Le Dépôt, a famous Parisian gay sex club in the Marais district. The intimate, deliberately unglamorous setting accommodated fewer than 100 guests and was designed to invert every convention of the Paris fashion week spectacle. The show launched Demna Gvasalia and the Vetements collective into the centre of the global fashion conversation and established a new template for the institutionally critical fashion presentation.",
+      "strategy": "The AW 2015 collection was constructed from oversized, proportion-distorted archetypes — the hoodie, the trench coat, the DHL uniform shirt — manipulated through extreme scaling, asymmetric cutting, and graphic appropriation. The Vetements design logic treated the everyday wardrobe of urban youth as raw material to be deconstructed and re-presented as luxury product, collapsing the distinction between streetwear and couture through irony and formal aggression.",
+      "critique": "Vetements' Le Dépôt presentation was a calculated institutional critique of the Paris fashion system on multiple levels simultaneously: the venue subverted the grand hotel ballroom; the guest list subverted the editor hierarchy; the clothes subverted the luxury material logic; and the collective structure subverted the singular designer myth. The show proposed that the most radical act in contemporary fashion was not formal innovation but institutional refusal — and that this refusal could itself be packaged and sold as luxury."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "hood-by-air-ss14",
+    "title": "Hood By Air SS 2014",
+    "subtitle": "",
+    "year": 2014,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Hood By Air",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Queer Theory & Subcultural Systems | Racial Identity & Representation | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+      "theories": "Queer Performativity (Butler) | Subcultural Resistance Theory | The Subverted Gaze | Intersectionality",
+      "gender": "Conceptual / Post-Binary Form",
+      "materials": "Petroleum-Based Polymers | Elastomeric Compounds | Artificially Degraded Textiles",
+      "geography": "New York (CFDA)",
+      "anatomy": "Sartorial Restriction | Displaced Anatomy and Padding | Clinical Exposure and Nudity | Compressed Proportions",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Shayne Oliver's Hood By Air SS 2014 show was presented in New York and cemented the brand's position at the intersection of queer club culture, Black American streetwear, and conceptual fashion. The show drew on the visual language of the NYC ballroom scene, BDSM subcultural dress, and graphic sports branding — synthesising these reference systems into a coherent and formally rigorous fashion proposition. Hood By Air's rise coincided with a broader cultural moment in which Black queer aesthetics moved from underground spaces into the institutional fashion mainstream.",
+      "strategy": "Oliver engineered the Hood By Air SS14 silhouette through extreme proportion manipulation — extended sleeves, compressed bodies, clinical exposure of specific anatomical zones — combined with aggressive graphic identity. The HBA logo functioned as both branding device and formal compositional element, applied at scales that overwhelmed the garment's structural logic. The approach borrowed from sportswear's logo culture while simultaneously deconstructing it.",
+      "critique": "Hood By Air's SS14 collection argued that Black queer club culture — long treated as raw material by mainstream fashion — could operate as its own formal system, with its own institutional logic and its own runway. The show constituted a demand for recognition: not as influence or inspiration for white designers, but as an autonomous design tradition with a fully developed aesthetic vocabulary. Oliver's work made visible the debt that contemporary fashion owes to communities it had historically excluded from its institutions."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "watanabe-aw15",
+    "title": "Junya Watanabe AW 2015",
+    "subtitle": "",
+    "year": 2015,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Junya Watanabe",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Labour Politics & Industrial Production | Anti-Consumerism & Institutional Critique | Globalisation & Cultural Hybridity",
+      "theories": "Postmodern Pastiche | Symbolic Exchange | Trickle-Down and Bubble-Up Dynamics | Globalisation and Diaspora",
+      "gender": "Menswear",
+      "materials": "Plant-Based Cellulose | Artificially Degraded Textiles | Deadstock & Surplus Inventory",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Topographic Layering | Deconstructed Assembly | Surface Erosion and Degradation",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Junya Watanabe's AW 2015 menswear collection was presented in Paris and became one of the most discussed of his career for its systematic appropriation and recombination of Western workwear brand identities. The collection featured patchwork garments composed from the logos and fabrics of Levi's, Carhartt, Lee, Wrangler, and other American and European workwear labels — assembled into dense collages that collapsed brand hierarchy and industrial heritage into a single textile surface.",
+      "strategy": "Watanabe treated the working uniforms of industrial labour as archival material — collecting authentic workwear pieces, deconstructing them, and reassembling their fragments into new hybrid garments. The patchwork logic was not random: each piece was engineered so that brand logos aligned and collided in ways that generated formal tension, treating the corporate graphic as a design element equivalent to woven pattern or printed textile.",
+      "critique": "The AW 2015 collection proposed that Western workwear brands — American in particular — carried a complex mythology of democratic utility, physical labour, and subcultural cool that Japanese fashion had been quietly digesting and reimagining for decades. By reassembling these brands within a Parisian couture context, Watanabe made visible the global circulation of cultural material and the ways in which Japanese designers had consistently operated as the most rigorous interpreters of Western dress codes."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "craig-green-ss15",
+    "title": "Craig Green SS 2015",
+    "subtitle": "",
+    "year": 2015,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Craig Green",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Labour Politics & Industrial Production",
+      "theories": "Object-Oriented Ontology | Structural Stasis | Bodily Autonomy and Transgression | Post-Humanism",
+      "gender": "Menswear",
+      "materials": "Plant-Based Cellulose | Industrial Coatings | Structural Composites",
+      "geography": "London (BFC)",
+      "anatomy": "Scaffolding and Internal Frameworks | Modular Componentry | Monolithic Massing | Bodily Obfuscation",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Craig Green's SS 2015 collection was presented under the MAN platform at London Fashion Week, during the designer's formative early seasons after his graduation from Central Saint Martins. The collection extended Green's ongoing exploration of the garment as autonomous object — pieces that referenced utilitarian function while refusing the conventions of wearable clothing. The show confirmed Green as the most formally rigorous British menswear designer of his generation and attracted immediate institutional attention from critics and buyers.",
+      "strategy": "Green constructed the SS 2015 collection around the logic of the quilted rectangle — flat panels of stitched fabric assembled into three-dimensional structures using cord, eyelets, and simple fastening systems. The garments were engineered to be worn but also to stand independently of the body: draped over a frame or laid flat, they remained formally complete. The cord-binding system allowed each piece to be assembled and disassembled, treating the garment as architectural component rather than fixed object.",
+      "critique": "Green's SS 2015 work extended a tradition of British menswear that treated the male body not as a surface to be decorated but as a structural problem to be solved. His quilted panels invoked industrial material — workwear padding, construction blankets, protective wrapping — while simultaneously quoting the language of monastic costume and ritual dress. The collection argued that menswear's most interesting territory lay not in tailoring or sportswear but in the space between clothing and sculpture."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "gucci-aw18",
+    "title": "Gucci AW 2018",
+    "subtitle": "Cyborg",
+    "year": 2018,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Gucci",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Gender Deconstruction & Fluidity",
+      "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Camp and Kitsch Subversion | The Simulacrum (Baudrillard) | Radical Romanticism",
+      "gender": "Womenswear",
+      "materials": "Fine Precious Metallics | Biological Ephemera | Bovine & Exotic Skins | 3D Printed Polymers",
+      "geography": "Milan (Camera Nazionale)",
+      "anatomy": "Prosthetic Extension | Displaced Anatomy and Padding | Bodily Obfuscation",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Alessandro Michele's AW 2018 Gucci collection, titled 'Cyborg', was presented at the Palazzo Delle Scintille in Milan and staged as a theatrical meditation on the post-human body. Models carried their own severed heads — realised as prosthetic replicas — under their arms, and walked alongside live baby dragons. The show was accompanied by Michele's written statement on the dissolution of the body's boundaries and Donna Haraway's cyborg theory. The 'Cyborg' collection was the commercial and critical apex of Michele's Gucci tenure.",
+      "strategy": "Michele constructed the 'Cyborg' collection by combining hyper-maximalist decorative accumulation — the signature of his Gucci tenure — with specific prosthetic interventions that extended, doubled, or displaced the model's body. The severed head props were engineered to be photo-realistic replicas of each model's face, creating an uncanny doubling effect. The dragon accessories were sourced from theatrical prop-makers and introduced a fantasy register that made literal the collection's post-human premise.",
+      "critique": "The 'Cyborg' collection constituted a sustained engagement with Donna Haraway's argument that the cyborg — the hybrid of organism and machine — offers a more honest account of the contemporary body than any purely biological or purely technological model. Michele's fashion proposed that luxury itself was a cyborg practice: the body enhanced, extended, and reimagined through material addition. The show was also a critique of fashion's obsession with the naturalised body, replacing it with an explicitly constructed, multiplied, and decapitated alternative."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "thom-browne-aw12",
+    "title": "Thom Browne AW 2012",
+    "subtitle": "",
+    "year": 2012,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Thom Browne",
+      "era": "2010–2019; The Digital and Streetwear Pivot",
+      "politics": "Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity | Body Politics & Corporeal Interventions",
+      "theories": "Queer Performativity (Butler) | Camp and Kitsch Subversion | Habitus and Field (Bourdieu) | Class Distinctions and Signalling",
+      "gender": "Menswear",
+      "materials": "Animal Protein Fibres | Plant-Based Cellulose | Fine Precious Metallics",
+      "geography": "New York (CFDA)",
+      "anatomy": "Compressed Proportions | Sartorial Restriction | Tailored Rigidity | Geometric Abstraction",
+      "format": "Theatrical Stage Performance"
+    },
+    "notes": {
+      "provenance": "Thom Browne's AW 2012 menswear presentation was staged in New York as a theatrical performance rather than a conventional runway. The show featured Browne's signature compressed grey suiting pushed into new formal extremes — jackets with shrunken sleeves, trousers cropped aggressively above the ankle, and the full range of his signature American preppy references rendered alien through scale manipulation. Browne's shows of this period were consistently cited as among the most theatrically ambitious in American fashion, combining precise tailoring with full narrative staging.",
+      "strategy": "Browne's design logic centred on the systematic compression of American menswear archetypes — the grey flannel suit, the oxford shirt, the varsity jacket — until they became formally strange. The shrinking of proportions was not random: each element was reduced in precise relationship to the others, maintaining internal coherence while producing an overall effect of miniaturisation and surreal formality. The result was a suit that was immediately legible as American institutional dress while simultaneously being unwearable in any conventional context.",
+      "critique": "Thom Browne's AW 2012 collection extended his ongoing project of queering the American power suit. By compressing and miniaturising the uniform of American corporate masculinity, Browne revealed its constructedness — its status as performance rather than natural form. The theatrical staging reinforced this reading: the suit was presented as costume, the wearer as actor, and the performance of masculinity as the show's real subject. Browne's work positioned menswear as a site of queer formal experimentation decades before that language entered mainstream fashion discourse."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "loewe-ss23",
+    "title": "Loewe SS 2023",
+    "subtitle": "",
+    "year": 2023,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Loewe",
+      "era": "2020–Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Body Politics & Corporeal Interventions | Anti-Consumerism & Institutional Critique",
+      "theories": "The Simulacrum (Baudrillard) | Radical Romanticism | Camp and Kitsch Subversion | Object-Oriented Ontology",
+      "gender": "Womenswear",
+      "materials": "Animal Protein Fibres | Plant-Based Cellulose | Thermoplastic Membranes",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Geometric Abstraction | Planar Distortion | Displaced Anatomy and Padding | Structural Stasis",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Jonathan Anderson's SS 2023 Loewe collection was presented in Paris and extended his ongoing exploration of trompe l'oeil and hyper-realistic surface illusion in fashion. The collection featured garments that simulated other materials with extraordinary fidelity — knitwear engineered to appear as printed denim, leather tooled to read as woven basketry, and tailoring constructed to create the visual impression of pixelation or digital glitch. The show reinforced Loewe's position as the most formally experimental of the major European luxury houses under Anderson's direction.",
+      "strategy": "Anderson's design process for SS 2023 centred on the systematic confusion of material categories — specifically the simulation of one textile by another. The trompe l'oeil knitwear was produced through extraordinary technical labour: each piece required hand-knitting at a scale and tension that produced convincing optical mimicry of printed fabric. The pixelated tailoring was constructed by assembling dozens of precisely cut fabric blocks in graduating tones, producing an effect of digital rendering in analogue material.",
+      "critique": "The SS 2023 collection constituted Anderson's most sustained engagement with questions of authenticity and simulation. In an era saturated with digitally generated imagery, Anderson's insistence on achieving digital aesthetics through artisanal means was a paradoxical position: a critique of digital culture executed through the most labour-intensive techniques of the pre-digital atelier. The collection proposed that luxury's defining characteristic in the post-digital age was not rarity of material but intensity of craft invested in the production of convincing illusion."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "marine-serre-ss20",
+    "title": "Marine Serre SS 2020",
+    "subtitle": "Manic",
+    "year": 2020,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Marine Serre",
+      "era": "2020–Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Ecological Politics & Resource Extraction | Anti-Consumerism & Institutional Critique | Body Politics & Corporeal Interventions",
+      "theories": "Marxist Materialism | Symbolic Exchange | Biopolitics and Bio-Power (Foucault) | Post-Humanism",
+      "gender": "Womenswear",
+      "materials": "Upcycled Industrial Waste | Domestic Found Objects | Elastomeric Compounds | Deadstock & Surplus Inventory",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Membrane and Transparency | Topographic Layering | Sartorial Restriction | Bodily Obfuscation",
+      "format": "Fashion Film / Cinematic Narrative"
+    },
+    "notes": {
+      "provenance": "Marine Serre's SS 2020 collection, titled 'Manic', was presented in Paris as a film-forward presentation that blurred the boundary between runway show and fashion film. The collection consolidated the visual identity Serre had established since her LVMH Prize-winning debut — the crescent moon print, the full-body second-skin unitard, and the systematic upcycling of deadstock and domestic textile waste — while expanding the conceptual and political ambition of the work. The show was widely credited as the most fully realised articulation of what Serre called 'futurewear': clothing designed for a world transformed by ecological crisis.",
+      "strategy": "The 'Manic' collection was constructed almost entirely from upcycled material — vintage scarves, domestic textiles, dead-stock jersey — assembled using Serre's signature patchwork and reconstruction methodology. Each piece required research into the source material's provenance and careful structural engineering to produce coherent silhouettes from heterogeneous textile fragments. The crescent moon print, screen-printed across multiple surfaces, functioned as a unifying visual system that imposed formal coherence on the disparate material palette.",
+      "critique": "The 'Manic' collection positioned ecological urgency not as a marketing position but as a formal constraint — the upcycling methodology was not optional but constitutive of the work's meaning. By refusing to use virgin material and building each collection from waste, Serre proposed a model of fashion production that acknowledged the environmental consequences of the industry and attempted to work within them. The collection was also a political statement about the relationship between fashion and the global south: the scarves and domestic textiles that formed the raw material carried with them histories of migration, domestic labour, and cultural identity that the reconstruction process made visible rather than erasing."
+    }
   }
 ];

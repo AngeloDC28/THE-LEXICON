@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "marine-serre-ss20",
+  "title": "Marine Serre SS 2020",
+  "subtitle": "Manic",
+  "year": 2020,
+  "season": "SS",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Marine Serre",
+    "era": "2020–Present; The Post-Pandemic and Surrealist Current",
+    "politics": "Ecological Politics & Resource Extraction | Anti-Consumerism & Institutional Critique | Body Politics & Corporeal Interventions",
+    "theories": "Marxist Materialism | Symbolic Exchange | Biopolitics and Bio-Power (Foucault) | Post-Humanism",
+    "gender": "Womenswear",
+    "materials": "Upcycled Industrial Waste | Domestic Found Objects | Elastomeric Compounds | Deadstock & Surplus Inventory",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Membrane and Transparency | Topographic Layering | Sartorial Restriction | Bodily Obfuscation",
+    "format": "Fashion Film / Cinematic Narrative"
+  },
+  "notes": {
+    "provenance": "Marine Serre's SS 2020 collection, titled 'Manic', was presented in Paris as a film-forward presentation that blurred the boundary between runway show and fashion film. The collection consolidated the visual identity Serre had established since her LVMH Prize-winning debut — the crescent moon print, the full-body second-skin unitard, and the systematic upcycling of deadstock and domestic textile waste — while expanding the conceptual and political ambition of the work. The show was widely credited as the most fully realised articulation of what Serre called 'futurewear': clothing designed for a world transformed by ecological crisis.",
+    "strategy": "The 'Manic' collection was constructed almost entirely from upcycled material — vintage scarves, domestic textiles, dead-stock jersey — assembled using Serre's signature patchwork and reconstruction methodology. Each piece required research into the source material's provenance and careful structural engineering to produce coherent silhouettes from heterogeneous textile fragments. The crescent moon print, screen-printed across multiple surfaces, functioned as a unifying visual system that imposed formal coherence on the disparate material palette.",
+    "critique": "The 'Manic' collection positioned ecological urgency not as a marketing position but as a formal constraint — the upcycling methodology was not optional but constitutive of the work's meaning. By refusing to use virgin material and building each collection from waste, Serre proposed a model of fashion production that acknowledged the environmental consequences of the industry and attempted to work within them. The collection was also a political statement about the relationship between fashion and the global south: the scarves and domestic textiles that formed the raw material carried with them histories of migration, domestic labour, and cultural identity that the reconstruction process made visible rather than erasing."
+  }
+}

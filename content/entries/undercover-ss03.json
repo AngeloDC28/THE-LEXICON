@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "undercover-ss03",
+  "title": "Undercover SS 2003",
+  "subtitle": "But Beautiful III",
+  "year": 2003,
+  "season": "SS",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Undercover",
+    "era": "2000–2009; The Global Conglomerate Era",
+    "politics": "Queer Theory & Subcultural Systems | Censorship & Provocation | Anti-Consumerism & Institutional Critique",
+    "theories": "Subcultural Resistance Theory | The Grotesque and Abject | Camp and Kitsch Subversion | Hauntology (Fisher)",
+    "gender": "Womenswear",
+    "materials": "Artificially Degraded Textiles | Domestic Found Objects | Plant-Based Cellulose",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Topographic Layering",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Jun Takahashi's Undercover SS 2003 collection 'But Beautiful III' was the designer's Paris debut and was immediately embraced as a watershed moment in conceptual fashion. Presented at Paris Fashion Week, the collection fused elements of horror, Dadaism, children's books, and darkly romantic illustration into a single coherent visual world. The show arrived at a moment when the Tokyo avant-garde was entering formal Parisian institutional territory for the first time.",
+    "strategy": "Takahashi constructed the 'But Beautiful III' collection by layering incongruous reference systems — fairytale illustration, horror film stills, craft textile traditions, and subcultural streetwear — into garments that defied singular reading. Each piece functioned as a collage: printed imagery was burned or distorted, fabric was deliberately frayed or distressed, and silhouettes were engineered to suggest both innocence and menace simultaneously.",
+    "critique": "The 'But Beautiful' series — of which SS03 was the third and most internationally visible chapter — argued for a mode of fashion that refused the commercial imperative of desirability. Takahashi's work was beautiful precisely because it was also disturbing: it held the viewer in an unresolved tension between attraction and repulsion. The Paris debut confirmed that the Tokyo avant-garde tradition — rooted in Comme des Garçons and Yohji Yamamoto — had produced a genuinely new generation of conceptual designers."
+  }
+}

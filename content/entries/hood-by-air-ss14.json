@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "hood-by-air-ss14",
+  "title": "Hood By Air SS 2014",
+  "subtitle": "",
+  "year": 2014,
+  "season": "SS",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Hood By Air",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Queer Theory & Subcultural Systems | Racial Identity & Representation | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+    "theories": "Queer Performativity (Butler) | Subcultural Resistance Theory | The Subverted Gaze | Intersectionality",
+    "gender": "Conceptual / Post-Binary Form",
+    "materials": "Petroleum-Based Polymers | Elastomeric Compounds | Artificially Degraded Textiles",
+    "geography": "New York (CFDA)",
+    "anatomy": "Sartorial Restriction | Displaced Anatomy and Padding | Clinical Exposure and Nudity | Compressed Proportions",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Shayne Oliver's Hood By Air SS 2014 show was presented in New York and cemented the brand's position at the intersection of queer club culture, Black American streetwear, and conceptual fashion. The show drew on the visual language of the NYC ballroom scene, BDSM subcultural dress, and graphic sports branding — synthesising these reference systems into a coherent and formally rigorous fashion proposition. Hood By Air's rise coincided with a broader cultural moment in which Black queer aesthetics moved from underground spaces into the institutional fashion mainstream.",
+    "strategy": "Oliver engineered the Hood By Air SS14 silhouette through extreme proportion manipulation — extended sleeves, compressed bodies, clinical exposure of specific anatomical zones — combined with aggressive graphic identity. The HBA logo functioned as both branding device and formal compositional element, applied at scales that overwhelmed the garment's structural logic. The approach borrowed from sportswear's logo culture while simultaneously deconstructing it.",
+    "critique": "Hood By Air's SS14 collection argued that Black queer club culture — long treated as raw material by mainstream fashion — could operate as its own formal system, with its own institutional logic and its own runway. The show constituted a demand for recognition: not as influence or inspiration for white designers, but as an autonomous design tradition with a fully developed aesthetic vocabulary. Oliver's work made visible the debt that contemporary fashion owes to communities it had historically excluded from its institutions."
+  }
+}

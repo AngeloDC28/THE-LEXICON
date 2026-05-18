@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "craig-green-ss15",
+  "title": "Craig Green SS 2015",
+  "subtitle": "",
+  "year": 2015,
+  "season": "SS",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Craig Green",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Body Politics & Corporeal Interventions | Labour Politics & Industrial Production",
+    "theories": "Object-Oriented Ontology | Structural Stasis | Bodily Autonomy and Transgression | Post-Humanism",
+    "gender": "Menswear",
+    "materials": "Plant-Based Cellulose | Industrial Coatings | Structural Composites",
+    "geography": "London (BFC)",
+    "anatomy": "Scaffolding and Internal Frameworks | Modular Componentry | Monolithic Massing | Bodily Obfuscation",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Craig Green's SS 2015 collection was presented under the MAN platform at London Fashion Week, during the designer's formative early seasons after his graduation from Central Saint Martins. The collection extended Green's ongoing exploration of the garment as autonomous object — pieces that referenced utilitarian function while refusing the conventions of wearable clothing. The show confirmed Green as the most formally rigorous British menswear designer of his generation and attracted immediate institutional attention from critics and buyers.",
+    "strategy": "Green constructed the SS 2015 collection around the logic of the quilted rectangle — flat panels of stitched fabric assembled into three-dimensional structures using cord, eyelets, and simple fastening systems. The garments were engineered to be worn but also to stand independently of the body: draped over a frame or laid flat, they remained formally complete. The cord-binding system allowed each piece to be assembled and disassembled, treating the garment as architectural component rather than fixed object.",
+    "critique": "Green's SS 2015 work extended a tradition of British menswear that treated the male body not as a surface to be decorated but as a structural problem to be solved. His quilted panels invoked industrial material — workwear padding, construction blankets, protective wrapping — while simultaneously quoting the language of monastic costume and ritual dress. The collection argued that menswear's most interesting territory lay not in tailoring or sportswear but in the space between clothing and sculpture."
+  }
+}

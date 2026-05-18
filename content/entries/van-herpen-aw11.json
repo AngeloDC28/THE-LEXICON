@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "van-herpen-aw11",
+  "title": "Iris van Herpen AW 2011",
+  "subtitle": "Capriole",
+  "year": 2011,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Iris van Herpen",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Body Politics & Corporeal Interventions | Techno-Politics & Digital Identities | Ecological Politics & Resource Extraction",
+    "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Object-Oriented Ontology | Techno-Optimism and Accelerationism",
+    "gender": "Womenswear",
+    "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Structural Composites",
+    "geography": "Paris (Fédération de la Haute Couture)",
+    "anatomy": "Prosthetic Extension | Geometric Abstraction | Scaffolding and Internal Frameworks | Weight and Gravity Defiance",
+    "format": "Theatrical Stage Performance"
+  },
+  "notes": {
+    "provenance": "Iris van Herpen's AW 2011 Haute Couture collection 'Capriole' was presented in Paris and featured a landmark collaboration with architect and computational designer Daniel Widrig. The collection used selective laser sintering — an industrial 3D printing process — to produce garments that were impossible to construct by hand. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
+    "strategy": "Van Herpen worked with Widrig to translate computational fluid dynamics simulations — the mathematical modelling of liquid motion — into wearable structures. The 3D-printed pieces captured the frozen geometry of a splash or an explosion at the moment of maximum extension, producing silhouettes that appeared simultaneously rigid and liquid. The manufacturing process replaced the atelier with the machine: each piece was grown rather than sewn.",
+    "critique": "The 'Capriole' collection was one of the first instances in which additive manufacturing — 3D printing — was used as the primary production method for Haute Couture. This placed van Herpen at the intersection of fashion, architecture, and engineering, and constituted a fundamental challenge to the couture system's reliance on handcraft as the marker of luxury value. The work proposed that the most radical couture of the 21st century would be produced not by petites mains but by machines operating beyond the limits of human dexterity."
+  }
+}

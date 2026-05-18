@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "vetements-aw15",
+  "title": "Vetements AW 2015",
+  "subtitle": "",
+  "year": 2015,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Vetements",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems",
+    "theories": "Institutional Critique | The Simulacrum (Baudrillard) | Subcultural Resistance Theory | Corporate Nihilism",
+    "gender": "Unisex / Neutral",
+    "materials": "Petroleum-Based Polymers | Artificially Degraded Textiles | Deadstock & Surplus Inventory",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Compressed Proportions | Radical Asymmetry | Surface Erosion and Degradation | Topographic Layering",
+    "format": "Salon / Intimate Appointment"
+  },
+  "notes": {
+    "provenance": "Vetements' AW 2015 collection — the collective's first major Paris show — was presented in Le Dépôt, a famous Parisian gay sex club in the Marais district. The intimate, deliberately unglamorous setting accommodated fewer than 100 guests and was designed to invert every convention of the Paris fashion week spectacle. The show launched Demna Gvasalia and the Vetements collective into the centre of the global fashion conversation and established a new template for the institutionally critical fashion presentation.",
+    "strategy": "The AW 2015 collection was constructed from oversized, proportion-distorted archetypes — the hoodie, the trench coat, the DHL uniform shirt — manipulated through extreme scaling, asymmetric cutting, and graphic appropriation. The Vetements design logic treated the everyday wardrobe of urban youth as raw material to be deconstructed and re-presented as luxury product, collapsing the distinction between streetwear and couture through irony and formal aggression.",
+    "critique": "Vetements' Le Dépôt presentation was a calculated institutional critique of the Paris fashion system on multiple levels simultaneously: the venue subverted the grand hotel ballroom; the guest list subverted the editor hierarchy; the clothes subverted the luxury material logic; and the collective structure subverted the singular designer myth. The show proposed that the most radical act in contemporary fashion was not formal innovation but institutional refusal — and that this refusal could itself be packaged and sold as luxury."
+  }
+}

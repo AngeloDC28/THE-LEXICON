@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "thom-browne-aw12",
+  "title": "Thom Browne AW 2012",
+  "subtitle": "",
+  "year": 2012,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Thom Browne",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity | Body Politics & Corporeal Interventions",
+    "theories": "Queer Performativity (Butler) | Camp and Kitsch Subversion | Habitus and Field (Bourdieu) | Class Distinctions and Signalling",
+    "gender": "Menswear",
+    "materials": "Animal Protein Fibres | Plant-Based Cellulose | Fine Precious Metallics",
+    "geography": "New York (CFDA)",
+    "anatomy": "Compressed Proportions | Sartorial Restriction | Tailored Rigidity | Geometric Abstraction",
+    "format": "Theatrical Stage Performance"
+  },
+  "notes": {
+    "provenance": "Thom Browne's AW 2012 menswear presentation was staged in New York as a theatrical performance rather than a conventional runway. The show featured Browne's signature compressed grey suiting pushed into new formal extremes — jackets with shrunken sleeves, trousers cropped aggressively above the ankle, and the full range of his signature American preppy references rendered alien through scale manipulation. Browne's shows of this period were consistently cited as among the most theatrically ambitious in American fashion, combining precise tailoring with full narrative staging.",
+    "strategy": "Browne's design logic centred on the systematic compression of American menswear archetypes — the grey flannel suit, the oxford shirt, the varsity jacket — until they became formally strange. The shrinking of proportions was not random: each element was reduced in precise relationship to the others, maintaining internal coherence while producing an overall effect of miniaturisation and surreal formality. The result was a suit that was immediately legible as American institutional dress while simultaneously being unwearable in any conventional context.",
+    "critique": "Thom Browne's AW 2012 collection extended his ongoing project of queering the American power suit. By compressing and miniaturising the uniform of American corporate masculinity, Browne revealed its constructedness — its status as performance rather than natural form. The theatrical staging reinforced this reading: the suit was presented as costume, the wearer as actor, and the performance of masculinity as the show's real subject. Browne's work positioned menswear as a site of queer formal experimentation decades before that language entered mainstream fashion discourse."
+  }
+}

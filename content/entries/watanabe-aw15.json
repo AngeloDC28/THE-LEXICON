@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "watanabe-aw15",
+  "title": "Junya Watanabe AW 2015",
+  "subtitle": "",
+  "year": 2015,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Junya Watanabe",
+    "era": "2010–2019; The Digital and Streetwear Pivot",
+    "politics": "Labour Politics & Industrial Production | Anti-Consumerism & Institutional Critique | Globalisation & Cultural Hybridity",
+    "theories": "Postmodern Pastiche | Symbolic Exchange | Trickle-Down and Bubble-Up Dynamics | Globalisation and Diaspora",
+    "gender": "Menswear",
+    "materials": "Plant-Based Cellulose | Artificially Degraded Textiles | Deadstock & Surplus Inventory",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Topographic Layering | Deconstructed Assembly | Surface Erosion and Degradation",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Junya Watanabe's AW 2015 menswear collection was presented in Paris and became one of the most discussed of his career for its systematic appropriation and recombination of Western workwear brand identities. The collection featured patchwork garments composed from the logos and fabrics of Levi's, Carhartt, Lee, Wrangler, and other American and European workwear labels — assembled into dense collages that collapsed brand hierarchy and industrial heritage into a single textile surface.",
+    "strategy": "Watanabe treated the working uniforms of industrial labour as archival material — collecting authentic workwear pieces, deconstructing them, and reassembling their fragments into new hybrid garments. The patchwork logic was not random: each piece was engineered so that brand logos aligned and collided in ways that generated formal tension, treating the corporate graphic as a design element equivalent to woven pattern or printed textile.",
+    "critique": "The AW 2015 collection proposed that Western workwear brands — American in particular — carried a complex mythology of democratic utility, physical labour, and subcultural cool that Japanese fashion had been quietly digesting and reimagining for decades. By reassembling these brands within a Parisian couture context, Watanabe made visible the global circulation of cultural material and the ways in which Japanese designers had consistently operated as the most rigorous interpreters of Western dress codes."
+  }
+}
