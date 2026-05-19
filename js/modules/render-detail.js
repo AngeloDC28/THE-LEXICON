@@ -438,11 +438,17 @@ function renderHotspots(entry, container) {
   if (!container) return;
   container.querySelectorAll('.hotspot-btn').forEach(el => el.remove());
 
-  // Reset payload state on every new entry render
+  // Reset all hotspot state for the new entry/image
+  AppState.activeHotspot = null;
   const payloadEl = $('analytical-payload');
   if (payloadEl) {
     payloadEl.classList.add('hidden');
     payloadEl.classList.remove('permanent-payload', 'expand-active');
+  }
+  const mobileSheet = $('mobile-hotspot-sheet');
+  if (mobileSheet) {
+    mobileSheet.classList.remove('open');
+    mobileSheet.setAttribute('aria-hidden', 'true');
   }
 
   const imgs = entry.images;
@@ -458,22 +464,22 @@ function renderHotspots(entry, container) {
     btn.setAttribute('aria-label', spot.label ? `Hotspot: ${spot.label}` : `Hotspot ${i + 1}`);
     btn.setAttribute('type', 'button');
     btn.innerHTML = '<div class="hotspot-target"></div>';
-    
-    // Interaction — pointerenter/leave covers both mouse and touch (pen, stylus)
-    btn.addEventListener('pointerenter', () => showPayload(spot));
-    btn.addEventListener('pointerleave', () => hidePayload());
-    btn.addEventListener('click', () => {
-      showPayload(spot, true);
-    });
+
+    // Desktop hover preview only. Click delegation is handled by hotspots.js.
+    btn.addEventListener('mouseenter', () => showPayload(spot));
+    btn.addEventListener('mouseleave', () => hidePayload());
 
     container.appendChild(btn);
   });
 }
 
-function showPayload(spot, permanent = false) {
+function showPayload(spot) {
   const payload = $('analytical-payload');
   const content = $('payload-content');
   if (!payload || !content) return;
+
+  // Don't override a permanent (clicked) payload with a hover preview
+  if (payload.classList.contains('permanent-payload')) return;
 
   const lang = AppState.language;
   const label = getTranslation(spot.label, lang);
@@ -485,19 +491,6 @@ function showPayload(spot, permanent = false) {
     <div class="text-[10px] leading-relaxed">${text}</div>
   `;
   payload.classList.remove('hidden');
-  
-  if (permanent) {
-    payload.classList.add('permanent-payload');
-    payload.classList.add('expand-active');
-  }
-
-  // Click to close/shrink
-  payload.onclick = (e) => {
-    e.stopPropagation();
-    payload.classList.remove('permanent-payload');
-    payload.classList.remove('expand-active');
-    payload.classList.add('hidden');
-  };
 }
 
 function hidePayload() {

@@ -1,21 +1,14 @@
 /**
  * hotspots.js
- * Logic for hotspot popups and interaction.
+ * Owns all hotspot click interactions: desktop floating payload + mobile bottom sheet.
  *
- * FIX 1: Removed direct import of archiveData from database.js — that path
- * resolves incorrectly in the module graph when loaded from the live site,
- * causing a silent module-load failure that breaks every hotspot interaction.
- * archiveData is now received as a parameter via initHotspotInteractions(archiveData).
- *
- * FIX 2: Hotspot buttons were being attached inside renderHotspots() AND getting
- * a second redundant click listener here. Consolidated: render-detail.js attaches
- * the buttons; this module only handles delegation on the container.
+ * Click events are handled here via a single delegated listener on #detail-image-view.
+ * render-detail.js keeps only mouseenter/mouseleave for the desktop hover preview.
  */
 import { $ } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
-// Module-scoped reference — set once by initHotspotInteractions(archiveData)
 let _archiveData = [];
 
 export function initHotspotInteractions(archiveData) {
@@ -24,7 +17,6 @@ export function initHotspotInteractions(archiveData) {
   const detailView = $('detail-image-view');
   if (!detailView) return;
 
-  // Single delegated listener — catches buttons rendered at any time
   detailView.addEventListener('click', (e) => {
     const btn = e.target.closest('.hotspot-btn');
     if (btn) {
@@ -33,11 +25,15 @@ export function initHotspotInteractions(archiveData) {
       toggleHotspot(idx);
     }
   });
+
+  const closeSheetBtn = $('btn-close-hotspot-sheet');
+  if (closeSheetBtn) {
+    closeSheetBtn.addEventListener('click', () => cleanupHotspots());
+  }
 }
 
 export function toggleHotspot(index) {
-  const isActive = AppState.activeHotspot === index;
-  if (isActive) {
+  if (AppState.activeHotspot === index) {
     cleanupHotspots();
   } else {
     showHotspot(index);
@@ -47,29 +43,46 @@ export function toggleHotspot(index) {
 function showHotspot(index) {
   AppState.activeHotspot = index;
 
-  // Mobile: show hotspot info via payload (dock elements not present)
   const entry = _archiveData.find(e => e.id === AppState.selectedEntryId);
-  if (entry && window.innerWidth < 1024) {
-    const imgs = entry.images;
-    const hotspots = imgs[AppState.currentImageIndex]?.hotspots || [];
-    const spot = hotspots[index];
-    if (spot) {
-      const payload = $('analytical-payload');
-      const content = $('payload-content');
-      if (payload && content) {
-        const lang = AppState.language;
-        const label = getTranslation(spot.label, lang);
-        let text = getTranslation(spot.description || '', lang);
-        text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
-        content.innerHTML = `<div class="text-[10px] font-bold mb-1">${label.toUpperCase()}</div><div class="text-[10px] leading-relaxed">${text}</div>`;
-        payload.classList.remove('hidden');
-        payload.onclick = () => payload.classList.add('hidden');
-      }
+  if (!entry) return;
+  const imgs = entry.images || [{ src: entry.imageUrl }];
+  const hotspots = imgs[AppState.currentImageIndex]?.hotspots || entry.hotspots || [];
+  const spot = hotspots[index];
+  if (!spot) return;
+
+  let text = spot.description || '';
+  text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
+
+  if (window.innerWidth < 1024) {
+    // Mobile: slide-up bottom sheet with scrollable, readable text
+    const sheet = $('mobile-hotspot-sheet');
+    const labelEl = $('mobile-hotspot-sheet-label');
+    const bodyEl = $('mobile-hotspot-sheet-body');
+    if (sheet && labelEl && bodyEl) {
+      labelEl.textContent = spot.label.toUpperCase();
+      bodyEl.textContent = text;
+      sheet.setAttribute('aria-hidden', 'false');
+      sheet.classList.add('open');
+    }
+  } else {
+    // Desktop: permanent floating payload
+    const payload = $('analytical-payload');
+    const content = $('payload-content');
+    if (payload && content) {
+      content.innerHTML = `
+        <div class="text-[10px] font-bold mb-2 border-b border-black/10 pb-1">${spot.label.toUpperCase()}</div>
+        <div class="text-[10px] leading-relaxed">${text}</div>
+      `;
+      payload.classList.remove('hidden');
+      payload.classList.add('permanent-payload', 'expand-active');
+      payload.onclick = (e) => {
+        e.stopPropagation();
+        cleanupHotspots();
+      };
     }
   }
 
-  // Highlight active button
-  document.querySelectorAll('.hotspot-btn').forEach((btn, i) => {
+  document.querySelectorAll('.hotspot-btn').forEach((btn) => {
     if (parseInt(btn.dataset.index, 10) === index) btn.classList.add('active');
     else btn.classList.remove('active');
   });
@@ -78,10 +91,22 @@ function showHotspot(index) {
 export function cleanupHotspots() {
   AppState.activeHotspot = null;
   document.querySelectorAll('.hotspot-btn').forEach(btn => btn.classList.remove('active'));
+
+  const sheet = $('mobile-hotspot-sheet');
+  if (sheet) {
+    sheet.classList.remove('open');
+    sheet.setAttribute('aria-hidden', 'true');
+  }
+
+  const payload = $('analytical-payload');
+  if (payload) {
+    payload.classList.remove('permanent-payload', 'expand-active');
+    payload.classList.add('hidden');
+  }
 }
 
 export function toggleMobileHotspots() {
-  const btn    = $('btn-toggle-hotspots-mobile');
+  const btn = $('btn-toggle-hotspots-mobile');
   const detail = $('detail-image-view');
   if (!detail) return;
   const lang = AppState.language;

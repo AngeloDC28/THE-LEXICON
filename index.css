@@ -3043,3 +3043,40 @@ html:not(.dark) .footer-bottom { color: #bbb; }
     word-break: break-all;
   }
 }
+
+/* ── MOBILE HOTSPOT BOTTOM SHEET ── */
+#mobile-hotspot-sheet {
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+#mobile-hotspot-sheet.open {
+  transform: translateY(0);
+}
+@media (max-width: 1023px) {
+  #mobile-hotspot-sheet.open {
+    transform: translateY(-60px);
+  }
+  .hotspot-btn {
+    width: 52px;
+    height: 52px;
+    margin-left: -26px;
+    margin-top: -26px;
+  }
+  .hotspot-target {
+    width: 18px;
+    height: 18px;
+    border-width: 2.5px;
+    border-color: #CCFF00;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+  .hotspot-target::before {
+    left: -10px;
+    width: 36px;
+    background: #CCFF00;
+  }
+  .hotspot-target::after {
+    top: -10px;
+    height: 36px;
+    background: #CCFF00;
+  }
+}

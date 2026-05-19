@@ -803,6 +803,17 @@
             </div>
           </div>
 
+          <!-- Mobile Hotspot Sheet — slides up above the action bar -->
+          <div id="mobile-hotspot-sheet" class="lg:hidden fixed bottom-0 left-0 w-full z-[210]" aria-hidden="true">
+            <div class="bg-black border-t-[3px] border-acid flex flex-col" style="max-height:58vh">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-white/15 shrink-0">
+                <span id="mobile-hotspot-sheet-label" class="text-[10px] font-bold font-mono uppercase tracking-[0.25em] text-acid"></span>
+                <button type="button" id="btn-close-hotspot-sheet" aria-label="Close annotation" class="text-white text-sm font-bold opacity-60 hover:opacity-100 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center">✕</button>
+              </div>
+              <div id="mobile-hotspot-sheet-body" class="px-4 py-5 overflow-y-auto flex-1 text-[13px] font-mono leading-[1.75] text-white/90"></div>
+            </div>
+          </div>
+
           <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]">
             <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
               <span class="text-[14px] leading-none">‹</span><span class="btn-label-mobile">Back</span>
