@@ -14,8 +14,9 @@
     "optimize-images": "node .github/scripts/optimize-images.mjs && node .github/scripts/measure-images.mjs",
     "new-entry": "node .github/scripts/new-entry.mjs",
     "stats": "node .github/scripts/stats.mjs",
-    "preflight": "npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run check",
-    "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs && node .github/scripts/measure-images.mjs",
+    "bust-cache": "node .github/scripts/bust-cache.mjs",
+    "preflight": "npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run check && npm run bust-cache",
+    "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs && node .github/scripts/measure-images.mjs && node .github/scripts/bust-cache.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
