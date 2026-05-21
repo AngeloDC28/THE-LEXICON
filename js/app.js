@@ -4,7 +4,7 @@
  * Orchestrates module initialization and global event delegation.
  */
 
-import { archiveData } from '../database.js';
+import { archiveData } from '../database.js?v=7930b97';
 import { imageDimensions } from './modules/image-dimensions.js';
 import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js';
 setImageDimensions(imageDimensions);

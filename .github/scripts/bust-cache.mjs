@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT  = fileURLToPath(new URL('../../', import.meta.url));
 const HTML  = join(ROOT, 'index.html');
+const APP   = join(ROOT, 'js', 'app.js');
 
 let version;
 try {
@@ -28,30 +29,56 @@ try {
   version = Math.floor(Date.now() / 1000).toString(36);
 }
 
-const src = readFileSync(HTML, 'utf8');
+let totalTouched = 0;
 
-// Pattern matches existing ?v=<anything> or no query string at all.
-// Updates: src="js/app.js"           → src="js/app.js?v=<sha>"
-//          src="js/app.js?v=abc"     → src="js/app.js?v=<sha>"
-//          href="index.css"          → href="index.css?v=<sha>"
-const patterns = [
+// ── 1) Stamp the <script> and <link> tags in index.html ──
+// These are the entry-point requests the browser makes for the
+// page-level JS bundle and stylesheet. Versioning them is what
+// makes the browser fetch fresh app.js + index.css after a deploy.
+const html = readFileSync(HTML, 'utf8');
+const htmlPatterns = [
   [/(\bsrc=")(js\/app\.js)(\?v=[^"]*)?(")/g,            `$1$2?v=${version}$4`],
   [/(\brel="stylesheet"\s+href=")(index\.css)(\?v=[^"]*)?(")/g, `$1$2?v=${version}$4`],
-  [/(\bsrc=")(database\.js)(\?v=[^"]*)?(")/g,            `$1$2?v=${version}$4`],
 ];
-
-let next = src;
-let touched = 0;
-for (const [re, rep] of patterns) {
-  const before = next;
-  next = next.replace(re, rep);
-  if (next !== before) touched++;
+let nextHtml = html;
+for (const [re, rep] of htmlPatterns) {
+  const before = nextHtml;
+  nextHtml = nextHtml.replace(re, rep);
+  if (nextHtml !== before) totalTouched++;
 }
+if (nextHtml !== html) writeFileSync(HTML, nextHtml, 'utf8');
 
-if (next === src) {
+// ── 2) Stamp the database.js ES-module import inside js/app.js ──
+// database.js is loaded via `import { archiveData } from '../database.js'`
+// at the top of app.js. Browsers cache module URLs aggressively and a
+// fresh app.js will happily re-use a stale ../database.js if the import
+// URL hasn't changed — which is how stale entry data (old slugs, missing
+// images) survives across deploys. Appending ?v=<sha> to this one import
+// forces a re-fetch on every commit.
+//
+// IMPORTANT: only database.js gets this treatment. The modules under
+// js/modules/ import each other (e.g. render-detail.js imports from
+// core-state.js), so any module imported from multiple sites would
+// fork into two instances if cache-busted here but not at every call
+// site — splitting shared state like AppState. Module code changes
+// infrequently and is governed by Firebase's standard 1-hour HTTP
+// cache, which is good enough for those.
+const app = readFileSync(APP, 'utf8');
+const appPatterns = [
+  [/(from\s+['"])(\.\.\/database\.js)(\?v=[^'"]*)?(['"])/g,
+   `$1$2?v=${version}$4`],
+];
+let nextApp = app;
+for (const [re, rep] of appPatterns) {
+  const before = nextApp;
+  nextApp = nextApp.replace(re, rep);
+  if (nextApp !== before) totalTouched++;
+}
+if (nextApp !== app) writeFileSync(APP, nextApp, 'utf8');
+
+if (nextHtml === html && nextApp === app) {
   console.log(`LEXICON_BUST_CACHE ok (already ${version} or no targets matched)`);
   process.exit(0);
 }
 
-writeFileSync(HTML, next, 'utf8');
-console.log(`LEXICON_BUST_CACHE ok (set ?v=${version} on ${touched} asset reference(s))`);
+console.log(`LEXICON_BUST_CACHE ok (set ?v=${version} on ${totalTouched} reference batch(es) across index.html + app.js)`);
