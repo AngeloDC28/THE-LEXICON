@@ -2613,18 +2613,6 @@ export const imageDimensions = {
     "w": 1366,
     "h": 2048
   },
-  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-011.jpg": {
-    "w": 1366,
-    "h": 2048
-  },
-  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-012.jpg": {
-    "w": 1366,
-    "h": 2048
-  },
-  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-013.jpg": {
-    "w": 1366,
-    "h": 2048
-  },
   "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-02.jpg": {
     "w": 1366,
     "h": 2048
@@ -2670,6 +2658,18 @@ export const imageDimensions = {
     "h": 2048
   },
   "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-10.jpg": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-11.jpg": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-12.jpg": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-13.jpg": {
     "w": 1366,
     "h": 2048
   }
