@@ -2672,5 +2672,445 @@ export const imageDimensions = {
   "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-13.jpg": {
     "w": 1366,
     "h": 2048
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-01.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-02.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-03.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-04.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-05.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-06.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-07.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-08.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-09.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-10.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-11.webp": {
+    "w": 683,
+    "h": 1024
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-02.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-03.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-04.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-06.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-07.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-08.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-09.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-10.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-11.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-12.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-13.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-14.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-15.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-16.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-01.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-02.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-03.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-04.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-05.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-06.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-07.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-08.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/green-ss15/green-ss15-09.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-01.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-02.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-03.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-04.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-05.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-06.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-07.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-08.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-09.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-1.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-10.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-11.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-12.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-13.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-14.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-15.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-16.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-17.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-01.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-02.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-04.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-07.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-09.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-01.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-02.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-03.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-04.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-05.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-06.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-07.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-08.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-09.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-10.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-11.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-12.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-01.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-02.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-03.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-04.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-05.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-06.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-07.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-08.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-09.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-10.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-11.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-12.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-13.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-14.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-15.webp": {
+    "w": 1280,
+    "h": 1920
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-01.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-02.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-03.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-04.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-05.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-06.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-07.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-08.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-09.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-10.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-11.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-12.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-01.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-02.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-03.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-04.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-05.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-06.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-07.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-08.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-09.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-10.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-11.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-12.webp": {
+    "w": 1366,
+    "h": 2048
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-13.webp": {
+    "w": 1366,
+    "h": 2048
   }
 };
