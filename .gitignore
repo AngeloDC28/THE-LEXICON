@@ -31,6 +31,11 @@ yarn-error.log*
 .env.local
 .env.*.local
 
+# Supabase service key (contains the service-role secret — never commit)
+# Copy .env.example → .env.local and fill in before running supabase/migrate.mjs
+# js/env.js is committed as an empty placeholder; real values are injected at
+# build time by .github/scripts/inject-env.mjs using Vercel env vars.
+
 # Temp scratch files
 *.tmp
 .commit-msg.tmp

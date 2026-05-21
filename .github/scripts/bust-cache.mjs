@@ -65,7 +65,13 @@ if (nextHtml !== html) writeFileSync(HTML, nextHtml, 'utf8');
 // cache, which is good enough for those.
 const app = readFileSync(APP, 'utf8');
 const appPatterns = [
+  // Static import (legacy): import { x } from '../database.js'
   [/(from\s+['"])(\.\.\/database\.js)(\?v=[^'"]*)?(['"])/g,
+   `$1$2?v=${version}$4`],
+  // Dynamic import (Supabase fallback): await import('../database.js')
+  // Stamping the dynamic import URL forces the browser to treat each deploy
+  // as a fresh module even on the fallback path.
+  [/(import\(['"])(\.\.\/database\.js)(\?v=[^'"]*)?(['"])/g,
    `$1$2?v=${version}$4`],
 ];
 let nextApp = app;
