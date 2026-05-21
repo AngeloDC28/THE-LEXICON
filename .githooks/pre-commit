@@ -26,8 +26,11 @@ if [ "$NEEDS_PREFLIGHT" = "1" ]; then
   echo "[pre-commit] running npm run preflight..."
   npm run preflight
   # If preflight regenerated any tracked artifacts, stage them so the
-  # commit reflects the consistent state.
-  git add database.js js/modules/translations.js js/modules/image-dimensions.js content/translations/en.json 2>/dev/null || true
+  # commit reflects the consistent state. index.html and js/app.js
+  # get cache-bust SHA stamps from bust-cache.mjs — if we don't re-stage
+  # them here, the commit ships with a stale ?v= and the live site
+  # serves a fresh app.js that imports a cached, stale database.js.
+  git add database.js js/modules/translations.js js/modules/image-dimensions.js content/translations/en.json index.html js/app.js 2>/dev/null || true
 else
   echo "[pre-commit] no build-affecting files staged; skipping preflight."
 fi
