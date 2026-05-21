@@ -5652,5 +5652,440 @@ export const archiveData = [
       "strategy": "The 'Manic' collection was constructed almost entirely from upcycled material — vintage scarves, domestic textiles, dead-stock jersey — assembled using Serre's signature patchwork and reconstruction methodology. Each piece required research into the source material's provenance and careful structural engineering to produce coherent silhouettes from heterogeneous textile fragments. The crescent moon print, screen-printed across multiple surfaces, functioned as a unifying visual system that imposed formal coherence on the disparate material palette.",
       "critique": "The 'Manic' collection positioned ecological urgency not as a marketing position but as a formal constraint — the upcycling methodology was not optional but constitutive of the work's meaning. By refusing to use virgin material and building each collection from waste, Serre proposed a model of fashion production that acknowledged the environmental consequences of the industry and attempted to work within them. The collection was also a political statement about the relationship between fashion and the global south: the scarves and domestic textiles that formed the raw material carried with them histories of migration, domestic labour, and cultural identity that the reconstruction process made visible rather than erasing."
     }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "chanel-aw14",
+    "title": "Chanel AW 2014",
+    "subtitle": "Chanel No. 5 Féminisme",
+    "year": 2014,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Chanel",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Activism & Crisis Response (Feminism) | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+      "theories": "Feminist Theory | Identity and Subjectivity | Postmodernism",
+      "gender": "Womenswear",
+      "materials": "Tweed | Silk Chiffon | Metallic Jacquard | Structured Wool Crepe",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Suspended Drape | Architectural Shielding and Armour | Modular Componentry",
+      "format": "Theatrical Stage Performance"
+    },
+    "notes": {
+      "provenance": "Karl Lagerfeld presented Chanel's Autumn/Winter 2014 ready-to-wear collection in March 2014 at the Grand Palais in Paris, transforming the nave into a mock Parisian boulevard — 'Boulevard Chanel' — complete with shop fronts, a pharmacy, a boulangerie, and a newsstand. The finale saw models abandon the conventional exit and instead stage a protest march down the central boulevard, carrying placards and banners bearing feminist slogans: 'Ladies First', 'Women's Rights Are More Than Alright', 'History Is Her Story', and 'He For She'. The casting included Cara Delevingne, Kendall Jenner, and Gisele Bündchen. The show was immediately polarising — critics debated whether Lagerfeld's appropriation of feminist iconography was a genuine political statement, a commercial stunt, or an act of aesthetic colonisation. The collection itself was composed of the house's signature vocabulary: boucle tweed suits, layered chiffon, and structured jewellery, reworked with sportswear details and oversized proportions that reinforced the collection's broadly democratic subtext.",
+      "strategy": "Lagerfeld's structural approach for the collection centred on a deliberate collision of the house's aristocratic codes with democratising sportswear logic. Classic Chanel tweed suits were cut oversized and slouched; interlocking CC logos were printed as graffiti-style repeat patterns on jersey; pearls were scaled to absurd proportions and worn as body chains. The theatrical boulevard set functioned as an architectural strategy — the runway became a social space rather than a performance space, and the models' protest march disrupted the passive spectatorship of the fashion show format entirely.",
+      "critique": "The collection invites reading through the lens of what cultural theorists have called 'commodity feminism' — the absorption of feminist signifiers into luxury branding as a means of expanding market appeal without substantive political commitment. Lagerfeld, a man, directing a group of predominantly white, predominantly thin models to march with feminist placards through a purpose-built simulacrum of a Parisian street constitutes a hyperreal political performance: all the signs of activism with none of its material stakes. Yet the show's cultural impact was undeniable. It made the front pages of newspapers that rarely covered fashion, forced public discourse about feminism in luxury spaces, and positioned Chanel as a brand willing to occupy contested ideological territory."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "vuitton-ss08",
+    "title": "Louis Vuitton SS 2008",
+    "subtitle": "",
+    "year": 2008,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Louis Vuitton",
+      "era": "2000 to 2009; The Global Conglomerate Era",
+      "politics": "Techno-Politics & Digital Identities | Body Politics & Corporeal Interventions",
+      "theories": "Postmodernism | Aesthetic Philosophy | Identity and Subjectivity",
+      "gender": "Womenswear",
+      "materials": "Silk Organza | Structured Cotton Canvas | Treated Leather | Monogram Jacquard",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Architectural Shielding and Armour | Monolithic Massing | Suspended Drape",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Marc Jacobs presented Louis Vuitton's Spring/Summer 2008 collection in October 2007 at the Cour Carrée du Louvre during Paris Fashion Week, staging the show in the round to allow full 360-degree viewing of each look. This collection fell at the midpoint of Jacobs's transformative sixteen-year tenure at the house, by which point he had firmly established Vuitton as the world's most commercially dominant luxury fashion label — an achievement built not on heritage conservation but on the aggressive integration of contemporary art, street culture, and celebrity into the house's monogram codes. The SS 2008 collection extended Jacobs's ongoing dialogue between the house's travelling trunk heritage and the aesthetics of postmodern globalism: clothes designed for a permanent state of transit, engineered for women whose primary habitat is the first-class cabin and the international hotel suite.",
+      "strategy": "Jacobs structured the collection around the logic of layered utility: silk organza blouses were worn over structured bustiers; fluid trousers were cut with architectural precision at the hip and cuff; outerwear was constructed with the kind of internal scaffolding more commonly associated with couture. The monogram vocabulary was treated as a graphic system rather than a brand identifier — scaled up, fractured across seams, and dissolved into the surface of fabrics that refused easy legibility. The colour palette of ivory, beige, and warm gold reinforced the idea of the permanent traveller: neutral enough for any context, opulent enough to declare the cost of the ticket.",
+      "critique": "The Jacobs era at Vuitton is the definitive case study in what has been theorised as 'luxury's postmodern turn' — the moment at which heritage fashion houses abandoned the pretence of timelessness and embraced the contemporary as a perpetual source of capital. Jacobs's genius was to understand that the monogram itself was already postmodern: a sign system so saturated by global reproduction that its meaning had been emptied and was available for reinscription. Each Vuitton collection under his direction was less a proposal about clothing than an argument about what luxury means at the moment of maximum global proliferation — an argument conducted in materials of extraordinary quality on a stage of extraordinary scale."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "celine-ss10",
+    "title": "Celine SS 2010",
+    "subtitle": "",
+    "year": 2010,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Celine",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Surveillance & Architectural Shielding",
+      "theories": "Feminist Theory | Minimalism & Reduction | Identity and Subjectivity",
+      "gender": "Womenswear",
+      "materials": "Unlined Cashmere | Washed Linen | Vegetable-Tanned Leather | Stone-Washed Silk",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Suspended Drape | Bodily Obfuscation | Modular Componentry",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Phoebe Philo presented her debut Spring/Summer 2010 collection for Céline in October 2009 at the Palais de Tokyo in Paris — her first show following a five-year sabbatical from fashion taken after leaving Chloé in 2006. The show was treated as one of the most significant debuts in contemporary fashion history: Philo had left the industry at the height of her critical reputation, and her return to a dormant house previously associated with polished but commercially generic luxury was regarded as both a gamble and a statement. The collection introduced the aesthetic vocabulary — later described as 'quiet luxury' or 'stealth wealth' — that would define not only Céline's commercial transformation but the trajectory of luxury fashion for the following decade. The Luggage Tote, introduced for SS 2010, became one of the most commercially successful accessories of the 2010s.",
+      "strategy": "Philo's structural strategy was predicated on radical subtraction: the removal of every ornamental element that could not be justified by function, proportion, or material quality. Garments were cut with extreme precision but finished in ways that looked deliberately unresolved — raw edges, deliberately fallen hems, unlined jackets that moved with the body rather than directing it. The palette was restricted to tan, ecru, bone, and black, with the occasional intrusion of a muted colour that read as accidental rather than designed. Silhouettes were wide at the shoulder and loose at the hip, refusing the body-revealing cuts that had dominated women's fashion in the preceding decade.",
+      "critique": "Philo's debut at Céline is the founding document of what has been theorised as the 'anti-fashion fashion' of the 2010s: a design proposition in which the refusal of visibility — the deliberate un-shouting of a garment — becomes its primary form of luxury signalling. The Philo woman was positioned as post-decorative: too confident, too educated, too affluent to need her clothing to perform on her behalf. This was a politics of anti-spectacle that was simultaneously a new form of spectacle — conspicuous in its inconspicuousness, ostentatious in its restraint. The collection launched a decade of Céline that would influence virtually every luxury label, produce some of fashion's most fervent consumer loyalty, and generate enormous critical and commercial capital from the performance of not trying."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "valentino-aw22",
+    "title": "Valentino AW 2022",
+    "subtitle": "The Beginning",
+    "year": 2022,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Valentino",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Activism & Crisis Response (Inclusivity)",
+      "theories": "Aesthetic Philosophy | Identity and Subjectivity | Postmodernism",
+      "gender": "Womenswear | Menswear",
+      "materials": "Micro-Studded Organza | Heavy Duchesse Satin | Couture-Weight Chiffon | Embroidered Silk Tulle",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Monolithic Massing | Suspended Drape | Architectural Shielding and Armour | Displaced Anatomy and Padding",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Pierpaolo Piccioli presented Valentino's Autumn/Winter 2022 ready-to-wear collection in March 2022 at the Hôtel Salomon de Rothschild in Paris, titling it 'The Beginning' — a declaration of intent that positioned the collection as the opening chapter of a new phase rather than a continuation of existing codes. The collection followed Piccioli's landmark SS 2022 'Pink PP' show, in which he had staged an almost monochromatic presentation in a single Pantone shade of hot fuchsia, generating one of the most widely reproduced fashion images of the decade. AW 2022 extended the chromatic ambition of that show while incorporating the full breadth of the Valentino couture atelier's technical vocabulary: micro-studding, hand-applied embroidery, bias-cut satin, and the extreme volume construction techniques historically associated with the house's founder Valentino Garavani.",
+      "strategy": "Piccioli constructed the collection around the productive tension between the maximalist and the monastic — extreme volume placed in dialogue with extreme restraint. Coats were engineered to twice the natural width of the shoulder; capes were cut to fall in a single geometric plane from neck to floor; evening looks used the internal scaffolding of couture construction to support volumes that defied structural logic at RTW price points. The colour palette moved between saturated Valentino red, deep forest green, electric cobalt, and dense ivory — hues chosen for their psychological intensity rather than their seasonal relevance. Models walked with consistent uniformity: a deliberate choreographic choice that treated the individual body as a unit of a collective rather than a site of personal expression.",
+      "critique": "Piccioli's project at Valentino across the 2020s constitutes one of contemporary fashion's most sustained arguments for the political possibilities of beauty. His AW 2022 collection is readable as a post-pandemic excess-as-resistance proposition: the deployment of extreme colour, extreme volume, and extreme craft as an argument against the grey pragmatism that austerity politics demands. The inclusive casting — extended size range, diverse age range, and non-model faces — refused the traditional couture logic of a singular body type as the legitimate vehicle for luxury clothing, reinscribing beauty as a democratic rather than exclusive category. In this reading, the collection's ostensible extravagance is its most politically rigorous quality."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "miu-miu-ss22",
+    "title": "Miu Miu SS 2022",
+    "subtitle": "",
+    "year": 2022,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Miu Miu",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Queer Theory & Subcultural Systems",
+      "theories": "Feminist Theory | Identity and Subjectivity | Postmodernism | Bodily Autonomy and Transgression",
+      "gender": "Womenswear",
+      "materials": "Crystal-Embellished Wool | Micro-Knit | Raw-Hemmed Tweed | Vintage-Washed Linen | Eyelet Lace",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Displaced Anatomy and Padding | Bodily Obfuscation | Anatomical Interaction",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Miuccia Prada presented Miu Miu's Spring/Summer 2022 collection at the Palais d'Iéna in Paris in October 2021, staging it as a return to a pre-pandemic Miu Miu world — intimate, conspiratorial, and irreducibly feminine in the idiosyncratic Prada sense of that word. The collection became one of the most widely discussed and culturally influential fashion presentations of the 2020s, generating a level of discourse disproportionate to the house's commercial scale. The central silhouette — a hip-skimming micro-skirt or tailored low-rise trouser worn with a cropped jacket and a visible underskirt that fell to the knee — became a defining fashion image of 2022, saturating editorial and social media in a way that few single runway looks had managed in the preceding decade. The low-rise waist, specifically, re-entered public consciousness as a contested site of intergenerational and political debate.",
+      "strategy": "The collection's structural logic operated through deliberate anachronism: the combination of garments from structurally incompatible fashion histories. The micro-skirt referenced early 1960s Courrèges futurism and late 1990s Y2K minimalism simultaneously; the underskirt introduced a Victorian or Edwardian petticoat logic; the low-rise waist invoked the controversial hip-hugger silhouette of early 2000s club culture. The result was a garment system that refused linear fashion time — it was legible as historical quotation, ironic revival, and original design proposition simultaneously. Crystal embellishments were applied with deliberate incongruity: heavy jewellery on utilitarian fabrics, raw edges on couture-weight materials.",
+      "critique": "The Miu Miu SS 2022 collection is the most significant recent case study in fashion's capacity to generate cultural discourse entirely through silhouette. The low-rise waist produced a torrent of online commentary that extended far beyond fashion's usual audience: discussions of body image, generational trauma, 2000s nostalgia, the politics of the female midriff, and the question of who is granted permission to occupy public space with an exposed body. Prada has consistently maintained that Miu Miu is a space for exploring the ambivalences of femininity rather than resolving them — the collection's deliberately uncomfortable silhouette is in this reading a forensic instrument, producing discomfort as a means of making the politics of the female body visible."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "klein-aw17",
+    "title": "Calvin Klein 205W39NYC AW 2017",
+    "subtitle": "",
+    "year": 2017,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Calvin Klein",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Activism & Crisis Response (Anti-Racism) | Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions",
+      "theories": "Identity and Subjectivity | Postmodernism | Intersectionality | Structural Stasis",
+      "gender": "Womenswear | Menswear",
+      "materials": "Quilted American Flannel | Coated Denim | Heavy Wool Melton | Faux Fur | Patent Leather",
+      "geography": "New York (CFDA/NYFW)",
+      "anatomy": "Architectural Shielding and Armour | Displaced Anatomy and Padding | Monolithic Massing | Modular Componentry",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Raf Simons presented his Autumn/Winter 2017 collection for Calvin Klein 205W39NYC — the house's newly renamed ready-to-wear line, incorporating Simons's own design reference, the Antwerp postal code 2050, and the New York address — at a transformed space on West 39th Street in New York City in February 2017. The show was Simons's second collection for the house following his debut SS 2017 presentation and represented his first full AW proposal for the American market. The set design, by long-time collaborator Sterling Ruby, covered every surface — floor, walls, ceiling, and models — in a quilted patchwork of American flags, cheerleader tassels, rodeo fringe, and pop-art colour fields. Andy Warhol prints were applied directly to garments. References to American horror cinema — specifically Carrie (1976) — were embedded in the set via cascades of synthetic red liquid. The collection was immediately recognised as one of the most politically charged runway presentations of the decade.",
+      "strategy": "Simons structured the collection around a systematic archaeology of American vernacular culture: the rodeo, the cheerleader, the homecoming queen, the horror-film prom. Each reference was treated not as celebration but as forensic specimen — extracted from its original context, placed in dialogue with European tailoring codes, and re-presented as a cultural object available for scrutiny. American quilts were draped over shoulders as outerwear; Warhol silkscreens were applied to the house's signature minimalist white shirts; fringed leather coats invoked the Western while being cut to the precision of Belgian tailoring. The result was a garment system that refused to love or condemn America, choosing instead to make the country's self-mythologising visible.",
+      "critique": "The AW 2017 collection is the most forensically rigorous application of postmodern cultural analysis to American fashion in the contemporary archive. Simons, a Belgian designer working for an American house during one of the most politically fractured moments in recent American history, used the collection to conduct a public reckoning with the image systems that constitute American identity: the flag, the cheerleader, the horror-film victim, the supermarket, the factory. By running these images through the filter of his own irreducibly European sensibility — precise tailoring, intellectual rigour, studied alienation — Simons produced a collection that was simultaneously inside and outside American culture, able to see it with a clarity unavailable to those who inhabit it."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "givenchy-aw15",
+    "title": "Givenchy AW 2015",
+    "subtitle": "",
+    "year": 2015,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Givenchy",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity",
+      "theories": "Post-Humanism | Identity and Subjectivity | Aesthetic Philosophy | Intersectionality",
+      "gender": "Womenswear",
+      "materials": "Embroidered Organza | Laser-Cut Leather | Heavyweight Lace | Sheer Silk Georgette | Bonded Neoprene",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Architectural Shielding and Armour | Anatomical Interaction | Displaced Anatomy and Padding | Monolithic Massing",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Riccardo Tisci presented Givenchy's Autumn/Winter 2015 ready-to-wear collection in March 2015 at the Coeur Défense in the La Défense business district of Paris — a deliberately anti-romantic choice of venue that placed the collection in dialogue with the glass-and-steel corporate architecture of late capitalism rather than the historic Parisian institutions traditionally associated with luxury fashion. The show fell at the midpoint of Tisci's transformative twelve-year tenure at Givenchy, by which point he had firmly established the house as the primary conduit through which high fashion absorbed the visual codes of gothic subculture, hip-hop, and queer nightlife. The AW 2015 collection was widely regarded as one of the strongest propositions of Tisci's Givenchy era: a precise synthesis of the house's haute couture heritage with the street-inflected darkness that had become his signature.",
+      "strategy": "Tisci built the collection through a systematic collision of the sacred and the profane — the iconography of Catholicism placed in aggressive proximity to fetish wear, tribal body adornment, and sportswear construction. Heavily embroidered organza panels referenced ecclesiastical vestments while being cut into streetwear silhouettes. Laser-cut leather formed body-hugging panels that simultaneously invoked protective armour and bondage gear. Lace — historically the most delicate of couture materials — was bonded to neoprene and stiffened into architectural forms. The colour palette of black, ivory, and deep burgundy reinforced the collection's consistently gothic register, broken only by the occasional intrusion of a flesh-toned sheer that read the body itself as material.",
+      "critique": "Tisci's sustained project at Givenchy constitutes the most commercially successful integration of subcultural codes into the luxury fashion apparatus in the 2010s. His AW 2015 collection demonstrates how this integration functioned at its most formally rigorous: the gothic, the tribal, the fetishistic, and the ecclesiastical are not decoratively applied but structurally embedded — each code informing the cut, the material choice, and the silhouette at a foundational level. The result is a fashion object that carries the weight of its subcultural references without reducing them to ornament. Tisci's casting — consistently diverse in ethnicity and body type across his Givenchy tenure — reinforced the collection's implicit argument that the bodies most comfortable in extreme clothing are those accustomed to existing at the margins of mainstream cultural legibility."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "van-noten-ss15",
+    "title": "Dries Van Noten SS 2015",
+    "subtitle": "",
+    "year": 2015,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Dries Van Noten",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Labour Politics & Industrial Production",
+      "theories": "Aesthetic Philosophy | Postmodernism | Identity and Subjectivity",
+      "gender": "Womenswear",
+      "materials": "Hand-Painted Silk | Embroidered Silk Organza | Velvet | Metallic Brocade | Printed Cotton Muslin",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Suspended Drape | Displaced Anatomy and Padding | Modular Componentry",
+      "format": "Theatrical Stage Performance"
+    },
+    "notes": {
+      "provenance": "Dries Van Noten presented his Spring/Summer 2015 collection in October 2014 at the Palais de Justice in Paris, staging it as a celebration of his 100th runway show — a milestone that marked over three decades of continuous presentation in the fashion system without the support of a conglomerate owner, private equity backing, or the commercial infrastructure typically required to sustain a major fashion label. To mark the occasion, Van Noten hosted a dinner for 500 guests — collaborators, craftspeople, muses, and editors who had accompanied the house across its history — at the Hôtel de Ville in Paris the night before the show. The dinner itself was widely documented and considered a statement about the value of long-term creative relationships in an industry increasingly structured around short-term financial cycles. The collection presented the following day extended this theme: it was built from a lifetime of accumulated references, material relationships, and print archives, assembled with a density that could only be achieved over the timescale Van Noten had devoted to it.",
+      "strategy": "The collection was structurally organised as a layered archive — each look built from multiple textile traditions, print techniques, and construction methodologies placed in productive dialogue. Hand-painted silk organza was worn over velvet; metallic brocade was cut into utilitarian field-jacket silhouettes; embroidered panels were applied to raw-cotton bases. The colour combinations were characteristically Van Noten: unexpected adjacencies that should conflict but instead resolve into a logic accessible only after sustained looking. The accumulation was not maximalist in the sense of excess but archival in the sense of depth — each layer legible as a specific reference to a specific tradition of making.",
+      "critique": "Van Noten's 100th show is the most explicit statement in the contemporary fashion archive of what an independent, craft-centred, long-term practice looks like when held against the conglomerate model that dominates the luxury industry. The collection's meaning is inseparable from its context: 100 shows produced by a single designer, without outside capital, without a fragrance or accessories category to subsidise the runway, without a succession plan dictated by investor return. In this context, the density of the clothes — the accumulation of hand processes, the layers of reference, the weight of material history — reads not as decoration but as argument: evidence that the slow accumulation of knowledge and relationship produces a different kind of object than the fast cycle of conglomerate fashion."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "saint-laurent-aw13",
+    "title": "Saint Laurent AW 2013",
+    "subtitle": "",
+    "year": 2013,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Saint Laurent",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity",
+      "theories": "Identity and Subjectivity | Postmodernism | Structural Stasis",
+      "gender": "Womenswear",
+      "materials": "Skinny Washed Denim | Sheer Silk Georgette | Patent Leather | Embellished Jersey | Metallic Lamé",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Bodily Obfuscation | Anatomical Interaction | Suspended Drape",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Hedi Slimane presented Saint Laurent's Autumn/Winter 2013 ready-to-wear collection in March 2013 at the Opéra Comique in Paris — his second full collection following the controversial rebranding of Yves Saint Laurent to Saint Laurent in 2012, a decision that provoked intense public debate about heritage, naming rights, and the authority of a living founding designer. The show marked the consolidation of Slimane's vision for the house: a total replacement of the YSL aesthetic vocabulary with one drawn almost entirely from his own obsessive documentation of Los Angeles rock culture, Hollywood gothic, and the heterosexual-presenting queerness of Sunset Strip nightlife. The collection was polarising in the same way that Slimane's entire Saint Laurent tenure was polarising: critics were divided between those who read the work as a radical reimagining of the house and those who read it as an erasure of its legacy.",
+      "strategy": "Slimane's structural strategy was the annihilation of volume: every silhouette in the collection was narrow to the point of restriction, every fabric pulled taut against the body or cut to avoid any excess material. The skinny trouser — which Slimane had pioneered for men's fashion during his Dior Homme tenure in the early 2000s — was applied with equal rigidity to women's wear. Sheer silk georgette blouses were cut to fall with no surplus fabric. Leather jackets were shaped to the precise contour of the shoulder. The effect was not sensual in the traditional fashion sense of body-revelation but geometric in the sense of body-as-line: the female silhouette reduced to a single vertical axis.",
+      "critique": "Slimane's Saint Laurent represents the most acute instance of what could be described as the 'auteur problem' in contemporary fashion: the substitution of a house's historical identity with the creative director's personal obsessions, conducted without acknowledgement of what has been displaced. His AW 2013 collection is at once immaculately resolved — every look operating within a coherent visual system — and culturally amnesiac, treating the house's archive as irrelevant. The collection's significance lies precisely in this tension: it was Slimane's most commercially successful Saint Laurent proposal, generating the sales figures that justified his approach to Kering's shareholders, while simultaneously constituting the most forceful rejection of the house's founding principles in its history."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "coperni-ss23",
+    "title": "Coperni SS 2023",
+    "subtitle": "",
+    "year": 2023,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Coperni",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Techno-Politics & Digital Identities | Body Politics & Corporeal Interventions",
+      "theories": "Post-Humanism | Surrealism | Aesthetic Philosophy | Object-Oriented Ontology",
+      "gender": "Womenswear",
+      "materials": "Biospray Polymer | Acetate | Structural Resin | Metallic Mesh | Technical Jersey",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Anatomical Interaction | Prosthetic Extension | Displaced Anatomy and Padding",
+      "format": "Theatrical Stage Performance"
+    },
+    "notes": {
+      "provenance": "Sébastien Meyer and Arnaud Vaillant presented Coperni's Spring/Summer 2023 collection in September 2022 at the Palais de Chaillot in Paris, closing the show with one of the most widely documented moments in twenty-first century fashion history. In the finale, model Bella Hadid appeared on the runway in only underwear and heels; two technicians from the Barcelona-based biotechnology company Fabrican then spent approximately ten minutes applying a spray of biodegradable polymer fibres directly onto her body using pressurised canisters. The material — a non-woven fabric developed by Dr. Manel Torres at the Royal College of Art — dried in real time to form a fitted off-white dress that was simultaneously couture in its precision and industrial in its manufacture. The event was filmed, photographed, and shared across global media within hours, generating a scale of cultural attention that no fashion show had achieved since the era of Alexander McQueen's most theatrical presentations.",
+      "strategy": "The show's structural strategy positioned technology not as a finish applied to an otherwise conventional garment system but as the primary manufacturing process: the dress that closed the show had no pattern, no seam, no cutter, and no atelier — it was assembled directly on the body in public view. The broader collection reinforced this logic through its treatment of hardware: bag straps were engineered from architectural resin; closures were replaced with magnetic systems; garments were structured using technical mesh derived from aerospace materials. Meyer and Vaillant consistently position Coperni within a tradition of applied science rather than applied craft, sourcing collaborators from research institutions rather than textile mills.",
+      "critique": "The Coperni SS 2023 spray-dress finale is the defining fashion spectacle of the post-Instagram era: an event designed for the moving image rather than the still photograph, for sharing rather than for looking, for the immediate emotional hit rather than the sustained critical engagement. Its cultural significance is not diminished by this observation — the capacity to generate a universally legible image of fashion's capacity for transformation is itself a form of power. The dress raises the question that all genuinely technological fashion objects raise: at what point does the technology become the garment, and at what point does it remain a performance conducted on a garment? The Fabrican material produces a textile, and the textile produces a dress — but the process of production is the cultural content, not the object it generates."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "ackermann-aw14",
+    "title": "Haider Ackermann AW 2014",
+    "subtitle": "",
+    "year": 2014,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Haider Ackermann",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Queer Theory & Subcultural Systems",
+      "theories": "Aesthetic Philosophy | Identity and Subjectivity | Bodily Autonomy and Transgression",
+      "gender": "Womenswear | Menswear",
+      "materials": "Washed Silk Charmeuse | Cashmere-Silk Blend | Draped Crepe | Metallic Satin | Lacquered Cotton",
+      "geography": "Paris (Chambre Syndicale)",
+      "anatomy": "Suspended Drape | Bodily Obfuscation | Anatomical Interaction | Displaced Anatomy and Padding",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Haider Ackermann presented his Autumn/Winter 2014 collection in March 2014 at the Cité de la Mode et du Design in Paris, in the context of a decade's work that had established him as one of the most critically admired but commercially constrained independent designers working in the French fashion system. Born in Colombia and raised across multiple countries before training at the Royal Academy of Fine Arts in Antwerp, Ackermann brought to his practice a cosmopolitan displacement that manifested in clothing consistently concerned with belonging, transition, and the inhabited body. The AW 2014 collection was representative of his mature period: a highly controlled colour palette moving between deep oxblood, charcoal, ivory, and dusty gold; silhouettes built from cascading diagonals and asymmetric closures; and an approach to material that treated the textile as active rather than passive — each fabric contributing its own physical behaviour to the construction of the look.",
+      "strategy": "Ackermann's structural approach centred on the diagonal as a compositional principle: seams were angled to redirect the eye away from horizontal and vertical axes, creating silhouettes that appeared to be in constant rotational motion even when static. Draped silk charmeuse was anchored at shoulder and hip by structured lacquered panels, producing a garment that combined the liquid movement of couture draping with the precise geometry of tailoring. The collection's androgynous casting reinforced this structural ambiguity: garments moved between women's and men's bodies without alteration, their essential form unchanged by the anatomy that wore them.",
+      "critique": "Ackermann occupies a specific and undertheorised position in the contemporary fashion archive: the designer whose work is consistently described in the language of sensation rather than concept. Critics write about his clothes as experiences — the way the silk moves, the quality of the colour, the particular intimacy of the construction. This sensory register is not incidental but constitutive: Ackermann's primary theoretical proposition is that clothing functions as second skin, and that the quality of that skin — its warmth, its weight, its relationship to the body it covers — is the primary site of meaning in fashion. His AW 2014 collection is an extended argument for the intelligence of the haptic: that what cloth does against the body is a more sophisticated form of communication than what it signifies at a distance."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "bottega-veneta-aw19",
+    "title": "Bottega Veneta AW 2019",
+    "subtitle": "",
+    "year": 2019,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Bottega Veneta",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Surveillance & Architectural Shielding | Body Politics & Corporeal Interventions",
+      "theories": "Minimalism & Reduction | Identity and Subjectivity | Aesthetic Philosophy | Object-Oriented Ontology",
+      "gender": "Womenswear | Menswear",
+      "materials": "Intrecciato Leather | Brushed Cashmere | Heavy Wool Suiting | Soft Lambskin | Technical Nylon",
+      "geography": "Milan (Camera Nazionale della Moda)",
+      "anatomy": "Architectural Shielding and Armour | Modular Componentry | Monolithic Massing",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Daniel Lee presented his debut Autumn/Winter 2019 collection for Bottega Veneta in February 2019 at the Teatro Giorgio Gaber in Milan, his first full ready-to-wear show following his appointment as creative director in 2018. Lee arrived at Bottega Veneta from Céline, where he had served as director of ready-to-wear under Phoebe Philo — the most critically admired creative director of her generation — and his AW 2019 debut was understood by the fashion press as a direct continuation of the Philo project: rigorous material luxury, architectural minimalism, and a studied refusal of visible branding. The collection reintroduced the house's foundational craft — the intrecciato leather weave — as a central design element rather than a heritage footnote, and presented it in a palette of deep forest green, mustard, and burgundy that became instantly recognisable as a new visual identity. The Pouch bag, introduced for this collection, became one of the most commercially successful accessories of 2019 and 2020.",
+      "strategy": "Lee's structural strategy centred on the amplification of the house's existing material vocabulary: the intrecciato weave was scaled up to exaggerated proportions, applied to outerwear, accessories, and footwear simultaneously. Silhouettes were broadly cut — wide shoulders, generous trouser legs, oversized coats — but constructed from materials of such density and quality that the volume read as authority rather than excess. The deliberate absence of visible logos was itself a structural choice: in a fashion system saturated with logomania following the LVMH and Kering campaigns of the mid-2010s, the refusal of the logo was the most legible signal of luxury available.",
+      "critique": "Lee's AW 2019 debut represents the most commercially successful recent application of the 'quiet luxury' proposition first articulated by Philo at Céline in 2010. Its significance lies not in its formal originality — the collection's premises are largely continuous with Philo's — but in the specific moment of its arrival: a fashion culture in the grip of hypebeast maximalism, streetwear logomania, and Instagram performance that was beginning to produce its own internal critique. Lee's Bottega Veneta provided that critique in material form: clothing and accessories that communicated status through quality rather than recognition, legible only to those with sufficient cultural capital to read the code. This exclusivity was itself the luxury product."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "sander-ss11",
+    "title": "Jil Sander SS 2011",
+    "subtitle": "",
+    "year": 2011,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Jil Sander",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
+      "theories": "Minimalism & Reduction | Identity and Subjectivity | Structural Stasis | Aesthetic Philosophy",
+      "gender": "Womenswear | Menswear",
+      "materials": "Precision-Woven Cotton Poplin | Lacquered Organza | Heavy Silk Faille | Compressed Wool | Bonded Technical Fabrics",
+      "geography": "Milan (Camera Nazionale della Moda)",
+      "anatomy": "Architectural Shielding and Armour | Monolithic Massing | Scaffolding and Internal Frameworks | Bodily Obfuscation",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Raf Simons presented his Spring/Summer 2011 collection for Jil Sander in September 2010 at the Fabbrica del Vapore in Milan, in the penultimate phase of his four-year tenure at the house. Simons had joined Jil Sander in 2005 following Sander's departure from her own label, and his work there had produced one of the most sustained critical discourses in contemporary fashion: a series of collections that extended the minimalist vocabulary the founder had established while introducing a psychological intensity and structural ambition that was recognisably Simons's own. The SS 2011 collection was one of the most formally concentrated of his Jil Sander period: a precise investigation of what garments become when all decoration, all ornament, and all reference is systematically eliminated, leaving only construction and material quality as expressive instruments.",
+      "strategy": "Simons's structural approach for the collection was the pursuit of geometric purity through tailoring: garments were constructed to maintain their three-dimensional shape independently of the body, using internal scaffolding and compressed interfacing to produce forms that read as architectural volumes rather than clothing. Lacquered organza was engineered to hold precise angles at shoulder and hem; wool suiting was bonded to technical fabric to resist the natural collapse of the weave under its own weight; silk faille was cut to form self-supporting cylindrical sleeves that retained their shape whether worn or not. The colour palette — white, ivory, pale sand, and a single intrusion of acid yellow — forced all attention onto form, eliminating the possibility of colour as a compositional distraction.",
+      "critique": "The Simons era at Jil Sander constitutes the most forensically rigorous investigation of minimalism's possibilities and limits in the contemporary fashion archive. His SS 2011 collection poses with particular clarity the central problem of fashion minimalism: if the garment is stripped of all ornamental and referential content, what remains as the carrier of meaning? Simons's answer — consistently across his Jil Sander period — was construction: the precision of the cut, the quality of the material, the degree to which the garment's form is independent of the body wearing it. This is a deeply sculptural proposition that treats the human body not as the garment's primary subject but as one structural variable among several. The collection remains a standard reference for the intellectual possibilities of the reduced silhouette."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "chromat-ss20",
+    "title": "Chromat SS 2020",
+    "subtitle": "",
+    "year": 2020,
+    "season": "SS",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "Chromat",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Body Politics & Corporeal Interventions | Activism & Crisis Response (Inclusivity) | Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity",
+      "theories": "Feminist Theory | Intersectionality | Bodily Autonomy and Transgression | Identity and Subjectivity",
+      "gender": "Womenswear | Non-Binary",
+      "materials": "Engineered Power Mesh | Neoprene | Metallic Lycra | Technical Supplex | Reflective Ripstop",
+      "geography": "New York (CFDA/NYFW)",
+      "anatomy": "Architectural Shielding and Armour | Bodily Obfuscation | Anatomical Interaction | Displaced Anatomy and Padding",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Becca McCharen-Tran presented Chromat's Spring/Summer 2020 collection in September 2019 during New York Fashion Week, staging the show in a format that had become the house's signature: an inclusive casting extending across a full size range — from XS to 5XL — and encompassing models of diverse ages, ethnicities, abilities, and gender identities. The show was presented under the CFDA's official schedule, a position that McCharen-Tran had occupied with increasing consistency since the brand's founding in 2010. McCharen-Tran, trained as an architect rather than a fashion designer, had built Chromat from a swimwear and activewear proposition into a fully articulated critical fashion practice: a label whose primary formal concern is the relationship between engineered performance textiles, structural precision, and the full spectrum of human body morphology. The SS 2020 collection extended the house's exploration of body-positive activewear into its most architecturally ambitious territory to date.",
+      "strategy": "McCharen-Tran's structural strategy is consistently defined by her architectural training: garments are designed from the inside out, with the structural armature — the scaffolding of elastic, power mesh, and boning — functioning as both the construction system and the visible aesthetic surface. Technical performance fabrics derived from athletic wear are cut and assembled with the precision of couture construction, producing garments that perform under the physical stress of actual movement while retaining their visual identity. The collection's recurring device was the structural frame: garments that used visible strapping, cutout geometry, and engineered mesh to define the body's volume while simultaneously making that engineering visible.",
+      "critique": "Chromat is the most significant contemporary fashion practice to have made size inclusivity the foundational structural premise of its design work rather than an afterthought applied to an existing garment system. McCharen-Tran does not design for a normative body and then grade out — she designs for the full range of human bodies simultaneously, which requires different construction logics, different structural assumptions, and different material choices. The SS 2020 collection demonstrates what this approach produces at its most resolved: garments that look and function differently on different body types not because they have been compromised in the scaling process but because they have been designed to accommodate multiple bodies from the outset. This constitutes a genuine formal innovation, not merely a political position."
+    }
+  },
+  {
+    "$schema": "../entry.schema.json",
+    "id": "anderson-aw22",
+    "title": "JW Anderson AW 2022",
+    "subtitle": "",
+    "year": 2022,
+    "season": "AW",
+    "images": [
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg"
+      }
+    ],
+    "tags": {
+      "brand": "JW Anderson",
+      "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
+      "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Queer Theory & Subcultural Systems",
+      "theories": "Surrealism | Postmodernism | Object-Oriented Ontology | Aesthetic Philosophy",
+      "gender": "Womenswear | Menswear",
+      "materials": "Sculptural Intarsia Knit | Felted Wool | Printed Denim | Structural Cotton Twill | Resin-Coated Leather",
+      "geography": "London (BFC)",
+      "anatomy": "Displaced Anatomy and Padding | Modular Componentry | Anatomical Interaction | Monolithic Massing",
+      "format": "Traditional Runway"
+    },
+    "notes": {
+      "provenance": "Jonathan Anderson presented JW Anderson's Autumn/Winter 2022 collection in February 2022 at the Saatchi Gallery in London, staging it during London Fashion Week as a homecoming of sorts: Anderson typically shows in London for the women's collections and in Milan for men's, but had consolidated both into a single joint presentation. The collection arrived during a period in which Anderson had achieved a level of critical and cultural visibility unusual for an independent British designer — his work at Loewe had established him as one of the most intellectually ambitious creative directors working in the luxury system, and the JW Anderson label had developed a reputation for producing runway moments that generated immediate cultural traction, from the pigeon-bag controversy of AW 2021 to the viral TikTok recreations of his patchwork cardigans. AW 2022 continued this trajectory, presenting a collection built around extreme volume, craft-intensive knitwear, and the deliberate disruption of expected proportions.",
+      "strategy": "Anderson's structural strategy centred on the subversion of the silhouette through deliberate anatomical dislocation: garments that misidentified or displaced the body's expected contours. Sculptural intarsia knitwear produced torso-length garments in which the relationship between garment and body was systematically ambiguous — knitted forms that read as clothing at one scale and as sculptural objects at another. The proportional system was consistently extreme: very narrow legs against very wide shoulders; very long bodices against very short skirts. Felted wool outerwear was structured to maintain its form independently of the body wearing it, producing coats that functioned as wearable architecture.",
+      "critique": "Anderson's practice — at both JW Anderson and Loewe — constitutes the most sustained contemporary argument for fashion as an intellectual practice conducted through objects rather than images. His AW 2022 collection extends this argument through its treatment of craft: the intarsia knitwear is not decorative but structural, not applied but integral to the garment's form. The collection raises the question that Anderson's work consistently poses: at what point does a garment become an object, and at what point does it remain clothing? The answer his practice implies is that this distinction is less stable than fashion discourse usually assumes — that the most interesting garments occupy the space where clothing and object become indistinguishable, and that this indistinguishability is a form of critical intelligence about what fashion can do."
+    }
   }
 ];

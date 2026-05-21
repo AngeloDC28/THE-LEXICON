@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "ackermann-aw14",
+  "title": "Haider Ackermann AW 2014",
+  "subtitle": "",
+  "year": 2014,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Haider Ackermann",
+    "era": "2010 to 2019; The Digital and Streetwear Pivot",
+    "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Queer Theory & Subcultural Systems",
+    "theories": "Aesthetic Philosophy | Identity and Subjectivity | Bodily Autonomy and Transgression",
+    "gender": "Womenswear | Menswear",
+    "materials": "Washed Silk Charmeuse | Cashmere-Silk Blend | Draped Crepe | Metallic Satin | Lacquered Cotton",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Suspended Drape | Bodily Obfuscation | Anatomical Interaction | Displaced Anatomy and Padding",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Haider Ackermann presented his Autumn/Winter 2014 collection in March 2014 at the Cité de la Mode et du Design in Paris, in the context of a decade's work that had established him as one of the most critically admired but commercially constrained independent designers working in the French fashion system. Born in Colombia and raised across multiple countries before training at the Royal Academy of Fine Arts in Antwerp, Ackermann brought to his practice a cosmopolitan displacement that manifested in clothing consistently concerned with belonging, transition, and the inhabited body. The AW 2014 collection was representative of his mature period: a highly controlled colour palette moving between deep oxblood, charcoal, ivory, and dusty gold; silhouettes built from cascading diagonals and asymmetric closures; and an approach to material that treated the textile as active rather than passive — each fabric contributing its own physical behaviour to the construction of the look.",
+    "strategy": "Ackermann's structural approach centred on the diagonal as a compositional principle: seams were angled to redirect the eye away from horizontal and vertical axes, creating silhouettes that appeared to be in constant rotational motion even when static. Draped silk charmeuse was anchored at shoulder and hip by structured lacquered panels, producing a garment that combined the liquid movement of couture draping with the precise geometry of tailoring. The collection's androgynous casting reinforced this structural ambiguity: garments moved between women's and men's bodies without alteration, their essential form unchanged by the anatomy that wore them.",
+    "critique": "Ackermann occupies a specific and undertheorised position in the contemporary fashion archive: the designer whose work is consistently described in the language of sensation rather than concept. Critics write about his clothes as experiences — the way the silk moves, the quality of the colour, the particular intimacy of the construction. This sensory register is not incidental but constitutive: Ackermann's primary theoretical proposition is that clothing functions as second skin, and that the quality of that skin — its warmth, its weight, its relationship to the body it covers — is the primary site of meaning in fashion. His AW 2014 collection is an extended argument for the intelligence of the haptic: that what cloth does against the body is a more sophisticated form of communication than what it signifies at a distance."
+  }
+}

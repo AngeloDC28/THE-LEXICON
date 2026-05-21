@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "givenchy-aw15",
+  "title": "Givenchy AW 2015",
+  "subtitle": "",
+  "year": 2015,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Givenchy",
+    "era": "2010 to 2019; The Digital and Streetwear Pivot",
+    "politics": "Body Politics & Corporeal Interventions | Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity",
+    "theories": "Post-Humanism | Identity and Subjectivity | Aesthetic Philosophy | Intersectionality",
+    "gender": "Womenswear",
+    "materials": "Embroidered Organza | Laser-Cut Leather | Heavyweight Lace | Sheer Silk Georgette | Bonded Neoprene",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Architectural Shielding and Armour | Anatomical Interaction | Displaced Anatomy and Padding | Monolithic Massing",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Riccardo Tisci presented Givenchy's Autumn/Winter 2015 ready-to-wear collection in March 2015 at the Coeur Défense in the La Défense business district of Paris — a deliberately anti-romantic choice of venue that placed the collection in dialogue with the glass-and-steel corporate architecture of late capitalism rather than the historic Parisian institutions traditionally associated with luxury fashion. The show fell at the midpoint of Tisci's transformative twelve-year tenure at Givenchy, by which point he had firmly established the house as the primary conduit through which high fashion absorbed the visual codes of gothic subculture, hip-hop, and queer nightlife. The AW 2015 collection was widely regarded as one of the strongest propositions of Tisci's Givenchy era: a precise synthesis of the house's haute couture heritage with the street-inflected darkness that had become his signature.",
+    "strategy": "Tisci built the collection through a systematic collision of the sacred and the profane — the iconography of Catholicism placed in aggressive proximity to fetish wear, tribal body adornment, and sportswear construction. Heavily embroidered organza panels referenced ecclesiastical vestments while being cut into streetwear silhouettes. Laser-cut leather formed body-hugging panels that simultaneously invoked protective armour and bondage gear. Lace — historically the most delicate of couture materials — was bonded to neoprene and stiffened into architectural forms. The colour palette of black, ivory, and deep burgundy reinforced the collection's consistently gothic register, broken only by the occasional intrusion of a flesh-toned sheer that read the body itself as material.",
+    "critique": "Tisci's sustained project at Givenchy constitutes the most commercially successful integration of subcultural codes into the luxury fashion apparatus in the 2010s. His AW 2015 collection demonstrates how this integration functioned at its most formally rigorous: the gothic, the tribal, the fetishistic, and the ecclesiastical are not decoratively applied but structurally embedded — each code informing the cut, the material choice, and the silhouette at a foundational level. The result is a fashion object that carries the weight of its subcultural references without reducing them to ornament. Tisci's casting — consistently diverse in ethnicity and body type across his Givenchy tenure — reinforced the collection's implicit argument that the bodies most comfortable in extreme clothing are those accustomed to existing at the margins of mainstream cultural legibility."
+  }
+}

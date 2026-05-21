@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "saint-laurent-aw13",
+  "title": "Saint Laurent AW 2013",
+  "subtitle": "",
+  "year": 2013,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Saint Laurent",
+    "era": "2010 to 2019; The Digital and Streetwear Pivot",
+    "politics": "Body Politics & Corporeal Interventions | Queer Theory & Subcultural Systems | Gender Deconstruction & Fluidity",
+    "theories": "Identity and Subjectivity | Postmodernism | Structural Stasis",
+    "gender": "Womenswear",
+    "materials": "Skinny Washed Denim | Sheer Silk Georgette | Patent Leather | Embellished Jersey | Metallic Lamé",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Bodily Obfuscation | Anatomical Interaction | Suspended Drape",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Hedi Slimane presented Saint Laurent's Autumn/Winter 2013 ready-to-wear collection in March 2013 at the Opéra Comique in Paris — his second full collection following the controversial rebranding of Yves Saint Laurent to Saint Laurent in 2012, a decision that provoked intense public debate about heritage, naming rights, and the authority of a living founding designer. The show marked the consolidation of Slimane's vision for the house: a total replacement of the YSL aesthetic vocabulary with one drawn almost entirely from his own obsessive documentation of Los Angeles rock culture, Hollywood gothic, and the heterosexual-presenting queerness of Sunset Strip nightlife. The collection was polarising in the same way that Slimane's entire Saint Laurent tenure was polarising: critics were divided between those who read the work as a radical reimagining of the house and those who read it as an erasure of its legacy.",
+    "strategy": "Slimane's structural strategy was the annihilation of volume: every silhouette in the collection was narrow to the point of restriction, every fabric pulled taut against the body or cut to avoid any excess material. The skinny trouser — which Slimane had pioneered for men's fashion during his Dior Homme tenure in the early 2000s — was applied with equal rigidity to women's wear. Sheer silk georgette blouses were cut to fall with no surplus fabric. Leather jackets were shaped to the precise contour of the shoulder. The effect was not sensual in the traditional fashion sense of body-revelation but geometric in the sense of body-as-line: the female silhouette reduced to a single vertical axis.",
+    "critique": "Slimane's Saint Laurent represents the most acute instance of what could be described as the 'auteur problem' in contemporary fashion: the substitution of a house's historical identity with the creative director's personal obsessions, conducted without acknowledgement of what has been displaced. His AW 2013 collection is at once immaculately resolved — every look operating within a coherent visual system — and culturally amnesiac, treating the house's archive as irrelevant. The collection's significance lies precisely in this tension: it was Slimane's most commercially successful Saint Laurent proposal, generating the sales figures that justified his approach to Kering's shareholders, while simultaneously constituting the most forceful rejection of the house's founding principles in its history."
+  }
+}

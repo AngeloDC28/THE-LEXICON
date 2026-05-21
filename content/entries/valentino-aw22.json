@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "valentino-aw22",
+  "title": "Valentino AW 2022",
+  "subtitle": "The Beginning",
+  "year": 2022,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Valentino",
+    "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
+    "politics": "Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity | Activism & Crisis Response (Inclusivity)",
+    "theories": "Aesthetic Philosophy | Identity and Subjectivity | Postmodernism",
+    "gender": "Womenswear | Menswear",
+    "materials": "Micro-Studded Organza | Heavy Duchesse Satin | Couture-Weight Chiffon | Embroidered Silk Tulle",
+    "geography": "Paris (Chambre Syndicale)",
+    "anatomy": "Monolithic Massing | Suspended Drape | Architectural Shielding and Armour | Displaced Anatomy and Padding",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Pierpaolo Piccioli presented Valentino's Autumn/Winter 2022 ready-to-wear collection in March 2022 at the Hôtel Salomon de Rothschild in Paris, titling it 'The Beginning' — a declaration of intent that positioned the collection as the opening chapter of a new phase rather than a continuation of existing codes. The collection followed Piccioli's landmark SS 2022 'Pink PP' show, in which he had staged an almost monochromatic presentation in a single Pantone shade of hot fuchsia, generating one of the most widely reproduced fashion images of the decade. AW 2022 extended the chromatic ambition of that show while incorporating the full breadth of the Valentino couture atelier's technical vocabulary: micro-studding, hand-applied embroidery, bias-cut satin, and the extreme volume construction techniques historically associated with the house's founder Valentino Garavani.",
+    "strategy": "Piccioli constructed the collection around the productive tension between the maximalist and the monastic — extreme volume placed in dialogue with extreme restraint. Coats were engineered to twice the natural width of the shoulder; capes were cut to fall in a single geometric plane from neck to floor; evening looks used the internal scaffolding of couture construction to support volumes that defied structural logic at RTW price points. The colour palette moved between saturated Valentino red, deep forest green, electric cobalt, and dense ivory — hues chosen for their psychological intensity rather than their seasonal relevance. Models walked with consistent uniformity: a deliberate choreographic choice that treated the individual body as a unit of a collective rather than a site of personal expression.",
+    "critique": "Piccioli's project at Valentino across the 2020s constitutes one of contemporary fashion's most sustained arguments for the political possibilities of beauty. His AW 2022 collection is readable as a post-pandemic excess-as-resistance proposition: the deployment of extreme colour, extreme volume, and extreme craft as an argument against the grey pragmatism that austerity politics demands. The inclusive casting — extended size range, diverse age range, and non-model faces — refused the traditional couture logic of a singular body type as the legitimate vehicle for luxury clothing, reinscribing beauty as a democratic rather than exclusive category. In this reading, the collection's ostensible extravagance is its most politically rigorous quality."
+  }
+}

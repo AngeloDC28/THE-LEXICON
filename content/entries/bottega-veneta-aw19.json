@@ -1,0 +1,29 @@
+{
+  "$schema": "../entry.schema.json",
+  "id": "bottega-veneta-aw19",
+  "title": "Bottega Veneta AW 2019",
+  "subtitle": "",
+  "year": 2019,
+  "season": "AW",
+  "images": [
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg"
+    }
+  ],
+  "tags": {
+    "brand": "Bottega Veneta",
+    "era": "2010 to 2019; The Digital and Streetwear Pivot",
+    "politics": "Surveillance & Architectural Shielding | Body Politics & Corporeal Interventions",
+    "theories": "Minimalism & Reduction | Identity and Subjectivity | Aesthetic Philosophy | Object-Oriented Ontology",
+    "gender": "Womenswear | Menswear",
+    "materials": "Intrecciato Leather | Brushed Cashmere | Heavy Wool Suiting | Soft Lambskin | Technical Nylon",
+    "geography": "Milan (Camera Nazionale della Moda)",
+    "anatomy": "Architectural Shielding and Armour | Modular Componentry | Monolithic Massing",
+    "format": "Traditional Runway"
+  },
+  "notes": {
+    "provenance": "Daniel Lee presented his debut Autumn/Winter 2019 collection for Bottega Veneta in February 2019 at the Teatro Giorgio Gaber in Milan, his first full ready-to-wear show following his appointment as creative director in 2018. Lee arrived at Bottega Veneta from Céline, where he had served as director of ready-to-wear under Phoebe Philo — the most critically admired creative director of her generation — and his AW 2019 debut was understood by the fashion press as a direct continuation of the Philo project: rigorous material luxury, architectural minimalism, and a studied refusal of visible branding. The collection reintroduced the house's foundational craft — the intrecciato leather weave — as a central design element rather than a heritage footnote, and presented it in a palette of deep forest green, mustard, and burgundy that became instantly recognisable as a new visual identity. The Pouch bag, introduced for this collection, became one of the most commercially successful accessories of 2019 and 2020.",
+    "strategy": "Lee's structural strategy centred on the amplification of the house's existing material vocabulary: the intrecciato weave was scaled up to exaggerated proportions, applied to outerwear, accessories, and footwear simultaneously. Silhouettes were broadly cut — wide shoulders, generous trouser legs, oversized coats — but constructed from materials of such density and quality that the volume read as authority rather than excess. The deliberate absence of visible logos was itself a structural choice: in a fashion system saturated with logomania following the LVMH and Kering campaigns of the mid-2010s, the refusal of the logo was the most legible signal of luxury available.",
+    "critique": "Lee's AW 2019 debut represents the most commercially successful recent application of the 'quiet luxury' proposition first articulated by Philo at Céline in 2010. Its significance lies not in its formal originality — the collection's premises are largely continuous with Philo's — but in the specific moment of its arrival: a fashion culture in the grip of hypebeast maximalism, streetwear logomania, and Instagram performance that was beginning to produce its own internal critique. Lee's Bottega Veneta provided that critique in material form: clothing and accessories that communicated status through quality rather than recognition, legible only to those with sufficient cultural capital to read the code. This exclusivity was itself the luxury product."
+  }
+}
