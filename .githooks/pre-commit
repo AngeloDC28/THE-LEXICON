@@ -9,6 +9,13 @@
 
 set -e
 
+# The nextjs branch uses Next.js build tooling, not preflight.
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+if [ "$BRANCH" = "nextjs" ]; then
+  echo "[pre-commit] nextjs branch — skipping preflight (Next.js build handles this)."
+  exit 0
+fi
+
 # Only run the heavy preflight if files that affect the build are staged.
 # Pure docs / config changes don't need it.
 CHANGED=$(git diff --cached --name-only)
