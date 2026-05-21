@@ -1,13 +1,13 @@
 {
   "$schema": "../entry.schema.json",
-  "id": "thom-browne-aw12",
+  "id": "browne-aw12",
   "title": "Thom Browne AW 2012",
   "subtitle": "",
   "year": 2012,
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-01.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-01.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-02.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-03.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -70,7 +70,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-04.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-05.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-06.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-07.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-08.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-09.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-09.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -178,7 +178,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-10.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-10.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-11.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-11.jpg",
       "hotspots": [
         {
           "x": 50,

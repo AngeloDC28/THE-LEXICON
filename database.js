@@ -6123,14 +6123,14 @@ export const archiveData = [
   },
   {
     "$schema": "../entry.schema.json",
-    "id": "craig-green-ss15",
+    "id": "green-ss15",
     "title": "Craig Green SS 2015",
     "subtitle": "",
     "year": 2015,
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-01.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6147,7 +6147,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-02.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-02.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6170,7 +6170,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-03.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6187,7 +6187,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-04.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-04.jpg",
         "hotspots": [
           {
             "x": 65,
@@ -6204,7 +6204,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-05.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6227,7 +6227,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-06.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-06.jpg",
         "hotspots": [
           {
             "x": 45,
@@ -6250,7 +6250,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-07.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-07.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6273,7 +6273,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-08.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-08.jpg",
         "hotspots": [
           {
             "x": 65,
@@ -6290,7 +6290,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-09.jpg",
+        "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-09.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6695,14 +6695,14 @@ export const archiveData = [
   },
   {
     "$schema": "../entry.schema.json",
-    "id": "thom-browne-aw12",
+    "id": "browne-aw12",
     "title": "Thom Browne AW 2012",
     "subtitle": "",
     "year": 2012,
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-01.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6725,7 +6725,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-02.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-02.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6748,7 +6748,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-03.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6765,7 +6765,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-04.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-04.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6782,7 +6782,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-05.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6799,7 +6799,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-06.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6822,7 +6822,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-07.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-07.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6839,7 +6839,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-08.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6856,7 +6856,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-09.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-09.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6873,7 +6873,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-10.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -6890,7 +6890,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-11.jpg",
+        "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7168,14 +7168,14 @@ export const archiveData = [
   },
   {
     "$schema": "../entry.schema.json",
-    "id": "marine-serre-ss20",
+    "id": "serre-ss20",
     "title": "Marine Serre SS 2020",
     "subtitle": "Marée Noire",
     "year": 2020,
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-01.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-01.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7198,7 +7198,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-02.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-02.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7215,7 +7215,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-03.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-03.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7232,7 +7232,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-04.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-04.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7249,7 +7249,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-05.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-05.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7272,7 +7272,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-06.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-06.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7289,7 +7289,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-07.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-07.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7306,7 +7306,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-08.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-08.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7329,7 +7329,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-09.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-09.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7346,7 +7346,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-10.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-10.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7363,7 +7363,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-11.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-11.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7374,7 +7374,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-12.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-12.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7385,7 +7385,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-13.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-13.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7408,7 +7408,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-14.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-14.jpg",
         "hotspots": [
           {
             "x": 50,
@@ -7425,7 +7425,7 @@ export const archiveData = [
         ]
       },
       {
-        "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-15.jpg",
+        "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-15.jpg",
         "hotspots": [
           {
             "x": 50,

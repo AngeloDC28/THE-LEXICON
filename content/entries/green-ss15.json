@@ -1,13 +1,13 @@
 {
   "$schema": "../entry.schema.json",
-  "id": "craig-green-ss15",
+  "id": "green-ss15",
   "title": "Craig Green SS 2015",
   "subtitle": "",
   "year": 2015,
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-01.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-01.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-02.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-03.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -64,7 +64,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-04.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-04.jpg",
       "hotspots": [
         {
           "x": 65,
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-05.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -104,7 +104,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-06.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-06.jpg",
       "hotspots": [
         {
           "x": 45,
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-07.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-08.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-08.jpg",
       "hotspots": [
         {
           "x": 65,
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-09.jpg",
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-09.jpg",
       "hotspots": [
         {
           "x": 50,
