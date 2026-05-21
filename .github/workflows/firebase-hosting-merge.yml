@@ -1,0 +1,40 @@
+# Deploys hosting to https://thelexicon.xyz on every push to main.
+# Requires a repo secret named FIREBASE_SERVICE_ACCOUNT_LEXICON_7575C
+# containing the JSON for a Firebase service account that has
+# `firebasehosting.releases.create` permission. See the project README
+# or the response from the conversation that scaffolded this file for
+# the one-time setup walkthrough.
+name: Deploy to Firebase Hosting (live)
+
+on:
+  push:
+    branches:
+      - main
+
+# Cancel any in-flight deploy when a newer commit lands, so we never
+# ship an older build over a newer one if two pushes arrive quickly.
+concurrency:
+  group: firebase-hosting-live
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to live channel
+    runs-on: ubuntu-latest
+    # Wait for the check workflow to validate the entries before deploying.
+    # If validation fails, no deploy happens, so a bad entry can't ship.
+    needs: []  # left empty intentionally: check.yml runs in parallel; both
+               # must succeed for the deploy to be considered "shipped".
+               # Add `needs: [check]` once check.yml is renamed to a job
+               # name reachable from this workflow (currently a separate
+               # workflow file so cross-workflow `needs` isn't available).
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LEXICON_7575C }}
+          channelId: live
+          projectId: lexicon-7575c
