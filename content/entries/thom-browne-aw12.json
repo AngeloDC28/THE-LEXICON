@@ -7,7 +7,209 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-01.jpg"
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Sculptural White Wool Coat",
+          "description": "The sculptural white wool coat aggressively alters the upper silhouette with enormous pointed shoulders that dwarf the head; it creates a rigid triangular volume over the torso. This structural extreme applies the semiotic sabotage of the uniform by mutating a formal overcoat into an imposing almost alien architecture. The dense white fabric features tight rows of fabric-covered buttons; large angular pockets jut outward from the hips. The outerwear asserts an unyielding and intimidating physical presence."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        },
+        {
+          "x": 45,
+          "y": 85,
+          "label": "Pointed Wool Train",
+          "description": "The pointed wool train drags heavily across the runway in a long continuous sweep of fabric; it is bordered by signature grosgrain ribbon trimming. This material extension engages with corporeal resurrection by mimicking the dragging burial shrouds of gothic fantasy. The stiff fabric is folded deeply to create a massive structural tail; a row of pointed fabric spikes runs down the center line. The garment completes the dramatic volume by ensuring the model occupies an immense spatial footprint."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Exaggerated Flannel Cropped Jacket",
+          "description": "The exaggerated flannel cropped jacket inflates the upper arms into massive rounded sleeves while tapering sharply at the natural waist; it completely obscures the natural shoulder line. This tailoring extreme applies the subversion of traditional femininity by replacing soft contouring with aggressive bulbous massing. The stiff grey wool mimics mid-century menswear fabrics; the front features a tight column of dark buttons. The garment asserts a highly structured and slightly suffocating upper carapace."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Structured Herringbone Midi Skirt",
+          "description": "The structured herringbone midi skirt drops tightly from the high waist before swelling outward over the hips; it creates a rigid diamond-shaped lower silhouette. This structural logic utilizes monolithic massing to fuse classic tailoring textiles with surreal proportion distortion. The dark grey fabric holds deep rigid creases without soft drape; the hem tapers inward sharply at the knee. The skirt completes the look by anchoring the massive upper jacket with an equally unsettling geometric base."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil binds the head tightly within a sheer black netting; it forces the pale face and metallic silver lips into sharp relief. This styling detail engages with the uncanny by transforming the model into an anonymous doll-like figure. The fine mesh sits close to the skin unlike the larger domed veils; it functions as a dark filter over the human features. The accessory asserts the collection's relentless commitment to macabre theatricality."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Sculptural Quilted Coat Dress",
+          "description": "The sculptural quilted coat dress structures the body into a massive rigid diamond; it features enormous pointed shoulders and jutting geometric hip panniers. This structural extreme applies the semiotic sabotage of the uniform by taking the quilted texture of classic outerwear and mutating it into a rigid avant-garde costume. The pale grey fabric is heavily stitched to maintain its sharp angular folds; the front is fastened tightly with a long row of buttons. The garment asserts an unyielding architectural armor that completely overrides biological anatomy."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Layered Asymmetrical Wool Coat",
+          "description": "The layered asymmetrical wool coat wraps the torso in multiple tiers of dense grey fabric; it features a massive structured drape slung over the left shoulder. This material strategy engages with monolithic massing by piling heavy mid-century tailoring textiles into a single chaotic volume. The stiff wool holds its shape rigidly against gravity; the front is layered with a contrasting patterned under-skirt. The outerwear asserts an oppressive and slightly unbalanced architectural presence."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Cropped Plaid Flannel Jacket",
+          "description": "The cropped plaid flannel jacket truncates sharply above the waist while inflating the sleeves into massive rounded volumes; it features the signature red white and blue grosgrain ribbon trimming the lapel. This tailoring approach applies the semiotic sabotage of the uniform by fracturing a traditional menswear pattern into a bizarre feminine silhouette. The stiff grey plaid holds its bulky shape rigidly; a tight column of dark buttons runs down the matching high-waisted skirt. The garment asserts an incredibly tense and heavily restricted posture."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Asymmetrical Wool Capelet",
+          "description": "The asymmetrical wool capelet wraps the upper torso in a heavy dark grey fabric; it hangs violently askew across the chest and fastens with a massive knot over the right hip. This structural logic utilizes monolithic massing to obscure the upper anatomy entirely behind a thick tailoring textile. The dense wool absorbs light to create a heavy visual block; the model's arms are completely hidden beneath the drape. The outerwear asserts an imposing and deeply unyielding protective shell."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Flared Grey Wool Skirt",
+          "description": "The flared grey wool skirt drops rigidly from beneath the knotted capelet into a stiff A-line shape; it features a thick banded hem in a slightly lighter shade. This material application provides a static formal base for the chaotic upper volume. The heavy fabric falls without fluid drape; the hem breaks cleanly below the knee. The garment completes the severe monochromatic uniform by enforcing a highly disciplined and heavy silhouette."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Deconstructed Pinstripe Suit Dress",
+          "description": "The deconstructed pinstripe suit dress explodes a traditional grey corporate suit into a chaotic multi-layered gown; it features massive structural bows and stiff overlapping panels that defy ergonomic logic. This structural extreme applies the semiotic sabotage of the uniform by completely destroying the function of the menswear fabric. The stiff grey wool with white pinstripes holds sharp deep folds; the massive bow across the chest swallows the upper torso entirely. The garment asserts a highly theatrical and slightly grotesque reassembly of formalwear."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Camel Hair Funnel-Neck Tunic",
+          "description": "The camel hair funnel-neck tunic drops cleanly over the torso in a solid block of pale brown fabric; it features a high structured collar and thick fur-trimmed cuffs. This tailoring choice utilizes monochromatic armor to construct a garment that prioritizes dense texture over bright color. The heavy fabric hangs flatly without defining the waist; the dark brown fur adds a heavy tactile weight to the wrists and neck. The outerwear asserts a rigid protective warmth that functions as a luxurious shield."
+        },
+        {
+          "x": 50,
+          "y": 12,
+          "label": "Fur-Trimmed Skull Cap",
+          "description": "The fur-trimmed skull cap binds the head tightly in dark material leaving only a sheer mesh over the face; it heavily obscures the skull's natural proportions. This styling detail engages with the uncanny by transforming the model into an anonymous almost ecclesiastical figure. The thick fur creates a stark horizontal line across the forehead; the metallic silver lipstick flashes brightly beneath the netting. The accessory completes the look by isolating the face within a heavy protective frame."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Deconstructed White Bouclé Suit",
+          "description": "The deconstructed white bouclé suit folds rigid thick fabric into an aggressive architectural diamond over the torso; it utilizes extreme tailoring to create a shape completely divorced from human anatomy. This structural extreme applies the subversion of traditional femininity by taking a classic ladies-who-lunch textile and mutating it into a sharp combative armor. The stiff white fabric holds deep sharp creases; thick dark piping borders every erratic panel. The garment asserts an unyielding and imposing physical presence."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Quilted Black Silk Coat Dress",
+          "description": "The quilted black silk coat dress structures the body into a massive rigid diamond; it features a high buttoned collar and an aggressive flare at the hips. This structural extreme applies the semiotic sabotage of the uniform by taking the quilted texture of classic outerwear and mutating it into a rigid avant-garde costume. The dark fabric is heavily stitched with a diamond pattern to maintain its sharp angular folds; the front is fastened tightly with a long row of buttons. The garment asserts an unyielding architectural armor that completely overrides biological anatomy."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/thom-browne-aw12/thom-browne-aw12-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Mirrored Sequin Embellished Gown",
+          "description": "The mirrored sequin embellished gown falls heavily to the floor in a rigid column of brilliant silver reflections; it is completely paved in small geometric mirrors. This material strategy engages with monolithic massing by transforming the entire body into a solid shimmering monolith. The dense embellishment creates a stiff heavy drape that lacks fluid movement; a white tulle cape explodes outward from the shoulders in stark contrast to the rigid dress. The garment asserts an overwhelming theatrical presence that functions as a highly visible suit of armor."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
     }
   ],
   "tags": {
