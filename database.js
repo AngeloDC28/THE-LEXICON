@@ -7500,14 +7500,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 35,
-            "label": "Tweed Boucle Power Suit",
-            "description": "The tweed boucle power suit anchors the model in the house's foundational textile reworked for protest theatre; it features the classic gold-buttoned cardigan jacket scaled to oversized proportions. This material strategy engages with commodity feminism by routing political iconography through luxury heritage codes. The signature fringed edges and contrast trim remain intact despite the slouched fit; the matching skirt drops sharply at the knee. The garment asserts a deliberate collision between aristocratic dressmaking and democratizing sportswear logic."
+            "label": "Metallic Sequined Waist Corset",
+            "description": "The metallic sequined waist corset cinches the midriff tightly over the textured tweed bodice; it isolates the upper and lower volumes into distinct geometric blocks. This material intervention engages with postmodern pastiche by applying aggressive disco-era embellishments to conservative bourgeois tailoring. The reflective silver scales catch the harsh supermarket lighting brightly against the dark grey bouclé; the wide belt forces a rigid hourglass silhouette. The accessory asserts a hyper-capitalist opulence that refuses subtle elegance."
           },
           {
-            "x": 50,
-            "y": 80,
-            "label": "Hand-Painted Feminist Placard",
-            "description": "The hand-painted feminist placard is carried aloft as the model marches down the simulated Boulevard Chanel runway; it bears slogans referencing women's rights and historical erasure. This styling choice introduces literal political signage into a luxury fashion context, generating immediate cultural traction across mainstream press. The cardboard surface clashes violently with the precision tailoring; the handwritten typography refuses corporate polish. The accessory completes the look by transforming the runway into a protest space."
+            "x": 75,
+            "y": 75,
+            "label": "Quilted Leather Shopping Trolley",
+            "description": "The quilted leather shopping trolley functions as a literal piece of mobile luggage dragged alongside the model; it completely replaces the traditional luxury handbag. This object utilizes the semiotic sabotage of mass commodities by transforming a banal grocery cart into an elite status symbol. The black padded exterior mimics the brand's classic flap bags with signature diamond stitching; it rolls on small functional wheels with an extended telescopic handle. The accessory completes the look by equating high-fashion consumption with everyday supermarket errands."
           }
         ]
       },
@@ -7516,9 +7516,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Knit Dress with Quilted Chain Bag",
-            "description": "The knit dress with quilted chain bag pairs a fluid pastel jersey with the house's foundational accessory — a quilted lambskin bag carried on its iconic gold chain strap; together they restage the Chanel signature in supermarket-aisle styling. This material strategy converts the boutique's most fetishized hardware into casual everyday gesture, the kind of object a shopper might grab off a shelf. The dress's loose drape allows the bag to swing kinetically as the model walks the boulevard set; the quilting catches light evenly across every diamond fold. The look asserts the show's central proposition: luxury codes circulating as consumer ephemera."
+            "y": 40,
+            "label": "Vacuum-Packed Metallic Leather Coat",
+            "description": "The vacuum-packed metallic leather coat drops to the ankles in a stiff highly reflective bronze hide; it structures the body within a rigid protective shell. This outerwear choice applies the concept of hyper-capitalist pop art by rendering a classic trench silhouette in a material resembling cheap candy wrappers. The shiny surface folds sharply without soft drape; the short sleeves and open front reveal the chaotic textures beneath. The garment asserts a highly commodified armor designed to outshine its commercial environment."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Multi-Color Sequined Midi Dress",
+            "description": "The multi-color sequined midi dress envelopes the torso and thighs in a dense mosaic of reflective pastel embellishments; it introduces intense visual noise beneath the metallic coat. This material strategy engages with logo fetishism and visual overload by mimicking the hyper-saturated packaging of supermarket junk food. The tight arrangement of pinks and greens and blues reflects light aggressively; a delicate black lace trim borders the hemline. The piece completes the ensemble by forcing an overwhelming and slightly dizzying textural clash."
           }
         ]
       },
@@ -7527,9 +7533,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Boucle Coat in Saturated Pink",
-            "description": "The boucle coat in saturated pink scales the Chanel tweed vocabulary into a single block of fluorescent color; it borrows the technical construction of the cardigan jacket but renders it in a chromatic register usually reserved for plastic packaging. This material treatment reads tweed as graphic surface rather than heritage textile, aligning with the show's broader supermarket logic. The signature fringed selvedge and contrast trim remain intact; the silhouette drops cleanly past the hip. The garment asserts the collection's argument that even the house's most aristocratic codes can be flattened into consumer signage."
+            "y": 35,
+            "label": "3D Woven Ruffled Tunic",
+            "description": "The 3D woven ruffled tunic envelopes the upper body in a chaotic explosion of multi-colored textured loops; it creates a massive disorganized volume over the chest and shoulders. This structural logic utilizes sartorial collage by shredding and reweaving traditional textiles into a hyper-tactile synthetic mass. The dense fabric features erratic strands of pink and blue and yellow jutting outwards; the short sleeves fan widely away from the arms. The garment refuses traditional flat tailoring to assert a bizarre and organic-looking growth."
+          },
+          {
+            "x": 50,
+            "y": 75,
+            "label": "Quilted Leather Knee-High Boots",
+            "description": "The quilted leather knee-high boots encase the legs entirely in a thick black hide; they feature a prominent diamond-stitched pattern over the kneecaps. This footwear application applies the simulacrum by translating the house's iconic handbag texture directly onto utilitarian footwear. The dark material rises smoothly over the calves before ending in a rounded protective cap; a subtle front lacing system runs down the shin. The accessory completes the silhouette by grounding the chaotic upper volume in severe recognizable luxury hardware."
           }
         ]
       },
@@ -7539,8 +7551,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Two-Tone Boucle Suit",
-            "description": "The two-tone boucle suit pairs the house's archetypal cardigan jacket and matching skirt in contrasting cream and black panels; it presents the most directly historical reference in the supermarket set against the most aggressively contemporary staging. This tailoring choice anchors the protest runway in the founder's foundational silhouette — the suit Coco Chanel built her house on. The black trim at every edge frames the cream wool like a graphic outline; the matching skirt drops cleanly at the knee. The look asserts the heritage core that the entire commercial enterprise depends on."
+            "label": "Tufted Floral Textile Dress",
+            "description": "The tufted floral textile dress wraps the body in a dense accumulation of bright red and orange fabric shreds; it entirely obscures the natural silhouette beneath a heavy artificial texture. This material extreme engages with postmodern pastiche by mimicking the appearance of raw ground meat or cheap synthetic carnations found in a grocery aisle. The vibrant coloring creates a stark visual block against the pale floor; the off-the-shoulder neckline exposes the collarbone sharply. The garment asserts an absurd and highly tactile interpretation of consumer packaging."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Patterned Lace-Up Knee Boots",
+            "description": "The patterned lace-up knee boots rise tightly over the calves in a chaotic multi-colored geometric print; they provide a rigid athletic foundation for the heavy dress. This footwear choice utilizes athleisure integration by blending the structure of a boxing boot with hyper-detailed pop-art graphics. The bright neon laces crisscross tightly over the shin; the dark printed textile contrasts violently with the bright orange dress above. The boots complete the look by enforcing an aesthetic of maximalist sensory overload."
           }
         ]
       },
@@ -7550,8 +7568,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Layered Pearl and Chain Necklaces",
-            "description": "The layered pearl and chain necklaces pile multiple long strands across the chest in the house's signature jewelry vocabulary — pearls, gold links, charms, and miniature padlocks. This styling choice reads jewelry as graphic accumulation rather than singular accessory; each individual chain is itself a Chanel reference, layered into a maximalist supermarket display. The pearls knock softly against the tweed beneath; the chains pool at the bust under their own weight. The accessory completes the look by treating the house's most-collected category as visible inventory."
+            "label": "Fringed Pink Feathered Tunic",
+            "description": "The fringed pink feathered tunic drops heavily over the torso in a dense arrangement of pale pink and white fabric strips; it builds a soft but overwhelming kinetic volume. This material strategy engages with hyper-capitalist pop art by resembling the fluffy synthetic texture of cheap cleaning dusters or novelty toys. The soft fringes flutter dynamically with the model's stride; the short puffed sleeves dwarf the arms completely. The outerwear asserts a playful yet deeply artificial vision of elevated banality."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Pink Chainmail Mesh Underlayer",
+            "description": "The pink chainmail mesh underlayer clings tightly to the chest beneath the feathered tunic; it provides a severe geometric grid against the soft outer volume. This structural intervention utilizes the semiotic sabotage of mass commodities by placing an aggressive industrial texture within a hyper-feminine pink palette. The thick netting reveals the bare skin underneath; the rigid grid contrasts sharply with the chaotic fringes. The piece completes the silhouette by injecting a subtle edge of hardware into the pastel ensemble."
           }
         ]
       },
@@ -7560,9 +7584,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 50,
+            "label": "Distressed Pink Athleisure Knitwear",
+            "description": "The distressed pink athleisure knitwear binds the torso and legs in a bright matching set heavily punctured by irregular torn holes; it features a cropped top that completely exposes the midriff. This sartorial choice applies the concept of elevated banality by taking comfortable gym clothing and subjecting it to deliberate high-fashion decay. The vibrant pink fabric clings tightly to the musculature; the raw cutouts reveal flashes of bare skin across the abdomen and thighs. The garment asserts a relaxed but slightly ruined posture that mocks pristine luxury."
+          },
+          {
+            "x": 50,
             "y": 45,
-            "label": "Quilted Mini Bag on Gold Chain",
-            "description": "The quilted mini bag on gold chain hangs from a single shoulder in the house's most-replicated accessory format; it carries the diamond quilting and CC twist-lock that define the entire chain-bag commercial program. This material gesture treats the bag as both functional object and brand logo — visible from any distance on the runway, instantly recognizable from any catalogue page. The shrunken proportion intensifies the iconography rather than diluting it; the chain hardware reflects the supermarket fluorescent lighting. The accessory asserts the commercial center of gravity around which the entire house orbits."
+            "label": "Elongated Bouclé Tweed Topcoat",
+            "description": "The elongated bouclé tweed topcoat drapes open over the distressed athletic wear in a heavy multicolored plaid textile; it drops cleanly to the ankles. This structural logic utilizes sartorial collage by forcing a highly conservative and traditional outerwear piece to frame an aggressive streetwear base. The thick wool holds a rigid oversized shape; the classic metallic buttons line the open front panels. The coat completes the ensemble by asserting the house's heritage against the chaotic modern styling beneath."
           }
         ]
       },
@@ -7571,9 +7601,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Tweed Bermuda Suit",
-            "description": "The tweed bermuda suit pairs the cardigan jacket with mid-thigh shorts cut from the same boucle fabric; it modernizes the heritage silhouette by truncating the lower half into an awkward summer proportion. This structural distortion brings the protest staging into conversation with the house's continual project of recoding its own vocabulary for each generation. The matching fabric runs unbroken from jacket to short; the lower hem terminates abruptly above the knee. The garment asserts the collection's tonal range — from heritage faithfulness through deliberate proportion sabotage."
+            "y": 35,
+            "label": "Pastel Bouclé Tweed Coat",
+            "description": "The pastel bouclé tweed coat structures the upper body in a classic textured white and pink wool; it features an exaggerated cropped overlay that drastically broadens the shoulders. This tailoring approach engages with postmodern pastiche by warping the house's signature demure suit jacket into an imposing architectural carapace. The stiff fabric is tightly zipped across the waist to emphasize the flared hem; the sleeves fall bluntly to the mid-forearm. The garment asserts a highly disciplined and formal volume amidst the supermarket setting."
+          },
+          {
+            "x": 70,
+            "y": 60,
+            "label": "Chainmail Supermarket Basket Accessory",
+            "description": "The chainmail supermarket basket accessory dangles from the left hand in a literal replication of a grocery shopping basket; it is constructed entirely from the brand's iconic leather-woven chains. This object utilizes the semiotic sabotage of mass commodities by rendering a banal utilitarian tool in elite luxury hardware. The heavy metallic structure houses a smaller quilted silver handbag inside; the thick chain handles grip the model's leather glove. The accessory completes the look by perfectly synthesizing everyday consumer errands with extreme wealth."
           }
         ]
       },
@@ -7582,9 +7618,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Quilted Tote in Iridescent Leather",
-            "description": "The quilted tote in iridescent leather carries the diamond stitching of the classic flap bag onto an oversized supermarket-tote silhouette; it converts a heritage handbag format into something closer to a luxury grocery sack. This material treatment is the most legible single statement of the show's supermarket thesis — the conversion of luxury hardware into bulk-purchase format. The pearlescent finish shifts color as the bag swings; the chain handles are doubled to support the larger volume. The accessory asserts the unmistakable supermarket-shopper character of the entire collection."
+            "y": 35,
+            "label": "Ribbed Knit Waist Corset",
+            "description": "The ribbed knit waist corset tightly binds the midsection in a pale yellow textured band; it features multiple vertical zippers that physically structure the torso. This sartorial restriction engages with athleisure integration by utilizing a stretchy athletic-style material to mimic historical shapewear. The thick fabric cinches the soft white top above it; the rigid zipper tracks create harsh vertical lines across the stomach. The garment asserts a hybridized athletic formality that controls the overall silhouette."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "White Lace-Up Knee Boots",
+            "description": "The white lace-up knee boots rise tightly over the calves in a clean bright textile; they provide a sharp athletic foundation for the pastel ensemble. This footwear choice applies the concept of elevated banality by transforming a sporting boot into a sleek runway focal point. The bright white material matches the skirt exactly; the intricate lacing snakes entirely up the shin. The boots complete the look by grounding the delicate tweed and knitwear in aggressive sportswear."
           }
         ]
       },
@@ -7594,8 +7636,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Tweed Cropped Jacket and Lace Tights",
-            "description": "The tweed cropped jacket and lace tights pair the house's defining outerwear with sheer floral hosiery in a deliberate collision of conservative tailoring and lingerie-adjacent intimacy. This styling logic continues the historical Chanel device of pairing rigid jacket against bare or barely-covered leg, scaled here for the post-internet generation. The boucle holds its boxy shape against the natural waist; the delicate floral pattern stretches across the calf. The look asserts the controlled tension between formal upper architecture and exposed lower vulnerability that has structured the house's silhouette since the 1990s."
+            "label": "Textured Purple Knit Co-ord",
+            "description": "The textured purple knit co-ord drapes over the torso and hips in a dark metallic yarn; it is entirely covered in small raised bobbles that create a dense 3D surface. This material strategy engages with hyper-capitalist pop art by mimicking the synthetic uniformity of mass-produced domestic textiles or bathmats. The heavy sweater features an exaggerated cowl neck; the matching skirt flares slightly above the knee. The garment asserts a deeply tactile and slightly absurd approach to luxury loungewear."
+          },
+          {
+            "x": 50,
+            "y": 75,
+            "label": "Lurex Metallic Knit Leggings",
+            "description": "The lurex metallic knit leggings tightly encase the legs in a highly reflective dark purple textile; they provide a sleek gleaming base beneath the heavy bobbled skirt. This structural intervention utilizes logo fetishism and flash by introducing a disco-era sheen to an otherwise muted silhouette. The shiny fabric wrinkles slightly over the knees and ankles; it catches the clinical runway lighting constantly. The piece completes the ensemble by forcing an aggressive synthetic texture onto the lower body."
           }
         ]
       },
@@ -7605,8 +7653,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Camellia Brooch on Tweed Lapel",
-            "description": "The camellia brooch on tweed lapel anchors the house's most heraldic floral motif at the upper chest in white silk and pearl detailing; it acts as a small but unmistakable house signature pinned to the most heritage-coded garment in the look. This material gesture treats the brooch as both decoration and identification badge, visible at distance like a brand mark. The dense petal construction catches light in three dimensions against the matte tweed surface; the central pearl provides the focal point. The accessory completes the look by carrying the house's most personal floral language into the otherwise generic supermarket vocabulary."
+            "label": "Geometric Pop-Art Silk Dress",
+            "description": "The geometric pop-art silk dress falls loosely over the body in a sheer grey fabric heavily printed with bright primary-colored shapes; it features short sleeves and an asymmetrical pleated hem. This graphic application engages with the critique of luxury consumption by mimicking the chaotic overlapping branding found in a busy grocery aisle. The translucent textile reveals the dark undergarments beneath; tiny embellished bees and logos are scattered across the print. The garment asserts a frantic visual overload that rejects classical subtlety."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Black Lace-Up Knee Boots",
+            "description": "The black lace-up knee boots wrap the lower legs in a dark matte leather; they feature aggressive silver hardware and white laces. This footwear choice applies athleisure integration to anchor the floaty silk dress with heavy utilitarian styling. The tight fit emphasizes the calves; the stark black tone absorbs the light entirely against the bright floor. The accessory completes the look by asserting a tough defensive posture beneath the delicate printed fabric."
           }
         ]
       },
@@ -7616,8 +7670,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Knit Beret in Boucle",
-            "description": "The knit beret in boucle reproduces the house's signature outerwear textile as headwear, scaling the tweed vocabulary onto the skull in a small flat disc. This styling choice treats the head as another surface for brand application, continuing the show's overall logic that every visible inch of the body becomes brand inventory. The matching boucle texture nods to the heritage Parisian beret while embedding it firmly in the Chanel system; the slightly cocked angle reads as casual gesture. The accessory asserts the seamless integration of brand surface across the full vertical of the body."
+            "label": "Geometric Pop-Art Silk Topcoat",
+            "description": "The geometric pop-art silk topcoat structures the body in a long flowing layer of bright chaotic graphic prints; it mirrors the exact busy motif of the garments layered underneath. This structural logic utilizes sartorial collage by piling identical loud patterns on top of one another to create visual fatigue. The lightweight fabric billows softly with the model's stride; the wide lapels reveal the matching corseted midriff inside. The outerwear asserts a totalizing commitment to hyper-capitalist pop art aesthetics."
+          },
+          {
+            "x": 30,
+            "y": 65,
+            "label": "Geometric Printed Classic Flap",
+            "description": "The geometric printed classic flap bag swings from the right hand; it wraps the house's most iconic accessory in the same loud primary-colored graphics as the coat. This object applies the simulacrum by treating a revered luxury item as merely another piece of mass-market packaging. The signature chain strap is pushed aside; the bright red and blue circles camouflage the quilted leather entirely. The accessory completes the silhouette by ensuring the graphic noise extends to every possible surface."
           }
         ]
       },
@@ -7625,10 +7685,16 @@ export const archiveData = [
         "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-12.jpg",
         "hotspots": [
           {
-            "x": 50,
+            "x": 25,
             "y": 45,
-            "label": "Two-Tone Slingback Pump",
-            "description": "The two-tone slingback pump pairs cream toe-cap with black quarter in the house's most precisely commercial footwear silhouette; it carries Coco Chanel's 1957 design language into the supermarket present without significant alteration. This styling choice anchors the protest runway in one of the house's longest-running and most stable commercial successes. The black cap shortens the visual length of the foot; the cream upper extends the leg line cleanly. The accessory asserts the heritage centerpiece around which the show's more chaotic gestures orbit."
+            "label": "Classic Pink Bouclé Suit",
+            "description": "The classic pink bouclé suit rigidly frames the female figure in a highly traditional textured wool jacket and matching knee-length skirt; it provides a stark conservative anchor within the chaotic show. This tailoring choice engages with postmodern pastiche by deploying the ultimate symbol of elite bourgeois fashion into a mundane supermarket setting. The stiff pink and white fabric features perfectly aligned patch pockets and silver buttons; the silhouette remains completely un-deconstructed. The garment asserts a stubborn historical purity amidst the surrounding commercial irony."
+          },
+          {
+            "x": 75,
+            "y": 65,
+            "label": "Branded Paper Shopping Bags",
+            "description": "The branded paper shopping bags are carried heavily by the male model; they are simple stark white retail bags emblazoned with the house logo. This prop intervention utilizes the semiotic sabotage of mass commodities by elevating the literal packaging of consumerism to runway status. The crisp white paper wrinkles naturally under the weight of the invisible purchases; the black typography stands out sharply. The detail completes the staging by explicitly highlighting the transactional nature of high fashion."
           }
         ]
       },
@@ -7638,8 +7704,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Boucle Coat with Quilted Lining",
-            "description": "The boucle coat with quilted lining drops past the knee in a pale wool exterior that flashes diamond-quilted satin lining at every step; it doubles the house's most-iconic surface treatments into a single garment. This construction treats the coat as walking inventory of brand assets — exterior tweed, interior quilting, all visible through the open front. The wide lapels frame a faux-pocketed front; the lining flashes with kinetic movement as the model strides. The outerwear asserts the maximum-density application of Chanel surface signatures within a single piece."
+            "label": "Vacuum-Packed Leather Dress",
+            "description": "The vacuum-packed leather dress encases the torso and hips in a highly reflective slick black hide; it features soft voluminous sleeves and a gathered skirt. This material extreme applies the concept of hyper-capitalist pop art by rendering a fluid silhouette in a material that resembles wet garbage bags or shrink-wrap. The glossy surface catches extreme white highlights from the runway lamps; the waist is cinched violently. The garment asserts a slightly fetishistic and highly artificial protective shell."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Contrast Zipper Corsetry Details",
+            "description": "The contrast zipper corsetry details violently bisect the black leather dress with thick tracks of bright red hardware; they mimic the visual effect of external boning. This structural logic engages with sartorial collage by utilizing heavy industrial closures as purely decorative geometric borders. The red zipper teeth run vertically down the entire front panel and outline the pockets; the metallic hardware adds a rough tactile edge. The detail completes the dress by injecting an aggressive subcultural motif into the sleek leather."
           }
         ]
       },
@@ -7649,8 +7721,14 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Statement Slogan Placard",
-            "description": "The statement slogan placard carries the central protest text 'Women's Rights Are More Than Alright' on a hand-lettered cardboard sign; it is the most widely reproduced single image from the show's reception. This styling choice is the show's defining political gesture — the moment at which the runway converted briefly from product showcase to mock political theater. The hand-painted typography refuses corporate polish; the cardboard surface clashes with every textile around it. The accessory completes the protest staging by giving the model a literal political voice within an otherwise silent commercial event."
+            "label": "Ribbed Orange Athleisure Co-ord",
+            "description": "The ribbed orange athleisure co-ord tightly binds the entire body in a highly textured matching knit top and leggings; it features a thick wrapped collar that obscures the neck completely. This material choice utilizes athleisure integration by presenting a head-to-toe lounge look on a haute couture runway. The vibrant orange yarn is woven with subtle horizontal ripples; the tight fit emphasizes the natural anatomy entirely. The ensemble asserts a relaxed but hyper-visible comfort that mocks formal daywear."
+          },
+          {
+            "x": 70,
+            "y": 65,
+            "label": "Transparent Pop-Art Plastic Tote",
+            "description": "The transparent pop-art plastic tote hangs heavily from the left hand; it is a large clear vinyl shopping bag printed with chaotic geometric shapes. This accessory engages with the critique of luxury consumption by mimicking cheap reusable grocery bags distributed at mass-market chains. The shiny plastic reveals the empty void inside; the bright orange piping matches the knitwear perfectly. The piece completes the silhouette by explicitly connecting the athletic styling to the act of consumer hoarding."
           }
         ]
       },
@@ -7659,9 +7737,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Layered Tweed Coat and Trouser Suit",
-            "description": "The layered tweed coat and trouser suit constructs an entirely tweed-clad silhouette from outerwear through full leg; it scales the boucle vocabulary to its maximum total surface coverage. This material strategy presents the house's signature textile as wearable monolith — every visible square inch of the look in the same fabric system. The pale boucle picks up shadow only in the deepest seams; the wide-leg trouser drags slightly over heritage footwear. The garment asserts the structural endpoint of the show's commercial logic — total brand surface immersion."
+            "y": 40,
+            "label": "Checked Bouclé Tweed Topcoat",
+            "description": "The checked bouclé tweed topcoat drops heavily to the mid-thigh in a classic black and white grid pattern; it features a stiff structural collar and traditional patch pockets. This outerwear strategy applies postmodern pastiche by utilizing a revered heritage textile to cover a highly casual athleisure base. The thick wool fabric holds a sharp boxy shape; the front hangs open to reveal the bright silver layers beneath. The garment asserts a deeply conservative outer boundary that attempts to legitimize the streetwear elements."
+          },
+          {
+            "x": 65,
+            "y": 50,
+            "label": "Chainmail Supermarket Basket Accessory",
+            "description": "The chainmail supermarket basket accessory is carried casually in the left hand; it is constructed entirely from rigid metallic wire interlaced with signature black leather. This object utilizes the semiotic sabotage of mass commodities by rendering a banal grocery basket as a heavy elite status symbol. The stiff metallic frame encases a bright yellow handbag wrapped in clear plastic; the chain handle rests lightly over the model's wrist. The accessory completes the look by fully integrating the staging environment into the wearable wardrobe."
           }
         ]
       },
@@ -7670,9 +7754,15 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 45,
-            "label": "Quilted Backpack with Chain Straps",
-            "description": "The quilted backpack with chain straps converts the house's most-replicated accessory format into a contemporary travel silhouette; it carries the diamond quilting and gold chain hardware onto a structurally different bag type. This material gesture demonstrates the elasticity of Chanel's accessories program — the same visual signatures applied to whatever bag format the current consumer wants. The dual chain straps cross the back to distribute weight; the front face presents an unbroken diamond grid. The accessory asserts the protest runway's underlying commercial argument: brand signatures are platform-independent."
+            "y": 30,
+            "label": "Oversized Bouclé Tweed Jacket",
+            "description": "The oversized bouclé tweed jacket swallows the upper torso in a massive textured black and white shell; it features dramatically inflated shoulders and an abbreviated cropped hem. This tailoring extreme engages with the subversion of traditional proportions by transforming a polite feminine jacket into a bulky imposing top. The heavy wool fabric sits stiffly away from the waist; large ornate buttons gleam down the center placket. The top asserts a hybridized aesthetic that merges classic luxury with cartoonish spatial volume."
+          },
+          {
+            "x": 50,
+            "y": 75,
+            "label": "Geometric Pop-Art Knit Leggings",
+            "description": "The geometric pop-art knit leggings tightly encase the legs in a chaotic pattern of bright pink and blue interlocking grids; they provide a visually deafening contrast to the dark tweed above. This material application utilizes hyper-capitalist pop art to inject the loud saturated colors of candy packaging onto the lower body. The stretch fabric highlights the musculature precisely; the bright hues clash violently with the metallic silver sneakers. The piece completes the silhouette by ensuring the lower half of the body remains entirely enveloped in graphic noise."
           }
         ]
       }
