@@ -39,7 +39,8 @@ try {
 } catch { /* no .env.local is fine */ }
 
 const SUPABASE_URL  = process.env.SUPABASE_URL;
-const SERVICE_KEY   = process.env.SUPABASE_SERVICE_KEY;
+// Accept either name so local .env.local and the GitHub Actions secret both work
+const SERVICE_KEY   = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!DRY_RUN && (!SUPABASE_URL || !SERVICE_KEY)) {
   console.error('\n❌  Set SUPABASE_URL and SUPABASE_SERVICE_KEY before running.\n');
