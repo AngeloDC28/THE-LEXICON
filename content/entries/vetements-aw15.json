@@ -2,28 +2,265 @@
   "$schema": "../entry.schema.json",
   "id": "vetements-aw15",
   "title": "Vetements AW 2015",
-  "subtitle": "",
+  "subtitle": "The Breakout Era (FW15 / SS16)",
   "year": 2015,
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-01.jpg"
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Red Velvet Suit",
+          "description": "The oversized red velvet suit engulfs the model in a massive slouching volume; it features immensely dropped shoulders that swallow the hands entirely. This structural intervention engages with downmarket irony by treating a luxurious eveningwear textile as a casual unkempt uniform. The jacket hangs open loosely; the trousers bunch heavily over the dark footwear. The garment asserts a deliberate \"vetementization\" of formalwear through radical proportion distortion."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Tonal Red Turtleneck",
+          "description": "The tonal red turtleneck provides a continuous monochromatic base beneath the heavy velvet jacket; it sits high against the throat. This styling choice utilizes post-postmodernism by creating a saturated block of color that mimics digital flat-design aesthetics. The soft knit fabric clings to the neck; it lacks any visible branding or contrast details. The piece completes the ensemble by forcing an overwhelming visual consistency upon the exaggerated silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Green Striped Turtleneck",
+          "description": "The green striped turtleneck features high-contrast horizontal bands in a deliberately mundane textile; it stretches tightly across the chest before loosening at the waist. This material application engages with the concept of the fashion meme by elevating a banal everyday sweater into a runway centerpiece. The high collar pushes awkwardly against the chin; the sleeves extend significantly past the wrists. The garment asserts a romanticization of the mundane that rejects traditional luxury aesthetics."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Reconstructed Leather Trousers",
+          "description": "The reconstructed leather trousers feature a stark central zipper fly and prominent red side panels; they split open at the ankle via thick metal hardware. This structural logic utilizes sartorial defacement to disrupt the sleekness of traditional leather pants. The dark material wrinkles sharply at the crotch and knees; the red racing stripes introduce a jarring sportswear element. The piece completes the look by grounding the casual sweater in heavy utilitarian hardware."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Utilitarian Firefighter Sweater",
+          "description": "The utilitarian firefighter sweater mimics a genuine public service uniform in bright red knit; it features highly visible reflective banding across the chest. This material strategy engages directly with downmarket irony by treating a functional working-class garment as a coveted high-fashion commodity. The thick yarn stretches tightly over the torso; the word \"INCENDIE\" is printed prominently on the black stripe. The top asserts a profound statement on capitalist kitsch by stripping the uniform of its heroic context."
+        },
+        {
+          "x": 45,
+          "y": 42,
+          "label": "Oversized Utility Belt",
+          "description": "The oversized utility belt cinches the natural waist with heavy black leather and industrial hardware; it features a prominent blue identification card holder. This accessory utilizes the simulacrum to introduce hyper-realistic functional details into the runway styling. The thick strap interrupts the bright red sweater violently; the plastic cardholder dangles uselessly over the hip. The detail completes the \"hacked\" aesthetic by forcing practical gear into a purely decorative role."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Navy Cargo Trousers",
+          "description": "The navy cargo trousers drop from beneath the heavy belt in a stiff utilitarian fabric; they feature massive patch pockets on the thighs. This structural choice provides a banal working-class base that perfectly matches the firefighter aesthetic above. The dark textile lacks any formal creasing; the straight legs tuck roughly into black footwear. The trousers complete the ensemble by fully committing to the romanticized service uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Military Trench",
+          "description": "The oversized military trench swallows the body in a massive volume of drab olive wool; it features drastically dropped shoulders and sleeves that hide the hands completely. This structural extreme applies the brand's signature silhouette distortion to a classic piece of outerwear. The stiff fabric holds deep heavy folds; the shiny inner lining is exposed as the coat hangs wide open. The garment asserts a defensive and slouched posture typical of the collective's anti-fashion ethos."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Standard Straight-Leg Denim",
+          "description": "The standard straight-leg denim introduces a mundane pale blue wash beneath the dramatic outerwear; it functions as a highly relatable everyday anchor. This material choice engages with the romanticization of the ordinary by avoiding specialized runway textiles. The fabric features slight distressing at the knee; the hem breaks cleanly over brown leather boots. The piece completes the look by fusing extreme architectural volume with aggressively normal casual wear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Beige Trench Coat",
+          "description": "The oversized beige trench coat engulfs the figure in a classic gabardine textile; it features immense drop shoulders and sleeves that entirely consume the arms. This outerwear choice engages with sartorial recontextualization by taking the most ubiquitous transitional coat and blowing it up to absurd proportions. The stiff fabric holds wide open to reveal the layered garments inside; the traditional storm flaps and epaulettes remain intact despite the scale distortion. The jacket asserts a protective but highly impractical urban shield."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Striped Oversized Button-Down",
+          "description": "The striped oversized button-down is layered haphazardly beneath the trench; it introduces a secondary volume of crisp cotton shirting. This structural logic utilizes a \"hacked\" layering technique that mimics hasty morning dressing rather than meticulous couture. The thin blue stripes contrast softly with the beige outerwear; the collar stands stiffly against the neck. The garment completes the top half of the silhouette by adding chaotic untucked length."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Graphic Red Sweatshirt Skirt",
+          "description": "The graphic red sweatshirt skirt wraps the hips in a bright fleece fabric; it appears to be a repurposed hoodie tied or draped to function as a skirt. This material manipulation relies on post-postmodernism by treating casual streetwear as a mutable raw material for high fashion. The vibrant red color features prominent white typography cut off by the drape; the hem falls bluntly above the knee. The piece completes the ensemble by violently disrupting the classic outerwear above."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Oversized Shearling Aviator Jacket",
+          "description": "The oversized shearling aviator jacket drops from massive structural shoulders into a deeply textured brown leather exterior; it features thick beige fleece lining bursting from the collar and hem. This material strategy engages with downmarket irony by inflating a classic vintage thrift-store staple into a dominating runway monolith. The dark hide catches the light with a rugged sheen; a heavy silver zipper splits the front precisely down the middle. The outerwear asserts an aggressive warmth and an imposing unyielding silhouette."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Bright Blue Tailored Trousers",
+          "description": "The bright blue tailored trousers peek out from the front slit of the massive jacket; they introduce a shocking jolt of saturated color against the dark leather. This styling choice utilizes the fashion meme aesthetic by contrasting aggressive earth tones with hyper-digital brights. The fabric drops cleanly without significant creasing; the straight leg breaks over shiny black footwear. The trousers complete the look by anchoring the heavy upper volume with a sudden flash of unexpected synthetic color."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Hybridized Two-Tone Puffer Coat",
+          "description": "The hybridized two-tone puffer coat stitches together stark black and bright blue quilted panels into a massive floor-length volume; it functions as an extreme sleeping-bag silhouette. This structural intervention engages with sartorial defacement by splicing two distinct athletic garments into a single overwhelming piece. The synthetic nylon reflects the runway lighting sharply; the bright blue sleeves hang uselessly at the sides. The outerwear asserts a survivalist aesthetic pushed to the level of luxury absurdity."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Graphic Black Hoodie",
+          "description": "The graphic black hoodie provides a dark foundational layer beneath the massive puffer; it features small flashes of neon yellow and red typography on the shoulders. This material choice utilizes the collective's signature streetwear integration by grounding the high-fashion coat with a banal skater staple. The soft jersey fabric sits tightly across the chest; the hood is worn up to obscure the hairline. The piece completes the ensemble by reinforcing an aggressive and highly insulated urban posture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Black Puffer Coat",
+          "description": "The oversized black puffer coat drapes over the shoulders like a massive heavy cape; it trails aggressively down to the runway floor. This outerwear choice applies monolithic massing to a standard winter staple by extending its volume well beyond human proportions. The matte black fabric absorbs light to create a heavy visual void; the quilted horizontal lines provide subtle structural texture. The garment asserts a protective architectural barrier that swallows the wearer entirely."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Graphic Moto-Cross Trousers",
+          "description": "The graphic moto-cross trousers encase the legs in rigid black red and white synthetic panels; they feature aggressive racing typography and heavy protective padding. This material application engages directly with the simulacrum by placing authentic extreme-sports gear onto the luxury runway without irony. The stiff fabric holds a sharp angular shape over the knees; the bright colors clash violently with the grey hoodie above. The piece completes the silhouette by injecting high-octane subcultural graphics into the somber layering."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Grey Fleece Hoodie",
+          "description": "The grey fleece hoodie is worn tightly over the head to frame the face; it provides a quiet banal anchor amidst the chaotic racing gear and massive coat. This styling detail utilizes the romanticization of the mundane to ground the avant-garde silhouette. The soft cotton fabric hangs loosely over the chest; the drawstrings dangle uselessly. The garment completes the look by asserting the casual indifference central to the brand's aesthetic."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Oversized Flannel Shirt",
+          "description": "The oversized flannel shirt hangs heavily over the torso in a stark black and white checkerboard pattern; it functions as a lightweight dress rather than a traditional top. This material strategy engages with subcultural systems by blowing up a staple of 1990s grunge into a primary runway garment. The soft fabric drops to the mid-thigh; the sleeves push out through the armholes of the bomber jacket above. The shirt asserts an aesthetic of extreme casual slowness and youthful apathy."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Deconstructed Black Bomber",
+          "description": "The deconstructed black bomber jacket wraps the shoulders in shiny black nylon; it features bright orange lining exposed at the front opening. This structural logic utilizes sartorial recontextualization by letting the jacket slide precariously off the torso. The metallic zippers and arm pockets remain intact despite the chaotic styling; the massive sleeves swallow the arms completely. The outerwear completes the silhouette by trapping the relaxed flannel within a heavy industrial shell."
+        },
+        {
+          "x": 50,
+          "y": 85,
+          "label": "Star-Print Platform Boots",
+          "description": "The star-print platform boots elevate the model significantly on heavy block heels; they feature bright white stars scattered across a dark blue leather base. This footwear choice applies post-postmodernism by injecting a sudden flash of kitsch into the dark grunge ensemble. The shiny leather reflects the runway lights; the high cut tightly encases the ankle. The accessory completes the look by contrasting the slouchy upper volume with a sharp theatrical foundation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Oversized Leather Shirting",
+          "description": "The oversized leather shirting drapes heavily over the torso in a dense matte black hide; it mimics the cut of a traditional button-down but utilizes extreme outerwear materials. This structural intervention engages with downmarket irony by treating an aggressive fetishistic fabric as a casual everyday top. The stiff material holds deep rigid creases across the stomach; the sleeves completely obscure the hands. The garment asserts an imposing and slightly sinister monolithic volume."
+        },
+        {
+          "x": 65,
+          "y": 70,
+          "label": "Trailing Leather Fringes",
+          "description": "The trailing leather fringes drop from the sleeves and shoulders entirely down to the runway floor; they create a massive chaotic cage of black strips around the model. This styling detail utilizes architectural shielding to isolate the wearer within a dense kinetic barrier. The thin hides drag heavily against the ground; they flash rapidly with every step. The piece completes the silhouette by extending the dark weight of the leather into the physical space surrounding the body."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Plaid Blazer",
+          "description": "The oversized plaid blazer structures the upper body in a massive boxy frame; it features heavily dropped shoulders and an extremely long hem that drops below the shorts. This tailoring extreme applies the brand's signature silhouette distortion to a classic piece of corporate menswear. The muted brown and grey grid absorbs light softly; the sleeves completely swallow the arms. The outerwear asserts an awkward \"borrowed-from-dad\" aesthetic that mocks traditional suit proportions."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Matching Plaid Bermuda Shorts",
+          "description": "The matching plaid Bermuda shorts drop from beneath the heavy blazer to truncate sharply above the knee; they complete the disjointed suit. This structural choice utilizes sartorial defacement by substituting formal trousers with an awkward mid-length short. The crisp fabric holds a slight crease down the center leg; the dark underlayer peeks out from the slit. The garment completes the ensemble by emphasizing the exposed leg against the heavy upper volume."
+        },
+        {
+          "x": 50,
+          "y": 88,
+          "label": "Snakeskin Print Ankle Boots",
+          "description": "The snakeskin print ankle boots rise tightly over the calf in a highly textured synthetic hide; they feature a heavy structural platform heel. This accessory choice engages with post-postmodernism by injecting a sudden flash of animalistic kitsch into the drab corporate suit. The pale beige and black print contrasts sharply with the smooth plaid fabric above; the tight fit emphasizes the ankle. The boots complete the look by grounding the oversized suit with aggressive theatrical footwear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Corduroy Blazer",
+          "description": "The oversized corduroy blazer engulfs the torso in a massive heavy-textured yellow-beige textile; it features an immense drop shoulder and lapels that scale down to the mid-thigh. This material strategy engages with the romanticization of the mundane by elevating a notoriously unglamorous fabric (associated with academics or thrift stores) into a runway centerpiece. The thick ridges of the corduroy catch the light vertically; the sleeves swallow the hands entirely. The garment asserts a posture of extreme slouch and intellectual apathy."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Saturated Blue Turtleneck",
+          "description": "The saturated blue turtleneck provides a stark vibrant focal point beneath the heavy beige lapels; it sits high against the throat. This styling choice utilizes the fashion meme aesthetic by injecting a highly saturated digital color block into a muted vintage ensemble. The soft knit fabric clings tightly to the neck and chest; it lacks any visible texture or ribbing. The top completes the upper silhouette by providing a necessary visual anchor against the massive coat."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Matching Corduroy Trousers",
+          "description": "The matching corduroy trousers drop heavily from the waist into a wide slouched volume; they feature the exact same yellow-beige ribbed texture as the blazer. This structural logic applies monolithic massing to complete a full suit of oppressive vintage fabric. The heavy textile pools thickly around the ankles; the hem drags slightly over dark platform footwear. The trousers assert a relaxed and highly un-tailored conclusion to the retro silhouette."
+        }
+      ]
     }
   ],
   "tags": {
     "brand": "Vetements",
     "era": "2010 to 2019; The Digital and Streetwear Pivot",
-    "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics & Anti-Elitism | Queer Theory & Subcultural Systems",
-    "theories": "Institutional Critique | The Simulacrum (Baudrillard) | Subcultural Resistance Theory | Corporate Nihilism",
-    "gender": "Unisex / Neutral",
-    "materials": "Petroleum-Based Polymers | Artificially Degraded Textiles | Deadstock & Surplus Inventory",
+    "politics": "Anti-Consumerism & Institutional Critique | Class Dynamics (Romanticising the Mundane)",
+    "theories": "Post-postmodernism | Downmarket Irony & Counterfeit Chic | The Simulacrum (Fashion Memes) | Hacking & Anti-Fashion",
+    "gender": "Womenswear",
+    "materials": "Everyday/Utilitarian Textiles (Cotton T-shirts) | Repurposed/Hacked Garments",
     "geography": "Paris (Chambre Syndicale)",
-    "anatomy": "Compressed Proportions | Radical Asymmetry | Surface Erosion and Degradation | Topographic Layering",
-    "format": "Salon / Intimate Appointment"
+    "anatomy": "Oversized Silhouettes | Sartorial Defacement / Recontextualization",
+    "format": "Physical Presence (Ready-to-Wear) | Viral Media / Digital \"Fashion Memes\""
   },
   "notes": {
-    "provenance": "Vetements' AW 2015 collection — the collective's first major Paris show — was presented in Le Dépôt, a famous Parisian gay sex club in the Marais district. The intimate, deliberately unglamorous setting accommodated fewer than 100 guests and was designed to invert every convention of the Paris fashion week spectacle. The show launched Demna Gvasalia and the Vetements collective into the centre of the global fashion conversation and established a new template for the institutionally critical fashion presentation.",
-    "strategy": "The AW 2015 collection was constructed from oversized, proportion-distorted archetypes — the hoodie, the trench coat, the DHL uniform shirt — manipulated through extreme scaling, asymmetric cutting, and graphic appropriation. The Vetements design logic treated the everyday wardrobe of urban youth as raw material to be deconstructed and re-presented as luxury product, collapsing the distinction between streetwear and couture through irony and formal aggression.",
-    "critique": "Vetements' Le Dépôt presentation was a calculated institutional critique of the Paris fashion system on multiple levels simultaneously: the venue subverted the grand hotel ballroom; the guest list subverted the editor hierarchy; the clothes subverted the luxury material logic; and the collective structure subverted the singular designer myth. The show proposed that the most radical act in contemporary fashion was not formal innovation but institutional refusal — and that this refusal could itself be packaged and sold as luxury."
+    "provenance": "This entry refers to the breakout early collections of Vetements (meaning ‘clothing’ in French) during the 2015–2016 seasons. While your prompt specifies Autumn/Winter 2015, fashion scholars and the provided texts heavily anchor this era of Vetements to its subsequent Spring/Summer 2016 runway presentation, which featured the iconic DHL T-shirt The brand initially operated as a creative collective of seven anonymous designers before Georgian creative director Demna Gvasalia became its highly profiled face The brand's phenomenal rise was deeply tied to its adroit understanding of contemporary digital media culture and social media practices",
+    "strategy": "Hacking & Defacement: Vetements’ core structural logic relied on \"hacking\" the existing fashion system. The strategy involved taking iconic, everyday products that other labels were known for (such as Hanes T-shirts or Manolo Blahnik heels) and reworking them through creative defacement—a process that birthed the phrase \"to Vetementize\" Downmarket Irony (The DHL Shirt): The most famous sartorial intervention of this era was the exact reproduction of a standard DHL courier T-shirt. Vetements paraded this mundane uniform down the SS2016 runway, subverting it by attaching a luxury price tag of £185 Engineering the \"Fashion Meme\": Gvasalia designed garments specifically to be \"viral.\" The clothing was engineered like internet memes—intended to be copied, modified, shared, and commented upon across digital platforms, giving the garments as much life online as they had offline",
+    "critique": "Post-Postmodernism & Capitalist Kitsch: The 2015/2016 Vetements collections are definitive examples of post-postmodernism. By turning a working-class delivery uniform into a highly expensive, coveted item, Vetements delivered a calculated disruption and assault on the fashion status quo, making profound statements on \"capitalist kitsch\" and bringing anti-fashion back to the luxury runway Romanticising the Mundane: Gvasalia actively romanticised the ordinary, bringing visibility to everyday communities and transforming mundane utility wear into fetishised high-fashion commodities. This signaled a massive shift in consumer culture: unlike the 2000s, where traditional logos (like Louis Vuitton or Chanel) represented ostentatious wealth, Vetements proved that non-fashion logos and \"downmarket irony\" plugged much more effectively into the millennial generation's vibe Subverting Intellectual Property: By actively creating fashion memes and inviting parody, satire, and pastiche, Vetements subverted the traditional, reverential rights-based fashion system that typically frowned upon copying and imitation. As critics noted, being transformed into a meme was no longer a mark of derision, but the ultimate signifier of cultural relevance"
   }
 }

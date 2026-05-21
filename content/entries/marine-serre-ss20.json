@@ -2,28 +2,286 @@
   "$schema": "../entry.schema.json",
   "id": "marine-serre-ss20",
   "title": "Marine Serre SS 2020",
-  "subtitle": "Manic",
+  "subtitle": "Marée Noire",
   "year": 2020,
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-01.jpg"
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ruffled Floral Silk Dress",
+          "description": "The ruffled floral silk dress drapes the body in a chaotic volume of electric blue and black printed fabric; it mimics the toxic bioluminescence of a mutated botanical species. This material choice engages with ecocriticism by corrupting a traditional feminine floral print with a harsh synthetic color palette. The heavy ruffles create an erratic kinetic silhouette that obscures the natural waistline. The garment asserts a dystopian approach to eveningwear, suggesting an aggressive and poisonous form of nature."
+        },
+        {
+          "x": 48,
+          "y": 10,
+          "label": "Sheer Visage Obfuscation",
+          "description": "The sheer visage obfuscation covers the entire head and face in the same dark floral textile; it isolates the model within an impenetrable decorative barrier. This styling choice utilizes bodily obfuscation to enforce the narrative of a toxic environment requiring total physical shielding. The thin fabric allows the model to see but completely erases her individual identity. The accessory completes the look by transforming the human wearer into an anonymous entity engulfed by synthetic nature."
+        },
+        {
+          "x": 45,
+          "y": 55,
+          "label": "Crescent Moon Base Layer",
+          "description": "The crescent moon base layer peeks out from beneath the chaotic ruffles; it tightly encases the arms and legs in a pale jersey printed with the brand's signature logo. This material application provides a strict aerodynamic foundation beneath the explosive volume of the dress. The tight fabric acts as a primary protective skin for the post-apocalyptic underground. The piece completes the ensemble by branding the wearer's anatomy with an unmistakable tribal marker."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Spliced Zebra-Print Dress",
+          "description": "The spliced zebra-print dress wraps the torso and hips in an aggressive animalistic pattern heavily interrupted by geometric panels of bright blue silk; it creates a jarring visual collage. This structural logic utilizes regenerative assemblage to merge distinct textile remnants into a single survivalist garment. The tight bodice pulls the fabric taut before flaring into a relaxed asymmetrical skirt. The garment asserts a hybridized aesthetic that mimics the chaotic blending of nature and synthetic refuse."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Aerodynamic Jersey Base",
+          "description": "The aerodynamic jersey base provides a solid black foundation beneath the chaotic printed dress; it features subtle white topstitching along the chest and shoulders. This tailoring choice utilizes the crescent moon base layer concept by treating the body as an entity requiring a sleek protective under-suit. The tight sleeves extend past the elbows to reveal the branded jersey beneath. The top asserts a highly functional and athletic core necessary for physical endurance."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Wrapped Asymmetrical Tunic",
+          "description": "The wrapped asymmetrical tunic binds the torso in a tight black stretch fabric intersected by a bright blue twisted sash across the chest; it features a single sleeve printed with the signature crescent moon logo. This structural intervention engages with hybrid assemblage by deliberately disorienting the symmetry of the upper body. The tight black fabric falls into a loose fluid skirt; the blue sash trails heavily behind the model. The garment asserts a posture of hasty protective dressing."
+        },
+        {
+          "x": 50,
+          "y": 80,
+          "label": "Crescent Moon Hosiery",
+          "description": "The crescent moon hosiery encases the legs in a tight black and yellow synthetic mesh; it features a dense pattern of the brand's iconic logo. This styling detail utilizes semiotic sabotage by forcing the eye to confront a heavily branded surface beneath the dark tunic. The bright yellow print flashes sharply against the dark footwear. The accessory completes the look by ensuring the tribal marker of the dystopian underground remains hyper-visible."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Monolithic Moiré Puffer Coat",
+          "description": "The monolithic moiré puffer coat swallows the body in a massive inflated volume of black water-marked silk; it features an immense protective hood that dwarfs the head completely. This outerwear choice applies the aesthetics of climate anxiety by engineering a garment that resembles a radiation suit or deep-sea survival gear. The glossy deadstock fabric holds deep rigid folds; the wide sleeves completely obscure the arms. The coat asserts a defensive and highly armored architectural presence."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Volumetric Moiré Skirt",
+          "description": "The volumetric moiré skirt drops from the waist into a wide bell-shaped silhouette; it mirrors the exact texture and fabric of the heavy coat above. This structural logic utilizes monolithic massing to ensure the lower half of the body is as heavily protected as the upper half. The dark fabric pools thickly around the knees; it is abruptly truncated by high-gloss black boots. The skirt completes the ensemble by forcing an overwhelming visual consistency upon the exaggerated silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Utilitarian Utility Jacket",
+          "description": "The utilitarian utility jacket structures the upper body in a stiff black textured fabric; it features aggressive white topstitching and heavy functional pockets. This material strategy engages directly with post-apocalyptic survivalism by elevating a mechanic's uniform into a sleek runway garment. The jacket is cinched tightly at the waist by a simple fabric belt; the collar stands stiffly against the neck. The outerwear asserts a rugged and highly practical defensive posture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Matching Cargo Trousers",
+          "description": "The matching cargo trousers drop fluidly from the waist into a relaxed utilitarian fit; they feature the exact same white topstitching and pocket detailing as the jacket. This structural choice provides a banal working-class base that emphasizes the grim functionality of the collection. The dark textile lacks any formal creasing; the straight legs tuck roughly into black tactical boots. The trousers complete the look by enforcing a strict uniform designed for harsh environmental endurance."
+        },
+        {
+          "x": 25,
+          "y": 30,
+          "label": "Tactical Arm Pouch",
+          "description": "The tactical arm pouch straps tightly around the right bicep; it features heavy black nylon and functional zippers. This accessory utilizes survivalist componentry to introduce literal carrying capacity directly onto the limbs. The small bag interrupts the clean line of the sleeve; it is adorned with subtle metal hardware. The detail completes the ensemble by emphasizing the necessity of hands-free utility in a crisis scenario."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Chain-Fringed Leather Tunic",
+          "description": "The chain-fringed leather tunic wraps the torso in a soft white fabric heavily obscured by a massive cascade of fine silver chains; it acts as a metallic protective veil over the chest. This structural intervention engages with survivalist armour by fusing delicate jewelry techniques with heavy industrial hardware. The chains drape heavily from the neckline down to the waist; small shells and charms are integrated into the metal links. The top asserts a hybridized aesthetic combining fragile beauty with defensive weight."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Embossed Crescent Leather Trousers",
+          "description": "The embossed crescent leather trousers encase the legs in a highly textured black hide; they feature a dense repeating pattern of the brand's signature moon logo stamped directly into the fabric. This material application utilizes semiotic sabotage by forcing a ubiquitous tribal marker into a heavy luxury material. The dark shiny surface reflects the runway lighting intensely; the trousers are tucked tightly into knee-high boots. The garment completes the silhouette by grounding the delicate upper chains in a severe militant base."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Glossy PVC Topcoat",
+          "description": "The glossy PVC topcoat falls cleanly to the mid-calf in a highly reflective black synthetic plastic; it functions as a severe weather-proof outer shell. This material choice engages with ecocriticism by utilizing deadstock petrochemical materials to construct a garment explicitly designed to repel environmental hazards. The slick surface holds sharp vertical highlights; the front hangs open to reveal a stark white underlayer. The outerwear asserts an artificial and highly defensive urban armor."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Bare-Legged Styling",
+          "description": "The bare-legged styling introduces a moment of profound vulnerability against the heavy industrial coat; the model's exposed skin contrasts violently with the toxic PVC. This styling detail engages with the aesthetics of climate anxiety by leaving the body partially unprotected in a harsh environment. The stark white undergarments sit high on the thigh; the model wears simple white sneakers. The look asserts a tension between total architectural shielding and fragile human biology."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Cinched Nylon Field Jacket",
+          "description": "The cinched nylon field jacket structures the upper body in a lightweight black synthetic fabric; it features a heavy chain belt wrapping the waist. This outerwear choice applies survivalist componentry by taking a basic windbreaker and equipping it with aggressive hardware. The stiff collar points sharply downward; the sleeves are pushed up to reveal dark leather gloves. The garment asserts a highly functional and tactical posture designed for rapid movement."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Nylon Cargo Trousers",
+          "description": "The nylon cargo trousers drop seamlessly from beneath the jacket into a relaxed utilitarian fit; they feature heavy zippers and subtle seaming details. This structural choice provides a quiet practical base that emphasizes the militant styling of the top half. The dark fabric falls without heavy bagging; it is tucked tightly into high-gloss black boots. The trousers complete the ensemble by reinforcing the strict survivalist uniform."
+        },
+        {
+          "x": 30,
+          "y": 60,
+          "label": "Spherical Chain Handbag",
+          "description": "The spherical chain handbag dangles from the right hand in a bright highly reflective red finish; it is suspended by a thick silver chain. This accessory utilizes the simulacrum to introduce a jarringly perfect geometric object into the gritty utilitarian ensemble. The bright color provides the only chromatic break in the dark silhouette; it resembles a futuristic containment vessel. The piece completes the look by asserting the collection's focus on bizarre industrial hardware."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Tailored Moiré Suit Jacket",
+          "description": "The tailored moiré suit jacket structures the torso in a vibrant bright red silk; it features an extremely cinched waist and prominent structured shoulders. This tailoring extreme applies the subversion of luxury codes by taking an opulent historical fabric and rendering it into a sharp aggressive power suit. The glossy deadstock textile displays its signature water-marked pattern subtly; it lacks heavy lapels or visible buttons. The outerwear asserts a commanding and highly visible presence."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Matching Moiré Bermuda Shorts",
+          "description": "The matching moiré Bermuda shorts drop from beneath the heavy blazer to truncate sharply just below the knee; they complete the disjointed suit. This structural choice utilizes sartorial defacement by substituting formal trousers with an awkward mid-length short. The crisp red fabric holds a slight crease down the center leg; the dark crescent moon hosiery peeks out from the hem. The garment completes the ensemble by emphasizing the bold graphic branding against the vivid luxury textile."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Spliced Athletic Bodysuit",
+          "description": "The spliced athletic bodysuit binds the torso tightly in panels of black and red synthetic stretch fabric; it mimics the aerodynamic cut of professional sportswear. This material application engages with the concept of the survivalist base layer, treating the body as an entity requiring high-performance athletic gear. The tight fabric highlights the musculature; the deep scoop neck exposes the collarbone. The top asserts a hyper-functional core necessary for physical endurance."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Draped Upcycled Silk Skirt",
+          "description": "The draped upcycled silk skirt wraps the lower body in a chaotic red fabric heavily distressed with dark ink-like splatters; it creates the illusion of a garment ruined by toxic exposure. This structural logic utilizes regenerative assemblage to fuse damaged materials into a fluid asymmetrical volume. The fabric hangs loosely from the hips; it trails unevenly across the runway over high-gloss black boots. The skirt asserts the environmental reality of the \"Marée Noire\" theme."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Upcycled Toweling Trench Coat",
+          "description": "The upcycled toweling trench coat engulfs the figure in a massive volume of dark orange and brown camouflage fabric; it is constructed entirely from repurposed bath towels. This material strategy engages heavily with institutional critique by elevating domestic refuse into the realm of luxury outerwear. The thick highly textured fabric hangs heavily over the shoulders; the traditional storm flaps are maintained despite the bizarre textile. The coat asserts a pragmatic approach to creation where warmth and survival supersede opulence."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Repurposed Crochet Gown",
+          "description": "The repurposed crochet gown falls heavily to the floor in a massive intricate web of white yarn; it completely engulfs the dark denim underlayer. This structural extreme applies regenerative assemblage to transform traditional domestic craft into a sweeping runway silhouette. The dense patterns feature large circular and floral motifs; the loose knit allows the body beneath to remain partially visible. The garment asserts a deep respect for historical handiwork while maintaining a slightly decaying post-apocalyptic aesthetic."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Spliced Satin and Lace Tunic",
+          "description": "The spliced satin and lace tunic wraps the upper body in a chaotic collage of delicate white textiles; it features an asymmetrical neckline and violently ruffled sleeves. This material manipulation utilizes deconstructivist assembly to create a garment that appears hastily stitched together from salvaged bridal wear. The smooth satin center contrasts sharply with the sheer floral lace on the arms; the fabric hangs loosely without any rigid tailoring. The top asserts a fragile and slightly ruined femininity."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Satin Track Shorts",
+          "description": "The satin track shorts truncate the silhouette sharply at the mid-thigh in a pale beige fabric bordered by delicate white lace; they introduce a highly casual athletic element to the complex lace top. This styling choice utilizes semiotic sabotage by pairing romantic textiles with the format of gym shorts. The smooth fabric drops cleanly from the waist; it exposes the sheer white crescent moon hosiery beneath. The piece completes the ensemble by forcing an awkward but highly mobile proportion onto the model."
+        },
+        {
+          "x": 30,
+          "y": 65,
+          "label": "Netted Macramé Handbag",
+          "description": "The netted macramé handbag dangles heavily from the right hand; it features a bright red spherical core trapped within a thick white woven net. This accessory applies the concept of upcycling as institutional critique by elevating a basic craft technique into a high-fashion object. The thick white cords contrast with the bright red interior; it swings kinetically with the model's stride. The detail completes the look by emphasizing the collection's focus on domestic resourcefulness."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Upcycled Toweling Pullover",
+          "description": "The upcycled toweling pullover structures the upper body in a thick heavily textured black fabric; it is constructed from repurposed bath towels featuring subtle geometric patterns. This material strategy engages heavily with institutional critique by elevating domestic refuse into the realm of luxury streetwear. The stiff fabric features a high zippered collar and a large front pocket; the sleeves end in raw fringed hems. The garment asserts a pragmatic approach to creation where warmth and survival supersede opulence."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Matching Toweling Shorts",
+          "description": "The matching toweling shorts drop from beneath the heavy pullover to truncate just above the knee; they complete the disjointed monochromatic suit. This structural choice utilizes sartorial defacement by substituting traditional trousers with an awkward fringed short. The thick fabric holds a slightly bulky shape; it exposes tight black leggings and heavy knee braces beneath. The garment completes the ensemble by emphasizing the highly functional and protective base layers."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/marine-serre-ss20/marine-serre-ss20-15.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Embellished Wool Topcoat",
+          "description": "The embellished wool topcoat structures the body into a massive rigid black column; it is entirely covered in a chaotic assortment of golden hardware, brooches, and shell motifs. This material application engages with the aesthetic of climate anxiety by treating the coat like an artifact salvaged from a shipwreck or a hoard of discarded treasures. The thick black fabric absorbs the light, forcing the shiny gold elements into sharp relief; the front is zippered tightly to the throat. The outerwear asserts an unyielding architectural armor heavily burdened by accumulated history."
+        }
+      ]
     }
   ],
   "tags": {
     "brand": "Marine Serre",
-    "era": "2020 to Present; The Post-Pandemic and Surrealist Current",
-    "politics": "Ecological Politics & Resource Extraction | Anti-Consumerism & Institutional Critique | Body Politics & Corporeal Interventions",
-    "theories": "Marxist Materialism | Symbolic Exchange | Biopolitics and Bio-Power (Foucault) | Post-Humanism",
+    "era": "2020s; The Anthropocene and Climate Crisis",
+    "politics": "Eco-Futurism & Climate Anxiety | Post-Apocalyptic Survivalism | Upcycling as Institutional Critique",
+    "theories": "Ecocriticism (The Anthropocene) | Dystopian Futurism | Semiotic Sabotage of Luxury Materials",
     "gender": "Womenswear",
-    "materials": "Upcycled Industrial Waste | Domestic Found Objects | Elastomeric Compounds | Deadstock & Surplus Inventory",
+    "materials": "Regenerated Denim | Upcycled Toweling | Moiré | Deadstock PVC | Repurposed Crochet",
     "geography": "Paris (Chambre Syndicale)",
-    "anatomy": "Membrane and Transparency | Topographic Layering | Sartorial Restriction | Bodily Obfuscation",
-    "format": "Fashion Film / Cinematic Narrative"
+    "anatomy": "Aerodynamic and Protective Volume | Bodily Obfuscation (Balaclavas and Masks) | Hybrid Assemblage",
+    "format": "Physical Presence | Environmental Runway (Outdoor, Weather-Exposed Staging)"
   },
   "notes": {
-    "provenance": "Marine Serre's SS 2020 collection, titled 'Manic', was presented in Paris as a film-forward presentation that blurred the boundary between runway show and fashion film. The collection consolidated the visual identity Serre had established since her LVMH Prize-winning debut — the crescent moon print, the full-body second-skin unitard, and the systematic upcycling of deadstock and domestic textile waste — while expanding the conceptual and political ambition of the work. The show was widely credited as the most fully realised articulation of what Serre called 'futurewear': clothing designed for a world transformed by ecological crisis.",
-    "strategy": "The 'Manic' collection was constructed almost entirely from upcycled material — vintage scarves, domestic textiles, dead-stock jersey — assembled using Serre's signature patchwork and reconstruction methodology. Each piece required research into the source material's provenance and careful structural engineering to produce coherent silhouettes from heterogeneous textile fragments. The crescent moon print, screen-printed across multiple surfaces, functioned as a unifying visual system that imposed formal coherence on the disparate material palette.",
-    "critique": "The 'Manic' collection positioned ecological urgency not as a marketing position but as a formal constraint — the upcycling methodology was not optional but constitutive of the work's meaning. By refusing to use virgin material and building each collection from waste, Serre proposed a model of fashion production that acknowledged the environmental consequences of the industry and attempted to work within them. The collection was also a political statement about the relationship between fashion and the global south: the scarves and domestic textiles that formed the raw material carried with them histories of migration, domestic labour, and cultural identity that the reconstruction process made visible rather than erasing."
+    "provenance": "This entry indexes Marine Serre’s Spring/Summer 2020 collection, titled \"Marée Noire\" (Black Tide), referencing a catastrophic oil spill. Staged outdoors at the Hippodrome d'Auteuil in Paris on a deliberately bleak, wet, and overcast day, the presentation operated as a profound, high-density warning regarding the looming climate apocalypse. Operating outside the traditional, trend-based fashion ecosystem, Serre utilized her platform to force the industry to confront its own ecological footprint. The collection solidified her reputation not just as a visionary image-maker, but as a pioneer of regenerative fashion, treating discarded garments as vital cultural artifacts to be salvaged and mutated for survival.",
+    "strategy": "Regenerative Assemblage: Serre’s core structural logic relied on an uncompromising commitment to upcycling. Nearly half of the collection was constructed from end-of-life materials. She engineered tailored suiting from deadstock moiré, draped post-apocalyptic robes from repurposed terrycloth towels, and spliced together regenerated denim, actively dismantling the luxury sector's reliance on virgin resources. Survivalist Componentry & Anatomy: The garments functioned explicitly as survival gear for a damaged planet. The body was encased in aerodynamic, protective layers featuring utilitarian hardware, radiation-style suits, and heavy PVC outerwear. Accessories were hyper-functional, treating the anatomical body as a fragile entity requiring shielding from a toxic environment. The Crescent Moon as Semiotic Anchor: Serre deployed her signature crescent moon motif across second-skin bodysuits and balaclavas. This ubiquitous logo functioned as an ambiguous tribal marker or a bio-hazard insignia for a newly formed, post-apocalyptic underground, tightly wrapping the body to serve as a base layer of dystopian armour.",
+    "critique": "Ecocriticism and the Anthropocene: Grounded in a rigorous audit of the climate crisis, \"Marée Noire\" served as a stark visual translation of the Anthropocene. By simulating the aesthetic of a global oil spill through an initial sequence of entirely black, uniform-like garments, the collection decoded the underlying mechanics of industrial devastation and consumer complicity. The Aesthetics of Climate Anxiety: Serre refused to provide a utopian vision of the future. Instead, she explored the anxiety, dread, and necessary resilience of a generation inheriting a dying planet. The integration of face masks and balaclavas—eerily prescient just months before the global pandemic—highlighted an era where breathable air and bodily safety are treated as extreme luxury. Subversion of Luxury Codes: The collection engaged in institutional critique by elevating discarded, domestic materials (like crochet and bath towels) to the level of high-fashion construction. This strategy stripped away the traditional, elitist codes of Parisian haute couture, replacing them with a radical, pragmatic approach to creation where survival, rather than opulence, is the ultimate aesthetic goal."
   }
 }

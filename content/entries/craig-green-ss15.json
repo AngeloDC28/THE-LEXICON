@@ -7,23 +7,197 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-01.jpg"
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Tied Workwear Jacket",
+          "description": "The tied workwear jacket structures the upper body in a crisp bright blue cotton; it features large functional patch pockets alongside a classic point collar. This material intervention engages with the semiotic sabotage of workwear by treating a banal laborer's jacket with delicate fastening techniques. The fabric tie fastenings secure the front in place of traditional buttons; the boxy fit drops cleanly over the hips. The garment asserts an intense electric blue deployed to project a specific energetic frequency."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Fringed Straight-Leg Trousers",
+          "description": "The fringed straight-leg trousers drop rigidly to the ankle in the exact same bright blue cotton; they are heavily adorned with long trailing fabric strips along the side seams. This structural choice applies kinetic extension to the lower body; the thick blue ribbons whip wildly as the model walks barefoot. The crisp fabric holds a slight crease; the waist is largely obscured by the jacket hem. The piece completes the uniform by turning an ordinary work pant into a dynamic spatial object."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Quilted Electric Blue Jacket",
+          "description": "The quilted electric blue jacket engulfs the torso in a massive heavily textured textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The bright fabric reflects light intensely; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
+        },
+        {
+          "x": 45,
+          "y": 30,
+          "label": "Fabric Tie Fastenings",
+          "description": "The fabric tie fastenings secure the heavy jacket across the chest; they replace traditional zippers or buttons with raw black ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The black ties contrast sharply with the metallic blue base; they hang loosely when unfastened. The detail asserts a posture of vulnerability as strength."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Quilted Electric Blue Trousers",
+          "description": "The quilted electric blue trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of spatial volume completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Denim Topcoat",
+          "description": "The oversized denim topcoat swallows the body in a massive volume of dark blue jean fabric; it features drastically dropped shoulders alongside an unfastened front. This structural extreme applies the concept of vulnerability as strength by overwhelming the wearer in protective fabric while leaving the chest entirely bare. The stiff fabric holds deep heavy folds; the shiny inner lining is exposed as the coat hangs wide open. The garment asserts a defensive slouched posture typical of the designer's anti-fashion ethos."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Wide-Leg Denim Trousers",
+          "description": "The wide-leg denim trousers drop from a high waist into a deeply gathered volume; they provide a heavy utilitarian base for the exposed torso above. This material choice engages with the semiotic sabotage of workwear by utilizing the most ubiquitous casual fabric for a highly dramatic runway silhouette. The dark denim falls to the bare feet without formal creasing; trailing black ribbons dangle from the waistline. The piece completes the look by fusing extreme architectural volume with aggressively normal casual wear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-04.jpg",
+      "hotspots": [
+        {
+          "x": 65,
+          "y": 25,
+          "label": "Wooden Sail Frame Accessory",
+          "description": "The wooden sail frame accessory extends from the back in a massive geometric structure; it features sheer black muslin stretched across a raw timber frame. This structural extreme applies kinetic extension and corporeal framing; it acts as a sail catching the breeze as the model walks barefoot. The dark structure isolates the garment as an artifact of a modern spiritual subculture. The accessory asserts an anthropological critique of traditional male stoicism by replacing aggressive posturing with poetic frailty."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Deconstructed Black Tunic",
+          "description": "The deconstructed black tunic drapes softly over the chest and stomach; it features long fabric ties that loosely bind the waist. This material strategy utilizes deconstructed assembly that rejects conventional heavy tailoring; it is constructed entirely from soft lightweight cotton. The dark fabric absorbs the runway lighting completely; the front slit exposes a sliver of bare skin. The garment asserts a slouchy loose silhouette that embraces vulnerability as strength."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Quilted Off-White Jacket",
+          "description": "The quilted off-white jacket engulfs the torso in a massive heavily textured textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The bright fabric reflects light softly; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
+        },
+        {
+          "x": 45,
+          "y": 30,
+          "label": "Fabric Tie Fastenings",
+          "description": "The fabric tie fastenings secure the heavy jacket across the chest and sleeves; they replace traditional zippers or buttons with raw white ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The matching white ties hang loosely when unfastened; they provide a subtle kinetic movement against the stiff quilted fabric. The detail asserts a posture of vulnerability as strength."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Quilted Off-White Trousers",
+          "description": "The quilted off-white trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of monolithic massing completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-06.jpg",
+      "hotspots": [
+        {
+          "x": 45,
+          "y": 15,
+          "label": "Wooden Sail Frame Accessory",
+          "description": "The wooden sail frame accessory extends from the back in a massive geometric structure; it features sheer white muslin stretched across a raw timber frame. This structural extreme applies kinetic extension and corporeal framing; it acts as a sail catching the breeze as the model walks barefoot. The stark white structure isolates the garment as an artifact of a modern spiritual subculture. The accessory asserts an anthropological critique of traditional male stoicism by replacing aggressive posturing with poetic frailty."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Deconstructed White Shirting",
+          "description": "The deconstructed white shirting wraps the torso in crisp cotton; it features raw edges and an unfastened placket that exposes the chest. This structural intervention utilizes deconstructed assembly that rejects conventional heavy tailoring; it uses a system of simple fabric ties instead of standard buttons. The stark white fabric holds deep irregular creases; the sleeves are pushed up to the elbows. The top asserts a slouchy loose silhouette punctuated by deliberate slits."
+        },
+        {
+          "x": 50,
+          "y": 75,
+          "label": "Wrapped Cotton Trousers",
+          "description": "The wrapped cotton trousers drop from a heavily knotted waist into a fluid draped volume; they feature an extra panel of fabric tied like a sarong. This material application engages with spiritual asceticism by providing a Zen-like base for the outfit. The pale cotton falls cleanly over bare feet; it lacks any formal creasing or hardware. The trousers complete the look by anchoring the complex top in an aesthetic of monastic retreat."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Quilted Metallic Jacket",
+          "description": "The quilted metallic jacket engulfs the upper body in a massive heavily textured silver textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The shiny fabric reflects light intensely; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
+        },
+        {
+          "x": 45,
+          "y": 30,
+          "label": "Fabric Tie Fastenings",
+          "description": "The fabric tie fastenings secure the heavy jacket across the chest; they replace traditional zippers or buttons with raw black ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The black ties contrast sharply with the metallic silver base; they hang loosely when unfastened. The detail asserts a posture of vulnerability as strength."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Quilted Metallic Trousers",
+          "description": "The quilted metallic trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of spatial volume completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-08.jpg",
+      "hotspots": [
+        {
+          "x": 65,
+          "y": 25,
+          "label": "Wooden Sail Frame Accessory",
+          "description": "The wooden sail frame accessory extends from the back in a massive geometric structure; it features sheer black muslin stretched across a raw timber frame. This structural extreme applies kinetic extension and corporeal framing; it acts as a sail catching the breeze as the model walks barefoot. The dark structure isolates the garment as an artifact of a modern spiritual subculture. The accessory asserts an anthropological critique of traditional male stoicism by replacing aggressive posturing with poetic frailty."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Deconstructed Black Tunic",
+          "description": "The deconstructed black tunic drapes softly over the chest and stomach; it features long fabric ties that loosely bind the waist. This material strategy utilizes deconstructed assembly that rejects conventional heavy tailoring; it is constructed entirely from soft lightweight cotton. The dark fabric absorbs the runway lighting completely; the front slit exposes a sliver of bare skin. The garment asserts a slouchy loose silhouette that embraces vulnerability as strength."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/craig-green-ss15/craig-green-ss15-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Cut-Out Jersey Top",
+          "description": "The cut-out jersey top clings tightly to the upper body in pale blue stretch fabric; it features precise circular and oval voids exposing the chest and shoulders. This structural logic utilizes deconstructed assembly to punctuate the tight silhouette with deliberate holes featuring perfectly bound edges. The soft material highlights the natural musculature beneath; the long sleeves are interrupted by matching cut-outs. The top asserts a post-gender modularity that strips away anatomical hyper-focus."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Wrapped Cotton Trousers",
+          "description": "The wrapped cotton trousers drop from a heavily knotted waist into a fluid draped volume; they feature an extra panel of fabric tied like a sarong. This material application engages with spiritual asceticism by providing a Zen-like base for the outfit. The pale cotton falls cleanly over bare feet; it lacks any formal creasing or hardware. The trousers complete the look by anchoring the complex top in an aesthetic of monastic retreat."
+        }
+      ]
     }
   ],
   "tags": {
     "brand": "Craig Green",
-    "era": "2010 to 2019; The Digital and Streetwear Pivot",
-    "politics": "Body Politics & Corporeal Interventions | Labour Politics & Industrial Production",
-    "theories": "Object-Oriented Ontology | Structural Stasis | Bodily Autonomy and Transgression | Post-Humanism",
+    "era": "2010 to 2019; The Rise of Emotional Menswear",
+    "politics": "Gender Transgression & Fluidity | Deconstruction of Working-Class Masculinity",
+    "theories": "Vulnerability as Strength | Spiritual Asceticism | Semiotic Sabotage of Workwear",
     "gender": "Menswear",
-    "materials": "Plant-Based Cellulose | Industrial Coatings | Structural Composites",
+    "materials": "Quilted Hessian | Muslin | Wood (Scaffolding / Masts) | Cardboard",
     "geography": "London (BFC)",
-    "anatomy": "Scaffolding and Internal Frameworks | Modular Componentry | Monolithic Massing | Bodily Obfuscation",
-    "format": "Traditional Runway"
+    "anatomy": "Spatial Volume and Kinetic Extension | Deconstructed Assembly (Tie-Fastenings) | Martial Silhouettes (Samurai / Guru)",
+    "format": "Physical Presence | Traditional Runway (Emotional / Visceral Staging)"
   },
   "notes": {
-    "provenance": "Craig Green's SS 2015 collection was presented under the MAN platform at London Fashion Week, during the designer's formative early seasons after his graduation from Central Saint Martins. The collection extended Green's ongoing exploration of the garment as autonomous object — pieces that referenced utilitarian function while refusing the conventions of wearable clothing. The show confirmed Green as the most formally rigorous British menswear designer of his generation and attracted immediate institutional attention from critics and buyers.",
-    "strategy": "Green constructed the SS 2015 collection around the logic of the quilted rectangle — flat panels of stitched fabric assembled into three-dimensional structures using cord, eyelets, and simple fastening systems. The garments were engineered to be worn but also to stand independently of the body: draped over a frame or laid flat, they remained formally complete. The cord-binding system allowed each piece to be assembled and disassembled, treating the garment as architectural component rather than fixed object.",
-    "critique": "Green's SS 2015 work extended a tradition of British menswear that treated the male body not as a surface to be decorated but as a structural problem to be solved. His quilted panels invoked industrial material — workwear padding, construction blankets, protective wrapping — while simultaneously quoting the language of monastic costume and ritual dress. The collection argued that menswear's most interesting territory lay not in tailoring or sportswear but in the space between clothing and sculpture."
+    "provenance": "This entry indexes Craig Green's inaugural solo runway presentation for Spring/Summer 2015 at London Collections: Men. The show is universally cited as a definitive \"fashion moment,\" famously moving its audience to tears. A look from this collection was selected by Topman's Gordon Richardson as the \"Dress of the Year 2015\" for Bath's Fashion Museum, marking the first time a menswear designer received this institutional honor. Green operated from a highly controlled, anti-spectacle ethos, pivoting away from the heavy opulence of his previous season toward what he termed \"DIY masculinity,\" rooted in his Hendon upbringing among builders and tradesmen.",
+    "strategy": "Kinetic Extensions and Corporeal Framing: Green utilized wood, cardboard, and muslin to create kite-like structures and sail-masts worn by barefoot models. These architectural interventions acted as kinetic extensions of the body, allowing garments to actively catch the breeze and interface with the surrounding spatial volume. Deconstructed Assembly: The collection rejected conventional heavy tailoring and hardware; instead of standard zips or buttons, Green employed a system of simple fabric ties to pull, wrap, and close the garments. This created slouchy, loose silhouettes punctuated by deliberate slits and holes with perfectly bound edges. Monochromatic Asceticism: To maintain rigorous aesthetic focus, the collection utilized a limited palette. Most notably, an intense electric blue was deployed to project a specific energetic frequency, acting as a visual palette cleanser from the extreme multi-tonal prints of previous seasons.",
+    "critique": "Subversion of Hyper-Masculinity: Green engineered an anthropological critique of traditional male stoicism. By sending barefoot models down the runway in sweeping robes that evoked samurais, priests, and gurus, he replaced aggressive posturing with a radical vulnerability. This established a new paradigm where delicacy and emotion exude structural power. Post-Gender Modularity: Although strictly scheduled as a menswear presentation, the fluid geometry of the collection immediately captured a dedicated female clientele. The garments stripped away anatomical hyper-focus, functioning as unisex armor and reflecting the collapsing boundaries of gender-specific semiotics. Spiritual Asceticism: The aesthetic language of the collection operated as a minimalist, almost monastic retreat. Reviewer Tim Blanks noted the \"Zen-like\" quality of the clothing, isolating the garments as artifacts of a modern, spiritual subculture, distinct from the trend-based consumption of the era."
   }
 }

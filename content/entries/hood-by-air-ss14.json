@@ -7,23 +7,219 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-01.jpg"
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Horizontal Zipper-Track Outerwear",
+          "description": "The horizontal zipper-track outerwear structures the torso in a dark segmented shell; it utilizes thick blue velvet banding across multiple metallic zippers. This structural intervention engages with subcultural systems by integrating industrial hardware associated with punk into a luxurious urban silhouette. The stiff dark fabric provides a rigid background for the reflective teeth of the zippers; the high collar frames the neck securely. The garment asserts a highly engineered and tactile interpretation of \"fashion infused to street.\""
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Convertible Zip-Panel Denim",
+          "description": "The convertible zip-panel denim utilizes heavy metal hardware to create massive triangular flaps across the upper thighs; it exposes a darker indigo wash beneath the peeled-back layers. This material strategy engages with deconstructed assembly by allowing the wearer to actively alter the silhouette of the garment. The bold \"HBA\" typography sits prominently below the kneecaps; the straight legs stack heavily over blue suede boots. The piece asserts a hybridized aesthetic that fuses practical utility with hyper-commercial branding."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Debossed Leather Carapace",
+          "description": "The debossed leather carapace wraps the upper body in a massive highly structured black hide; it features the iconic \"HBA\" typography and bold numbers stamped directly into the fabric in deep relief. This material application utilizes corporate irony by transforming premium leather into a literal billboard. The thick material holds a rigid shape that broadens the shoulders aggressively; the central zipper splits the torso cleanly down the middle. The outerwear asserts an intimidating and heavily branded urban armor."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Zipped Thigh-High Leather Boots",
+          "description": "The zipped thigh-high leather boots pull tightly over the legs into a sleek protective second skin; they feature aggressive front zippers that run from the toe to the mid-thigh. This footwear strategy applies gender deconstruction by placing historically hyper-feminine fetishwear onto an androgynous runway model. The dark shiny leather mirrors the heavy coat above; the thick platform soles ground the silhouette with a heavy militant base. The accessory completes the look by asserting undeniable queer power and glamour."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Lace-Trimmed Asymmetrical Suede Jacket",
+          "description": "The lace-trimmed asymmetrical suede jacket structures the upper body in an intricately detailed pale brown hide; it features raw lacing details and a wildly disjointed front panel overlapping the zipper. This structural logic utilizes deconstructed assembly to disrupt the symmetry of traditional outerwear. The soft suede is punctuated heavily by metallic eyelets and thick zippers; the collar is left completely unfastened. The garment asserts a chaotic but highly crafted approach to streetwear."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Utilitarian Harness Denim",
+          "description": "The utilitarian harness denim equips the lower body with heavy hanging straps, D-rings, and multiple zippered pockets; it transforms basic jeans into tactical gear. This sartorial choice engages with subcultural systems by elevating the bondage and utility motifs of the New York underground to the luxury runway. The bold \"HBA\" logo wraps the calf prominently; the dark blue wash contrasts with the pale suede jacket above. The piece completes the silhouette by enforcing an aesthetic of extreme urban readiness."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Elongated Utility Vest",
+          "description": "The elongated utility vest drapes heavily to the mid-thigh in a crisp white fabric; it features multiple D-rings, trailing straps, and asymmetrical panels. This structural extreme applies \"straightjacket chic\" by utilizing medical restraint aesthetics as an imposing luxury garment. The pale material contrasts violently with the dark underlayer; the long white ribbons dangle uselessly towards the floor. The outerwear asserts a dramatic and slightly unsettling posture of bodily obfuscation."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Zip-Front Corseted Midriff",
+          "description": "The zip-front corseted midriff tightly binds the stomach in stark black fabric; it provides a severe structural anchor beneath the loose white vest. This material intervention engages directly with gender fluidity by applying a traditionally feminine piece of restrictive shapewear to a masculine frame. The metallic zipper runs cleanly down the center; the tight fit emphasizes the contrast in volume against the heavy outerwear. The garment refuses traditional menswear norms to assert a powerful androgynous core."
+        },
+        {
+          "x": 50,
+          "y": 75,
+          "label": "Paneled Leather Trousers",
+          "description": "The paneled leather trousers drop into a heavily stacked wide-leg silhouette; they feature distinct horizontal seams breaking up the shiny black hide across the knee and shin. This tailoring choice utilizes monolithic massing to ground the complex upper layers in a heavy utilitarian base. The dark material pools thickly over the footwear; cargo pockets sit flatly against the thighs. The trousers complete the ensemble by injecting a rugged streetwear staple into the theatrical presentation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Graphic Photographic Print Tunic",
+          "description": "The graphic photographic print tunic hangs loosely over the torso in a dark cotton blend; it features a stark horizontal block of distorted digital imagery across the chest. This material application utilizes corporate irony by disrupting a basic streetwear staple with abstract disjointed media. The white typography sits prominently on the dark fabric; the sleeves are banded with broken static-like patterns. The garment asserts a hyper-modern identity deeply connected to the digital era."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tapered Black Trousers",
+          "description": "The tapered black trousers drop cleanly to the ankle in a muted dark textile; they provide a sharp formal baseline against the casual printed tunic. This structural logic engages with the \"fashion infused to street\" strategy by utilizing precise tailoring on the lower body. The fabric falls without heavy bagging or distressing; the hem breaks cleanly over shiny gold sneakers. The piece completes the look by elevating the casual upper half with an unexpected touch of formal discipline."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Hardware-Laced Sweatshirt",
+          "description": "The hardware-laced sweatshirt covers the torso in a deep maroon jersey fabric entirely crisscrossed by horizontal lacing and zippers; it turns a basic casual garment into a complex piece of bondage-wear. This structural intervention utilizes subcultural systems to inject the fetish aesthetics of the GHE20G0TH1K scene directly onto the runway. The silver eyelets and zippers reflect the light fiercely; the heavy texture creates a stiff unyielding drape. The top asserts an aggressive and highly tactile interpretation of modern streetwear."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Convertible Zip-Away Trousers",
+          "description": "The convertible zip-away trousers mirror the exact hardware lacing of the sweatshirt above; they feature massive horizontal zippers that leave the knees entirely exposed. This material manipulation engages with deconstructed assembly by creating functional but absurd voids within the garment. The deep maroon fabric stacks heavily over the footwear; the bare skin contrasts sharply with the dense textured clothing. The piece completes the uniform by applying extreme subcultural modification to the entire body."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Graphic Line-Art Sweatshirt",
+          "description": "The graphic line-art sweatshirt drapes casually over the upper body in a pale off-white jersey; it is dominated by an enormous fingerprint-like pattern spreading across the stomach. This visual strategy utilizes bold branding to turn a simple cotton top into a highly recognizable statement piece. The stark black \"HBA\" logo sits prominently on the chest inside a solid rectangular block; the relaxed fit embodies classic skate and streetwear silhouettes. The garment asserts a comfortable but highly commodified posture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Color-Blocked Logo Trousers",
+          "description": "The color-blocked logo trousers drop from the waist in bright white fabric before being violently interrupted by thick black bands across the knees. This structural logic engages directly with the simulacrum by stamping the body with massive corporate typography. The bold \"HBA\" letters stretch entirely across the thighs; the white fabric stacks heavily over thick-soled boots. The piece completes the ensemble by functioning as a literal walking advertisement for the brand."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Layered Asymmetrical Outerwear",
+          "description": "The layered asymmetrical outerwear stacks a crisp white tailored coat over a stark white zip-up layer; it creates a clean but highly complex architectural volume. This material strategy engages with deconstructed assembly by piecing together multiple white textiles into a disjointed \"straightjacket chic\" silhouette. The heavy lapels frame a high central zipper; trailing white straps dangle loosely from the hem. The garment asserts a clinical and imposing presence that subverts traditional tailoring."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Voluminous White Trousers",
+          "description": "The voluminous white trousers drop heavily from the waist in a massive un-tailored fit; they completely swallow the lower body in pale fabric. This structural extreme applies monolithic massing to create a relaxed and deeply slouched streetwear silhouette. The bright white material pools thickly around the ankles; the hem drags slightly over matching white footwear. The piece completes the monochromatic uniform by providing a heavy fluid base for the sharp architecture above."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sleek Leather Overcoat",
+          "description": "The sleek leather overcoat drops cleanly to the mid-thigh in a highly polished black hide; it provides a sharp severe frame for the dark ensemble. This outerwear choice utilizes an aggressive urban aesthetic characteristic of the New York underground. The smooth leather catches the runway lighting starkly; the lapels stand rigidly against the chest. The garment asserts a protective utilitarian armor designed to exude power."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Heavy Metal Padlock Necklace",
+          "description": "The heavy metal padlock necklace sits prominently over the dark shirt collar; it introduces literal industrial hardware as luxury jewelry. This accessory engages directly with the fetishwear and club kid costumery of the ballroom scene. The thick silver chain contrasts violently with the stark black outfit; the heavy brass lock rests at the sternum. The piece completes the silhouette by injecting a heavy tactile symbol of restriction into the elegant outerwear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Cropped Asymmetrical Outerwear",
+          "description": "The cropped asymmetrical outerwear slices sharply across the midriff in a pale grey textile; it features an uneven lapel that reveals a dark faux-fur lining on one side. This structural logic engages with gender deconstruction by pairing a sharp masculine shoulder with a cropped silhouette that exposes the stomach entirely. The stiff fabric holds a rigid shape away from the body; the front zipper hangs unfastened. The garment asserts a highly tailored yet rebellious posture."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Tapered Grey Trousers",
+          "description": "The tapered grey trousers drop cleanly to the mid-calf in a matching pale fabric; they provide a strict formal baseline against the chaotic cropped jacket. This tailoring approach applies the \"fashion infused to street\" strategy by utilizing precise suiting on the lower body. The fabric falls cleanly with subtle darting; the high hem exposes the dramatic two-tone boots beneath. The piece completes the ensemble by grounding the exposed torso with quiet sartorial discipline."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Abstract Face Paint",
+          "description": "The abstract face paint covers the right eye and cheek in geometric blocks of pale beige and deep brown; it radically alters the model's natural features. This styling detail utilizes subcultural theatricality to subvert orthodox beauty standards entirely. The stark paint mimics a fragmented mask or tribal marking; the intense gaze is highlighted against the sharp contrast. The accessory completes the look by asserting the unyielding artistic vision of the GHE20G0TH1K scene."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Deconstructed Suede Pullover",
+          "description": "The deconstructed suede pullover wraps the torso in a pale brown hide heavily interrupted by asymmetrical zippered panels; it transforms a soft material into a rigid architectural shell. This material intervention engages with deconstructed assembly by applying chaotic and unnecessary functional hardware to a luxury textile. The folded triangular flaps jut outward from the chest; the shiny silver zippers run horizontally across the body. The garment asserts a highly engineered and tactile interpretation of streetwear."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Multi-Pocket Cargo Trousers",
+          "description": "The multi-pocket cargo trousers drop into a relaxed wide-leg fit; they feature massive protruding pockets dominating the thighs and shins. This structural choice utilizes monolithic massing to ground the complex suede top in a heavy utilitarian base. The muted brown fabric pools thickly over heavy brown platform boots; the pockets introduce severe bulk to the lower silhouette. The piece completes the look by enforcing an aesthetic of extreme urban readiness."
+        }
+      ]
     }
   ],
   "tags": {
-    "brand": "Hood By Air",
+    "brand": "Hood By Air (HBA)",
     "era": "2010 to 2019; The Digital and Streetwear Pivot",
-    "politics": "Queer Theory & Subcultural Systems | Racial Identity & Representation | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
-    "theories": "Queer Performativity (Butler) | Subcultural Resistance Theory | The Subverted Gaze | Intersectionality",
-    "gender": "Conceptual / Post-Binary Form",
-    "materials": "Petroleum-Based Polymers | Elastomeric Compounds | Artificially Degraded Textiles",
-    "geography": "New York (CFDA)",
-    "anatomy": "Sartorial Restriction | Displaced Anatomy and Padding | Clinical Exposure and Nudity | Compressed Proportions",
-    "format": "Traditional Runway"
+    "politics": "Queer Theory & Subcultural Systems (Ballroom Culture / GHE20G0TH1K) | Class Dynamics & Anti-Elitism (Streetwear vs. Haute Couture) | Gender Deconstruction & Fluidity",
+    "theories": "Subcultural Appropriation | Postmodernism (Corporate Irony / Logo Defacement)",
+    "gender": "Co-ed / Unisex",
+    "materials": "Bold Laminate (Logos) | Denim | Suede | Cotton (Sweatshirts)",
+    "geography": "New York (CFDA/NYFW)",
+    "anatomy": "Silhouette and Spatial Volume | 2.1 Deconstructed Assembly | Bodily Obfuscation (Straightjacket Chic) | 1.1 Monolithic Massing | Asymmetrical / Billowy Silhouettes",
+    "format": "Physical Presence | Traditional Runway / Underground Staging"
   },
   "notes": {
-    "provenance": "Shayne Oliver's Hood By Air SS 2014 show was presented in New York and cemented the brand's position at the intersection of queer club culture, Black American streetwear, and conceptual fashion. The show drew on the visual language of the NYC ballroom scene, BDSM subcultural dress, and graphic sports branding — synthesising these reference systems into a coherent and formally rigorous fashion proposition. Hood By Air's rise coincided with a broader cultural moment in which Black queer aesthetics moved from underground spaces into the institutional fashion mainstream.",
-    "strategy": "Oliver engineered the Hood By Air SS14 silhouette through extreme proportion manipulation — extended sleeves, compressed bodies, clinical exposure of specific anatomical zones — combined with aggressive graphic identity. The HBA logo functioned as both branding device and formal compositional element, applied at scales that overwhelmed the garment's structural logic. The approach borrowed from sportswear's logo culture while simultaneously deconstructing it.",
-    "critique": "Hood By Air's SS14 collection argued that Black queer club culture — long treated as raw material by mainstream fashion — could operate as its own formal system, with its own institutional logic and its own runway. The show constituted a demand for recognition: not as influence or inspiration for white designers, but as an autonomous design tradition with a fully developed aesthetic vocabulary. Oliver's work made visible the debt that contemporary fashion owes to communities it had historically excluded from its institutions."
+    "provenance": "This entry refers to Shayne Oliver’s Spring/Summer 2014 collection for Hood By Air (HBA), presented during New York Fashion Week. The collection also featured an exclusive on-schedule launch presentation staged in a Selfridges car park in London, highlighting the collision of casual, skate, and street aesthetics Hood By Air emerged directly from the New York underground, specifically rooted in the itinerant GHE20G0TH1K club night and the Black, queer Ballroom scene Oliver’s work during this period garnered intense attention not only from the fashion press but also from major hip-hop and cultural icons like A$AP Rocky, Rihanna, and Kanye West, propelling the brand from a cult subcultural label to a global luxury phenomenon",
+    "strategy": "Fashion Infused into Street: Oliver’s core structural strategy was to elevate street basics through highly crafted, conceptual garment construction. As critics noted, rather than merely infusing street elements into high fashion, the collection showed \"fashion infused to street\" Androgynous Componentry: Though officially designated as a menswear collection, Oliver enlisted both male and female models to walk the runway. He engineered a range of androgynous designs featuring billowy silhouettes, futuristic cut-and-sew techniques, revealing cutouts, and corset-inspired suits Bold Branding and Hardware: Garments heavily featured the iconic \"HBA\" block-letter logo printed across oxfords, blouses, jackets, and shorts in a bold laminate. Utilitarian zipper details were streamlined throughout the tailored trousers and jumpers Theatrical Proportions: Key standout pieces included a double-layered ivory jacket described as \"straightjacket chic\" and a voluminous, textured \"abominable snowman-like sweatshirt and skirt combo\" for the finale. The styling complemented this gritty, urban reality by sending models down the runway with dirt-caked faces to represent the grueling NYC streets",
+    "critique": "Pioneering the Luxury Streetwear Movement: This specific era of Hood By Air is historically credited with elevating the very concept of streetwear in the minds of the luxury industry’s cognoscenti. By refusing to play by the rules of fashion's old guard, Oliver laid the foundation for the massive high-fashion/streetwear crossover that dominated the 2010s. Virgil Abloh directly credited HBA with \"ushering in a new era of American designer\" Queer Power and Ballroom Glamour: As a Black gay man raised around the bright lights of Ballroom culture and club kid costumery, Oliver imbued his collections with a radical queer aesthetic. His designs unapologetically placed the power and glamour of these marginalized communities front and center, utilizing fashion as an escape hatch and demanding a seat at the elite table Subverting Hyper-Masculinity: By placing skirts, crop tops, and corsets on unconventional, often thuggish-looking models, Oliver actively challenged and subverted the hyper-masculine norms typically associated with hip-hop and streetwear. The collection did not toy with androgyny simply for shock value, but rather to create garments that \"exude power\" regardless of traditional gender binaries Corporate Irony: True to his streetwear roots, Oliver frequently played with recognizable motifs in pop culture—such as flipping the Warner Bros. logo—long before corporate fashion irony from labels like Balenciaga and Vetements became a mainstream runway staple"
   }
 }
