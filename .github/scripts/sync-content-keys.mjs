@@ -43,6 +43,15 @@ for (const f of files) {
       add(hs.description);
     }
   }
+  // Tag values are pipe-separated; tokenize each tag value so individual
+  // taxonomy strings (e.g. "Vetements", "Post-postmodernism") land in
+  // en.json as discrete translation keys. The UI renders tag tokens via
+  // getTranslation(), so each token needs to be its own key for the
+  // translation pipeline to reach it.
+  for (const v of Object.values(e.tags || {})) {
+    if (typeof v !== 'string') continue;
+    for (const token of v.split('|')) add(token.trim());
+  }
 }
 
 let added = 0;

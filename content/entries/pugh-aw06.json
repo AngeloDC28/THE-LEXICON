@@ -9,68 +9,178 @@
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-01.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Cellophane Fringe Carapace", "description": "The cellophane fringe carapace engulfs the torso in an immense mass of reflective gold plastic strips; it creates a chaotic kinetic volume that obscures the natural anatomy entirely. This material application engages with the anti-commercial ethos of London's underground club scene by utilizing literal garbage to construct runway spectacle. The shiny fringes catch the light violently as they shift with movement; the heavy layer drops well past the hips. The garment asserts a playful but highly defensive architectural shield against the environment." },
-        { "x": 48, "y": 8, "label": "Geometric Fringe Headpiece", "description": "The geometric fringe headpiece isolates the face within a harsh frame of synthetic black strips; it flattens the upper skull into an unnatural rectangular block. This accessory utilizes subcultural theatricality to transform the model into an unsettling apocalyptic figure. The black fringe drops vertically over the ears to contrast sharply with the stark white facial makeup. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Cellophane Fringe Carapace",
+          "description": "The cellophane fringe carapace engulfs the torso in an immense mass of reflective gold plastic strips; it creates a chaotic kinetic volume that obscures the natural anatomy entirely. This material application engages with the anti-commercial ethos of London's underground club scene by utilizing literal garbage to construct runway spectacle. The shiny fringes catch the light violently as they shift with movement; the heavy layer drops well past the hips. The garment asserts a playful but highly defensive architectural shield against the environment."
+        },
+        {
+          "x": 48,
+          "y": 8,
+          "label": "Geometric Fringe Headpiece",
+          "description": "The geometric fringe headpiece isolates the face within a harsh frame of synthetic black strips; it flattens the upper skull into an unnatural rectangular block. This accessory utilizes subcultural theatricality to transform the model into an unsettling apocalyptic figure. The black fringe drops vertically over the ears to contrast sharply with the stark white facial makeup. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-02.jpg",
       "hotspots": [
-        { "x": 50, "y": 35, "label": "Pneumatic PVC Puffer", "description": "The pneumatic PVC puffer balloons around the chest and neck into massive rigid geometric volumes; it physically forces the arms away from the sides. This structural extreme applies posthumanist theory by mutating the human form into an aggressive unyielding piece of architecture. The glossy black plastic mimics industrial refuse bags; the collar rises dangerously high to swallow the jawline. The outerwear asserts an oppressive and dystopian presence that severely restricts mobility." },
-        { "x": 50, "y": 65, "label": "High-Gloss Latex Trousers", "description": "The high-gloss latex trousers tightly encase the legs in a highly reflective black skin; they provide a sleek contrasting baseline for the massive inflated outerwear. This material choice engages directly with fetishwear subcultures common in the Peckham club scene. The synthetic fabric wrinkles sharply at the knee; it reflects the stark runway lighting to mimic liquid tar. The garment completes the apocalyptic uniform by grounding the floating balloon shapes in severe tactile restriction." },
-        { "x": 50, "y": 10, "label": "Foam Football Headpiece", "description": "The foam football headpiece mounts multiple black spheres atop the skull; it distorts the silhouette into an absurd alien geometry. This styling detail utilizes the aesthetic of the !WOWWOW! creative squat by transforming cheap banal sporting goods into avant-garde sculpture. The matte black foam absorbs light entirely; the spheres cluster erratically over the stark white makeup. The accessory asserts the collection's signature tension between dark menacing themes and playful club-kid humor." }
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Pneumatic PVC Puffer",
+          "description": "The pneumatic PVC puffer balloons around the chest and neck into massive rigid geometric volumes; it physically forces the arms away from the sides. This structural extreme applies posthumanist theory by mutating the human form into an aggressive unyielding piece of architecture. The glossy black plastic mimics industrial refuse bags; the collar rises dangerously high to swallow the jawline. The outerwear asserts an oppressive and dystopian presence that severely restricts mobility."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "High-Gloss Latex Trousers",
+          "description": "The high-gloss latex trousers tightly encase the legs in a highly reflective black skin; they provide a sleek contrasting baseline for the massive inflated outerwear. This material choice engages directly with fetishwear subcultures common in the Peckham club scene. The synthetic fabric wrinkles sharply at the knee; it reflects the stark runway lighting to mimic liquid tar. The garment completes the apocalyptic uniform by grounding the floating balloon shapes in severe tactile restriction."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Foam Football Headpiece",
+          "description": "The foam football headpiece mounts multiple black spheres atop the skull; it distorts the silhouette into an absurd alien geometry. This styling detail utilizes the aesthetic of the !WOWWOW! creative squat by transforming cheap banal sporting goods into avant-garde sculpture. The matte black foam absorbs light entirely; the spheres cluster erratically over the stark white makeup. The accessory asserts the collection's signature tension between dark menacing themes and playful club-kid humor."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-03.jpg",
       "hotspots": [
-        { "x": 50, "y": 25, "label": "Accordion-Pleated Collar Shield", "description": "The accordion-pleated collar shield radiates from the neck in a massive rigid disk of dense black fabric; it physically separates the head from the rest of the body. This structural logic engages with architectural shielding by building an impenetrable circular wall around the throat. The stiff pleats hold deep shadows that absorb the runway lighting; the scale of the collar completely dwarfs the model's face. The garment asserts an imposing theatricality reminiscent of extreme Elizabethan ruffs filtered through a dystopian lens." },
-        { "x": 50, "y": 35, "label": "Harlequin Perspex Bodysuit", "description": "The harlequin Perspex bodysuit encases the torso and arms in a rigid mosaic of black and transparent diamonds; it functions as a highly constructed synthetic second skin. This material application utilizes unconventional componentry to create a garment that acts more like modern chainmail than traditional fabric. The clear panels reveal bare skin beneath the dark plastic armor; the sleeves bunch stiffly at the elbows. The piece completes the silhouette by merging historical court jester motifs with sci-fi industrial materials." },
-        { "x": 50, "y": 50, "label": "Molded Leather Hip Panniers", "description": "The molded leather hip panniers explode outward from the waist into hard bulbous protrusions; they violently disrupt the natural curve of the hips. This engineered distortion applies theories of anatomical interaction by forcing the female body into an unnatural geometric shape. The stiff black leather maintains its volume without underlying scaffolding; the smooth surface contrasts with the fragmented bodysuit above. The garment refuses traditional tailoring to assert a heavy burdensome architecture." }
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Accordion-Pleated Collar Shield",
+          "description": "The accordion-pleated collar shield radiates from the neck in a massive rigid disk of dense black fabric; it physically separates the head from the rest of the body. This structural logic engages with architectural shielding by building an impenetrable circular wall around the throat. The stiff pleats hold deep shadows that absorb the runway lighting; the scale of the collar completely dwarfs the model's face. The garment asserts an imposing theatricality reminiscent of extreme Elizabethan ruffs filtered through a dystopian lens."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Harlequin Perspex Bodysuit",
+          "description": "The harlequin Perspex bodysuit encases the torso and arms in a rigid mosaic of black and transparent diamonds; it functions as a highly constructed synthetic second skin. This material application utilizes unconventional componentry to create a garment that acts more like modern chainmail than traditional fabric. The clear panels reveal bare skin beneath the dark plastic armor; the sleeves bunch stiffly at the elbows. The piece completes the silhouette by merging historical court jester motifs with sci-fi industrial materials."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Molded Leather Hip Panniers",
+          "description": "The molded leather hip panniers explode outward from the waist into hard bulbous protrusions; they violently disrupt the natural curve of the hips. This engineered distortion applies theories of anatomical interaction by forcing the female body into an unnatural geometric shape. The stiff black leather maintains its volume without underlying scaffolding; the smooth surface contrasts with the fragmented bodysuit above. The garment refuses traditional tailoring to assert a heavy burdensome architecture."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-04.jpg",
       "hotspots": [
-        { "x": 50, "y": 35, "label": "Volumetric Tulle Ruffle Cape", "description": "The volumetric tulle ruffle cape erupts from the shoulders in two massive pleated semi-circles; it drastically widens the upper silhouette into a colossal butterfly-like shape. This structural extreme utilizes monolithic massing to create a garment that dominates the physical space around the wearer. The dense black netting is layered obsessively to achieve rigid structure without solid scaffolding; the deep V-neck exposes the pale chest. The outerwear asserts an overwhelming theatrical presence that completely swallows the human frame." },
-        { "x": 50, "y": 80, "label": "High-Gloss Latex Trousers", "description": "The high-gloss latex trousers drop tightly down the legs in a reflective wet-look synthetic; they act as a severe anchor for the massive tulle structure above. This material choice engages with subcultural fetish aesthetics by utilizing restrictive rubber. The tight fit highlights the extreme contrast in volume between the upper and lower halves of the body; the hem ends bluntly over heavy combat boots. The garment completes the apocalyptic look by ensuring the lower body remains tightly protected." },
-        { "x": 50, "y": 10, "label": "Horned Foam Headpiece", "description": "The horned foam headpiece twists thick black foam into aggressive protruding spikes; it transforms the model into a demonic alien figure. This accessory engages directly with the lineage of fashion-as-performance-art popularized by Leigh Bowery. The matte black texture absorbs light completely against the stark white face; the heavy shape forces the model to balance carefully. The piece asserts the collection's core theme of dark menacing theatricality mixed with club-kid absurdity." }
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Volumetric Tulle Ruffle Cape",
+          "description": "The volumetric tulle ruffle cape erupts from the shoulders in two massive pleated semi-circles; it drastically widens the upper silhouette into a colossal butterfly-like shape. This structural extreme utilizes monolithic massing to create a garment that dominates the physical space around the wearer. The dense black netting is layered obsessively to achieve rigid structure without solid scaffolding; the deep V-neck exposes the pale chest. The outerwear asserts an overwhelming theatrical presence that completely swallows the human frame."
+        },
+        {
+          "x": 50,
+          "y": 80,
+          "label": "High-Gloss Latex Trousers",
+          "description": "The high-gloss latex trousers drop tightly down the legs in a reflective wet-look synthetic; they act as a severe anchor for the massive tulle structure above. This material choice engages with subcultural fetish aesthetics by utilizing restrictive rubber. The tight fit highlights the extreme contrast in volume between the upper and lower halves of the body; the hem ends bluntly over heavy combat boots. The garment completes the apocalyptic look by ensuring the lower body remains tightly protected."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Horned Foam Headpiece",
+          "description": "The horned foam headpiece twists thick black foam into aggressive protruding spikes; it transforms the model into a demonic alien figure. This accessory engages directly with the lineage of fashion-as-performance-art popularized by Leigh Bowery. The matte black texture absorbs light completely against the stark white face; the heavy shape forces the model to balance carefully. The piece asserts the collection's core theme of dark menacing theatricality mixed with club-kid absurdity."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-05.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Metallic Checkerboard Cape", "description": "The metallic checkerboard cape wraps the entire body in a massive grid of highly reflective gold and matte black squares; it functions as a towering unyielding monolith. This material application engages with the anti-commercial ethos of the collection by creating a heavy cumbersome shape entirely unsuited for practical wear. The stiff fabric holds sharp geometric folds that drop heavily to the floor; the waist is cinched violently to control the immense volume. The garment asserts a chaotic architectural presence that visually fractures the body." },
-        { "x": 48, "y": 8, "label": "Asymmetrical Foam Headpiece", "description": "The asymmetrical foam headpiece tilts dangerously off the skull in a lopsided mass of dense black material; it refuses any semblance of traditional balance. This styling choice utilizes subcultural theatricality to further distort the human silhouette. The dark foam rests heavily over the right ear; the stark white facial makeup creates a jarring contrast against the black mass. The accessory completes the look by injecting a sense of unbalanced unease into the apocalyptic ensemble." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Metallic Checkerboard Cape",
+          "description": "The metallic checkerboard cape wraps the entire body in a massive grid of highly reflective gold and matte black squares; it functions as a towering unyielding monolith. This material application engages with the anti-commercial ethos of the collection by creating a heavy cumbersome shape entirely unsuited for practical wear. The stiff fabric holds sharp geometric folds that drop heavily to the floor; the waist is cinched violently to control the immense volume. The garment asserts a chaotic architectural presence that visually fractures the body."
+        },
+        {
+          "x": 48,
+          "y": 8,
+          "label": "Asymmetrical Foam Headpiece",
+          "description": "The asymmetrical foam headpiece tilts dangerously off the skull in a lopsided mass of dense black material; it refuses any semblance of traditional balance. This styling choice utilizes subcultural theatricality to further distort the human silhouette. The dark foam rests heavily over the right ear; the stark white facial makeup creates a jarring contrast against the black mass. The accessory completes the look by injecting a sense of unbalanced unease into the apocalyptic ensemble."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-06.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Faux-Fur Ruffled Coat", "description": "The faux-fur ruffled coat engulfs the torso in dense black pelts bordered by heavily cascading ruffles; it creates a deeply textural and oppressive volume. This structural logic utilizes monolithic massing to suggest a figure burdened by heavy layers of scavenged material. The dark synthetic fur completely obscures the arms and shoulders; the central ruffles snake down the front in a chaotic asymmetrical path. The outerwear asserts a somber dystopian aesthetic that relies entirely on shadow and dense texture." },
-        { "x": 50, "y": 10, "label": "Asymmetrical Foam Headpiece", "description": "The asymmetrical foam headpiece perches awkwardly upon the head in a swollen lumpy mass; it drastically alters the shape of the skull. This accessory applies the performance art aesthetics of the London underground scene to elevate a runway look into a bizarre character study. The matte black foam absorbs the harsh runway lighting; it looms over the stark white painted face. The piece completes the silhouette by enforcing an unsettling top-heavy proportion." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Faux-Fur Ruffled Coat",
+          "description": "The faux-fur ruffled coat engulfs the torso in dense black pelts bordered by heavily cascading ruffles; it creates a deeply textural and oppressive volume. This structural logic utilizes monolithic massing to suggest a figure burdened by heavy layers of scavenged material. The dark synthetic fur completely obscures the arms and shoulders; the central ruffles snake down the front in a chaotic asymmetrical path. The outerwear asserts a somber dystopian aesthetic that relies entirely on shadow and dense texture."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Asymmetrical Foam Headpiece",
+          "description": "The asymmetrical foam headpiece perches awkwardly upon the head in a swollen lumpy mass; it drastically alters the shape of the skull. This accessory applies the performance art aesthetics of the London underground scene to elevate a runway look into a bizarre character study. The matte black foam absorbs the harsh runway lighting; it looms over the stark white painted face. The piece completes the silhouette by enforcing an unsettling top-heavy proportion."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-07.jpg",
       "hotspots": [
-        { "x": 50, "y": 50, "label": "Pneumatic Synthetic Bodysuit", "description": "The pneumatic synthetic bodysuit encases the torso in tight black spandex while appending massive inflatable black spheres to the head, arms, and back; it completely mutates the human form into a bizarre cellular structure. This extreme anatomical interaction utilizes posthumanist theory to merge the biological body with absurd synthetic appendages. The tight black fabric highlights the rigid connection points of the heavy balloons; the hands are completely trapped within the lateral spheres. The garment asserts the ultimate victory of avant-garde architecture over the natural body." },
-        { "x": 50, "y": 25, "label": "Obfuscating Balaclava", "description": "The obfuscating balaclava covers the entire head and neck in dark fabric leaving only a small horizontal slit for the eyes; it serves as the base for the massive vertical balloon stack. This styling detail engages with bodily obfuscation to erase the model's humanity entirely. The tight mask creates a sense of militant anonymity; the intense gaze is the only biological element remaining. The accessory completes the apocalyptic look by ensuring total protection and isolation from the environment." }
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Pneumatic Synthetic Bodysuit",
+          "description": "The pneumatic synthetic bodysuit encases the torso in tight black spandex while appending massive inflatable black spheres to the head, arms, and back; it completely mutates the human form into a bizarre cellular structure. This extreme anatomical interaction utilizes posthumanist theory to merge the biological body with absurd synthetic appendages. The tight black fabric highlights the rigid connection points of the heavy balloons; the hands are completely trapped within the lateral spheres. The garment asserts the ultimate victory of avant-garde architecture over the natural body."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Obfuscating Balaclava",
+          "description": "The obfuscating balaclava covers the entire head and neck in dark fabric leaving only a small horizontal slit for the eyes; it serves as the base for the massive vertical balloon stack. This styling detail engages with bodily obfuscation to erase the model's humanity entirely. The tight mask creates a sense of militant anonymity; the intense gaze is the only biological element remaining. The accessory completes the apocalyptic look by ensuring total protection and isolation from the environment."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-08.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Chunky Hand-Knit Tunic", "description": "The chunky hand-knit tunic hangs heavily over the torso in a massive web of thick black yarn; it features violently shredded holes and trailing threads. This material strategy engages with the anti-consumerist squatter aesthetic of the !WOWWOW! collective by elevating a degraded ruined textile to high fashion. The oversized armholes reveal the bare skin beneath; the heavy knit bunches awkwardly at the neck. The garment asserts a posture of extreme frugality and survivalist DIY construction." },
-        { "x": 50, "y": 70, "label": "High-Gloss Latex Thigh Boots", "description": "The high-gloss latex thigh boots pull tightly over the legs to act as a sleek reflective second skin; they provide a sharp textural contrast to the matte shredded yarn above. This footwear choice applies the fetishistic codes of the London club scene to ground the chaotic upper body. The wet-look material bunches slightly behind the knee; the thick platform soles elevate the model significantly. The accessory completes the look by anchoring the distressed tunic with severe synthetic armor." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Chunky Hand-Knit Tunic",
+          "description": "The chunky hand-knit tunic hangs heavily over the torso in a massive web of thick black yarn; it features violently shredded holes and trailing threads. This material strategy engages with the anti-consumerist squatter aesthetic of the !WOWWOW! collective by elevating a degraded ruined textile to high fashion. The oversized armholes reveal the bare skin beneath; the heavy knit bunches awkwardly at the neck. The garment asserts a posture of extreme frugality and survivalist DIY construction."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "High-Gloss Latex Thigh Boots",
+          "description": "The high-gloss latex thigh boots pull tightly over the legs to act as a sleek reflective second skin; they provide a sharp textural contrast to the matte shredded yarn above. This footwear choice applies the fetishistic codes of the London club scene to ground the chaotic upper body. The wet-look material bunches slightly behind the knee; the thick platform soles elevate the model significantly. The accessory completes the look by anchoring the distressed tunic with severe synthetic armor."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-09.jpg",
       "hotspots": [
-        { "x": 50, "y": 25, "label": "Exaggerated Ruffled Collar", "description": "The exaggerated ruffled collar frames the head in a dense circular explosion of pleated black tulle; it physically isolates the skull from the body. This structural logic utilizes historical pastiche by mutating an Elizabethan ruff into a dark menacing piece of club wear. The stiff netting holds rigid geometric shadows; it rests heavily upon the shoulders of the checkerboard bodysuit. The garment asserts an oppressive theatricality that severely restricts the movement of the neck." },
-        { "x": 50, "y": 50, "label": "Harlequin Stretch Bodysuit", "description": "The harlequin stretch bodysuit encases the torso and arms in a tight grid of metallic gold and matte black diamonds; it functions as a highly visible graphic second skin. This material application engages directly with the performative humor of the collection by referencing traditional court jesters. The tight synthetic fabric highlights the natural musculature beneath; it features a high cut over the hips. The piece completes the silhouette by contrasting the massive architectural collar with a sleek unpadded base." },
-        { "x": 50, "y": 10, "label": "Elongated Cone Hat", "description": "The elongated cone hat points sharply upward in a matching gold and black harlequin pattern; it extends the vertical axis of the body dramatically. This accessory utilizes surrealist proportion play to transform the model into an absurd chess piece. The stiff fabric holds a perfect conical shape; it rests upon a tight black hood that obscures the hairline. The hat asserts the playful yet severe theatricality required of authentic performance art." }
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Exaggerated Ruffled Collar",
+          "description": "The exaggerated ruffled collar frames the head in a dense circular explosion of pleated black tulle; it physically isolates the skull from the body. This structural logic utilizes historical pastiche by mutating an Elizabethan ruff into a dark menacing piece of club wear. The stiff netting holds rigid geometric shadows; it rests heavily upon the shoulders of the checkerboard bodysuit. The garment asserts an oppressive theatricality that severely restricts the movement of the neck."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Harlequin Stretch Bodysuit",
+          "description": "The harlequin stretch bodysuit encases the torso and arms in a tight grid of metallic gold and matte black diamonds; it functions as a highly visible graphic second skin. This material application engages directly with the performative humor of the collection by referencing traditional court jesters. The tight synthetic fabric highlights the natural musculature beneath; it features a high cut over the hips. The piece completes the silhouette by contrasting the massive architectural collar with a sleek unpadded base."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Elongated Cone Hat",
+          "description": "The elongated cone hat points sharply upward in a matching gold and black harlequin pattern; it extends the vertical axis of the body dramatically. This accessory utilizes surrealist proportion play to transform the model into an absurd chess piece. The stiff fabric holds a perfect conical shape; it rests upon a tight black hood that obscures the hairline. The hat asserts the playful yet severe theatricality required of authentic performance art."
+        }
       ]
     }
   ],
@@ -79,9 +189,9 @@
     "era": "2000 to 2009; The Global Conglomerate Era",
     "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique",
     "theories": "Post-Humanism | Camp and Kitsch Subversion | The Grotesque and Abject | Subcultural Resistance Theory",
-    "gender": "Conceptual / Post-Binary Form",
+    "gender": "Co-ed / Unisex",
     "materials": "Petroleum-Based Polymers | Thermoplastic Membranes | Elastomeric Compounds | Industrial Coatings | Assembled Non-Textile Hardware",
-    "geography": "London (BFC) | London Underground / Club Culture",
+    "geography": "London (BFC)",
     "anatomy": "Monolithic Massing | Bodily Obfuscation | Architectural Shielding and Armour | Prosthetic Extension",
     "format": "Performance Art / Live Action"
   },

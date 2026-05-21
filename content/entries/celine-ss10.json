@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg"
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Unlined Cashmere Coat",
+          "description": "The unlined cashmere coat drops cleanly from broad-set shoulders in a single uninterrupted plane of camel fabric; it refuses interior structure or visible hardware. This tailoring strategy is the founding document of Phoebe Philo's 'quiet luxury' proposition — luxury communicated through material quality rather than visible signaling. The raw inner edge is exposed; the deliberately fallen hem skirts the knee. The garment asserts that the most legible form of wealth is the wealth that refuses to perform."
+        }
+      ]
     }
   ],
   "tags": {

@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg"
+      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Hand-Painted Silk and Velvet Layered Look",
+          "description": "The hand-painted silk and velvet layered look stacks multiple textile traditions into a single garment system; it places a hand-illustrated organza panel over a velvet bodice cut with utilitarian field-jacket precision. This material strategy embodies the archival depth that defined Dries Van Noten's 100th show — accumulation as a slow craft achievement rather than maximalist excess. The competing surface textures resolve into a coherent palette only after sustained looking; each layer cites a specific making tradition. The garment asserts what independent, craft-centered, long-term practice produces when held against the conglomerate luxury system."
+        }
+      ]
     }
   ],
   "tags": {

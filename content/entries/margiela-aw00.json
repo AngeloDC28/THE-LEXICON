@@ -9,72 +9,177 @@
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Ultra-Oversized Vintage Leather Carapace", "description": "The ultra-oversized vintage leather carapace envelopes the body in a massive shiny hide; it completely dwarfs the natural shoulder line and arms. This structural extreme applies menswear grading at an Italian size 78 to deliberately obliterate the slim silhouettes dominating the era. The deadstock leather exhibits a unique sheen and stiffness derived from years of undisturbed aging; the heavy silver hardware sits awkwardly over the hip rather than the waist. The outerwear asserts a monolithic massing that forces the model to negotiate the garment's autonomous weight." },
-        { "x": 55, "y": 60, "label": "Detached Animal Tail Accessory", "description": "The detached animal tail accessory dangles limply from the hem of the oversized leather jacket; it introduces a visceral organic element to the synthetic sheen of the hide. This styling choice engages with horror-tinged surrealism by appending a literal dead animal part to the silhouette. The striped fur contrasts sharply with the dark jacket and black skirt below; it functions as an unsettling and unnecessary organic zipper pull. The piece completes the silhouette by injecting a jarring moment of the abject." },
-        { "x": 48, "y": 10, "label": "Ocular-Obscuring Fringe Wig", "description": "The ocular-obscuring fringe wig covers the model's eyes entirely with a heavy curtain of black hair; it creates a severe horizontal barrier across the face. This styling strategy utilizes anonymity to actively decentralize the human identity and reject the cult of the supermodel. The dark hair blends seamlessly into the shadows of the warehouse setting; the mouth remains visible but emotionally detached. The accessory asserts that the sculptural integrity of the clothing is the only subject worthy of the audience's gaze." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ultra-Oversized Vintage Leather Carapace",
+          "description": "The ultra-oversized vintage leather carapace envelopes the body in a massive shiny hide; it completely dwarfs the natural shoulder line and arms. This structural extreme applies menswear grading at an Italian size 78 to deliberately obliterate the slim silhouettes dominating the era. The deadstock leather exhibits a unique sheen and stiffness derived from years of undisturbed aging; the heavy silver hardware sits awkwardly over the hip rather than the waist. The outerwear asserts a monolithic massing that forces the model to negotiate the garment's autonomous weight."
+        },
+        {
+          "x": 55,
+          "y": 60,
+          "label": "Detached Animal Tail Accessory",
+          "description": "The detached animal tail accessory dangles limply from the hem of the oversized leather jacket; it introduces a visceral organic element to the synthetic sheen of the hide. This styling choice engages with horror-tinged surrealism by appending a literal dead animal part to the silhouette. The striped fur contrasts sharply with the dark jacket and black skirt below; it functions as an unsettling and unnecessary organic zipper pull. The piece completes the silhouette by injecting a jarring moment of the abject."
+        },
+        {
+          "x": 48,
+          "y": 10,
+          "label": "Ocular-Obscuring Fringe Wig",
+          "description": "The ocular-obscuring fringe wig covers the model's eyes entirely with a heavy curtain of black hair; it creates a severe horizontal barrier across the face. This styling strategy utilizes anonymity to actively decentralize the human identity and reject the cult of the supermodel. The dark hair blends seamlessly into the shadows of the warehouse setting; the mouth remains visible but emotionally detached. The accessory asserts that the sculptural integrity of the clothing is the only subject worthy of the audience's gaze."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-02.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Folded-Waist Oversized Denim", "description": "The folded-waist oversized denim wraps the midsection in a massive accumulation of blue jean fabric; it utilizes a simple hook and eye to secure the excessive size 78 cloth. This sartorial fastening applies deconstructionist logic by turning the functional necessity of altering a giant garment into an elegant design feature. The pale denim crosses asymmetrically over the groin; the heavy legs pool thickly around the feet. The garment refuses traditional tailoring to assert a relaxed but highly considered approach to extreme volume." },
-        { "x": 50, "y": 35, "label": "Ultra-Oversized Grey Wool Outerwear", "description": "The ultra-oversized grey wool outerwear engulfs the upper body in a massive tailored frame; it is treated with hot molding to retain a three-dimensional shape independent of the wearer. This structural logic engages with object-oriented ontology by granting the coat a structural autonomy that forces the model to swim inside it. The sleeves push up heavily around the wrists; the lapels fold deeply over the chest. The coat completes the silhouette by contrasting the casual denim below with an absurdly scaled formal piece." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Folded-Waist Oversized Denim",
+          "description": "The folded-waist oversized denim wraps the midsection in a massive accumulation of blue jean fabric; it utilizes a simple hook and eye to secure the excessive size 78 cloth. This sartorial fastening applies deconstructionist logic by turning the functional necessity of altering a giant garment into an elegant design feature. The pale denim crosses asymmetrically over the groin; the heavy legs pool thickly around the feet. The garment refuses traditional tailoring to assert a relaxed but highly considered approach to extreme volume."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Ultra-Oversized Grey Wool Outerwear",
+          "description": "The ultra-oversized grey wool outerwear engulfs the upper body in a massive tailored frame; it is treated with hot molding to retain a three-dimensional shape independent of the wearer. This structural logic engages with object-oriented ontology by granting the coat a structural autonomy that forces the model to swim inside it. The sleeves push up heavily around the wrists; the lapels fold deeply over the chest. The coat completes the silhouette by contrasting the casual denim below with an absurdly scaled formal piece."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-03.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Double-Breasted Wool Monolith", "description": "The double-breasted wool monolith structures the upper body into a massive severe rectangle; it utilizes deep grey felt to create a heavy unyielding surface. This tailoring extreme applies menswear grading to obliterate the feminine form completely beneath the oversized shell. The deep hot-molded folds hold their shape regardless of the wearer's movement; the oversized buttons sit disproportionately low on the thighs. The outerwear asserts a deeply formal but deeply uncomfortable proportion." },
-        { "x": 50, "y": 15, "label": "Ocular-Obscuring Fringe Wig", "description": "The ocular-obscuring fringe wig drops a thick curtain of black hair over the eyes; it isolates the lower half of the face in stark contrast to the massive coat. This application of anonymity serves as a direct critique of the fashion industry's reliance on recognizable models to sell garments. The black hair melts into the deep shadows of the collar; the heavy silver earrings reflect the minimal lighting. The styling ensures the audience focuses entirely on the architecture of the double-breasted coat." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Double-Breasted Wool Monolith",
+          "description": "The double-breasted wool monolith structures the upper body into a massive severe rectangle; it utilizes deep grey felt to create a heavy unyielding surface. This tailoring extreme applies menswear grading to obliterate the feminine form completely beneath the oversized shell. The deep hot-molded folds hold their shape regardless of the wearer's movement; the oversized buttons sit disproportionately low on the thighs. The outerwear asserts a deeply formal but deeply uncomfortable proportion."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Ocular-Obscuring Fringe Wig",
+          "description": "The ocular-obscuring fringe wig drops a thick curtain of black hair over the eyes; it isolates the lower half of the face in stark contrast to the massive coat. This application of anonymity serves as a direct critique of the fashion industry's reliance on recognizable models to sell garments. The black hair melts into the deep shadows of the collar; the heavy silver earrings reflect the minimal lighting. The styling ensures the audience focuses entirely on the architecture of the double-breasted coat."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-04.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Ultra-Oversized White Denim Chore Jacket", "description": "The ultra-oversized white denim chore jacket envelopes the torso in a stiff pale textile; it features massive drop shoulders that obscure the arms entirely. This material application utilizes deadstock fabric to inject a stiff aged texture into the silhouette. The bright white jacket catches the dramatic spotlighting starkly against the dark background; the unbuttoned front reveals a soft grey underlayer. The garment refuses sleek modernism to assert a posture of utilitarian labor pushed to an absurd scale." },
-        { "x": 50, "y": 65, "label": "Raw-Hem Pale Yellow Skirt", "description": "The raw-hem pale yellow skirt drops rigidly from beneath the heavy jacket to the mid-calf; it features a stark unhemmed edge. This deconstructed assembly engages with the aesthetic of poverty chic by contrasting the massive tailored jacket with a simple unfinished lower garment. The pale yellow fabric lacks any visible pleating or gathering; the yellow string detail hangs limply from the waist. The skirt completes the look by adding a subtle but jarring block of color to the austere top half." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ultra-Oversized White Denim Chore Jacket",
+          "description": "The ultra-oversized white denim chore jacket envelopes the torso in a stiff pale textile; it features massive drop shoulders that obscure the arms entirely. This material application utilizes deadstock fabric to inject a stiff aged texture into the silhouette. The bright white jacket catches the dramatic spotlighting starkly against the dark background; the unbuttoned front reveals a soft grey underlayer. The garment refuses sleek modernism to assert a posture of utilitarian labor pushed to an absurd scale."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Raw-Hem Pale Yellow Skirt",
+          "description": "The raw-hem pale yellow skirt drops rigidly from beneath the heavy jacket to the mid-calf; it features a stark unhemmed edge. This deconstructed assembly engages with the aesthetic of poverty chic by contrasting the massive tailored jacket with a simple unfinished lower garment. The pale yellow fabric lacks any visible pleating or gathering; the yellow string detail hangs limply from the waist. The skirt completes the look by adding a subtle but jarring block of color to the austere top half."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-05.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Ultra-Oversized Distressed Wool Knit", "description": "The ultra-oversized distressed wool knit engulfs the torso in a massive red v-neck vest; it features violently frayed edges across the hem and armholes. This structural intervention utilizes deconstruction to mimic the rapid decay of a cozy domestic garment scaled up to monstrous proportions. The deep red yarn sits starkly against the black underlayer; the armholes drop significantly below the natural waistline. The garment asserts a horror-tinged surrealism by transforming a familiar sweater into an imposing degraded shell." },
-        { "x": 50, "y": 25, "label": "Exaggerated White Shirt Collar", "description": "The exaggerated white shirt collar flares upward and outward from the deep v-neck; it provides a crisp formal contrast to the decaying red knit. This styling choice applies historical pastiche by mimicking the severe collars of 19th-century menswear scaled to match the size 78 grading. The bright white fabric frames the neck tightly before spreading wide; the points of the collar rest upon the shoulders of the vest. The detail completes the ensemble by forcing an element of extreme formality into the ruined knitwear." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ultra-Oversized Distressed Wool Knit",
+          "description": "The ultra-oversized distressed wool knit engulfs the torso in a massive red v-neck vest; it features violently frayed edges across the hem and armholes. This structural intervention utilizes deconstruction to mimic the rapid decay of a cozy domestic garment scaled up to monstrous proportions. The deep red yarn sits starkly against the black underlayer; the armholes drop significantly below the natural waistline. The garment asserts a horror-tinged surrealism by transforming a familiar sweater into an imposing degraded shell."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Exaggerated White Shirt Collar",
+          "description": "The exaggerated white shirt collar flares upward and outward from the deep v-neck; it provides a crisp formal contrast to the decaying red knit. This styling choice applies historical pastiche by mimicking the severe collars of 19th-century menswear scaled to match the size 78 grading. The bright white fabric frames the neck tightly before spreading wide; the points of the collar rest upon the shoulders of the vest. The detail completes the ensemble by forcing an element of extreme formality into the ruined knitwear."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-06.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Polka-Dot Raw Canvas Tunic", "description": "The polka-dot raw canvas tunic hangs flatly over the torso in a stiff rectangular shape; it features faded holographic dots scattered unevenly across the textile. This material application engages with the materiality of time by utilizing a deadstock fabric that appears sun-bleached and slightly degraded. The stiff canvas holds no drape or contouring; the armholes are cut sharply to expose the bare shoulders. The garment asserts a deeply unglamorous and slightly tragic aesthetic." },
-        { "x": 50, "y": 65, "label": "Asymmetrical Layered Grey Skirt", "description": "The asymmetrical layered grey skirt drops beneath the canvas tunic in an uneven column of soft fabric; it introduces a subtle shift in texture to the lower body. This simple format provides a quiet baseline against the stiff printed top. The grey textile falls cleanly to the knee; the hem trails slightly longer on the right side. The skirt completes the look by grounding the stiff canvas in a comfortable domestic drape." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Polka-Dot Raw Canvas Tunic",
+          "description": "The polka-dot raw canvas tunic hangs flatly over the torso in a stiff rectangular shape; it features faded holographic dots scattered unevenly across the textile. This material application engages with the materiality of time by utilizing a deadstock fabric that appears sun-bleached and slightly degraded. The stiff canvas holds no drape or contouring; the armholes are cut sharply to expose the bare shoulders. The garment asserts a deeply unglamorous and slightly tragic aesthetic."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Asymmetrical Layered Grey Skirt",
+          "description": "The asymmetrical layered grey skirt drops beneath the canvas tunic in an uneven column of soft fabric; it introduces a subtle shift in texture to the lower body. This simple format provides a quiet baseline against the stiff printed top. The grey textile falls cleanly to the knee; the hem trails slightly longer on the right side. The skirt completes the look by grounding the stiff canvas in a comfortable domestic drape."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-07.jpg",
       "hotspots": [
-        { "x": 50, "y": 40, "label": "Ultra-Oversized Frayed Black Cardigan", "description": "The ultra-oversized frayed black cardigan swallows the torso in a massive heavy-gauge knit; it features long drooping sleeves that entirely cover the hands. This material strategy engages with monolithic massing by transforming a soft domestic garment into a suffocating architectural shell. The dark yarn absorbs light to create a heavy visual void over the white layers beneath; the hem is violently unraveled and irregular. The outerwear asserts an aggressive coziness that functions as physical and emotional armor." },
-        { "x": 50, "y": 55, "label": "Deconstructed Layered Shirting", "description": "The deconstructed layered shirting stacks multiple white button-downs haphazardly beneath the heavy black cardigan; it creates an uneven cascade of white fabric over the grey skirt. This layering technique utilizes deconstructionist assembly to confuse the boundaries of individual garments. The crisp white fabric wrinkles and bunches beneath the heavy weight of the knitwear; a loose white thread dangles from the chest. The detail completes the silhouette by injecting a chaotic formal element into the relaxed knitwear." }
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Ultra-Oversized Frayed Black Cardigan",
+          "description": "The ultra-oversized frayed black cardigan swallows the torso in a massive heavy-gauge knit; it features long drooping sleeves that entirely cover the hands. This material strategy engages with monolithic massing by transforming a soft domestic garment into a suffocating architectural shell. The dark yarn absorbs light to create a heavy visual void over the white layers beneath; the hem is violently unraveled and irregular. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Deconstructed Layered Shirting",
+          "description": "The deconstructed layered shirting stacks multiple white button-downs haphazardly beneath the heavy black cardigan; it creates an uneven cascade of white fabric over the grey skirt. This layering technique utilizes deconstructionist assembly to confuse the boundaries of individual garments. The crisp white fabric wrinkles and bunches beneath the heavy weight of the knitwear; a loose white thread dangles from the chest. The detail completes the silhouette by injecting a chaotic formal element into the relaxed knitwear."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-08.jpg",
       "hotspots": [
-        { "x": 50, "y": 65, "label": "Folded-Waist Oversized Pinstripe Trousers", "description": "The folded-waist oversized pinstripe trousers utilize a deep cross-over fold to secure the massive size 78 fabric tightly to the model's hips; they swallow the lower body in dark suiting material. This sartorial fastening applies deconstructionist logic by turning the functional necessity of altering a giant garment into an elegant design feature. The dark fabric is marked with subtle vertical stripes; the heavy legs pool thickly over the black footwear. The garment refuses traditional tailoring to assert a highly considered approach to extreme volume." },
-        { "x": 50, "y": 35, "label": "Slouching Black Jersey Tunic", "description": "The slouching black jersey tunic falls softly over the upper body before tucking heavily into the folded waistline; it provides a fluid unstructured top layer. This material choice introduces a soft kinetic movement that contrasts with the severe tailoring of the trousers. The dark fabric absorbs the harsh spotlighting completely; the long sleeves are pushed up to the elbows. The tunic asserts a relaxed and intimate posture above the massive formal trousers." }
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Folded-Waist Oversized Pinstripe Trousers",
+          "description": "The folded-waist oversized pinstripe trousers utilize a deep cross-over fold to secure the massive size 78 fabric tightly to the model's hips; they swallow the lower body in dark suiting material. This sartorial fastening applies deconstructionist logic by turning the functional necessity of altering a giant garment into an elegant design feature. The dark fabric is marked with subtle vertical stripes; the heavy legs pool thickly over the black footwear. The garment refuses traditional tailoring to assert a highly considered approach to extreme volume."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Slouching Black Jersey Tunic",
+          "description": "The slouching black jersey tunic falls softly over the upper body before tucking heavily into the folded waistline; it provides a fluid unstructured top layer. This material choice introduces a soft kinetic movement that contrasts with the severe tailoring of the trousers. The dark fabric absorbs the harsh spotlighting completely; the long sleeves are pushed up to the elbows. The tunic asserts a relaxed and intimate posture above the massive formal trousers."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-09.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Ultra-Oversized Minimalist Wool Coat", "description": "The ultra-oversized minimalist wool coat envelopes the figure in a smooth black shell without any visible lapels or hardware; it drops cleanly from the high shoulders to the mid-calf. This structural logic utilizes monolithic massing and hot molding to create a stark uninterrupted void that dominates the visual space. The stiff black fabric holds its shape securely away from the body; the sleeves completely hide the arms. The outerwear asserts a deeply formal but inherently unsettling proportion." },
-        { "x": 50, "y": 10, "label": "Ocular-Obscuring Fringe Wig", "description": "The ocular-obscuring fringe wig drops a thick curtain of brown hair over the eyes; it creates an absolute barrier between the wearer and the audience. This application of anonymity serves as a direct critique of the fashion industry's reliance on recognizable models. The brown hair sits starkly against the deep black of the coat; the chin and jawline remain visible but emotionally detached. The styling ensures the audience focuses entirely on the imposing black monolith." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ultra-Oversized Minimalist Wool Coat",
+          "description": "The ultra-oversized minimalist wool coat envelopes the figure in a smooth black shell without any visible lapels or hardware; it drops cleanly from the high shoulders to the mid-calf. This structural logic utilizes monolithic massing and hot molding to create a stark uninterrupted void that dominates the visual space. The stiff black fabric holds its shape securely away from the body; the sleeves completely hide the arms. The outerwear asserts a deeply formal but inherently unsettling proportion."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Ocular-Obscuring Fringe Wig",
+          "description": "The ocular-obscuring fringe wig drops a thick curtain of brown hair over the eyes; it creates an absolute barrier between the wearer and the audience. This application of anonymity serves as a direct critique of the fashion industry's reliance on recognizable models. The brown hair sits starkly against the deep black of the coat; the chin and jawline remain visible but emotionally detached. The styling ensures the audience focuses entirely on the imposing black monolith."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-10.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Ultra-Oversized Double-Breasted Topcoat", "description": "The ultra-oversized double-breasted topcoat structures the body into a massive grey rectangle; it utilizes deep felt to create a heavy unyielding surface. This tailoring extreme applies menswear grading to obliterate the feminine form completely beneath the oversized shell. The deep hot-molded folds hold their shape regardless of the wearer's movement; the oversized lapels and buttons sit disproportionately low on the torso. The outerwear asserts an imposing formal architecture that forces the model to negotiate its weight." },
-        { "x": 50, "y": 10, "label": "Ocular-Obscuring Fringe Wig", "description": "The ocular-obscuring fringe wig covers the model's eyes entirely with a heavy curtain of dark hair; it creates a severe horizontal barrier across the face. This styling strategy utilizes anonymity to actively decentralize the human identity and reject the cult of the supermodel. The dark hair blends smoothly with the shadows of the coat collar; the lower face is illuminated strictly by the runway spotlight. The accessory asserts that the sculptural integrity of the oversized coat is the primary subject of the presentation." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ultra-Oversized Double-Breasted Topcoat",
+          "description": "The ultra-oversized double-breasted topcoat structures the body into a massive grey rectangle; it utilizes deep felt to create a heavy unyielding surface. This tailoring extreme applies menswear grading to obliterate the feminine form completely beneath the oversized shell. The deep hot-molded folds hold their shape regardless of the wearer's movement; the oversized lapels and buttons sit disproportionately low on the torso. The outerwear asserts an imposing formal architecture that forces the model to negotiate its weight."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Ocular-Obscuring Fringe Wig",
+          "description": "The ocular-obscuring fringe wig covers the model's eyes entirely with a heavy curtain of dark hair; it creates a severe horizontal barrier across the face. This styling strategy utilizes anonymity to actively decentralize the human identity and reject the cult of the supermodel. The dark hair blends smoothly with the shadows of the coat collar; the lower face is illuminated strictly by the runway spotlight. The accessory asserts that the sculptural integrity of the oversized coat is the primary subject of the presentation."
+        }
       ]
     }
   ],

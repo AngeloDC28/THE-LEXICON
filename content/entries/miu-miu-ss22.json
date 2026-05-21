@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg"
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Low-Rise Micro-Skirt",
+          "description": "The low-rise micro-skirt cuts horizontally across the hips in a band of tailored wool no wider than a hand's breadth; it sits well below the natural waist. This structural intervention is the silhouette that defined the SS 2022 cultural conversation, generating discourse across body image, generational politics, and the female midriff. The raw lower edge exposes the high-cut underskirt and the bare expanse of stomach above; the eyelet detailing nods to school-uniform vocabulary. The garment asserts Miuccia Prada's lifelong project of making femininity's ambivalences visible through deliberately uncomfortable proportion."
+        }
+      ]
     }
   ],
   "tags": {

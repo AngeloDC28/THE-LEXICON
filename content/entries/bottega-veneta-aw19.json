@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg"
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Oversized Intrecciato Pouch Bag",
+          "description": "The oversized intrecciato pouch bag is held softly under the arm in a deep forest-green leather woven via the house's foundational craft technique; it became the defining accessory of 2019 and 2020. This material strategy reintroduces Bottega Veneta's heritage weave as a central design element rather than a heritage footnote. The exaggerated scale of the weave makes the construction technique legible; the absence of any visible logo is itself the luxury signal. The accessory asserts the 'quiet luxury' proposition that defined Daniel Lee's commercially successful AW 2019 debut."
+        }
+      ]
     }
   ],
   "tags": {

@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg"
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Embroidered Organza Streetwear Tunic",
+          "description": "The embroidered organza streetwear tunic layers ecclesiastical embellishment over a sweatshirt silhouette; it places the iconography of Catholic vestment in aggressive proximity to athletic wear. This structural collision defines Riccardo Tisci's foundational achievement at Givenchy: the systematic integration of subcultural codes into the luxury fashion apparatus. The dense thread work weighs the soft jersey down unevenly; the rounded crew neckline refuses the formality of a traditional collar. The garment asserts the gothic-streetwear hybrid that became one of the 2010s' most commercially successful design grammars."
+        }
+      ]
     }
   ],
   "tags": {

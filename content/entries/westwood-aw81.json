@@ -9,44 +9,109 @@
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-01.jpg",
       "hotspots": [
-        { "x": 50, "y": 10, "label": "Stiffened Felt Tricorne Hat", "description": "The stiffened felt tricorne hat dramatically extends the vertical axis of the head while mimicking 18th-century naval headwear. This accessory applies historical pastiche to inject a sense of grand theatricality into a modern runway context. The thick grey felt is structured rigidly to hold the high crown and pinned brim; a heavy tassel dangles from the side. The piece asserts a playful subversion of elite military history." },
-        { "x": 50, "y": 30, "label": "Metallic Double-Breasted Jacket", "description": "The metallic double-breasted jacket features a rigid structural silhouette and a highly reflective bronze-toned fabric. This material choice engages with subcultural systems by utilizing flashy club-kid textiles in place of traditional wool suiting. The jacket is adorned with two columns of prominent brass buttons; the lapels are folded back broadly over the chest. The garment refuses subtle tailoring to assert a posture of aggressive New Romantic flamboyance." },
-        { "x": 50, "y": 60, "label": "Gathered Metallic Breeches", "description": "The gathered metallic breeches drop just below the knee in the same reflective textile as the jacket. This structural logic utilizes historical pastiche to introduce a fluid non-modern drape into the lower silhouette. The fabric bunches heavily around the waist and hips; it is abruptly truncated by thick gathered cuffs at the calf. The piece completes the ensemble by forcing a historically masculine garment to adopt a flamboyant and slightly absurd volume." }
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Stiffened Felt Tricorne Hat",
+          "description": "The stiffened felt tricorne hat dramatically extends the vertical axis of the head while mimicking 18th-century naval headwear. This accessory applies historical pastiche to inject a sense of grand theatricality into a modern runway context. The thick grey felt is structured rigidly to hold the high crown and pinned brim; a heavy tassel dangles from the side. The piece asserts a playful subversion of elite military history."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Metallic Double-Breasted Jacket",
+          "description": "The metallic double-breasted jacket features a rigid structural silhouette and a highly reflective bronze-toned fabric. This material choice engages with subcultural systems by utilizing flashy club-kid textiles in place of traditional wool suiting. The jacket is adorned with two columns of prominent brass buttons; the lapels are folded back broadly over the chest. The garment refuses subtle tailoring to assert a posture of aggressive New Romantic flamboyance."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Gathered Metallic Breeches",
+          "description": "The gathered metallic breeches drop just below the knee in the same reflective textile as the jacket. This structural logic utilizes historical pastiche to introduce a fluid non-modern drape into the lower silhouette. The fabric bunches heavily around the waist and hips; it is abruptly truncated by thick gathered cuffs at the calf. The piece completes the ensemble by forcing a historically masculine garment to adopt a flamboyant and slightly absurd volume."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-02.jpg",
       "hotspots": [
-        { "x": 50, "y": 40, "label": "Ruffled Poet Shirt", "description": "The ruffled poet shirt expands outward from the chest and cuffs in massive cascades of crisp white fabric. This structural intervention engages with gender fluidity by applying a historically hyper-masculine aristocratic silhouette to an androgynous aesthetic. The dense gathering at the shoulders creates significant volume; the sharp pointed collar stands rigidly against the neck. The garment asserts an aesthetic of romantic escapism that directly counters the harshness of late 70s punk." },
-        { "x": 50, "y": 70, "label": "Striped Gathered Trousers", "description": "The striped gathered trousers feature dark vertical lines over a muted fabric, dropping loosely from a tight waistband. This material strategy utilizes historical pastiche to reference 18th-century undergarments or sailor's slops. The fabric billows softly around the thighs before tapering toward the ankle. The trousers complete the look by anchoring the flamboyant upper ruffles with a slightly more utilitarian domestic drape." }
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Ruffled Poet Shirt",
+          "description": "The ruffled poet shirt expands outward from the chest and cuffs in massive cascades of crisp white fabric. This structural intervention engages with gender fluidity by applying a historically hyper-masculine aristocratic silhouette to an androgynous aesthetic. The dense gathering at the shoulders creates significant volume; the sharp pointed collar stands rigidly against the neck. The garment asserts an aesthetic of romantic escapism that directly counters the harshness of late 70s punk."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Striped Gathered Trousers",
+          "description": "The striped gathered trousers feature dark vertical lines over a muted fabric, dropping loosely from a tight waistband. This material strategy utilizes historical pastiche to reference 18th-century undergarments or sailor's slops. The fabric billows softly around the thighs before tapering toward the ankle. The trousers complete the look by anchoring the flamboyant upper ruffles with a slightly more utilitarian domestic drape."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-03.jpg",
       "hotspots": [
-        { "x": 50, "y": 40, "label": "Cropped Double-Breasted Tailcoat", "description": "The cropped double-breasted tailcoat provides a rigid tailored frame around the torso in stark black wool; it truncates sharply at the natural waist while leaving the back panels to trail. This tailoring approach applies historical pastiche by dissecting the formal menswear of the 18th-century court into a subcultural club garment. The deep lapels are folded flat; the sleeves are pushed up violently to reveal ruffled white cuffs beneath. The outerwear asserts a hybridized aesthetic that fuses aristocratic history with reckless DIY styling." },
-        { "x": 50, "y": 60, "label": "Gathered Drop-Crotch Breeches", "description": "The gathered drop-crotch breeches hang heavily around the hips in a stark white textile; they feature a massive gathered waistband and a drastically lowered inseam. This structural extreme applies the theatrical surrealism of the Blitz Kids by forcing the lower body into an impossibly exaggerated drape. The fabric pools thickly around the upper thighs before tightening above the knee. The garment refuses modern tailoring protocols to complete a silhouette defined by flamboyant restriction." }
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Cropped Double-Breasted Tailcoat",
+          "description": "The cropped double-breasted tailcoat provides a rigid tailored frame around the torso in stark black wool; it truncates sharply at the natural waist while leaving the back panels to trail. This tailoring approach applies historical pastiche by dissecting the formal menswear of the 18th-century court into a subcultural club garment. The deep lapels are folded flat; the sleeves are pushed up violently to reveal ruffled white cuffs beneath. The outerwear asserts a hybridized aesthetic that fuses aristocratic history with reckless DIY styling."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Gathered Drop-Crotch Breeches",
+          "description": "The gathered drop-crotch breeches hang heavily around the hips in a stark white textile; they feature a massive gathered waistband and a drastically lowered inseam. This structural extreme applies the theatrical surrealism of the Blitz Kids by forcing the lower body into an impossibly exaggerated drape. The fabric pools thickly around the upper thighs before tightening above the knee. The garment refuses modern tailoring protocols to complete a silhouette defined by flamboyant restriction."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-04.jpg",
       "hotspots": [
-        { "x": 65, "y": 55, "label": "Gingham Empire-Waist Gown", "description": "The gingham empire-waist gown drops from just beneath the bust in a soft continuous volume of pale checked fabric. This structural logic utilizes historical pastiche to mimic the relaxed neoclassicism of early 19th-century womenswear. The fine checked pattern invokes a domestic almost pastoral aesthetic; the neckline falls into a soft scoop. The garment asserts a sense of naive romanticism that completely rejects the aggressive bondage motifs of the designer's earlier work." },
-        { "x": 50, "y": 50, "label": "Striped Asymmetrical Waistcoat", "description": "The striped asymmetrical waistcoat is worn entirely unfastened over a bare chest; it features broad vertical stripes and an uneven hemline. This material application engages with queer theory by placing a piece of formal menswear on a male model while simultaneously stripping him of an undershirt. The fabric hangs loosely to reveal the torso; a wide cummerbund wraps tightly around the natural waist below. The piece asserts an unapologetic and sensual subversion of masculine dressing codes." }
+        {
+          "x": 65,
+          "y": 55,
+          "label": "Gingham Empire-Waist Gown",
+          "description": "The gingham empire-waist gown drops from just beneath the bust in a soft continuous volume of pale checked fabric. This structural logic utilizes historical pastiche to mimic the relaxed neoclassicism of early 19th-century womenswear. The fine checked pattern invokes a domestic almost pastoral aesthetic; the neckline falls into a soft scoop. The garment asserts a sense of naive romanticism that completely rejects the aggressive bondage motifs of the designer's earlier work."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Striped Asymmetrical Waistcoat",
+          "description": "The striped asymmetrical waistcoat is worn entirely unfastened over a bare chest; it features broad vertical stripes and an uneven hemline. This material application engages with queer theory by placing a piece of formal menswear on a male model while simultaneously stripping him of an undershirt. The fabric hangs loosely to reveal the torso; a wide cummerbund wraps tightly around the natural waist below. The piece asserts an unapologetic and sensual subversion of masculine dressing codes."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-05.jpg",
       "hotspots": [
-        { "x": 50, "y": 20, "label": "Striped Turban Headwrap", "description": "The striped turban headwrap engulfs the head in a massive volume of gathered patterned fabric; it obscures the hair and dramatically alters the skull's proportions. This accessory utilizes subcultural appropriation by pulling non-Western historical motifs into the London club scene. The dark striped material is twisted into a heavy chaotic knot; the trailing ends fall over the shoulders. The headwear asserts a flamboyant theatricality necessary for standing out in the crowded Blitz club." },
-        { "x": 50, "y": 65, "label": "Gathered Striped Trousers", "description": "The gathered striped trousers drop from a massive wrapped waist sash in dense vertical lines; they create a fluid but heavy silhouette around the legs. This structural logic relies on the illusion of historical seafarer garments. The dark stripes match the turban and sleeves precisely; the fabric bunches over white knit leg warmers at the ankle. The piece completes the ensemble by emphasizing the theatricality of an overly large un-tailored fit." }
+        {
+          "x": 50,
+          "y": 20,
+          "label": "Striped Turban Headwrap",
+          "description": "The striped turban headwrap engulfs the head in a massive volume of gathered patterned fabric; it obscures the hair and dramatically alters the skull's proportions. This accessory utilizes subcultural appropriation by pulling non-Western historical motifs into the London club scene. The dark striped material is twisted into a heavy chaotic knot; the trailing ends fall over the shoulders. The headwear asserts a flamboyant theatricality necessary for standing out in the crowded Blitz club."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Gathered Striped Trousers",
+          "description": "The gathered striped trousers drop from a massive wrapped waist sash in dense vertical lines; they create a fluid but heavy silhouette around the legs. This structural logic relies on the illusion of historical seafarer garments. The dark stripes match the turban and sleeves precisely; the fabric bunches over white knit leg warmers at the ankle. The piece completes the ensemble by emphasizing the theatricality of an overly large un-tailored fit."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-06.jpg",
       "hotspots": [
-        { "x": 50, "y": 35, "label": "Sleeveless Striped Waistcoat", "description": "The sleeveless striped waistcoat is worn open over a bare chest; it features contrasting white lapels dotted with dark brass buttons. This material application engages with gender fluidity by presenting a male model in a state of stylized undress beneath formal wear. The vertical stripes add a harsh geometric noise against the pale skin; the deep armholes allow completely unrestricted movement. The garment asserts a posture of confident and theatrical exposure." },
-        { "x": 50, "y": 60, "label": "Asymmetrical Striped Trousers", "description": "The asymmetrical striped trousers gather thickly at the waist beneath a wide spotted cummerbund; they drop in a relaxed fit to the mid-calf. This structural logic utilizes historical pastiche to mimic the loose slops of 18th-century pirates. The fabric matches the waistcoat to create a jarringly coordinated uniform; the wide legs are abruptly truncated by heavy strapped footwear. The garment completes the silhouette by enforcing an aesthetic of historical reenactment filtered through subcultural rebellion." }
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Sleeveless Striped Waistcoat",
+          "description": "The sleeveless striped waistcoat is worn open over a bare chest; it features contrasting white lapels dotted with dark brass buttons. This material application engages with gender fluidity by presenting a male model in a state of stylized undress beneath formal wear. The vertical stripes add a harsh geometric noise against the pale skin; the deep armholes allow completely unrestricted movement. The garment asserts a posture of confident and theatrical exposure."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Asymmetrical Striped Trousers",
+          "description": "The asymmetrical striped trousers gather thickly at the waist beneath a wide spotted cummerbund; they drop in a relaxed fit to the mid-calf. This structural logic utilizes historical pastiche to mimic the loose slops of 18th-century pirates. The fabric matches the waistcoat to create a jarringly coordinated uniform; the wide legs are abruptly truncated by heavy strapped footwear. The garment completes the silhouette by enforcing an aesthetic of historical reenactment filtered through subcultural rebellion."
+        }
       ]
     }
   ],
@@ -55,9 +120,9 @@
     "era": "1980 to 1989; The Post-Modern Shift",
     "politics": "Queer Theory & Subcultural Systems | Class Dynamics & Anti-Elitism",
     "theories": "Subcultural Resistance Theory | Camp and Kitsch Subversion | Mythology and Contemporary Lore (Barthes)",
-    "gender": "Unisex / Neutral",
+    "gender": "Co-ed / Unisex",
     "materials": "Plant-Based Cellulose | Animal Protein Fibres | Bovine & Exotic Skins",
-    "geography": "London (BFC) | London Underground / Club Culture",
+    "geography": "London (BFC)",
     "anatomy": "Radical Asymmetry | Suspended Drape | Deconstructed Assembly",
     "format": "Traditional Runway"
   },

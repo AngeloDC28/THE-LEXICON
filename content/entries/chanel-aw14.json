@@ -7,7 +7,21 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.jpg"
+      "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Tweed Boucle Power Suit",
+          "description": "The tweed boucle power suit anchors the model in the house's foundational textile reworked for protest theatre; it features the classic gold-buttoned cardigan jacket scaled to oversized proportions. This material strategy engages with commodity feminism by routing political iconography through luxury heritage codes. The signature fringed edges and contrast trim remain intact despite the slouched fit; the matching skirt drops sharply at the knee. The garment asserts a deliberate collision between aristocratic dressmaking and democratizing sportswear logic."
+        },
+        {
+          "x": 50,
+          "y": 80,
+          "label": "Hand-Painted Feminist Placard",
+          "description": "The hand-painted feminist placard is carried aloft as the model marches down the simulated Boulevard Chanel runway; it bears slogans referencing women's rights and historical erasure. This styling choice introduces literal political signage into a luxury fashion context, generating immediate cultural traction across mainstream press. The cardboard surface clashes violently with the precision tailoring; the handwritten typography refuses corporate polish. The accessory completes the look by transforming the runway into a protest space."
+        }
+      ]
     }
   ],
   "tags": {

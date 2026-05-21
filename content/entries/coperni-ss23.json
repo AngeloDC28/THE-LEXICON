@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg"
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Spray-Applied Fabrican Polymer Dress",
+          "description": "The spray-applied Fabrican polymer dress is assembled directly on the body in real time via pressurized canisters of biodegradable polymer fibers; it has no pattern, no seam, no cutter, and no atelier. This material extreme is the most widely documented fashion spectacle of the post-Instagram era — designed for the moving image rather than the still photograph. The non-woven textile dries instantly to form a fitted couture-precision silhouette; the manufacturing process is itself the cultural content. The garment asserts technology not as finish but as primary production logic."
+        }
+      ]
     }
   ],
   "tags": {

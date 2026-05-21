@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg"
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Layered Silk Organza Blouse",
+          "description": "The layered silk organza blouse cascades sheer cream fabric over a structured bustier; it operates as both inner and outer garment simultaneously. This material strategy engages with the Marc Jacobs era's signature treatment of monogram codes as graphic system rather than brand identifier. The translucent textile reveals the architectural foundation garment beneath; the cuffs fall loosely past the wrists. The piece asserts the permanent traveler aesthetic that defined LV's commercial dominance through the 2000s."
+        }
+      ]
     }
   ],
   "tags": {

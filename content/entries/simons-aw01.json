@@ -9,58 +9,143 @@
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-01.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Oversized Fostex MA-1 Bomber", "description": "The oversized Fostex MA-1 bomber swallows the upper body in a massive dark nylon shell; it drops below the hips to obscure the natural waistline completely. This structural choice engages with theories of monolithic massing by transforming standard-issue military surplus into an imposing architectural volume. The jacket is heavily padded to create a rigid defensive barrier against the cold; the zipper runs vertically down the center axis but remains unfastened. The outerwear asserts a utilitarian aesthetic that rejects the slim tailoring previously associated with the designer." },
-        { "x": 50, "y": 25, "label": "Graphic Wrapped Balaclava", "description": "The graphic wrapped balaclava obscures the lower face and neck tightly behind a pale grey jersey scarf; it leaves only the eyes visible beneath the dark hood. This accessory utilizes architectural shielding to enforce a sense of militant anonymity and isolation. The soft fabric contrasts with the heavy nylon of the bomber jacket; a subtle dark graphic is visible across the bridge of the nose. The styling detail completes the controversial terrorist-chic aesthetic by masking the model's identity entirely." },
-        { "x": 50, "y": 70, "label": "Layered Wool Midi Skirt", "description": "The layered wool midi skirt drops below the heavy bomber jacket in a stiff pale beige textile; it bifurcates over dark pinstripe trousers. This sartorial choice applies gender deconstruction by introducing a traditionally feminine silhouette into an aggressively masculine military ensemble. The thick fabric is cleanly tailored with a sharp front slit to allow kinetic mobility; the hem falls bluntly to the knee. The garment asserts a hybridized and deeply subversive approach to winter layering." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Fostex MA-1 Bomber",
+          "description": "The oversized Fostex MA-1 bomber swallows the upper body in a massive dark nylon shell; it drops below the hips to obscure the natural waistline completely. This structural choice engages with theories of monolithic massing by transforming standard-issue military surplus into an imposing architectural volume. The jacket is heavily padded to create a rigid defensive barrier against the cold; the zipper runs vertically down the center axis but remains unfastened. The outerwear asserts a utilitarian aesthetic that rejects the slim tailoring previously associated with the designer."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Graphic Wrapped Balaclava",
+          "description": "The graphic wrapped balaclava obscures the lower face and neck tightly behind a pale grey jersey scarf; it leaves only the eyes visible beneath the dark hood. This accessory utilizes architectural shielding to enforce a sense of militant anonymity and isolation. The soft fabric contrasts with the heavy nylon of the bomber jacket; a subtle dark graphic is visible across the bridge of the nose. The styling detail completes the controversial terrorist-chic aesthetic by masking the model's identity entirely."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Layered Wool Midi Skirt",
+          "description": "The layered wool midi skirt drops below the heavy bomber jacket in a stiff pale beige textile; it bifurcates over dark pinstripe trousers. This sartorial choice applies gender deconstruction by introducing a traditionally feminine silhouette into an aggressively masculine military ensemble. The thick fabric is cleanly tailored with a sharp front slit to allow kinetic mobility; the hem falls bluntly to the knee. The garment asserts a hybridized and deeply subversive approach to winter layering."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-02.jpg",
       "hotspots": [
-        { "x": 50, "y": 40, "label": "Patch-Embellished Camouflage Bomber", "description": "The patch-embellished camouflage bomber constructs a massive upper carapace using a cheap Fostex military jacket; it is heavily modified with raw printed fabric patches tacked onto the chest and sleeves. This material application engages with postmodern DIY collage by treating the military garment as a blank canvas for subcultural signifiers. The patches feature obscure band flyers and distressed graphics relating to youth alienation; the camouflage pattern blends the model into the dystopian warehouse setting. The jacket asserts the definitive blueprint for modern high-end streetwear." },
-        { "x": 50, "y": 15, "label": "Black Hoodie Underlayer", "description": "The black hoodie underlayer pulls tightly over the head beneath the heavy bomber jacket; it frames the face securely within a dark void. This layering strategy utilizes Eastern European street style influences where garments are simply stacked for warmth. The soft cotton jersey provides a quiet base beneath the noisy graphic exterior; the hood adds an extra layer of protective anonymity. The piece completes the silhouette by reinforcing the sullen isolated energy of the youth subculture theme." }
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Patch-Embellished Camouflage Bomber",
+          "description": "The patch-embellished camouflage bomber constructs a massive upper carapace using a cheap Fostex military jacket; it is heavily modified with raw printed fabric patches tacked onto the chest and sleeves. This material application engages with postmodern DIY collage by treating the military garment as a blank canvas for subcultural signifiers. The patches feature obscure band flyers and distressed graphics relating to youth alienation; the camouflage pattern blends the model into the dystopian warehouse setting. The jacket asserts the definitive blueprint for modern high-end streetwear."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Black Hoodie Underlayer",
+          "description": "The black hoodie underlayer pulls tightly over the head beneath the heavy bomber jacket; it frames the face securely within a dark void. This layering strategy utilizes Eastern European street style influences where garments are simply stacked for warmth. The soft cotton jersey provides a quiet base beneath the noisy graphic exterior; the hood adds an extra layer of protective anonymity. The piece completes the silhouette by reinforcing the sullen isolated energy of the youth subculture theme."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-03.jpg",
       "hotspots": [
-        { "x": 50, "y": 55, "label": "Monolithic Nylon Trench Coat", "description": "The monolithic nylon trench coat drops heavily from the shoulders to the mid-calf in a slick dark textile; it hangs open to reveal the bright layers beneath. This outerwear utilizes monolithic massing to create a long unbroken column of dark fabric that swallows the natural human silhouette. The wide lapels and double-breasted button format mimic formal menswear; the synthetic material introduces a slightly cheap industrial sheen. The coat asserts a protective utilitarian barrier against the damp environment." },
-        { "x": 55, "y": 35, "label": "Striped Funnel-Neck Knit", "description": "The striped funnel-neck knit hugs the torso tightly beneath the massive trench coat; it features aggressive horizontal bands of red and black. This material choice engages with subcultural systems by referencing the grunge aesthetics of 1990s alternative rock such as Kurt Cobain's iconic sweaters. The high collar pulls up tightly over the throat to obscure the neck; the bright red stripes provide a jarring visual contrast to the muted outerwear. The garment completes the look by injecting a flash of rebellious youth culture into the somber layering." }
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Monolithic Nylon Trench Coat",
+          "description": "The monolithic nylon trench coat drops heavily from the shoulders to the mid-calf in a slick dark textile; it hangs open to reveal the bright layers beneath. This outerwear utilizes monolithic massing to create a long unbroken column of dark fabric that swallows the natural human silhouette. The wide lapels and double-breasted button format mimic formal menswear; the synthetic material introduces a slightly cheap industrial sheen. The coat asserts a protective utilitarian barrier against the damp environment."
+        },
+        {
+          "x": 55,
+          "y": 35,
+          "label": "Striped Funnel-Neck Knit",
+          "description": "The striped funnel-neck knit hugs the torso tightly beneath the massive trench coat; it features aggressive horizontal bands of red and black. This material choice engages with subcultural systems by referencing the grunge aesthetics of 1990s alternative rock such as Kurt Cobain's iconic sweaters. The high collar pulls up tightly over the throat to obscure the neck; the bright red stripes provide a jarring visual contrast to the muted outerwear. The garment completes the look by injecting a flash of rebellious youth culture into the somber layering."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-04.jpg",
       "hotspots": [
-        { "x": 50, "y": 50, "label": "Oversized Synthetic Parka", "description": "The oversized synthetic parka engulfs the upper body in a massive dark blue shell; it features a heavy protective collar standing rigidly against the neck. This structural intervention utilizes architectural shielding to isolate the wearer within a thick insulated volume. The dark fabric falls past the knees to cover the layered leather skirt beneath; the sleeves are pushed up roughly to expose the hands. The outerwear asserts a nomadic and highly practical aesthetic inspired by Eastern European flea markets." },
-        { "x": 50, "y": 35, "label": "Layered White Turtleneck", "description": "The layered white turtleneck provides a stark bright focal point beneath the dark collar of the parka; it isolates the head within a crisp white frame. This simple styling choice applies sequential layering to emphasize the model's pale features against the harsh industrial lighting. The soft cotton fabric fits snugly against the throat; a dark crewneck is layered directly over it. The detail completes the Russian-doll stacking effect essential to the collection's survivalist theme." }
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Oversized Synthetic Parka",
+          "description": "The oversized synthetic parka engulfs the upper body in a massive dark blue shell; it features a heavy protective collar standing rigidly against the neck. This structural intervention utilizes architectural shielding to isolate the wearer within a thick insulated volume. The dark fabric falls past the knees to cover the layered leather skirt beneath; the sleeves are pushed up roughly to expose the hands. The outerwear asserts a nomadic and highly practical aesthetic inspired by Eastern European flea markets."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Layered White Turtleneck",
+          "description": "The layered white turtleneck provides a stark bright focal point beneath the dark collar of the parka; it isolates the head within a crisp white frame. This simple styling choice applies sequential layering to emphasize the model's pale features against the harsh industrial lighting. The soft cotton fabric fits snugly against the throat; a dark crewneck is layered directly over it. The detail completes the Russian-doll stacking effect essential to the collection's survivalist theme."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-05.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Oversized Graphic Hoodie", "description": "The oversized graphic hoodie completely consumes the upper torso and drops heavily below the crotch; it features extremely long sleeves that entirely swallow the model's hands. This material strategy engages with monolithic massing by transforming a basic casual garment into a dominating spatial volume. The dark fabric is punctuated by a stark white circular graphic featuring gothic typography referencing Antwerp; the hood rests thickly against the nape of the neck. The garment asserts a deeply isolated and slouched posture indicative of teenage angst." },
-        { "x": 45, "y": 75, "label": "Relaxed Straight-Leg Denim", "description": "The relaxed straight-leg denim drops fluidly from beneath the massive hoodie in a dark blue wash; the hem breaks cleanly over heavy black footwear. This structural choice rejects the ultra-slim tailoring of the era in favor of a baggy comfortable silhouette. The dark jeans provide a quiet utilitarian base for the aggressive upper volume; they lack any severe distressing or obvious branding. The trousers complete the look by anchoring the rebellious streetwear aesthetic in accessible everyday reality." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Graphic Hoodie",
+          "description": "The oversized graphic hoodie completely consumes the upper torso and drops heavily below the crotch; it features extremely long sleeves that entirely swallow the model's hands. This material strategy engages with monolithic massing by transforming a basic casual garment into a dominating spatial volume. The dark fabric is punctuated by a stark white circular graphic featuring gothic typography referencing Antwerp; the hood rests thickly against the nape of the neck. The garment asserts a deeply isolated and slouched posture indicative of teenage angst."
+        },
+        {
+          "x": 45,
+          "y": 75,
+          "label": "Relaxed Straight-Leg Denim",
+          "description": "The relaxed straight-leg denim drops fluidly from beneath the massive hoodie in a dark blue wash; the hem breaks cleanly over heavy black footwear. This structural choice rejects the ultra-slim tailoring of the era in favor of a baggy comfortable silhouette. The dark jeans provide a quiet utilitarian base for the aggressive upper volume; they lack any severe distressing or obvious branding. The trousers complete the look by anchoring the rebellious streetwear aesthetic in accessible everyday reality."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-07.jpg",
       "hotspots": [
-        { "x": 50, "y": 45, "label": "Fitted Plaid Button-Down", "description": "The fitted plaid button-down hugs the torso tightly with a classic dark grid pattern; it is tucked sharply into the matching trousers to emphasize a rare moment of slim tailoring within the collection. This material application engages with subcultural systems by subverting a traditional working-class flannel into a sleek high-fashion top. The dark blue and green squares absorb the runway lighting; the sleeves end cleanly at the wrist. The garment asserts a disciplined base layer that contrasts with the oversized outerwear seen elsewhere in the show." },
-        { "x": 50, "y": 30, "label": "Popped Contrast Collar", "description": "The popped contrast collar stands rigidly against the neck in a bright white fabric; it is worn aggressively flipped up to shield the throat. This styling detail utilizes architectural shielding on a micro-scale to provide a slight defensive barrier around the face. The stark white fabric contrasts sharply with the dark plaid pattern below; it frames the model's gaunt features perfectly. The element completes the look by injecting a sense of tense uptight formality into the casual flannel." }
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Fitted Plaid Button-Down",
+          "description": "The fitted plaid button-down hugs the torso tightly with a classic dark grid pattern; it is tucked sharply into the matching trousers to emphasize a rare moment of slim tailoring within the collection. This material application engages with subcultural systems by subverting a traditional working-class flannel into a sleek high-fashion top. The dark blue and green squares absorb the runway lighting; the sleeves end cleanly at the wrist. The garment asserts a disciplined base layer that contrasts with the oversized outerwear seen elsewhere in the show."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Popped Contrast Collar",
+          "description": "The popped contrast collar stands rigidly against the neck in a bright white fabric; it is worn aggressively flipped up to shield the throat. This styling detail utilizes architectural shielding on a micro-scale to provide a slight defensive barrier around the face. The stark white fabric contrasts sharply with the dark plaid pattern below; it frames the model's gaunt features perfectly. The element completes the look by injecting a sense of tense uptight formality into the casual flannel."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-08.jpg",
       "hotspots": [
-        { "x": 50, "y": 40, "label": "Sleeveless Hooded Waistcoat", "description": "The sleeveless hooded waistcoat hangs open over the striped sweater in a muted olive-green textile; it introduces an extra layer of unstructured insulation without restricting the arms. This structural choice engages with the DIY-collage aesthetic by randomly stacking disjointed garments to create new protective volumes. The stiff fabric droops heavily over the shoulders; the oversized hood acts as a massive framing device for the head. The piece asserts a scavenged survivalist quality." },
-        { "x": 50, "y": 60, "label": "Elongated Striped Turtleneck", "description": "The elongated striped turtleneck drops well below the waistline in alternating bands of pale brown and dark brown; it functions as a long tubular tunic rather than a standard sweater. This material strategy utilizes sequential layering to elongate the torso unnaturally beneath the cropped waistcoat. The soft knit fabric clings to the ribs before falling straight down; the sleeves are pushed up past the wrists. The garment completes the silhouette by injecting a subtle grunge motif into the heavy military layering." }
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Sleeveless Hooded Waistcoat",
+          "description": "The sleeveless hooded waistcoat hangs open over the striped sweater in a muted olive-green textile; it introduces an extra layer of unstructured insulation without restricting the arms. This structural choice engages with the DIY-collage aesthetic by randomly stacking disjointed garments to create new protective volumes. The stiff fabric droops heavily over the shoulders; the oversized hood acts as a massive framing device for the head. The piece asserts a scavenged survivalist quality."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Elongated Striped Turtleneck",
+          "description": "The elongated striped turtleneck drops well below the waistline in alternating bands of pale brown and dark brown; it functions as a long tubular tunic rather than a standard sweater. This material strategy utilizes sequential layering to elongate the torso unnaturally beneath the cropped waistcoat. The soft knit fabric clings to the ribs before falling straight down; the sleeves are pushed up past the wrists. The garment completes the silhouette by injecting a subtle grunge motif into the heavy military layering."
+        }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-09.jpg",
       "hotspots": [
-        { "x": 45, "y": 40, "label": "Oversized Camouflage Parka", "description": "The oversized camouflage parka swallows the upper body in a massive patterned shell; it features a thick dark collar standing rigidly against the neck. This outerwear choice engages directly with subcultural appropriation by elevating cheap military surplus into an imposing runway centerpiece. The green and brown print effectively camouflages the body against the industrial scaffolding of the warehouse setting; the heavy fabric is unfastened to reveal the black layers beneath. The jacket asserts the definitive silhouette of high-end youth streetwear." },
-        { "x": 50, "y": 70, "label": "Layered Nylon Tunic Skirt", "description": "The layered nylon tunic skirt drops from beneath the camo parka to the mid-calf in a slick black synthetic textile; it bifurcates slightly to reveal the trousers beneath. This structural intervention utilizes gender deconstruction by introducing a dress-like volume into a harsh masculine uniform. The shiny fabric catches the runway lights sharply; it adds a liquid kinetic movement to the otherwise rigid ensemble. The garment completes the Riot aesthetic by stacking multiple disjointed layers into a cohesive protective shell." }
+        {
+          "x": 45,
+          "y": 40,
+          "label": "Oversized Camouflage Parka",
+          "description": "The oversized camouflage parka swallows the upper body in a massive patterned shell; it features a thick dark collar standing rigidly against the neck. This outerwear choice engages directly with subcultural appropriation by elevating cheap military surplus into an imposing runway centerpiece. The green and brown print effectively camouflages the body against the industrial scaffolding of the warehouse setting; the heavy fabric is unfastened to reveal the black layers beneath. The jacket asserts the definitive silhouette of high-end youth streetwear."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Layered Nylon Tunic Skirt",
+          "description": "The layered nylon tunic skirt drops from beneath the camo parka to the mid-calf in a slick black synthetic textile; it bifurcates slightly to reveal the trousers beneath. This structural intervention utilizes gender deconstruction by introducing a dress-like volume into a harsh masculine uniform. The shiny fabric catches the runway lights sharply; it adds a liquid kinetic movement to the otherwise rigid ensemble. The garment completes the Riot aesthetic by stacking multiple disjointed layers into a cohesive protective shell."
+        }
       ]
     }
   ],
@@ -71,7 +156,7 @@
     "theories": "Subcultural Resistance Theory | Hauntology (Fisher) | Camp and Kitsch Subversion | Institutional Critique",
     "gender": "Menswear",
     "materials": "High-Performance Textiles | Petroleum-Based Polymers | Animal Protein Fibres | Plant-Based Cellulose",
-    "geography": "Paris (Chambre Syndicale) | Subcultural Origin",
+    "geography": "Paris (Chambre Syndicale)",
     "anatomy": "Monolithic Massing | Scaffolding and Internal Frameworks | Architectural Shielding and Armour",
     "format": "Theatrical Stage Performance"
   },

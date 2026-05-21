@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg"
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Sculptural Intarsia Knit Bodice",
+          "description": "The sculptural intarsia knit bodice produces a torso-length garment whose relationship to the body is systematically ambiguous; the form reads as clothing at one scale and sculpture at another. This structural strategy embodies Jonathan Anderson's signature compositional move — deliberate anatomical dislocation through misidentified contours and extreme proportional contrasts. The proportional system pairs very narrow legs against very wide shoulders; the felted wool structures maintain their form independently of the body. The garment asserts Anderson's intellectual proposition that the most interesting garments occupy the space where clothing and object become indistinguishable."
+        }
+      ]
     }
   ],
   "tags": {

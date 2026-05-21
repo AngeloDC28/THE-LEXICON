@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg"
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Diagonal-Seamed Silk Charmeuse Top",
+          "description": "The diagonal-seamed silk charmeuse top wraps the torso along an angled axis that redirects the eye away from horizontal and vertical lines; it appears to rotate even in static photography. This structural strategy is Haider Ackermann's signature compositional device — the diagonal as principle, not ornament. The liquid silk is anchored at one shoulder by a single structured lacquered panel; the opposing side falls in unsupported drape. The garment asserts Ackermann's central proposition that clothing functions as second skin, and the haptic register of fabric against body is a more sophisticated form of communication than what it signifies at a distance."
+        }
+      ]
     }
   ],
   "tags": {

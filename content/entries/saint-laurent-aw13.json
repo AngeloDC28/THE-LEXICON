@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg"
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Black Leather Skinny Trouser and Sheer Blouse",
+          "description": "The black leather skinny trouser and sheer blouse pull tight against the body in a single uninterrupted vertical line; they refuse any structural excess that would soften the silhouette. This tailoring extreme defines Hedi Slimane's controversial vision for Saint Laurent: the female body reduced to a single geometric axis, the silhouette annihilated into pure line. The matte black leather creates a heavy visual void below the translucent silk georgette top; the sleeves end precisely at the wrist. The garment asserts the auteur project that replaced the YSL archive with the designer's own obsession with Sunset Strip rock culture."
+        }
+      ]
     }
   ],
   "tags": {

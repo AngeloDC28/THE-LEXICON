@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg"
+      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Saturated Color Cape Coat",
+          "description": "The saturated color cape coat falls in a single geometric plane from the neck to the floor in a heavily pigmented Valentino red; it refuses to register the body underneath. This structural strategy continues Pierpaolo Piccioli's extreme volume project that defined the AW 2022 'Beginning' collection. The dense duchesse satin reflects light evenly across every flat surface; the front conceals every closure mechanism. The garment asserts that maximalist color and volume function as post-pandemic political acts of refusal against austerity logic."
+        }
+      ]
     }
   ],
   "tags": {

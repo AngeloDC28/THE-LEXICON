@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg"
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Lacquered Organza Architectural Top",
+          "description": "The lacquered organza architectural top maintains its three-dimensional shape independently of the body via internal scaffolding and compressed interfacing; it reads as architectural volume rather than clothing. This structural strategy defines Raf Simons's late Jil Sander period: the pursuit of geometric purity through tailoring alone, with all ornamental content systematically eliminated. The single intrusion of acid yellow within an ivory-and-sand palette forces total attention onto form rather than color. The garment asserts the central problem of fashion minimalism — when the garment is stripped of all reference, construction itself becomes the carrier of meaning."
+        }
+      ]
     }
   ],
   "tags": {

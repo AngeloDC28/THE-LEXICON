@@ -263,7 +263,14 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-16.jpg",
-      "hotspots": []
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Trompe-L'oeil Tattoo Mesh Bodysuit",
+          "description": "The trompe-l'oeil tattoo mesh bodysuit pulls a flesh-toned synthetic textile across the body in a second-skin layer printed with full-coverage tribal and Polynesian-derived tattoo motifs; it simulates permanent body modification through removable garment. This material strategy is the foundational structural device of Gaultier's Les Tatouages collection — the deliberate confusion of garment with skin, decoration with mutilation, fashion with subcultural identity. The stretch mesh contours to the musculature without visible seam or hardware; the printed ink reads as physical pigment from runway distance. The piece asserts Gaultier's sustained interrogation of the boundary between clothed and naked bodies, and the politics of who is granted permission to wear which cultural code."
+        }
+      ]
     }
   ],
   "tags": {
@@ -271,9 +278,9 @@
     "era": "1990 to 1999; The Deconstructionist Decade",
     "politics": "Globalization & Cultural Hybridity | Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
     "theories": "Postmodernism | Cultural Appropriation vs. Pluralism (Global Village Chic) | Identity and Subjectivity",
-    "gender": "Womenswear & Menswear (Gender Fluidity)",
+    "gender": "Womenswear | Menswear",
     "materials": "Second-Skin Mesh / Sheer Tulle | Denim | 18th-Century Brocade | Chainmail & Metal | Found Objects (Piercings, Heavy Jewelry)",
-    "geography": "Paris (Chambre Syndicale / RTW)",
+    "geography": "Paris (Chambre Syndicale)",
     "anatomy": "Trompe l'Oeil (Body Illusion) | Historical Pastiche | Sartorial Restriction (Flattened Corsets) | Scaffolding and Internal Frameworks (Armor)",
     "format": "Traditional Runway"
   },

@@ -7,7 +7,15 @@
   "season": "SS",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg"
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Engineered Power Mesh Body",
+          "description": "The engineered power mesh body uses the structural armature of strapping, boning, and elastic as both construction system and visible aesthetic surface; the scaffolding IS the garment. This material strategy embodies Becca McCharen-Tran's architectural training applied to the full spectrum of body morphology — designs that perform under actual physical stress while retaining visible engineering. The technical performance fabric is cut with couture-grade precision; the casting on the runway spans XS to 5XL across ages, abilities, and gender identities. The garment asserts Chromat's foundational position: size inclusivity as design premise, not afterthought."
+        }
+      ]
     }
   ],
   "tags": {

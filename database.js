@@ -620,7 +620,7 @@ export const archiveData = [
       "theories": "Cyborg Manifestos (Haraway)",
       "gender": "Womenswear",
       "materials": "Industrial Coatings",
-      "geography": "Paris (Fédération de la Haute Couture)",
+      "geography": "Paris (Chambre Syndicale / Haute Couture)",
       "anatomy": "Prosthetic Extension",
       "format": "Theatrical Stage Performance"
     },
@@ -882,7 +882,7 @@ export const archiveData = [
       "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Labour Politics & Industrial Production",
       "theories": "Post-Humanism",
-      "gender": "Unisex / Neutral",
+      "gender": "Co-ed / Unisex",
       "materials": "Smart & Kinetic Textiles",
       "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Modular Componentry",
@@ -1793,7 +1793,7 @@ export const archiveData = [
       "theories": "Camp and Kitsch Subversion",
       "gender": "Womenswear",
       "materials": "Petroleum-Based Polymers",
-      "geography": "Milan (Camera Nazionale)",
+      "geography": "Milan (Camera Nazionale della Moda)",
       "anatomy": "Sartorial Restriction",
       "format": "Traditional Runway"
     },
@@ -2427,9 +2427,9 @@ export const archiveData = [
       "theories": "Identity and Subjectivity | Intersectionality",
       "gender": "Womenswear",
       "materials": "Heavy/Untreated Fabrics (Washed Leather; Densely Woven Wools; Crisp Cottons)",
-      "geography": "Paris (Chambre Syndicale / RTW)",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Monolithic Massing | Suspended Drape | Architectural Shielding and Armour",
-      "format": "Theatrical Stage Performance / Performance Art"
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
       "provenance": "This entry refers to Rick Owens's Spring/Summer 2014 collection, officially titled \"Vicious\". Instead of casting traditional fashion models, Owens hired forty professional \"stepping\" dancers to present the garments. Stepping is a hybrid of step dancing, cheerleading, and military drill that originally evolved in African-American colleges.",
@@ -2696,7 +2696,7 @@ export const archiveData = [
       "theories": "Post-Humanism | The Grotesque and Abject | Feminist Ideology | Deconstruction",
       "gender": "Womenswear",
       "materials": "Down / Synthetic Batting",
-      "geography": "Paris",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Radical Asymmetry | Displaced Anatomy | Structural Construction (Tectonic Craft)",
       "format": "Traditional Runway"
     },
@@ -2977,7 +2977,7 @@ export const archiveData = [
       "theories": "Aesthetic Philosophy (Wabi-sabi / Imperfect Beauty)",
       "gender": "Womenswear",
       "materials": "Knits (Handmade aesthetic) | Luxurious Jerseys | Woven Materials | Solid Wood (Bamboo/Canes)",
-      "geography": "Paris (Chambre Syndicale / RTW)",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Kinetic State and Movement | Suspended Drape | Scaffolding and Internal Frameworks",
       "format": "Traditional Runway"
     },
@@ -3252,7 +3252,14 @@ export const archiveData = [
       },
       {
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-16.jpg",
-        "hotspots": []
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Trompe-L'oeil Tattoo Mesh Bodysuit",
+            "description": "The trompe-l'oeil tattoo mesh bodysuit pulls a flesh-toned synthetic textile across the body in a second-skin layer printed with full-coverage tribal and Polynesian-derived tattoo motifs; it simulates permanent body modification through removable garment. This material strategy is the foundational structural device of Gaultier's Les Tatouages collection — the deliberate confusion of garment with skin, decoration with mutilation, fashion with subcultural identity. The stretch mesh contours to the musculature without visible seam or hardware; the printed ink reads as physical pigment from runway distance. The piece asserts Gaultier's sustained interrogation of the boundary between clothed and naked bodies, and the politics of who is granted permission to wear which cultural code."
+          }
+        ]
       }
     ],
     "tags": {
@@ -3260,9 +3267,9 @@ export const archiveData = [
       "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Globalization & Cultural Hybridity | Queer Theory & Subcultural Systems | Body Politics & Corporeal Interventions | Gender Deconstruction & Fluidity",
       "theories": "Postmodernism | Cultural Appropriation vs. Pluralism (Global Village Chic) | Identity and Subjectivity",
-      "gender": "Womenswear & Menswear (Gender Fluidity)",
+      "gender": "Womenswear | Menswear",
       "materials": "Second-Skin Mesh / Sheer Tulle | Denim | 18th-Century Brocade | Chainmail & Metal | Found Objects (Piercings, Heavy Jewelry)",
-      "geography": "Paris (Chambre Syndicale / RTW)",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Trompe l'Oeil (Body Illusion) | Historical Pastiche | Sartorial Restriction (Flattened Corsets) | Scaffolding and Internal Frameworks (Armor)",
       "format": "Traditional Runway"
     },
@@ -3373,7 +3380,7 @@ export const archiveData = [
       "materials": "Heavy/Untreated Fabrics (Jute / Hessian Sackcloth) | Luxurious Textiles (Silk Satin; Brocade; Lace) | Reflective & Refractive Media (Crystals; Diamante; Metallic Sequins)",
       "geography": "Paris (Chambre Syndicale / Haute Couture)",
       "anatomy": "Monolithic Massing | Scaffolding and Internal Frameworks (Sequential Layering)",
-      "format": "Theatrical Stage Performance / Performance Art"
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
       "provenance": "This entry refers to Viktor & Rolf's Autumn/Winter 1999 Haute Couture show, officially titled the \"Russian Doll\" collection. Instead of a traditional runway procession, the 15-minute presentation featured a single model, Maggie Rizer, standing on a rotating turntable pedestal like a \"toy ballerina in a music box.\" Throughout the show, the two designers, dressed entirely in black, acted as petites mains and painstakingly dressed Rizer in real-time in front of the audience. The presentation was a massive critical success, with Vogue editor André Leon Talley famously dubbing it \"the Viagra of couture week.\"",
@@ -3565,11 +3572,11 @@ export const archiveData = [
       "era": "1990 to 1999; The Deconstructionist Decade",
       "politics": "Anti-Consumerism & Institutional Critique | Activism & Crisis Response (Democratization of Fashion)",
       "theories": "Postmodernism | Aesthetic Philosophy (Minimalism / Quiet Luxury)",
-      "gender": "Menswear & Womenswear",
+      "gender": "Womenswear | Menswear",
       "materials": "Technical & Performative Systems | Sheer Layers | Silk Grey & Off-White Finishes",
-      "geography": "Digital / New York (Headquarters Relocation)",
+      "geography": "New York (CFDA/NYFW)",
       "anatomy": "Asymmetrical Sleeves | Sartorial Restriction / Scaffolding and Internal Frameworks (Ballistic Vests) | Utilitarianism",
-      "format": "CD-ROM | Lookbook / Still Photography Series"
+      "format": "CD-ROM / Lookbook"
     },
     "notes": {
       "provenance": "This entry refers to Helmut Lang's Fall/Winter 1998 collection, historically renowned as the first fashion collection to bypass a physical runway and be presented entirely via the internet and CD-ROM. Lang was in the process of relocating his headquarters from Europe to New York and was scheduled to hold the city's first combined men's and women's runway show. However, fearing the overwhelming industry hype would ruin the intimate \"séance de travail\" (work session) presentation format he had cultivated since 1988, he canceled the physical show and moved it online. To promote this unprecedented digital shift, Lang utilized over 1,000 New York taxi-top advertisements. The physical CD-ROMs sent to the press featured a metallic gold exterior encased in a minimal, transparent shell.",
@@ -3854,9 +3861,9 @@ export const archiveData = [
       "theories": "Postmodernism | Consumer Culture & Capitalism | The Simulacrum (Downmarket Irony / Counterfeit Chic) | Camp",
       "gender": "Womenswear",
       "materials": "Quilted Leather | Heavy Gold Chains | Silk & Satin (Gowns) | Plastic & Vinyl (Accessories)",
-      "geography": "Milan (Camera Nazionale)",
+      "geography": "Milan (Camera Nazionale della Moda)",
       "anatomy": "1980s / 1990s Hip-Hop Silhouettes | Classic Tailoring (Bouclé Suits) | Exaggerated Volumetric Gowns",
-      "format": "\"See Now, Buy Now\" / Digital Capsule (\"Fash Fashion: Next Day After The Runway\")"
+      "format": "Digital Capsule"
     },
     "notes": {
       "provenance": "This entry refers to Jeremy Scott's highly anticipated debut collection as creative director for the Italian house Moschino for the Autumn/Winter 2014 season. The show was a hyperactive ode to American pop culture, heavily featuring motifs from McDonald's, SpongeBob SquarePants, Froot Loops, Budweiser, and Hershey's chocolate. Obliterating the traditional six-month fashion cycle, Scott introduced a capsule collection titled \"Fash Fashion: Next Day After The Runway.\" Key pieces (like the French Fry phone case and \"M\" logo sweaters) were made available to purchase online and in-store the very next morning, perfectly mirroring the instant gratification of fast food.",
@@ -4137,7 +4144,7 @@ export const archiveData = [
       "materials": "Molded Leather | Silk-Velvet bonded to Neoprene | Crisp Dry Hand Taffeta | Stone-Washed Silk Duchess | Metal / Golden Brass / Resin | Rhinestones / Crystals",
       "geography": "Paris (Chambre Syndicale / Haute Couture)",
       "anatomy": "Anatomical Interaction | Monolithic Massing | Prosthetic Extension | Architectural Shielding and Armour | Displaced Anatomy and Padding",
-      "format": "Short Film (231 Seconds of Haute Couture)"
+      "format": "Short Film"
     },
     "notes": {
       "provenance": "This entry refers to Daniel Roseberry's third haute couture collection as artistic director for the Parisian house of Schiaparelli, presented digitally during the Covid-19 pandemic via a short film titled 231 Seconds of Haute Couture. The collection launched just days after Roseberry gained global attention for dressing Lady Gaga in a custom Schiaparelli gown and golden dove brooch to sing the national anthem at President Joe Biden's inauguration. Roseberry sought to challenge the traditional cliches of haute couture, explicitly rejecting polite fairy-tale princess dresses in favor of a bold, disobedient exploration of human anatomy.",
@@ -4469,9 +4476,9 @@ export const archiveData = [
       "era": "1980 to 1989; The Post-Modern Shift",
       "politics": "Queer Theory & Subcultural Systems | Class Dynamics & Anti-Elitism",
       "theories": "Subcultural Resistance Theory | Camp and Kitsch Subversion | Mythology and Contemporary Lore (Barthes)",
-      "gender": "Unisex / Neutral",
+      "gender": "Co-ed / Unisex",
       "materials": "Plant-Based Cellulose | Animal Protein Fibres | Bovine & Exotic Skins",
-      "geography": "London (BFC) | London Underground / Club Culture",
+      "geography": "London (BFC)",
       "anatomy": "Radical Asymmetry | Suspended Drape | Deconstructed Assembly",
       "format": "Traditional Runway"
     },
@@ -4639,7 +4646,7 @@ export const archiveData = [
       "theories": "Subcultural Resistance Theory | Hauntology (Fisher) | Camp and Kitsch Subversion | Institutional Critique",
       "gender": "Menswear",
       "materials": "High-Performance Textiles | Petroleum-Based Polymers | Animal Protein Fibres | Plant-Based Cellulose",
-      "geography": "Paris (Chambre Syndicale) | Subcultural Origin",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Monolithic Massing | Scaffolding and Internal Frameworks | Architectural Shielding and Armour",
       "format": "Theatrical Stage Performance"
     },
@@ -4829,7 +4836,7 @@ export const archiveData = [
       "theories": "Deconstructionist Logic (Derrida) | Subcultural Resistance Theory | Post-Colonial Critique | The Grotesque and Abject",
       "gender": "Womenswear",
       "materials": "Plant-Based Cellulose | Artificially Degraded Textiles | Assembled Non-Textile Hardware | Upcycled Industrial Waste",
-      "geography": "Paris (Chambre Syndicale) | Tokyo Avant-Garde",
+      "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Deconstructed Assembly | Radical Asymmetry | Bodily Obfuscation | Surface Erosion and Degradation",
       "format": "Traditional Runway"
     },
@@ -5025,7 +5032,7 @@ export const archiveData = [
       "theories": "Symbolic Exchange | Camp and Kitsch Subversion | Subcultural Resistance Theory | Marxist Materialism",
       "gender": "Womenswear",
       "materials": "Upcycled Industrial Waste | Deadstock & Surplus Inventory | Plant-Based Cellulose | Domestic Found Objects",
-      "geography": "New York (CFDA) | Subcultural Origin",
+      "geography": "New York (CFDA/NYFW)",
       "anatomy": "Deconstructed Assembly | Surface Erosion and Degradation | Modular Componentry",
       "format": "Guerrilla / Street Presentation"
     },
@@ -5208,7 +5215,7 @@ export const archiveData = [
       "theories": "Post-Humanism | Cyborg Manifestos (Haraway) | Object-Oriented Ontology | Techno-Optimism and Accelerationism",
       "gender": "Womenswear",
       "materials": "3D Printed Polymers | Thermoplastic Membranes | Smart & Kinetic Textiles | Additive Manufacturing",
-      "geography": "Paris (Fédération de la Haute Couture)",
+      "geography": "Paris (Chambre Syndicale / Haute Couture)",
       "anatomy": "Prosthetic Extension | Scaffolding and Internal Frameworks | Architectural Shielding and Armour | Clinical Exposure and Nudity",
       "format": "Traditional Runway"
     },
@@ -5409,9 +5416,9 @@ export const archiveData = [
       "era": "2000 to 2009; The Global Conglomerate Era",
       "politics": "Queer Theory & Subcultural Systems | Anti-Consumerism & Institutional Critique",
       "theories": "Post-Humanism | Camp and Kitsch Subversion | The Grotesque and Abject | Subcultural Resistance Theory",
-      "gender": "Conceptual / Post-Binary Form",
+      "gender": "Co-ed / Unisex",
       "materials": "Petroleum-Based Polymers | Thermoplastic Membranes | Elastomeric Compounds | Industrial Coatings | Assembled Non-Textile Hardware",
-      "geography": "London (BFC) | London Underground / Club Culture",
+      "geography": "London (BFC)",
       "anatomy": "Monolithic Massing | Bodily Obfuscation | Architectural Shielding and Armour | Prosthetic Extension",
       "format": "Performance Art / Live Action"
     },
@@ -5679,7 +5686,7 @@ export const archiveData = [
       "materials": "Everyday/Utilitarian Textiles (Cotton T-shirts) | Repurposed/Hacked Garments",
       "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Oversized Silhouettes | Sartorial Defacement / Recontextualization",
-      "format": "Physical Presence (Ready-to-Wear) | Viral Media / Digital \"Fashion Memes\""
+      "format": "Traditional Runway"
     },
     "notes": {
       "provenance": "This entry refers to the breakout early collections of Vetements (meaning ‘clothing’ in French) during the 2015–2016 seasons. While your prompt specifies Autumn/Winter 2015, fashion scholars and the provided texts heavily anchor this era of Vetements to its subsequent Spring/Summer 2016 runway presentation, which featured the iconic DHL T-shirt The brand initially operated as a creative collective of seven anonymous designers before Georgian creative director Demna Gvasalia became its highly profiled face The brand's phenomenal rise was deeply tied to its adroit understanding of contemporary digital media culture and social media practices",
@@ -5904,7 +5911,7 @@ export const archiveData = [
       "materials": "Bold Laminate (Logos) | Denim | Suede | Cotton (Sweatshirts)",
       "geography": "New York (CFDA/NYFW)",
       "anatomy": "Silhouette and Spatial Volume | 2.1 Deconstructed Assembly | Bodily Obfuscation (Straightjacket Chic) | 1.1 Monolithic Massing | Asymmetrical / Billowy Silhouettes",
-      "format": "Physical Presence | Traditional Runway / Underground Staging"
+      "format": "Traditional Runway"
     },
     "notes": {
       "provenance": "This entry refers to Shayne Oliver’s Spring/Summer 2014 collection for Hood By Air (HBA), presented during New York Fashion Week. The collection also featured an exclusive on-schedule launch presentation staged in a Selfridges car park in London, highlighting the collision of casual, skate, and street aesthetics Hood By Air emerged directly from the New York underground, specifically rooted in the itinerant GHE20G0TH1K club night and the Black, queer Ballroom scene Oliver’s work during this period garnered intense attention not only from the fashion press but also from major hip-hop and cultural icons like A$AP Rocky, Rihanna, and Kanye West, propelling the brand from a cult subcultural label to a global luxury phenomenon",
@@ -6106,7 +6113,7 @@ export const archiveData = [
       "materials": "Stiffened Mesh | Laser & Hand-Cut Textiles | Shiny Synthetic Fabrics",
       "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Structural Construction | 1.1 Monolithic Massing (3D Pyramids/Honeycombs); 3.3 Architectural Shielding / Bodily Obfuscation (Spherical Helmets); Kinetic/Concertina Expansion",
-      "format": "Physical Presence | Traditional Runway"
+      "format": "Traditional Runway"
     },
     "notes": {
       "provenance": "This entry refers to Junya Watanabe’s Autumn/Winter 2015 Womenswear collection, presented at the Palais de Tokyo during Paris Fashion Week The presentation was a masterclass in his signature \"techno couture,\" synthesizing cutting-edge construction methods with highly conceptual artistry Watanabe explicitly stated that the core thesis of the collection was \"exploring dimensionality through clothing\"",
@@ -6309,7 +6316,7 @@ export const archiveData = [
       "materials": "Quilted Hessian | Muslin | Wood (Scaffolding / Masts) | Cardboard",
       "geography": "London (BFC)",
       "anatomy": "Spatial Volume and Kinetic Extension | Deconstructed Assembly (Tie-Fastenings) | Martial Silhouettes (Samurai / Guru)",
-      "format": "Physical Presence | Traditional Runway (Emotional / Visceral Staging)"
+      "format": "Traditional Runway"
     },
     "notes": {
       "provenance": "This entry indexes Craig Green's inaugural solo runway presentation for Spring/Summer 2015 at London Collections: Men. The show is universally cited as a definitive \"fashion moment,\" famously moving its audience to tears. A look from this collection was selected by Topman's Gordon Richardson as the \"Dress of the Year 2015\" for Bath's Fashion Museum, marking the first time a menswear designer received this institutional honor. Green operated from a highly controlled, anti-spectacle ethos, pivoting away from the heavy opulence of his previous season toward what he termed \"DIY masculinity,\" rooted in his Hendon upbringing among builders and tradesmen.",
@@ -6674,11 +6681,11 @@ export const archiveData = [
       "era": "2010 to 2019; The Maximalist & Post-Truth Era",
       "politics": "Post-Humanism | Identity Fluidity & Hybridity | Anti-Essentialism",
       "theories": "Cyborg Theory (Donna Haraway) | Postmodern Pastiche | Semiotic Pluralism",
-      "gender": "Co-ed",
+      "gender": "Co-ed / Unisex",
       "materials": "Velvet | Tweed | Sequins | Lurex | Silicone (Prosthetics)",
       "geography": "Milan (Camera Nazionale della Moda)",
       "anatomy": "Maximalist Layering | Corporeal Alteration (Prosthetic Heads, Third Eyes) | Sartorial Collage",
-      "format": "Physical Presence | Theatrical Runway (Clinical Operating Theatre Staging)"
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
       "provenance": "This entry indexes Alessandro Michele's Autumn/Winter 2018 collection for Gucci, famously staged within a clinical operating room set at the Gucci Hub in Milan. The collection operates as a high-density visual translation of Donna Haraway's 1984 \"A Cyborg Manifesto\" and instantly transcended traditional fashion media to become a viral cultural artifact. By utilizing hyper-realistic props and an exhaustive catalog of historical references, Michele solidified his vision of Gucci not merely as a luxury house, but as a terminal for identity creation and postmodern anthropological critique. The runway served as an exercise in semiotic sabotage, mapping the intersections of technology, mythology, and biological mutation.",
@@ -6902,14 +6909,14 @@ export const archiveData = [
     ],
     "tags": {
       "brand": "Thom Browne",
-      "era": "2010 to 2019",
+      "era": "2010 to 2019; The Digital and Streetwear Pivot",
       "politics": "The Macabre & Institutional Critique | Subversion of Traditional Femininity | Anti-Essentialism",
       "theories": "The Uncanny | Semiotic Sabotage of the Uniform | Corporeal Resurrection",
       "gender": "Womenswear",
       "materials": "Grey Flannel | Heavy Wool | Tulle (Veils) | Silk | Grosgrain",
       "geography": "New York (CFDA/NYFW)",
       "anatomy": "Constricted Volume and Exaggerated Proportions | Monolithic Massing | Sartorial Armour | Bodily Obfuscation (Veiling)",
-      "format": "Physical Presence | Theatrical Runway (Coffin Staging / Macabre Dreamscape)"
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
       "provenance": "This entry indexes Thom Browne's Autumn/Winter 2012 Womenswear collection, famously staged within the wood paneled halls of the New York Public Library. Solidifying Browne's reputation as a high-density research terminal for theatrical image-making, the presentation transformed the institutional setting into a surreal dreamscape. Instead of a traditional runway, the space was populated with wooden caskets. The models emerged from these macabre resting places clad in dark veils and monochromatic tailoring, sporting metallic silver lipstick. Operating completely outside the traditional fashion media ecosystem of trend-based consumption, the collection functioned as a visionary exploration of the uncanny, mapping the intersections of rigid American tailoring and gothic fantasy.",
@@ -7151,7 +7158,7 @@ export const archiveData = [
       "materials": "Fiberglass (Anthurium Bodices) | Enamel | Waxy Cotton | Rubber (Deflated Balloons)",
       "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Exaggerated Spatial Proportions and Kinetic Rigidity | Corporeal Flattening (8-Bit Silhouettes) | Monolithic Massing",
-      "format": "Physical Presence | Theatrical Runway (Central Anthurium Installation)"
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
       "provenance": "This entry indexes Jonathan Anderson's Spring/Summer 2023 Womenswear collection for Loewe, staged in Paris around a towering, hyper-realistic fiberglass anthurium flower. Operating as a profound critique of digital consumption and modern reality, the collection transcended seasonal trend cycles to function as a viral cultural artifact. Anderson weaponized the visual language of the internet, isolating garments that actively challenged the boundaries between the organic and the synthetic. Designed to provoke discomfort and curiosity, the presentation functioned as a high-density research terminal for examining how screen-based aesthetics are actively colonizing physical space.",
@@ -7438,7 +7445,7 @@ export const archiveData = [
       "materials": "Regenerated Denim | Upcycled Toweling | Moiré | Deadstock PVC | Repurposed Crochet",
       "geography": "Paris (Chambre Syndicale)",
       "anatomy": "Aerodynamic and Protective Volume | Bodily Obfuscation (Balaclavas and Masks) | Hybrid Assemblage",
-      "format": "Physical Presence | Environmental Runway (Outdoor, Weather-Exposed Staging)"
+      "format": "Theatrical Stage Performance"
     },
     "notes": {
       "provenance": "This entry indexes Marine Serre’s Spring/Summer 2020 collection, titled \"Marée Noire\" (Black Tide), referencing a catastrophic oil spill. Staged outdoors at the Hippodrome d'Auteuil in Paris on a deliberately bleak, wet, and overcast day, the presentation operated as a profound, high-density warning regarding the looming climate apocalypse. Operating outside the traditional, trend-based fashion ecosystem, Serre utilized her platform to force the industry to confront its own ecological footprint. The collection solidified her reputation not just as a visionary image-maker, but as a pioneer of regenerative fashion, treating discarded garments as vital cultural artifacts to be salvaged and mutated for survival.",
@@ -7455,7 +7462,21 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.jpg"
+        "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Tweed Boucle Power Suit",
+            "description": "The tweed boucle power suit anchors the model in the house's foundational textile reworked for protest theatre; it features the classic gold-buttoned cardigan jacket scaled to oversized proportions. This material strategy engages with commodity feminism by routing political iconography through luxury heritage codes. The signature fringed edges and contrast trim remain intact despite the slouched fit; the matching skirt drops sharply at the knee. The garment asserts a deliberate collision between aristocratic dressmaking and democratizing sportswear logic."
+          },
+          {
+            "x": 50,
+            "y": 80,
+            "label": "Hand-Painted Feminist Placard",
+            "description": "The hand-painted feminist placard is carried aloft as the model marches down the simulated Boulevard Chanel runway; it bears slogans referencing women's rights and historical erasure. This styling choice introduces literal political signage into a luxury fashion context, generating immediate cultural traction across mainstream press. The cardboard surface clashes violently with the precision tailoring; the handwritten typography refuses corporate polish. The accessory completes the look by transforming the runway into a protest space."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7484,7 +7505,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg"
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Layered Silk Organza Blouse",
+            "description": "The layered silk organza blouse cascades sheer cream fabric over a structured bustier; it operates as both inner and outer garment simultaneously. This material strategy engages with the Marc Jacobs era's signature treatment of monogram codes as graphic system rather than brand identifier. The translucent textile reveals the architectural foundation garment beneath; the cuffs fall loosely past the wrists. The piece asserts the permanent traveler aesthetic that defined LV's commercial dominance through the 2000s."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7513,7 +7542,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg"
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Unlined Cashmere Coat",
+            "description": "The unlined cashmere coat drops cleanly from broad-set shoulders in a single uninterrupted plane of camel fabric; it refuses interior structure or visible hardware. This tailoring strategy is the founding document of Phoebe Philo's 'quiet luxury' proposition — luxury communicated through material quality rather than visible signaling. The raw inner edge is exposed; the deliberately fallen hem skirts the knee. The garment asserts that the most legible form of wealth is the wealth that refuses to perform."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7542,7 +7579,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg"
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Saturated Color Cape Coat",
+            "description": "The saturated color cape coat falls in a single geometric plane from the neck to the floor in a heavily pigmented Valentino red; it refuses to register the body underneath. This structural strategy continues Pierpaolo Piccioli's extreme volume project that defined the AW 2022 'Beginning' collection. The dense duchesse satin reflects light evenly across every flat surface; the front conceals every closure mechanism. The garment asserts that maximalist color and volume function as post-pandemic political acts of refusal against austerity logic."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7571,7 +7616,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg"
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Low-Rise Micro-Skirt",
+            "description": "The low-rise micro-skirt cuts horizontally across the hips in a band of tailored wool no wider than a hand's breadth; it sits well below the natural waist. This structural intervention is the silhouette that defined the SS 2022 cultural conversation, generating discourse across body image, generational politics, and the female midriff. The raw lower edge exposes the high-cut underskirt and the bare expanse of stomach above; the eyelet detailing nods to school-uniform vocabulary. The garment asserts Miuccia Prada's lifelong project of making femininity's ambivalences visible through deliberately uncomfortable proportion."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7600,7 +7653,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg"
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Quilted American Flag Coat",
+            "description": "The quilted American flag coat drapes the torso in a patchwork of stars-and-stripes quilting bonded to heavy wool; it converts a domestic textile tradition into runway outerwear. This material application engages directly with Raf Simons's forensic archaeology of American vernacular culture conducted during his Calvin Klein 205W39NYC tenure. The Sterling Ruby collaboration is visible in the chaotic patchwork construction; the silhouette references the Western frontier coat. The outerwear asserts the European designer's argument that the most rigorous reading of American imagery comes from outside it."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7629,7 +7690,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg"
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Embroidered Organza Streetwear Tunic",
+            "description": "The embroidered organza streetwear tunic layers ecclesiastical embellishment over a sweatshirt silhouette; it places the iconography of Catholic vestment in aggressive proximity to athletic wear. This structural collision defines Riccardo Tisci's foundational achievement at Givenchy: the systematic integration of subcultural codes into the luxury fashion apparatus. The dense thread work weighs the soft jersey down unevenly; the rounded crew neckline refuses the formality of a traditional collar. The garment asserts the gothic-streetwear hybrid that became one of the 2010s' most commercially successful design grammars."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7658,7 +7727,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg"
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Hand-Painted Silk and Velvet Layered Look",
+            "description": "The hand-painted silk and velvet layered look stacks multiple textile traditions into a single garment system; it places a hand-illustrated organza panel over a velvet bodice cut with utilitarian field-jacket precision. This material strategy embodies the archival depth that defined Dries Van Noten's 100th show — accumulation as a slow craft achievement rather than maximalist excess. The competing surface textures resolve into a coherent palette only after sustained looking; each layer cites a specific making tradition. The garment asserts what independent, craft-centered, long-term practice produces when held against the conglomerate luxury system."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7687,7 +7764,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg"
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Black Leather Skinny Trouser and Sheer Blouse",
+            "description": "The black leather skinny trouser and sheer blouse pull tight against the body in a single uninterrupted vertical line; they refuse any structural excess that would soften the silhouette. This tailoring extreme defines Hedi Slimane's controversial vision for Saint Laurent: the female body reduced to a single geometric axis, the silhouette annihilated into pure line. The matte black leather creates a heavy visual void below the translucent silk georgette top; the sleeves end precisely at the wrist. The garment asserts the auteur project that replaced the YSL archive with the designer's own obsession with Sunset Strip rock culture."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7716,7 +7801,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg"
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Spray-Applied Fabrican Polymer Dress",
+            "description": "The spray-applied Fabrican polymer dress is assembled directly on the body in real time via pressurized canisters of biodegradable polymer fibers; it has no pattern, no seam, no cutter, and no atelier. This material extreme is the most widely documented fashion spectacle of the post-Instagram era — designed for the moving image rather than the still photograph. The non-woven textile dries instantly to form a fitted couture-precision silhouette; the manufacturing process is itself the cultural content. The garment asserts technology not as finish but as primary production logic."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7745,7 +7838,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg"
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Diagonal-Seamed Silk Charmeuse Top",
+            "description": "The diagonal-seamed silk charmeuse top wraps the torso along an angled axis that redirects the eye away from horizontal and vertical lines; it appears to rotate even in static photography. This structural strategy is Haider Ackermann's signature compositional device — the diagonal as principle, not ornament. The liquid silk is anchored at one shoulder by a single structured lacquered panel; the opposing side falls in unsupported drape. The garment asserts Ackermann's central proposition that clothing functions as second skin, and the haptic register of fabric against body is a more sophisticated form of communication than what it signifies at a distance."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7774,7 +7875,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg"
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Oversized Intrecciato Pouch Bag",
+            "description": "The oversized intrecciato pouch bag is held softly under the arm in a deep forest-green leather woven via the house's foundational craft technique; it became the defining accessory of 2019 and 2020. This material strategy reintroduces Bottega Veneta's heritage weave as a central design element rather than a heritage footnote. The exaggerated scale of the weave makes the construction technique legible; the absence of any visible logo is itself the luxury signal. The accessory asserts the 'quiet luxury' proposition that defined Daniel Lee's commercially successful AW 2019 debut."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7803,7 +7912,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg"
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Lacquered Organza Architectural Top",
+            "description": "The lacquered organza architectural top maintains its three-dimensional shape independently of the body via internal scaffolding and compressed interfacing; it reads as architectural volume rather than clothing. This structural strategy defines Raf Simons's late Jil Sander period: the pursuit of geometric purity through tailoring alone, with all ornamental content systematically eliminated. The single intrusion of acid yellow within an ivory-and-sand palette forces total attention onto form rather than color. The garment asserts the central problem of fashion minimalism — when the garment is stripped of all reference, construction itself becomes the carrier of meaning."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7832,7 +7949,15 @@ export const archiveData = [
     "season": "SS",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg"
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Engineered Power Mesh Body",
+            "description": "The engineered power mesh body uses the structural armature of strapping, boning, and elastic as both construction system and visible aesthetic surface; the scaffolding IS the garment. This material strategy embodies Becca McCharen-Tran's architectural training applied to the full spectrum of body morphology — designs that perform under actual physical stress while retaining visible engineering. The technical performance fabric is cut with couture-grade precision; the casting on the runway spans XS to 5XL across ages, abilities, and gender identities. The garment asserts Chromat's foundational position: size inclusivity as design premise, not afterthought."
+          }
+        ]
       }
     ],
     "tags": {
@@ -7861,7 +7986,15 @@ export const archiveData = [
     "season": "AW",
     "images": [
       {
-        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg"
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Sculptural Intarsia Knit Bodice",
+            "description": "The sculptural intarsia knit bodice produces a torso-length garment whose relationship to the body is systematically ambiguous; the form reads as clothing at one scale and sculpture at another. This structural strategy embodies Jonathan Anderson's signature compositional move — deliberate anatomical dislocation through misidentified contours and extreme proportional contrasts. The proportional system pairs very narrow legs against very wide shoulders; the felted wool structures maintain their form independently of the body. The garment asserts Anderson's intellectual proposition that the most interesting garments occupy the space where clothing and object become indistinguishable."
+          }
+        ]
       }
     ],
     "tags": {

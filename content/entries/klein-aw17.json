@@ -7,7 +7,15 @@
   "season": "AW",
   "images": [
     {
-      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg"
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Quilted American Flag Coat",
+          "description": "The quilted American flag coat drapes the torso in a patchwork of stars-and-stripes quilting bonded to heavy wool; it converts a domestic textile tradition into runway outerwear. This material application engages directly with Raf Simons's forensic archaeology of American vernacular culture conducted during his Calvin Klein 205W39NYC tenure. The Sterling Ruby collaboration is visible in the chaotic patchwork construction; the silhouette references the Western frontier coat. The outerwear asserts the European designer's argument that the most rigorous reading of American imagery comes from outside it."
+        }
+      ]
     }
   ],
   "tags": {
