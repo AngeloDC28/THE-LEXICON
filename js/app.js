@@ -469,6 +469,11 @@ function applyStateFromQuery(params) {
   for (const key of Object.keys(AppState.filters)) {
     if (params.has(key)) AppState.filters[key] = params.get(key);
   }
+  // Phase 2: view mode (visual | index) is URL-shareable
+  if (params.has('mode')) {
+    const mode = params.get('mode');
+    if (mode === 'index' || mode === 'visual') setViewMode(mode);
+  }
 }
 
 export function syncHashFromState() {
@@ -481,6 +486,8 @@ export function syncHashFromState() {
   for (const [k, v] of Object.entries(AppState.filters)) {
     if (v) params.set(k, v);
   }
+  // Phase 2: encode view mode (only if non-default)
+  if (AppState.viewMode === 'index') params.set('mode', 'index');
   const view = AppState.currentView || 'grid';
   const qs = params.toString();
   const newHash = '#' + view + (qs ? '?' + qs : '');

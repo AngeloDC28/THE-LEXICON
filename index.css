@@ -149,8 +149,20 @@ html.dark #app-root {
   }
 }
 
-/* Keyboard focus (brutalist: offset ring, no radius) */
+/* Keyboard focus (brutalist: offset ring, no radius)
+   WCAG 2.2 AA: every interactive element must show a visible focus ring.
+   Hide default outline on click/touch, but always render on :focus-visible. */
 :focus { outline: none; }
+:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+html.dark :focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+}
+/* .focus-ring class is now redundant for keyboard users but kept for
+   backwards compatibility with markup that uses it explicitly. */
 .focus-ring:focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
