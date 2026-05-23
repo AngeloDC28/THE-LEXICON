@@ -946,7 +946,7 @@ function setupEventListeners() {
   document.addEventListener('lexicon-refresh', refreshUI);
 }
 
-// ── CITATIONS ──
+// ── CITATIONS (Phase 3 — multi-format export) ──
 function openCiteModal() {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (!entry) return;
@@ -957,31 +957,47 @@ function openCiteModal() {
   const brand = entry.tags?.brand || entry.id;
   const year  = entry.year || '';
   const season = entry.season ? entry.season + ' ' : '';
-  // "Comme des Garçons SS 1997: Body Meets Dress; Dress Meets Body"
   const collectionTitle = entry.title
     ? entry.title
     : `${brand} ${season}${year}`.trim();
   const subtitle = entry.subtitle ? `: ${entry.subtitle}` : '';
   const fullTitle = collectionTitle + subtitle;
   const accessDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  const accessIso = new Date().toISOString().slice(0, 10);
+  const siteName = 'THE LEXICON: Forensic Archive of Visual Culture';
 
-  // Chicago Manual of Style 17th ed. note format for a web entry
-  // — author/curator (if known), "Entry Title," Site Name, accessed Date, URL.
+  // Chicago Manual of Style 17th ed. note format
   const chicago =
-    `"${fullTitle}," THE LEXICON: Forensic Archive of Visual Culture, accessed ${accessDate}, ${url}.`;
+    `"${fullTitle}," ${siteName}, accessed ${accessDate}, ${url}.`;
 
-  // BibTeX @misc with stable citekey: lexicon-<id>
+  // MLA 9th edition
+  const mla =
+    `"${fullTitle}." ${siteName}, ${year}, ${url}. Accessed ${accessDate}.`;
+
+  // APA 7th edition
+  const apa =
+    `${siteName}. (${year}). ${fullTitle}. Retrieved ${accessDate}, from ${url}`;
+
+  // Harvard
+  const harvard =
+    `${siteName} (${year}) ${fullTitle}. Available at: ${url} (Accessed: ${accessDate}).`;
+
+  // BibTeX @misc with stable citekey
   const citekey = `lexicon-${entry.id}`;
   const bibtex =
     `@misc{${citekey},\n` +
     `  title        = {{${fullTitle.replace(/[{}]/g,'')}}},\n` +
-    `  howpublished = {{THE LEXICON: Forensic Archive of Visual Culture}},\n` +
+    `  howpublished = {{${siteName}}},\n` +
     `  year         = {${year}},\n` +
+    `  urldate      = {${accessIso}},\n` +
     `  note         = {Entry ID: ${entry.id}. Accessed ${accessDate}.},\n` +
     `  url          = {${url}}\n` +
     `}`;
 
   if ($('cite-chicago')) $('cite-chicago').textContent = chicago;
+  if ($('cite-mla'))     $('cite-mla').textContent     = mla;
+  if ($('cite-apa'))     $('cite-apa').textContent     = apa;
+  if ($('cite-harvard')) $('cite-harvard').textContent = harvard;
   if ($('cite-bibtex'))  $('cite-bibtex').textContent  = bibtex;
   if ($('cite-url'))     $('cite-url').textContent     = url;
 
