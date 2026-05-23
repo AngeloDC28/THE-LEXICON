@@ -13,7 +13,7 @@ import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDi
 setImageDimensions(imageDimensions);
 import { AppState, updateHash, emptyFilters } from './modules/core-state.js';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
-import { renderImageGrid, renderEntryList } from './modules/render-grid.js';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js';
 import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
 import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js';
 // sticky-notes module reserved for future use; previous exports were dead.
@@ -439,6 +439,7 @@ function refreshContent() {
 
   if (AppState.currentView === 'grid') {
     renderImageGrid(archiveData, callbacks);
+    renderFeaturedStrip(archiveData);
     // Phase 2: also render the Brutalist Index View (toggled by V/I)
     renderIndexView(archiveData);
   } else if (AppState.currentView === 'timeline') {
@@ -837,9 +838,12 @@ function setupEventListeners() {
     const type  = btn.dataset.taxType;
     const value = btn.dataset.taxValue;
     if (!type || !value) return;
-    // Reset other filters, set this one
-    Object.keys(AppState.filters).forEach(k => AppState.filters[k] = null);
-    AppState.filters[type] = value;
+    // Toggle this tag value within its axis (multi-select); keep other axes.
+    const current = AppState.filters[type] || '';
+    const activeVals = current.split('|').map(s => s.trim()).filter(Boolean);
+    const idx = activeVals.indexOf(value);
+    if (idx >= 0) { activeVals.splice(idx, 1); } else { activeVals.push(value); }
+    AppState.filters[type] = activeVals.length ? activeVals.join('|') : null;
     closeDetail(callbacks, archiveData);
     // switchView's onUpdate already calls refreshUI; just refresh the
     // category cells to reflect the new active filter.

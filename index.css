@@ -271,6 +271,92 @@ html.dark .grid-cell:hover img {
   line-height: 1.2;
 }
 
+/* ─── Phase 1: Featured Strip ─────────────────────────────────────── */
+.feat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+@media (max-width: 1023px) { .feat-strip { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .feat-strip { grid-template-columns: repeat(2, 1fr); } }
+
+.feat-card {
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #0e0e0e;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+html:not(.dark) .feat-card { border-color: #ddd; background: #f9f9f7; }
+.feat-card:hover { border-color: #CCFF00; }
+html:not(.dark) .feat-card:hover { border-color: #000; }
+
+.feat-card-tag {
+  padding: 8px 12px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+}
+html:not(.dark) .feat-card-tag { border-bottom-color: #e8e8e6; }
+
+.feat-card-tag .fc-label {
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.feat-card-tag .fc-id {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #555;
+  font-family: monospace;
+}
+html:not(.dark) .feat-card-tag .fc-id { color: #aaa; }
+
+.feat-card.tag-corporeal .fc-label  { color: var(--c-corporeal); }
+.feat-card.tag-semiotic .fc-label   { color: var(--c-semiotic); }
+.feat-card.tag-subculture .fc-label { color: var(--c-subculture); }
+.feat-card.tag-critique .fc-label   { color: var(--c-critique); }
+.feat-card.tag-strategy .fc-label   { color: var(--c-strategy); }
+.feat-card.tag-provenance .fc-label { color: var(--c-provenance); }
+
+.feat-card-img {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+html:not(.dark) .feat-card-img { background: #e8e8e8; }
+.feat-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.feat-card:hover .feat-card-img img { transform: scale(1.04); }
+
+.feat-card-body {
+  padding: 10px 12px 12px;
+}
+.feat-card-meta {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: #666;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+html:not(.dark) .feat-card-meta { color: #999; }
+.feat-card-hook {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #ccc;
+  line-height: 1.45;
+}
+html:not(.dark) .feat-card-hook { color: #333; }
+
 /* ─── Phase 1/2: Visual/Index Mode Toggle ──────────────────────────── */
 .mode-toggle {
   display: inline-flex;

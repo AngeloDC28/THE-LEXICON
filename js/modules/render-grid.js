@@ -189,3 +189,86 @@ export function renderEntryList(archiveData, callbacks) {
       </div>`;
   }).join('');
 }
+
+// Phase 1: Featured strip — one card per analytical category, ordered by year desc.
+export function renderFeaturedStrip(archiveData) {
+  const container = $('featured-strip');
+  if (!container) return;
+
+  const lang = AppState.language;
+  const CATEGORIES = ['critique', 'subculture', 'corporeal', 'semiotic'];
+  const tagLabelMap = {
+    corporeal: 'Corporeal Intervention',
+    critique: 'Institutional Critique',
+    subculture: 'Subcultural Codification',
+    semiotic: 'Semiotic Sabotage',
+    strategy: 'Strategic Appropriation',
+    provenance: 'Historical Lineage',
+  };
+
+  // Pick best (most recent) entry per category
+  const picks = CATEGORIES.map(cat => {
+    const match = [...archiveData]
+      .sort((a, b) => (b.year || 0) - (a.year || 0))
+      .find(e => getTagCategory(e.tags?.politics || '') === cat);
+    return match ? { cat, entry: match } : null;
+  }).filter(Boolean);
+
+  if (picks.length === 0) {
+    container.classList.add('hidden');
+    return;
+  }
+
+  container.classList.remove('hidden');
+  container.innerHTML = picks.map(({ cat, entry }) => {
+    const brand = entry.tags?.brand
+      ? getTranslation(entry.tags.brand, lang).toUpperCase()
+      : '—';
+    const year = entry.year || '----';
+    const season = entry.season ? entry.season.toUpperCase() : 'ARCHIVE';
+    const id = `N-${entry.id.slice(0, 4).toUpperCase()}`;
+    const label = tagLabelMap[cat] || cat.toUpperCase();
+    const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
+    const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
+    const webpImg = firstImg ? resolveImgSrc({ src: webpSrc(firstImg) }) : null;
+    const hook = entry.notes?.critique
+      ? getTranslation(entry.notes.critique, lang).replace(/<[^>]+>/g, '').slice(0, 120) + '…'
+      : (entry.notes?.provenance
+          ? getTranslation(entry.notes.provenance, lang).replace(/<[^>]+>/g, '').slice(0, 120) + '…'
+          : '');
+
+    const imgHtml = imgSrc
+      ? `<picture>
+           <source type="image/webp" srcset="${webpImg}">
+           <img src="${imgSrc}" alt="${brand}" loading="lazy" decoding="async"
+                onerror="this.onerror=null;this.src='${BROKEN_ASSET}'">
+         </picture>`
+      : '';
+
+    return `
+      <div class="feat-card tag-${cat}" data-entry-id="${entry.id}" role="button" tabindex="0"
+           aria-label="${label} — ${brand} ${year}" title="Open ${brand} ${year}">
+        <div class="feat-card-tag">
+          <span class="fc-label">${label.toUpperCase()}</span>
+          <span class="fc-id">${id}</span>
+        </div>
+        <div class="feat-card-img">${imgHtml}</div>
+        <div class="feat-card-body">
+          <div class="feat-card-meta">${brand} · ${year} · ${season}</div>
+          ${hook ? `<div class="feat-card-hook">${hook}</div>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+
+  // Click to open detail
+  container.querySelectorAll('.feat-card').forEach(card => {
+    const open = () => {
+      const id = card.dataset.entryId;
+      if (id) window.location.hash = `detail/${id}/0`;
+    };
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+}
