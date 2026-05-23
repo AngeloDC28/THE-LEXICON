@@ -309,7 +309,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=2250784" />
+  <link rel="stylesheet" href="index.css?v=2fb2615" />
 </head>
 
 <body>
@@ -494,6 +494,11 @@
         <!-- View Controls -->
         <div class="px-3 py-2 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between gap-3 bg-bone dark:bg-darkBase shrink-0">
           <div class="flex items-center gap-3 lg:gap-8 min-w-0">
+            <!-- Visual / Index Mode Toggle (Phase 1/2 redesign) -->
+            <div class="mode-toggle inline-flex border border-black/60 dark:border-white/30 shrink-0" role="group" aria-label="View mode">
+              <button type="button" id="btn-mode-visual" class="active text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" title="Visual mode (V)" aria-pressed="true">VISUAL <span class="kbd">V</span></button>
+              <button type="button" id="btn-mode-index" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" title="Index mode (I)" aria-pressed="false">INDEX <span class="kbd">I</span></button>
+            </div>
             <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0" title="Switch to Grid View">Grid View</button>
             <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0" title="Switch to Evolution Matrix">Timeline</button>
           </div>
@@ -533,7 +538,10 @@
           <div id="image-grid" class="image-grid"></div>
         </div>
 
-        
+        <!-- Brutalist Index View (Phase 2) -->
+        <div id="index-table-view" class="hidden flex-1 min-h-0 overflow-y-auto p-4 md:p-6 bg-darkBase text-white"></div>
+
+
 <!-- Timeline View -->
         <div id="timeline-view" class="hidden flex-1 min-h-0">
           <div class="timeline-axis"></div>
@@ -868,7 +876,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=2250784"></script>
+    <script type="module" src="js/app.js?v=2fb2615"></script>
 
   </div>
 

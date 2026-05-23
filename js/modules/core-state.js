@@ -22,6 +22,8 @@ export function emptyFilters() {
 
 export const AppState = {
   currentView: 'grid',
+  // Phase 1/2 redesign: visual (image grid) | index (brutalist table)
+  viewMode: safeLocalGet('lexicon.view-mode', 'visual'),
   selectedEntryId: null,
   currentImageIndex: 0,
   activeTaxonomy: null,

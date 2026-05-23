@@ -259,6 +259,219 @@ html.dark .grid-cell:hover img {
   line-height: 1.2;
 }
 
+/* ─── Phase 1/2: Visual/Index Mode Toggle ──────────────────────────── */
+.mode-toggle {
+  display: inline-flex;
+  border: 1px solid currentColor;
+  background: transparent;
+}
+.mode-toggle button {
+  padding: 4px 10px;
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: transparent;
+  color: inherit;
+  border-right: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.mode-toggle button:last-child { border-right: none; }
+.mode-toggle button.active {
+  background: #000;
+  color: #CCFF00;
+}
+html.dark .mode-toggle button.active {
+  background: #CCFF00;
+  color: #000;
+}
+.mode-toggle button .kbd {
+  margin-left: 4px;
+  font-size: 8px;
+  opacity: 0.65;
+  padding: 1px 3px;
+  border: 1px solid currentColor;
+}
+.mode-toggle button.active .kbd { opacity: 0.9; }
+
+/* ─── Phase 2: Brutalist Index Table View ──────────────────────────── */
+#index-table-view {
+  background: #0a0a0a;
+  color: #d4d4d4;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+}
+html:not(.dark) #index-table-view {
+  background: #fafaf8;
+  color: #1a1a1a;
+}
+.index-banner {
+  border: 1px solid #2a2a2a;
+  padding: 12px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #040404;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+html:not(.dark) .index-banner { background: #f0f0ee; border-color: #c0c0c0; }
+.index-banner-l { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.index-mode-label {
+  font-size: var(--t-mono-sm);
+  letter-spacing: 0.3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+html:not(.dark) .index-mode-label { color: #000; }
+.index-desc {
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  color: #888;
+  text-transform: uppercase;
+}
+.index-shortcuts {
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  color: #888;
+  text-transform: uppercase;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.index-shortcuts kbd, .index-shortcuts-inline kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 0 3px;
+  border: 1px solid #444;
+  color: #ccc;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: inherit;
+}
+html:not(.dark) .index-shortcuts kbd, html:not(.dark) .index-shortcuts-inline kbd {
+  border-color: #999;
+  color: #333;
+}
+.index-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #2a2a2a;
+  background: #0a0a0a;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+}
+html:not(.dark) .index-table { background: #fff; border-color: #c0c0c0; }
+.index-table thead {
+  background: #080808;
+  border-bottom: 1px solid #404040;
+}
+html:not(.dark) .index-table thead { background: #ebebe8; border-bottom-color: #999; }
+.index-table th {
+  text-align: left;
+  padding: 12px;
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.22em;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-right: 1px solid #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+html:not(.dark) .index-table th { color: #555; border-right-color: #ddd; background: #ebebe8; }
+.index-table th:last-child { border-right: none; }
+.index-table tbody tr {
+  border-bottom: 1px solid #161616;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+html:not(.dark) .index-table tbody tr { border-bottom-color: #eee; }
+.index-table tbody tr:hover { background: #141414; }
+html:not(.dark) .index-table tbody tr:hover { background: #f6f6f4; }
+.index-table tbody tr.focused {
+  background: #1a1a1a;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+html:not(.dark) .index-table tbody tr.focused { background: #eaeae6; outline-color: #000; }
+.index-table tbody tr:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: -2px;
+}
+.index-table td {
+  padding: 12px;
+  font-size: var(--t-mono-sm);
+  color: #ccc;
+  vertical-align: top;
+  border-right: 1px solid #121212;
+}
+html:not(.dark) .index-table td { color: #333; border-right-color: #eee; }
+.index-table td:last-child { border-right: none; }
+.td-id { color: #666; font-weight: 500; }
+.td-designer { color: #fff; font-weight: 600; }
+html:not(.dark) .td-designer { color: #000; }
+.td-year { color: #aaa; }
+.td-season { color: #888; letter-spacing: 0.1em; font-size: var(--t-mono-xs); }
+.td-tag {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: var(--t-mono-xs);
+  padding: 3px 8px;
+  display: inline-block;
+  border: 1px solid;
+  font-weight: 500;
+}
+.td-tag.corporeal   { color: var(--c-corporeal);  border-color: rgba(226,164,160,0.4); }
+.td-tag.semiotic    { color: var(--c-semiotic);   border-color: rgba(212,196,160,0.4); }
+.td-tag.subculture  { color: var(--c-subculture); border-color: rgba(176,143,196,0.4); }
+.td-tag.critique    { color: var(--c-critique);   border-color: rgba(217,107,107,0.4); }
+.td-tag.strategy    { color: var(--c-strategy);   border-color: rgba(127,179,163,0.4); }
+.td-tag.provenance  { color: var(--c-provenance); border-color: rgba(196,168,122,0.4); }
+.td-prov { color: #aaa; font-style: italic; font-size: var(--t-mono-sm); }
+html:not(.dark) .td-prov { color: #555; }
+.td-status { color: #888; font-size: var(--t-mono-xs); letter-spacing: 0.15em; }
+.index-toolbar {
+  margin-top: 16px;
+  padding: 12px 20px;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  color: #888;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+html:not(.dark) .index-toolbar { border-color: #c0c0c0; color: #666; }
+.index-empty {
+  padding: 80px 20px;
+  text-align: center;
+}
+.index-empty-title {
+  font-size: var(--t-mono-base);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 12px;
+}
+.index-empty-desc {
+  font-size: var(--t-mono-xs);
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  .index-table th, .index-table td { padding: 8px 6px; font-size: 11px; }
+  .index-banner { padding: 10px 12px; }
+  .index-mode-label { font-size: 11px; }
+  .index-desc, .index-shortcuts { font-size: 9px; }
+  .index-shortcuts { gap: 8px; }
+}
+
 /* Accessibility: Skip Links */
 .skip-link {
   position: absolute;
