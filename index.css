@@ -597,6 +597,120 @@ html:not(.dark) .feat-card-meta { color: #999; }
 }
 html:not(.dark) .feat-card-hook { color: #333; }
 
+/* ─── Phase 1: Section Headers ────────────────────────────────────── */
+.sec-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: clamp(16px, 2.5vw, 32px) 4px clamp(12px, 1.5vw, 20px);
+}
+.sec-eye {
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.28em;
+  color: #555;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+}
+html:not(.dark) .sec-eye { color: #999; }
+.sec-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-h2);
+  color: #fff;
+  font-weight: 400;
+}
+html:not(.dark) .sec-title { color: #0a0a0a; }
+.sec-link {
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  color: #666;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.sec-link:hover { color: #CCFF00; }
+html:not(.dark) .sec-link { color: #999; }
+html:not(.dark) .sec-link:hover { color: #000; }
+
+/* ─── Phase 1: How It Works ───────────────────────────────────────── */
+.how-section {
+  margin-bottom: 4px;
+}
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #1e1e1e;
+}
+html:not(.dark) .how-grid { border-color: #e0e0dc; }
+@media (max-width: 767px) { .how-grid { grid-template-columns: 1fr; } }
+
+.how-step {
+  padding: clamp(20px, 2.5vw, 36px);
+  border-right: 1px solid #1e1e1e;
+}
+html:not(.dark) .how-step { border-right-color: #e0e0dc; }
+.how-step:last-child { border-right: none; }
+@media (max-width: 767px) {
+  .how-step { border-right: none; border-bottom: 1px solid #1e1e1e; }
+  html:not(.dark) .how-step { border-bottom-color: #e0e0dc; }
+  .how-step:last-child { border-bottom: none; }
+}
+
+.how-num {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: clamp(12px, 1.5vw, 20px);
+}
+.how-num span:first-child {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-h3);
+  color: #333;
+  font-weight: 400;
+  line-height: 1;
+}
+html:not(.dark) .how-num span:first-child { color: #ccc; }
+.how-num span:last-child {
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.25em;
+  color: #555;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+html:not(.dark) .how-num span:last-child { color: #999; }
+
+.how-step h3 {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-h3);
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+html:not(.dark) .how-step h3 { color: #0a0a0a; }
+
+.how-step p {
+  font-size: var(--t-mono-sm);
+  color: #777;
+  line-height: 1.65;
+  font-family: var(--font-mono);
+}
+html:not(.dark) .how-step p { color: #555; }
+
+.how-term {
+  margin-top: 16px;
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.14em;
+  color: #444;
+  font-family: var(--font-mono);
+}
+html:not(.dark) .how-term { color: #aaa; }
+.how-term span { color: #CCFF00; }
+html:not(.dark) .how-term span { color: #000; text-decoration: underline; }
+
 /* ─── Phase 1/2: Visual/Index Mode Toggle ──────────────────────────── */
 .mode-toggle {
   display: inline-flex;

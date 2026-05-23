@@ -721,10 +721,20 @@ function setupEventListeners() {
   const dismissOrientation = () => {
     const op = $('orientation-panel');
     if (op) op.classList.add('hidden');
+    // Hide the "How It Works" section and featured strip header when hero is dismissed
+    const how = $('how-it-works');
+    const featHead = $('featured-strip-head');
+    if (how) how.style.display = 'none';
+    if (featHead) featHead.style.display = 'none';
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
   };
   $('btn-dismiss-orientation')?.addEventListener('click', dismissOrientation);
   $('btn-close-orientation')?.addEventListener('click', dismissOrientation);
+  // "VIEW ALL ENTRIES →" collapses the landing sections and scrolls to grid
+  $('btn-hide-featured')?.addEventListener('click', () => {
+    dismissOrientation();
+    $('image-grid')?.scrollIntoView({ behavior: 'smooth' });
+  });
 
   // --- View Toggles ---
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));
@@ -969,6 +979,12 @@ function renderHero(archiveData) {
 
   const panel = $('orientation-panel');
   if (!panel || panel.classList.contains('hidden')) return;
+
+  // Reveal section header above featured strip and "How It Works"
+  const featHead = $('featured-strip-head');
+  const how = $('how-it-works');
+  if (featHead) featHead.style.display = 'flex';
+  if (how) how.style.display = 'block';
 
   // Pick the most recently dated entry with a rich critique note for the teaser
   const candidate = [...archiveData]
