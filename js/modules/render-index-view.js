@@ -51,21 +51,70 @@ function shortTagLabel(politicsTag = '') {
 
 let _focusedRowIndex = 0;
 
+// { col: 'year'|'designer'|'tag'|'season', dir: 'asc'|'desc' }
+let _indexSort = { col: 'year', dir: 'desc' };
+// Reference to archiveData for re-sorting without full re-render
+let _lastArchiveData = null;
+
+const SORT_COLS = {
+  year:     { label: 'YEAR',             width: '70px'  },
+  designer: { label: 'DESIGNER / BRAND', width: '200px' },
+  tag:      { label: 'ANALYTICAL TAG',   width: '240px' },
+  season:   { label: 'SEASON',           width: '140px' },
+};
+
+function sortEntries(entries, lang) {
+  return [...entries].sort((a, b) => {
+    const dir = _indexSort.dir === 'asc' ? 1 : -1;
+    switch (_indexSort.col) {
+      case 'designer':
+        return dir * (a.tags?.brand || '').localeCompare(b.tags?.brand || '');
+      case 'season':
+        return dir * (a.season || '').localeCompare(b.season || '');
+      case 'tag':
+        return dir * (a.tags?.politics || '').localeCompare(b.tags?.politics || '');
+      case 'year':
+      default:
+        return dir * ((a.year || 0) - (b.year || 0));
+    }
+  });
+}
+
+function sortIndicator(col) {
+  if (_indexSort.col !== col) return '<span class="sort-icon" aria-hidden="true">↕</span>';
+  return `<span class="sort-icon active" aria-hidden="true">${_indexSort.dir === 'asc' ? '↑' : '↓'}</span>`;
+}
+
+function buildHeaderRow() {
+  const cols = [
+    { key: null,       label: 'ID',         width: '90px'  },
+    { key: 'designer', label: 'DESIGNER / BRAND', width: '200px' },
+    { key: 'year',     label: 'YEAR',        width: '70px'  },
+    { key: 'season',   label: 'SEASON',      width: '140px' },
+    { key: 'tag',      label: 'ANALYTICAL TAG', width: '240px' },
+    { key: null,       label: 'PROVENANCE',  width: null    },
+    { key: null,       label: 'STATUS',      width: '120px' },
+  ];
+  return cols.map(({ key, label, width }) => {
+    const w = width ? ` style="width:${width};"` : '';
+    if (!key) return `<th scope="col"${w}>${label}</th>`;
+    const active = _indexSort.col === key ? ' sort-active' : '';
+    const ariaSort = _indexSort.col === key
+      ? (_indexSort.dir === 'asc' ? 'ascending' : 'descending')
+      : 'none';
+    return `<th scope="col"${w} class="sortable${active}" data-sort-col="${key}" aria-sort="${ariaSort}" tabindex="0" role="columnheader" title="Click to sort by ${label}">${label} ${sortIndicator(key)}</th>`;
+  }).join('');
+}
+
 export function renderIndexView(archiveData) {
   const container = $('index-table-view');
   if (!container) return;
+  _lastArchiveData = archiveData;
 
   const entries = getFilteredEntries(archiveData);
   const lang = AppState.language;
 
-  // Sort by year descending by default (newest first)
-  const sortedEntries = [...entries].sort((a, b) => {
-    if (AppState.sortMode === 'year_asc') return (a.year || 0) - (b.year || 0);
-    if (AppState.sortMode === 'brand_az') {
-      return (a.tags?.brand || '').localeCompare(b.tags?.brand || '');
-    }
-    return (b.year || 0) - (a.year || 0);
-  });
+  const sortedEntries = sortEntries(entries, lang);
 
   if (sortedEntries.length === 0) {
     container.innerHTML = `
@@ -129,15 +178,7 @@ export function renderIndexView(archiveData) {
 
     <table class="index-table" role="table" aria-label="Archive entries, text-only index view">
       <thead>
-        <tr>
-          <th scope="col" style="width:90px;">ID</th>
-          <th scope="col" style="width:200px;">DESIGNER / BRAND</th>
-          <th scope="col" style="width:70px;">YEAR</th>
-          <th scope="col" style="width:140px;">SEASON</th>
-          <th scope="col" style="width:240px;">ANALYTICAL TAG</th>
-          <th scope="col">PROVENANCE</th>
-          <th scope="col" style="width:120px;">STATUS</th>
-        </tr>
+        <tr>${buildHeaderRow()}</tr>
       </thead>
       <tbody id="index-table-body">${rows}</tbody>
     </table>
@@ -154,6 +195,24 @@ export function renderIndexView(archiveData) {
     tr.addEventListener('click', () => {
       const id = tr.dataset.entryId;
       if (id) window.location.hash = `detail/${id}/0`;
+    });
+  });
+
+  // Bind sortable column headers
+  container.querySelectorAll('th[data-sort-col]').forEach((th) => {
+    const col = th.dataset.sortCol;
+    const activate = () => {
+      if (_indexSort.col === col) {
+        _indexSort.dir = _indexSort.dir === 'desc' ? 'asc' : 'desc';
+      } else {
+        _indexSort.col = col;
+        _indexSort.dir = col === 'year' ? 'desc' : 'asc';
+      }
+      renderIndexView(_lastArchiveData);
+    };
+    th.addEventListener('click', activate);
+    th.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
   });
 }
