@@ -252,6 +252,13 @@ html.dark .grid-cell:hover img {
   filter: brightness(1);
 }
 
+/* Phase 1: Inverted Metadata Hierarchy — Tag strip at top of grid cell */
+.grid-cell-tag-strip {
+  z-index: 5;
+  font-size: var(--t-mono-xs);
+  line-height: 1.2;
+}
+
 /* Accessibility: Skip Links */
 .skip-link {
   position: absolute;

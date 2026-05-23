@@ -86,6 +86,11 @@ export function renderImageGrid(archiveData, callbacks) {
         ? getTranslation(entry.tags.brand, AppState.language)
         : getTranslation('brand_unknown', AppState.language);
 
+      // Phase 1: Inverted metadata hierarchy — extract primary analytical tag
+      const politicsTag = entry.tags?.politics || '';
+      const primaryTag = politicsTag.split('|')[0].trim().toLowerCase().replace(/\s+&.*/, '');
+      const tagColor = `--c-${primaryTag.replace(/[^a-z-]/g, '')}`;
+
       const hotspotCount = (imgObj?.hotspots || []).length;
       const hotspotBadge = hotspotCount > 0
         ? `<div class="absolute top-1 right-1 z-10 bg-acid text-black text-[8px] font-bold font-mono px-1.5 py-0.5 tracking-wider leading-none" title="${hotspotCount} hotspot${hotspotCount > 1 ? 's' : ''}">◉ ${hotspotCount}</div>`
@@ -98,6 +103,11 @@ export function renderImageGrid(archiveData, callbacks) {
              role="button"
              aria-label="${brand} ${entry.year || ''}"
              style="animation-delay: ${delay}s">
+          <!-- Tag strip (Phase 1: inverted metadata) -->
+          <div class="grid-cell-tag-strip absolute top-0 left-0 right-0 z-5 flex items-center justify-between px-2 py-1 bg-black/40 text-white text-[8px] font-mono uppercase tracking-widest">
+            <span style="color: var(${tagColor}, #999)">${primaryTag.toUpperCase()}</span>
+            <span aria-hidden="true" class="text-[7px] opacity-60">${entry.id}</span>
+          </div>
           ${hotspotBadge}
           <picture>
             <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
