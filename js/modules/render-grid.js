@@ -9,6 +9,7 @@ import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-u
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
+import { getTagCategory } from './render-index-view.js';
 
 export function setupGridIntersectionObserver() {
   if (gridIntersectionObserver) {
@@ -88,8 +89,13 @@ export function renderImageGrid(archiveData, callbacks) {
 
       // Phase 1: Inverted metadata hierarchy — extract primary analytical tag
       const politicsTag = entry.tags?.politics || '';
-      const primaryTag = politicsTag.split('|')[0].trim().toLowerCase().replace(/\s+&.*/, '');
-      const tagColor = `--c-${primaryTag.replace(/[^a-z-]/g, '')}`;
+      const tagCategory = getTagCategory(politicsTag);
+      const tagLabels = {
+        corporeal: 'CORPOREAL', critique: 'CRITIQUE', subculture: 'SUBCULTURE',
+        strategy: 'STRATEGY', semiotic: 'SEMIOTIC', provenance: 'PROVENANCE'
+      };
+      const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
+      const tagColor = `--c-${tagCategory}`;
 
       const hotspotCount = (imgObj?.hotspots || []).length;
       const hotspotBadge = hotspotCount > 0
@@ -104,9 +110,9 @@ export function renderImageGrid(archiveData, callbacks) {
              aria-label="${brand} ${entry.year || ''}"
              style="animation-delay: ${delay}s">
           <!-- Tag strip (Phase 1: inverted metadata) -->
-          <div class="grid-cell-tag-strip absolute top-0 left-0 right-0 z-5 flex items-center justify-between px-2 py-1 bg-black/40 text-white text-[8px] font-mono uppercase tracking-widest">
-            <span style="color: var(${tagColor}, #999)">${primaryTag.toUpperCase()}</span>
-            <span aria-hidden="true" class="text-[7px] opacity-60">${entry.id}</span>
+          <div class="grid-cell-tag-strip absolute top-0 left-0 right-0 z-5 flex items-center justify-between px-2 py-1 bg-black/60 text-white text-[8px] font-mono uppercase tracking-widest">
+            <span style="color: var(${tagColor}, #999)" class="font-bold">${tagLabel}</span>
+            <span aria-hidden="true" class="text-[7px] opacity-60">${entry.id.slice(0, 8).toUpperCase()}</span>
           </div>
           ${hotspotBadge}
           <picture>
@@ -158,16 +164,24 @@ export function renderEntryList(archiveData, callbacks) {
   }
 
   const lang = AppState.language;
+  const tagLabels = {
+    corporeal: 'CORPOREAL', critique: 'CRITIQUE', subculture: 'SUBCULTURE',
+    strategy: 'STRATEGY', semiotic: 'SEMIOTIC', provenance: 'PROVENANCE'
+  };
   container.innerHTML = filtered.map(entry => {
     const brand = (entry.tags && entry.tags.brand)
       ? getTranslation(entry.tags.brand, lang)
       : getTranslation('brand_unknown', lang);
     const year  = entry.year  || '----';
     const title = entry.title ? getTranslation(entry.title, lang) : getTranslation('entry_untitled', lang);
+    // Phase 1: Inverted metadata — analytical tag is primary, brand is secondary
+    const tagCategory = getTagCategory(entry.tags?.politics || '');
+    const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
     return `
       <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-2.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
            data-id="${entry.id}">
-        <div class="text-[10px] font-mono uppercase tracking-widest font-medium">${brand}</div>
+        <div class="text-[9px] font-mono uppercase tracking-[0.18em] font-bold" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
+        <div class="text-[10px] font-mono uppercase tracking-widest font-medium mt-0.5">${brand}</div>
         <div class="text-[9px] font-mono text-black/40 dark:text-white/40 mt-0.5">
           <span>${year}</span>
         </div>

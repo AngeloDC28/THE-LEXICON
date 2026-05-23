@@ -516,7 +516,7 @@
             <div class="max-w-3xl">
               <h2 class="text-lg md:text-xl font-bold uppercase tracking-[0.2em] mb-4">Archive Orientation</h2>
               <p class="text-xs md:text-sm leading-relaxed mb-6 opacity-90">
-                THE LEXICON is a cultural research system for students, critics, and historians. It maps the intersections of aesthetic language and structural power through a forensic audit of visual culture.
+                A research archive for fashion history and visual culture. We map how ideas move — references, garments, subcultures, and back again.
               </p>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-current pt-6">
                 <div>
@@ -525,11 +525,11 @@
                 </div>
                 <div>
                   <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Relational Nexus</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Use the Nexus tool in any entry to visualize connections between disparate artifacts.</p>
+                  <p class="text-[10px] leading-relaxed opacity-80">See how this entry connects to others — references, influences, lineage.</p>
                 </div>
                 <div>
                   <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Archival Collections</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Authenticate via 'Access' to save artifacts into private collections for ongoing study.</p>
+                  <p class="text-[10px] leading-relaxed opacity-80">Sign in to save entries into private collections for ongoing study.</p>
                 </div>
               </div>
               <button id="btn-dismiss-orientation" class="mt-8 text-[9px] font-bold uppercase tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black dark:hover:bg-black">[ Proceed to Archive ]</button>
@@ -555,7 +555,7 @@
               <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Folders</h1>
               <div class="flex gap-4">
                 <button id="btn-export-all-folders" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[ Export Database ]</button>
-                <span id="folders-count" class="text-[10px] font-mono opacity-50 uppercase">0 Folders Initialized</span>
+                <span id="folders-count" class="text-[10px] font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
               </div>
             </div>
             <div id="folders-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -793,9 +793,9 @@
       <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth" aria-hidden="true"></div>
       <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
         <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
-        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Terminal Access</h2>
+        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
         <div id="auth-form-container">
-          <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your credentials to receive a magic link for terminal access.</p>
+          <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
           <form id="auth-form" class="space-y-4">
             <div>
               <label for="auth-email" class="block text-[10px] font-bold uppercase tracking-widest mb-1">Email Address</label>
@@ -806,7 +806,7 @@
           <p id="auth-message" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
         </div>
         <div id="auth-success-container" class="hidden">
-          <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Link transmitted. Check your inbox to complete initialization.</p>
+          <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>
         </div>
       </div>
     </div>
