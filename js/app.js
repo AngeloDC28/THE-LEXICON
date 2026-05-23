@@ -988,22 +988,13 @@ function openCiteModal() {
   modal.classList.remove('hidden');
 }
 
-// ── KEYBOARD SHORTCUTS ──
+// ── KEYBOARD SHORTCUTS HELP ──
 function showKeyboardHelp() {
-  const shortcuts = [
-    { key: '/', label: 'Focus search' },
-    { key: 'V', label: 'Visual mode (grid)' },
-    { key: 'I', label: 'Index mode (table)' },
-    { key: 'j / ↓', label: 'Next row (Index mode)' },
-    { key: 'k / ↑', label: 'Previous row (Index mode)' },
-    { key: '⏎', label: 'Open focused entry' },
-    { key: '⌘K / Ctrl+K', label: 'Command palette' },
-    { key: '←/→', label: 'Navigate images' },
-    { key: 'Esc', label: 'Close detail / modal' },
-    { key: '?', label: 'Show this help' },
-  ];
-  const shortcutText = shortcuts.map(s => `${s.key.padEnd(16)} ${s.label}`).join('\n');
-  alert(`KEYBOARD SHORTCUTS\n\n${shortcutText}`);
+  const modal = $('kbd-help-modal');
+  if (!modal) return;
+  modal.classList.remove('hidden');
+  // Focus the close button so Esc and tab navigation work
+  modal.querySelector('[data-modal-close]')?.focus();
 }
 
 // ── FOCUS RESTORE ──
