@@ -580,12 +580,30 @@ function setupEventListeners() {
     if (taxVal) {
       const type = taxVal.dataset.taxonomyType;
       const val  = taxVal.dataset.taxonomyVal;
-      // Toggle: clicking the active value deselects it
-      AppState.filters[type] = AppState.filters[type] === val ? null : val;
-      AppState.activeTaxonomy = null;
-      // Categories cells + grid both depend on the filter set; don't
-      // re-render modal chrome for a filter change.
-      refreshTaxonomy();
+      // Multi-select: toggle this value within the pipe-separated filter string
+      const current = AppState.filters[type] || '';
+      const activeVals = current.split('|').map(s => s.trim()).filter(Boolean);
+      const idx = activeVals.indexOf(val);
+      if (idx >= 0) {
+        activeVals.splice(idx, 1);
+      } else {
+        activeVals.push(val);
+      }
+      AppState.filters[type] = activeVals.length ? activeVals.join('|') : null;
+      // Re-render sub-panel to update checked state; keep panel open for multi-select.
+      renderTaxonomySub(callbacks);
+      renderTaxonomyGrid();
+      refreshContent();
+      updateHash('grid');
+      return;
+    }
+
+    // Clear-all button for a single taxonomy axis
+    const taxClear = e.target.closest('[data-taxonomy-clear]');
+    if (taxClear) {
+      AppState.filters[taxClear.dataset.taxonomyClear] = null;
+      renderTaxonomySub(callbacks);
+      renderTaxonomyGrid();
       refreshContent();
       updateHash('grid');
       return;

@@ -44,19 +44,18 @@ export function getFilteredEntries(archiveData) {
   }
 
   // 2. Filter by taxonomy tags
-  // Tags can be single-value (era, brand) or pipe-separated multi-value
-  // (politics, theories, materials, anatomy, etc.). An entry matches a filter
-  // if the filter value equals the whole tag OR appears as one of its
-  // ' | '-separated parts (trim-tolerant).
+  // AppState.filters[key] is a pipe-separated string of selected values (multi-select).
+  // An entry matches if its tag value equals ANY of the selected filter values,
+  // checking both the whole tag and its own pipe-separated parts.
   entries = entries.filter(entry => {
     if (!entry.tags) return false;
     for (const [key, val] of Object.entries(AppState.filters)) {
       if (!val) continue;
       const tag = entry.tags[key];
       if (!tag) return false;
-      if (tag === val) continue;
-      const parts = tag.split('|').map(s => s.trim());
-      if (!parts.includes(val)) return false;
+      const filterVals = val.split('|').map(s => s.trim());
+      const tagParts = tag.split('|').map(s => s.trim());
+      if (!filterVals.some(fv => fv === tag || tagParts.includes(fv))) return false;
     }
     return true;
   });
@@ -111,12 +110,16 @@ export function renderTaxonomyGrid() {
 
   container.innerHTML = types.map(type => {
     const isActive = AppState.activeTaxonomy === type.key;
-    const isFiltered = AppState.filters && AppState.filters[type.key];
+    const filterVal = AppState.filters && AppState.filters[type.key];
+    const isFiltered = !!filterVal;
+    const activeValsCount = isFiltered ? filterVal.split('|').filter(Boolean).length : 0;
     const activeClass = isActive
       ? 'bg-black text-white dark:bg-white dark:text-black'
       : (isFiltered ? 'bg-acid text-black' : '');
     const spanClass = type.span ? 'taxonomy-cell--full' : '';
-    const activeLabel = isFiltered ? ` <span class="taxonomy-cell-filter">· ${getTranslation(AppState.filters[type.key], lang)}</span>` : '';
+    const activeLabel = isFiltered
+      ? ` <span class="taxonomy-cell-filter">· ${activeValsCount > 1 ? `${activeValsCount} selected` : getTranslation(filterVal, lang)}</span>`
+      : '';
     return `<button
       type="button"
       class="taxonomy-cell ${spanClass} ${activeClass}"
@@ -144,28 +147,30 @@ export function renderTaxonomySub(callbacks) {
   const values = taxonomyData[type];
   const lang = AppState.language;
   const currentFilter = AppState.filters[type];
+  const activeVals = currentFilter ? currentFilter.split('|').map(s => s.trim()).filter(Boolean) : [];
+
   container.innerHTML = `
     <div class="taxonomy-sub-header flex items-center justify-between gap-3 mb-3 pb-2 border-b border-black/10 dark:border-white/10">
       <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-70">
-        ${getTranslation('tax_' + type, lang)}${currentFilter ? ` <span class="opacity-50 font-normal normal-case tracking-normal">· ${getTranslation(currentFilter, lang)}</span>` : ''}
+        ${getTranslation('tax_' + type, lang)}${activeVals.length ? ` <span class="opacity-50 font-normal normal-case tracking-normal">· ${activeVals.length} selected</span>` : ''}
       </span>
-      <button class="focus-ring text-[9px] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
+      <div class="flex items-center gap-2">
+        ${activeVals.length ? `<button class="focus-ring text-[9px] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-acid text-acid px-2 py-1 transition-opacity" data-taxonomy-clear="${type}" aria-label="Clear all ${type} filters">[ Clear all ]</button>` : ''}
+        <button class="focus-ring text-[9px] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
+      </div>
     </div>
     <div class="taxonomy-sub-values flex flex-wrap gap-1.5">
-      ${currentFilter ? `<button
-        class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border border-acid bg-acid text-black hover:opacity-80 transition-opacity"
-        data-taxonomy-type="${type}"
-        data-taxonomy-val="${currentFilter}"
-        title="Clear this filter"
-      >× ${getTranslation('btn_clear', lang) || 'Clear'}</button>` : ''}
       ${values.map(val => {
-        const isActive = currentFilter === val;
-        if (isActive) return '';
+        const isActive = activeVals.includes(val);
+        const activeClass = isActive
+          ? 'border-acid bg-acid text-black hover:opacity-80'
+          : 'border-black/30 dark:border-white/30 hover:border-black dark:hover:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black';
         return `<button
-          class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border border-black/30 dark:border-white/30 hover:border-black dark:hover:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+          class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border transition-colors ${activeClass}"
           data-taxonomy-type="${type}"
           data-taxonomy-val="${val}"
-        >${getTranslation(val, AppState.language)}</button>`;
+          aria-pressed="${isActive}"
+        >${isActive ? '✓ ' : ''}${getTranslation(val, AppState.language)}</button>`;
       }).join('')}
     </div>
   `;

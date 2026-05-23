@@ -70,11 +70,12 @@ export function renderFilterChips(callbacks) {
   }
 
   Object.entries(AppState.filters).forEach(([type, val]) => {
-    if (val) {
-      const translatedType = getTranslation(`tax_${type}`, AppState.language);
-      const translatedVal = getTranslation(val, AppState.language);
-      chips.push({ label: `${translatedType.toUpperCase()}: ${translatedVal}`, type, value: val });
-    }
+    if (!val) return;
+    const translatedType = getTranslation(`tax_${type}`, AppState.language);
+    val.split('|').map(s => s.trim()).filter(Boolean).forEach(v => {
+      const translatedVal = getTranslation(v, AppState.language);
+      chips.push({ label: `${translatedType.toUpperCase()}: ${translatedVal}`, type, value: v });
+    });
   });
 
   if (chips.length === 0) {
@@ -97,7 +98,10 @@ export function renderFilterChips(callbacks) {
         AppState.searchQuery = '';
         if ($('search-input')) $('search-input').value = '';
       } else {
-        AppState.filters[type] = null;
+        const removedVal = btn.dataset.value;
+        const current = AppState.filters[type] || '';
+        const remaining = current.split('|').map(s => s.trim()).filter(v => v && v !== removedVal);
+        AppState.filters[type] = remaining.length ? remaining.join('|') : null;
       }
       // switchView('grid') already calls callbacks.onUpdate → refreshUI(),
       // so no separate lexicon-refresh dispatch is needed. Removing it
