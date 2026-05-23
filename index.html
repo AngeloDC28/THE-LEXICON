@@ -736,12 +736,15 @@
 
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="hidden fixed bottom-4 right-4 z-[10000] bg-bone dark:bg-darkBase border border-black dark:border-white p-4 shadow-2xl max-w-sm">
-      <p id="cookie-notice-text" class="text-[10px] uppercase font-mono tracking-wide mb-2 leading-relaxed">This directory uses persistent local storage (cookies) to maintain terminal state and archive context.</p>
+      <p id="cookie-notice-text" class="text-[10px] uppercase font-mono tracking-wide mb-3 leading-relaxed"></p>
       <div class="flex gap-4 mb-3">
         <button type="button" id="btn-privacy-link" class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100">Privacy</button>
         <button type="button" id="btn-terms-link" class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100">Terms</button>
       </div>
-      <button id="btn-accept-cookies" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-80">Accept</button>
+      <div class="flex gap-2">
+        <button id="btn-reject-cookies" type="button" class="flex-1 border border-black dark:border-white bg-transparent dark:bg-transparent text-black dark:text-white py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-60">Reject</button>
+        <button id="btn-accept-cookies" type="button" class="flex-1 border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-80">Accept</button>
+      </div>
     </div>
 
     <!-- JSON-LD Structured Data -->

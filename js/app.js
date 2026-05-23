@@ -866,6 +866,24 @@ function setupEventListeners() {
       const idx = document.activeElement.dataset.imgIndex || 0;
       if (id) window.location.hash = `detail/${id}/${idx}`;
     }
+    // Phase 1 Keyboard Shortcuts
+    if (e.key === '?') {
+      e.preventDefault();
+      showKeyboardHelp();
+    }
+    if (e.key === '/') {
+      e.preventDefault();
+      const searchInput = $('search-input');
+      if (searchInput) searchInput.focus();
+    }
+    if (e.key === 'v' || e.key === 'V') {
+      e.preventDefault();
+      switchView('grid', callbacks);
+    }
+    if (e.key === 'i' || e.key === 'I') {
+      e.preventDefault();
+      switchView('timeline', callbacks);
+    }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       toggleCmdPalette(archiveData, callbacks);
@@ -878,14 +896,22 @@ function setupEventListeners() {
   });
   $('cmd-palette-backdrop')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
 
-  // Cookie
+  // Cookie Banner (GDPR compliance)
   var cookieAccepted;
   try { cookieAccepted = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
   if (!cookieAccepted) {
     $('cookie-banner')?.classList.remove('hidden');
   }
+  // Populate cookie notice text from translations
+  const cookieNotice = $('cookie-notice-text');
+  if (cookieNotice) {
+    cookieNotice.textContent = getTranslation('cookie_notice', AppState.language);
+  }
   $('btn-accept-cookies')?.addEventListener('click', () => {
     try { localStorage.setItem('lexicon-terms-accepted', 'true'); } catch(e) {}
+    $('cookie-banner')?.classList.add('hidden');
+  });
+  $('btn-reject-cookies')?.addEventListener('click', () => {
     $('cookie-banner')?.classList.add('hidden');
   });
 
@@ -933,6 +959,21 @@ function openCiteModal() {
   if ($('cite-url'))     $('cite-url').textContent     = url;
 
   modal.classList.remove('hidden');
+}
+
+// ── KEYBOARD SHORTCUTS ──
+function showKeyboardHelp() {
+  const shortcuts = [
+    { key: '/', label: 'Focus search' },
+    { key: 'V', label: 'Visual mode' },
+    { key: 'I', label: 'Index mode' },
+    { key: '⌘K / Ctrl+K', label: 'Command palette' },
+    { key: '←/→', label: 'Navigate images' },
+    { key: 'Esc', label: 'Close detail view' },
+    { key: '?', label: 'Show this help' },
+  ];
+  const shortcutText = shortcuts.map(s => `${s.key.padEnd(14)} ${s.label}`).join('\n');
+  alert(`KEYBOARD SHORTCUTS\n\n${shortcutText}`);
 }
 
 // ── FOCUS RESTORE ──
