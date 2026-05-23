@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — Type System</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .frame { width:1440px; padding:var(--s-5); }
+
+  .header {
+    border:var(--border-1); padding:var(--s-7);
+    margin-bottom:var(--s-4);
+  }
+  .header .eye {
+    font-size:var(--t-mono-xs); letter-spacing:0.35em;
+    color:var(--c-text-lo); text-transform:uppercase;
+    margin-bottom:var(--s-3);
+  }
+  .header h1 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h1); color:var(--c-text-hi);
+    line-height:1.0; letter-spacing:var(--letter-serif-tight);
+  }
+  .header h1 em { font-style:italic; color:#bbb; }
+  .header p {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-lead); color:#bbb; line-height:1.55;
+    margin-top:var(--s-5); max-width:62ch;
+  }
+
+  /* Type specimen blocks */
+  .specimen {
+    border:var(--border-1); padding:0;
+    margin-bottom:var(--s-4);
+    display:grid; grid-template-columns:280px 1fr;
+  }
+  .spec-meta {
+    background:#050505; padding:var(--s-5);
+    border-right:var(--border-1);
+  }
+  .spec-meta h3 {
+    font-size:var(--t-mono-sm); letter-spacing:0.25em;
+    color:var(--c-text-hi); text-transform:uppercase;
+    margin-bottom:var(--s-4); padding-bottom:var(--s-3);
+    border-bottom:1px solid #1a1a1a;
+  }
+  .spec-meta .row {
+    padding:var(--s-2) 0; display:grid;
+    grid-template-columns:90px 1fr;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase;
+  }
+  .spec-meta .row .k { color:#666; }
+  .spec-meta .row .v { color:#bbb; }
+  .spec-meta code {
+    display:block; margin-top:var(--s-3);
+    padding:var(--s-3); background:#000;
+    border:1px solid #1a1a1a; color:var(--c-corporeal);
+    font-family:'JetBrains Mono', monospace; font-size:10px;
+    letter-spacing:0; line-height:1.5;
+    overflow-wrap:break-word; white-space:pre-wrap;
+  }
+  .spec-display {
+    padding:var(--s-7) var(--s-7);
+    display:flex; flex-direction:column; justify-content:center;
+    min-height:200px; position:relative;
+  }
+  .spec-display .baseline {
+    position:absolute; left:var(--s-7); right:var(--s-7);
+    border-top:1px dashed #1a1a1a;
+  }
+
+  /* The actual type samples */
+  .sample-display {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-display); color:var(--c-text-hi);
+    line-height:0.95; letter-spacing:-0.02em;
+  }
+  .sample-display em { font-style:italic; color:#bbb; }
+  .sample-h1 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h1); color:var(--c-text-hi);
+    line-height:1.05; letter-spacing:var(--letter-serif-tight);
+  }
+  .sample-h2 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi);
+    line-height:1.1;
+  }
+  .sample-h3 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi);
+    line-height:1.2; font-weight:500;
+  }
+  .sample-lead {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-lead); color:#ddd; line-height:1.5;
+    max-width:60ch;
+  }
+  .sample-body {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#ccc; line-height:1.65;
+    max-width:62ch;
+  }
+  .sample-mono-base {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-base); color:#ccc;
+    letter-spacing:0.05em;
+  }
+  .sample-mono-sm {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-sm); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:#aaa;
+  }
+  .sample-mono-xs {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    text-transform:uppercase; color:#888;
+  }
+
+  /* Viewport diagram */
+  .viewport-diagram {
+    border:var(--border-1); padding:var(--s-6);
+    margin-bottom:var(--s-4);
+    background:#050505;
+  }
+  .vd-head { display:flex; justify-content:space-between; margin-bottom:var(--s-5); }
+  .vd-head .ttl {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi);
+  }
+  .vd-head .sub {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+  }
+
+  .viewports {
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:var(--s-4);
+  }
+  .vp-frame {
+    border:var(--border-1); padding:var(--s-4);
+    position:relative;
+  }
+  .vp-frame::before {
+    content:""; position:absolute; top:0; left:0; height:2px;
+    background:var(--c-corporeal);
+  }
+  .vp-frame[data-width="360"]::before { width:20%; }
+  .vp-frame[data-width="768"]::before { width:45%; }
+  .vp-frame[data-width="1024"]::before { width:65%; }
+  .vp-frame[data-width="1440"]::before { width:100%; }
+  .vp-frame .vp-label {
+    display:flex; justify-content:space-between;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-3);
+  }
+  .vp-frame .vp-label .px { color:var(--c-text-hi); }
+  /* Manually demonstrate what clamp produces at each viewport */
+  .vp-frame .vp-h {
+    font-family:'EB Garamond', serif;
+    color:var(--c-text-hi); line-height:1.05;
+    letter-spacing:-0.015em;
+  }
+  .vp-frame[data-width="360"]  .vp-h { font-size:2rem; }
+  .vp-frame[data-width="768"]  .vp-h { font-size:2.4rem; }
+  .vp-frame[data-width="1024"] .vp-h { font-size:3.05rem; }
+  .vp-frame[data-width="1440"] .vp-h { font-size:3.9rem; }
+  .vp-frame .vp-body {
+    font-family:'EB Garamond', serif;
+    color:#aaa; line-height:1.55;
+    margin-top:var(--s-3); font-size:var(--t-body);
+  }
+  .vp-frame .vp-mono {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#666; text-transform:uppercase; margin-top:var(--s-3);
+  }
+
+  /* Curves visual */
+  .curve-card {
+    border:var(--border-1); padding:var(--s-6);
+    margin-bottom:var(--s-4);
+  }
+  .curve-card h3 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi); margin-bottom:var(--s-3);
+  }
+  .curve-card p {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#aaa; line-height:1.55;
+    margin-bottom:var(--s-5); max-width:64ch;
+  }
+  .curve-svg {
+    width:100%; height:280px;
+    background:#000; border:1px solid #1a1a1a;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="eye">— THE LEXICON · TYPOGRAPHIC SYSTEM v2</div>
+    <h1>Type that flexes, never <em>breaks</em>.</h1>
+    <p>A fluid typographic scale built on <code style="font-family:'JetBrains Mono', monospace; color:var(--c-corporeal); background:#080808; padding:0 6px;">clamp()</code> functions. Every text size scales mathematically from a 360px phone to a 1920px desktop without a single media query for font sizing. The grid never breaks.</p>
+  </div>
+
+  <!-- DISPLAY -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Display</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">EB Garamond</span></div>
+      <div class="row"><span class="k">WEIGHT</span><span class="v">400 / italic</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">Hero, editorial accents</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">48 → 112 px</span></div>
+      <code>--t-display:
+  clamp(
+    3rem,
+    1.5rem + 6vw,
+    7rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-display">No.<em>13</em></div>
+    </div>
+  </div>
+
+  <!-- H1 -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Heading 1</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">EB Garamond</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">Page titles</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">32 → 72 px</span></div>
+      <code>--t-h1:
+  clamp(
+    2rem,
+    1.2rem + 3.2vw,
+    4.5rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-h1">See where every fashion idea <em>actually</em> came from.</div>
+    </div>
+  </div>
+
+  <!-- H2 -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Heading 2</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">EB Garamond</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">Section titles</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">24 → 36 px</span></div>
+      <code>--t-h2:
+  clamp(
+    1.5rem,
+    1.1rem + 1.4vw,
+    2.25rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-h2">Authorship is delegated to the apparatus; the body becomes site.</div>
+    </div>
+  </div>
+
+  <!-- H3 -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Heading 3</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">EB Garamond 500</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">Card titles, sidebars</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">20 → 28 px</span></div>
+      <code>--t-h3:
+  clamp(
+    1.25rem,
+    1rem + 0.9vw,
+    1.75rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-h3">A single show rewrote the grammar of fashion spectacle.</div>
+    </div>
+  </div>
+
+  <!-- LEAD -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Lead</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">EB Garamond</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">Subhead, intro</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">16 → 20 px</span></div>
+      <code>--t-lead:
+  clamp(
+    1rem,
+    0.85rem + 0.55vw,
+    1.25rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-lead">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Body</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">EB Garamond</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">Editorial prose</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">15 → 17 px</span></div>
+      <div class="row"><span class="k">MEASURE</span><span class="v">54–68 ch</span></div>
+      <code>--t-body:
+  clamp(
+    0.95rem,
+    0.85rem + 0.3vw,
+    1.0625rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-body">The 13th collection McQueen showed under his own name closed with a tableau that has, in the twenty-five years since, been reproduced more often than almost any other moment in late twentieth-century fashion. The Gainsborough Studios in Shoreditch, an audience seated on bleachers, and Shalom Harlow standing on a rotating wooden disc in a strapless white cotton dress.</div>
+    </div>
+  </div>
+
+  <!-- MONO STACK -->
+  <div class="specimen">
+    <div class="spec-meta">
+      <h3>— Mono Scale</h3>
+      <div class="row"><span class="k">FAMILY</span><span class="v">JetBrains Mono</span></div>
+      <div class="row"><span class="k">USE</span><span class="v">UI, metadata, IDs</span></div>
+      <div class="row"><span class="k">RANGE</span><span class="v">10 → 15 px</span></div>
+      <code>--t-mono-base:
+  clamp(
+    0.75rem,
+    0.65rem + 0.25vw,
+    0.9375rem
+  );</code>
+    </div>
+    <div class="spec-display">
+      <div class="sample-mono-base" style="margin-bottom:var(--s-3);">N-0142 · ALEXANDER McQUEEN · SS99 · "NO.13"</div>
+      <div class="sample-mono-sm" style="margin-bottom:var(--s-3);">CORPOREAL INTERVENTION · 47 CITATIONS</div>
+      <div class="sample-mono-xs">FEATURED ENTRY · 01 / 05 · UPDATED 22 MAY 2026</div>
+    </div>
+  </div>
+
+  <!-- VIEWPORTS — showing the same H1 at 4 widths -->
+  <div class="viewport-diagram">
+    <div class="vd-head">
+      <div class="ttl">The same headline, four viewports.</div>
+      <div class="sub">CLAMP() · NO MEDIA QUERIES · STRICT BASELINE</div>
+    </div>
+    <div class="viewports">
+      <div class="vp-frame" data-width="360">
+        <div class="vp-label"><span>MOBILE</span><span class="px">360 px</span></div>
+        <div class="vp-h">See where every fashion idea <em>actually</em> came from.</div>
+        <div class="vp-body">A research archive mapping fashion history and visual culture.</div>
+        <div class="vp-mono">N-0142 · McQUEEN · 1999</div>
+      </div>
+      <div class="vp-frame" data-width="768">
+        <div class="vp-label"><span>TABLET</span><span class="px">768 px</span></div>
+        <div class="vp-h">See where every fashion idea <em>actually</em> came from.</div>
+        <div class="vp-body">A research archive mapping fashion history and visual culture.</div>
+        <div class="vp-mono">N-0142 · McQUEEN · 1999</div>
+      </div>
+      <div class="vp-frame" data-width="1024">
+        <div class="vp-label"><span>LAPTOP</span><span class="px">1024 px</span></div>
+        <div class="vp-h">See where every fashion idea <em>actually</em> came from.</div>
+        <div class="vp-body">A research archive mapping fashion history and visual culture.</div>
+        <div class="vp-mono">N-0142 · McQUEEN · 1999</div>
+      </div>
+      <div class="vp-frame" data-width="1440">
+        <div class="vp-label"><span>DESKTOP</span><span class="px">1440 px</span></div>
+        <div class="vp-h">See where every fashion idea <em>actually</em> came from.</div>
+        <div class="vp-body">A research archive mapping fashion history and visual culture.</div>
+        <div class="vp-mono">N-0142 · McQUEEN · 1999</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE CURVES -->
+  <div class="curve-card">
+    <h3>How the scale interpolates.</h3>
+    <p>Each <code style="font-family:'JetBrains Mono', monospace; color:var(--c-corporeal); background:#080808; padding:0 4px;">clamp()</code> defines a minimum (locked below the small viewport), a preferred fluid value (scales with <code style="font-family:'JetBrains Mono', monospace; color:var(--c-corporeal); background:#080808; padding:0 4px;">vw</code>), and a maximum (locked above the large viewport). Plotted across viewports, type sizes follow controlled diagonals — H1 climbs steeply, body climbs gently. Hierarchy is preserved at every width.</p>
+
+    <svg class="curve-svg" viewBox="0 0 1280 280" xmlns="http://www.w3.org/2000/svg">
+      <!-- Grid -->
+      <g stroke="#161616" stroke-width="1">
+        <line x1="60" y1="20" x2="60" y2="240" />
+        <line x1="60" y1="240" x2="1240" y2="240" />
+        <!-- vertical viewport markers -->
+        <line x1="220" y1="240" x2="220" y2="246" stroke="#333" />
+        <line x1="540" y1="240" x2="540" y2="246" stroke="#333" />
+        <line x1="780" y1="240" x2="780" y2="246" stroke="#333" />
+        <line x1="1180" y1="240" x2="1180" y2="246" stroke="#333" />
+      </g>
+      <g font-family="JetBrains Mono, monospace" font-size="10" fill="#666" letter-spacing="2">
+        <text x="220" y="262" text-anchor="middle">360</text>
+        <text x="540" y="262" text-anchor="middle">768</text>
+        <text x="780" y="262" text-anchor="middle">1024</text>
+        <text x="1180" y="262" text-anchor="middle">1440</text>
+        <text x="50" y="40" text-anchor="end">72</text>
+        <text x="50" y="100" text-anchor="end">48</text>
+        <text x="50" y="160" text-anchor="end">28</text>
+        <text x="50" y="220" text-anchor="end">14</text>
+        <text x="1240" y="14" text-anchor="end" fill="#888">FONT-SIZE (PX)</text>
+        <text x="660" y="278" text-anchor="middle" fill="#888">VIEWPORT WIDTH (PX)</text>
+      </g>
+      <!-- H1 curve — steep -->
+      <path d="M 60 188 L 220 168 L 540 105 L 780 60 L 1180 30 L 1240 30"
+            stroke="#e2a4a0" stroke-width="2" fill="none" />
+      <text x="1170" y="22" font-family="JetBrains Mono, monospace" font-size="10"
+            fill="#e2a4a0" letter-spacing="2">H1</text>
+
+      <!-- H2 curve -->
+      <path d="M 60 200 L 220 192 L 540 165 L 780 145 L 1180 130 L 1240 130"
+            stroke="#d4c4a0" stroke-width="2" fill="none" />
+      <text x="1170" y="124" font-family="JetBrains Mono, monospace" font-size="10"
+            fill="#d4c4a0" letter-spacing="2">H2</text>
+
+      <!-- H3 curve -->
+      <path d="M 60 210 L 220 206 L 540 188 L 780 175 L 1180 165 L 1240 165"
+            stroke="#b08fc4" stroke-width="2" fill="none" />
+      <text x="1170" y="158" font-family="JetBrains Mono, monospace" font-size="10"
+            fill="#b08fc4" letter-spacing="2">H3</text>
+
+      <!-- Body curve -->
+      <path d="M 60 222 L 220 220 L 540 213 L 780 209 L 1180 205 L 1240 205"
+            stroke="#7fb3a3" stroke-width="2" fill="none" />
+      <text x="1170" y="198" font-family="JetBrains Mono, monospace" font-size="10"
+            fill="#7fb3a3" letter-spacing="2">BODY</text>
+
+      <!-- Mono curve -->
+      <path d="M 60 232 L 220 230 L 540 226 L 780 224 L 1180 221 L 1240 221"
+            stroke="#888" stroke-width="2" fill="none" />
+      <text x="1170" y="214" font-family="JetBrains Mono, monospace" font-size="10"
+            fill="#888" letter-spacing="2">MONO</text>
+    </svg>
+  </div>
+
+</div>
+</body>
+</html>

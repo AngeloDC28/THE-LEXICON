@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — Homepage v2</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .frame { width:1440px; padding:var(--s-5); }
+
+  /* Top status bar */
+  .top-status {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-3) var(--s-4); border:var(--border-1);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:var(--c-text-lo);
+    margin-bottom:var(--s-4);
+  }
+  .top-status .left { display:flex; gap:var(--s-5); align-items:center; }
+  .top-status .dot { width:6px; height:6px; background:#4ade80; border-radius:50%; }
+  .top-status .right { display:flex; gap:var(--s-5); }
+  .top-status .count { color:#bbb; }
+
+  /* Nav */
+  .nav {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-4) var(--s-5); border:var(--border-1);
+    margin-bottom:var(--s-5);
+  }
+  .nav .brand {
+    font-size:var(--t-mono-base); font-weight:700;
+    letter-spacing:var(--letter-mono); color:var(--c-text-hi);
+  }
+  .nav .links {
+    display:flex; gap:var(--s-6);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:#bbb;
+  }
+  .nav .actions { display:flex; gap:var(--s-3); }
+  .nav-btn {
+    padding:var(--s-2) var(--s-4); border:1px solid var(--c-border-hi);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:#ddd;
+  }
+  .nav-btn.primary { background:var(--c-text-hi); color:var(--c-bg); border-color:var(--c-text-hi); }
+
+  /* Mode toggle — the brutalist [VISUAL] [INDEX] toggle */
+  .mode-toggle {
+    display:inline-flex; border:1px solid var(--c-border-hi);
+    margin-right:var(--s-3);
+  }
+  .mode-toggle button {
+    padding:var(--s-2) var(--s-4); font-size:var(--t-mono-xs);
+    letter-spacing:var(--letter-mono); text-transform:uppercase;
+    background:transparent; color:#aaa; border-right:1px solid var(--c-border-hi);
+  }
+  .mode-toggle button:last-child { border-right:none; }
+  .mode-toggle button.active { background:var(--c-text-hi); color:var(--c-bg); }
+  .mode-toggle button .kbd {
+    margin-left:var(--s-2); font-size:9px; opacity:0.6; padding:1px 4px;
+    border:1px solid currentColor;
+  }
+
+  /* HERO */
+  .hero {
+    display:grid; grid-template-columns:1.05fr 0.95fr;
+    border:var(--border-1); margin-bottom:var(--s-4);
+    min-height:540px;
+  }
+  .hero-left {
+    padding:var(--s-8) var(--s-7);
+    display:flex; flex-direction:column; justify-content:space-between;
+    border-right:var(--border-1);
+  }
+  .hero-tag {
+    font-size:var(--t-mono-xs); letter-spacing:0.3em;
+    color:var(--c-text-lo); text-transform:uppercase;
+    display:flex; align-items:center; gap:10px;
+  }
+  .hero-tag .bar { display:inline-block; width:30px; height:1px; background:#666; }
+  .hero-headline {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h1); font-weight:400; line-height:1.05;
+    color:var(--c-text-hi);
+    margin-top:var(--s-5); letter-spacing:var(--letter-serif-tight);
+  }
+  .hero-headline em { font-style:italic; color:#bdbdbd; }
+  .hero-sub {
+    font-family:'EB Garamond', serif;
+    margin-top:var(--s-5); font-size:var(--t-lead); line-height:1.55;
+    color:#bbb; max-width:520px;
+  }
+  .hero-actions { display:flex; gap:var(--s-3); margin-top:var(--s-7); }
+  .btn-big {
+    padding:var(--s-4) var(--s-6); font-size:var(--t-mono-xs);
+    letter-spacing:var(--letter-mono); text-transform:uppercase;
+  }
+  .btn-pri { background:var(--c-text-hi); color:var(--c-bg); border:1px solid var(--c-text-hi); }
+  .btn-sec { background:transparent; color:var(--c-text-hi); border:1px solid #555; }
+
+  .hero-stats {
+    margin-top:auto; padding-top:var(--s-5); display:flex; gap:var(--s-7);
+    border-top:1px solid #1a1a1a;
+  }
+  .hero-stat .num {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi); font-weight:400;
+  }
+  .hero-stat .lbl {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#666; text-transform:uppercase; margin-top:var(--s-1);
+  }
+
+  /* Hero right */
+  .hero-right {
+    position:relative;
+    background:linear-gradient(135deg, #1a1414 0%, #0f0a0a 50%, #2a1a1a 100%);
+    padding:var(--s-6); display:flex; flex-direction:column;
+    justify-content:space-between;
+  }
+  .hero-right::before {
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(120,80,80,0.18) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(200,180,160,0.06) 0%, transparent 40%);
+    pointer-events:none;
+  }
+  .hrm {
+    position:relative; z-index:2; display:flex; justify-content:space-between;
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    color:#a89890; text-transform:uppercase;
+  }
+  .hrc { position:relative; z-index:2; padding:var(--s-5) 0 0; }
+  .hrc .accent-tag {
+    font-size:var(--t-mono-sm); letter-spacing:0.2em;
+    text-transform:uppercase; color:var(--c-corporeal);
+    padding:6px 10px; border:1px solid var(--c-corporeal);
+    display:inline-block;
+  }
+  .hrc .ttl {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi); margin-top:var(--s-3);
+    font-style:italic; line-height:1.15;
+  }
+  .hrc .meta {
+    font-size:var(--t-mono-xs); letter-spacing:0.25em; color:#a89890;
+    margin-top:var(--s-3);
+  }
+  .hrc .desc {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#c4b8b0; margin-top:var(--s-3);
+    line-height:1.5; max-width:480px;
+  }
+  .hrd {
+    position:absolute; right:var(--s-5); bottom:var(--s-5);
+    display:flex; gap:6px; z-index:2;
+  }
+  .hrd span { width:6px; height:6px; border:1px solid #a89890; }
+  .hrd span.active { background:#a89890; }
+
+  /* Section headers */
+  .sec-head {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    padding:var(--s-6) var(--s-1) var(--s-4);
+  }
+  .sec-title {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi);
+  }
+  .sec-eye {
+    font-size:var(--t-mono-xs); letter-spacing:0.3em;
+    color:#666; text-transform:uppercase; margin-bottom:var(--s-1);
+  }
+  .sec-link {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+  }
+
+  /* ─── INVERTED METADATA CARD ──────────────────────────── */
+  .feat-strip {
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:var(--s-3);
+    margin-bottom:var(--s-4);
+  }
+
+  /* The card with the new hierarchy:
+     1. accent tag (large, accent color, on top)
+     2. image (4:5)
+     3. mono metadata (designer · year · season)
+     4. serif editorial hook */
+  .card {
+    border:var(--border-1); overflow:hidden;
+    display:flex; flex-direction:column;
+    background:var(--c-bg-alt);
+  }
+  .card-tag {
+    padding:var(--s-3) var(--s-4) var(--s-2);
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:var(--border-1);
+  }
+  .card-tag .label {
+    font-size:var(--t-mono-sm);
+    letter-spacing:0.18em; text-transform:uppercase; font-weight:500;
+  }
+  .card-tag .id {
+    font-size:var(--t-mono-xs); letter-spacing:0.15em;
+    color:var(--c-text-xlo);
+  }
+  .card-img { aspect-ratio:4/5; }
+  .card-body { padding:var(--s-4); }
+  .card-meta {
+    font-size:var(--t-mono-xs); letter-spacing:0.2em;
+    color:#999; text-transform:uppercase;
+  }
+  .card-hook {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:var(--c-text-hi);
+    margin-top:var(--s-2); line-height:1.4;
+  }
+
+  /* Tag accents */
+  .card.tag-corporeal .card-tag .label { color:var(--c-corporeal); }
+  .card.tag-corporeal .card-tag { border-bottom-color:rgba(226,164,160,0.2); }
+  .card.tag-semiotic .card-tag .label { color:var(--c-semiotic); }
+  .card.tag-semiotic .card-tag { border-bottom-color:rgba(212,196,160,0.2); }
+  .card.tag-subculture .card-tag .label { color:var(--c-subculture); }
+  .card.tag-subculture .card-tag { border-bottom-color:rgba(176,143,196,0.2); }
+  .card.tag-critique .card-tag .label { color:var(--c-critique); }
+  .card.tag-critique .card-tag { border-bottom-color:rgba(217,107,107,0.2); }
+
+  /* Image placeholders */
+  .img-1 { background:linear-gradient(135deg, #1f1414 0%, #2d1a1a 60%, #1a0e0e 100%); }
+  .img-2 { background:linear-gradient(160deg, #0e0e15 0%, #1c1c28 100%); }
+  .img-3 { background:linear-gradient(45deg, #1a1612 0%, #2a221b 100%); }
+  .img-4 { background:linear-gradient(200deg, #181818 0%, #0a0a0a 100%); }
+
+  /* HOW IT WORKS */
+  .how {
+    border:var(--border-1); padding:var(--s-7);
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--s-7);
+    margin-bottom:var(--s-4);
+  }
+  .how-step .num {
+    font-size:var(--t-mono-xs); letter-spacing:0.3em;
+    color:#666; border-bottom:var(--border-1);
+    padding-bottom:var(--s-3); margin-bottom:var(--s-5);
+    display:flex; justify-content:space-between;
+  }
+  .how-step h3 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi);
+    margin-bottom:var(--s-3); font-weight:500;
+  }
+  .how-step p {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); line-height:1.55; color:#aaa;
+  }
+  .how-step .term {
+    margin-top:var(--s-4); font-size:var(--t-mono-xs);
+    letter-spacing:var(--letter-mono); color:#666;
+    text-transform:uppercase;
+  }
+  .how-step .term span { color:#bbb; }
+
+  /* WHO IT'S FOR */
+  .who { border:var(--border-1); padding:var(--s-7); margin-bottom:var(--s-4); }
+  .who-head {
+    display:grid; grid-template-columns:300px 1fr;
+    gap:var(--s-7); margin-bottom:var(--s-6);
+  }
+  .who-head .ttl {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi); line-height:1.1;
+  }
+  .who-head .lead {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-lead); color:#bbb; line-height:1.55;
+  }
+  .who-grid {
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:1px;
+    background:var(--c-border); border:var(--border-1);
+  }
+  .who-cell { background:var(--c-bg); padding:var(--s-5) var(--s-4); }
+  .who-cell .role {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-2);
+  }
+  .who-cell .use {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#ddd; line-height:1.5;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top:var(--s-4); padding:var(--s-6) var(--s-5);
+    border:var(--border-1);
+    display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:var(--s-7);
+  }
+  .footer .brand-block {
+    font-size:var(--t-mono-base); letter-spacing:var(--letter-mono);
+    color:var(--c-text-hi); font-weight:700;
+  }
+  .footer .blurb {
+    margin-top:var(--s-3); font-family:'EB Garamond', serif;
+    color:#888; font-size:var(--t-body); line-height:1.5; max-width:320px;
+  }
+  .footer h4 {
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-3);
+  }
+  .footer a {
+    display:block; font-size:var(--t-mono-sm); color:#bbb;
+    margin-bottom:var(--s-2);
+  }
+  .footer .news-input {
+    border:1px solid #333; padding:var(--s-3) var(--s-3);
+    background:transparent; color:var(--c-text-hi); width:100%;
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-xs); letter-spacing:0.1em; margin-top:var(--s-2);
+  }
+  .footer-bottom {
+    grid-column:1 / -1; padding-top:var(--s-5);
+    border-top:1px solid #1a1a1a;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:var(--c-text-lo); text-transform:uppercase;
+  }
+
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="top-status">
+    <div class="left">
+      <span class="dot"></span>
+      <span class="count">2,847 ENTRIES</span><span>///</span>
+      <span class="count">412 BRANDS</span><span>///</span>
+      <span class="count">38 MOVEMENTS</span>
+    </div>
+    <div class="right">
+      <span>LAST UPDATE: 22 MAY 2026</span>
+      <span>EN ▾</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="brand">THE LEXICON</div>
+    <div class="links">
+      <a href="#">BROWSE</a>
+      <a href="#">RESEARCH TERMINAL</a>
+      <a href="#">ESSAYS</a>
+      <a href="#">METHODOLOGY</a>
+      <a href="#">ABOUT</a>
+    </div>
+    <div class="actions">
+      <div class="mode-toggle">
+        <button class="active">VISUAL <span class="kbd">V</span></button>
+        <button>INDEX <span class="kbd">I</span></button>
+      </div>
+      <div class="nav-btn">⌘K SEARCH</div>
+      <div class="nav-btn primary">SIGN IN</div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <div>
+        <div class="hero-tag"><span class="bar"></span>FASHION HISTORY · VISUAL CULTURE · LINEAGE</div>
+        <h1 class="hero-headline">See where every fashion idea <em>actually</em> came from.</h1>
+        <p class="hero-sub">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.</p>
+        <div class="hero-actions">
+          <div class="btn btn-big btn-pri">BROWSE THE ARCHIVE →</div>
+          <div class="btn btn-big btn-sec">ENTER RESEARCH TERMINAL</div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">2,847</div><div class="lbl">Entries</div></div>
+        <div class="hero-stat"><div class="num">412</div><div class="lbl">Brands</div></div>
+        <div class="hero-stat"><div class="num">38</div><div class="lbl">Movements</div></div>
+        <div class="hero-stat"><div class="num">14</div><div class="lbl">Categories</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hrm">
+        <span>FEATURED · 01 / 05</span>
+        <span>N-0142</span>
+      </div>
+      <div class="hrc">
+        <span class="accent-tag">CORPOREAL INTERVENTION</span>
+        <div class="ttl">A single show rewrote the grammar of fashion spectacle.</div>
+        <div class="meta">ALEXANDER McQUEEN · SS99 · "NO.13"</div>
+        <div class="desc">Shalom Harlow, two robotic arms, a white cotton dress. The runway becomes performance; the garment becomes site. Tracing the shockwaves of the most cited fashion moment of the late 20th century.</div>
+      </div>
+      <div class="hrd">
+        <span class="active"></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED STRIP — inverted metadata hierarchy -->
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">// INDEXED BY ANALYTICAL CATEGORY</div>
+      <div class="sec-title">Featured entries</div>
+    </div>
+    <div class="sec-link">VIEW ALL 2,847 ENTRIES →</div>
+  </div>
+  <div class="feat-strip">
+
+    <div class="card tag-critique">
+      <div class="card-tag">
+        <span class="label">INSTITUTIONAL CRITIQUE</span>
+        <span class="id">N-0089</span>
+      </div>
+      <div class="card-img img-1"></div>
+      <div class="card-body">
+        <div class="card-meta">MARGIELA · AW97 · STOCKMAN</div>
+        <div class="card-hook">The tailor's dummy as final garment — deconstruction made literal.</div>
+      </div>
+    </div>
+
+    <div class="card tag-subculture">
+      <div class="card-tag">
+        <span class="label">SUBCULTURAL CODIFICATION</span>
+        <span class="id">N-0214</span>
+      </div>
+      <div class="card-img img-2"></div>
+      <div class="card-body">
+        <div class="card-meta">UK PUNK · 1976–1980 · KING'S ROAD</div>
+        <div class="card-hook">Punk's afterlife in luxury houses — forty years of appropriation.</div>
+      </div>
+    </div>
+
+    <div class="card tag-semiotic">
+      <div class="card-tag">
+        <span class="label">SEMIOTIC SABOTAGE</span>
+        <span class="id">N-0301</span>
+      </div>
+      <div class="card-img img-3"></div>
+      <div class="card-body">
+        <div class="card-meta">YOHJI YAMAMOTO · AW86 · PARIS</div>
+        <div class="card-hook">When black became a position — silence as a Western legibility test.</div>
+      </div>
+    </div>
+
+    <div class="card tag-corporeal">
+      <div class="card-tag">
+        <span class="label">CORPOREAL INTERVENTION</span>
+        <span class="id">N-0418</span>
+      </div>
+      <div class="card-img img-4"></div>
+      <div class="card-body">
+        <div class="card-meta">RAF SIMONS · AW01 · "RIOT, RIOT, RIOT"</div>
+        <div class="card-hook">The teenage boy as cultural archive — bombers, balaclavas, and a generation seen for the first time.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="sec-head">
+    <div>
+      <div class="sec-eye">// METHOD</div>
+      <div class="sec-title">How The Lexicon works</div>
+    </div>
+  </div>
+  <div class="how">
+    <div class="how-step">
+      <div class="num"><span>01</span><span>RESEARCH</span></div>
+      <h3>Trace any lineage.</h3>
+      <p>Search by brand, era, designer, or analytical category. Every entry is sourced, citable, and indexed by the editorial framework — not just the maker.</p>
+      <div class="term">↳ <span>Provenance</span> · where it came from</div>
+    </div>
+    <div class="how-step">
+      <div class="num"><span>02</span><span>CONNECT</span></div>
+      <h3>See the references.</h3>
+      <p>The Nexus on every entry maps the visual, intellectual, and historical references it draws from — and the work it has gone on to influence.</p>
+      <div class="term">↳ <span>Nexus</span> · the connections between entries</div>
+    </div>
+    <div class="how-step">
+      <div class="num"><span>03</span><span>ARCHIVE</span></div>
+      <h3>Build your own.</h3>
+      <p>Sign in to save entries into folders, annotate them, and generate footnotes in Chicago, MLA, APA, Harvard, BibTeX, or permalink format.</p>
+      <div class="term">↳ <span>Folder</span> · your saved collection</div>
+    </div>
+  </div>
+
+  <!-- WHO IT'S FOR -->
+  <div class="who">
+    <div class="who-head">
+      <div class="ttl">For people who take<br>fashion seriously.</div>
+      <div class="lead">The Lexicon is built for the people who do the work — designers, students, critics, costume teams, and stylists who need references that hold up to scrutiny. Free to browse; sign in to save.</div>
+    </div>
+    <div class="who-grid">
+      <div class="who-cell">
+        <div class="role">DESIGNERS</div>
+        <div class="use">Reference checks. Avoid accidental repeats. Find lineage for new ideas.</div>
+      </div>
+      <div class="who-cell">
+        <div class="role">STUDENTS</div>
+        <div class="use">Citable sources for dissertations, essays, and critical writing.</div>
+      </div>
+      <div class="who-cell">
+        <div class="role">STYLISTS</div>
+        <div class="use">Build moodboards anchored in real history, not Pinterest drift.</div>
+      </div>
+      <div class="who-cell">
+        <div class="role">COSTUME</div>
+        <div class="use">Period-accurate references for film, television, and theatre.</div>
+      </div>
+      <div class="who-cell">
+        <div class="role">CRITICS</div>
+        <div class="use">Fact-check lineage. Win arguments. Find the original.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="brand-block">THE LEXICON</div>
+      <div class="blurb">A research archive for fashion history and visual culture. Built in London.</div>
+    </div>
+    <div>
+      <h4>Archive</h4>
+      <a href="#">Browse</a><a href="#">Research Terminal</a><a href="#">Essays</a><a href="#">Methodology</a><a href="#">Index View</a>
+    </div>
+    <div>
+      <h4>Account</h4>
+      <a href="#">Sign in</a><a href="#">Folders</a><a href="#">Citations</a><a href="#">Pricing</a><a href="#">Institutional</a>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <a href="#" style="color:#888">One essay a month. No spam.</a>
+      <input class="news-input" placeholder="YOUR EMAIL"/>
+    </div>
+    <div class="footer-bottom">
+      <span>© THE LEXICON · LONDON · MMXXIV</span>
+      <span>PRIVACY · TERMS · COOKIES · ACCESSIBILITY</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

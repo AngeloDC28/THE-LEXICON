@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — Metadata Hierarchy Inversion</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .frame { width:1440px; padding:var(--s-7); }
+  .head {
+    border-bottom:var(--border-1); padding-bottom:var(--s-5);
+    margin-bottom:var(--s-6);
+    display:flex; justify-content:space-between; align-items:flex-end;
+  }
+  .head h1 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h1); color:var(--c-text-hi);
+    line-height:1.0; letter-spacing:var(--letter-serif-tight);
+    font-weight:500;
+  }
+  .head .sub {
+    font-size:var(--t-mono-sm); letter-spacing:0.3em;
+    color:#888; text-transform:uppercase;
+  }
+
+  .columns { display:grid; grid-template-columns:1fr 1fr; gap:var(--s-6); margin-bottom:var(--s-7); }
+  .col h2 {
+    font-size:var(--t-mono-sm); letter-spacing:0.3em;
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-4);
+    display:flex; gap:var(--s-3); align-items:center;
+  }
+  .col h2 .tag {
+    padding:4px 8px; font-size:9px; font-weight:500;
+  }
+  .col.bef h2 .tag { background:#4a1414; color:#ff8888; }
+  .col.aft h2 .tag { background:#143a14; color:#88ff88; }
+  .col-blurb {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#aaa; line-height:1.55;
+    margin-bottom:var(--s-5);
+  }
+
+  /* BEFORE — designer-first card */
+  .card-before {
+    border:var(--border-1); overflow:hidden; max-width:340px;
+    background:var(--c-bg-alt);
+  }
+  .card-before .img {
+    aspect-ratio:4/5;
+    background:linear-gradient(135deg, #1f1414 0%, #2d1a1a 60%, #1a0e0e 100%);
+  }
+  .card-before .body { padding:var(--s-4) var(--s-4) var(--s-5); }
+  .card-before .designer {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-sm); letter-spacing:var(--letter-mono);
+    color:var(--c-text-hi); text-transform:uppercase;
+    margin-bottom:var(--s-2);
+  }
+  .card-before .season {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+  }
+  .card-before .hook {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#bbb;
+    margin-top:var(--s-3); line-height:1.5;
+  }
+  .card-before .tag-buried {
+    margin-top:var(--s-4); padding-top:var(--s-3);
+    border-top:1px solid #1a1a1a;
+    font-size:9px; letter-spacing:0.15em; color:#555;
+    text-transform:uppercase;
+  }
+  .card-before .tag-buried em {
+    color:#888; font-style:normal;
+  }
+
+  /* AFTER — tag-first card */
+  .card-after {
+    border:var(--border-1); overflow:hidden; max-width:340px;
+    background:var(--c-bg-alt);
+  }
+  .card-after .tag-strip {
+    padding:var(--s-3) var(--s-4) var(--s-3);
+    border-bottom:1px solid rgba(226,164,160,0.25);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .card-after .tag-strip .label {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-sm); letter-spacing:0.18em;
+    color:var(--c-corporeal); text-transform:uppercase; font-weight:500;
+  }
+  .card-after .tag-strip .id {
+    font-size:var(--t-mono-xs); letter-spacing:0.15em;
+    color:#555;
+  }
+  .card-after .img {
+    aspect-ratio:4/5;
+    background:linear-gradient(135deg, #1f1414 0%, #2d1a1a 60%, #1a0e0e 100%);
+  }
+  .card-after .body { padding:var(--s-4) var(--s-4) var(--s-5); }
+  .card-after .meta {
+    font-size:var(--t-mono-xs); letter-spacing:0.2em;
+    color:#888; text-transform:uppercase;
+  }
+  .card-after .hook {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:var(--c-text-hi);
+    margin-top:var(--s-2); line-height:1.4;
+  }
+
+  /* Annotation arrows */
+  .annotations {
+    border-top:1px solid #1a1a1a; padding-top:var(--s-6);
+  }
+  .ann-grid {
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:var(--s-5);
+  }
+  .ann {
+    border-left:2px solid var(--c-corporeal);
+    padding:var(--s-1) 0 var(--s-1) var(--s-4);
+  }
+  .ann .num {
+    font-size:var(--t-mono-xs); letter-spacing:0.3em;
+    color:var(--c-corporeal); text-transform:uppercase;
+    margin-bottom:var(--s-2);
+  }
+  .ann .ttl {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi);
+    margin-bottom:var(--s-2); line-height:1.2;
+  }
+  .ann p {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#aaa; line-height:1.55;
+  }
+
+  /* Multi-category strip showing the tag landscape */
+  .landscape-section {
+    margin-top:var(--s-6); padding-top:var(--s-6);
+    border-top:1px solid #1a1a1a;
+  }
+  .landscape-section h3 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi);
+    margin-bottom:var(--s-2);
+  }
+  .landscape-section .lead {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-lead); color:#aaa; line-height:1.55;
+    max-width:62ch; margin-bottom:var(--s-6);
+  }
+  .landscape-grid {
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:var(--s-3);
+  }
+  .l-card { border:var(--border-1); }
+  .l-tag {
+    padding:var(--s-3) var(--s-4);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-sm); letter-spacing:0.18em;
+    text-transform:uppercase;
+  }
+  .l-tag .id { font-size:var(--t-mono-xs); color:#555; }
+  .l-img { aspect-ratio:4/5; }
+  .l-body { padding:var(--s-3) var(--s-4) var(--s-4); }
+  .l-meta { font-size:var(--t-mono-xs); letter-spacing:0.18em; color:#888; text-transform:uppercase; }
+  .l-hook { font-family:'EB Garamond', serif; font-size:var(--t-body); color:var(--c-text-hi); margin-top:var(--s-2); line-height:1.35; }
+
+  .l-card.c-corporeal .l-tag { color:var(--c-corporeal); }
+  .l-card.c-corporeal .l-tag { border-bottom-color:rgba(226,164,160,0.25); }
+  .l-card.c-corporeal .l-img { background:linear-gradient(135deg, #1f1414, #2d1a1a 60%, #1a0e0e); }
+
+  .l-card.c-semiotic .l-tag { color:var(--c-semiotic); }
+  .l-card.c-semiotic .l-tag { border-bottom-color:rgba(212,196,160,0.25); }
+  .l-card.c-semiotic .l-img { background:linear-gradient(45deg, #1a1612, #2a221b); }
+
+  .l-card.c-subculture .l-tag { color:var(--c-subculture); }
+  .l-card.c-subculture .l-tag { border-bottom-color:rgba(176,143,196,0.25); }
+  .l-card.c-subculture .l-img { background:linear-gradient(160deg, #0e0e15, #1c1c28); }
+
+  .l-card.c-critique .l-tag { color:var(--c-critique); }
+  .l-card.c-critique .l-tag { border-bottom-color:rgba(217,107,107,0.25); }
+  .l-card.c-critique .l-img { background:linear-gradient(200deg, #1a1010, #0e0606); }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="head">
+    <h1>The metadata <em style="font-style:italic; color:#bbb;">inversion</em>.</h1>
+    <div class="sub">CARD HIERARCHY · BEFORE / AFTER</div>
+  </div>
+
+  <div class="columns">
+    <div class="col bef">
+      <h2><span class="tag">BEFORE</span>DESIGNER-FIRST · CONVENTIONAL</h2>
+      <p class="col-blurb">The traditional fashion-media hierarchy: the designer's name and the season are the headline; the analytical category, if it appears at all, is buried beneath the fold or hidden in a hover state.</p>
+      <div class="card-before">
+        <div class="img"></div>
+        <div class="body">
+          <div class="designer">ALEXANDER McQUEEN</div>
+          <div class="season">SS99 · "NO.13" · LONDON</div>
+          <div class="hook">A single show rewrote the grammar of fashion spectacle.</div>
+          <div class="tag-buried">FILED UNDER: <em>corporeal intervention</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col aft">
+      <h2><span class="tag">AFTER</span>TAG-FIRST · LEXICON HIERARCHY</h2>
+      <p class="col-blurb">The analytical category is promoted to the top of the card, given accent colour, and made immediately scannable. The designer remains visible but is repositioned as metadata, not headline. The argument is the lens.</p>
+      <div class="card-after">
+        <div class="tag-strip">
+          <span class="label">CORPOREAL INTERVENTION</span>
+          <span class="id">N-0142</span>
+        </div>
+        <div class="img"></div>
+        <div class="body">
+          <div class="meta">ALEXANDER McQUEEN · SS99 · "NO.13"</div>
+          <div class="hook">A single show rewrote the grammar of fashion spectacle.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="annotations">
+    <div class="ann-grid">
+      <div class="ann">
+        <div class="num">01 · PROMINENCE</div>
+        <div class="ttl">The lens is the headline.</div>
+        <p>The analytical tag occupies the top of the card with equal visual weight to anything below. It is not a decoration; it is the argument.</p>
+      </div>
+      <div class="ann">
+        <div class="num">02 · COLOUR</div>
+        <div class="ttl">Tags carry a hue.</div>
+        <p>Each category family has an accent colour drawn from a controlled palette. Across a grid, the colours reveal which arguments are present — at a glance.</p>
+      </div>
+      <div class="ann">
+        <div class="num">03 · METADATA</div>
+        <div class="ttl">Designer becomes context.</div>
+        <p>The designer, season, and location remain visible — as monospace metadata below the image. They are the where and when, not the what.</p>
+      </div>
+      <div class="ann">
+        <div class="num">04 · INTERACTION</div>
+        <div class="ttl">Tags are filters.</div>
+        <p>Clicking the tag pivots the archive to show every entry under that category — making the editorial taxonomy navigable, not decorative.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="landscape-section">
+    <h3>The argument, made scannable.</h3>
+    <p class="lead">Four cards across the grid; four analytical positions. The colour-coded tags make the editorial landscape legible before the visitor reads a single word of body copy. This is what it means to <em>subvert the codes</em> of fashion media in the structure itself.</p>
+
+    <div class="landscape-grid">
+      <div class="l-card c-corporeal">
+        <div class="l-tag"><span>CORPOREAL INTERVENTION</span><span class="id">N-0142</span></div>
+        <div class="l-img"></div>
+        <div class="l-body">
+          <div class="l-meta">McQUEEN · SS99</div>
+          <div class="l-hook">The runway becomes site, the body becomes work.</div>
+        </div>
+      </div>
+      <div class="l-card c-semiotic">
+        <div class="l-tag"><span>SEMIOTIC SABOTAGE</span><span class="id">N-0301</span></div>
+        <div class="l-img"></div>
+        <div class="l-body">
+          <div class="l-meta">YAMAMOTO · AW86</div>
+          <div class="l-hook">When black became a position.</div>
+        </div>
+      </div>
+      <div class="l-card c-subculture">
+        <div class="l-tag"><span>SUBCULTURAL CODIFICATION</span><span class="id">N-0214</span></div>
+        <div class="l-img"></div>
+        <div class="l-body">
+          <div class="l-meta">UK PUNK · 1976</div>
+          <div class="l-hook">King's Road to Comme: forty years of appropriation.</div>
+        </div>
+      </div>
+      <div class="l-card c-critique">
+        <div class="l-tag"><span>INSTITUTIONAL CRITIQUE</span><span class="id">N-0089</span></div>
+        <div class="l-img"></div>
+        <div class="l-body">
+          <div class="l-meta">MARGIELA · AW97</div>
+          <div class="l-hook">The tailor's dummy as final garment.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — Mobile v2</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  body { background:#0a0a0a; }
+  .stage {
+    display:grid; grid-template-columns:repeat(3, 390px);
+    gap:24px; padding:24px;
+  }
+  .phone {
+    width:390px; background:#000;
+    border:1px solid #2a2a2a;
+    padding:14px;
+  }
+  .phone-label {
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px; letter-spacing:0.3em; color:#888;
+    text-transform:uppercase; margin-bottom:10px;
+    text-align:center;
+  }
+
+  /* Mobile nav */
+  .m-nav {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:14px 14px; border:1px solid #2a2a2a; margin-bottom:10px;
+  }
+  .m-nav .brand { font-size:12px; letter-spacing:0.18em; color:#fff; font-weight:700; }
+  .m-nav .menu {
+    font-size:11px; letter-spacing:0.2em; color:#bbb;
+  }
+
+  .m-status {
+    padding:8px 12px; border:1px solid #2a2a2a; margin-bottom:10px;
+    font-size:9px; letter-spacing:0.15em; color:#888; text-transform:uppercase;
+    display:flex; justify-content:space-between;
+  }
+  .m-status .dot { display:inline-block; width:5px; height:5px; background:#4ade80; border-radius:50%; margin-right:6px; }
+
+  /* Mode toggle - critical mobile element */
+  .m-mode {
+    display:flex; border:1px solid #444; margin-bottom:10px;
+  }
+  .m-mode button {
+    flex:1; padding:10px; font-size:10px; letter-spacing:0.25em;
+    text-transform:uppercase; background:transparent;
+    color:#aaa; border-right:1px solid #444;
+    font-family:'JetBrains Mono', monospace;
+  }
+  .m-mode button:last-child { border-right:none; }
+  .m-mode button.active { background:#fff; color:#000; }
+
+  /* HOMEPAGE HERO */
+  .m-hero { border:1px solid #2a2a2a; overflow:hidden; margin-bottom:10px; }
+  .m-hero-img {
+    height:240px;
+    background:linear-gradient(135deg, #1a1414 0%, #0f0a0a 50%, #2a1a1a 100%);
+    padding:14px; position:relative;
+    display:flex; flex-direction:column; justify-content:space-between;
+  }
+  .m-hero-img::before {
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle at 40% 50%, rgba(120,80,80,0.2), transparent 60%);
+  }
+  .m-tag-accent {
+    font-size:10px; letter-spacing:0.18em; color:var(--c-corporeal);
+    padding:4px 8px; border:1px solid var(--c-corporeal);
+    text-transform:uppercase; align-self:flex-start;
+    position:relative; z-index:1; background:rgba(0,0,0,0.4);
+  }
+  .m-hero-img .cap {
+    position:relative; z-index:1;
+  }
+  .m-hero-img .cap .ttl {
+    font-family:'EB Garamond', serif;
+    font-size:17px; color:#fff; font-style:italic; line-height:1.2;
+  }
+  .m-hero-img .cap .meta {
+    font-size:9px; letter-spacing:0.18em; color:#a89890;
+    text-transform:uppercase; margin-top:6px;
+  }
+  .m-hero-body { padding:22px 18px; }
+  .m-hero-eye {
+    font-size:9px; letter-spacing:0.22em; color:#888;
+    text-transform:uppercase; margin-bottom:12px;
+  }
+  .m-h1 {
+    font-family:'EB Garamond', serif;
+    font-size:32px; color:#fff; line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  .m-h1 em { font-style:italic; color:#bbb; }
+  .m-hero-sub {
+    font-family:'EB Garamond', serif;
+    font-size:14px; color:#aaa; line-height:1.5;
+    margin-top:12px;
+  }
+  .m-btn-row { display:flex; flex-direction:column; gap:8px; margin-top:20px; }
+  .m-btn {
+    padding:12px; text-align:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px; letter-spacing:0.22em; text-transform:uppercase;
+  }
+  .m-btn-pri { background:#fff; color:#000; }
+  .m-btn-sec { border:1px solid #555; color:#fff; }
+
+  .m-stats {
+    display:grid; grid-template-columns:repeat(3, 1fr);
+    border:1px solid #2a2a2a; margin-bottom:10px;
+  }
+  .m-stat {
+    padding:12px; text-align:center; border-right:1px solid #2a2a2a;
+  }
+  .m-stat:last-child { border-right:none; }
+  .m-stat .n {
+    font-family:'EB Garamond', serif;
+    font-size:18px; color:#fff;
+  }
+  .m-stat .l {
+    font-size:8px; letter-spacing:0.2em; color:#666;
+    margin-top:3px; text-transform:uppercase;
+  }
+
+  .m-sec-head { padding:18px 4px 8px; }
+  .m-sec-eye { font-size:9px; letter-spacing:0.3em; color:#666; text-transform:uppercase; margin-bottom:5px; }
+  .m-sec-ttl { font-family:'EB Garamond', serif; font-size:22px; color:#fff; }
+
+  /* CARD with inverted hierarchy */
+  .m-card { border:1px solid #2a2a2a; margin-bottom:10px; }
+  .m-card-tag {
+    padding:10px 12px;
+    border-bottom:1px solid rgba(226,164,160,0.2);
+    display:flex; justify-content:space-between;
+    font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--c-corporeal);
+  }
+  .m-card-tag .id { color:#555; font-weight:300; letter-spacing:0.12em; }
+  .m-card-tag.t-semiotic { color:var(--c-semiotic); border-bottom-color:rgba(212,196,160,0.2); }
+  .m-card-tag.t-subculture { color:var(--c-subculture); border-bottom-color:rgba(176,143,196,0.2); }
+  .m-card-tag.t-critique { color:var(--c-critique); border-bottom-color:rgba(217,107,107,0.2); }
+  .m-card-img { height:200px; }
+  .ic1 { background:linear-gradient(135deg, #1f1414, #2d1a1a 60%, #1a0e0e); }
+  .ic2 { background:linear-gradient(160deg, #0e0e15, #1c1c28); }
+  .ic3 { background:linear-gradient(45deg, #1a1612, #2a221b); }
+  .m-card-body { padding:12px 14px 14px; }
+  .m-card-meta { font-size:9px; letter-spacing:0.22em; color:#888; text-transform:uppercase; }
+  .m-card-hook { font-family:'EB Garamond', serif; font-size:15px; color:#fff; line-height:1.3; margin-top:6px; }
+
+  /* INDEX VIEW MOBILE */
+  .m-index-banner {
+    border:1px solid #2a2a2a; padding:10px 12px;
+    margin-bottom:10px;
+    font-size:9px; letter-spacing:0.2em; color:#888; text-transform:uppercase;
+  }
+  .m-index-banner .lead { color:#fff; margin-bottom:4px; font-size:10px; letter-spacing:0.25em; }
+
+  .m-chip-row {
+    display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap;
+  }
+  .m-chip {
+    padding:6px 10px; border:1px solid #2a2a2a;
+    font-size:9px; letter-spacing:0.18em; color:#bbb; text-transform:uppercase;
+  }
+  .m-chip.active { background:#1a1a1a; color:#fff; border-color:#444; }
+  .m-filter-trigger {
+    margin-bottom:10px; padding:12px;
+    border:1px solid #2a2a2a;
+    display:flex; justify-content:space-between;
+    font-size:10px; letter-spacing:0.22em; color:#fff; text-transform:uppercase;
+  }
+
+  /* Index rows on mobile = stacked, not table */
+  .m-row {
+    padding:14px 12px; border:1px solid #2a2a2a;
+    margin-bottom:6px;
+  }
+  .m-row-head {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:6px;
+  }
+  .m-row-id { font-size:9px; letter-spacing:0.18em; color:#555; }
+  .m-row-cites { font-size:9px; letter-spacing:0.18em; color:#4ade80; }
+  .m-row-tag {
+    font-size:9px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--c-corporeal); padding:2px 6px;
+    border:1px solid var(--c-corporeal); display:inline-block;
+    margin-bottom:8px;
+  }
+  .m-row-tag.t-critique { color:var(--c-critique); border-color:rgba(217,107,107,0.4); }
+  .m-row-tag.t-subculture { color:var(--c-subculture); border-color:rgba(176,143,196,0.4); }
+  .m-row-tag.t-semiotic { color:var(--c-semiotic); border-color:rgba(212,196,160,0.4); }
+  .m-row-designer {
+    font-size:11px; letter-spacing:0.18em; color:#fff;
+    text-transform:uppercase; font-family:'JetBrains Mono', monospace;
+  }
+  .m-row-meta {
+    font-family:'EB Garamond', serif; font-size:13px; color:#bbb;
+    margin-top:4px; line-height:1.4; font-style:italic;
+  }
+  .m-row-base {
+    margin-top:8px; padding-top:8px;
+    border-top:1px solid #161616;
+    display:flex; justify-content:space-between;
+    font-size:9px; letter-spacing:0.18em; color:#888; text-transform:uppercase;
+  }
+
+  /* BOTTOM SHEET filter overlay */
+  .m-bottom-sheet {
+    margin-top:10px;
+    border:1px solid #2a2a2a; padding:14px;
+    background:#080808;
+  }
+  .m-bs-head {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-bottom:14px;
+  }
+  .m-bs-head .title {
+    font-family:'EB Garamond', serif;
+    font-size:18px; color:#fff;
+  }
+  .m-bs-head .close { font-size:11px; color:#888; letter-spacing:0.2em; }
+  .m-bs-section { margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid #161616; }
+  .m-bs-section h4 {
+    font-size:9px; letter-spacing:0.25em; color:#888;
+    text-transform:uppercase; margin-bottom:8px;
+  }
+  .m-bs-chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .m-bs-actions { display:flex; gap:8px; margin-top:8px; }
+  .m-bs-clear, .m-bs-apply {
+    flex:1; padding:12px; text-align:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size:10px; letter-spacing:0.22em; text-transform:uppercase;
+  }
+  .m-bs-clear { border:1px solid #444; color:#fff; }
+  .m-bs-apply { background:#fff; color:#000; }
+</style>
+</head>
+<body>
+
+<div class="stage">
+
+  <!-- SCREEN 1 — HOMEPAGE -->
+  <div>
+    <div class="phone-label">— HOMEPAGE</div>
+    <div class="phone">
+      <div class="m-nav">
+        <div class="brand">THE LEXICON</div>
+        <div class="menu">☰ MENU</div>
+      </div>
+      <div class="m-status">
+        <span><span class="dot"></span>2,847 ENTRIES · 412 BRANDS</span>
+        <span>EN</span>
+      </div>
+      <div class="m-mode">
+        <button class="active">VISUAL</button>
+        <button>INDEX</button>
+      </div>
+
+      <div class="m-hero">
+        <div class="m-hero-img">
+          <span class="m-tag-accent">CORPOREAL INTERVENTION</span>
+          <div class="cap">
+            <div class="ttl">A single show rewrote the grammar of fashion spectacle.</div>
+            <div class="meta">McQUEEN · SS99 · "NO.13" · N-0142</div>
+          </div>
+        </div>
+        <div class="m-hero-body">
+          <div class="m-hero-eye">— FASHION · VISUAL CULTURE · LINEAGE</div>
+          <h1 class="m-h1">See where every fashion idea <em>actually</em> came from.</h1>
+          <div class="m-hero-sub">A research archive indexed by analytical category, not just designer.</div>
+          <div class="m-btn-row">
+            <div class="m-btn m-btn-pri">BROWSE THE ARCHIVE →</div>
+            <div class="m-btn m-btn-sec">RESEARCH TERMINAL</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-stats">
+        <div class="m-stat"><div class="n">2,847</div><div class="l">Entries</div></div>
+        <div class="m-stat"><div class="n">412</div><div class="l">Brands</div></div>
+        <div class="m-stat"><div class="n">14</div><div class="l">Categories</div></div>
+      </div>
+
+      <div class="m-sec-head">
+        <div class="m-sec-eye">// INDEXED BY ANALYTICAL CATEGORY</div>
+        <div class="m-sec-ttl">Featured entries</div>
+      </div>
+
+      <div class="m-card">
+        <div class="m-card-tag t-critique">
+          <span>INSTITUTIONAL CRITIQUE</span><span class="id">N-0089</span>
+        </div>
+        <div class="m-card-img ic1"></div>
+        <div class="m-card-body">
+          <div class="m-card-meta">MARGIELA · AW97 · STOCKMAN</div>
+          <div class="m-card-hook">The tailor's dummy as final garment — deconstruction made literal.</div>
+        </div>
+      </div>
+
+      <div class="m-card">
+        <div class="m-card-tag t-subculture">
+          <span>SUBCULTURAL CODIFICATION</span><span class="id">N-0214</span>
+        </div>
+        <div class="m-card-img ic2"></div>
+        <div class="m-card-body">
+          <div class="m-card-meta">UK PUNK · 1976–1980 · KING'S ROAD</div>
+          <div class="m-card-hook">Punk's afterlife in luxury houses — forty years of appropriation.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCREEN 2 — INDEX MODE on mobile -->
+  <div>
+    <div class="phone-label">— INDEX MODE (BRUTALIST)</div>
+    <div class="phone">
+      <div class="m-nav">
+        <div class="brand">THE LEXICON</div>
+        <div class="menu">☰ MENU</div>
+      </div>
+      <div class="m-status">
+        <span><span class="dot"></span>INDEX VIEW · 142 FILTERED</span>
+        <span>SR</span>
+      </div>
+      <div class="m-mode">
+        <button>VISUAL</button>
+        <button class="active">INDEX</button>
+      </div>
+
+      <div class="m-index-banner">
+        <div class="lead">— INDEX MODE ACTIVE</div>
+        <span>DENSE TEXTUAL · SCREEN READER OPTIMISED · LARGE TAP TARGETS</span>
+      </div>
+
+      <div class="m-filter-trigger">
+        <span>FILTERS · 2 ACTIVE</span><span>▾</span>
+      </div>
+      <div class="m-chip-row">
+        <div class="m-chip active">CORPOREAL ×</div>
+        <div class="m-chip active">1995–2005 ×</div>
+        <div class="m-chip">SORT: YEAR ↓</div>
+      </div>
+
+      <div class="m-row">
+        <div class="m-row-head">
+          <span class="m-row-id">N-0142</span>
+          <span class="m-row-cites">● 47 CITATIONS</span>
+        </div>
+        <span class="m-row-tag">CORPOREAL INTERVENTION</span>
+        <div class="m-row-designer">ALEXANDER McQUEEN</div>
+        <div class="m-row-meta">SS99 "No.13" — Robotic spraying of Shalom Harlow's dress.</div>
+        <div class="m-row-base">
+          <span>LONDON · 1999</span><span>OPEN ›</span>
+        </div>
+      </div>
+
+      <div class="m-row">
+        <div class="m-row-head">
+          <span class="m-row-id">N-0139</span>
+          <span class="m-row-cites">● 38 CITATIONS</span>
+        </div>
+        <span class="m-row-tag">CORPOREAL INTERVENTION</span>
+        <div class="m-row-designer">COMME des GARÇONS</div>
+        <div class="m-row-meta">SS97 "Lumps &amp; Bumps" — silhouette as anatomical critique.</div>
+        <div class="m-row-base">
+          <span>PARIS · 1997</span><span>OPEN ›</span>
+        </div>
+      </div>
+
+      <div class="m-row">
+        <div class="m-row-head">
+          <span class="m-row-id">N-0418</span>
+          <span class="m-row-cites">● 31 CITATIONS</span>
+        </div>
+        <span class="m-row-tag t-subculture">SUBCULTURAL CODIFICATION</span>
+        <div class="m-row-designer">RAF SIMONS</div>
+        <div class="m-row-meta">AW01 "Riot, Riot, Riot" — adolescent uniform as cultural archive.</div>
+        <div class="m-row-base">
+          <span>ANTWERP · 2001</span><span>OPEN ›</span>
+        </div>
+      </div>
+
+      <div class="m-row">
+        <div class="m-row-head">
+          <span class="m-row-id">N-0089</span>
+          <span class="m-row-cites">● 29 CITATIONS</span>
+        </div>
+        <span class="m-row-tag t-critique">INSTITUTIONAL CRITIQUE</span>
+        <div class="m-row-designer">MARGIELA</div>
+        <div class="m-row-meta">AW97 Stockman — the tailor's dummy as worn final garment.</div>
+        <div class="m-row-base">
+          <span>PARIS · 1997</span><span>OPEN ›</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCREEN 3 — FILTER BOTTOM SHEET + ENTRY -->
+  <div>
+    <div class="phone-label">— FILTER BOTTOM SHEET + ENTRY</div>
+    <div class="phone">
+      <div class="m-bottom-sheet">
+        <div class="m-bs-head">
+          <div class="title">Filter archive</div>
+          <div class="close">CLOSE ×</div>
+        </div>
+
+        <div class="m-bs-section">
+          <h4>ANALYTICAL TAG</h4>
+          <div class="m-bs-chips">
+            <span class="m-chip active">CORPOREAL ×</span>
+            <span class="m-chip">SEMIOTIC</span>
+            <span class="m-chip">SUBCULTURAL</span>
+            <span class="m-chip">CRITIQUE</span>
+            <span class="m-chip">STRATEGY</span>
+          </div>
+        </div>
+
+        <div class="m-bs-section">
+          <h4>YEAR · 1995–2005</h4>
+          <div style="height:30px; background:#0a0a0a; border:1px solid #2a2a2a; position:relative;">
+            <div style="position:absolute; top:0; bottom:0; left:30%; right:30%; background:rgba(226,164,160,0.3);"></div>
+            <div style="position:absolute; top:-4px; bottom:-4px; left:30%; width:2px; background:#fff;"></div>
+            <div style="position:absolute; top:-4px; bottom:-4px; right:30%; width:2px; background:#fff;"></div>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin-top:6px; font-size:9px; color:#888; letter-spacing:0.15em;">
+            <span>1850</span><span>1925</span><span>2000</span><span>2026</span>
+          </div>
+        </div>
+
+        <div class="m-bs-section">
+          <h4>BRAND / DESIGNER</h4>
+          <div class="m-bs-chips">
+            <span class="m-chip">+ ANY DESIGNER</span>
+          </div>
+        </div>
+
+        <div class="m-bs-section" style="border-bottom:none; padding-bottom:0;">
+          <h4>SHAREABLE URL</h4>
+          <div style="padding:8px 10px; background:#000; border:1px solid #2a2a2a; font-size:9px; color:#bbb; font-family:'JetBrains Mono', monospace; letter-spacing:0.05em; overflow:hidden;">
+            /archive?tag=corporeal&amp;y=1995-2005
+          </div>
+        </div>
+
+        <div class="m-bs-actions">
+          <div class="m-bs-clear">CLEAR ALL</div>
+          <div class="m-bs-apply">APPLY · 142 RESULTS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

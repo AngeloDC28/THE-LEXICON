@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — The Nexus</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .frame { width:1440px; padding:var(--s-5); }
+
+  .top-status {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-3) var(--s-4); border:var(--border-1);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:var(--c-text-lo); margin-bottom:var(--s-4);
+  }
+  .top-status .left { display:flex; gap:var(--s-5); align-items:center; }
+  .top-status .dot { width:6px; height:6px; background:#4ade80; border-radius:50%; }
+  .top-status .right { display:flex; gap:var(--s-5); }
+
+  .nav {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-4) var(--s-5); border:var(--border-1); margin-bottom:var(--s-4);
+  }
+  .nav .brand { font-size:var(--t-mono-base); font-weight:700; letter-spacing:var(--letter-mono); color:var(--c-text-hi); }
+  .nav .links { display:flex; gap:var(--s-6); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; color:#bbb; }
+  .nav-btn { padding:var(--s-2) var(--s-4); border:1px solid var(--c-border-hi); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; color:#ddd; }
+  .nav-btn.primary { background:var(--c-text-hi); color:var(--c-bg); border-color:var(--c-text-hi); }
+
+  /* Sub-header */
+  .nexus-header {
+    border:var(--border-1); padding:var(--s-5);
+    margin-bottom:var(--s-4);
+    display:grid; grid-template-columns:1fr auto; gap:var(--s-5);
+    align-items:center;
+  }
+  .nexus-header h1 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi); line-height:1.1;
+  }
+  .nexus-header .sub {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase; margin-top:var(--s-2);
+  }
+  .view-toggle { display:inline-flex; border:1px solid var(--c-border-hi); }
+  .view-toggle button {
+    padding:var(--s-2) var(--s-4); font-size:var(--t-mono-xs);
+    letter-spacing:var(--letter-mono); text-transform:uppercase;
+    background:transparent; color:#aaa; border-right:1px solid var(--c-border-hi);
+  }
+  .view-toggle button:last-child { border-right:none; }
+  .view-toggle button.active { background:var(--c-text-hi); color:var(--c-bg); }
+
+  /* Main layout */
+  .nexus-layout {
+    display:grid; grid-template-columns:240px 1fr 280px;
+    gap:var(--s-4); align-items:flex-start;
+  }
+
+  /* LEFT — relationship filter & legend */
+  .left-panel {
+    border:var(--border-1); padding:var(--s-4);
+  }
+  .left-panel h4 {
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-3);
+    padding-bottom:var(--s-3); border-bottom:1px solid #1a1a1a;
+  }
+  .filter-list { margin-bottom:var(--s-5); }
+  .filter-item {
+    padding:var(--s-2) 0; display:flex; align-items:center; gap:var(--s-3);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#bbb; text-transform:uppercase;
+  }
+  .filter-item .box {
+    width:12px; height:12px; border:1px solid #555;
+    display:flex; align-items:center; justify-content:center;
+    font-size:9px;
+  }
+  .filter-item.active .box {
+    background:var(--c-text-hi); border-color:var(--c-text-hi);
+    color:var(--c-bg);
+  }
+  .filter-item .count { margin-left:auto; color:#666; }
+
+  .legend-row {
+    display:flex; align-items:center; gap:var(--s-3);
+    padding:var(--s-2) 0;
+    font-size:var(--t-mono-xs); letter-spacing:0.18em;
+    color:#aaa; text-transform:uppercase;
+  }
+  .legend-row .swatch { width:18px; height:6px; }
+  .sw-corporeal { background:var(--c-corporeal); }
+  .sw-semiotic { background:var(--c-semiotic); }
+  .sw-subculture { background:var(--c-subculture); }
+  .sw-critique { background:var(--c-critique); }
+  .sw-strategy { background:var(--c-strategy); }
+  .sw-provenance { background:var(--c-provenance); }
+
+  /* CENTRE — the graph */
+  .graph-card {
+    border:var(--border-1); position:relative;
+    background:
+      radial-gradient(ellipse at center, #050505 0%, #000 70%);
+    height:720px; overflow:hidden;
+  }
+  .graph-toolbar {
+    position:absolute; top:var(--s-3); left:var(--s-3); right:var(--s-3);
+    display:flex; justify-content:space-between; z-index:5;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+    pointer-events:none;
+  }
+  .graph-toolbar .l { display:flex; gap:var(--s-3); align-items:center; pointer-events:auto; }
+  .graph-toolbar .crosshair {
+    color:var(--c-corporeal); font-family:'JetBrains Mono', monospace;
+  }
+  .graph-toolbar .r {
+    display:flex; gap:var(--s-2); pointer-events:auto;
+  }
+  .graph-toolbar .ctrl {
+    padding:var(--s-1) var(--s-2); border:1px solid #2a2a2a;
+    background:#050505; color:#aaa;
+  }
+
+  .graph-svg {
+    width:100%; height:100%;
+  }
+
+  /* Floating tooltip on the graph */
+  .node-tooltip {
+    position:absolute; top:55%; left:62%;
+    background:#0a0a0a; border:1px solid var(--c-border-hi);
+    padding:var(--s-3) var(--s-4); min-width:240px;
+    z-index:10; pointer-events:none;
+  }
+  .node-tooltip .nt-tag {
+    font-size:var(--t-mono-xs); letter-spacing:0.2em;
+    text-transform:uppercase; color:var(--c-corporeal);
+    margin-bottom:var(--s-2); padding-bottom:var(--s-2);
+    border-bottom:1px solid #1a1a1a;
+  }
+  .node-tooltip .nt-title {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:var(--c-text-hi);
+    line-height:1.3;
+  }
+  .node-tooltip .nt-meta {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase; margin-top:var(--s-2);
+  }
+  .node-tooltip .nt-rel {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#666; text-transform:uppercase; margin-top:var(--s-2);
+    padding-top:var(--s-2); border-top:1px solid #1a1a1a;
+  }
+  .node-tooltip .nt-rel span { color:var(--c-text-hi); }
+
+  /* RIGHT — node detail panel */
+  .right-panel { border:var(--border-1); padding:var(--s-4); }
+  .right-panel h4 {
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-3);
+    padding-bottom:var(--s-3); border-bottom:1px solid #1a1a1a;
+  }
+  .selected-node {
+    margin-bottom:var(--s-4);
+  }
+  .selected-node .tag {
+    font-size:var(--t-mono-xs); letter-spacing:0.2em;
+    text-transform:uppercase; color:var(--c-corporeal);
+    padding:4px 8px; border:1px solid var(--c-corporeal);
+    display:inline-block; margin-bottom:var(--s-3);
+  }
+  .selected-node .ttl {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:var(--c-text-hi);
+    line-height:1.3; margin-bottom:var(--s-3);
+  }
+  .selected-node .meta {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+  }
+  .conn-list { display:flex; flex-direction:column; gap:0; }
+  .conn {
+    padding:var(--s-2) 0; border-bottom:1px solid #121212;
+    display:flex; justify-content:space-between;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#bbb; text-transform:uppercase;
+  }
+  .conn .rel { color:#666; }
+  .open-entry {
+    margin-top:var(--s-4); padding:var(--s-3);
+    background:var(--c-text-hi); color:var(--c-bg);
+    text-align:center; font-size:var(--t-mono-xs);
+    letter-spacing:var(--letter-mono); text-transform:uppercase;
+  }
+
+  .help-strip {
+    margin-top:var(--s-3);
+    border:var(--border-1); padding:var(--s-3) var(--s-4);
+    display:flex; gap:var(--s-5); justify-content:center;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#666; text-transform:uppercase;
+  }
+  .help-strip span span {
+    display:inline-block; padding:2px 6px; margin-right:4px;
+    border:1px solid #333; color:#aaa;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="top-status">
+    <div class="left">
+      <span class="dot"></span>
+      <span>NEXUS · CORPOREAL INTERVENTION · DEPTH 2</span>
+      <span>///</span>
+      <span>23 NODES · 47 EDGES</span>
+    </div>
+    <div class="right">
+      <span>SHARE: /nexus/mcqueen-ss99-13?d=2</span>
+      <span>EN ▾</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="brand">THE LEXICON</div>
+    <div class="links">
+      <a href="#">BROWSE</a>
+      <a href="#">RESEARCH TERMINAL</a>
+      <a href="#">ESSAYS</a>
+      <a href="#">METHODOLOGY</a>
+      <a href="#">ABOUT</a>
+    </div>
+    <div style="display:flex; gap:var(--s-3);">
+      <div class="nav-btn">⌘K SEARCH</div>
+      <div class="nav-btn primary">SIGN IN</div>
+    </div>
+  </div>
+
+  <div class="nexus-header">
+    <div>
+      <h1>Nexus — anchored at <em style="color:#bbb;">McQueen SS99 "No.13"</em></h1>
+      <div class="sub">FORCE-DIRECTED GRAPH · 23 NODES · 47 EDGES · DEPTH = 2 · FILTER: ALL RELATIONS</div>
+    </div>
+    <div class="view-toggle">
+      <button class="active">GRAPH</button>
+      <button>TIMELINE</button>
+      <button>LIST</button>
+    </div>
+  </div>
+
+  <div class="nexus-layout">
+
+    <!-- LEFT panel -->
+    <aside class="left-panel">
+      <h4>RELATIONSHIP TYPES</h4>
+      <div class="filter-list">
+        <div class="filter-item active"><span class="box">✓</span>REFERENCES<span class="count">12</span></div>
+        <div class="filter-item active"><span class="box">✓</span>INFLUENCES<span class="count">18</span></div>
+        <div class="filter-item active"><span class="box">✓</span>RESPONDS TO<span class="count">7</span></div>
+        <div class="filter-item active"><span class="box">✓</span>APPROPRIATES<span class="count">5</span></div>
+        <div class="filter-item active"><span class="box">✓</span>CITES<span class="count">5</span></div>
+      </div>
+
+      <h4>ANALYTICAL TAGS</h4>
+      <div class="filter-list" style="margin-bottom:0;">
+        <div class="legend-row"><span class="swatch sw-corporeal"></span>CORPOREAL INTERVENTION</div>
+        <div class="legend-row"><span class="swatch sw-semiotic"></span>SEMIOTIC SABOTAGE</div>
+        <div class="legend-row"><span class="swatch sw-subculture"></span>SUBCULTURAL CODIFICATION</div>
+        <div class="legend-row"><span class="swatch sw-critique"></span>INSTITUTIONAL CRITIQUE</div>
+        <div class="legend-row"><span class="swatch sw-strategy"></span>STRATEGIC MINIMALISM</div>
+        <div class="legend-row"><span class="swatch sw-provenance"></span>HISTORICAL PROVENANCE</div>
+      </div>
+    </aside>
+
+    <!-- CENTRE — the graph -->
+    <div class="graph-card">
+      <div class="graph-toolbar">
+        <div class="l">
+          <span class="crosshair">+ 320, -180</span>
+          <span style="color:#666;">ZOOM: 1.0×</span>
+        </div>
+        <div class="r">
+          <span class="ctrl">−</span>
+          <span class="ctrl">FIT</span>
+          <span class="ctrl">+</span>
+          <span class="ctrl">RESET</span>
+          <span class="ctrl">↗ EXPORT SVG</span>
+        </div>
+      </div>
+
+      <!-- SVG GRAPH -->
+      <svg class="graph-svg" viewBox="0 0 1000 720" xmlns="http://www.w3.org/2000/svg">
+        <!-- Edges -->
+        <g stroke="#3a3a3a" stroke-width="1" fill="none" opacity="0.65">
+          <!-- Primary node connections -->
+          <line x1="500" y1="360" x2="690" y2="240" />
+          <line x1="500" y1="360" x2="730" y2="430" />
+          <line x1="500" y1="360" x2="600" y2="540" />
+          <line x1="500" y1="360" x2="370" y2="540" />
+          <line x1="500" y1="360" x2="290" y2="400" />
+          <line x1="500" y1="360" x2="260" y2="240" />
+          <line x1="500" y1="360" x2="440" y2="180" />
+          <line x1="500" y1="360" x2="610" y2="180" />
+          <line x1="500" y1="360" x2="800" y2="350" />
+          <line x1="500" y1="360" x2="180" y2="500" />
+
+          <!-- Secondary node connections -->
+          <line x1="690" y1="240" x2="800" y2="180" stroke="#2a2a2a" />
+          <line x1="690" y1="240" x2="850" y2="290" stroke="#2a2a2a" />
+          <line x1="730" y1="430" x2="850" y2="500" stroke="#2a2a2a" />
+          <line x1="600" y1="540" x2="700" y2="630" stroke="#2a2a2a" />
+          <line x1="370" y1="540" x2="280" y2="600" stroke="#2a2a2a" />
+          <line x1="290" y1="400" x2="180" y2="380" stroke="#2a2a2a" />
+          <line x1="260" y1="240" x2="160" y2="180" stroke="#2a2a2a" />
+          <line x1="440" y1="180" x2="380" y2="90" stroke="#2a2a2a" />
+          <line x1="610" y1="180" x2="660" y2="90" stroke="#2a2a2a" />
+          <line x1="800" y1="350" x2="900" y2="280" stroke="#2a2a2a" />
+        </g>
+
+        <!-- Edges with accent colour for highlighted relationships -->
+        <g stroke="rgba(226,164,160,0.5)" stroke-width="1.5" fill="none">
+          <line x1="500" y1="360" x2="690" y2="240" />
+          <line x1="500" y1="360" x2="370" y2="540" />
+          <line x1="500" y1="360" x2="260" y2="240" />
+        </g>
+
+        <!-- Edge type labels -->
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="#555" letter-spacing="2">
+          <text x="600" y="295">REFERENCES</text>
+          <text x="612" y="395" transform="rotate(40 612 395)">INFLUENCES</text>
+          <text x="430" y="455" transform="rotate(-50 430 455)">INFLUENCES</text>
+          <text x="380" y="305">REFERENCES</text>
+        </g>
+
+        <!-- Secondary nodes -->
+        <g>
+          <!-- ring 1 — direct connections -->
+          <circle cx="690" cy="240" r="10" fill="#1a1414" stroke="rgba(226,164,160,0.7)" stroke-width="1.5" />
+          <circle cx="730" cy="430" r="9" fill="#1a1414" stroke="rgba(226,164,160,0.7)" stroke-width="1.5" />
+          <circle cx="600" cy="540" r="9" fill="#0e0e15" stroke="rgba(176,143,196,0.6)" stroke-width="1.5" />
+          <circle cx="370" cy="540" r="9" fill="#0e0e15" stroke="rgba(176,143,196,0.6)" stroke-width="1.5" />
+          <circle cx="290" cy="400" r="8" fill="#1a1414" stroke="rgba(226,164,160,0.6)" stroke-width="1.5" />
+          <circle cx="260" cy="240" r="10" fill="#1a1612" stroke="rgba(212,196,160,0.6)" stroke-width="1.5" />
+          <circle cx="440" cy="180" r="8" fill="#181818" stroke="rgba(217,107,107,0.6)" stroke-width="1.5" />
+          <circle cx="610" cy="180" r="9" fill="#181818" stroke="rgba(217,107,107,0.6)" stroke-width="1.5" />
+          <circle cx="800" cy="350" r="8" fill="#0a0a0a" stroke="rgba(127,179,163,0.6)" stroke-width="1.5" />
+          <circle cx="180" cy="500" r="7" fill="#1a1612" stroke="rgba(212,196,160,0.5)" stroke-width="1.5" />
+
+          <!-- ring 2 — depth 2 -->
+          <circle cx="800" cy="180" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="850" cy="290" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="850" cy="500" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="700" cy="630" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="280" cy="600" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="180" cy="380" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="160" cy="180" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="380" cy="90" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="660" cy="90" r="5" fill="#0a0a0a" stroke="#444" />
+          <circle cx="900" cy="280" r="5" fill="#0a0a0a" stroke="#444" />
+        </g>
+
+        <!-- Primary node — McQueen SS99 -->
+        <g>
+          <circle cx="500" cy="360" r="32" fill="rgba(226,164,160,0.08)" stroke="none" />
+          <circle cx="500" cy="360" r="22" fill="rgba(226,164,160,0.15)" stroke="none" />
+          <circle cx="500" cy="360" r="14" fill="#e2a4a0" stroke="#fff" stroke-width="1.5" />
+        </g>
+
+        <!-- Labels for primary nodes -->
+        <g font-family="JetBrains Mono, monospace" font-size="10" fill="#fff" letter-spacing="2">
+          <text x="500" y="320" text-anchor="middle">McQUEEN · SS99</text>
+          <text x="500" y="412" text-anchor="middle" fill="#bbb" font-size="9">N-0142 · CORPOREAL</text>
+        </g>
+        <g font-family="JetBrains Mono, monospace" font-size="9" fill="#bbb" letter-spacing="1.5">
+          <text x="710" y="230" text-anchor="start">HORN · HIGH MOON</text>
+          <text x="745" y="425" text-anchor="start">CHALAYAN · AW00</text>
+          <text x="618" y="555" text-anchor="start">PUNK · SUBCULTURE</text>
+          <text x="358" y="555" text-anchor="end">CdG · LUMPS</text>
+          <text x="278" y="395" text-anchor="end">RICK OWENS</text>
+          <text x="248" y="235" text-anchor="end">YAMAMOTO 86</text>
+          <text x="436" y="172" text-anchor="middle">MARGIELA</text>
+          <text x="612" y="172" text-anchor="middle">GAULTIER 84</text>
+          <text x="812" y="345" text-anchor="start">HELMUT LANG</text>
+          <text x="172" y="495" text-anchor="end">KAWAKUBO 82</text>
+        </g>
+      </svg>
+
+      <!-- Floating tooltip showing hovered node -->
+      <div class="node-tooltip">
+        <div class="nt-tag">CORPOREAL INTERVENTION</div>
+        <div class="nt-title">Hussein Chalayan "Afterwords" — furniture as garment.</div>
+        <div class="nt-meta">N-0204 · AW 2000 · LONDON</div>
+        <div class="nt-rel">RELATION: <span>INFLUENCES</span> (this entry was influenced by McQueen SS99)</div>
+      </div>
+    </div>
+
+    <!-- RIGHT panel -->
+    <aside class="right-panel">
+      <h4>SELECTED NODE</h4>
+      <div class="selected-node">
+        <span class="tag">CORPOREAL INTERVENTION</span>
+        <div class="ttl">A single show rewrote the grammar of fashion spectacle.</div>
+        <div class="meta">McQUEEN · SS99 · "NO.13" · N-0142</div>
+      </div>
+
+      <h4>CONNECTIONS · 10</h4>
+      <div class="conn-list">
+        <div class="conn"><span>HORN · HIGH MOON 91</span><span class="rel">REF</span></div>
+        <div class="conn"><span>CHALAYAN · AFTERWORDS</span><span class="rel">INFL</span></div>
+        <div class="conn"><span>V&amp;R · RUSSIAN DOLL</span><span class="rel">INFL</span></div>
+        <div class="conn"><span>KAWAKUBO · LUMPS</span><span class="rel">PARA</span></div>
+        <div class="conn"><span>RICK OWENS · VICIOUS</span><span class="rel">INFL</span></div>
+        <div class="conn"><span>YAMAMOTO · AW86</span><span class="rel">REF</span></div>
+        <div class="conn"><span>MARGIELA · AW97</span><span class="rel">CITES</span></div>
+        <div class="conn"><span>GAULTIER · SS84</span><span class="rel">CITES</span></div>
+        <div class="conn"><span>HELMUT LANG · SS98</span><span class="rel">RESP</span></div>
+        <div class="conn"><span>PUNK · 1976–80</span><span class="rel">REF</span></div>
+      </div>
+
+      <div class="open-entry">OPEN ENTRY ↗</div>
+    </aside>
+
+  </div>
+
+  <div class="help-strip">
+    <span><span>⌥</span> DRAG TO PAN</span>
+    <span><span>+</span><span>−</span> ZOOM</span>
+    <span><span>F</span> FIT</span>
+    <span><span>R</span> RESET</span>
+    <span><span>L</span> LIST VIEW</span>
+    <span><span>T</span> TIMELINE</span>
+    <span><span>⏎</span> OPEN NODE</span>
+    <span><span>↗</span> SHARE URL</span>
+  </div>
+
+</div>
+</body>
+</html>

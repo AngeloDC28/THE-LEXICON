@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — Index View (Brutalist)</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .frame { width:1440px; padding:var(--s-5); }
+
+  /* Top status & nav reused from homepage */
+  .top-status {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-3) var(--s-4); border:var(--border-1);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:var(--c-text-lo);
+    margin-bottom:var(--s-4);
+  }
+  .top-status .left { display:flex; gap:var(--s-5); align-items:center; }
+  .top-status .dot { width:6px; height:6px; background:#4ade80; border-radius:50%; }
+  .top-status .right { display:flex; gap:var(--s-5); }
+
+  .nav {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-4) var(--s-5); border:var(--border-1);
+    margin-bottom:var(--s-4);
+  }
+  .nav .brand {
+    font-size:var(--t-mono-base); font-weight:700;
+    letter-spacing:var(--letter-mono); color:var(--c-text-hi);
+  }
+  .nav .links { display:flex; gap:var(--s-6); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; color:#bbb; }
+  .nav .actions { display:flex; gap:var(--s-3); }
+  .nav-btn { padding:var(--s-2) var(--s-4); border:1px solid var(--c-border-hi); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; color:#ddd; }
+  .nav-btn.primary { background:var(--c-text-hi); color:var(--c-bg); border-color:var(--c-text-hi); }
+
+  .mode-toggle { display:inline-flex; border:1px solid var(--c-border-hi); margin-right:var(--s-3); }
+  .mode-toggle button { padding:var(--s-2) var(--s-4); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; background:transparent; color:#aaa; border-right:1px solid var(--c-border-hi); }
+  .mode-toggle button:last-child { border-right:none; }
+  .mode-toggle button.active { background:var(--c-text-hi); color:var(--c-bg); }
+  .mode-toggle button .kbd { margin-left:var(--s-2); font-size:9px; opacity:0.6; padding:1px 4px; border:1px solid currentColor; }
+
+  /* Section title — make clear this is a deliberate brutalist mode */
+  .index-banner {
+    border:var(--border-1); padding:var(--s-4) var(--s-5);
+    margin-bottom:var(--s-4); display:flex;
+    justify-content:space-between; align-items:center;
+    background:#040404;
+  }
+  .index-banner .l { display:flex; align-items:center; gap:var(--s-4); }
+  .index-banner .mode-label {
+    font-size:var(--t-mono-sm); letter-spacing:0.3em;
+    color:var(--c-text-hi); text-transform:uppercase;
+  }
+  .index-banner .desc {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+  }
+  .index-banner .shortcuts {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+    display:flex; gap:var(--s-4);
+  }
+  .index-banner .shortcuts span span {
+    display:inline-block; padding:2px 6px; margin-right:4px;
+    border:1px solid #444; color:#ccc; font-weight:500;
+  }
+
+  /* Filter row */
+  .filter-row {
+    display:flex; gap:var(--s-2); margin-bottom:var(--s-4);
+    flex-wrap:wrap;
+  }
+  .chip {
+    border:var(--border-1); padding:var(--s-2) var(--s-3);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#bbb; text-transform:uppercase;
+    display:flex; align-items:center; gap:6px;
+  }
+  .chip.active { background:#1a1a1a; color:var(--c-text-hi); border-color:#444; }
+  .chip .x { color:#666; font-weight:300; }
+  .chip.search {
+    background:transparent; flex:1; max-width:300px;
+    color:#666;
+  }
+  .chip.search::before { content:"/  "; color:#444; }
+
+  /* THE TABLE — the brutalist index view itself */
+  .index-table {
+    width:100%; border-collapse:collapse;
+    border:var(--border-1); background:var(--c-bg);
+    font-family:'JetBrains Mono', monospace;
+  }
+  .index-table thead {
+    background:#080808;
+    border-bottom:1px solid var(--c-border-hi);
+  }
+  .index-table th {
+    text-align:left; padding:var(--s-3) var(--s-3);
+    font-size:var(--t-mono-xs); letter-spacing:0.22em;
+    color:#888; text-transform:uppercase; font-weight:400;
+    border-right:1px solid #1a1a1a;
+    position:relative;
+  }
+  .index-table th:last-child { border-right:none; }
+  .index-table th .sort {
+    margin-left:6px; color:#555; font-size:10px;
+  }
+  .index-table th .sort.active { color:#fff; }
+  .index-table tbody tr {
+    border-bottom:1px solid #161616;
+  }
+  .index-table tbody tr:hover {
+    background:#0c0c0c; cursor:pointer;
+  }
+  .index-table tbody tr.focused {
+    background:#1a1a1a;
+    outline:2px solid var(--c-text-hi);
+    outline-offset:-2px;
+  }
+  .index-table td {
+    padding:var(--s-3); font-size:var(--t-mono-sm);
+    color:#ccc; vertical-align:top;
+    border-right:1px solid #121212;
+  }
+  .index-table td:last-child { border-right:none; }
+
+  .td-id { color:#666; }
+  .td-designer { color:var(--c-text-hi); }
+  .td-year { color:#aaa; }
+  .td-season { color:#888; letter-spacing:0.1em; }
+  .td-tag {
+    letter-spacing:0.15em; text-transform:uppercase;
+    font-size:var(--t-mono-xs); padding:2px 8px;
+    display:inline-block; border:1px solid;
+  }
+  .td-tag.corporeal   { color:var(--c-corporeal);  border-color:rgba(226,164,160,0.4); }
+  .td-tag.semiotic    { color:var(--c-semiotic);   border-color:rgba(212,196,160,0.4); }
+  .td-tag.subculture  { color:var(--c-subculture); border-color:rgba(176,143,196,0.4); }
+  .td-tag.critique    { color:var(--c-critique);   border-color:rgba(217,107,107,0.4); }
+  .td-tag.strategy    { color:var(--c-strategy);   border-color:rgba(127,179,163,0.4); }
+  .td-tag.provenance  { color:var(--c-provenance); border-color:rgba(196,168,122,0.4); }
+  .td-prov { color:#aaa; font-family:'EB Garamond', serif; font-style:italic; font-size:var(--t-body); }
+  .td-status { color:#888; font-size:var(--t-mono-xs); letter-spacing:0.15em; }
+  .td-status.cited { color:#4ade80; }
+  .td-status.draft { color:#facc15; }
+
+  /* Footer toolbar */
+  .toolbar {
+    margin-top:var(--s-4); padding:var(--s-3) var(--s-4);
+    border:var(--border-1);
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+  }
+  .toolbar .pagination span { padding:0 var(--s-3); }
+  .toolbar .pagination span.active { color:var(--c-text-hi); }
+
+  /* Keyboard shortcut help */
+  .help-strip {
+    margin-top:var(--s-3);
+    border:var(--border-1); padding:var(--s-3) var(--s-4);
+    display:flex; gap:var(--s-5); justify-content:center;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#666; text-transform:uppercase;
+  }
+  .help-strip span span {
+    display:inline-block; padding:2px 6px; margin-right:4px;
+    border:1px solid #333; color:#aaa; font-weight:500;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="top-status">
+    <div class="left">
+      <span class="dot"></span>
+      <span>INDEX VIEW</span><span>///</span>
+      <span>2,847 ENTRIES · FILTERED: 142</span>
+    </div>
+    <div class="right">
+      <span>SCREEN READER OPTIMISED</span>
+      <span>EN ▾</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="brand">THE LEXICON</div>
+    <div class="links">
+      <a href="#">BROWSE</a>
+      <a href="#">RESEARCH TERMINAL</a>
+      <a href="#">ESSAYS</a>
+      <a href="#">METHODOLOGY</a>
+      <a href="#">ABOUT</a>
+    </div>
+    <div class="actions">
+      <div class="mode-toggle">
+        <button>VISUAL <span class="kbd">V</span></button>
+        <button class="active">INDEX <span class="kbd">I</span></button>
+      </div>
+      <div class="nav-btn">⌘K SEARCH</div>
+      <div class="nav-btn primary">SIGN IN</div>
+    </div>
+  </div>
+
+  <!-- Mode banner -->
+  <div class="index-banner">
+    <div class="l">
+      <span class="mode-label">— INDEX</span>
+      <span class="desc">DENSE TEXTUAL MODE · KEYBOARD NAVIGABLE · SCREEN READER OPTIMISED</span>
+    </div>
+    <div class="shortcuts">
+      <span><span>↑</span><span>↓</span> NAVIGATE</span>
+      <span><span>⏎</span> OPEN</span>
+      <span><span>/</span> SEARCH</span>
+      <span><span>?</span> HELP</span>
+    </div>
+  </div>
+
+  <!-- Filter chips -->
+  <div class="filter-row">
+    <div class="chip search">SEARCH ENTRIES, TAGS, DESIGNERS…</div>
+    <div class="chip active">TAG: CORPOREAL INTERVENTION <span class="x">×</span></div>
+    <div class="chip active">YEAR: 1995–2005 <span class="x">×</span></div>
+    <div class="chip">+ ADD BRAND</div>
+    <div class="chip">+ ADD MOVEMENT</div>
+    <div class="chip">SORT: YEAR ↓</div>
+    <div class="chip" style="margin-left:auto; color:#666;">SAVED VIEWS ▾</div>
+  </div>
+
+  <!-- THE TABLE -->
+  <table class="index-table" role="table" aria-label="Archive entries, text-only index view">
+    <thead>
+      <tr>
+        <th scope="col" style="width:80px;">ID <span class="sort">↕</span></th>
+        <th scope="col" style="width:200px;">DESIGNER / BRAND <span class="sort">↕</span></th>
+        <th scope="col" style="width:70px;">YEAR <span class="sort active">↓</span></th>
+        <th scope="col" style="width:90px;">SEASON <span class="sort">↕</span></th>
+        <th scope="col" style="width:220px;">ANALYTICAL TAG <span class="sort">↕</span></th>
+        <th scope="col">PROVENANCE <span class="sort">↕</span></th>
+        <th scope="col" style="width:120px;">STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="focused" aria-label="Entry N-0142, Alexander McQueen, 1999">
+        <td class="td-id">N-0142</td>
+        <td class="td-designer">ALEXANDER McQUEEN</td>
+        <td class="td-year">1999</td>
+        <td class="td-season">SS · "NO.13"</td>
+        <td><span class="td-tag corporeal">CORPOREAL INTERVENTION</span></td>
+        <td class="td-prov">London. Robotic spraying of Shalom Harlow's dress.</td>
+        <td class="td-status cited">● 47 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0139</td>
+        <td class="td-designer">COMME des GARÇONS</td>
+        <td class="td-year">1997</td>
+        <td class="td-season">SS · "LUMPS &amp; BUMPS"</td>
+        <td><span class="td-tag corporeal">CORPOREAL INTERVENTION</span></td>
+        <td class="td-prov">Kawakubo's silhouette as anatomical critique.</td>
+        <td class="td-status cited">● 38 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0418</td>
+        <td class="td-designer">RAF SIMONS</td>
+        <td class="td-year">2001</td>
+        <td class="td-season">AW · "RIOT, RIOT, RIOT"</td>
+        <td><span class="td-tag subculture">SUBCULTURAL CODIFICATION</span></td>
+        <td class="td-prov">Antwerp. Adolescent uniform as cultural archive.</td>
+        <td class="td-status cited">● 31 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0089</td>
+        <td class="td-designer">MARGIELA</td>
+        <td class="td-year">1997</td>
+        <td class="td-season">AW · STOCKMAN</td>
+        <td><span class="td-tag critique">INSTITUTIONAL CRITIQUE</span></td>
+        <td class="td-prov">Paris. The tailor's dummy as worn final garment.</td>
+        <td class="td-status cited">● 29 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0301</td>
+        <td class="td-designer">YOHJI YAMAMOTO</td>
+        <td class="td-year">1986</td>
+        <td class="td-season">AW</td>
+        <td><span class="td-tag semiotic">SEMIOTIC SABOTAGE</span></td>
+        <td class="td-prov">Paris. Black as Western legibility test.</td>
+        <td class="td-status cited">● 24 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0204</td>
+        <td class="td-designer">HUSSEIN CHALAYAN</td>
+        <td class="td-year">2000</td>
+        <td class="td-season">AW · "AFTER WORDS"</td>
+        <td><span class="td-tag corporeal">CORPOREAL INTERVENTION</span></td>
+        <td class="td-prov">Furniture as garments. Displacement as material.</td>
+        <td class="td-status cited">● 22 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0356</td>
+        <td class="td-designer">HELMUT LANG</td>
+        <td class="td-year">1998</td>
+        <td class="td-season">SS</td>
+        <td><span class="td-tag strategy">STRATEGIC MINIMALISM</span></td>
+        <td class="td-prov">New York. Code of refusal in luxury context.</td>
+        <td class="td-status cited">● 19 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0214</td>
+        <td class="td-designer">UK PUNK (SUBCULTURE)</td>
+        <td class="td-year">1976</td>
+        <td class="td-season">— · KING'S ROAD</td>
+        <td><span class="td-tag subculture">SUBCULTURAL CODIFICATION</span></td>
+        <td class="td-prov">London. McLaren/Westwood SEX → Seditionaries.</td>
+        <td class="td-status cited">● 18 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0277</td>
+        <td class="td-designer">REI KAWAKUBO · CdG</td>
+        <td class="td-year">1982</td>
+        <td class="td-season">AW · "DESTROY"</td>
+        <td><span class="td-tag semiotic">SEMIOTIC SABOTAGE</span></td>
+        <td class="td-prov">Paris debut. "Hiroshima chic" mistranslation.</td>
+        <td class="td-status cited">● 16 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0445</td>
+        <td class="td-designer">JEAN PAUL GAULTIER</td>
+        <td class="td-year">1984</td>
+        <td class="td-season">SS · "AND GOD CREATED MAN"</td>
+        <td><span class="td-tag critique">INSTITUTIONAL CRITIQUE</span></td>
+        <td class="td-prov">Paris. Skirts on men as gender systems audit.</td>
+        <td class="td-status cited">● 14 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0512</td>
+        <td class="td-designer">GARETH PUGH</td>
+        <td class="td-year">2007</td>
+        <td class="td-season">AW</td>
+        <td><span class="td-tag corporeal">CORPOREAL INTERVENTION</span></td>
+        <td class="td-prov">London. Inflated silhouettes as bodily fiction.</td>
+        <td class="td-status">● 12 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0588</td>
+        <td class="td-designer">VIKTOR &amp; ROLF</td>
+        <td class="td-year">1999</td>
+        <td class="td-season">AW · "RUSSIAN DOLL"</td>
+        <td><span class="td-tag corporeal">CORPOREAL INTERVENTION</span></td>
+        <td class="td-prov">Paris. Nine-layer matryoshka on a still model.</td>
+        <td class="td-status">● 11 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0633</td>
+        <td class="td-designer">VETEMENTS</td>
+        <td class="td-year">2016</td>
+        <td class="td-season">AW · DHL T-SHIRT</td>
+        <td><span class="td-tag semiotic">SEMIOTIC SABOTAGE</span></td>
+        <td class="td-prov">Paris. Logistics branding as luxury commodity.</td>
+        <td class="td-status">● 9 CITATIONS</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0701</td>
+        <td class="td-designer">DEMNA · BALENCIAGA</td>
+        <td class="td-year">2022</td>
+        <td class="td-season">SS · "MUD"</td>
+        <td><span class="td-tag critique">INSTITUTIONAL CRITIQUE</span></td>
+        <td class="td-prov">Paris. Trauma as runway, luxury as spectacle.</td>
+        <td class="td-status draft">● UNDER REVIEW</td>
+      </tr>
+      <tr>
+        <td class="td-id">N-0728</td>
+        <td class="td-designer">RICK OWENS</td>
+        <td class="td-year">2014</td>
+        <td class="td-season">SS · "VICIOUS"</td>
+        <td><span class="td-tag corporeal">CORPOREAL INTERVENTION</span></td>
+        <td class="td-prov">Step dancers from Black US sororities as models.</td>
+        <td class="td-status">● 8 CITATIONS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Bottom toolbar -->
+  <div class="toolbar">
+    <span>SHOWING 1–15 OF 142 FILTERED · 2,847 TOTAL</span>
+    <div class="pagination">
+      <span>‹ PREV</span>
+      <span class="active">1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>…</span>
+      <span>10</span>
+      <span>NEXT ›</span>
+    </div>
+    <span>EXPORT: <a href="#" style="color:#bbb;">CSV</a> · <a href="#" style="color:#bbb;">BIBTEX</a></span>
+  </div>
+
+  <!-- Keyboard help -->
+  <div class="help-strip">
+    <span><span>V</span> VISUAL</span>
+    <span><span>I</span> INDEX</span>
+    <span><span>/</span> SEARCH</span>
+    <span><span>⌘K</span> COMMAND</span>
+    <span><span>j</span><span>k</span> ROW</span>
+    <span><span>⏎</span> OPEN</span>
+    <span><span>S</span> SAVE</span>
+    <span><span>C</span> CITE</span>
+    <span><span>?</span> ALL SHORTCUTS</span>
+  </div>
+
+</div>
+</body>
+</html>

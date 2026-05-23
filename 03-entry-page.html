@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>THE LEXICON — Entry: McQueen SS99 No.13</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  .frame { width:1440px; padding:var(--s-5); }
+
+  /* Reuse nav patterns */
+  .top-status {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-3) var(--s-4); border:var(--border-1);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:var(--c-text-lo); margin-bottom:var(--s-4);
+  }
+  .top-status .left { display:flex; gap:var(--s-5); align-items:center; }
+  .top-status .dot { width:6px; height:6px; background:#4ade80; border-radius:50%; }
+  .top-status .right { display:flex; gap:var(--s-5); }
+
+  .nav {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:var(--s-4) var(--s-5); border:var(--border-1);
+    margin-bottom:var(--s-4);
+  }
+  .nav .brand { font-size:var(--t-mono-base); font-weight:700; letter-spacing:var(--letter-mono); color:var(--c-text-hi); }
+  .nav .links { display:flex; gap:var(--s-6); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; color:#bbb; }
+  .nav .actions { display:flex; gap:var(--s-3); }
+  .nav-btn { padding:var(--s-2) var(--s-4); border:1px solid var(--c-border-hi); font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono); text-transform:uppercase; color:#ddd; }
+  .nav-btn.primary { background:var(--c-text-hi); color:var(--c-bg); border-color:var(--c-text-hi); }
+
+  /* Breadcrumb */
+  .crumb {
+    padding:var(--s-3) var(--s-1) var(--s-4);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; text-transform:uppercase;
+    display:flex; gap:var(--s-3); align-items:center;
+  }
+  .crumb .sep { color:#444; }
+  .crumb a { color:#888; }
+  .crumb .current { color:var(--c-text-hi); }
+
+  /* MAIN LAYOUT — three columns */
+  .entry-layout {
+    display:grid; grid-template-columns:280px 1fr 320px;
+    gap:var(--s-5); align-items:flex-start;
+  }
+
+  /* LEFT RAIL — metadata */
+  .meta-rail {
+    border:var(--border-1); padding:var(--s-5);
+    position:sticky; top:var(--s-4);
+  }
+  .meta-rail .accent-tag {
+    font-size:var(--t-mono-sm); letter-spacing:0.2em;
+    text-transform:uppercase; color:var(--c-corporeal);
+    padding:var(--s-2) var(--s-3);
+    border:1px solid var(--c-corporeal);
+    display:inline-block; margin-bottom:var(--s-4);
+  }
+  .meta-rail .entry-id {
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#555; margin-bottom:var(--s-2);
+  }
+  .meta-rail h1 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi);
+    line-height:1.15; font-weight:500;
+    margin-bottom:var(--s-5);
+  }
+  .meta-list { border-top:var(--border-1); margin-bottom:var(--s-4); }
+  .meta-row {
+    padding:var(--s-3) 0; border-bottom:1px solid #161616;
+    display:grid; grid-template-columns:100px 1fr;
+    gap:var(--s-3);
+  }
+  .meta-row .k {
+    font-size:var(--t-mono-xs); letter-spacing:0.18em;
+    color:#666; text-transform:uppercase;
+  }
+  .meta-row .v {
+    font-size:var(--t-mono-sm); color:#ccc;
+  }
+  .meta-row .v.serif {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); line-height:1.4;
+  }
+
+  .meta-actions { display:flex; flex-direction:column; gap:var(--s-2); margin-top:var(--s-4); }
+  .meta-action {
+    padding:var(--s-3) var(--s-4); border:1px solid var(--c-border-hi);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    text-transform:uppercase; color:#ddd;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .meta-action.primary { background:var(--c-text-hi); color:var(--c-bg); border-color:var(--c-text-hi); }
+  .meta-action .kbd {
+    font-size:9px; opacity:0.6; padding:1px 5px; border:1px solid currentColor;
+  }
+
+  /* CENTRE — editorial */
+  .editorial { min-width:0; }
+
+  .ed-image {
+    aspect-ratio:5/4;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(180,140,130,0.2), transparent 50%),
+      linear-gradient(135deg, #1a1414 0%, #0f0a0a 50%, #2a1a1a 100%);
+    margin-bottom:var(--s-4); position:relative;
+    border:var(--border-1);
+  }
+  .ed-image .caption-overlay {
+    position:absolute; bottom:var(--s-3); left:var(--s-4); right:var(--s-4);
+    display:flex; justify-content:space-between;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#a89890; text-transform:uppercase;
+  }
+
+  .ed-toolbar {
+    display:flex; justify-content:space-between; align-items:center;
+    border-bottom:var(--border-1); padding-bottom:var(--s-3);
+    margin-bottom:var(--s-6);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#666; text-transform:uppercase;
+  }
+  .ed-toolbar .controls { display:flex; gap:var(--s-3); }
+  .ed-toolbar .ctrl {
+    padding:var(--s-1) var(--s-2); border:1px solid #2a2a2a;
+    color:#aaa;
+  }
+
+  /* SECTION — Provenance / Critique / Strategy */
+  .section {
+    margin-bottom:var(--s-7);
+  }
+  .section-tag {
+    display:flex; align-items:center; gap:var(--s-3);
+    margin-bottom:var(--s-4);
+    font-size:var(--t-mono-sm); letter-spacing:0.3em;
+    text-transform:uppercase; color:var(--c-corporeal);
+  }
+  .section-tag .num {
+    padding:var(--s-1) var(--s-2);
+    border:1px solid var(--c-corporeal);
+    font-size:var(--t-mono-xs);
+  }
+  .section-tag .line {
+    flex:1; height:1px; background:#1f1f1f;
+  }
+  .section h2 {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h2); color:var(--c-text-hi);
+    font-weight:500; margin-bottom:var(--s-4);
+    line-height:1.1; letter-spacing:var(--letter-serif-tight);
+  }
+  .section p {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#ddd; line-height:1.65;
+    margin-bottom:var(--s-4); max-width:62ch;
+  }
+  .section p .footnote {
+    font-size:0.7em; vertical-align:super; color:var(--c-corporeal);
+    padding:0 2px;
+  }
+  .section blockquote {
+    margin:var(--s-5) 0; padding-left:var(--s-5);
+    border-left:2px solid var(--c-corporeal);
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-lead); color:#ccc; font-style:italic;
+    line-height:1.5; max-width:60ch;
+  }
+  .section blockquote cite {
+    display:block; margin-top:var(--s-3);
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#888; font-style:normal; text-transform:uppercase;
+  }
+
+  .pullquote {
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-h3); color:var(--c-text-hi);
+    font-style:italic; line-height:1.25;
+    padding:var(--s-5) var(--s-6);
+    border-top:1px solid var(--c-corporeal);
+    border-bottom:1px solid var(--c-corporeal);
+    margin:var(--s-6) 0;
+    max-width:60ch;
+  }
+
+  /* RIGHT RAIL — Nexus preview + TOC */
+  .right-rail {
+    display:flex; flex-direction:column; gap:var(--s-4);
+    position:sticky; top:var(--s-4);
+  }
+  .toc { border:var(--border-1); padding:var(--s-4); }
+  .toc h4 {
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-3);
+    padding-bottom:var(--s-3); border-bottom:1px solid #1a1a1a;
+  }
+  .toc a {
+    display:block; padding:var(--s-2) 0;
+    font-family:'EB Garamond', serif;
+    font-size:var(--t-body); color:#bbb; line-height:1.3;
+    border-bottom:1px solid #121212;
+  }
+  .toc a.active {
+    color:var(--c-text-hi); padding-left:var(--s-2);
+    border-left:2px solid var(--c-corporeal);
+    margin-left:-2px;
+  }
+  .toc a:last-child { border-bottom:none; }
+  .toc a .n {
+    font-family:'JetBrains Mono', monospace;
+    font-size:var(--t-mono-xs); color:#555;
+    margin-right:var(--s-2); letter-spacing:0.1em;
+  }
+
+  .nexus-card { border:var(--border-1); padding:var(--s-4); }
+  .nexus-card h4 {
+    font-size:var(--t-mono-xs); letter-spacing:0.25em;
+    color:#888; text-transform:uppercase; margin-bottom:var(--s-3);
+    padding-bottom:var(--s-3); border-bottom:1px solid #1a1a1a;
+    display:flex; justify-content:space-between;
+  }
+  .nexus-mini {
+    aspect-ratio:1; position:relative;
+    background:radial-gradient(circle at 50% 50%, #0a0a0a, #000);
+    margin-bottom:var(--s-3);
+  }
+  .nexus-mini .node {
+    position:absolute; width:8px; height:8px; border-radius:50%;
+    background:#444; border:1px solid #888;
+  }
+  .nexus-mini .node.primary {
+    width:14px; height:14px; background:var(--c-corporeal);
+    border-color:var(--c-corporeal); box-shadow:0 0 12px var(--c-corporeal);
+  }
+  .nexus-mini .line {
+    position:absolute; height:1px; background:#2a2a2a;
+    transform-origin:left center;
+  }
+
+  .nexus-list { display:flex; flex-direction:column; gap:var(--s-2); }
+  .nexus-item {
+    display:flex; justify-content:space-between; padding:var(--s-2) 0;
+    border-bottom:1px solid #121212;
+    font-size:var(--t-mono-xs); letter-spacing:var(--letter-mono);
+    color:#aaa; text-transform:uppercase;
+  }
+  .nexus-item:last-child { border-bottom:none; }
+  .nexus-item .rel {
+    color:#666; font-size:9px;
+  }
+  .nexus-card .full {
+    margin-top:var(--s-3); padding:var(--s-3);
+    background:#0a0a0a; border:1px solid var(--c-border-hi);
+    text-align:center; font-size:var(--t-mono-xs);
+    letter-spacing:var(--letter-mono); color:#ddd;
+    text-transform:uppercase; cursor:pointer;
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <div class="top-status">
+    <div class="left">
+      <span class="dot"></span>
+      <span>ENTRY N-0142 · LOADED</span><span>///</span>
+      <span>47 CITATIONS · 23 NEXUS LINKS</span>
+    </div>
+    <div class="right">
+      <span>READER MODE: <span style="color:#ccc;">R</span></span>
+      <span>EN ▾</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="brand">THE LEXICON</div>
+    <div class="links">
+      <a href="#">BROWSE</a>
+      <a href="#">RESEARCH TERMINAL</a>
+      <a href="#">ESSAYS</a>
+      <a href="#">METHODOLOGY</a>
+      <a href="#">ABOUT</a>
+    </div>
+    <div class="actions">
+      <div class="nav-btn">⌘K SEARCH</div>
+      <div class="nav-btn primary">SIGN IN</div>
+    </div>
+  </div>
+
+  <div class="crumb">
+    <a href="#">ARCHIVE</a><span class="sep">/</span>
+    <a href="#">CORPOREAL INTERVENTION</a><span class="sep">/</span>
+    <a href="#">ALEXANDER McQUEEN</a><span class="sep">/</span>
+    <span class="current">N-0142 · SS99 "NO.13"</span>
+  </div>
+
+  <div class="entry-layout">
+
+    <!-- LEFT RAIL -->
+    <aside class="meta-rail">
+      <span class="accent-tag">CORPOREAL INTERVENTION</span>
+      <div class="entry-id">ENTRY · N-0142</div>
+      <h1>How a single show rewrote the grammar of fashion spectacle.</h1>
+
+      <div class="meta-list">
+        <div class="meta-row"><span class="k">DESIGNER</span><span class="v">Alexander McQueen</span></div>
+        <div class="meta-row"><span class="k">HOUSE</span><span class="v">Alexander McQueen</span></div>
+        <div class="meta-row"><span class="k">YEAR</span><span class="v">1999</span></div>
+        <div class="meta-row"><span class="k">SEASON</span><span class="v">SS · "No.13"</span></div>
+        <div class="meta-row"><span class="k">CITY</span><span class="v">London</span></div>
+        <div class="meta-row"><span class="k">MODEL</span><span class="v">Shalom Harlow</span></div>
+        <div class="meta-row"><span class="k">PHOTOGRAPHER</span><span class="v">Anne Deniau</span></div>
+        <div class="meta-row"><span class="k">SOURCE</span><span class="v serif">Deniau, <em>Love Looks Not With The Eyes</em>, 2012</span></div>
+        <div class="meta-row"><span class="k">CITATIONS</span><span class="v">47 academic · 3 institutional</span></div>
+        <div class="meta-row"><span class="k">UPDATED</span><span class="v">22 May 2026</span></div>
+      </div>
+
+      <div class="meta-actions">
+        <div class="meta-action primary"><span>★ SAVE TO FOLDER</span><span class="kbd">S</span></div>
+        <div class="meta-action"><span>◈ OPEN NEXUS</span><span class="kbd">N</span></div>
+        <div class="meta-action"><span>⁂ CITE THIS ENTRY</span><span class="kbd">C</span></div>
+        <div class="meta-action"><span>↗ SHARE PERMALINK</span><span class="kbd">P</span></div>
+      </div>
+    </aside>
+
+    <!-- CENTRE -->
+    <article class="editorial">
+
+      <div class="ed-image">
+        <div class="caption-overlay">
+          <span>FIG. 01 · SHALOM HARLOW, FINALE</span>
+          <span>© ANNE DENIAU</span>
+        </div>
+      </div>
+
+      <div class="ed-toolbar">
+        <span>~14 MIN READ · 3,142 WORDS · 12 FOOTNOTES</span>
+        <div class="controls">
+          <span class="ctrl">A−</span>
+          <span class="ctrl" style="color:#fff; border-color:#444;">A</span>
+          <span class="ctrl">A+</span>
+          <span class="ctrl">READER MODE</span>
+          <span class="ctrl">PRINT</span>
+        </div>
+      </div>
+
+      <!-- Section 01: Provenance -->
+      <div class="section">
+        <div class="section-tag">
+          <span class="num">01</span>
+          <span>PROVENANCE</span>
+          <span class="line"></span>
+          <span style="color:#555;">~3 MIN</span>
+        </div>
+        <h2>Where the gesture came from.</h2>
+        <p>The 13th collection McQueen showed under his own name closed with a tableau that has, in the twenty-five years since, been reproduced more often than almost any other moment in late twentieth-century fashion. The Gainsborough Studios in Shoreditch, an audience seated on bleachers, and Shalom Harlow standing on a rotating wooden disc in a strapless white cotton dress.<span class="footnote">¹</span> Two industrial robotic arms — leased from a Fiat factory in Turin — flanked her, and as the disc began to turn, they began to spray.</p>
+        <p>The lineage is precise but rarely traced. McQueen's reference for the gesture was Rebecca Horn's <em>High Moon</em> (1991) — two rifles, suspended at face height, periodically firing red paint at each other across the gallery.<span class="footnote">²</span> Horn had spent the 1970s building wearable extension prosthetics, body-mounted apparatus that performed actions <em>on</em> the wearer. McQueen substituted automotive industry for studio practice, and the audience for the artist.</p>
+        <blockquote>
+          The dress is not the work. The dress is the witness.
+          <cite>— McQueen, in conversation with Susannah Frankel, 2003</cite>
+        </blockquote>
+      </div>
+
+      <!-- Pull quote -->
+      <div class="pullquote">
+        "Authorship is delegated to the apparatus; the body becomes site, not subject — a transfer of agency that the next twenty years of fashion would attempt, mostly unsuccessfully, to repeat."
+      </div>
+
+      <!-- Section 02: Critique -->
+      <div class="section">
+        <div class="section-tag">
+          <span class="num">02</span>
+          <span>CRITIQUE</span>
+          <span class="line"></span>
+          <span style="color:#555;">~6 MIN</span>
+        </div>
+        <h2>What the gesture argued.</h2>
+        <p>To read No. 13 as a "spectacle" — the term most often applied to it in fashion press of the period — is to miss the structural argument. McQueen's intervention was not theatrical but procedural: he refused the conventional choreography in which the designer authors the garment and the model presents it.<span class="footnote">³</span> Authorship was delegated to the apparatus; the body became site rather than subject.</p>
+        <p>This is the move that distinguishes the work from its many subsequent imitators. The garments Rei Kawakubo would later produce under conditions of similar process-driven authorship — the 1997 "Lumps and Bumps" collection, in particular — share the analytical framework but diverge in execution. Where Kawakubo defamiliarises the body through the silhouette of the garment itself, McQueen defamiliarises the act of <em>making</em> the garment by inserting the audience into its final composition.<span class="footnote">⁴</span></p>
+      </div>
+
+      <!-- Section 03: Strategy -->
+      <div class="section">
+        <div class="section-tag">
+          <span class="num">03</span>
+          <span>STRATEGY</span>
+          <span class="line"></span>
+          <span style="color:#555;">~5 MIN</span>
+        </div>
+        <h2>What the gesture produced.</h2>
+        <p>The downstream effects are visible across two decades. Hussein Chalayan's <em>Afterwords</em> (AW 2000) takes the McQueen logic — garment as displaced site — and extends it to architecture, dissolving the boundary between furniture and dress. Viktor &amp; Rolf's nine-layer matryoshka finale of AW 1999 stages the same procedural authorship in reverse: the designer adds, the model is still…</p>
+        <p style="color:#666; font-style:italic;">[ Continue reading — 3 more sections, 14 footnotes, 23 Nexus links ]</p>
+      </div>
+
+    </article>
+
+    <!-- RIGHT RAIL -->
+    <aside class="right-rail">
+
+      <div class="toc">
+        <h4>CONTENTS</h4>
+        <a href="#" class="active"><span class="n">01</span>Provenance</a>
+        <a href="#"><span class="n">02</span>Critique</a>
+        <a href="#"><span class="n">03</span>Strategy</a>
+        <a href="#"><span class="n">04</span>Citations</a>
+        <a href="#"><span class="n">05</span>Footnotes</a>
+      </div>
+
+      <div class="nexus-card">
+        <h4><span>NEXUS</span><span style="color:#666;">23 LINKS</span></h4>
+        <div class="nexus-mini">
+          <!-- Lines from primary to nodes (approximate angular layout) -->
+          <div class="line" style="left:50%; top:50%; width:80px; transform:rotate(20deg);"></div>
+          <div class="line" style="left:50%; top:50%; width:90px; transform:rotate(80deg);"></div>
+          <div class="line" style="left:50%; top:50%; width:70px; transform:rotate(150deg);"></div>
+          <div class="line" style="left:50%; top:50%; width:85px; transform:rotate(220deg);"></div>
+          <div class="line" style="left:50%; top:50%; width:75px; transform:rotate(290deg);"></div>
+          <div class="line" style="left:50%; top:50%; width:60px; transform:rotate(335deg);"></div>
+          <!-- Nodes -->
+          <div class="node primary" style="left:calc(50% - 7px); top:calc(50% - 7px);"></div>
+          <div class="node" style="left:78%; top:55%;"></div>
+          <div class="node" style="left:62%; top:80%;"></div>
+          <div class="node" style="left:25%; top:70%;"></div>
+          <div class="node" style="left:18%; top:30%;"></div>
+          <div class="node" style="left:55%; top:18%;"></div>
+          <div class="node" style="left:80%; top:30%;"></div>
+        </div>
+        <div class="nexus-list">
+          <div class="nexus-item"><span>HORN · HIGH MOON</span><span class="rel">REF</span></div>
+          <div class="nexus-item"><span>CHALAYAN · AW00</span><span class="rel">INFL</span></div>
+          <div class="nexus-item"><span>V&amp;R · RUSSIAN DOLL</span><span class="rel">INFL</span></div>
+          <div class="nexus-item"><span>KAWAKUBO · L&amp;B</span><span class="rel">PARA</span></div>
+          <div class="nexus-item"><span>RICK OWENS · VICIOUS</span><span class="rel">INFL</span></div>
+          <div class="nexus-item"><span>WESTWOOD · CAFE SOC.</span><span class="rel">CITES</span></div>
+        </div>
+        <div class="full">OPEN FULL NEXUS →</div>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+</body>
+</html>
