@@ -103,6 +103,40 @@ which runs them all in order.
   when adding new ones — frontmatter comment explaining purpose, zero
   deps when possible, idempotent, resumable.
 
+## Redesign roadmap
+
+THE LEXICON is undergoing a major redesign to position it as a **research terminal** rather than a fashion blog. Full strategy documented in `thelexicon-code-review-v2.md` and visual mockups in `*.png` files.
+
+### Phase 1: Front door redesign (2–3 weeks, current)
+- [ ] Fluid type system: CSS `clamp()` variables for all `font-size` declarations
+- [ ] Inverted metadata hierarchy: Analytical tag → designer → year/season → hook on all cards
+- [ ] Microcopy audit: Update labels, headers, error messages per spec
+- [ ] GDPR cookie control: Add Reject button to consent banner
+- [ ] Keyboard shortcuts: `?` (help), `/` (search), `V` (visual mode), `I` (index mode)
+
+### Phase 2: Research instrument (4–6 weeks)
+- Brutalist Index View: Text-only sortable table mode with keyboard navigation
+- Command palette: `⌘K` / `Ctrl+K` with type-ahead and boolean operators
+- Multi-select filters: URL-encoded, shareable filter combinations
+- WCAG 2.2 AA accessibility audit and fixes
+- Mobile bottom-sheet filters
+- Saved searches (authenticated)
+
+### Phase 3: Entry architecture (6–8 weeks)
+- Per-entry routes: Move from SPA modals to `/entry/{slug}` with SSR + JSON-LD
+- Three-column reading layout: Sticky metadata rail | prose | Nexus preview
+- Print stylesheet: Reader-friendly PDF output
+- Citation export (Chicago, MLA, APA, Harvard, BibTeX)
+- Nexus graph visualization: D3 force-directed with Timeline and List views
+
+### Phase 4: Editorial & business (ongoing)
+- MDX/CMS editorial pipeline
+- Subscription tiers + Stripe
+- Print quarterly product
+- Institutional licensing
+
+**Reference:** See `thelexicon-code-review-v2.md` for complete specifications, HTML contracts, and accessibility requirements. Each mockup HTML file (01–08) can be opened in a browser to see the proposed design.
+
 ## Where to learn more
 
 - **REPORT.md** — current state of the site, what's done, what's still rough,
@@ -111,3 +145,5 @@ which runs them all in order.
 - **content/translations/en.json** — every translatable string in the app.
 - **.github/scripts/** — all the build/check scripts, each with a header
   comment explaining its purpose.
+- **thelexicon-code-review-v2.md** — full redesign specification with phase roadmap
+- **01–08 mockups** — visual reference for each major view and feature

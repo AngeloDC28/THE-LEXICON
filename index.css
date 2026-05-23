@@ -1,9 +1,30 @@
 :root {
+  /* Color palette */
   --bg-base: #FAF9F6;
   --bg-overlay: #FDFCF0;
   --text-main: #000000;
   --border-color: rgba(0,0,0,0.8);
   --font-mono: 'IBM Plex Mono', 'Courier New', 'Consolas', 'Liberation Mono', 'Menlo', 'Noto Sans CJK SC', 'Noto Sans CJK JP', 'Noto Sans CJK KR', 'Microsoft YaHei', 'Meiryo', 'Malgun Gothic', monospace;
+
+  /* Analytical tag palette (inverted metadata hierarchy) */
+  --c-corporeal:  #e2a4a0;
+  --c-semiotic:   #d4c4a0;
+  --c-subculture: #b08fc4;
+  --c-critique:   #d96b6b;
+  --c-strategy:   #7fb3a3;
+  --c-provenance: #c4a87a;
+
+  /* Fluid typography system: scales fluidly between 360px and 1440px viewport */
+  --t-mono-xs:   clamp(0.625rem, 0.55rem + 0.18vw, 0.75rem);
+  --t-mono-sm:   clamp(0.6875rem, 0.6rem + 0.2vw, 0.8125rem);
+  --t-mono-base: clamp(0.75rem, 0.65rem + 0.25vw, 0.9375rem);
+  --t-body:      clamp(0.95rem, 0.85rem + 0.3vw, 1.0625rem);
+  --t-lead:      clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
+  --t-h3:        clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
+  --t-h2:        clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
+  --t-h1:        clamp(2rem, 1.2rem + 3.2vw, 4.5rem);
+  --t-display:   clamp(3rem, 1.5rem + 6vw, 7rem);
+  --measure:     clamp(54ch, 56vw, 68ch);
 }
 html.dark {
   --bg-base: #0A0A0A;
