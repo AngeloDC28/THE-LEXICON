@@ -25,7 +25,7 @@ import { addRecentlyViewed, toggleBookmark, isBookmarked } from './modules/stora
 import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js';
 import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js';
 import { getTranslation, supportedLanguages } from './modules/translations.js';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow } from './modules/render-index-view.js';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory } from './modules/render-index-view.js';
 
 // --- Shared Callbacks ---
 const callbacks = {
@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Initial Render
   refreshUI();
+  renderHero(archiveData);
 
   // Orientation Panel Logic
   var dismissed;
@@ -231,24 +232,9 @@ function refreshChrome() {
   if (btnGrid)     btnGrid.textContent     = t('label_grid_view');
   if (btnTimeline) btnTimeline.textContent = t('label_timeline');
 
-  // --- Orientation panel ---
-  const oriTitle = $$('#orientation-panel h2')[0];
-  if (oriTitle) oriTitle.textContent = t('orientation_title');
-  const oriDesc = $$('#orientation-panel > div > p')[0];
-  if (oriDesc) oriDesc.textContent = t('orientation_desc');
-  const oriHeadings = $$('#orientation-panel h3');
-  const oriParas    = $$('#orientation-panel .grid p');
-  const oriKeys = [
-    ['orientation_col1_title','orientation_col1_desc'],
-    ['orientation_col2_title','orientation_col2_desc'],
-    ['orientation_col3_title','orientation_col3_desc']
-  ];
-  oriKeys.forEach(([hKey, pKey], i) => {
-    if (oriHeadings[i]) oriHeadings[i].textContent = t(hKey);
-    if (oriParas[i])    oriParas[i].textContent    = t(pKey);
-  });
+  // --- Orientation panel (hero layout) — text is baked into HTML; no dynamic i18n needed here ---
   const btnDismissOri = $('btn-dismiss-orientation');
-  if (btnDismissOri) btnDismissOri.textContent = t('orientation_proceed');
+  if (btnDismissOri) btnDismissOri.textContent = t('orientation_proceed') || 'BROWSE THE ARCHIVE →';
 
   // --- Active Entry Detail ---
   const btnSaveFolder       = $('btn-save-to-folder');
@@ -973,6 +959,67 @@ function setupEventListeners() {
 
   // Custom Refresh Event
   document.addEventListener('lexicon-refresh', refreshUI);
+}
+
+// ── HERO (Phase 1 — populates right column with featured entry) ──
+function renderHero(archiveData) {
+  // Update entry count stat
+  const statEl = $('stat-entries');
+  if (statEl) statEl.textContent = archiveData.length.toLocaleString();
+
+  const panel = $('orientation-panel');
+  if (!panel || panel.classList.contains('hidden')) return;
+
+  // Pick the most recently dated entry with a rich critique note for the teaser
+  const candidate = [...archiveData]
+    .filter(e => e.tags?.politics && e.notes?.critique)
+    .sort((a, b) => (b.year || 0) - (a.year || 0))[0]
+    || archiveData[0];
+
+  if (!candidate) return;
+
+  const tagLabelMap = {
+    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
+    subculture: 'Subcultural Codification', semiotic: 'Semiotic Sabotage',
+    strategy: 'Strategic Appropriation', provenance: 'Historical Lineage',
+  };
+
+  const cat = getTagCategory(candidate.tags?.politics || '');
+  const tagLabel = tagLabelMap[cat] || 'Analytical Record';
+  const brand = (candidate.tags?.brand || '').toUpperCase();
+  const year = candidate.year || '—';
+  const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
+  const hook = candidate.notes?.critique
+    ? candidate.notes.critique.replace(/<[^>]+>/g, '').slice(0, 200) + '…'
+    : '';
+
+  const tagEl = $('hero-tag-label');
+  if (tagEl) {
+    tagEl.textContent = tagLabel.toUpperCase();
+    tagEl.style.borderColor = `var(--c-${cat})`;
+    tagEl.style.color = `var(--c-${cat})`;
+  }
+
+  const titleEl = $('hero-featured-title');
+  if (titleEl && candidate.title) titleEl.innerHTML = `<em>${candidate.title}</em>`;
+
+  const brandEl = $('hero-featured-brand');
+  if (brandEl) brandEl.textContent = `${brand} · ${year} · ${season}`;
+
+  const descEl = $('hero-featured-desc');
+  if (descEl) descEl.textContent = hook;
+
+  const idSpan = panel.querySelector('.hero-id');
+  if (idSpan) idSpan.textContent = `N-${candidate.id.slice(0, 4).toUpperCase()}`;
+
+  // Make the right column clickable
+  const rightCol = $('hero-featured-slot');
+  if (rightCol) {
+    rightCol.style.cursor = 'pointer';
+    rightCol.addEventListener('click', () => {
+      window.location.hash = `detail/${candidate.id}/0`;
+    });
+  }
 }
 
 // ── CITATIONS (Phase 3 — multi-format export) ──

@@ -162,6 +162,21 @@ export function renderIndexView(archiveData) {
   const total = archiveData.length;
   const filtered = sortedEntries.length;
 
+  // Build active filter chips for index view header
+  const activeFilterChips = Object.entries(AppState.filters)
+    .filter(([, v]) => v)
+    .flatMap(([key, val]) =>
+      val.split('|').map(v => v.trim()).filter(Boolean).map(v =>
+        `<span class="idx-filter-chip" data-type="${key}" data-val="${v}">${key.toUpperCase()}: ${v} ×</span>`
+      )
+    ).join('');
+  const searchChip = AppState.searchQuery
+    ? `<span class="idx-filter-chip" data-type="search" data-val="">${AppState.searchQuery} ×</span>`
+    : '';
+  const filterBar = (activeFilterChips || searchChip)
+    ? `<div class="index-filter-bar">${searchChip}${activeFilterChips}</div>`
+    : '';
+
   container.innerHTML = `
     <div class="index-banner">
       <div class="index-banner-l">
@@ -175,6 +190,7 @@ export function renderIndexView(archiveData) {
         <span><kbd>?</kbd> HELP</span>
       </div>
     </div>
+    ${filterBar}
 
     <table class="index-table" role="table" aria-label="Archive entries, text-only index view">
       <thead>
@@ -195,6 +211,25 @@ export function renderIndexView(archiveData) {
     tr.addEventListener('click', () => {
       const id = tr.dataset.entryId;
       if (id) window.location.hash = `detail/${id}/0`;
+    });
+  });
+
+  // Bind index filter chip dismissal
+  container.querySelectorAll('.idx-filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const type = chip.dataset.type;
+      if (type === 'search') {
+        AppState.searchQuery = '';
+        const si = document.getElementById('search-input');
+        if (si) si.value = '';
+      } else {
+        const removedVal = chip.dataset.val;
+        const current = AppState.filters[type] || '';
+        const remaining = current.split('|').map(s => s.trim()).filter(v => v && v !== removedVal);
+        AppState.filters[type] = remaining.length ? remaining.join('|') : null;
+      }
+      renderIndexView(_lastArchiveData);
+      document.dispatchEvent(new CustomEvent('lexicon-refresh'));
     });
   });
 

@@ -256,7 +256,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Inter:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;700&display=swap"
     rel="stylesheet"
   />
 
@@ -511,28 +511,44 @@
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
           <!-- Orientation Panel -->
-          <div id="orientation-panel" class="relative mb-1 p-4 md:p-8 bg-black text-white dark:bg-acid dark:text-black font-mono">
-            <button id="btn-close-orientation" type="button" aria-label="Dismiss orientation panel" class="absolute top-3 right-3 md:top-4 md:right-4 text-[14px] leading-none font-bold opacity-70 hover:opacity-100 focus:outline-none focus-visible:ring-1 focus-visible:ring-current px-2 py-1">×</button>
-            <div class="max-w-3xl">
-              <h2 class="text-lg md:text-xl font-bold uppercase tracking-[0.2em] mb-4">Archive Orientation</h2>
-              <p class="text-xs md:text-sm leading-relaxed mb-6 opacity-90">
-                A research archive for fashion history and visual culture. We map how ideas move — references, garments, subcultures, and back again.
-              </p>
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-t border-current pt-6">
-                <div>
-                  <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Research Index</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Query the directory by brand, era, or theory to isolate specific archival nodes.</p>
-                </div>
-                <div>
-                  <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Relational Nexus</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">See how this entry connects to others — references, influences, lineage.</p>
-                </div>
-                <div>
-                  <h3 class="text-[10px] font-bold uppercase tracking-widest mb-2">Archival Collections</h3>
-                  <p class="text-[10px] leading-relaxed opacity-80">Sign in to save entries into private collections for ongoing study.</p>
+          <!-- Hero (Phase 1 redesign — two-column layout matching 01-homepage mockup) -->
+          <div id="orientation-panel" class="hero-panel mb-1">
+            <button id="btn-close-orientation" type="button" aria-label="Dismiss orientation panel" class="hero-close">×</button>
+
+            <!-- Left column: headline + stats + actions -->
+            <div class="hero-col-left">
+              <div>
+                <div class="hero-eyebrow"><span class="hero-bar"></span>FASHION HISTORY · VISUAL CULTURE · LINEAGE</div>
+                <h1 class="hero-headline">See where every fashion idea <em>actually</em> came from.</h1>
+                <p class="hero-sub">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.</p>
+                <div class="hero-actions">
+                  <button id="btn-dismiss-orientation" class="hero-btn-pri" type="button">BROWSE THE ARCHIVE →</button>
+                  <button id="btn-hero-search" class="hero-btn-sec" type="button" onclick="document.getElementById('search-input')?.focus()">RESEARCH TERMINAL</button>
                 </div>
               </div>
-              <button id="btn-dismiss-orientation" class="mt-8 text-[9px] font-bold uppercase tracking-widest border border-current px-4 py-2 hover:bg-white hover:text-black dark:hover:bg-black">[ Proceed to Archive ]</button>
+              <div class="hero-stats">
+                <div class="hero-stat"><div class="hs-num" id="stat-entries">—</div><div class="hs-lbl">Entries</div></div>
+                <div class="hero-stat"><div class="hs-num">412</div><div class="hs-lbl">Brands</div></div>
+                <div class="hero-stat"><div class="hs-num">38</div><div class="hs-lbl">Movements</div></div>
+                <div class="hero-stat"><div class="hs-num">14</div><div class="hs-lbl">Categories</div></div>
+              </div>
+            </div>
+
+            <!-- Right column: featured entry teaser (populated by JS) -->
+            <div class="hero-col-right" id="hero-featured-slot">
+              <div class="hero-featured-meta">
+                <span>FEATURED · ANALYTICAL RECORD</span>
+                <span class="hero-id">N-——</span>
+              </div>
+              <div class="hero-featured-content">
+                <span class="hero-featured-tag" id="hero-tag-label">CORPOREAL INTERVENTION</span>
+                <div class="hero-featured-title" id="hero-featured-title"><em>A single show rewrote the grammar of fashion spectacle.</em></div>
+                <div class="hero-featured-brand" id="hero-featured-brand">— · —</div>
+                <div class="hero-featured-desc" id="hero-featured-desc"></div>
+              </div>
+              <div class="hero-dots">
+                <span class="hero-dot active"></span><span class="hero-dot"></span><span class="hero-dot"></span><span class="hero-dot"></span>
+              </div>
             </div>
           </div>
           <!-- Featured Strip (Phase 1 — dynamically populated from archive) -->
