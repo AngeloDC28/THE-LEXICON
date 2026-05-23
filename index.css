@@ -1578,6 +1578,7 @@ html.dark .active-hotspot-box {
   #mobile-detail-actions,
   #mobile-notes-sheet,
   #cmd-palette,
+  #kbd-help-modal,
   #save-folder-modal,
   #auth-modal,
   #about-modal,
@@ -1602,9 +1603,10 @@ html.dark .active-hotspot-box {
   #related-entries-section .text-\[8px\],
   #aria-announcer { display: none !important; }
 
-  /* When NOT on detail page, just hide grid/timeline (don't print thumbnails) */
+  /* When NOT on detail page, just hide grid/timeline/index (don't print thumbnails) */
   #app-root:not(.detail-mode-active) #grid-view,
   #app-root:not(.detail-mode-active) #timeline-view,
+  #app-root:not(.detail-mode-active) #index-table-view,
   #app-root:not(.detail-mode-active) #folders-view {
     display: none !important;
   }
