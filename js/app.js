@@ -269,7 +269,7 @@ function refreshChrome() {
   if (btnCite) btnCite.textContent = t('btn_cite_entry');
   const citeTitle = $('cite-modal-title');
   if (citeTitle) citeTitle.textContent = t('cite_modal_title');
-  const citeSub = $$('#cite-modal h2 + p')[0];
+  const citeSub = $('cite-modal-subtitle');
   if (citeSub) citeSub.textContent = t('cite_modal_subtitle');
   const citeChicago = $('cite-chicago-label');
   if (citeChicago) citeChicago.textContent = t('cite_chicago_label');
