@@ -26,7 +26,8 @@ export function getFilteredEntries(archiveData) {
     ? (AppState.archivalFolders.find(f => f.id === folId)?.lookIds || []).length
     : 0;
   const yr = AppState.yearRange || { min: 1980, max: 2025 };
-  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}|${yr.min}-${yr.max}`;
+  const bookmarksOnly = !!AppState.bookmarksOnly;
+  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}|${yr.min}-${yr.max}|bm:${bookmarksOnly}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -42,6 +43,15 @@ export function getFilteredEntries(archiveData) {
       const ids = fol.lookIds || [];
       entries = entries.filter(e => ids.includes(e.id));
     }
+  }
+
+  // 1b. Bookmarks-only filter (independent of folders).
+  if (bookmarksOnly) {
+    try {
+      const bm = JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]');
+      const bmSet = new Set(bm);
+      entries = entries.filter(e => bmSet.has(e.id));
+    } catch (e) { /* localStorage unavailable */ }
   }
 
   // 2a. Filter by year range (if narrowed from defaults)

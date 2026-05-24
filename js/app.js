@@ -23,7 +23,7 @@ import { switchView } from './modules/navigation.js';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
 import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js';
 import { initFirebaseAuth, toggleAuth, sendSignInLink, createArchivalFolder, saveToFolder, currentUser, fetchArchivalFolders } from './modules/auth.js';
-import { addRecentlyViewed, toggleBookmark, isBookmarked } from './modules/storage.js';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks } from './modules/storage.js';
 import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js';
 import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js';
 import { getTranslation, supportedLanguages } from './modules/translations.js';
@@ -915,6 +915,17 @@ function setupEventListeners() {
 
   $('btn-bookmark-entry')?.addEventListener('click', () => {
     if (AppState.selectedEntryId) toggleBookmark(AppState.selectedEntryId, callbacks);
+  });
+
+  // Filter the archive to show only bookmarked entries. Toggle to clear.
+  $('btn-show-bookmarks')?.addEventListener('click', () => {
+    AppState.bookmarksOnly = !AppState.bookmarksOnly;
+    const btn = $('btn-show-bookmarks');
+    if (btn) btn.setAttribute('aria-pressed', String(AppState.bookmarksOnly));
+    refreshUI();
+    showToast(AppState.bookmarksOnly
+      ? getTranslation('showing_bookmarks', AppState.language) || 'Showing bookmarked entries'
+      : getTranslation('showing_all', AppState.language) || 'Showing all entries');
   });
 
   $('btn-copy-link')?.addEventListener('click', () => {

@@ -7,7 +7,7 @@ import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
-function getBookmarks() {
+export function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
 }
 

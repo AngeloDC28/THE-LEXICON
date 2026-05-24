@@ -119,6 +119,8 @@ export const translations = {
     "no_results": "No results",
     "no_active_filters": "No active filters",
     "clear_all_filters": "Clear all filters",
+    "showing_bookmarks": "Showing bookmarked entries",
+    "showing_all": "Showing all entries",
     "search_prefix": "SEARCH",
     "cmd_placeholder": "Start typing to search...",
     "cmd_no_results": "No matching records found.",
