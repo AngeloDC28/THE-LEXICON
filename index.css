@@ -2536,7 +2536,7 @@ html.dark .filter-chip { background: #CCFF00; color: #000; border-color: #CCFF00
 #toast {
   position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
   z-index: 99999; padding: 8px 20px;
-  font-size: 10px; font-family: var(--font-mono);
+  font-size: var(--t-mono-xs); font-family: var(--font-mono);
   text-transform: uppercase; letter-spacing: 0.1em;
   background: #000; color: #fff; border: 1px solid rgba(255,255,255,0.2);
   pointer-events: none; animation: toastIn 0.3s ease;
