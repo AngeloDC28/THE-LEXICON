@@ -99,35 +99,41 @@ export function renderImageGrid(archiveData, callbacks) {
 
       const hotspotCount = (imgObj?.hotspots || []).length;
       const hotspotBadge = hotspotCount > 0
-        ? `<div class="absolute top-1 right-1 z-10 bg-acid text-black text-[8px] font-bold font-mono px-1.5 py-0.5 tracking-wider leading-none" title="${hotspotCount} hotspot${hotspotCount > 1 ? 's' : ''}">◉ ${hotspotCount}</div>`
+        ? `<div class="grid-cell-hotspot-badge" aria-label="${hotspotCount} hotspot${hotspotCount > 1 ? 's' : ''}">◉ ${hotspotCount}</div>`
         : '';
+      const season = entry.season || '';
+      const year = entry.year || '----';
+      const metaLine = [brand.toUpperCase(), year, season].filter(Boolean).join(' · ');
       html += `
-        <div class="grid-cell cursor-crosshair group relative overflow-hidden"
+        <div class="grid-cell"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
              tabindex="0"
              role="button"
-             aria-label="${brand} ${entry.year || ''}"
+             aria-label="${brand} ${year} ${tagLabel}"
              style="animation-delay: ${delay}s">
-          <!-- Tag strip (Phase 1: inverted metadata) -->
-          <div class="grid-cell-tag-strip absolute top-0 left-0 right-0 z-5 flex items-center justify-between px-2 py-1 bg-black/60 text-white text-[8px] font-mono uppercase tracking-widest">
-            <span style="color: var(${tagColor}, #999)" class="font-bold">${tagLabel}</span>
-            <span aria-hidden="true" class="text-[7px] opacity-60">${entry.id.slice(0, 8).toUpperCase()}</span>
+          <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
+          <div class="grid-cell-tag-strip">
+            <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
+            <span class="gc-tag-id" aria-hidden="true">${`N-${entry.id.slice(0,6).toUpperCase()}`}</span>
           </div>
-          ${hotspotBadge}
-          <picture>
-            <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
-            <img
-              src="${src}"${imgAttrs(imgObj)}
-              alt="${entry.tags?.brand || entry.id}"
-              loading="lazy"
-              decoding="async"
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
-          </picture>
-          <div class="grid-cell-meta absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-            <div class="text-[9px] font-mono uppercase tracking-widest text-white">${brand}</div>
-            <div class="text-[8px] font-mono text-white/60">${entry.year || '----'} // ${entry.season || 'ARCHIVE'}</div>
+          <!-- Image wrapper -->
+          <div class="grid-cell-img group">
+            ${hotspotBadge}
+            <picture>
+              <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
+              <img
+                src="${src}"${imgAttrs(imgObj)}
+                alt="${brand} ${season} ${year}"
+                loading="lazy"
+                decoding="async"
+                class="transition-transform duration-500 group-hover:scale-105"
+                onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
+            </picture>
+          </div>
+          <!-- Always-visible metadata below image -->
+          <div class="grid-cell-body">
+            <div class="gc-meta">${metaLine}</div>
           </div>
         </div>`;
     });

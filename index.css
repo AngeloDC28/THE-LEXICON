@@ -264,12 +264,73 @@ html.dark .grid-cell:hover img {
   filter: brightness(1);
 }
 
-/* Phase 1: Inverted Metadata Hierarchy — Tag strip at top of grid cell */
+/* Phase 1: Inverted Metadata Hierarchy — tag-first card layout */
 .grid-cell-tag-strip {
-  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   font-size: var(--t-mono-xs);
+  font-family: var(--font-mono);
   line-height: 1.2;
+  background: var(--c-bg-alt, #0d0d0d);
 }
+html:not(.dark) .grid-cell-tag-strip {
+  border-bottom-color: rgba(0,0,0,0.07);
+  background: #f4f4f0;
+}
+.gc-tag-label { font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+.gc-tag-id { font-size: 8px; opacity: 0.35; letter-spacing: 0.12em; }
+
+.grid-cell-img {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.grid-cell-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
+}
+
+.grid-cell-hotspot-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 10;
+  background: #CCFF00;
+  color: #000;
+  font-size: 8px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 2px 5px;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+}
+
+.grid-cell-body {
+  padding: 5px 8px 7px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: var(--c-bg-alt, #0d0d0d);
+}
+html:not(.dark) .grid-cell-body {
+  border-top-color: rgba(0,0,0,0.06);
+  background: #f4f4f0;
+}
+.gc-meta {
+  font-size: var(--t-mono-xs);
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html:not(.dark) .gc-meta { color: rgba(0,0,0,0.4); }
 
 /* ─── Phase 1: Hero Panel ─────────────────────────────────────────── */
 .hero-panel {
@@ -1675,16 +1736,9 @@ html.dark .info-box.active-hotspot {
   transition: background-color 0.12s ease, color 0.12s ease;
 }
 
-/* Mobile grid: centre-column reveals colour + overlay */
+/* Mobile grid: focused card gets accent border */
 @media (max-width: 767px) {
-  .grid-cell.grid-cell--focus img,
-  body.grid-meta-always .grid-cell img {
-    filter: none !important;
-  }
-  .grid-cell.grid-cell--focus .grid-overlay,
-  body.grid-meta-always .grid-cell .grid-overlay {
-    opacity: 1;
-  }
+  .grid-cell.grid-cell--focus { border-color: #CCFF00; }
 }
 
 /* Scrollbar */
@@ -1696,8 +1750,10 @@ html.dark .info-box.active-hotspot {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0;
+  gap: 1px;
+  background: rgba(255,255,255,0.05);
 }
+html:not(.dark) .image-grid { background: rgba(0,0,0,0.04); }
 
 
 
@@ -1713,31 +1769,27 @@ html.dark .info-box.active-hotspot {
 
 .grid-cell {
   position: relative;
-  aspect-ratio: 3/4;
-  overflow: hidden;
   cursor: crosshair;
-  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
               transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
 }
+html:not(.dark) .grid-cell { border-color: rgba(0,0,0,0.06); }
+.grid-cell:hover { border-color: #CCFF00; }
+html:not(.dark) .grid-cell:hover { border-color: #000; }
 
 .grid-cell.loaded {
   opacity: 1;
   transform: translateY(0);
 }
 
-.grid-cell img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.4s ease;
-}
-
 .grid-cell img.loaded {
   opacity: 1;
 }
 
-.grid-cell:hover img {
+.grid-cell .group:hover img {
   transform: scale(1.05);
 }
 
