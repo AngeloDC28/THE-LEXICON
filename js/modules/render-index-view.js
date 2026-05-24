@@ -172,10 +172,14 @@ export function renderIndexView(archiveData, resetPage = false) {
   const sortedEntries = sortEntries(entries, lang);
 
   if (sortedEntries.length === 0) {
+    const hasActiveFilters = Object.values(AppState.filters || {}).some(Boolean) ||
+                             AppState.searchQuery ||
+                             (AppState.yearRange && (AppState.yearRange.min > 1980 || AppState.yearRange.max < 2025));
     container.innerHTML = `
-      <div class="index-empty">
+      <div class="index-empty" role="status" aria-live="polite">
         <div class="index-empty-title">${getTranslation('null_set', lang)}</div>
         <div class="index-empty-desc">${getTranslation('null_set_desc', lang)}</div>
+        ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters-index" class="index-empty-action focus-ring">${getTranslation('clear_all_filters', lang) || 'CLEAR ALL FILTERS'}</button>` : ''}
       </div>`;
     return;
   }
@@ -421,12 +425,12 @@ export function applyViewMode(mode) {
   if (mode === 'index') {
     if (gridView) gridView.classList.add('hidden');
     if (indexView) indexView.classList.remove('hidden');
-    if (visualBtn) visualBtn.classList.remove('active');
-    if (indexBtn) indexBtn.classList.add('active');
+    if (visualBtn) { visualBtn.classList.remove('active'); visualBtn.setAttribute('aria-pressed', 'false'); }
+    if (indexBtn) { indexBtn.classList.add('active'); indexBtn.setAttribute('aria-pressed', 'true'); }
   } else {
     if (gridView) gridView.classList.remove('hidden');
     if (indexView) indexView.classList.add('hidden');
-    if (visualBtn) visualBtn.classList.add('active');
-    if (indexBtn) indexBtn.classList.remove('active');
+    if (visualBtn) { visualBtn.classList.add('active'); visualBtn.setAttribute('aria-pressed', 'true'); }
+    if (indexBtn) { indexBtn.classList.remove('active'); indexBtn.setAttribute('aria-pressed', 'false'); }
   }
 }

@@ -118,6 +118,7 @@ export const translations = {
     "null_set_desc": "Adjust filters or search parameters",
     "no_results": "No results",
     "no_active_filters": "No active filters",
+    "clear_all_filters": "Clear all filters",
     "search_prefix": "SEARCH",
     "cmd_placeholder": "Start typing to search...",
     "cmd_no_results": "No matching records found.",

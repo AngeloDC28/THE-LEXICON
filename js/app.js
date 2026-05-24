@@ -778,13 +778,20 @@ function setupEventListeners() {
     refreshContent();
   }, 300));
 
-  $('btn-clear-directory')?.addEventListener('click', () => {
+  const clearAllFilters = () => {
     AppState.filters = emptyFilters();
     AppState.searchQuery = '';
     AppState.activeFolderId = null;
+    AppState.yearRange = { min: 1980, max: 2025 };
     if ($('search-input')) $('search-input').value = '';
     refreshTaxonomy();
     refreshContent();
+  };
+  $('btn-clear-directory')?.addEventListener('click', clearAllFilters);
+  // Empty-state "Clear filters" buttons are rendered dynamically — delegate.
+  document.addEventListener('click', (e) => {
+    const id = e.target?.id;
+    if (id === 'btn-clear-all-filters' || id === 'btn-clear-all-filters-index') clearAllFilters();
   });
 
   $('btn-clear-folder-filter')?.addEventListener('click', () => {
@@ -1119,10 +1126,10 @@ function setupEventListeners() {
   });
   $('cmd-palette-backdrop')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
 
-  // Cookie Banner (GDPR compliance)
-  var cookieAccepted;
-  try { cookieAccepted = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
-  if (!cookieAccepted) {
+  // Cookie Banner (GDPR compliance) — show until the user makes any choice
+  var cookieChoice;
+  try { cookieChoice = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
+  if (!cookieChoice) {
     $('cookie-banner')?.classList.remove('hidden');
   }
   // Populate cookie notice text from translations
@@ -1135,6 +1142,7 @@ function setupEventListeners() {
     $('cookie-banner')?.classList.add('hidden');
   });
   $('btn-reject-cookies')?.addEventListener('click', () => {
+    try { localStorage.setItem('lexicon-terms-accepted', 'rejected'); } catch(e) {}
     $('cookie-banner')?.classList.add('hidden');
   });
 

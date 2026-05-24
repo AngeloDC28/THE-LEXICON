@@ -103,11 +103,18 @@ export function debounce(func, wait) {
   };
 }
 
+let _toastTimer = null;
 export function showToast(message) {
   const toast = $('toast');
   if (!toast) return;
   toast.textContent = message.toUpperCase();
+  toast.classList.remove('hidden');
   toast.classList.add('visible');
-  setTimeout(() => toast.classList.remove('visible'), 3000);
+  if (_toastTimer) clearTimeout(_toastTimer);
+  _toastTimer = setTimeout(() => {
+    toast.classList.remove('visible');
+    toast.classList.add('hidden');
+    _toastTimer = null;
+  }, 3000);
 }
 

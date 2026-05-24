@@ -1464,6 +1464,26 @@ html:not(.dark) .index-kbd-bar { border-top-color: rgba(0,0,0,0.08); color: rgba
   font-size: var(--t-mono-xs);
   color: #666;
 }
+.index-empty-action {
+  margin-top: 20px;
+  padding: 10px 18px;
+  min-height: 44px;
+  font-size: var(--t-mono-xs);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.index-empty-action:hover {
+  background: #CCFF00;
+  color: #000;
+  border-color: #CCFF00;
+}
 
 @media (max-width: 767px) {
   .index-table th, .index-table td { padding: 8px 6px; font-size: 11px; }

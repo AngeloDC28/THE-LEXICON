@@ -84,6 +84,7 @@ function updateNavStates(viewId) {
     btn.classList.toggle('opacity-100', isActive);
     btn.classList.toggle('opacity-40', !isActive);
     btn.classList.toggle('view-active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
   };
   setActive($('btn-toggle-grid'),     viewId === 'grid');
   setActive($('btn-toggle-timeline'), viewId === 'timeline');

@@ -169,7 +169,16 @@ export function renderEntryList(archiveData, callbacks) {
   }
 
   if (count === 0) {
-    container.innerHTML = `<p class="text-[10px] font-mono text-black/40 dark:text-white/40 p-4">${getTranslation('no_results', AppState.language)}</p>`;
+    const t = (key) => getTranslation(key, AppState.language);
+    const hasActiveFilters = Object.values(AppState.filters || {}).some(Boolean) ||
+                             AppState.searchQuery ||
+                             (AppState.yearRange && (AppState.yearRange.min > 1980 || AppState.yearRange.max < 2025));
+    container.innerHTML = `
+      <div role="status" aria-live="polite" class="p-6 border border-black/10 dark:border-white/10 m-4">
+        <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
+        <p class="text-[11px] font-mono text-black/70 dark:text-white/70 mb-3">${t('no_results')}</p>
+        ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters" class="text-[9px] font-mono font-bold uppercase tracking-[0.2em] border border-current px-3 py-1.5 hover:bg-acid hover:text-black hover:border-acid transition-colors focus-ring">${t('clear_all_filters') || 'CLEAR FILTERS'}</button>` : ''}
+      </div>`;
     return;
   }
 
