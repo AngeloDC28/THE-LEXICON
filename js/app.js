@@ -1013,8 +1013,13 @@ function setupEventListeners() {
     }
     // Generic: Escape closes any open dialog-style modal
     if (e.key === 'Escape') {
-      const openModal = document.querySelector('.modal-backdrop:not(.hidden), [role="dialog"]:not(.hidden)');
-      if (openModal && openModal.id !== 'image-lightbox') {
+      // Connection matrix needs its own close path for body overflow cleanup
+      const matrix = $('connection-matrix');
+      if (matrix && !matrix.classList.contains('hidden')) {
+        closeConnectionMatrix(); restoreFocus(); e.preventDefault(); return;
+      }
+      const openModal = document.querySelector('[role="dialog"]:not(.hidden):not(#image-lightbox)');
+      if (openModal) {
         openModal.classList.add('hidden');
         restoreFocus();
         e.preventDefault();
