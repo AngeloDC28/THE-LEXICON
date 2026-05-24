@@ -938,7 +938,7 @@
         <div class="border-t border-black dark:border-white pt-4">
           <label for="new-folder-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
           <div class="flex gap-2">
-            <input type="text" id="new-folder-name" class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none" placeholder="FOLDER_TITLE" />
+            <input type="text" id="new-folder-name" autocomplete="off" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none" placeholder="FOLDER_TITLE" />
             <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 text-[10px] font-bold uppercase tracking-widest">Create</button>
           </div>
         </div>
@@ -1010,14 +1010,14 @@
         <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
         <div id="auth-form-container">
           <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
-          <form id="auth-form" class="space-y-4">
+          <form id="auth-form" class="space-y-4" novalidate>
             <div>
               <label for="auth-email" class="block text-[10px] font-bold uppercase tracking-widest mb-1">Email Address</label>
-              <input type="email" id="auth-email" class="w-full bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none focus:ring-1" />
+              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none focus:ring-1" />
             </div>
             <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:bg-transparent">Send sign-in link</button>
           </form>
-          <p id="auth-message" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
+          <p id="auth-message" role="alert" aria-live="polite" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
         </div>
         <div id="auth-success-container" class="hidden">
           <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>

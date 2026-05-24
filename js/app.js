@@ -1832,7 +1832,40 @@ function toggleLangDropdown() {
   const isHidden = dd.classList.contains('hidden');
   dd.classList.toggle('hidden');
   if (btn) btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+  // When opening, move focus to the currently selected option (or first).
+  if (isHidden) {
+    const selected = dd.querySelector('[aria-selected="true"]') || dd.querySelector('[role="option"]');
+    if (selected) requestAnimationFrame(() => selected.focus());
+  }
 }
+
+// Keyboard navigation for lang dropdown (listbox semantics).
+document.addEventListener('keydown', (e) => {
+  const dd = document.getElementById('lang-dropdown');
+  if (!dd || dd.classList.contains('hidden')) return;
+  if (!dd.contains(document.activeElement)) return;
+  const options = Array.from(dd.querySelectorAll('[role="option"]'));
+  if (!options.length) return;
+  const idx = options.indexOf(document.activeElement);
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    options[(idx + 1) % options.length].focus();
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    options[(idx - 1 + options.length) % options.length].focus();
+  } else if (e.key === 'Home') {
+    e.preventDefault();
+    options[0].focus();
+  } else if (e.key === 'End') {
+    e.preventDefault();
+    options[options.length - 1].focus();
+  } else if (e.key === 'Escape') {
+    e.preventDefault();
+    dd.classList.add('hidden');
+    document.getElementById('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
+    document.getElementById('btn-lang-toggle')?.focus();
+  }
+});
 
 function toggleLanguage() {
   let idx = supportedLanguages.indexOf(AppState.language);
