@@ -1870,7 +1870,7 @@ function renderLangDropdown() {
     // ARIA spec: role="option" must be a direct child of role="listbox"
     // — no <li> wrapper. The <ul> container is rendered with display:block
     // styling so removing the <li> doesn't change visuals.
-    return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" class="w-full text-left px-3 py-2 text-[10px] font-mono uppercase tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3">
+    return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" class="w-full text-left px-3 py-2 min-h-[44px] text-[10px] font-mono uppercase tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3 focus-ring">
       <span>${name}</span><span class="opacity-50 text-[8px]">${code.toUpperCase()}</span>
     </button>`;
   }).join('');

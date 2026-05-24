@@ -753,6 +753,8 @@ html:not(.dark) .sec-title { color: #0a0a0a; }
 .sec-link:hover { color: #CCFF00; }
 html:not(.dark) .sec-link { color: #999; }
 html:not(.dark) .sec-link:hover { color: #000; }
+.sec-link:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
+html:not(.dark) .sec-link:focus-visible { outline-color: #000; }
 
 /* ─── Phase 1: How It Works ───────────────────────────────────────── */
 .how-section {
@@ -991,6 +993,8 @@ html:not(.dark) .mobile-sheet-title { color: #000; }
 }
 .mobile-sheet-close:hover { color: #fff; }
 html:not(.dark) .mobile-sheet-close:hover { color: #000; }
+.mobile-sheet-close:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
+html:not(.dark) .mobile-sheet-close:focus-visible { outline-color: #000; }
 
 .mobile-sheet-section {
   margin-bottom: 20px;
@@ -1037,6 +1041,8 @@ html:not(.dark) .mbs-chip { border-color: #ccc; color: #555; }
 }
 .mbs-chip:hover:not(.active) { border-color: #fff; color: #fff; }
 html:not(.dark) .mbs-chip:hover:not(.active) { border-color: #000; color: #000; }
+.mbs-chip:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
+html:not(.dark) .mbs-chip:focus-visible { outline-color: #000; }
 
 /* ── Year range slider ─────────────────────────────── */
 .mbs-range-wrap {
@@ -1148,6 +1154,8 @@ html:not(.dark) .mbs-btn-clear { border-color: #ccc; color: #000; }
 .mbs-btn-apply { background: #fff; color: #000; }
 html:not(.dark) .mbs-btn-apply { background: #000; color: #fff; }
 .mbs-btn-apply:hover { background: #CCFF00; }
+.mbs-btn-clear:focus-visible, .mbs-btn-apply:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
+html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:focus-visible { outline-color: #000; }
 
 /* ─── Mobile index view: stacked cards instead of table ─────────────── */
 @media (max-width: 767px) {
@@ -2121,6 +2129,8 @@ html:not(.dark) .cmd-scope-pill { color: #aaa; }
 html:not(.dark) .cmd-scope-pill:hover { color: #444; border-color: rgba(0,0,0,0.15); }
 .cmd-scope-pill.active { color: #CCFF00; border-color: rgba(204,255,0,0.3); }
 html:not(.dark) .cmd-scope-pill.active { color: #000; border-color: rgba(0,0,0,0.4); }
+.cmd-scope-pill:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
+html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
 
 #detail-image {
   display: block;
