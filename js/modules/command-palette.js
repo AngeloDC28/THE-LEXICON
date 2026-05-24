@@ -64,52 +64,159 @@ function matchesEntry(entry, ops, freeText) {
   return true;
 }
 
+// Analytical tag values to surface as "tag" results
+const ALL_POLITICS = [
+  'Queer Theory & Subcultural Systems','Gender Deconstruction & Fluidity',
+  'Body Politics & Corporeal Interventions','Class Dynamics & Anti-Elitism',
+  'Post-Colonialism & Diasporic Narratives','Anti-Consumerism & Institutional Critique',
+  'Activism & Crisis Response','Globalisation & Cultural Hybridity',
+  'Surveillance & Architectural Shielding','Ecological Politics & Resource Extraction',
+  'Labour Politics & Industrial Production','Feminist Theory & The Subverted Gaze',
+  'Racial Identity & Representation','Censorship & Provocation',
+  'Techno-Politics & Digital Identities',
+];
+
+function closePalette() {
+  const modal = $('cmd-palette');
+  if (modal) modal.classList.add('hidden');
+}
+
 export function renderCmdResults(query, archiveData, callbacks) {
   const container = $('cmd-results');
   if (!container) return;
   cmdSelectedIndex = -1;
+
   if (!query.trim()) {
     container.innerHTML = `
       <div class="p-4 text-[10px] opacity-50 uppercase text-center font-mono leading-relaxed">
         ${getTranslation('cmd_placeholder', AppState.language)}<br/>
         <span class="opacity-70">Tip: try <kbd class="border border-current px-1 mx-0.5">tag:corporeal</kbd> <kbd class="border border-current px-1 mx-0.5">year:1999</kbd> <kbd class="border border-current px-1 mx-0.5">designer:mcqueen</kbd></span>
-      </div>`;
+      </div>
+      <div class="cmd-group-head">QUICK COMMANDS</div>
+      ${buildCommandItems(query)}`;
     cmdResults = [];
+    bindCmdActions(container, archiveData, callbacks);
     return;
   }
 
+  const q = query.toLowerCase();
   const { ops, freeText } = parseFieldOps(query);
-  cmdResults = archiveData.filter(e => matchesEntry(e, ops, freeText)).slice(0, 12);
 
-  if (cmdResults.length === 0) {
-    container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_no_results', AppState.language)}</div>`;
+  // 1. Matching analytical tags
+  const matchedTags = ALL_POLITICS.filter(t => t.toLowerCase().includes(q));
+
+  // 2. Matching entries
+  const entryMatches = archiveData.filter(e => matchesEntry(e, ops, freeText)).slice(0, 8);
+  cmdResults = entryMatches;
+
+  // 3. Quick commands
+  const cmds = buildCommandItems(query);
+
+  if (matchedTags.length === 0 && entryMatches.length === 0) {
+    container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_no_results', AppState.language)}</div>
+      <div class="cmd-group-head">QUICK COMMANDS</div>${cmds}`;
+    bindCmdActions(container, archiveData, callbacks);
     return;
   }
 
   let html = '';
-  cmdResults.forEach((entry, i) => {
-    const brand = entry.tags?.brand || '—';
-    const title = entry.title || `${brand} ${entry.season || ''} ${entry.year || ''}`.trim();
-    html += `<div class="cmd-item p-3 px-4 cursor-pointer flex justify-between items-center transition-colors" data-index="${i}" data-entry-id="${entry.id}">
-      <div class="min-w-0 flex-1">
-        <div class="text-xs font-bold uppercase tracking-wide">${brand}</div>
-        <div class="text-[10px] opacity-60 uppercase truncate">${entry.year || '----'} &middot; ${entry.season || 'ARCHIVE'} &middot; ${title}</div>
-      </div>
-      <div class="text-[10px] opacity-40 ml-2 shrink-0">↵</div>
-    </div>`;
-  });
-  container.innerHTML = html;
 
-  // Phase 2: click-to-navigate
-  container.querySelectorAll('.cmd-item').forEach((el) => {
-    el.addEventListener('click', () => {
-      const id = el.dataset.entryId;
-      if (id) {
-        const modal = $('cmd-palette');
-        if (modal) modal.classList.add('hidden');
-        window.location.hash = `detail/${id}/0`;
-      }
+  // Tag group
+  if (matchedTags.length) {
+    const tagCount = archiveData.filter(e => (e.tags?.politics || '').toLowerCase().includes(q)).length;
+    html += `<div class="cmd-group-head">ANALYTICAL TAG</div>`;
+    matchedTags.slice(0, 2).forEach(tag => {
+      const shortTag = tag.split('&')[0].trim();
+      html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex justify-between items-center" data-cmd-action="filter-tag" data-cmd-val="${tag}">
+        <div class="min-w-0 flex-1">
+          <div class="text-[11px] font-bold tracking-wide" style="color:var(--c-corporeal)">${tag}</div>
+          <div class="text-[9px] opacity-50 uppercase tracking-wider mt-0.5">${tagCount} ENTRIES · ${shortTag.toUpperCase()}</div>
+        </div>
+        <div class="text-[9px] opacity-40 ml-2 shrink-0 tracking-wider">TAG</div>
+      </div>`;
     });
+  }
+
+  // Entry group
+  if (entryMatches.length) {
+    html += `<div class="cmd-group-head">ENTRIES</div>`;
+    entryMatches.forEach((entry, i) => {
+      const brand = entry.tags?.brand || '—';
+      const year  = entry.year || '----';
+      const season = entry.season || 'ARCHIVE';
+      const title = entry.title || `${brand} ${season} ${year}`.trim();
+      const id    = `N-${entry.id.slice(0,4).toUpperCase()}`;
+      const politics = (entry.tags?.politics || '').split('&')[0].trim().toUpperCase().slice(0, 28);
+      html += `<div class="cmd-item p-3 px-4 cursor-pointer flex justify-between items-center" data-index="${i}" data-entry-id="${entry.id}">
+        <div class="min-w-0 flex-1">
+          <div class="flex items-baseline gap-2">
+            <span class="text-[8px] opacity-40 font-mono">${id}</span>
+            <span class="text-[11px] font-bold uppercase tracking-wide truncate">${brand}</span>
+          </div>
+          <div class="text-[9px] opacity-50 uppercase tracking-wide mt-0.5 truncate">${year} · ${season} · ${politics}</div>
+        </div>
+        <div class="text-[10px] opacity-40 ml-2 shrink-0">↵</div>
+      </div>`;
+    });
+  }
+
+  // Commands group
+  html += `<div class="cmd-group-head">COMMANDS</div>${cmds}`;
+
+  container.innerHTML = html;
+  bindCmdActions(container, archiveData, callbacks);
+}
+
+function buildCommandItems(query) {
+  const q = query.toLowerCase();
+  const items = [
+    { icon: '⊞', label: 'Switch to VISUAL mode', action: 'visual-mode' },
+    { icon: '≡', label: 'Switch to INDEX mode', action: 'index-mode' },
+    { icon: '⌘', label: 'Open keyboard shortcuts', action: 'kbd-help' },
+  ];
+  if (q) {
+    items.unshift(
+      { icon: '⧉', label: `Filter archive by tag: ${query}`, action: 'filter-tag', val: query },
+    );
+  }
+  return items.map(item => `
+    <div class="cmd-item cmd-cmd-item p-3 px-4 cursor-pointer flex items-center gap-3" data-cmd-action="${item.action}" ${item.val ? `data-cmd-val="${item.val}"` : ''}>
+      <span class="text-[14px] opacity-40">${item.icon}</span>
+      <span class="text-[10px] uppercase tracking-wide">${item.label}</span>
+      <span class="ml-auto text-[9px] opacity-30 tracking-wider">RUN →</span>
+    </div>`).join('');
+}
+
+function bindCmdActions(container, archiveData, callbacks) {
+  // Entry navigation
+  container.querySelectorAll('.cmd-item[data-entry-id]').forEach((el) => {
+    el.addEventListener('click', () => {
+      closePalette();
+      window.location.hash = `detail/${el.dataset.entryId}/0`;
+    });
+  });
+
+  // Tag filter
+  container.querySelectorAll('[data-cmd-action="filter-tag"]').forEach(el => {
+    el.addEventListener('click', () => {
+      closePalette();
+      AppState.filters.politics = el.dataset.cmdVal || '';
+      document.dispatchEvent(new CustomEvent('lexicon-refresh'));
+    });
+  });
+
+  // Mode switches
+  container.querySelector('[data-cmd-action="visual-mode"]')?.addEventListener('click', () => {
+    closePalette();
+    document.dispatchEvent(new CustomEvent('lexicon-set-view-mode', { detail: 'visual' }));
+  });
+  container.querySelector('[data-cmd-action="index-mode"]')?.addEventListener('click', () => {
+    closePalette();
+    document.dispatchEvent(new CustomEvent('lexicon-set-view-mode', { detail: 'index' }));
+  });
+  container.querySelector('[data-cmd-action="kbd-help"]')?.addEventListener('click', () => {
+    closePalette();
+    document.dispatchEvent(new CustomEvent('lexicon-kbd-help'));
   });
 }
 

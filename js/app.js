@@ -783,6 +783,13 @@ function setupEventListeners() {
     renderIndexView(archiveData);
   });
 
+  // Command palette CustomEvents
+  document.addEventListener('lexicon-set-view-mode', (e) => {
+    setViewMode(e.detail);
+    if (e.detail === 'index') renderIndexView(archiveData);
+  });
+  document.addEventListener('lexicon-kbd-help', showKeyboardHelp);
+
   // Sort cycle — content-only (sort label is rebuilt inside refreshContent)
   $('btn-sort-cycle')?.addEventListener('click', () => {
     const modes = ['default', 'year-asc', 'year-desc', 'brand-az'];
