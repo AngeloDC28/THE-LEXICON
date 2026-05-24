@@ -35,6 +35,7 @@ export function renderTimeline(archiveData, callbacks) {
               <picture>
                 <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(e.images && e.images[0])})}">
                 <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
+                     alt="${getTranslation(e.tags.brand, AppState.language)} ${e.year}"
                      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0"
                      loading="lazy"
                      onload="this.classList.add('loaded'); this.closest('.timeline-item').classList.add('loaded');"
