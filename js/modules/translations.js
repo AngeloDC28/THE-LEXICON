@@ -99,7 +99,7 @@ export const translations = {
     "bookmark_removed": "Bookmark removed",
     "btn_reset_system": "Reset System",
     "loading": "LOADING THE LEXICON",
-    "accept_terms": "[ ACCEPT_TERMS ]",
+    "accept_terms": "Accept",
     "cookie_notice": "We use cookies to keep your archive state and folders between visits.",
     "close": "Close",
     "legal_privacy_title": "Privacy Protocol",
