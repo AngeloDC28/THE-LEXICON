@@ -1117,6 +1117,10 @@ function setupEventListeners() {
       e.preventDefault();
       $('btn-copy-link')?.click();
     }
+    if ((e.key === 'b' || e.key === 'B') && AppState.selectedEntryId && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      toggleBookmark(AppState.selectedEntryId, callbacks);
+    }
     // Brutalist Index View: j/k row navigation when index mode is active
     if (AppState.viewMode === 'index') {
       if (e.key === 'j' || e.key === 'ArrowDown') {
