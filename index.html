@@ -750,8 +750,11 @@
             <div id="detail-metadata-sidebar" class="hidden w-[400px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
               <!-- Sticky Note Container (Brutalist Nodes) -->
               <div class="flex items-center justify-between px-6 pt-4 pb-2">
-                <span class="text-[9px] font-mono uppercase tracking-widest text-white/30">Analysis</span>
-                <button class="btn-reading-mode" id="btn-reading-mode" type="button" title="Toggle reading mode">READING MODE</button>
+                <div>
+                  <span class="text-[9px] font-mono uppercase tracking-widest text-white/30">Analysis</span>
+                  <span id="detail-reading-time" class="ml-3 text-[8px] font-mono opacity-20 tracking-wider"></span>
+                </div>
+                <button class="btn-reading-mode" id="btn-reading-mode" type="button" aria-label="Toggle reading mode" aria-pressed="false">READING MODE</button>
               </div>
               <div id="sticky-note-container" class="flex flex-col gap-6 p-6">
                 <!-- Nodes injected by JS -->

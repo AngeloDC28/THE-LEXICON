@@ -241,6 +241,17 @@ function renderBrutalistNodes(entry) {
     }
   });
 
+  // Show reading time estimate in sidebar header
+  const readingEl = document.getElementById('detail-reading-time');
+  if (readingEl) {
+    const allText = ['provenance', 'critique', 'strategy']
+      .map(k => entry.notes?.[k] || '')
+      .join(' ');
+    const wordCount = allText.trim().split(/\s+/).filter(Boolean).length;
+    const mins = Math.max(1, Math.round(wordCount / 200));
+    readingEl.textContent = `${wordCount} words · ~${mins} min read`;
+  }
+
   // Inject a mini TOC above the nodes for reading mode
   const toc = document.createElement('div');
   toc.className = 'notes-toc';

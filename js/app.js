@@ -794,14 +794,18 @@ function setupEventListeners() {
     const btn = $('btn-reading-mode');
     if (!container) return;
     const isReading = container.classList.toggle('reading-mode');
-    if (btn) btn.classList.toggle('active', isReading);
+    if (btn) {
+      btn.classList.toggle('active', isReading);
+      btn.setAttribute('aria-pressed', String(isReading));
+    }
     try { localStorage.setItem('lexicon-reading-mode', isReading ? '1' : '0'); } catch(e) {}
   });
   // Restore reading mode preference
   try {
     if (localStorage.getItem('lexicon-reading-mode') === '1') {
       $('sticky-note-container')?.classList.add('reading-mode');
-      $('btn-reading-mode')?.classList.add('active');
+      const btn = $('btn-reading-mode');
+      if (btn) { btn.classList.add('active'); btn.setAttribute('aria-pressed', 'true'); }
     }
   } catch(e) {}
 
