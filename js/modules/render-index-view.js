@@ -50,6 +50,8 @@ function shortTagLabel(politicsTag = '') {
 }
 
 let _focusedRowIndex = 0;
+let _currentPage = 1;
+const PAGE_SIZE = 25;
 
 // { col: 'year'|'designer'|'tag'|'season', dir: 'asc'|'desc' }
 let _indexSort = { col: 'year', dir: 'desc' };
@@ -80,6 +82,22 @@ function sortEntries(entries, lang) {
   });
 }
 
+function buildPagination(totalPages) {
+  const pages = [];
+  for (let p = 1; p <= totalPages; p++) {
+    if (totalPages <= 7 || p === 1 || p === totalPages || Math.abs(p - _currentPage) <= 1) {
+      pages.push(`<button class="idx-page-btn${p === _currentPage ? ' active' : ''}" data-page="${p}">${p}</button>`);
+    } else if (pages[pages.length - 1] !== '…') {
+      pages.push('…');
+    }
+  }
+  return `<div class="idx-pagination">
+    <button class="idx-page-btn" data-page="${_currentPage - 1}" ${_currentPage <= 1 ? 'disabled' : ''}>PREV</button>
+    ${pages.join('')}
+    <button class="idx-page-btn" data-page="${_currentPage + 1}" ${_currentPage >= totalPages ? 'disabled' : ''}>NEXT</button>
+  </div>`;
+}
+
 function sortIndicator(col) {
   if (_indexSort.col !== col) return '<span class="sort-icon" aria-hidden="true">↕</span>';
   return `<span class="sort-icon active" aria-hidden="true">${_indexSort.dir === 'asc' ? '↑' : '↓'}</span>`;
@@ -106,10 +124,47 @@ function buildHeaderRow() {
   }).join('');
 }
 
-export function renderIndexView(archiveData) {
+function csvEscape(val) {
+  const s = String(val ?? '').replace(/"/g, '""');
+  return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s}"` : s;
+}
+
+function exportCsv(entries, lang) {
+  const headers = ['ID', 'BRAND', 'YEAR', 'SEASON', 'ANALYTICAL_TAG', 'PROVENANCE'];
+  const rows = entries.map(e => [
+    `N-${e.id.slice(0, 6).toUpperCase()}`,
+    e.tags?.brand || '',
+    e.year || '',
+    e.season || '',
+    e.tags?.politics || '',
+    (e.notes?.provenance || '').slice(0, 120),
+  ].map(csvEscape).join(','));
+  const blob = new Blob([headers.join(',') + '\n' + rows.join('\n')], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  Object.assign(document.createElement('a'), { href: url, download: 'lexicon-export.csv' }).click();
+  URL.revokeObjectURL(url);
+}
+
+function exportBibtex(entries, lang) {
+  const bib = entries.map(e => {
+    const key = `${(e.tags?.brand || 'Unknown').replace(/\s+/g, '')}_${e.year || '0000'}`;
+    const brand = e.tags?.brand || 'Unknown';
+    const year = e.year || '';
+    const season = e.season || '';
+    const politics = e.tags?.politics || '';
+    return `@misc{${key},\n  author = {${brand}},\n  title = {${season} Collection${politics ? ' — ' + politics : ''}},\n  year = {${year}},\n  howpublished = {THE LEXICON Archive}\n}`;
+  }).join('\n\n');
+  const blob = new Blob([bib], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  Object.assign(document.createElement('a'), { href: url, download: 'lexicon-export.bib' }).click();
+  URL.revokeObjectURL(url);
+}
+
+export function renderIndexView(archiveData, resetPage = false) {
   const container = $('index-table-view');
   if (!container) return;
   _lastArchiveData = archiveData;
+  if (resetPage) _currentPage = 1;
 
   const entries = getFilteredEntries(archiveData);
   const lang = AppState.language;
@@ -125,7 +180,14 @@ export function renderIndexView(archiveData) {
     return;
   }
 
-  const rows = sortedEntries.map((entry, idx) => {
+  // Paginate
+  const totalFiltered = sortedEntries.length;
+  const totalPages = Math.max(1, Math.ceil(totalFiltered / PAGE_SIZE));
+  _currentPage = Math.min(_currentPage, totalPages);
+  const pageStart = (_currentPage - 1) * PAGE_SIZE;
+  const pageEntries = sortedEntries.slice(pageStart, pageStart + PAGE_SIZE);
+
+  const rows = pageEntries.map((entry, idx) => {
     const brand = entry.tags?.brand
       ? getTranslation(entry.tags.brand, lang)
       : getTranslation('brand_unknown', lang);
@@ -170,7 +232,7 @@ export function renderIndexView(archiveData) {
   }).join('');
 
   const total = archiveData.length;
-  const filtered = sortedEntries.length;
+  const filtered = totalFiltered;
 
   // Build active filter chips for index view header
   const activeFilterChips = Object.entries(AppState.filters)
@@ -212,10 +274,28 @@ export function renderIndexView(archiveData) {
     </table>
 
     <div class="index-toolbar">
-      <span>SHOWING ${pad(filtered)} OF ${pad(total)}</span>
-      <span class="index-shortcuts-inline">
-        <kbd>V</kbd> VISUAL · <kbd>I</kbd> INDEX · <kbd>⌘K</kbd> COMMAND · <kbd>?</kbd> HELP
+      <span class="index-showing">SHOWING ${pageStart + 1}–${Math.min(pageStart + PAGE_SIZE, filtered)} OF ${filtered} FILTERED / ${total} TOTAL</span>
+      ${totalPages > 1 ? buildPagination(totalPages) : ''}
+      <span class="index-export">
+        <button class="idx-export-btn" data-export="csv">EXPORT CSV</button>
+        <span class="opacity-30">·</span>
+        <button class="idx-export-btn" data-export="bibtex">BIBTEX</button>
       </span>
+    </div>
+    <div class="index-kbd-bar">
+      <span><kbd>V</kbd> VISUAL</span>
+      <span>·</span>
+      <span><kbd>I</kbd> INDEX</span>
+      <span>·</span>
+      <span><kbd>/</kbd> SEARCH</span>
+      <span>·</span>
+      <span><kbd>⌘K</kbd> COMMAND</span>
+      <span>·</span>
+      <span><kbd>J/K</kbd> NAVIGATE</span>
+      <span>·</span>
+      <span><kbd>⏎</kbd> OPEN</span>
+      <span>·</span>
+      <span><kbd>?</kbd> HELP</span>
     </div>`;
 
   // Bind row click
@@ -242,6 +322,27 @@ export function renderIndexView(archiveData) {
       }
       renderIndexView(_lastArchiveData);
       document.dispatchEvent(new CustomEvent('lexicon-refresh'));
+    });
+  });
+
+  // Bind pagination
+  container.querySelectorAll('.idx-page-btn[data-page]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const p = parseInt(btn.dataset.page);
+      if (!isNaN(p) && p >= 1 && p <= totalPages && p !== _currentPage) {
+        _currentPage = p;
+        _focusedRowIndex = 0;
+        renderIndexView(_lastArchiveData);
+        container.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Bind export buttons
+  container.querySelectorAll('.idx-export-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (btn.dataset.export === 'csv') exportCsv(sortedEntries, lang);
+      else if (btn.dataset.export === 'bibtex') exportBibtex(sortedEntries, lang);
     });
   });
 

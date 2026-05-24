@@ -1369,6 +1369,68 @@ html:not(.dark) .index-filter-bar { border-bottom-color: #e0e0dc; background: #f
   gap: 12px;
 }
 html:not(.dark) .index-toolbar { border-color: #c0c0c0; color: #666; }
+
+/* Pagination */
+.idx-pagination { display: flex; align-items: center; gap: 4px; }
+.idx-page-btn {
+  padding: 2px 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.idx-page-btn:hover:not(:disabled) { border-color: #CCFF00; color: #CCFF00; }
+.idx-page-btn.active { background: #CCFF00; color: #000; border-color: #CCFF00; }
+.idx-page-btn:disabled { opacity: 0.25; cursor: default; }
+html:not(.dark) .idx-page-btn { border-color: rgba(0,0,0,0.2); }
+html:not(.dark) .idx-page-btn:hover:not(:disabled) { border-color: #000; color: #000; }
+html:not(.dark) .idx-page-btn.active { background: #000; color: #fff; border-color: #000; }
+
+/* Export buttons */
+.idx-export-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.6;
+}
+.idx-export-btn:hover { opacity: 1; color: #CCFF00; }
+html:not(.dark) .idx-export-btn:hover { color: #000; }
+
+/* Bottom keyboard shortcut bar */
+.index-kbd-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 4px;
+  font-size: 8px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+html:not(.dark) .index-kbd-bar { border-top-color: rgba(0,0,0,0.08); color: rgba(0,0,0,0.35); }
+.index-kbd-bar kbd {
+  border: 1px solid currentColor;
+  padding: 0 3px;
+  font-size: 7px;
+  line-height: 1.4;
+  border-radius: 1px;
+}
+
 .index-empty {
   padding: 80px 20px;
   text-align: center;

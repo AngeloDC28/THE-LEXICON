@@ -99,6 +99,12 @@ function closePalette() {
   if (modal) modal.classList.add('hidden');
 }
 
+function updateResultCount(total) {
+  const el = $('cmd-result-count');
+  if (!el) return;
+  el.textContent = total > 0 ? `${total} RESULTS` : '';
+}
+
 export function renderCmdResults(query, archiveData, callbacks) {
   const container = $('cmd-results');
   if (!container) return;
@@ -113,6 +119,7 @@ export function renderCmdResults(query, archiveData, callbacks) {
       <div class="cmd-group-head">QUICK COMMANDS</div>
       ${buildCommandItems(query)}`;
     cmdResults = [];
+    updateResultCount(0);
     bindCmdActions(container, archiveData, callbacks);
     return;
   }
@@ -133,6 +140,9 @@ export function renderCmdResults(query, archiveData, callbacks) {
 
   // 3. Quick commands
   const cmds = showCommands ? buildCommandItems(query) : '';
+
+  const totalCount = matchedTags.length + entryMatches.length;
+  updateResultCount(totalCount);
 
   if (matchedTags.length === 0 && entryMatches.length === 0 && !cmds) {
     container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_no_results', AppState.language)}</div>`;

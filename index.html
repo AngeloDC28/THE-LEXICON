@@ -968,13 +968,24 @@
           <input type="text" id="cmd-input" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30" aria-label="Search archive" autocomplete="off" spellcheck="false" />
           <span class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
         </div>
-        <div id="cmd-scope-bar" class="flex gap-1 px-4 py-2 border-b border-black/10 dark:border-white/10">
+        <div id="cmd-scope-bar" class="flex items-center gap-1 px-4 py-2 border-b border-black/10 dark:border-white/10">
           <button class="cmd-scope-pill active" data-scope="all">ALL</button>
           <button class="cmd-scope-pill" data-scope="entries">ENTRIES</button>
           <button class="cmd-scope-pill" data-scope="tags">TAGS</button>
           <button class="cmd-scope-pill" data-scope="commands">COMMANDS</button>
+          <span id="cmd-result-count" class="ml-auto text-[8px] font-mono opacity-40 uppercase tracking-widest"></span>
         </div>
         <div id="cmd-results" class="overflow-y-auto flex-1 font-mono"></div>
+        <div class="border-t border-black/10 dark:border-white/10 px-4 py-1.5 flex items-center gap-3 text-[8px] font-mono opacity-40 uppercase tracking-wider">
+          <span><kbd class="border border-current px-0.5">tag:</kbd> FILTER</span>
+          <span class="opacity-50">·</span>
+          <span><kbd class="border border-current px-0.5">year:</kbd> FILTER</span>
+          <span class="opacity-50">·</span>
+          <span><kbd class="border border-current px-0.5">brand:</kbd> FILTER</span>
+          <span class="opacity-50">·</span>
+          <span><kbd class="border border-current px-0.5">↑↓</kbd> NAVIGATE</span>
+          <span class="ml-auto opacity-60">LEXICON INDEX · V2</span>
+        </div>
       </div>
     </div>
 

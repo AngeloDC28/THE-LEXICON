@@ -430,7 +430,8 @@ function refreshContent() {
     renderImageGrid(archiveData, callbacks);
     renderFeaturedStrip(archiveData);
     // Phase 2: also render the Brutalist Index View (toggled by V/I)
-    renderIndexView(archiveData);
+    // resetPage=true so filter changes always go back to page 1
+    renderIndexView(archiveData, true);
   } else if (AppState.currentView === 'timeline') {
     renderTimeline(filtered, callbacks);
   } else if (AppState.currentView === 'folders') {
