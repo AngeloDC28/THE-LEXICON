@@ -360,7 +360,7 @@ function renderMetadataGrid(entry) {
         <div class="text-[9px] font-mono uppercase tracking-wide text-white/30">--</div>
       </div>`;
     }
-    return `<button type="button" class="metadata-tag-btn group text-left space-y-1 hover:bg-white/5 transition-colors p-1 -m-1 focus-ring" data-tax-type="${f.key}" data-tax-value="${f.value.replace(/"/g, '&quot;')}" title="Filter archive by ${f.label}">
+    return `<button type="button" class="metadata-tag-btn group text-left space-y-1 hover:bg-white/5 transition-colors p-1 -m-1 focus-ring" data-tax-type="${f.key}" data-tax-value="${f.value.replace(/"/g, '&quot;')}" aria-label="Filter archive by ${f.label}">
       <div class="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40 group-hover:text-acid transition-colors">${f.label} ›</div>
       <div class="text-[9px] font-mono uppercase tracking-wide text-white group-hover:text-acid transition-colors">${translated}</div>
     </button>`;
@@ -404,7 +404,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     const thumb = e.images && e.images[0];
     const src   = resolveImgSrc(thumb);
     const brand = e.tags.brand ? getTranslation(e.tags.brand, lang) : '';
-    return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" title="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}">
+    return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" aria-label="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}. Open entry">
       <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
         <picture>
           <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(thumb)})}">
@@ -457,9 +457,9 @@ function renderHotspots(entry, container) {
     btn.setAttribute('type', 'button');
     btn.innerHTML = '<div class="hotspot-target"></div>';
     
-    // Interaction
-    btn.addEventListener('mouseenter', () => showPayload(spot));
-    btn.addEventListener('mouseleave', () => hidePayload());
+    // Interaction — pointerenter/leave covers both mouse and touch (pen, stylus)
+    btn.addEventListener('pointerenter', () => showPayload(spot));
+    btn.addEventListener('pointerleave', () => hidePayload());
     btn.addEventListener('click', () => {
       showPayload(spot, true);
     });

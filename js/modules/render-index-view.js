@@ -120,7 +120,7 @@ function buildHeaderRow() {
     const ariaSort = _indexSort.col === key
       ? (_indexSort.dir === 'asc' ? 'ascending' : 'descending')
       : 'none';
-    return `<th scope="col"${w} class="sortable${active}" data-sort-col="${key}" aria-sort="${ariaSort}" tabindex="0" role="columnheader" title="Click to sort by ${label}">${label} ${sortIndicator(key)}</th>`;
+    return `<th scope="col"${w} class="sortable${active}" data-sort-col="${key}" aria-sort="${ariaSort}" tabindex="0" role="columnheader" aria-label="Sort by ${label}">${label} ${sortIndicator(key)}</th>`;
   }).join('');
 }
 

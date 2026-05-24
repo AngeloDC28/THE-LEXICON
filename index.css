@@ -875,6 +875,7 @@ html:not(.dark) .who-use { color: #555; }
   color: #000;
   border: none;
   padding: 10px 16px;
+  min-height: 44px;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -983,7 +984,8 @@ html:not(.dark) .mobile-sheet-section { border-bottom-color: #e0e0dc; }
 }
 
 .mbs-chip {
-  padding: 7px 12px;
+  padding: 10px 12px;
+  min-height: 44px;
   border: 1px solid #2a2a2a;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.16em;
@@ -1095,6 +1097,7 @@ html:not(.dark) .mbs-url { background: #fafaf8; border-color: #e0e0dc; color: #5
 .mbs-btn-clear, .mbs-btn-apply {
   flex: 1;
   padding: 13px;
+  min-height: 44px;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1123,6 +1126,7 @@ html:not(.dark) .mbs-btn-apply { background: #000; color: #fff; }
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto auto auto;
     padding: 14px 12px;
+    min-height: 44px;
     border: 1px solid #1e1e1e;
     margin-bottom: 4px;
     gap: 0;

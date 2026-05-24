@@ -257,7 +257,7 @@ export function renderFeaturedStrip(archiveData) {
 
     return `
       <div class="feat-card tag-${cat}" data-entry-id="${entry.id}" role="button" tabindex="0"
-           aria-label="${label} — ${brand} ${year}" title="Open ${brand} ${year}">
+           aria-label="${label} — ${brand} ${year}">
         <div class="feat-card-tag">
           <span class="fc-label">${label.toUpperCase()}</span>
           <span class="fc-id">${id}</span>
