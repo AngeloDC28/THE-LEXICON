@@ -59,14 +59,16 @@ function renderRecentlyViewed(archiveData, callbacks) {
     const entry = archiveData.find(e => e.id === id);
     if (!entry) return;
     const thumbSrc = resolveImgSrc(entry.images && entry.images[0]);
+    const label = `${entry.tags.brand || ''} ${entry.year || ''}`.trim();
     html += `
-      <img src="${thumbSrc}" 
-           alt="${entry.tags.brand}" 
-           class="recent-thumb opacity-0" 
-           data-recent-id="${id}" 
-           loading="lazy" 
-           onload="this.classList.add('loaded'); this.style.opacity='1';"
-           onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');" />
+      <button type="button" class="recent-thumb-btn focus-ring" data-recent-id="${id}" aria-label="Open ${label}">
+        <img src="${thumbSrc}"
+             alt=""
+             class="recent-thumb opacity-0"
+             loading="lazy"
+             onload="this.classList.add('loaded'); this.style.opacity='1';"
+             onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');" />
+      </button>
     `;
   });
   row.innerHTML = html;

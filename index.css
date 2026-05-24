@@ -2500,11 +2500,17 @@ html.dark #toast { background: #CCFF00; color: #000; }
   display: flex; gap: 6px; padding: 6px 12px; overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+.recent-thumb-btn {
+  padding: 0; margin: 0; background: transparent; border: 0;
+  flex-shrink: 0; cursor: pointer; line-height: 0;
+}
 .recent-thumb {
   width: 36px; height: 44px; object-fit: cover; flex-shrink: 0;
   border: 1px solid rgba(0,0,0,0.3); cursor: pointer;
   transition: filter 0.2s ease;
+  display: block;
 }
+.recent-thumb-btn:hover .recent-thumb,
 .recent-thumb:hover { filter: none; }
 html.dark .recent-thumb { border-color: rgba(255,255,255,0.2); }
 

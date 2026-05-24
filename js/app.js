@@ -921,6 +921,7 @@ function setupEventListeners() {
       const original = btn.textContent;
       btn.textContent = '✓ ' + getTranslation('link_copied', lang).replace('.','').toUpperCase();
       btn.classList.add('btn-copied');
+      showToast(getTranslation('link_copied', lang));
       setTimeout(() => {
         btn.textContent = original;
         btn.classList.remove('btn-copied');
@@ -950,6 +951,7 @@ function setupEventListeners() {
         const original = btn.textContent;
         btn.textContent = '✓ Copied';
         btn.classList.add('btn-copied');
+        showToast(getTranslation('link_copied', AppState.language));
         setTimeout(() => { btn.textContent = original; btn.classList.remove('btn-copied'); }, 1400);
       });
     });
