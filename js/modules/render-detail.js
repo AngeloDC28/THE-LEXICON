@@ -294,11 +294,14 @@ function renderStickyOverlay(entry) {
   ];
 
   let activeId = null;
+  let activeSq = null;
 
   const closePanel = () => {
     if (panel) panel.classList.remove('visible');
     squaresEl.querySelectorAll('.sticky-square').forEach(s => s.classList.remove('active'));
+    if (activeSq) requestAnimationFrame(() => activeSq?.focus());
     activeId = null;
+    activeSq = null;
   };
 
   const closeBtn = $('btn-close-sticky-panel');
@@ -320,6 +323,7 @@ function renderStickyOverlay(entry) {
       e.stopPropagation();
       if (activeId === type.id) { closePanel(); return; }
       activeId = type.id;
+      activeSq = sq;
 
       squaresEl.querySelectorAll('.sticky-square').forEach(s => s.classList.remove('active'));
       sq.classList.add('active');

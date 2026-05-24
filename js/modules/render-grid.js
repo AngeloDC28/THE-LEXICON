@@ -65,7 +65,7 @@ export function renderImageGrid(archiveData, callbacks) {
         <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-3">${getTranslation('null_set', lang)}</div>
         <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-4">${getTranslation('null_set_desc', lang)}</div>
         ${filtersList}
-        <button id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors">${getTranslation('btn_reset_system', lang)}</button>
+        <button type="button" id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">${getTranslation('btn_reset_system', lang)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
       AppState.filters = emptyFilters();
