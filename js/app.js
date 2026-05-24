@@ -1021,6 +1021,16 @@ function setupEventListeners() {
       setViewMode('index');
       renderIndexView(archiveData);
     }
+    if (e.key === 'r' || e.key === 'R') {
+      const container = $('sticky-note-container');
+      const btn = $('btn-reading-mode');
+      if (container && !e.metaKey && !e.ctrlKey) {
+        e.preventDefault();
+        const isReading = container.classList.toggle('reading-mode');
+        if (btn) { btn.classList.toggle('active', isReading); btn.setAttribute('aria-pressed', String(isReading)); }
+        try { localStorage.setItem('lexicon-reading-mode', isReading ? '1' : '0'); } catch(ex) {}
+      }
+    }
     // Brutalist Index View: j/k row navigation when index mode is active
     if (AppState.viewMode === 'index') {
       if (e.key === 'j' || e.key === 'ArrowDown') {
