@@ -71,6 +71,10 @@ export function switchView(viewId, callbacks) {
     callbacks.renderFolders();
   }
 
+  // Footer visibility — show only on grid view
+  const footer = document.getElementById('site-footer');
+  if (footer) footer.classList.toggle('hidden', viewId !== 'grid');
+
   if (callbacks?.onUpdate) callbacks.onUpdate();
 }
 

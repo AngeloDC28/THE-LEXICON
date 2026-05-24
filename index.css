@@ -2455,6 +2455,80 @@ html.dark .active-hotspot-box {
   font-size: 9.5px !important;
 }
 
+/* ─── Site Footer ─────────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid #1a1a1a;
+  padding: clamp(32px, 4vw, 64px) clamp(16px, 3vw, 48px) clamp(20px, 2.5vw, 36px);
+  font-family: var(--font-mono);
+  background: #000;
+}
+html:not(.dark) .site-footer { border-top-color: #e0e0dc; background: #f4f4f0; }
+
+.footer-cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  margin-bottom: clamp(24px, 3vw, 40px);
+  padding-bottom: clamp(24px, 3vw, 40px);
+  border-bottom: 1px solid #1a1a1a;
+}
+html:not(.dark) .footer-cols { border-bottom-color: #e0e0dc; }
+@media (max-width: 900px) { .footer-cols { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-cols { grid-template-columns: 1fr; } }
+
+.footer-brand {
+  font-size: var(--t-mono-base);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+html:not(.dark) .footer-brand { color: #000; }
+
+.footer-blurb {
+  font-size: var(--t-mono-xs);
+  color: #555;
+  line-height: 1.7;
+  max-width: 32ch;
+}
+html:not(.dark) .footer-blurb { color: #888; }
+
+.footer-col h4 {
+  font-size: 8px;
+  letter-spacing: 0.28em;
+  color: #444;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+html:not(.dark) .footer-col h4 { color: #bbb; }
+
+.footer-col a {
+  display: block;
+  font-size: var(--t-mono-xs);
+  color: #666;
+  text-decoration: none;
+  padding: 3px 0;
+  letter-spacing: 0.12em;
+  transition: color 0.12s;
+}
+.footer-col a:hover { color: #CCFF00; }
+html:not(.dark) .footer-col a { color: #888; }
+html:not(.dark) .footer-col a:hover { color: #000; }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #444;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+html:not(.dark) .footer-bottom { color: #bbb; }
+.footer-tech { opacity: 0.5; }
+
 /* ============================================================
    PRINT STYLESHEET
    For academic / editorial export. The detail page becomes a
