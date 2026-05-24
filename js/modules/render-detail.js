@@ -129,7 +129,7 @@ function renderBreadcrumb(entry) {
   const idLabel = season ? `${id} · ${season.slice(0, 30)}` : id;
   const sep = `<span class="mx-1 opacity-30">/</span>`;
   crumb.innerHTML =
-    `<a href="#" class="hover:text-white/60 transition-colors" data-crumb-back>ARCHIVE</a>`
+    `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
     + sep
     + `<span style="color:var(--c-corporeal, #e2a4a0)">${tagCat}</span>`
     + sep
