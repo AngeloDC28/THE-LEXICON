@@ -224,8 +224,7 @@ export function renderIndexView(archiveData, resetPage = false) {
           data-entry-id="${entry.id}"
           data-row-index="${idx}"
           tabindex="0"
-          role="link"
-          aria-label="Entry ${id}, ${brand}, ${year}, ${tagLabel}">
+          aria-label="Open entry: ${brand}, ${year}, ${tagLabel}">
         <td class="td-id">${id}</td>
         <td class="td-designer">${brand.toUpperCase()}</td>
         <td class="td-year">${year}</td>
@@ -311,12 +310,11 @@ export function renderIndexView(archiveData, resetPage = false) {
       <span><kbd>?</kbd> HELP</span>
     </div>`;
 
-  // Bind row click
+  // Bind row click and keyboard activation
   container.querySelectorAll('tbody tr').forEach((tr) => {
-    tr.addEventListener('click', () => {
-      const id = tr.dataset.entryId;
-      if (id) window.location.hash = `detail/${id}/0`;
-    });
+    const activate = () => { const id = tr.dataset.entryId; if (id) window.location.hash = `detail/${id}/0`; };
+    tr.addEventListener('click', activate);
+    tr.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
   });
 
   // Bind index filter chip dismissal

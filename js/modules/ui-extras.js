@@ -30,8 +30,10 @@ export function renderTimeline(archiveData, callbacks) {
         </div>
         <div class="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar">
           ${entries.map((e, i) => `
-            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0 translateY-10" 
-                 data-id="${e.id}" style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
+            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0 translateY-10"
+                 data-id="${e.id}" role="button" tabindex="0"
+                 aria-label="${getTranslation(e.tags.brand, AppState.language)} ${e.year} — ${getTranslation(e.title, AppState.language)}"
+                 style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
               <picture>
                 <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(e.images && e.images[0])})}">
                 <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
@@ -54,11 +56,9 @@ export function renderTimeline(archiveData, callbacks) {
 
   // Attach Listeners
   container.querySelectorAll('.timeline-item').forEach(el => {
-    el.addEventListener('click', () => {
-      if (callbacks && callbacks.openDetail) {
-        callbacks.openDetail(el.dataset.id);
-      }
-    });
+    const activate = () => { if (callbacks && callbacks.openDetail) callbacks.openDetail(el.dataset.id); };
+    el.addEventListener('click', activate);
+    el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
   });
 }
 
