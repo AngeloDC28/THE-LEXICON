@@ -731,6 +731,22 @@ function setupEventListeners() {
     });
   });
 
+  // Search: Esc clears query (first press), or blurs if already empty (second press)
+  $('search-input')?.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const input = e.currentTarget;
+    if (input.value) {
+      e.preventDefault();
+      e.stopPropagation();
+      input.value = '';
+      AppState.searchQuery = '';
+      invalidateSearchCache();
+      refreshContent();
+    } else {
+      input.blur();
+    }
+  });
+
   // Search — only content re-renders (chrome is invariant to the query)
   $('search-input')?.addEventListener('input', debounce((e) => {
     AppState.searchQuery = e.target.value;
