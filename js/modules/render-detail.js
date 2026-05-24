@@ -27,6 +27,8 @@ export function updateStatusBar(archiveData) {
   }
 }
 
+let _savedGridScrollTop = 0;
+
 export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const entry = archiveData.find((e) => e.id === entryId);
   if (!entry) return;
@@ -36,6 +38,11 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     console.warn(`[openDetail] entry ${entryId} has no images; aborting render.`);
     return;
   }
+
+  // Save grid scroll position for restoration on close
+  const imagePanel = $('image-panel');
+  if (imagePanel) _savedGridScrollTop = imagePanel.scrollTop;
+
   AppState.selectedEntryId   = entryId;
   AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
@@ -81,6 +88,13 @@ export function closeDetail(callbacks, archiveData) {
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.remove('detail-mode-active');
   updateStatusBar(archiveData);
+  // Restore grid scroll position
+  const imagePanel = $('image-panel');
+  if (imagePanel && _savedGridScrollTop > 0) {
+    requestAnimationFrame(() => {
+      imagePanel.scrollTop = _savedGridScrollTop;
+    });
+  }
 }
 
 export function navigateEntry(direction, archiveData, callbacks) {
