@@ -114,12 +114,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderHero(archiveData);
   syncMobileSheetChips();
 
-  // Orientation Panel Logic
+  // Orientation Panel Logic — also hide the supporting landing sections
+  // (how-it-works, featured strip header, who-section) so the page state
+  // matches what the user dismissed previously.
   var dismissed;
   try { dismissed = localStorage.getItem('lexicon-orientation-dismissed'); } catch(e) {}
   if (dismissed) {
     const op = $('orientation-panel');
     if (op) op.classList.add('hidden');
+    const how = $('how-it-works');
+    const featHead = $('featured-strip-head');
+    const whoEl = $('who-section');
+    if (how) how.style.display = 'none';
+    if (featHead) featHead.style.display = 'none';
+    if (whoEl) whoEl.style.display = 'none';
   }
 
   // Reveal UI

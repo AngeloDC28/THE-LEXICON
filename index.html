@@ -721,7 +721,7 @@
                 <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]"></div>
                 <picture>
                   <source id="detail-image-webp" type="image/webp" srcset="" />
-                  <img id="detail-image" class="relative z-10" src="" alt="" />
+                  <img id="detail-image" class="relative z-10" src="" alt="" fetchpriority="high" decoding="async" />
                 </picture>
                 
                 <!-- Floating Analytical Payload -->
@@ -911,7 +911,7 @@
       <div id="lightbox-stage" class="relative w-full h-full overflow-hidden flex items-center justify-center cursor-zoom-in">
         <picture>
           <source id="lightbox-image-webp" type="image/webp" srcset="" />
-          <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
+          <img id="lightbox-image" src="" alt="" fetchpriority="high" decoding="async" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
         </picture>
       </div>
       <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-[10px] font-mono tracking-widest uppercase pointer-events-none">
