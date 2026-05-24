@@ -990,6 +990,75 @@ html:not(.dark) .mbs-chip { border-color: #ccc; color: #555; }
 .mbs-chip:hover:not(.active) { border-color: #fff; color: #fff; }
 html:not(.dark) .mbs-chip:hover:not(.active) { border-color: #000; color: #000; }
 
+/* ── Year range slider ─────────────────────────────── */
+.mbs-range-wrap {
+  position: relative;
+  height: 36px;
+  margin: 8px 0 4px;
+}
+.mbs-range-track {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-50%);
+  border-radius: 2px;
+  pointer-events: none;
+}
+html:not(.dark) .mbs-range-track { background: rgba(0,0,0,0.12); }
+.mbs-range-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #CCFF00;
+  border-radius: 2px;
+}
+.mbs-range {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  pointer-events: none;
+  outline: none;
+}
+.mbs-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #CCFF00;
+  border: 2px solid #000;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 0 0 1px rgba(204,255,0,0.4);
+}
+.mbs-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #CCFF00;
+  border: 2px solid #000;
+  cursor: pointer;
+  pointer-events: all;
+  box-shadow: 0 0 0 1px rgba(204,255,0,0.4);
+}
+.mbs-range-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+  margin-top: 2px;
+}
+
 .mbs-url {
   padding: 8px 10px;
   background: #000;

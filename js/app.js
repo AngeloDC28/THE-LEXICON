@@ -14,7 +14,7 @@ import { imageDimensions } from './modules/image-dimensions.js';
 import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js';
 setImageDimensions(imageDimensions);
 import { AppState, updateHash, emptyFilters } from './modules/core-state.js';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy } from './modules/search-engine.js';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js';
 import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js';
 import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
 import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js';
@@ -459,6 +459,11 @@ function applyStateFromQuery(params) {
   for (const key of Object.keys(AppState.filters)) {
     if (params.has(key)) AppState.filters[key] = params.get(key);
   }
+  // Year range from URL (y_min / y_max)
+  const yMin = params.has('y_min') ? parseInt(params.get('y_min')) : 1980;
+  const yMax = params.has('y_max') ? parseInt(params.get('y_max')) : 2025;
+  if (!isNaN(yMin) && !isNaN(yMax)) AppState.yearRange = { min: yMin, max: yMax };
+
   // Phase 2: view mode (visual | index) is URL-shareable
   if (params.has('mode')) {
     const mode = params.get('mode');
@@ -476,6 +481,9 @@ export function syncHashFromState() {
   for (const [k, v] of Object.entries(AppState.filters)) {
     if (v) params.set(k, v);
   }
+  const yr = AppState.yearRange || { min: 1980, max: 2025 };
+  if (yr.min > 1980) params.set('y_min', yr.min);
+  if (yr.max < 2025) params.set('y_max', yr.max);
   // Phase 2: encode view mode (only if non-default)
   if (AppState.viewMode === 'index') params.set('mode', 'index');
   const view = AppState.currentView || 'grid';
@@ -1032,6 +1040,7 @@ function setupEventListeners() {
     sheet.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
     syncMobileSheetChips();
+    syncYearRangeSlider();
     updateMobileSheetUrl();
     updateMbsResultCount();
   };
@@ -1063,15 +1072,47 @@ function setupEventListeners() {
 
   $('btn-mbs-clear')?.addEventListener('click', () => {
     AppState.filters = emptyFilters();
+    AppState.yearRange = { min: 1980, max: 2025 };
     syncMobileSheetChips();
+    syncYearRangeSlider();
     updateMobileSheetUrl();
     updateMbsResultCount();
   });
 
   $('btn-mbs-apply')?.addEventListener('click', () => {
     closeMobileSheet();
+    invalidateSearchCache();
     refreshContent();
     updateHash('grid');
+  });
+
+  // Year range dual-thumb slider
+  const minInput = $('mbs-year-min');
+  const maxInput = $('mbs-year-max');
+  function updateYearRangeUI() {
+    if (!minInput || !maxInput) return;
+    const mn = parseInt(minInput.value);
+    const mx = parseInt(maxInput.value);
+    const span = 2025 - 1980;
+    const fill = $('mbs-year-fill');
+    if (fill) {
+      fill.style.left  = ((mn - 1980) / span * 100) + '%';
+      fill.style.right = ((2025 - mx)  / span * 100) + '%';
+    }
+    const label = $('mbs-year-label');
+    if (label) label.textContent = (mn === 1980 && mx === 2025) ? 'ALL' : `${mn}–${mx}`;
+    AppState.yearRange = { min: mn, max: mx };
+    invalidateSearchCache();
+    updateMobileSheetUrl();
+    updateMbsResultCount();
+  }
+  minInput?.addEventListener('input', () => {
+    if (parseInt(minInput.value) >= parseInt(maxInput.value)) minInput.value = parseInt(maxInput.value) - 1;
+    updateYearRangeUI();
+  });
+  maxInput?.addEventListener('input', () => {
+    if (parseInt(maxInput.value) <= parseInt(minInput.value)) maxInput.value = parseInt(minInput.value) + 1;
+    updateYearRangeUI();
   });
 }
 
@@ -1084,14 +1125,34 @@ function syncMobileSheetChips() {
     const activeVals = current.split('|').map(s => s.trim()).filter(Boolean);
     chip.classList.toggle('active', activeVals.includes(val));
   });
-  // Update the mobile filter badge count
-  const total = Object.values(AppState.filters).filter(Boolean)
+  // Update the mobile filter badge count (includes year range if active)
+  const tagTotal = Object.values(AppState.filters).filter(Boolean)
     .flatMap(v => v.split('|').filter(Boolean)).length;
+  const yr = AppState.yearRange || { min: 1980, max: 2025 };
+  const yearActive = yr.min > 1980 || yr.max < 2025 ? 1 : 0;
+  const total = tagTotal + yearActive;
   const badge = $('mobile-filter-count');
   if (badge) {
     badge.textContent = total;
     badge.classList.toggle('hidden', total === 0);
   }
+}
+
+function syncYearRangeSlider() {
+  const minInput = $('mbs-year-min');
+  const maxInput = $('mbs-year-max');
+  if (!minInput || !maxInput) return;
+  const { min, max } = AppState.yearRange || { min: 1980, max: 2025 };
+  minInput.value = min;
+  maxInput.value = max;
+  const span = 2025 - 1980;
+  const fill = $('mbs-year-fill');
+  if (fill) {
+    fill.style.left  = ((min - 1980) / span * 100) + '%';
+    fill.style.right = ((2025 - max)  / span * 100) + '%';
+  }
+  const label = $('mbs-year-label');
+  if (label) label.textContent = (min === 1980 && max === 2025) ? 'ALL' : `${min}–${max}`;
 }
 
 function updateMobileSheetUrl() {
@@ -1101,6 +1162,9 @@ function updateMobileSheetUrl() {
   for (const [k, v] of Object.entries(AppState.filters)) {
     if (v) params.set(k, v);
   }
+  const yr = AppState.yearRange || { min: 1980, max: 2025 };
+  if (yr.min > 1980) params.set('y_min', yr.min);
+  if (yr.max < 2025) params.set('y_max', yr.max);
   const qs = params.toString();
   urlEl.textContent = qs ? `/archive?${qs}` : '—';
 }

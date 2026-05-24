@@ -25,7 +25,8 @@ export function getFilteredEntries(archiveData) {
   const folRev = folId
     ? (AppState.archivalFolders.find(f => f.id === folId)?.lookIds || []).length
     : 0;
-  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}`;
+  const yr = AppState.yearRange || { min: 1980, max: 2025 };
+  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}|${yr.min}-${yr.max}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -41,6 +42,14 @@ export function getFilteredEntries(archiveData) {
       const ids = fol.lookIds || [];
       entries = entries.filter(e => ids.includes(e.id));
     }
+  }
+
+  // 2a. Filter by year range (if narrowed from defaults)
+  if (yr.min > 1980 || yr.max < 2025) {
+    entries = entries.filter(e => {
+      const y = e.year;
+      return y && y >= yr.min && y <= yr.max;
+    });
   }
 
   // 2. Filter by taxonomy tags

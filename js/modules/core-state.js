@@ -35,6 +35,7 @@ export const AppState = {
   previousView: 'grid',
   activeHotspot: null,
   sortMode: safeLocalGet('lexicon.sort-mode', 'year-desc'),
+  yearRange: { min: 1980, max: 2025 },
 };
 
 export let gridIntersectionObserver = null;
