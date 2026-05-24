@@ -739,6 +739,23 @@ function setupEventListeners() {
     $('image-grid')?.scrollIntoView({ behavior: 'smooth' });
   });
 
+  // Reading mode toggle for detail sidebar notes
+  $('btn-reading-mode')?.addEventListener('click', () => {
+    const container = $('sticky-note-container');
+    const btn = $('btn-reading-mode');
+    if (!container) return;
+    const isReading = container.classList.toggle('reading-mode');
+    if (btn) btn.classList.toggle('active', isReading);
+    try { localStorage.setItem('lexicon-reading-mode', isReading ? '1' : '0'); } catch(e) {}
+  });
+  // Restore reading mode preference
+  try {
+    if (localStorage.getItem('lexicon-reading-mode') === '1') {
+      $('sticky-note-container')?.classList.add('reading-mode');
+      $('btn-reading-mode')?.classList.add('active');
+    }
+  } catch(e) {}
+
   // --- View Toggles ---
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));
   $('btn-toggle-timeline')?.addEventListener('click', () => switchView('timeline', callbacks));

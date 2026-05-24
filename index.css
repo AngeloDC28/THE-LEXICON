@@ -1364,6 +1364,87 @@ html:not(.dark) .index-toolbar { border-color: #c0c0c0; color: #666; }
 .node-critique   { background: #FF0000 !important; } /* Editorial Red */
 .node-strategy   { background: #0000FF !important; } /* Digital Blue */
 
+/* ── Reading Mode: editorial layout for the note sidebar ─────────────
+   Applied via .reading-mode on #sticky-note-container.
+   Transforms the brutalist sticker nodes into the prose reading layout
+   from the 03-entry-page mockup — EB Garamond body, numbered section
+   headers, accent rule, no colour backgrounds.                        */
+#sticky-note-container.reading-mode .brutalist-node {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 0 32px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  text-transform: none;
+  cursor: default;
+  color: inherit !important;
+}
+#sticky-note-container.reading-mode .brutalist-node:hover {
+  transform: none;
+  box-shadow: none !important;
+}
+html:not(.dark) #sticky-note-container.reading-mode .brutalist-node {
+  border-bottom-color: rgba(0,0,0,0.08) !important;
+}
+
+#sticky-note-container.reading-mode .node-label {
+  font-family: var(--font-mono) !important;
+  font-size: 9px !important;
+  letter-spacing: 0.28em !important;
+  color: #666 !important;
+  text-transform: uppercase;
+  font-weight: 500 !important;
+  border-bottom: none !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#sticky-note-container.reading-mode .node-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  display: block;
+}
+html:not(.dark) #sticky-note-container.reading-mode .node-label::after {
+  background: rgba(0,0,0,0.08);
+}
+
+#sticky-note-container.reading-mode .node-body {
+  font-family: 'EB Garamond', Georgia, serif !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: #ccc !important;
+  text-transform: none;
+}
+html:not(.dark) #sticky-note-container.reading-mode .node-body {
+  color: #333 !important;
+}
+
+#sticky-note-container.reading-mode .node-provenance { background: transparent !important; }
+#sticky-note-container.reading-mode .node-critique   { background: transparent !important; }
+#sticky-note-container.reading-mode .node-strategy   { background: transparent !important; }
+
+/* Reading mode toggle button */
+.btn-reading-mode {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  color: #888;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.btn-reading-mode:hover, .btn-reading-mode.active { color: #CCFF00; border-color: #CCFF00; }
+html:not(.dark) .btn-reading-mode { border-color: #ccc; color: #666; }
+html:not(.dark) .btn-reading-mode:hover,
+html:not(.dark) .btn-reading-mode.active { color: #000; border-color: #000; }
+
 /* Analytical Payload Node (Hotspot triggers this) */
 #analytical-payload {
   background: #FFFFFF !important;
