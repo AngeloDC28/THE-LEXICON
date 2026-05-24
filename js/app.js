@@ -1249,55 +1249,107 @@ function renderHero(archiveData) {
   const panel = $('orientation-panel');
   if (!panel || panel.classList.contains('hidden')) return;
 
-  // Pick the most recently dated entry with a rich critique note for the teaser
-  const candidate = [...archiveData]
-    .filter(e => e.tags?.politics && e.notes?.critique)
-    .sort((a, b) => (b.year || 0) - (a.year || 0))[0]
-    || archiveData[0];
-
-  if (!candidate) return;
-
   const tagLabelMap = {
     corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
     subculture: 'Subcultural Codification', semiotic: 'Semiotic Sabotage',
     strategy: 'Strategic Appropriation', provenance: 'Historical Lineage',
   };
 
-  const cat = getTagCategory(candidate.tags?.politics || '');
-  const tagLabel = tagLabelMap[cat] || 'Analytical Record';
-  const brand = (candidate.tags?.brand || '').toUpperCase();
-  const year = candidate.year || '—';
-  const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
-  const hook = candidate.notes?.critique
-    ? candidate.notes.critique.replace(/<[^>]+>/g, '').slice(0, 200) + '…'
-    : '';
-
-  const tagEl = $('hero-tag-label');
-  if (tagEl) {
-    tagEl.textContent = tagLabel.toUpperCase();
-    tagEl.style.borderColor = `var(--c-${cat})`;
-    tagEl.style.color = `var(--c-${cat})`;
+  // Pick one entry per category (most recent), up to 4 candidates
+  const HERO_CATS = ['corporeal', 'critique', 'subculture', 'semiotic'];
+  const sorted = [...archiveData].sort((a, b) => (b.year || 0) - (a.year || 0));
+  const picks = HERO_CATS.map(cat =>
+    sorted.find(e => getTagCategory(e.tags?.politics || '') === cat && (e.notes?.critique || e.notes?.provenance))
+  ).filter(Boolean);
+  // Fallback: use most recent entries with any notes
+  if (picks.length < 2) {
+    sorted.filter(e => (e.notes?.critique || e.notes?.provenance)).slice(0, 4).forEach(e => {
+      if (!picks.includes(e)) picks.push(e);
+    });
   }
 
-  const titleEl = $('hero-featured-title');
-  if (titleEl && candidate.title) titleEl.innerHTML = `<em>${candidate.title}</em>`;
+  if (picks.length === 0) return;
 
-  const brandEl = $('hero-featured-brand');
-  if (brandEl) brandEl.textContent = `${brand} · ${year} · ${season}`;
+  let heroIndex = 0;
 
-  const descEl = $('hero-featured-desc');
-  if (descEl) descEl.textContent = hook;
+  function showHeroEntry(idx) {
+    const candidate = picks[idx];
+    if (!candidate) return;
+    const cat = getTagCategory(candidate.tags?.politics || '');
+    const tagLabel = tagLabelMap[cat] || 'Analytical Record';
+    const brand = (candidate.tags?.brand || '').toUpperCase();
+    const year = candidate.year || '—';
+    const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
+    const hook = candidate.notes?.critique
+      ? candidate.notes.critique.replace(/<[^>]+>/g, '').slice(0, 200) + '…'
+      : candidate.notes?.provenance
+        ? candidate.notes.provenance.replace(/<[^>]+>/g, '').slice(0, 200) + '…'
+        : '';
 
-  const idSpan = panel.querySelector('.hero-id');
-  if (idSpan) idSpan.textContent = `N-${candidate.id.slice(0, 4).toUpperCase()}`;
+    const tagEl = $('hero-tag-label');
+    if (tagEl) {
+      tagEl.textContent = tagLabel.toUpperCase();
+      tagEl.style.borderColor = `var(--c-${cat})`;
+      tagEl.style.color = `var(--c-${cat})`;
+    }
 
-  // Make the right column clickable
-  const rightCol = $('hero-featured-slot');
-  if (rightCol) {
-    rightCol.style.cursor = 'pointer';
-    rightCol.addEventListener('click', () => {
-      window.location.hash = `detail/${candidate.id}/0`;
-    });
+    const titleEl = $('hero-featured-title');
+    if (titleEl && candidate.title) titleEl.innerHTML = `<em>${candidate.title}</em>`;
+
+    const brandEl = $('hero-featured-brand');
+    if (brandEl) brandEl.textContent = `${brand} · ${year} · ${season}`;
+
+    const descEl = $('hero-featured-desc');
+    if (descEl) descEl.textContent = hook;
+
+    const idSpan = panel.querySelector('.hero-id');
+    if (idSpan) idSpan.textContent = `N-${candidate.id.slice(0, 4).toUpperCase()}`;
+
+    // Update dot indicators
+    const dotsEl = panel.querySelector('.hero-dots');
+    if (dotsEl) {
+      const needed = picks.length;
+      const existing = dotsEl.querySelectorAll('.hero-dot');
+      // Rebuild if count changed
+      if (existing.length !== needed) {
+        dotsEl.innerHTML = picks.map((_, i) =>
+          `<button class="hero-dot${i === idx ? ' active' : ''}" data-hero-idx="${i}" aria-label="Featured entry ${i + 1}" aria-pressed="${i === idx}"></button>`
+        ).join('');
+        dotsEl.querySelectorAll('.hero-dot').forEach(dotBtn => {
+          dotBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            heroIndex = parseInt(dotBtn.dataset.heroIdx, 10);
+            showHeroEntry(heroIndex);
+          });
+        });
+      } else {
+        existing.forEach((d, i) => {
+          d.classList.toggle('active', i === idx);
+          d.setAttribute('aria-pressed', String(i === idx));
+        });
+      }
+    }
+
+    // Make the right column clickable to open the entry
+    const rightCol = $('hero-featured-slot');
+    if (rightCol) {
+      rightCol.style.cursor = 'pointer';
+      rightCol.onclick = () => { window.location.hash = `detail/${candidate.id}/0`; };
+    }
+  }
+
+  showHeroEntry(0);
+
+  // Auto-rotate every 6 seconds if prefers-reduced-motion is not set
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && picks.length > 1) {
+    let heroTimer = setInterval(() => {
+      if ($('orientation-panel')?.classList.contains('hidden')) {
+        clearInterval(heroTimer);
+        return;
+      }
+      heroIndex = (heroIndex + 1) % picks.length;
+      showHeroEntry(heroIndex);
+    }, 6000);
   }
 }
 

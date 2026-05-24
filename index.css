@@ -569,9 +569,21 @@ html:not(.dark) .hero-stat .hs-lbl { color: #999; }
 .hero-dot {
   width: 6px;
   height: 6px;
+  min-width: 6px;
   border: 1px solid #8a7a70;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0;
+  position: relative;
+}
+.hero-dot::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
 }
 .hero-dot.active { background: #8a7a70; }
+.hero-dot:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
 
 /* Mobile: stack hero columns */
 @media (max-width: 767px) {
