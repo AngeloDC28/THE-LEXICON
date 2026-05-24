@@ -197,8 +197,11 @@ export function renderEntryList(archiveData, callbacks) {
     const tagCategory = getTagCategory(entry.tags?.politics || '');
     const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
     return `
-      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-2.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
-           data-id="${entry.id}">
+      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-2.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
+           data-id="${entry.id}"
+           role="button"
+           tabindex="0"
+           aria-label="${brand} ${year} ${tagLabel}">
         <div class="text-[9px] font-mono uppercase tracking-[0.18em] font-bold" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
         <div class="text-[10px] font-mono uppercase tracking-widest font-medium mt-0.5">${brand}</div>
         <div class="text-[9px] font-mono text-black/40 dark:text-white/40 mt-0.5">

@@ -1050,6 +1050,12 @@ function setupEventListeners() {
       const idx = document.activeElement.dataset.imgIndex || 0;
       if (id) window.location.hash = `detail/${id}/${idx}`;
     }
+    // Entry-item (A-Z compact list) keyboard activation
+    if ((e.key === 'Enter' || e.key === ' ') && document.activeElement?.classList.contains('entry-item')) {
+      e.preventDefault();
+      const id = document.activeElement.dataset.id;
+      if (id) window.location.hash = `detail/${id}/0`;
+    }
     // Phase 1/2 Keyboard Shortcuts
     if (e.key === '?') {
       e.preventDefault();
