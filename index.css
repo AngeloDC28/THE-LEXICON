@@ -627,6 +627,8 @@ html:not(.dark) .hero-stat .hs-lbl { color: #999; }
 html:not(.dark) .feat-card { border-color: #ddd; background: #f9f9f7; }
 .feat-card:hover { border-color: #CCFF00; }
 html:not(.dark) .feat-card:hover { border-color: #000; }
+.feat-card:focus-visible { outline: 2px solid #CCFF00; outline-offset: -2px; }
+html:not(.dark) .feat-card:focus-visible { outline-color: #000; }
 
 .feat-card-tag {
   padding: 8px 12px 6px;
@@ -1991,6 +1993,8 @@ html:not(.dark) .image-grid { background: rgba(0,0,0,0.04); }
 html:not(.dark) .grid-cell { border-color: rgba(0,0,0,0.06); }
 .grid-cell:hover { border-color: #CCFF00; }
 html:not(.dark) .grid-cell:hover { border-color: #000; }
+.grid-cell:focus-visible { outline: 2px solid #CCFF00; outline-offset: -1px; }
+html:not(.dark) .grid-cell:focus-visible { outline-color: #000; }
 
 .grid-cell.loaded {
   opacity: 1;

@@ -91,10 +91,11 @@ export function renderFilterChips(callbacks) {
   }
 
   container.innerHTML = chips.map(c => `
-    <button class="filter-chip bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 text-[8px] font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-80 transition-opacity" 
-            data-type="${c.type}" data-value="${c.value}">
+    <button type="button" class="filter-chip focus-ring bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 text-[8px] font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-80 transition-opacity"
+            data-type="${c.type}" data-value="${c.value}"
+            aria-label="Remove filter: ${c.label}">
       ${c.label}
-      <span class="opacity-50">✕</span>
+      <span aria-hidden="true" class="opacity-50">✕</span>
     </button>
   `).join('');
 

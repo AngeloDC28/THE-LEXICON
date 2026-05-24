@@ -86,16 +86,17 @@ function buildPagination(totalPages) {
   const pages = [];
   for (let p = 1; p <= totalPages; p++) {
     if (totalPages <= 7 || p === 1 || p === totalPages || Math.abs(p - _currentPage) <= 1) {
-      pages.push(`<button class="idx-page-btn${p === _currentPage ? ' active' : ''}" data-page="${p}">${p}</button>`);
+      const isCurrent = p === _currentPage;
+      pages.push(`<button type="button" class="idx-page-btn${isCurrent ? ' active' : ''}" data-page="${p}" aria-label="Page ${p}"${isCurrent ? ' aria-current="page"' : ''}>${p}</button>`);
     } else if (pages[pages.length - 1] !== '…') {
-      pages.push('…');
+      pages.push('<span aria-hidden="true">…</span>');
     }
   }
-  return `<div class="idx-pagination">
-    <button class="idx-page-btn" data-page="${_currentPage - 1}" ${_currentPage <= 1 ? 'disabled' : ''}>PREV</button>
+  return `<nav class="idx-pagination" role="navigation" aria-label="Pagination">
+    <button type="button" class="idx-page-btn" data-page="${_currentPage - 1}" aria-label="Previous page"${_currentPage <= 1 ? ' disabled aria-disabled="true"' : ''}>PREV</button>
     ${pages.join('')}
-    <button class="idx-page-btn" data-page="${_currentPage + 1}" ${_currentPage >= totalPages ? 'disabled' : ''}>NEXT</button>
-  </div>`;
+    <button type="button" class="idx-page-btn" data-page="${_currentPage + 1}" aria-label="Next page"${_currentPage >= totalPages ? ' disabled aria-disabled="true"' : ''}>NEXT</button>
+  </nav>`;
 }
 
 function sortIndicator(col) {
@@ -281,9 +282,9 @@ export function renderIndexView(archiveData, resetPage = false) {
       <span class="index-showing">SHOWING ${pageStart + 1}–${Math.min(pageStart + PAGE_SIZE, filtered)} OF ${filtered} FILTERED / ${total} TOTAL</span>
       ${totalPages > 1 ? buildPagination(totalPages) : ''}
       <span class="index-export">
-        <button class="idx-export-btn" data-export="csv">EXPORT CSV</button>
-        <span class="opacity-30">·</span>
-        <button class="idx-export-btn" data-export="bibtex">BIBTEX</button>
+        <button type="button" class="idx-export-btn focus-ring" data-export="csv" aria-label="Export as CSV">EXPORT CSV</button>
+        <span class="opacity-30" aria-hidden="true">·</span>
+        <button type="button" class="idx-export-btn focus-ring" data-export="bibtex" aria-label="Export as BibTeX">BIBTEX</button>
       </span>
     </div>
     <div class="index-kbd-bar">
