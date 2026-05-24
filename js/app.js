@@ -1223,7 +1223,9 @@ function syncMobileSheetChips() {
     const val = chip.dataset.mbsVal;
     const current = AppState.filters[filterKey] || '';
     const activeVals = current.split('|').map(s => s.trim()).filter(Boolean);
-    chip.classList.toggle('active', activeVals.includes(val));
+    const isActive = activeVals.includes(val);
+    chip.classList.toggle('active', isActive);
+    chip.setAttribute('aria-pressed', String(isActive));
   });
   // Update the mobile filter badge count (includes year range if active)
   const tagTotal = Object.values(AppState.filters).filter(Boolean)
