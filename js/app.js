@@ -1691,7 +1691,8 @@ function renderLightbox() {
   if (img) {
     if (webp) webp.srcset = resolveImgSrc({ src: webpSrc(current) });
     img.src = resolveImgSrc(current);
-    img.alt = getTranslation(entry.title || entry.id, AppState.language);
+    const title = getTranslation(entry.title || entry.id, AppState.language);
+    img.alt = `${title} — image ${idx + 1} of ${imgs.length}`;
     img.style.transform = '';
   }
   if (counter) counter.textContent = (idx + 1) + ' / ' + imgs.length;

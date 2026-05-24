@@ -171,7 +171,8 @@ function renderImage(entry, callbacks) {
       if (h) imgEl.setAttribute('height', h[1]);
     }
     imgEl.src = currentImgSrc;
-    imgEl.alt = entry.title || entry.id;
+    const baseAlt = entry.title || entry.id;
+    imgEl.alt = `${baseAlt} — image ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}`;
   }
 
   const titleEl = $('active-entry-title');
