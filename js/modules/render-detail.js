@@ -442,6 +442,8 @@ function renderHotspots(entry, container) {
     btn.style.left = spot.x + '%';
     btn.style.top  = spot.y + '%';
     btn.setAttribute('data-index', i);
+    btn.setAttribute('aria-label', spot.label ? `Hotspot: ${spot.label}` : `Hotspot ${i + 1}`);
+    btn.setAttribute('type', 'button');
     btn.innerHTML = '<div class="hotspot-target"></div>';
     
     // Interaction

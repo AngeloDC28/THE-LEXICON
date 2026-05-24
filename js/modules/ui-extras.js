@@ -6,6 +6,7 @@
 import { $, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
+import { invalidateSearchCache } from './search-engine.js';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');
@@ -69,6 +70,11 @@ export function renderFilterChips(callbacks) {
     chips.push({ label: `${getTranslation('search_prefix', AppState.language)}: ${AppState.searchQuery}`, type: 'search', value: '' });
   }
 
+  const yr = AppState.yearRange || { min: 1980, max: 2025 };
+  if (yr.min > 1980 || yr.max < 2025) {
+    chips.push({ label: `YEAR: ${yr.min}–${yr.max}`, type: 'yearRange', value: '' });
+  }
+
   Object.entries(AppState.filters).forEach(([type, val]) => {
     if (!val) return;
     const translatedType = getTranslation(`tax_${type}`, AppState.language);
@@ -97,6 +103,9 @@ export function renderFilterChips(callbacks) {
       if (type === 'search') {
         AppState.searchQuery = '';
         if ($('search-input')) $('search-input').value = '';
+      } else if (type === 'yearRange') {
+        AppState.yearRange = { min: 1980, max: 2025 };
+        invalidateSearchCache();
       } else {
         const removedVal = btn.dataset.value;
         const current = AppState.filters[type] || '';
