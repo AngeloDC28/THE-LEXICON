@@ -1396,7 +1396,7 @@ function renderHero(archiveData) {
       // Rebuild if count changed
       if (existing.length !== needed) {
         dotsEl.innerHTML = picks.map((_, i) =>
-          `<button class="hero-dot${i === idx ? ' active' : ''}" data-hero-idx="${i}" aria-label="Featured entry ${i + 1}" aria-pressed="${i === idx}"></button>`
+          `<button type="button" class="hero-dot${i === idx ? ' active' : ''}" data-hero-idx="${i}" aria-label="Show featured entry ${i + 1} of ${needed}" aria-pressed="${i === idx}"></button>`
         ).join('');
         dotsEl.querySelectorAll('.hero-dot').forEach(dotBtn => {
           dotBtn.addEventListener('click', (e) => {
@@ -1413,11 +1413,18 @@ function renderHero(archiveData) {
       }
     }
 
-    // Make the right column clickable to open the entry
+    // Make the right column clickable + keyboard-activatable to open the entry
     const rightCol = $('hero-featured-slot');
     if (rightCol) {
       rightCol.style.cursor = 'pointer';
-      rightCol.onclick = () => { window.location.hash = `detail/${candidate.id}/0`; };
+      rightCol.setAttribute('role', 'link');
+      rightCol.setAttribute('tabindex', '0');
+      rightCol.setAttribute('aria-label', `Open featured entry: ${candidate.tags?.brand || ''} ${candidate.year || ''}`);
+      const openCandidate = () => { window.location.hash = `detail/${candidate.id}/0`; };
+      rightCol.onclick = openCandidate;
+      rightCol.onkeydown = (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCandidate(); }
+      };
     }
   }
 
