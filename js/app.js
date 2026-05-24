@@ -811,6 +811,11 @@ function setupEventListeners() {
     const whoEl = $('who-section');
     if (whoEl) whoEl.style.display = 'none';
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
+    // Move focus into the archive so keyboard users land somewhere meaningful
+    // (otherwise focus goes to <body> when the orientation panel is removed).
+    const firstCell = document.querySelector('#image-grid .grid-cell');
+    if (firstCell) firstCell.focus();
+    else $('search-input')?.focus();
   };
   $('btn-dismiss-orientation')?.addEventListener('click', dismissOrientation);
   $('btn-close-orientation')?.addEventListener('click', dismissOrientation);
