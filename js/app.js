@@ -36,7 +36,7 @@ const callbacks = {
   navigateEntry: (dir) => navigateEntry(dir, archiveData, callbacks),
   showToast: showToast,
   renderFolders: () => renderFoldersView(),
-  renderFolderOptions: () => renderSaveFolderModal(),
+  renderFolderOptions: () => { openModal('save-folder-modal'); renderSaveFolderModal(); },
   updateBookmarkUI: (id) => {
     const btn = $('btn-bookmark-entry');
     const saved = isBookmarked(id);
@@ -671,10 +671,24 @@ function setupEventListeners() {
       $('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
     }
   });
-  $('btn-auth-toggle')?.addEventListener('click', () => { toggleAuth(); setTimeout(() => $('auth-email')?.focus(), 50); });
+  $('btn-auth-toggle')?.addEventListener('click', () => {
+    toggleAuth();
+    const authModal = $('auth-modal');
+    if (authModal && !authModal.classList.contains('hidden')) {
+      setTimeout(() => $('auth-email')?.focus(), 50);
+      trapFocus(authModal);
+    }
+  });
   $('btn-theme-toggle-mobile')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
-  $('btn-auth-toggle-mobile')?.addEventListener('click', () => { toggleAuth(); setTimeout(() => $('auth-email')?.focus(), 50); });
+  $('btn-auth-toggle-mobile')?.addEventListener('click', () => {
+    toggleAuth();
+    const authModal = $('auth-modal');
+    if (authModal && !authModal.classList.contains('hidden')) {
+      setTimeout(() => $('auth-email')?.focus(), 50);
+      trapFocus(authModal);
+    }
+  });
 
   // Modals — opening
   function openModal(id) {
