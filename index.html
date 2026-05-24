@@ -431,6 +431,9 @@
                 id="search-input"
                 type="search"
                 autocomplete="off"
+                autocorrect="off"
+                autocapitalize="off"
+                spellcheck="false"
                 placeholder="Search — or try brand:mcqueen year:1999 tag:corporeal..."
                 aria-label="Search archive"
                 class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:border-acid focus:outline-none"
@@ -938,7 +941,7 @@
         <div class="border-t border-black dark:border-white pt-4">
           <label for="new-folder-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
           <div class="flex gap-2">
-            <input type="text" id="new-folder-name" autocomplete="off" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none" placeholder="FOLDER_TITLE" />
+            <input type="text" id="new-folder-name" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 text-[10px] font-mono uppercase focus:outline-none" placeholder="FOLDER_TITLE" />
             <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 text-[10px] font-bold uppercase tracking-widest">Create</button>
           </div>
         </div>

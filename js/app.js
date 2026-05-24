@@ -1888,11 +1888,14 @@ function renderFoldersView() {
   }
   AppState.archivalFolders.forEach(fol => {
     const card = document.createElement('div');
-    card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all';
+    card.className = 'bg-bone dark:bg-darkBase border border-black dark:border-white p-6 cursor-crosshair hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-all focus-ring';
+    card.setAttribute('role', 'button');
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('aria-label', `Open folder ${fol.name}, ${fol.lookIds ? fol.lookIds.length : 0} entries`);
     card.innerHTML = `
       <div class="flex items-baseline justify-between mb-4">
         <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
-        <button class="btn-export-fol text-[9px] font-mono uppercase opacity-40 group-hover:opacity-100 underline">EXPORT_JSON</button>
+        <button type="button" class="btn-export-fol text-[9px] font-mono uppercase opacity-40 group-hover:opacity-100 underline" aria-label="Export folder ${fol.name} as JSON">EXPORT_JSON</button>
       </div>
       <p class="text-[10px] font-mono opacity-60 mb-4">${fol.notes ? fol.notes : getTranslation('no_obs_logged', AppState.language)}</p>
       <div class="flex gap-6 text-[9px] font-mono uppercase opacity-50">
@@ -1900,12 +1903,21 @@ function renderFoldersView() {
         <span>${new Date(fol.createdAt).toLocaleDateString()}</span>
       </div>
     `;
-    card.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-export-fol')) { e.stopPropagation(); exportFolder(fol.id); return; }
+    const open = () => {
       AppState.activeFolderId = fol.id;
-      // switchView's onUpdate already triggers refreshUI; no duplicate needed.
       switchView('grid', callbacks);
       showToast(getTranslation('toast_browsing', AppState.language) + ' ' + fol.name);
+    };
+    card.addEventListener('click', (e) => {
+      if (e.target.classList.contains('btn-export-fol')) { e.stopPropagation(); exportFolder(fol.id); return; }
+      open();
+    });
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.classList.contains('btn-export-fol')) return;
+        e.preventDefault();
+        open();
+      }
     });
     container.appendChild(card);
   });
@@ -1921,12 +1933,16 @@ function renderSaveFolderModal() {
   }
   AppState.archivalFolders.forEach(fol => {
     const btn = document.createElement('button');
-    btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center';
-    btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40">${fol.lookIds ? fol.lookIds.length : 0}</span>`;
+    btn.type = 'button';
+    btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[10px] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center focus-ring';
+    const count = fol.lookIds ? fol.lookIds.length : 0;
+    btn.setAttribute('aria-label', `Save to folder ${fol.name}, ${count} entries`);
+    btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40" aria-hidden="true">${count}</span>`;
     btn.addEventListener('click', () => {
       saveToFolder(fol.id, AppState.selectedEntryId, callbacks);
       const modal = $('save-folder-modal');
       if (modal) modal.classList.add('hidden');
+      restoreFocus();
     });
     container.appendChild(btn);
   });
