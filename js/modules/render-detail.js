@@ -49,6 +49,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.add('detail-mode-active');
 
+  renderBreadcrumb(entry);
   renderImage(entry, callbacks);
   preloadAdjacentImages(entry);
   renderBrutalistNodes(entry);
@@ -101,6 +102,31 @@ export function navigateEntry(direction, archiveData, callbacks) {
   const nextEntry = entries[newIndex];
   const startImg = direction > 0 ? 0 : (nextEntry.images || [1]).length - 1;
   openDetail(nextEntry.id, startImg, archiveData, callbacks);
+}
+
+function renderBreadcrumb(entry) {
+  const crumb = $('detail-breadcrumb');
+  if (!crumb) return;
+  const brand = entry.tags?.brand || '—';
+  const politics = entry.tags?.politics || '';
+  const tagCat = politics.split('&')[0].trim().replace(/s$/, '').toUpperCase() || 'ARCHIVE';
+  const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
+  const season = entry.season || '';
+  const idLabel = season ? `${id} · ${season.slice(0, 30)}` : id;
+  const sep = `<span class="mx-1 opacity-30">/</span>`;
+  crumb.innerHTML =
+    `<a href="#" class="hover:text-white/60 transition-colors" data-crumb-back>ARCHIVE</a>`
+    + sep
+    + `<span style="color:var(--c-corporeal, #e2a4a0)">${tagCat}</span>`
+    + sep
+    + `<span class="text-white/50">${brand.toUpperCase()}</span>`
+    + sep
+    + `<span class="text-white/70">${idLabel.toUpperCase()}</span>`;
+  crumb.classList.remove('hidden');
+  crumb.querySelector('[data-crumb-back]')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    history.back();
+  });
 }
 
 function renderImage(entry, callbacks) {

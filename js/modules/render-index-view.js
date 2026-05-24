@@ -142,6 +142,16 @@ export function renderIndexView(archiveData) {
     const seasonLabel = title ? `${season} · "${title.slice(0, 30)}"` : season;
     const focused = idx === _focusedRowIndex ? 'focused' : '';
 
+    // STATUS: hotspot count + note completeness
+    const hotspotCount = (entry.images || []).reduce((sum, img) => sum + (img?.hotspots?.length || 0), 0);
+    const noteCount = ['provenance', 'critique', 'strategy'].filter(k => entry.notes?.[k]).length;
+    const statusParts = [];
+    if (hotspotCount > 0) statusParts.push(`◉ ${hotspotCount}`);
+    if (noteCount === 3) statusParts.push('✦ FULL');
+    else if (noteCount > 0) statusParts.push(`${noteCount}/3 NOTES`);
+    const statusClass = hotspotCount > 0 ? 'td-status cited' : 'td-status';
+    const statusText = statusParts.length ? statusParts.join(' · ') : '● ARCHIVED';
+
     return `
       <tr class="${focused}"
           data-entry-id="${entry.id}"
@@ -155,7 +165,7 @@ export function renderIndexView(archiveData) {
         <td class="td-season">${seasonLabel.toUpperCase()}</td>
         <td><span class="td-tag ${tagCat}">${tagLabel.toUpperCase()}</span></td>
         <td class="td-prov">${provenance}</td>
-        <td class="td-status">● ARCHIVED</td>
+        <td class="${statusClass}">${statusText}</td>
       </tr>`;
   }).join('');
 
@@ -166,9 +176,11 @@ export function renderIndexView(archiveData) {
   const activeFilterChips = Object.entries(AppState.filters)
     .filter(([, v]) => v)
     .flatMap(([key, val]) =>
-      val.split('|').map(v => v.trim()).filter(Boolean).map(v =>
-        `<span class="idx-filter-chip" data-type="${key}" data-val="${v}">${key.toUpperCase()}: ${v} ×</span>`
-      )
+      val.split('|').map(v => v.trim()).filter(Boolean).map(v => {
+        // Shorten long politics tag values to category label
+        const displayVal = key === 'politics' ? shortTagLabel(v).toUpperCase() : v.toUpperCase();
+        return `<span class="idx-filter-chip" data-type="${key}" data-val="${v}">${key.toUpperCase()}: ${displayVal} ×</span>`;
+      })
     ).join('');
   const searchChip = AppState.searchQuery
     ? `<span class="idx-filter-chip" data-type="search" data-val="">${AppState.searchQuery} ×</span>`

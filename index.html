@@ -422,7 +422,7 @@
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
           <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
             <span>Filtering: <span id="active-folder-name"></span></span>
-            <button id="btn-clear-folder-filter" class="underline">[ CLEAR_FILTER ]</button>
+            <button id="btn-clear-folder-filter" class="underline">Clear</button>
           </div>
           <div class="flex flex-col gap-2">
             <div class="flex gap-2 items-stretch">
@@ -504,7 +504,7 @@
           </div>
           <div class="flex items-center gap-3 lg:gap-4 min-w-0">
             <button type="button" id="btn-sort-cycle" class="text-[9px] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-0.5 whitespace-nowrap shrink-0" title="Cycle sort order">SORT: DEFAULT</button>
-            <span id="current-view-label" class="hidden lg:inline text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">ARCHIVE_GRID</span>
+            <span id="current-view-label" class="hidden lg:inline text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
           </div>
         </div>
 
@@ -684,6 +684,8 @@
 
         <!-- Detail View -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-black lg:pb-0">
+          <!-- Breadcrumb bar -->
+          <nav id="detail-breadcrumb" class="hidden lg:flex items-center gap-1 px-4 py-1.5 border-b border-white/10 text-[8px] font-mono uppercase tracking-widest text-white/30" aria-label="Entry breadcrumb"></nav>
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
             <!-- LEFT: Image Sector -->
             <div id="detail-image-sector" class="flex-1 relative flex items-center justify-center p-4 lg:p-12 border-r border-white/10">
@@ -1038,7 +1040,7 @@
       <div class="matrix-backdrop" id="matrix-backdrop"></div>
       <div class="matrix-panel">
         <div class="matrix-header">
-          <span class="text-[10px] font-mono font-bold tracking-[0.2em]">CONNECTION_MATRIX_ALPHA</span>
+          <span class="text-[10px] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
           <button type="button" id="btn-close-matrix" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
         </div>
         <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
