@@ -739,7 +739,7 @@ function setupEventListeners() {
     $('image-grid')?.scrollIntoView({ behavior: 'smooth' });
   });
 
-  // Reading mode toggle for detail sidebar notes
+  // Reading mode toggle + TOC scroll spy
   $('btn-reading-mode')?.addEventListener('click', () => {
     const container = $('sticky-note-container');
     const btn = $('btn-reading-mode');
@@ -755,6 +755,22 @@ function setupEventListeners() {
       $('btn-reading-mode')?.classList.add('active');
     }
   } catch(e) {}
+
+  // TOC scroll-spy: highlight active note section as sidebar scrolls
+  const sidebar = $('detail-metadata-sidebar');
+  if (sidebar && window.IntersectionObserver) {
+    const tocObs = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        const id = ent.target.id?.replace('note-', '');
+        const link = document.querySelector(`.notes-toc-link[data-toc-target="${id}"]`);
+        if (link) link.classList.toggle('toc-active', ent.isIntersecting);
+      });
+    }, { root: sidebar, threshold: 0.3 });
+    // Re-observe whenever detail opens (nodes are re-rendered per entry)
+    document.addEventListener('lexicon-detail-opened', () => {
+      document.querySelectorAll('[id^="note-"]').forEach(el => tocObs.observe(el));
+    });
+  }
 
   // --- View Toggles ---
   $('btn-toggle-grid')?.addEventListener('click', () => switchView('grid', callbacks));

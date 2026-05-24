@@ -69,6 +69,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
 
   updateHash(`detail/${entryId}/${AppState.currentImageIndex}`);
   updateStatusBar(archiveData);
+  document.dispatchEvent(new CustomEvent('lexicon-detail-opened'));
 }
 
 export function closeDetail(callbacks, archiveData) {
@@ -162,9 +163,9 @@ function renderBrutalistNodes(entry) {
   const t = (k) => getTranslation(k, lang);
 
   const nodeTypes = [
-    { id: 'provenance', label: '[ ' + t('note_provenance') + ' ]', class: 'node-provenance' },
-    { id: 'critique',   label: '[ ' + t('note_critique')   + ' ]', class: 'node-critique'   },
-    { id: 'strategy',   label: '[ ' + t('note_strategy')   + ' ]', class: 'node-strategy'   }
+    { id: 'provenance', num: '01', label: t('note_provenance'), class: 'node-provenance' },
+    { id: 'critique',   num: '02', label: t('note_critique'),   class: 'node-critique'   },
+    { id: 'strategy',   num: '03', label: t('note_strategy'),   class: 'node-strategy'   }
   ];
 
   nodeTypes.forEach(type => {
@@ -176,13 +177,28 @@ function renderBrutalistNodes(entry) {
     if (text) {
       const node = document.createElement('div');
       node.className = `brutalist-node ${type.class}`;
+      node.dataset.noteId = type.id;
+      node.id = `note-${type.id}`;
+      // Label includes a numbered prefix for the reading-mode header style
       node.innerHTML = `
-        <span class="node-label">${type.label}</span>
+        <span class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]</span>
         <div class="node-body">${text}</div>
       `;
       container.appendChild(node);
     }
   });
+
+  // Inject a mini TOC above the nodes for reading mode
+  const toc = document.createElement('div');
+  toc.className = 'notes-toc';
+  toc.id = 'notes-toc';
+  toc.innerHTML = nodeTypes
+    .filter(nt => entry.notes?.[nt.id])
+    .map(nt => `<a href="#note-${nt.id}" class="notes-toc-link" data-toc-target="${nt.id}">
+      <span class="ntl-num">${nt.num}</span>
+      <span class="ntl-label">${nt.label.toUpperCase()}</span>
+    </a>`).join('');
+  container.prepend(toc);
 }
 
 /**
