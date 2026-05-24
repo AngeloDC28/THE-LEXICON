@@ -73,7 +73,7 @@
     .taxonomy-cell {
       background: #FAF9F6;
       color: #000;
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'JetBrains Mono', monospace;
       font-size: 10px;
       font-weight: 600;
       text-transform: uppercase;
@@ -256,7 +256,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap"
     rel="stylesheet"
   />
 
@@ -273,8 +273,8 @@
             acid: '#CCFF00',
           },
           fontFamily: {
-            inter: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
-            mono: ['"IBM Plex Mono"', '"Courier New"', 'monospace'],
+            mono: ['"JetBrains Mono"', '"Cascadia Code"', '"Fira Code"', 'monospace'],
+            serif: ['"EB Garamond"', 'Georgia', 'serif'],
           },
         },
       },
@@ -320,7 +320,7 @@
   <div id="aria-announcer" class="sr-only" aria-live="polite"></div>
 
   <noscript>
-    <div style="padding: 24px; font-family: 'IBM Plex Mono', monospace; background: #000; color: #CCFF00; text-align: center;">
+    <div style="padding: 24px; font-family: 'JetBrains Mono', monospace; background: #000; color: #CCFF00; text-align: center;">
       <strong>THE LEXICON requires JavaScript.</strong><br>
       This research archive is a dynamic terminal — enable JavaScript to access entries, filters, and the command palette.
     </div>
@@ -513,11 +513,11 @@
               <button type="button" id="btn-mode-visual" class="active text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" aria-label="Visual mode (shortcut: V)" aria-pressed="true">VISUAL <span class="kbd" aria-hidden="true">V</span></button>
               <button type="button" id="btn-mode-index" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
             </div>
-            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
-            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0" aria-label="Switch to Evolution Matrix" aria-pressed="false">Timeline</button>
+            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
+            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Evolution Matrix" aria-pressed="false">Timeline</button>
           </div>
           <div class="flex items-center gap-3 lg:gap-4 min-w-0">
-            <button type="button" id="btn-sort-cycle" class="text-[9px] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-0.5 whitespace-nowrap shrink-0" aria-label="Cycle sort order">SORT: DEFAULT</button>
+            <button type="button" id="btn-sort-cycle" class="text-[9px] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-2 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Cycle sort order">SORT: DEFAULT</button>
             <span id="current-view-label" class="hidden lg:inline text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
           </div>
         </div>
@@ -561,10 +561,10 @@
                 <div class="hero-featured-desc" id="hero-featured-desc"></div>
               </div>
               <div class="hero-dots" aria-label="Featured entry navigation" role="group">
-                <button class="hero-dot active" data-hero-idx="0" aria-label="Featured entry 1" aria-pressed="true"></button>
-                <button class="hero-dot" data-hero-idx="1" aria-label="Featured entry 2" aria-pressed="false"></button>
-                <button class="hero-dot" data-hero-idx="2" aria-label="Featured entry 3" aria-pressed="false"></button>
-                <button class="hero-dot" data-hero-idx="3" aria-label="Featured entry 4" aria-pressed="false"></button>
+                <button type="button" class="hero-dot active" data-hero-idx="0" aria-label="Featured entry 1" aria-pressed="true"></button>
+                <button type="button" class="hero-dot" data-hero-idx="1" aria-label="Featured entry 2" aria-pressed="false"></button>
+                <button type="button" class="hero-dot" data-hero-idx="2" aria-label="Featured entry 3" aria-pressed="false"></button>
+                <button type="button" class="hero-dot" data-hero-idx="3" aria-label="Featured entry 4" aria-pressed="false"></button>
               </div>
             </div>
           </section>
@@ -646,20 +646,20 @@
             <div class="mobile-sheet-section">
               <h4>ANALYTICAL TAG</h4>
               <div class="mobile-sheet-chips" id="mbs-tag-chips">
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="corporeal" data-mbs-val="Body Politics & Corporeal Interventions">CORPOREAL</button>
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="semiotic" data-mbs-val="Techno-Politics & Digital Identities">SEMIOTIC</button>
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="subculture" data-mbs-val="Queer Theory & Subcultural Systems">SUBCULTURAL</button>
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="critique" data-mbs-val="Anti-Consumerism & Institutional Critique">CRITIQUE</button>
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="strategy" data-mbs-val="Globalisation & Cultural Hybridity">STRATEGY</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="corporeal" data-mbs-val="Body Politics & Corporeal Interventions">CORPOREAL</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="semiotic" data-mbs-val="Techno-Politics & Digital Identities">SEMIOTIC</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="subculture" data-mbs-val="Queer Theory & Subcultural Systems">SUBCULTURAL</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="critique" data-mbs-val="Anti-Consumerism & Institutional Critique">CRITIQUE</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="politics" data-mbs-cat="strategy" data-mbs-val="Globalisation & Cultural Hybridity">STRATEGY</button>
               </div>
             </div>
 
             <div class="mobile-sheet-section">
               <h4>GENDER</h4>
               <div class="mobile-sheet-chips" id="mbs-gender-chips">
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="gender" data-mbs-val="Menswear">MENSWEAR</button>
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="gender" data-mbs-val="Womenswear">WOMENSWEAR</button>
-                <button class="mbs-chip" aria-pressed="false" data-mbs-filter="gender" data-mbs-val="Unisex / Neutral">UNISEX</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="gender" data-mbs-val="Menswear">MENSWEAR</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="gender" data-mbs-val="Womenswear">WOMENSWEAR</button>
+                <button type="button" class="mbs-chip" aria-pressed="false" data-mbs-filter="gender" data-mbs-val="Unisex / Neutral">UNISEX</button>
               </div>
             </div>
 
@@ -822,17 +822,17 @@
           </div>
 
           <!-- Mobile Notes Sheet (slides up from bottom on mobile) -->
-          <div id="mobile-notes-sheet" class="lg:hidden hidden fixed inset-x-0 bottom-0 z-[300] bg-bone dark:bg-darkBase border-t-2 border-acid max-h-[70vh] flex flex-col">
+          <div id="mobile-notes-sheet" class="lg:hidden hidden fixed inset-x-0 bottom-0 z-[300] bg-bone dark:bg-darkBase border-t-2 border-acid max-h-[70vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="mobile-notes-title">
             <div class="flex items-center justify-between px-4 py-3 border-b border-black/20 dark:border-white/20 bg-black text-white">
               <span class="text-[10px] font-bold font-mono uppercase tracking-[0.2em]" id="mobile-notes-title">Forensic Notes</span>
-              <button type="button" id="btn-close-mobile-notes" aria-label="Close notes" class="text-lg font-bold leading-none px-2">×</button>
+              <button type="button" id="btn-close-mobile-notes" aria-label="Close notes" class="text-lg font-bold leading-none px-2 min-h-[44px] min-w-[44px] flex items-center justify-center">×</button>
             </div>
-            <div class="grid grid-cols-3 gap-px bg-black/20 dark:bg-white/20 shrink-0">
-              <button type="button" data-mobile-note="provenance" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 bg-bone dark:bg-darkBase active:bg-yellow-300">Provenance</button>
-              <button type="button" data-mobile-note="critique" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 bg-bone dark:bg-darkBase active:bg-red-500 active:text-white">Critique</button>
-              <button type="button" data-mobile-note="strategy" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 bg-bone dark:bg-darkBase active:bg-blue-600 active:text-white">Strategy</button>
+            <div class="grid grid-cols-3 gap-px bg-black/20 dark:bg-white/20 shrink-0" role="tablist" aria-label="Forensic note types">
+              <button type="button" role="tab" data-mobile-note="provenance" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Provenance</button>
+              <button type="button" role="tab" data-mobile-note="critique" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Critique</button>
+              <button type="button" role="tab" data-mobile-note="strategy" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Strategy</button>
             </div>
-            <div id="mobile-notes-body" class="flex-1 overflow-y-auto p-5 text-[12px] leading-relaxed font-mono"></div>
+            <div id="mobile-notes-body" role="tabpanel" class="flex-1 overflow-y-auto p-5 text-[12px] leading-relaxed font-mono"></div>
           </div>
         </div>
 
@@ -993,10 +993,10 @@
           <span class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
         </div>
         <div id="cmd-scope-bar" class="flex items-center gap-1 px-4 py-2 border-b border-black/10 dark:border-white/10">
-          <button class="cmd-scope-pill active" data-scope="all">ALL</button>
-          <button class="cmd-scope-pill" data-scope="entries">ENTRIES</button>
-          <button class="cmd-scope-pill" data-scope="tags">TAGS</button>
-          <button class="cmd-scope-pill" data-scope="commands">COMMANDS</button>
+          <button type="button" class="cmd-scope-pill active" data-scope="all" aria-pressed="true">ALL</button>
+          <button type="button" class="cmd-scope-pill" data-scope="entries" aria-pressed="false">ENTRIES</button>
+          <button type="button" class="cmd-scope-pill" data-scope="tags" aria-pressed="false">TAGS</button>
+          <button type="button" class="cmd-scope-pill" data-scope="commands" aria-pressed="false">COMMANDS</button>
           <span id="cmd-result-count" class="ml-auto text-[8px] font-mono opacity-40 uppercase tracking-widest"></span>
         </div>
         <div id="cmd-results" class="overflow-y-auto flex-1 font-mono" role="listbox" aria-label="Search results" aria-live="polite"></div>

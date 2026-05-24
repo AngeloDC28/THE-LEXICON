@@ -40,7 +40,9 @@ export function toggleCmdPalette(archiveData, callbacks) {
 
 function updateScopePills() {
   document.querySelectorAll('.cmd-scope-pill').forEach(p => {
-    p.classList.toggle('active', p.dataset.scope === cmdScope);
+    const isActive = p.dataset.scope === cmdScope;
+    p.classList.toggle('active', isActive);
+    p.setAttribute('aria-pressed', String(isActive));
   });
 }
 

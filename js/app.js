@@ -497,6 +497,11 @@ function applyStateFromQuery(params) {
   const yMax = params.has('y_max') ? parseInt(params.get('y_max')) : 2025;
   if (!isNaN(yMin) && !isNaN(yMax)) AppState.yearRange = { min: yMin, max: yMax };
 
+  if (params.has('saved') && params.get('saved') === '1') {
+    AppState.bookmarksOnly = true;
+    const btn = $('btn-show-bookmarks');
+    if (btn) btn.setAttribute('aria-pressed', 'true');
+  }
   // Phase 2: view mode (visual | index) is URL-shareable
   if (params.has('mode')) {
     const mode = params.get('mode');
@@ -517,6 +522,7 @@ export function syncHashFromState() {
   const yr = AppState.yearRange || { min: 1980, max: 2025 };
   if (yr.min > 1980) params.set('y_min', yr.min);
   if (yr.max < 2025) params.set('y_max', yr.max);
+  if (AppState.bookmarksOnly) params.set('saved', '1');
   // Phase 2: encode view mode (only if non-default)
   if (AppState.viewMode === 'index') params.set('mode', 'index');
   const view = AppState.currentView || 'grid';
@@ -914,7 +920,10 @@ function setupEventListeners() {
   $('btn-nexus-mobile')?.addEventListener('click', openNexus);
   $('btn-related-open-nexus')?.addEventListener('click', openNexus);
   $('btn-notes-mobile')?.addEventListener('click', () => openMobileNotes());
-  $('btn-close-mobile-notes')?.addEventListener('click', () => $('mobile-notes-sheet')?.classList.add('hidden'));
+  $('btn-close-mobile-notes')?.addEventListener('click', () => {
+    $('mobile-notes-sheet')?.classList.add('hidden');
+    restoreFocus();
+  });
   document.querySelectorAll('.mobile-note-tab').forEach(tab => {
     tab.addEventListener('click', () => showMobileNote(tab.dataset.mobileNote));
   });
@@ -1755,8 +1764,9 @@ function openMobileNotes() {
   const sheet = $('mobile-notes-sheet');
   if (!sheet) return;
   sheet.classList.remove('hidden');
-  // Default to provenance tab
   showMobileNote('provenance');
+  requestAnimationFrame(() => $('btn-close-mobile-notes')?.focus());
+  trapFocus(sheet);
 }
 
 function showMobileNote(type) {
@@ -1786,9 +1796,10 @@ function showMobileNote(type) {
     }
   }
   if (bodyEl) bodyEl.textContent = text || '—';
-  // Visual active state on tabs
   document.querySelectorAll('.mobile-note-tab').forEach(t => {
-    if (t.dataset.mobileNote === type) {
+    const isActive = t.dataset.mobileNote === type;
+    t.setAttribute('aria-selected', String(isActive));
+    if (isActive) {
       t.style.background = colors[type].bg;
       t.style.color      = colors[type].fg;
     } else {

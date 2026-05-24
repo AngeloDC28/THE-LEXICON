@@ -312,8 +312,8 @@ function renderStickyOverlay(entry) {
     if (!text) return;
 
     const sq = document.createElement('button');
+    sq.type = 'button';
     sq.className = `sticky-square ${type.cls}`;
-    sq.title = type.label;
     sq.setAttribute('aria-label', type.label);
 
     sq.addEventListener('click', (e) => {
