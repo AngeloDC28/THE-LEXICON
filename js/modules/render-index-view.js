@@ -245,11 +245,11 @@ export function renderIndexView(archiveData, resetPage = false) {
       val.split('|').map(v => v.trim()).filter(Boolean).map(v => {
         // Shorten long politics tag values to category label
         const displayVal = key === 'politics' ? shortTagLabel(v).toUpperCase() : v.toUpperCase();
-        return `<span class="idx-filter-chip" data-type="${key}" data-val="${v}">${key.toUpperCase()}: ${displayVal} ×</span>`;
+        return `<button type="button" class="idx-filter-chip focus-ring" data-type="${key}" data-val="${v}" aria-label="Remove filter ${key} ${v}">${key.toUpperCase()}: ${displayVal} ×</button>`;
       })
     ).join('');
   const searchChip = AppState.searchQuery
-    ? `<span class="idx-filter-chip" data-type="search" data-val="">${AppState.searchQuery} ×</span>`
+    ? `<button type="button" class="idx-filter-chip focus-ring" data-type="search" data-val="" aria-label="Clear search">${AppState.searchQuery} ×</button>`
     : '';
   const filterBar = (activeFilterChips || searchChip)
     ? `<div class="index-filter-bar">${searchChip}${activeFilterChips}</div>`

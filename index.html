@@ -344,7 +344,7 @@
       </div>
     </div>
     <div class="lexicon-desktop-only items-center gap-3 lg:gap-5">
-      <button id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">FOLDERS</button>
+      <button type="button" id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring" aria-pressed="false">FOLDERS</button>
       <button id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring">SIGN IN</button>
       <div class="relative inline-block">
         <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
@@ -352,9 +352,9 @@
         </button>
         <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
       </div>
-      <button id="btn-about" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">ABOUT</button>
-      <button id="btn-contact" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">CONTACT</button>
-      <button id="btn-theme-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">THEME</button>
+      <button type="button" id="btn-about" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">ABOUT</button>
+      <button type="button" id="btn-contact" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring">CONTACT</button>
+      <button type="button" id="btn-theme-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring" aria-label="Toggle light/dark theme">THEME</button>
     </div>
   </header>
 
@@ -439,7 +439,7 @@
                 class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 text-xs font-mono text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:border-acid focus:outline-none"
               />
               <button type="button" id="btn-cmd-palette-hint" aria-label="Open command palette" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-transparent px-3 py-2 hover:border-acid hover:text-acid transition-colors hidden lg:flex items-center gap-1"><kbd class="border border-current px-1">⌘K</kbd></button>
-              <button type="button" id="btn-clear-directory" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-transparent px-3 py-2">Clear</button>
+              <button type="button" id="btn-clear-directory" aria-label="Clear search and filters" class="shrink-0 text-[8px] font-bold font-mono uppercase tracking-[0.06em] border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-transparent px-3 py-2 focus-ring">Clear</button>
             </div>
             <div id="filter-chips" class="flex flex-wrap gap-1 mt-1 items-center">
               <span id="filter-result-count" class="text-[8px] font-mono opacity-40 uppercase tracking-widest hidden"></span>
