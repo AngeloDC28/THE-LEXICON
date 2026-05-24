@@ -406,7 +406,7 @@ function refreshTaxonomy() {
   const taxHeading = $('taxonomy-heading');
   if (taxHeading) taxHeading.textContent = getTranslation('taxonomy_heading', lang) || 'Categories';
   renderTaxonomyGrid();
-  renderTaxonomySub(callbacks);
+  renderTaxonomySub(callbacks, archiveData);
 }
 
 function refreshSortLabel() {
@@ -581,7 +581,7 @@ function setupEventListeners() {
       const type = taxType.dataset.taxonomyType;
       setActiveTaxonomy(type);
       renderTaxonomyGrid();
-      renderTaxonomySub(callbacks);
+      renderTaxonomySub(callbacks, archiveData);
       return;
     }
 
@@ -603,7 +603,7 @@ function setupEventListeners() {
       }
       AppState.filters[type] = activeVals.length ? activeVals.join('|') : null;
       // Re-render sub-panel to update checked state; keep panel open for multi-select.
-      renderTaxonomySub(callbacks);
+      renderTaxonomySub(callbacks, archiveData);
       renderTaxonomyGrid();
       refreshContent();
       updateHash('grid');
@@ -614,7 +614,7 @@ function setupEventListeners() {
     const taxClear = e.target.closest('[data-taxonomy-clear]');
     if (taxClear) {
       AppState.filters[taxClear.dataset.taxonomyClear] = null;
-      renderTaxonomySub(callbacks);
+      renderTaxonomySub(callbacks, archiveData);
       renderTaxonomyGrid();
       refreshContent();
       updateHash('grid');
@@ -625,7 +625,7 @@ function setupEventListeners() {
     if (e.target.closest('[data-taxonomy-back]') || e.target.id === 'btn-taxonomy-back') {
       AppState.activeTaxonomy = null;
       renderTaxonomyGrid();
-      renderTaxonomySub(callbacks);
+      renderTaxonomySub(callbacks, archiveData);
       return;
     }
     // ────────────────────────────────────────────────────────────

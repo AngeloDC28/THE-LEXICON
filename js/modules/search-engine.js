@@ -157,7 +157,7 @@ export function renderTaxonomyGrid() {
   }).join('');
 }
 
-export function renderTaxonomySub(callbacks) {
+export function renderTaxonomySub(callbacks, archiveData) {
   const container = $('taxonomy-sub');
   const grid = $('taxonomy-grid');
   if (!container || !grid) return;
@@ -176,6 +176,18 @@ export function renderTaxonomySub(callbacks) {
   const currentFilter = AppState.filters[type];
   const activeVals = currentFilter ? currentFilter.split('|').map(s => s.trim()).filter(Boolean) : [];
 
+  // Build per-value entry count map if archiveData is provided
+  const countMap = new Map();
+  if (archiveData && archiveData.length) {
+    values.forEach(val => {
+      const count = archiveData.filter(e => {
+        const tag = e.tags?.[type] || '';
+        return tag === val || tag.split('|').map(s => s.trim()).includes(val);
+      }).length;
+      if (count > 0) countMap.set(val, count);
+    });
+  }
+
   container.innerHTML = `
     <div class="taxonomy-sub-header flex items-center justify-between gap-3 mb-3 pb-2 border-b border-black/10 dark:border-white/10">
       <span class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-70">
@@ -189,15 +201,19 @@ export function renderTaxonomySub(callbacks) {
     <div class="taxonomy-sub-values flex flex-wrap gap-1.5">
       ${values.map(val => {
         const isActive = activeVals.includes(val);
+        const count = countMap.get(val);
+        const countBadge = count ? ` <span class="opacity-50 text-[8px] font-normal normal-case">${count}</span>` : '';
         const activeClass = isActive
           ? 'border-acid bg-acid text-black hover:opacity-80'
           : 'border-black/30 dark:border-white/30 hover:border-black dark:hover:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black';
+        const zeroClass = count === 0 ? ' opacity-30' : '';
         return `<button
-          class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border transition-colors ${activeClass}"
+          class="taxonomy-val-btn px-2.5 py-1.5 text-[10px] tracking-wider uppercase font-mono border transition-colors ${activeClass}${zeroClass}"
           data-taxonomy-type="${type}"
           data-taxonomy-val="${val}"
           aria-pressed="${isActive}"
-        >${isActive ? '✓ ' : ''}${getTranslation(val, AppState.language)}</button>`;
+          ${count === 0 ? 'disabled' : ''}
+        >${isActive ? '✓ ' : ''}${getTranslation(val, AppState.language)}${countBadge}</button>`;
       }).join('')}
     </div>
   `;
