@@ -295,6 +295,10 @@ export function renderIndexView(archiveData, resetPage = false) {
       <span>·</span>
       <span><kbd>⏎</kbd> OPEN</span>
       <span>·</span>
+      <span><kbd>S</kbd> SAVE</span>
+      <span>·</span>
+      <span><kbd>C</kbd> CITE</span>
+      <span>·</span>
       <span><kbd>?</kbd> HELP</span>
     </div>`;
 

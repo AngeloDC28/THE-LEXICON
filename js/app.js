@@ -1012,6 +1012,22 @@ function setupEventListeners() {
       } else if (e.key === 'Enter') {
         e.preventDefault();
         indexActivateRow();
+      } else if ((e.key === 's' || e.key === 'S') && !e.metaKey && !e.ctrlKey) {
+        // Save focused row entry to folder
+        const focusedRow = document.querySelector('#index-table-view tbody tr.focused');
+        if (focusedRow?.dataset.entryId) {
+          e.preventDefault();
+          AppState.selectedEntryId = focusedRow.dataset.entryId;
+          callbacks.renderFolderOptions?.();
+        }
+      } else if (e.key === 'c' || e.key === 'C') {
+        // Cite focused row entry
+        const focusedRow = document.querySelector('#index-table-view tbody tr.focused');
+        if (focusedRow?.dataset.entryId) {
+          e.preventDefault();
+          AppState.selectedEntryId = focusedRow.dataset.entryId;
+          openCiteModal();
+        }
       }
     }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
