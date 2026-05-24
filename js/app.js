@@ -1959,7 +1959,7 @@ function renderFoldersView() {
     card.innerHTML = `
       <div class="flex items-baseline justify-between mb-4">
         <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
-        <button type="button" class="btn-export-fol text-[9px] font-mono uppercase opacity-40 group-hover:opacity-100 underline" aria-label="Export folder ${fol.name} as JSON">EXPORT_JSON</button>
+        <button type="button" class="btn-export-fol text-[9px] font-mono uppercase opacity-40 hover:opacity-100 underline focus-ring min-h-[44px] px-1" aria-label="Export folder ${fol.name} as JSON">EXPORT_JSON</button>
       </div>
       <p class="text-[10px] font-mono opacity-60 mb-4">${fol.notes ? fol.notes : getTranslation('no_obs_logged', AppState.language)}</p>
       <div class="flex gap-6 text-[9px] font-mono uppercase opacity-50">

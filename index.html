@@ -430,7 +430,7 @@
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
           <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
             <span>Filtering: <span id="active-folder-name"></span></span>
-            <button type="button" id="btn-clear-folder-filter" aria-label="Clear active folder filter" class="underline">Clear</button>
+            <button type="button" id="btn-clear-folder-filter" aria-label="Clear active folder filter" class="underline min-h-[44px] px-2 focus-ring">Clear</button>
           </div>
           <div class="flex flex-col gap-2">
             <div class="flex gap-2 items-stretch">
@@ -701,7 +701,7 @@
             <div class="flex items-baseline justify-between mb-8 border-b border-black dark:border-white pb-4">
               <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Folders</h1>
               <div class="flex gap-4">
-                <button type="button" id="btn-export-all-folders" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[ Export Database ]</button>
+                <button type="button" id="btn-export-all-folders" aria-label="Export all folders as JSON" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline min-h-[44px] px-2 focus-ring">[ Export Database ]</button>
                 <span id="folders-count" class="text-[10px] font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
               </div>
             </div>
