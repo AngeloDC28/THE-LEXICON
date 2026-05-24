@@ -104,6 +104,9 @@ export function renderImageGrid(archiveData, callbacks) {
       const season = entry.season || '';
       const year = entry.year || '----';
       const metaLine = [brand.toUpperCase(), year, season].filter(Boolean).join(' · ');
+      // Only show hook on first image of each entry (i===0) to avoid repetition
+      const hookRaw = i === 0 ? (entry.notes?.critique || '') : '';
+      const hook = hookRaw ? hookRaw.split('.')[0].trim().slice(0, 80) : '';
       html += `
         <div class="grid-cell"
              data-entry-id="${entry.id}"
@@ -115,7 +118,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
           <div class="grid-cell-tag-strip">
             <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
-            <span class="gc-tag-id" aria-hidden="true">${`N-${entry.id.slice(0,6).toUpperCase()}`}</span>
+            <span class="gc-tag-id" aria-hidden="true">N-${entry.id.slice(0,6).toUpperCase()}</span>
           </div>
           <!-- Image wrapper -->
           <div class="grid-cell-img group">
@@ -134,6 +137,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <!-- Always-visible metadata below image -->
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
+            ${hook ? `<div class="gc-hook">${hook}.</div>` : ''}
           </div>
         </div>`;
     });
