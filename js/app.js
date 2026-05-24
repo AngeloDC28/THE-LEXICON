@@ -1143,11 +1143,15 @@ function setupEventListeners() {
     syncYearRangeSlider();
     updateMobileSheetUrl();
     updateMbsResultCount();
+    const closeBtn = $('btn-mobile-filter-close');
+    if (closeBtn) requestAnimationFrame(() => closeBtn.focus());
+    trapFocus(sheet);
   };
   const closeMobileSheet = () => {
     const sheet = $('mobile-filter-sheet');
     if (sheet) sheet.classList.add('hidden');
     document.body.style.overflow = '';
+    restoreFocus();
   };
 
   $('btn-mobile-filter')?.addEventListener('click', openMobileSheet);
