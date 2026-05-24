@@ -205,10 +205,23 @@ function renderBrutalistNodes(entry) {
       node.className = `brutalist-node ${type.class}`;
       node.dataset.noteId = type.id;
       node.id = `note-${type.id}`;
-      // Label includes a numbered prefix for the reading-mode header style
+
+      // Critique note gets a pull quote — extract the first sentence 40–250 chars
+      let bodyHtml = text;
+      if (type.id === 'critique') {
+        const sentences = text.split(/(?<=[.!?])\s+/);
+        const pullIdx = sentences.findIndex(s => s.length >= 40 && s.length <= 280);
+        if (pullIdx >= 0) {
+          const pull = sentences.splice(pullIdx, 1)[0];
+          bodyHtml = sentences.length
+            ? `<blockquote class="note-pullquote">${pull}</blockquote>${sentences.join(' ')}`
+            : `<blockquote class="note-pullquote">${pull}</blockquote>`;
+        }
+      }
+
       node.innerHTML = `
         <span class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]</span>
-        <div class="node-body">${text}</div>
+        <div class="node-body">${bodyHtml}</div>
       `;
       container.appendChild(node);
     }

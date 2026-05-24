@@ -1627,6 +1627,28 @@ html:not(.dark) #sticky-note-container.reading-mode .node-body {
   color: #333 !important;
 }
 
+/* Pull quote inside critique note */
+.note-pullquote {
+  margin: 16px 0;
+  padding: 16px 20px;
+  border-left: 3px solid #FF0000;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  background: rgba(255,0,0,0.06);
+}
+html:not(.dark) .note-pullquote { color: #111; background: rgba(255,0,0,0.04); }
+#sticky-note-container.reading-mode .note-pullquote {
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem) !important;
+  border-left-color: #FF0000;
+  padding: 20px 28px;
+}
+
 #sticky-note-container.reading-mode .node-provenance { background: transparent !important; }
 #sticky-note-container.reading-mode .node-critique   { background: transparent !important; }
 #sticky-note-container.reading-mode .node-strategy   { background: transparent !important; }
