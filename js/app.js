@@ -881,12 +881,18 @@ function setupEventListeners() {
   $('btn-back-grid')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-back-grid-mobile')?.addEventListener('click', () => closeDetail(callbacks, archiveData));
   $('btn-toggle-hotspots-mobile')?.addEventListener('click', toggleMobileHotspots);
-  $('btn-nexus-mobile')?.addEventListener('click', () => {
-    if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
-  });
-  $('btn-related-open-nexus')?.addEventListener('click', () => {
-    if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
-  });
+  function openNexus() {
+    if (!AppState.selectedEntryId) return;
+    openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
+    const matrix = $('connection-matrix');
+    if (matrix && !matrix.classList.contains('hidden')) {
+      const closeBtn = $('btn-close-matrix');
+      if (closeBtn) requestAnimationFrame(() => closeBtn.focus());
+      trapFocus(matrix);
+    }
+  }
+  $('btn-nexus-mobile')?.addEventListener('click', openNexus);
+  $('btn-related-open-nexus')?.addEventListener('click', openNexus);
   $('btn-notes-mobile')?.addEventListener('click', () => openMobileNotes());
   $('btn-close-mobile-notes')?.addEventListener('click', () => $('mobile-notes-sheet')?.classList.add('hidden'));
   document.querySelectorAll('.mobile-note-tab').forEach(tab => {
@@ -976,11 +982,9 @@ function setupEventListeners() {
     showToast(getTranslation('filtering_label', AppState.language) + ' ' + value);
   });
 
-  $('btn-open-matrix')?.addEventListener('click', () => {
-    if (AppState.selectedEntryId) openConnectionMatrix(AppState.selectedEntryId, archiveData, callbacks);
-  });
-  $('btn-close-matrix')?.addEventListener('click', () => closeConnectionMatrix());
-  $('matrix-backdrop')?.addEventListener('click', () => closeConnectionMatrix());
+  $('btn-open-matrix')?.addEventListener('click', openNexus);
+  $('btn-close-matrix')?.addEventListener('click', () => { closeConnectionMatrix(); restoreFocus(); });
+  $('matrix-backdrop')?.addEventListener('click', () => { closeConnectionMatrix(); restoreFocus(); });
 
   $('btn-save-to-folder')?.addEventListener('click', () => {
     if (!currentUser) { showToast(getTranslation('auth_required', AppState.language)); toggleAuth(); return; }

@@ -1075,12 +1075,12 @@
     </div>
 
     <!-- CONNECTION MATRIX (RELATIONAL NEXUS) -->
-    <div id="connection-matrix" class="hidden">
-      <div class="matrix-backdrop" id="matrix-backdrop"></div>
+    <div id="connection-matrix" class="hidden" role="dialog" aria-modal="true" aria-labelledby="matrix-panel-title">
+      <div class="matrix-backdrop" id="matrix-backdrop" aria-hidden="true"></div>
       <div class="matrix-panel">
         <div class="matrix-header">
-          <span class="text-[10px] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
-          <button type="button" id="btn-close-matrix" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
+          <span id="matrix-panel-title" class="text-[10px] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
+          <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
         </div>
         <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
       </div>
