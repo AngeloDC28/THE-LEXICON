@@ -499,14 +499,14 @@
           <div class="flex items-center gap-3 lg:gap-8 min-w-0">
             <!-- Visual / Index Mode Toggle (Phase 1/2 redesign) -->
             <div class="mode-toggle inline-flex border border-black/60 dark:border-white/30 shrink-0" role="group" aria-label="View mode">
-              <button type="button" id="btn-mode-visual" class="active text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" title="Visual mode (V)" aria-pressed="true">VISUAL <span class="kbd">V</span></button>
-              <button type="button" id="btn-mode-index" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" title="Index mode (I)" aria-pressed="false">INDEX <span class="kbd">I</span></button>
+              <button type="button" id="btn-mode-visual" class="active text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" aria-label="Visual mode (shortcut: V)" aria-pressed="true">VISUAL <span class="kbd" aria-hidden="true">V</span></button>
+              <button type="button" id="btn-mode-index" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-1" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
             </div>
-            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0" title="Switch to Grid View">Grid View</button>
-            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0" title="Switch to Evolution Matrix">Timeline</button>
+            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0" aria-label="Switch to Grid View">Grid View</button>
+            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0" aria-label="Switch to Evolution Matrix">Timeline</button>
           </div>
           <div class="flex items-center gap-3 lg:gap-4 min-w-0">
-            <button type="button" id="btn-sort-cycle" class="text-[9px] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-0.5 whitespace-nowrap shrink-0" title="Cycle sort order">SORT: DEFAULT</button>
+            <button type="button" id="btn-sort-cycle" class="text-[9px] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-0.5 whitespace-nowrap shrink-0" aria-label="Cycle sort order">SORT: DEFAULT</button>
             <span id="current-view-label" class="hidden lg:inline text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
           </div>
         </div>
@@ -928,11 +928,11 @@
     <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"THE LEXICON","description":"A Relational Database and Cultural Directory Dedicated to the Rigorous Audit of Fashion History and Visual Culture."}</script>
 
     <!-- SAVE TO FOLDER MODAL -->
-    <div id="save-folder-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4">
-      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="save-folder"></div>
+    <div id="save-folder-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="save-folder-modal-title">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="save-folder" aria-hidden="true"></div>
       <div class="relative w-full max-w-md bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[80vh]">
         <button type="button" data-modal-close="save-folder" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close">X</button>
-        <h2 class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Save to Archival Folder</h2>
+        <h2 id="save-folder-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Save to Archival Folder</h2>
         <div class="flex-1 overflow-y-auto mb-6 space-y-2" id="folder-list-container"></div>
         <div class="border-t border-black dark:border-white pt-4">
           <label for="new-folder-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
@@ -970,8 +970,8 @@
     </div>
 
     <!-- COMMAND PALETTE (CMD+K) -->
-    <div id="cmd-palette" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4">
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-md" id="cmd-palette-backdrop"></div>
+    <div id="cmd-palette" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-md" id="cmd-palette-backdrop" aria-hidden="true"></div>
       <div class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border-[1px] border-black/80 dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
         <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
           <span class="text-xl font-bold font-mono">›</span>
@@ -1000,11 +1000,11 @@
     </div>
 
     <!-- AUTH MODAL -->
-    <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4">
+    <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
       <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth" aria-hidden="true"></div>
       <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
         <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
-        <h2 class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
+        <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
         <div id="auth-form-container">
           <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
           <form id="auth-form" class="space-y-4">

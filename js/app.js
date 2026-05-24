@@ -904,8 +904,13 @@ function setupEventListeners() {
     });
   });
 
-  $('btn-cmd-palette-hint')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
-  $('btn-hero-search')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
+  function openCmdPalette() {
+    toggleCmdPalette(archiveData, callbacks);
+    const pal = $('cmd-palette');
+    if (pal && !pal.classList.contains('hidden')) trapFocus(pal);
+  }
+  $('btn-cmd-palette-hint')?.addEventListener('click', openCmdPalette);
+  $('btn-hero-search')?.addEventListener('click', openCmdPalette);
 
   // Cite Entry modal: build BibTeX + Chicago + permalink for the active entry
   $('btn-cite-entry')?.addEventListener('click', () => openCiteModal());
@@ -1073,7 +1078,7 @@ function setupEventListeners() {
     }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
-      toggleCmdPalette(archiveData, callbacks);
+      openCmdPalette();
     }
     handleCmdKeydown(e, archiveData, callbacks);
   });
