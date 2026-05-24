@@ -1811,6 +1811,24 @@ html:not(.dark) .cmd-group-head { border-top-color: rgba(0,0,0,0.06); background
 .cmd-cmd-item { opacity: 0.85; }
 .cmd-cmd-item:hover { opacity: 1; }
 
+.cmd-scope-pill {
+  padding: 2px 8px;
+  font-size: 8px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  color: #666;
+  cursor: pointer;
+  background: transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+html:not(.dark) .cmd-scope-pill { color: #aaa; }
+.cmd-scope-pill:hover { color: #ccc; border-color: rgba(255,255,255,0.15); }
+html:not(.dark) .cmd-scope-pill:hover { color: #444; border-color: rgba(0,0,0,0.15); }
+.cmd-scope-pill.active { color: #CCFF00; border-color: rgba(204,255,0,0.3); }
+html:not(.dark) .cmd-scope-pill.active { color: #000; border-color: rgba(0,0,0,0.4); }
+
 #detail-image {
   display: block;
   width: auto;

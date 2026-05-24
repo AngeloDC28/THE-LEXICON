@@ -9,21 +9,39 @@ import { getTranslation } from './translations.js';
 
 let cmdSelectedIndex = -1;
 let cmdResults = [];
+let cmdScope = 'all'; // 'all' | 'entries' | 'tags' | 'commands'
 
 export function toggleCmdPalette(archiveData, callbacks) {
   const modal = $('cmd-palette');
   if (!modal) return;
   if (modal.classList.contains('hidden')) {
     modal.classList.remove('hidden');
+    cmdScope = 'all';
+    updateScopePills();
     const input = $('cmd-input');
     if (input) {
       input.value = '';
       input.focus();
     }
-    renderCmdResults('', archiveData);
+    renderCmdResults('', archiveData, callbacks);
   } else {
     modal.classList.add('hidden');
   }
+  // Bind scope pill clicks (once, after modal shown)
+  document.querySelectorAll('.cmd-scope-pill').forEach(pill => {
+    pill.onclick = () => {
+      cmdScope = pill.dataset.scope;
+      updateScopePills();
+      const q = $('cmd-input')?.value || '';
+      renderCmdResults(q, archiveData, callbacks);
+    };
+  });
+}
+
+function updateScopePills() {
+  document.querySelectorAll('.cmd-scope-pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.scope === cmdScope);
+  });
 }
 
 // Phase 2: parse field operators from query (e.g. "tag:corporeal year:1999")
@@ -102,16 +120,25 @@ export function renderCmdResults(query, archiveData, callbacks) {
   const q = query.toLowerCase();
   const { ops, freeText } = parseFieldOps(query);
 
+  const showTags     = cmdScope === 'all' || cmdScope === 'tags';
+  const showEntries  = cmdScope === 'all' || cmdScope === 'entries';
+  const showCommands = cmdScope === 'all' || cmdScope === 'commands';
+
   // 1. Matching analytical tags
-  const matchedTags = ALL_POLITICS.filter(t => t.toLowerCase().includes(q));
+  const matchedTags = showTags ? ALL_POLITICS.filter(t => t.toLowerCase().includes(q)) : [];
 
   // 2. Matching entries
-  const entryMatches = archiveData.filter(e => matchesEntry(e, ops, freeText)).slice(0, 8);
+  const entryMatches = showEntries ? archiveData.filter(e => matchesEntry(e, ops, freeText)).slice(0, 8) : [];
   cmdResults = entryMatches;
 
   // 3. Quick commands
-  const cmds = buildCommandItems(query);
+  const cmds = showCommands ? buildCommandItems(query) : '';
 
+  if (matchedTags.length === 0 && entryMatches.length === 0 && !cmds) {
+    container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_no_results', AppState.language)}</div>`;
+    bindCmdActions(container, archiveData, callbacks);
+    return;
+  }
   if (matchedTags.length === 0 && entryMatches.length === 0) {
     container.innerHTML = `<div class="p-4 text-xs opacity-50 uppercase text-center">${getTranslation('cmd_no_results', AppState.language)}</div>
       <div class="cmd-group-head">QUICK COMMANDS</div>${cmds}`;
@@ -123,11 +150,12 @@ export function renderCmdResults(query, archiveData, callbacks) {
 
   // Tag group
   if (matchedTags.length) {
-    const tagCount = archiveData.filter(e => (e.tags?.politics || '').toLowerCase().includes(q)).length;
     html += `<div class="cmd-group-head">ANALYTICAL TAG</div>`;
-    matchedTags.slice(0, 2).forEach(tag => {
+    matchedTags.slice(0, 3).forEach(tag => {
+      const tagCount = archiveData.filter(e => (e.tags?.politics || '').toLowerCase().includes(tag.toLowerCase())).length;
       const shortTag = tag.split('&')[0].trim();
-      html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex justify-between items-center" data-cmd-action="filter-tag" data-cmd-val="${tag}">
+      html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex items-center gap-3" data-cmd-action="filter-tag" data-cmd-val="${tag}">
+        <div class="text-[10px] font-bold opacity-30 shrink-0 font-mono">#</div>
         <div class="min-w-0 flex-1">
           <div class="text-[11px] font-bold tracking-wide" style="color:var(--c-corporeal)">${tag}</div>
           <div class="text-[9px] opacity-50 uppercase tracking-wider mt-0.5">${tagCount} ENTRIES · ${shortTag.toUpperCase()}</div>
@@ -144,24 +172,26 @@ export function renderCmdResults(query, archiveData, callbacks) {
       const brand = entry.tags?.brand || '—';
       const year  = entry.year || '----';
       const season = entry.season || 'ARCHIVE';
-      const title = entry.title || `${brand} ${season} ${year}`.trim();
-      const id    = `N-${entry.id.slice(0,4).toUpperCase()}`;
-      const politics = (entry.tags?.politics || '').split('&')[0].trim().toUpperCase().slice(0, 28);
-      html += `<div class="cmd-item p-3 px-4 cursor-pointer flex justify-between items-center" data-index="${i}" data-entry-id="${entry.id}">
+      const id    = `N-${entry.id.slice(0,6).toUpperCase()}`;
+      const politics = (entry.tags?.politics || '').split('&')[0].trim().toUpperCase().slice(0, 32);
+      // Use critique note as the "hook" text, or fall back to title
+      const hook = entry.notes?.critique
+        ? entry.notes.critique.slice(0, 72) + (entry.notes.critique.length > 72 ? '…' : '')
+        : (entry.title ? entry.title.slice(0, 72) : `${brand} · ${season} · ${year}`);
+      html += `<div class="cmd-item p-3 px-4 cursor-pointer flex items-start gap-3" data-index="${i}" data-entry-id="${entry.id}">
+        <div class="text-[10px] font-bold opacity-30 mt-0.5 shrink-0 font-mono">N</div>
         <div class="min-w-0 flex-1">
-          <div class="flex items-baseline gap-2">
-            <span class="text-[8px] opacity-40 font-mono">${id}</span>
-            <span class="text-[11px] font-bold uppercase tracking-wide truncate">${brand}</span>
-          </div>
-          <div class="text-[9px] opacity-50 uppercase tracking-wide mt-0.5 truncate">${year} · ${season} · ${politics}</div>
+          <div class="text-[11px] font-bold tracking-wide truncate">${brand.toUpperCase()} · ${season.toUpperCase()} · ${year}</div>
+          <div class="text-[9px] opacity-60 mt-0.5 truncate font-normal normal-case">${hook}</div>
+          <div class="text-[8px] opacity-35 uppercase tracking-wider mt-0.5">${id} · ${politics}</div>
         </div>
-        <div class="text-[10px] opacity-40 ml-2 shrink-0">↵</div>
+        <div class="text-[10px] opacity-40 ml-1 shrink-0">↵</div>
       </div>`;
     });
   }
 
   // Commands group
-  html += `<div class="cmd-group-head">COMMANDS</div>${cmds}`;
+  if (cmds) html += `<div class="cmd-group-head">COMMANDS</div>${cmds}`;
 
   container.innerHTML = html;
   bindCmdActions(container, archiveData, callbacks);
