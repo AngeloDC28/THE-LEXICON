@@ -215,10 +215,11 @@ function renderBrutalistNodes(entry) {
     text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
 
     if (text) {
-      const node = document.createElement('div');
+      const node = document.createElement('article');
       node.className = `brutalist-node ${type.class}`;
       node.dataset.noteId = type.id;
       node.id = `note-${type.id}`;
+      node.setAttribute('aria-labelledby', `note-${type.id}-label`);
 
       // Critique note gets a pull quote — extract the first sentence 40–250 chars
       let bodyHtml = text;
@@ -234,7 +235,7 @@ function renderBrutalistNodes(entry) {
       }
 
       node.innerHTML = `
-        <span class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]</span>
+        <h3 id="note-${type.id}-label" class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]</h3>
         <div class="node-body">${bodyHtml}</div>
       `;
       container.appendChild(node);
