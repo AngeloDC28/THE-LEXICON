@@ -44,8 +44,18 @@ export function updateHeaderTelemetry(text) {
   updateTelemetry(`ACTION_LOG: ${text.toUpperCase()}`);
 }
 
-export function initHeaderTypewriter() {
+export function initHeaderTypewriter(archiveData) {
+  // Build a live count phrase from the actual archive if provided
+  const statsPhrase = (() => {
+    if (!archiveData || !archiveData.length) return null;
+    const entryCount = archiveData.length;
+    const brandSet = new Set(archiveData.map(e => e.tags?.brand).filter(Boolean));
+    const lastYear = Math.max(...archiveData.map(e => e.year || 0).filter(Boolean));
+    return `${entryCount} ENTRIES · ${brandSet.size} BRANDS · THROUGH ${lastYear}`;
+  })();
+
   const phrases = [
+    ...(statsPhrase ? [statsPhrase] : []),
     'ROUTING SEMIOTIC SABOTAGE',
     'ISOLATING CLASS DYNAMICS',
     'DECODING STRUCTURAL POWER MECHANICS',

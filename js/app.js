@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Systems
   initCustomCursor();
-  initHeaderTypewriter();
+  initHeaderTypewriter(archiveData);
   // Pass archiveData to hotspots so it doesn't need to import database.js itself
   initHotspotInteractions(archiveData);
   initFirebaseAuth(callbacks);
