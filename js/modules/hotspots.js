@@ -82,8 +82,8 @@ function showHotspot(index) {
     const content = $('payload-content');
     if (payload && content) {
       content.innerHTML = `
-        <div class="text-[10px] font-bold mb-2 border-b border-black/10 pb-1">${spot.label.toUpperCase()}</div>
-        <div class="text-[10px] leading-relaxed">${text}</div>
+        <div class="text-[var(--t-mono-xs)] font-bold mb-2 border-b border-black/10 pb-1">${spot.label.toUpperCase()}</div>
+        <div class="text-[var(--t-mono-xs)] leading-relaxed">${text}</div>
       `;
       payload.classList.remove('hidden');
       payload.classList.add('permanent-payload', 'expand-active');

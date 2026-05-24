@@ -363,12 +363,12 @@ function renderMetadataGrid(entry) {
     if (!f.value) {
       return `<div class="space-y-1">
         <div class="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40">${f.label}</div>
-        <div class="text-[9px] font-mono uppercase tracking-wide text-white/30">--</div>
+        <div class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wide text-white/30">--</div>
       </div>`;
     }
     return `<button type="button" class="metadata-tag-btn group text-left space-y-1 hover:bg-white/5 transition-colors p-1 -m-1 focus-ring" data-tax-type="${f.key}" data-tax-value="${f.value.replace(/"/g, '&quot;')}" aria-label="Filter archive by ${f.label}">
       <div class="text-[8px] font-mono uppercase tracking-[0.2em] text-white/40 group-hover:text-acid transition-colors">${f.label} ›</div>
-      <div class="text-[9px] font-mono uppercase tracking-wide text-white group-hover:text-acid transition-colors">${translated}</div>
+      <div class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wide text-white group-hover:text-acid transition-colors">${translated}</div>
     </button>`;
   }).join('');
 }
@@ -491,8 +491,8 @@ function showPayload(spot) {
   text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
 
   content.innerHTML = `
-    <div class="text-[10px] font-bold mb-2 border-b border-black/10 pb-1">${label.toUpperCase()}</div>
-    <div class="text-[10px] leading-relaxed">${text}</div>
+    <div class="text-[var(--t-mono-xs)] font-bold mb-2 border-b border-black/10 pb-1">${label.toUpperCase()}</div>
+    <div class="text-[var(--t-mono-xs)] leading-relaxed">${text}</div>
   `;
   payload.classList.remove('hidden');
 }

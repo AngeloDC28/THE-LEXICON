@@ -26,7 +26,7 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
 
   let html = '';
   html += `<div class="matrix-center">
-    <p class="text-[9px] uppercase tracking-[0.2em] opacity-40 mb-2">${t('nexus_viewing')}</p>
+    <p class="text-[var(--t-mono-xs)] uppercase tracking-[0.2em] opacity-40 mb-2">${t('nexus_viewing')}</p>
     <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${entry.tags.brand}</p>
     <p class="text-xs font-mono uppercase opacity-60 mt-1">${entry.year} &middot; ${entry.season}</p>
     <div class="mt-3">
@@ -35,7 +35,7 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   </div>`;
 
   if (connections.size === 0) {
-    html += `<div class="matrix-section"><p class="text-[10px] uppercase tracking-[0.15em] opacity-40 text-center py-8">${t('nexus_no_connections')}</p></div>`;
+    html += `<div class="matrix-section"><p class="text-[var(--t-mono-xs)] uppercase tracking-[0.15em] opacity-40 text-center py-8">${t('nexus_no_connections')}</p></div>`;
   } else {
     connections.forEach(function(data, tagValue) {
       html += '<div class="matrix-section">';
@@ -46,8 +46,8 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
         const label = (rel.tags.brand || '') + ' ' + (rel.year || '');
         html += `<button type="button" class="matrix-entry focus-ring" data-matrix-entry-id="${rel.id}" aria-label="Open ${label}">`;
         html += `<img src="${thumbSrc}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;" loading="lazy" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.style.filter='none'" />`;
-        html += `<p class="text-[10px] font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>`;
-        html += `<p class="text-[9px] font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>`;
+        html += `<p class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>`;
+        html += `<p class="text-[var(--t-mono-xs)] font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>`;
         html += '</button>';
       });
       html += '</div></div>';

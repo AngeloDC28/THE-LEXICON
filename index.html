@@ -345,23 +345,23 @@
       <button id="btn-hamburger" type="button" class="lg:hidden text-white hover:text-acid focus-ring -ml-2 -my-2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation" aria-label="Toggle Menu" aria-expanded="false" aria-controls="index-panel">
         <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <button type="button" id="header-title" aria-label="Reset filters and return to archive home" class="text-[11px] lg:text-[13px] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
-      <div id="header-telemetry" class="lexicon-tablet-up text-[9px] font-mono opacity-60 tracking-widest uppercase">
+      <button type="button" id="header-title" aria-label="Reset filters and return to archive home" class="text-[var(--t-mono-sm)] lg:text-[var(--t-mono-base)] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
+      <div id="header-telemetry" class="lexicon-tablet-up text-[var(--t-mono-xs)] font-mono opacity-60 tracking-widest uppercase">
         <span id="telemetry-text">LOADING ARCHIVE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
     <div class="lexicon-desktop-only items-center gap-3 lg:gap-5">
-      <button type="button" id="btn-folders-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-pressed="false">FOLDERS</button>
-      <button type="button" id="btn-auth-toggle" class="text-[9px] lg:text-[10px] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">SIGN IN</button>
+      <button type="button" id="btn-folders-toggle" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-xs)] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-pressed="false">FOLDERS</button>
+      <button type="button" id="btn-auth-toggle" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-xs)] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">SIGN IN</button>
       <div class="relative inline-block">
-        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
+        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
           <span id="btn-lang-toggle-label">EN ▾</span>
         </button>
         <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
       </div>
-      <button type="button" id="btn-about" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">ABOUT</button>
-      <button type="button" id="btn-contact" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
-      <button type="button" id="btn-theme-toggle" class="text-[10px] lg:text-[11px] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
+      <button type="button" id="btn-about" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">ABOUT</button>
+      <button type="button" id="btn-contact" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
+      <button type="button" id="btn-theme-toggle" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
     </div>
   </header>
 
@@ -376,19 +376,19 @@
     <div id="status-ribbon" class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" aria-live="polite" aria-atomic="true">
       <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span id="status-brand-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Brand</span>
-        <span id="status-brand" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-brand" class="text-[var(--t-mono-xs)] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 md:border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span id="status-year-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Year</span>
-        <span id="status-year" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-year" class="text-[var(--t-mono-xs)] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span id="status-season-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Season</span>
-        <span id="status-season" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-season" class="text-[var(--t-mono-xs)] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 overflow-hidden">
         <span id="status-entry-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Entry</span>
-        <span id="status-entry" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-entry" class="text-[var(--t-mono-xs)] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
     </div>
 
@@ -403,18 +403,18 @@
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
           <span id="index-panel-title" class="text-xs font-bold uppercase tracking-[0.15em]">Research Index</span>
-          <button type="button" id="btn-show-bookmarks" class="text-[9px] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
+          <button type="button" id="btn-show-bookmarks" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
         </div>
 
         <!-- Mobile Quick Nav (top of drawer, immediately visible) -->
         <div id="mobile-quick-nav" class="lg:hidden border-b-[1px] border-black/80 dark:border-white/20 shrink-0 bg-overlay dark:bg-darkSurface">
           <div class="grid grid-cols-3 gap-px bg-black/10 dark:bg-white/10">
-            <button type="button" id="btn-folders-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Folders</button>
-            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Sign In</button>
-            <button type="button" id="btn-lang-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
-            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
-            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
-            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
+            <button type="button" id="btn-folders-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Folders</button>
+            <button type="button" id="btn-auth-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Sign In</button>
+            <button type="button" id="btn-lang-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
+            <button type="button" id="btn-theme-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
+            <button type="button" id="btn-about-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
+            <button type="button" id="btn-contact-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
           </div>
         </div>
 
@@ -428,7 +428,7 @@
 
         <!-- Search -->
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
-          <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
+          <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[var(--t-mono-xs)] font-mono uppercase tracking-widest">
             <span>Filtering: <span id="active-folder-name"></span></span>
             <button type="button" id="btn-clear-folder-filter" aria-label="Clear active folder filter" class="underline min-h-[44px] px-2 focus-ring">Clear</button>
           </div>
@@ -484,10 +484,10 @@
             aria-expanded="false"
             aria-controls="taxonomy-grid"
           >
-            <span id="taxonomy-heading" class="text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">Categories</span>
+            <span id="taxonomy-heading" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] opacity-60">Categories</span>
             <span class="flex items-center gap-2">
               <span id="taxonomy-hint" class="text-[8px] font-mono uppercase tracking-wider opacity-40 hidden md:inline">Tap to filter</span>
-              <span id="taxonomy-chevron" class="lg:hidden text-[10px] opacity-60 transition-transform" aria-hidden="true">▾</span>
+              <span id="taxonomy-chevron" class="lg:hidden text-[var(--t-mono-xs)] opacity-60 transition-transform" aria-hidden="true">▾</span>
             </span>
           </button>
 
@@ -510,15 +510,15 @@
           <div class="flex items-center gap-3 lg:gap-8 shrink-0">
             <!-- Visual / Index Mode Toggle (Phase 1/2 redesign) -->
             <div class="mode-toggle inline-flex border border-black/60 dark:border-white/30 shrink-0" role="group" aria-label="View mode">
-              <button type="button" id="btn-mode-visual" class="active text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Visual mode (shortcut: V)" aria-pressed="true">VISUAL <span class="kbd" aria-hidden="true">V</span></button>
-              <button type="button" id="btn-mode-index" class="text-[10px] font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
+              <button type="button" id="btn-mode-visual" class="active text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Visual mode (shortcut: V)" aria-pressed="true">VISUAL <span class="kbd" aria-hidden="true">V</span></button>
+              <button type="button" id="btn-mode-index" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
             </div>
-            <button type="button" id="btn-toggle-grid" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
-            <button type="button" id="btn-toggle-timeline" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Evolution Matrix" aria-pressed="false">Timeline</button>
+            <button type="button" id="btn-toggle-grid" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
+            <button type="button" id="btn-toggle-timeline" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Evolution Matrix" aria-pressed="false">Timeline</button>
           </div>
           <div class="flex items-center gap-3 lg:gap-4 shrink-0">
-            <button type="button" id="btn-sort-cycle" class="text-[9px] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-2 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Cycle sort order">SORT: DEFAULT</button>
-            <span id="current-view-label" class="hidden lg:inline text-[9px] font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
+            <button type="button" id="btn-sort-cycle" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-2 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Cycle sort order">SORT: DEFAULT</button>
+            <span id="current-view-label" class="hidden lg:inline text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
           </div>
         </div>
 
@@ -701,8 +701,8 @@
             <div class="flex items-baseline justify-between mb-8 border-b border-black dark:border-white pb-4">
               <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Folders</h1>
               <div class="flex gap-4">
-                <button type="button" id="btn-export-all-folders" aria-label="Export all folders as JSON" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline min-h-[44px] px-2 focus-ring">[ Export Database ]</button>
-                <span id="folders-count" class="text-[10px] font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
+                <button type="button" id="btn-export-all-folders" aria-label="Export all folders as JSON" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline min-h-[44px] px-2 focus-ring">[ Export Database ]</button>
+                <span id="folders-count" class="text-[var(--t-mono-xs)] font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
               </div>
             </div>
             <div id="folders-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -740,8 +740,8 @@
                    already inline below the image and fullscreen is rarely
                    useful on a phone-sized image. -->
               <div class="hidden lg:flex absolute top-4 left-4 flex-col gap-2 z-[200]">
-                <button type="button" id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
-                <button type="button" id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
+                <button type="button" id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
+                <button type="button" id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
 
               <!-- Sticky Note Squares (top-right triggers) -->
@@ -751,10 +751,10 @@
             <!-- Sticky Note Panel (reveals on right when a square is clicked) -->
             <div id="sticky-note-panel" class="hidden w-[280px] flex-col overflow-y-auto border-l border-white/10 bg-black">
               <div id="sticky-panel-header" class="flex items-center justify-between px-4 py-3 border-b border-black/20">
-                <span id="sticky-panel-label" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span>
-                <button type="button" id="btn-close-sticky-panel" class="text-[11px] font-bold leading-none hover:opacity-60 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close panel">✕</button>
+                <span id="sticky-panel-label" class="text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-[0.2em]"></span>
+                <button type="button" id="btn-close-sticky-panel" class="text-[var(--t-mono-sm)] font-bold leading-none hover:opacity-60 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close panel">✕</button>
               </div>
-              <div id="sticky-panel-body" class="p-5 text-[11px] font-mono leading-relaxed overflow-y-auto"></div>
+              <div id="sticky-panel-body" class="p-5 text-[var(--t-mono-sm)] font-mono leading-relaxed overflow-y-auto"></div>
             </div>
 
             <!-- RIGHT: Metadata Sidebar -->
@@ -762,7 +762,7 @@
               <!-- Sticky Note Container (Brutalist Nodes) -->
               <div class="flex items-center justify-between px-6 pt-4 pb-2">
                 <div>
-                  <span class="text-[9px] font-mono uppercase tracking-widest text-white/30">Analysis</span>
+                  <span class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest text-white/30">Analysis</span>
                   <span id="detail-reading-time" class="ml-3 text-[8px] font-mono opacity-20 tracking-wider"></span>
                 </div>
                 <button class="btn-reading-mode" id="btn-reading-mode" type="button" aria-label="Toggle reading mode" aria-pressed="false">READING MODE</button>
@@ -773,14 +773,14 @@
               
               <!-- Core Metadata Grid -->
               <div class="p-6 border-t border-white/10">
-                <h4 class="text-[9px] font-bold uppercase tracking-[0.2em] mb-4 text-white/40">Technical Specifications</h4>
+                <h4 class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] mb-4 text-white/40">Technical Specifications</h4>
                 <div id="metadata-grid" class="grid grid-cols-2 gap-4"></div>
               </div>
 
               <!-- Related Entries (auto-populated by render-detail.js) -->
               <div id="related-entries-section" class="p-6 border-t border-white/10 hidden">
                 <div class="flex items-baseline justify-between mb-4">
-                  <h4 id="related-entries-title" class="text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">Related</h4>
+                  <h4 id="related-entries-title" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] text-white/40">Related</h4>
                   <button id="btn-related-open-nexus" type="button" class="text-[8px] uppercase tracking-widest text-white/40 hover:text-acid transition-colors focus-ring min-h-[44px] px-1 flex items-center" aria-label="View all Nexus connections">View All Nexus ›</button>
                 </div>
                 <div id="related-entries-grid" class="grid grid-cols-3 gap-2"></div>
@@ -789,15 +789,15 @@
               <!-- Save / Action Panel -->
               <div class="mt-auto p-6 border-t border-white/10 bg-white/5">
                 <div class="flex items-center justify-between mb-4">
-                  <span id="active-entry-title" class="text-[10px] font-bold uppercase tracking-[0.2em] text-white"></span>
+                  <span id="active-entry-title" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] text-white"></span>
                   <button type="button" id="btn-bookmark-entry" class="bookmark-star text-white min-h-[44px] min-w-[44px] flex items-center justify-center focus-ring" aria-label="Bookmark this entry" aria-pressed="false">★</button>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
-                  <button type="button" id="btn-open-matrix" aria-label="View Nexus connections for this entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">View Nexus</button>
-                  <button type="button" id="btn-save-to-folder" aria-label="Save this entry to a folder" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Save to Folder</button>
-                  <button type="button" id="btn-cite-entry" aria-label="Open citation formats for this entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Cite Entry</button>
-                  <button type="button" id="btn-copy-link" aria-label="Copy permalink to this entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">[ Copy Link ]</button>
-                  <button type="button" id="btn-back-grid" aria-label="Return to archive grid" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Return to Archive</button>
+                  <button type="button" id="btn-open-matrix" aria-label="View Nexus connections for this entry" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">View Nexus</button>
+                  <button type="button" id="btn-save-to-folder" aria-label="Save this entry to a folder" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Save to Folder</button>
+                  <button type="button" id="btn-cite-entry" aria-label="Open citation formats for this entry" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Cite Entry</button>
+                  <button type="button" id="btn-copy-link" aria-label="Copy permalink to this entry" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">[ Copy Link ]</button>
+                  <button type="button" id="btn-back-grid" aria-label="Return to archive grid" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Return to Archive</button>
                 </div>
               </div>
             </div>
@@ -807,43 +807,43 @@
           <div id="mobile-hotspot-sheet" class="lg:hidden fixed bottom-0 left-0 w-full z-[210]" aria-hidden="true" role="region" aria-label="Annotation details">
             <div class="bg-black border-t-[3px] border-acid flex flex-col" style="max-height:58vh">
               <div class="flex items-center justify-between px-4 py-3 border-b border-white/15 shrink-0">
-                <span id="mobile-hotspot-sheet-label" class="text-[10px] font-bold font-mono uppercase tracking-[0.25em] text-acid"></span>
+                <span id="mobile-hotspot-sheet-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.25em] text-acid"></span>
                 <button type="button" id="btn-close-hotspot-sheet" aria-label="Close annotation" class="text-white text-sm font-bold opacity-60 hover:opacity-100 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center">✕</button>
               </div>
-              <div id="mobile-hotspot-sheet-body" class="px-4 py-5 overflow-y-auto flex-1 text-[13px] font-mono leading-[1.75] text-white/90"></div>
+              <div id="mobile-hotspot-sheet-body" class="px-4 py-5 overflow-y-auto flex-1 text-[var(--t-mono-base)] font-mono leading-[1.75] text-white/90"></div>
             </div>
           </div>
 
           <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]">
             <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[14px] leading-none">‹</span><span class="btn-label-mobile">Back</span>
+              <span class="text-[var(--t-body)] leading-none">‹</span><span class="btn-label-mobile">Back</span>
             </button>
             <button type="button" id="btn-notes-mobile" aria-label="View notes" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[12px] leading-none">▦</span><span class="btn-label-mobile">Notes</span>
+              <span class="text-[var(--t-mono-base)] leading-none">▦</span><span class="btn-label-mobile">Notes</span>
             </button>
             <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex flex-col items-center justify-center gap-0.5 border border-acid text-acid py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[12px] leading-none">◉</span><span class="btn-label-mobile">Hotspots</span>
+              <span class="text-[var(--t-mono-base)] leading-none">◉</span><span class="btn-label-mobile">Hotspots</span>
             </button>
             <button type="button" id="btn-nexus-mobile" aria-label="Open Nexus" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[12px] leading-none">◈</span><span class="btn-label-mobile">Nexus</span>
+              <span class="text-[var(--t-mono-base)] leading-none">◈</span><span class="btn-label-mobile">Nexus</span>
             </button>
             <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex flex-col items-center justify-center gap-0.5 bg-acid text-black py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[12px] leading-none">★</span><span class="btn-label-mobile">Save</span>
+              <span class="text-[var(--t-mono-base)] leading-none">★</span><span class="btn-label-mobile">Save</span>
             </button>
           </div>
 
           <!-- Mobile Notes Sheet (slides up from bottom on mobile) -->
           <div id="mobile-notes-sheet" class="lg:hidden hidden fixed inset-x-0 bottom-0 z-[300] bg-bone dark:bg-darkBase border-t-2 border-acid max-h-[70vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="mobile-notes-title">
             <div class="flex items-center justify-between px-4 py-3 border-b border-black/20 dark:border-white/20 bg-black text-white">
-              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.2em]" id="mobile-notes-title">Forensic Notes</span>
+              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.2em]" id="mobile-notes-title">Forensic Notes</span>
               <button type="button" id="btn-close-mobile-notes" aria-label="Close notes" class="text-lg font-bold leading-none px-2 min-h-[44px] min-w-[44px] flex items-center justify-center">×</button>
             </div>
             <div class="grid grid-cols-3 gap-px bg-black/20 dark:bg-white/20 shrink-0" role="tablist" aria-label="Forensic note types">
-              <button type="button" role="tab" data-mobile-note="provenance" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Provenance</button>
-              <button type="button" role="tab" data-mobile-note="critique" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Critique</button>
-              <button type="button" role="tab" data-mobile-note="strategy" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[9px] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Strategy</button>
+              <button type="button" role="tab" data-mobile-note="provenance" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Provenance</button>
+              <button type="button" role="tab" data-mobile-note="critique" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Critique</button>
+              <button type="button" role="tab" data-mobile-note="strategy" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Strategy</button>
             </div>
-            <div id="mobile-notes-body" role="tabpanel" class="flex-1 overflow-y-auto p-5 text-[12px] leading-relaxed font-mono"></div>
+            <div id="mobile-notes-body" role="tabpanel" class="flex-1 overflow-y-auto p-5 text-[var(--t-mono-base)] leading-relaxed font-mono"></div>
           </div>
         </div>
 
@@ -860,55 +860,55 @@
       <div class="relative w-full max-w-xl bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[85vh] overflow-y-auto">
         <button type="button" data-modal-close="cite" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close">X</button>
         <h2 id="cite-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-1 border-b border-black dark:border-white pb-2">Cite This Entry</h2>
-        <p id="cite-modal-subtitle" class="text-[10px] font-mono opacity-60 uppercase tracking-wide mb-5">For academic and editorial reference.</p>
+        <p id="cite-modal-subtitle" class="text-[var(--t-mono-xs)] font-mono opacity-60 uppercase tracking-wide mb-5">For academic and editorial reference.</p>
 
         <div class="space-y-5">
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span id="cite-chicago-label" class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">Chicago (17th)</span>
-              <button type="button" data-cite-copy="chicago" aria-label="Copy Chicago citation" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span id="cite-chicago-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">Chicago (17th)</span>
+              <button type="button" data-cite-copy="chicago" aria-label="Copy Chicago citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-chicago" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-chicago" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">MLA (9th)</span>
-              <button type="button" data-cite-copy="mla" aria-label="Copy MLA citation" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">MLA (9th)</span>
+              <button type="button" data-cite-copy="mla" aria-label="Copy MLA citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-mla" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-mla" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">APA (7th)</span>
-              <button type="button" data-cite-copy="apa" aria-label="Copy APA citation" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">APA (7th)</span>
+              <button type="button" data-cite-copy="apa" aria-label="Copy APA citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-apa" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-apa" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">Harvard</span>
-              <button type="button" data-cite-copy="harvard" aria-label="Copy Harvard citation" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">Harvard</span>
+              <button type="button" data-cite-copy="harvard" aria-label="Copy Harvard citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-harvard" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-harvard" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span id="cite-bibtex-label" class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">BibTeX</span>
-              <button type="button" data-cite-copy="bibtex" aria-label="Copy BibTeX citation" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span id="cite-bibtex-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">BibTeX</span>
+              <button type="button" data-cite-copy="bibtex" aria-label="Copy BibTeX citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-bibtex" class="text-[11px] font-mono leading-relaxed whitespace-pre bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 overflow-x-auto"></pre>
+            <pre id="cite-bibtex" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 overflow-x-auto"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span id="cite-url-label" class="text-[10px] font-bold font-mono uppercase tracking-[0.15em]">Permalink</span>
-              <button type="button" data-cite-copy="url" aria-label="Copy permalink URL" class="cite-copy-btn text-[9px] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span id="cite-url-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">Permalink</span>
+              <button type="button" data-cite-copy="url" aria-label="Copy permalink URL" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-url" class="text-[11px] font-mono leading-relaxed whitespace-pre-wrap break-all bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-url" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-all bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
         </div>
       </div>
@@ -925,7 +925,7 @@
           <img id="lightbox-image" src="" alt="" fetchpriority="high" decoding="async" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
         </picture>
       </div>
-      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-[10px] font-mono tracking-widest uppercase pointer-events-none">
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-[var(--t-mono-xs)] font-mono tracking-widest uppercase pointer-events-none">
         <span id="lightbox-counter">1 / 1</span> · <span class="opacity-60">CLICK TO ZOOM · ESC TO CLOSE</span>
       </div>
     </div>
@@ -935,14 +935,14 @@
 
     <!-- Cookie Banner -->
     <div id="cookie-banner" class="hidden fixed bottom-4 right-4 z-[10000] bg-bone dark:bg-darkBase border border-black dark:border-white p-4 shadow-2xl max-w-sm" role="region" aria-label="Cookie consent">
-      <p id="cookie-notice-text" class="text-[10px] uppercase font-mono tracking-wide mb-3 leading-relaxed"></p>
+      <p id="cookie-notice-text" class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide mb-3 leading-relaxed"></p>
       <div class="flex gap-4 mb-3">
-        <button type="button" id="btn-privacy-link" class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Privacy</button>
-        <button type="button" id="btn-terms-link" class="text-[9px] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Terms</button>
+        <button type="button" id="btn-privacy-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Privacy</button>
+        <button type="button" id="btn-terms-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Terms</button>
       </div>
       <div class="flex gap-2">
-        <button id="btn-reject-cookies" type="button" class="flex-1 border border-black dark:border-white bg-transparent dark:bg-transparent text-black dark:text-white py-3 min-h-[44px] text-[10px] font-bold uppercase tracking-widest hover:opacity-60 focus-ring">Reject</button>
-        <button id="btn-accept-cookies" type="button" class="flex-1 border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-3 min-h-[44px] text-[10px] font-bold uppercase tracking-widest hover:opacity-80 focus-ring">Accept</button>
+        <button id="btn-reject-cookies" type="button" class="flex-1 border border-black dark:border-white bg-transparent dark:bg-transparent text-black dark:text-white py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-60 focus-ring">Reject</button>
+        <button id="btn-accept-cookies" type="button" class="flex-1 border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-80 focus-ring">Accept</button>
       </div>
     </div>
 
@@ -957,10 +957,10 @@
         <h2 id="save-folder-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Save to Archival Folder</h2>
         <div class="flex-1 overflow-y-auto mb-6 space-y-2" id="folder-list-container"></div>
         <div class="border-t border-black dark:border-white pt-4">
-          <label for="new-folder-name" class="block text-[10px] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
+          <label for="new-folder-name" class="block text-[var(--t-mono-xs)] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
           <div class="flex gap-2">
-            <input type="text" id="new-folder-name" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[10px] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" placeholder="FOLDER_TITLE" />
-            <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 min-h-[44px] text-[10px] font-bold uppercase tracking-widest focus-ring">Create</button>
+            <input type="text" id="new-folder-name" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" placeholder="FOLDER_TITLE" />
+            <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest focus-ring">Create</button>
           </div>
         </div>
       </div>
@@ -972,7 +972,7 @@
       <div class="relative w-full max-w-xl bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 font-mono">
         <button type="button" data-modal-close="kbd-help" class="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider hover:opacity-70 focus-ring p-2" aria-label="Close keyboard shortcuts">X</button>
         <h2 id="kbd-help-title" class="text-sm font-bold uppercase tracking-[0.2em] mb-4 border-b border-black dark:border-white pb-2">Keyboard Shortcuts</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-[10px] uppercase tracking-wider">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-[var(--t-mono-xs)] uppercase tracking-wider">
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Visual mode</span><kbd class="border border-current px-2 py-0.5">V</kbd></div>
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Index mode</span><kbd class="border border-current px-2 py-0.5">I</kbd></div>
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Focus search</span><kbd class="border border-current px-2 py-0.5">/</kbd></div>
@@ -990,7 +990,7 @@
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Toggle reading mode</span><kbd class="border border-current px-2 py-0.5">R</kbd></div>
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Show this help</span><kbd class="border border-current px-2 py-0.5">?</kbd></div>
         </div>
-        <p class="text-[9px] uppercase tracking-wider opacity-50 mt-4">Press <kbd class="border border-current px-1">Esc</kbd> to close</p>
+        <p class="text-[var(--t-mono-xs)] uppercase tracking-wider opacity-50 mt-4">Press <kbd class="border border-current px-1">Esc</kbd> to close</p>
       </div>
     </div>
 
@@ -1001,7 +1001,7 @@
         <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
           <span class="text-xl font-bold font-mono">›</span>
           <input type="text" id="cmd-input" role="combobox" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30" aria-label="Search archive" aria-autocomplete="list" aria-controls="cmd-results" aria-expanded="true" autocomplete="off" spellcheck="false" />
-          <span class="text-[10px] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
+          <span class="text-[var(--t-mono-xs)] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
         </div>
         <div id="cmd-scope-bar" class="flex items-center gap-1 px-4 py-2 border-b border-black/10 dark:border-white/10">
           <button type="button" class="cmd-scope-pill active" data-scope="all" aria-pressed="true">ALL</button>
@@ -1031,18 +1031,18 @@
         <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
         <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
         <div id="auth-form-container">
-          <p class="text-[10px] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
+          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
           <form id="auth-form" class="space-y-4" novalidate>
             <div>
-              <label for="auth-email" class="block text-[10px] font-bold uppercase tracking-widest mb-1">Email Address</label>
-              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[10px] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" />
+              <label for="auth-email" class="block text-[var(--t-mono-xs)] font-bold uppercase tracking-widest mb-1">Email Address</label>
+              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" />
             </div>
-            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:opacity-80 min-h-[44px] text-[10px] font-bold uppercase tracking-widest focus-ring">Send sign-in link</button>
+            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:opacity-80 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest focus-ring">Send sign-in link</button>
           </form>
-          <p id="auth-message" role="alert" aria-live="polite" class="text-[10px] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
+          <p id="auth-message" role="alert" aria-live="polite" class="text-[var(--t-mono-xs)] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
         </div>
         <div id="auth-success-container" class="hidden">
-          <p class="text-[10px] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>
+          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>
         </div>
       </div>
     </div>
@@ -1083,7 +1083,7 @@
           <h2 id="privacy-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Privacy Protocol</h2>
           <button type="button" data-modal-close="privacy" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
         </div>
-        <div id="privacy-modal-body" class="font-mono text-[10px] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
+        <div id="privacy-modal-body" class="font-mono text-[var(--t-mono-xs)] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
       </div>
     </div>
 
@@ -1095,7 +1095,7 @@
           <h2 id="terms-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Terms of Service</h2>
           <button type="button" data-modal-close="terms" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
         </div>
-        <div id="terms-modal-body" class="font-mono text-[10px] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
+        <div id="terms-modal-body" class="font-mono text-[var(--t-mono-xs)] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
       </div>
     </div>
 
@@ -1104,7 +1104,7 @@
       <div class="matrix-backdrop" id="matrix-backdrop" aria-hidden="true"></div>
       <div class="matrix-panel">
         <div class="matrix-header">
-          <span id="matrix-panel-title" class="text-[10px] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
+          <span id="matrix-panel-title" class="text-[var(--t-mono-xs)] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
           <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
         </div>
         <div id="matrix-content" class="flex-1 overflow-y-auto"></div>

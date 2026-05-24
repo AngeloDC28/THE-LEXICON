@@ -52,20 +52,20 @@ export function renderImageGrid(archiveData, callbacks) {
     const lang = AppState.language;
     const activeFilters = Object.entries(AppState.filters).filter(([_, v]) => v);
     const filtersList = activeFilters.length
-      ? `<div class="text-[10px] font-mono text-black/50 dark:text-white/50 mb-4 max-w-md mx-auto">
+      ? `<div class="text-[var(--t-mono-xs)] font-mono text-black/50 dark:text-white/50 mb-4 max-w-md mx-auto">
            <div class="text-[8px] uppercase tracking-[0.2em] opacity-60 mb-2">${getTranslation('filtering_label', lang)}</div>
            <div class="flex flex-wrap justify-center gap-1">
-             ${activeFilters.map(([k, v]) => `<span class="border border-current px-2 py-0.5 text-[9px] uppercase">${getTranslation('tax_' + k, lang)}: ${getTranslation(v, lang)}</span>`).join('')}
-             ${AppState.searchQuery ? `<span class="border border-current px-2 py-0.5 text-[9px] uppercase">"${AppState.searchQuery}"</span>` : ''}
+             ${activeFilters.map(([k, v]) => `<span class="border border-current px-2 py-0.5 text-[var(--t-mono-xs)] uppercase">${getTranslation('tax_' + k, lang)}: ${getTranslation(v, lang)}</span>`).join('')}
+             ${AppState.searchQuery ? `<span class="border border-current px-2 py-0.5 text-[var(--t-mono-xs)] uppercase">"${AppState.searchQuery}"</span>` : ''}
            </div>
          </div>`
       : '';
     grid.innerHTML = `
       <div class="col-span-full flex flex-col items-center justify-center py-24 text-center px-4">
         <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-3">${getTranslation('null_set', lang)}</div>
-        <div class="text-[10px] font-mono text-black/30 dark:text-white/30 mb-4">${getTranslation('null_set_desc', lang)}</div>
+        <div class="text-[var(--t-mono-xs)] font-mono text-black/30 dark:text-white/30 mb-4">${getTranslation('null_set_desc', lang)}</div>
         ${filtersList}
-        <button type="button" id="btn-reset-filters-null" class="border border-black dark:border-white text-[10px] font-mono uppercase tracking-widest px-4 py-2 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">${getTranslation('btn_reset_system', lang)}</button>
+        <button type="button" id="btn-reset-filters-null" class="border border-black dark:border-white text-[var(--t-mono-xs)] font-mono uppercase tracking-widest px-4 py-2 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">${getTranslation('btn_reset_system', lang)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
       AppState.filters = emptyFilters();
@@ -175,9 +175,9 @@ export function renderEntryList(archiveData, callbacks) {
                              (AppState.yearRange && (AppState.yearRange.min > 1980 || AppState.yearRange.max < 2025));
     container.innerHTML = `
       <div role="status" aria-live="polite" class="p-6 border border-black/10 dark:border-white/10 m-4">
-        <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
-        <p class="text-[11px] font-mono text-black/70 dark:text-white/70 mb-3">${t('no_results')}</p>
-        ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters" class="text-[9px] font-mono font-bold uppercase tracking-[0.2em] border border-current px-3 py-1.5 hover:bg-acid hover:text-black hover:border-acid transition-colors focus-ring">${t('clear_all_filters') || 'CLEAR FILTERS'}</button>` : ''}
+        <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
+        <p class="text-[var(--t-mono-sm)] font-mono text-black/70 dark:text-white/70 mb-3">${t('no_results')}</p>
+        ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters" class="text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-[0.2em] border border-current px-3 py-1.5 hover:bg-acid hover:text-black hover:border-acid transition-colors focus-ring">${t('clear_all_filters') || 'CLEAR FILTERS'}</button>` : ''}
       </div>`;
     return;
   }
@@ -202,12 +202,12 @@ export function renderEntryList(archiveData, callbacks) {
            role="button"
            tabindex="0"
            aria-label="${brand} ${year} ${tagLabel}">
-        <div class="text-[9px] font-mono uppercase tracking-[0.18em] font-bold" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
-        <div class="text-[10px] font-mono uppercase tracking-widest font-medium mt-0.5">${brand}</div>
-        <div class="text-[9px] font-mono text-black/40 dark:text-white/40 mt-0.5">
+        <div class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.18em] font-bold" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
+        <div class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest font-medium mt-0.5">${brand}</div>
+        <div class="text-[var(--t-mono-xs)] font-mono text-black/40 dark:text-white/40 mt-0.5">
           <span>${year}</span>
         </div>
-        <div class="text-[9px] font-mono text-black/60 dark:text-white/60 mt-0.5 truncate">${title}</div>
+        <div class="text-[var(--t-mono-xs)] font-mono text-black/60 dark:text-white/60 mt-0.5 truncate">${title}</div>
       </div>`;
   }).join('');
 }
