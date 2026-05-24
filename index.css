@@ -102,6 +102,9 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
 #app-root {
   display: flex;
   flex-direction: column;
