@@ -1192,16 +1192,16 @@ function renderHero(archiveData) {
     statMov.textContent = uniqueMovements.size.toLocaleString();
   }
 
-  const panel = $('orientation-panel');
-  if (!panel || panel.classList.contains('hidden')) return;
-
-  // Reveal section header, "How It Works", and "Who It's For"
+  // Always reveal the featured strip header, "How It Works", and "Who It's For"
   const featHead = $('featured-strip-head');
   const how = $('how-it-works');
   const who = $('who-section');
   if (featHead) featHead.style.display = 'flex';
   if (how) how.style.display = 'block';
   if (who) who.style.display = 'block';
+
+  const panel = $('orientation-panel');
+  if (!panel || panel.classList.contains('hidden')) return;
 
   // Pick the most recently dated entry with a rich critique note for the teaser
   const candidate = [...archiveData]
