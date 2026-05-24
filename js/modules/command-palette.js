@@ -164,7 +164,7 @@ export function renderCmdResults(query, archiveData, callbacks) {
     matchedTags.slice(0, 3).forEach(tag => {
       const tagCount = archiveData.filter(e => (e.tags?.politics || '').toLowerCase().includes(tag.toLowerCase())).length;
       const shortTag = tag.split('&')[0].trim();
-      html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex items-center gap-3" data-cmd-action="filter-tag" data-cmd-val="${tag}">
+      html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex items-center gap-3" role="option" aria-selected="false" data-cmd-action="filter-tag" data-cmd-val="${tag}">
         <div class="text-[10px] font-bold opacity-30 shrink-0 font-mono">#</div>
         <div class="min-w-0 flex-1">
           <div class="text-[11px] font-bold tracking-wide" style="color:var(--c-corporeal)">${tag}</div>
@@ -188,14 +188,14 @@ export function renderCmdResults(query, archiveData, callbacks) {
       const hook = entry.notes?.critique
         ? entry.notes.critique.slice(0, 72) + (entry.notes.critique.length > 72 ? '…' : '')
         : (entry.title ? entry.title.slice(0, 72) : `${brand} · ${season} · ${year}`);
-      html += `<div class="cmd-item p-3 px-4 cursor-pointer flex items-start gap-3" data-index="${i}" data-entry-id="${entry.id}">
+      html += `<div class="cmd-item p-3 px-4 cursor-pointer flex items-start gap-3" role="option" aria-selected="false" data-index="${i}" data-entry-id="${entry.id}">
         <div class="text-[10px] font-bold opacity-30 mt-0.5 shrink-0 font-mono">N</div>
         <div class="min-w-0 flex-1">
           <div class="text-[11px] font-bold tracking-wide truncate">${brand.toUpperCase()} · ${season.toUpperCase()} · ${year}</div>
           <div class="text-[9px] opacity-60 mt-0.5 truncate font-normal normal-case">${hook}</div>
           <div class="text-[8px] opacity-35 uppercase tracking-wider mt-0.5">${id} · ${politics}</div>
         </div>
-        <div class="text-[10px] opacity-40 ml-1 shrink-0">↵</div>
+        <div class="text-[10px] opacity-40 ml-1 shrink-0" aria-hidden="true">↵</div>
       </div>`;
     });
   }
@@ -220,10 +220,10 @@ function buildCommandItems(query) {
     );
   }
   return items.map(item => `
-    <div class="cmd-item cmd-cmd-item p-3 px-4 cursor-pointer flex items-center gap-3" data-cmd-action="${item.action}" ${item.val ? `data-cmd-val="${item.val}"` : ''}>
-      <span class="text-[14px] opacity-40">${item.icon}</span>
+    <div class="cmd-item cmd-cmd-item p-3 px-4 cursor-pointer flex items-center gap-3" role="option" aria-selected="false" data-cmd-action="${item.action}" ${item.val ? `data-cmd-val="${item.val}"` : ''}>
+      <span class="text-[14px] opacity-40" aria-hidden="true">${item.icon}</span>
       <span class="text-[10px] uppercase tracking-wide">${item.label}</span>
-      <span class="ml-auto text-[9px] opacity-30 tracking-wider">RUN →</span>
+      <span class="ml-auto text-[9px] opacity-30 tracking-wider" aria-hidden="true">RUN →</span>
     </div>`).join('');
 }
 
@@ -284,8 +284,23 @@ export function handleCmdKeydown(e, archiveData, callbacks) {
 }
 
 function updateCmdSelection() {
-  document.querySelectorAll('.cmd-item').forEach((el, i) => {
-    if (i === cmdSelectedIndex) el.classList.add('selected');
-    else el.classList.remove('selected');
+  const items = document.querySelectorAll('.cmd-item');
+  items.forEach((el, i) => {
+    const isSelected = i === cmdSelectedIndex;
+    el.classList.toggle('selected', isSelected);
+    el.setAttribute('aria-selected', String(isSelected));
+    if (isSelected) {
+      // Update aria-activedescendant on the input so SR users hear the choice.
+      const input = document.getElementById('cmd-input');
+      if (input) {
+        if (!el.id) el.id = `cmd-item-${i}`;
+        input.setAttribute('aria-activedescendant', el.id);
+      }
+      // Scroll selected item into view.
+      el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
   });
+  if (cmdSelectedIndex < 0) {
+    document.getElementById('cmd-input')?.removeAttribute('aria-activedescendant');
+  }
 }
