@@ -409,12 +409,12 @@
         <!-- Mobile Quick Nav (top of drawer, immediately visible) -->
         <div id="mobile-quick-nav" class="lg:hidden border-b-[1px] border-black/80 dark:border-white/20 shrink-0 bg-overlay dark:bg-darkSurface">
           <div class="grid grid-cols-3 gap-px bg-black/10 dark:bg-white/10">
-            <button type="button" id="btn-folders-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Folders</button>
-            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Sign In</button>
-            <button type="button" id="btn-lang-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Lang</button>
-            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Theme</button>
-            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">About</button>
-            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black">Contact</button>
+            <button type="button" id="btn-folders-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Folders</button>
+            <button type="button" id="btn-auth-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Sign In</button>
+            <button type="button" id="btn-lang-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
+            <button type="button" id="btn-theme-toggle-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
+            <button type="button" id="btn-about-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
+            <button type="button" id="btn-contact-mobile" class="text-[10px] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
           </div>
         </div>
 
@@ -815,19 +815,19 @@
           </div>
 
           <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]">
-            <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+            <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
               <span class="text-[14px] leading-none">‹</span><span class="btn-label-mobile">Back</span>
             </button>
-            <button type="button" id="btn-notes-mobile" aria-label="View notes" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+            <button type="button" id="btn-notes-mobile" aria-label="View notes" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
               <span class="text-[12px] leading-none">▦</span><span class="btn-label-mobile">Notes</span>
             </button>
-            <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex flex-col items-center justify-center gap-0.5 border border-acid text-acid py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+            <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex flex-col items-center justify-center gap-0.5 border border-acid text-acid py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
               <span class="text-[12px] leading-none">◉</span><span class="btn-label-mobile">Hotspots</span>
             </button>
-            <button type="button" id="btn-nexus-mobile" aria-label="Open Nexus" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+            <button type="button" id="btn-nexus-mobile" aria-label="Open Nexus" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
               <span class="text-[12px] leading-none">◈</span><span class="btn-label-mobile">Nexus</span>
             </button>
-            <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex flex-col items-center justify-center gap-0.5 bg-acid text-black py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px]">
+            <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex flex-col items-center justify-center gap-0.5 bg-acid text-black py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
               <span class="text-[12px] leading-none">★</span><span class="btn-label-mobile">Save</span>
             </button>
           </div>
