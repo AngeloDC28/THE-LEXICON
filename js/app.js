@@ -1148,6 +1148,13 @@ function setupEventListeners() {
           AppState.selectedEntryId = focusedRow.dataset.entryId;
           openCiteModal();
         }
+      } else if (e.key === 'b' || e.key === 'B') {
+        // Bookmark focused row entry
+        const focusedRow = document.querySelector('#index-table-view tbody tr.focused');
+        if (focusedRow?.dataset.entryId) {
+          e.preventDefault();
+          toggleBookmark(focusedRow.dataset.entryId, callbacks);
+        }
       }
     }
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {

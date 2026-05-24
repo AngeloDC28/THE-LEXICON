@@ -303,6 +303,8 @@ export function renderIndexView(archiveData, resetPage = false) {
       <span>·</span>
       <span><kbd>C</kbd> CITE</span>
       <span>·</span>
+      <span><kbd>B</kbd> BOOKMARK</span>
+      <span>·</span>
       <span><kbd>N</kbd> NEXUS</span>
       <span>·</span>
       <span><kbd>?</kbd> HELP</span>
