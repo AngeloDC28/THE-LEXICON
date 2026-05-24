@@ -206,7 +206,7 @@ function refreshChrome() {
   const btnBookmarks = $('btn-show-bookmarks');
   if (btnBookmarks) btnBookmarks.textContent = t('index_saved');
 
-  const recentTitle = $$('#recent-container span')[0];
+  const recentTitle = $('recent-title-label');
   if (recentTitle) recentTitle.textContent = t('index_recent');
 
   const searchInput = $('search-input');
@@ -223,13 +223,13 @@ function refreshChrome() {
 
   // --- Status Ribbon labels (Brand/Year/Season/Entry sub-labels) ---
   const statusLabels = {
-    'status-brand': 'status_brand',
-    'status-year':  'status_year',
-    'status-season':'status_season',
-    'status-entry': 'status_entry'
+    'status-brand-label':  'status_brand',
+    'status-year-label':   'status_year',
+    'status-season-label': 'status_season',
+    'status-entry-label':  'status_entry'
   };
   Object.entries(statusLabels).forEach(([id, key]) => {
-    const el = $(id)?.previousElementSibling;
+    const el = $(id);
     if (el) el.textContent = t(key);
   });
 

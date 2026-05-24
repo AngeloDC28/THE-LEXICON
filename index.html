@@ -368,19 +368,19 @@
     ============================================================ -->
     <div id="status-ribbon" class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" aria-live="polite" aria-atomic="true">
       <div class="px-2 lg:px-4 py-1 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
-        <span class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Brand</span>
+        <span id="status-brand-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Brand</span>
         <span id="status-brand" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 md:border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
-        <span class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Year</span>
+        <span id="status-year-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Year</span>
         <span id="status-year" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
-        <span class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Season</span>
+        <span id="status-season-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Season</span>
         <span id="status-season" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-1 border-t-[1px] md:border-t-0 overflow-hidden">
-        <span class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Entry</span>
+        <span id="status-entry-label" class="text-[8px] uppercase tracking-[0.3em] opacity-60 block">Entry</span>
         <span id="status-entry" class="text-[10px] lg:text-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
     </div>
@@ -414,7 +414,7 @@
         <!-- Recently Viewed -->
         <div id="recent-container" class="border-b-[1px] border-black/80 dark:border-white/20 shrink-0 hidden">
           <div class="px-3 pt-2 pb-1 flex items-center justify-between">
-            <span class="text-[8px] uppercase tracking-[0.2em] opacity-40">Recently Viewed</span>
+            <span id="recent-title-label" class="text-[8px] uppercase tracking-[0.2em] opacity-40">Recently Viewed</span>
           </div>
           <div id="recent-row" class="recent-row"></div>
         </div>
