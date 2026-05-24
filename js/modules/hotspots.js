@@ -10,6 +10,7 @@ import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
 let _archiveData = [];
+let _triggerBtn = null;
 
 export function initHotspotInteractions(archiveData) {
   if (Array.isArray(archiveData)) _archiveData = archiveData;
@@ -21,6 +22,7 @@ export function initHotspotInteractions(archiveData) {
     const btn = e.target.closest('.hotspot-btn');
     if (btn) {
       e.stopPropagation();
+      _triggerBtn = btn;
       const idx = parseInt(btn.dataset.index, 10);
       toggleHotspot(idx);
     }
@@ -70,6 +72,9 @@ function showHotspot(index) {
       bodyEl.textContent = text;
       sheet.setAttribute('aria-hidden', 'false');
       sheet.classList.add('open');
+      // Move focus to close button so keyboard users can dismiss the sheet
+      const closeBtn = $('btn-close-hotspot-sheet');
+      if (closeBtn) requestAnimationFrame(() => closeBtn.focus());
     }
   } else {
     // Desktop: permanent floating payload
@@ -96,6 +101,8 @@ function showHotspot(index) {
 }
 
 export function cleanupHotspots() {
+  const prevTrigger = _triggerBtn;
+  _triggerBtn = null;
   AppState.activeHotspot = null;
   document.querySelectorAll('.hotspot-btn').forEach(btn => btn.classList.remove('active'));
 
@@ -103,6 +110,8 @@ export function cleanupHotspots() {
   if (sheet) {
     sheet.classList.remove('open');
     sheet.setAttribute('aria-hidden', 'true');
+    // Return focus to the hotspot button that opened the sheet
+    if (prevTrigger) requestAnimationFrame(() => prevTrigger.focus());
   }
 
   const payload = $('analytical-payload');
