@@ -430,7 +430,7 @@
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
           <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[9px] font-mono uppercase tracking-widest">
             <span>Filtering: <span id="active-folder-name"></span></span>
-            <button id="btn-clear-folder-filter" class="underline">Clear</button>
+            <button type="button" id="btn-clear-folder-filter" aria-label="Clear active folder filter" class="underline">Clear</button>
           </div>
           <div class="flex flex-col gap-2">
             <div class="flex gap-2 items-stretch">
@@ -701,7 +701,7 @@
             <div class="flex items-baseline justify-between mb-8 border-b border-black dark:border-white pb-4">
               <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Folders</h1>
               <div class="flex gap-4">
-                <button id="btn-export-all-folders" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[ Export Database ]</button>
+                <button type="button" id="btn-export-all-folders" class="text-[9px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline">[ Export Database ]</button>
                 <span id="folders-count" class="text-[10px] font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
               </div>
             </div>
@@ -740,8 +740,8 @@
                    already inline below the image and fullscreen is rarely
                    useful on a phone-sized image. -->
               <div class="hidden lg:flex absolute top-4 left-4 flex-col gap-2 z-[200]">
-                <button id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
-                <button id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
+                <button type="button" id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
+                <button type="button" id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[9px] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
 
               <!-- Sticky Note Squares (top-right triggers) -->
@@ -752,7 +752,7 @@
             <div id="sticky-note-panel" class="hidden w-[280px] flex-col overflow-y-auto border-l border-white/10 bg-black">
               <div id="sticky-panel-header" class="flex items-center justify-between px-4 py-3 border-b border-black/20">
                 <span id="sticky-panel-label" class="text-[10px] font-mono font-bold uppercase tracking-[0.2em]"></span>
-                <button id="btn-close-sticky-panel" class="text-[11px] font-bold leading-none hover:opacity-60" aria-label="Close panel">✕</button>
+                <button type="button" id="btn-close-sticky-panel" class="text-[11px] font-bold leading-none hover:opacity-60" aria-label="Close panel">✕</button>
               </div>
               <div id="sticky-panel-body" class="p-5 text-[11px] font-mono leading-relaxed overflow-y-auto"></div>
             </div>
@@ -793,11 +793,11 @@
                   <button type="button" id="btn-bookmark-entry" class="bookmark-star text-white" aria-label="Bookmark this entry" aria-pressed="false">★</button>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
-                  <button id="btn-open-matrix" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">View Nexus</button>
-                  <button id="btn-save-to-folder" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Save to Folder</button>
-                  <button id="btn-cite-entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Cite Entry</button>
-                  <button id="btn-copy-link" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">[ Copy Link ]</button>
-                  <button id="btn-back-grid" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Return to Archive</button>
+                  <button type="button" id="btn-open-matrix" aria-label="View Nexus connections for this entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">View Nexus</button>
+                  <button type="button" id="btn-save-to-folder" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors">Save to Folder</button>
+                  <button type="button" id="btn-cite-entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors focus-ring">Cite Entry</button>
+                  <button type="button" id="btn-copy-link" aria-label="Copy permalink to this entry" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors focus-ring">[ Copy Link ]</button>
+                  <button type="button" id="btn-back-grid" class="text-[9px] tracking-widest uppercase border border-white/20 text-white px-2 py-3 hover:bg-white hover:text-black transition-colors focus-ring">Return to Archive</button>
                 </div>
               </div>
             </div>
