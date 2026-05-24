@@ -33,6 +33,15 @@ html.dark {
   --text-main: #F4F4F5;
   --border-color: rgba(255,255,255,0.2);
 }
+/* Light-mode category colors: darkened for WCAG AA contrast (≥4.5:1 on #f4f4f0) */
+html:not(.dark) {
+  --c-corporeal:  #7a2828;
+  --c-semiotic:   #5c4c2a;
+  --c-subculture: #4a2870;
+  --c-critique:   #7a1818;
+  --c-strategy:   #1e4f48;
+  --c-provenance: #6a4214;
+}
 
 /* Global Utilities */
 /* .hidden uses !important so JS-driven `el.classList.add('hidden')` reliably
@@ -469,6 +478,14 @@ html:not(.dark) .hero-btn-pri { background: #000; color: #fff; border-color: #00
 html:not(.dark) .hero-btn-sec { color: #000; border-color: #ccc; }
 .hero-btn-sec:hover { border-color: #fff; }
 html:not(.dark) .hero-btn-sec:hover { border-color: #000; }
+.hero-btn-pri:focus-visible, .hero-btn-sec:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+}
+html:not(.dark) .hero-btn-pri:focus-visible,
+html:not(.dark) .hero-btn-sec:focus-visible { outline-color: #000; }
+.hero-close:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
+html:not(.dark) .hero-close:focus-visible { outline-color: #000; }
 
 .hero-stats {
   margin-top: auto;
@@ -1712,9 +1729,12 @@ html:not(.dark) .note-pullquote { color: #111; background: rgba(255,0,0,0.04); }
   background: transparent;
   border: 1px solid #2a2a2a;
   padding: 4px 8px;
+  min-height: 44px;
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
 }
+.btn-reading-mode:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
+html:not(.dark) .btn-reading-mode:focus-visible { outline-color: #000; }
 .btn-reading-mode:hover, .btn-reading-mode.active { color: #CCFF00; border-color: #CCFF00; }
 html:not(.dark) .btn-reading-mode { border-color: #ccc; color: #666; }
 html:not(.dark) .btn-reading-mode:hover,
