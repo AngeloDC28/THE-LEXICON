@@ -8,6 +8,8 @@
 // All module-level callbacks close over this binding by reference, so they
 // receive the live value once DOMContentLoaded resolves it.
 let archiveData = [];
+
+const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
 import { imageDimensions } from './modules/image-dimensions.js';
 import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js';
 setImageDimensions(imageDimensions);
@@ -641,14 +643,23 @@ function setupEventListeners() {
   $('btn-lang-toggle-mobile')?.addEventListener('click', toggleLanguage);
   $('btn-auth-toggle-mobile')?.addEventListener('click', () => { toggleAuth(); setTimeout(() => $('auth-email')?.focus(), 50); });
 
-  // Modals
-  $('btn-about')?.addEventListener('click', () => $('about-modal').classList.remove('hidden'));
-  $('btn-contact')?.addEventListener('click', () => $('contact-modal').classList.remove('hidden'));
-  $('btn-about-mobile')?.addEventListener('click', () => { $('about-modal').classList.remove('hidden'); toggleHamburger(); });
-  $('btn-contact-mobile')?.addEventListener('click', () => { $('contact-modal').classList.remove('hidden'); toggleHamburger(); });
+  // Modals — opening
+  function openModal(id) {
+    const modal = $(id);
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    // Move focus to first focusable element (prefer close button)
+    const focusEl = modal.querySelector('[data-modal-close], [autofocus]') || modal.querySelector(FOCUSABLE_SELECTORS);
+    if (focusEl) requestAnimationFrame(() => focusEl.focus());
+    trapFocus(modal);
+  }
+  $('btn-about')?.addEventListener('click', () => openModal('about-modal'));
+  $('btn-contact')?.addEventListener('click', () => openModal('contact-modal'));
+  $('btn-about-mobile')?.addEventListener('click', () => { openModal('about-modal'); toggleHamburger(); });
+  $('btn-contact-mobile')?.addEventListener('click', () => { openModal('contact-modal'); toggleHamburger(); });
   $('btn-search-mobile')?.addEventListener('click', () => { const s = $('search-input'); if (s) { s.focus(); s.scrollIntoView({ behavior: 'smooth' }); } });
-  $('btn-privacy-link')?.addEventListener('click', () => $('privacy-modal').classList.remove('hidden'));
-  $('btn-terms-link')?.addEventListener('click', () => $('terms-modal').classList.remove('hidden'));
+  $('btn-privacy-link')?.addEventListener('click', () => openModal('privacy-modal'));
+  $('btn-terms-link')?.addEventListener('click', () => openModal('terms-modal'));
 
   // Auth form
   $('auth-form')?.addEventListener('submit', (e) => { e.preventDefault(); sendSignInLink(callbacks); });
@@ -899,12 +910,12 @@ function setupEventListeners() {
 
   $('btn-save-to-folder')?.addEventListener('click', () => {
     if (!currentUser) { showToast(getTranslation('auth_required', AppState.language)); toggleAuth(); return; }
-    $('save-folder-modal').classList.remove('hidden');
+    openModal('save-folder-modal');
     renderSaveFolderModal();
   });
   $('btn-save-folder-mobile')?.addEventListener('click', () => {
     if (!currentUser) { showToast(getTranslation('auth_required', AppState.language)); toggleAuth(); return; }
-    $('save-folder-modal').classList.remove('hidden');
+    openModal('save-folder-modal');
     renderSaveFolderModal();
   });
 
@@ -1224,6 +1235,8 @@ function openCiteModal() {
   if ($('cite-url'))     $('cite-url').textContent     = url;
 
   modal.classList.remove('hidden');
+  modal.querySelector('[data-modal-close]')?.focus();
+  trapFocus(modal);
 }
 
 // ── KEYBOARD SHORTCUTS HELP ──
@@ -1231,8 +1244,8 @@ function showKeyboardHelp() {
   const modal = $('kbd-help-modal');
   if (!modal) return;
   modal.classList.remove('hidden');
-  // Focus the close button so Esc and tab navigation work
   modal.querySelector('[data-modal-close]')?.focus();
+  trapFocus(modal);
 }
 
 // ── FOCUS RESTORE ──
@@ -1244,6 +1257,35 @@ function restoreFocus() {
   if (_lastNonModalFocus && document.body.contains(_lastNonModalFocus)) {
     try { _lastNonModalFocus.focus(); } catch (e) { /* element no longer focusable */ }
   }
+}
+
+// ── FOCUS TRAP ──
+// Constrain keyboard focus inside a modal element while it's open.
+// Call trapFocus(el) when opening; listener is removed automatically when
+// the element gains 'hidden' class (via MutationObserver).
+function trapFocus(modal) {
+  function getFocusable() { return [...modal.querySelectorAll(FOCUSABLE_SELECTORS)].filter(el => !el.closest('[hidden]') && el.offsetParent !== null); }
+  function handler(e) {
+    if (e.key !== 'Tab') return;
+    const focusable = getFocusable();
+    if (!focusable.length) { e.preventDefault(); return; }
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  }
+  modal.addEventListener('keydown', handler);
+  // Auto-remove when modal is hidden
+  const obs = new MutationObserver(() => {
+    if (modal.classList.contains('hidden')) {
+      modal.removeEventListener('keydown', handler);
+      obs.disconnect();
+    }
+  });
+  obs.observe(modal, { attributes: true, attributeFilter: ['class'] });
 }
 
 // ── LIGHTBOX ──
