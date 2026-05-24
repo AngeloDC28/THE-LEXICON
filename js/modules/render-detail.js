@@ -321,8 +321,12 @@ function renderMetadataGrid(entry) {
     { key: 'era',       label: t('tax_era'),       value: entry.tags.era },
     { key: 'politics',  label: t('tax_politics'),  value: entry.tags.politics },
     { key: 'theories',  label: t('tax_theories'),  value: entry.tags.theories },
-    { key: 'materials', label: t('tax_materials'), value: entry.tags.materials }
-  ];
+    { key: 'anatomy',   label: t('tax_anatomy'),   value: entry.tags.anatomy },
+    { key: 'materials', label: t('tax_materials'), value: entry.tags.materials },
+    { key: 'geography', label: t('tax_geography'), value: entry.tags.geography },
+    { key: 'gender',    label: t('tax_gender'),    value: entry.tags.gender },
+    { key: 'format',    label: t('tax_format'),    value: entry.tags.format },
+  ].filter(f => f.value);
   grid.innerHTML = fields.map(f => {
     const translated = getTranslation(f.value, lang) || '--';
     if (!f.value) {
