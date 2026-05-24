@@ -447,11 +447,22 @@ function refreshContent() {
 
   // Update filtered result count badge in the filter chip bar
   const countEl = $('filter-result-count');
+  const filteredEntries = getFilteredEntries(archiveData);
   if (countEl) {
-    const filtered = getFilteredEntries(archiveData);
-    const hasFilter = filtered.length !== archiveData.length;
-    countEl.textContent = hasFilter ? `${filtered.length} / ${archiveData.length} ENTRIES` : '';
+    const hasFilter = filteredEntries.length !== archiveData.length;
+    countEl.textContent = hasFilter ? `${filteredEntries.length} / ${archiveData.length} ENTRIES` : '';
     countEl.classList.toggle('hidden', !hasFilter);
+  }
+
+  // Announce result count to screen readers when filters are active
+  const announcer = $('aria-announcer');
+  if (announcer) {
+    const hasActiveFilter = filteredEntries.length !== archiveData.length
+      || Object.values(AppState.filters).some(Boolean)
+      || AppState.searchQuery;
+    announcer.textContent = hasActiveFilter
+      ? `${filteredEntries.length} entries shown`
+      : '';
   }
 }
 
