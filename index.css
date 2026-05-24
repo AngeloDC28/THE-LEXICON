@@ -2655,7 +2655,13 @@ html:not(.dark) .footer-bottom { color: #bbb; }
   .hotspot-btn,
   #analytical-payload,
   #related-entries-section .text-\[8px\],
-  #aria-announcer { display: none !important; }
+  #aria-announcer,
+  #btn-mobile-filter,
+  #mobile-filter-sheet,
+  #site-footer,
+  #detail-breadcrumb,
+  .btn-reading-mode,
+  #notes-toc { display: none !important; }
 
   /* When NOT on detail page, just hide grid/timeline/index (don't print thumbnails) */
   #app-root:not(.detail-mode-active) #grid-view,
