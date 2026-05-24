@@ -1896,21 +1896,6 @@ html:not(.dark) .cmd-scope-pill.active { color: #000; border-color: rgba(0,0,0,0
 
 
 
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  pointer-events: none;
-}
-.group:hover .grid-overlay {
-  opacity: 1;
-}
 
 /* .tag-pill, .taxonomy-sub-item, .taxonomy-group-header all deleted
    in audit pass 2 — no markup references them after the taxonomy
