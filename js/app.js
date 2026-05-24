@@ -1112,9 +1112,19 @@ function updateMbsResultCount() {
 
 // ── HERO (Phase 1 — populates right column with featured entry) ──
 function renderHero(archiveData) {
-  // Update entry count stat
+  // Update live stats
   const statEl = $('stat-entries');
   if (statEl) statEl.textContent = archiveData.length.toLocaleString();
+  const statBrands = $('stat-brands');
+  if (statBrands) {
+    const uniqueBrands = new Set(archiveData.map(e => e.tags?.brand).filter(Boolean));
+    statBrands.textContent = uniqueBrands.size.toLocaleString();
+  }
+  const statMov = $('stat-movements');
+  if (statMov) {
+    const uniqueMovements = new Set(archiveData.flatMap(e => (e.tags?.theories || '').split('|').map(s => s.trim())).filter(Boolean));
+    statMov.textContent = uniqueMovements.size.toLocaleString();
+  }
 
   const panel = $('orientation-panel');
   if (!panel || panel.classList.contains('hidden')) return;
