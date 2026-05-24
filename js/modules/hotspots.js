@@ -30,6 +30,13 @@ export function initHotspotInteractions(archiveData) {
   if (closeSheetBtn) {
     closeSheetBtn.addEventListener('click', () => cleanupHotspots());
   }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && AppState.activeHotspot !== null) {
+      e.preventDefault();
+      cleanupHotspots();
+    }
+  });
 }
 
 export function toggleHotspot(index) {
