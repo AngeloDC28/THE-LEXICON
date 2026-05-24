@@ -865,6 +865,7 @@ function setupEventListeners() {
   });
 
   $('btn-cmd-palette-hint')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
+  $('btn-hero-search')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
 
   // Cite Entry modal: build BibTeX + Chicago + permalink for the active entry
   $('btn-cite-entry')?.addEventListener('click', () => openCiteModal());

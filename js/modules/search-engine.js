@@ -69,19 +69,37 @@ export function getFilteredEntries(archiveData) {
     return true;
   });
 
-  // 3. Filter by search query
+  // 3. Filter by search query (supports field operators: tag:, brand:, year:, designer:, era:, format:)
   if (q) {
+    // Extract field operators
+    const opRe = /(tag|brand|year|designer|era|format|movement):([^\s]+)/gi;
+    const ops = {};
+    let freeText = q;
+    let m;
+    while ((m = opRe.exec(q)) !== null) {
+      ops[m[1].toLowerCase()] = m[2].toLowerCase();
+      freeText = freeText.replace(m[0], '').trim();
+    }
+
     entries = entries.filter(entry => {
-      const searchable = [
-        entry.id || '',
-        entry.title || '',
-        entry.year ? String(entry.year) : '',
-        entry.season || '',
-        entry.description || '',
-        ...(entry.tags ? Object.values(entry.tags) : []),
-        ...(entry.notes ? Object.values(entry.notes) : [])
-      ].join(' ').toLowerCase();
-      return searchable.includes(q);
+      const t = entry.tags || {};
+      if (ops.year   && String(entry.year || '') !== ops.year) return false;
+      if (ops.brand  && !(t.brand || '').toLowerCase().includes(ops.brand)) return false;
+      if (ops.designer && !(t.brand || '').toLowerCase().includes(ops.designer)) return false;
+      if (ops.tag    && !(t.politics || '').toLowerCase().includes(ops.tag)) return false;
+      if (ops.era    && !(t.era || '').toLowerCase().includes(ops.era)) return false;
+      if (ops.format && !(t.format || '').toLowerCase().includes(ops.format)) return false;
+      if (ops.movement && !(t.theories || '').toLowerCase().includes(ops.movement)) return false;
+      if (freeText) {
+        const searchable = [
+          entry.id || '', entry.title || '',
+          entry.year ? String(entry.year) : '',
+          entry.season || '', entry.description || '',
+          ...Object.values(t), ...Object.values(entry.notes || {})
+        ].join(' ').toLowerCase();
+        if (!searchable.includes(freeText)) return false;
+      }
+      return true;
     });
   }
 
