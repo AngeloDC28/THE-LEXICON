@@ -1074,6 +1074,10 @@ function setupEventListeners() {
       e.preventDefault();
       openNexus();
     }
+    if ((e.key === 'p' || e.key === 'P') && AppState.selectedEntryId && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      $('btn-copy-link')?.click();
+    }
     // Brutalist Index View: j/k row navigation when index mode is active
     if (AppState.viewMode === 'index') {
       if (e.key === 'j' || e.key === 'ArrowDown') {
