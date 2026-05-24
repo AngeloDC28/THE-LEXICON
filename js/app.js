@@ -39,7 +39,11 @@ const callbacks = {
   renderFolderOptions: () => renderSaveFolderModal(),
   updateBookmarkUI: (id) => {
     const btn = $('btn-bookmark-entry');
-    if (btn) { btn.style.opacity = isBookmarked(id) ? '1' : '0.4'; }
+    const saved = isBookmarked(id);
+    if (btn) {
+      btn.style.opacity = saved ? '1' : '0.4';
+      btn.setAttribute('aria-pressed', String(saved));
+    }
   },
   closeModal: (id) => {
     const modal = $(id + '-modal');
