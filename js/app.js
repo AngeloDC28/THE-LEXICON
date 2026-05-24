@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initial Render
   refreshUI();
   renderHero(archiveData);
+  syncMobileSheetChips();
 
   // Orientation Panel Logic
   var dismissed;
@@ -726,6 +727,8 @@ function setupEventListeners() {
     const featHead = $('featured-strip-head');
     if (how) how.style.display = 'none';
     if (featHead) featHead.style.display = 'none';
+    const whoEl = $('who-section');
+    if (whoEl) whoEl.style.display = 'none';
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
   };
   $('btn-dismiss-orientation')?.addEventListener('click', dismissOrientation);
@@ -969,6 +972,91 @@ function setupEventListeners() {
 
   // Custom Refresh Event
   document.addEventListener('lexicon-refresh', refreshUI);
+
+  // ── Mobile bottom-sheet filter ──
+  const openMobileSheet = () => {
+    const sheet = $('mobile-filter-sheet');
+    if (!sheet) return;
+    sheet.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    syncMobileSheetChips();
+    updateMobileSheetUrl();
+    updateMbsResultCount();
+  };
+  const closeMobileSheet = () => {
+    const sheet = $('mobile-filter-sheet');
+    if (sheet) sheet.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
+
+  $('btn-mobile-filter')?.addEventListener('click', openMobileSheet);
+  $('btn-mobile-filter-close')?.addEventListener('click', closeMobileSheet);
+  $('mobile-sheet-backdrop')?.addEventListener('click', closeMobileSheet);
+
+  // Chip toggle in bottom sheet
+  document.querySelectorAll('.mbs-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const filterKey = chip.dataset.mbsFilter;
+      const val = chip.dataset.mbsVal;
+      const current = AppState.filters[filterKey] || '';
+      const activeVals = current.split('|').map(s => s.trim()).filter(Boolean);
+      const idx = activeVals.indexOf(val);
+      if (idx >= 0) { activeVals.splice(idx, 1); } else { activeVals.push(val); }
+      AppState.filters[filterKey] = activeVals.length ? activeVals.join('|') : null;
+      syncMobileSheetChips();
+      updateMobileSheetUrl();
+      updateMbsResultCount();
+    });
+  });
+
+  $('btn-mbs-clear')?.addEventListener('click', () => {
+    AppState.filters = emptyFilters();
+    syncMobileSheetChips();
+    updateMobileSheetUrl();
+    updateMbsResultCount();
+  });
+
+  $('btn-mbs-apply')?.addEventListener('click', () => {
+    closeMobileSheet();
+    refreshContent();
+    updateHash('grid');
+  });
+}
+
+// ── Mobile bottom-sheet helpers ──────────────────────────────────────
+function syncMobileSheetChips() {
+  document.querySelectorAll('.mbs-chip').forEach(chip => {
+    const filterKey = chip.dataset.mbsFilter;
+    const val = chip.dataset.mbsVal;
+    const current = AppState.filters[filterKey] || '';
+    const activeVals = current.split('|').map(s => s.trim()).filter(Boolean);
+    chip.classList.toggle('active', activeVals.includes(val));
+  });
+  // Update the mobile filter badge count
+  const total = Object.values(AppState.filters).filter(Boolean)
+    .flatMap(v => v.split('|').filter(Boolean)).length;
+  const badge = $('mobile-filter-count');
+  if (badge) {
+    badge.textContent = total;
+    badge.classList.toggle('hidden', total === 0);
+  }
+}
+
+function updateMobileSheetUrl() {
+  const urlEl = $('mbs-shareable-url');
+  if (!urlEl) return;
+  const params = new URLSearchParams();
+  for (const [k, v] of Object.entries(AppState.filters)) {
+    if (v) params.set(k, v);
+  }
+  const qs = params.toString();
+  urlEl.textContent = qs ? `/archive?${qs}` : '—';
+}
+
+function updateMbsResultCount() {
+  const countEl = $('mbs-result-count');
+  if (!countEl || !archiveData) return;
+  countEl.textContent = `· ${getFilteredEntries(archiveData).length} RESULTS`;
 }
 
 // ── HERO (Phase 1 — populates right column with featured entry) ──
@@ -980,11 +1068,13 @@ function renderHero(archiveData) {
   const panel = $('orientation-panel');
   if (!panel || panel.classList.contains('hidden')) return;
 
-  // Reveal section header above featured strip and "How It Works"
+  // Reveal section header, "How It Works", and "Who It's For"
   const featHead = $('featured-strip-head');
   const how = $('how-it-works');
+  const who = $('who-section');
   if (featHead) featHead.style.display = 'flex';
   if (how) how.style.display = 'block';
+  if (who) who.style.display = 'block';
 
   // Pick the most recently dated entry with a rich critique note for the teaser
   const candidate = [...archiveData]

@@ -592,7 +592,70 @@
             </div>
           </div>
 
+          <!-- Who It's For (shown with hero on first visit) -->
+          <div id="who-section" class="who-section" style="display:none;">
+            <div class="who-inner">
+              <div class="who-head">
+                <div class="who-title">For people who take<br>fashion seriously.</div>
+                <div class="who-lead">The Lexicon is built for the people who do the work — designers, students, critics, costume teams, and stylists who need references that hold up to scrutiny. Free to browse; sign in to save.</div>
+              </div>
+              <div class="who-grid">
+                <div class="who-cell"><div class="who-role">DESIGNERS</div><div class="who-use">Reference checks. Avoid accidental repeats. Find lineage for new ideas.</div></div>
+                <div class="who-cell"><div class="who-role">STUDENTS</div><div class="who-use">Citable sources for dissertations, essays, and critical writing.</div></div>
+                <div class="who-cell"><div class="who-role">STYLISTS</div><div class="who-use">Build moodboards anchored in real history, not Pinterest drift.</div></div>
+                <div class="who-cell"><div class="who-role">COSTUME</div><div class="who-use">Period-accurate references for film, television, and theatre.</div></div>
+                <div class="who-cell"><div class="who-role">CRITICS</div><div class="who-use">Fact-check lineage. Win arguments. Find the original.</div></div>
+              </div>
+            </div>
+          </div>
+
           <div id="image-grid" class="image-grid"></div>
+        </div>
+
+        <!-- Mobile filter button (visible only on small screens) -->
+        <button id="btn-mobile-filter" class="mobile-filter-btn" type="button" aria-label="Open filter panel">
+          <span>FILTER</span><span class="mf-count hidden" id="mobile-filter-count"></span><span>▾</span>
+        </button>
+
+        <!-- Mobile bottom-sheet filter -->
+        <div id="mobile-filter-sheet" class="mobile-sheet hidden" role="dialog" aria-modal="true" aria-label="Filter archive">
+          <div class="mobile-sheet-backdrop" id="mobile-sheet-backdrop"></div>
+          <div class="mobile-sheet-panel">
+            <div class="mobile-sheet-header">
+              <div class="mobile-sheet-title">Filter archive</div>
+              <button class="mobile-sheet-close" id="btn-mobile-filter-close" type="button" aria-label="Close filter panel">CLOSE ×</button>
+            </div>
+
+            <div class="mobile-sheet-section">
+              <h4>ANALYTICAL TAG</h4>
+              <div class="mobile-sheet-chips" id="mbs-tag-chips">
+                <button class="mbs-chip" data-mbs-filter="politics" data-mbs-cat="corporeal" data-mbs-val="Body Politics & Corporeal Interventions">CORPOREAL</button>
+                <button class="mbs-chip" data-mbs-filter="politics" data-mbs-cat="semiotic" data-mbs-val="Techno-Politics & Digital Identities">SEMIOTIC</button>
+                <button class="mbs-chip" data-mbs-filter="politics" data-mbs-cat="subculture" data-mbs-val="Queer Theory & Subcultural Systems">SUBCULTURAL</button>
+                <button class="mbs-chip" data-mbs-filter="politics" data-mbs-cat="critique" data-mbs-val="Anti-Consumerism & Institutional Critique">CRITIQUE</button>
+                <button class="mbs-chip" data-mbs-filter="politics" data-mbs-cat="strategy" data-mbs-val="Globalisation & Cultural Hybridity">STRATEGY</button>
+              </div>
+            </div>
+
+            <div class="mobile-sheet-section">
+              <h4>GENDER</h4>
+              <div class="mobile-sheet-chips" id="mbs-gender-chips">
+                <button class="mbs-chip" data-mbs-filter="gender" data-mbs-val="Menswear">MENSWEAR</button>
+                <button class="mbs-chip" data-mbs-filter="gender" data-mbs-val="Womenswear">WOMENSWEAR</button>
+                <button class="mbs-chip" data-mbs-filter="gender" data-mbs-val="Unisex / Neutral">UNISEX</button>
+              </div>
+            </div>
+
+            <div class="mobile-sheet-section">
+              <h4>SHAREABLE URL</h4>
+              <div class="mbs-url" id="mbs-shareable-url">—</div>
+            </div>
+
+            <div class="mobile-sheet-actions">
+              <button class="mbs-btn-clear" id="btn-mbs-clear" type="button">CLEAR ALL</button>
+              <button class="mbs-btn-apply" id="btn-mbs-apply" type="button">APPLY <span id="mbs-result-count"></span></button>
+            </div>
+          </div>
         </div>
 
         <!-- Brutalist Index View (Phase 2) -->
