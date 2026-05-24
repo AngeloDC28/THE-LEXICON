@@ -1535,6 +1535,10 @@ function openLightbox() {
   document.body.style.overflow = 'hidden';
   _lightboxZoomed = false;
   renderLightbox();
+  // Focus the close button so keyboard users have a home base.
+  const closeBtn = $('btn-close-lightbox');
+  if (closeBtn) requestAnimationFrame(() => closeBtn.focus());
+  trapFocus(box);
   // Pinch handlers are bound once and persist across opens.
   if (!_pinchHandlersBound) bindLightboxPinch();
 }
