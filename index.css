@@ -370,6 +370,11 @@ html:not(.dark) .hero-panel { border-color: #e0e0dc; background: #fff; color: #0
   color: inherit;
   opacity: 0.5;
   line-height: 1;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 4px 8px;
 }
 .hero-close:hover { opacity: 1; }
@@ -432,6 +437,7 @@ html:not(.dark) .hero-sub { color: #444; }
 }
 .hero-btn-pri {
   padding: 10px 20px;
+  min-height: 44px;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -448,6 +454,7 @@ html:not(.dark) .hero-btn-pri { background: #000; color: #fff; border-color: #00
 
 .hero-btn-sec {
   padding: 10px 20px;
+  min-height: 44px;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;

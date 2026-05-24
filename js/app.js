@@ -1784,6 +1784,10 @@ function toggleHamburger() {
 function toggleTheme() {
   const isDark = document.documentElement.classList.toggle('dark');
   try { localStorage.setItem('lexicon-theme', isDark ? 'dark' : 'light'); } catch(e) {}
+  // Reflect theme in <meta name="theme-color"> so mobile chrome matches.
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', isDark ? '#000000' : '#FDFCF0');
+  showToast(isDark ? 'Dark mode' : 'Light mode');
   refreshUI();
 }
 
