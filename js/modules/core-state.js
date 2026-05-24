@@ -34,7 +34,7 @@ export const AppState = {
   activeFolderId: null,
   previousView: 'grid',
   activeHotspot: null,
-  sortMode: 'default',
+  sortMode: safeLocalGet('lexicon.sort-mode', 'year-desc'),
 };
 
 export let gridIntersectionObserver = null;

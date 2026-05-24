@@ -177,7 +177,7 @@ function refreshChrome() {
 
   const btnLangLabel = $('btn-lang-toggle-label');
   const btnLangMobile = $('btn-lang-toggle-mobile');
-  if (btnLangLabel) btnLangLabel.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
+  if (btnLangLabel) btnLangLabel.textContent = lang.toUpperCase() + ' ▾';
   if (btnLangMobile) btnLangMobile.textContent = (t('nav_language') + ': ' + lang.toUpperCase()).toUpperCase();
   renderLangDropdown();
 
@@ -803,9 +803,10 @@ function setupEventListeners() {
 
   // Sort cycle — content-only (sort label is rebuilt inside refreshContent)
   $('btn-sort-cycle')?.addEventListener('click', () => {
-    const modes = ['default', 'year-asc', 'year-desc', 'brand-az'];
-    const idx = modes.indexOf(AppState.sortMode || 'default');
+    const modes = ['year-desc', 'year-asc', 'brand-az', 'default'];
+    const idx = modes.indexOf(AppState.sortMode || 'year-desc');
     AppState.sortMode = modes[(idx + 1) % modes.length];
+    try { localStorage.setItem('lexicon.sort-mode', AppState.sortMode); } catch(e) {}
     refreshContent();
   });
 
