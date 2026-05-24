@@ -1070,6 +1070,10 @@ function setupEventListeners() {
         try { localStorage.setItem('lexicon-reading-mode', isReading ? '1' : '0'); } catch(ex) {}
       }
     }
+    if ((e.key === 'n' || e.key === 'N') && AppState.selectedEntryId && !e.metaKey && !e.ctrlKey) {
+      e.preventDefault();
+      openNexus();
+    }
     // Brutalist Index View: j/k row navigation when index mode is active
     if (AppState.viewMode === 'index') {
       if (e.key === 'j' || e.key === 'ArrowDown') {
