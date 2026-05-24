@@ -444,6 +444,15 @@ function refreshContent() {
 
   renderFilterChips(callbacks);
   updateStatusBar(archiveData);
+
+  // Update filtered result count badge in the filter chip bar
+  const countEl = $('filter-result-count');
+  if (countEl) {
+    const filtered = getFilteredEntries(archiveData);
+    const hasFilter = filtered.length !== archiveData.length;
+    countEl.textContent = hasFilter ? `${filtered.length} / ${archiveData.length} ENTRIES` : '';
+    countEl.classList.toggle('hidden', !hasFilter);
+  }
 }
 
 function refreshUI() {
