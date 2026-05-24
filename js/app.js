@@ -271,12 +271,12 @@ function refreshChrome() {
   if (citeTitle) citeTitle.textContent = t('cite_modal_title');
   const citeSub = $$('#cite-modal h2 + p')[0];
   if (citeSub) citeSub.textContent = t('cite_modal_subtitle');
-  const citeLabels = $$('#cite-modal .text-\\[10px\\].font-bold');
-  if (citeLabels.length >= 3) {
-    citeLabels[0].textContent = t('cite_chicago_label');
-    citeLabels[1].textContent = t('cite_bibtex_label');
-    citeLabels[2].textContent = t('cite_url_label');
-  }
+  const citeChicago = $('cite-chicago-label');
+  if (citeChicago) citeChicago.textContent = t('cite_chicago_label');
+  const citeBibtex = $('cite-bibtex-label');
+  if (citeBibtex) citeBibtex.textContent = t('cite_bibtex_label');
+  const citeUrl = $('cite-url-label');
+  if (citeUrl) citeUrl.textContent = t('cite_url_label');
   document.querySelectorAll('.cite-copy-btn').forEach(b => {
     if (!b.classList.contains('btn-copied')) b.textContent = t('cite_copy');
   });
