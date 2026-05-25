@@ -114,6 +114,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderHero(archiveData);
   syncMobileSheetChips();
 
+  // Welcome Modal — shown on first visit only
+  initWelcomeModal();
+
   // Orientation Panel Logic — also hide the supporting landing sections
   // (how-it-works, featured strip header, who-section) so the page state
   // matches what the user dismissed previously.
@@ -146,6 +149,59 @@ document.addEventListener('DOMContentLoaded', async () => {
   }, 500);
     } catch(e) { console.error('LEXICON_BOOT_ERROR:', e); }
 });
+
+// ─── Welcome Modal ───────────────────────────────────────────────────
+function initWelcomeModal() {
+  const modal = $('welcome-modal');
+  if (!modal) return;
+
+  let welcomed;
+  try { welcomed = localStorage.getItem('lexicon-welcomed'); } catch(e) {}
+  if (welcomed) return;
+
+  modal.removeAttribute('hidden');
+  document.body.style.overflow = 'hidden';
+
+  const enterBtn = $('btn-welcome-enter');
+  if (enterBtn) setTimeout(() => enterBtn.focus(), 50);
+
+  function dismiss() {
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+    try { localStorage.setItem('lexicon-welcomed', '1'); } catch(e) {}
+  }
+
+  $('btn-welcome-enter')?.addEventListener('click', dismiss);
+  $('btn-welcome-skip')?.addEventListener('click', dismiss);
+  modal.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismiss(); });
+
+  const langBtns = modal.querySelectorAll('.wlang-btn');
+  const lang = AppState.language || 'en';
+  langBtns.forEach(btn => {
+    if (btn.dataset.lang === lang) btn.classList.add('active');
+    btn.addEventListener('click', () => {
+      langBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      AppState.language = btn.dataset.lang;
+      try { localStorage.setItem('lexicon-lang', AppState.language); } catch(e) {}
+      updateWelcomeText(AppState.language);
+    });
+  });
+  updateWelcomeText(lang);
+}
+
+function updateWelcomeText(lang) {
+  const t = (key) => getTranslation(key, lang);
+  const set = (id, key) => { const el = $(id); if (el) el.textContent = t(key) || el.textContent; };
+  set('welcome-subtitle-text', 'welcome_subtitle');
+  set('welcome-desc-text',     'welcome_desc');
+  set('welcome-lang-label-text', 'welcome_lang_label');
+  set('ws-label-1', 'welcome_step1_label'); set('ws-title-1', 'welcome_step1_title'); set('ws-desc-1', 'welcome_step1_desc');
+  set('ws-label-2', 'welcome_step2_label'); set('ws-title-2', 'welcome_step2_title'); set('ws-desc-2', 'welcome_step2_desc');
+  set('ws-label-3', 'welcome_step3_label'); set('ws-title-3', 'welcome_step3_title'); set('ws-desc-3', 'welcome_step3_desc');
+  const cta = $('btn-welcome-enter'); if (cta) cta.textContent = t('welcome_cta') || cta.textContent;
+  const skip = $('btn-welcome-skip'); if (skip) skip.textContent = t('welcome_skip') || skip.textContent;
+}
 
 // ─────────────────────────────────────────────────────────────────────
 // REFRESH PIPELINE

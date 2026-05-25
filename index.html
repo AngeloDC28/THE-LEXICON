@@ -1133,6 +1133,62 @@
 
   </div>
 
+  <!-- Welcome Modal: shown on first visit, dismissed to localStorage -->
+  <div id="welcome-modal" class="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title" hidden>
+    <div class="welcome-inner">
+
+      <!-- Language selector -->
+      <div class="welcome-lang-row" id="welcome-lang-row">
+        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
+        <div class="welcome-lang-options" id="welcome-lang-options">
+          <button type="button" class="wlang-btn active" data-lang="en" lang="en">EN</button>
+          <button type="button" class="wlang-btn" data-lang="en-gb" lang="en-GB">EN-GB</button>
+          <button type="button" class="wlang-btn" data-lang="fr" lang="fr">FR</button>
+          <button type="button" class="wlang-btn" data-lang="de" lang="de">DE</button>
+          <button type="button" class="wlang-btn" data-lang="es" lang="es">ES</button>
+          <button type="button" class="wlang-btn" data-lang="it" lang="it">IT</button>
+          <button type="button" class="wlang-btn" data-lang="pt" lang="pt">PT</button>
+          <button type="button" class="wlang-btn" data-lang="zh" lang="zh">中文</button>
+          <button type="button" class="wlang-btn" data-lang="ja" lang="ja">日本語</button>
+          <button type="button" class="wlang-btn" data-lang="ko" lang="ko">한국어</button>
+          <button type="button" class="wlang-btn" data-lang="ru" lang="ru">РУ</button>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <div class="welcome-header">
+        <div class="welcome-wordmark">THE LEXICON</div>
+        <p class="welcome-subtitle" id="welcome-subtitle-text">A research archive for fashion history and visual culture.</p>
+        <p class="welcome-desc" id="welcome-desc-text">We map where every idea came from — indexed by analytical category, not just designer.</p>
+      </div>
+
+      <!-- 3-step guide -->
+      <div class="welcome-steps" role="list">
+        <div class="welcome-step" role="listitem">
+          <div class="ws-label" id="ws-label-1">01 · BROWSE</div>
+          <div class="ws-title" id="ws-title-1">Explore the archive</div>
+          <div class="ws-desc" id="ws-desc-1">Scroll the visual grid or switch to the index table. Filter by brand, era, movement, or theory.</div>
+        </div>
+        <div class="welcome-step" role="listitem">
+          <div class="ws-label" id="ws-label-2">02 · ANALYSE</div>
+          <div class="ws-title" id="ws-title-2">Open any entry</div>
+          <div class="ws-desc" id="ws-desc-2">Each entry has annotated hotspots on every image, and three structured notes: Provenance, Critique, and Strategy.</div>
+        </div>
+        <div class="welcome-step" role="listitem">
+          <div class="ws-label" id="ws-label-3">03 · CONNECT</div>
+          <div class="ws-title" id="ws-title-3">Follow the lineage</div>
+          <div class="ws-desc" id="ws-desc-3">The Nexus maps every entry's visual and intellectual references — and what it went on to influence.</div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="welcome-footer">
+        <button type="button" id="btn-welcome-enter" class="welcome-cta">ENTER THE ARCHIVE</button>
+        <button type="button" id="btn-welcome-skip" class="welcome-skip">Skip introduction</button>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
