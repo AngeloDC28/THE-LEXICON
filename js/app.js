@@ -1476,6 +1476,17 @@ function renderHero(archiveData) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCandidate(); }
       };
     }
+
+    // Hero background image
+    const bgEl = $('hero-bg-img');
+    if (bgEl && candidate.images?.[0]) {
+      bgEl.classList.remove('loaded');
+      const src = resolveImgSrc(candidate.images[0]);
+      bgEl.style.backgroundImage = `url(${src})`;
+      const img = new Image();
+      img.onload = () => bgEl.classList.add('loaded');
+      img.src = src;
+    }
   }
 
   showHeroEntry(0);
