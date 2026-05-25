@@ -773,18 +773,18 @@
             </div>
 
             <!-- RIGHT: Metadata Sidebar -->
-            <div id="detail-metadata-sidebar" class="hidden w-[400px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
+            <div id="detail-metadata-sidebar" class="hidden w-[480px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
               <!-- Sidebar header: accent tag + entry ID (Phase 1 redesign) -->
               <div id="detail-sidebar-header" class="px-6 pt-6 pb-4 border-b border-white/10 shrink-0"></div>
               <!-- Sticky Note Container (Brutalist Nodes) -->
-              <div class="flex items-center justify-between px-6 pt-5 pb-2">
-                <div>
-                  <span class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest text-white/30">Analysis</span>
-                  <span id="detail-reading-time" class="ml-3 text-[8px] font-mono opacity-20 tracking-wider"></span>
+              <div class="flex items-center justify-between px-6 pt-5 pb-3">
+                <div class="flex items-baseline gap-3">
+                  <span class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest text-white/50 font-bold">Analysis</span>
+                  <span id="detail-reading-time" class="text-[8px] font-mono opacity-30 tracking-wider"></span>
                 </div>
-                <button class="btn-reading-mode" id="btn-reading-mode" type="button" aria-label="Toggle reading mode" aria-pressed="false">READING MODE</button>
+                <button class="btn-reading-mode" id="btn-reading-mode" type="button" aria-label="Toggle reading mode" aria-pressed="false">EXPAND NOTES ↗</button>
               </div>
-              <div id="sticky-note-container" class="flex flex-col gap-6 p-6">
+              <div id="sticky-note-container" class="flex flex-col gap-6 px-6 pb-6">
                 <!-- Nodes injected by JS -->
               </div>
               

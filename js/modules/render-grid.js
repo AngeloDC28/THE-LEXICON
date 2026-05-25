@@ -197,17 +197,14 @@ export function renderEntryList(archiveData, callbacks) {
     const tagCategory = getTagCategory(entry.tags?.politics || '');
     const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
     return `
-      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-2.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
+      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
            data-id="${entry.id}"
            role="button"
            tabindex="0"
            aria-label="${brand} ${year} ${tagLabel}">
-        <div class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.18em] font-bold" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
-        <div class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest font-medium mt-0.5">${brand}</div>
-        <div class="text-[var(--t-mono-xs)] font-mono text-black/40 dark:text-white/40 mt-0.5">
-          <span>${year}</span>
-        </div>
-        <div class="text-[var(--t-mono-xs)] font-mono text-black/60 dark:text-white/60 mt-0.5 truncate">${title}</div>
+        <div class="text-[8px] font-mono uppercase tracking-[0.18em] font-bold leading-tight" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
+        <div class="text-[9px] font-mono uppercase tracking-widest font-medium leading-tight">${brand} <span class="text-black/40 dark:text-white/40">${year}</span></div>
+        <div class="text-[8px] font-mono text-black/50 dark:text-white/50 truncate leading-tight">${title}</div>
       </div>`;
   }).join('');
 }

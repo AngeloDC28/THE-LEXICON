@@ -1783,7 +1783,7 @@ html:not(.dark) #sticky-note-container.reading-mode .node-body {
 
 /* Widen the sidebar in reading mode so prose isn't too narrow */
 #detail-metadata-sidebar:has(#sticky-note-container.reading-mode) {
-  width: 480px;
+  width: 600px;
 }
 @media (max-width: 1200px) {
   #detail-metadata-sidebar:has(#sticky-note-container.reading-mode) {
