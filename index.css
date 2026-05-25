@@ -1788,13 +1788,53 @@ html:not(.dark) #sticky-note-container.reading-mode .node-body {
   color: #2a2a2a !important;
 }
 
-/* Widen the sidebar in reading mode so prose isn't too narrow */
-#detail-metadata-sidebar:has(#sticky-note-container.reading-mode) {
-  width: 600px;
+/* Reader mode at desktop: hide the image rail, expand the sidebar to
+   full width, and centre the prose at --measure. Press R to exit.
+   :has() lets us climb from the inner container that owns the toggle. */
+#detail-desktop-stack:has(.reading-mode) #detail-image-sector,
+#detail-desktop-stack:has(.reading-mode) #sticky-note-panel {
+  display: none !important;
 }
+#detail-desktop-stack:has(.reading-mode) #detail-metadata-sidebar {
+  width: 100% !important;
+  max-width: none;
+  border-left: none;
+}
+#detail-desktop-stack:has(.reading-mode) #detail-sidebar-header,
+#detail-desktop-stack:has(.reading-mode) #sticky-note-container,
+#detail-desktop-stack:has(.reading-mode) #metadata-grid,
+#detail-desktop-stack:has(.reading-mode) #related-entries-section,
+#detail-desktop-stack:has(.reading-mode) > #detail-metadata-sidebar > div:last-child {
+  max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Reader mode banner — small hint that you're in this mode */
+#detail-desktop-stack:has(.reading-mode)::before {
+  content: 'READER MODE · PRESS R TO EXIT';
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.3em;
+  color: #CCFF00;
+  background: rgba(0,0,0,0.85);
+  padding: 6px;
+  border-bottom: 1px solid rgba(204,255,0,0.3);
+}
+html:not(.dark) #detail-desktop-stack:has(.reading-mode)::before {
+  color: #000;
+  background: rgba(255,255,255,0.95);
+  border-bottom-color: #000;
+}
+/* Fallback for older browsers without :has() — still narrow the prose */
+#sticky-note-container.reading-mode { max-width: 68ch; margin: 0 auto; }
 @media (max-width: 1200px) {
-  #detail-metadata-sidebar:has(#sticky-note-container.reading-mode) {
-    width: 100%;
+  #detail-desktop-stack:has(.reading-mode) #detail-metadata-sidebar {
+    width: 100% !important;
   }
 }
 
@@ -1844,6 +1884,15 @@ html:not(.dark) .btn-reading-mode:focus-visible { outline-color: #000; }
 html:not(.dark) .btn-reading-mode { border-color: #ccc; color: #666; }
 html:not(.dark) .btn-reading-mode:hover,
 html:not(.dark) .btn-reading-mode.active { color: #000; border-color: #000; }
+.btn-reading-mode .rm-kbd {
+  display: inline-block;
+  padding: 0 4px;
+  margin-left: 6px;
+  border: 1px solid currentColor;
+  font-size: 8px;
+  line-height: 1.4;
+  opacity: 0.7;
+}
 
 /* Notes TOC (mini, always visible above the note nodes) */
 .notes-toc {
