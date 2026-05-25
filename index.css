@@ -19,6 +19,12 @@
   --t-mono-xs:   clamp(0.5625rem, 0.49rem + 0.18vw, 0.6875rem);
   --t-mono-sm:   clamp(0.625rem, 0.55rem + 0.18vw, 0.75rem);
   --t-mono-base: clamp(0.75rem, 0.65rem + 0.25vw, 0.9375rem);
+
+  /* Chrome-scoped sizes: ~25% smaller than mono-xs/sm.
+     Applied via #primary-header, #status-ribbon, #view-controls-bar
+     so the rest of the app's mono text keeps its original sizing. */
+  --t-chrome-xs: clamp(0.4375rem, 0.385rem + 0.13vw, 0.5rem);
+  --t-chrome-sm: clamp(0.5rem, 0.44rem + 0.13vw, 0.5625rem);
   --t-body:      clamp(0.95rem, 0.85rem + 0.3vw, 1.0625rem);
   --t-lead:      clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
   --t-h3:        clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
@@ -2695,6 +2701,18 @@ html.dark .entry-item:hover::after {
   transform: translateY(5px);
   display: none !important;
 }
+/* ── CHROME SIZE SCOPING ──
+   Redefine --t-mono-xs and --t-mono-sm inside the top chrome only,
+   shrinking every label/button/value that uses those variables by
+   ~25%. Doesn't touch sidebar, detail view, index table, etc.
+   Specificity uses ID selectors so it wins over any Tailwind utility. */
+#primary-header,
+#status-ribbon,
+#view-controls-bar {
+  --t-mono-xs: var(--t-chrome-xs);
+  --t-mono-sm: var(--t-chrome-sm);
+}
+
 /* ── HEADER TELEMETRY FEED ── */
 #header-telemetry {
   display: flex; align-items: center;
