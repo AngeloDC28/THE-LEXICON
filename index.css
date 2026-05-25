@@ -1424,7 +1424,7 @@ html:not(.dark) .td-designer { color: #000; }
 .td-tag.critique    { color: var(--c-critique);   border-color: rgba(217,107,107,0.4); }
 .td-tag.strategy    { color: var(--c-strategy);   border-color: rgba(127,179,163,0.4); }
 .td-tag.provenance  { color: var(--c-provenance); border-color: rgba(196,168,122,0.4); }
-.td-prov { color: #aaa; font-style: italic; font-size: var(--t-mono-sm); }
+.td-prov { font-family: 'EB Garamond', Georgia, serif; color: #aaa; font-style: italic; font-size: var(--t-body); }
 html:not(.dark) .td-prov { color: #555; }
 .td-status { color: #888; font-size: var(--t-mono-xs); letter-spacing: 0.15em; }
 .td-status.cited { color: #4ade80; }
