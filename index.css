@@ -715,9 +715,15 @@ html:not(.dark) .feat-card-img { background: #e8e8e8; }
 html:not(.dark) .feat-card-meta { color: #999; }
 .feat-card-hook {
   margin-top: 6px;
-  font-size: var(--t-mono-base);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-body);
+  font-style: italic;
   color: #ccc;
-  line-height: 1.45;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 html:not(.dark) .feat-card-hook { color: #333; }
 
@@ -819,10 +825,10 @@ html:not(.dark) .how-num span:last-child { color: #999; }
 html:not(.dark) .how-step h3 { color: #0a0a0a; }
 
 .how-step p {
-  font-size: var(--t-mono-sm);
-  color: #777;
-  line-height: 1.65;
-  font-family: var(--font-mono);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-body);
+  color: #888;
+  line-height: 1.55;
 }
 html:not(.dark) .how-step p { color: #555; }
 
@@ -860,11 +866,11 @@ html:not(.dark) .who-inner { border-color: #e0e0dc; }
 html:not(.dark) .who-title { color: #0a0a0a; }
 
 .who-lead {
-  font-size: var(--t-mono-sm);
-  color: #777;
-  line-height: 1.7;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-lead);
+  color: #888;
+  line-height: 1.55;
   margin-top: 16px;
-  font-family: var(--font-mono);
   max-width: 52ch;
 }
 html:not(.dark) .who-lead { color: #555; }
@@ -896,10 +902,10 @@ html:not(.dark) .who-cell { background: #fff; }
 html:not(.dark) .who-role { color: #000; }
 
 .who-use {
-  font-size: var(--t-mono-sm);
-  color: #666;
-  line-height: 1.6;
-  font-family: var(--font-mono);
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: var(--t-body);
+  color: #777;
+  line-height: 1.5;
 }
 html:not(.dark) .who-use { color: #555; }
 
