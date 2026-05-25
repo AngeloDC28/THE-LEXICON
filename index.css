@@ -1303,6 +1303,10 @@ html.dark .mode-toggle button.active {
 .mode-toggle button.active .kbd { opacity: 0.9; }
 
 /* ─── Phase 2: Brutalist Index Table View ──────────────────────────── */
+/* Guarantee grid is hidden in INDEX mode — CSS-level, not relying on Tailwind */
+#image-panel[data-view-mode="index"] #grid-view { display: none !important; }
+#image-panel[data-view-mode="visual"] #index-table-view { display: none !important; }
+
 #index-table-view {
   background: #0a0a0a;
   color: #d4d4d4;
@@ -1312,43 +1316,8 @@ html:not(.dark) #index-table-view {
   background: #fafaf8;
   color: #1a1a1a;
 }
-.index-banner {
-  border: 1px solid #2a2a2a;
-  padding: 12px 20px;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #040404;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-html:not(.dark) .index-banner { background: #f0f0ee; border-color: #c0c0c0; }
-.index-banner-l { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.index-mode-label {
-  font-size: var(--t-mono-sm);
-  letter-spacing: 0.3em;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-html:not(.dark) .index-mode-label { color: #000; }
-.index-desc {
-  font-size: var(--t-mono-xs);
-  letter-spacing: 0.18em;
-  color: #888;
-  text-transform: uppercase;
-}
-.index-shortcuts {
-  font-size: var(--t-mono-xs);
-  letter-spacing: 0.18em;
-  color: #888;
-  text-transform: uppercase;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.index-shortcuts kbd, .index-shortcuts-inline kbd {
+/* index-banner removed — mode label + shortcuts moved to index-kbd-bar at bottom */
+.index-shortcuts-inline kbd {
   display: inline-block;
   padding: 1px 5px;
   margin: 0 3px;
@@ -1358,7 +1327,7 @@ html:not(.dark) .index-mode-label { color: #000; }
   font-family: inherit;
   font-size: inherit;
 }
-html:not(.dark) .index-shortcuts kbd, html:not(.dark) .index-shortcuts-inline kbd {
+html:not(.dark) .index-shortcuts-inline kbd {
   border-color: #999;
   color: #333;
 }
@@ -1545,22 +1514,27 @@ html:not(.dark) .idx-page-btn.active { background: #000; color: #fff; border-col
 .idx-export-btn:hover { opacity: 1; color: #CCFF00; }
 html:not(.dark) .idx-export-btn:hover { color: #000; }
 
-/* Bottom keyboard shortcut bar */
+/* Bottom status bar — terminal mode line style */
 .index-kbd-bar {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 20px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  margin-top: 4px;
+  gap: 10px;
+  padding: 5px 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 8px;
   font-size: 8px;
   font-family: var(--font-mono);
   letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.28);
   text-transform: uppercase;
   flex-wrap: wrap;
+  background: #060606;
 }
-html:not(.dark) .index-kbd-bar { border-top-color: rgba(0,0,0,0.08); color: rgba(0,0,0,0.35); }
+html:not(.dark) .index-kbd-bar {
+  border-top-color: rgba(0,0,0,0.12);
+  color: rgba(0,0,0,0.35);
+  background: #f2f2f0;
+}
 .index-kbd-bar kbd {
   border: 1px solid currentColor;
   padding: 0 3px;
@@ -1568,6 +1542,18 @@ html:not(.dark) .index-kbd-bar { border-top-color: rgba(0,0,0,0.08); color: rgba
   line-height: 1.4;
   border-radius: 1px;
 }
+.index-mode-tag {
+  display: inline-block;
+  padding: 1px 6px;
+  background: #CCFF00;
+  color: #000;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
 
 .index-empty {
   padding: 80px 20px;
@@ -1607,10 +1593,7 @@ html:not(.dark) .index-kbd-bar { border-top-color: rgba(0,0,0,0.08); color: rgba
 
 @media (max-width: 767px) {
   .index-table th, .index-table td { padding: 8px 6px; font-size: var(--t-mono-sm); }
-  .index-banner { padding: 10px 12px; }
-  .index-mode-label { font-size: var(--t-mono-sm); }
-  .index-desc, .index-shortcuts { font-size: var(--t-mono-xs); }
-  .index-shortcuts { gap: 8px; }
+  .index-kbd-bar { gap: 6px; padding: 4px 12px; }
 }
 
 /* Accessibility: Skip Links */

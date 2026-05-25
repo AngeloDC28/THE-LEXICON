@@ -256,18 +256,6 @@ export function renderIndexView(archiveData, resetPage = false) {
     : '';
 
   container.innerHTML = `
-    <div class="index-banner">
-      <div class="index-banner-l">
-        <span class="index-mode-label">— INDEX</span>
-        <span class="index-desc">DENSE TEXTUAL MODE · KEYBOARD NAVIGABLE · SCREEN READER OPTIMISED</span>
-      </div>
-      <div class="index-shortcuts">
-        <span><kbd>↑</kbd><kbd>↓</kbd> NAVIGATE</span>
-        <span><kbd>⏎</kbd> OPEN</span>
-        <span><kbd>/</kbd> SEARCH</span>
-        <span><kbd>?</kbd> HELP</span>
-      </div>
-    </div>
     ${filterBar}
 
     <table class="index-table" role="table" aria-label="Archive entries, text-only index view">
@@ -287,25 +275,21 @@ export function renderIndexView(archiveData, resetPage = false) {
       </span>
     </div>
     <div class="index-kbd-bar">
-      <span><kbd>V</kbd> VISUAL</span>
+      <span class="index-mode-tag">INDEX</span>
+      <span class="opacity-30" aria-hidden="true">·</span>
+      <span><kbd>↑↓</kbd> NAVIGATE</span>
       <span>·</span>
-      <span><kbd>I</kbd> INDEX</span>
+      <span><kbd>⏎</kbd> OPEN</span>
       <span>·</span>
       <span><kbd>/</kbd> SEARCH</span>
       <span>·</span>
       <span><kbd>⌘K</kbd> COMMAND</span>
       <span>·</span>
-      <span><kbd>J/K</kbd> NAVIGATE</span>
-      <span>·</span>
-      <span><kbd>⏎</kbd> OPEN</span>
+      <span><kbd>V</kbd> VISUAL</span>
       <span>·</span>
       <span><kbd>S</kbd> SAVE</span>
       <span>·</span>
-      <span><kbd>C</kbd> CITE</span>
-      <span>·</span>
       <span><kbd>B</kbd> BOOKMARK</span>
-      <span>·</span>
-      <span><kbd>N</kbd> NEXUS</span>
       <span>·</span>
       <span><kbd>?</kbd> HELP</span>
     </div>`;
@@ -422,15 +406,18 @@ export function applyViewMode(mode) {
   const indexView = $('index-table-view');
   const visualBtn = $('btn-mode-visual');
   const indexBtn = $('btn-mode-index');
+  const imagePanel = $('image-panel');
 
   if (mode === 'index') {
     if (gridView) gridView.classList.add('hidden');
     if (indexView) indexView.classList.remove('hidden');
+    if (imagePanel) imagePanel.setAttribute('data-view-mode', 'index');
     if (visualBtn) { visualBtn.classList.remove('active'); visualBtn.setAttribute('aria-pressed', 'false'); }
     if (indexBtn) { indexBtn.classList.add('active'); indexBtn.setAttribute('aria-pressed', 'true'); }
   } else {
     if (gridView) gridView.classList.remove('hidden');
     if (indexView) indexView.classList.add('hidden');
+    if (imagePanel) imagePanel.setAttribute('data-view-mode', 'visual');
     if (visualBtn) { visualBtn.classList.add('active'); visualBtn.setAttribute('aria-pressed', 'true'); }
     if (indexBtn) { indexBtn.classList.remove('active'); indexBtn.setAttribute('aria-pressed', 'false'); }
   }

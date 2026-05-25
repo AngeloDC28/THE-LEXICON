@@ -309,7 +309,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=586ee5d" />
+  <link rel="stylesheet" href="index.css?v=e1d5b9c" />
 </head>
 
 <body>
@@ -340,28 +340,28 @@
   <!-- ============================================================
        PRIMARY NAVIGATION
   ============================================================ -->
-  <header id="primary-header" class="bg-black text-white flex items-center justify-between px-3 py-2 lg:px-5 lg:py-3 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
-    <div class="flex items-center gap-4 lg:gap-6">
+  <header id="primary-header" class="bg-black text-white flex items-center justify-between px-3 py-1.5 lg:px-5 lg:py-2 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
+    <div class="flex items-center gap-3 lg:gap-5">
       <button id="btn-hamburger" type="button" class="lg:hidden text-white hover:text-acid focus-ring -ml-2 -my-2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation" aria-label="Toggle Menu" aria-expanded="false" aria-controls="index-panel">
-        <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <button type="button" id="header-title" aria-label="Reset filters and return to archive home" class="text-[var(--t-mono-sm)] lg:text-[var(--t-mono-base)] font-bold tracking-[0.3em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
-      <div id="header-telemetry" class="lexicon-tablet-up text-[var(--t-mono-xs)] font-mono opacity-60 tracking-widest uppercase" data-notranslate translate="no">
+      <button type="button" id="header-title" aria-label="Reset filters and return to archive home" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-[0.25em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
+      <div id="header-telemetry" class="lexicon-tablet-up text-[var(--t-mono-xs)] font-mono opacity-50 tracking-widest uppercase" data-notranslate translate="no">
         <span id="telemetry-text">LOADING ARCHIVE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
-    <div class="lexicon-desktop-only items-center gap-3 lg:gap-5">
-      <button type="button" id="btn-folders-toggle" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-xs)] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-pressed="false">FOLDERS</button>
-      <button type="button" id="btn-auth-toggle" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-xs)] opacity-60 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">SIGN IN</button>
+    <div class="lexicon-desktop-only items-center gap-2 lg:gap-4">
+      <button type="button" id="btn-folders-toggle" class="text-[var(--t-mono-xs)] opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-pressed="false">FOLDERS</button>
+      <button type="button" id="btn-auth-toggle" class="text-[var(--t-mono-xs)] opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">SIGN IN</button>
       <div class="relative inline-block">
-        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
+        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
           <span id="btn-lang-toggle-label" data-notranslate translate="no">EN ▾</span>
         </button>
         <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
       </div>
-      <button type="button" id="btn-about" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">ABOUT</button>
-      <button type="button" id="btn-contact" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
-      <button type="button" id="btn-theme-toggle" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
+      <button type="button" id="btn-about" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">ABOUT</button>
+      <button type="button" id="btn-contact" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
+      <button type="button" id="btn-theme-toggle" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
     </div>
   </header>
 
@@ -1129,7 +1129,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=586ee5d"></script>
+    <script type="module" src="js/app.js?v=e1d5b9c"></script>
 
   </div>
 
