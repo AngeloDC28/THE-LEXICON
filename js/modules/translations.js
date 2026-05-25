@@ -85,15 +85,23 @@ export const translations = {
     "modal_about_title": "About",
     "modal_about_body": [
       "Created by <strong>Angelo Sanchez Dela Cruz</strong> — researcher and cultural analyst based in London.",
-      "THE LEXICON is a high-density research terminal engineered for the forensic analysis of visual culture and subcultural theory.",
-      "Operating strictly outside the traditional fashion media ecosystem, the directory maps the intersections of aesthetic language, historical precedent, and structural power.",
-      "Designed for cultural critics and visual strategists, this system decodes the underlying mechanics of class dynamics and bodily autonomy through the lens of visionary image-making."
+      "THE LEXICON is a research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.",
+      "Operating outside the traditional fashion media ecosystem, the directory decodes the intersections of aesthetic language, historical precedent, and structural power. Designed for cultural critics, designers, students, and visual strategists.",
+      "<strong>— FOR PRESS —</strong>",
+      "Currently indexing 45 landmark collections across 45 brands, annotated under nine taxonomy axes (analytical tag, era, politics, theory, gender, materials, geography, anatomy, format).",
+      "Press inquiries, image licensing, interview requests, and editorial partnerships: <a href='mailto:press@thelexicon.xyz' style='color:#CCFF00;text-decoration:underline;'>press@thelexicon.xyz</a>",
+      "Press kit, brand assets, founder bio, and high-resolution imagery available on request."
     ],
     "modal_contact_title": "Contact",
     "modal_contact_body": [
-      "System Communications",
-      "Email: info@thelexicon.xyz",
-      "Location: London, United Kingdom"
+      "<strong>General Enquiries</strong>",
+      "info@thelexicon.xyz",
+      "<strong>Press &amp; Editorial</strong>",
+      "press@thelexicon.xyz",
+      "<strong>Institutional Licensing</strong>",
+      "licensing@thelexicon.xyz",
+      "<strong>Location</strong>",
+      "London, United Kingdom"
     ],
     "bookmarked": "Bookmarked",
     "bookmark_removed": "Bookmark removed",
