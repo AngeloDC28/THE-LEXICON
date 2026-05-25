@@ -108,19 +108,19 @@ which runs them all in order.
 THE LEXICON is undergoing a major redesign to position it as a **research terminal** rather than a fashion blog. Full strategy documented in `thelexicon-code-review-v2.md` and visual mockups in `*.png` files.
 
 ### Phase 1: Front door redesign (2–3 weeks, current)
-- [ ] Fluid type system: CSS `clamp()` variables for all `font-size` declarations
-- [ ] Inverted metadata hierarchy: Analytical tag → designer → year/season → hook on all cards
-- [ ] Microcopy audit: Update labels, headers, error messages per spec
-- [ ] GDPR cookie control: Add Reject button to consent banner
-- [ ] Keyboard shortcuts: `?` (help), `/` (search), `V` (visual mode), `I` (index mode)
+- [x] Fluid type system: CSS `clamp()` variables for all `font-size` declarations
+- [x] Inverted metadata hierarchy: Analytical tag → designer → year/season → hook on all cards
+- [x] Microcopy audit: Update labels, headers, error messages per spec
+- [x] GDPR cookie control: Add Reject button to consent banner
+- [x] Keyboard shortcuts: `?` (help), `/` (search), `V` (visual mode), `I` (index mode)
 
 ### Phase 2: Research instrument (4–6 weeks)
-- Brutalist Index View: Text-only sortable table mode with keyboard navigation
-- Command palette: `⌘K` / `Ctrl+K` with type-ahead and boolean operators
-- Multi-select filters: URL-encoded, shareable filter combinations
-- WCAG 2.2 AA accessibility audit and fixes
-- Mobile bottom-sheet filters
-- Saved searches (authenticated)
+- [x] Brutalist Index View: Text-only sortable table mode with keyboard navigation
+- [x] Command palette: `⌘K` / `Ctrl+K` with type-ahead and boolean operators
+- [x] Multi-select filters: URL-encoded, shareable filter combinations
+- [ ] WCAG 2.2 AA accessibility audit and fixes
+- [x] Mobile bottom-sheet filters
+- [ ] Saved searches (authenticated)
 
 ### Phase 3: Entry architecture (6–8 weeks)
 - Per-entry routes: Move from SPA modals to `/entry/{slug}` with SSR + JSON-LD
