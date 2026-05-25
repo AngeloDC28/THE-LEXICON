@@ -959,8 +959,8 @@ html:not(.dark) .who-use { color: #555; }
 .mobile-filter-btn {
   display: none;
   position: fixed;
-  bottom: 72px;
-  right: 14px;
+  bottom: calc(72px + env(safe-area-inset-bottom));
+  right: calc(14px + env(safe-area-inset-right));
   z-index: 80;
   background: #fff;
   color: #000;
@@ -1015,7 +1015,7 @@ html:not(.dark) .who-use { color: #555; }
   border-radius: 0;
   max-height: 85vh;
   overflow-y: auto;
-  padding: 20px 16px 32px;
+  padding: 20px 16px calc(32px + env(safe-area-inset-bottom));
   animation: sheet-up 0.22s cubic-bezier(0.22,1,0.36,1);
 }
 html:not(.dark) .mobile-sheet-panel { background: #f4f4f0; border-top-color: #ccc; }
@@ -2353,7 +2353,7 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
 
   /* Mobile detail bottom bar: ensure image area accounts for fixed bar */
   #app-root.detail-mode-active #detail-image-view {
-    padding-bottom: 70px;
+    padding-bottom: calc(70px + env(safe-area-inset-bottom));
   }
 }
 
