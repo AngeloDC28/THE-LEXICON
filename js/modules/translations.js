@@ -89,8 +89,8 @@ export const translations = {
       "Operating outside the traditional fashion media ecosystem, the directory decodes the intersections of aesthetic language, historical precedent, and structural power. Designed for cultural critics, designers, students, and visual strategists.",
       "<strong>— FOR PRESS —</strong>",
       "Currently indexing 45 landmark collections across 45 brands, annotated under nine taxonomy axes (analytical tag, era, politics, theory, gender, materials, geography, anatomy, format).",
-      "Press inquiries, image licensing, interview requests, and editorial partnerships: <a href='mailto:press@thelexicon.xyz' style='color:#CCFF00;text-decoration:underline;'>press@thelexicon.xyz</a>",
-      "Press kit, brand assets, founder bio, and high-resolution imagery available on request."
+      "Press inquiries, interview requests, and editorial partnerships: <a href='mailto:press@thelexicon.xyz' style='color:#CCFF00;text-decoration:underline;'>press@thelexicon.xyz</a>",
+      "Press kit, brand assets, and founder bio available on request."
     ],
     "modal_contact_title": "Contact",
     "modal_contact_body": [
