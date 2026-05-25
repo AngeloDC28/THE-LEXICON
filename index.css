@@ -16,8 +16,8 @@
   --c-provenance: #c4a87a;
 
   /* Fluid typography system: scales fluidly between 360px and 1440px viewport */
-  --t-mono-xs:   clamp(0.625rem, 0.55rem + 0.18vw, 0.75rem);
-  --t-mono-sm:   clamp(0.6875rem, 0.6rem + 0.2vw, 0.8125rem);
+  --t-mono-xs:   clamp(0.5625rem, 0.49rem + 0.18vw, 0.6875rem);
+  --t-mono-sm:   clamp(0.625rem, 0.55rem + 0.18vw, 0.75rem);
   --t-mono-base: clamp(0.75rem, 0.65rem + 0.25vw, 0.9375rem);
   --t-body:      clamp(0.95rem, 0.85rem + 0.3vw, 1.0625rem);
   --t-lead:      clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
