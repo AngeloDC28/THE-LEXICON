@@ -287,12 +287,19 @@ html:not(.dark) .grid-cell-tag-strip {
 .gc-tag-label { font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
 .gc-tag-id { font-size: 8px; opacity: 0.35; letter-spacing: 0.12em; }
 /* Colored accent border-bottom on grid card tag strip, via data attribute set in render-grid.js */
-.grid-cell-tag-strip[data-cat="corporeal"]  { border-bottom-color: rgba(226,164,160,0.28); }
-.grid-cell-tag-strip[data-cat="semiotic"]   { border-bottom-color: rgba(212,196,160,0.28); }
-.grid-cell-tag-strip[data-cat="subculture"] { border-bottom-color: rgba(176,143,196,0.28); }
-.grid-cell-tag-strip[data-cat="critique"]   { border-bottom-color: rgba(217,107,107,0.28); }
-.grid-cell-tag-strip[data-cat="strategy"]   { border-bottom-color: rgba(127,179,163,0.28); }
-.grid-cell-tag-strip[data-cat="provenance"] { border-bottom-color: rgba(196,168,122,0.28); }
+.grid-cell-tag-strip[data-cat="corporeal"]  { border-bottom-color: rgba(226,164,160,0.45); }
+.grid-cell-tag-strip[data-cat="semiotic"]   { border-bottom-color: rgba(212,196,160,0.45); }
+.grid-cell-tag-strip[data-cat="subculture"] { border-bottom-color: rgba(176,143,196,0.45); }
+.grid-cell-tag-strip[data-cat="critique"]   { border-bottom-color: rgba(217,107,107,0.45); }
+.grid-cell-tag-strip[data-cat="strategy"]   { border-bottom-color: rgba(127,179,163,0.45); }
+.grid-cell-tag-strip[data-cat="provenance"] { border-bottom-color: rgba(196,168,122,0.45); }
+/* Category color on the tag label text */
+.grid-cell-tag-strip[data-cat="corporeal"]  .gc-tag-label { color: var(--c-corporeal); }
+.grid-cell-tag-strip[data-cat="semiotic"]   .gc-tag-label { color: var(--c-semiotic); }
+.grid-cell-tag-strip[data-cat="subculture"] .gc-tag-label { color: var(--c-subculture); }
+.grid-cell-tag-strip[data-cat="critique"]   .gc-tag-label { color: var(--c-critique); }
+.grid-cell-tag-strip[data-cat="strategy"]   .gc-tag-label { color: var(--c-strategy); }
+.grid-cell-tag-strip[data-cat="provenance"] .gc-tag-label { color: var(--c-provenance); }
 
 .grid-cell-img {
   position: relative;
@@ -308,6 +315,16 @@ html:not(.dark) .grid-cell-img { background: #e8e8e4; }
   display: block;
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.4s ease;
 }
+.grid-cell-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.55) 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.grid-cell:hover .grid-cell-img::after { opacity: 1; }
 
 .grid-cell-hotspot-badge {
   position: absolute;
@@ -338,16 +355,16 @@ html:not(.dark) .grid-cell-body {
   font-family: var(--font-mono);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.65);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-html:not(.dark) .gc-meta { color: rgba(0,0,0,0.4); }
+html:not(.dark) .gc-meta { color: rgba(0,0,0,0.55); }
 .gc-hook {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: var(--t-body);
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.82);
   margin-top: 3px;
   line-height: 1.35;
   display: -webkit-box;
@@ -355,7 +372,7 @@ html:not(.dark) .gc-meta { color: rgba(0,0,0,0.4); }
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-html:not(.dark) .gc-hook { color: rgba(0,0,0,0.6); }
+html:not(.dark) .gc-hook { color: rgba(0,0,0,0.75); }
 
 /* ─── Phase 1: Hero Panel ─────────────────────────────────────────── */
 .hero-panel {
@@ -461,7 +478,8 @@ html:not(.dark) .hero-sub { color: #444; }
   transition: opacity 0.15s;
 }
 html:not(.dark) .hero-btn-pri { background: #000; color: #fff; border-color: #000; }
-.hero-btn-pri:hover { opacity: 0.8; }
+.hero-btn-pri:hover { background: #CCFF00; color: #000; border-color: #CCFF00; opacity: 1; }
+html:not(.dark) .hero-btn-pri:hover { background: #CCFF00; color: #000; border-color: #CCFF00; }
 
 .hero-btn-sec {
   padding: 10px 20px;
@@ -477,8 +495,8 @@ html:not(.dark) .hero-btn-pri { background: #000; color: #fff; border-color: #00
   transition: border-color 0.15s;
 }
 html:not(.dark) .hero-btn-sec { color: #000; border-color: #ccc; }
-.hero-btn-sec:hover { border-color: #fff; }
-html:not(.dark) .hero-btn-sec:hover { border-color: #000; }
+.hero-btn-sec:hover { border-color: #CCFF00; color: #CCFF00; }
+html:not(.dark) .hero-btn-sec:hover { border-color: #000; color: #000; }
 .hero-btn-pri:focus-visible, .hero-btn-sec:focus-visible {
   outline: 2px solid #CCFF00;
   outline-offset: 2px;
@@ -526,7 +544,7 @@ html:not(.dark) .hero-stat .hs-lbl { color: #999; }
   opacity: 0;
   transition: opacity 0.7s ease;
 }
-.hero-bg-img.loaded { opacity: 0.35; }
+.hero-bg-img.loaded { opacity: 0.50; }
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
@@ -699,12 +717,12 @@ html:not(.dark) .feat-card-tag .fc-id { color: #aaa; }
 .feat-card.tag-strategy   .fc-label { color: var(--c-strategy); }
 .feat-card.tag-provenance .fc-label { color: var(--c-provenance); }
 /* Colored accent border-bottom on tag strip — matches analytical tag palette */
-.feat-card.tag-corporeal  .feat-card-tag { border-bottom-color: rgba(226,164,160,0.28); }
-.feat-card.tag-semiotic   .feat-card-tag { border-bottom-color: rgba(212,196,160,0.28); }
-.feat-card.tag-subculture .feat-card-tag { border-bottom-color: rgba(176,143,196,0.28); }
-.feat-card.tag-critique   .feat-card-tag { border-bottom-color: rgba(217,107,107,0.28); }
-.feat-card.tag-strategy   .feat-card-tag { border-bottom-color: rgba(127,179,163,0.28); }
-.feat-card.tag-provenance .feat-card-tag { border-bottom-color: rgba(196,168,122,0.28); }
+.feat-card.tag-corporeal  .feat-card-tag { border-bottom-color: rgba(226,164,160,0.45); }
+.feat-card.tag-semiotic   .feat-card-tag { border-bottom-color: rgba(212,196,160,0.45); }
+.feat-card.tag-subculture .feat-card-tag { border-bottom-color: rgba(176,143,196,0.45); }
+.feat-card.tag-critique   .feat-card-tag { border-bottom-color: rgba(217,107,107,0.45); }
+.feat-card.tag-strategy   .feat-card-tag { border-bottom-color: rgba(127,179,163,0.45); }
+.feat-card.tag-provenance .feat-card-tag { border-bottom-color: rgba(196,168,122,0.45); }
 
 .feat-card-img {
   aspect-ratio: 4/5;
@@ -1995,7 +2013,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 .hotspot-target {
   width: 14px;
   height: 14px;
-  border: 2px solid #FFF;
+  border: 2px solid rgba(204,255,0,0.75);
   position: relative;
   pointer-events: none; /* Let the button handle all events */
   transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
@@ -2005,7 +2023,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 .hotspot-target::after {
   content: '';
   position: absolute;
-  background: #FFF;
+  background: rgba(204,255,0,0.75);
   transition: background 0.2s ease;
 }
 
@@ -2698,6 +2716,7 @@ html.dark .entry-item:hover::after {
 #header-telemetry {
   display: flex; align-items: center;
   min-width: 0; overflow: hidden;
+  max-width: clamp(160px, 28vw, 420px);
 }
 #telemetry-text {
   display: inline-block;
