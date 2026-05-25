@@ -116,7 +116,7 @@ export function renderImageGrid(archiveData, callbacks) {
              aria-label="${brand} ${year} ${tagLabel}"
              style="animation-delay: ${delay}s">
           <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
-          <div class="grid-cell-tag-strip">
+          <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
             <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
             <span class="gc-tag-id" aria-hidden="true">N-${entry.id.slice(0,6).toUpperCase()}</span>
           </div>

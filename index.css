@@ -286,6 +286,13 @@ html:not(.dark) .grid-cell-tag-strip {
 }
 .gc-tag-label { font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
 .gc-tag-id { font-size: 8px; opacity: 0.35; letter-spacing: 0.12em; }
+/* Colored accent border-bottom on grid card tag strip, via data attribute set in render-grid.js */
+.grid-cell-tag-strip[data-cat="corporeal"]  { border-bottom-color: rgba(226,164,160,0.28); }
+.grid-cell-tag-strip[data-cat="semiotic"]   { border-bottom-color: rgba(212,196,160,0.28); }
+.grid-cell-tag-strip[data-cat="subculture"] { border-bottom-color: rgba(176,143,196,0.28); }
+.grid-cell-tag-strip[data-cat="critique"]   { border-bottom-color: rgba(217,107,107,0.28); }
+.grid-cell-tag-strip[data-cat="strategy"]   { border-bottom-color: rgba(127,179,163,0.28); }
+.grid-cell-tag-strip[data-cat="provenance"] { border-bottom-color: rgba(196,168,122,0.28); }
 
 .grid-cell-img {
   position: relative;
@@ -666,12 +673,19 @@ html:not(.dark) .feat-card-tag { border-bottom-color: #e8e8e6; }
 }
 html:not(.dark) .feat-card-tag .fc-id { color: #aaa; }
 
-.feat-card.tag-corporeal .fc-label  { color: var(--c-corporeal); }
-.feat-card.tag-semiotic .fc-label   { color: var(--c-semiotic); }
+.feat-card.tag-corporeal  .fc-label { color: var(--c-corporeal); }
+.feat-card.tag-semiotic   .fc-label { color: var(--c-semiotic); }
 .feat-card.tag-subculture .fc-label { color: var(--c-subculture); }
-.feat-card.tag-critique .fc-label   { color: var(--c-critique); }
-.feat-card.tag-strategy .fc-label   { color: var(--c-strategy); }
+.feat-card.tag-critique   .fc-label { color: var(--c-critique); }
+.feat-card.tag-strategy   .fc-label { color: var(--c-strategy); }
 .feat-card.tag-provenance .fc-label { color: var(--c-provenance); }
+/* Colored accent border-bottom on tag strip — matches analytical tag palette */
+.feat-card.tag-corporeal  .feat-card-tag { border-bottom-color: rgba(226,164,160,0.28); }
+.feat-card.tag-semiotic   .feat-card-tag { border-bottom-color: rgba(212,196,160,0.28); }
+.feat-card.tag-subculture .feat-card-tag { border-bottom-color: rgba(176,143,196,0.28); }
+.feat-card.tag-critique   .feat-card-tag { border-bottom-color: rgba(217,107,107,0.28); }
+.feat-card.tag-strategy   .feat-card-tag { border-bottom-color: rgba(127,179,163,0.28); }
+.feat-card.tag-provenance .feat-card-tag { border-bottom-color: rgba(196,168,122,0.28); }
 
 .feat-card-img {
   aspect-ratio: 4/5;
@@ -1377,6 +1391,7 @@ html:not(.dark) .td-designer { color: #000; }
 .td-prov { color: #aaa; font-style: italic; font-size: var(--t-mono-sm); }
 html:not(.dark) .td-prov { color: #555; }
 .td-status { color: #888; font-size: var(--t-mono-xs); letter-spacing: 0.15em; }
+.td-status.cited { color: #4ade80; }
 .index-filter-bar {
   display: flex;
   flex-wrap: wrap;
