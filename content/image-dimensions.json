@@ -3127,7 +3127,7 @@
   "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-01.jpg": {
     "w": 1280,
     "h": 1920,
-    "mtime": 1779643439249.993
+    "mtime": 1779687888372.3364
   },
   "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-02.jpg": {
     "w": 1280,
@@ -3883,5 +3883,1125 @@
     "w": 1366,
     "h": 2048,
     "mtime": 1779643439529.993
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891208.3364
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-02.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-03.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-04.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-05.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-06.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-07.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-08.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-09.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-10.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.01.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.02.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.03.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.04.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.05.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.06.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.07.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.08.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.09.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00.10.jpg": {
+    "w": 1152,
+    "h": 1728,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894640.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894640.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894644.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894644.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894648.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894652.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894652.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894656.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894660.3364
+  },
+  "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894660.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894660.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894666.9739
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894666.9739
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894668.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894672.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894672.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894676.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894676.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894680.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894684.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-11.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894684.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-12.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894688.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-13.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894692.3364
+  },
+  "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-14.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894696.3364
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891214.554
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-02.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-03.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-04.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-05.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-06.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-07.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-08.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-09.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-10.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894700.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894700.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894704.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894708.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894712.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894712.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894716.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894716.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894720.3364
+  },
+  "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687894720.3364
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891219.229
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891222.5261
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891222.5261
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891222.5261
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891224.3364
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891232.3364
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891232.3364
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891236.3364
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891244.3364
+  },
+  "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891248.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891248.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-02.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891253.432
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-03.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891253.432
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-04.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891253.432
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-05.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891253.432
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-06.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891256.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-07.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891256.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-08.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891256.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-09.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891260.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-10.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891260.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-11.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891264.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-12.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891264.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-13.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891264.3364
+  },
+  "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-14.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891268.3364
+  },
+  "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-1.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891268.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891275.2317
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891276.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891280.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891280.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891284.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891288.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891292.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891296.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891296.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-11.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891300.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-12.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891304.3364
+  },
+  "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-13.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891304.3364
+  },
+  "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-04.jpg.webp": {
+    "w": 1280,
+    "h": 1920,
+    "mtime": 1779687874384.337
+  },
+  "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-010.jpg": {
+    "w": 1920,
+    "h": 2869,
+    "mtime": 1779687874388.337
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891308.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891308.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891312.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891312.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891316.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891316.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891320.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891320.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891320.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891324.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-11.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891328.3364
+  },
+  "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-12.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891328.3364
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.01.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874388.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.02.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874388.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.03.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.04.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.05.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.06.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.07.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.08.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06.09.jpg": {
+    "w": 1920,
+    "h": 2877,
+    "mtime": 1779687874392.337
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891332.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-02.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891336.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-03.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891336.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-04.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891340.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-05.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891344.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-06.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891344.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-07.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891348.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-08.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891352.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-09.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891356.3364
+  },
+  "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-10.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891356.3364
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894724.3364
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-02.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-03.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-04.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-05.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-06.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-07.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-08.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-09.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-10.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-11.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-12.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894728.9316
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-13.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894732.3364
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-14.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894732.3364
+  },
+  "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-15.jpg": {
+    "w": 683,
+    "h": 1024,
+    "mtime": 1779687894732.3364
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.01.jpg": {
+    "w": 1855,
+    "h": 2808,
+    "mtime": 1779687874396.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.02.jpg": {
+    "w": 1867,
+    "h": 2878,
+    "mtime": 1779687874396.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687874396.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687874400.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687874400.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687874404.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687874404.337
+  },
+  "THE-LEXICON-ASSETS/simons-aw01/simons-aw01.09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687874404.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.01.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874404.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.02.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874404.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.03.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.04.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.05.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.06.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.07.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.08.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.09.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03.10.jpg": {
+    "w": 418,
+    "h": 625,
+    "mtime": 1779687874408.337
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891360.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-02.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891360.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-03.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891364.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-04.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891364.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-05.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891368.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-06.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891372.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-07.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891372.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-08.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891376.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-09.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891376.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-10.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891376.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-11.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891380.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-12.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891380.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-13.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891384.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-14.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891388.3364
+  },
+  "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-15.jpg": {
+    "w": 1920,
+    "h": 2880,
+    "mtime": 1779687891388.3364
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.01.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874412.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.02.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874416.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.03.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874416.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.04.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874416.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.05.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874420.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.06.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874424.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.07.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874424.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.08.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874424.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.09.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874428.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.10.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874428.337
+  },
+  "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11.11.jpg": {
+    "w": 1772,
+    "h": 2658,
+    "mtime": 1779687874428.337
+  },
+  "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891388.3364
+  },
+  "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-02.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891392.3364
+  },
+  "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-03.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891396.3364
+  },
+  "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-04.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891396.3364
+  },
+  "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-05.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891400.3364
+  },
+  "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-06.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687891404.3364
+  },
+  "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-012jpg.webp": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687874428.337
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891404.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-02.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891409.3103
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-03.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891409.3103
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-04.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891409.3103
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-05.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891412.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-06.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891412.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-07.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891416.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-08.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891416.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-09.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891416.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-10.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891420.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-11.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891420.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-12.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891424.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-13.jpg": {
+    "w": 567,
+    "h": 850,
+    "mtime": 1779687891424.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-14.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891428.3364
+  },
+  "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-15.jpg": {
+    "w": 564,
+    "h": 850,
+    "mtime": 1779687891428.3364
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-010.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687874432.337
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-011.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687874432.337
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-012.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687874432.337
+  },
+  "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-013.jpg": {
+    "w": 1366,
+    "h": 2048,
+    "mtime": 1779687874432.337
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81.01.jpg": {
+    "w": 1600,
+    "h": 2400,
+    "mtime": 1779687874436.337
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81.02.jpg": {
+    "w": 1600,
+    "h": 2401,
+    "mtime": 1779687874444.337
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81.03.jpg": {
+    "w": 1600,
+    "h": 2382,
+    "mtime": 1779687874444.337
+  },
+  "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81.06.jpg": {
+    "w": 1365,
+    "h": 2048,
+    "mtime": 1779687874444.337
   }
 }

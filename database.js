@@ -10914,6 +10914,10 @@ export const archiveData = [
             "description": "The draped blue trousers fall heavily from the suspender straps to pool around the ankles; they appear to be standard track pants dropped entirely off the hips. This sartorial choice applies active corporeal exposure by removing the functional purpose of the trousers entirely. The bright blue fabric drags loosely against the runway; the hem rests over the white sneakers. The piece completes the look by asserting an aesthetic of hasty unfastened undress."
           }
         ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-10.jpg",
+        "hotspots": []
       }
     ],
     "tags": {
