@@ -11,9 +11,222 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 30,
+          "label": "Oversized Metallic Lurex Cardigan",
+          "description": "The oversized metallic lurex cardigan completely swallows the upper torso in a heavy slouched volume; it drops past the hips with aggressively long sleeves. This material application engages with sartorial collage by mutating a cozy domestic knit into a flashy disco-era texture. The dark synthetic yarn catches the runway lighting fiercely; the front hangs entirely open. The outerwear asserts a relaxed and highly apathetic posture that rejects traditional structured tailoring."
+        },
+        {
+          "x": 50,
           "y": 45,
-          "label": "Black Leather Skinny Trouser and Sheer Blouse",
-          "description": "The black leather skinny trouser and sheer blouse pull tight against the body in a single uninterrupted vertical line; they refuse any structural excess that would soften the silhouette. This tailoring extreme defines Hedi Slimane's controversial vision for Saint Laurent: the female body reduced to a single geometric axis, the silhouette annihilated into pure line. The matte black leather creates a heavy visual void below the translucent silk georgette top; the sleeves end precisely at the wrist. The garment asserts the auteur project that replaced the YSL archive with the designer's own obsession with Sunset Strip rock culture."
+          "label": "Metallic Leopard Print Babydoll Dress",
+          "description": "The metallic leopard print babydoll dress tightly binds the chest before dropping into a loose un-tailored skirt; it features a stark chaotic animal pattern. This structural logic utilizes trickle-up fashion theory by taking a cheap thrift-store silhouette and elevating it through premium materials. The shiny fabric reflects light aggressively; a thin white belt sits artificially high on the waist. The garment completes the top half of the look with a signature piece of 1990s subcultural irony."
+        },
+        {
+          "x": 50,
+          "y": 80,
+          "label": "Patterned Opaque Tights",
+          "description": "The patterned opaque tights encase the legs entirely beneath the short dress; they provide a dark highly textured foundation for the ensemble. This styling choice applies the aesthetic of \"elevated thrift\" by utilizing a messy complicated pattern rather than sheer elegant hosiery. The dark fabric absorbs the light completely; it stretches tightly into the heavy combat boots. The accessory completes the look by enforcing a gritty slightly disheveled uniformity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Plunging Halter Neckline",
+          "description": "The plunging halter neckline cuts sharply down the center of the torso to expose the sternum entirely; it relies on rigid internal framework to maintain the severe V-shape without gaping. This sartorial choice engages with anatomical interaction by framing the bare skin with severe architectural lines rather than soft contouring. The stark black fabric contrasts sharply with the pale skin; it completely flattens the natural bustline. The top asserts a highly provocative and unsettling take on the cinematic femme fatale."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Leather Moto Miniskirt",
+          "description": "The leather moto miniskirt anchors the lower silhouette in a tight shiny black hide; it features heavy functional silver zippers running aggressively across the front panels. This material intervention utilizes subcultural appropriation by cutting a classic punk biker jacket into a tiny unyielding skirt. The stiff material holds a rigid shape over the upper thighs; the horizontal zippers draw the eye laterally. The garment completes the look by grounding the severe upper bodice in recognizable rebellious hardware."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy leather above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Cropped Leather Moto Jacket",
+          "description": "The cropped leather moto jacket structures the upper body in a stiff black hide; it features sharp classic lapels and a heavily zipped asymmetrical front closure. This outerwear choice applies the semiotic sabotage of haute couture by taking the ultimate symbol of street rebellion and presenting it on an elite Parisian runway. The dark material absorbs light to create a heavy visual void; the sleeves fall cleanly to the wrist. The jacket asserts an imposing and highly defensive urban armor."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Velvet Peter-Pan Collar Dress",
+          "description": "The velvet Peter-Pan collar dress drops softly over the torso in a dark plush fabric; it features a bright white collar and a stiff decorative bow at the neck. This material strategy engages with gender deconstruction by utilizing a historically infantile silhouette to clash violently with the aggressive leather jacket. The heavy fabric hangs flatly without defining the waist; the white collar frames the neck securely. The garment completes the top half of the look by injecting a sense of naive nostalgia into the punk aesthetic."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy leather above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Oversized Pastel Fur Coat",
+          "description": "The oversized pastel fur coat engulfs the entire body in a massive chaotic volume of dyed pale pink pelts; it completely obliterates the human silhouette beneath a dense organic texture. This material extreme applies monolithic massing by inflating a classic luxury symbol into a loud garish piece of pop-art outerwear. The bright synthetic-looking fibers catch the air violently with every step; the coat lacks any visible closures or tailoring details. The garment asserts an overwhelming theatrical presence that functions as pure sensory overload."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "High-Waisted Studded Hotpants",
+          "description": "The high-waisted studded hotpants tightly encase the hips and upper thighs in a smooth black fabric; they are heavily adorned with small silver metallic studs. This material application engages with subcultural appropriation by combining an abbreviated pin-up silhouette with aggressive punk hardware. The stiff fabric holds a rigid shape above the bare legs; the waist is pulled artificially high. The piece completes the ensemble by forcing a massive contrast in volume between the heavy coat and the exposed lower body."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Oversized Duffle Coat",
+          "description": "The oversized duffle coat drops heavily to the knee in a dark grey wool; it features traditional wooden toggle closures and a massive structural hood. This outerwear choice utilizes the outsider's gaze by elevating a classic British schoolboy staple into a piece of luxury grunge. The thick fabric hangs straight without defining the waist; the sleeves completely swallow the arms. The coat asserts a protective and highly nostalgic architectural shield."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Sequined Peter-Pan Collar Dress",
+          "description": "The sequined Peter-Pan collar dress wraps the torso in a highly reflective black textile; it features a bright white collar and a stiff decorative bow at the neck. This material strategy engages with sartorial collage by pairing a flashy disco fabric with an infantile naive cut. The shiny material catches the runway lighting fiercely through the open coat; the dress drops cleanly to the mid-thigh. The garment completes the top half of the look by injecting a sudden flash of unexpected glamour into the drab outerwear."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy wool above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Shearling-Trimmed Suede Coat",
+          "description": "The shearling-trimmed suede coat engulfs the upper body in a massive highly textured brown hide; it features thick beige fleece bursting from the collar and hem. This material strategy engages with the semiotic sabotage of luxury by inflating a classic vintage thrift-store staple into an imposing runway monolith. The dark hide catches the light softly; it hangs entirely open over the delicate dress beneath. The outerwear asserts an aggressive warmth and a deeply relaxed slouched posture."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Sheer Floral Lace Slip Dress",
+          "description": "The sheer floral lace slip dress drops to the mid-thigh in a translucent dark textile densely patterned with pale red and white flowers; it exposes the torso entirely beneath a veil of fragile synthetic material. This tailoring approach applies trickle-up fashion theory by taking a cheap 1990s thrift-store staple and rendering it in high-end Parisian lace. The soft fabric falls loosely over the hips; the deep V-neck exposes the chest completely. The garment asserts a highly provocative and unsettling take on casual sportswear."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the soft lace above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Voluminous Fur Cape Coat",
+          "description": "The voluminous fur cape coat drops heavily from the shoulders to the mid-thigh; it creates an immense bell-shaped volume that completely swallows the arms and torso in mixed brown and black pelts. This structural extreme applies monolithic massing by transforming the body into a solid heavily textured animalistic monolith. The dense fabric holds deep rigid folds that fall straight to the hem; the coat lacks traditional sleeves entirely. The outerwear asserts an oppressive and theatrical presence that dominates the physical space."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ruffled Floral Silk Dress",
+          "description": "The ruffled floral silk dress peeks out from beneath the heavy fur in a chaotic volume of pale white fabric printed with tiny red flowers; it mimics the lightweight drape of a summer sundress. This material choice engages with sartorial collage by pairing a deeply unseasonal and fragile textile with massive winter outerwear. The sheer layers fold heavily onto one another; the asymmetrical hem trails wildly to create a disorganized spatial footprint. The garment completes the ensemble by emphasizing the chaotic \"thrown-together\" nature of the styling."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy fur above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Metallic Gold Bouclé Jacket",
+          "description": "The metallic gold bouclé jacket frames the upper body in a highly reflective and stiff synthetic textile; it features sharp puffed shoulders and classic patch pockets lined with black binding. This outerwear choice engages with postmodern pastiche by taking the highly conservative silhouette of a classic Chanel-style suit and rendering it in a blinding disco-era color palette. The shiny fabric catches the clinical lighting fiercely; the front hangs open to reveal a soft pink underlayer. The jacket asserts a posture of aggressive commercialized glamour that rejects subtlety entirely."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Draped Peach Silk Dress",
+          "description": "The draped peach silk dress falls softly over the body in a pale translucent fabric; it features a high square neckline and a loose un-tailored fit. This material application provides a quiet romantic baseline against the chaotic heavy jacket. The sheer fabric reveals the dark undergarments beneath; the hem drops cleanly above the knee. The garment completes the look by grounding the severe upper carapace in a relaxed pragmatic drape."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the delicate silk above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Cut-Out Leather Bralette",
+          "description": "The cut-out leather bralette tightly binds the upper torso in a stiff black hide; it features sharp geometric voids that expose the chest entirely beneath a sheer mesh overlay. This structural intervention engages with bodily obfuscation by turning a piece of extreme fetishwear into a subtle structural base layer. The dark material absorbs light completely; a stark black collar and tie wrap the neck securely above it. The top asserts a highly provocative and unsettling take on cinematic layering."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Hardware-Embellished Leather Skirt",
+          "description": "The hardware-embellished leather skirt tightly encases the hips and upper thighs in a smooth black hide; it is heavily adorned with multiple horizontal straps and aggressive silver metallic buckles. This material application utilizes subcultural appropriation by combining a traditional abbreviated pin-up silhouette with the heavy unyielding hardware of the punk scene. The stiff fabric holds a rigid shape above the bare legs; the waist is pulled artificially high. The piece completes the ensemble by forcing a massive tactile focus onto the midriff."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy leather above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Oversized Plaid Flannel Shirt",
+          "description": "The oversized plaid flannel shirt hangs heavily over the torso in a stark red and black checkerboard pattern; it functions as a lightweight topcoat rather than a traditional shirt. This material strategy engages with subcultural systems by blowing up a staple of 1990s Seattle grunge into a primary runway garment. The soft fabric drops to the mid-thigh; the sleeves completely swallow the hands. The shirt asserts an aesthetic of extreme casual slowness and youthful apathy."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sheer Distressed Lace Slip Dress",
+          "description": "The sheer distressed lace slip dress exposes delicate lingerie detailing beneath the heavy flannel outerwear; it drops an uneven raw hemline to the mid-calf. This layered exposure utilizes trickle-up fashion methodologies to blur the lines between intimate thrift-store apparel and public runway armor. The black lace is torn violently across the thighs; long raw threads dangle from the frayed edges. The garment refuses pristine elegance to complete the silhouette with a deeply tragic and vulnerable core."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Shredded Fishnet Tights",
+          "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the soft lace above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
         }
       ]
     }

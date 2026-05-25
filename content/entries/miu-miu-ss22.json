@@ -11,9 +11,220 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 45,
+          "label": "Deconstructed Cable-Knit Crop",
+          "description": "The deconstructed cable-knit crop violently truncates the traditional navy sweater just below the bust; it entirely exposes the midriff and the blue shirting beneath. This structural intervention engages with horizontal truncation by applying a raw hacked edge to a classic preppy staple. The thick wool features classic braided patterning; the sleeves hang aggressively long past the hands. The top asserts a deliberate tension between cozy modesty and aggressive corporeal exposure."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Low-Rise Chino Trousers",
+          "description": "The low-rise chino trousers drop the waistline to the extreme limit of the hip bones; they reveal the branded elastic band of the undergarment beneath. This tailoring choice utilizes the Y2K semiotic revival to subvert traditional conservative office wear. The beige gabardine fabric falls loosely to the floor with a subtle center crease; a black leather belt anchors the low waist. The trousers complete the look by forcing the torso to act as the primary visual focus of the silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Cropped Oxford Button-Down",
+          "description": "The cropped Oxford button-down structures the upper body in a crisp bright blue cotton; it features a sharp collar and the brand's logo embroidered on the chest. This material application engages with the semiotic sabotage of the corporate uniform by slicing a formal shirt exactly at the waistline. The fabric lacks a finished hem, displaying slight fraying; it is tucked loosely into the belt rather than the skirt. The garment asserts a posture of hasty disheveled professionalism."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Raw-Edge Micro-Mini Skirt",
+          "description": "The raw-edge micro-mini skirt anchors the lower silhouette in an incredibly brief pleated beige gabardine; it barely covers the upper thighs. This structural extreme applies the \"Miu Miu set\" logic by exposing the white cotton pocket linings beneath the violently hacked hem. The stiff fabric holds sharp geometric pleats; a thick black belt emphasizes the ultra-low rise. The skirt asserts a radical and highly controversial reclamation of the Y2K schoolgirl trope."
+        },
+        {
+          "x": 50,
+          "y": 85,
+          "label": "Grey Socks and Loafers",
+          "description": "The grey socks and loafers ground the ensemble in deeply traditional mundane footwear; they feature knee-high ribbed grey knit pulled over polished black leather shoes. This accessory choice utilizes deconstructed prep componentry to contrast the extreme bodily exposure of the torso and legs. The shoes are adorned with subtle metallic hardware; the socks bunch slightly at the ankle. The detail completes the look by refusing high-glamour footwear in favor of intellectualized banality."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Distressed Leather Biker Jacket",
+          "description": "The distressed leather biker jacket frames the torso in a heavily aged brown hide; it features a dark mottled finish mimicking years of wear. This outerwear choice introduces a rugged subcultural texture into the otherwise preppy collection. The stiff material holds a boxy cropped silhouette that drops just above the natural waist; it hangs open to reveal a layered knit and shirt combination. The jacket asserts a slightly rebellious posture against the pleated skirt."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Distressed Leather Pleated Skirt",
+          "description": "The distressed leather pleated skirt drops to the mid-calf in the exact same aged brown hide as the jacket; it functions as a heavy rigid column. This material strategy utilizes monolithic massing by transforming a classic schoolgirl silhouette into an imposing leather armor. The deep knife pleats create harsh vertical shadows across the mottled surface; the hem is uneven and raw. The skirt completes the ensemble by grounding the cropped upper layers in a dense tactile foundation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Camel Hair Topcoat",
+          "description": "The camel hair topcoat engulfs the figure in a massive soft beige volume; it features a classic wide lapel and heavily dropped shoulders. This tailoring choice utilizes the subversion of the corporate uniform by throwing a highly formal conservative coat over extreme microscopic garments. The thick fabric hangs open completely to frame the exposed torso; the sleeves are pushed up. The outerwear asserts an imposing architectural shield that dramatically contrasts with the bare skin."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Micro-Bandeau Suiting Top",
+          "description": "The micro-bandeau suiting top violently truncates a formal grey wool textile into a tiny horizontal strip across the bust; it is anchored by a functional black leather belt. This structural intervention engages with horizontal truncation by reducing a tailored garment to its absolute minimum structural requirement. The raw frayed edges and exposed white lining point to the aggressive deconstruction process; it exposes the entire midriff. The piece asserts an absurd and highly intellectualized approach to corporeal exposure."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Micro-Mini Suiting Skirt",
+          "description": "The micro-mini suiting skirt mirrors the exact fabric and raw detailing of the bandeau top; it features sharp pleats and a matching black leather belt. This material application relies on the \"Miu Miu set\" architecture to generate viral cultural friction. The exposed white pocket bags drop below the violently cut hemline; it sits dangerously low on the hips. The garment completes the silhouette by enforcing the collection's signature proportion play."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Embellished Black Midi Dress",
+          "description": "The embellished black midi dress drops from a high sleeveless neckline into a heavy straight column; it is entirely covered in dense three-dimensional black floral appliques and reflective sequins. This material extreme engages with textural topography by transforming a simple silhouette into a rich tactical surface. The stiff fabric lacks any fluid drape; the hem falls below the knee with subtle frayed white edges peeking through. The garment asserts a dark ceremonial volume that provides a stark contrast to the highly exposed looks."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Oversized Pearl Choker",
+          "description": "The oversized pearl choker binds the throat tightly in a massive cluster of enormous golden and white beads; it introduces a highly traditional luxury motif pushed to an absurd scale. This styling detail utilizes deconstructed prep componentry by mutating a conservative bourgeois accessory into a heavy theatrical collar. The bright spheres reflect the runway light fiercely against the dark dress; they frame the sharp black sunglasses perfectly. The accessory completes the look with a flash of imposing hardware."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Suede Utility Shirt",
+          "description": "The suede utility shirt frames the upper body in a rich smooth brown hide; it features a classic point collar and a clean button placket. This tailoring approach applies the semiotic sabotage of office wear by rendering a formal shirt in a soft tactile outerwear material. The fabric lacks rigid interfacing; it is tucked seamlessly into the matching skirt. The garment asserts a quiet monochromatic uniformity."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Suede Midi Skirt",
+          "description": "The suede midi skirt drops from the natural waist to the mid-calf in an identical smooth brown leather; it provides a continuous unbroken line of color and texture. This structural logic utilizes essentialist modesty to contrast the hyper-abbreviated silhouettes seen elsewhere. The heavy material falls straight without pleating; a classic brown leather belt sits at the waist. The skirt completes the look by providing a deeply traditional and elegant formal base."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Suede Tailored Blazer",
+          "description": "The suede tailored blazer structures the torso in a soft brown leather; it features classic notch lapels and large patch pockets. This outerwear choice utilizes the subversion of the corporate uniform by applying a casual rugged material to formal suiting architecture. The jacket hangs open to reveal a complex layered interior; the sleeves drop cleanly to the wrist. The piece asserts a relaxed but highly considered approach to bourgeois dressing."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Layered Zip-Up Knitwear",
+          "description": "The layered zip-up knitwear introduces a grey ribbed cardigan worn over a beige poplin shirt; it functions as a deeply banal domestic layer beneath the blazer. This styling strategy engages with deconstructed prep componentry by stacking multiple unassuming office staples. The metallic zipper runs cleanly down the center; the knit fabric clings to the torso tightly. The detail completes the top half of the silhouette by enforcing an aesthetic of chaotic but formal layering."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Suede Tailored Trousers",
+          "description": "The suede tailored trousers fall fluidly from the waist to the floor; they complete the monochromatic brown suit. This material application provides a soft continuous texture that absorbs the runway lighting smoothly. The wide legs lack sharp formal creasing; they break cleanly over white sneakers. The trousers complete the look by grounding the complex layering in a highly comfortable but luxurious base."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Cropped Ribbed Zip-Up",
+          "description": "The cropped ribbed zip-up violently truncates a thick dark grey sweater just below the bust; it entirely exposes the midriff and the blue shirting beneath. This structural intervention engages with horizontal truncation by applying a raw hacked edge to a classic functional staple. The thick wool features deep vertical ribbing; the sleeves are pushed up the forearms. The top asserts a deliberate tension between cozy modesty and aggressive corporeal exposure."
+        },
+        {
+          "x": 50,
           "y": 55,
-          "label": "Low-Rise Micro-Skirt",
-          "description": "The low-rise micro-skirt cuts horizontally across the hips in a band of tailored wool no wider than a hand's breadth; it sits well below the natural waist. This structural intervention is the silhouette that defined the SS 2022 cultural conversation, generating discourse across body image, generational politics, and the female midriff. The raw lower edge exposes the high-cut underskirt and the bare expanse of stomach above; the eyelet detailing nods to school-uniform vocabulary. The garment asserts Miuccia Prada's lifelong project of making femininity's ambivalences visible through deliberately uncomfortable proportion."
+          "label": "Low-Rise Pleated Midi Skirt",
+          "description": "The low-rise pleated midi skirt anchors the lower silhouette far below the natural waistline; it drops heavily past the knee in a dark navy wool. This tailoring choice utilizes the Y2K semiotic revival by forcing a modest skirt length to sit dangerously low on the hips. The stiff fabric holds sharp geometric pleats; a thick black belt emphasizes the exposed branded undergarment. The skirt completes the look by providing a severe formal contrast to the massive exposed torso."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Cropped Navy Track Jacket",
+          "description": "The cropped navy track jacket structures the upper body in a dark athletic fabric; it is sliced sharply above the navel to expose the abdomen. This material strategy engages with the semiotic sabotage of office wear by treating a casual sportswear item with the same violent abbreviation as the formal shirting. The soft fabric features a high collar and subtle logo detailing; the layered blue shirt peeks out from the hem and cuffs. The garment asserts a highly engineered and sporty approach to corporeal exposure."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Micro-Mini Denim Skirt",
+          "description": "The micro-mini denim skirt wraps the hips in a tiny strip of dark blue jean fabric; it features a raw frayed hem that barely covers the upper thigh. This structural extreme applies the \"Miu Miu set\" logic to a classic casual textile. The thick denim holds a rigid flat shape; a heavy brown leather belt emphasizes the ultra-low rise. The piece completes the silhouette by grounding the layered top half in a deeply nostalgic Y2K foundation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Faded Dip-Dye Knit Sweater",
+          "description": "The faded dip-dye knit sweater hangs heavily over the torso in a dark blue ribbed wool that transitions to a pale faded edge at the hem and cuffs; it completely obscures the upper anatomy. This material application utilizes an aesthetic of decay and wear to disrupt the pristine corporate uniform. The thick yarn drops loosely to the mid-thigh; a layered white poplin shirt flashes sharply from beneath the hem. The garment asserts a relaxed and slouched posture."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Faded Cable-Knit Skirt",
+          "description": "The faded cable-knit skirt drops to the knee in the exact same dip-dye blue wool as the sweater; it creates a continuous highly textured column. This structural logic engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The deep cable pattern runs vertically down the fabric; the hem is uneven and heavily faded. The skirt completes the ensemble by providing a soft tactile base that echoes the domesticity of the sweater."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Faded Cable-Knit Sweater",
+          "description": "The faded cable-knit sweater structures the upper body in a soft dark green wool that transitions to a pale faded edge; it features a high crew neckline. This material choice applies the subversion of the corporate uniform by introducing a heavily worn domestic textile into a tailored look. The thick yarn drops loosely to the hip; a layered beige poplin shirt flashes sharply from beneath the hem. The garment asserts a quiet relaxed uniformity."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Faded Cable-Knit Skirt",
+          "description": "The faded cable-knit skirt drops to the knee in the exact same dip-dye green wool as the sweater; it creates a continuous highly textured column. This structural logic engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The deep cable pattern runs vertically down the fabric; the hem is uneven and heavily faded. The skirt completes the ensemble by providing a soft tactile base that echoes the domesticity of the sweater."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Bleached Floral Sweatshirt",
+          "description": "The bleached floral sweatshirt envelopes the torso in a dark grey jersey heavily distressed with white bleach splatters and adorned with massive 3D black floral appliques. This material extreme engages with the semiotic sabotage of office wear by completely destroying a casual garment and covering it in gothic eveningwear embellishment. The soft fabric holds a bulky relaxed fit; a crisp white collared shirt sits rigidly beneath the neckline. The top asserts a highly chaotic and visually noisy presence."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Fitted Navy Midi Skirt",
+          "description": "The fitted navy midi skirt drops cleanly to the knee in a smooth dark fabric; it features a subtle asymmetrical slit at the hem. This tailoring choice utilizes quiet minimalism to anchor the chaotic heavily decorated sweatshirt above. The stiff material lacks heavy pleating or draping; it exposes layered white poplin details at the waist. The skirt completes the look by providing a strict formal baseline."
         }
       ]
     }

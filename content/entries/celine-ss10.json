@@ -11,9 +11,144 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Unlined Cashmere Coat",
-          "description": "The unlined cashmere coat drops cleanly from broad-set shoulders in a single uninterrupted plane of camel fabric; it refuses interior structure or visible hardware. This tailoring strategy is the founding document of Phoebe Philo's 'quiet luxury' proposition — luxury communicated through material quality rather than visible signaling. The raw inner edge is exposed; the deliberately fallen hem skirts the knee. The garment asserts that the most legible form of wealth is the wealth that refuses to perform."
+          "y": 30,
+          "label": "Striped Sleeveless Poplin Shirt",
+          "description": "The striped sleeveless poplin shirt frames the upper body in crisp black and white vertical lines; it hangs loosely over the torso without darts or tailored contouring. This structural choice applies the concept of unrestrictive anatomy by prioritizing comfortable utilitarian geometry over the hyper-sexualized body-con silhouettes of the previous decade. The sharp collar and hidden button placket mimic traditional menswear shirting. The garment asserts a pragmatic minimalism designed for the working intellectual rather than for visual consumption."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Striped A-Line Midi Skirt",
+          "description": "The striped A-line midi skirt drops below the knee in the exact same crisp poplin as the shirt; it features contrasting panels of horizontal and vertical lines. This material application engages with essentialism by taking a mundane textile and elevating it through meticulous geometric pattern cutting. The stiff fabric holds a slight flare without clinging to the hips or thighs. The piece completes the uniform by subverting the traditional suit into a relaxed graphic ensemble."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Fluid White Silk Blouse",
+          "description": "The fluid white silk blouse drapes softly over the chest; it features a high rounded neckline and completely lacks sleeves. This material strategy utilizes quiet luxury to elevate a basic t-shirt silhouette into a highly refined runway piece. The delicate fabric catches the light smoothly without heavy structuring; it is tucked sharply into the rigid skirt below. The top asserts a posture of effortless and highly polished everyday elegance."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Leather A-Line Miniskirt",
+          "description": "The leather A-line miniskirt tightly binds the waist before flaring stiffly away from the thighs; it is constructed from a smooth matte black hide. This structural intervention engages with material elevation by applying an aggressive fetishistic textile to a conservative classic shape. The thick material holds a rigid unyielding volume that contrasts violently with the soft silk blouse above; a minimal unbranded belt cinches the waist. The skirt completes the look by grounding the delicate top in an imposing and structural base."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Leather Short-Sleeve T-Shirt",
+          "description": "The leather short-sleeve t-shirt envelopes the upper body in a sleek black hide; it precisely mimics the cut of a banal cotton tee. This outerwear choice is the definitive example of the designer's core structural logic: isolating a basic everyday component and reconstructing it in hyper-luxurious buttery leather. The stiff material absorbs the runway lighting completely; the sleeves end bluntly at the elbow. The garment asserts a profound statement on essentialism and quiet luxury."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Cut-Out Jersey Miniskirt",
+          "description": "The cut-out jersey miniskirt drops from beneath the leather top in a dark unadorned fabric; it features subtle asymmetrical cut-outs at the hip. This tailoring approach applies pragmatic feminism by allowing brief moments of skin exposure without relying on overt traditional sexuality. The soft fabric provides a kinetic moving base beneath the rigid leather; the hem breaks cleanly at the mid-thigh. The piece completes the silhouette by neutralizing the heavy top half with a relaxed athletic-inspired drape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Laced Canvas Tunic Dress",
+          "description": "The laced canvas tunic dress structures the body in a stiff pale beige textile; it features an aggressive thick leather lacing system running entirely down the center front. This material strategy engages with utilitarian geometry by treating a heavy raw fabric with the reverence of haute couture. The boxy fit completely obscures the natural waistline and bust; the black laces provide a sharp graphic contrast against the muted canvas. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Leather Short-Sleeve T-Shirt",
+          "description": "The leather short-sleeve t-shirt tightly encases the torso in a pale olive-brown hide; it flawlessly replicates the silhouette of a casual cotton tee. This material elevation utilizes quiet luxury by taking the most mundane garment format and rendering it in incredibly premium buttery leather. The smooth surface catches the light subtly across the bust; it is tucked sharply into the high-waisted trousers. The top asserts the collection's obsession with perfecting the ultimate wardrobe essential."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "High-Waisted Canvas Trousers",
+          "description": "The high-waisted canvas trousers drop cleanly from the waist to the floor in a muted beige fabric; they feature prominent utilitarian patch pockets across the thighs. This structural logic engages with pragmatic feminism by providing wide unrestrictive spatial volumes that liberate the female form rather than constraining it. The thick fabric holds a sharp vertical crease down the center leg; a minimal unbranded belt anchors the look. The trousers complete the ensemble by asserting a highly disciplined but deeply comfortable urban uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Laced Canvas Tunic Dress",
+          "description": "The laced canvas tunic dress structures the body in a stiff dark beige textile; it features an aggressive thick black leather lacing system running entirely down the center front. This material strategy engages with utilitarian geometry by treating a heavy raw fabric with the reverence of haute couture. The boxy short-sleeve fit completely obscures the natural waistline and bust; the deep V-neck provides a subtle relief from the rigid fabric. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Quilted Leather Moto Jacket",
+          "description": "The quilted leather moto jacket frames the upper body in a highly textured black hide; it features an asymmetrical peplum flare that disrupts the rigid tailoring. This outerwear choice applies the subversion of the sex symbol by taking an aggressive fetishistic fabric and mutating it into an intellectual architectural shape. The dark material absorbs light completely; the front zipper is hidden to maintain a clean clinical line. The jacket asserts an imposing and highly defensive posture."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Asymmetrical Poplin Shirtdress",
+          "description": "The asymmetrical poplin shirtdress drops beneath the heavy leather jacket in a crisp white cotton; it introduces a soft unrestrictive volume to the lower silhouette. This structural intervention utilizes essentialism by deploying the most basic shirting fabric as a foundational layer. The bright white textile flashes cleanly against the dark leather; the hem trails unevenly over the thighs. The garment completes the look by grounding the severe upper carapace in a relaxed pragmatic drape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Draped Asymmetrical Silk Dress",
+          "description": "The draped asymmetrical silk dress wraps the torso and hips in a smooth pale brown textile; it features a complex folded overlay across the chest that completely disguises the natural bustline. This tailoring approach applies the concept of the female gaze by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The soft fabric falls cleanly without heavy gathering; the short sleeves and high neckline maintain a modest profile. The garment asserts a highly polished and quietly powerful everyday uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Fitted Long-Sleeve Bodysuit",
+          "description": "The fitted long-sleeve bodysuit clings tightly to the upper body in a smooth beige stretch fabric; it provides a severe and unadorned baseline. This styling choice engages with quiet luxury by stripping away all non-essential detailing in favor of a clean clinical silhouette. The pale textile blends seamlessly with the skin tone; it tucks sharply into the high waist of the skirt. The top asserts a rigid formal minimalism that functions as an intellectual canvas for the look."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Paneled Pleated Midi Skirt",
+          "description": "The paneled pleated midi skirt drops heavily from the waist in alternating blocks of beige and cream fabric; it features deep sharp pleats that split open over the thigh. This structural logic utilizes utilitarian geometry to introduce kinetic movement to an otherwise static uniform. The thick material holds a rigid shape while walking; a minimal unbranded belt anchors the waist. The skirt completes the ensemble by asserting an aesthetic of in-the-know austerity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Draped Asymmetrical Silk Dress",
+          "description": "The draped asymmetrical silk dress wraps the torso and hips in a highly lustrous dark blue textile; it features a complex folded overlay that drops diagonally across the waist. This tailoring approach applies the concept of the female gaze by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The shiny fabric catches the runway light softly; the sleeveless cut exposes the arms completely. The garment asserts a highly polished and quietly powerful eveningwear alternative."
         }
       ]
     }

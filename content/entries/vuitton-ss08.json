@@ -12,8 +12,336 @@
         {
           "x": 50,
           "y": 40,
-          "label": "Layered Silk Organza Blouse",
-          "description": "The layered silk organza blouse cascades sheer cream fabric over a structured bustier; it operates as both inner and outer garment simultaneously. This material strategy engages with the Marc Jacobs era's signature treatment of monogram codes as graphic system rather than brand identifier. The translucent textile reveals the architectural foundation garment beneath; the cuffs fall loosely past the wrists. The piece asserts the permanent traveler aesthetic that defined LV's commercial dominance through the 2000s."
+          "label": "Deep Red Satin Coat Dress",
+          "description": "The structured scarlet topcoat frames the upper body in a highly tailored deep red fabric; it features a deep plunging neckline and an aggressive flare at the hips. This tailoring choice utilizes fetish theory to construct a garment that prioritizes dense saturated texture over soft modesty. The stiff material holds deep rigid creases without soft drape; the wide folded lapels plunge sharply toward the waistline. The outerwear asserts a dramatic theatrical command of spatial volume."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        },
+        {
+          "x": 35,
+          "y": 60,
+          "label": "Smeared Gradient Handbag",
+          "description": "The watercolor fade monogram bag swings from the right hand; it features a chaotic blur of pastel pink and gold smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The soft pouch shape contrasts with the sharp tailoring of the coat; the short leather handles are gripped tightly. The accessory completes the look by equating high-fashion luxury with post-ironic pop art."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Tiered Tulle Overdress",
+          "description": "The tiered tulle overdress envelopes the torso and legs in a massive chaotic explosion of sheer navy fabric; it introduces intense visual noise through floating translucent layers. This material strategy engages with cinematic and exaggerated volume by mimicking the hyper-saturated dramatic costumes of mid-century cinema. The sheer layers fold heavily onto one another; the asymmetrical hem trails wildly to create a disorganized spatial footprint. The garment asserts an overwhelming theatrical presence that merges deep eveningwear with an almost cosmic grandiosity."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Sheer Tulle Veil",
+          "description": "The sheer tulle veil tightly caps the head and drapes softly over the shoulders; it functions as a fragile dark halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The dark netting contrasts sharply with the pale skin; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sheer Plastic Nurse Coat",
+          "description": "The sheer plastic nurse coat drops rigidly to the mid-calf; it offers a translucent slightly milky barrier over the pink satin underlayer. This outerwear choice applies the subversion of the uniform by mutating a utilitarian medical garment into a slick fetishistic carapace. The glossy synthetic material reflects the harsh runway lighting; the severe button placket mimics traditional uniform construction while totally failing to provide modesty. The coat asserts a highly provocative and unsettling take on the cinematic femme fatale."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "LV Monogram Lace Mask",
+          "description": "The LV monogram lace mask binds the lower half of the face in a tight dark web of heavily branded netting. This accessory utilizes the semiotic sabotage of the logo by applying the ultimate luxury identifier to an object associated with surgical sterility and fetish roleplay. The thick black lace contrasts violently with the stark white nurse cap above; it forces the pale skin around the eyes into sharp relief. The mask asserts an intimidating and deeply cynical commodification of the body."
+        },
+        {
+          "x": 75,
+          "y": 65,
+          "label": "Watercolor Fade Monogram Bag",
+          "description": "The watercolor fade monogram bag hangs from the left hand; it features a chaotic acid-washed blur of pastel tones smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The structured shape of the handbag remains intact; the dark leather handles provide a sobering contrast to the spongy blurred exterior. The accessory completes the look by equating high-fashion luxury with the sardonic humor of Richard Prince."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sheer Plastic Nurse Coat",
+          "description": "The sheer plastic nurse coat drops rigidly to the mid-calf; it offers a translucent slightly milky barrier over the neon green satin underlayer. This outerwear choice applies the subversion of the uniform by mutating a utilitarian medical garment into a slick fetishistic carapace. The glossy synthetic material reflects the harsh runway lighting; the severe button placket mimics traditional uniform construction while totally failing to provide modesty. The coat asserts a highly provocative and unsettling take on the cinematic femme fatale."
+        },
+        {
+          "x": 65,
+          "y": 45,
+          "label": "Sardonic Text Print Bag",
+          "description": "The sardonic text print bag hangs heavily from the shoulder; it features the classic LV monogram violently overprinted with a dark smeared gradient and stark white typography. This object applies appropriation art by integrating Richard Prince’s signature joke paintings directly onto a luxury commodity. The dark cloudy finish obscures the heritage pattern beneath; the heavy leather strap anchors the chaotic design. The accessory completes the look by functioning as a literal billboard for post-ironic pop art."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "LV Monogram Lace Mask",
+          "description": "The LV monogram lace mask binds the lower half of the face in a tight dark web of heavily branded netting. This accessory utilizes the semiotic sabotage of the logo by applying the ultimate luxury identifier to an object associated with surgical sterility and fetish roleplay. The thick black lace contrasts violently with the stark white nurse cap above; it forces the pale skin around the eyes into sharp relief. The mask asserts an intimidating and deeply cynical commodification of the body."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sheer Plastic Nurse Coat",
+          "description": "The sheer plastic nurse coat drops rigidly to the mid-calf; it offers a translucent milky barrier over the pale pink satin underlayer. This outerwear choice applies the subversion of the uniform by mutating a utilitarian medical garment into a slick fetishistic carapace. The glossy synthetic material reflects the harsh runway lighting; the severe button placket mimics traditional uniform construction while totally failing to provide modesty. The coat asserts a highly provocative and unsettling take on the cinematic femme fatale."
+        },
+        {
+          "x": 65,
+          "y": 55,
+          "label": "Watercolor Fade Monogram Bag",
+          "description": "The watercolor fade monogram bag swings heavily from the left hand; it features a chaotic acid-washed blur of saturated bruised colors smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The massive unstructured shape of the tote bag emphasizes the scale of the corrupted print; the dark leather handles provide a sobering contrast to the spongy blurred exterior. The accessory completes the look by equating high-fashion luxury with the sardonic humor of Richard Prince."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "LV Monogram Lace Mask",
+          "description": "The LV monogram lace mask binds the lower half of the face in a tight dark web of heavily branded netting. This accessory utilizes the semiotic sabotage of the logo by applying the ultimate luxury identifier to an object associated with surgical sterility and fetish roleplay. The thick black lace contrasts violently with the stark white nurse cap above; it forces the pale skin around the eyes into sharp relief. The mask asserts an intimidating and deeply cynical commodification of the body."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Metallic Cropped Peacoat",
+          "description": "The metallic cropped peacoat heavily structures the upper torso in a stiff highly reflective silver fabric; it features a classic double-breasted closure truncated sharply above the waist. This outerwear choice engages with hyper-capitalist logo fetishism by deploying a loud synthetic sheen that mimics the gaudy flash of pulp fiction covers. The thick material holds a rigid boxy silhouette; the wide lapels dwarf the bright yellow blouse beneath. The jacket asserts an aggressive and flashy posture."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Glittering Lurex Midi Skirt",
+          "description": "The glittering lurex midi skirt drops cleanly to the knee in a dense shimmering grey textile; it provides a highly textured and reflective base for the ensemble. This material application utilizes post-ironic pop art by pairing the ostentatious glitter of cheap party wear with a conservative mid-century silhouette. The fabric clings softly without heavy draping; the hem is finished neatly above sheer stockings. The skirt completes the look by fully committing the lower body to an aesthetic of deliberate garish excess."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Sheer Tulle Veil",
+          "description": "The sheer tulle veil tightly caps the head and drapes softly over the shoulders; it functions as a fragile pale halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The light netting softens the harsh metallic textures below; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Glittering Silver Tunic",
+          "description": "The glittering silver tunic clings to the torso in a dense heavily textured metallic knit; it completely eschews traditional blouse structures for a soft slouched volume. This material choice engages with hyper-capitalist logo fetishism by deploying a loud synthetic sheen that catches the light sharply. The deep V-neck exposes a sheer modesty panel; the long sleeves end in awkward ruched tulle cuffs. The top asserts a chaotic and highly tactile approach to luxury layering."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Lurex Pinstripe Suit Skirt",
+          "description": "The lurex pinstripe suit skirt drops cleanly to the knee; it features a classic grey suiting pattern woven with highly reflective metallic threads. This tailoring extreme applies the subversion of the uniform by taking the most banal corporate textile and mutating it into a flashy disco-era statement piece. The stiff fabric holds a sharp asymmetric split up the front thigh; a vibrant orange knit band sits prominently at the waist. The skirt asserts a hybridized aesthetic that fuses tedious boardroom dressing with unapologetic pop-art glitz."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark brown netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Floral Print Silk Skirt",
+          "description": "The floral print silk skirt gathers into a soft voluminous bell shape; it drops to the mid-thigh in a fabric densely printed with bright blue and green watercolor flowers. This material application relies on sartorial collage to introduce a fluid highly romanticized pattern into the surreal ensemble. The sheer fabric falls softly without rigid structure; the hem ends abruptly above the knee. The piece completes the silhouette by contrasting the stark runway environment with a chaotic and deeply traditional lower volume."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark brown netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        },
+        {
+          "x": 35,
+          "y": 65,
+          "label": "Pink Ostrich Leather Handbag",
+          "description": "The pink ostrich leather handbag is gripped tightly in the right hand; it introduces an exotic skin rendered in an unnaturally bright pastel hue. This object engages with hyper-capitalist logo fetishism by treating incredibly expensive materials as playful disposable props. The structured shape resembles a classic doctor's bag; the golden hardware catches the light sharply. The accessory completes the look by equating high-fashion luxury with cartoonish pop-art coloring."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Glittering Lurex Midi Skirt",
+          "description": "The glittering lurex midi skirt drops cleanly to the knee in a dense shimmering purple textile; it provides a highly textured and reflective base for the ensemble. This material application utilizes post-ironic pop art by pairing the ostentatious glitter of cheap party wear with a conservative mid-century silhouette. The fabric clings softly without heavy draping; the hem is finished neatly above sheer stockings. The skirt completes the look by fully committing the lower body to an aesthetic of deliberate garish excess."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Pastel Knit Cardigan",
+          "description": "The pastel knit cardigan wraps the upper torso in a soft lilac textile; it features a tight row of black buttons fastened completely to the chest. This outerwear choice engages with the subversion of traditional femininity by deploying a modest grandmotherly garment atop a flashy disco skirt. The soft knit conforms to the arms smoothly; the pale color creates a stark chromatic clash with the deep purple below. The garment asserts a deliberate tension between cozy domesticity and eveningwear glamour."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of light beige netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Sheer Organza Overcoat",
+          "description": "The sheer organza overcoat drops to the mid-calf in a translucent black layer; it features short sleeves and a totally unfastened front. This outerwear choice applies the fetishization of the caregiver by mutating a simple cover-up into a slick revealing carapace. The sheer synthetic material creates a dark smoky filter over the vibrant garments beneath; the crisp collar stands rigidly against the neck. The coat asserts a highly provocative and unsettling take on cinematic layering."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Asymmetrical Color-Blocked Skirt",
+          "description": "The asymmetrical color-blocked skirt dramatically slices the lower silhouette into contrasting panels of bright purple floral prints and geometric plaid; it drops unevenly below the knee. This structural logic utilizes sartorial collage by forcing completely discordant patterns and historical textile references into a single chaotic garment. The fabric gathers heavily on the left hip before falling into a deep front slit; the yellow underlayer flashes brightly with movement. The skirt asserts an unapologetic and messy rejection of unified tasteful design."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Embroidered Silk Overcoat",
+          "description": "The embroidered silk overcoat structures the upper body in a vibrant mosaic of pastel geometric blocks; it is densely detailed with shimmering silver beadwork tracing every seam. This outerwear choice engages with post-ironic pop art by treating the garment as an incredibly busy heavily saturated canvas. The stiff silk holds a precise boxy silhouette; the sleeves reach exactly to the elbow. The coat asserts an overwhelming visual overload that refuses classical restrained elegance."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Matching Geometric Midi Skirt",
+          "description": "The matching geometric midi skirt drops below the heavy jacket in a stiff A-line shape; it echoes the exact chaotic patterning and beadwork of the top half. This material application provides a static formal base that completes a full suit of oppressive glittering fabric. The dense textile falls without fluid drape; the hem is abruptly truncated at the knee. The garment asserts a ceremonial and slightly absurd volume that completely obscures the legs."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-12.jpg",
+      "hotspots": [
+        {
+          "x": 65,
+          "y": 35,
+          "label": "Satin Frock Coat Vest",
+          "description": "The satin frock coat vest drops heavily to the upper thigh in a highly reflective yellow textile; it features an open unfastened front and stiff tailored lapels. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its bright vertical panels; it hangs open to reveal a sheer pink underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Asymmetrical Color-Blocked Skirt",
+          "description": "The asymmetrical color-blocked skirt dramatically slices the lower silhouette into contrasting panels of bright purple floral prints and geometric orange patterns; it drops unevenly below the knee. This structural logic utilizes sartorial collage by forcing completely discordant patterns and historical textile references into a single chaotic garment. The fabric gathers heavily before falling into a deep front slit; the yellow underlayer flashes brightly with movement. The skirt asserts an unapologetic and messy rejection of unified tasteful design."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Sheer Chiffon Blouse",
+          "description": "The sheer chiffon blouse clings loosely to the upper body in a translucent pink textile; it exposes the torso entirely beneath a veil of fragile synthetic material. This material application engages with fetish theory by pairing a deeply vulnerable transparent layer with the austere minimalism of the structured vest. The soft neckline hangs casually over the collarbone; the front is fastened with a tight row of small buttons. The garment refuses traditional modesty to assert a quiet but potent sensuality."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Volumetric Lurex Topcoat",
+          "description": "The volumetric lurex topcoat swallows the body in a massive heavy-textured navy blue metallic textile; it features an immense drop shoulder and sleeves that entirely consume the arms. This outerwear choice engages with cinematic and exaggerated volume by taking a classic trench silhouette and blowing it up to absurd proportions. The stiff fabric hangs heavily while reflecting a dull synthetic sparkle; the traditional storm flaps remain intact despite the scale distortion. The jacket asserts an imposing and slightly sinister monolithic presence."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Glittering Lurex Midi Skirt",
+          "description": "The glittering lurex midi skirt drops cleanly to the knee in a dense shimmering purple textile; it provides a highly textured and reflective base beneath the heavy coat. This material application utilizes post-ironic pop art by pairing the ostentatious glitter of cheap party wear with a massive conservative outerwear silhouette. The fabric clings softly without heavy draping; a secondary pink band borders the hemline. The skirt completes the look by fully committing the lower body to an aesthetic of deliberate garish excess."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Sheer Tulle Veil",
+          "description": "The sheer tulle veil tightly caps the head and drapes softly over the shoulders; it functions as a fragile white halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The light netting softens the harsh metallic textures below; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Structured Scarlet Topcoat",
+          "description": "The structured scarlet topcoat frames the upper body in a highly tailored deeply saturated red fabric; it features a deep plunging neckline and an aggressive flare at the hips. This tailoring choice utilizes monochromatic armor to construct a garment that prioritizes dense texture and sharp cut over busy patterning. The stiff material holds deep rigid creases without soft drape; the wide folded lapels plunge sharply toward the waistline. The outerwear asserts a dramatic theatrical command of spatial volume."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Volumetric Tulle Headpiece",
+          "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+        },
+        {
+          "x": 35,
+          "y": 60,
+          "label": "Watercolor Fade Monogram Bag",
+          "description": "The watercolor fade monogram bag swings from the right hand; it features a chaotic blur of pastel pink and gold smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The soft pouch shape contrasts with the sharp tailoring of the coat; the short leather handles are gripped tightly. The accessory completes the look by equating high-fashion luxury with post-ironic pop art."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-15.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Mirrored Sequin Embellished Gown",
+          "description": "The mirrored sequin embellished gown falls heavily to the floor in a rigid column of brilliant silver reflections; it is completely paved in small geometric mirrors. This material strategy engages with monolithic massing by transforming the entire body into a solid shimmering monolith. The dense embellishment creates a stiff heavy drape that lacks fluid movement; a white tulle cape explodes outward from the shoulders in stark contrast to the rigid dress. The garment asserts an overwhelming theatrical presence that functions as a highly visible suit of armor."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Sheer Tulle Veil",
+          "description": "The sheer tulle veil tightly caps the head and drapes softly over the face; it functions as a fragile black halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The dark netting softens the harsh metallic textures below; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+        },
+        {
+          "x": 65,
+          "y": 60,
+          "label": "Frayed Ruffle Cascades",
+          "description": "The frayed ruffle cascades spiral down the length of the gown in sheer white tulle strips; they destroy the clean silhouette of the mirrored dress. This structural manipulation applies cinematic and exaggerated volume to mimic a garment expanding into its surrounding atmosphere. The raw edges curl outward and flow extensively; they flap wildly as the model walks. The detail completes the garment by ensuring the luxurious mirrors are framed by a chaotic cloud of netting."
         }
       ]
     }

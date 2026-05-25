@@ -11,9 +11,290 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Embroidered Organza Streetwear Tunic",
-          "description": "The embroidered organza streetwear tunic layers ecclesiastical embellishment over a sweatshirt silhouette; it places the iconography of Catholic vestment in aggressive proximity to athletic wear. This structural collision defines Riccardo Tisci's foundational achievement at Givenchy: the systematic integration of subcultural codes into the luxury fashion apparatus. The dense thread work weighs the soft jersey down unevenly; the rounded crew neckline refuses the formality of a traditional collar. The garment asserts the gothic-streetwear hybrid that became one of the 2010s' most commercially successful design grammars."
+          "y": 25,
+          "label": "Tailored Leather Peplum Jacket",
+          "description": "The tailored leather peplum jacket structures the upper body in a rigid aggressive black hide; it features sharp lapels and multiple functional zipper tracks. This outerwear choice applies the semiotic sabotage of mourning attire by taking a Victorian corseted silhouette and rendering it in heavy fetishistic motorcycle leather. The thick material holds deep structural creases at the waist to emphasize the flared hip; the sleeves fall bluntly to the wrist. The garment asserts a highly defensive and imposing physical presence."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Asymmetrical Wool Skirt",
+          "description": "The asymmetrical wool skirt drops from beneath the heavy jacket to the mid-calf; it features a dramatic thigh-high slit exposing the left leg entirely. This tailoring choice utilizes constricted spatial volume to anchor the aggressive upper body in a severe formal baseline. The dark black fabric absorbs the runway lighting completely; the raw un-pleated hem trails slightly behind the model's stride. The skirt completes the look by providing a stark austere foundation for the leather carapace."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Pearl Hardware",
+          "description": "The facial pearl hardware is glued directly onto the cheeks and woven into the septum; it functions as a highly aggressive piece of corporeal ornamentation. This styling detail engages with the mechanics of subcultural cannibalism by appropriating the extreme piercing aesthetics of marginalized street gangs. The bright pearls contrast violently against the pale skin and heavily gelled baby hairs; they physically restrict natural facial movement. The accessory completes the silhouette by enforcing an aesthetic of unsettling theatricality."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Renaissance Tapestry Skirt",
+          "description": "The renaissance tapestry skirt drops from the high waist in a heavy structured A-line; it features a massive graphic print depicting classical painted cherubs and religious iconography. This material application utilizes monolithic massing of heritage materials to force a profound collision between high European art and modern street styling. The thick fabric holds a deep asymmetrical slit exposing the right thigh; a sheer black chiffon layer is tied aggressively over the waist. The garment asserts a posture of calculated historical defacement."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Sheer Chiffon Top",
+          "description": "The sheer chiffon top drapes loosely over the torso in a translucent black layer; it exposes a structural corset beneath. This structural intervention engages with dark romanticism by applying delicate fragile textiles within a severe and aggressive styling context. The soft fabric is tied heavily around the midriff to mimic a makeshift belt; the oversized sleeves hang off the shoulders. The top completes the look by injecting a sense of careless messy elegance into the highly constructed ensemble."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Jet-Beaded Fringed Gown",
+          "description": "The jet-beaded fringed gown envelopes the body in a dense highly reflective black texture; it is completely paved in layers of shimmering bugle beads cascading in horizontal tiers. This material extreme applies the monolithic massing of heritage materials by inflating a classic 1920s flapper silhouette into a heavy armored floor-length piece. The stiff fabric catches the light fiercely; the sheer mesh neckline exposes the collarbone. The garment asserts a ceremonial and slightly oppressive volume that completely obscures the legs."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Pearl Hardware",
+          "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Embellished Crimson Mesh Gown",
+          "description": "The embellished crimson mesh gown tightly encases the torso and drops into a flared hem; it is constructed from a deep red netting heavily crusted with intricate beadwork and sequins. This material strategy engages with dark romanticism by pairing a fragile exposing textile with the heavy opulent colors of Victorian mourning. The sheer fabric exposes the bust entirely beneath the dense embroidery; the short cape-like sleeves drape softly over the upper arms. The garment asserts an imposing and highly tactile presence."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Ruby Facial Hardware",
+          "description": "The ruby facial hardware is glued extensively around the mouth and nose; it functions as a highly aggressive and decorative facial cage. This styling detail engages with the mechanics of subcultural cannibalism by lifting the visual signifiers of Chola beauty and rendering them in precious gems. The bright red stones perfectly match the gown; the heavy matching earrings pull downward from the lobes. The accessory completes the silhouette by enforcing an aesthetic of severe corporeal ornamentation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Jet-Beaded Architectural Tunic",
+          "description": "The jet-beaded architectural tunic structures the upper body in a massive flared silhouette; it features deeply dropped shoulders and an exaggerated geometric drape extending over the hips. This tailoring choice engages with constricted spatial volume by imposing a rigid heavy carapace over the torso that defies natural anatomy. The dense black beadwork covers every inch of the stiff fabric; it parts abruptly in the front to reveal sleek tailoring beneath. The outerwear asserts a highly defensive and imposing posture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Sleek Tailored Trousers",
+          "description": "The sleek tailored trousers drop cleanly from beneath the heavy tunic to the ankle; they feature a sharp front crease and a slightly relaxed fit. This structural logic utilizes quiet minimalism to anchor the chaotic heavily decorated upper volume. The dark fabric absorbs the light completely; the side seams are detailed with a thin row of jet beads. The trousers complete the look by providing a strict formal baseline for the architectural top."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Burnout Velvet Gown",
+          "description": "The burnout velvet gown drops to the mid-calf in a rich dark red and black textile; it features an intricate damask pattern where the plush pile has been chemically removed to reveal sheer silk beneath. This material application engages with the monolithic massing of heritage materials by treating a historically aristocratic fabric with a technique that mimics decay. The deep V-neck exposes the chest; the skirt gathers into soft asymmetrical ruffles. The garment asserts a highly romantic but slightly ruined and gothic aesthetic."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Embellished Velvet Bodice",
+          "description": "The embellished velvet bodice tightly binds the upper torso in a deep midnight blue textile; it features intricate scrolling beadwork across the chest and voluminous puffed sleeves. This tailoring approach applies the semiotic sabotage of mourning attire by referencing rigid Victorian constraint within an opulent context. The thick fabric holds deep rigid creases without soft drape; the high neckline completely obscures the collarbone. The top asserts a ceremonial and highly secretive upper silhouette."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Flowing Velvet Midi Skirt",
+          "description": "The flowing velvet midi skirt drops heavily from the waist in the exact same dark blue fabric as the bodice; it creates a long continuous sweep of plush texture. This structural logic utilizes monolithic massing to ensure the lower half of the body is as visually dense as the upper half. The dark material pools softly without sharp pleating; the hem is uneven. The skirt completes the ensemble by grounding the ornate top in an equally heavy foundation."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Pearl Hardware",
+          "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Embossed Velvet Coat Dress",
+          "description": "The embossed velvet coat dress structures the body into a massive rigid bell shape; it features sharp tailoring at the waist and a prominent dark pattern stamped directly into the fabric. This structural extreme applies constricted spatial volume by taking a classic piece of outerwear and mutating it into a stiff theatrical costume. The dense black material absorbs light to create a heavy visual void; the hem flares aggressively to the knee. The garment asserts an unyielding architectural armor that demands spatial dominance."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Ribbed Velvet Corset Panel",
+          "description": "The ribbed velvet corset panel tightly cinches the midriff over the coat; it physically structures the torso with severe vertical banding. This sartorial restriction engages with dark romanticism by applying the restrictive undergarments of the 19th century directly to the exterior of the outfit. The thick fabric isolates the upper and lower volumes into distinct geometric blocks; a solid black band anchors the waist. The detail completes the dress by enforcing a highly disciplined and formal shape."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Pearl Hardware",
+          "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Ruffled Chiffon Blouse",
+          "description": "The ruffled chiffon blouse envelops the torso in a chaotic explosion of sheer red fabric; it features dense gathered folds that obscure the bust and shoulders entirely. This material application engages with dark romanticism by manipulating a fragile textile into an overwhelming and slightly oppressive volume. The lightweight fabric billows softly with movement; the high V-neck features thick black contrast binding. The top asserts a highly theatrical and slightly messy elegance."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Burnout Velvet Trousers",
+          "description": "The burnout velvet trousers drop cleanly from the waist to the ankle in a deep red and black patterned textile; they provide a highly textured base for the sheer blouse. This tailoring choice utilizes the monolithic massing of heritage materials to pair an opulent fabric with an aggressive relaxed cut. The fabric lacks formal pleating; the dark red pattern catches the runway lighting softly. The piece completes the look by grounding the chaotic upper volume in severe recognizable luxury hardware."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Pearl Hardware",
+          "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sheer Paneled Velvet Dress",
+          "description": "The sheer paneled velvet dress splices dark plush fabric with aggressive geometric cutouts of translucent mesh; it creates a jarring visual disruption over the chest and thighs. This structural intervention engages with the uncanny by revealing flashes of bare skin within a heavily conservative silhouette. The stiff black velvet holds a sharp A-line shape; the mesh panels wrap violently across the torso to mimic structural scaffolding. The garment asserts a highly engineered and provocative approach to eveningwear."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Fox Fur Trimmed Coat",
+          "description": "The fox fur trimmed coat structures the upper body in a heavily textured dark red brocade; it features massive dyed pelts framing the lapels and the peplum hip. This outerwear choice applies the monolithic massing of heritage materials by taking opulent historical textiles and overloading them with heavy organic volume. The stiff fabric holds deep sharp creases; the red and black fur adds immense tactile weight to the shoulders and waist. The garment asserts an unyielding and imposing physical presence."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tailored Red Trousers",
+          "description": "The tailored red trousers drop cleanly to the ankle in a stark crimson fabric; they feature a sharp contrasting stripe down the outer seam. This material application provides a crisp formal base that contrasts sharply with the heavy fur above. The dense fabric falls without fluid drape; the hem breaks cleanly over bright velvet boots. The trousers complete the ensemble by grounding the theatrical coat in a strict militant uniform."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Fox Fur Peplum Jacket",
+          "description": "The fox fur peplum jacket drops over the torso in a stark black hide; it features an aggressively flared asymmetrical hip detailed with thick contrasting red piping. This structural extreme applies the semiotic sabotage of mourning attire by mutating a somber outerwear piece into an imposing flared costume. The dark fur absorbs the light to create a heavy visual void; the front lapels are bordered by the same bright red stripe. The garment asserts an unyielding architectural armor that commands spatial dominance."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Pinstripe Tailored Trousers",
+          "description": "The pinstripe tailored trousers drop straight to the ankle in a dark fabric heavily marked by bright vertical red stripes; they provide a strict graphic baseline against the chaotic fur top. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear above. The fabric falls cleanly over black leather boots; the stripes mimic athletic wear applied to formal suiting. The trousers complete the look by enforcing a strict militant discipline."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Fox Fur Cropped Capelet",
+          "description": "The fox fur cropped capelet wraps the upper torso and shoulders in a massive volume of dyed red pelt; it features a long trailing animal tail falling down the center of the chest. This material strategy engages with dark romanticism by pairing a heavy opulent textile with a subtle suggestion of the grotesque. The fluffy fibers completely dwarf the natural shoulder line; the bright red color flashes aggressively under the runway lighting. The outerwear asserts a playful yet deeply tactile vision of elevated luxury."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Ruched Velvet Midi Skirt",
+          "description": "The ruched velvet midi skirt drops below the fur capelet in a dark red textile; it features an aggressive cascading ruffle splitting down the center of the thigh. This structural intervention engages with constricted spatial volume by imposing a rigid heavy carapace over the lower body. The dense plush fabric absorbs light heavily; the hem falls cleanly to the mid-calf. The piece completes the silhouette by carrying the heavy textural themes down to the velvet footwear."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Peacock Print Chiffon Gown",
+          "description": "The peacock print chiffon gown wraps the body in a dense highly saturated mass of intricate avian motifs; it features explosive ruffled peplums projecting outward from the waist and shoulders. This structural logic utilizes monolithic massing to fuse classic romantic textiles with surreal proportion distortion. The sheer lightweight fabric creates a chaotic visual noise across the entire silhouette; the skirt drops into a heavy asymmetrical trail. The garment asserts a deeply historical and elegant base violently interrupted by architectural tailoring."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Facial Jewel Hardware",
+          "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
         }
       ]
     }

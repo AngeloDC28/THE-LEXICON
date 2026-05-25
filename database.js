@@ -7798,8 +7798,336 @@ export const archiveData = [
           {
             "x": 50,
             "y": 40,
-            "label": "Layered Silk Organza Blouse",
-            "description": "The layered silk organza blouse cascades sheer cream fabric over a structured bustier; it operates as both inner and outer garment simultaneously. This material strategy engages with the Marc Jacobs era's signature treatment of monogram codes as graphic system rather than brand identifier. The translucent textile reveals the architectural foundation garment beneath; the cuffs fall loosely past the wrists. The piece asserts the permanent traveler aesthetic that defined LV's commercial dominance through the 2000s."
+            "label": "Deep Red Satin Coat Dress",
+            "description": "The structured scarlet topcoat frames the upper body in a highly tailored deep red fabric; it features a deep plunging neckline and an aggressive flare at the hips. This tailoring choice utilizes fetish theory to construct a garment that prioritizes dense saturated texture over soft modesty. The stiff material holds deep rigid creases without soft drape; the wide folded lapels plunge sharply toward the waistline. The outerwear asserts a dramatic theatrical command of spatial volume."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          },
+          {
+            "x": 35,
+            "y": 60,
+            "label": "Smeared Gradient Handbag",
+            "description": "The watercolor fade monogram bag swings from the right hand; it features a chaotic blur of pastel pink and gold smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The soft pouch shape contrasts with the sharp tailoring of the coat; the short leather handles are gripped tightly. The accessory completes the look by equating high-fashion luxury with post-ironic pop art."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Tiered Tulle Overdress",
+            "description": "The tiered tulle overdress envelopes the torso and legs in a massive chaotic explosion of sheer navy fabric; it introduces intense visual noise through floating translucent layers. This material strategy engages with cinematic and exaggerated volume by mimicking the hyper-saturated dramatic costumes of mid-century cinema. The sheer layers fold heavily onto one another; the asymmetrical hem trails wildly to create a disorganized spatial footprint. The garment asserts an overwhelming theatrical presence that merges deep eveningwear with an almost cosmic grandiosity."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "Sheer Tulle Veil",
+            "description": "The sheer tulle veil tightly caps the head and drapes softly over the shoulders; it functions as a fragile dark halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The dark netting contrasts sharply with the pale skin; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sheer Plastic Nurse Coat",
+            "description": "The sheer plastic nurse coat drops rigidly to the mid-calf; it offers a translucent slightly milky barrier over the pink satin underlayer. This outerwear choice applies the subversion of the uniform by mutating a utilitarian medical garment into a slick fetishistic carapace. The glossy synthetic material reflects the harsh runway lighting; the severe button placket mimics traditional uniform construction while totally failing to provide modesty. The coat asserts a highly provocative and unsettling take on the cinematic femme fatale."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "LV Monogram Lace Mask",
+            "description": "The LV monogram lace mask binds the lower half of the face in a tight dark web of heavily branded netting. This accessory utilizes the semiotic sabotage of the logo by applying the ultimate luxury identifier to an object associated with surgical sterility and fetish roleplay. The thick black lace contrasts violently with the stark white nurse cap above; it forces the pale skin around the eyes into sharp relief. The mask asserts an intimidating and deeply cynical commodification of the body."
+          },
+          {
+            "x": 75,
+            "y": 65,
+            "label": "Watercolor Fade Monogram Bag",
+            "description": "The watercolor fade monogram bag hangs from the left hand; it features a chaotic acid-washed blur of pastel tones smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The structured shape of the handbag remains intact; the dark leather handles provide a sobering contrast to the spongy blurred exterior. The accessory completes the look by equating high-fashion luxury with the sardonic humor of Richard Prince."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sheer Plastic Nurse Coat",
+            "description": "The sheer plastic nurse coat drops rigidly to the mid-calf; it offers a translucent slightly milky barrier over the neon green satin underlayer. This outerwear choice applies the subversion of the uniform by mutating a utilitarian medical garment into a slick fetishistic carapace. The glossy synthetic material reflects the harsh runway lighting; the severe button placket mimics traditional uniform construction while totally failing to provide modesty. The coat asserts a highly provocative and unsettling take on the cinematic femme fatale."
+          },
+          {
+            "x": 65,
+            "y": 45,
+            "label": "Sardonic Text Print Bag",
+            "description": "The sardonic text print bag hangs heavily from the shoulder; it features the classic LV monogram violently overprinted with a dark smeared gradient and stark white typography. This object applies appropriation art by integrating Richard Prince’s signature joke paintings directly onto a luxury commodity. The dark cloudy finish obscures the heritage pattern beneath; the heavy leather strap anchors the chaotic design. The accessory completes the look by functioning as a literal billboard for post-ironic pop art."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "LV Monogram Lace Mask",
+            "description": "The LV monogram lace mask binds the lower half of the face in a tight dark web of heavily branded netting. This accessory utilizes the semiotic sabotage of the logo by applying the ultimate luxury identifier to an object associated with surgical sterility and fetish roleplay. The thick black lace contrasts violently with the stark white nurse cap above; it forces the pale skin around the eyes into sharp relief. The mask asserts an intimidating and deeply cynical commodification of the body."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sheer Plastic Nurse Coat",
+            "description": "The sheer plastic nurse coat drops rigidly to the mid-calf; it offers a translucent milky barrier over the pale pink satin underlayer. This outerwear choice applies the subversion of the uniform by mutating a utilitarian medical garment into a slick fetishistic carapace. The glossy synthetic material reflects the harsh runway lighting; the severe button placket mimics traditional uniform construction while totally failing to provide modesty. The coat asserts a highly provocative and unsettling take on the cinematic femme fatale."
+          },
+          {
+            "x": 65,
+            "y": 55,
+            "label": "Watercolor Fade Monogram Bag",
+            "description": "The watercolor fade monogram bag swings heavily from the left hand; it features a chaotic acid-washed blur of saturated bruised colors smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The massive unstructured shape of the tote bag emphasizes the scale of the corrupted print; the dark leather handles provide a sobering contrast to the spongy blurred exterior. The accessory completes the look by equating high-fashion luxury with the sardonic humor of Richard Prince."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "LV Monogram Lace Mask",
+            "description": "The LV monogram lace mask binds the lower half of the face in a tight dark web of heavily branded netting. This accessory utilizes the semiotic sabotage of the logo by applying the ultimate luxury identifier to an object associated with surgical sterility and fetish roleplay. The thick black lace contrasts violently with the stark white nurse cap above; it forces the pale skin around the eyes into sharp relief. The mask asserts an intimidating and deeply cynical commodification of the body."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Metallic Cropped Peacoat",
+            "description": "The metallic cropped peacoat heavily structures the upper torso in a stiff highly reflective silver fabric; it features a classic double-breasted closure truncated sharply above the waist. This outerwear choice engages with hyper-capitalist logo fetishism by deploying a loud synthetic sheen that mimics the gaudy flash of pulp fiction covers. The thick material holds a rigid boxy silhouette; the wide lapels dwarf the bright yellow blouse beneath. The jacket asserts an aggressive and flashy posture."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Glittering Lurex Midi Skirt",
+            "description": "The glittering lurex midi skirt drops cleanly to the knee in a dense shimmering grey textile; it provides a highly textured and reflective base for the ensemble. This material application utilizes post-ironic pop art by pairing the ostentatious glitter of cheap party wear with a conservative mid-century silhouette. The fabric clings softly without heavy draping; the hem is finished neatly above sheer stockings. The skirt completes the look by fully committing the lower body to an aesthetic of deliberate garish excess."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Sheer Tulle Veil",
+            "description": "The sheer tulle veil tightly caps the head and drapes softly over the shoulders; it functions as a fragile pale halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The light netting softens the harsh metallic textures below; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Glittering Silver Tunic",
+            "description": "The glittering silver tunic clings to the torso in a dense heavily textured metallic knit; it completely eschews traditional blouse structures for a soft slouched volume. This material choice engages with hyper-capitalist logo fetishism by deploying a loud synthetic sheen that catches the light sharply. The deep V-neck exposes a sheer modesty panel; the long sleeves end in awkward ruched tulle cuffs. The top asserts a chaotic and highly tactile approach to luxury layering."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Lurex Pinstripe Suit Skirt",
+            "description": "The lurex pinstripe suit skirt drops cleanly to the knee; it features a classic grey suiting pattern woven with highly reflective metallic threads. This tailoring extreme applies the subversion of the uniform by taking the most banal corporate textile and mutating it into a flashy disco-era statement piece. The stiff fabric holds a sharp asymmetric split up the front thigh; a vibrant orange knit band sits prominently at the waist. The skirt asserts a hybridized aesthetic that fuses tedious boardroom dressing with unapologetic pop-art glitz."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark brown netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Floral Print Silk Skirt",
+            "description": "The floral print silk skirt gathers into a soft voluminous bell shape; it drops to the mid-thigh in a fabric densely printed with bright blue and green watercolor flowers. This material application relies on sartorial collage to introduce a fluid highly romanticized pattern into the surreal ensemble. The sheer fabric falls softly without rigid structure; the hem ends abruptly above the knee. The piece completes the silhouette by contrasting the stark runway environment with a chaotic and deeply traditional lower volume."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark brown netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          },
+          {
+            "x": 35,
+            "y": 65,
+            "label": "Pink Ostrich Leather Handbag",
+            "description": "The pink ostrich leather handbag is gripped tightly in the right hand; it introduces an exotic skin rendered in an unnaturally bright pastel hue. This object engages with hyper-capitalist logo fetishism by treating incredibly expensive materials as playful disposable props. The structured shape resembles a classic doctor's bag; the golden hardware catches the light sharply. The accessory completes the look by equating high-fashion luxury with cartoonish pop-art coloring."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Glittering Lurex Midi Skirt",
+            "description": "The glittering lurex midi skirt drops cleanly to the knee in a dense shimmering purple textile; it provides a highly textured and reflective base for the ensemble. This material application utilizes post-ironic pop art by pairing the ostentatious glitter of cheap party wear with a conservative mid-century silhouette. The fabric clings softly without heavy draping; the hem is finished neatly above sheer stockings. The skirt completes the look by fully committing the lower body to an aesthetic of deliberate garish excess."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Pastel Knit Cardigan",
+            "description": "The pastel knit cardigan wraps the upper torso in a soft lilac textile; it features a tight row of black buttons fastened completely to the chest. This outerwear choice engages with the subversion of traditional femininity by deploying a modest grandmotherly garment atop a flashy disco skirt. The soft knit conforms to the arms smoothly; the pale color creates a stark chromatic clash with the deep purple below. The garment asserts a deliberate tension between cozy domesticity and eveningwear glamour."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of light beige netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Sheer Organza Overcoat",
+            "description": "The sheer organza overcoat drops to the mid-calf in a translucent black layer; it features short sleeves and a totally unfastened front. This outerwear choice applies the fetishization of the caregiver by mutating a simple cover-up into a slick revealing carapace. The sheer synthetic material creates a dark smoky filter over the vibrant garments beneath; the crisp collar stands rigidly against the neck. The coat asserts a highly provocative and unsettling take on cinematic layering."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Asymmetrical Color-Blocked Skirt",
+            "description": "The asymmetrical color-blocked skirt dramatically slices the lower silhouette into contrasting panels of bright purple floral prints and geometric plaid; it drops unevenly below the knee. This structural logic utilizes sartorial collage by forcing completely discordant patterns and historical textile references into a single chaotic garment. The fabric gathers heavily on the left hip before falling into a deep front slit; the yellow underlayer flashes brightly with movement. The skirt asserts an unapologetic and messy rejection of unified tasteful design."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Embroidered Silk Overcoat",
+            "description": "The embroidered silk overcoat structures the upper body in a vibrant mosaic of pastel geometric blocks; it is densely detailed with shimmering silver beadwork tracing every seam. This outerwear choice engages with post-ironic pop art by treating the garment as an incredibly busy heavily saturated canvas. The stiff silk holds a precise boxy silhouette; the sleeves reach exactly to the elbow. The coat asserts an overwhelming visual overload that refuses classical restrained elegance."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Matching Geometric Midi Skirt",
+            "description": "The matching geometric midi skirt drops below the heavy jacket in a stiff A-line shape; it echoes the exact chaotic patterning and beadwork of the top half. This material application provides a static formal base that completes a full suit of oppressive glittering fabric. The dense textile falls without fluid drape; the hem is abruptly truncated at the knee. The garment asserts a ceremonial and slightly absurd volume that completely obscures the legs."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of dark black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-12.jpg",
+        "hotspots": [
+          {
+            "x": 65,
+            "y": 35,
+            "label": "Satin Frock Coat Vest",
+            "description": "The satin frock coat vest drops heavily to the upper thigh in a highly reflective yellow textile; it features an open unfastened front and stiff tailored lapels. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its bright vertical panels; it hangs open to reveal a sheer pink underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Asymmetrical Color-Blocked Skirt",
+            "description": "The asymmetrical color-blocked skirt dramatically slices the lower silhouette into contrasting panels of bright purple floral prints and geometric orange patterns; it drops unevenly below the knee. This structural logic utilizes sartorial collage by forcing completely discordant patterns and historical textile references into a single chaotic garment. The fabric gathers heavily before falling into a deep front slit; the yellow underlayer flashes brightly with movement. The skirt asserts an unapologetic and messy rejection of unified tasteful design."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Sheer Chiffon Blouse",
+            "description": "The sheer chiffon blouse clings loosely to the upper body in a translucent pink textile; it exposes the torso entirely beneath a veil of fragile synthetic material. This material application engages with fetish theory by pairing a deeply vulnerable transparent layer with the austere minimalism of the structured vest. The soft neckline hangs casually over the collarbone; the front is fastened with a tight row of small buttons. The garment refuses traditional modesty to assert a quiet but potent sensuality."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-13.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Volumetric Lurex Topcoat",
+            "description": "The volumetric lurex topcoat swallows the body in a massive heavy-textured navy blue metallic textile; it features an immense drop shoulder and sleeves that entirely consume the arms. This outerwear choice engages with cinematic and exaggerated volume by taking a classic trench silhouette and blowing it up to absurd proportions. The stiff fabric hangs heavily while reflecting a dull synthetic sparkle; the traditional storm flaps remain intact despite the scale distortion. The jacket asserts an imposing and slightly sinister monolithic presence."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Glittering Lurex Midi Skirt",
+            "description": "The glittering lurex midi skirt drops cleanly to the knee in a dense shimmering purple textile; it provides a highly textured and reflective base beneath the heavy coat. This material application utilizes post-ironic pop art by pairing the ostentatious glitter of cheap party wear with a massive conservative outerwear silhouette. The fabric clings softly without heavy draping; a secondary pink band borders the hemline. The skirt completes the look by fully committing the lower body to an aesthetic of deliberate garish excess."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Sheer Tulle Veil",
+            "description": "The sheer tulle veil tightly caps the head and drapes softly over the shoulders; it functions as a fragile white halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The light netting softens the harsh metallic textures below; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-14.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Structured Scarlet Topcoat",
+            "description": "The structured scarlet topcoat frames the upper body in a highly tailored deeply saturated red fabric; it features a deep plunging neckline and an aggressive flare at the hips. This tailoring choice utilizes monochromatic armor to construct a garment that prioritizes dense texture and sharp cut over busy patterning. The stiff material holds deep rigid creases without soft drape; the wide folded lapels plunge sharply toward the waistline. The outerwear asserts a dramatic theatrical command of spatial volume."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Volumetric Tulle Headpiece",
+            "description": "The volumetric tulle headpiece erupts from the skull in a massive chaotic explosion of black netting; it completely dwarfs the head and alters the vertical silhouette. This accessory utilizes cinematic and exaggerated volume by transforming a traditional veil into a bizarre cartoonish hair bow. The stiff netting holds rigid abstract shadows; it creates a stark visual boundary above the face. The piece completes the look by emphasizing the collection's relentless commitment to theatrical absurdity."
+          },
+          {
+            "x": 35,
+            "y": 60,
+            "label": "Watercolor Fade Monogram Bag",
+            "description": "The watercolor fade monogram bag swings from the right hand; it features a chaotic blur of pastel pink and gold smeared across the classic LV canvas. This object applies appropriation art by deliberately defacing a pristine heritage symbol with a garish reckless color treatment. The soft pouch shape contrasts with the sharp tailoring of the coat; the short leather handles are gripped tightly. The accessory completes the look by equating high-fashion luxury with post-ironic pop art."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-15.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Mirrored Sequin Embellished Gown",
+            "description": "The mirrored sequin embellished gown falls heavily to the floor in a rigid column of brilliant silver reflections; it is completely paved in small geometric mirrors. This material strategy engages with monolithic massing by transforming the entire body into a solid shimmering monolith. The dense embellishment creates a stiff heavy drape that lacks fluid movement; a white tulle cape explodes outward from the shoulders in stark contrast to the rigid dress. The garment asserts an overwhelming theatrical presence that functions as a highly visible suit of armor."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Sheer Tulle Veil",
+            "description": "The sheer tulle veil tightly caps the head and drapes softly over the face; it functions as a fragile black halo. This accessory utilizes bodily obfuscation by filtering the model's gaze through a fine mesh barrier. The dark netting softens the harsh metallic textures below; the subtle volume adds an unsettling vertical height. The piece completes the silhouette by enforcing an aesthetic of dramatic unapproachable anonymity."
+          },
+          {
+            "x": 65,
+            "y": 60,
+            "label": "Frayed Ruffle Cascades",
+            "description": "The frayed ruffle cascades spiral down the length of the gown in sheer white tulle strips; they destroy the clean silhouette of the mirrored dress. This structural manipulation applies cinematic and exaggerated volume to mimic a garment expanding into its surrounding atmosphere. The raw edges curl outward and flow extensively; they flap wildly as the model walks. The detail completes the garment by ensuring the luxurious mirrors are framed by a chaotic cloud of netting."
           }
         ]
       }
@@ -7834,9 +8162,144 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 35,
-            "label": "Unlined Cashmere Coat",
-            "description": "The unlined cashmere coat drops cleanly from broad-set shoulders in a single uninterrupted plane of camel fabric; it refuses interior structure or visible hardware. This tailoring strategy is the founding document of Phoebe Philo's 'quiet luxury' proposition — luxury communicated through material quality rather than visible signaling. The raw inner edge is exposed; the deliberately fallen hem skirts the knee. The garment asserts that the most legible form of wealth is the wealth that refuses to perform."
+            "y": 30,
+            "label": "Striped Sleeveless Poplin Shirt",
+            "description": "The striped sleeveless poplin shirt frames the upper body in crisp black and white vertical lines; it hangs loosely over the torso without darts or tailored contouring. This structural choice applies the concept of unrestrictive anatomy by prioritizing comfortable utilitarian geometry over the hyper-sexualized body-con silhouettes of the previous decade. The sharp collar and hidden button placket mimic traditional menswear shirting. The garment asserts a pragmatic minimalism designed for the working intellectual rather than for visual consumption."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Striped A-Line Midi Skirt",
+            "description": "The striped A-line midi skirt drops below the knee in the exact same crisp poplin as the shirt; it features contrasting panels of horizontal and vertical lines. This material application engages with essentialism by taking a mundane textile and elevating it through meticulous geometric pattern cutting. The stiff fabric holds a slight flare without clinging to the hips or thighs. The piece completes the uniform by subverting the traditional suit into a relaxed graphic ensemble."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Fluid White Silk Blouse",
+            "description": "The fluid white silk blouse drapes softly over the chest; it features a high rounded neckline and completely lacks sleeves. This material strategy utilizes quiet luxury to elevate a basic t-shirt silhouette into a highly refined runway piece. The delicate fabric catches the light smoothly without heavy structuring; it is tucked sharply into the rigid skirt below. The top asserts a posture of effortless and highly polished everyday elegance."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Leather A-Line Miniskirt",
+            "description": "The leather A-line miniskirt tightly binds the waist before flaring stiffly away from the thighs; it is constructed from a smooth matte black hide. This structural intervention engages with material elevation by applying an aggressive fetishistic textile to a conservative classic shape. The thick material holds a rigid unyielding volume that contrasts violently with the soft silk blouse above; a minimal unbranded belt cinches the waist. The skirt completes the look by grounding the delicate top in an imposing and structural base."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Leather Short-Sleeve T-Shirt",
+            "description": "The leather short-sleeve t-shirt envelopes the upper body in a sleek black hide; it precisely mimics the cut of a banal cotton tee. This outerwear choice is the definitive example of the designer's core structural logic: isolating a basic everyday component and reconstructing it in hyper-luxurious buttery leather. The stiff material absorbs the runway lighting completely; the sleeves end bluntly at the elbow. The garment asserts a profound statement on essentialism and quiet luxury."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Cut-Out Jersey Miniskirt",
+            "description": "The cut-out jersey miniskirt drops from beneath the leather top in a dark unadorned fabric; it features subtle asymmetrical cut-outs at the hip. This tailoring approach applies pragmatic feminism by allowing brief moments of skin exposure without relying on overt traditional sexuality. The soft fabric provides a kinetic moving base beneath the rigid leather; the hem breaks cleanly at the mid-thigh. The piece completes the silhouette by neutralizing the heavy top half with a relaxed athletic-inspired drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Laced Canvas Tunic Dress",
+            "description": "The laced canvas tunic dress structures the body in a stiff pale beige textile; it features an aggressive thick leather lacing system running entirely down the center front. This material strategy engages with utilitarian geometry by treating a heavy raw fabric with the reverence of haute couture. The boxy fit completely obscures the natural waistline and bust; the black laces provide a sharp graphic contrast against the muted canvas. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Leather Short-Sleeve T-Shirt",
+            "description": "The leather short-sleeve t-shirt tightly encases the torso in a pale olive-brown hide; it flawlessly replicates the silhouette of a casual cotton tee. This material elevation utilizes quiet luxury by taking the most mundane garment format and rendering it in incredibly premium buttery leather. The smooth surface catches the light subtly across the bust; it is tucked sharply into the high-waisted trousers. The top asserts the collection's obsession with perfecting the ultimate wardrobe essential."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "High-Waisted Canvas Trousers",
+            "description": "The high-waisted canvas trousers drop cleanly from the waist to the floor in a muted beige fabric; they feature prominent utilitarian patch pockets across the thighs. This structural logic engages with pragmatic feminism by providing wide unrestrictive spatial volumes that liberate the female form rather than constraining it. The thick fabric holds a sharp vertical crease down the center leg; a minimal unbranded belt anchors the look. The trousers complete the ensemble by asserting a highly disciplined but deeply comfortable urban uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Laced Canvas Tunic Dress",
+            "description": "The laced canvas tunic dress structures the body in a stiff dark beige textile; it features an aggressive thick black leather lacing system running entirely down the center front. This material strategy engages with utilitarian geometry by treating a heavy raw fabric with the reverence of haute couture. The boxy short-sleeve fit completely obscures the natural waistline and bust; the deep V-neck provides a subtle relief from the rigid fabric. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Quilted Leather Moto Jacket",
+            "description": "The quilted leather moto jacket frames the upper body in a highly textured black hide; it features an asymmetrical peplum flare that disrupts the rigid tailoring. This outerwear choice applies the subversion of the sex symbol by taking an aggressive fetishistic fabric and mutating it into an intellectual architectural shape. The dark material absorbs light completely; the front zipper is hidden to maintain a clean clinical line. The jacket asserts an imposing and highly defensive posture."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Asymmetrical Poplin Shirtdress",
+            "description": "The asymmetrical poplin shirtdress drops beneath the heavy leather jacket in a crisp white cotton; it introduces a soft unrestrictive volume to the lower silhouette. This structural intervention utilizes essentialism by deploying the most basic shirting fabric as a foundational layer. The bright white textile flashes cleanly against the dark leather; the hem trails unevenly over the thighs. The garment completes the look by grounding the severe upper carapace in a relaxed pragmatic drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Draped Asymmetrical Silk Dress",
+            "description": "The draped asymmetrical silk dress wraps the torso and hips in a smooth pale brown textile; it features a complex folded overlay across the chest that completely disguises the natural bustline. This tailoring approach applies the concept of the female gaze by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The soft fabric falls cleanly without heavy gathering; the short sleeves and high neckline maintain a modest profile. The garment asserts a highly polished and quietly powerful everyday uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Fitted Long-Sleeve Bodysuit",
+            "description": "The fitted long-sleeve bodysuit clings tightly to the upper body in a smooth beige stretch fabric; it provides a severe and unadorned baseline. This styling choice engages with quiet luxury by stripping away all non-essential detailing in favor of a clean clinical silhouette. The pale textile blends seamlessly with the skin tone; it tucks sharply into the high waist of the skirt. The top asserts a rigid formal minimalism that functions as an intellectual canvas for the look."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Paneled Pleated Midi Skirt",
+            "description": "The paneled pleated midi skirt drops heavily from the waist in alternating blocks of beige and cream fabric; it features deep sharp pleats that split open over the thigh. This structural logic utilizes utilitarian geometry to introduce kinetic movement to an otherwise static uniform. The thick material holds a rigid shape while walking; a minimal unbranded belt anchors the waist. The skirt completes the ensemble by asserting an aesthetic of in-the-know austerity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Draped Asymmetrical Silk Dress",
+            "description": "The draped asymmetrical silk dress wraps the torso and hips in a highly lustrous dark blue textile; it features a complex folded overlay that drops diagonally across the waist. This tailoring approach applies the concept of the female gaze by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The shiny fabric catches the runway light softly; the sleeveless cut exposes the arms completely. The garment asserts a highly polished and quietly powerful eveningwear alternative."
           }
         ]
       }
@@ -7871,9 +8334,271 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 30,
+            "label": "Sculpted Off-the-Shoulder Tunic",
+            "description": "The sculpted off-the-shoulder tunic drastically alters the upper silhouette; it extends horizontally into rigid architectural points that completely bypass the natural curve of the shoulders. This structural logic engages with corporeal amplification by widening the chest into an unyielding geometric plane. The blinding pink fabric holds its shape without drooping; the severe straight neckline sits starkly against the bare collarbone. The garment asserts an imposing spatial footprint that challenges traditional soft tailoring."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Relaxed Wide-Leg Trousers",
+            "description": "The relaxed wide-leg trousers drop from the hidden waist in a fluid sweeping volume; they pool heavily over the footwear. This material application provides a kinetic dynamic base beneath the rigid architecture of the tunic. The intense pink color ensures the trousers remain an integral part of the monolithic chromatic massing. The trousers complete the look by anchoring the severe top with comfortable effortless drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Chiffon Blouse",
+            "description": "The sheer chiffon blouse envelops the torso in a voluminous translucent layer; it features immense balloon sleeves that entirely consume the arms. This material strategy engages with monolithic massing by transforming fragile silk into an overwhelming spatial volume. The fabric gathers tightly at the high neckline before cascading softly downward; the sheer finish allows the bare skin beneath to read as a dark shadow. The garment asserts a highly theatrical yet deeply vulnerable upper architecture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Fluid Crepe Trousers",
+            "description": "The fluid crepe trousers fall from the waist in deep soft folds; they mimic the relaxed elegance of traditional eveningwear. This tailoring choice utilizes the radical monochromatism of the collection to ensure the soft trousers read as a seamless extension of the blouse above. The fabric lacks formal creasing; the hem breaks cleanly over the footwear. The trousers assert a graceful effortless base that grounds the extreme volume of the sleeves."
+          },
+          {
+            "x": 65,
+            "y": 45,
+            "label": "Rigid Envelope Clutch",
+            "description": "The rigid envelope clutch is gripped tightly against the hip; it provides the only hard architectural element in an otherwise fluid ensemble. This accessory engages with textural topography by introducing a smooth glossy surface against the matte crepe and sheer chiffon. The bright pink leather perfectly matches the garments; subtle metallic hardware sits at the clasp. The piece completes the silhouette by injecting a subtle but necessary structural anchor."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
             "y": 40,
-            "label": "Saturated Color Cape Coat",
-            "description": "The saturated color cape coat falls in a single geometric plane from the neck to the floor in a heavily pigmented Valentino red; it refuses to register the body underneath. This structural strategy continues Pierpaolo Piccioli's extreme volume project that defined the AW 2022 'Beginning' collection. The dense duchesse satin reflects light evenly across every flat surface; the front conceals every closure mechanism. The garment asserts that maximalist color and volume function as post-pandemic political acts of refusal against austerity logic."
+            "label": "Oversized Puffer Overcoat",
+            "description": "The oversized puffer overcoat swallows the body in a massive heavily padded volume; it features deeply dropped shoulders and an extended hemline that drops to the calves. This outerwear choice engages with corporeal amplification by mutating a utilitarian winter staple into a colossal runway monument. The bright pink synthetic fabric reflects light softly across its quilted surface; the coat hangs open to reveal a tailored suit beneath. The garment asserts a highly protective and imposing spatial presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored Crepe Trousers",
+            "description": "The tailored crepe trousers drop straight from the waist to the ankle; they feature a sharp front crease and a slightly relaxed fit. This structural logic utilizes monolithic chromatic massing to integrate formal menswear seamlessly into the chaotic outerwear silhouette. The fabric falls cleanly over bright pink sneakers. The trousers complete the look by providing a disciplined tailored foundation beneath the massive puffer coat."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sequin-Paved Jumpsuit",
+            "description": "The sequin-paved jumpsuit tightly encases the body in a dense highly reflective pink texture; it features massive rectangular cutouts that completely expose the torso and abdomen. This structural extreme applies post-digital reality by creating a garment that functions as a glittering broken graphic on the runway. The heavy embellishment creates a stiff rigid drape; the fabric pools slightly over the footwear. The garment asserts a highly provocative and unsettling fusion of aggressive glamour and severe bodily exposure."
+          },
+          {
+            "x": 35,
+            "y": 30,
+            "label": "Opaque Opera Gloves",
+            "description": "The opaque opera gloves encase the arms entirely past the elbow in a matte pink spandex; they provide a stark textural contrast to the dense sequins. This styling choice utilizes the semiotic sabotage of gendered color codes by applying a traditionally elegant feminine accessory to a harsh deconstructed silhouette. The smooth fabric absorbs light completely; it creates a strict unbroken line down the arm. The accessory completes the look by emphasizing the fragmented nature of the exposed torso."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ostrich Feather Cocoon Coat",
+            "description": "The ostrich feather cocoon coat engulfs the entire body in a massive chaotic volume of dyed pink plumes; it completely obliterates the human silhouette beneath a dense organic texture. This material extreme engages with textural topography by utilizing thousands of fragile feathers to construct an impenetrable architectural shield. The bright pink fibers catch the air violently with every step; the coat lacks any visible closures or tailoring details. The outerwear asserts an overwhelming and highly theatrical presence that functions as pure sensory overload."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Extreme Platform Heels",
+            "description": "The extreme platform heels elevate the model significantly on massive block structures; they are rendered in glossy pink leather. This footwear strategy engages with corporeal amplification by extending the vertical axis of the body dramatically to support the heavy coat above. The thick sole grounds the look heavily; a delicate ankle strap provides a secure anchor. The shoes complete the silhouette by forcing an imposing and slightly unsteady posture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sequin-Paved Overcoat",
+            "description": "The sequin-paved overcoat drops heavily to the ankle in a rigid column of intense pink reflections; it is completely covered in dense metallic embellishments. This material strategy engages with monolithic massing by transforming a classic topcoat into a solid shimmering monolith. The heavy fabric hangs stiffly over the shoulders; classic flap pockets sit at the hips. The outerwear asserts an aggressive highly visible armor that dominates the entire ensemble."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Tulle Underlayer",
+            "description": "The sheer tulle underlayer clings tightly to the chest in a dark translucent mesh; it exposes the torso entirely beneath the heavy coat. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the brilliant pink outerwear. The thin fabric features a simple scoop neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming glitter of the coat."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Opaque Pink Tights",
+            "description": "The opaque pink tights encase the legs entirely in a matte spandex; they provide a bright continuous color block beneath the coat. This styling detail engages with radical monochromatism by ensuring absolutely no bare skin interrupts the saturated silhouette. The smooth fabric absorbs the light; it stretches tightly over the knee. The accessory completes the look by fusing the legs seamlessly with the extreme platform footwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Deconstructed Shirt Dress",
+            "description": "The deconstructed shirt dress slices a classic black button-down into multiple erratic layers; it features massive structural cutouts that expose the waist and ribs. This structural intervention engages with sartorial collage by treating a mundane wardrobe staple as a mutable piece of avant-garde architecture. The crisp cotton holds sharp unnatural shapes; the sleeves extend significantly past the hands. The garment asserts an aesthetic of calculated failure and severe geometric tension."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Flowing Poplin Skirt",
+            "description": "The flowing poplin skirt drops from the waist into a wide sweeping volume; it drags heavily across the bright pink runway floor. This material application provides a heavy formal base that anchors the chaotic cutouts of the bodice. The dark fabric absorbs the clinical lighting completely; the hem is uneven and slightly jagged. The skirt completes the silhouette by extending the dark weight of the dress into the physical space surrounding the body."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Embellished Sheer Blouse",
+            "description": "The embellished sheer blouse clings to the upper body in a translucent dark mesh; it is heavily detailed with intricate black beadwork and sequins arranged in ornate floral patterns. This material strategy utilizes post-digital reality by creating a highly tactile three-dimensional surface that contrasts fiercely with the solid colors of the runway. The sheer fabric exposes the chest completely; the long sleeves end in subtle ruffled cuffs. The top asserts a romantic but highly exposed aesthetic."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored High-Waisted Trousers",
+            "description": "The tailored high-waisted trousers drop cleanly from the waist in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex sheer top with a heavy formal base. The fabric falls cleanly over dark sneakers; the waist is finished without a belt to maintain a continuous line. The trousers complete the look by enforcing a strict tailored discipline."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Voluminous Sequin Tunic Dress",
+            "description": "The voluminous sequin tunic dress envelops the torso in a massive slouched volume; it is completely paved in dense metallic pink embellishments. This material strategy engages with corporeal amplification by replacing the natural body shape with a heavy glittering carapace. The stiff fabric features three-dimensional floral appliques clustered over the shoulders and chest; the long sleeves obscure the hands entirely. The garment asserts a highly theatrical and slightly oppressive interpretation of luxury."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Opaque Pink Tights",
+            "description": "The opaque pink tights encase the legs entirely in a matte spandex; they provide a bright continuous color block beneath the heavy tunic. This styling detail engages with radical monochromatism by ensuring absolutely no bare skin interrupts the saturated silhouette. The smooth fabric absorbs the light; it stretches tightly over the knee. The accessory completes the look by fusing the legs seamlessly with the extreme platform footwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Draped Chiffon Gown",
+            "description": "The draped chiffon gown cascades over the body in a massive fluid volume of intense pink silk; it features an aggressively plunging neckline that exposes the chest entirely. This structural extreme applies the elevation of the individual by framing the bare skin within dramatic sweeping architecture. The lightweight fabric falls into deep soft pleats that pool around the feet; the off-the-shoulder drape leaves the arms completely unencumbered. The dress asserts an elegant but deeply vulnerable presence."
+          },
+          {
+            "x": 35,
+            "y": 40,
+            "label": "Opaque Opera Gloves",
+            "description": "The opaque opera gloves encase the arms entirely past the elbow in a matte pink spandex; they provide a stark textural contrast to the fluid chiffon gown. This styling choice utilizes the semiotic sabotage of gendered color codes by pushing a traditionally elegant accessory to an absurdly saturated limit. The smooth fabric absorbs light completely; it creates a strict unbroken line down the arm. The accessory completes the look by injecting a tight athletic texture into the romantic silhouette."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "High-Gloss Sequined Coat",
+            "description": "The high-gloss sequined coat structures the upper body in a stiff heavy volume; it is constructed entirely from large black reflective paillettes that mimic shattered glass. This material choice engages with textural topography by forcing a wet-look synthetic shine onto a classic outerwear silhouette. The coat hangs rigidly over the shoulders; the dark fabric absorbs and fractures the bright pink runway light. The outerwear asserts an aggressive slightly hostile armor."
+          },
+          {
+            "x": 40,
+            "y": 30,
+            "label": "Trailing Chiffon Scarf",
+            "description": "The trailing chiffon scarf is tied loosely at the neck; it drops a sheer black ribbon down the front of the coat to contrast with the rigid sequins. This styling detail utilizes bodily obfuscation by introducing a delicate fragile element into the heavy ensemble. The translucent fabric flutters with movement; it blends into the dark shadows of the coat. The accessory asserts a subtle romantic tension."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Opaque Black Tights",
+            "description": "The opaque black tights encase the legs entirely in a matte spandex; they provide a dark continuous color block beneath the heavy coat. This styling detail engages with monolithic massing by ensuring the lower body remains an unbroken visual void. The smooth fabric absorbs the light; it stretches tightly into the high platform boots. The accessory completes the look by enforcing a severe monochromatic discipline."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-12.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Oversized Double-Breasted Topcoat",
+            "description": "The oversized double-breasted topcoat engulfs the body in a massive structured black wool shell; it features dramatically dropped shoulders and an extended hem. This outerwear choice applies corporeal amplification by taking a classic menswear staple and mutating it into an imposing architectural volume. The stiff fabric holds a sharp rigid shape; the lapels fold deeply over the chest. The coat asserts a defensive and highly armored urban presence."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Tulle Shirting",
+            "description": "The sheer tulle shirting clings tightly to the chest in a dark translucent mesh; it exposes the torso entirely beneath the heavy coat. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black wool. The thin fabric features a simple crew neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming outerwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-13.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Voluminous Wool Cape Coat",
+            "description": "The voluminous wool cape coat drops heavily from the shoulders to the ankles; it creates an immense triangular volume that completely swallows the arms and torso. This structural extreme applies monolithic massing by transforming the body into a solid black geometric monolith. The dense fabric holds deep rigid folds that fall to the floor; the coat lacks traditional sleeves entirely. The outerwear asserts an oppressive and theatrical presence that dominates the physical space."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Tulle Shirting",
+            "description": "The sheer tulle shirting clings tightly to the chest in a dark translucent mesh; it exposes the torso entirely beneath the heavy coat. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black wool. The thin fabric features a simple scoop neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming outerwear."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored Crepe Trousers",
+            "description": "The tailored crepe trousers drop straight from the waist to the ankle; they feature a sharp front crease and a slightly relaxed fit. This structural logic utilizes monolithic massing to integrate formal tailoring seamlessly into the chaotic outerwear silhouette. The fabric falls cleanly over extreme platform boots. The trousers complete the look by providing a disciplined tailored foundation beneath the massive cape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-14.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Cut-Out Taffeta Ballgown",
+            "description": "The cut-out taffeta ballgown manipulates a massive volume of rigid black fabric into an aggressively architectural shape; it features severe geometric cutouts that expose the torso and waist. This structural intervention engages with the subversion of gendered color codes by rendering a historically hyper-feminine silhouette in stark militant black. The stiff material holds deep structural folds across the skirt; the long sleeves drop heavily over the hands. The dress asserts a highly controlled but fractured presence."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-15.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Embellished Sheer Tunic",
+            "description": "The embellished sheer tunic clings to the upper body in a translucent dark mesh; it is heavily detailed with intricate black beadwork and sequins arranged in ornate classical patterns. This material strategy utilizes post-digital reality by creating a highly tactile three-dimensional surface that contrasts fiercely with the solid pink runway. The sheer fabric exposes the chest completely; the long sleeves end in subtle beaded cuffs. The top asserts a romantic but highly exposed aesthetic."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored High-Waisted Trousers",
+            "description": "The tailored high-waisted trousers drop cleanly from the waist in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex sheer top with a heavy formal base. The fabric falls cleanly over dark sneakers; the waist is finished with a simple tonal band. The trousers complete the look by enforcing a strict tailored discipline."
           }
         ]
       }
@@ -7908,9 +8633,220 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 45,
+            "label": "Deconstructed Cable-Knit Crop",
+            "description": "The deconstructed cable-knit crop violently truncates the traditional navy sweater just below the bust; it entirely exposes the midriff and the blue shirting beneath. This structural intervention engages with horizontal truncation by applying a raw hacked edge to a classic preppy staple. The thick wool features classic braided patterning; the sleeves hang aggressively long past the hands. The top asserts a deliberate tension between cozy modesty and aggressive corporeal exposure."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Low-Rise Chino Trousers",
+            "description": "The low-rise chino trousers drop the waistline to the extreme limit of the hip bones; they reveal the branded elastic band of the undergarment beneath. This tailoring choice utilizes the Y2K semiotic revival to subvert traditional conservative office wear. The beige gabardine fabric falls loosely to the floor with a subtle center crease; a black leather belt anchors the low waist. The trousers complete the look by forcing the torso to act as the primary visual focus of the silhouette."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Cropped Oxford Button-Down",
+            "description": "The cropped Oxford button-down structures the upper body in a crisp bright blue cotton; it features a sharp collar and the brand's logo embroidered on the chest. This material application engages with the semiotic sabotage of the corporate uniform by slicing a formal shirt exactly at the waistline. The fabric lacks a finished hem, displaying slight fraying; it is tucked loosely into the belt rather than the skirt. The garment asserts a posture of hasty disheveled professionalism."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Raw-Edge Micro-Mini Skirt",
+            "description": "The raw-edge micro-mini skirt anchors the lower silhouette in an incredibly brief pleated beige gabardine; it barely covers the upper thighs. This structural extreme applies the \"Miu Miu set\" logic by exposing the white cotton pocket linings beneath the violently hacked hem. The stiff fabric holds sharp geometric pleats; a thick black belt emphasizes the ultra-low rise. The skirt asserts a radical and highly controversial reclamation of the Y2K schoolgirl trope."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Grey Socks and Loafers",
+            "description": "The grey socks and loafers ground the ensemble in deeply traditional mundane footwear; they feature knee-high ribbed grey knit pulled over polished black leather shoes. This accessory choice utilizes deconstructed prep componentry to contrast the extreme bodily exposure of the torso and legs. The shoes are adorned with subtle metallic hardware; the socks bunch slightly at the ankle. The detail completes the look by refusing high-glamour footwear in favor of intellectualized banality."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Distressed Leather Biker Jacket",
+            "description": "The distressed leather biker jacket frames the torso in a heavily aged brown hide; it features a dark mottled finish mimicking years of wear. This outerwear choice introduces a rugged subcultural texture into the otherwise preppy collection. The stiff material holds a boxy cropped silhouette that drops just above the natural waist; it hangs open to reveal a layered knit and shirt combination. The jacket asserts a slightly rebellious posture against the pleated skirt."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Distressed Leather Pleated Skirt",
+            "description": "The distressed leather pleated skirt drops to the mid-calf in the exact same aged brown hide as the jacket; it functions as a heavy rigid column. This material strategy utilizes monolithic massing by transforming a classic schoolgirl silhouette into an imposing leather armor. The deep knife pleats create harsh vertical shadows across the mottled surface; the hem is uneven and raw. The skirt completes the ensemble by grounding the cropped upper layers in a dense tactile foundation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Camel Hair Topcoat",
+            "description": "The camel hair topcoat engulfs the figure in a massive soft beige volume; it features a classic wide lapel and heavily dropped shoulders. This tailoring choice utilizes the subversion of the corporate uniform by throwing a highly formal conservative coat over extreme microscopic garments. The thick fabric hangs open completely to frame the exposed torso; the sleeves are pushed up. The outerwear asserts an imposing architectural shield that dramatically contrasts with the bare skin."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Micro-Bandeau Suiting Top",
+            "description": "The micro-bandeau suiting top violently truncates a formal grey wool textile into a tiny horizontal strip across the bust; it is anchored by a functional black leather belt. This structural intervention engages with horizontal truncation by reducing a tailored garment to its absolute minimum structural requirement. The raw frayed edges and exposed white lining point to the aggressive deconstruction process; it exposes the entire midriff. The piece asserts an absurd and highly intellectualized approach to corporeal exposure."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Micro-Mini Suiting Skirt",
+            "description": "The micro-mini suiting skirt mirrors the exact fabric and raw detailing of the bandeau top; it features sharp pleats and a matching black leather belt. This material application relies on the \"Miu Miu set\" architecture to generate viral cultural friction. The exposed white pocket bags drop below the violently cut hemline; it sits dangerously low on the hips. The garment completes the silhouette by enforcing the collection's signature proportion play."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Embellished Black Midi Dress",
+            "description": "The embellished black midi dress drops from a high sleeveless neckline into a heavy straight column; it is entirely covered in dense three-dimensional black floral appliques and reflective sequins. This material extreme engages with textural topography by transforming a simple silhouette into a rich tactical surface. The stiff fabric lacks any fluid drape; the hem falls below the knee with subtle frayed white edges peeking through. The garment asserts a dark ceremonial volume that provides a stark contrast to the highly exposed looks."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "Oversized Pearl Choker",
+            "description": "The oversized pearl choker binds the throat tightly in a massive cluster of enormous golden and white beads; it introduces a highly traditional luxury motif pushed to an absurd scale. This styling detail utilizes deconstructed prep componentry by mutating a conservative bourgeois accessory into a heavy theatrical collar. The bright spheres reflect the runway light fiercely against the dark dress; they frame the sharp black sunglasses perfectly. The accessory completes the look with a flash of imposing hardware."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Suede Utility Shirt",
+            "description": "The suede utility shirt frames the upper body in a rich smooth brown hide; it features a classic point collar and a clean button placket. This tailoring approach applies the semiotic sabotage of office wear by rendering a formal shirt in a soft tactile outerwear material. The fabric lacks rigid interfacing; it is tucked seamlessly into the matching skirt. The garment asserts a quiet monochromatic uniformity."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Suede Midi Skirt",
+            "description": "The suede midi skirt drops from the natural waist to the mid-calf in an identical smooth brown leather; it provides a continuous unbroken line of color and texture. This structural logic utilizes essentialist modesty to contrast the hyper-abbreviated silhouettes seen elsewhere. The heavy material falls straight without pleating; a classic brown leather belt sits at the waist. The skirt completes the look by providing a deeply traditional and elegant formal base."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Suede Tailored Blazer",
+            "description": "The suede tailored blazer structures the torso in a soft brown leather; it features classic notch lapels and large patch pockets. This outerwear choice utilizes the subversion of the corporate uniform by applying a casual rugged material to formal suiting architecture. The jacket hangs open to reveal a complex layered interior; the sleeves drop cleanly to the wrist. The piece asserts a relaxed but highly considered approach to bourgeois dressing."
+          },
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Layered Zip-Up Knitwear",
+            "description": "The layered zip-up knitwear introduces a grey ribbed cardigan worn over a beige poplin shirt; it functions as a deeply banal domestic layer beneath the blazer. This styling strategy engages with deconstructed prep componentry by stacking multiple unassuming office staples. The metallic zipper runs cleanly down the center; the knit fabric clings to the torso tightly. The detail completes the top half of the silhouette by enforcing an aesthetic of chaotic but formal layering."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Suede Tailored Trousers",
+            "description": "The suede tailored trousers fall fluidly from the waist to the floor; they complete the monochromatic brown suit. This material application provides a soft continuous texture that absorbs the runway lighting smoothly. The wide legs lack sharp formal creasing; they break cleanly over white sneakers. The trousers complete the look by grounding the complex layering in a highly comfortable but luxurious base."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Cropped Ribbed Zip-Up",
+            "description": "The cropped ribbed zip-up violently truncates a thick dark grey sweater just below the bust; it entirely exposes the midriff and the blue shirting beneath. This structural intervention engages with horizontal truncation by applying a raw hacked edge to a classic functional staple. The thick wool features deep vertical ribbing; the sleeves are pushed up the forearms. The top asserts a deliberate tension between cozy modesty and aggressive corporeal exposure."
+          },
+          {
+            "x": 50,
             "y": 55,
-            "label": "Low-Rise Micro-Skirt",
-            "description": "The low-rise micro-skirt cuts horizontally across the hips in a band of tailored wool no wider than a hand's breadth; it sits well below the natural waist. This structural intervention is the silhouette that defined the SS 2022 cultural conversation, generating discourse across body image, generational politics, and the female midriff. The raw lower edge exposes the high-cut underskirt and the bare expanse of stomach above; the eyelet detailing nods to school-uniform vocabulary. The garment asserts Miuccia Prada's lifelong project of making femininity's ambivalences visible through deliberately uncomfortable proportion."
+            "label": "Low-Rise Pleated Midi Skirt",
+            "description": "The low-rise pleated midi skirt anchors the lower silhouette far below the natural waistline; it drops heavily past the knee in a dark navy wool. This tailoring choice utilizes the Y2K semiotic revival by forcing a modest skirt length to sit dangerously low on the hips. The stiff fabric holds sharp geometric pleats; a thick black belt emphasizes the exposed branded undergarment. The skirt completes the look by providing a severe formal contrast to the massive exposed torso."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Cropped Navy Track Jacket",
+            "description": "The cropped navy track jacket structures the upper body in a dark athletic fabric; it is sliced sharply above the navel to expose the abdomen. This material strategy engages with the semiotic sabotage of office wear by treating a casual sportswear item with the same violent abbreviation as the formal shirting. The soft fabric features a high collar and subtle logo detailing; the layered blue shirt peeks out from the hem and cuffs. The garment asserts a highly engineered and sporty approach to corporeal exposure."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Micro-Mini Denim Skirt",
+            "description": "The micro-mini denim skirt wraps the hips in a tiny strip of dark blue jean fabric; it features a raw frayed hem that barely covers the upper thigh. This structural extreme applies the \"Miu Miu set\" logic to a classic casual textile. The thick denim holds a rigid flat shape; a heavy brown leather belt emphasizes the ultra-low rise. The piece completes the silhouette by grounding the layered top half in a deeply nostalgic Y2K foundation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Faded Dip-Dye Knit Sweater",
+            "description": "The faded dip-dye knit sweater hangs heavily over the torso in a dark blue ribbed wool that transitions to a pale faded edge at the hem and cuffs; it completely obscures the upper anatomy. This material application utilizes an aesthetic of decay and wear to disrupt the pristine corporate uniform. The thick yarn drops loosely to the mid-thigh; a layered white poplin shirt flashes sharply from beneath the hem. The garment asserts a relaxed and slouched posture."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Faded Cable-Knit Skirt",
+            "description": "The faded cable-knit skirt drops to the knee in the exact same dip-dye blue wool as the sweater; it creates a continuous highly textured column. This structural logic engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The deep cable pattern runs vertically down the fabric; the hem is uneven and heavily faded. The skirt completes the ensemble by providing a soft tactile base that echoes the domesticity of the sweater."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Faded Cable-Knit Sweater",
+            "description": "The faded cable-knit sweater structures the upper body in a soft dark green wool that transitions to a pale faded edge; it features a high crew neckline. This material choice applies the subversion of the corporate uniform by introducing a heavily worn domestic textile into a tailored look. The thick yarn drops loosely to the hip; a layered beige poplin shirt flashes sharply from beneath the hem. The garment asserts a quiet relaxed uniformity."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Faded Cable-Knit Skirt",
+            "description": "The faded cable-knit skirt drops to the knee in the exact same dip-dye green wool as the sweater; it creates a continuous highly textured column. This structural logic engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The deep cable pattern runs vertically down the fabric; the hem is uneven and heavily faded. The skirt completes the ensemble by providing a soft tactile base that echoes the domesticity of the sweater."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-12.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Bleached Floral Sweatshirt",
+            "description": "The bleached floral sweatshirt envelopes the torso in a dark grey jersey heavily distressed with white bleach splatters and adorned with massive 3D black floral appliques. This material extreme engages with the semiotic sabotage of office wear by completely destroying a casual garment and covering it in gothic eveningwear embellishment. The soft fabric holds a bulky relaxed fit; a crisp white collared shirt sits rigidly beneath the neckline. The top asserts a highly chaotic and visually noisy presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Fitted Navy Midi Skirt",
+            "description": "The fitted navy midi skirt drops cleanly to the knee in a smooth dark fabric; it features a subtle asymmetrical slit at the hem. This tailoring choice utilizes quiet minimalism to anchor the chaotic heavily decorated sweatshirt above. The stiff material lacks heavy pleating or draping; it exposes layered white poplin details at the waist. The skirt completes the look by providing a strict formal baseline."
           }
         ]
       }
@@ -7945,9 +8881,213 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 45,
+            "label": "Color-Blocked Wool Vest",
+            "description": "The color-blocked wool vest wraps the upper torso in a deep maroon fabric heavily interrupted by a jagged geometric patch of bright yellow and white; it completely lacks sleeves. This structural intervention engages with sartorial collage by treating a formal knitwear piece like an abstract graphic canvas. The bright yellow patch sits awkwardly off-center over the chest; the neckline is cut high against the throat. The top asserts an athletic and slightly disjointed modern uniform."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored Blue Trousers",
+            "description": "The tailored blue trousers drop cleanly from the waist in a bright highly saturated fabric; they feature a sharp front crease and contrasting side stripes. This material strategy utilizes the outsider's gaze to elevate a classic marching band uniform into a piece of sleek high fashion. The vibrant blue breaks sharply over brown leather cowboy boots; the fit is relatively relaxed through the thigh. The trousers complete the look by anchoring the chaotic top in a recognizable piece of Americana."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Tailored Western Shirt",
+            "description": "The tailored Western shirt frames the upper body in a dark navy wool; it features prominent flap pockets and a structured pointed collar. This material application engages with the semiotic sabotage of nostalgia by applying the severe cut of a cowboy shirt to a traditional piece of formal suiting fabric. The dark material absorbs light completely; a bright blue underlayer peeks out from the neckline. The garment asserts a highly disciplined and vaguely militant posture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored Track Trousers",
+            "description": "The tailored track trousers drop from the waist in a dark green textile; they feature a sharp vertical crease and bright yellow racing stripes down the side seams. This structural logic utilizes sartorial pastiche by fusing formal boardroom tailoring with athletic sportswear. The stiff fabric falls cleanly over bright red cowboy boots; the contrasting stripes draw the eye directly downward. The trousers complete the silhouette by enforcing an aesthetic of strict uniformity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
             "y": 40,
-            "label": "Quilted American Flag Coat",
-            "description": "The quilted American flag coat drapes the torso in a patchwork of stars-and-stripes quilting bonded to heavy wool; it converts a domestic textile tradition into runway outerwear. This material application engages directly with Raf Simons's forensic archaeology of American vernacular culture conducted during his Calvin Klein 205W39NYC tenure. The Sterling Ruby collaboration is visible in the chaotic patchwork construction; the silhouette references the Western frontier coat. The outerwear asserts the European designer's argument that the most rigorous reading of American imagery comes from outside it."
+            "label": "Double-Breasted Plaid Suit",
+            "description": "The double-breasted plaid suit structures the body in a classic light grey and black check pattern; it features a stiff boxy fit and sharp formal lapels. This outerwear choice applies the outsider's gaze to a staple of Wall Street power dressing, rendering it slightly oversized to emphasize its structural rigidity. The traditional metallic buttons run strictly down the front; the sleeves drop cleanly to the wrist. The garment asserts a posture of commanding corporate authority."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Matching Plaid Midi Skirt",
+            "description": "The matching plaid midi skirt drops rigidly below the heavy jacket in a stiff A-line shape; it features a subtle asymmetrical drape near the hem. This material application provides a static formal base that completes the full suit of oppressive patterned fabric. The dense textile falls without fluid movement; the hem breaks cleanly over bright red cowboy boots. The garment asserts a ceremonial and slightly absurd volume that completely obscures the legs."
+          },
+          {
+            "x": 70,
+            "y": 50,
+            "label": "Rigid Briefcase Accessory",
+            "description": "The rigid briefcase accessory is carried firmly under the left arm; it mimics a traditional piece of corporate luggage rendered in smooth black leather. This object utilizes the semiotic sabotage of nostalgia by treating a banal workplace tool as a primary luxury accessory. The sharp corners contrast with the subtle drape of the skirt; shiny silver hardware secures the clasp. The piece completes the look by solidifying the parody of American office culture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Torso Panel",
+            "description": "The sheer torso panel tightly binds the chest and abdomen in a highly translucent flesh-toned mesh; it exposes the male anatomy completely beneath a fragile synthetic layer. This material application engages with gender-fluid Americana by replacing a traditional button-down shirt with a piece of aggressive corporeal exposure. The thin fabric clings to the ribs; it sits starkly against the heavy knit sleeves. The top asserts a highly provocative and unsettling take on casual sportswear."
+          },
+          {
+            "x": 35,
+            "y": 30,
+            "label": "Deconstructed Varsity Sleeves",
+            "description": "The deconstructed varsity sleeves wrap the arms in heavy knit white and blue yarn; they are entirely detached from a central bodice. This structural intervention utilizes sartorial collage by isolating the visual markers of an American letterman jacket and appending them to a sheer base layer. The thick fabric holds deep horizontal stripes; the cuffs end bluntly at the elbow. The garment completes the silhouette by injecting a chaotic and broken athletic motif."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Tailored Navy Blazer",
+            "description": "The tailored navy blazer frames the upper body in a classic formal wool; it features sharp lapels and a heavily structured shoulder line. This outerwear choice engages with the outsider's gaze by taking a pristine piece of corporate uniform and styling it carelessly over an exposed torso. The dark fabric absorbs the runway lighting completely; it hangs open to reveal a tiny bandeau top. The jacket asserts an imposing and highly defensive posture."
+          },
+          {
+            "x": 35,
+            "y": 35,
+            "label": "Draped Yellow Knit Sleeves",
+            "description": "The draped yellow knit sleeves hang heavily off the shoulders; they are completely detached from a main sweater and serve merely as a textural scarf. This structural logic utilizes deconstructed knitwear to introduce a jarring block of bright color into the dark ensemble. The thick ribbed fabric bunches awkwardly against the clean lines of the blazer; it mimics a sweater hastily tied around the neck. The accessory asserts a chaotic and slightly ruined approach to luxury layering."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Ribbed Red Midi Skirt",
+            "description": "The ribbed red midi skirt drops cleanly to the mid-calf in a bright highly saturated knit fabric; it provides a severe linear contrast to the dark blazer above. This material choice introduces a flexible but unyielding column of intense color that dominates the lower visual field. The deep vertical lines draw the eye straight down to the delicate strappy sandals; the hem ends bluntly below the knee. The skirt completes the look by finalizing the jarring primary color palette."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "PVC-Encased Plaid Topcoat",
+            "description": "The PVC-encased plaid topcoat structures the body into a massive rigid rectangle; it is completely sealed inside a highly reflective transparent plastic shell. This material extreme applies the concept of synthetic encapsulation by taking a classic piece of heritage outerwear and rendering it clinically artificial. The shiny surface catches the runway lights sharply over the muted brown check beneath; the coat hangs open to reveal a sheer torso panel. The garment asserts a highly commodified armor designed to preserve and protect."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "PVC-Encased Faux Fur Coat",
+            "description": "The PVC-encased faux fur coat engulfs the figure in a massive volume of bright yellow synthetic pelt; it is hermetically sealed within a clear plastic slipcover. This material strategy engages heavily with the semiotic sabotage of nostalgia by treating a luxurious 1970s silhouette like a piece of protected living room furniture. The glossy exterior adds a stiff unnatural shine to the fluffy fur beneath; a delicate silver chain belt cinches the waist tightly. The outerwear asserts a theatrical and slightly absurd approach to preservation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Leather Western Jacket",
+            "description": "The leather Western jacket wraps the torso tightly in a dark brown hide; it is heavily embellished with silver metallic floral appliques. This tailoring choice utilizes sartorial pastiche by elevating the rugged aesthetic of a cowboy uniform into a piece of pristine high fashion. The stiff material holds deep rigid creases; a contrasting shearling collar frames the neck softly. The jacket asserts an imposing and highly defensive urban armor."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Floral Print Midi Skirt",
+            "description": "The floral print midi skirt drops below the heavy leather jacket in a soft flowing silhouette; it features a dense pattern of delicate pink and white blossoms. This material application provides a romantic fluid base that clashes violently with the militant outerwear above. The thin fabric falls softly over delicate strappy sandals; the hem breaks cleanly at the mid-calf. The skirt completes the ensemble by grounding the harsh leather in a fragile traditional Americana motif."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Crisp Denim Uniform",
+            "description": "The crisp denim uniform tightly binds the entire body in a stiff unwashed indigo fabric; it features a classic trucker jacket and straight-leg jeans with aggressive yellow topstitching. This material strategy utilizes the outsider's gaze to present the ultimate symbol of American working-class labor as a highly disciplined runway uniform. The rigid material lacks any distressing or fading; the jacket is buttoned cleanly to the waist. The ensemble asserts a deeply serious and formal approach to casualwear."
+          },
+          {
+            "x": 50,
+            "y": 88,
+            "label": "Metal-Tipped Cowboy Boots",
+            "description": "The metal-tipped cowboy boots provide a sharp aggressive anchor for the denim suit; they feature bright silver hardware capping the pointed toes. This footwear choice applies sartorial collage by injecting a sudden flash of Western kitsch into the austere uniform. The shiny red and black leather contrasts with the matte indigo denim; the thick heel provides a heavy base. The accessory completes the look by solidifying the parody of American archetypes."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Patchwork Quilted Parka",
+            "description": "The patchwork quilted parka drops heavily from the shoulders to the mid-thigh in a dark nylon shell; it hangs wide open to reveal a massive interior lining constructed from traditional American quilting squares. This outerwear choice engages with sartorial collage by hiding a deeply nostalgic symbol of domestic craft inside a sleek modern coat. The thick fabric is lined with grey faux-fur along the hood; the bright pastel squares contrast violently with the dark exterior. The garment asserts a highly protective layer that conceals a fragile heritage."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Color-Blocked Wool Shirt",
+            "description": "The color-blocked wool shirt hugs the torso tightly beneath the heavy parka; it features a deep maroon body interrupted by bright yellow geometric patches across the chest. This structural intervention engages with visual flattening by treating a formal shirt like an abstract graphic canvas. The stiff fabric is buttoned cleanly to the throat over a white turtleneck; the long sleeves end sharply at the wrist. The top completes the upper silhouette by adding a dense block of clashing color."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "PVC-Encased Feather Dress",
+            "description": "The PVC-encased feather dress envelops the torso and thighs in a chaotic explosion of bright blue and white plumes; it is entirely sealed within a clear rigid plastic slipcover. This material extreme applies synthetic encapsulation to freeze a fragile organic material in a state of suspended animation. The shiny outer shell reflects the runway lighting sharply over the soft feathers beneath; the dress drops cleanly to the knee. The garment asserts a highly theatrical and slightly suffocating approach to preservation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-12.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Cropped Leather Aviator Jacket",
+            "description": "The cropped leather aviator jacket frames the upper body in a stiff dark hide; it features a sharp tailored collar and contrasting bright red cuffs and hem. This outerwear choice utilizes the outsider's gaze by taking a classic piece of military heritage and mutating it into a sharp aggressive top layer. The dark material absorbs light completely; it hangs open to expose the midriff beneath a tiny bandeau top. The jacket asserts an imposing and highly defensive posture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "A-Line Wool Midi Skirt",
+            "description": "The A-line wool midi skirt drops cleanly to the mid-calf in a smooth black fabric; it provides a strict formal baseline against the chaotic cropped jacket. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear above. The stiff material features subtle structural panels that allow it to hold a rigid bell shape; the hem breaks cleanly over black strappy sandals. The skirt completes the look by providing a deeply traditional and elegant base."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-13.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Glossy Black Leather Trench",
+            "description": "The glossy black leather trench engulfs the figure in a massive highly reflective outer shell; it features large classic lapels and a double-breasted closure left completely unfastened. This outerwear choice applies the semiotic sabotage of nostalgia by mutating a classic spy-movie silhouette into a slick futuristic carapace. The dark surface catches extreme white highlights from the runway lamps; the coat trails heavily past the knee. The garment asserts a slightly fetishistic and highly artificial protective armor."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Track Trousers with Red Stripes",
+            "description": "The track trousers drop cleanly to the ankle in a dark maroon fabric; they feature a sharp white and red racing stripe running down the outer seam. This structural logic engages with sartorial pastiche by fusing formal boardroom tailoring with athletic sportswear beneath a heavy leather coat. The fabric falls cleanly over brown cowboy boots; the contrasting stripe draws the eye directly downward. The trousers complete the silhouette by anchoring the imposing jacket in a recognizable athletic motif."
           }
         ]
       }
@@ -7982,9 +9122,290 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 40,
-            "label": "Embroidered Organza Streetwear Tunic",
-            "description": "The embroidered organza streetwear tunic layers ecclesiastical embellishment over a sweatshirt silhouette; it places the iconography of Catholic vestment in aggressive proximity to athletic wear. This structural collision defines Riccardo Tisci's foundational achievement at Givenchy: the systematic integration of subcultural codes into the luxury fashion apparatus. The dense thread work weighs the soft jersey down unevenly; the rounded crew neckline refuses the formality of a traditional collar. The garment asserts the gothic-streetwear hybrid that became one of the 2010s' most commercially successful design grammars."
+            "y": 25,
+            "label": "Tailored Leather Peplum Jacket",
+            "description": "The tailored leather peplum jacket structures the upper body in a rigid aggressive black hide; it features sharp lapels and multiple functional zipper tracks. This outerwear choice applies the semiotic sabotage of mourning attire by taking a Victorian corseted silhouette and rendering it in heavy fetishistic motorcycle leather. The thick material holds deep structural creases at the waist to emphasize the flared hip; the sleeves fall bluntly to the wrist. The garment asserts a highly defensive and imposing physical presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Asymmetrical Wool Skirt",
+            "description": "The asymmetrical wool skirt drops from beneath the heavy jacket to the mid-calf; it features a dramatic thigh-high slit exposing the left leg entirely. This tailoring choice utilizes constricted spatial volume to anchor the aggressive upper body in a severe formal baseline. The dark black fabric absorbs the runway lighting completely; the raw un-pleated hem trails slightly behind the model's stride. The skirt completes the look by providing a stark austere foundation for the leather carapace."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Pearl Hardware",
+            "description": "The facial pearl hardware is glued directly onto the cheeks and woven into the septum; it functions as a highly aggressive piece of corporeal ornamentation. This styling detail engages with the mechanics of subcultural cannibalism by appropriating the extreme piercing aesthetics of marginalized street gangs. The bright pearls contrast violently against the pale skin and heavily gelled baby hairs; they physically restrict natural facial movement. The accessory completes the silhouette by enforcing an aesthetic of unsettling theatricality."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Renaissance Tapestry Skirt",
+            "description": "The renaissance tapestry skirt drops from the high waist in a heavy structured A-line; it features a massive graphic print depicting classical painted cherubs and religious iconography. This material application utilizes monolithic massing of heritage materials to force a profound collision between high European art and modern street styling. The thick fabric holds a deep asymmetrical slit exposing the right thigh; a sheer black chiffon layer is tied aggressively over the waist. The garment asserts a posture of calculated historical defacement."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Chiffon Top",
+            "description": "The sheer chiffon top drapes loosely over the torso in a translucent black layer; it exposes a structural corset beneath. This structural intervention engages with dark romanticism by applying delicate fragile textiles within a severe and aggressive styling context. The soft fabric is tied heavily around the midriff to mimic a makeshift belt; the oversized sleeves hang off the shoulders. The top completes the look by injecting a sense of careless messy elegance into the highly constructed ensemble."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Jet-Beaded Fringed Gown",
+            "description": "The jet-beaded fringed gown envelopes the body in a dense highly reflective black texture; it is completely paved in layers of shimmering bugle beads cascading in horizontal tiers. This material extreme applies the monolithic massing of heritage materials by inflating a classic 1920s flapper silhouette into a heavy armored floor-length piece. The stiff fabric catches the light fiercely; the sheer mesh neckline exposes the collarbone. The garment asserts a ceremonial and slightly oppressive volume that completely obscures the legs."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Pearl Hardware",
+            "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Embellished Crimson Mesh Gown",
+            "description": "The embellished crimson mesh gown tightly encases the torso and drops into a flared hem; it is constructed from a deep red netting heavily crusted with intricate beadwork and sequins. This material strategy engages with dark romanticism by pairing a fragile exposing textile with the heavy opulent colors of Victorian mourning. The sheer fabric exposes the bust entirely beneath the dense embroidery; the short cape-like sleeves drape softly over the upper arms. The garment asserts an imposing and highly tactile presence."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Ruby Facial Hardware",
+            "description": "The ruby facial hardware is glued extensively around the mouth and nose; it functions as a highly aggressive and decorative facial cage. This styling detail engages with the mechanics of subcultural cannibalism by lifting the visual signifiers of Chola beauty and rendering them in precious gems. The bright red stones perfectly match the gown; the heavy matching earrings pull downward from the lobes. The accessory completes the silhouette by enforcing an aesthetic of severe corporeal ornamentation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Jet-Beaded Architectural Tunic",
+            "description": "The jet-beaded architectural tunic structures the upper body in a massive flared silhouette; it features deeply dropped shoulders and an exaggerated geometric drape extending over the hips. This tailoring choice engages with constricted spatial volume by imposing a rigid heavy carapace over the torso that defies natural anatomy. The dense black beadwork covers every inch of the stiff fabric; it parts abruptly in the front to reveal sleek tailoring beneath. The outerwear asserts a highly defensive and imposing posture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Sleek Tailored Trousers",
+            "description": "The sleek tailored trousers drop cleanly from beneath the heavy tunic to the ankle; they feature a sharp front crease and a slightly relaxed fit. This structural logic utilizes quiet minimalism to anchor the chaotic heavily decorated upper volume. The dark fabric absorbs the light completely; the side seams are detailed with a thin row of jet beads. The trousers complete the look by providing a strict formal baseline for the architectural top."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Burnout Velvet Gown",
+            "description": "The burnout velvet gown drops to the mid-calf in a rich dark red and black textile; it features an intricate damask pattern where the plush pile has been chemically removed to reveal sheer silk beneath. This material application engages with the monolithic massing of heritage materials by treating a historically aristocratic fabric with a technique that mimics decay. The deep V-neck exposes the chest; the skirt gathers into soft asymmetrical ruffles. The garment asserts a highly romantic but slightly ruined and gothic aesthetic."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Embellished Velvet Bodice",
+            "description": "The embellished velvet bodice tightly binds the upper torso in a deep midnight blue textile; it features intricate scrolling beadwork across the chest and voluminous puffed sleeves. This tailoring approach applies the semiotic sabotage of mourning attire by referencing rigid Victorian constraint within an opulent context. The thick fabric holds deep rigid creases without soft drape; the high neckline completely obscures the collarbone. The top asserts a ceremonial and highly secretive upper silhouette."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Flowing Velvet Midi Skirt",
+            "description": "The flowing velvet midi skirt drops heavily from the waist in the exact same dark blue fabric as the bodice; it creates a long continuous sweep of plush texture. This structural logic utilizes monolithic massing to ensure the lower half of the body is as visually dense as the upper half. The dark material pools softly without sharp pleating; the hem is uneven. The skirt completes the ensemble by grounding the ornate top in an equally heavy foundation."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Pearl Hardware",
+            "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Embossed Velvet Coat Dress",
+            "description": "The embossed velvet coat dress structures the body into a massive rigid bell shape; it features sharp tailoring at the waist and a prominent dark pattern stamped directly into the fabric. This structural extreme applies constricted spatial volume by taking a classic piece of outerwear and mutating it into a stiff theatrical costume. The dense black material absorbs light to create a heavy visual void; the hem flares aggressively to the knee. The garment asserts an unyielding architectural armor that demands spatial dominance."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Ribbed Velvet Corset Panel",
+            "description": "The ribbed velvet corset panel tightly cinches the midriff over the coat; it physically structures the torso with severe vertical banding. This sartorial restriction engages with dark romanticism by applying the restrictive undergarments of the 19th century directly to the exterior of the outfit. The thick fabric isolates the upper and lower volumes into distinct geometric blocks; a solid black band anchors the waist. The detail completes the dress by enforcing a highly disciplined and formal shape."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Pearl Hardware",
+            "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Ruffled Chiffon Blouse",
+            "description": "The ruffled chiffon blouse envelops the torso in a chaotic explosion of sheer red fabric; it features dense gathered folds that obscure the bust and shoulders entirely. This material application engages with dark romanticism by manipulating a fragile textile into an overwhelming and slightly oppressive volume. The lightweight fabric billows softly with movement; the high V-neck features thick black contrast binding. The top asserts a highly theatrical and slightly messy elegance."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Burnout Velvet Trousers",
+            "description": "The burnout velvet trousers drop cleanly from the waist to the ankle in a deep red and black patterned textile; they provide a highly textured base for the sheer blouse. This tailoring choice utilizes the monolithic massing of heritage materials to pair an opulent fabric with an aggressive relaxed cut. The fabric lacks formal pleating; the dark red pattern catches the runway lighting softly. The piece completes the look by grounding the chaotic upper volume in severe recognizable luxury hardware."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Pearl Hardware",
+            "description": "The facial pearl hardware clusters aggressively around the mouth and nose; it forces the pale face into a stark unreadable mask. This accessory utilizes subcultural appropriation to inject a sense of street-level danger into the highly opulent gown. The bright spheres contrast violently with the dark heavily embellished dress; the gelled hair is slicked flat against the skull. The piece completes the silhouette by ensuring the model occupies a deeply unsettling visual space."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sheer Paneled Velvet Dress",
+            "description": "The sheer paneled velvet dress splices dark plush fabric with aggressive geometric cutouts of translucent mesh; it creates a jarring visual disruption over the chest and thighs. This structural intervention engages with the uncanny by revealing flashes of bare skin within a heavily conservative silhouette. The stiff black velvet holds a sharp A-line shape; the mesh panels wrap violently across the torso to mimic structural scaffolding. The garment asserts a highly engineered and provocative approach to eveningwear."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Fox Fur Trimmed Coat",
+            "description": "The fox fur trimmed coat structures the upper body in a heavily textured dark red brocade; it features massive dyed pelts framing the lapels and the peplum hip. This outerwear choice applies the monolithic massing of heritage materials by taking opulent historical textiles and overloading them with heavy organic volume. The stiff fabric holds deep sharp creases; the red and black fur adds immense tactile weight to the shoulders and waist. The garment asserts an unyielding and imposing physical presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored Red Trousers",
+            "description": "The tailored red trousers drop cleanly to the ankle in a stark crimson fabric; they feature a sharp contrasting stripe down the outer seam. This material application provides a crisp formal base that contrasts sharply with the heavy fur above. The dense fabric falls without fluid drape; the hem breaks cleanly over bright velvet boots. The trousers complete the ensemble by grounding the theatrical coat in a strict militant uniform."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-12.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Fox Fur Peplum Jacket",
+            "description": "The fox fur peplum jacket drops over the torso in a stark black hide; it features an aggressively flared asymmetrical hip detailed with thick contrasting red piping. This structural extreme applies the semiotic sabotage of mourning attire by mutating a somber outerwear piece into an imposing flared costume. The dark fur absorbs the light to create a heavy visual void; the front lapels are bordered by the same bright red stripe. The garment asserts an unyielding architectural armor that commands spatial dominance."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Pinstripe Tailored Trousers",
+            "description": "The pinstripe tailored trousers drop straight to the ankle in a dark fabric heavily marked by bright vertical red stripes; they provide a strict graphic baseline against the chaotic fur top. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear above. The fabric falls cleanly over black leather boots; the stripes mimic athletic wear applied to formal suiting. The trousers complete the look by enforcing a strict militant discipline."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-13.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Fox Fur Cropped Capelet",
+            "description": "The fox fur cropped capelet wraps the upper torso and shoulders in a massive volume of dyed red pelt; it features a long trailing animal tail falling down the center of the chest. This material strategy engages with dark romanticism by pairing a heavy opulent textile with a subtle suggestion of the grotesque. The fluffy fibers completely dwarf the natural shoulder line; the bright red color flashes aggressively under the runway lighting. The outerwear asserts a playful yet deeply tactile vision of elevated luxury."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Ruched Velvet Midi Skirt",
+            "description": "The ruched velvet midi skirt drops below the fur capelet in a dark red textile; it features an aggressive cascading ruffle splitting down the center of the thigh. This structural intervention engages with constricted spatial volume by imposing a rigid heavy carapace over the lower body. The dense plush fabric absorbs light heavily; the hem falls cleanly to the mid-calf. The piece completes the silhouette by carrying the heavy textural themes down to the velvet footwear."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-14.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Peacock Print Chiffon Gown",
+            "description": "The peacock print chiffon gown wraps the body in a dense highly saturated mass of intricate avian motifs; it features explosive ruffled peplums projecting outward from the waist and shoulders. This structural logic utilizes monolithic massing to fuse classic romantic textiles with surreal proportion distortion. The sheer lightweight fabric creates a chaotic visual noise across the entire silhouette; the skirt drops into a heavy asymmetrical trail. The garment asserts a deeply historical and elegant base violently interrupted by architectural tailoring."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Facial Jewel Hardware",
+            "description": "The facial jewel hardware is adhered directly to the skin surrounding the mouth and nose; it mimics extreme subcultural piercings using high-end rhinestones. This styling choice utilizes the uncanny by transforming the human face into a piece of synthetic decorative armor. The dark stones frame the mouth aggressively; the slicked-down hair features hyper-styled edges framing the forehead. The detail completes the look with an imposing and slightly hostile anonymity."
           }
         ]
       }
@@ -8019,9 +9440,94 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 40,
-            "label": "Hand-Painted Silk and Velvet Layered Look",
-            "description": "The hand-painted silk and velvet layered look stacks multiple textile traditions into a single garment system; it places a hand-illustrated organza panel over a velvet bodice cut with utilitarian field-jacket precision. This material strategy embodies the archival depth that defined Dries Van Noten's 100th show — accumulation as a slow craft achievement rather than maximalist excess. The competing surface textures resolve into a coherent palette only after sustained looking; each layer cites a specific making tradition. The garment asserts what independent, craft-centered, long-term practice produces when held against the conglomerate luxury system."
+            "y": 45,
+            "label": "Horizontally Striped Silk Tunic",
+            "description": "The horizontally striped silk tunic engulfs the upper body in a relaxed oversized volume; it features broad bands of dark purple, gold, and black. This material strategy engages with unrestrictive spatial volume by dropping the shoulder line completely and allowing the fabric to billow away from the torso. The lightweight silk catches the dim golden lighting softly; the sleeves fall loosely past the elbow without structured cuffs. The garment asserts a languid nomadic aesthetic that prioritizes comfort and fluid kinetic motion."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Asymmetrical Color-Blocked Hem",
+            "description": "The asymmetrical color-blocked hem drops unevenly to the knee; it violently interrupts the horizontal stripes with thick geometric blocks of bright blue and yellow. This structural logic utilizes sartorial collage to break up the expected rhythm of the pattern. The bright colors contrast sharply with the muted tones above; the raw un-pleated fabric hangs limply. The detail completes the tunic by enforcing an aesthetic of deliberate imperfection and neo-bohemian subcultural appropriation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sheer Printed Chiffon Dress",
+            "description": "The sheer printed chiffon dress wraps the entire body in multiple fragile translucent layers; it features an intricate chaotic pattern of tribal and geometric motifs. This material application engages with Pre-Raphaelite eroticism by exposing the silhouette of the body through delicate gossamer textiles rather than tight tailoring. The soft fabric falls into a series of tiered ruffled skirts that drag slightly near the ankle; the cold-shoulder neckline exposes the collarbone entirely. The garment asserts a tragic romanticism that mimics the appearance of ancient decaying tapestries."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Gilded Jacquard High-Neck Top",
+            "description": "The gilded jacquard high-neck top structures the upper body in a stiff opulent textile; it features an aggressive geometric pattern woven with metallic gold and dark brown threads. This outerwear choice applies the monolithic massing of heritage materials to create a dense architectural shell. The stiff fabric sits rigidly against the throat; it drops flatly over the waist without any tailored darts or gathering. The top asserts a ceremonial and highly tactile upper silhouette."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Asymmetrical Striped Trousers",
+            "description": "The asymmetrical striped trousers fall fluidly from the waist into a relaxed slouching volume; they feature thick vertical and horizontal stripes in dark blue, purple, and green. This structural intervention utilizes sartorial collage by pairing a heavy rigid jacquard top with extremely casual pajama-like bottoms. The fabric pools slightly over the footwear; an extra panel of striped fabric wraps randomly around the hip like a discarded sash. The trousers complete the look by anchoring the opulent top in a deeply bohemian subcultural drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Layered Asymmetrical Silk Dress",
+            "description": "The layered asymmetrical silk dress drops over the body in a smooth dark brown textile heavily printed with ornate golden motifs; it features a deep V-neckline and a chaotic tiered skirt. This material strategy engages with organic decay by utilizing a fabric that resembles a rich but fading historical artifact. The soft silk clings slightly to the torso before expanding into loose unstructured panels; the hemline is violently uneven, dragging low on the right side. The garment asserts a posture of languid un-tailored elegance."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Striped Chiffon Under-Panel",
+            "description": "The striped chiffon under-panel peeks out from beneath the heavy asymmetrical hem of the silk dress; it introduces a completely different textile and pattern into the lower silhouette. This styling detail utilizes sartorial collage to emphasize the illusion of scavenged layered clothing. The sheer blue and grey stripes contrast sharply with the solid golden print above; it falls softly to the mid-calf. The piece completes the silhouette by enforcing an aesthetic of chaotic nomadic accumulation."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Metallic Lurex Duster Coat",
+            "description": "The metallic lurex duster coat drops cleanly to the knee in a highly reflective dark blue textile; it features a simple open collar and completely lacks lapels or hardware. This outerwear choice applies the subversion of the \"natural\" by taking a relaxed pajama-like silhouette and rendering it in a flashy synthetic disco fabric. The material catches the dim runway lighting fiercely; it hangs open to reveal a deeply complex layered outfit beneath. The coat asserts a quiet but highly visible urban armor."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Slouching Jacquard Trousers",
+            "description": "The slouching jacquard trousers fall heavily from the waist in a dark patterned fabric; they provide a relaxed wide-leg base for the metallic coat. This structural logic engages with unrestrictive spatial volume by avoiding slim tailoring entirely. The thick fabric pools slightly around the ankles; the dark muted colors anchor the bright blue topcoat. The trousers complete the ensemble by asserting a highly comfortable and fluid kinetic motion."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Sheer Beaded Chiffon Blouse",
+            "description": "The sheer beaded chiffon blouse envelopes the torso in a dark fragile mesh; it is completely covered in chaotic patches of green, gold, and black beadwork. This material application utilizes Pre-Raphaelite eroticism by exposing the bare skin entirely beneath a heavily adorned but structurally useless textile. The thin fabric holds deep wrinkles and soft folds; the dark floral embellishments mimic creeping moss or organic decay spreading across the body. The top asserts a deeply vulnerable and tragic romanticism."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Printed Silk Slouch Trousers",
+            "description": "The printed silk slouch trousers drop from the waist in a dark heavily patterned fabric; they feature a stark vertical stripe of contrasting print running down the right leg. This tailoring approach applies sartorial collage to disrupt a simple relaxed silhouette. The lightweight silk falls cleanly over dark sandals; the chaotic white and grey print provides a dense visual texture that mirrors the beaded top. The trousers complete the look by enforcing a strictly non-tailored bohemian uniform."
           }
         ]
       }
@@ -8056,9 +9562,222 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 30,
+            "label": "Oversized Metallic Lurex Cardigan",
+            "description": "The oversized metallic lurex cardigan completely swallows the upper torso in a heavy slouched volume; it drops past the hips with aggressively long sleeves. This material application engages with sartorial collage by mutating a cozy domestic knit into a flashy disco-era texture. The dark synthetic yarn catches the runway lighting fiercely; the front hangs entirely open. The outerwear asserts a relaxed and highly apathetic posture that rejects traditional structured tailoring."
+          },
+          {
+            "x": 50,
             "y": 45,
-            "label": "Black Leather Skinny Trouser and Sheer Blouse",
-            "description": "The black leather skinny trouser and sheer blouse pull tight against the body in a single uninterrupted vertical line; they refuse any structural excess that would soften the silhouette. This tailoring extreme defines Hedi Slimane's controversial vision for Saint Laurent: the female body reduced to a single geometric axis, the silhouette annihilated into pure line. The matte black leather creates a heavy visual void below the translucent silk georgette top; the sleeves end precisely at the wrist. The garment asserts the auteur project that replaced the YSL archive with the designer's own obsession with Sunset Strip rock culture."
+            "label": "Metallic Leopard Print Babydoll Dress",
+            "description": "The metallic leopard print babydoll dress tightly binds the chest before dropping into a loose un-tailored skirt; it features a stark chaotic animal pattern. This structural logic utilizes trickle-up fashion theory by taking a cheap thrift-store silhouette and elevating it through premium materials. The shiny fabric reflects light aggressively; a thin white belt sits artificially high on the waist. The garment completes the top half of the look with a signature piece of 1990s subcultural irony."
+          },
+          {
+            "x": 50,
+            "y": 80,
+            "label": "Patterned Opaque Tights",
+            "description": "The patterned opaque tights encase the legs entirely beneath the short dress; they provide a dark highly textured foundation for the ensemble. This styling choice applies the aesthetic of \"elevated thrift\" by utilizing a messy complicated pattern rather than sheer elegant hosiery. The dark fabric absorbs the light completely; it stretches tightly into the heavy combat boots. The accessory completes the look by enforcing a gritty slightly disheveled uniformity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Plunging Halter Neckline",
+            "description": "The plunging halter neckline cuts sharply down the center of the torso to expose the sternum entirely; it relies on rigid internal framework to maintain the severe V-shape without gaping. This sartorial choice engages with anatomical interaction by framing the bare skin with severe architectural lines rather than soft contouring. The stark black fabric contrasts sharply with the pale skin; it completely flattens the natural bustline. The top asserts a highly provocative and unsettling take on the cinematic femme fatale."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Leather Moto Miniskirt",
+            "description": "The leather moto miniskirt anchors the lower silhouette in a tight shiny black hide; it features heavy functional silver zippers running aggressively across the front panels. This material intervention utilizes subcultural appropriation by cutting a classic punk biker jacket into a tiny unyielding skirt. The stiff material holds a rigid shape over the upper thighs; the horizontal zippers draw the eye laterally. The garment completes the look by grounding the severe upper bodice in recognizable rebellious hardware."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy leather above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Cropped Leather Moto Jacket",
+            "description": "The cropped leather moto jacket structures the upper body in a stiff black hide; it features sharp classic lapels and a heavily zipped asymmetrical front closure. This outerwear choice applies the semiotic sabotage of haute couture by taking the ultimate symbol of street rebellion and presenting it on an elite Parisian runway. The dark material absorbs light to create a heavy visual void; the sleeves fall cleanly to the wrist. The jacket asserts an imposing and highly defensive urban armor."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Velvet Peter-Pan Collar Dress",
+            "description": "The velvet Peter-Pan collar dress drops softly over the torso in a dark plush fabric; it features a bright white collar and a stiff decorative bow at the neck. This material strategy engages with gender deconstruction by utilizing a historically infantile silhouette to clash violently with the aggressive leather jacket. The heavy fabric hangs flatly without defining the waist; the white collar frames the neck securely. The garment completes the top half of the look by injecting a sense of naive nostalgia into the punk aesthetic."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy leather above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Oversized Pastel Fur Coat",
+            "description": "The oversized pastel fur coat engulfs the entire body in a massive chaotic volume of dyed pale pink pelts; it completely obliterates the human silhouette beneath a dense organic texture. This material extreme applies monolithic massing by inflating a classic luxury symbol into a loud garish piece of pop-art outerwear. The bright synthetic-looking fibers catch the air violently with every step; the coat lacks any visible closures or tailoring details. The garment asserts an overwhelming theatrical presence that functions as pure sensory overload."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "High-Waisted Studded Hotpants",
+            "description": "The high-waisted studded hotpants tightly encase the hips and upper thighs in a smooth black fabric; they are heavily adorned with small silver metallic studs. This material application engages with subcultural appropriation by combining an abbreviated pin-up silhouette with aggressive punk hardware. The stiff fabric holds a rigid shape above the bare legs; the waist is pulled artificially high. The piece completes the ensemble by forcing a massive contrast in volume between the heavy coat and the exposed lower body."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Oversized Duffle Coat",
+            "description": "The oversized duffle coat drops heavily to the knee in a dark grey wool; it features traditional wooden toggle closures and a massive structural hood. This outerwear choice utilizes the outsider's gaze by elevating a classic British schoolboy staple into a piece of luxury grunge. The thick fabric hangs straight without defining the waist; the sleeves completely swallow the arms. The coat asserts a protective and highly nostalgic architectural shield."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Sequined Peter-Pan Collar Dress",
+            "description": "The sequined Peter-Pan collar dress wraps the torso in a highly reflective black textile; it features a bright white collar and a stiff decorative bow at the neck. This material strategy engages with sartorial collage by pairing a flashy disco fabric with an infantile naive cut. The shiny material catches the runway lighting fiercely through the open coat; the dress drops cleanly to the mid-thigh. The garment completes the top half of the look by injecting a sudden flash of unexpected glamour into the drab outerwear."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy wool above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Shearling-Trimmed Suede Coat",
+            "description": "The shearling-trimmed suede coat engulfs the upper body in a massive highly textured brown hide; it features thick beige fleece bursting from the collar and hem. This material strategy engages with the semiotic sabotage of luxury by inflating a classic vintage thrift-store staple into an imposing runway monolith. The dark hide catches the light softly; it hangs entirely open over the delicate dress beneath. The outerwear asserts an aggressive warmth and a deeply relaxed slouched posture."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "Sheer Floral Lace Slip Dress",
+            "description": "The sheer floral lace slip dress drops to the mid-thigh in a translucent dark textile densely patterned with pale red and white flowers; it exposes the torso entirely beneath a veil of fragile synthetic material. This tailoring approach applies trickle-up fashion theory by taking a cheap 1990s thrift-store staple and rendering it in high-end Parisian lace. The soft fabric falls loosely over the hips; the deep V-neck exposes the chest completely. The garment asserts a highly provocative and unsettling take on casual sportswear."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the soft lace above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Voluminous Fur Cape Coat",
+            "description": "The voluminous fur cape coat drops heavily from the shoulders to the mid-thigh; it creates an immense bell-shaped volume that completely swallows the arms and torso in mixed brown and black pelts. This structural extreme applies monolithic massing by transforming the body into a solid heavily textured animalistic monolith. The dense fabric holds deep rigid folds that fall straight to the hem; the coat lacks traditional sleeves entirely. The outerwear asserts an oppressive and theatrical presence that dominates the physical space."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Ruffled Floral Silk Dress",
+            "description": "The ruffled floral silk dress peeks out from beneath the heavy fur in a chaotic volume of pale white fabric printed with tiny red flowers; it mimics the lightweight drape of a summer sundress. This material choice engages with sartorial collage by pairing a deeply unseasonal and fragile textile with massive winter outerwear. The sheer layers fold heavily onto one another; the asymmetrical hem trails wildly to create a disorganized spatial footprint. The garment completes the ensemble by emphasizing the chaotic \"thrown-together\" nature of the styling."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy fur above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Metallic Gold Bouclé Jacket",
+            "description": "The metallic gold bouclé jacket frames the upper body in a highly reflective and stiff synthetic textile; it features sharp puffed shoulders and classic patch pockets lined with black binding. This outerwear choice engages with postmodern pastiche by taking the highly conservative silhouette of a classic Chanel-style suit and rendering it in a blinding disco-era color palette. The shiny fabric catches the clinical lighting fiercely; the front hangs open to reveal a soft pink underlayer. The jacket asserts a posture of aggressive commercialized glamour that rejects subtlety entirely."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Draped Peach Silk Dress",
+            "description": "The draped peach silk dress falls softly over the body in a pale translucent fabric; it features a high square neckline and a loose un-tailored fit. This material application provides a quiet romantic baseline against the chaotic heavy jacket. The sheer fabric reveals the dark undergarments beneath; the hem drops cleanly above the knee. The garment completes the look by grounding the severe upper carapace in a relaxed pragmatic drape."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the delicate silk above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Cut-Out Leather Bralette",
+            "description": "The cut-out leather bralette tightly binds the upper torso in a stiff black hide; it features sharp geometric voids that expose the chest entirely beneath a sheer mesh overlay. This structural intervention engages with bodily obfuscation by turning a piece of extreme fetishwear into a subtle structural base layer. The dark material absorbs light completely; a stark black collar and tie wrap the neck securely above it. The top asserts a highly provocative and unsettling take on cinematic layering."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Hardware-Embellished Leather Skirt",
+            "description": "The hardware-embellished leather skirt tightly encases the hips and upper thighs in a smooth black hide; it is heavily adorned with multiple horizontal straps and aggressive silver metallic buckles. This material application utilizes subcultural appropriation by combining a traditional abbreviated pin-up silhouette with the heavy unyielding hardware of the punk scene. The stiff fabric holds a rigid shape above the bare legs; the waist is pulled artificially high. The piece completes the ensemble by forcing a massive tactile focus onto the midriff."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy leather above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Oversized Plaid Flannel Shirt",
+            "description": "The oversized plaid flannel shirt hangs heavily over the torso in a stark red and black checkerboard pattern; it functions as a lightweight topcoat rather than a traditional shirt. This material strategy engages with subcultural systems by blowing up a staple of 1990s Seattle grunge into a primary runway garment. The soft fabric drops to the mid-thigh; the sleeves completely swallow the hands. The shirt asserts an aesthetic of extreme casual slowness and youthful apathy."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sheer Distressed Lace Slip Dress",
+            "description": "The sheer distressed lace slip dress exposes delicate lingerie detailing beneath the heavy flannel outerwear; it drops an uneven raw hemline to the mid-calf. This layered exposure utilizes trickle-up fashion methodologies to blur the lines between intimate thrift-store apparel and public runway armor. The black lace is torn violently across the thighs; long raw threads dangle from the frayed edges. The garment refuses pristine elegance to complete the silhouette with a deeply tragic and vulnerable core."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Shredded Fishnet Tights",
+            "description": "The shredded fishnet tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the soft lace above. This styling choice utilizes postmodern pastiche by layering a dirty ruined textile beneath a piece of luxury tailoring. The intricate netting stretches tightly over the musculature; the dark tone absorbs the harsh runway lighting. The accessory completes the silhouette by enforcing an aesthetic of deliberate unkempt grunge."
           }
         ]
       }
@@ -8094,8 +9813,137 @@ export const archiveData = [
           {
             "x": 50,
             "y": 45,
-            "label": "Spray-Applied Fabrican Polymer Dress",
-            "description": "The spray-applied Fabrican polymer dress is assembled directly on the body in real time via pressurized canisters of biodegradable polymer fibers; it has no pattern, no seam, no cutter, and no atelier. This material extreme is the most widely documented fashion spectacle of the post-Instagram era — designed for the moving image rather than the still photograph. The non-woven textile dries instantly to form a fitted couture-precision silhouette; the manufacturing process is itself the cultural content. The garment asserts technology not as finish but as primary production logic."
+            "label": "Solidified Fabrican Dress",
+            "description": "The solidified Fabrican dress tightly encases the torso and hips in a stark white non-woven textile; it represents the exact culmination of the live performative fabrication. This material extreme applies real-time chemical assembly by transforming a liquid polymer suspension into a wearable garment directly upon the flesh. The bright white material hugs every contour of the natural anatomy perfectly; the neckline is folded down awkwardly off the shoulders. The garment asserts a purely scientific approach to sculptural conformity."
+          },
+          {
+            "x": 55,
+            "y": 65,
+            "label": "Manually Altered Slit",
+            "description": "The manually altered slit cuts violently up the left thigh to expose the bare leg entirely; it features a raw jagged edge where the solidified material was hacked with scissors. This structural intervention engages with the performative material genesis by revealing the hasty on-stage finishing process. The stiff fabric lacks fluid drape; the high cut allows the model to walk off the platform. The detail completes the dress by injecting a necessary functional mobility into the restrictive chemical shell."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Asymmetrical Cut-Out Dress",
+            "description": "The asymmetrical cut-out dress drapes softly over the body in a dark fluid fabric; it features a massive diagonal void across the chest that completely exposes the right breast and torso. This structural logic utilizes corporeal objectification to frame the bare skin as a central visual element. The dark material falls cleanly to the knee with an uneven hem; a subtle knot sits at the right hip. The garment asserts a highly provocative and unsettling take on cinematic eveningwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Spliced Satin Minidress",
+            "description": "The spliced satin minidress tightly binds the torso and hips in a smooth highly reflective black textile; it features an asymmetrical neckline and a deep diagonal cut revealing a sheer lace underlayer across the chest. This tailoring choice engages with the mechanics of virality by creating a hyper-sexualized and highly recognizable \"It-girl\" silhouette designed specifically for digital consumption. The shiny fabric catches the clinical lighting fiercely; the skirt drops sharply to expose the right leg entirely. The garment asserts an aggressive commercialized glamour that rejects subtlety."
+          },
+          {
+            "x": 35,
+            "y": 60,
+            "label": "Solid Glass Swipe Bag",
+            "description": "The solid glass Swipe bag is gripped tightly in the right hand; it utilizes actual thick transparent glass to recreate the brand's signature accessory. This object engages with tech-integrated hardware by elevating a functional item into a fragile heavy and structurally uncompromising piece of industrial design. The smooth surface reflects light like a distorted mirror; it features a subtle metallic clasp. The accessory completes the look by asserting the brand's obsession with pushing material boundaries."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Structured Floral Leather Top",
+            "description": "The structured floral leather top frames the upper body in a rigid highly reflective black hide printed heavily with bright pink flowers; it features a deep unfastened V-neckline. This outerwear choice applies the concept of techno-sartorial synthesis by rendering a traditional romantic motif in a slick fetishistic material. The stiff fabric holds a sharp boxy shape over the torso; the short sleeves end bluntly above the elbow. The garment asserts an imposing and slightly toxic posthuman posture."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Matching Floral Hotpants",
+            "description": "The matching floral hotpants tightly encase the hips in the exact same glossy printed leather; they truncate sharply to leave the legs entirely exposed. This styling choice engages with the female body as canvas by minimizing the physical fabric to maximize corporeal exposure. The dark material absorbs light heavily outside of the bright floral prints; they sit high on the natural waist. The piece completes the look by forcing an incredibly abbreviated and aggressive lower silhouette."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Floral Neoprene Crop Top",
+            "description": "The floral neoprene crop top clings tightly to the upper body in a thick spongy synthetic textile; it features a bright pink floral print on a stark black background. This material strategy utilizes the mechanics of virality by creating a highly graphic and easily readable garment for the digital algorithm. The high neckline hugs the throat securely; the hem is violently truncated to expose the entire midriff. The top asserts a sporty but highly stylized silhouette."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Low-Rise Tailored Trousers",
+            "description": "The low-rise tailored trousers drop cleanly from the hip in a dark matte fabric; they feature a subtle contrasting waistband. This tailoring approach applies a relaxed formal baseline to anchor the bright sporty top. The fabric falls cleanly over dark open-toed footwear; the fit is relatively loose through the thigh. The trousers complete the ensemble by grounding the highly saturated upper volume."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Exaggerated Shoulder Bomber",
+            "description": "The exaggerated shoulder bomber structures the upper body in a smooth pale blue synthetic fabric; it pushes the shoulder line drastically upward and outward into harsh geometric points. This structural extreme applies monolithic massing by transforming a classic casual jacket into an imposing architectural carapace. The shiny material catches light softly; the front is zipped cleanly down the center. The outerwear asserts an unyielding and intimidating physical presence."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "High-Cut Satin Bodysuit",
+            "description": "The high-cut satin bodysuit tightly encases the hips and groin in a matching pale blue textile; it leaves the legs entirely exposed to the top of the thigh. This sartorial choice engages with corporeal objectification by applying the aesthetics of vintage swimwear to a modern runway look. The smooth fabric clings tightly to the body; a subtle waistband detail mirrors the jacket above. The piece completes the silhouette by creating a massive contrast in volume between the heavy top and bare legs."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Deconstructed Bustier Dress",
+            "description": "The deconstructed bustier dress wraps the torso in a stark black and white textile; it features deep angular cutouts at the waist and a prominent structural bra cup. This structural logic engages with the mechanics of virality by engineering a hyper-exposed \"Y2K revival\" silhouette. The sheer white fabric is heavily textured with subtle shimmering dots; the black detailing outlines the sharp geometric cuts. The garment asserts a highly calculated approach to bodily exposure."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Asymmetrical Jersey Maxi Dress",
+            "description": "The asymmetrical jersey maxi dress drapes heavily across the body in a dense black fabric; it features aggressive diagonal cutouts exposing the chest and a massive slit up the left thigh. This tailoring extreme applies corporeal objectification to frame the bare skin within severe architectural voids. The soft fabric pools heavily at the floor on the right side; the neckline wraps tightly around the throat. The dress asserts an imposing and slightly sinister monolithic presence."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Deconstructed Hardware Dress",
+            "description": "The deconstructed hardware dress splices white fluid fabric together using massive continuous rows of industrial hook-and-eye closures; it drapes erratically over the body. This material application utilizes tech-integrated hardware to build a garment that appears barely held together by metal teeth. The sheer fabric falls in chaotic asymmetrical panels over the hips; the right shoulder is entirely exposed. The garment asserts a fragile and slightly ruined aesthetic."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Asymmetrical Zipper Dress",
+            "description": "The asymmetrical zipper dress tightly encases the torso and hips in a smooth black fabric; it features two continuous metal zippers coiling chaotically around the entire body. This structural logic engages with the mechanics of virality by turning functional hardware into a massive spiral graphic motif. The dark material absorbs light heavily; the hem is uneven and features a long trailing strip of fabric. The piece completes the silhouette by asserting a highly engineered and slightly fetishistic approach to eveningwear."
           }
         ]
       }
@@ -8130,9 +9978,174 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 30,
+            "label": "Layered Fur-Sleeved Jacket",
+            "description": "The layered fur-sleeved jacket envelopes the upper body in a massive highly textured volume; it features dense dark brown fur completely covering the arms while leaving the torso in a smooth grey wool. This material strategy engages with structural draping by isolating heavy organic pelts to emphasize the shoulders and sleeves. The stiff grey lapels fold back rigidly; the front zipper hangs open to expose the chest. The outerwear asserts an imposing and highly defensive urban armor."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tapered Wool Trousers",
+            "description": "The tapered wool trousers drop cleanly to the ankle in a soft grey textile; they provide a strict formal baseline against the chaotic heavy fur above. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear. The fabric falls cleanly without formal pleating; the hem breaks sharply over dark suede boots. The trousers complete the look by enforcing a strictly disciplined and abbreviated lower silhouette."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Asymmetrical Checkered Coat",
+            "description": "The asymmetrical checkered coat structures the upper body in a stiff dark brown and black grid pattern; it features deeply dropped shoulders and uneven lapels that fold casually over the chest. This tailoring extreme engages with sartorial melancholia by treating a classic piece of formal menswear as a relaxed slightly slouched layer. The heavy wool fabric holds deep rigid folds; the massive fur sleeves peek out from the cuffs. The outerwear asserts an elegant but deeply vulnerable and informal presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Slouchy Black Jersey Trousers",
+            "description": "The slouchy black jersey trousers drop fluidly from the waist into a relaxed comfortable fit; they gather thickly around the ankles. This material application provides a soft kinetic base beneath the heavy formal coat. The dark fabric absorbs the runway lighting completely; it lacks any formal creasing or hardware. The trousers complete the ensemble by grounding the formal upper volume in a deeply casual domestic drape."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Minimalist Skull Cap",
+            "description": "The minimalist skull cap binds the head tightly in dark material; it heavily obscures the hairline and natural proportions of the skull. This styling detail engages with corporeal obfuscation by forcing the pale face into stark relief against the dark uniform. The tight fit creates a stark horizontal line across the forehead; the model lacks any bright cosmetic embellishment. The accessory completes the look by isolating the face within a heavy protective frame."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Cropped Leather Moto Jacket",
+            "description": "The cropped leather moto jacket tightly binds the upper torso in a stiff dark hide; it features classic sharp lapels and a heavily zipped front closure left completely open. This outerwear choice engages with the subversion of menswear tailoring by taking an aggressive fetishistic fabric and mutating it into an abbreviated feminine shell. The dark material absorbs light heavily; the wide collar sits flatly over the bare chest. The jacket asserts a highly structured and slightly provocative upper carapace."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Wide-Leg Khaki Trousers",
+            "description": "The wide-leg khaki trousers drop from a high thick black leather belt into a relaxed fluid volume; they provide a quiet formal base for the aggressive leather jacket. This structural logic utilizes unrestrictive spatial volume to allow kinetic mobility beneath the tight top. The pale fabric falls smoothly over dark pointed footwear; the waist is finished cleanly without pleats. The trousers complete the look by anchoring the severe top with comfortable effortless drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Elongated Houndstooth Topcoat",
+            "description": "The elongated houndstooth topcoat drops heavily to the ankle in a massive unstructured volume; it features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds; it drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Draped Silk Blouse",
+            "description": "The draped silk blouse wraps the torso tightly beneath the heavy coat in a highly lustrous dark fabric; it features a plunging neckline that exposes the chest. This material application introduces a soft fluid layer to contrast the heavy wool outerwear. The shiny textile catches the light softly; it tucks sharply into the matching trousers. The garment asserts a quiet sensual elegance hidden beneath the heavy protective shell."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Monolithic Dark Wool Overcoat",
+            "description": "The monolithic dark wool overcoat engulfs the body in an immense structural void; it features severe pointed shoulders and an extremely long hem that brushes the floor. This tailoring extreme applies corporeal obfuscation by mutating a formal overcoat into an imposing almost alien architecture. The dense dark fabric lacks visible hardware or lapels; the sleeves completely swallow the arms. The outerwear asserts an unyielding and intimidating physical presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Relaxed Jersey Trousers",
+            "description": "The relaxed jersey trousers drop from the waist in a dark muted fabric; they feature a soft un-tailored fit that contrasts with the severe coat above. This material application provides a comfortable kinetic base beneath the heavy formal armor. The dark material falls cleanly over black leather boots; it lacks sharp formal creasing. The trousers complete the ensemble by emphasizing the relaxed nomadic aesthetic beneath the rigid outerwear."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Sheer Knit Pullover",
+            "description": "The sheer knit pullover clings tightly to the upper body in a translucent dark mesh; it exposes the torso entirely beneath a fragile synthetic layer. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black trousers. The thin fabric features a simple crew neckline; it is tucked sharply into the wide leather belt. The top asserts a quiet and vulnerable contrast to the heavy textured layers of the collection."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "High-Waisted Black Maxi Skirt",
+            "description": "The high-waisted black maxi skirt drops heavily to the floor in a dense unbroken column of dark fabric; it provides a severe formal base for the sheer top. This structural logic utilizes monolithic massing to fuse classic tailoring textiles with surreal proportion distortion. The dark fabric absorbs the light completely; the thick leather belt cinches the natural waist securely. The skirt completes the look by anchoring the delicate knitwear with an imposing geometric base."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Layered Wool and Leather Jacket",
+            "description": "The layered wool and leather jacket structures the torso in a complex collage of textures; it features snakeskin-print leather sleeves extending from a dark brown wool vest. This outerwear choice engages with sartorial layering by physically fusing multiple distinct garments into a single architectural shell. The stiff lapels hang open to reveal a grey knit underlayer; a thick black leather belt cinches the waist aggressively. The jacket asserts a highly constructed and protective upper carapace."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Slouchy Dark Wool Trousers",
+            "description": "The slouchy dark wool trousers drop fluidly from the waist into a deeply relaxed and baggy silhouette; they gather thickly around the ankles. This styling choice engages with the nomadic aesthetic by pairing highly conceptual restricted outerwear with incredibly casual mundane pants. The dark fabric pools heavily over black footwear; it lacks any formal pleating or hardware. The garment completes the look by grounding the surreal upper volume in a familiar everyday staple."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Elongated Black Wool Topcoat",
+            "description": "The elongated black wool topcoat drops cleanly to the ankle in a smooth dark fabric; it features long flowing lapels that trail heavily down the chest. This outerwear choice utilizes unrestrictive spatial volume to create a dramatic sweeping silhouette that obscures the natural waistline. The dark material absorbs light completely; the front hangs open to reveal the tailored suit beneath. The coat asserts a highly theatrical and slightly mournful presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tailored Crepe Trousers",
+            "description": "The tailored crepe trousers drop straight from the waist to the ankle in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex flowing topcoat with a heavy formal base. The fabric falls cleanly over dark footwear; the waist is finished cleanly without a belt. The trousers complete the look by enforcing a strict tailored discipline."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Layered Asymmetrical Wool Coat",
+            "description": "The layered asymmetrical wool coat wraps the torso in a dense brown fabric; it features a massive structured drape forming an integrated scarf around the neck. This material strategy engages with structural draping by piling heavy tailoring textiles into a single chaotic but protective volume. The stiff wool holds its shape rigidly against gravity; the sleeves are pushed up softly. The outerwear asserts an oppressive and highly defensive architectural shield."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Slouching Brown Jersey Trousers",
+            "description": "The slouching brown jersey trousers drop heavily from the waist into a wide relaxed volume; they perfectly match the color and texture of the coat above. This structural logic applies monolithic massing to complete a full suit of heavy organic fabric. The textile pools thickly around the ankles; the hem drags slightly over dark footwear. The trousers assert a ceremonial almost monastic volume that completely obscures the legs."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
             "y": 40,
-            "label": "Diagonal-Seamed Silk Charmeuse Top",
-            "description": "The diagonal-seamed silk charmeuse top wraps the torso along an angled axis that redirects the eye away from horizontal and vertical lines; it appears to rotate even in static photography. This structural strategy is Haider Ackermann's signature compositional device — the diagonal as principle, not ornament. The liquid silk is anchored at one shoulder by a single structured lacquered panel; the opposing side falls in unsupported drape. The garment asserts Ackermann's central proposition that clothing functions as second skin, and the haptic register of fabric against body is a more sophisticated form of communication than what it signifies at a distance."
+            "label": "Textured Houndstooth Topcoat",
+            "description": "The textured houndstooth topcoat drops heavily to the ankle in a massive unstructured volume; it features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds; it drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Matching Houndstooth Trousers",
+            "description": "The matching houndstooth trousers drop from the waist in the exact same highly textured pattern; they create a continuous unbroken column of heritage fabric. This material strategy engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The thick textile falls without sharp creases; the hem pools heavily over black leather boots. The trousers complete the ensemble by providing a soft tactile base that echoes the formal outerwear."
           }
         ]
       }
@@ -8167,9 +10180,272 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 45,
+            "label": "Asymmetrical Layered Knit Dress",
+            "description": "The asymmetrical layered knit dress drops across the body in stark contrasting panels of black and bright blue; it features a violent diagonal cut that completely overrides the natural waistline. This structural logic utilizes scale distortion by dropping a massive heavy-gauge panel off the left shoulder. The dense wool fabric holds deep rigid folds; a bright gold interlocking belt sharply divides the torso from the hips. The garment asserts a highly architectural approach to casual knitwear."
+          },
+          {
+            "x": 35,
+            "y": 65,
+            "label": "Structured Clutch Handbag",
+            "description": "The structured clutch handbag is gripped tightly against the right thigh; it is a rigid dark rectangular block completely devoid of visible logos or straps. This accessory applies the concept of post-digital anonymity by transforming a functional item into a monolithic unreadable object. The smooth dark leather contrasts with the heavy ribbed texture of the dress; the subtle metallic frame provides a slight flash of hardware. The piece completes the silhouette by enforcing an aesthetic of severe stealth wealth."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Squared-Toe Leather Footwear",
+            "description": "The squared-toe leather footwear provides a heavy brutalist anchor for the fluid dress above; they feature a sharp blunt geometry across the toe box. This footwear strategy engages with brutalist elegance by mutating a delicate feminine pump into an imposing architectural foundation. The black leather absorbs the runway light completely; the thick heel elevates the model significantly. The accessory completes the look by asserting the brand's new obsession with aggressive uncompromising shape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Macro-Intrecciato Leather Coat",
+            "description": "The macro-intrecciato leather coat envelops the entire torso in a massive grid of padded white squares; it functions as a highly textured rigid carapace. This material extreme applies scale distortion by taking the brand's delicate heritage weave and magnifying it into a heavy architectural component. The thick leather strips are interwoven perfectly to create deep shadows across the surface; the collar stands stiffly against the neck. The outerwear asserts a protective and highly imposing urban armor."
+          },
+          {
+            "x": 30,
+            "y": 55,
+            "label": "Padded Leather Cassette Bag",
+            "description": "The padded leather Cassette bag hangs casually from the right hand; it perfectly mimics the exact macro-weave texture of the coat above. This object utilizes the semiotic sabotage of heritage by turning the classic intrecciato into a chunky plush graphic. The bright white leather catches the light softly; the thick padded squares bulge outward to create a hyper-tactile surface. The accessory completes the look by ensuring the heavy grid pattern dominates the entire silhouette."
+          },
+          {
+            "x": 50,
+            "y": 80,
+            "label": "Chunky Platform Combat Boots",
+            "description": "The chunky platform combat boots encase the lower legs in thick black leather; they feature massive protruding soles and heavy strap detailing. This footwear choice engages with brutalist geometry by grounding the pristine white coat in a harsh militant base. The matte black finish absorbs the light entirely; the boots rise tightly over the calf. The accessory completes the ensemble by asserting a protective and highly utilitarian posture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Glossy Leather Drawstring Parka",
+            "description": "The glossy leather drawstring parka drops heavily to the knee in a deep reflective brown hide; it features soft gathered volume at the waist and hem. This outerwear choice engages with stealth wealth brutalism by applying an incredibly luxurious material to a mundane functional raincoat silhouette. The highly polished surface catches sharp horizontal highlights from the runway lamps; the long sleeves end abruptly to reveal bright blue cuffs beneath. The garment asserts a highly protective and slightly imposing urban shield."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Chunky Chelsea Boots",
+            "description": "The chunky Chelsea boots drop cleanly from the dark trousers; they feature a massive protruding sole and a thick rounded toe. This footwear strategy applies brutalist massing by taking a classic British boot and inflating its proportions into heavy architectural hardware. The smooth black leather contrasts slightly with the brown coat above; the thick rubber sole provides a heavy structural anchor. The boots complete the look by enforcing a strict utilitarian posture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Tailored Leather Cape Coat",
+            "description": "The tailored leather cape coat structures the upper body in a rigid black hide; it features sharp lapels and long trailing side panels that entirely obscure the arms. This tailoring extreme applies architectural massing by transforming a classic formal topcoat into an imposing monolithic block. The dark material absorbs light completely; a heavy triangular metallic buckle fastens the chest. The outerwear asserts a highly defensive and theatrical posture that functions as a luxurious shield."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Voluminous Ruched Skirt",
+            "description": "The voluminous ruched skirt drops beneath the heavy coat in a bright glossy blue fabric; it balloons outward to create a massive bubble-like silhouette above the knee. This structural logic utilizes scale distortion to force a sudden jarring contrast in volume and color against the black leather above. The shiny synthetic textile gathers tightly at the hem to trap the volume; it introduces a playful but bizarre spatial footprint. The garment completes the look by adding a highly unexpected kinetic element."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Sculptural Leather Dress",
+            "description": "The sculptural leather dress envelopes the torso and hips in a smooth continuous black hide; it features a stiff square neckline and complex folded draping that creates an asymmetrical hem. This material strategy engages with brutalist elegance by taking an aggressive fetishistic fabric and mutating it into an intellectual architectural shape. The dark surface catches the runway lighting softly; the stiff material holds a rigid shape that completely overrides natural anatomy. The garment asserts an unyielding and imposing physical presence."
+          },
+          {
+            "x": 35,
             "y": 60,
-            "label": "Oversized Intrecciato Pouch Bag",
-            "description": "The oversized intrecciato pouch bag is held softly under the arm in a deep forest-green leather woven via the house's foundational craft technique; it became the defining accessory of 2019 and 2020. This material strategy reintroduces Bottega Veneta's heritage weave as a central design element rather than a heritage footnote. The exaggerated scale of the weave makes the construction technique legible; the absence of any visible logo is itself the luxury signal. The accessory asserts the 'quiet luxury' proposition that defined Daniel Lee's commercially successful AW 2019 debut."
+            "label": "Woven Leather Handle Bag",
+            "description": "The woven leather handle bag is gripped tightly against the right hip; it features a classic intrecciato weave updated with a sharp triangular metallic handle. This accessory utilizes the semiotic sabotage of heritage by fusing delicate artisanal craft with cold modern hardware. The dark black leather blends into the dress above; the bright silver triangle provides the only point of contrast. The piece completes the silhouette by asserting a highly clinical and disciplined approach to luxury."
+          },
+          {
+            "x": 50,
+            "y": 88,
+            "label": "Quilted Woven Pumps",
+            "description": "The quilted woven pumps encase the feet in a highly textured dark brown leather; they feature a rounded toe heavily constructed using the brand's signature weave. This footwear choice applies post-digital anonymity by prioritizing deep material texture over recognizable logos or sleek curves. The thick woven pattern mimics the appearance of domestic upholstery; the block heel grounds the look heavily. The accessory completes the look by ensuring the heritage techniques remain present in a mutated form."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Paneled Leather Moto Jacket",
+            "description": "The paneled leather moto jacket tightly binds the upper body in a deep brown hide; it features aggressive structural padding running vertically down the sleeves and across the chest. This outerwear choice applies brutalist geometry by turning a classic rebellious garment into a highly engineered piece of tactical armor. The smooth leather is interrupted by complex seams and heavy silver hardware; the front is zipped entirely to the throat. The jacket asserts a protective utilitarian posture designed for rapid movement."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Paneled Moto Trousers",
+            "description": "The paneled moto trousers drop straight to the ankle in the exact same dark brown leather as the jacket above; they feature thick ribbed padding across the knees and thighs. This structural logic engages with stealth wealth brutalism by elevating aggressive protective gear into a full runway suit. The stiff fabric holds sharp rigid creases; the trousers tuck seamlessly into heavy black combat boots. The garment completes the look by enforcing a strict survivalist uniform."
+          },
+          {
+            "x": 35,
+            "y": 55,
+            "label": "Minimalist White Cylindrical Bag",
+            "description": "The minimalist white cylindrical bag is held casually in the right hand; it provides a stark bright focal point against the dark leather ensemble. This object utilizes post-digital anonymity by functioning as a pure geometric shape rather than a recognizable luxury handbag. The smooth bright white leather lacks any functional straps or logos; a heavy gold chain link acts as the single embellishment. The accessory completes the silhouette by introducing an entirely alien form into the militant look."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Elongated Orange Knit Tunic",
+            "description": "The elongated orange knit tunic drops heavily to the knee in a bright saturated wool; it features an integrated draped scarf that wraps the neck and falls past the hem. This material strategy engages with anonymous power dressing by utilizing an incredibly simple silhouette elevated by a blinding primary color. The soft fabric clings loosely to the torso without defining the waist; the long sleeves are pushed up slightly over the wrists. The garment asserts a relaxed but highly visible nomadic posture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Quilted Leather Pencil Skirt",
+            "description": "The quilted leather pencil skirt drops from beneath the bright orange tunic to truncate sharply above the knee; it is constructed from shiny black hide heavily stitched with a diamond pattern. This structural choice provides a dark rigid baseline that grounds the fluid knitwear above. The glossy surface catches the light sharply; the tight fit restricts the model's stride slightly. The skirt completes the look by anchoring the loud top layer in a severe industrial texture."
+          },
+          {
+            "x": 65,
+            "y": 60,
+            "label": "Intrecciato Leather Tote",
+            "description": "The intrecciato leather tote hangs heavily from the left hand; it is a large structured bag featuring the brand's signature weave pushed to a massive scale. This accessory applies the semiotic sabotage of heritage by taking a delicate craft technique and mutating it into an imposing piece of urban luggage. The dark black leather absorbs the light completely; the thick woven strips create deep shadows. The piece completes the look by asserting the brand's new obsession with exaggerated proportions."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Deconstructed Ribbed Knit Layer",
+            "description": "The deconstructed ribbed knit layer wraps the upper torso in a dark navy wool; it features a massive asymmetrical cutout that completely exposes a grey sweater underneath. This material intervention engages with scale distortion by ripping open a traditional garment to reveal a chaotic layered interior. The thick ribbed fabric bunches heavily around the hips; the extremely elongated sleeves dangle past the hands. The top asserts a slouchy ruined silhouette that mocks pristine tailoring."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Paneled Leather Trousers",
+            "description": "The paneled leather trousers drop to the ankle in a sleek black hide; they feature aggressive horizontal seaming and padding across the thighs and knees. This structural logic applies brutalist geometry by incorporating the protective gear of motorcross into a casual runway ensemble. The stiff material reflects light sharply over every quilted ridge; the pants break cleanly over thick combat boots. The garment completes the look by grounding the messy knitwear in a highly engineered base."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Monolithic Black Topcoat",
+            "description": "The monolithic black topcoat swallows the upper body in an immense structural void; it features severe squared shoulders and an extremely long hem that brushes the mid-calf. This outerwear choice applies anonymous power dressing by mutating a formal overcoat into an imposing almost alien architecture. The dense dark fabric lacks visible hardware or lapels; the wide sleeves hang rigidly away from the arms. The coat asserts an unyielding and intimidating physical presence."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Padded Leather Moto Trousers",
+            "description": "The padded leather moto trousers drop heavily from beneath the coat in a dark brown hide; they feature thick ribbed padding across the knees and shins. This structural logic engages with stealth wealth brutalism by elevating aggressive protective gear into a full runway look. The stiff fabric holds sharp rigid creases over the knees; the trousers tuck seamlessly into heavy black combat boots. The garment completes the look by enforcing a strict survivalist uniform beneath the elegant coat."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Laser-Cut Leather Coat",
+            "description": "The laser-cut leather coat envelops the body in a stiff dark brown hide; it features an aggressive all-over pattern of small rectangular cutouts that reveal a dark underlayer. This material application utilizes scale distortion by transforming a solid sheet of leather into a highly complex porous net. The thick fabric hangs rigidly to the mid-calf; a subtle tied belt cinches the waist loosely. The outerwear asserts a hybridized aesthetic that fuses heavy industrial hardware with an almost delicate lattice."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Fluid Nylon Skirt",
+            "description": "The fluid nylon skirt drops beneath the heavy leather coat to the knee; it provides a soft kinetic base for the massive structured outerwear. This structural choice introduces a dark relaxed volume that contrasts with the stiff lattice above. The lightweight fabric falls softly over heavy black combat boots; it lacks any formal pleating. The garment completes the ensemble by grounding the highly technical coat in a deeply utilitarian and comfortable drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Oversized Leather Trench Coat",
+            "description": "The oversized leather trench coat structures the body into a massive rigid rectangle; it is constructed from a pale yellow opaque hide. This material extreme applies the concept of anonymous power dressing by taking a classic piece of heritage outerwear and stripping away all traditional hardware or detailing. The smooth surface catches the runway lights softly; a massive triangular metallic buckle fastens the waist tightly. The garment asserts a highly commodified armor designed to project immense structural power."
+          },
+          {
+            "x": 35,
+            "y": 60,
+            "label": "Textured Spaghetti Handbag",
+            "description": "The textured spaghetti handbag hangs heavily from the right hand; it is a chaotic cluster of glossy black synthetic strings mimicking a mop head or sea anemone. This accessory utilizes the semiotic sabotage of heritage by entirely discarding the brand's signature leather weaving in favor of a bizarre tactile mess. The dense black material absorbs light completely; it completely lacks functional straps or a clear opening. The piece completes the look by injecting an absurd organic element into the clinical leather coat."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-12.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Oversized Leather Anorak",
+            "description": "The oversized leather anorak swallows the upper torso in a massive slouched volume of dark black hide; it features an oversized hood and thick drawstring ties pulling the waist inward. This outerwear choice engages with stealth wealth brutalism by mutating a basic casual windbreaker into an imposing luxury carapace. The dark material absorbs light heavily; the long sleeves gather thickly around the wrists. The jacket asserts a highly defensive and theatrical posture that functions as an urban shield."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Laser-Cut Leather Midi Skirt",
+            "description": "The laser-cut leather midi skirt drops to the knee in a deep maroon hide; it features an all-over grid of rectangular cutouts that expose the bare legs beneath. This material application engages with scale distortion by transforming a solid leather skirt into a porous architectural net. The stiff fabric holds a slight flare over the knees; the dark maroon provides a subtle flash of color against the black top. The skirt completes the look by grounding the heavy anorak with an intricate lattice texture."
+          },
+          {
+            "x": 30,
+            "y": 60,
+            "label": "Triangular Leather Clutch",
+            "description": "The triangular leather clutch is gripped tightly in the right hand; it is a bright turquoise geometric block outlined in gold hardware. This accessory applies post-digital anonymity by replacing a functional handbag with a pure unyielding shape. The bright color provides a jarring contrast to the dark ensemble; the sharp corners echo the brand's new obsession with blunt geometry. The piece completes the silhouette by introducing a stark synthetic object into the heavy leather look."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-13.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Voluminous Metallic Parka",
+            "description": "The voluminous metallic parka engulfs the figure in an immense heavy volume of reflective dark purple nylon; it drops aggressively down to the mid-calf. This outerwear choice applies brutalist massing to a standard winter staple by inflating its proportions into a massive shiny monolith. The glossy fabric features a thick central zipper tracking the entire length of the body; the massive gathered sleeves completely dwarf the arms. The garment asserts a highly protective architectural barrier that swallows the wearer entirely."
+          },
+          {
+            "x": 50,
+            "y": 80,
+            "label": "Chunky Platform Combat Boots",
+            "description": "The chunky platform combat boots encase the lower legs in thick black leather; they feature massive protruding soles and heavy strap detailing. This footwear choice engages with brutalist geometry by grounding the shiny purple coat in a harsh militant base. The matte black finish absorbs the light entirely; the boots rise tightly over the calf. The accessory completes the ensemble by asserting a protective and highly utilitarian posture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-14.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Tailored High-Neck Overcoat",
+            "description": "The tailored high-neck overcoat structures the upper body in a massive boxy frame of stark black wool; it features an extremely sharp shoulder line and an asymmetrical front panel that extends over the lapel. This tailoring extreme applies anonymous power dressing by erasing traditional suiting details to create a solid unreadable block of fabric. The dark material absorbs light completely; a subtle sheer mesh panel peeks out from the high neckline. The outerwear asserts an unyielding and imposing physical presence."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Voluminous Drop-Crotch Trousers",
+            "description": "The voluminous drop-crotch trousers fall heavily from the waist into a wide slouched volume; they gather thickly around the calves into a bulbous shape. This structural logic utilizes scale distortion to introduce a chaotic fluid drape beneath the rigid tailored coat. The black fabric matches the jacket perfectly to create a monolithic uniform; the hem breaks aggressively over heavy black boots. The trousers complete the look by forcing an awkward and highly exaggerated lower silhouette."
           }
         ]
       }
@@ -8204,9 +10480,247 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 45,
+            "label": "Striped Columnar Midi Skirt",
+            "description": "The striped columnar midi skirt drops heavily from the waist in a stiff fabric; it features stark black and white vertical bands alternating with grey. This structural logic utilizes austere couture proportions to create a rigid architectural cylinder around the lower body. The dense material falls cleanly without fluid drape; a wide horizontal band visually truncates the midsection. The skirt asserts a deeply disciplined and formal geometry that anchors the chaotic upper layer."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Asymmetrical Striped Tunic",
+            "description": "The asymmetrical striped tunic wraps the upper torso loosely in a chaotic collage of black and white stripes; it features an extended trailing panel thrown haphazardly over the left shoulder. This material strategy engages with structural pastiche by disrupting a classic tailored stripe with a messy unstructured drape. The stiff fabric sits away from the chest; the V-neck exposes a simple grey underlayer. The top completes the silhouette by injecting a sense of tense imbalance."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Voluminous White Silk Blouse",
+            "description": "The voluminous white silk blouse drapes softly over the torso; it features a high conservative neckline and an attached cape-like overlay that drops dramatically over the shoulders. This material choice applies the semiotic sabotage of the basics by taking the mundane formatting of a simple white top and inflating it into an imposing architectural carapace. The smooth fabric catches the runway lights cleanly; the lack of visible hardware emphasizes the purity of the drape. The garment asserts a quiet but highly theatrical upper volume."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "High-Gloss Leather Miniskirt",
+            "description": "The high-gloss leather miniskirt tightly encases the hips before flaring slightly; it is constructed from a thick reflective black hide. This structural intervention provides a severe aggressive contrast to the delicate white silk above. The stiff material holds a rigid shape above the knee; a minimal dark belt sits perfectly at the natural waistline. The piece completes the look by grounding the ethereal top in a harsh tactile reality."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Leather Yoke T-Shirt",
+            "description": "The leather yoke t-shirt structures the upper chest in a stiff black hide before transitioning abruptly into a matte black knit torso; it entirely mimics the silhouette of a banal short-sleeve top. This material strategy utilizes sartorial collage by fusing an aggressive fetishistic fabric with a mundane everyday staple. The smooth leather catches subtle highlights; the sleeves end bluntly at the bicep. The garment asserts a highly disciplined approach to essentialism."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Spliced Jersey Miniskirt",
+            "description": "The spliced jersey miniskirt drops from beneath the black top in a dark unadorned fabric; it features subtle asymmetrical cut-outs at the hip exposing bare skin. This tailoring approach applies a tense architectural geometry to a simple skirt. The soft fabric provides a kinetic moving base beneath the rigid leather; the hem breaks cleanly at the mid-thigh. The piece completes the silhouette by neutralizing the heavy top half with a relaxed athletic-inspired drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Laced Linen Tunic Dress",
+            "description": "The laced linen tunic dress structures the body in a stiff pale grey textile; it features an aggressive thick black leather lacing system running entirely down the center front. This material strategy engages with utilitarian assembly by treating a heavy raw fabric with the reverence of haute couture. The boxy short-sleeve fit completely obscures the natural waistline and bust; the black laces provide a sharp graphic contrast against the muted canvas. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Leather Yoke T-Shirt",
+            "description": "The leather yoke t-shirt tightly encases the upper chest in a stiff olive-green hide before transitioning into a soft tonal knit; it flawlessly replicates the silhouette of a casual short-sleeve tee. This material elevation utilizes the semiotic sabotage of the basics by taking the most mundane garment format and rendering it partially in incredibly premium buttery leather. The smooth surface catches the light subtly across the bust; it is tucked sharply into the high-waisted trousers. The top asserts the collection's obsession with perfecting the ultimate wardrobe essential."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "High-Waisted Linen Trousers",
+            "description": "The high-waisted linen trousers drop cleanly from the waist to the floor in a muted grey fabric; they feature prominent utilitarian patch pockets across the thighs. This structural logic engages with unrestrictive spatial volume by providing wide comfortable pants that liberate the female form rather than constraining it. The thick fabric holds a sharp vertical crease down the center leg; a minimal unbranded belt anchors the look. The trousers complete the ensemble by asserting a highly disciplined but deeply comfortable urban uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Laced Linen Tunic Dress",
+            "description": "The laced linen tunic dress structures the body in a stiff dark khaki textile; it features an aggressive thick black leather lacing system running entirely down the center front. This material strategy engages with utilitarian assembly by treating a heavy raw fabric with the reverence of haute couture. The boxy short-sleeve fit completely obscures the natural waistline and bust; the deep cowl neckline provides a subtle relief from the rigid fabric. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Quilted Leather Moto Jacket",
+            "description": "The quilted leather moto jacket frames the upper body in a highly textured black hide; it features an asymmetrical peplum flare that disrupts the rigid tailoring. This outerwear choice applies the subversion of traditional outerwear by taking an aggressive fetishistic fabric and mutating it into an intellectual architectural shape. The dark material absorbs light completely; the front zipper is hidden to maintain a clean clinical line. The jacket asserts an imposing and highly defensive posture."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Asymmetrical Cotton Shirtdress",
+            "description": "The asymmetrical cotton shirtdress drops beneath the heavy leather jacket in a crisp bright white textile; it introduces a soft unrestrictive volume to the lower silhouette. This structural intervention utilizes essentialism by deploying the most basic shirting fabric as a foundational layer. The bright white textile flashes cleanly against the dark leather; the hem trails unevenly over the thighs. The garment completes the look by grounding the severe upper carapace in a relaxed pragmatic drape."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Draped Asymmetrical Silk Dress",
+            "description": "The draped asymmetrical silk dress wraps the torso and hips in a smooth pale camel textile; it features a complex folded overlay across the chest that completely disguises the natural bustline. This tailoring approach applies austere couture proportions by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The soft fabric falls cleanly without heavy gathering; the short sleeves and high neckline maintain a modest profile. The garment asserts a highly polished and quietly powerful everyday uniform."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Fitted Long-Sleeve Bodysuit",
+            "description": "The fitted long-sleeve bodysuit clings tightly to the upper body in a smooth beige stretch fabric; it provides a severe and unadorned baseline. This styling choice engages with zero embellishment by stripping away all unnecessary detailing in favor of a clean clinical silhouette. The pale textile blends seamlessly with the skin tone; it tucks sharply into the high waist of the skirt. The top asserts a rigid formal minimalism that functions as an intellectual canvas for the look."
+          },
+          {
+            "x": 50,
+            "y": 60,
+            "label": "Paneled Pleated Midi Skirt",
+            "description": "The paneled pleated midi skirt drops heavily from the waist in alternating blocks of beige and cream fabric; it features deep sharp pleats that split open over the thigh. This structural logic utilizes austere couture proportions to introduce kinetic movement to an otherwise static uniform. The thick material holds a rigid shape while walking; a minimal unbranded belt anchors the waist. The skirt completes the ensemble by asserting an aesthetic of rigorous architectural tailoring."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Draped Asymmetrical Silk Dress",
+            "description": "The draped asymmetrical silk dress wraps the torso and hips in a highly lustrous dark blue textile; it features a complex folded overlay that drops diagonally across the waist. This tailoring approach applies austere couture proportions by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The shiny fabric catches the runway light softly; the sleeveless cut exposes the arms completely. The garment asserts a highly polished and quietly powerful eveningwear alternative."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-11.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Vibrant Fuchsia T-Shirt",
+            "description": "The vibrant fuchsia t-shirt clings tightly to the upper body in a highly saturated synthetic knit; it mimics the mundane silhouette of a short-sleeve top. This material application utilizes chromatic maximalism by treating the bright pigment as the primary structural element. The soft fabric conforms to the chest smoothly; it tucks securely into the massive green skirt. The top asserts a deliberate tension between the ordinary format and the shocking explosive color."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Voluminous Emerald Silk Skirt",
+            "description": "The voluminous emerald silk skirt inflates from the waist into a massive billowing bell shape; it drops heavily to the floor in an intensely saturated green textile. This structural logic applies the semiotic sabotage of the basics by pairing a mundane t-shirt with a monumental piece of mid-century couture architecture. The stiff shiny fabric gathers deeply to maintain its immense spatial volume; the hem completely obscures the footwear. The skirt asserts a dramatic and highly visible posture that commands absolute attention."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-12.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Oversized Black Wool Blazer",
+            "description": "The oversized black wool blazer drops heavily past the hips in a stark unyielding block of dark fabric; it features slightly dropped shoulders and severe architectural tailoring. This outerwear choice utilizes monolithic massing to create an imposing and somber outer shell. The stiff lapels hang open loosely over the bright colors beneath; the dark fabric absorbs light entirely. The jacket asserts a protective and clinical frame that attempts to contain the explosive hues."
+          },
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Fuchsia T-Shirt and Green Lapels",
+            "description": "The bright fuchsia t-shirt and wide green lapels provide a violent chromatic collision beneath the dark blazer; they introduce intense synthetic pigment to the core of the silhouette. This material strategy engages with chromatic maximalism by layering aggressive contrasting colors tightly together. The pink knit matches the trousers perfectly; the green lapels mimic a secondary jacket layer. The detail completes the upper body by injecting high-voltage visual energy."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Tailored Fuchsia Trousers",
+            "description": "The tailored fuchsia trousers drop straight to the ankle in the exact same shocking pink fabric as the top; they feature a sharp front crease. This structural logic utilizes austere couture proportions to anchor the heavy outerwear. The brightly colored fabric falls cleanly over black platform footwear; it lacks any formal pleating. The trousers complete the look by enforcing a strict tailored discipline."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-13.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Basic White T-Shirt",
+            "description": "The basic white t-shirt hugs the torso in a tight crisp cotton; it represents the ultimate mundane wardrobe essential. This sartorial choice engages with the semiotic sabotage of the basics by elevating a cheap accessible garment to the level of high luxury. The stark white fabric fits cleanly without bunching; it is tucked seamlessly into the massive skirt. The top asserts a quiet pragmatic minimalism."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Voluminous Pale Yellow Maxi Skirt",
+            "description": "The voluminous pale yellow maxi skirt erupts from the waist in deep dramatic pleats; it creates an immense structured dome that sweeps the runway floor. This material extreme applies structural pastiche by recreating a mid-century ballgown silhouette to anchor the casual t-shirt. The stiff fabric holds sharp vertical shadows; it drops into a heavy bell shape. The garment asserts a highly theatrical volume that completely obscures the legs."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-14.jpg",
+        "hotspots": [
+          {
+            "x": 50,
             "y": 35,
-            "label": "Lacquered Organza Architectural Top",
-            "description": "The lacquered organza architectural top maintains its three-dimensional shape independently of the body via internal scaffolding and compressed interfacing; it reads as architectural volume rather than clothing. This structural strategy defines Raf Simons's late Jil Sander period: the pursuit of geometric purity through tailoring alone, with all ornamental content systematically eliminated. The single intrusion of acid yellow within an ivory-and-sand palette forces total attention onto form rather than color. The garment asserts the central problem of fashion minimalism — when the garment is stripped of all reference, construction itself becomes the carrier of meaning."
+            "label": "Bright Green Silk Topcoat",
+            "description": "The bright green silk topcoat structures the body in a stiff highly saturated textile; it features an oversized dropped-shoulder fit and simple classic lapels. This outerwear choice engages with chromatic maximalism by transforming a traditionally muted garment into a blinding piece of structural color. The shiny fabric holds deep rigid creases without soft drape; it hangs open to reveal the layered suiting beneath. The coat asserts a commanding and theatrical spatial presence."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Vibrant Purple Silk Blazer",
+            "description": "The vibrant purple silk blazer introduces a secondary layer of intense synthetic color beneath the green coat; it features dark contrasting buttons fastened tightly. This styling strategy utilizes a violent chromatic collision to generate deep visual tension within the silhouette. The bright fabric clashes aggressively with the outerwear; it sits flatly against the black trousers. The piece completes the upper body with an unapologetic display of color-blocking."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Tapered Black Trousers",
+            "description": "The tapered black trousers drop cleanly to the ankle in a dark matte fabric; they provide a strict formal baseline against the chaotic bright colors above. This material logic utilizes zero embellishment to anchor the explosive outerwear. The dark fabric falls cleanly over black leather heels; it lacks any formal pleating or hardware. The trousers complete the ensemble by providing a formal static base for the aggressive upper volume."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-15.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Saturated Green Utility Jacket",
+            "description": "The saturated green utility jacket frames the upper body in a lightweight synthetic nylon; it features prominent flap pockets and a classic point collar. This outerwear choice engages with the semiotic sabotage of the basics by treating a banal laborer's jacket with blinding high-visibility pigment. The bright fabric reflects the light softly; the sleeves are pushed up to the wrists. The garment asserts a highly functional but incredibly loud architectural shield."
+          },
+          {
+            "x": 50,
+            "y": 25,
+            "label": "Vibrant Pink Silk Blouse",
+            "description": "The vibrant pink silk blouse provides a stark bright focal point beneath the green jacket; it features a sharp pointed collar buttoned cleanly to the throat. This styling choice utilizes chromatic maximalism by forcing clashing saturated colors into tight proximity. The soft fabric sits smoothly against the chest; it tucks sharply into the massive yellow trousers. The top completes the upper silhouette with an unapologetic jolt of color."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Voluminous Yellow Trousers",
+            "description": "The voluminous yellow trousers drop heavily from the waist into a massive un-tailored fit; they completely swallow the lower body in blinding bright fabric. This structural extreme applies unrestrictive spatial volume to ground the colorful top half. The vivid yellow textile pools thickly over the footwear; the wide leg drops softly without pleating. The trousers assert a ceremonial almost theatrical volume."
           }
         ]
       }
@@ -8241,9 +10755,163 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
+            "y": 45,
+            "label": "Graphic Seamed White Slip Dress",
+            "description": "The graphic seamed white slip dress hugs the torso and hips in a sleek synthetic fabric; it features aggressive black stitch lines mapping the garment's construction directly onto the exterior. This structural intervention engages with tension structures by treating the seams as visible architectural vectors. The crisp white textile drops cleanly to the ankle with a dramatic asymmetrical slit over the right thigh; it is suspended by thin delicate straps. The garment asserts a highly engineered and provocative approach to swimwear cover-ups."
+          },
+          {
+            "x": 48,
+            "y": 70,
+            "label": "Rigid Branded Crinoline Cage",
+            "description": "The rigid branded crinoline cage spirals around the lower legs in a wide bell shape; it is constructed entirely from stiff white ribbons printed with the brand's typography. This accessory utilizes architectural scaffolding to enforce a massive geometric boundary around the model's stride. The empty voids between the ribbons completely expose the leg; it drags heavily across the runway. The piece completes the silhouette by injecting a bizarre historical reference into the hyper-modern collection."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
             "y": 40,
-            "label": "Engineered Power Mesh Body",
-            "description": "The engineered power mesh body uses the structural armature of strapping, boning, and elastic as both construction system and visible aesthetic surface; the scaffolding IS the garment. This material strategy embodies Becca McCharen-Tran's architectural training applied to the full spectrum of body morphology — designs that perform under actual physical stress while retaining visible engineering. The technical performance fabric is cut with couture-grade precision; the casting on the runway spans XS to 5XL across ages, abilities, and gender identities. The garment asserts Chromat's foundational position: size inclusivity as design premise, not afterthought."
+            "label": "Saturated Blue Velvet Swimsuit",
+            "description": "The saturated blue velvet swimsuit tightly binds the torso and groin in a highly tactile plush fabric; it features subtle paneled construction that contours the body precisely. This material application engages with active corporeal exposure by presenting a heavily textured luxury fabric within the context of a utilitarian bathing suit. The bright blue absorbs the runway lighting smoothly; it exposes the thighs and shoulders entirely. The garment asserts a confident and unapologetic approach to plus-size swimwear."
+          },
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Rigid Red Architectural Caging",
+            "description": "The rigid red architectural caging spirals over the blue swimsuit in an aggressive geometric grid; it flares widely away from the hips into a stiff bell shape. This structural extreme applies the concept of tension structures by using external scaffolding to create a massive spatial volume completely independent of the wearer's anatomy. The bright red material clashes violently with the blue velvet beneath; it casts sharp shadows over the stomach. The accessory completes the look by transforming the model into an imposing architectural monument."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Pink Velvet Cut-Out Swimsuit",
+            "description": "The pink velvet cut-out swimsuit wraps the torso and hips in an incredibly complex network of thin plush straps; it features massive geometric voids that expose the pregnant abdomen entirely. This structural logic utilizes active corporeal exposure to celebrate the reality of the changing female anatomy rather than attempting to conceal it. The bright pink fabric contrasts sharply with the pale skin; the straps crisscross tightly over the bust. The garment asserts a deeply vulnerable but fiercely proud and unyielding presence."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "Utilitarian White Combat Boots",
+            "description": "The utilitarian white combat boots anchor the delicate swimwear in a heavy functional base; they feature stark white leather and thick aggressive soles. This footwear choice applies semiotic sabotage by pairing a fragile swimsuit with heavy militant footwear. The bright white material reflects the lights fiercely; they rise tightly over the ankle. The boots complete the look by enforcing a strict survivalist and highly mobile posture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Color-Blocked Cut-Out Bodysuit",
+            "description": "The color-blocked cut-out bodysuit binds the torso and groin tightly in contrasting panels of bright blue and striped synthetic fabric; it features massive angular voids exposing the stomach and lower ribs. This material application engages with radical corporeal democratization by highlighting diverse anatomies with sharp geometric frames. The dark stripes compress the upper chest into a strict athletic shape; the solid blue groin panel sits high on the hips. The top asserts a sleek highly functional but incredibly revealing silhouette."
+          },
+          {
+            "x": 50,
+            "y": 15,
+            "label": "Bright Blue Lipstick",
+            "description": "The bright blue lipstick covers the mouth entirely in a highly saturated synthetic pigment; it matches the solid panels of the bodysuit precisely. This styling detail utilizes subcultural theatricality to introduce a jarring unnatural element into the otherwise minimal aesthetic. The bright blue pigment clashes softly with the model's skin tone; it acts as a bold aggressive facial focal point. The accessory completes the look by asserting the collection's obsession with high-voltage synthetic color."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Graphic Mesh Paneled Top",
+            "description": "The graphic mesh paneled top structures the upper chest with a sheer black net overlaid by bright blue geometric lines; it functions as a highly athletic and breathable crop top. This material choice engages with tension structures by treating the blue lines as supportive architectural vectors. The sheer fabric exposes the bust subtly beneath the grid; the solid black binding frames the edges tightly. The garment asserts a highly engineered and tactical approach to swimwear."
+          },
+          {
+            "x": 50,
+            "y": 55,
+            "label": "High-Waisted Mesh Cycling Shorts",
+            "description": "The high-waisted mesh cycling shorts encase the thighs in the exact same sheer black material as the top; they feature a solid blue groin panel that mimics traditional swimwear. This structural logic utilizes active corporeal exposure by turning athletic shorts into a translucent skin-baring garment. The tight mesh highlights the natural musculature; the solid panel sits artificially high. The piece completes the silhouette by enforcing an aggressive highly visible and athletic uniformity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Graphic Printed Mesh Top",
+            "description": "The graphic printed mesh top clings tightly to the upper body in a translucent dark blue fabric; it is heavily detailed with abstract technological motifs. This material strategy utilizes post-digital reality by creating a highly complex surface texture resembling circuit boards or structural blueprints. The sheer fabric exposes the bright yellow corset beneath; the sleeves end sharply at the elbows. The top asserts a highly engineered and tactical upper silhouette."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Neon Yellow Utility Corset",
+            "description": "The neon yellow utility corset tightly cinches the waist in a bright stiff synthetic textile; it features prominent functional zippers and small attached utility pouches. This structural logic engages with architectural scaffolding by forcing the soft mesh garments into a rigid controlled shape. The bright yellow color provides a massive chromatic contrast to the dark blue mesh; the sharp points angle downward over the hips. The garment completes the look by injecting heavy tactical hardware into the ensemble."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Classic Red Swimming Trunks",
+            "description": "The classic red swimming trunks bind the groin in a tight smooth synthetic fabric; they feature a slightly higher retro cut exposing the upper thigh. This material application engages with active corporeal exposure by providing the absolute minimum level of coverage necessary. The bright red color absorbs the runway light completely; the tight fit emphasizes the muscular anatomy of the model. The garment asserts a proud highly confident and unyielding physical presence."
+          },
+          {
+            "x": 50,
+            "y": 85,
+            "label": "White Graphic Athletic Sneakers",
+            "description": "The white graphic athletic sneakers ground the bare silhouette in heavy utilitarian footwear; they feature complex blue and red lacing systems. This accessory choice applies semiotic sabotage by pairing a beach-ready swimsuit with heavy urban sportswear. The stark white material reflects the lights fiercely; the thick soles provide a stable base. The boots complete the look by enforcing a strict highly mobile and slightly combative posture."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 40,
+            "label": "Red Strappy Bikini Top",
+            "description": "The red strappy bikini top binds the chest tightly in a bright saturated textile; it features an aggressive network of thick straps that crisscross the torso and back. This structural logic utilizes tension structures to transform a simple bikini into a complex piece of wearable scaffolding. The bright red material holds a rigid shape against the skin; the straps hang loosely with heavy metallic adjusters. The garment asserts a highly engineered and tactical approach to swimwear."
+          },
+          {
+            "x": 50,
+            "y": 50,
+            "label": "High-Cut Red Bikini Bottom",
+            "description": "The high-cut red bikini bottom anchors the lower silhouette in an incredibly brief bright red fabric; it features sharp asymmetrical cutouts across the hips. This material strategy engages with active corporeal exposure by maximizing the visibility of the legs and abdomen. The thick fabric holds its shape firmly; the high cut elongates the leg visually. The piece completes the ensemble by forcing the body to act as the primary visual focus."
+          },
+          {
+            "x": 50,
+            "y": 10,
+            "label": "Voluminous Gathered Hairstyle",
+            "description": "The voluminous gathered hairstyle features massive chaotic puffs of dark hair clustered tightly over the head and ears; it creates an unbalanced cartoonish silhouette. This styling detail applies subcultural theatricality by inflating the hair into an absurd geometric mass. The dark color contrasts softly with the bright red swimwear; the messy finish rejects pristine elegance. The accessory completes the look with an imposing and slightly aggressive anonymity."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 30,
+            "label": "Spliced Graphic Logo Hoodie",
+            "description": "The spliced graphic logo hoodie wraps the upper body in a complex block of white and dark blue jersey; it is violently chopped in half to expose the entire lower abdomen. This structural logic utilizes deconstructed assembly to force a heavy winter garment into a revealing swimwear cover-up. The thick fabric features prominent bright blue corporate branding; the hood hangs loosely behind the neck. The top asserts a chaotic and highly commodified posture."
+          },
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Red High-Waisted Bikini Bottom",
+            "description": "The red high-waisted bikini bottom tightly binds the groin and hips in a bright opaque textile; it is anchored by heavy hanging suspender straps. This material choice engages with radical corporeal democratization by celebrating a full-figured anatomy with bright aggressive color. The soft fabric provides a solid block of color beneath the chaotic hoodie; the blue straps pull tightly downwards. The garment completes the silhouette by injecting heavy tactical hardware into the ensemble."
+          },
+          {
+            "x": 50,
+            "y": 70,
+            "label": "Draped Blue Trousers",
+            "description": "The draped blue trousers fall heavily from the suspender straps to pool around the ankles; they appear to be standard track pants dropped entirely off the hips. This sartorial choice applies active corporeal exposure by removing the functional purpose of the trousers entirely. The bright blue fabric drags loosely against the runway; the hem rests over the white sneakers. The piece completes the look by asserting an aesthetic of hasty unfastened undress."
           }
         ]
       }
@@ -8278,9 +10946,132 @@ export const archiveData = [
         "hotspots": [
           {
             "x": 50,
-            "y": 40,
-            "label": "Sculptural Intarsia Knit Bodice",
-            "description": "The sculptural intarsia knit bodice produces a torso-length garment whose relationship to the body is systematically ambiguous; the form reads as clothing at one scale and sculpture at another. This structural strategy embodies Jonathan Anderson's signature compositional move — deliberate anatomical dislocation through misidentified contours and extreme proportional contrasts. The proportional system pairs very narrow legs against very wide shoulders; the felted wool structures maintain their form independently of the body. The garment asserts Anderson's intellectual proposition that the most interesting garments occupy the space where clothing and object become indistinguishable."
+            "y": 45,
+            "label": "Trompe l'Oeil Billboard Dress",
+            "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a green dress; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-02.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Trompe l'Oeil Billboard Dress",
+            "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a red tracksuit; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-03.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Trompe l'Oeil Billboard Dress",
+            "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a black gown; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-04.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Trompe l'Oeil Billboard Dress",
+            "description": "The trompe l'oeil billboard dress features a massive photographic print of an anime-style character and a model in a pink dress; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-05.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 55,
+            "label": "Trompe l'Oeil Billboard Dress",
+            "description": "The trompe l'oeil billboard dress features a massive photographic print of a model in a black hoodie; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-06.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Tinsel-Fringed Crop Top",
+            "description": "The tinsel-fringed crop top covers the upper torso in a highly textured pink synthetic yarn; it features an aggressively short hemline that exposes the entire midriff. This material application utilizes the semiotic sabotage of the party dress by transforming a cheap festive decoration into a dense architectural shell. The fuzzy material creates a chaotic visual noise that absorbs light softly; the high neck obscures the collarbone entirely. The garment asserts a posture of calculated post-pandemic absurdity."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Tinsel-Fringed Cutout Skirt",
+            "description": "The tinsel-fringed cutout skirt drops to the mid-calf in the exact same pink synthetic yarn; it features massive asymmetrical cutouts that completely expose the knees. This structural extreme applies corporeal distortion by violently interrupting a traditional pencil skirt silhouette with absurd voids. The thick material clings to the hips before breaking apart; the leg warmers attached below the knee add a bizarre disjointed texture. The piece completes the ensemble by forcing a heavy awkward stride."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-07.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 35,
+            "label": "Inflatable Tube Bandeau",
+            "description": "The inflatable tube bandeau acts as a rigid horizontal barrier across the chest; it is constructed from thick black latex inflated into a multi-chambered rectangular block. This material strategy engages directly with corporeal distortion via trapped componentry by replacing a traditional bodice with a piece of cheap party refuse. The shiny surface catches the bright studio lighting fiercely; it stands entirely away from the biological curve of the bust. The garment asserts a deeply alien and highly uncomfortable upper architecture."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Kinetic Faux-Fur Trousers",
+            "description": "The kinetic faux-fur trousers swallow the lower body in an immense volume of long synthetic black hair; they create a chaotic swirling mass that completely obscures the legs. This structural logic utilizes exaggerated and absurd volume to contrast the tight geometric rigidity of the latex bandeau above. The heavy fibers whip violently through the air as the model moves; the hem drags across the floor. The piece completes the silhouette by injecting an aggressive animalistic texture into the synthetic ensemble."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-08.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Printed Balloon Silk Dress",
+            "description": "The printed balloon silk dress drapes over the body in a stiff metallic silver textile; it features an aggressive peplum at the waist and a chaotic print of deflated colored balloons. This material application engages with the semiotic sabotage of the party dress by taking the ultimate symbol of celebration and presenting it as a discarded ruined motif. The shiny fabric holds deep rigid creases without soft fluid movement; the asymmetrical neckline exposes the left shoulder. The garment asserts a highly theatrical and slightly melancholic volume."
+          },
+          {
+            "x": 35,
+            "y": 30,
+            "label": "Printed Leather Handbag",
+            "description": "The printed leather handbag hangs from the right hand; it features the exact same deflated balloon print and silver sheen as the dress. This accessory utilizes surrealist domesticity by ensuring the depressing party motif is carried onto the functional hardware. The bright red strap provides a sharp contrast to the metallic body; the stiff shape mimics a classic clutch. The piece completes the look by solidifying the absurd visual narrative."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-09.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Trompe l'Oeil Billboard Dress",
+            "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a red bodysuit; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          }
+        ]
+      },
+      {
+        "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-10.jpg",
+        "hotspots": [
+          {
+            "x": 50,
+            "y": 45,
+            "label": "Glossy Blue Leather Jacket",
+            "description": "The glossy blue leather jacket structures the upper body in a highly reflective bright hide; it features classic lapels and an unfastened asymmetrical front. This outerwear choice applies the subversion of the mundane by elevating a basic moto jacket into a blinding piece of synthetic pop art. The stiff fabric holds sharp geometric creases over the arms; the bright color contrasts violently with the white trousers below. The jacket asserts an imposing and highly visible upper carapace."
+          },
+          {
+            "x": 50,
+            "y": 65,
+            "label": "Balloon-Studded White Trousers",
+            "description": "The balloon-studded white trousers drop heavily from the waist in a massive gathered volume; they are entirely covered in hundreds of uninflated white latex balloons. This material extreme engages directly with corporeal distortion via trapped componentry by appending cheap party debris to the legs as high-fashion embroidery. The soft rubber creates a dense chaotic texture that obscures the cut of the pants entirely; the wide legs bunch awkwardly over silver sandals. The garment completes the silhouette by enforcing an aesthetic of complete Dadaist absurdity."
           }
         ]
       }

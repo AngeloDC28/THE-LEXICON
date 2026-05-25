@@ -12,8 +12,137 @@
         {
           "x": 50,
           "y": 45,
-          "label": "Spray-Applied Fabrican Polymer Dress",
-          "description": "The spray-applied Fabrican polymer dress is assembled directly on the body in real time via pressurized canisters of biodegradable polymer fibers; it has no pattern, no seam, no cutter, and no atelier. This material extreme is the most widely documented fashion spectacle of the post-Instagram era — designed for the moving image rather than the still photograph. The non-woven textile dries instantly to form a fitted couture-precision silhouette; the manufacturing process is itself the cultural content. The garment asserts technology not as finish but as primary production logic."
+          "label": "Solidified Fabrican Dress",
+          "description": "The solidified Fabrican dress tightly encases the torso and hips in a stark white non-woven textile; it represents the exact culmination of the live performative fabrication. This material extreme applies real-time chemical assembly by transforming a liquid polymer suspension into a wearable garment directly upon the flesh. The bright white material hugs every contour of the natural anatomy perfectly; the neckline is folded down awkwardly off the shoulders. The garment asserts a purely scientific approach to sculptural conformity."
+        },
+        {
+          "x": 55,
+          "y": 65,
+          "label": "Manually Altered Slit",
+          "description": "The manually altered slit cuts violently up the left thigh to expose the bare leg entirely; it features a raw jagged edge where the solidified material was hacked with scissors. This structural intervention engages with the performative material genesis by revealing the hasty on-stage finishing process. The stiff fabric lacks fluid drape; the high cut allows the model to walk off the platform. The detail completes the dress by injecting a necessary functional mobility into the restrictive chemical shell."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Asymmetrical Cut-Out Dress",
+          "description": "The asymmetrical cut-out dress drapes softly over the body in a dark fluid fabric; it features a massive diagonal void across the chest that completely exposes the right breast and torso. This structural logic utilizes corporeal objectification to frame the bare skin as a central visual element. The dark material falls cleanly to the knee with an uneven hem; a subtle knot sits at the right hip. The garment asserts a highly provocative and unsettling take on cinematic eveningwear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Spliced Satin Minidress",
+          "description": "The spliced satin minidress tightly binds the torso and hips in a smooth highly reflective black textile; it features an asymmetrical neckline and a deep diagonal cut revealing a sheer lace underlayer across the chest. This tailoring choice engages with the mechanics of virality by creating a hyper-sexualized and highly recognizable \"It-girl\" silhouette designed specifically for digital consumption. The shiny fabric catches the clinical lighting fiercely; the skirt drops sharply to expose the right leg entirely. The garment asserts an aggressive commercialized glamour that rejects subtlety."
+        },
+        {
+          "x": 35,
+          "y": 60,
+          "label": "Solid Glass Swipe Bag",
+          "description": "The solid glass Swipe bag is gripped tightly in the right hand; it utilizes actual thick transparent glass to recreate the brand's signature accessory. This object engages with tech-integrated hardware by elevating a functional item into a fragile heavy and structurally uncompromising piece of industrial design. The smooth surface reflects light like a distorted mirror; it features a subtle metallic clasp. The accessory completes the look by asserting the brand's obsession with pushing material boundaries."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Structured Floral Leather Top",
+          "description": "The structured floral leather top frames the upper body in a rigid highly reflective black hide printed heavily with bright pink flowers; it features a deep unfastened V-neckline. This outerwear choice applies the concept of techno-sartorial synthesis by rendering a traditional romantic motif in a slick fetishistic material. The stiff fabric holds a sharp boxy shape over the torso; the short sleeves end bluntly above the elbow. The garment asserts an imposing and slightly toxic posthuman posture."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Matching Floral Hotpants",
+          "description": "The matching floral hotpants tightly encase the hips in the exact same glossy printed leather; they truncate sharply to leave the legs entirely exposed. This styling choice engages with the female body as canvas by minimizing the physical fabric to maximize corporeal exposure. The dark material absorbs light heavily outside of the bright floral prints; they sit high on the natural waist. The piece completes the look by forcing an incredibly abbreviated and aggressive lower silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Floral Neoprene Crop Top",
+          "description": "The floral neoprene crop top clings tightly to the upper body in a thick spongy synthetic textile; it features a bright pink floral print on a stark black background. This material strategy utilizes the mechanics of virality by creating a highly graphic and easily readable garment for the digital algorithm. The high neckline hugs the throat securely; the hem is violently truncated to expose the entire midriff. The top asserts a sporty but highly stylized silhouette."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Low-Rise Tailored Trousers",
+          "description": "The low-rise tailored trousers drop cleanly from the hip in a dark matte fabric; they feature a subtle contrasting waistband. This tailoring approach applies a relaxed formal baseline to anchor the bright sporty top. The fabric falls cleanly over dark open-toed footwear; the fit is relatively loose through the thigh. The trousers complete the ensemble by grounding the highly saturated upper volume."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Exaggerated Shoulder Bomber",
+          "description": "The exaggerated shoulder bomber structures the upper body in a smooth pale blue synthetic fabric; it pushes the shoulder line drastically upward and outward into harsh geometric points. This structural extreme applies monolithic massing by transforming a classic casual jacket into an imposing architectural carapace. The shiny material catches light softly; the front is zipped cleanly down the center. The outerwear asserts an unyielding and intimidating physical presence."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "High-Cut Satin Bodysuit",
+          "description": "The high-cut satin bodysuit tightly encases the hips and groin in a matching pale blue textile; it leaves the legs entirely exposed to the top of the thigh. This sartorial choice engages with corporeal objectification by applying the aesthetics of vintage swimwear to a modern runway look. The smooth fabric clings tightly to the body; a subtle waistband detail mirrors the jacket above. The piece completes the silhouette by creating a massive contrast in volume between the heavy top and bare legs."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Deconstructed Bustier Dress",
+          "description": "The deconstructed bustier dress wraps the torso in a stark black and white textile; it features deep angular cutouts at the waist and a prominent structural bra cup. This structural logic engages with the mechanics of virality by engineering a hyper-exposed \"Y2K revival\" silhouette. The sheer white fabric is heavily textured with subtle shimmering dots; the black detailing outlines the sharp geometric cuts. The garment asserts a highly calculated approach to bodily exposure."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Asymmetrical Jersey Maxi Dress",
+          "description": "The asymmetrical jersey maxi dress drapes heavily across the body in a dense black fabric; it features aggressive diagonal cutouts exposing the chest and a massive slit up the left thigh. This tailoring extreme applies corporeal objectification to frame the bare skin within severe architectural voids. The soft fabric pools heavily at the floor on the right side; the neckline wraps tightly around the throat. The dress asserts an imposing and slightly sinister monolithic presence."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Deconstructed Hardware Dress",
+          "description": "The deconstructed hardware dress splices white fluid fabric together using massive continuous rows of industrial hook-and-eye closures; it drapes erratically over the body. This material application utilizes tech-integrated hardware to build a garment that appears barely held together by metal teeth. The sheer fabric falls in chaotic asymmetrical panels over the hips; the right shoulder is entirely exposed. The garment asserts a fragile and slightly ruined aesthetic."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Asymmetrical Zipper Dress",
+          "description": "The asymmetrical zipper dress tightly encases the torso and hips in a smooth black fabric; it features two continuous metal zippers coiling chaotically around the entire body. This structural logic engages with the mechanics of virality by turning functional hardware into a massive spiral graphic motif. The dark material absorbs light heavily; the hem is uneven and features a long trailing strip of fabric. The piece completes the silhouette by asserting a highly engineered and slightly fetishistic approach to eveningwear."
         }
       ]
     }

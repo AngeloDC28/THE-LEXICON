@@ -11,9 +11,272 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 45,
+          "label": "Asymmetrical Layered Knit Dress",
+          "description": "The asymmetrical layered knit dress drops across the body in stark contrasting panels of black and bright blue; it features a violent diagonal cut that completely overrides the natural waistline. This structural logic utilizes scale distortion by dropping a massive heavy-gauge panel off the left shoulder. The dense wool fabric holds deep rigid folds; a bright gold interlocking belt sharply divides the torso from the hips. The garment asserts a highly architectural approach to casual knitwear."
+        },
+        {
+          "x": 35,
+          "y": 65,
+          "label": "Structured Clutch Handbag",
+          "description": "The structured clutch handbag is gripped tightly against the right thigh; it is a rigid dark rectangular block completely devoid of visible logos or straps. This accessory applies the concept of post-digital anonymity by transforming a functional item into a monolithic unreadable object. The smooth dark leather contrasts with the heavy ribbed texture of the dress; the subtle metallic frame provides a slight flash of hardware. The piece completes the silhouette by enforcing an aesthetic of severe stealth wealth."
+        },
+        {
+          "x": 50,
+          "y": 85,
+          "label": "Squared-Toe Leather Footwear",
+          "description": "The squared-toe leather footwear provides a heavy brutalist anchor for the fluid dress above; they feature a sharp blunt geometry across the toe box. This footwear strategy engages with brutalist elegance by mutating a delicate feminine pump into an imposing architectural foundation. The black leather absorbs the runway light completely; the thick heel elevates the model significantly. The accessory completes the look by asserting the brand's new obsession with aggressive uncompromising shape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Macro-Intrecciato Leather Coat",
+          "description": "The macro-intrecciato leather coat envelops the entire torso in a massive grid of padded white squares; it functions as a highly textured rigid carapace. This material extreme applies scale distortion by taking the brand's delicate heritage weave and magnifying it into a heavy architectural component. The thick leather strips are interwoven perfectly to create deep shadows across the surface; the collar stands stiffly against the neck. The outerwear asserts a protective and highly imposing urban armor."
+        },
+        {
+          "x": 30,
+          "y": 55,
+          "label": "Padded Leather Cassette Bag",
+          "description": "The padded leather Cassette bag hangs casually from the right hand; it perfectly mimics the exact macro-weave texture of the coat above. This object utilizes the semiotic sabotage of heritage by turning the classic intrecciato into a chunky plush graphic. The bright white leather catches the light softly; the thick padded squares bulge outward to create a hyper-tactile surface. The accessory completes the look by ensuring the heavy grid pattern dominates the entire silhouette."
+        },
+        {
+          "x": 50,
+          "y": 80,
+          "label": "Chunky Platform Combat Boots",
+          "description": "The chunky platform combat boots encase the lower legs in thick black leather; they feature massive protruding soles and heavy strap detailing. This footwear choice engages with brutalist geometry by grounding the pristine white coat in a harsh militant base. The matte black finish absorbs the light entirely; the boots rise tightly over the calf. The accessory completes the ensemble by asserting a protective and highly utilitarian posture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Glossy Leather Drawstring Parka",
+          "description": "The glossy leather drawstring parka drops heavily to the knee in a deep reflective brown hide; it features soft gathered volume at the waist and hem. This outerwear choice engages with stealth wealth brutalism by applying an incredibly luxurious material to a mundane functional raincoat silhouette. The highly polished surface catches sharp horizontal highlights from the runway lamps; the long sleeves end abruptly to reveal bright blue cuffs beneath. The garment asserts a highly protective and slightly imposing urban shield."
+        },
+        {
+          "x": 50,
+          "y": 85,
+          "label": "Chunky Chelsea Boots",
+          "description": "The chunky Chelsea boots drop cleanly from the dark trousers; they feature a massive protruding sole and a thick rounded toe. This footwear strategy applies brutalist massing by taking a classic British boot and inflating its proportions into heavy architectural hardware. The smooth black leather contrasts slightly with the brown coat above; the thick rubber sole provides a heavy structural anchor. The boots complete the look by enforcing a strict utilitarian posture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Tailored Leather Cape Coat",
+          "description": "The tailored leather cape coat structures the upper body in a rigid black hide; it features sharp lapels and long trailing side panels that entirely obscure the arms. This tailoring extreme applies architectural massing by transforming a classic formal topcoat into an imposing monolithic block. The dark material absorbs light completely; a heavy triangular metallic buckle fastens the chest. The outerwear asserts a highly defensive and theatrical posture that functions as a luxurious shield."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Voluminous Ruched Skirt",
+          "description": "The voluminous ruched skirt drops beneath the heavy coat in a bright glossy blue fabric; it balloons outward to create a massive bubble-like silhouette above the knee. This structural logic utilizes scale distortion to force a sudden jarring contrast in volume and color against the black leather above. The shiny synthetic textile gathers tightly at the hem to trap the volume; it introduces a playful but bizarre spatial footprint. The garment completes the look by adding a highly unexpected kinetic element."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sculptural Leather Dress",
+          "description": "The sculptural leather dress envelopes the torso and hips in a smooth continuous black hide; it features a stiff square neckline and complex folded draping that creates an asymmetrical hem. This material strategy engages with brutalist elegance by taking an aggressive fetishistic fabric and mutating it into an intellectual architectural shape. The dark surface catches the runway lighting softly; the stiff material holds a rigid shape that completely overrides natural anatomy. The garment asserts an unyielding and imposing physical presence."
+        },
+        {
+          "x": 35,
           "y": 60,
-          "label": "Oversized Intrecciato Pouch Bag",
-          "description": "The oversized intrecciato pouch bag is held softly under the arm in a deep forest-green leather woven via the house's foundational craft technique; it became the defining accessory of 2019 and 2020. This material strategy reintroduces Bottega Veneta's heritage weave as a central design element rather than a heritage footnote. The exaggerated scale of the weave makes the construction technique legible; the absence of any visible logo is itself the luxury signal. The accessory asserts the 'quiet luxury' proposition that defined Daniel Lee's commercially successful AW 2019 debut."
+          "label": "Woven Leather Handle Bag",
+          "description": "The woven leather handle bag is gripped tightly against the right hip; it features a classic intrecciato weave updated with a sharp triangular metallic handle. This accessory utilizes the semiotic sabotage of heritage by fusing delicate artisanal craft with cold modern hardware. The dark black leather blends into the dress above; the bright silver triangle provides the only point of contrast. The piece completes the silhouette by asserting a highly clinical and disciplined approach to luxury."
+        },
+        {
+          "x": 50,
+          "y": 88,
+          "label": "Quilted Woven Pumps",
+          "description": "The quilted woven pumps encase the feet in a highly textured dark brown leather; they feature a rounded toe heavily constructed using the brand's signature weave. This footwear choice applies post-digital anonymity by prioritizing deep material texture over recognizable logos or sleek curves. The thick woven pattern mimics the appearance of domestic upholstery; the block heel grounds the look heavily. The accessory completes the look by ensuring the heritage techniques remain present in a mutated form."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Paneled Leather Moto Jacket",
+          "description": "The paneled leather moto jacket tightly binds the upper body in a deep brown hide; it features aggressive structural padding running vertically down the sleeves and across the chest. This outerwear choice applies brutalist geometry by turning a classic rebellious garment into a highly engineered piece of tactical armor. The smooth leather is interrupted by complex seams and heavy silver hardware; the front is zipped entirely to the throat. The jacket asserts a protective utilitarian posture designed for rapid movement."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Paneled Moto Trousers",
+          "description": "The paneled moto trousers drop straight to the ankle in the exact same dark brown leather as the jacket above; they feature thick ribbed padding across the knees and thighs. This structural logic engages with stealth wealth brutalism by elevating aggressive protective gear into a full runway suit. The stiff fabric holds sharp rigid creases; the trousers tuck seamlessly into heavy black combat boots. The garment completes the look by enforcing a strict survivalist uniform."
+        },
+        {
+          "x": 35,
+          "y": 55,
+          "label": "Minimalist White Cylindrical Bag",
+          "description": "The minimalist white cylindrical bag is held casually in the right hand; it provides a stark bright focal point against the dark leather ensemble. This object utilizes post-digital anonymity by functioning as a pure geometric shape rather than a recognizable luxury handbag. The smooth bright white leather lacks any functional straps or logos; a heavy gold chain link acts as the single embellishment. The accessory completes the silhouette by introducing an entirely alien form into the militant look."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Elongated Orange Knit Tunic",
+          "description": "The elongated orange knit tunic drops heavily to the knee in a bright saturated wool; it features an integrated draped scarf that wraps the neck and falls past the hem. This material strategy engages with anonymous power dressing by utilizing an incredibly simple silhouette elevated by a blinding primary color. The soft fabric clings loosely to the torso without defining the waist; the long sleeves are pushed up slightly over the wrists. The garment asserts a relaxed but highly visible nomadic posture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Quilted Leather Pencil Skirt",
+          "description": "The quilted leather pencil skirt drops from beneath the bright orange tunic to truncate sharply above the knee; it is constructed from shiny black hide heavily stitched with a diamond pattern. This structural choice provides a dark rigid baseline that grounds the fluid knitwear above. The glossy surface catches the light sharply; the tight fit restricts the model's stride slightly. The skirt completes the look by anchoring the loud top layer in a severe industrial texture."
+        },
+        {
+          "x": 65,
+          "y": 60,
+          "label": "Intrecciato Leather Tote",
+          "description": "The intrecciato leather tote hangs heavily from the left hand; it is a large structured bag featuring the brand's signature weave pushed to a massive scale. This accessory applies the semiotic sabotage of heritage by taking a delicate craft technique and mutating it into an imposing piece of urban luggage. The dark black leather absorbs the light completely; the thick woven strips create deep shadows. The piece completes the look by asserting the brand's new obsession with exaggerated proportions."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Deconstructed Ribbed Knit Layer",
+          "description": "The deconstructed ribbed knit layer wraps the upper torso in a dark navy wool; it features a massive asymmetrical cutout that completely exposes a grey sweater underneath. This material intervention engages with scale distortion by ripping open a traditional garment to reveal a chaotic layered interior. The thick ribbed fabric bunches heavily around the hips; the extremely elongated sleeves dangle past the hands. The top asserts a slouchy ruined silhouette that mocks pristine tailoring."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Paneled Leather Trousers",
+          "description": "The paneled leather trousers drop to the ankle in a sleek black hide; they feature aggressive horizontal seaming and padding across the thighs and knees. This structural logic applies brutalist geometry by incorporating the protective gear of motorcross into a casual runway ensemble. The stiff material reflects light sharply over every quilted ridge; the pants break cleanly over thick combat boots. The garment completes the look by grounding the messy knitwear in a highly engineered base."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Monolithic Black Topcoat",
+          "description": "The monolithic black topcoat swallows the upper body in an immense structural void; it features severe squared shoulders and an extremely long hem that brushes the mid-calf. This outerwear choice applies anonymous power dressing by mutating a formal overcoat into an imposing almost alien architecture. The dense dark fabric lacks visible hardware or lapels; the wide sleeves hang rigidly away from the arms. The coat asserts an unyielding and intimidating physical presence."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Padded Leather Moto Trousers",
+          "description": "The padded leather moto trousers drop heavily from beneath the coat in a dark brown hide; they feature thick ribbed padding across the knees and shins. This structural logic engages with stealth wealth brutalism by elevating aggressive protective gear into a full runway look. The stiff fabric holds sharp rigid creases over the knees; the trousers tuck seamlessly into heavy black combat boots. The garment completes the look by enforcing a strict survivalist uniform beneath the elegant coat."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Laser-Cut Leather Coat",
+          "description": "The laser-cut leather coat envelops the body in a stiff dark brown hide; it features an aggressive all-over pattern of small rectangular cutouts that reveal a dark underlayer. This material application utilizes scale distortion by transforming a solid sheet of leather into a highly complex porous net. The thick fabric hangs rigidly to the mid-calf; a subtle tied belt cinches the waist loosely. The outerwear asserts a hybridized aesthetic that fuses heavy industrial hardware with an almost delicate lattice."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Fluid Nylon Skirt",
+          "description": "The fluid nylon skirt drops beneath the heavy leather coat to the knee; it provides a soft kinetic base for the massive structured outerwear. This structural choice introduces a dark relaxed volume that contrasts with the stiff lattice above. The lightweight fabric falls softly over heavy black combat boots; it lacks any formal pleating. The garment completes the ensemble by grounding the highly technical coat in a deeply utilitarian and comfortable drape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Leather Trench Coat",
+          "description": "The oversized leather trench coat structures the body into a massive rigid rectangle; it is constructed from a pale yellow opaque hide. This material extreme applies the concept of anonymous power dressing by taking a classic piece of heritage outerwear and stripping away all traditional hardware or detailing. The smooth surface catches the runway lights softly; a massive triangular metallic buckle fastens the waist tightly. The garment asserts a highly commodified armor designed to project immense structural power."
+        },
+        {
+          "x": 35,
+          "y": 60,
+          "label": "Textured Spaghetti Handbag",
+          "description": "The textured spaghetti handbag hangs heavily from the right hand; it is a chaotic cluster of glossy black synthetic strings mimicking a mop head or sea anemone. This accessory utilizes the semiotic sabotage of heritage by entirely discarding the brand's signature leather weaving in favor of a bizarre tactile mess. The dense black material absorbs light completely; it completely lacks functional straps or a clear opening. The piece completes the look by injecting an absurd organic element into the clinical leather coat."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Oversized Leather Anorak",
+          "description": "The oversized leather anorak swallows the upper torso in a massive slouched volume of dark black hide; it features an oversized hood and thick drawstring ties pulling the waist inward. This outerwear choice engages with stealth wealth brutalism by mutating a basic casual windbreaker into an imposing luxury carapace. The dark material absorbs light heavily; the long sleeves gather thickly around the wrists. The jacket asserts a highly defensive and theatrical posture that functions as an urban shield."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Laser-Cut Leather Midi Skirt",
+          "description": "The laser-cut leather midi skirt drops to the knee in a deep maroon hide; it features an all-over grid of rectangular cutouts that expose the bare legs beneath. This material application engages with scale distortion by transforming a solid leather skirt into a porous architectural net. The stiff fabric holds a slight flare over the knees; the dark maroon provides a subtle flash of color against the black top. The skirt completes the look by grounding the heavy anorak with an intricate lattice texture."
+        },
+        {
+          "x": 30,
+          "y": 60,
+          "label": "Triangular Leather Clutch",
+          "description": "The triangular leather clutch is gripped tightly in the right hand; it is a bright turquoise geometric block outlined in gold hardware. This accessory applies post-digital anonymity by replacing a functional handbag with a pure unyielding shape. The bright color provides a jarring contrast to the dark ensemble; the sharp corners echo the brand's new obsession with blunt geometry. The piece completes the silhouette by introducing a stark synthetic object into the heavy leather look."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Voluminous Metallic Parka",
+          "description": "The voluminous metallic parka engulfs the figure in an immense heavy volume of reflective dark purple nylon; it drops aggressively down to the mid-calf. This outerwear choice applies brutalist massing to a standard winter staple by inflating its proportions into a massive shiny monolith. The glossy fabric features a thick central zipper tracking the entire length of the body; the massive gathered sleeves completely dwarf the arms. The garment asserts a highly protective architectural barrier that swallows the wearer entirely."
+        },
+        {
+          "x": 50,
+          "y": 80,
+          "label": "Chunky Platform Combat Boots",
+          "description": "The chunky platform combat boots encase the lower legs in thick black leather; they feature massive protruding soles and heavy strap detailing. This footwear choice engages with brutalist geometry by grounding the shiny purple coat in a harsh militant base. The matte black finish absorbs the light entirely; the boots rise tightly over the calf. The accessory completes the ensemble by asserting a protective and highly utilitarian posture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Tailored High-Neck Overcoat",
+          "description": "The tailored high-neck overcoat structures the upper body in a massive boxy frame of stark black wool; it features an extremely sharp shoulder line and an asymmetrical front panel that extends over the lapel. This tailoring extreme applies anonymous power dressing by erasing traditional suiting details to create a solid unreadable block of fabric. The dark material absorbs light completely; a subtle sheer mesh panel peeks out from the high neckline. The outerwear asserts an unyielding and imposing physical presence."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Voluminous Drop-Crotch Trousers",
+          "description": "The voluminous drop-crotch trousers fall heavily from the waist into a wide slouched volume; they gather thickly around the calves into a bulbous shape. This structural logic utilizes scale distortion to introduce a chaotic fluid drape beneath the rigid tailored coat. The black fabric matches the jacket perfectly to create a monolithic uniform; the hem breaks aggressively over heavy black boots. The trousers complete the look by forcing an awkward and highly exaggerated lower silhouette."
         }
       ]
     }

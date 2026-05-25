@@ -11,9 +11,132 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Sculptural Intarsia Knit Bodice",
-          "description": "The sculptural intarsia knit bodice produces a torso-length garment whose relationship to the body is systematically ambiguous; the form reads as clothing at one scale and sculpture at another. This structural strategy embodies Jonathan Anderson's signature compositional move — deliberate anatomical dislocation through misidentified contours and extreme proportional contrasts. The proportional system pairs very narrow legs against very wide shoulders; the felted wool structures maintain their form independently of the body. The garment asserts Anderson's intellectual proposition that the most interesting garments occupy the space where clothing and object become indistinguishable."
+          "y": 45,
+          "label": "Trompe l'Oeil Billboard Dress",
+          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a green dress; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Trompe l'Oeil Billboard Dress",
+          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a red tracksuit; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Trompe l'Oeil Billboard Dress",
+          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a black gown; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Trompe l'Oeil Billboard Dress",
+          "description": "The trompe l'oeil billboard dress features a massive photographic print of an anime-style character and a model in a pink dress; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Trompe l'Oeil Billboard Dress",
+          "description": "The trompe l'oeil billboard dress features a massive photographic print of a model in a black hoodie; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Tinsel-Fringed Crop Top",
+          "description": "The tinsel-fringed crop top covers the upper torso in a highly textured pink synthetic yarn; it features an aggressively short hemline that exposes the entire midriff. This material application utilizes the semiotic sabotage of the party dress by transforming a cheap festive decoration into a dense architectural shell. The fuzzy material creates a chaotic visual noise that absorbs light softly; the high neck obscures the collarbone entirely. The garment asserts a posture of calculated post-pandemic absurdity."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tinsel-Fringed Cutout Skirt",
+          "description": "The tinsel-fringed cutout skirt drops to the mid-calf in the exact same pink synthetic yarn; it features massive asymmetrical cutouts that completely expose the knees. This structural extreme applies corporeal distortion by violently interrupting a traditional pencil skirt silhouette with absurd voids. The thick material clings to the hips before breaking apart; the leg warmers attached below the knee add a bizarre disjointed texture. The piece completes the ensemble by forcing a heavy awkward stride."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Inflatable Tube Bandeau",
+          "description": "The inflatable tube bandeau acts as a rigid horizontal barrier across the chest; it is constructed from thick black latex inflated into a multi-chambered rectangular block. This material strategy engages directly with corporeal distortion via trapped componentry by replacing a traditional bodice with a piece of cheap party refuse. The shiny surface catches the bright studio lighting fiercely; it stands entirely away from the biological curve of the bust. The garment asserts a deeply alien and highly uncomfortable upper architecture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Kinetic Faux-Fur Trousers",
+          "description": "The kinetic faux-fur trousers swallow the lower body in an immense volume of long synthetic black hair; they create a chaotic swirling mass that completely obscures the legs. This structural logic utilizes exaggerated and absurd volume to contrast the tight geometric rigidity of the latex bandeau above. The heavy fibers whip violently through the air as the model moves; the hem drags across the floor. The piece completes the silhouette by injecting an aggressive animalistic texture into the synthetic ensemble."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Printed Balloon Silk Dress",
+          "description": "The printed balloon silk dress drapes over the body in a stiff metallic silver textile; it features an aggressive peplum at the waist and a chaotic print of deflated colored balloons. This material application engages with the semiotic sabotage of the party dress by taking the ultimate symbol of celebration and presenting it as a discarded ruined motif. The shiny fabric holds deep rigid creases without soft fluid movement; the asymmetrical neckline exposes the left shoulder. The garment asserts a highly theatrical and slightly melancholic volume."
+        },
+        {
+          "x": 35,
+          "y": 30,
+          "label": "Printed Leather Handbag",
+          "description": "The printed leather handbag hangs from the right hand; it features the exact same deflated balloon print and silver sheen as the dress. This accessory utilizes surrealist domesticity by ensuring the depressing party motif is carried onto the functional hardware. The bright red strap provides a sharp contrast to the metallic body; the stiff shape mimics a classic clutch. The piece completes the look by solidifying the absurd visual narrative."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Trompe l'Oeil Billboard Dress",
+          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a red bodysuit; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Glossy Blue Leather Jacket",
+          "description": "The glossy blue leather jacket structures the upper body in a highly reflective bright hide; it features classic lapels and an unfastened asymmetrical front. This outerwear choice applies the subversion of the mundane by elevating a basic moto jacket into a blinding piece of synthetic pop art. The stiff fabric holds sharp geometric creases over the arms; the bright color contrasts violently with the white trousers below. The jacket asserts an imposing and highly visible upper carapace."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Balloon-Studded White Trousers",
+          "description": "The balloon-studded white trousers drop heavily from the waist in a massive gathered volume; they are entirely covered in hundreds of uninflated white latex balloons. This material extreme engages directly with corporeal distortion via trapped componentry by appending cheap party debris to the legs as high-fashion embroidery. The soft rubber creates a dense chaotic texture that obscures the cut of the pants entirely; the wide legs bunch awkwardly over silver sandals. The garment completes the silhouette by enforcing an aesthetic of complete Dadaist absurdity."
         }
       ]
     }

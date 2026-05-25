@@ -11,9 +11,213 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 45,
+          "label": "Color-Blocked Wool Vest",
+          "description": "The color-blocked wool vest wraps the upper torso in a deep maroon fabric heavily interrupted by a jagged geometric patch of bright yellow and white; it completely lacks sleeves. This structural intervention engages with sartorial collage by treating a formal knitwear piece like an abstract graphic canvas. The bright yellow patch sits awkwardly off-center over the chest; the neckline is cut high against the throat. The top asserts an athletic and slightly disjointed modern uniform."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tailored Blue Trousers",
+          "description": "The tailored blue trousers drop cleanly from the waist in a bright highly saturated fabric; they feature a sharp front crease and contrasting side stripes. This material strategy utilizes the outsider's gaze to elevate a classic marching band uniform into a piece of sleek high fashion. The vibrant blue breaks sharply over brown leather cowboy boots; the fit is relatively relaxed through the thigh. The trousers complete the look by anchoring the chaotic top in a recognizable piece of Americana."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Tailored Western Shirt",
+          "description": "The tailored Western shirt frames the upper body in a dark navy wool; it features prominent flap pockets and a structured pointed collar. This material application engages with the semiotic sabotage of nostalgia by applying the severe cut of a cowboy shirt to a traditional piece of formal suiting fabric. The dark material absorbs light completely; a bright blue underlayer peeks out from the neckline. The garment asserts a highly disciplined and vaguely militant posture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tailored Track Trousers",
+          "description": "The tailored track trousers drop from the waist in a dark green textile; they feature a sharp vertical crease and bright yellow racing stripes down the side seams. This structural logic utilizes sartorial pastiche by fusing formal boardroom tailoring with athletic sportswear. The stiff fabric falls cleanly over bright red cowboy boots; the contrasting stripes draw the eye directly downward. The trousers complete the silhouette by enforcing an aesthetic of strict uniformity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
           "y": 40,
-          "label": "Quilted American Flag Coat",
-          "description": "The quilted American flag coat drapes the torso in a patchwork of stars-and-stripes quilting bonded to heavy wool; it converts a domestic textile tradition into runway outerwear. This material application engages directly with Raf Simons's forensic archaeology of American vernacular culture conducted during his Calvin Klein 205W39NYC tenure. The Sterling Ruby collaboration is visible in the chaotic patchwork construction; the silhouette references the Western frontier coat. The outerwear asserts the European designer's argument that the most rigorous reading of American imagery comes from outside it."
+          "label": "Double-Breasted Plaid Suit",
+          "description": "The double-breasted plaid suit structures the body in a classic light grey and black check pattern; it features a stiff boxy fit and sharp formal lapels. This outerwear choice applies the outsider's gaze to a staple of Wall Street power dressing, rendering it slightly oversized to emphasize its structural rigidity. The traditional metallic buttons run strictly down the front; the sleeves drop cleanly to the wrist. The garment asserts a posture of commanding corporate authority."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Matching Plaid Midi Skirt",
+          "description": "The matching plaid midi skirt drops rigidly below the heavy jacket in a stiff A-line shape; it features a subtle asymmetrical drape near the hem. This material application provides a static formal base that completes the full suit of oppressive patterned fabric. The dense textile falls without fluid movement; the hem breaks cleanly over bright red cowboy boots. The garment asserts a ceremonial and slightly absurd volume that completely obscures the legs."
+        },
+        {
+          "x": 70,
+          "y": 50,
+          "label": "Rigid Briefcase Accessory",
+          "description": "The rigid briefcase accessory is carried firmly under the left arm; it mimics a traditional piece of corporate luggage rendered in smooth black leather. This object utilizes the semiotic sabotage of nostalgia by treating a banal workplace tool as a primary luxury accessory. The sharp corners contrast with the subtle drape of the skirt; shiny silver hardware secures the clasp. The piece completes the look by solidifying the parody of American office culture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Sheer Torso Panel",
+          "description": "The sheer torso panel tightly binds the chest and abdomen in a highly translucent flesh-toned mesh; it exposes the male anatomy completely beneath a fragile synthetic layer. This material application engages with gender-fluid Americana by replacing a traditional button-down shirt with a piece of aggressive corporeal exposure. The thin fabric clings to the ribs; it sits starkly against the heavy knit sleeves. The top asserts a highly provocative and unsettling take on casual sportswear."
+        },
+        {
+          "x": 35,
+          "y": 30,
+          "label": "Deconstructed Varsity Sleeves",
+          "description": "The deconstructed varsity sleeves wrap the arms in heavy knit white and blue yarn; they are entirely detached from a central bodice. This structural intervention utilizes sartorial collage by isolating the visual markers of an American letterman jacket and appending them to a sheer base layer. The thick fabric holds deep horizontal stripes; the cuffs end bluntly at the elbow. The garment completes the silhouette by injecting a chaotic and broken athletic motif."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Tailored Navy Blazer",
+          "description": "The tailored navy blazer frames the upper body in a classic formal wool; it features sharp lapels and a heavily structured shoulder line. This outerwear choice engages with the outsider's gaze by taking a pristine piece of corporate uniform and styling it carelessly over an exposed torso. The dark fabric absorbs the runway lighting completely; it hangs open to reveal a tiny bandeau top. The jacket asserts an imposing and highly defensive posture."
+        },
+        {
+          "x": 35,
+          "y": 35,
+          "label": "Draped Yellow Knit Sleeves",
+          "description": "The draped yellow knit sleeves hang heavily off the shoulders; they are completely detached from a main sweater and serve merely as a textural scarf. This structural logic utilizes deconstructed knitwear to introduce a jarring block of bright color into the dark ensemble. The thick ribbed fabric bunches awkwardly against the clean lines of the blazer; it mimics a sweater hastily tied around the neck. The accessory asserts a chaotic and slightly ruined approach to luxury layering."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Ribbed Red Midi Skirt",
+          "description": "The ribbed red midi skirt drops cleanly to the mid-calf in a bright highly saturated knit fabric; it provides a severe linear contrast to the dark blazer above. This material choice introduces a flexible but unyielding column of intense color that dominates the lower visual field. The deep vertical lines draw the eye straight down to the delicate strappy sandals; the hem ends bluntly below the knee. The skirt completes the look by finalizing the jarring primary color palette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "PVC-Encased Plaid Topcoat",
+          "description": "The PVC-encased plaid topcoat structures the body into a massive rigid rectangle; it is completely sealed inside a highly reflective transparent plastic shell. This material extreme applies the concept of synthetic encapsulation by taking a classic piece of heritage outerwear and rendering it clinically artificial. The shiny surface catches the runway lights sharply over the muted brown check beneath; the coat hangs open to reveal a sheer torso panel. The garment asserts a highly commodified armor designed to preserve and protect."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "PVC-Encased Faux Fur Coat",
+          "description": "The PVC-encased faux fur coat engulfs the figure in a massive volume of bright yellow synthetic pelt; it is hermetically sealed within a clear plastic slipcover. This material strategy engages heavily with the semiotic sabotage of nostalgia by treating a luxurious 1970s silhouette like a piece of protected living room furniture. The glossy exterior adds a stiff unnatural shine to the fluffy fur beneath; a delicate silver chain belt cinches the waist tightly. The outerwear asserts a theatrical and slightly absurd approach to preservation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Leather Western Jacket",
+          "description": "The leather Western jacket wraps the torso tightly in a dark brown hide; it is heavily embellished with silver metallic floral appliques. This tailoring choice utilizes sartorial pastiche by elevating the rugged aesthetic of a cowboy uniform into a piece of pristine high fashion. The stiff material holds deep rigid creases; a contrasting shearling collar frames the neck softly. The jacket asserts an imposing and highly defensive urban armor."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Floral Print Midi Skirt",
+          "description": "The floral print midi skirt drops below the heavy leather jacket in a soft flowing silhouette; it features a dense pattern of delicate pink and white blossoms. This material application provides a romantic fluid base that clashes violently with the militant outerwear above. The thin fabric falls softly over delicate strappy sandals; the hem breaks cleanly at the mid-calf. The skirt completes the ensemble by grounding the harsh leather in a fragile traditional Americana motif."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Crisp Denim Uniform",
+          "description": "The crisp denim uniform tightly binds the entire body in a stiff unwashed indigo fabric; it features a classic trucker jacket and straight-leg jeans with aggressive yellow topstitching. This material strategy utilizes the outsider's gaze to present the ultimate symbol of American working-class labor as a highly disciplined runway uniform. The rigid material lacks any distressing or fading; the jacket is buttoned cleanly to the waist. The ensemble asserts a deeply serious and formal approach to casualwear."
+        },
+        {
+          "x": 50,
+          "y": 88,
+          "label": "Metal-Tipped Cowboy Boots",
+          "description": "The metal-tipped cowboy boots provide a sharp aggressive anchor for the denim suit; they feature bright silver hardware capping the pointed toes. This footwear choice applies sartorial collage by injecting a sudden flash of Western kitsch into the austere uniform. The shiny red and black leather contrasts with the matte indigo denim; the thick heel provides a heavy base. The accessory completes the look by solidifying the parody of American archetypes."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Patchwork Quilted Parka",
+          "description": "The patchwork quilted parka drops heavily from the shoulders to the mid-thigh in a dark nylon shell; it hangs wide open to reveal a massive interior lining constructed from traditional American quilting squares. This outerwear choice engages with sartorial collage by hiding a deeply nostalgic symbol of domestic craft inside a sleek modern coat. The thick fabric is lined with grey faux-fur along the hood; the bright pastel squares contrast violently with the dark exterior. The garment asserts a highly protective layer that conceals a fragile heritage."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Color-Blocked Wool Shirt",
+          "description": "The color-blocked wool shirt hugs the torso tightly beneath the heavy parka; it features a deep maroon body interrupted by bright yellow geometric patches across the chest. This structural intervention engages with visual flattening by treating a formal shirt like an abstract graphic canvas. The stiff fabric is buttoned cleanly to the throat over a white turtleneck; the long sleeves end sharply at the wrist. The top completes the upper silhouette by adding a dense block of clashing color."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "PVC-Encased Feather Dress",
+          "description": "The PVC-encased feather dress envelops the torso and thighs in a chaotic explosion of bright blue and white plumes; it is entirely sealed within a clear rigid plastic slipcover. This material extreme applies synthetic encapsulation to freeze a fragile organic material in a state of suspended animation. The shiny outer shell reflects the runway lighting sharply over the soft feathers beneath; the dress drops cleanly to the knee. The garment asserts a highly theatrical and slightly suffocating approach to preservation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Cropped Leather Aviator Jacket",
+          "description": "The cropped leather aviator jacket frames the upper body in a stiff dark hide; it features a sharp tailored collar and contrasting bright red cuffs and hem. This outerwear choice utilizes the outsider's gaze by taking a classic piece of military heritage and mutating it into a sharp aggressive top layer. The dark material absorbs light completely; it hangs open to expose the midriff beneath a tiny bandeau top. The jacket asserts an imposing and highly defensive posture."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "A-Line Wool Midi Skirt",
+          "description": "The A-line wool midi skirt drops cleanly to the mid-calf in a smooth black fabric; it provides a strict formal baseline against the chaotic cropped jacket. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear above. The stiff material features subtle structural panels that allow it to hold a rigid bell shape; the hem breaks cleanly over black strappy sandals. The skirt completes the look by providing a deeply traditional and elegant base."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Glossy Black Leather Trench",
+          "description": "The glossy black leather trench engulfs the figure in a massive highly reflective outer shell; it features large classic lapels and a double-breasted closure left completely unfastened. This outerwear choice applies the semiotic sabotage of nostalgia by mutating a classic spy-movie silhouette into a slick futuristic carapace. The dark surface catches extreme white highlights from the runway lamps; the coat trails heavily past the knee. The garment asserts a slightly fetishistic and highly artificial protective armor."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Track Trousers with Red Stripes",
+          "description": "The track trousers drop cleanly to the ankle in a dark maroon fabric; they feature a sharp white and red racing stripe running down the outer seam. This structural logic engages with sartorial pastiche by fusing formal boardroom tailoring with athletic sportswear beneath a heavy leather coat. The fabric falls cleanly over brown cowboy boots; the contrasting stripe draws the eye directly downward. The trousers complete the silhouette by anchoring the imposing jacket in a recognizable athletic motif."
         }
       ]
     }

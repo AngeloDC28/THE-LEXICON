@@ -11,9 +11,163 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 45,
+          "label": "Graphic Seamed White Slip Dress",
+          "description": "The graphic seamed white slip dress hugs the torso and hips in a sleek synthetic fabric; it features aggressive black stitch lines mapping the garment's construction directly onto the exterior. This structural intervention engages with tension structures by treating the seams as visible architectural vectors. The crisp white textile drops cleanly to the ankle with a dramatic asymmetrical slit over the right thigh; it is suspended by thin delicate straps. The garment asserts a highly engineered and provocative approach to swimwear cover-ups."
+        },
+        {
+          "x": 48,
+          "y": 70,
+          "label": "Rigid Branded Crinoline Cage",
+          "description": "The rigid branded crinoline cage spirals around the lower legs in a wide bell shape; it is constructed entirely from stiff white ribbons printed with the brand's typography. This accessory utilizes architectural scaffolding to enforce a massive geometric boundary around the model's stride. The empty voids between the ribbons completely expose the leg; it drags heavily across the runway. The piece completes the silhouette by injecting a bizarre historical reference into the hyper-modern collection."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
           "y": 40,
-          "label": "Engineered Power Mesh Body",
-          "description": "The engineered power mesh body uses the structural armature of strapping, boning, and elastic as both construction system and visible aesthetic surface; the scaffolding IS the garment. This material strategy embodies Becca McCharen-Tran's architectural training applied to the full spectrum of body morphology — designs that perform under actual physical stress while retaining visible engineering. The technical performance fabric is cut with couture-grade precision; the casting on the runway spans XS to 5XL across ages, abilities, and gender identities. The garment asserts Chromat's foundational position: size inclusivity as design premise, not afterthought."
+          "label": "Saturated Blue Velvet Swimsuit",
+          "description": "The saturated blue velvet swimsuit tightly binds the torso and groin in a highly tactile plush fabric; it features subtle paneled construction that contours the body precisely. This material application engages with active corporeal exposure by presenting a heavily textured luxury fabric within the context of a utilitarian bathing suit. The bright blue absorbs the runway lighting smoothly; it exposes the thighs and shoulders entirely. The garment asserts a confident and unapologetic approach to plus-size swimwear."
+        },
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Rigid Red Architectural Caging",
+          "description": "The rigid red architectural caging spirals over the blue swimsuit in an aggressive geometric grid; it flares widely away from the hips into a stiff bell shape. This structural extreme applies the concept of tension structures by using external scaffolding to create a massive spatial volume completely independent of the wearer's anatomy. The bright red material clashes violently with the blue velvet beneath; it casts sharp shadows over the stomach. The accessory completes the look by transforming the model into an imposing architectural monument."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Pink Velvet Cut-Out Swimsuit",
+          "description": "The pink velvet cut-out swimsuit wraps the torso and hips in an incredibly complex network of thin plush straps; it features massive geometric voids that expose the pregnant abdomen entirely. This structural logic utilizes active corporeal exposure to celebrate the reality of the changing female anatomy rather than attempting to conceal it. The bright pink fabric contrasts sharply with the pale skin; the straps crisscross tightly over the bust. The garment asserts a deeply vulnerable but fiercely proud and unyielding presence."
+        },
+        {
+          "x": 50,
+          "y": 85,
+          "label": "Utilitarian White Combat Boots",
+          "description": "The utilitarian white combat boots anchor the delicate swimwear in a heavy functional base; they feature stark white leather and thick aggressive soles. This footwear choice applies semiotic sabotage by pairing a fragile swimsuit with heavy militant footwear. The bright white material reflects the lights fiercely; they rise tightly over the ankle. The boots complete the look by enforcing a strict survivalist and highly mobile posture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Color-Blocked Cut-Out Bodysuit",
+          "description": "The color-blocked cut-out bodysuit binds the torso and groin tightly in contrasting panels of bright blue and striped synthetic fabric; it features massive angular voids exposing the stomach and lower ribs. This material application engages with radical corporeal democratization by highlighting diverse anatomies with sharp geometric frames. The dark stripes compress the upper chest into a strict athletic shape; the solid blue groin panel sits high on the hips. The top asserts a sleek highly functional but incredibly revealing silhouette."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Bright Blue Lipstick",
+          "description": "The bright blue lipstick covers the mouth entirely in a highly saturated synthetic pigment; it matches the solid panels of the bodysuit precisely. This styling detail utilizes subcultural theatricality to introduce a jarring unnatural element into the otherwise minimal aesthetic. The bright blue pigment clashes softly with the model's skin tone; it acts as a bold aggressive facial focal point. The accessory completes the look by asserting the collection's obsession with high-voltage synthetic color."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Graphic Mesh Paneled Top",
+          "description": "The graphic mesh paneled top structures the upper chest with a sheer black net overlaid by bright blue geometric lines; it functions as a highly athletic and breathable crop top. This material choice engages with tension structures by treating the blue lines as supportive architectural vectors. The sheer fabric exposes the bust subtly beneath the grid; the solid black binding frames the edges tightly. The garment asserts a highly engineered and tactical approach to swimwear."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "High-Waisted Mesh Cycling Shorts",
+          "description": "The high-waisted mesh cycling shorts encase the thighs in the exact same sheer black material as the top; they feature a solid blue groin panel that mimics traditional swimwear. This structural logic utilizes active corporeal exposure by turning athletic shorts into a translucent skin-baring garment. The tight mesh highlights the natural musculature; the solid panel sits artificially high. The piece completes the silhouette by enforcing an aggressive highly visible and athletic uniformity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Graphic Printed Mesh Top",
+          "description": "The graphic printed mesh top clings tightly to the upper body in a translucent dark blue fabric; it is heavily detailed with abstract technological motifs. This material strategy utilizes post-digital reality by creating a highly complex surface texture resembling circuit boards or structural blueprints. The sheer fabric exposes the bright yellow corset beneath; the sleeves end sharply at the elbows. The top asserts a highly engineered and tactical upper silhouette."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Neon Yellow Utility Corset",
+          "description": "The neon yellow utility corset tightly cinches the waist in a bright stiff synthetic textile; it features prominent functional zippers and small attached utility pouches. This structural logic engages with architectural scaffolding by forcing the soft mesh garments into a rigid controlled shape. The bright yellow color provides a massive chromatic contrast to the dark blue mesh; the sharp points angle downward over the hips. The garment completes the look by injecting heavy tactical hardware into the ensemble."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Classic Red Swimming Trunks",
+          "description": "The classic red swimming trunks bind the groin in a tight smooth synthetic fabric; they feature a slightly higher retro cut exposing the upper thigh. This material application engages with active corporeal exposure by providing the absolute minimum level of coverage necessary. The bright red color absorbs the runway light completely; the tight fit emphasizes the muscular anatomy of the model. The garment asserts a proud highly confident and unyielding physical presence."
+        },
+        {
+          "x": 50,
+          "y": 85,
+          "label": "White Graphic Athletic Sneakers",
+          "description": "The white graphic athletic sneakers ground the bare silhouette in heavy utilitarian footwear; they feature complex blue and red lacing systems. This accessory choice applies semiotic sabotage by pairing a beach-ready swimsuit with heavy urban sportswear. The stark white material reflects the lights fiercely; the thick soles provide a stable base. The boots complete the look by enforcing a strict highly mobile and slightly combative posture."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Red Strappy Bikini Top",
+          "description": "The red strappy bikini top binds the chest tightly in a bright saturated textile; it features an aggressive network of thick straps that crisscross the torso and back. This structural logic utilizes tension structures to transform a simple bikini into a complex piece of wearable scaffolding. The bright red material holds a rigid shape against the skin; the straps hang loosely with heavy metallic adjusters. The garment asserts a highly engineered and tactical approach to swimwear."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "High-Cut Red Bikini Bottom",
+          "description": "The high-cut red bikini bottom anchors the lower silhouette in an incredibly brief bright red fabric; it features sharp asymmetrical cutouts across the hips. This material strategy engages with active corporeal exposure by maximizing the visibility of the legs and abdomen. The thick fabric holds its shape firmly; the high cut elongates the leg visually. The piece completes the ensemble by forcing the body to act as the primary visual focus."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Voluminous Gathered Hairstyle",
+          "description": "The voluminous gathered hairstyle features massive chaotic puffs of dark hair clustered tightly over the head and ears; it creates an unbalanced cartoonish silhouette. This styling detail applies subcultural theatricality by inflating the hair into an absurd geometric mass. The dark color contrasts softly with the bright red swimwear; the messy finish rejects pristine elegance. The accessory completes the look with an imposing and slightly aggressive anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Spliced Graphic Logo Hoodie",
+          "description": "The spliced graphic logo hoodie wraps the upper body in a complex block of white and dark blue jersey; it is violently chopped in half to expose the entire lower abdomen. This structural logic utilizes deconstructed assembly to force a heavy winter garment into a revealing swimwear cover-up. The thick fabric features prominent bright blue corporate branding; the hood hangs loosely behind the neck. The top asserts a chaotic and highly commodified posture."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Red High-Waisted Bikini Bottom",
+          "description": "The red high-waisted bikini bottom tightly binds the groin and hips in a bright opaque textile; it is anchored by heavy hanging suspender straps. This material choice engages with radical corporeal democratization by celebrating a full-figured anatomy with bright aggressive color. The soft fabric provides a solid block of color beneath the chaotic hoodie; the blue straps pull tightly downwards. The garment completes the silhouette by injecting heavy tactical hardware into the ensemble."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Draped Blue Trousers",
+          "description": "The draped blue trousers fall heavily from the suspender straps to pool around the ankles; they appear to be standard track pants dropped entirely off the hips. This sartorial choice applies active corporeal exposure by removing the functional purpose of the trousers entirely. The bright blue fabric drags loosely against the runway; the hem rests over the white sneakers. The piece completes the look by asserting an aesthetic of hasty unfastened undress."
         }
       ]
     }

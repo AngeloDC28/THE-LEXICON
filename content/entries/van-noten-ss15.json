@@ -11,9 +11,94 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Hand-Painted Silk and Velvet Layered Look",
-          "description": "The hand-painted silk and velvet layered look stacks multiple textile traditions into a single garment system; it places a hand-illustrated organza panel over a velvet bodice cut with utilitarian field-jacket precision. This material strategy embodies the archival depth that defined Dries Van Noten's 100th show — accumulation as a slow craft achievement rather than maximalist excess. The competing surface textures resolve into a coherent palette only after sustained looking; each layer cites a specific making tradition. The garment asserts what independent, craft-centered, long-term practice produces when held against the conglomerate luxury system."
+          "y": 45,
+          "label": "Horizontally Striped Silk Tunic",
+          "description": "The horizontally striped silk tunic engulfs the upper body in a relaxed oversized volume; it features broad bands of dark purple, gold, and black. This material strategy engages with unrestrictive spatial volume by dropping the shoulder line completely and allowing the fabric to billow away from the torso. The lightweight silk catches the dim golden lighting softly; the sleeves fall loosely past the elbow without structured cuffs. The garment asserts a languid nomadic aesthetic that prioritizes comfort and fluid kinetic motion."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Asymmetrical Color-Blocked Hem",
+          "description": "The asymmetrical color-blocked hem drops unevenly to the knee; it violently interrupts the horizontal stripes with thick geometric blocks of bright blue and yellow. This structural logic utilizes sartorial collage to break up the expected rhythm of the pattern. The bright colors contrast sharply with the muted tones above; the raw un-pleated fabric hangs limply. The detail completes the tunic by enforcing an aesthetic of deliberate imperfection and neo-bohemian subcultural appropriation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sheer Printed Chiffon Dress",
+          "description": "The sheer printed chiffon dress wraps the entire body in multiple fragile translucent layers; it features an intricate chaotic pattern of tribal and geometric motifs. This material application engages with Pre-Raphaelite eroticism by exposing the silhouette of the body through delicate gossamer textiles rather than tight tailoring. The soft fabric falls into a series of tiered ruffled skirts that drag slightly near the ankle; the cold-shoulder neckline exposes the collarbone entirely. The garment asserts a tragic romanticism that mimics the appearance of ancient decaying tapestries."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Gilded Jacquard High-Neck Top",
+          "description": "The gilded jacquard high-neck top structures the upper body in a stiff opulent textile; it features an aggressive geometric pattern woven with metallic gold and dark brown threads. This outerwear choice applies the monolithic massing of heritage materials to create a dense architectural shell. The stiff fabric sits rigidly against the throat; it drops flatly over the waist without any tailored darts or gathering. The top asserts a ceremonial and highly tactile upper silhouette."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Asymmetrical Striped Trousers",
+          "description": "The asymmetrical striped trousers fall fluidly from the waist into a relaxed slouching volume; they feature thick vertical and horizontal stripes in dark blue, purple, and green. This structural intervention utilizes sartorial collage by pairing a heavy rigid jacquard top with extremely casual pajama-like bottoms. The fabric pools slightly over the footwear; an extra panel of striped fabric wraps randomly around the hip like a discarded sash. The trousers complete the look by anchoring the opulent top in a deeply bohemian subcultural drape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Layered Asymmetrical Silk Dress",
+          "description": "The layered asymmetrical silk dress drops over the body in a smooth dark brown textile heavily printed with ornate golden motifs; it features a deep V-neckline and a chaotic tiered skirt. This material strategy engages with organic decay by utilizing a fabric that resembles a rich but fading historical artifact. The soft silk clings slightly to the torso before expanding into loose unstructured panels; the hemline is violently uneven, dragging low on the right side. The garment asserts a posture of languid un-tailored elegance."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Striped Chiffon Under-Panel",
+          "description": "The striped chiffon under-panel peeks out from beneath the heavy asymmetrical hem of the silk dress; it introduces a completely different textile and pattern into the lower silhouette. This styling detail utilizes sartorial collage to emphasize the illusion of scavenged layered clothing. The sheer blue and grey stripes contrast sharply with the solid golden print above; it falls softly to the mid-calf. The piece completes the silhouette by enforcing an aesthetic of chaotic nomadic accumulation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Metallic Lurex Duster Coat",
+          "description": "The metallic lurex duster coat drops cleanly to the knee in a highly reflective dark blue textile; it features a simple open collar and completely lacks lapels or hardware. This outerwear choice applies the subversion of the \"natural\" by taking a relaxed pajama-like silhouette and rendering it in a flashy synthetic disco fabric. The material catches the dim runway lighting fiercely; it hangs open to reveal a deeply complex layered outfit beneath. The coat asserts a quiet but highly visible urban armor."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Slouching Jacquard Trousers",
+          "description": "The slouching jacquard trousers fall heavily from the waist in a dark patterned fabric; they provide a relaxed wide-leg base for the metallic coat. This structural logic engages with unrestrictive spatial volume by avoiding slim tailoring entirely. The thick fabric pools slightly around the ankles; the dark muted colors anchor the bright blue topcoat. The trousers complete the ensemble by asserting a highly comfortable and fluid kinetic motion."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Sheer Beaded Chiffon Blouse",
+          "description": "The sheer beaded chiffon blouse envelopes the torso in a dark fragile mesh; it is completely covered in chaotic patches of green, gold, and black beadwork. This material application utilizes Pre-Raphaelite eroticism by exposing the bare skin entirely beneath a heavily adorned but structurally useless textile. The thin fabric holds deep wrinkles and soft folds; the dark floral embellishments mimic creeping moss or organic decay spreading across the body. The top asserts a deeply vulnerable and tragic romanticism."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Printed Silk Slouch Trousers",
+          "description": "The printed silk slouch trousers drop from the waist in a dark heavily patterned fabric; they feature a stark vertical stripe of contrasting print running down the right leg. This tailoring approach applies sartorial collage to disrupt a simple relaxed silhouette. The lightweight silk falls cleanly over dark sandals; the chaotic white and grey print provides a dense visual texture that mirrors the beaded top. The trousers complete the look by enforcing a strictly non-tailored bohemian uniform."
         }
       ]
     }

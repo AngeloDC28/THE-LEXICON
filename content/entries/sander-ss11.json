@@ -11,9 +11,247 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 45,
+          "label": "Striped Columnar Midi Skirt",
+          "description": "The striped columnar midi skirt drops heavily from the waist in a stiff fabric; it features stark black and white vertical bands alternating with grey. This structural logic utilizes austere couture proportions to create a rigid architectural cylinder around the lower body. The dense material falls cleanly without fluid drape; a wide horizontal band visually truncates the midsection. The skirt asserts a deeply disciplined and formal geometry that anchors the chaotic upper layer."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Asymmetrical Striped Tunic",
+          "description": "The asymmetrical striped tunic wraps the upper torso loosely in a chaotic collage of black and white stripes; it features an extended trailing panel thrown haphazardly over the left shoulder. This material strategy engages with structural pastiche by disrupting a classic tailored stripe with a messy unstructured drape. The stiff fabric sits away from the chest; the V-neck exposes a simple grey underlayer. The top completes the silhouette by injecting a sense of tense imbalance."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Voluminous White Silk Blouse",
+          "description": "The voluminous white silk blouse drapes softly over the torso; it features a high conservative neckline and an attached cape-like overlay that drops dramatically over the shoulders. This material choice applies the semiotic sabotage of the basics by taking the mundane formatting of a simple white top and inflating it into an imposing architectural carapace. The smooth fabric catches the runway lights cleanly; the lack of visible hardware emphasizes the purity of the drape. The garment asserts a quiet but highly theatrical upper volume."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "High-Gloss Leather Miniskirt",
+          "description": "The high-gloss leather miniskirt tightly encases the hips before flaring slightly; it is constructed from a thick reflective black hide. This structural intervention provides a severe aggressive contrast to the delicate white silk above. The stiff material holds a rigid shape above the knee; a minimal dark belt sits perfectly at the natural waistline. The piece completes the look by grounding the ethereal top in a harsh tactile reality."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Leather Yoke T-Shirt",
+          "description": "The leather yoke t-shirt structures the upper chest in a stiff black hide before transitioning abruptly into a matte black knit torso; it entirely mimics the silhouette of a banal short-sleeve top. This material strategy utilizes sartorial collage by fusing an aggressive fetishistic fabric with a mundane everyday staple. The smooth leather catches subtle highlights; the sleeves end bluntly at the bicep. The garment asserts a highly disciplined approach to essentialism."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Spliced Jersey Miniskirt",
+          "description": "The spliced jersey miniskirt drops from beneath the black top in a dark unadorned fabric; it features subtle asymmetrical cut-outs at the hip exposing bare skin. This tailoring approach applies a tense architectural geometry to a simple skirt. The soft fabric provides a kinetic moving base beneath the rigid leather; the hem breaks cleanly at the mid-thigh. The piece completes the silhouette by neutralizing the heavy top half with a relaxed athletic-inspired drape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Laced Linen Tunic Dress",
+          "description": "The laced linen tunic dress structures the body in a stiff pale grey textile; it features an aggressive thick black leather lacing system running entirely down the center front. This material strategy engages with utilitarian assembly by treating a heavy raw fabric with the reverence of haute couture. The boxy short-sleeve fit completely obscures the natural waistline and bust; the black laces provide a sharp graphic contrast against the muted canvas. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Leather Yoke T-Shirt",
+          "description": "The leather yoke t-shirt tightly encases the upper chest in a stiff olive-green hide before transitioning into a soft tonal knit; it flawlessly replicates the silhouette of a casual short-sleeve tee. This material elevation utilizes the semiotic sabotage of the basics by taking the most mundane garment format and rendering it partially in incredibly premium buttery leather. The smooth surface catches the light subtly across the bust; it is tucked sharply into the high-waisted trousers. The top asserts the collection's obsession with perfecting the ultimate wardrobe essential."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "High-Waisted Linen Trousers",
+          "description": "The high-waisted linen trousers drop cleanly from the waist to the floor in a muted grey fabric; they feature prominent utilitarian patch pockets across the thighs. This structural logic engages with unrestrictive spatial volume by providing wide comfortable pants that liberate the female form rather than constraining it. The thick fabric holds a sharp vertical crease down the center leg; a minimal unbranded belt anchors the look. The trousers complete the ensemble by asserting a highly disciplined but deeply comfortable urban uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Laced Linen Tunic Dress",
+          "description": "The laced linen tunic dress structures the body in a stiff dark khaki textile; it features an aggressive thick black leather lacing system running entirely down the center front. This material strategy engages with utilitarian assembly by treating a heavy raw fabric with the reverence of haute couture. The boxy short-sleeve fit completely obscures the natural waistline and bust; the deep cowl neckline provides a subtle relief from the rigid fabric. The garment asserts an unyielding architectural armor that functions as a highly protective everyday uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Quilted Leather Moto Jacket",
+          "description": "The quilted leather moto jacket frames the upper body in a highly textured black hide; it features an asymmetrical peplum flare that disrupts the rigid tailoring. This outerwear choice applies the subversion of traditional outerwear by taking an aggressive fetishistic fabric and mutating it into an intellectual architectural shape. The dark material absorbs light completely; the front zipper is hidden to maintain a clean clinical line. The jacket asserts an imposing and highly defensive posture."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Asymmetrical Cotton Shirtdress",
+          "description": "The asymmetrical cotton shirtdress drops beneath the heavy leather jacket in a crisp bright white textile; it introduces a soft unrestrictive volume to the lower silhouette. This structural intervention utilizes essentialism by deploying the most basic shirting fabric as a foundational layer. The bright white textile flashes cleanly against the dark leather; the hem trails unevenly over the thighs. The garment completes the look by grounding the severe upper carapace in a relaxed pragmatic drape."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Draped Asymmetrical Silk Dress",
+          "description": "The draped asymmetrical silk dress wraps the torso and hips in a smooth pale camel textile; it features a complex folded overlay across the chest that completely disguises the natural bustline. This tailoring approach applies austere couture proportions by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The soft fabric falls cleanly without heavy gathering; the short sleeves and high neckline maintain a modest profile. The garment asserts a highly polished and quietly powerful everyday uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Fitted Long-Sleeve Bodysuit",
+          "description": "The fitted long-sleeve bodysuit clings tightly to the upper body in a smooth beige stretch fabric; it provides a severe and unadorned baseline. This styling choice engages with zero embellishment by stripping away all unnecessary detailing in favor of a clean clinical silhouette. The pale textile blends seamlessly with the skin tone; it tucks sharply into the high waist of the skirt. The top asserts a rigid formal minimalism that functions as an intellectual canvas for the look."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Paneled Pleated Midi Skirt",
+          "description": "The paneled pleated midi skirt drops heavily from the waist in alternating blocks of beige and cream fabric; it features deep sharp pleats that split open over the thigh. This structural logic utilizes austere couture proportions to introduce kinetic movement to an otherwise static uniform. The thick material holds a rigid shape while walking; a minimal unbranded belt anchors the waist. The skirt completes the ensemble by asserting an aesthetic of rigorous architectural tailoring."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Draped Asymmetrical Silk Dress",
+          "description": "The draped asymmetrical silk dress wraps the torso and hips in a highly lustrous dark blue textile; it features a complex folded overlay that drops diagonally across the waist. This tailoring approach applies austere couture proportions by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The shiny fabric catches the runway light softly; the sleeveless cut exposes the arms completely. The garment asserts a highly polished and quietly powerful eveningwear alternative."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Vibrant Fuchsia T-Shirt",
+          "description": "The vibrant fuchsia t-shirt clings tightly to the upper body in a highly saturated synthetic knit; it mimics the mundane silhouette of a short-sleeve top. This material application utilizes chromatic maximalism by treating the bright pigment as the primary structural element. The soft fabric conforms to the chest smoothly; it tucks securely into the massive green skirt. The top asserts a deliberate tension between the ordinary format and the shocking explosive color."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Voluminous Emerald Silk Skirt",
+          "description": "The voluminous emerald silk skirt inflates from the waist into a massive billowing bell shape; it drops heavily to the floor in an intensely saturated green textile. This structural logic applies the semiotic sabotage of the basics by pairing a mundane t-shirt with a monumental piece of mid-century couture architecture. The stiff shiny fabric gathers deeply to maintain its immense spatial volume; the hem completely obscures the footwear. The skirt asserts a dramatic and highly visible posture that commands absolute attention."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Black Wool Blazer",
+          "description": "The oversized black wool blazer drops heavily past the hips in a stark unyielding block of dark fabric; it features slightly dropped shoulders and severe architectural tailoring. This outerwear choice utilizes monolithic massing to create an imposing and somber outer shell. The stiff lapels hang open loosely over the bright colors beneath; the dark fabric absorbs light entirely. The jacket asserts a protective and clinical frame that attempts to contain the explosive hues."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Fuchsia T-Shirt and Green Lapels",
+          "description": "The bright fuchsia t-shirt and wide green lapels provide a violent chromatic collision beneath the dark blazer; they introduce intense synthetic pigment to the core of the silhouette. This material strategy engages with chromatic maximalism by layering aggressive contrasting colors tightly together. The pink knit matches the trousers perfectly; the green lapels mimic a secondary jacket layer. The detail completes the upper body by injecting high-voltage visual energy."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Tailored Fuchsia Trousers",
+          "description": "The tailored fuchsia trousers drop straight to the ankle in the exact same shocking pink fabric as the top; they feature a sharp front crease. This structural logic utilizes austere couture proportions to anchor the heavy outerwear. The brightly colored fabric falls cleanly over black platform footwear; it lacks any formal pleating. The trousers complete the look by enforcing a strict tailored discipline."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Basic White T-Shirt",
+          "description": "The basic white t-shirt hugs the torso in a tight crisp cotton; it represents the ultimate mundane wardrobe essential. This sartorial choice engages with the semiotic sabotage of the basics by elevating a cheap accessible garment to the level of high luxury. The stark white fabric fits cleanly without bunching; it is tucked seamlessly into the massive skirt. The top asserts a quiet pragmatic minimalism."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Voluminous Pale Yellow Maxi Skirt",
+          "description": "The voluminous pale yellow maxi skirt erupts from the waist in deep dramatic pleats; it creates an immense structured dome that sweeps the runway floor. This material extreme applies structural pastiche by recreating a mid-century ballgown silhouette to anchor the casual t-shirt. The stiff fabric holds sharp vertical shadows; it drops into a heavy bell shape. The garment asserts a highly theatrical volume that completely obscures the legs."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
           "y": 35,
-          "label": "Lacquered Organza Architectural Top",
-          "description": "The lacquered organza architectural top maintains its three-dimensional shape independently of the body via internal scaffolding and compressed interfacing; it reads as architectural volume rather than clothing. This structural strategy defines Raf Simons's late Jil Sander period: the pursuit of geometric purity through tailoring alone, with all ornamental content systematically eliminated. The single intrusion of acid yellow within an ivory-and-sand palette forces total attention onto form rather than color. The garment asserts the central problem of fashion minimalism — when the garment is stripped of all reference, construction itself becomes the carrier of meaning."
+          "label": "Bright Green Silk Topcoat",
+          "description": "The bright green silk topcoat structures the body in a stiff highly saturated textile; it features an oversized dropped-shoulder fit and simple classic lapels. This outerwear choice engages with chromatic maximalism by transforming a traditionally muted garment into a blinding piece of structural color. The shiny fabric holds deep rigid creases without soft drape; it hangs open to reveal the layered suiting beneath. The coat asserts a commanding and theatrical spatial presence."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Vibrant Purple Silk Blazer",
+          "description": "The vibrant purple silk blazer introduces a secondary layer of intense synthetic color beneath the green coat; it features dark contrasting buttons fastened tightly. This styling strategy utilizes a violent chromatic collision to generate deep visual tension within the silhouette. The bright fabric clashes aggressively with the outerwear; it sits flatly against the black trousers. The piece completes the upper body with an unapologetic display of color-blocking."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Tapered Black Trousers",
+          "description": "The tapered black trousers drop cleanly to the ankle in a dark matte fabric; they provide a strict formal baseline against the chaotic bright colors above. This material logic utilizes zero embellishment to anchor the explosive outerwear. The dark fabric falls cleanly over black leather heels; it lacks any formal pleating or hardware. The trousers complete the ensemble by providing a formal static base for the aggressive upper volume."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-15.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Saturated Green Utility Jacket",
+          "description": "The saturated green utility jacket frames the upper body in a lightweight synthetic nylon; it features prominent flap pockets and a classic point collar. This outerwear choice engages with the semiotic sabotage of the basics by treating a banal laborer's jacket with blinding high-visibility pigment. The bright fabric reflects the light softly; the sleeves are pushed up to the wrists. The garment asserts a highly functional but incredibly loud architectural shield."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Vibrant Pink Silk Blouse",
+          "description": "The vibrant pink silk blouse provides a stark bright focal point beneath the green jacket; it features a sharp pointed collar buttoned cleanly to the throat. This styling choice utilizes chromatic maximalism by forcing clashing saturated colors into tight proximity. The soft fabric sits smoothly against the chest; it tucks sharply into the massive yellow trousers. The top completes the upper silhouette with an unapologetic jolt of color."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Voluminous Yellow Trousers",
+          "description": "The voluminous yellow trousers drop heavily from the waist into a massive un-tailored fit; they completely swallow the lower body in blinding bright fabric. This structural extreme applies unrestrictive spatial volume to ground the colorful top half. The vivid yellow textile pools thickly over the footwear; the wide leg drops softly without pleating. The trousers assert a ceremonial almost theatrical volume."
         }
       ]
     }
