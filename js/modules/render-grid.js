@@ -225,13 +225,12 @@ export function renderFeaturedStrip(archiveData) {
     provenance: 'Historical Lineage',
   };
 
-  // Pick best (most recent) entry per category
-  const picks = CATEGORIES.map(cat => {
-    const match = [...archiveData]
-      .sort((a, b) => (b.year || 0) - (a.year || 0))
-      .find(e => getTagCategory(e.tags?.politics || '') === cat);
-    return match ? { cat, entry: match } : null;
-  }).filter(Boolean);
+  // Pick 4 random entries on each load, labelled by their analytical category
+  const shuffled = [...archiveData].sort(() => Math.random() - 0.5);
+  const picks = shuffled.slice(0, 4).map(entry => {
+    const cat = getTagCategory(entry.tags?.politics || '') || 'critique';
+    return { cat, entry };
+  });
 
   if (picks.length === 0) {
     container.classList.add('hidden');
