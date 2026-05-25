@@ -186,6 +186,30 @@ function renderImage(entry, callbacks) {
     const hotspotSuffix = hotspotCount > 0 ? ` · ${hotspotCount} ${annLabel}` : '';
     titleEl.textContent = `${brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]${hotspotSuffix}`;
   }
+
+  // Image counter dots
+  const counter = $('image-counter');
+  if (counter) {
+    counter.dataset.count = imgs.length;
+    if (imgs.length > 1) {
+      counter.innerHTML = imgs.map((_, i) => {
+        const isActive = i === AppState.currentImageIndex;
+        return `<button type="button" class="img-dot${isActive ? ' active' : ''}" data-img-index="${i}" aria-label="Image ${i + 1} of ${imgs.length}"${isActive ? ' aria-current="true"' : ''}></button>`;
+      }).join('');
+      counter.querySelectorAll('.img-dot').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.dataset.imgIndex, 10);
+          if (idx !== AppState.currentImageIndex) {
+            AppState.currentImageIndex = idx;
+            renderImage(entry, null);
+            renderHotspots(entry, $('detail-image-wrapper'));
+          }
+        });
+      });
+    } else {
+      counter.innerHTML = '';
+    }
+  }
 }
 
 /**

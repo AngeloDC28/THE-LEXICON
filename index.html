@@ -709,19 +709,28 @@
           </div>
         </div>
 
+        <!-- Site footer — inside scrollable panel so it doesn't compress the layout.
+             JS shows/hides it via the .hidden class (only on grid view). -->
+        <footer id="site-footer" class="site-footer hidden" aria-label="Site footer">
+          <div class="footer-bottom">
+            <span>© THE LEXICON · LONDON · MMXXV</span>
+            <span class="footer-tech">VANILLA JS · STATIC · NO TRACKING</span>
+          </div>
+        </footer>
+
         <!-- Detail View -->
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-black lg:pb-0">
           <!-- Breadcrumb bar -->
           <nav id="detail-breadcrumb" class="hidden lg:flex items-center gap-1 px-4 py-1.5 border-b border-white/10 text-[8px] font-mono uppercase tracking-widest text-white/30" aria-label="Entry breadcrumb"></nav>
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
             <!-- LEFT: Image Sector -->
-            <div id="detail-image-sector" class="flex-1 relative flex items-center justify-center p-4 lg:p-12 border-r border-white/10">
+            <div id="detail-image-sector" class="flex-1 relative flex flex-col items-center justify-center p-4 lg:p-12 border-r border-white/10">
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
                 <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]"></div>
-                <picture>
+                <picture style="pointer-events:none">
                   <source id="detail-image-webp" type="image/webp" srcset="" />
-                  <img id="detail-image" class="relative z-10" src="" alt="" fetchpriority="high" decoding="async" />
+                  <img id="detail-image" class="relative z-10" style="pointer-events:none" src="" alt="" fetchpriority="high" decoding="async" />
                 </picture>
                 
                 <!-- Floating Analytical Payload -->
@@ -746,10 +755,13 @@
 
               <!-- Sticky Note Squares (top-right triggers) -->
               <div id="sticky-squares" class="absolute top-4 right-16 z-[300] flex flex-col gap-[6px] pointer-events-auto"></div>
+
+              <!-- Image counter / dots (bottom-centre of image sector) -->
+              <div id="image-counter" class="shrink-0 flex items-center justify-center gap-2 pt-3 pb-1 z-[200]" aria-live="polite" aria-label="Image navigation"></div>
             </div>
 
-            <!-- Sticky Note Panel (reveals on right when a square is clicked) -->
-            <div id="sticky-note-panel" class="hidden w-[280px] flex-col overflow-y-auto border-l border-white/10 bg-black">
+            <!-- Sticky Note Panel (reveals on right when a square is clicked; shown via .visible CSS not Tailwind hidden) -->
+            <div id="sticky-note-panel" class="w-[280px] flex-col overflow-y-auto border-l border-white/10 bg-black">
               <div id="sticky-panel-header" class="flex items-center justify-between px-4 py-3 border-b border-black/20">
                 <span id="sticky-panel-label" class="text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-[0.2em]"></span>
                 <button type="button" id="btn-close-sticky-panel" class="text-[var(--t-mono-sm)] font-bold leading-none hover:opacity-60 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close panel">✕</button>
@@ -760,7 +772,7 @@
             <!-- RIGHT: Metadata Sidebar -->
             <div id="detail-metadata-sidebar" class="hidden w-[400px] bg-black border-l border-white/10 flex flex-col overflow-y-auto">
               <!-- Sticky Note Container (Brutalist Nodes) -->
-              <div class="flex items-center justify-between px-6 pt-4 pb-2">
+              <div class="flex items-center justify-between px-6 pt-8 pb-2">
                 <div>
                   <span class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest text-white/30">Analysis</span>
                   <span id="detail-reading-time" class="ml-3 text-[8px] font-mono opacity-20 tracking-wider"></span>
@@ -1116,37 +1128,6 @@
 
   </div>
 
-  <!-- Site footer (visible on homepage, hidden on detail/other views) -->
-  <footer id="site-footer" class="site-footer hidden" aria-label="Site footer">
-    <div class="footer-cols">
-      <div class="footer-col footer-brand-col">
-        <div class="footer-brand">THE LEXICON</div>
-        <div class="footer-blurb">A research archive for fashion history and visual culture. Built in London.</div>
-      </div>
-      <div class="footer-col">
-        <h4>Archive</h4>
-        <a href="#grid">Browse</a>
-        <a href="#" id="footer-research-link">Research Terminal</a>
-        <a href="#" id="footer-index-link">Index View</a>
-      </div>
-      <div class="footer-col">
-        <h4>Account</h4>
-        <a href="#" id="footer-signin-link">Sign in</a>
-        <a href="#folders" id="footer-folders-link">Folders</a>
-        <a href="#" id="footer-cite-link">Citations</a>
-      </div>
-      <div class="footer-col">
-        <h4>About</h4>
-        <a href="#" id="footer-method-link">Methodology</a>
-        <a href="#" id="footer-accessibility-link">Accessibility</a>
-        <a href="#" id="footer-privacy-link">Privacy &amp; Cookies</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© THE LEXICON · LONDON · MMXXV</span>
-      <span class="footer-tech">VANILLA JS · STATIC · NO TRACKING</span>
-    </div>
-  </footer>
 
 </body>
 </html>

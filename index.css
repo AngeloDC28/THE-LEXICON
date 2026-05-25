@@ -130,16 +130,7 @@ html.dark #app-root {
     flex-direction: column;
   }
   #app-root.detail-mode-active #index-panel {
-    position: relative;
-    width: 100%;
-    height: auto;
-    max-height: 35dvh;
-    transform: none;
-    border-right: 0;
-    border-top: 1px solid rgba(0,0,0,0.8);
-    order: 2;
-    z-index: 10;
-    padding-bottom: 70px;
+    display: none;
   }
   #app-root.detail-mode-active #image-panel {
     width: 100%;
@@ -1656,11 +1647,21 @@ html:not(.dark) .index-kbd-bar { border-top-color: rgba(0,0,0,0.08); color: rgba
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 0 32px !important;
+  padding: 0 0 36px !important;
   border-bottom: 1px solid rgba(255,255,255,0.08) !important;
   text-transform: none;
   cursor: default;
   color: inherit !important;
+  position: relative;
+}
+#sticky-note-container.reading-mode .brutalist-node::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.2;
+  margin-bottom: 20px;
 }
 #sticky-note-container.reading-mode .brutalist-node:hover {
   transform: none;
@@ -1672,17 +1673,20 @@ html:not(.dark) #sticky-note-container.reading-mode .brutalist-node {
 
 #sticky-note-container.reading-mode .node-label {
   font-family: var(--font-mono) !important;
-  font-size: 9px !important;
+  font-size: var(--t-mono-xs) !important;
   letter-spacing: 0.28em !important;
-  color: #666 !important;
+  color: rgba(255,255,255,0.4) !important;
   text-transform: uppercase;
-  font-weight: 500 !important;
+  font-weight: 700 !important;
   border-bottom: none !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 16px !important;
   padding-bottom: 0 !important;
   display: flex;
   align-items: center;
   gap: 12px;
+}
+html:not(.dark) #sticky-note-container.reading-mode .node-label {
+  color: rgba(0,0,0,0.4) !important;
 }
 #sticky-note-container.reading-mode .node-label::after {
   content: '';
@@ -1697,13 +1701,24 @@ html:not(.dark) #sticky-note-container.reading-mode .node-label::after {
 
 #sticky-note-container.reading-mode .node-body {
   font-family: 'EB Garamond', Georgia, serif !important;
-  font-size: var(--t-body) !important;
-  line-height: 1.7 !important;
-  color: #ccc !important;
-  text-transform: none;
+  font-size: clamp(1rem, 1.2vw, 1.15rem) !important;
+  line-height: 1.8 !important;
+  color: rgba(255,255,255,0.82) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
 }
 html:not(.dark) #sticky-note-container.reading-mode .node-body {
-  color: #333 !important;
+  color: #2a2a2a !important;
+}
+
+/* Widen the sidebar in reading mode so prose isn't too narrow */
+#detail-metadata-sidebar:has(#sticky-note-container.reading-mode) {
+  width: 480px;
+}
+@media (max-width: 1200px) {
+  #detail-metadata-sidebar:has(#sticky-note-container.reading-mode) {
+    width: 100%;
+  }
 }
 
 /* Pull quote inside critique note */
@@ -2722,6 +2737,33 @@ html.dark .active-hotspot-box {
   max-height: calc(100vh - 48px) !important;
 }
 
+/* ── IMAGE COUNTER (dots strip below image) ── */
+#image-counter {
+  min-height: 20px;
+}
+.img-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  padding: 0;
+}
+.img-dot.active {
+  background: #CCFF00;
+  border-color: #CCFF00;
+  transform: scale(1.4);
+}
+.img-dot:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+}
+/* On single-image entries the counter stays hidden */
+#image-counter:empty,
+#image-counter[data-count="1"] { display: none !important; }
+
 /* ── STICKY NOTE SQUARES (top-right image triggers) ── */
 .sticky-square {
   width: 20px;
@@ -2759,6 +2801,9 @@ html.dark .active-hotspot-box {
 .sq-strategy   { background: #0000FF; }
 
 /* ── STICKY NOTE PANEL (right-side reveal panel) ── */
+#sticky-note-panel {
+  display: none; /* hidden by default; shown via .visible */
+}
 #sticky-note-panel.visible {
   display: flex !important;
 }
@@ -2789,62 +2834,11 @@ html.dark .active-hotspot-box {
 /* ─── Site Footer ─────────────────────────────────────────────────── */
 .site-footer {
   border-top: 1px solid #1a1a1a;
-  padding: clamp(32px, 4vw, 64px) clamp(16px, 3vw, 48px) clamp(20px, 2.5vw, 36px);
+  padding: 12px clamp(16px, 3vw, 48px);
   font-family: var(--font-mono);
   background: #000;
 }
 html:not(.dark) .site-footer { border-top-color: #e0e0dc; background: #f4f4f0; }
-
-.footer-cols {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: clamp(24px, 4vw, 56px);
-  margin-bottom: clamp(24px, 3vw, 40px);
-  padding-bottom: clamp(24px, 3vw, 40px);
-  border-bottom: 1px solid #1a1a1a;
-}
-html:not(.dark) .footer-cols { border-bottom-color: #e0e0dc; }
-@media (max-width: 900px) { .footer-cols { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 500px) { .footer-cols { grid-template-columns: 1fr; } }
-
-.footer-brand {
-  font-size: var(--t-mono-base);
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: #fff;
-  margin-bottom: 10px;
-}
-html:not(.dark) .footer-brand { color: #000; }
-
-.footer-blurb {
-  font-size: var(--t-mono-xs);
-  color: #555;
-  line-height: 1.7;
-  max-width: 32ch;
-}
-html:not(.dark) .footer-blurb { color: #888; }
-
-.footer-col h4 {
-  font-size: 8px;
-  letter-spacing: 0.28em;
-  color: #444;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-html:not(.dark) .footer-col h4 { color: #bbb; }
-
-.footer-col a {
-  display: block;
-  font-size: var(--t-mono-xs);
-  color: #666;
-  text-decoration: none;
-  padding: 3px 0;
-  letter-spacing: 0.12em;
-  transition: color 0.12s;
-}
-.footer-col a:hover { color: #CCFF00; }
-html:not(.dark) .footer-col a { color: #888; }
-html:not(.dark) .footer-col a:hover { color: #000; }
 
 .footer-bottom {
   display: flex;

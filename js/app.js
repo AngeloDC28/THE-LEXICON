@@ -990,8 +990,14 @@ function setupEventListeners() {
     });
   });
 
-  // Lightbox: click the detail image to open zoomable fullscreen view
-  $('detail-image')?.addEventListener('click', () => openLightbox());
+  // Lightbox: click the image wrapper to open fullscreen view.
+  // picture/img have pointer-events:none so clicks pass through to the wrapper.
+  $('detail-image-wrapper')?.addEventListener('click', (e) => {
+    if (e.target.closest('.hotspot-btn')) return;
+    // Don't open if a sticky note panel or analytical payload is already active
+    if ($('sticky-note-panel')?.classList.contains('visible')) return;
+    openLightbox();
+  });
   $('btn-close-lightbox')?.addEventListener('click', () => closeLightbox());
   $('btn-lightbox-prev')?.addEventListener('click', () => navigateLightbox(-1));
   $('btn-lightbox-next')?.addEventListener('click', () => navigateLightbox(1));
