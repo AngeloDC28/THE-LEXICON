@@ -1162,6 +1162,27 @@ html:not(.dark) .mbs-btn-apply { background: #000; color: #fff; }
 .mbs-btn-clear:focus-visible, .mbs-btn-apply:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
 html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:focus-visible { outline-color: #000; }
 
+/* ─── Detail sidebar: accent tag header ─────────────────────────────── */
+.detail-accent-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 10px;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+.detail-entry-id {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.35); }
+
 /* ─── Mobile index view: stacked cards instead of table ─────────────── */
 @media (max-width: 767px) {
   .index-table thead { display: none; }
@@ -1187,8 +1208,17 @@ html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:foc
   /* Year + Season on row 4 */
   .index-table tbody td.td-year   { grid-column:1; grid-row:4; padding: 6px 0 0; font-size: var(--t-mono-xs); }
   .index-table tbody td.td-season { grid-column:2; grid-row:4; padding: 6px 0 0; text-align:right; font-size:var(--t-mono-xs); }
-  /* Provenance hidden on mobile to keep it tight */
-  .index-table tbody td.td-prov   { display: none; }
+  /* Provenance as italic hook on mobile row 5 */
+  .index-table tbody td.td-prov {
+    grid-column: 1/-1; grid-row: 5;
+    padding: 6px 0 0;
+    font-family: var(--font-serif);
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  html:not(.dark) .index-table tbody td.td-prov { color: rgba(0,0,0,0.45); }
   .index-table td { padding: 0; border: none; }
   .index-filter-bar { padding: 8px 12px; }
 }

@@ -6,6 +6,7 @@ import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-u
 import { AppState, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
+import { getTagCategory } from './render-index-view.js';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -59,6 +60,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   renderBreadcrumb(entry);
   renderImage(entry, callbacks);
   preloadAdjacentImages(entry);
+  renderSidebarHeader(entry);
   renderBrutalistNodes(entry);
   renderStickyOverlay(entry);
   renderMetadataGrid(entry);
@@ -118,11 +120,33 @@ export function navigateEntry(direction, archiveData, callbacks) {
   openDetail(nextEntry.id, startImg, archiveData, callbacks);
 }
 
+function renderSidebarHeader(entry) {
+  const header = $('detail-sidebar-header');
+  if (!header) return;
+  const lang = AppState.language;
+  const cat = getTagCategory(entry.tags?.politics || '');
+  const labelMap = {
+    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
+    subculture: 'Subcultural Codification', strategy: 'Strategic Appropriation',
+    semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
+  };
+  const tagLabel = labelMap[cat] || (entry.tags?.politics || 'ARCHIVE').split('&')[0].trim();
+  const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
+  const brand = entry.tags?.brand ? getTranslation(entry.tags.brand, lang).toUpperCase() : '—';
+  const year = entry.year || '----';
+  const season = entry.season ? entry.season.toUpperCase() : '';
+
+  header.innerHTML = `
+    <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
+    <div class="detail-entry-id">${id} · ${brand} · ${year}${season ? ' · ' + season : ''}</div>`;
+}
+
 function renderBreadcrumb(entry) {
   const crumb = $('detail-breadcrumb');
   if (!crumb) return;
   const brand = entry.tags?.brand || '—';
   const politics = entry.tags?.politics || '';
+  const cat = getTagCategory(politics);
   const tagCat = politics.split('&')[0].trim().replace(/s$/, '').toUpperCase() || 'ARCHIVE';
   const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
   const season = entry.season || '';
@@ -131,7 +155,7 @@ function renderBreadcrumb(entry) {
   crumb.innerHTML =
     `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
     + sep
-    + `<span style="color:var(--c-corporeal, #e2a4a0)">${tagCat}</span>`
+    + `<span style="color:var(--c-${cat}, #e2a4a0)">${tagCat}</span>`
     + sep
     + `<span class="text-white/50">${brand.toUpperCase()}</span>`
     + sep
