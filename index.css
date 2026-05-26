@@ -251,11 +251,14 @@ html.dark #app-root {
     right: 0;
     bottom: 0;
     z-index: 300;
+    height: 70vh;
     max-height: 70vh;
     display: flex;
     flex-direction: column;
     border-top: 2px solid #CCFF00;
+    background: var(--c-bg, #0a0a0a);
   }
+  html:not(.dark) #mobile-notes-sheet { background: #f5f5f0; }
   #mobile-notes-sheet.hidden { display: none !important; }
   #mobile-notes-sheet > div:first-child {
     display: flex;

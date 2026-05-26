@@ -106,7 +106,6 @@ function sortIndicator(col) {
 
 function buildHeaderRow() {
   const cols = [
-    { key: null,       label: 'ID',         width: '90px'  },
     { key: 'designer', label: 'DESIGNER / BRAND', width: '200px' },
     { key: 'year',     label: 'YEAR',        width: '70px'  },
     { key: 'season',   label: 'SEASON',      width: '140px' },
@@ -205,7 +204,6 @@ export function renderIndexView(archiveData, resetPage = false) {
     const provenance = entry.notes?.provenance
       ? getTranslation(entry.notes.provenance, lang).slice(0, 80) + '…'
       : '—';
-    const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
     const seasonLabel = title ? `${season} · "${title.slice(0, 30)}"` : season;
     const focused = idx === _focusedRowIndex ? 'focused' : '';
 
@@ -225,7 +223,6 @@ export function renderIndexView(archiveData, resetPage = false) {
           data-row-index="${idx}"
           tabindex="0"
           aria-label="Open entry: ${brand}, ${year}, ${tagLabel}">
-        <td class="td-id">${id}</td>
         <td class="td-designer">${brand.toUpperCase()}</td>
         <td class="td-year">${year}</td>
         <td class="td-season">${seasonLabel.toUpperCase()}</td>
