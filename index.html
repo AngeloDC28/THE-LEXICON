@@ -297,25 +297,15 @@
         document.documentElement.classList.add('dark');
       }
 
-      // Fail-safe boot dismissal
-      setTimeout(function() {
-        var overlay = document.getElementById('boot-overlay');
-        var root = document.getElementById('app-root');
-        if (overlay && !overlay.classList.contains('hidden')) {
-          console.warn("BOOT_FAILSAFE_TRIGGERED");
-          overlay.classList.add('boot-fade-out');
-          setTimeout(function() {
-            overlay.classList.add('hidden');
-            if (root) root.classList.remove('opacity-0');
-          }, 500);
-        } else if (root && root.classList.contains('opacity-0')) {
-          root.classList.remove('opacity-0');
-        }
-      }, 1200);
+      // Remove boot gate immediately — no artificial delay on slow connections
+      var overlay = document.getElementById('boot-overlay');
+      var root = document.getElementById('app-root');
+      if (overlay) overlay.classList.add('hidden');
+      if (root) root.classList.remove('opacity-0');
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=988bbff" />
+  <link rel="stylesheet" href="index.css?v=d96fff0" />
 </head>
 
 <body>
@@ -396,7 +386,7 @@
     </div>
   </header>
 
-  <div id="app-root" class="opacity-0 transition-opacity duration-300">
+  <div id="app-root">
 
     <!-- Drawer Backdrop (mobile only) -->
     <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
@@ -1173,7 +1163,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=988bbff"></script>
+    <script type="module" src="js/app.js?v=d96fff0"></script>
 
   </div>
 
