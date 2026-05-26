@@ -164,7 +164,9 @@ export function renderEntryList(archiveData, callbacks) {
   const totalLabel = $('index-panel-title');
   if (totalLabel) {
     const t = (key) => getTranslation(key, AppState.language);
-    totalLabel.textContent = `${t('index_title')} / ${pad(count)} OF ${pad(total)}`;
+    totalLabel.textContent = count < total
+      ? `${t('index_title')} · ${pad(count)} of ${pad(total)}`
+      : `${t('index_title')} · ${pad(total)}`;
   }
 
   if (count === 0) {
@@ -200,13 +202,29 @@ export function renderEntryList(archiveData, callbacks) {
     const catHeader = isNewCat
       ? `<div class="entry-cat-header" style="color:var(--c-${tagCategory},#888)">${tagLabel}</div>`
       : '';
+    // Thumbnail — first image of entry, shown inline on desktop
+    const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
+    const thumbSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
+    const thumbWebp = firstImg ? resolveImgSrc({ src: webpSrc(firstImg) }) : null;
+    const thumb = thumbSrc
+      ? `<picture class="entry-item-thumb" aria-hidden="true">
+           <source type="image/webp" srcset="${thumbWebp}">
+           <img src="${thumbSrc}" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.parentElement.style.display='none'">
+         </picture>`
+      : '';
     return `${catHeader}<div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
            data-id="${entry.id}"
+           data-thumb="${thumbSrc || ''}"
            role="button"
            tabindex="0"
            aria-label="${brand} ${year} ${tagLabel}">
-        <div class="entry-item-brand">${brand}</div>
-        <div class="entry-item-meta">${year}${season ? ' · ' + season : ''}</div>
+        <div class="entry-item-inner">
+          <div>
+            <div class="entry-item-brand">${brand}</div>
+            <div class="entry-item-meta">${year}${season ? ' · ' + season : ''}</div>
+          </div>
+          ${thumb}
+        </div>
       </div>`;
   }).join('');
 }
