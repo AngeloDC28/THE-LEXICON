@@ -23,8 +23,8 @@
   /* Chrome-scoped sizes: ~25% smaller than mono-xs/sm.
      Applied via #primary-header, #status-ribbon, #view-controls-bar
      so the rest of the app's mono text keeps its original sizing. */
-  --t-chrome-xs: clamp(0.375rem, 0.33rem + 0.11vw, 0.4375rem);
-  --t-chrome-sm: clamp(0.4375rem, 0.385rem + 0.11vw, 0.5rem);
+  --t-chrome-xs: clamp(0.5rem, 0.46rem + 0.12vw, 0.5625rem);
+  --t-chrome-sm: clamp(0.5625rem, 0.52rem + 0.12vw, 0.625rem);
   --t-body:      clamp(0.95rem, 0.85rem + 0.3vw, 1.0625rem);
   --t-lead:      clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
   --t-h3:        clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
@@ -2870,7 +2870,7 @@ html.dark .entry-item:hover::after {
   font-size: var(--t-chrome-xs);
 }
 #status-ribbon span[id$="-label"] {
-  font-size: 7px;
+  font-size: 9px;
 }
 #view-controls-bar button,
 #view-controls-bar span {
