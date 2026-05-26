@@ -2440,11 +2440,18 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
 
   /* Hamburger: bigger tap target + visible icon */
   #btn-hamburger {
-    padding: 10px;
-    min-width: 48px;
-    min-height: 48px;
+    padding: 12px;
+    min-width: 56px;
+    min-height: 56px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  #btn-hamburger svg { width: 30px; height: 30px; stroke-width: 2.25; }
+  #btn-hamburger svg { width: 32px; height: 32px; stroke-width: 2.5; pointer-events: none; }
+
+  /* Hide footer on mobile — it's not useful at small viewports and breaks flex layout */
+  #site-footer { display: none !important; }
 
   /* Mobile detail bottom bar: ensure image area accounts for fixed bar */
   #app-root.detail-mode-active #detail-image-view {
