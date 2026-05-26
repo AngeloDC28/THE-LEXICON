@@ -199,14 +199,13 @@ function renderSidebarHeader(entry) {
     semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
   };
   const tagLabel = labelMap[cat] || (entry.tags?.politics || 'ARCHIVE').split('&')[0].trim();
-  const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
   const brand = entry.tags?.brand ? getTranslation(entry.tags.brand, lang).toUpperCase() : '—';
   const year = entry.year || '----';
   const season = entry.season ? entry.season.toUpperCase() : '';
 
   header.innerHTML = `
     <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
-    <div class="detail-entry-id">${id} · ${brand} · ${year}${season ? ' · ' + season : ''}</div>`;
+    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>`;
 }
 
 function renderBreadcrumb(entry) {
@@ -216,9 +215,7 @@ function renderBreadcrumb(entry) {
   const politics = entry.tags?.politics || '';
   const cat = getTagCategory(politics);
   const tagCat = politics.split('&')[0].trim().replace(/s$/, '').toUpperCase() || 'ARCHIVE';
-  const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
   const season = entry.season || '';
-  const idLabel = season ? `${id} · ${season.slice(0, 30)}` : id;
   const sep = `<span class="mx-1 opacity-30">/</span>`;
   crumb.innerHTML =
     `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
@@ -226,8 +223,7 @@ function renderBreadcrumb(entry) {
     + `<span style="color:var(--c-${cat}, #e2a4a0)">${tagCat}</span>`
     + sep
     + `<span class="text-white/50">${brand.toUpperCase()}</span>`
-    + sep
-    + `<span class="text-white/70">${idLabel.toUpperCase()}</span>`;
+    + (season ? sep + `<span class="text-white/70">${season.slice(0, 30).toUpperCase()}</span>` : '');
   crumb.classList.remove('hidden');
   crumb.querySelector('[data-crumb-back]')?.addEventListener('click', (e) => {
     e.preventDefault();
@@ -507,7 +503,6 @@ function renderMetaRail(entry) {
     semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
   };
   const catLabel = catLabels[cat] || (entry.tags?.politics || 'Archive').split('&')[0].trim();
-  const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
   const taxRows = [
     { key: 'brand',     label: 'Brand' },
     { key: 'era',       label: 'Era' },
@@ -522,8 +517,7 @@ function renderMetaRail(entry) {
 
   rail.innerHTML = `
     <div class="meta-rail-section">
-      <span class="meta-rail-id">${id}</span>
-      <div class="meta-rail-cat" style="margin-top:4px">${catLabel}</div>
+      <div class="meta-rail-cat">${catLabel}</div>
     </div>
     <div class="meta-rail-section">
       <span class="meta-rail-label">Year / Season</span>
