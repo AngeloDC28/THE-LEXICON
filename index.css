@@ -192,6 +192,54 @@ html.dark #app-root {
 #terms-modal.hidden, #auth-modal.hidden, #save-folder-modal.hidden,
 #kbd-help-modal.hidden, #cmd-palette.hidden, #cite-modal.hidden,
 #image-lightbox.hidden { display: none !important; }
+/* Modal backdrop — first child absolute-positioned div with [data-modal-backdrop] */
+#about-modal > div:first-child,
+#contact-modal > div:first-child,
+#privacy-modal > div:first-child,
+#terms-modal > div:first-child,
+#auth-modal > div:first-child,
+#save-folder-modal > div:first-child,
+#kbd-help-modal > div:first-child,
+#cmd-palette > div:first-child,
+#cite-modal > div:first-child {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+/* Modal content panel — second child (the actual dialog box) */
+#about-modal > div:nth-child(2),
+#contact-modal > div:nth-child(2),
+#privacy-modal > div:nth-child(2),
+#terms-modal > div:nth-child(2),
+#auth-modal > div:nth-child(2),
+#save-folder-modal > div:nth-child(2),
+#kbd-help-modal > div:nth-child(2),
+#cmd-palette > div:nth-child(2),
+#cite-modal > div:nth-child(2) {
+  position: relative;
+  background: var(--c-bg, #0a0a0a);
+  color: var(--c-fg, #fff);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+html:not(.dark) #about-modal > div:nth-child(2),
+html:not(.dark) #contact-modal > div:nth-child(2),
+html:not(.dark) #privacy-modal > div:nth-child(2),
+html:not(.dark) #terms-modal > div:nth-child(2),
+html:not(.dark) #auth-modal > div:nth-child(2),
+html:not(.dark) #save-folder-modal > div:nth-child(2),
+html:not(.dark) #kbd-help-modal > div:nth-child(2),
+html:not(.dark) #cmd-palette > div:nth-child(2),
+html:not(.dark) #cite-modal > div:nth-child(2) {
+  background: #f5f5f0;
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
 @media (min-width: 768px) {
   #status-ribbon       { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
