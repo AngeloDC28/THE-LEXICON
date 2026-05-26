@@ -2826,15 +2826,32 @@ html.dark .entry-item:hover::after {
   display: none !important;
 }
 /* ── CHROME SIZE SCOPING ──
-   Redefine --t-mono-xs and --t-mono-sm inside the top chrome only,
-   shrinking every label/button/value that uses those variables by
-   ~25%. Doesn't touch sidebar, detail view, index table, etc.
-   Specificity uses ID selectors so it wins over any Tailwind utility. */
+   Both the CSS-variable cascade AND direct font-size rules are applied.
+   The variable cascade handles elements that do pick up the Tailwind
+   text-[var(--t-mono-xs)] class. The explicit font-size rules handle
+   elements where the Play CDN may not generate the arbitrary-value class. */
 #primary-header,
 #status-ribbon,
 #view-controls-bar {
   --t-mono-xs: var(--t-chrome-xs);
   --t-mono-sm: var(--t-chrome-sm);
+}
+/* Direct font-size rules — guarantee chrome text stays small on mobile
+   regardless of whether Tailwind Play CDN generates the arbitrary classes. */
+#primary-header button,
+#primary-header span:not(.kbd),
+#primary-header #header-telemetry {
+  font-size: var(--t-chrome-xs);
+}
+#status-ribbon span {
+  font-size: var(--t-chrome-xs);
+}
+#status-ribbon span[id$="-label"] {
+  font-size: 7px;
+}
+#view-controls-bar button,
+#view-controls-bar span {
+  font-size: var(--t-chrome-xs);
 }
 
 /* ── HEADER TELEMETRY FEED ── */

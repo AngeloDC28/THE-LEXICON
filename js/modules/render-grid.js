@@ -113,12 +113,11 @@ export function renderImageGrid(archiveData, callbacks) {
              data-img-index="${i}"
              tabindex="0"
              role="button"
-             aria-label="${brand} ${year} ${tagLabel}"
+             aria-label="Open entry: ${brand} ${season} ${year} — ${tagLabel}"
              style="animation-delay: ${delay}s">
           <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
             <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
-            <span class="gc-tag-id" aria-hidden="true">N-${entry.id.slice(0,6).toUpperCase()}</span>
           </div>
           <!-- Image wrapper -->
           <div class="grid-cell-img group">
@@ -244,7 +243,6 @@ export function renderFeaturedStrip(archiveData) {
       : '—';
     const year = entry.year || '----';
     const season = entry.season ? entry.season.toUpperCase() : 'ARCHIVE';
-    const id = `N-${entry.id.slice(0, 4).toUpperCase()}`;
     const label = tagLabelMap[cat] || cat.toUpperCase();
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
     const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
@@ -258,7 +256,7 @@ export function renderFeaturedStrip(archiveData) {
     const imgHtml = imgSrc
       ? `<picture>
            <source type="image/webp" srcset="${webpImg}">
-           <img src="${imgSrc}" alt="${brand}" loading="lazy" decoding="async"
+           <img src="${imgSrc}" alt="" loading="lazy" decoding="async"
                 onerror="this.onerror=null;this.src='${BROKEN_ASSET}'">
          </picture>`
       : '';
@@ -268,7 +266,6 @@ export function renderFeaturedStrip(archiveData) {
            aria-label="${label} — ${brand} ${year}">
         <div class="feat-card-tag">
           <span class="fc-label">${label.toUpperCase()}</span>
-          <span class="fc-id">${id}</span>
         </div>
         <div class="feat-card-img">${imgHtml}</div>
         <div class="feat-card-body">
