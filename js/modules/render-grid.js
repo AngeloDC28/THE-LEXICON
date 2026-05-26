@@ -282,7 +282,7 @@ export function renderFeaturedStrip(archiveData) {
   container.querySelectorAll('.feat-card').forEach(card => {
     const open = () => {
       const id = card.dataset.entryId;
-      if (id) window.location.hash = `detail/${id}/0`;
+      if (id) document.dispatchEvent(new CustomEvent('lexicon:navigate', { detail: { id, idx: 0 } }));
     };
     card.addEventListener('click', open);
     card.addEventListener('keydown', e => {

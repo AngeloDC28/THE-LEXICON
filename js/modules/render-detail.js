@@ -44,6 +44,9 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const imagePanel = $('image-panel');
   if (imagePanel) _savedGridScrollTop = imagePanel.scrollTop;
 
+  // Detect same-entry navigation (image paging) vs. new entry — for URL strategy
+  const _previousEntryId = AppState.selectedEntryId;
+
   AppState.selectedEntryId   = entryId;
   AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
@@ -52,7 +55,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   if (detailView) {
     detailView.classList.remove('hidden');
     // Used by print stylesheet ::after for permalink footer
-    detailView.dataset.printUrl = window.location.origin + window.location.pathname + '#detail/' + entry.id + '/' + AppState.currentImageIndex;
+    detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
   }
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.add('detail-mode-active');
@@ -77,9 +80,35 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     if (callbacks.updateBookmarkUI)      callbacks.updateBookmarkUI(entryId);
   }
 
-  updateHash(`detail/${entryId}/${AppState.currentImageIndex}`);
+  // Image navigation within same entry uses replaceState; new entry uses pushState
+  const isSameEntry = _previousEntryId === entryId;
+  updateHash(`detail/${entryId}/${AppState.currentImageIndex}`, isSameEntry);
+  updateEntryJsonLd(entry);
   updateStatusBar(archiveData);
   document.dispatchEvent(new CustomEvent('lexicon-detail-opened'));
+}
+
+function updateEntryJsonLd(entry) {
+  const el = document.getElementById('entry-jsonld');
+  if (!el) return;
+  const brand = entry.tags?.brand || '';
+  const year  = entry.year || '';
+  const season = entry.season || '';
+  const title = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
+  const url   = `${window.location.origin}/entry/${entry.id}/0`;
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    'name': `${title} — THE LEXICON`,
+    'headline': title,
+    'url': url,
+    'description': entry.subtitle || `Forensic visual analysis of ${title}.`,
+    'author': { '@type': 'Organization', 'name': 'THE LEXICON' },
+    'publisher': { '@type': 'Organization', 'name': 'THE LEXICON', 'url': window.location.origin },
+    'keywords': [brand, season, year, entry.tags?.politics, entry.tags?.theories].filter(Boolean).join(', '),
+    'inLanguage': 'en',
+  };
+  el.textContent = JSON.stringify(ld);
 }
 
 export function closeDetail(callbacks, archiveData) {

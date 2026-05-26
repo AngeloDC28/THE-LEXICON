@@ -296,7 +296,7 @@ export function renderIndexView(archiveData, resetPage = false) {
 
   // Bind row click and keyboard activation
   container.querySelectorAll('tbody tr').forEach((tr) => {
-    const activate = () => { const id = tr.dataset.entryId; if (id) window.location.hash = `detail/${id}/0`; };
+    const activate = () => { const id = tr.dataset.entryId; if (id) document.dispatchEvent(new CustomEvent('lexicon:navigate', { detail: { id, idx: 0 } })); };
     tr.addEventListener('click', activate);
     tr.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
   });
@@ -378,7 +378,7 @@ export function indexActivateRow() {
   const tr = rows[_focusedRowIndex];
   if (tr) {
     const id = tr.dataset.entryId;
-    if (id) window.location.hash = `detail/${id}/0`;
+    if (id) document.dispatchEvent(new CustomEvent('lexicon:navigate', { detail: { id, idx: 0 } }));
   }
 }
 

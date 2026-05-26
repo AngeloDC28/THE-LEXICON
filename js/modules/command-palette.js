@@ -234,7 +234,7 @@ function bindCmdActions(container, archiveData, callbacks) {
   container.querySelectorAll('.cmd-item[data-entry-id]').forEach((el) => {
     el.addEventListener('click', () => {
       closePalette();
-      window.location.hash = `detail/${el.dataset.entryId}/0`;
+      document.dispatchEvent(new CustomEvent('lexicon:navigate', { detail: { id: el.dataset.entryId, idx: 0 } }));
     });
   });
 
