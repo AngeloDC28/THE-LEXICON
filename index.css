@@ -162,7 +162,19 @@ html.dark #app-root {
 /* ── LAYOUT ANCHORS ────────────────────────────────────────────────────────
    Tailwind CDN does not reliably generate transform/positioning utilities
    for elements that start off-screen or hidden. These rules are the source
-   of truth for layout-critical elements across all breakpoints. */
+   of truth for layout-critical elements across all breakpoints.
+   They also serve as a safety net when Tailwind CDN is slow or blocked. */
+
+/* Core structural display properties — Tailwind flex/grid classes are not
+   guaranteed to be generated; these ensure the shell always renders. */
+#primary-header        { display: flex; align-items: center; justify-content: space-between; }
+.main-shell            { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+#image-panel           { display: flex; flex-direction: column; min-height: 0; }
+#view-controls-bar     { display: flex; align-items: center; justify-content: space-between; }
+#status-ribbon         { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 768px) {
+  #status-ribbon       { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 
 /* Desktop: index panel always-visible side column */
 @media (min-width: 1024px) {
@@ -198,23 +210,12 @@ html.dark #app-root {
     transform: translateX(0) !important;
   }
   /* Status ribbon: 4-col single row on mobile instead of 2×2 grid */
-  #status-ribbon {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  }
+  #status-ribbon { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   #status-ribbon > div:nth-child(3),
-  #status-ribbon > div:nth-child(4) {
-    border-top: none !important;
-  }
-  #status-ribbon > div:nth-child(2) {
-    border-right: 1px solid rgba(0, 0, 0, 0.8);
-  }
-  html.dark #status-ribbon > div:nth-child(2) {
-    border-right-color: rgba(255, 255, 255, 0.2);
-  }
-  #status-ribbon > div {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
-  }
+  #status-ribbon > div:nth-child(4) { border-top: none !important; }
+  #status-ribbon > div:nth-child(2) { border-right: 1px solid rgba(0,0,0,0.8); }
+  html.dark #status-ribbon > div:nth-child(2) { border-right-color: rgba(255,255,255,0.2); }
+  #status-ribbon > div { padding-left: 5px !important; padding-right: 5px !important; }
   /* Mobile detail action bar */
   #mobile-detail-actions {
     position: fixed;
