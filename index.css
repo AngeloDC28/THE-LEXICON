@@ -379,6 +379,8 @@ html:not(.dark) .gc-meta { color: rgba(0,0,0,0.55); }
   overflow: hidden;
 }
 html:not(.dark) .gc-hook { color: rgba(0,0,0,0.75); }
+/* Cards are too narrow at 2-col to show the critique hook legibly */
+@media (max-width: 767px) { .gc-hook { display: none; } }
 
 /* ─── Phase 1: Hero Panel ─────────────────────────────────────────── */
 .hero-panel {
@@ -972,7 +974,7 @@ html:not(.dark) .who-use { color: #555; }
 .mobile-filter-btn {
   display: none;
   position: fixed;
-  bottom: calc(72px + env(safe-area-inset-bottom));
+  bottom: calc(16px + env(safe-area-inset-bottom));
   right: calc(14px + env(safe-area-inset-right));
   z-index: 80;
   background: #fff;
@@ -1001,6 +1003,8 @@ html:not(.dark) .who-use { color: #555; }
 @media (max-width: 767px) {
   .mobile-filter-btn { display: flex; }
 }
+/* Hide filter FAB while in detail mode — detail bar occupies the bottom */
+.detail-mode-active .mobile-filter-btn { display: none !important; }
 
 /* ─── Phase 2: Mobile Bottom-Sheet Filter ─────────────────────────── */
 .mobile-sheet {
