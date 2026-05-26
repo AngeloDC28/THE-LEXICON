@@ -315,7 +315,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=c75a6cc" />
+  <link rel="stylesheet" href="index.css?v=a027867" />
 </head>
 
 <body>
@@ -732,7 +732,11 @@
           <!-- Breadcrumb bar -->
           <nav id="detail-breadcrumb" class="hidden lg:flex items-center gap-1 px-4 py-1.5 border-b border-white/10 text-[8px] font-mono uppercase tracking-widest text-white/30" aria-label="Entry breadcrumb"></nav>
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
-            <!-- LEFT: Image Sector -->
+            <!-- PHASE 3: Left metadata rail — visible only at ≥1400px via CSS three-col layout -->
+            <div id="detail-meta-rail" class="hidden w-[220px] flex-col overflow-y-auto border-r border-white/10 bg-black shrink-0">
+              <div id="meta-rail-body" class="p-5 flex flex-col gap-5"></div>
+            </div>
+            <!-- CENTER: Image Sector -->
             <div id="detail-image-sector" class="flex-1 relative flex flex-col items-center justify-center p-4 lg:p-12 border-r border-white/10">
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
@@ -1144,7 +1148,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=c75a6cc"></script>
+    <script type="module" src="js/app.js?v=a027867"></script>
 
   </div>
 

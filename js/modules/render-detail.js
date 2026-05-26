@@ -67,6 +67,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   renderBrutalistNodes(entry);
   renderStickyOverlay(entry);
   renderMetadataGrid(entry);
+  renderMetaRail(entry);
   renderRelatedEntries(entry, archiveData, callbacks);
   renderHotspots(entry, $('detail-image-wrapper'));
   setupSwipeGestures(archiveData, callbacks);
@@ -448,6 +449,57 @@ function renderMetadataGrid(entry) {
       <div class="text-[8px] font-mono uppercase tracking-wide text-white group-hover:text-acid transition-colors">${translated}</div>
     </button>`;
   }).join('');
+}
+
+/**
+ * renderMetaRail
+ * Populates the Phase 3 left metadata rail (visible at ≥1400px).
+ * Shows entry ID, analytical category, and taxonomy axes at a glance
+ * without requiring sidebar scroll.
+ */
+function renderMetaRail(entry) {
+  const rail = $('meta-rail-body');
+  if (!rail) return;
+  const lang = AppState.language;
+  const cat  = getTagCategory(entry.tags?.politics || '');
+  const catLabels = {
+    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
+    subculture: 'Subcultural Codification', strategy: 'Strategic Appropriation',
+    semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
+  };
+  const catLabel = catLabels[cat] || (entry.tags?.politics || 'Archive').split('&')[0].trim();
+  const id = `N-${entry.id.slice(0, 6).toUpperCase()}`;
+  const taxRows = [
+    { key: 'brand',     label: 'Brand' },
+    { key: 'era',       label: 'Era' },
+    { key: 'politics',  label: 'Politics' },
+    { key: 'theories',  label: 'Theory' },
+    { key: 'gender',    label: 'Gender' },
+    { key: 'geography', label: 'Geography' },
+    { key: 'format',    label: 'Format' },
+    { key: 'materials', label: 'Materials' },
+    { key: 'anatomy',   label: 'Anatomy' },
+  ];
+
+  rail.innerHTML = `
+    <div class="meta-rail-section">
+      <span class="meta-rail-id">${id}</span>
+      <div class="meta-rail-cat" style="margin-top:4px">${catLabel}</div>
+    </div>
+    <div class="meta-rail-section">
+      <span class="meta-rail-label">Year / Season</span>
+      <div class="meta-rail-value">${entry.year || '—'} · ${entry.season || '—'}</div>
+    </div>
+    ${taxRows.map(({ key, label }) => {
+      const val = entry.tags?.[key];
+      if (!val) return '';
+      const translated = getTranslation(val, lang);
+      return `<div class="meta-rail-section">
+        <span class="meta-rail-label">${label}</span>
+        <div class="meta-rail-value">${translated}</div>
+      </div>`;
+    }).join('')}
+  `;
 }
 
 /**
