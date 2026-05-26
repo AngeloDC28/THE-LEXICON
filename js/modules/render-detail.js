@@ -21,9 +21,9 @@ export function updateStatusBar(archiveData) {
     if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
   } else {
     const filtered = getFilteredEntries(archiveData);
-    if (brand)       brand.textContent       = '--';
-    if (year)        year.textContent        = '--';
-    if (season)      season.textContent      = '--';
+    if (brand)       brand.textContent       = 'ARCHIVE';
+    if (year)        year.textContent        = '1981–2023';
+    if (season)      season.textContent      = 'ALL';
     if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ' + getTranslation('label_entries', AppState.language);
   }
 }

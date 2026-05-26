@@ -315,7 +315,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=6a62679" />
+  <link rel="stylesheet" href="index.css?v=e993c56" />
 </head>
 
 <body>
@@ -984,16 +984,16 @@
     <!-- TOAST -->
     <div id="toast" class="hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 lg:bottom-4 lg:right-4 lg:left-auto z-[10000] bg-bone dark:bg-darkBase border-t border-black dark:border-white lg:border p-3 lg:p-4 shadow-2xl lg:max-w-sm" style="padding-bottom:calc(0.75rem + env(safe-area-inset-bottom));" role="region" aria-label="Cookie consent">
-      <p id="cookie-notice-text" class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide mb-3 leading-relaxed"></p>
-      <div class="flex gap-4 mb-3">
-        <button type="button" id="btn-privacy-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Privacy</button>
-        <button type="button" id="btn-terms-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Terms</button>
-      </div>
-      <div class="flex gap-2">
-        <button id="btn-reject-cookies" type="button" class="flex-1 border border-black dark:border-white bg-transparent dark:bg-transparent text-black dark:text-white py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-60 focus-ring">Reject</button>
-        <button id="btn-accept-cookies" type="button" class="flex-1 border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-80 focus-ring">Accept</button>
+    <!-- Cookie Banner — compact strip -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-[10000]" role="region" aria-label="Cookie consent">
+      <div class="cookie-strip">
+        <p id="cookie-notice-text" class="cookie-strip-text"></p>
+        <div class="cookie-strip-actions">
+          <button type="button" id="btn-privacy-link" class="cookie-link focus-ring">Privacy</button>
+          <button type="button" id="btn-terms-link" class="cookie-link focus-ring">Terms</button>
+          <button id="btn-reject-cookies" type="button" class="cookie-btn cookie-btn--ghost focus-ring">Reject</button>
+          <button id="btn-accept-cookies" type="button" class="cookie-btn cookie-btn--fill focus-ring">Accept</button>
+        </div>
       </div>
     </div>
 
@@ -1173,7 +1173,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=6a62679"></script>
+    <script type="module" src="js/app.js?v=e993c56"></script>
 
   </div>
 

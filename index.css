@@ -656,15 +656,26 @@ html:not(.dark) .hero-stat .hs-lbl { color: #999; }
 .hero-dot.active { background: #8a7a70; }
 .hero-dot:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
 
-/* Mobile: stack hero columns */
+/* Mobile: compact hero — left column only, grid bleeds below the fold */
 @media (max-width: 767px) {
   .hero-panel {
     grid-template-columns: 1fr;
     min-height: auto;
+    max-height: 80vh;
+    overflow: hidden;
   }
-  .hero-col-left { border-right: none; border-bottom: 1px solid #222; }
+  .hero-col-left {
+    border-right: none;
+    border-bottom: 1px solid #222;
+    padding: 20px 20px 16px;
+  }
   html:not(.dark) .hero-col-left { border-bottom-color: #e0e0dc; }
-  .hero-col-right { min-height: 280px; }
+  /* Hide the right image column on mobile — saves ~280px of vertical space */
+  .hero-col-right { display: none; }
+  .hero-headline { font-size: clamp(1.5rem, 6.5vw, 2rem); margin-top: 12px; }
+  .hero-sub { font-size: clamp(0.875rem, 3.5vw, 1rem); margin-top: 8px; }
+  .hero-stats { padding-top: 12px; gap: 20px; }
+  .hero-actions { margin-top: 16px; gap: 8px; }
 }
 
 /* ─── Phase 1: Featured Strip ─────────────────────────────────────── */
@@ -2400,9 +2411,19 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
 
   /* Entry list items: comfortable tap targets */
   .entry-item {
-    padding: 14px 16px !important;
-    min-height: 56px;
+    padding: 10px 16px !important;
+    min-height: 48px;
   }
+  /* Entry list — explicit sizes so Tailwind CDN gaps don't affect mobile */
+  .entry-cat-header { font-size: 7px; padding: 10px 16px 3px; }
+  .entry-item-brand { font-size: 10px; }
+  .entry-item-meta  { font-size: 8px; }
+
+  /* Mobile quick-nav buttons — explicit size */
+  #mobile-quick-nav button { font-size: 9px; }
+
+  /* Index panel header — keep bookmark button subtle */
+  #btn-show-bookmarks { font-size: 8px; opacity: 0.4; }
 
   /* Search input: bigger on mobile */
   #search-input {
@@ -2852,6 +2873,107 @@ html.dark .entry-item:hover::after {
 #view-controls-bar button,
 #view-controls-bar span {
   font-size: var(--t-chrome-xs);
+}
+
+/* ── COOKIE STRIP ── */
+.cookie-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+}
+html:not(.dark) .cookie-strip {
+  background: #f0efe9;
+  border-top-color: rgba(0,0,0,0.15);
+}
+.cookie-strip-text {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.4;
+  color: #fff;
+}
+html:not(.dark) .cookie-strip-text { color: #000; }
+.cookie-strip-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.cookie-link {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 4px;
+  min-height: 32px;
+}
+.cookie-link:hover { opacity: 0.8; }
+.cookie-btn {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5px 10px;
+  min-height: 30px;
+  cursor: pointer;
+  border: 1px solid currentColor;
+}
+.cookie-btn--ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+}
+html:not(.dark) .cookie-btn--ghost { color: rgba(0,0,0,0.5); }
+.cookie-btn--ghost:hover { opacity: 0.8; }
+.cookie-btn--fill {
+  background: #CCFF00;
+  color: #000;
+  border-color: #CCFF00;
+}
+.cookie-btn--fill:hover { opacity: 0.85; }
+
+/* ── ENTRY LIST HIERARCHY ── */
+.entry-cat-header {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 10px 16px 3px;
+  opacity: 0.85;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.entry-cat-header:first-child { border-top: none; padding-top: 6px; }
+html.dark .entry-cat-header { border-top-color: rgba(255,255,255,0.06); }
+html:not(.dark) .entry-cat-header { opacity: 0.65; }
+.entry-item-brand {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.entry-item-meta {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+  text-transform: uppercase;
+  margin-top: 1px;
 }
 
 /* ── HEADER TELEMETRY FEED ── */

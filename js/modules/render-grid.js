@@ -186,24 +186,27 @@ export function renderEntryList(archiveData, callbacks) {
     corporeal: 'CORPOREAL', critique: 'CRITIQUE', subculture: 'SUBCULTURE',
     strategy: 'STRATEGY', semiotic: 'SEMIOTIC', provenance: 'PROVENANCE'
   };
+  let prevCat = null;
   container.innerHTML = filtered.map(entry => {
     const brand = (entry.tags && entry.tags.brand)
       ? getTranslation(entry.tags.brand, lang)
       : getTranslation('brand_unknown', lang);
     const year  = entry.year  || '----';
-    const title = entry.title ? getTranslation(entry.title, lang) : getTranslation('entry_untitled', lang);
-    // Phase 1: Inverted metadata — analytical tag is primary, brand is secondary
+    const season = entry.season ? entry.season.replace(/^(SS|AW|FW|SS\/FW)\s*/i, '') : '';
     const tagCategory = getTagCategory(entry.tags?.politics || '');
     const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
-    return `
-      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
+    const isNewCat = tagCategory !== prevCat;
+    prevCat = tagCategory;
+    const catHeader = isNewCat
+      ? `<div class="entry-cat-header" style="color:var(--c-${tagCategory},#888)">${tagLabel}</div>`
+      : '';
+    return `${catHeader}<div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
            data-id="${entry.id}"
            role="button"
            tabindex="0"
            aria-label="${brand} ${year} ${tagLabel}">
-        <div class="text-[8px] font-mono uppercase tracking-[0.18em] font-bold leading-tight" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
-        <div class="text-[9px] font-mono uppercase tracking-widest font-medium leading-tight">${brand} <span class="text-black/40 dark:text-white/40">${year}</span></div>
-        <div class="text-[8px] font-mono text-black/50 dark:text-white/50 truncate leading-tight">${title}</div>
+        <div class="entry-item-brand">${brand}</div>
+        <div class="entry-item-meta">${year}${season ? ' · ' + season : ''}</div>
       </div>`;
   }).join('');
 }
