@@ -176,6 +176,22 @@ html.dark #app-root {
 #grid-view, #index-table-view, #folders-view, #timeline-view { flex: 1; min-height: 0; }
 #grid-view.hidden, #index-table-view.hidden, #folders-view.hidden,
 #timeline-view.hidden, #detail-image-view.hidden { display: none !important; }
+
+/* Modals: when not .hidden, must be fixed overlay covering the viewport. */
+#about-modal, #contact-modal, #privacy-modal, #terms-modal,
+#auth-modal, #save-folder-modal, #kbd-help-modal, #cmd-palette,
+#cite-modal, #image-lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#about-modal.hidden, #contact-modal.hidden, #privacy-modal.hidden,
+#terms-modal.hidden, #auth-modal.hidden, #save-folder-modal.hidden,
+#kbd-help-modal.hidden, #cmd-palette.hidden, #cite-modal.hidden,
+#image-lightbox.hidden { display: none !important; }
 @media (min-width: 768px) {
   #status-ribbon       { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
