@@ -172,6 +172,10 @@ html.dark #app-root {
 #image-panel           { display: flex; flex-direction: column; min-height: 0; }
 #view-controls-bar     { display: flex; align-items: center; justify-content: space-between; }
 #status-ribbon         { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Inner view containers — flex grow so they fill the panel and remain scrollable */
+#grid-view, #index-table-view, #folders-view, #timeline-view { flex: 1; min-height: 0; }
+#grid-view.hidden, #index-table-view.hidden, #folders-view.hidden,
+#timeline-view.hidden, #detail-image-view.hidden { display: none !important; }
 @media (min-width: 768px) {
   #status-ribbon       { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
@@ -3228,10 +3232,16 @@ html:not(.dark) #entry-hover-preview {
 
 /* ── FEATURE: EVOLUTION MATRIX ── */
 #timeline-view {
-  position: relative; width: 100%; height: 100%;
+  position: relative; width: 100%; flex: 1; min-height: 0;
   overflow-x: auto; overflow-y: hidden;
   white-space: nowrap; -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+}
+#timeline-matrix {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 400px;
 }
 #timeline-view::-webkit-scrollbar { display: none; }
 #timeline-view.active { display: block; }
