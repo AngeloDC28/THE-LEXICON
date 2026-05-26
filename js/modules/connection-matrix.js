@@ -149,8 +149,13 @@ function renderGraph(entry, connections, callbacks, container) {
   const NS = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-  svg.setAttribute('aria-label', 'Nexus connection graph');
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('aria-labelledby', 'nexus-graph-title');
   svg.style.cssText = 'width:100%;height:100%;display:block;';
+  const svgTitle = document.createElementNS(NS, 'title');
+  svgTitle.id = 'nexus-graph-title';
+  svgTitle.textContent = `Connection graph for ${anchor.brand} ${anchor.year}`;
+  svg.appendChild(svgTitle);
 
   // Link elements — rendered first so nodes appear on top
   const linkEls = links.map(({ source, target, color }) => {

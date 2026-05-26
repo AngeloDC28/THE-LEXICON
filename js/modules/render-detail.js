@@ -284,10 +284,11 @@ function renderImage(entry, callbacks) {
   if (counter) {
     counter.dataset.count = imgs.length;
     if (imgs.length > 1) {
+      const currentIdx = AppState.currentImageIndex;
       counter.innerHTML = imgs.map((_, i) => {
-        const isActive = i === AppState.currentImageIndex;
+        const isActive = i === currentIdx;
         return `<button type="button" class="img-dot${isActive ? ' active' : ''}" data-img-index="${i}" aria-label="Image ${i + 1} of ${imgs.length}"${isActive ? ' aria-current="true"' : ''}></button>`;
-      }).join('');
+      }).join('') + `<span class="sr-only">${currentIdx + 1} of ${imgs.length}</span>`;
       counter.querySelectorAll('.img-dot').forEach(btn => {
         btn.addEventListener('click', () => {
           const idx = parseInt(btn.dataset.imgIndex, 10);
@@ -636,9 +637,12 @@ function renderHotspots(entry, container) {
     btn.setAttribute('type', 'button');
     btn.innerHTML = '<div class="hotspot-target"></div>';
 
-    // Desktop hover preview only. Click delegation is handled by hotspots.js.
+    btn.setAttribute('aria-describedby', 'analytical-payload');
+    // Desktop hover/focus preview. Click delegation is handled by hotspots.js.
     btn.addEventListener('mouseenter', () => showPayload(spot));
     btn.addEventListener('mouseleave', () => hidePayload());
+    btn.addEventListener('focus',      () => showPayload(spot));
+    btn.addEventListener('blur',       () => hidePayload());
 
     container.appendChild(btn);
   });

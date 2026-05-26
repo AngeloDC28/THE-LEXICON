@@ -113,7 +113,7 @@ export function renderImageGrid(archiveData, callbacks) {
              data-img-index="${i}"
              tabindex="0"
              role="button"
-             aria-label="${brand} ${year} ${tagLabel}"
+             aria-label="Open entry: ${brand} ${season} ${year} — ${tagLabel}"
              style="animation-delay: ${delay}s">
           <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
@@ -258,7 +258,7 @@ export function renderFeaturedStrip(archiveData) {
     const imgHtml = imgSrc
       ? `<picture>
            <source type="image/webp" srcset="${webpImg}">
-           <img src="${imgSrc}" alt="${brand}" loading="lazy" decoding="async"
+           <img src="${imgSrc}" alt="" loading="lazy" decoding="async"
                 onerror="this.onerror=null;this.src='${BROKEN_ASSET}'">
          </picture>`
       : '';
