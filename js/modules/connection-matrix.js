@@ -39,40 +39,39 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   }
   document.body.style.overflow = 'hidden';
 
-  // Bind tab switching
-  const tabGraph = $('nexus-tab-graph');
-  const tabList  = $('nexus-tab-list');
+  // Bind tab switching (once)
+  const tabGraph    = $('nexus-tab-graph');
+  const tabTimeline = $('nexus-tab-timeline');
+  const tabList     = $('nexus-tab-list');
   if (tabGraph && !tabGraph._nexusBound) {
     tabGraph._nexusBound = true;
-    tabGraph.addEventListener('click', () => setNexusView('graph'));
-    tabList.addEventListener('click',  () => setNexusView('list'));
+    tabGraph.addEventListener('click',    () => setNexusView('graph'));
+    tabTimeline.addEventListener('click', () => setNexusView('timeline'));
+    tabList.addEventListener('click',     () => setNexusView('list'));
   }
 
   setNexusView(_currentView, true);
 }
 
+const TABS = ['graph', 'timeline', 'list'];
 function setNexusView(view, force = false) {
   if (view === _currentView && !force) return;
   _currentView = view;
 
   // Update tab aria states
-  const tabGraph = $('nexus-tab-graph');
-  const tabList  = $('nexus-tab-list');
-  if (tabGraph && tabList) {
-    const activeClass = ['border-white/30', 'bg-white/10', 'text-white'];
-    const inactiveClass = ['border-white/10', 'text-white/40'];
-    if (view === 'graph') {
-      activeClass.forEach(c => tabGraph.classList.add(c));
-      inactiveClass.forEach(c => { tabGraph.classList.remove(c); tabList.classList.add(c); tabList.classList.remove(...activeClass); });
-      tabGraph.setAttribute('aria-selected', 'true');
-      tabList.setAttribute('aria-selected', 'false');
+  TABS.forEach(t => {
+    const el = $(`nexus-tab-${t}`);
+    if (!el) return;
+    const active = t === view;
+    el.setAttribute('aria-selected', active ? 'true' : 'false');
+    if (active) {
+      el.classList.add('border-white/30', 'bg-white/10', 'text-white');
+      el.classList.remove('border-white/10', 'text-white/40');
     } else {
-      activeClass.forEach(c => tabList.classList.add(c));
-      inactiveClass.forEach(c => { tabList.classList.remove(c); tabGraph.classList.add(c); tabGraph.classList.remove(...activeClass); });
-      tabList.setAttribute('aria-selected', 'true');
-      tabGraph.setAttribute('aria-selected', 'false');
+      el.classList.remove('border-white/30', 'bg-white/10', 'text-white');
+      el.classList.add('border-white/10', 'text-white/40');
     }
-  }
+  });
 
   if (_cancelSim) { _cancelSim(); _cancelSim = null; }
 
@@ -81,6 +80,8 @@ function setNexusView(view, force = false) {
 
   if (view === 'graph') {
     renderGraph(_lastEntry, _lastConnections, _lastCallbacks, content);
+  } else if (view === 'timeline') {
+    renderTimeline(_lastEntry, _lastConnections, _lastCallbacks, content);
   } else {
     renderList(_lastEntry, _lastConnections, _lastCallbacks, content);
   }
@@ -296,6 +297,98 @@ function renderGraph(entry, connections, callbacks, container) {
     const lang = AppState.language;
     container.innerHTML = `<div class="matrix-section"><p class="text-[var(--t-mono-xs)] uppercase tracking-[0.15em] opacity-40 text-center py-8">${getTranslation('nexus_no_connections', lang)}</p></div>`;
   }
+}
+
+// ── TIMELINE VIEW ────────────────────────────────────────────────────────────
+
+function renderTimeline(entry, connections, callbacks, container) {
+  container.innerHTML = '';
+  container.style.overflow = 'auto';
+
+  // Collect all connected entries with their years, de-duped
+  const seen = new Map(); // id → { entry, sharedKeys }
+  connections.forEach(({ key, entries: relEntries }) => {
+    relEntries.forEach(rel => {
+      if (!seen.has(rel.id)) seen.set(rel.id, { rel, keys: new Set() });
+      seen.get(rel.id).keys.add(key);
+    });
+  });
+
+  if (seen.size === 0) {
+    container.innerHTML = `<div class="matrix-section"><p class="text-[var(--t-mono-xs)] uppercase tracking-[0.15em] opacity-40 text-center py-8">${getTranslation('nexus_no_connections', AppState.language)}</p></div>`;
+    return;
+  }
+
+  // Bucket by year
+  const byYear = new Map();
+  // Include current entry
+  const currentYear = parseInt(entry.year) || 0;
+  byYear.set(currentYear, [{ rel: entry, keys: new Set(['current']), isCurrent: true }]);
+
+  seen.forEach(({ rel, keys }) => {
+    const yr = parseInt(rel.year) || 0;
+    if (!byYear.has(yr)) byYear.set(yr, []);
+    byYear.get(yr).push({ rel, keys, isCurrent: false });
+  });
+
+  const years = [...byYear.keys()].sort((a, b) => a - b);
+  const minYear = years[0];
+  const maxYear = years[years.length - 1];
+
+  // Tag category → colour
+  const TAG_COLORS = {
+    politics: '#FF6B6B', theories: '#FFB347', era: '#87CEEB',
+    format: '#DDA0DD', brand: '#98FB98', materials: '#F0E68C',
+    geography: '#87CEFA', anatomy: '#FFB6C1',
+  };
+
+  // Render as a scrollable vertical timeline
+  let html = `<div style="padding:24px 20px;font-family:ui-monospace,monospace;">`;
+  html += `<p style="font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;">Connected entries — ${minYear}–${maxYear}</p>`;
+  html += `<div style="position:relative;padding-left:32px;">`;
+  // Vertical line
+  html += `<div style="position:absolute;left:8px;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.12);"></div>`;
+
+  years.forEach(yr => {
+    const items = byYear.get(yr);
+    items.forEach(({ rel, keys, isCurrent }) => {
+      const isCur = isCurrent || rel.id === entry.id;
+      const brand = rel.tags?.brand || rel.id;
+      const season = rel.season || '';
+      const keyArr = isCur ? [] : [...keys];
+      const dotColor = isCur ? '#CCFF00' : (keyArr[0] ? TAG_COLORS[keyArr[0]] || '#fff' : '#fff');
+      const keyLabels = keyArr.map(k => `<span style="font-size:6px;letter-spacing:0.1em;text-transform:uppercase;padding:1px 4px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.4);margin-right:3px;">${k}</span>`).join('');
+
+      html += `<div style="position:relative;margin-bottom:18px;${isCur ? '' : 'cursor:pointer;'}" ${isCur ? '' : `data-tl-id="${rel.id}"`} role="${isCur ? 'presentation' : 'button'}" tabindex="${isCur ? '-1' : '0'}" aria-label="${isCur ? '' : `Open ${brand} ${yr}`}">`;
+      // Dot on timeline
+      html += `<div style="position:absolute;left:-28px;top:4px;width:8px;height:8px;border-radius:50%;background:${dotColor};${isCur ? 'box-shadow:0 0 8px #CCFF00;' : ''}"></div>`;
+      // Year
+      html += `<div style="font-size:7px;letter-spacing:0.15em;color:${isCur ? '#CCFF00' : 'rgba(255,255,255,0.35)'};margin-bottom:2px;">${yr}${season ? ' · ' + season.toUpperCase() : ''}</div>`;
+      // Brand
+      html += `<div style="font-size:10px;font-weight:700;letter-spacing:0.1em;color:${isCur ? '#CCFF00' : 'rgba(255,255,255,0.85)'};text-transform:uppercase;${!isCur ? '' : ''}">${brand}</div>`;
+      if (keyLabels) html += `<div style="margin-top:4px;">${keyLabels}</div>`;
+      html += `</div>`;
+    });
+  });
+
+  html += `</div></div>`;
+  container.innerHTML = html;
+
+  // Bind clicks
+  container.querySelectorAll('[data-tl-id]').forEach(el => {
+    const open = () => {
+      if (callbacks?.openDetail) {
+        closeConnectionMatrix();
+        callbacks.openDetail(el.dataset.tlId);
+      }
+    };
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+    el.addEventListener('mouseenter', () => el.style.opacity = '0.75');
+    el.addEventListener('mouseleave', () => el.style.opacity = '1');
+  });
 }
 
 // ── LIST VIEW ─────────────────────────────────────────────────────────────────

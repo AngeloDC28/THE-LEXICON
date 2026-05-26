@@ -85,8 +85,43 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const isSameEntry = _previousEntryId === entryId;
   updateHash(`detail/${entryId}/${AppState.currentImageIndex}`, isSameEntry);
   updateEntryJsonLd(entry);
+  updateEntryMetaTags(entry);
   updateStatusBar(archiveData);
   document.dispatchEvent(new CustomEvent('lexicon-detail-opened'));
+}
+
+function updateEntryMetaTags(entry) {
+  const brand  = entry.tags?.brand || '';
+  const year   = entry.year || '';
+  const season = entry.season ? entry.season + ' ' : '';
+  const title  = entry.title ? entry.title : `${brand} ${season}${year}`.trim();
+  const desc   = entry.subtitle
+    ? `${title}: ${entry.subtitle}`
+    : `Forensic visual analysis of ${title}. Annotated for visual and cultural research.`;
+  const url    = `${window.location.origin}/entry/${entry.id}/0`;
+  const img    = entry.images?.[0]
+    ? `${window.location.origin}/public/${entry.images[0]}`
+    : null;
+
+  document.title = `${title} — THE LEXICON`;
+  const setMeta = (sel, attr, val) => { if (val) { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); } };
+  setMeta('meta[property="og:title"]',       'content', `${title} — THE LEXICON`);
+  setMeta('meta[property="og:description"]', 'content', desc);
+  setMeta('meta[property="og:url"]',         'content', url);
+  setMeta('meta[name="description"]',        'content', desc);
+  if (img) {
+    setMeta('meta[property="og:image"]',     'content', img);
+    setMeta('meta[property="og:image:alt"]', 'content', `${title} — THE LEXICON archive`);
+  }
+}
+
+function _resetEntryMetaTags() {
+  document.title = 'THE LEXICON | Forensic Visual Culture Archive';
+  const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
+  setMeta('meta[property="og:title"]',       'content', 'THE LEXICON — fashion history, indexed analytically');
+  setMeta('meta[property="og:description"]', 'content', 'A research archive mapping fashion history, visual culture, and the lineage of ideas.');
+  setMeta('meta[property="og:url"]',         'content', window.location.origin + '/');
+  setMeta('meta[name="description"]',        'content', 'A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.');
 }
 
 function updateEntryJsonLd(entry) {
@@ -115,6 +150,9 @@ function updateEntryJsonLd(entry) {
 export function closeDetail(callbacks, archiveData) {
   AppState.selectedEntryId = null;
   updateHash(null);
+  _resetEntryMetaTags();
+  const entryLd = document.getElementById('entry-jsonld');
+  if (entryLd) entryLd.textContent = '';
   const detailView = $('detail-image-view');
   if (detailView) detailView.classList.add('hidden');
   const appRoot = $('app-root');

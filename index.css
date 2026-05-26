@@ -3328,6 +3328,7 @@ html:not(.dark) .footer-bottom { color: #bbb; }
   #mobile-filter-sheet,
   #site-footer,
   #detail-breadcrumb,
+  #detail-meta-rail,
   .btn-reading-mode,
   #notes-toc { display: none !important; }
 
