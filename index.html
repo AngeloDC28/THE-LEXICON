@@ -315,7 +315,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=f54972a" />
+  <link rel="stylesheet" href="index.css?v=c75a6cc" />
 </head>
 
 <body>
@@ -1131,14 +1131,20 @@
       <div class="matrix-panel">
         <div class="matrix-header">
           <span id="matrix-panel-title" class="text-[var(--t-mono-xs)] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
-          <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
+          <div class="flex items-center gap-3">
+            <div class="flex gap-1" role="tablist" aria-label="Nexus view">
+              <button type="button" id="nexus-tab-graph" role="tab" aria-selected="true" aria-controls="matrix-content" class="text-[8px] font-mono uppercase tracking-[0.15em] px-2 py-1 border border-white/30 bg-white/10 text-white hover:bg-white/20 transition-colors focus-ring">GRAPH</button>
+              <button type="button" id="nexus-tab-list" role="tab" aria-selected="false" aria-controls="matrix-content" class="text-[8px] font-mono uppercase tracking-[0.15em] px-2 py-1 border border-white/10 text-white/40 hover:bg-white/10 transition-colors focus-ring">LIST</button>
+            </div>
+            <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
+          </div>
         </div>
-        <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
+        <div id="matrix-content" class="flex-1 overflow-y-auto" role="tabpanel"></div>
       </div>
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=f54972a"></script>
+    <script type="module" src="js/app.js?v=c75a6cc"></script>
 
   </div>
 
