@@ -200,12 +200,12 @@ export function renderTaxonomySub(callbacks, archiveData) {
 
   container.innerHTML = `
     <div class="taxonomy-sub-header flex items-center justify-between gap-3 mb-3 pb-2 border-b border-black/10 dark:border-white/10">
-      <span class="text-[var(--t-mono-xs)] font-bold tracking-[0.2em] uppercase opacity-70">
+      <span class="text-[var(--t-chrome-sm)] font-bold tracking-[0.2em] uppercase opacity-70">
         ${getTranslation('tax_' + type, lang)}${activeVals.length ? ` <span class="opacity-50 font-normal normal-case tracking-normal">· ${activeVals.length} selected</span>` : ''}
       </span>
       <div class="flex items-center gap-2">
-        ${activeVals.length ? `<button type="button" class="focus-ring text-[var(--t-mono-xs)] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-acid text-acid px-2 py-1 transition-opacity" data-taxonomy-clear="${type}" aria-label="Clear all ${type} filters">[ Clear all ]</button>` : ''}
-        <button type="button" class="focus-ring text-[var(--t-mono-xs)] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
+        ${activeVals.length ? `<button type="button" class="focus-ring text-[var(--t-chrome-sm)] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-acid text-acid px-2 py-1 transition-opacity" data-taxonomy-clear="${type}" aria-label="Clear all ${type} filters">[ Clear all ]</button>` : ''}
+        <button type="button" class="focus-ring text-[var(--t-chrome-sm)] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
       </div>
     </div>
     <div class="taxonomy-sub-values flex flex-wrap gap-1.5">
