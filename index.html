@@ -315,7 +315,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=c25b76c" />
+  <link rel="stylesheet" href="index.css?v=20fb09a" />
 </head>
 
 <body>
@@ -326,9 +326,34 @@
   <div id="aria-announcer" class="sr-only" aria-live="polite"></div>
 
   <noscript>
-    <div style="padding: 24px; font-family: 'JetBrains Mono', monospace; background: #000; color: #CCFF00; text-align: center;">
-      <strong>THE LEXICON requires JavaScript.</strong><br>
-      This research archive is a dynamic terminal — enable JavaScript to access entries, filters, and the command palette.
+    <div style="padding:32px 24px;font-family:Georgia,serif;background:#0a0a0a;color:#f5f5f5;max-width:860px;margin:0 auto;line-height:1.7">
+      <h1 style="font-family:monospace;font-size:22px;letter-spacing:0.15em;color:#CCFF00;margin:0 0 8px">THE LEXICON</h1>
+      <p style="color:#999;font-family:monospace;font-size:11px;margin:0 0 24px;letter-spacing:0.2em;text-transform:uppercase">Forensic Visual Culture Archive</p>
+      <p style="font-size:15px;margin:0 0 20px">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer. 45 landmark collections annotated with hotspot analysis, critical notes, and connection matrices.</p>
+      <p style="font-size:14px;color:#aaa;margin:0 0 24px">This site requires JavaScript to browse the interactive archive. Enable JavaScript or visit <a href="https://thelexicon.xyz" style="color:#CCFF00">thelexicon.xyz</a> in a modern browser.</p>
+      <h2 style="font-family:monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#666;margin:0 0 16px;border-top:1px solid #222;padding-top:20px">Archive — 45 Entries</h2>
+      <ul style="columns:2;column-gap:32px;list-style:none;padding:0;margin:0;font-size:13px;color:#bbb">
+        <li><a href="/entry/mcqueen-ss99/0" style="color:#ddd">Alexander McQueen SS 1999</a></li>
+        <li><a href="/entry/mugler-aw95/0" style="color:#ddd">Thierry Mugler AW 1995</a></li>
+        <li><a href="/entry/miyake-ss99/0" style="color:#ddd">Issey Miyake SS 1999</a></li>
+        <li><a href="/entry/balenciaga-ss07/0" style="color:#ddd">Balenciaga SS 2007</a></li>
+        <li><a href="/entry/chalayan-aw00/0" style="color:#ddd">Hussein Chalayan AW 2000</a></li>
+        <li><a href="/entry/prada-ss96/0" style="color:#ddd">Prada SS 1996</a></li>
+        <li><a href="/entry/galliano-dior-ss00/0" style="color:#ddd">Christian Dior SS 2000</a></li>
+        <li><a href="/entry/owens-ss14/0" style="color:#ddd">Rick Owens SS 2014</a></li>
+        <li><a href="/entry/garcons-ss97/0" style="color:#ddd">Comme des Garçons SS 1997</a></li>
+        <li><a href="/entry/yamamoto-aw98/0" style="color:#ddd">Yohji Yamamoto AW 1998</a></li>
+        <li><a href="/entry/gaultier-ss94/0" style="color:#ddd">Jean Paul Gaultier SS 1994</a></li>
+        <li><a href="/entry/viktor-rolf-aw99/0" style="color:#ddd">Viktor &amp; Rolf AW 1999</a></li>
+        <li><a href="/entry/lang-aw98/0" style="color:#ddd">Helmut Lang AW 1998</a></li>
+        <li><a href="/entry/moschino-aw14/0" style="color:#ddd">Moschino AW 2014</a></li>
+        <li><a href="/entry/schiaparelli-ss21/0" style="color:#ddd">Schiaparelli SS 2021</a></li>
+        <li><a href="/entry/margiela-aw00/0" style="color:#ddd">Maison Margiela AW 2000</a></li>
+        <li><a href="/entry/westwood-aw81/0" style="color:#ddd">Vivienne Westwood AW 1981</a></li>
+        <li><a href="/entry/simons-aw01/0" style="color:#ddd">Raf Simons AW 2001</a></li>
+        <li><a href="/entry/undercover-ss03/0" style="color:#ddd">Undercover SS 2003</a></li>
+        <li><a href="/entry/adrover-aw00/0" style="color:#ddd">Miguel Adrover AW 2000</a></li>
+      </ul>
     </div>
   </noscript>
 
@@ -408,8 +433,8 @@
 
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
-          <span id="index-panel-title" class="text-[var(--t-chrome-sm)] font-bold uppercase tracking-[0.15em]">Research Index</span>
-          <button type="button" id="btn-show-bookmarks" class="text-[var(--t-chrome-sm)] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
+          <span id="index-panel-title" class="text-[var(--t-chrome-xs)] font-medium uppercase tracking-[0.15em]">Research Index</span>
+          <button type="button" id="btn-show-bookmarks" class="text-[var(--t-chrome-xs)] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
         </div>
 
         <!-- Mobile Quick Nav (top of drawer, immediately visible) -->
@@ -490,7 +515,7 @@
             aria-expanded="false"
             aria-controls="taxonomy-grid"
           >
-            <span id="taxonomy-heading" class="text-[var(--t-chrome-sm)] font-bold uppercase tracking-[0.2em] opacity-60">Categories</span>
+            <span id="taxonomy-heading" class="text-[var(--t-chrome-xs)] font-medium uppercase tracking-[0.2em] opacity-60">Categories</span>
             <span class="flex items-center gap-2">
               <span id="taxonomy-hint" class="text-[8px] font-mono uppercase tracking-wider opacity-40 hidden md:inline">Tap to filter</span>
               <span id="taxonomy-chevron" class="lg:hidden text-[var(--t-mono-xs)] opacity-60 transition-transform" aria-hidden="true">▾</span>
@@ -1149,7 +1174,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=c25b76c"></script>
+    <script type="module" src="js/app.js?v=20fb09a"></script>
 
   </div>
 
