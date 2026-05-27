@@ -35,6 +35,17 @@
   <meta name="twitter:description" content="45 landmark collections, decoded by category, designer, era, and movement. A research archive for fashion history and visual culture." />
   <meta name="twitter:image" content="https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg" />
   <link rel="canonical" href="https://thelexicon.xyz/" />
+  <script>
+    (function() {
+      var m = window.location.pathname.match(/^\/entry\/([^/]+)(?:\/(\d+))?/);
+      if (m) {
+        var c = document.querySelector('link[rel="canonical"]');
+        if (c) c.href = 'https://thelexicon.xyz/entry/' + m[1] + '/' + (m[2] || '0');
+        var ou = document.querySelector('meta[property="og:url"]');
+        if (ou) ou.content = 'https://thelexicon.xyz/entry/' + m[1] + '/' + (m[2] || '0');
+      }
+    })();
+  </script>
 
   <!-- Accessibility: Skip Link Styles -->
   <style>
@@ -306,7 +317,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=a75b1a6" />
+  <link rel="stylesheet" href="index.css?v=2b954f7" />
 </head>
 
 <body>
@@ -1164,7 +1175,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=a75b1a6"></script>
+    <script type="module" src="js/app.js?v=2b954f7"></script>
 
   </div>
 
