@@ -17,6 +17,8 @@
   <meta name="asset-base" content="/public">
 
   <!-- SEO & Social Meta Tags -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="description" content="A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer." />
   <meta name="keywords" content="fashion archive, fashion history, visual culture, subcultural theory, runway analysis, fashion criticism, fashion research" />
   <meta name="author" content="Angelo Sanchez Dela Cruz" />
@@ -36,14 +38,46 @@
   <meta name="twitter:image" content="https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg" />
   <link rel="canonical" href="https://thelexicon.xyz/" />
   <script>
+    // Per-entry SEO bootstrapping: runs before any async JS so Googlebot's
+    // first-pass HTML crawl sees a unique canonical, title, and og tags
+    // per entry URL instead of the homepage defaults. Slug → display name
+    // (e.g. "mcqueen-ss99" → "McQueen SS99").
     (function() {
-      var m = window.location.pathname.match(/^\/entry\/([^/]+)(?:\/(\d+))?/);
-      if (m) {
-        var c = document.querySelector('link[rel="canonical"]');
-        if (c) c.href = 'https://thelexicon.xyz/entry/' + m[1] + '/' + (m[2] || '0');
-        var ou = document.querySelector('meta[property="og:url"]');
-        if (ou) ou.content = 'https://thelexicon.xyz/entry/' + m[1] + '/' + (m[2] || '0');
+      var m = window.location.pathname.match(/^\/entry\/([^/]+)/);
+      if (!m) return;
+      var slug = m[1];
+      // Canonicalize all image-index variants to /0 (matches sitemap.xml)
+      var url = 'https://thelexicon.xyz/entry/' + slug + '/0';
+      var parts = slug.split('-');
+      var seasonRe = /^(ss|aw|fw|pre|cruise|resort)(\d+)$/i;
+      var last = parts[parts.length - 1];
+      var name;
+      var match = last.match(seasonRe);
+      if (match) {
+        var brand = parts.slice(0, -1).map(function(p) {
+          return p.charAt(0).toUpperCase() + p.slice(1);
+        }).join(' ');
+        name = brand + ' ' + match[1].toUpperCase() + match[2];
+      } else {
+        name = parts.map(function(p) {
+          return p.charAt(0).toUpperCase() + p.slice(1);
+        }).join(' ');
       }
+      var title = name + ' — THE LEXICON';
+      var desc  = 'Forensic visual analysis of ' + name + '. Annotated for visual and cultural research.';
+      document.title = title;
+      var set = function(sel, attr, val) {
+        var el = document.querySelector(sel);
+        if (el) el.setAttribute(attr, val);
+      };
+      set('link[rel="canonical"]',           'href',    url);
+      set('meta[property="og:url"]',         'content', url);
+      set('meta[property="og:title"]',       'content', title);
+      set('meta[property="og:description"]', 'content', desc);
+      set('meta[property="og:type"]',        'content', 'article');
+      set('meta[name="description"]',        'content', desc);
+      set('meta[name="twitter:title"]',      'content', title);
+      set('meta[name="twitter:description"]','content', desc);
     })();
   </script>
 
@@ -317,7 +351,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=2b954f7" />
+  <link rel="stylesheet" href="index.css?v=0c18614" />
 </head>
 
 <body>
@@ -1175,7 +1209,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=2b954f7"></script>
+    <script type="module" src="js/app.js?v=0c18614"></script>
 
   </div>
 
