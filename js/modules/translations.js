@@ -191,7 +191,7 @@ export const translations = {
     "label_artifact_singular": "ARTIFACT",
     "label_analysis": "ANALYSIS",
     "label_grid_view": "Grid View",
-    "label_timeline": "Timeline",
+    "label_timeline": "Evolution Matrix",
     "refine_by": "REFINE BY",
     "btn_back": "BACK",
     "btn_fullscreen": "FULLSCREEN",

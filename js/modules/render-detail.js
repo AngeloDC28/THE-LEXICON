@@ -40,6 +40,9 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     return;
   }
 
+  // Store reference so renderSidebarHeader can build position counter
+  AppState._archiveData = archiveData;
+
   // Save grid scroll position for restoration on close
   const imagePanel = $('image-panel');
   if (imagePanel) _savedGridScrollTop = imagePanel.scrollTop;
@@ -219,9 +222,29 @@ function renderSidebarHeader(entry) {
   const year = entry.year || '----';
   const season = entry.season ? entry.season.toUpperCase() : '';
 
+  // Build position counter using filtered set (same set arrow keys navigate)
+  const filtered = getFilteredEntries(AppState._archiveData || []);
+  const pos = filtered.findIndex(e => e.id === entry.id);
+  const total = filtered.length;
+  const posLabel = total > 0 ? `${pos + 1} / ${total}` : '';
+
   header.innerHTML = `
     <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
-    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>`;
+    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
+    ${posLabel ? `
+    <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
+      <button type="button" class="den-btn" id="btn-detail-prev" aria-label="Previous entry (←)" ${pos <= 0 ? 'disabled' : ''}>‹</button>
+      <span class="den-pos" aria-live="polite" aria-atomic="true">${posLabel}</span>
+      <button type="button" class="den-btn" id="btn-detail-next" aria-label="Next entry (→)" ${pos >= total - 1 ? 'disabled' : ''}>›</button>
+    </div>` : ''}`;
+
+  // Wire click handlers directly (sidebar is re-rendered on each entry open)
+  header.querySelector('#btn-detail-prev')?.addEventListener('click', () => {
+    document.dispatchEvent(new CustomEvent('lexicon:entry-nav', { detail: { dir: -1 } }));
+  });
+  header.querySelector('#btn-detail-next')?.addEventListener('click', () => {
+    document.dispatchEvent(new CustomEvent('lexicon:entry-nav', { detail: { dir: 1 } }));
+  });
 }
 
 function renderBreadcrumb(entry) {

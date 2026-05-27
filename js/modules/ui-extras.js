@@ -19,9 +19,24 @@ export function renderTimeline(archiveData, callbacks) {
   });
 
   const sortedYears = Object.keys(years).sort((a, b) => a - b);
-  
-  container.innerHTML = sortedYears.map(year => {
-    const entries = years[year];
+
+  // Insert gap markers between non-consecutive years (bug 7.1b)
+  const items = [];
+  sortedYears.forEach((year, idx) => {
+    if (idx > 0) {
+      const gap = Number(year) - Number(sortedYears[idx - 1]) - 1;
+      if (gap > 0) items.push({ type: 'gap', gap });
+    }
+    items.push({ type: 'year', year, entries: years[year] });
+  });
+
+  container.innerHTML = items.map(item => {
+    if (item.type === 'gap') {
+      return `<div class="flex-shrink-0 w-16 h-full flex flex-col items-center justify-center opacity-20 border-r border-black/10 dark:border-white/10">
+        <div class="text-[7px] font-mono uppercase tracking-widest writing-mode-vertical" style="writing-mode:vertical-rl;transform:rotate(180deg)">· · · ${item.gap} ${item.gap === 1 ? 'yr' : 'yrs'} · · ·</div>
+      </div>`;
+    }
+    const { year, entries } = item;
     return `
       <div class="flex-shrink-0 w-64 h-full border-r border-black/10 dark:border-white/10 flex flex-col p-4 bg-overlay/20 dark:bg-darkSurface/20">
         <div class="flex justify-between items-baseline mb-6 shrink-0">
