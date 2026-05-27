@@ -189,6 +189,7 @@ export const translations = {
     "label_entries": "ENTRIES",
     "label_artifacts": "ARTIFACTS",
     "label_artifact_singular": "ARTIFACT",
+    "label_reading_time": "{words} words · ~{mins} min read",
     "label_analysis": "ANALYSIS",
     "label_grid_view": "Grid View",
     "label_timeline": "Evolution Matrix",

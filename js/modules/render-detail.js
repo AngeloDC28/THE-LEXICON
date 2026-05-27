@@ -404,7 +404,10 @@ function renderBrutalistNodes(entry) {
       .join(' ');
     const wordCount = allText.trim().split(/\s+/).filter(Boolean).length;
     const mins = Math.max(1, Math.round(wordCount / 200));
-    readingEl.textContent = `${wordCount} words · ~${mins} min read`;
+    const tpl = getTranslation('label_reading_time', AppState.language);
+    readingEl.textContent = tpl
+      .replace('{words}', wordCount)
+      .replace('{mins}', mins);
   }
 
   // Inject a mini TOC above the nodes for reading mode
