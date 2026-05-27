@@ -366,7 +366,7 @@ html:not(.dark) .grid-cell-body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-html:not(.dark) .gc-meta { color: rgba(0,0,0,0.55); }
+html:not(.dark) .gc-meta { color: rgba(0,0,0,0.65); }
 .gc-hook {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: var(--t-body);
@@ -2852,6 +2852,173 @@ html.dark .entry-item:hover::after {
 #view-controls-bar button,
 #view-controls-bar span {
   font-size: var(--t-chrome-xs);
+}
+
+/* ── COOKIE STRIP ── */
+.cookie-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+}
+html:not(.dark) .cookie-strip {
+  background: #f0efe9;
+  border-top-color: rgba(0,0,0,0.15);
+}
+.cookie-strip-text {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  flex: 1;
+  min-width: 0;
+  line-height: 1.4;
+  color: #fff;
+}
+html:not(.dark) .cookie-strip-text { color: #000; }
+.cookie-strip-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.cookie-link {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 4px;
+  min-height: 32px;
+}
+.cookie-link:hover { opacity: 0.8; }
+.cookie-btn {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5px 10px;
+  min-height: 30px;
+  cursor: pointer;
+  border: 1px solid currentColor;
+}
+.cookie-btn--ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+}
+html:not(.dark) .cookie-btn--ghost { color: rgba(0,0,0,0.5); }
+.cookie-btn--ghost:hover { opacity: 0.8; }
+.cookie-btn--fill {
+  background: #CCFF00;
+  color: #000;
+  border-color: #CCFF00;
+}
+.cookie-btn--fill:hover { opacity: 0.85; }
+
+/* ── ENTRY LIST HIERARCHY ── */
+.entry-cat-header {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  padding: 10px 16px 3px;
+  opacity: 0.85;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.entry-cat-header:hover { opacity: 1; }
+.entry-cat-header--active { opacity: 1; font-weight: 900; }
+.entry-cat-header:first-child { border-top: none; padding-top: 6px; }
+html.dark .entry-cat-header { border-top-color: rgba(255,255,255,0.06); }
+html:not(.dark) .entry-cat-header { opacity: 0.65; }
+html:not(.dark) .entry-cat-header:hover { opacity: 1; }
+html:not(.dark) .entry-cat-header--active { opacity: 1; }
+.entry-item-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.entry-item-brand {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.entry-item-meta {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+/* Thumbnail inline in entry list — desktop only */
+.entry-item-thumb {
+  display: none;
+  flex-shrink: 0;
+  width: 32px;
+  height: 40px;
+  overflow: hidden;
+}
+.entry-item-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+.entry-item:hover .entry-item-thumb img { opacity: 1; }
+@media (min-width: 1024px) {
+  .entry-item-thumb { display: block; }
+}
+
+/* Floating hover preview panel */
+#entry-hover-preview {
+  position: fixed;
+  z-index: 9998;
+  width: 120px;
+  height: 150px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #0a0a0a;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+html:not(.dark) #entry-hover-preview {
+  border-color: rgba(0,0,0,0.15);
+  background: #f0efe9;
+}
+#entry-hover-preview.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#entry-hover-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ── HEADER TELEMETRY FEED ── */
