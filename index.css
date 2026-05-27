@@ -1476,7 +1476,7 @@ html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:foc
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
 }
-html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.35); }
+html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.55); }
 
 /* ─── Detail entry navigation (prev / pos / next in sidebar header) ─── */
 .detail-entry-nav {
@@ -1826,7 +1826,7 @@ html:not(.dark) .idx-export-btn:hover { color: #000; }
 }
 html:not(.dark) .index-kbd-bar {
   border-top-color: rgba(0,0,0,0.12);
-  color: rgba(0,0,0,0.35);
+  color: rgba(0,0,0,0.55);
   background: #f2f2f0;
 }
 .index-kbd-bar kbd {
@@ -2340,7 +2340,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
   font-size: 7px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 6px;
   display: block;
 }
@@ -3679,10 +3679,10 @@ html:not(.dark) .ws-desc { color: rgba(0,0,0,0.5); }
 html:not(.dark) .wlang-btn { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.5); }
 html:not(.dark) .wlang-btn:hover { border-color: #000; color: #000; }
 html:not(.dark) .wlang-btn.active { border-color: #000; color: #000; background: rgba(0,0,0,0.06); }
-html:not(.dark) .welcome-lang-label { color: rgba(0,0,0,0.35); }
+html:not(.dark) .welcome-lang-label { color: rgba(0,0,0,0.55); }
 html:not(.dark) .welcome-cta { background: #000; color: #CCFF00; }
 html:not(.dark) .welcome-cta:hover { background: #333; }
-html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.35); }
+html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
 
 /* ── STICKY NOTE SQUARES (top-right image triggers) ── */
 .sticky-square {
