@@ -330,7 +330,7 @@ function renderImage(entry, callbacks) {
           const idx = parseInt(btn.dataset.imgIndex, 10);
           if (idx !== AppState.currentImageIndex) {
             AppState.currentImageIndex = idx;
-            renderImage(entry, null);
+            renderImage(entry, callbacks);
             renderHotspots(entry, $('detail-image-wrapper'));
           }
         });
