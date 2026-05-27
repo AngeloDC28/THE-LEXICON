@@ -203,8 +203,9 @@ export function renderEntryList(archiveData, callbacks) {
     const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
     const isNewCat = tagCategory !== prevCat;
     prevCat = tagCategory;
+    const isActiveCat = AppState.analyticalCat === tagCategory;
     const catHeader = isNewCat
-      ? `<div class="entry-cat-header" style="color:var(--c-${tagCategory},#888)">${tagLabel}</div>`
+      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
       : '';
     // Thumbnail — first image of entry, shown inline on desktop
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;

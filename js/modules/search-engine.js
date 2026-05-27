@@ -6,6 +6,7 @@
 import { $ } from './core-utils.js';
 import { AppState, taxonomyData } from './core-state.js';
 import { getTranslation } from './translations.js';
+import { getTagCategory } from './render-index-view.js';
 
 let searchCache = new Map();
 
@@ -27,7 +28,7 @@ export function getFilteredEntries(archiveData) {
     : 0;
   const yr = AppState.yearRange || { min: 1980, max: 2025 };
   const bookmarksOnly = !!AppState.bookmarksOnly;
-  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}|${yr.min}-${yr.max}|bm:${bookmarksOnly}`;
+  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.analyticalCat}|${AppState.sortMode}|${yr.min}-${yr.max}|bm:${bookmarksOnly}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -60,6 +61,11 @@ export function getFilteredEntries(archiveData) {
       const y = e.year;
       return y && y >= yr.min && y <= yr.max;
     });
+  }
+
+  // 1c. Filter by analytical category (sidebar category header click)
+  if (AppState.analyticalCat) {
+    entries = entries.filter(e => getTagCategory(e.tags?.politics || '') === AppState.analyticalCat);
   }
 
   // 2. Filter by taxonomy tags

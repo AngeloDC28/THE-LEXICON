@@ -2833,6 +2833,36 @@ html.dark .matrix-center { border-color: rgba(255,255,255,0.1); }
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 html.dark .matrix-section { border-color: rgba(255,255,255,0.08); }
+.nexus-empty { padding: 32px 20px; }
+.nexus-peers { margin-top: 20px; }
+.nexus-peers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.nexus-peer-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: background 0.15s;
+}
+.nexus-peer-card:hover { background: rgba(255,255,255,0.1); }
+.nexus-peer-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.nexus-peer-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
 .matrix-section-title {
   font-size: var(--t-mono-xs); font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.2em;
@@ -3174,6 +3204,11 @@ html:not(.dark) .cookie-btn--ghost { color: rgba(0,0,0,0.5); }
 
 /* ── ENTRY LIST HIERARCHY ── */
 .entry-cat-header {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
   font-family: var(--font-mono);
   font-size: 7px;
   font-weight: 700;
@@ -3182,10 +3217,16 @@ html:not(.dark) .cookie-btn--ghost { color: rgba(0,0,0,0.5); }
   padding: 10px 16px 3px;
   opacity: 0.85;
   border-top: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  transition: opacity 0.15s;
 }
+.entry-cat-header:hover { opacity: 1; }
+.entry-cat-header--active { opacity: 1; font-weight: 900; }
 .entry-cat-header:first-child { border-top: none; padding-top: 6px; }
 html.dark .entry-cat-header { border-top-color: rgba(255,255,255,0.06); }
 html:not(.dark) .entry-cat-header { opacity: 0.65; }
+html:not(.dark) .entry-cat-header:hover { opacity: 1; }
+html:not(.dark) .entry-cat-header--active { opacity: 1; }
 .entry-item-inner {
   display: flex;
   align-items: center;
