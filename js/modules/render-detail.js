@@ -267,7 +267,7 @@ function renderBreadcrumb(entry) {
   crumb.classList.remove('hidden');
   crumb.querySelector('[data-crumb-back]')?.addEventListener('click', (e) => {
     e.preventDefault();
-    history.back();
+    document.dispatchEvent(new CustomEvent('lexicon:close-detail'));
   });
 }
 
