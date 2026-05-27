@@ -23,19 +23,19 @@ const ENTRIES = join(ROOT, 'content', 'entries');
 const OUT     = join(ROOT, 'sitemap.xml');
 const OUT_ALT = join(ROOT, 'sitemap-index.xml');
 const BASE    = 'https://thelexicon.xyz';
-const TODAY   = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-
 const ids = readdirSync(ENTRIES)
   .filter(f => f.endsWith('.json') && !f.startsWith('_'))
   .map(f => f.replace(/\.json$/, ''))
   .sort();
 
-const url = (loc, priority, changefreq) =>
-  `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+// Bare-minimum sitemap: only <loc>, no optional <lastmod>/<changefreq>/<priority>.
+// Google ignores changefreq + priority anyway, and lastmod with a clock-skewed
+// date can cause GSC to reject the file. Simpler = more compatible.
+const url = (loc) => `  <url><loc>${loc}</loc></url>`;
 
 const urls = [
-  url(`${BASE}/`, '1.0', 'weekly'),
-  ...ids.map(id => url(`${BASE}/entry/${id}/0`, '0.8', 'monthly')),
+  url(`${BASE}/`),
+  ...ids.map(id => url(`${BASE}/entry/${id}/0`)),
 ];
 
 const xml =
