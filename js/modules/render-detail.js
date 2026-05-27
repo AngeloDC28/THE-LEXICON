@@ -186,14 +186,16 @@ export function closeDetail(callbacks, archiveData) {
   }
 }
 
-export function navigateEntry(direction, archiveData, callbacks) {
+export function navigateEntry(direction, archiveData, callbacks, entryOnly = false) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (!entry) return;
-  const imgs = entry.images;
-  const nextImg = AppState.currentImageIndex + direction;
-  if (nextImg >= 0 && nextImg < imgs.length) {
-    openDetail(entry.id, nextImg, archiveData, callbacks);
-    return;
+  if (!entryOnly) {
+    const imgs = entry.images;
+    const nextImg = AppState.currentImageIndex + direction;
+    if (nextImg >= 0 && nextImg < imgs.length) {
+      openDetail(entry.id, nextImg, archiveData, callbacks);
+      return;
+    }
   }
   const entries = getFilteredEntries(archiveData);
   if (entries.length <= 1) return;
@@ -203,8 +205,7 @@ export function navigateEntry(direction, archiveData, callbacks) {
   if (newIndex < 0) newIndex = entries.length - 1;
   if (newIndex >= entries.length) newIndex = 0;
   const nextEntry = entries[newIndex];
-  const startImg = direction > 0 ? 0 : (nextEntry.images || [1]).length - 1;
-  openDetail(nextEntry.id, startImg, archiveData, callbacks);
+  openDetail(nextEntry.id, 0, archiveData, callbacks);
 }
 
 function renderSidebarHeader(entry) {
