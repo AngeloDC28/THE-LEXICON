@@ -107,33 +107,37 @@ export function renderImageGrid(archiveData, callbacks) {
       // Only show hook on first image of each entry (i===0) to avoid repetition
       const hookRaw = i === 0 ? (entry.notes?.critique || '') : '';
       const hook = hookRaw ? hookRaw.split('.')[0].trim().slice(0, 80) : '';
+
+      // Only the first image per entry is a keyboard/screen-reader target.
+      // Subsequent images are presentational — clickable via mouse but not
+      // tab-reachable. This reduces tab stops from 643 → 45.
+      const isFirst = i === 0;
+      const a11yAttrs = isFirst
+        ? `tabindex="0" role="button" aria-label="Open ${brand} ${season} ${year} — ${tagLabel} (${imgs.length} image${imgs.length !== 1 ? 's' : ''})"`
+        : `aria-hidden="true"`;
+
       html += `
         <div class="grid-cell"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
-             tabindex="0"
-             role="button"
-             aria-label="Open entry: ${brand} ${season} ${year} — ${tagLabel}"
+             ${a11yAttrs}
              style="animation-delay: ${delay}s">
-          <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
             <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
           </div>
-          <!-- Image wrapper -->
           <div class="grid-cell-img group">
             ${hotspotBadge}
             <picture>
               <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
               <img
                 src="${src}"${imgAttrs(imgObj)}
-                alt="${brand} ${season} ${year}"
+                alt="${isFirst ? brand + ' ' + season + ' ' + year : ''}"
                 loading="lazy"
                 decoding="async"
                 class="transition-transform duration-500 group-hover:scale-105"
                 onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
             </picture>
           </div>
-          <!-- Always-visible metadata below image -->
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
             ${hook ? `<div class="gc-hook">${hook}.</div>` : ''}
