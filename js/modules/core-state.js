@@ -63,8 +63,9 @@ export function updateHash(id, replace = false) {
     // non-detail hash (legacy fallback, e.g. grid views)
     window.location.hash = id;
   } else {
-    // closing detail — return to root, clearing /entry/ path
-    history.pushState(null, '', '/');
+    // closing detail — replace rather than push so the entry doesn't live in
+    // the back-stack. Filter state is restored by syncHashFromState() in app.js.
+    history.replaceState(null, '', '/');
   }
 }
 
