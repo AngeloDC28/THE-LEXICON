@@ -592,7 +592,7 @@ html:not(.dark) .grid-cell-body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-html:not(.dark) .gc-meta { color: rgba(0,0,0,0.55); }
+html:not(.dark) .gc-meta { color: rgba(0,0,0,0.65); }
 .gc-hook {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: var(--t-body);
@@ -3245,7 +3245,7 @@ html:not(.dark) .entry-cat-header--active { opacity: 1; }
   font-family: var(--font-mono);
   font-size: 7px;
   letter-spacing: 0.1em;
-  opacity: 0.45;
+  opacity: 0.6;
   text-transform: uppercase;
   margin-top: 1px;
 }
