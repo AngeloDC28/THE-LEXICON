@@ -1101,7 +1101,7 @@ html:not(.dark) .how-num span:first-child { color: #ccc; }
 }
 html:not(.dark) .how-num span:last-child { color: #999; }
 
-.how-step h3 {
+.how-step h2 {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: var(--t-h3);
   font-weight: 400;
@@ -1109,7 +1109,7 @@ html:not(.dark) .how-num span:last-child { color: #999; }
   margin-bottom: 10px;
   line-height: 1.2;
 }
-html:not(.dark) .how-step h3 { color: #0a0a0a; }
+html:not(.dark) .how-step h2 { color: #0a0a0a; }
 
 .how-step p {
   font-family: 'EB Garamond', Georgia, serif;
