@@ -222,13 +222,13 @@ export function renderTaxonomySub(callbacks, archiveData) {
         const activeClass = isActive
           ? 'border-acid bg-acid text-black hover:opacity-80'
           : 'border-black/30 dark:border-white/30 hover:border-black dark:hover:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black';
-        const zeroClass = count === 0 ? ' opacity-30' : '';
+        const zeroClass = !count ? ' opacity-30' : '';
         return `<button type="button"
           class="taxonomy-val-btn px-2.5 py-1.5 text-[var(--t-mono-xs)] tracking-wider uppercase font-mono border transition-colors ${activeClass}${zeroClass}"
           data-taxonomy-type="${type}"
           data-taxonomy-val="${val}"
           aria-pressed="${isActive}"
-          ${count === 0 ? 'disabled aria-disabled="true"' : ''}
+          ${!count ? 'disabled aria-disabled="true"' : ''}
         >${isActive ? '✓ ' : ''}${getTranslation(val, AppState.language)}${countBadge}</button>`;
       }).join('')}
     </div>
