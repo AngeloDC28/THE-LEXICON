@@ -2621,7 +2621,7 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
     flex: 1 1 calc(50% - 4px) !important;
   }
   .taxonomy-val-btn {
-    min-height: 40px !important;
+    min-height: 44px !important;
     padding: 8px 12px !important;
     font-size: var(--t-mono-sm) !important;
   }
