@@ -539,6 +539,7 @@ function renderMetaRail(entry) {
   const rail = $('meta-rail-body');
   if (!rail) return;
   const lang = AppState.language;
+  const t    = (k) => getTranslation(k, lang);
   const cat  = getTagCategory(entry.tags?.politics || '');
   const catLabels = {
     corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
@@ -547,15 +548,15 @@ function renderMetaRail(entry) {
   };
   const catLabel = catLabels[cat] || (entry.tags?.politics || 'Archive').split('&')[0].trim();
   const taxRows = [
-    { key: 'brand',     label: 'Brand' },
-    { key: 'era',       label: 'Era' },
-    { key: 'politics',  label: 'Politics' },
-    { key: 'theories',  label: 'Theory' },
-    { key: 'gender',    label: 'Gender' },
-    { key: 'geography', label: 'Geography' },
-    { key: 'format',    label: 'Format' },
-    { key: 'materials', label: 'Materials' },
-    { key: 'anatomy',   label: 'Anatomy' },
+    { key: 'brand',     label: t('tax_brand') },
+    { key: 'era',       label: t('tax_era') },
+    { key: 'politics',  label: t('tax_politics') },
+    { key: 'theories',  label: t('tax_theories') },
+    { key: 'gender',    label: t('tax_gender') },
+    { key: 'geography', label: t('tax_geography') },
+    { key: 'format',    label: t('tax_format') },
+    { key: 'materials', label: t('tax_materials') },
+    { key: 'anatomy',   label: t('tax_anatomy') },
   ];
 
   rail.innerHTML = `
@@ -563,7 +564,7 @@ function renderMetaRail(entry) {
       <div class="meta-rail-cat">${catLabel}</div>
     </div>
     <div class="meta-rail-section">
-      <span class="meta-rail-label">Year / Season</span>
+      <span class="meta-rail-label">${t('tax_year_season') || 'Year / Season'}</span>
       <div class="meta-rail-value">${entry.year || '—'} · ${entry.season || '—'}</div>
     </div>
     ${taxRows.map(({ key, label }) => {

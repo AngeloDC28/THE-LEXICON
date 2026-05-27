@@ -40,6 +40,7 @@ export const translations = {
     "tax_geography": "Geography",
     "tax_anatomy": "Form & Anatomy",
     "tax_format": "Format & Medium",
+    "tax_year_season": "Year / Season",
     "taxonomy_heading": "Categories",
     "btn_back_mobile": "Back",
     "btn_notes_mobile": "Notes",
