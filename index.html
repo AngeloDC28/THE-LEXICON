@@ -17,6 +17,8 @@
   <meta name="asset-base" content="/public">
 
   <!-- SEO & Social Meta Tags -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="description" content="A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer." />
   <meta name="keywords" content="fashion archive, fashion history, visual culture, subcultural theory, runway analysis, fashion criticism, fashion research" />
   <meta name="author" content="Angelo Sanchez Dela Cruz" />
@@ -34,6 +36,50 @@
   <meta name="twitter:title" content="THE LEXICON — fashion history, indexed analytically" />
   <meta name="twitter:description" content="45 landmark collections, decoded by category, designer, era, and movement. A research archive for fashion history and visual culture." />
   <meta name="twitter:image" content="https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg" />
+  <link rel="canonical" href="https://thelexicon.xyz/" />
+  <script>
+    // Per-entry SEO bootstrapping: runs before any async JS so Googlebot's
+    // first-pass HTML crawl sees a unique canonical, title, and og tags
+    // per entry URL instead of the homepage defaults. Slug → display name
+    // (e.g. "mcqueen-ss99" → "McQueen SS99").
+    (function() {
+      var m = window.location.pathname.match(/^\/entry\/([^/]+)/);
+      if (!m) return;
+      var slug = m[1];
+      // Canonicalize all image-index variants to /0 (matches sitemap.xml)
+      var url = 'https://thelexicon.xyz/entry/' + slug + '/0';
+      var parts = slug.split('-');
+      var seasonRe = /^(ss|aw|fw|pre|cruise|resort)(\d+)$/i;
+      var last = parts[parts.length - 1];
+      var name;
+      var match = last.match(seasonRe);
+      if (match) {
+        var brand = parts.slice(0, -1).map(function(p) {
+          return p.charAt(0).toUpperCase() + p.slice(1);
+        }).join(' ');
+        name = brand + ' ' + match[1].toUpperCase() + match[2];
+      } else {
+        name = parts.map(function(p) {
+          return p.charAt(0).toUpperCase() + p.slice(1);
+        }).join(' ');
+      }
+      var title = name + ' — THE LEXICON';
+      var desc  = 'Forensic visual analysis of ' + name + '. Annotated for visual and cultural research.';
+      document.title = title;
+      var set = function(sel, attr, val) {
+        var el = document.querySelector(sel);
+        if (el) el.setAttribute(attr, val);
+      };
+      set('link[rel="canonical"]',           'href',    url);
+      set('meta[property="og:url"]',         'content', url);
+      set('meta[property="og:title"]',       'content', title);
+      set('meta[property="og:description"]', 'content', desc);
+      set('meta[property="og:type"]',        'content', 'article');
+      set('meta[name="description"]',        'content', desc);
+      set('meta[name="twitter:title"]',      'content', title);
+      set('meta[name="twitter:description"]','content', desc);
+    })();
+  </script>
 
   <!-- Accessibility: Skip Link Styles -->
   <style>
@@ -297,25 +343,15 @@
         document.documentElement.classList.add('dark');
       }
 
-      // Fail-safe boot dismissal
-      setTimeout(function() {
-        var overlay = document.getElementById('boot-overlay');
-        var root = document.getElementById('app-root');
-        if (overlay && !overlay.classList.contains('hidden')) {
-          console.warn("BOOT_FAILSAFE_TRIGGERED");
-          overlay.classList.add('boot-fade-out');
-          setTimeout(function() {
-            overlay.classList.add('hidden');
-            if (root) root.classList.remove('opacity-0');
-          }, 500);
-        } else if (root && root.classList.contains('opacity-0')) {
-          root.classList.remove('opacity-0');
-        }
-      }, 1200);
+      // Remove boot gate immediately — no artificial delay on slow connections
+      var overlay = document.getElementById('boot-overlay');
+      var root = document.getElementById('app-root');
+      if (overlay) overlay.classList.add('hidden');
+      if (root) root.classList.remove('opacity-0');
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=6a62679" />
+  <link rel="stylesheet" href="index.css?v=cad7261" />
 </head>
 
 <body>
@@ -364,7 +400,7 @@
   <!-- ============================================================
        BOOT OVERLAY
   ============================================================ -->
-  <div id="boot-overlay" class="pointer-events-auto">
+  <div id="boot-overlay" class="pointer-events-auto hidden">
     <div class="boot-text" id="boot-text">THE LEXICON</div>
   </div>
 
@@ -377,7 +413,7 @@
         <svg class="w-7 h-7 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
       <button type="button" id="header-title" aria-label="Reset filters and return to archive home" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-[0.25em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
-      <div id="header-telemetry" class="lexicon-tablet-up text-[var(--t-mono-xs)] font-mono opacity-50 tracking-widest uppercase" data-notranslate translate="no">
+      <div id="header-telemetry" class="lexicon-tablet-up text-[var(--t-mono-xs)] font-mono opacity-50 tracking-widest uppercase" data-notranslate translate="no" aria-hidden="true" role="presentation">
         <span id="telemetry-text">LOADING ARCHIVE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
@@ -396,7 +432,7 @@
     </div>
   </header>
 
-  <div id="app-root" class="opacity-0 transition-opacity duration-300">
+  <div id="app-root">
 
     <!-- Drawer Backdrop (mobile only) -->
     <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
@@ -472,7 +508,7 @@
                 autocorrect="off"
                 autocapitalize="off"
                 spellcheck="false"
-                placeholder="Search — or try brand:mcqueen year:1999 tag:corporeal..."
+                placeholder="Search archive — brand:mcqueen year:1999 tag:corporeal — Press ? for shortcuts"
                 aria-label="Search archive"
                 class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 min-h-[44px] text-xs font-mono text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:border-acid focus:outline-none"
               />
@@ -984,16 +1020,16 @@
     <!-- TOAST -->
     <div id="toast" class="hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 lg:bottom-4 lg:right-4 lg:left-auto z-[10000] bg-bone dark:bg-darkBase border-t border-black dark:border-white lg:border p-3 lg:p-4 shadow-2xl lg:max-w-sm" style="padding-bottom:calc(0.75rem + env(safe-area-inset-bottom));" role="region" aria-label="Cookie consent">
-      <p id="cookie-notice-text" class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide mb-3 leading-relaxed"></p>
-      <div class="flex gap-4 mb-3">
-        <button type="button" id="btn-privacy-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Privacy</button>
-        <button type="button" id="btn-terms-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Terms</button>
-      </div>
-      <div class="flex gap-2">
-        <button id="btn-reject-cookies" type="button" class="flex-1 border border-black dark:border-white bg-transparent dark:bg-transparent text-black dark:text-white py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-60 focus-ring">Reject</button>
-        <button id="btn-accept-cookies" type="button" class="flex-1 border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-80 focus-ring">Accept</button>
+    <!-- Cookie Banner — compact strip -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-[10000]" role="region" aria-label="Cookie consent">
+      <div class="cookie-strip">
+        <p id="cookie-notice-text" class="cookie-strip-text"></p>
+        <div class="cookie-strip-actions">
+          <button type="button" id="btn-privacy-link" class="cookie-link focus-ring">Privacy</button>
+          <button type="button" id="btn-terms-link" class="cookie-link focus-ring">Terms</button>
+          <button id="btn-reject-cookies" type="button" class="cookie-btn cookie-btn--ghost focus-ring">Reject</button>
+          <button id="btn-accept-cookies" type="button" class="cookie-btn cookie-btn--fill focus-ring">Accept</button>
+        </div>
       </div>
     </div>
 
@@ -1173,7 +1209,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=6a62679"></script>
+    <script type="module" src="js/app.js?v=cad7261"></script>
 
   </div>
 

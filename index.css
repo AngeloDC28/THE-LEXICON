@@ -23,8 +23,8 @@
   /* Chrome-scoped sizes: ~25% smaller than mono-xs/sm.
      Applied via #primary-header, #status-ribbon, #view-controls-bar
      so the rest of the app's mono text keeps its original sizing. */
-  --t-chrome-xs: clamp(0.375rem, 0.33rem + 0.11vw, 0.4375rem);
-  --t-chrome-sm: clamp(0.4375rem, 0.385rem + 0.11vw, 0.5rem);
+  --t-chrome-xs: clamp(0.5rem, 0.46rem + 0.12vw, 0.5625rem);
+  --t-chrome-sm: clamp(0.5625rem, 0.52rem + 0.12vw, 0.625rem);
   --t-body:      clamp(0.95rem, 0.85rem + 0.3vw, 1.0625rem);
   --t-lead:      clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
   --t-h3:        clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
@@ -159,6 +159,230 @@ html.dark #app-root {
   }
 }
 
+/* ── LAYOUT ANCHORS ────────────────────────────────────────────────────────
+   Tailwind CDN does not reliably generate transform/positioning utilities
+   for elements that start off-screen or hidden. These rules are the source
+   of truth for layout-critical elements across all breakpoints.
+   They also serve as a safety net when Tailwind CDN is slow or blocked. */
+
+/* Core structural display properties — Tailwind flex/grid classes are not
+   guaranteed to be generated; these ensure the shell always renders. */
+#primary-header        { display: flex; align-items: center; justify-content: space-between; }
+.main-shell            { display: flex; flex: 1; overflow: hidden; min-height: 0; }
+#image-panel           { display: flex; flex-direction: column; min-height: 0; }
+#view-controls-bar     { display: flex; align-items: center; justify-content: space-between; }
+#status-ribbon         { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Inner view containers — flex grow so they fill the panel and remain scrollable */
+#grid-view, #index-table-view, #folders-view, #timeline-view { flex: 1; min-height: 0; }
+#grid-view.hidden, #index-table-view.hidden, #folders-view.hidden,
+#timeline-view.hidden, #detail-image-view.hidden { display: none !important; }
+
+/* Modals: when not .hidden, must be fixed overlay covering the viewport. */
+#about-modal, #contact-modal, #privacy-modal, #terms-modal,
+#auth-modal, #save-folder-modal, #kbd-help-modal, #cmd-palette,
+#cite-modal, #image-lightbox {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#about-modal.hidden, #contact-modal.hidden, #privacy-modal.hidden,
+#terms-modal.hidden, #auth-modal.hidden, #save-folder-modal.hidden,
+#kbd-help-modal.hidden, #cmd-palette.hidden, #cite-modal.hidden,
+#image-lightbox.hidden { display: none !important; }
+/* Modal backdrop — first child absolute-positioned div with [data-modal-backdrop] */
+#about-modal > div:first-child,
+#contact-modal > div:first-child,
+#privacy-modal > div:first-child,
+#terms-modal > div:first-child,
+#auth-modal > div:first-child,
+#save-folder-modal > div:first-child,
+#kbd-help-modal > div:first-child,
+#cmd-palette > div:first-child,
+#cite-modal > div:first-child {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+/* Modal content panel — second child (the actual dialog box) */
+#about-modal > div:nth-child(2),
+#contact-modal > div:nth-child(2),
+#privacy-modal > div:nth-child(2),
+#terms-modal > div:nth-child(2),
+#auth-modal > div:nth-child(2),
+#save-folder-modal > div:nth-child(2),
+#kbd-help-modal > div:nth-child(2),
+#cmd-palette > div:nth-child(2),
+#cite-modal > div:nth-child(2) {
+  position: relative;
+  background: var(--c-bg, #0a0a0a);
+  color: var(--c-fg, #fff);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+html:not(.dark) #about-modal > div:nth-child(2),
+html:not(.dark) #contact-modal > div:nth-child(2),
+html:not(.dark) #privacy-modal > div:nth-child(2),
+html:not(.dark) #terms-modal > div:nth-child(2),
+html:not(.dark) #auth-modal > div:nth-child(2),
+html:not(.dark) #save-folder-modal > div:nth-child(2),
+html:not(.dark) #kbd-help-modal > div:nth-child(2),
+html:not(.dark) #cmd-palette > div:nth-child(2),
+html:not(.dark) #cite-modal > div:nth-child(2) {
+  background: #f5f5f0;
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  #status-ribbon       { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* Desktop: index panel always-visible side column */
+@media (min-width: 1024px) {
+  #index-panel {
+    position: relative !important;
+    transform: none !important;
+    width: 40% !important;
+    top: auto; bottom: auto; left: auto;
+    flex-shrink: 0;
+    height: auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+/* Mobile/tablet: index panel is a slide-in drawer */
+@media (max-width: 1023px) {
+  #index-panel {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 85% !important;
+    z-index: 50;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    will-change: transform;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  #index-panel.translate-x-0 {
+    transform: translateX(0) !important;
+  }
+  /* Status ribbon: 4-col single row on mobile instead of 2×2 grid */
+  #status-ribbon { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #status-ribbon > div:nth-child(3),
+  #status-ribbon > div:nth-child(4) { border-top: none !important; }
+  #status-ribbon > div:nth-child(2) { border-right: 1px solid rgba(0,0,0,0.8); }
+  html.dark #status-ribbon > div:nth-child(2) { border-right-color: rgba(255,255,255,0.2); }
+  #status-ribbon > div { padding-left: 5px !important; padding-right: 5px !important; }
+  /* Mobile detail action bar */
+  #mobile-detail-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+    padding: 8px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    background: #000;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  #mobile-detail-actions button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 48px;
+    padding: 6px 4px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  /* Mobile notes sheet */
+  #mobile-notes-sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 300;
+    height: 70vh;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #CCFF00;
+    background: var(--c-bg, #0a0a0a);
+  }
+  html:not(.dark) #mobile-notes-sheet { background: #f5f5f0; }
+  #mobile-notes-sheet.hidden { display: none !important; }
+  #mobile-notes-sheet > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: #000;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+  #mobile-notes-sheet [role="tablist"] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    flex-shrink: 0;
+  }
+  #mobile-notes-sheet .mobile-note-tab {
+    padding: 12px 8px;
+    min-height: 44px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  #mobile-notes-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  /* Mobile hotspot annotation sheet */
+  #mobile-hotspot-sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 210;
+  }
+  /* Cookie banner */
+  #cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+  }
+  /* Mobile filter sheet */
+  #mobile-filter-sheet {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+  }
+}
+
 /* Keyboard focus (brutalist: offset ring, no radius)
    WCAG 2.2 AA: every interactive element must show a visible focus ring.
    Hide default outline on click/touch, but always render on :focus-visible. */
@@ -234,8 +458,10 @@ html.dark .focus-ring:focus-visible {
 
 /* Grid Reveal Animation */
 .grid-cell {
-  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
               transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  content-visibility: auto;
+  contain-intrinsic-size: 0 300px;
 }
 .grid-cell.loaded, .timeline-item.loaded {
   opacity: 1;
@@ -379,16 +605,20 @@ html:not(.dark) .gc-meta { color: rgba(0,0,0,0.65); }
   overflow: hidden;
 }
 html:not(.dark) .gc-hook { color: rgba(0,0,0,0.75); }
+/* Cards are too narrow at 2-col to show the critique hook legibly */
+@media (max-width: 767px) { .gc-hook { display: none; } }
 
 /* ─── Phase 1: Hero Panel ─────────────────────────────────────────── */
 .hero-panel {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   border: 1px solid #222;
-  min-height: 500px;
+  min-height: 340px;
+  max-height: 420px;
   position: relative;
   background: #000;
   color: #fff;
+  overflow: hidden;
 }
 html:not(.dark) .hero-panel { border-color: #e0e0dc; background: #fff; color: #000; }
 
@@ -656,15 +886,26 @@ html:not(.dark) .hero-stat .hs-lbl { color: #999; }
 .hero-dot.active { background: #8a7a70; }
 .hero-dot:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
 
-/* Mobile: stack hero columns */
+/* Mobile: compact hero — left column only, grid bleeds below the fold */
 @media (max-width: 767px) {
   .hero-panel {
     grid-template-columns: 1fr;
     min-height: auto;
+    max-height: 80vh;
+    overflow: hidden;
   }
-  .hero-col-left { border-right: none; border-bottom: 1px solid #222; }
+  .hero-col-left {
+    border-right: none;
+    border-bottom: 1px solid #222;
+    padding: 20px 20px 16px;
+  }
   html:not(.dark) .hero-col-left { border-bottom-color: #e0e0dc; }
-  .hero-col-right { min-height: 280px; }
+  /* Hide the right image column on mobile — saves ~280px of vertical space */
+  .hero-col-right { display: none; }
+  .hero-headline { font-size: clamp(1.5rem, 6.5vw, 2rem); margin-top: 12px; }
+  .hero-sub { font-size: clamp(0.875rem, 3.5vw, 1rem); margin-top: 8px; }
+  .hero-stats { padding-top: 12px; gap: 20px; }
+  .hero-actions { margin-top: 16px; gap: 8px; }
 }
 
 /* ─── Phase 1: Featured Strip ─────────────────────────────────────── */
@@ -959,7 +1200,7 @@ html:not(.dark) .who-use { color: #555; }
 .mobile-filter-btn {
   display: none;
   position: fixed;
-  bottom: calc(72px + env(safe-area-inset-bottom));
+  bottom: calc(16px + env(safe-area-inset-bottom));
   right: calc(14px + env(safe-area-inset-right));
   z-index: 80;
   background: #fff;
@@ -988,6 +1229,8 @@ html:not(.dark) .who-use { color: #555; }
 @media (max-width: 767px) {
   .mobile-filter-btn { display: flex; }
 }
+/* Hide filter FAB while in detail mode — detail bar occupies the bottom */
+.detail-mode-active .mobile-filter-btn { display: none !important; }
 
 /* ─── Phase 2: Mobile Bottom-Sheet Filter ─────────────────────────── */
 .mobile-sheet {
@@ -2212,23 +2455,11 @@ html.dark .info-box.active-hotspot {
 /* ── ARCHIVE GRID SYSTEM ── */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1px;
   background: rgba(255,255,255,0.05);
 }
 html:not(.dark) .image-grid { background: rgba(0,0,0,0.04); }
-
-
-
-@media (min-width: 768px) {
-  .image-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (min-width: 1024px) {
-  .image-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
-@media (min-width: 1280px) {
-  .image-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-}
 
 .grid-cell {
   position: relative;
@@ -2400,9 +2631,19 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
 
   /* Entry list items: comfortable tap targets */
   .entry-item {
-    padding: 14px 16px !important;
-    min-height: 56px;
+    padding: 10px 16px !important;
+    min-height: 48px;
   }
+  /* Entry list — explicit sizes so Tailwind CDN gaps don't affect mobile */
+  .entry-cat-header { font-size: 7px; padding: 10px 16px 3px; }
+  .entry-item-brand { font-size: 10px; }
+  .entry-item-meta  { font-size: 8px; }
+
+  /* Mobile quick-nav buttons — explicit size */
+  #mobile-quick-nav button { font-size: 9px; }
+
+  /* Index panel header — keep bookmark button subtle */
+  #btn-show-bookmarks { font-size: 8px; opacity: 0.4; }
 
   /* Search input: bigger on mobile */
   #search-input {
@@ -2417,11 +2658,18 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
 
   /* Hamburger: bigger tap target + visible icon */
   #btn-hamburger {
-    padding: 10px;
-    min-width: 48px;
-    min-height: 48px;
+    padding: 12px;
+    min-width: 56px;
+    min-height: 56px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  #btn-hamburger svg { width: 30px; height: 30px; stroke-width: 2.25; }
+  #btn-hamburger svg { width: 32px; height: 32px; stroke-width: 2.5; pointer-events: none; }
+
+  /* Hide footer on mobile — it's not useful at small viewports and breaks flex layout */
+  #site-footer { display: none !important; }
 
   /* Mobile detail bottom bar: ensure image area accounts for fixed bar */
   #app-root.detail-mode-active #detail-image-view {
@@ -2585,6 +2833,36 @@ html.dark .matrix-center { border-color: rgba(255,255,255,0.1); }
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 html.dark .matrix-section { border-color: rgba(255,255,255,0.08); }
+.nexus-empty { padding: 32px 20px; }
+.nexus-peers { margin-top: 20px; }
+.nexus-peers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.nexus-peer-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  transition: background 0.15s;
+}
+.nexus-peer-card:hover { background: rgba(255,255,255,0.1); }
+.nexus-peer-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.nexus-peer-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 8px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
 .matrix-section-title {
   font-size: var(--t-mono-xs); font-weight: 700;
   text-transform: uppercase; letter-spacing: 0.2em;
@@ -2847,7 +3125,7 @@ html.dark .entry-item:hover::after {
   font-size: var(--t-chrome-xs);
 }
 #status-ribbon span[id$="-label"] {
-  font-size: 7px;
+  font-size: 9px;
 }
 #view-controls-bar button,
 #view-controls-bar span {
@@ -3049,10 +3327,16 @@ html:not(.dark) #entry-hover-preview {
 
 /* ── FEATURE: EVOLUTION MATRIX ── */
 #timeline-view {
-  position: relative; width: 100%; height: 100%;
+  position: relative; width: 100%; flex: 1; min-height: 0;
   overflow-x: auto; overflow-y: hidden;
   white-space: nowrap; -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+}
+#timeline-matrix {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 400px;
 }
 #timeline-view::-webkit-scrollbar { display: none; }
 #timeline-view.active { display: block; }

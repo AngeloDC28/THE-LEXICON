@@ -29,6 +29,7 @@ export const AppState = {
   activeTaxonomy: null,
   language: safeLocalGet('lexicon-lang', 'en'),
   filters: emptyFilters(),
+  analyticalCat: null,
   searchQuery: '',
   archivalFolders: [],
   activeFolderId: null,

@@ -21,9 +21,9 @@ export function updateStatusBar(archiveData) {
     if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
   } else {
     const filtered = getFilteredEntries(archiveData);
-    if (brand)       brand.textContent       = '--';
-    if (year)        year.textContent        = '--';
-    if (season)      season.textContent      = '--';
+    if (brand)       brand.textContent       = 'ARCHIVE';
+    if (year)        year.textContent        = '1981–2023';
+    if (season)      season.textContent      = 'ALL';
     if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ' + getTranslation('label_entries', AppState.language);
   }
 }
@@ -99,8 +99,8 @@ function updateEntryMetaTags(entry) {
     ? `${title}: ${entry.subtitle}`
     : `Forensic visual analysis of ${title}. Annotated for visual and cultural research.`;
   const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = entry.images?.[0]
-    ? `${window.location.origin}/public/${entry.images[0]}`
+  const img    = entry.images?.[0]?.src
+    ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
 
   document.title = `${title} — THE LEXICON`;
@@ -108,10 +108,16 @@ function updateEntryMetaTags(entry) {
   setMeta('meta[property="og:title"]',       'content', `${title} — THE LEXICON`);
   setMeta('meta[property="og:description"]', 'content', desc);
   setMeta('meta[property="og:url"]',         'content', url);
+  setMeta('meta[property="og:type"]',        'content', 'article');
   setMeta('meta[name="description"]',        'content', desc);
+  setMeta('meta[name="twitter:title"]',      'content', `${title} — THE LEXICON`);
+  setMeta('meta[name="twitter:description"]','content', desc);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute('href', url);
   if (img) {
     setMeta('meta[property="og:image"]',     'content', img);
     setMeta('meta[property="og:image:alt"]', 'content', `${title} — THE LEXICON archive`);
+    setMeta('meta[name="twitter:image"]',    'content', img);
   }
 }
 
@@ -121,29 +127,39 @@ function _resetEntryMetaTags() {
   setMeta('meta[property="og:title"]',       'content', 'THE LEXICON — fashion history, indexed analytically');
   setMeta('meta[property="og:description"]', 'content', 'A research archive mapping fashion history, visual culture, and the lineage of ideas.');
   setMeta('meta[property="og:url"]',         'content', window.location.origin + '/');
+  setMeta('meta[property="og:type"]',        'content', 'website');
   setMeta('meta[name="description"]',        'content', 'A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.');
+  setMeta('meta[name="twitter:title"]',      'content', 'THE LEXICON — fashion history, indexed analytically');
+  setMeta('meta[name="twitter:description"]','content', '45 landmark collections, decoded by category, designer, era, and movement. A research archive for fashion history and visual culture.');
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute('href', window.location.origin + '/');
 }
 
 function updateEntryJsonLd(entry) {
   const el = document.getElementById('entry-jsonld');
   if (!el) return;
-  const brand = entry.tags?.brand || '';
-  const year  = entry.year || '';
+  const brand  = entry.tags?.brand || '';
+  const year   = entry.year || '';
   const season = entry.season || '';
-  const title = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
-  const url   = `${window.location.origin}/entry/${entry.id}/0`;
+  const title  = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
+  const url    = `${window.location.origin}/entry/${entry.id}/0`;
+  const img    = entry.images?.[0]?.src
+    ? `${window.location.origin}/public/${entry.images[0].src}`
+    : null;
   const ld = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     'name': `${title} — THE LEXICON`,
     'headline': title,
     'url': url,
+    'mainEntityOfPage': { '@type': 'WebPage', '@id': url },
     'description': entry.subtitle || `Forensic visual analysis of ${title}.`,
-    'author': { '@type': 'Organization', 'name': 'THE LEXICON' },
+    'author': { '@type': 'Organization', 'name': 'THE LEXICON', 'url': window.location.origin },
     'publisher': { '@type': 'Organization', 'name': 'THE LEXICON', 'url': window.location.origin },
-    'keywords': [brand, season, year, entry.tags?.politics, entry.tags?.theories].filter(Boolean).join(', '),
+    'keywords': [brand, season, year, entry.tags?.politics, entry.tags?.theories, entry.tags?.era].filter(Boolean).join(', '),
     'inLanguage': 'en',
   };
+  if (img) ld.image = { '@type': 'ImageObject', 'url': img, 'representativeOfPage': true };
   el.textContent = JSON.stringify(ld);
 }
 

@@ -21,20 +21,21 @@ import { fileURLToPath } from 'node:url';
 const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
 const OUT     = join(ROOT, 'sitemap.xml');
+const OUT_ALT = join(ROOT, 'sitemap-index.xml');
 const BASE    = 'https://thelexicon.xyz';
-const TODAY   = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-
 const ids = readdirSync(ENTRIES)
   .filter(f => f.endsWith('.json') && !f.startsWith('_'))
   .map(f => f.replace(/\.json$/, ''))
   .sort();
 
-const url = (loc, priority, changefreq) =>
-  `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${TODAY}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
+// Bare-minimum sitemap: only <loc>, no optional <lastmod>/<changefreq>/<priority>.
+// Google ignores changefreq + priority anyway, and lastmod with a clock-skewed
+// date can cause GSC to reject the file. Simpler = more compatible.
+const url = (loc) => `  <url><loc>${loc}</loc></url>`;
 
 const urls = [
-  url(`${BASE}/`, '1.0', 'weekly'),
-  ...ids.map(id => url(`${BASE}/entry/${id}/0`, '0.8', 'monthly')),
+  url(`${BASE}/`),
+  ...ids.map(id => url(`${BASE}/entry/${id}/0`)),
 ];
 
 const xml =
@@ -44,4 +45,7 @@ const xml =
   `</urlset>\n`;
 
 writeFileSync(OUT, xml, 'utf8');
-console.log(`LEXICON_SITEMAP ok (wrote ${OUT} — 1 homepage + ${ids.length} entries)`);
+// Mirror to a second URL — gives a clean fetch path that bypasses any
+// cached-failure backoff in Google Search Console's sitemap processor.
+writeFileSync(OUT_ALT, xml, 'utf8');
+console.log(`LEXICON_SITEMAP ok (wrote ${OUT} + ${OUT_ALT} — 1 homepage + ${ids.length} entries)`);

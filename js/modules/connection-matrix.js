@@ -13,6 +13,7 @@ let _currentView = 'graph'; // 'graph' | 'list'
 let _lastEntry = null;
 let _lastConnections = null;
 let _lastCallbacks = null;
+let _lastArchiveData = null;
 
 export function openConnectionMatrix(entryId, archiveData, callbacks) {
   const entry = archiveData.find(e => e.id === entryId);
@@ -31,6 +32,7 @@ export function openConnectionMatrix(entryId, archiveData, callbacks) {
   _lastEntry = entry;
   _lastConnections = connections;
   _lastCallbacks = callbacks;
+  _lastArchiveData = archiveData;
 
   const matrix = $('connection-matrix');
   if (matrix) {
@@ -295,12 +297,57 @@ function renderGraph(entry, connections, callbacks, container) {
   frame = requestAnimationFrame(simulate);
   _cancelSim = () => { if (frame) cancelAnimationFrame(frame); };
 
-  // Empty state
+  // Empty state — show peer suggestions by same era or analytical category
   if (connections.size === 0) {
     container.innerHTML = '';
     container.style.overflow = '';
-    const lang = AppState.language;
-    container.innerHTML = `<div class="matrix-section"><p class="text-[var(--t-mono-xs)] uppercase tracking-[0.15em] opacity-40 text-center py-8">${getTranslation('nexus_no_connections', lang)}</p></div>`;
+    renderNexusEmptyState(entry, container);
+  }
+}
+
+function renderNexusEmptyState(entry, container) {
+  const lang = AppState.language;
+  const archiveData = _lastArchiveData || [];
+  const callbacks = _lastCallbacks;
+
+  // Find peers: same era OR same tag category (politics)
+  const peers = archiveData.filter(e => {
+    if (e.id === entry.id) return false;
+    return e.tags?.era === entry.tags?.era ||
+      (e.tags?.politics && entry.tags?.politics &&
+       e.tags.politics.split('|')[0].trim() !== entry.tags.politics.split('|')[0].trim() &&
+       e.tags.politics.toLowerCase().slice(0, 15) === entry.tags.politics.toLowerCase().slice(0, 15));
+  }).slice(0, 6);
+
+  const peerCards = peers.length ? `
+    <div class="nexus-peers">
+      <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.18em] opacity-40 mb-3">From the same era</p>
+      <div class="nexus-peers-grid">
+        ${peers.map(p => {
+          const img = p.images?.[0]?.src ? resolveImgSrc({ src: p.images[0].src }) : '';
+          const brand = (p.tags?.brand || p.id).toUpperCase();
+          const year = p.year || '';
+          return `<button type="button" class="nexus-peer-card focus-ring" data-entry-id="${p.id}" aria-label="Open ${brand} ${year}">
+            ${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
+            <span class="nexus-peer-label">${brand}<br>${year}</span>
+          </button>`;
+        }).join('')}
+      </div>
+    </div>` : '';
+
+  container.innerHTML = `
+    <div class="matrix-section nexus-empty">
+      <p class="text-[var(--t-mono-xs)] uppercase tracking-[0.2em] opacity-40 mb-1">Nexus</p>
+      <p class="text-[var(--t-mono-sm)] font-mono text-white/50 mb-4">This entry's connections are still being mapped.</p>
+      ${peerCards}
+    </div>`;
+
+  if (callbacks) {
+    container.querySelectorAll('[data-entry-id]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        callbacks.openDetail(btn.dataset.entryId, 0);
+      });
+    });
   }
 }
 

@@ -107,33 +107,37 @@ export function renderImageGrid(archiveData, callbacks) {
       // Only show hook on first image of each entry (i===0) to avoid repetition
       const hookRaw = i === 0 ? (entry.notes?.critique || '') : '';
       const hook = hookRaw ? hookRaw.split('.')[0].trim().slice(0, 80) : '';
+
+      // Only the first image per entry is a keyboard/screen-reader target.
+      // Subsequent images are presentational — clickable via mouse but not
+      // tab-reachable. This reduces tab stops from 643 → 45.
+      const isFirst = i === 0;
+      const a11yAttrs = isFirst
+        ? `tabindex="0" role="button" aria-label="Open ${brand} ${season} ${year} — ${tagLabel} (${imgs.length} image${imgs.length !== 1 ? 's' : ''})"`
+        : `aria-hidden="true"`;
+
       html += `
         <div class="grid-cell"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
-             tabindex="0"
-             role="button"
-             aria-label="Open entry: ${brand} ${season} ${year} — ${tagLabel}"
+             ${a11yAttrs}
              style="animation-delay: ${delay}s">
-          <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
             <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
           </div>
-          <!-- Image wrapper -->
           <div class="grid-cell-img group">
             ${hotspotBadge}
             <picture>
               <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
               <img
                 src="${src}"${imgAttrs(imgObj)}
-                alt="${brand} ${season} ${year}"
+                alt="${isFirst ? brand + ' ' + season + ' ' + year : ''}"
                 loading="lazy"
                 decoding="async"
                 class="transition-transform duration-500 group-hover:scale-105"
                 onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
             </picture>
           </div>
-          <!-- Always-visible metadata below image -->
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
             ${hook ? `<div class="gc-hook">${hook}.</div>` : ''}
@@ -164,7 +168,9 @@ export function renderEntryList(archiveData, callbacks) {
   const totalLabel = $('index-panel-title');
   if (totalLabel) {
     const t = (key) => getTranslation(key, AppState.language);
-    totalLabel.textContent = `${t('index_title')} / ${pad(count)} OF ${pad(total)}`;
+    totalLabel.textContent = count < total
+      ? `${t('index_title')} · ${pad(count)} of ${pad(total)}`
+      : `${t('index_title')} · ${pad(total)}`;
   }
 
   if (count === 0) {
@@ -186,24 +192,44 @@ export function renderEntryList(archiveData, callbacks) {
     corporeal: 'CORPOREAL', critique: 'CRITIQUE', subculture: 'SUBCULTURE',
     strategy: 'STRATEGY', semiotic: 'SEMIOTIC', provenance: 'PROVENANCE'
   };
+  let prevCat = null;
   container.innerHTML = filtered.map(entry => {
     const brand = (entry.tags && entry.tags.brand)
       ? getTranslation(entry.tags.brand, lang)
       : getTranslation('brand_unknown', lang);
     const year  = entry.year  || '----';
-    const title = entry.title ? getTranslation(entry.title, lang) : getTranslation('entry_untitled', lang);
-    // Phase 1: Inverted metadata — analytical tag is primary, brand is secondary
+    const season = entry.season ? entry.season.replace(/^(SS|AW|FW|SS\/FW)\s*/i, '') : '';
     const tagCategory = getTagCategory(entry.tags?.politics || '');
     const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
-    return `
-      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
+    const isNewCat = tagCategory !== prevCat;
+    prevCat = tagCategory;
+    const isActiveCat = AppState.analyticalCat === tagCategory;
+    const catHeader = isNewCat
+      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
+      : '';
+    // Thumbnail — first image of entry, shown inline on desktop
+    const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
+    const thumbSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
+    const thumbWebp = firstImg ? resolveImgSrc({ src: webpSrc(firstImg) }) : null;
+    const thumb = thumbSrc
+      ? `<picture class="entry-item-thumb" aria-hidden="true">
+           <source type="image/webp" srcset="${thumbWebp}">
+           <img src="${thumbSrc}" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.parentElement.style.display='none'">
+         </picture>`
+      : '';
+    return `${catHeader}<div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
            data-id="${entry.id}"
+           data-thumb="${thumbSrc || ''}"
            role="button"
            tabindex="0"
            aria-label="${brand} ${year} ${tagLabel}">
-        <div class="text-[8px] font-mono uppercase tracking-[0.18em] font-bold leading-tight" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
-        <div class="text-[9px] font-mono uppercase tracking-widest font-medium leading-tight">${brand} <span class="text-black/40 dark:text-white/40">${year}</span></div>
-        <div class="text-[8px] font-mono text-black/50 dark:text-white/50 truncate leading-tight">${title}</div>
+        <div class="entry-item-inner">
+          <div>
+            <div class="entry-item-brand">${brand}</div>
+            <div class="entry-item-meta">${year}${season ? ' · ' + season : ''}</div>
+          </div>
+          ${thumb}
+        </div>
       </div>`;
   }).join('');
 }
