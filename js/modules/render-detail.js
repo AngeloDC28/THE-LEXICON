@@ -99,8 +99,8 @@ function updateEntryMetaTags(entry) {
     ? `${title}: ${entry.subtitle}`
     : `Forensic visual analysis of ${title}. Annotated for visual and cultural research.`;
   const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = entry.images?.[0]
-    ? `${window.location.origin}/public/${entry.images[0]}`
+  const img    = entry.images?.[0]?.src
+    ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
 
   document.title = `${title} — THE LEXICON`;
@@ -143,8 +143,8 @@ function updateEntryJsonLd(entry) {
   const season = entry.season || '';
   const title  = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
   const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = entry.images?.[0]
-    ? `${window.location.origin}/public/${entry.images[0]}`
+  const img    = entry.images?.[0]?.src
+    ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
   const ld = {
     '@context': 'https://schema.org',
