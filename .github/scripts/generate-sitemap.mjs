@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
 const OUT     = join(ROOT, 'sitemap.xml');
+const OUT_ALT = join(ROOT, 'sitemap-index.xml');
 const BASE    = 'https://thelexicon.xyz';
 const TODAY   = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
@@ -44,4 +45,7 @@ const xml =
   `</urlset>\n`;
 
 writeFileSync(OUT, xml, 'utf8');
-console.log(`LEXICON_SITEMAP ok (wrote ${OUT} — 1 homepage + ${ids.length} entries)`);
+// Mirror to a second URL — gives a clean fetch path that bypasses any
+// cached-failure backoff in Google Search Console's sitemap processor.
+writeFileSync(OUT_ALT, xml, 'utf8');
+console.log(`LEXICON_SITEMAP ok (wrote ${OUT} + ${OUT_ALT} — 1 homepage + ${ids.length} entries)`);
