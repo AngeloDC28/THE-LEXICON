@@ -96,6 +96,7 @@ export function renderImageGrid(archiveData, callbacks) {
       };
       const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
       const tagColor = `--c-${tagCategory}`;
+      const catTip   = getTranslation(`cat_tip_${tagCategory}`, AppState.language);
 
       const hotspotCount = (imgObj?.hotspots || []).length;
       const hotspotBadge = hotspotCount > 0
@@ -123,7 +124,7 @@ export function renderImageGrid(archiveData, callbacks) {
              ${a11yAttrs}
              style="animation-delay: ${delay}s">
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
-            <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
+            <span class="gc-tag-label" style="color: var(${tagColor}, #999)"${catTip ? ` data-tooltip="${catTip.replace(/"/g, '&quot;')}"` : ''}>${tagLabel}</span>
           </div>
           <div class="grid-cell-img group">
             ${hotspotBadge}
@@ -207,8 +208,9 @@ export function renderEntryList(archiveData, callbacks) {
     const isNewCat = tagCategory !== prevCat;
     prevCat = tagCategory;
     const isActiveCat = AppState.analyticalCat === tagCategory;
+    const listCatTip  = getTranslation(`cat_tip_${tagCategory}`, lang);
     const catHeader = isNewCat
-      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
+      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}" aria-description="${listCatTip}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
       : '';
     // Thumbnail — first image of entry, shown inline on desktop
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;

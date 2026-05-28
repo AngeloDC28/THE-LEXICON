@@ -5,6 +5,12 @@
  */
 export const translations = {
   "en": {
+    "cat_tip_corporeal": "The body as site of political intervention — collections that reframe, distort, or weaponise anatomy.",
+    "cat_tip_critique": "Collections that interrogate fashion's own institutions: commerce, spectacle, and the industry itself.",
+    "cat_tip_subculture": "Subcultural codes translated into runway language — street and underground aesthetics formalised.",
+    "cat_tip_strategy": "Strategic appropriation of historical, cultural, or commercial references — pastiche as method.",
+    "cat_tip_semiotic": "The manipulation of sign systems — deconstruction, logomania, and symbolic subversion.",
+    "cat_tip_provenance": "Engagement with historical lineage, craft tradition, and cultural geography.",
     "nav_folders": "Folders",
     "nav_theme_light": "Theme: Light",
     "nav_theme_dark": "Theme: Dark",
