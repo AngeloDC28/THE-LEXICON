@@ -299,7 +299,9 @@ function renderImage(entry, callbacks) {
       if (h) imgEl.setAttribute('height', h[1]);
     }
     imgEl.src = currentImgSrc;
-    const baseAlt = entry.title || entry.id;
+    const baseAlt = entry.title
+      || [entry.tags?.brand, entry.season, entry.year].filter(Boolean).join(' ')
+      || entry.id;
     imgEl.alt = `${baseAlt} — image ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}`;
   }
 
