@@ -136,6 +136,7 @@ export const translations = {
     "null_set": "Null Set Detected",
     "null_set_desc": "Adjust filters or search parameters",
     "no_results": "No results",
+    "no_results_bookmarks": "No saved entries yet. Use ★ on any entry to bookmark it.",
     "no_active_filters": "No active filters",
     "clear_all_filters": "Clear all filters",
     "showing_bookmarks": "Showing bookmarked entries",
