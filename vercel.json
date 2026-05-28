@@ -34,6 +34,19 @@
       ]
     },
     {
+      "source": "/feed.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/rss+xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    },
+    {
       "source": "/sitemap.xml",
       "headers": [
         {
@@ -136,7 +149,7 @@
 
   "rewrites": [
     {
-      "source": "/((?!public|js|index\\.css|database\\.js|favicon|apple-touch-icon|manifest|site\\.webmanifest|\\.well-known|sitemap\\.xml|sitemap-index\\.xml|robots\\.txt).*)",
+      "source": "/((?!public|js|index\\.css|database\\.js|favicon|apple-touch-icon|manifest|site\\.webmanifest|\\.well-known|sitemap\\.xml|sitemap-index\\.xml|feed\\.xml|robots\\.txt).*)",
       "destination": "/index.html"
     }
   ]

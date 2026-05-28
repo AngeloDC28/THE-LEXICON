@@ -125,7 +125,7 @@ function updateEntryMetaTags(entry) {
 }
 
 function _resetEntryMetaTags() {
-  document.title = 'THE LEXICON | Forensic Visual Culture Archive';
+  document.title = 'THE LEXICON — fashion history, indexed analytically';
   const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
   setMeta('meta[property="og:title"]',       'content', 'THE LEXICON — fashion history, indexed analytically');
   setMeta('meta[property="og:description"]', 'content', 'A research archive mapping fashion history, visual culture, and the lineage of ideas.');
