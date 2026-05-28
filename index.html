@@ -355,7 +355,7 @@
     })();
   </script>
 
-  <link rel="stylesheet" href="index.css?v=acfe63b" />
+  <link rel="stylesheet" href="index.css?v=7225067" />
 </head>
 
 <body>
@@ -1164,6 +1164,26 @@
         <div id="auth-success-container" class="hidden">
           <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>
         </div>
+        <div id="auth-signed-in-container" class="hidden space-y-6">
+          <div class="border-b border-black/20 dark:border-white/20 pb-4">
+            <p class="text-[9px] font-mono uppercase tracking-[0.2em] opacity-50 mb-1">Signed in as</p>
+            <p id="auth-user-email" class="text-[var(--t-mono-xs)] font-mono break-all"></p>
+          </div>
+          <button type="button" id="btn-sign-out-account" class="w-full border border-black dark:border-white min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-70 focus-ring">Sign Out</button>
+          <div class="border-t border-red-500/40 pt-4">
+            <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-red-500 mb-3">Danger Zone</p>
+            <div id="auth-delete-confirm" class="hidden space-y-3 mb-3">
+              <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wide opacity-70 leading-relaxed">This will permanently delete your account and all saved folders. This cannot be undone.</p>
+              <label for="auth-delete-email-input" class="block text-[9px] font-mono uppercase tracking-[0.2em] opacity-70 mb-1">Type your email to confirm:</label>
+              <input type="email" id="auth-delete-email-input" autocomplete="off" class="w-full bg-transparent border border-red-500 p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-red-400" placeholder="" aria-label="Confirm email for account deletion" />
+              <div class="flex gap-2">
+                <button type="button" id="btn-delete-account-confirm" class="flex-1 border border-red-500 text-red-500 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:bg-red-500 hover:text-white transition-colors focus-ring">Yes, delete my account</button>
+                <button type="button" id="btn-delete-account-cancel" class="border border-black dark:border-white px-4 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:opacity-70 focus-ring">Cancel</button>
+              </div>
+            </div>
+            <button type="button" id="btn-delete-account" class="w-full border border-red-500/60 text-red-500 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:border-red-500 focus-ring">Delete Account</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1241,7 +1261,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=acfe63b"></script>
+    <script type="module" src="js/app.js?v=7225067"></script>
 
   </div>
 

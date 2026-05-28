@@ -38,13 +38,16 @@ export function initFirebaseAuth(callbacks) {
     currentUser = user;
     const btnAuth = $('btn-auth-toggle');
     const btnAuthMobile = $('btn-auth-toggle-mobile');
-    
+
     const lang = AppState.language;
     if (user) {
       const txt = (getTranslation('nav_signout', lang) || 'Sign Out').toUpperCase();
       if (btnAuth) btnAuth.textContent = txt;
       if (btnAuthMobile) btnAuthMobile.textContent = txt;
       $('auth-modal')?.classList.add('hidden');
+      // Populate the signed-in panel for when it's reopened
+      const emailEl = $('auth-user-email');
+      if (emailEl) emailEl.textContent = user.email || '';
       fetchArchivalFolders(callbacks);
     } else {
       const txt = (getTranslation('nav_signin', lang) || 'Sign In').toUpperCase();
@@ -58,13 +61,25 @@ export function initFirebaseAuth(callbacks) {
 
 export function toggleAuth() {
   if (currentUser) {
-    if (confirm(getTranslation('auth_signout_confirm', AppState.language))) {
-      window.signOut(window.firebaseAuth);
-    }
+    // Open the account panel (shows user email, sign-out, danger zone)
+    const modal = $('auth-modal');
+    if (!modal) return;
+    $('auth-form-container')?.classList.add('hidden');
+    $('auth-success-container')?.classList.add('hidden');
+    $('auth-signed-in-container')?.classList.remove('hidden');
+    $('auth-delete-confirm')?.classList.add('hidden');
+    const emailEl = $('auth-user-email');
+    if (emailEl) emailEl.textContent = currentUser.email || '';
+    modal.classList.remove('hidden');
+    const titleEl = $('auth-modal-title');
+    if (titleEl) titleEl.textContent = getTranslation('auth_account_title', AppState.language) || 'ACCOUNT';
   } else {
     $('auth-modal')?.classList.remove('hidden');
-    $('auth-form-container')?.classList.remove('hidden');
+    $('auth-signed-in-container')?.classList.add('hidden');
     $('auth-success-container')?.classList.add('hidden');
+    $('auth-form-container')?.classList.remove('hidden');
+    const titleEl = $('auth-modal-title');
+    if (titleEl) titleEl.textContent = 'Sign in';
   }
 }
 
@@ -147,5 +162,46 @@ export async function saveToFolder(folderId, entryId, callbacks) {
   } catch (err) {
     console.error("Save to Folder Error:", err);
     if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_sync_failed', AppState.language));
+  }
+}
+
+export async function deleteAccount(typedEmail, callbacks) {
+  const lang = AppState.language;
+  if (!currentUser) return;
+
+  // Require email confirmation to match
+  if ((typedEmail || '').trim().toLowerCase() !== (currentUser.email || '').toLowerCase()) {
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_delete_email_mismatch', lang));
+    return;
+  }
+
+  try {
+    // 1. Delete all archival folders from Firestore
+    if (window.firebaseDb && window.writeBatch) {
+      const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_folders`);
+      const snap = await window.getDocs(colRef);
+      if (!snap.empty) {
+        const batch = window.writeBatch(window.firebaseDb);
+        snap.docs.forEach(d => batch.delete(d.ref));
+        await batch.commit();
+      }
+    }
+
+    // 2. Delete the Auth user (requires recent sign-in)
+    await window.deleteUser(currentUser);
+
+    // 3. Clean up local state
+    AppState.archivalFolders = [];
+    if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
+    $('auth-modal')?.classList.add('hidden');
+    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_delete_success', lang) || 'Account deleted.');
+
+  } catch (err) {
+    console.error('Delete Account Error:', err);
+    if (err.code === 'auth/requires-recent-login') {
+      if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_reauth_required', lang));
+    } else {
+      if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_delete_failed', lang));
+    }
   }
 }
