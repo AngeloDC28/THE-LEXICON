@@ -3833,6 +3833,18 @@ html:not(.dark) .footer-bottom { color: #bbb; }
 }
 .footer-kbd-hint:hover { opacity: 1; }
 .footer-kbd-label { opacity: 0.7; }
+.footer-copyright {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #444;
+  padding: 8px 24px 12px;
+  border-top: 1px solid #1a1a1a;
+  text-align: center;
+  line-height: 1.6;
+}
+html:not(.dark) .footer-copyright { color: #aaa; border-top-color: #ddd; }
 
 /* ============================================================
    PRINT STYLESHEET

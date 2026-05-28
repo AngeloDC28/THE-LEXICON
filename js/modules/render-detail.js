@@ -317,6 +317,19 @@ function renderImage(entry, callbacks) {
     titleEl.textContent = `${brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]${hotspotSuffix}`;
   }
 
+  // Image credit / attribution
+  const creditEl = $('detail-image-credit');
+  if (creditEl) {
+    const brand = entry.tags?.brand || '';
+    const slug  = entry.id || '';
+    const line  = entry.season ? `${entry.season} ${entry.year}` : String(entry.year || '');
+    const credit = entry.photo_credit
+      ? entry.photo_credit
+      : `Source: ${brand ? brand.replace(/_/g, ' ') : 'Unknown'} press archive, ${line}`;
+    const contactHref = `mailto:info@thelexicon.xyz?subject=Image%20credit%3A%20${encodeURIComponent(slug)}`;
+    creditEl.innerHTML = `<span>${credit}</span> · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
+  }
+
   // Image counter dots
   const counter = $('image-counter');
   if (counter) {

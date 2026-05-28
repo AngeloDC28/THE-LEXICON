@@ -152,9 +152,14 @@ export const translations = {
     ],
     "legal_terms_title": "Terms of Service",
     "legal_terms_body": [
-      "1. INTELLECTUAL PROPERTY: All archival content is for research purposes only. Unauthorized commercial redistribution is strictly prohibited.",
+      "1. INTELLECTUAL PROPERTY: All archival content is for research purposes only. Unauthorised commercial redistribution is strictly prohibited.",
       "2. TERMINAL USAGE: Users are expected to maintain the integrity of the database. Automated scraping or denial-of-service attempts will result in IP termination.",
-      "3. LIABILITY: THE LEXICON is provided \"as is\" without warranty. We are not responsible for temporal or intellectual displacement resulting from archival immersion."
+      "3. LIABILITY: THE LEXICON is provided \"as is\" without warranty. We are not responsible for temporal or intellectual displacement resulting from archival immersion.",
+      "— IMAGE USE AND COPYRIGHT —",
+      "The images reproduced on The Lexicon are editorial and press photographs sourced from publicly available archives, press releases, and published fashion media. They appear in direct support of written analytical commentary — including provenance notes, structural critique, and contextual analysis — and are used under the fair dealing exception for criticism and review as provided by ss.30 and 30A of the Copyright, Designs and Patents Act 1988.",
+      "Copyright in all reproduced images remains with the original rights holders, including photographers, fashion houses, and press agencies. No commercial use of these images is made or intended. Images are reproduced at a scale and resolution appropriate to critical analysis and not as a substitute for licensed access to the originals.",
+      "Where photographer and source credits are known, they are displayed beneath each image. Where they are unknown, The Lexicon makes reasonable efforts to identify rights holders. Rights holders who wish to be credited, or who object to the inclusion of their work, should contact info@thelexicon.xyz. Removal or correction requests will be addressed within 14 days.",
+      "Textual content, analytical notes, editorial copy, and the taxonomic framework of The Lexicon are original works copyright © Angelo Sanchez Dela Cruz, The Lexicon, 2026. All rights reserved."
     ],
     "null_set": "Null Set Detected",
     "null_set_desc": "Adjust filters or search parameters",
