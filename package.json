@@ -17,7 +17,8 @@
     "bust-cache": "node .github/scripts/bust-cache.mjs",
     "generate-sitemap": "node .github/scripts/generate-sitemap.mjs",
     "generate-feed": "node .github/scripts/generate-feed.mjs",
-    "preflight": "npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run generate-sitemap && npm run generate-feed && npm run check && npm run bust-cache",
+    "generate-entry-pages": "node .github/scripts/generate-entry-pages.mjs",
+    "preflight": "npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run generate-sitemap && npm run generate-feed && npm run generate-entry-pages && npm run check && npm run bust-cache",
     "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs && node .github/scripts/measure-images.mjs && node .github/scripts/bust-cache.mjs",
     "build": "vite build",
     "preview": "vite preview"

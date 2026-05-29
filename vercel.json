@@ -147,6 +147,14 @@
     }
   ],
 
+  "redirects": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.svg",
+      "permanent": true
+    }
+  ],
+
   "rewrites": [
     {
       "source": "/((?!public|js|index\\.css|database\\.js|favicon\\.svg|favicon\\.ico|apple-touch-icon|site\\.webmanifest|sw\\.js|\\.well-known|sitemap\\.xml|sitemap-index\\.xml|feed\\.xml|robots\\.txt).*)",
