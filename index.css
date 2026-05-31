@@ -388,7 +388,7 @@ html:not(.dark) #cite-modal > div:nth-child(2) {
    Hide default outline on click/touch, but always render on :focus-visible. */
 :focus { outline: none; }
 :focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 html.dark :focus-visible {
@@ -398,7 +398,7 @@ html.dark :focus-visible {
 /* .focus-ring class is now redundant for keyboard users but kept for
    backwards compatibility with markup that uses it explicitly. */
 .focus-ring:focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 html.dark .focus-ring:focus-visible {

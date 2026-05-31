@@ -184,8 +184,11 @@ export function renderTaxonomySub(callbacks, archiveData) {
     return;
   }
 
-  // Show sub-panel ABOVE the grid (grid stays visible — they're stacked).
+  // Show sub-panel above the grid (grid stays visible — they're stacked).
   container.classList.remove('hidden');
+  // Scroll into view so the sub-panel is visible even on short sidebars where
+  // users are looking at the category cells below.
+  requestAnimationFrame(() => container.scrollIntoView({ behavior: 'smooth', block: 'nearest' }));
 
   const values = taxonomyData[type];
   const lang = AppState.language;
