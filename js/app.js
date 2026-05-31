@@ -808,7 +808,11 @@ function setupEventListeners() {
   document.addEventListener('click', (e) => {
     const dd = $('lang-dropdown');
     if (!dd || dd.classList.contains('hidden')) return;
-    if (!e.target.closest('#lang-dropdown') && !e.target.closest('#btn-lang-toggle')) {
+    // Close when clicking outside the header entirely — the dropdown drops down
+    // into the page body from the header stacking context and can visually overlap
+    // hero-panel content, intercepting clicks that the user intends for those elements.
+    const inHeader = e.target.closest('#primary-header');
+    if (!inHeader || (!e.target.closest('#lang-dropdown') && !e.target.closest('#btn-lang-toggle'))) {
       dd.classList.add('hidden');
       $('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
     }
@@ -1109,7 +1113,15 @@ function setupEventListeners() {
     if (pal && !pal.classList.contains('hidden')) trapFocus(pal);
   }
   $('btn-cmd-palette-hint')?.addEventListener('click', openCmdPalette);
-  $('btn-hero-search')?.addEventListener('click', openCmdPalette);
+  $('btn-hero-search')?.addEventListener('click', () => {
+    const dd = $('lang-dropdown');
+    if (dd && !dd.classList.contains('hidden')) {
+      dd.classList.add('hidden');
+      $('btn-lang-toggle')?.setAttribute('aria-expanded', 'false');
+    }
+    openCmdPalette();
+  });
+  $('btn-kbd-help-footer')?.addEventListener('click', showKeyboardHelp);
 
   // Cite Entry modal: build BibTeX + Chicago + permalink for the active entry
   $('btn-cite-entry')?.addEventListener('click', () => openCiteModal());
