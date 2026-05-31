@@ -406,6 +406,13 @@ html.dark .focus-ring:focus-visible {
   outline-offset: 2px;
 }
 
+/* WCAG 1.4.3 contrast patch — opacity-50 on bone (#F5F0E8) gives ~3.5:1 (FAIL).
+   Minimum 4.5:1 AA requires opacity ≥ 0.65 for black text on bone.
+   Only override in light mode; dark mode has its own color scheme. */
+html:not(.dark) #btn-sort-cycle,
+html:not(.dark) #current-view-label,
+html:not(.dark) #btn-show-bookmarks { opacity: 0.7; }
+
 /* View toggle active underline */
 .view-active {
   border-bottom: 2px solid #CCFF00;
