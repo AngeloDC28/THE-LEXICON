@@ -388,7 +388,7 @@ html:not(.dark) #cite-modal > div:nth-child(2) {
    Hide default outline on click/touch, but always render on :focus-visible. */
 :focus { outline: none; }
 :focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 html.dark :focus-visible {
@@ -398,13 +398,20 @@ html.dark :focus-visible {
 /* .focus-ring class is now redundant for keyboard users but kept for
    backwards compatibility with markup that uses it explicitly. */
 .focus-ring:focus-visible {
-  outline: 2px solid #000;
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 html.dark .focus-ring:focus-visible {
   outline: 2px solid #CCFF00;
   outline-offset: 2px;
 }
+
+/* WCAG 1.4.3 contrast patch — opacity-50 on bone (#F5F0E8) gives ~3.5:1 (FAIL).
+   Minimum 4.5:1 AA requires opacity ≥ 0.65 for black text on bone.
+   Only override in light mode; dark mode has its own color scheme. */
+html:not(.dark) #btn-sort-cycle,
+html:not(.dark) #current-view-label,
+html:not(.dark) #btn-show-bookmarks { opacity: 0.7; }
 
 /* View toggle active underline */
 .view-active {
@@ -1474,9 +1481,51 @@ html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:foc
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.5);
 }
-html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.35); }
+html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.55); }
+
+/* ─── Detail entry navigation (prev / pos / next in sidebar header) ─── */
+.detail-entry-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+.den-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.6);
+  font-size: 16px;
+  line-height: 1;
+  min-width: 32px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+.den-btn:hover:not(:disabled) {
+  border-color: #CCFF00;
+  color: #CCFF00;
+}
+.den-btn:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+.den-btn:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: 2px;
+}
+.den-pos {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.4);
+  min-width: 40px;
+  text-align: center;
+}
 
 /* ─── Mobile index view: stacked cards instead of table ─────────────── */
 @media (max-width: 767px) {
@@ -1777,14 +1826,14 @@ html:not(.dark) .idx-export-btn:hover { color: #000; }
   font-size: 8px;
   font-family: var(--font-mono);
   letter-spacing: 0.14em;
-  color: rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.5);
   text-transform: uppercase;
   flex-wrap: wrap;
   background: #060606;
 }
 html:not(.dark) .index-kbd-bar {
   border-top-color: rgba(0,0,0,0.12);
-  color: rgba(0,0,0,0.35);
+  color: rgba(0,0,0,0.55);
   background: #f2f2f0;
 }
 .index-kbd-bar kbd {
@@ -1892,6 +1941,45 @@ html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
   .boot-cursor {
     animation: none !important;
   }
+}
+
+/* ── CATEGORY TOOLTIPS ── */
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #CCFF00;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  line-height: 1.4;
+  padding: 6px 8px;
+  width: max-content;
+  max-width: 220px;
+  border: 1px solid #CCFF00;
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 9000;
+}
+.dark [data-tooltip]::after {
+  background: #0a0a0a;
+}
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-visible::after {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-tooltip]::after { transition: none; }
 }
 
 /* ── CUSTOM BRUTALIST CURSOR (Desktop Only) ── */
@@ -2298,7 +2386,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
   font-size: 7px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 6px;
   display: block;
 }
@@ -2984,6 +3072,8 @@ html.dark .skeleton {
 /* ── LAZY FADE-IN ── */
 .grid-cell img { opacity: 0; transition: opacity 0.4s ease; }
 .grid-cell img.loaded { opacity: 1; }
+.timeline-item { transform: translateY(10px); }
+.timeline-item.loaded { transform: translateY(0); }
 .timeline-item img { transition: opacity 0.4s ease, transform 0.5s ease; }
 .timeline-item img.loaded { opacity: 1 !important; }
 
@@ -3637,10 +3727,10 @@ html:not(.dark) .ws-desc { color: rgba(0,0,0,0.5); }
 html:not(.dark) .wlang-btn { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.5); }
 html:not(.dark) .wlang-btn:hover { border-color: #000; color: #000; }
 html:not(.dark) .wlang-btn.active { border-color: #000; color: #000; background: rgba(0,0,0,0.06); }
-html:not(.dark) .welcome-lang-label { color: rgba(0,0,0,0.35); }
+html:not(.dark) .welcome-lang-label { color: rgba(0,0,0,0.55); }
 html:not(.dark) .welcome-cta { background: #000; color: #CCFF00; }
 html:not(.dark) .welcome-cta:hover { background: #333; }
-html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.35); }
+html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
 
 /* ── STICKY NOTE SQUARES (top-right image triggers) ── */
 .sticky-square {
@@ -3731,6 +3821,37 @@ html:not(.dark) .site-footer { border-top-color: #e0e0dc; background: #f4f4f0; }
 }
 html:not(.dark) .footer-bottom { color: #bbb; }
 .footer-tech { opacity: 0.5; }
+.footer-kbd-hint {
+  background: none;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  min-height: 28px;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: opacity 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.footer-kbd-hint:hover { opacity: 1; }
+.footer-kbd-label { opacity: 0.7; }
+.footer-copyright {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #444;
+  padding: 8px 24px 12px;
+  border-top: 1px solid #1a1a1a;
+  text-align: center;
+  line-height: 1.6;
+}
+html:not(.dark) .footer-copyright { color: #aaa; border-top-color: #ddd; }
 
 /* ============================================================
    PRINT STYLESHEET

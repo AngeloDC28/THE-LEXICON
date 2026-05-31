@@ -96,6 +96,7 @@ export function renderImageGrid(archiveData, callbacks) {
       };
       const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
       const tagColor = `--c-${tagCategory}`;
+      const catTip   = getTranslation(`cat_tip_${tagCategory}`, AppState.language);
 
       const hotspotCount = (imgObj?.hotspots || []).length;
       const hotspotBadge = hotspotCount > 0
@@ -123,7 +124,7 @@ export function renderImageGrid(archiveData, callbacks) {
              ${a11yAttrs}
              style="animation-delay: ${delay}s">
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
-            <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
+            <span class="gc-tag-label" style="color: var(${tagColor}, #999)"${catTip ? ` data-tooltip="${catTip.replace(/"/g, '&quot;')}"` : ''}>${tagLabel}</span>
           </div>
           <div class="grid-cell-img group">
             ${hotspotBadge}
@@ -178,10 +179,13 @@ export function renderEntryList(archiveData, callbacks) {
     const hasActiveFilters = Object.values(AppState.filters || {}).some(Boolean) ||
                              AppState.searchQuery ||
                              (AppState.yearRange && (AppState.yearRange.min > 1980 || AppState.yearRange.max < 2025));
+    const emptyMsg = AppState.bookmarksOnly
+      ? t('no_results_bookmarks') || 'No saved entries yet. Use ★ on any entry to bookmark it.'
+      : t('no_results');
     container.innerHTML = `
       <div role="status" aria-live="polite" class="p-6 border border-black/10 dark:border-white/10 m-4">
         <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
-        <p class="text-[var(--t-mono-sm)] font-mono text-black/70 dark:text-white/70 mb-3">${t('no_results')}</p>
+        <p class="text-[var(--t-mono-sm)] font-mono text-black/70 dark:text-white/70 mb-3">${emptyMsg}</p>
         ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters" class="text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-[0.2em] border border-current px-3 py-1.5 hover:bg-acid hover:text-black hover:border-acid transition-colors focus-ring">${t('clear_all_filters') || 'CLEAR FILTERS'}</button>` : ''}
       </div>`;
     return;
@@ -204,8 +208,9 @@ export function renderEntryList(archiveData, callbacks) {
     const isNewCat = tagCategory !== prevCat;
     prevCat = tagCategory;
     const isActiveCat = AppState.analyticalCat === tagCategory;
+    const listCatTip  = getTranslation(`cat_tip_${tagCategory}`, lang);
     const catHeader = isNewCat
-      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
+      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}" aria-description="${listCatTip}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
       : '';
     // Thumbnail — first image of entry, shown inline on desktop
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;

@@ -40,6 +40,9 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     return;
   }
 
+  // Store reference so renderSidebarHeader can build position counter
+  AppState._archiveData = archiveData;
+
   // Save grid scroll position for restoration on close
   const imagePanel = $('image-panel');
   if (imagePanel) _savedGridScrollTop = imagePanel.scrollTop;
@@ -122,7 +125,7 @@ function updateEntryMetaTags(entry) {
 }
 
 function _resetEntryMetaTags() {
-  document.title = 'THE LEXICON | Forensic Visual Culture Archive';
+  document.title = 'THE LEXICON — fashion history, indexed analytically';
   const setMeta = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
   setMeta('meta[property="og:title"]',       'content', 'THE LEXICON — fashion history, indexed analytically');
   setMeta('meta[property="og:description"]', 'content', 'A research archive mapping fashion history, visual culture, and the lineage of ideas.');
@@ -183,14 +186,16 @@ export function closeDetail(callbacks, archiveData) {
   }
 }
 
-export function navigateEntry(direction, archiveData, callbacks) {
+export function navigateEntry(direction, archiveData, callbacks, entryOnly = false) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
   if (!entry) return;
-  const imgs = entry.images;
-  const nextImg = AppState.currentImageIndex + direction;
-  if (nextImg >= 0 && nextImg < imgs.length) {
-    openDetail(entry.id, nextImg, archiveData, callbacks);
-    return;
+  if (!entryOnly) {
+    const imgs = entry.images;
+    const nextImg = AppState.currentImageIndex + direction;
+    if (nextImg >= 0 && nextImg < imgs.length) {
+      openDetail(entry.id, nextImg, archiveData, callbacks);
+      return;
+    }
   }
   const entries = getFilteredEntries(archiveData);
   if (entries.length <= 1) return;
@@ -200,8 +205,7 @@ export function navigateEntry(direction, archiveData, callbacks) {
   if (newIndex < 0) newIndex = entries.length - 1;
   if (newIndex >= entries.length) newIndex = 0;
   const nextEntry = entries[newIndex];
-  const startImg = direction > 0 ? 0 : (nextEntry.images || [1]).length - 1;
-  openDetail(nextEntry.id, startImg, archiveData, callbacks);
+  openDetail(nextEntry.id, 0, archiveData, callbacks);
 }
 
 function renderSidebarHeader(entry) {
@@ -219,9 +223,29 @@ function renderSidebarHeader(entry) {
   const year = entry.year || '----';
   const season = entry.season ? entry.season.toUpperCase() : '';
 
+  // Build position counter using filtered set (same set arrow keys navigate)
+  const filtered = getFilteredEntries(AppState._archiveData || []);
+  const pos = filtered.findIndex(e => e.id === entry.id);
+  const total = filtered.length;
+  const posLabel = total > 0 ? `${pos + 1} / ${total}` : '';
+
   header.innerHTML = `
     <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
-    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>`;
+    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
+    ${posLabel ? `
+    <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
+      <button type="button" class="den-btn" id="btn-detail-prev" aria-label="Previous entry (←)" ${pos <= 0 ? 'disabled' : ''}>‹</button>
+      <span class="den-pos" aria-live="polite" aria-atomic="true">${posLabel}</span>
+      <button type="button" class="den-btn" id="btn-detail-next" aria-label="Next entry (→)" ${pos >= total - 1 ? 'disabled' : ''}>›</button>
+    </div>` : ''}`;
+
+  // Wire click handlers directly (sidebar is re-rendered on each entry open)
+  header.querySelector('#btn-detail-prev')?.addEventListener('click', () => {
+    document.dispatchEvent(new CustomEvent('lexicon:entry-nav', { detail: { dir: -1 } }));
+  });
+  header.querySelector('#btn-detail-next')?.addEventListener('click', () => {
+    document.dispatchEvent(new CustomEvent('lexicon:entry-nav', { detail: { dir: 1 } }));
+  });
 }
 
 function renderBreadcrumb(entry) {
@@ -243,7 +267,7 @@ function renderBreadcrumb(entry) {
   crumb.classList.remove('hidden');
   crumb.querySelector('[data-crumb-back]')?.addEventListener('click', (e) => {
     e.preventDefault();
-    history.back();
+    document.dispatchEvent(new CustomEvent('lexicon:close-detail'));
   });
 }
 
@@ -275,7 +299,9 @@ function renderImage(entry, callbacks) {
       if (h) imgEl.setAttribute('height', h[1]);
     }
     imgEl.src = currentImgSrc;
-    const baseAlt = entry.title || entry.id;
+    const baseAlt = entry.title
+      || [entry.tags?.brand, entry.season, entry.year].filter(Boolean).join(' ')
+      || entry.id;
     imgEl.alt = `${baseAlt} — image ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}`;
   }
 
@@ -289,6 +315,19 @@ function renderImage(entry, callbacks) {
       : getTranslation('hotspot_annotations', AppState.language);
     const hotspotSuffix = hotspotCount > 0 ? ` · ${hotspotCount} ${annLabel}` : '';
     titleEl.textContent = `${brand} ${entry.year} [${pad(AppState.currentImageIndex + 1)}/${pad(imgs.length)}]${hotspotSuffix}`;
+  }
+
+  // Image credit / attribution
+  const creditEl = $('detail-image-credit');
+  if (creditEl) {
+    const brand = entry.tags?.brand || '';
+    const slug  = entry.id || '';
+    const line  = entry.season ? `${entry.season} ${entry.year}` : String(entry.year || '');
+    const credit = entry.photo_credit
+      ? entry.photo_credit
+      : `Source: ${brand ? brand.replace(/_/g, ' ') : 'Unknown'} press archive, ${line}`;
+    const contactHref = `mailto:info@thelexicon.xyz?subject=Image%20credit%3A%20${encodeURIComponent(slug)}`;
+    creditEl.innerHTML = `<span>${credit}</span> · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
   }
 
   // Image counter dots
@@ -306,7 +345,7 @@ function renderImage(entry, callbacks) {
           const idx = parseInt(btn.dataset.imgIndex, 10);
           if (idx !== AppState.currentImageIndex) {
             AppState.currentImageIndex = idx;
-            renderImage(entry, null);
+            renderImage(entry, callbacks);
             renderHotspots(entry, $('detail-image-wrapper'));
           }
         });
@@ -380,7 +419,10 @@ function renderBrutalistNodes(entry) {
       .join(' ');
     const wordCount = allText.trim().split(/\s+/).filter(Boolean).length;
     const mins = Math.max(1, Math.round(wordCount / 200));
-    readingEl.textContent = `${wordCount} words · ~${mins} min read`;
+    const tpl = getTranslation('label_reading_time', AppState.language);
+    readingEl.textContent = tpl
+      .replace('{words}', wordCount)
+      .replace('{mins}', mins);
   }
 
   // Inject a mini TOC above the nodes for reading mode
@@ -512,6 +554,7 @@ function renderMetaRail(entry) {
   const rail = $('meta-rail-body');
   if (!rail) return;
   const lang = AppState.language;
+  const t    = (k) => getTranslation(k, lang);
   const cat  = getTagCategory(entry.tags?.politics || '');
   const catLabels = {
     corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
@@ -520,15 +563,15 @@ function renderMetaRail(entry) {
   };
   const catLabel = catLabels[cat] || (entry.tags?.politics || 'Archive').split('&')[0].trim();
   const taxRows = [
-    { key: 'brand',     label: 'Brand' },
-    { key: 'era',       label: 'Era' },
-    { key: 'politics',  label: 'Politics' },
-    { key: 'theories',  label: 'Theory' },
-    { key: 'gender',    label: 'Gender' },
-    { key: 'geography', label: 'Geography' },
-    { key: 'format',    label: 'Format' },
-    { key: 'materials', label: 'Materials' },
-    { key: 'anatomy',   label: 'Anatomy' },
+    { key: 'brand',     label: t('tax_brand') },
+    { key: 'era',       label: t('tax_era') },
+    { key: 'politics',  label: t('tax_politics') },
+    { key: 'theories',  label: t('tax_theories') },
+    { key: 'gender',    label: t('tax_gender') },
+    { key: 'geography', label: t('tax_geography') },
+    { key: 'format',    label: t('tax_format') },
+    { key: 'materials', label: t('tax_materials') },
+    { key: 'anatomy',   label: t('tax_anatomy') },
   ];
 
   rail.innerHTML = `
@@ -536,7 +579,7 @@ function renderMetaRail(entry) {
       <div class="meta-rail-cat">${catLabel}</div>
     </div>
     <div class="meta-rail-section">
-      <span class="meta-rail-label">Year / Season</span>
+      <span class="meta-rail-label">${t('tax_year_season') || 'Year / Season'}</span>
       <div class="meta-rail-value">${entry.year || '—'} · ${entry.season || '—'}</div>
     </div>
     ${taxRows.map(({ key, label }) => {

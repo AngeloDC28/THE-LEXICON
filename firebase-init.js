@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, collection, doc, setDoc, getDocs, arrayUnion, query, orderBy, addDoc, updateDoc } from "firebase/firestore";
+import { getAuth, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink, onAuthStateChanged, signOut, deleteUser, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, doc, setDoc, getDocs, arrayUnion, query, orderBy, addDoc, updateDoc, deleteDoc, writeBatch } from "firebase/firestore";
 import { getFunctions, httpsCallable } from "firebase/functions";
 
 // Your web app's Firebase configuration
@@ -33,6 +33,7 @@ window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
 window.signInWithEmailAndPassword = signInWithEmailAndPassword;
 window.onAuthStateChanged = onAuthStateChanged;
 window.signOut = signOut;
+window.deleteUser = deleteUser;
 window.setDoc = setDoc;
 window.doc = doc;
 window.collection = collection;
@@ -42,5 +43,5 @@ window.query = query;
 window.orderBy = orderBy;
 window.addDoc = addDoc;
 window.updateDoc = updateDoc;
-
-
+window.deleteDoc = deleteDoc;
+window.writeBatch = writeBatch;
