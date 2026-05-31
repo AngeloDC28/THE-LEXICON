@@ -406,12 +406,39 @@ html.dark .focus-ring:focus-visible {
   outline-offset: 2px;
 }
 
-/* WCAG 1.4.3 contrast patch — opacity-50 on bone (#F5F0E8) gives ~3.5:1 (FAIL).
-   Minimum 4.5:1 AA requires opacity ≥ 0.65 for black text on bone.
-   Only override in light mode; dark mode has its own color scheme. */
+/* WCAG 1.4.3 AA contrast — comprehensive light-mode pass.
+   opacity-50 on bone (#F5F0E8) ≈ 3.5:1 (FAIL); ≥ 0.70 → ~5.8:1 (PASS).
+   opacity-60 on bone ≈ 4.4:1 (borderline FAIL); 0.72 → 5.1:1 (PASS).
+   Exempt: aria-hidden/role=presentation decorative chrome.
+   Inactive interactive states (aria-pressed=false disabled buttons) need
+   only 3:1 per WCAG 1.4.11 Non-text Contrast — still covered at 0.70. */
+
+/* Navigation chrome */
+html:not(.dark) #btn-folders-toggle,
+html:not(.dark) #btn-auth-toggle,
 html:not(.dark) #btn-sort-cycle,
 html:not(.dark) #current-view-label,
-html:not(.dark) #btn-show-bookmarks { opacity: 0.7; }
+html:not(.dark) #btn-show-bookmarks,
+html:not(.dark) #btn-toggle-timeline,
+html:not(.dark) #btn-export-all-folders,
+html:not(.dark) #folders-count { opacity: 0.70; }
+
+/* Status / metadata labels */
+html:not(.dark) #status-brand-label,
+html:not(.dark) #status-year-label,
+html:not(.dark) #status-season-label,
+html:not(.dark) #status-entry-label,
+html:not(.dark) #taxonomy-heading,
+html:not(.dark) #recent-title-label,
+html:not(.dark) #filter-result-count { opacity: 0.72; }
+
+/* Input placeholder contrast — /40 fails, bump to /60 */
+html:not(.dark) ::placeholder { color: rgba(0,0,0,0.60) !important; }
+
+/* Dark mode: text-white/40 on #0D0D0D ≈ 4.0:1 (borderline FAIL) → /55 = 5.1:1 */
+html.dark .text-white\/40:not([aria-hidden="true"]):not([role="presentation"]) {
+  color: rgba(255,255,255,0.55) !important;
+}
 
 /* View toggle active underline */
 .view-active {

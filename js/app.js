@@ -218,10 +218,19 @@ function initWelcomeModal() {
   $('btn-welcome-skip')?.addEventListener('click', dismiss);
   modal.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismiss(); });
 
-  const langBtns = modal.querySelectorAll('.wlang-btn');
+  // Dynamically populate from ALL_LANGS so codes stay in sync with the nav dropdown
+  const WELCOME_LANGS = ['en', 'zh', 'es', 'fr', 'ar', 'pt', 'ru', 'ja', 'de', 'ko', 'it'];
+  const SHORT_LABEL = { en:'EN', zh:'中文', 'zh-tw':'繁中', hi:'HI', es:'ES', fr:'FR', ar:'عر', bn:'BN', pt:'PT', ru:'РУ', ja:'日本語', de:'DE', ko:'한국어', it:'IT', tr:'TR', vi:'VI', pl:'PL', nl:'NL', uk:'UK', id:'ID', ms:'MS', th:'ไทย', el:'EL', he:'HE', sv:'SV', no:'NO', da:'DA', fi:'FI', cs:'CS', ro:'RO', hu:'HU', tl:'TL' };
+  const wlangOpts = $('welcome-lang-options');
   const lang = AppState.language || 'en';
+  if (wlangOpts) {
+    const langSubset = ALL_LANGS.filter(l => WELCOME_LANGS.includes(l.code));
+    wlangOpts.innerHTML = langSubset.map(({ code }) =>
+      `<button type="button" class="wlang-btn${code === lang ? ' active' : ''}" data-lang="${code}" lang="${code}">${SHORT_LABEL[code] || code.toUpperCase()}</button>`
+    ).join('');
+  }
+  const langBtns = modal.querySelectorAll('.wlang-btn');
   langBtns.forEach(btn => {
-    if (btn.dataset.lang === lang) btn.classList.add('active');
     btn.addEventListener('click', () => {
       langBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
@@ -1571,7 +1580,7 @@ function updateMobileSheetUrl() {
   if (yr.min > 1980) params.set('y_min', yr.min);
   if (yr.max < 2025) params.set('y_max', yr.max);
   const qs = params.toString();
-  urlEl.textContent = qs ? `/archive?${qs}` : '—';
+  urlEl.textContent = qs ? `${window.location.origin}/archive?${qs}` : '—';
 }
 
 function updateMbsResultCount() {
