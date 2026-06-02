@@ -113,7 +113,18 @@ export function getFilteredEntries(archiveData) {
           entry.season || '', entry.description || '',
           ...Object.values(t), ...Object.values(entry.notes || {})
         ].join(' ').toLowerCase();
-        if (!searchable.includes(freeText)) return false;
+        // Exact substring match first; fall back to compressed match so
+        // "mqueen" finds "McQueen", "balanciga" finds "Balenciaga", etc.
+        const exact = searchable.includes(freeText);
+        if (!exact) {
+          const compress = s => s.replace(/[^a-z0-9]/gi, '').toLowerCase();
+          const sc = compress(searchable);
+          const matched = freeText.split(/\s+/).filter(Boolean).every(tok => {
+            const tc = compress(tok);
+            return tc.length >= 2 && sc.includes(tc);
+          });
+          if (!matched) return false;
+        }
       }
       return true;
     });

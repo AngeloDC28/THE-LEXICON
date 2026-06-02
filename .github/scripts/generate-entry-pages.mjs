@@ -29,6 +29,43 @@ function escAttr(str) {
     .replace(/>/g, '&gt;');
 }
 
+
+function buildArticleJsonLd(entry, url, ogImage) {
+  const title = entry.title || entry.id;
+  const desc  = buildDesc(entry);
+  const t     = entry.tags || {};
+  const keywords = [
+    t.brand, t.politics, t.theories, t.era, t.format
+  ].filter(Boolean).flatMap(v => v.split(';').map(s => s.trim())).filter(Boolean);
+
+  const images = (entry.images || []).slice(0, 3).map(img =>
+    `${BASE}/public/${img.src || ''}`
+  ).filter(s => s.length > BASE.length + 1);
+  if (!images.length && ogImage) images.push(ogImage);
+
+  const obj = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': url + '#article',
+    headline: title,
+    description: buildDesc(entry),
+    image: images,
+    author: { '@type': 'Organization', name: 'THE LEXICON', url: BASE },
+    publisher: {
+      '@type': 'Organization', '@id': BASE + '/#org',
+      name: 'THE LEXICON',
+      logo: { '@type': 'ImageObject', url: `${BASE}/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg` }
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    about: keywords.map(k => ({ '@type': 'Thing', name: k })),
+    keywords: keywords.join(', '),
+    inLanguage: 'en-GB',
+    isPartOf: { '@id': BASE + '/#website' }
+  };
+  if (entry.year) obj.datePublished = `${entry.year}-01-01`;
+  return JSON.stringify(obj);
+}
+
 function buildDesc(entry) {
   const critique = (entry.notes?.critique || '').slice(0, 200).trimEnd();
   const subtitle = entry.subtitle || '';
@@ -136,6 +173,20 @@ for (const slug of slugs) {
     /(<link rel="canonical" href=")[^"]*(")/,
     `$1${url}$2`
   );
+
+  // hreflang — rewrite homepage hrefs to per-entry hrefs, preserving ?lang= params
+  // e.g. href="https://thelexicon.xyz/?lang=fr" → href="https://thelexicon.xyz/entry/slug/0?lang=fr"
+  html = html.replace(
+    /(<link rel="alternate" hreflang="[^"]*" href=")https:\/\/thelexicon\.xyz\/(\?lang=[^"]*)?"/g,
+    (_, pre, query) => `${pre}${url}${query || ''}"`
+  );
+
+  // Article JSON-LD — populate the empty entry-jsonld placeholder
+  html = html.replace(
+    /<script id="entry-jsonld" type="application\/ld\+json"><\/script>/,
+    `<script id="entry-jsonld" type="application/ld+json">${buildArticleJsonLd(entry, url, ogImage)}</script>`
+  );
+
 
   const dir = join(ROOT, 'entry', slug, '0');
   mkdirSync(dir, { recursive: true });

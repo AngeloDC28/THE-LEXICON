@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    window.onerror = function(msg, url, lineNo, columnNo, error) {
-      console.error("LEXICON_CORE_EXCEPTION:", msg, "at line", lineNo, error);
-    };
-  </script>
+  <script src="/js/boot.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>THE LEXICON — fashion history, indexed analytically</title>
@@ -40,261 +36,40 @@
   <link rel="canonical" href="https://thelexicon.xyz/" />
   <link rel="alternate" type="application/rss+xml" title="THE LEXICON — new entries" href="https://thelexicon.xyz/feed.xml" />
   <link rel="alternate" hreflang="en" href="https://thelexicon.xyz/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://thelexicon.xyz/?lang=zh" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://thelexicon.xyz/?lang=zh-tw" />
+  <link rel="alternate" hreflang="hi" href="https://thelexicon.xyz/?lang=hi" />
+  <link rel="alternate" hreflang="es" href="https://thelexicon.xyz/?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://thelexicon.xyz/?lang=fr" />
+  <link rel="alternate" hreflang="ar" href="https://thelexicon.xyz/?lang=ar" />
+  <link rel="alternate" hreflang="bn" href="https://thelexicon.xyz/?lang=bn" />
+  <link rel="alternate" hreflang="pt" href="https://thelexicon.xyz/?lang=pt" />
+  <link rel="alternate" hreflang="ru" href="https://thelexicon.xyz/?lang=ru" />
+  <link rel="alternate" hreflang="ja" href="https://thelexicon.xyz/?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://thelexicon.xyz/?lang=de" />
+  <link rel="alternate" hreflang="ko" href="https://thelexicon.xyz/?lang=ko" />
+  <link rel="alternate" hreflang="it" href="https://thelexicon.xyz/?lang=it" />
+  <link rel="alternate" hreflang="tr" href="https://thelexicon.xyz/?lang=tr" />
+  <link rel="alternate" hreflang="vi" href="https://thelexicon.xyz/?lang=vi" />
+  <link rel="alternate" hreflang="pl" href="https://thelexicon.xyz/?lang=pl" />
+  <link rel="alternate" hreflang="nl" href="https://thelexicon.xyz/?lang=nl" />
+  <link rel="alternate" hreflang="uk" href="https://thelexicon.xyz/?lang=uk" />
+  <link rel="alternate" hreflang="id" href="https://thelexicon.xyz/?lang=id" />
+  <link rel="alternate" hreflang="ms" href="https://thelexicon.xyz/?lang=ms" />
+  <link rel="alternate" hreflang="th" href="https://thelexicon.xyz/?lang=th" />
+  <link rel="alternate" hreflang="el" href="https://thelexicon.xyz/?lang=el" />
+  <link rel="alternate" hreflang="he" href="https://thelexicon.xyz/?lang=he" />
+  <link rel="alternate" hreflang="sv" href="https://thelexicon.xyz/?lang=sv" />
+  <link rel="alternate" hreflang="no" href="https://thelexicon.xyz/?lang=no" />
+  <link rel="alternate" hreflang="da" href="https://thelexicon.xyz/?lang=da" />
+  <link rel="alternate" hreflang="fi" href="https://thelexicon.xyz/?lang=fi" />
+  <link rel="alternate" hreflang="cs" href="https://thelexicon.xyz/?lang=cs" />
+  <link rel="alternate" hreflang="ro" href="https://thelexicon.xyz/?lang=ro" />
+  <link rel="alternate" hreflang="hu" href="https://thelexicon.xyz/?lang=hu" />
+  <link rel="alternate" hreflang="tl" href="https://thelexicon.xyz/?lang=tl" />
   <link rel="alternate" hreflang="x-default" href="https://thelexicon.xyz/" />
-  <script>
-    // Per-entry SEO bootstrapping: runs before any async JS so Googlebot's
-    // first-pass HTML crawl sees a unique canonical, title, and og tags
-    // per entry URL instead of the homepage defaults. Slug → display name
-    // (e.g. "mcqueen-ss99" → "McQueen SS99").
-    (function() {
-      var m = window.location.pathname.match(/^\/entry\/([^/]+)/);
-      if (!m) return;
-      var slug = m[1];
-      // Canonicalize all image-index variants to /0 (matches sitemap.xml)
-      var url = 'https://thelexicon.xyz/entry/' + slug + '/0';
-      var parts = slug.split('-');
-      var seasonRe = /^(ss|aw|fw|pre|cruise|resort)(\d+)$/i;
-      var last = parts[parts.length - 1];
-      var name;
-      var match = last.match(seasonRe);
-      if (match) {
-        var brand = parts.slice(0, -1).map(function(p) {
-          return p.charAt(0).toUpperCase() + p.slice(1);
-        }).join(' ');
-        name = brand + ' ' + match[1].toUpperCase() + match[2];
-      } else {
-        name = parts.map(function(p) {
-          return p.charAt(0).toUpperCase() + p.slice(1);
-        }).join(' ');
-      }
-      var title = name + ' — THE LEXICON';
-      var desc  = 'Forensic visual analysis of ' + name + '. Annotated for visual and cultural research.';
-      document.title = title;
-      var set = function(sel, attr, val) {
-        var el = document.querySelector(sel);
-        if (el) el.setAttribute(attr, val);
-      };
-      set('link[rel="canonical"]',           'href',    url);
-      set('meta[property="og:url"]',         'content', url);
-      set('meta[property="og:title"]',       'content', title);
-      set('meta[property="og:description"]', 'content', desc);
-      set('meta[property="og:type"]',        'content', 'article');
-      set('meta[name="description"]',        'content', desc);
-      set('meta[name="twitter:title"]',      'content', title);
-      set('meta[name="twitter:description"]','content', desc);
-    })();
-  </script>
 
-  <!-- Accessibility: Skip Link Styles -->
-  <style>
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #CCFF00;
-      color: #000;
-      padding: 8px;
-      z-index: 10000;
-      transition: top 0.2s;
-    }
-    .skip-link:focus {
-      top: 0;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-
-    /* ============================================================
-       TAXONOMY CELL GRID (bottom-left filter table)
-       2-column grid; last cell (Format & Medium) spans both columns.
-       Mimics a research-style data table with crisp hairline borders.
-    ============================================================ */
-    .taxonomy-cell-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .dark .taxonomy-cell-grid {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .taxonomy-cell {
-      background: #FAF9F6;
-      color: #000;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      text-align: left;
-      padding: 12px 14px;
-      min-height: 44px;
-      border: none;
-      margin: 0 1px 1px 0;
-      cursor: pointer;
-      transition: background-color 0.15s, color 0.15s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .dark .taxonomy-cell {
-      background: #0A0A0A;
-      color: #fff;
-    }
-    .taxonomy-cell:hover {
-      background: #000;
-      color: #CCFF00;
-    }
-    .dark .taxonomy-cell:hover {
-      background: #CCFF00;
-      color: #000;
-    }
-    /* Distinct focus ring — visible to keyboard users even when the
-       cell already has a hover-equivalent background. */
-    .taxonomy-cell:focus-visible {
-      outline: 2px solid #CCFF00;
-      outline-offset: -2px;
-      background: #000;
-      color: #CCFF00;
-    }
-    .dark .taxonomy-cell:focus-visible {
-      outline-color: #000;
-      background: #CCFF00;
-      color: #000;
-    }
-    .taxonomy-cell--full {
-      grid-column: 1 / -1;
-      margin-right: 0;
-    }
-    .taxonomy-cell-filter {
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      text-transform: none;
-      opacity: 0.7;
-      font-size: 9px;
-    }
-    /* Active state when this category is the focused sub-panel */
-    .taxonomy-cell[aria-pressed="true"] {
-      background: #000;
-      color: #CCFF00;
-    }
-    .dark .taxonomy-cell[aria-pressed="true"] {
-      background: #CCFF00;
-      color: #000;
-    }
-
-    /* ============================================================
-       ENTRY LIST SCROLL POLISH
-       Subtle scrollbar that doesn't clash with the monospace aesthetic.
-    ============================================================ */
-    #entry-list {
-      scrollbar-width: thin;
-      scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-      scroll-behavior: smooth;
-      overscroll-behavior: contain;
-    }
-    .dark #entry-list {
-      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-    }
-    #entry-list::-webkit-scrollbar {
-      width: 6px;
-    }
-    #entry-list::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    #entry-list::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 0;
-    }
-    .dark #entry-list::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    #entry-list::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .dark #entry-list::-webkit-scrollbar-thumb:hover {
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    /* Apply the same scrollbar treatment to the taxonomy sub-panel */
-    #taxonomy-sub {
-      scrollbar-width: thin;
-      scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-    }
-    .dark #taxonomy-sub {
-      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-    }
-    #taxonomy-sub::-webkit-scrollbar { width: 6px; }
-    #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.3); }
-    .dark #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); }
-
-    /* ============================================================
-       MOBILE TWEAKS
-       Larger tap targets, collapsible categories, no pull-to-refresh.
-    ============================================================ */
-    @media (max-width: 1023px) {
-      .taxonomy-cell {
-        min-height: 52px;
-        padding: 14px 12px;
-        font-size: 11.5px;
-        line-height: 1.25;
-        letter-spacing: 0.1em;
-      }
-      .taxonomy-cell-filter {
-        display: block;
-        margin-top: 2px;
-        font-size: 9.5px;
-      }
-      /* Categories collapses to header-only by default on mobile, freeing
-         ~280px for the entry list. User taps the header to expand. */
-      #taxonomy-section:not(.taxonomy-expanded) #taxonomy-grid {
-        display: none;
-      }
-      #taxonomy-section:not(.taxonomy-expanded) #taxonomy-sub {
-        display: none !important;
-      }
-      #taxonomy-section.taxonomy-expanded {
-        max-height: 60vh;
-        overflow-y: auto;
-      }
-      #taxonomy-section.taxonomy-expanded #taxonomy-chevron {
-        transform: rotate(180deg);
-      }
-      /* Mobile drawer should never bounce-scroll into pull-to-refresh */
-      #index-panel { overscroll-behavior: contain; }
-      /* Categories header has a bit more vertical room on mobile so the
-         chevron + label sit comfortably above the cell grid. */
-      #btn-taxonomy-collapse {
-        padding-top: 14px;
-        padding-bottom: 14px;
-        min-height: 48px;
-      }
-      /* Slightly larger taxonomy heading on mobile for legibility. */
-      #taxonomy-heading {
-        font-size: 11px;
-        letter-spacing: 0.22em;
-      }
-    }
-
-    /* Block native pull-to-refresh on key interactive surfaces — users
-       horizontal-swiping images shouldn't accidentally reload the page. */
-    #grid-view,
-    #image-lightbox,
-    #detail-image-wrapper {
-      overscroll-behavior-y: contain;
-      touch-action: pan-x pan-y pinch-zoom;
-    }
-  </style>
-
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/public/tailwind.css" />
 
   <script type="importmap">
     {
@@ -316,46 +91,7 @@
     rel="stylesheet"
   />
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            bone: '#FAF9F6',
-            overlay: '#FDFCF0',
-            darkBase: '#0A0A0A',
-            darkSurface: '#111111',
-            acid: '#CCFF00',
-          },
-          fontFamily: {
-            mono: ['"JetBrains Mono"', '"Cascadia Code"', '"Fira Code"', 'monospace'],
-            serif: ['"EB Garamond"', 'Georgia', 'serif'],
-          },
-        },
-      },
-    };
-  </script>
-
-  <script>
-    (function() {
-      var saved;
-      try { saved = localStorage.getItem('lexicon-theme'); } catch(e) {}
-      if (saved === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
-
-      // Remove boot gate immediately — no artificial delay on slow connections
-      var overlay = document.getElementById('boot-overlay');
-      var root = document.getElementById('app-root');
-      if (overlay) overlay.classList.add('hidden');
-      if (root) root.classList.remove('opacity-0');
-    })();
-  </script>
-
-  <link rel="stylesheet" href="index.css?v=44a593b" />
+  <link rel="stylesheet" href="index.css?v=55c5ed7" />
 </head>
 
 <body>
@@ -422,7 +158,7 @@
     </div>
   </noscript>
 
-  <a href="#image-panel" class="skip-link">Skip to Archive</a>
+  <a href="#grid-view" class="skip-link">Skip to Archive</a>
   <a href="#search-input" class="skip-link">Skip to Search</a>
   <a href="#site-footer" class="skip-link">Skip to Footer</a>
 
@@ -587,6 +323,7 @@
             </span>
           </button>
           <script>(function(){if(window.innerWidth>=1024){var e=document.getElementById('btn-taxonomy-collapse');if(e)e.setAttribute('aria-expanded','true')}})()</script>
+
 
           <div
             id="taxonomy-grid"
@@ -1072,7 +809,7 @@
     <script id="entry-jsonld" type="application/ld+json"></script>
 
     <!-- JSON-LD Structured Data -->
-    <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thelexicon.xyz/#website","url":"https://thelexicon.xyz/","name":"THE LEXICON","description":"A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.","publisher":{"@id":"https://thelexicon.xyz/#org"},"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://thelexicon.xyz/#org","name":"THE LEXICON","url":"https://thelexicon.xyz/","logo":"https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg","founder":{"@type":"Person","name":"Angelo Sanchez Dela Cruz","jobTitle":"Researcher and Cultural Analyst","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}},"contactPoint":[{"@type":"ContactPoint","contactType":"press","email":"press@thelexicon.xyz","availableLanguage":["en"]},{"@type":"ContactPoint","contactType":"customer support","email":"info@thelexicon.xyz","availableLanguage":["en"]}],"sameAs":["https://x.com/thelexi0n"]},{"@type":"CreativeWork","@id":"https://thelexicon.xyz/#archive","name":"THE LEXICON Archive","creator":{"@id":"https://thelexicon.xyz/#org"},"keywords":["fashion history","visual culture","subcultural theory","runway analysis","fashion criticism"],"about":"Landmark fashion collections annotated by analytical category, designer, era, and movement."},{"@type":"AboutPage","@id":"https://thelexicon.xyz/about","url":"https://thelexicon.xyz/about","name":"About THE LEXICON","description":"The editorial methodology, mission, and attribution for THE LEXICON research archive.","isPartOf":{"@id":"https://thelexicon.xyz/#website"},"about":{"@id":"https://thelexicon.xyz/#org"}}]}</script>
+    <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thelexicon.xyz/#website","url":"https://thelexicon.xyz/","name":"THE LEXICON","description":"A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.","publisher":{"@id":"https://thelexicon.xyz/#org"},"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://thelexicon.xyz/#org","name":"THE LEXICON","url":"https://thelexicon.xyz/","logo":"https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg","founder":{"@type":"Person","name":"Angelo Sanchez Dela Cruz","jobTitle":"Researcher and Cultural Analyst","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}},"contactPoint":[{"@type":"ContactPoint","contactType":"press","email":"info@thelexicon.xyz","availableLanguage":["en"]},{"@type":"ContactPoint","contactType":"customer support","email":"info@thelexicon.xyz","availableLanguage":["en"]}],"sameAs":["https://x.com/thelexi0n"]},{"@type":"CreativeWork","@id":"https://thelexicon.xyz/#archive","name":"THE LEXICON Archive","creator":{"@id":"https://thelexicon.xyz/#org"},"keywords":["fashion history","visual culture","subcultural theory","runway analysis","fashion criticism"],"about":"Landmark fashion collections annotated by analytical category, designer, era, and movement."},{"@type":"AboutPage","@id":"https://thelexicon.xyz/about","url":"https://thelexicon.xyz/about","name":"About THE LEXICON","description":"The editorial methodology, mission, and attribution for THE LEXICON research archive.","isPartOf":{"@id":"https://thelexicon.xyz/#website"},"about":{"@id":"https://thelexicon.xyz/#org"}}]}</script>
 
     <!-- SAVE TO FOLDER MODAL -->
     <div id="save-folder-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="save-folder-modal-title">
@@ -1214,7 +951,7 @@
         </div>
         <div id="contact-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
           <p>General: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
-          <p>Press: <a href="mailto:press@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">press@thelexicon.xyz</a></p>
+          <p>Press: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
           <p>Licensing: <a href="mailto:licensing@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">licensing@thelexicon.xyz</a></p>
           <p>Location: London, United Kingdom</p>
           <p class="border-t border-current/20 pt-4 text-[0.7rem] tracking-[0.05em] opacity-60">Data requests (DSAR/GDPR): <a href="mailto:info@thelexicon.xyz?subject=Data%20Subject%20Access%20Request" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
@@ -1266,7 +1003,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=44a593b"></script>
+    <script type="module" src="js/app.js?v=55c5ed7"></script>
 
   </div>
 
@@ -1278,17 +1015,7 @@
       <div class="welcome-lang-row" id="welcome-lang-row">
         <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
         <div class="welcome-lang-options" id="welcome-lang-options">
-          <button type="button" class="wlang-btn active" data-lang="en" lang="en">EN</button>
-          <button type="button" class="wlang-btn" data-lang="en-gb" lang="en-GB">EN-GB</button>
-          <button type="button" class="wlang-btn" data-lang="fr" lang="fr">FR</button>
-          <button type="button" class="wlang-btn" data-lang="de" lang="de">DE</button>
-          <button type="button" class="wlang-btn" data-lang="es" lang="es">ES</button>
-          <button type="button" class="wlang-btn" data-lang="it" lang="it">IT</button>
-          <button type="button" class="wlang-btn" data-lang="pt" lang="pt">PT</button>
-          <button type="button" class="wlang-btn" data-lang="zh" lang="zh">中文</button>
-          <button type="button" class="wlang-btn" data-lang="ja" lang="ja">日本語</button>
-          <button type="button" class="wlang-btn" data-lang="ko" lang="ko">한국어</button>
-          <button type="button" class="wlang-btn" data-lang="ru" lang="ru">РУ</button>
+          <!-- Populated by initWelcomeModal() from ALL_LANGS -->
         </div>
       </div>
 

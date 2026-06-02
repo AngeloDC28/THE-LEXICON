@@ -406,12 +406,39 @@ html.dark .focus-ring:focus-visible {
   outline-offset: 2px;
 }
 
-/* WCAG 1.4.3 contrast patch — opacity-50 on bone (#F5F0E8) gives ~3.5:1 (FAIL).
-   Minimum 4.5:1 AA requires opacity ≥ 0.65 for black text on bone.
-   Only override in light mode; dark mode has its own color scheme. */
+/* WCAG 1.4.3 AA contrast — comprehensive light-mode pass.
+   opacity-50 on bone (#F5F0E8) ≈ 3.5:1 (FAIL); ≥ 0.70 → ~5.8:1 (PASS).
+   opacity-60 on bone ≈ 4.4:1 (borderline FAIL); 0.72 → 5.1:1 (PASS).
+   Exempt: aria-hidden/role=presentation decorative chrome.
+   Inactive interactive states (aria-pressed=false disabled buttons) need
+   only 3:1 per WCAG 1.4.11 Non-text Contrast — still covered at 0.70. */
+
+/* Navigation chrome */
+html:not(.dark) #btn-folders-toggle,
+html:not(.dark) #btn-auth-toggle,
 html:not(.dark) #btn-sort-cycle,
 html:not(.dark) #current-view-label,
-html:not(.dark) #btn-show-bookmarks { opacity: 0.7; }
+html:not(.dark) #btn-show-bookmarks,
+html:not(.dark) #btn-toggle-timeline,
+html:not(.dark) #btn-export-all-folders,
+html:not(.dark) #folders-count { opacity: 0.70; }
+
+/* Status / metadata labels */
+html:not(.dark) #status-brand-label,
+html:not(.dark) #status-year-label,
+html:not(.dark) #status-season-label,
+html:not(.dark) #status-entry-label,
+html:not(.dark) #taxonomy-heading,
+html:not(.dark) #recent-title-label,
+html:not(.dark) #filter-result-count { opacity: 0.72; }
+
+/* Input placeholder contrast — /40 fails, bump to /60 */
+html:not(.dark) ::placeholder { color: rgba(0,0,0,0.60) !important; }
+
+/* Dark mode: text-white/40 on #0D0D0D ≈ 4.0:1 (borderline FAIL) → /55 = 5.1:1 */
+html.dark .text-white\/40:not([aria-hidden="true"]):not([role="presentation"]) {
+  color: rgba(255,255,255,0.55) !important;
+}
 
 /* View toggle active underline */
 .view-active {
@@ -4119,4 +4146,136 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
     height: 36px;
     background: #CCFF00;
   }
+}
+
+/* ============================================================
+   STYLES MIGRATED FROM index.html <style> BLOCK
+   Previously inline to avoid a round-trip; now that Tailwind
+   is pre-built and served as a static file, all CSS lives here.
+   Moved as part of CSP unsafe-inline removal.
+============================================================ */
+
+/* Skip links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #CCFF00;
+  color: #000;
+  padding: 8px;
+  z-index: 10000;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Taxonomy cell grid */
+.taxonomy-cell-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.dark .taxonomy-cell-grid { background: rgba(255, 255, 255, 0.2); }
+
+.taxonomy-cell {
+  background: #FAF9F6;
+  color: #000;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: left;
+  padding: 12px 14px;
+  min-height: 44px;
+  border: none;
+  margin: 0 1px 1px 0;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dark .taxonomy-cell { background: #0A0A0A; color: #fff; }
+.taxonomy-cell:hover { background: #000; color: #CCFF00; }
+.dark .taxonomy-cell:hover { background: #CCFF00; color: #000; }
+.taxonomy-cell:focus-visible {
+  outline: 2px solid #CCFF00;
+  outline-offset: -2px;
+  background: #000;
+  color: #CCFF00;
+}
+.dark .taxonomy-cell:focus-visible { outline-color: #000; background: #CCFF00; color: #000; }
+.taxonomy-cell--full { grid-column: 1 / -1; margin-right: 0; }
+.taxonomy-cell-filter {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  opacity: 0.7;
+  font-size: 9px;
+}
+.taxonomy-cell[aria-pressed="true"] { background: #000; color: #CCFF00; }
+.dark .taxonomy-cell[aria-pressed="true"] { background: #CCFF00; color: #000; }
+
+/* Scrollbar polish */
+#entry-list {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+.dark #entry-list { scrollbar-color: rgba(255, 255, 255, 0.3) transparent; }
+#entry-list::-webkit-scrollbar { width: 6px; }
+#entry-list::-webkit-scrollbar-track { background: transparent; }
+#entry-list::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.3); border-radius: 0; }
+.dark #entry-list::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); }
+#entry-list::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.5); }
+.dark #entry-list::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.5); }
+
+#taxonomy-sub {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+.dark #taxonomy-sub { scrollbar-color: rgba(255, 255, 255, 0.3) transparent; }
+#taxonomy-sub::-webkit-scrollbar { width: 6px; }
+#taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.3); }
+.dark #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); }
+
+/* Mobile tweaks */
+@media (max-width: 1023px) {
+  .taxonomy-cell {
+    min-height: 52px;
+    padding: 14px 12px;
+    font-size: 11.5px;
+    line-height: 1.25;
+    letter-spacing: 0.1em;
+  }
+  .taxonomy-cell-filter { display: block; margin-top: 2px; font-size: 9.5px; }
+  #taxonomy-section:not(.taxonomy-expanded) #taxonomy-grid { display: none; }
+  #taxonomy-section:not(.taxonomy-expanded) #taxonomy-sub { display: none !important; }
+  #taxonomy-section.taxonomy-expanded { max-height: 60vh; overflow-y: auto; }
+  #taxonomy-section.taxonomy-expanded #taxonomy-chevron { transform: rotate(180deg); }
+  #index-panel { overscroll-behavior: contain; }
+  #btn-taxonomy-collapse { padding-top: 14px; padding-bottom: 14px; min-height: 48px; }
+  #taxonomy-heading { font-size: 11px; letter-spacing: 0.22em; }
+}
+
+/* Pull-to-refresh prevention on interactive surfaces */
+#grid-view,
+#image-lightbox,
+#detail-image-wrapper {
+  overscroll-behavior-y: contain;
+  touch-action: pan-x pan-y pinch-zoom;
 }

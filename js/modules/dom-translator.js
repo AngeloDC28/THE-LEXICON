@@ -25,6 +25,10 @@ const _orig = new WeakMap();
 let _obs = null;
 let _gen = 0; // incremented on every translate() call, used to abort stale fetches
 
+// Attributes carrying screen-reader content — translated alongside text nodes
+const TRANSLATE_ATTRS = ['aria-label', 'placeholder', 'alt'];
+const _origAttrs = new WeakMap(); // element → { attr: original }
+
 // ─── helpers ────────────────────────────────────────────────────────────────
 
 function _skip(node) {
@@ -150,14 +154,61 @@ function _startObserver(lang, gen) {
   _obs.observe(document.body, { childList: true, subtree: true });
 }
 
+// ─── Attribute translation ────────────────────────────────────────────────────
+
+function _collectAttrPairs(root) {
+  const sel = TRANSLATE_ATTRS.map(a => `[${a}]`).join(',');
+  const pairs = [];
+  for (const el of (root || document.body).querySelectorAll(sel)) {
+    if (SKIP_TAGS.has(el.tagName)) continue;
+    let skip = false, anc = el;
+    while (anc && anc !== document.body) {
+      if (anc.hasAttribute('data-notranslate') ||
+          (anc.hasAttribute('translate') && anc.getAttribute('translate') === 'no')) {
+        skip = true; break;
+      }
+      anc = anc.parentElement;
+    }
+    if (skip) continue;
+    for (const attr of TRANSLATE_ATTRS) {
+      const val = el.getAttribute(attr);
+      if (!val?.trim()) continue;
+      let map = _origAttrs.get(el);
+      if (!map) { map = {}; _origAttrs.set(el, map); }
+      if (!map[attr]) map[attr] = val;
+      pairs.push({ el, attr, src: map[attr] });
+    }
+  }
+  return pairs;
+}
+
+async function _applyAttrTranslations(attrPairs, lang, gen) {
+  if (!attrPairs.length || gen !== _gen) return;
+  // Wrap as virtual objects so _translateBatch can be reused as-is
+  const pairs = attrPairs.map(({ el, attr, src }) => ({
+    node: {
+      get textContent() { return src; },
+      set textContent(v) { if (el.isConnected) el.setAttribute(attr, v); },
+      get isConnected() { return el.isConnected; },
+    },
+    src,
+  }));
+  await _translateBatch(pairs, lang, gen);
+}
+
 // ─── Public API ─────────────────────────────────────────────────────────────
 
-/** Restore every saved text node to its English original. */
+/** Restore every saved text node and ARIA attribute to English originals. */
 export function restoreAll() {
   _obs?.disconnect();
   _obs = null;
   _orig.forEach((orig, node) => {
     if (node.isConnected) node.textContent = orig;
+  });
+  _origAttrs.forEach((map, el) => {
+    if (el.isConnected) {
+      for (const [attr, orig] of Object.entries(map)) el.setAttribute(attr, orig);
+    }
   });
 }
 
@@ -179,6 +230,10 @@ export async function translate(lang) {
   }).filter(p => p.src.trim());
 
   await _translateBatch(pairs, lang, gen);
+  if (gen !== _gen) return;
+
+  // Translate ARIA attributes (aria-label, placeholder, alt) for screen readers
+  await _applyAttrTranslations(_collectAttrPairs(), lang, gen);
   if (gen !== _gen) return;
 
   _startObserver(lang, gen);
