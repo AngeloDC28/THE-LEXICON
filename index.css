@@ -689,18 +689,19 @@ html:not(.dark) .hero-col-left { border-right-color: #e0e0dc; }
 .hero-eyebrow {
   font-size: var(--t-mono-xs);
   letter-spacing: 0.28em;
-  color: #666;
+  /* WCAG 1.4.3 AA: #666 on near-black ≈ 3.7:1 (FAIL) → #a8a5a0 ≈ 8.6:1 */
+  color: #a8a5a0;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-html:not(.dark) .hero-eyebrow { color: #999; }
+html:not(.dark) .hero-eyebrow { color: #666; } /* #999 on bone ≈ 2.7:1 (FAIL) → #666 ≈ 5.4:1 */
 .hero-bar {
   display: inline-block;
   width: 28px;
   height: 1px;
-  background: #555;
+  background: #8a8a8a;
   flex-shrink: 0;
 }
 
@@ -796,12 +797,13 @@ html:not(.dark) .hero-stat .hs-num { color: #000; }
 .hero-stat .hs-lbl {
   font-size: var(--t-mono-xs);
   letter-spacing: 0.22em;
-  color: #555;
+  /* WCAG 1.4.3 AA: #555 on near-black ≈ 2.8:1 (FAIL) → #a8a5a0 ≈ 8.6:1 */
+  color: #a8a5a0;
   text-transform: uppercase;
   margin-top: 4px;
   font-family: var(--font-mono);
 }
-html:not(.dark) .hero-stat .hs-lbl { color: #999; }
+html:not(.dark) .hero-stat .hs-lbl { color: #666; } /* #999 on bone ≈ 2.7:1 (FAIL) → #666 ≈ 5.4:1 */
 
 /* Right column: featured entry teaser */
 .hero-bg-img {
@@ -884,6 +886,8 @@ html:not(.dark) .hero-stat .hs-lbl { color: #999; }
   text-transform: uppercase;
   font-family: var(--font-mono);
 }
+/* #8a7a70 on bone ≈ 3.9:1 (FAIL) → #6b5d54 ≈ 5.6:1 */
+html:not(.dark) .hero-featured-brand { color: #6b5d54; }
 
 .hero-featured-desc {
   font-family: 'EB Garamond', Georgia, serif;
