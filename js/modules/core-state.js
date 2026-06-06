@@ -31,6 +31,7 @@ export const AppState = {
   filters: emptyFilters(),
   analyticalCat: null,
   searchQuery: '',
+  bookmarksOnly: false,
   archivalFolders: [],
   activeFolderId: null,
   previousView: 'grid',
