@@ -179,9 +179,16 @@ export function renderEntryList(archiveData, callbacks) {
     const hasActiveFilters = Object.values(AppState.filters || {}).some(Boolean) ||
                              AppState.searchQuery ||
                              (AppState.yearRange && (AppState.yearRange.min > 1980 || AppState.yearRange.max < 2025));
-    const emptyMsg = AppState.bookmarksOnly
-      ? t('no_results_bookmarks') || 'No saved entries yet. Use ★ on any entry to bookmark it.'
-      : t('no_results');
+    let emptyMsg;
+    if (AppState.bookmarksOnly) {
+      emptyMsg = t('no_results_bookmarks') || 'No saved entries yet. Use ★ on any entry to bookmark it.';
+    } else if (AppState.searchQuery) {
+      emptyMsg = (t('no_results_search') || 'No entries match “{q}”. Try a brand, year, or analytical category — or clear filters to browse all {n}.')
+        .replace('{q}', AppState.searchQuery)
+        .replace('{n}', total);
+    } else {
+      emptyMsg = t('no_results');
+    }
     container.innerHTML = `
       <div role="status" aria-live="polite" class="p-6 border border-black/10 dark:border-white/10 m-4">
         <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
