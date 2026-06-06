@@ -1,6 +1,7 @@
 /**
  * auth.js
- * Firebase Auth and Archival Folders logic (Firestore version).
+ * Magic-link authentication via /api/auth/* (Neon + Resend).
+ * No Firebase. No SDK. Pure fetch().
  */
 
 import { $ } from './core-utils.js';
@@ -8,200 +9,325 @@ import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 import { invalidateSearchCache } from './search-engine.js';
 
-export let currentUser = null;
+export let currentUser = null; // { email } or null
 
-export function initFirebaseAuth(callbacks) {
-  if (!window.firebaseAuth) return;
+// ─── Hydrate session on load ──────────────────────────────────────────────────
 
-  // Handle Sign-in Link
-  if (window.isSignInWithEmailLink(window.firebaseAuth, window.location.href)) {
-    let email = window.localStorage.getItem('emailForSignIn');
-    if (!email) {
-      email = window.prompt(getTranslation('auth_email_prompt', AppState.language));
+export async function initAuth(callbacks) {
+  // Check ?auth= landing state first (verification redirect)
+  const params = new URLSearchParams(window.location.search);
+  const authResult = params.get('auth');
+
+  if (authResult) {
+    // Clean up the URL immediately
+    const clean = window.location.pathname + window.location.hash;
+    history.replaceState(null, '', clean);
+
+    if (authResult === 'ok') {
+      // Session cookie is now set; load user and complete intent
+      await _hydrateUser(callbacks);
+      const lang = AppState.language;
+      if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_success', lang) || 'Signed in.');
+      _completeIntent(callbacks);
+      return;
     }
-    if (email) {
-      window.signInWithEmailLink(window.firebaseAuth, email, window.location.href)
-        .then(() => {
-          window.localStorage.removeItem('emailForSignIn');
-          if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_success', AppState.language));
-          window.history.replaceState(null, '', window.location.pathname);
-        })
-        .catch((error) => {
-          console.error('Error signing in', error);
-          if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_failed', AppState.language));
-        });
+    if (authResult === 'expired') {
+      toggleAuth();
+      if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_link_expired', lang) || 'That link expired. Send a new one.');
     }
   }
 
-  // Monitor Auth State
-  window.onAuthStateChanged(window.firebaseAuth, (user) => {
-    currentUser = user;
-    const btnAuth = $('btn-auth-toggle');
-    const btnAuthMobile = $('btn-auth-toggle-mobile');
-
-    const lang = AppState.language;
-    if (user) {
-      const txt = (getTranslation('nav_signout', lang) || 'Sign Out').toUpperCase();
-      if (btnAuth) btnAuth.textContent = txt;
-      if (btnAuthMobile) btnAuthMobile.textContent = txt;
-      $('auth-modal')?.classList.add('hidden');
-      // Populate the signed-in panel for when it's reopened
-      const emailEl = $('auth-user-email');
-      if (emailEl) emailEl.textContent = user.email || '';
-      fetchArchivalFolders(callbacks);
-    } else {
-      const txt = (getTranslation('nav_signin', lang) || 'Sign In').toUpperCase();
-      if (btnAuth) btnAuth.textContent = txt;
-      if (btnAuthMobile) btnAuthMobile.textContent = txt;
-      AppState.archivalFolders = [];
-      if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
-    }
-  });
+  await _hydrateUser(callbacks);
 }
+
+async function _hydrateUser(callbacks) {
+  try {
+    const { user } = await fetch('/api/auth/me').then(r => r.json());
+    _setUser(user, callbacks);
+  } catch {
+    _setUser(null, callbacks);
+  }
+}
+
+function _setUser(user, callbacks) {
+  currentUser = user || null;
+  const lang = AppState.language;
+  const btnAuth = $('btn-auth-toggle');
+  const btnAuthMobile = $('btn-auth-toggle-mobile');
+
+  if (currentUser) {
+    const handle = currentUser.email.split('@')[0].toUpperCase();
+    const txt = handle.length > 12 ? handle.slice(0, 12) + '…' : handle;
+    if (btnAuth) btnAuth.textContent = txt;
+    if (btnAuthMobile) btnAuthMobile.textContent = txt;
+    const emailEl = $('auth-user-email');
+    if (emailEl) emailEl.textContent = currentUser.email;
+    fetchArchivalFolders(callbacks);
+  } else {
+    const txt = (getTranslation('nav_signin', lang) || 'Sign In').toUpperCase();
+    if (btnAuth) btnAuth.textContent = txt;
+    if (btnAuthMobile) btnAuthMobile.textContent = txt;
+    AppState.archivalFolders = [];
+    if (callbacks?.renderFolders) callbacks.renderFolders();
+  }
+}
+
+// Called when `?auth=ok` lands — replay the stashed intent
+function _completeIntent(callbacks) {
+  const intent = sessionStorage.getItem('lx_intent');
+  if (intent) {
+    sessionStorage.removeItem('lx_intent');
+    // If the intent is an entry path, navigate there
+    if (intent.startsWith('/entry/')) {
+      history.pushState(null, '', intent);
+      // Trigger routing in app.js via popstate
+      window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+    }
+  }
+  // Auto-open Save dialog if entry is in focus
+  if (AppState.selectedEntryId && callbacks?.renderFolderOptions) {
+    callbacks.renderFolderOptions();
+  }
+}
+
+// ─── Modal state machine ───────────────────────────────────────────────────────
 
 export function toggleAuth() {
+  const modal = $('auth-modal');
+  if (!modal) return;
+
   if (currentUser) {
-    // Open the account panel (shows user email, sign-out, danger zone)
-    const modal = $('auth-modal');
-    if (!modal) return;
-    $('auth-form-container')?.classList.add('hidden');
-    $('auth-success-container')?.classList.add('hidden');
-    $('auth-signed-in-container')?.classList.remove('hidden');
-    $('auth-delete-confirm')?.classList.add('hidden');
-    const emailEl = $('auth-user-email');
-    if (emailEl) emailEl.textContent = currentUser.email || '';
-    modal.classList.remove('hidden');
-    const titleEl = $('auth-modal-title');
-    if (titleEl) titleEl.textContent = getTranslation('auth_account_title', AppState.language) || 'ACCOUNT';
+    _showSignedIn();
   } else {
-    $('auth-modal')?.classList.remove('hidden');
-    $('auth-signed-in-container')?.classList.add('hidden');
-    $('auth-success-container')?.classList.add('hidden');
-    $('auth-form-container')?.classList.remove('hidden');
-    const titleEl = $('auth-modal-title');
-    if (titleEl) titleEl.textContent = 'Sign in';
+    _showForm();
+  }
+  modal.classList.remove('hidden');
+}
+
+function _showForm(contextLabel) {
+  $('auth-form-container')?.classList.remove('hidden');
+  $('auth-success-container')?.classList.add('hidden');
+  $('auth-signed-in-container')?.classList.add('hidden');
+  const titleEl = $('auth-modal-title');
+  if (titleEl) titleEl.textContent = 'SIGN IN';
+  // Reset form state
+  const email = $('auth-email');
+  if (email) { email.value = ''; email.disabled = false; }
+  const btn = $('btn-submit-auth');
+  if (btn) { btn.textContent = '[ SEND SIGN-IN LINK ]'; btn.disabled = false; }
+  _clearMessage();
+  // Contextual header (UX-5)
+  const ctx = $('auth-context-label');
+  if (ctx) {
+    if (contextLabel) {
+      ctx.textContent = contextLabel;
+      ctx.classList.remove('hidden');
+    } else {
+      ctx.classList.add('hidden');
+    }
   }
 }
 
-export function sendSignInLink(callbacks) {
-  const email = $('auth-email')?.value;
-  if (!email) {
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_email_invalid', AppState.language));
+function _showSuccess(email) {
+  $('auth-form-container')?.classList.add('hidden');
+  $('auth-success-container')?.classList.remove('hidden');
+  $('auth-signed-in-container')?.classList.add('hidden');
+  const sentTo = $('auth-sent-email');
+  if (sentTo) sentTo.textContent = email;
+  _startResendCountdown(email);
+}
+
+function _showSignedIn() {
+  $('auth-form-container')?.classList.add('hidden');
+  $('auth-success-container')?.classList.add('hidden');
+  $('auth-signed-in-container')?.classList.remove('hidden');
+  $('auth-delete-confirm')?.classList.add('hidden');
+  $('btn-delete-account')?.classList.remove('hidden');
+  const titleEl = $('auth-modal-title');
+  if (titleEl) titleEl.textContent = 'ACCOUNT';
+  const emailEl = $('auth-user-email');
+  if (emailEl) emailEl.textContent = currentUser?.email || '';
+}
+
+// ─── Resend countdown ─────────────────────────────────────────────────────────
+
+let _resendTimer = null;
+
+function _startResendCountdown(email) {
+  const btn = $('btn-auth-resend');
+  if (!btn) return;
+  let secs = 30;
+  btn.disabled = true;
+  btn.textContent = `Resend in ${secs}s`;
+
+  clearInterval(_resendTimer);
+  _resendTimer = setInterval(() => {
+    secs--;
+    if (secs <= 0) {
+      clearInterval(_resendTimer);
+      btn.disabled = false;
+      btn.textContent = '[ RESEND ]';
+      btn.onclick = () => sendSignInLink(email, null, /* isResend */ true);
+    } else {
+      btn.textContent = `Resend in ${secs}s`;
+    }
+  }, 1000);
+}
+
+// ─── Send magic link ──────────────────────────────────────────────────────────
+
+export function sendSignInLink(emailArg, callbacks, isResend = false) {
+  const emailInput = $('auth-email');
+  const email = emailArg || emailInput?.value?.trim();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    _showMessage(getTranslation('auth_email_invalid', AppState.language) || 'That doesn\'t look like a valid email.', 'error');
     return;
   }
 
   const btn = $('btn-submit-auth');
-  if (btn) { btn.disabled = true; btn.style.opacity = '0.5'; }
+  if (btn) { btn.textContent = '[ SENDING… ]'; btn.disabled = true; }
+  _clearMessage();
 
-  const actionCodeSettings = {
-    url: window.location.href,
-    handleCodeInApp: true
-  };
+  const next = sessionStorage.getItem('lx_intent') || window.location.pathname + window.location.hash;
 
-  window.sendSignInLinkToEmail(window.firebaseAuth, email, actionCodeSettings)
-    .then(() => {
-      window.localStorage.setItem('emailForSignIn', email);
-      $('auth-form-container')?.classList.add('hidden');
-      $('auth-success-container')?.classList.remove('hidden');
+  fetch('/api/auth/request', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, next }),
+  })
+    .then(async r => {
+      if (r.status === 429) {
+        const { retryAfter } = await r.json();
+        _showMessage(`Too many requests. Wait ${retryAfter}s before trying again.`, 'error');
+        if (btn) { btn.textContent = '[ SEND SIGN-IN LINK ]'; btn.disabled = false; }
+        return;
+      }
+      if (!r.ok) {
+        throw new Error('send_failed');
+      }
+      _showSuccess(email);
     })
-    .catch((error) => {
-      console.error('Auth Link Error:', error);
-      if (btn) { btn.disabled = false; btn.style.opacity = ''; }
-      if (callbacks && callbacks.showToast) callbacks.showToast(error.message);
+    .catch(() => {
+      _showMessage(getTranslation('auth_send_failed', AppState.language) || 'Couldn\'t send the link. Try again.', 'error');
+      if (btn) { btn.textContent = '[ SEND SIGN-IN LINK ]'; btn.disabled = false; }
     });
 }
 
-export async function fetchArchivalFolders(callbacks) {
-  if (!currentUser || !window.firebaseDb) return;
-  try {
-    const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_folders`);
-    const q = window.query(colRef, window.orderBy('createdAt', 'desc'));
-    const querySnapshot = await window.getDocs(q);
-    AppState.archivalFolders = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    // Folder set changed — clear cached filter results so the next
-    // getFilteredEntries call recomputes against current membership.
-    invalidateSearchCache();
+// ─── Sign out ─────────────────────────────────────────────────────────────────
 
-    if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
-    if (callbacks && callbacks.renderFolderOptions) callbacks.renderFolderOptions();
+export async function signOut(callbacks) {
+  try {
+    await fetch('/api/auth/signout', { method: 'POST' });
+  } catch { /* server already cleared the cookie if reachable */ }
+  _setUser(null, callbacks);
+  $('auth-modal')?.classList.add('hidden');
+  if (callbacks?.showToast) callbacks.showToast(getTranslation('nav_signout', AppState.language) || 'Signed out.');
+}
+
+// ─── Delete account ───────────────────────────────────────────────────────────
+
+export async function deleteAccount(typedEmail, callbacks) {
+  const lang = AppState.language;
+  if (!currentUser) return;
+
+  if ((typedEmail || '').trim().toLowerCase() !== currentUser.email) {
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_delete_email_mismatch', lang));
+    return;
+  }
+
+  try {
+    const r = await fetch('/api/auth/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: typedEmail }),
+    });
+    if (!r.ok) throw new Error('delete_failed');
+
+    AppState.archivalFolders = [];
+    _setUser(null, callbacks);
+    $('auth-modal')?.classList.add('hidden');
+    if (callbacks?.renderFolders) callbacks.renderFolders();
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_delete_success', lang) || 'Account deleted.');
+  } catch {
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_delete_failed', lang) || 'Delete failed. Try again.');
+  }
+}
+
+// ─── Folders ──────────────────────────────────────────────────────────────────
+
+export async function fetchArchivalFolders(callbacks) {
+  if (!currentUser) return;
+  try {
+    const { folders } = await fetch('/api/folders').then(r => r.json());
+    // Normalise to the shape the rest of the app expects: { id, name, lookIds[] }
+    AppState.archivalFolders = (folders || []).map(f => ({
+      id: f.id,
+      name: f.name,
+      createdAt: f.created_at,
+      lookIds: f.entries || [],
+    }));
+    invalidateSearchCache();
+    if (callbacks?.renderFolders) callbacks.renderFolders();
+    if (callbacks?.renderFolderOptions) callbacks.renderFolderOptions();
   } catch (err) {
-    console.error("Fetch Folders Error:", err);
+    console.error('[auth] fetchArchivalFolders', err);
   }
 }
 
 export async function createArchivalFolder(name, callbacks) {
-  if (!currentUser || !name) return;
+  if (!currentUser || !name?.trim()) return;
   try {
-    const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_folders`);
-    await window.addDoc(colRef, {
-      name: name.toUpperCase(),
-      createdAt: new Date().toISOString(),
-      lookIds: []
+    await fetch('/api/folders', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name }),
     });
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_new', AppState.language));
-    fetchArchivalFolders(callbacks);
-    
     const input = $('new-folder-name');
     if (input) input.value = '';
-  } catch (err) {
-    console.error("Create Folder Error:", err);
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_new_failed', AppState.language));
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('folder_new', AppState.language));
+    await fetchArchivalFolders(callbacks);
+  } catch {
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('folder_new_failed', AppState.language));
   }
 }
 
 export async function saveToFolder(folderId, entryId, callbacks) {
   if (!currentUser || !entryId) return;
   try {
-    const docRef = window.doc(window.firebaseDb, `users/${currentUser.uid}/archival_folders/${folderId}`);
-    await window.updateDoc(docRef, {
-      lookIds: window.arrayUnion(entryId)
+    await fetch('/api/folders/entry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ folderId, entrySlug: entryId }),
     });
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_sync_success', AppState.language));
-    if (callbacks && callbacks.closeModal) callbacks.closeModal('save-folder');
-    fetchArchivalFolders(callbacks);
-  } catch (err) {
-    console.error("Save to Folder Error:", err);
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('folder_sync_failed', AppState.language));
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('folder_sync_success', AppState.language));
+    if (callbacks?.closeModal) callbacks.closeModal('save-folder');
+    await fetchArchivalFolders(callbacks);
+  } catch {
+    if (callbacks?.showToast) callbacks.showToast(getTranslation('folder_sync_failed', AppState.language));
   }
 }
 
-export async function deleteAccount(typedEmail, callbacks) {
-  const lang = AppState.language;
-  if (!currentUser) return;
+// ─── Gating helper ────────────────────────────────────────────────────────────
 
-  // Require email confirmation to match
-  if ((typedEmail || '').trim().toLowerCase() !== (currentUser.email || '').toLowerCase()) {
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_delete_email_mismatch', lang));
-    return;
-  }
+export function requireAuth(intentPath, contextLabel) {
+  sessionStorage.setItem('lx_intent', intentPath || window.location.pathname + window.location.hash);
+  _showForm(contextLabel);
+  $('auth-modal')?.classList.remove('hidden');
+  setTimeout(() => $('auth-email')?.focus(), 50);
+}
 
-  try {
-    // 1. Delete all archival folders from Firestore
-    if (window.firebaseDb && window.writeBatch) {
-      const colRef = window.collection(window.firebaseDb, `users/${currentUser.uid}/archival_folders`);
-      const snap = await window.getDocs(colRef);
-      if (!snap.empty) {
-        const batch = window.writeBatch(window.firebaseDb);
-        snap.docs.forEach(d => batch.delete(d.ref));
-        await batch.commit();
-      }
-    }
+// ─── Internal helpers ─────────────────────────────────────────────────────────
 
-    // 2. Delete the Auth user (requires recent sign-in)
-    await window.deleteUser(currentUser);
+function _showMessage(text, type = 'info') {
+  const el = $('auth-message');
+  if (!el) return;
+  el.textContent = text;
+  el.className = el.className.replace(/\bhidden\b/, '');
+  el.style.color = type === 'error' ? '' : '#a8a5a0';
+  el.classList.remove('hidden');
+}
 
-    // 3. Clean up local state
-    AppState.archivalFolders = [];
-    if (callbacks && callbacks.renderFolders) callbacks.renderFolders();
-    $('auth-modal')?.classList.add('hidden');
-    if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_delete_success', lang) || 'Account deleted.');
-
-  } catch (err) {
-    console.error('Delete Account Error:', err);
-    if (err.code === 'auth/requires-recent-login') {
-      if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_reauth_required', lang));
-    } else {
-      if (callbacks && callbacks.showToast) callbacks.showToast(getTranslation('auth_delete_failed', lang));
-    }
-  }
+function _clearMessage() {
+  const el = $('auth-message');
+  if (el) { el.textContent = ''; el.classList.add('hidden'); }
 }
