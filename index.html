@@ -71,19 +71,6 @@
 
   <link rel="stylesheet" href="/public/tailwind.css" />
 
-  <script type="importmap">
-    {
-      "imports": {
-        "firebase/app": "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js",
-        "firebase/analytics": "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js",
-        "firebase/auth": "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js",
-        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js",
-        "firebase/functions": "https://www.gstatic.com/firebasejs/10.13.0/firebase-functions.js"
-      }
-    }
-  </script>
-  <script type="module" src="firebase-init.js"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -91,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="index.css?v=d58faca" />
+  <link rel="stylesheet" href="index.css?v=f09e9f0" />
 </head>
 
 <body>
@@ -322,7 +309,6 @@
               <span id="taxonomy-chevron" class="lg:hidden text-[var(--t-mono-xs)] opacity-60 transition-transform" aria-hidden="true">▾</span>
             </span>
           </button>
-          <script>(function(){if(window.innerWidth>=1024){var e=document.getElementById('btn-taxonomy-collapse');if(e)e.setAttribute('aria-expanded','true')}})()</script>
 
 
           <div
@@ -890,34 +876,47 @@
     <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
       <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth" aria-hidden="true"></div>
       <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
-        <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
-        <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
+        <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close sign-in modal">[ X ]</button>
+        <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">SIGN IN</h2>
+
+        <!-- Form state -->
         <div id="auth-form-container">
-          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
+          <p id="auth-context-label" class="hidden text-[var(--t-mono-xs)] font-mono uppercase tracking-wide text-acid mb-3 leading-relaxed"></p>
+          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide opacity-60 mb-4 leading-relaxed">Enter your email to receive a one-time sign-in link. No password.</p>
           <form id="auth-form" class="space-y-4" novalidate>
             <div>
-              <label for="auth-email" class="block text-[var(--t-mono-xs)] font-bold uppercase tracking-widest mb-1">Email Address</label>
-              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" />
+              <label for="auth-email" class="block text-[var(--t-mono-xs)] font-bold uppercase tracking-widest mb-2">Email</label>
+              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-3 min-h-[44px] text-[var(--t-mono-xs)] font-mono focus:outline-none focus:border-acid dark:focus:border-acid" placeholder="you@example.com" />
             </div>
-            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:opacity-80 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest focus-ring">Send sign-in link</button>
+            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-white text-white dark:text-black hover:opacity-80 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest focus-ring">[ SEND SIGN-IN LINK ]</button>
           </form>
-          <p id="auth-message" role="alert" aria-live="polite" class="text-[var(--t-mono-xs)] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
+          <p id="auth-message" role="alert" aria-live="polite" class="text-[var(--t-mono-xs)] text-red-500 font-mono tracking-wide mt-3 hidden"></p>
+          <p class="text-[9px] font-mono uppercase tracking-[0.15em] opacity-40 mt-3">No password. We store only your email.</p>
         </div>
-        <div id="auth-success-container" class="hidden">
-          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>
+
+        <!-- Sent state -->
+        <div id="auth-success-container" class="hidden space-y-4" aria-live="polite">
+          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide text-acid leading-relaxed font-bold">LINK SENT — CHECK YOUR EMAIL.</p>
+          <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wide opacity-60 leading-relaxed">Sent to <span id="auth-sent-email" class="text-inherit opacity-100"></span>. Expires in 15 min — you can close this tab.</p>
+          <div class="flex items-center gap-4 pt-2">
+            <button type="button" id="btn-auth-resend" class="text-[9px] font-mono font-bold uppercase tracking-[0.2em] border border-black/30 dark:border-white/30 px-3 py-2 hover:border-black dark:hover:border-white transition-colors focus-ring" disabled>Resend in 30s</button>
+            <button type="button" id="btn-auth-use-different" class="text-[9px] font-mono uppercase tracking-[0.2em] opacity-50 hover:opacity-100 underline focus-ring">← Use a different email</button>
+          </div>
         </div>
+
+        <!-- Signed-in state -->
         <div id="auth-signed-in-container" class="hidden space-y-6">
           <div class="border-b border-black/20 dark:border-white/20 pb-4">
             <p class="text-[9px] font-mono uppercase tracking-[0.2em] opacity-50 mb-1">Signed in as</p>
             <p id="auth-user-email" class="text-[var(--t-mono-xs)] font-mono break-all"></p>
           </div>
-          <button type="button" id="btn-sign-out-account" class="w-full border border-black dark:border-white min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-70 focus-ring">Sign Out</button>
+          <button type="button" id="btn-sign-out-account" class="w-full border border-black dark:border-white min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-70 focus-ring">[ SIGN OUT ]</button>
           <div class="border-t border-red-500/40 pt-4">
             <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-red-500 mb-3">Danger Zone</p>
             <div id="auth-delete-confirm" class="hidden space-y-3 mb-3">
-              <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wide opacity-70 leading-relaxed">This will permanently delete your account and all saved folders. This cannot be undone.</p>
+              <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wide opacity-70 leading-relaxed">This permanently deletes your account and all saved folders. Cannot be undone.</p>
               <label for="auth-delete-email-input" class="block text-[9px] font-mono uppercase tracking-[0.2em] opacity-70 mb-1">Type your email to confirm:</label>
-              <input type="email" id="auth-delete-email-input" autocomplete="off" class="w-full bg-transparent border border-red-500 p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-red-400" placeholder="" aria-label="Confirm email for account deletion" />
+              <input type="email" id="auth-delete-email-input" autocomplete="off" class="w-full bg-transparent border border-red-500 p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono focus:outline-none focus:border-red-400" aria-label="Confirm email for account deletion" />
               <div class="flex gap-2">
                 <button type="button" id="btn-delete-account-confirm" class="flex-1 border border-red-500 text-red-500 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:bg-red-500 hover:text-white transition-colors focus-ring">Yes, delete my account</button>
                 <button type="button" id="btn-delete-account-cancel" class="border border-black dark:border-white px-4 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:opacity-70 focus-ring">Cancel</button>
@@ -1003,7 +1002,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=d58faca"></script>
+    <script type="module" src="js/app.js?v=f09e9f0"></script>
 
   </div>
 
