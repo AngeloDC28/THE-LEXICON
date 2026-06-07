@@ -78,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="index.css?v=f09e9f0" />
+  <link rel="stylesheet" href="index.css?v=4873c8f" />
 </head>
 
 <body>
@@ -1002,21 +1002,13 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=f09e9f0"></script>
+    <script type="module" src="js/app.js?v=4873c8f"></script>
 
   </div>
 
   <!-- Welcome Modal: shown on first visit, dismissed to localStorage -->
   <div id="welcome-modal" class="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title" hidden>
     <div class="welcome-inner">
-
-      <!-- Language selector -->
-      <div class="welcome-lang-row" id="welcome-lang-row">
-        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
-        <div class="welcome-lang-options" id="welcome-lang-options">
-          <!-- Populated by initWelcomeModal() from ALL_LANGS -->
-        </div>
-      </div>
 
       <!-- Header -->
       <div class="welcome-header">
@@ -1048,6 +1040,14 @@
       <div class="welcome-footer">
         <button type="button" id="btn-welcome-enter" class="welcome-cta">ENTER THE ARCHIVE</button>
         <button type="button" id="btn-welcome-skip" class="welcome-skip">Skip introduction</button>
+      </div>
+
+      <!-- Language selector — below CTA so hero content lands first -->
+      <div class="welcome-lang-row" id="welcome-lang-row">
+        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
+        <div class="welcome-lang-options" id="welcome-lang-options">
+          <!-- Populated by initWelcomeModal() from ALL_LANGS -->
+        </div>
       </div>
 
     </div>

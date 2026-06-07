@@ -795,7 +795,7 @@ html:not(.dark) .hero-stats { border-top-color: #e0e0dc; }
 }
 html:not(.dark) .hero-stat .hs-num { color: #000; }
 .hero-stat .hs-lbl {
-  font-size: var(--t-mono-xs);
+  font-size: clamp(0.6875rem, 0.55rem + 0.5vw, 0.75rem);
   letter-spacing: 0.22em;
   /* WCAG 1.4.3 AA: #555 on near-black ≈ 2.8:1 (FAIL) → #a8a5a0 ≈ 8.6:1 */
   color: #a8a5a0;
@@ -940,7 +940,7 @@ html:not(.dark) .hero-featured-brand { color: #6b5d54; }
   html:not(.dark) .hero-col-left { border-bottom-color: #e0e0dc; }
   /* Hide the right image column on mobile — saves ~280px of vertical space */
   .hero-col-right { display: none; }
-  .hero-headline { font-size: clamp(1.5rem, 6.5vw, 2rem); margin-top: 12px; }
+  .hero-headline { font-size: clamp(1.875rem, 7.5vw, 2rem); margin-top: 12px; }
   .hero-sub { font-size: clamp(0.875rem, 3.5vw, 1rem); margin-top: 8px; }
   .hero-stats { padding-top: 12px; gap: 20px; }
   .hero-actions { margin-top: 16px; gap: 8px; }
@@ -3601,6 +3601,9 @@ html.dark .active-hotspot-box {
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 .welcome-lang-label {
   font-family: var(--font-mono);
@@ -3619,13 +3622,14 @@ html.dark .active-hotspot-box {
   font-size: 9px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 6px 12px;
   border: 1px solid rgba(255,255,255,0.15);
   background: transparent;
   color: rgba(255,255,255,0.45);
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s;
-  min-height: 32px;
+  min-height: 44px;
+  min-width: 44px;
 }
 .wlang-btn:hover { border-color: #CCFF00; color: #CCFF00; }
 .wlang-btn.active { border-color: #CCFF00; color: #CCFF00; background: rgba(204,255,0,0.06); }
