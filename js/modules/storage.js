@@ -33,6 +33,37 @@ export function toggleBookmark(id, callbacks) {
   if (callbacks && callbacks.updateBookmarkUI) callbacks.updateBookmarkUI(id);
 }
 
+// ── Saved searches ────────────────────────────────────────────────────────────
+// Stored LOCALLY ONLY (localStorage) by design: the backend persists nothing
+// beyond email + folders (data-minimisation / GDPR posture). Saved searches
+// therefore never leave the device and add zero server-side PII.
+const SAVED_SEARCH_KEY = 'lexicon-saved-searches';
+
+export function getSavedSearches() {
+  try { return JSON.parse(localStorage.getItem(SAVED_SEARCH_KEY) || '[]'); } catch(e) { return []; }
+}
+
+function setSavedSearches(arr) {
+  try { localStorage.setItem(SAVED_SEARCH_KEY, JSON.stringify(arr)); } catch(e) {}
+}
+
+/** Persist a named search state. Returns the new id, or null if an identical
+ *  state is already saved (so the same search can't be saved twice). */
+export function saveSearch(name, state) {
+  const arr = getSavedSearches();
+  const sig = JSON.stringify(state);
+  if (arr.some(s => JSON.stringify(s.state) === sig)) return null;
+  const id = 'ss-' + Date.now().toString(36);
+  arr.unshift({ id, name, state, createdAt: Date.now() });
+  if (arr.length > 20) arr.length = 20;
+  setSavedSearches(arr);
+  return id;
+}
+
+export function deleteSavedSearch(id) {
+  setSavedSearches(getSavedSearches().filter(s => s.id !== id));
+}
+
 function getRecentlyViewed() {
   try { return JSON.parse(localStorage.getItem('lexicon-recent') || '[]'); } catch(e) { return []; }
 }

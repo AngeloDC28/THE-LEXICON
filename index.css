@@ -4157,6 +4157,51 @@ html:not(.dark) .footer-copyright { color: #aaa; border-top-color: #ddd; }
    tagged footer. Everything else (nav, sidebars, action bars,
    modals, telemetry) is hidden.
 ============================================================ */
+/* ─── Saved searches (local-only) ─── */
+.saved-search-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 3px 4px 3px 7px;
+  line-height: 1.4;
+  background: none;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+html:not(.dark) .saved-search-chip { color: rgba(0,0,0,0.7); border-color: rgba(0,0,0,0.25); }
+.saved-search-chip:hover,
+.saved-search-chip:focus-within { color: #CCFF00; border-color: #CCFF00; }
+html:not(.dark) .saved-search-chip:hover,
+html:not(.dark) .saved-search-chip:focus-within { color: #000; border-color: #000; }
+.saved-search-chip .ssc-apply,
+.saved-search-chip .ssc-del {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+.saved-search-chip .ssc-apply:focus-visible,
+.saved-search-chip .ssc-del:focus-visible { outline: 1px solid currentColor; outline-offset: 1px; }
+.saved-search-chip .ssc-del {
+  font-size: 11px;
+  line-height: 1;
+  padding: 0 2px;
+  opacity: 0.55;
+  border-left: 1px solid currentColor;
+  margin-left: 2px;
+}
+.saved-search-chip .ssc-del:hover { opacity: 1; }
+
 /* Hidden on screen; revealed by the print stylesheet below. */
 .print-only { display: none; }
 

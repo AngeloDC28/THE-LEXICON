@@ -23,7 +23,7 @@ import { switchView } from './modules/navigation.js';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
 import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js';
 import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks } from './modules/storage.js';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js';
 import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js';
 import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js';
 import { getTranslation, supportedLanguages } from './modules/translations.js';
@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=3997c9a');
+  const { archiveData: staticData } = await import('../database.js?v=9dcb93b');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -349,6 +349,9 @@ function refreshChrome() {
   const btnClearDir = $('btn-clear-directory');
   if (btnClearDir) btnClearDir.textContent = t('search_clear');
 
+  const btnSaveSearch = $('btn-save-search');
+  if (btnSaveSearch) btnSaveSearch.textContent = t('search_save');
+
   // Cookie banner buttons — hardcoded HTML so they need explicit JS translation
   const cookiePairs = [
     ['btn-accept-cookies', 'btn_cookie_accept'],
@@ -619,6 +622,76 @@ function refreshContent() {
       ? `${filteredEntries.length} entries shown`
       : '';
   }
+
+  // Saved-search bar: show "Save" when there's something to save
+  updateSaveSearchBar();
+}
+
+// ── SAVED SEARCHES (local-only — see storage.js) ──
+function captureSearchState() {
+  return {
+    searchQuery: AppState.searchQuery || '',
+    filters: { ...AppState.filters },
+    analyticalCat: AppState.analyticalCat || null,
+    yearRange: { ...(AppState.yearRange || { min: 1980, max: 2025 }) },
+    sortMode: AppState.sortMode || 'default',
+    bookmarksOnly: !!AppState.bookmarksOnly,
+  };
+}
+
+function isSearchActive(s) {
+  return !!(s.searchQuery
+    || s.analyticalCat
+    || s.bookmarksOnly
+    || Object.values(s.filters).some(Boolean)
+    || s.yearRange.min > 1980 || s.yearRange.max < 2025);
+}
+
+function buildSearchName(s) {
+  const parts = [];
+  if (s.searchQuery) parts.push(`"${s.searchQuery}"`);
+  if (s.analyticalCat) parts.push(s.analyticalCat);
+  for (const v of Object.values(s.filters)) {
+    if (v) v.split('|').filter(Boolean).forEach(x => parts.push(getTranslation(x, AppState.language)));
+  }
+  if (s.bookmarksOnly) parts.push('saved');
+  if (s.yearRange.min > 1980 || s.yearRange.max < 2025) parts.push(`${s.yearRange.min}–${s.yearRange.max}`);
+  const name = parts.slice(0, 3).join(' · ');
+  return name.length > 42 ? name.slice(0, 41) + '…' : (name || 'Custom search');
+}
+
+function applySearchState(s) {
+  AppState.searchQuery   = s.searchQuery || '';
+  AppState.filters       = { ...emptyFilters(), ...(s.filters || {}) };
+  AppState.analyticalCat = s.analyticalCat || null;
+  AppState.yearRange     = { ...(s.yearRange || { min: 1980, max: 2025 }) };
+  AppState.sortMode      = s.sortMode || 'default';
+  AppState.bookmarksOnly = !!s.bookmarksOnly;
+  AppState.activeFolderId = null;
+  const si = $('search-input');
+  if (si) si.value = AppState.searchQuery;
+  const bmBtn = $('btn-show-bookmarks');
+  if (bmBtn) bmBtn.setAttribute('aria-pressed', String(AppState.bookmarksOnly));
+  invalidateSearchCache();
+  refreshTaxonomy();
+  refreshContent();
+}
+
+function updateSaveSearchBar() {
+  const btn = $('btn-save-search');
+  if (btn) btn.classList.toggle('hidden', !isSearchActive(captureSearchState()));
+  renderSavedSearches();
+}
+
+function renderSavedSearches() {
+  const list = $('saved-search-list');
+  if (!list) return;
+  const saved = getSavedSearches();
+  list.innerHTML = saved.map(s => `
+    <span class="saved-search-chip" role="listitem">
+      <button type="button" class="ssc-apply" data-saved-apply="${s.id}" aria-label="Apply saved search: ${s.name.replace(/"/g, '&quot;')}">${s.name}</button>
+      <button type="button" class="ssc-del" data-saved-del="${s.id}" aria-label="Delete saved search: ${s.name.replace(/"/g, '&quot;')}">×</button>
+    </span>`).join('');
 }
 
 function refreshUI() {
@@ -1068,6 +1141,30 @@ function setupEventListeners() {
   document.addEventListener('click', (e) => {
     const id = e.target?.id;
     if (id === 'btn-clear-all-filters' || id === 'btn-clear-all-filters-index') clearAllFilters();
+  });
+
+  // Saved searches (local-only)
+  $('btn-save-search')?.addEventListener('click', () => {
+    const state = captureSearchState();
+    if (!isSearchActive(state)) return;
+    const id = saveSearch(buildSearchName(state), state);
+    renderSavedSearches();
+    showToast(id
+      ? getTranslation('search_saved', AppState.language) || 'Search saved'
+      : getTranslation('search_already_saved', AppState.language) || 'Already saved');
+  });
+  $('saved-search-list')?.addEventListener('click', (e) => {
+    const applyBtn = e.target.closest('[data-saved-apply]');
+    if (applyBtn) {
+      const s = getSavedSearches().find(x => x.id === applyBtn.dataset.savedApply);
+      if (s) { applySearchState(s.state); showToast(getTranslation('search_applied', AppState.language) || 'Search applied'); }
+      return;
+    }
+    const delBtn = e.target.closest('[data-saved-del]');
+    if (delBtn) {
+      deleteSavedSearch(delBtn.dataset.savedDel);
+      renderSavedSearches();
+    }
   });
 
   $('btn-clear-folder-filter')?.addEventListener('click', () => {

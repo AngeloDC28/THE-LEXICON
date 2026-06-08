@@ -78,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="index.css?v=3997c9a" />
+  <link rel="stylesheet" href="index.css?v=9dcb93b" />
 </head>
 
 <body>
@@ -271,6 +271,10 @@
             </div>
             <div id="filter-chips" class="flex flex-wrap gap-1 mt-1 items-center">
               <span id="filter-result-count" class="text-[8px] font-mono opacity-40 uppercase tracking-widest hidden"></span>
+            </div>
+            <div id="saved-search-bar" class="flex flex-wrap items-center gap-1.5 mt-1">
+              <button type="button" id="btn-save-search" class="hidden text-[8px] font-bold font-mono uppercase tracking-[0.1em] border border-acid text-acid px-2 py-1 min-h-[28px] hover:bg-acid hover:text-black transition-colors focus-ring" aria-label="Save the current search and filters">+ Save search</button>
+              <div id="saved-search-list" class="flex flex-wrap gap-1.5" role="list" aria-label="Saved searches"></div>
             </div>
           </div>
         </div>
@@ -1072,7 +1076,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=3997c9a"></script>
+    <script type="module" src="js/app.js?v=9dcb93b"></script>
 
   </div>
 
