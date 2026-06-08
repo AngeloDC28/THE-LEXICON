@@ -678,7 +678,7 @@ html:not(.dark) .gc-vibe:focus-visible { color: #000; border-color: #000; }
   grid-template-columns: 1.1fr 0.9fr;
   border: 1px solid #222;
   min-height: 340px;
-  max-height: 420px;
+  max-height: 520px;
   position: relative;
   background: #000;
   color: #fff;
@@ -1277,6 +1277,7 @@ html:not(.dark) .eow-card { border-color: #e0e0dc; background: #f0efe9; }
 .eow-bg {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background-size: cover;
   background-position: center;
   opacity: 0.5;
@@ -1286,6 +1287,7 @@ html:not(.dark) .eow-card { border-color: #e0e0dc; background: #f0efe9; }
 .eow-overlay {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: linear-gradient(0deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.2) 100%);
 }
 html:not(.dark) .eow-overlay {

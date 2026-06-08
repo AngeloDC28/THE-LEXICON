@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (eowEl) eowEl.style.display = 'none';
     const nexusTEl = $('nexus-teaser');
     if (nexusTEl) nexusTEl.style.display = 'none';
+    $('featured-strip')?.classList.add('hidden');
   }
 
   // Shorten search placeholder on mobile — full query syntax hint overflows at 375px
@@ -1189,12 +1190,18 @@ function setupEventListeners() {
     if (eowEl) eowEl.style.display = 'none';
     const nexusTEl = $('nexus-teaser');
     if (nexusTEl) nexusTEl.style.display = 'none';
+    $('featured-strip')?.classList.add('hidden');
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
-    // Move focus into the archive so keyboard users land somewhere meaningful
-    // (otherwise focus goes to <body> when the orientation panel is removed).
-    const firstCell = document.querySelector('#image-grid .grid-cell');
-    if (firstCell) firstCell.focus();
-    else $('search-input')?.focus();
+    // Scroll the right panel back to the top so the grid is immediately visible
+    // after all the landing sections collapse (user may have scrolled down).
+    const imagePanel = $('image-panel');
+    if (imagePanel) imagePanel.scrollTop = 0;
+    // Move focus into the archive so keyboard users land somewhere meaningful.
+    requestAnimationFrame(() => {
+      const firstCell = document.querySelector('#image-grid .grid-cell');
+      if (firstCell) firstCell.focus({ preventScroll: true });
+      else $('search-input')?.focus();
+    });
   };
   $('btn-dismiss-orientation')?.addEventListener('click', dismissOrientation);
   $('btn-close-orientation')?.addEventListener('click', dismissOrientation);
@@ -1459,6 +1466,7 @@ function setupEventListeners() {
       const openModal = document.querySelector('[role="dialog"]:not(.hidden):not(#image-lightbox)');
       if (openModal) {
         openModal.classList.add('hidden');
+        document.body.style.overflow = '';
         restoreFocus();
         e.preventDefault();
         return;
@@ -1767,7 +1775,17 @@ function renderHero(archiveData) {
     statMov.textContent = uniqueMovements.size.toLocaleString();
   }
 
-  // Always reveal the featured strip header, "How It Works", and "Who It's For"
+  // Populate landing section content (always — so they're ready when shown)
+  renderAxesBrowse(archiveData);
+  renderEntryOfWeek(archiveData);
+  renderNexusTeaser(archiveData);
+
+  // Only reveal landing sections and hero content when the orientation panel
+  // is actually going to be shown. Returning users (panel dismissed) get none
+  // of this — the grid is their immediate landing state.
+  const panel = $('orientation-panel');
+  if (!panel || panel.classList.contains('hidden')) return;
+
   const featHead = $('featured-strip-head');
   const how = $('how-it-works');
   const who = $('who-section');
@@ -1775,19 +1793,12 @@ function renderHero(archiveData) {
   if (how) how.style.display = 'block';
   if (who) who.style.display = 'block';
 
-  // Second-door browse + rotating spotlight + connection-graph teaser
-  renderAxesBrowse(archiveData);
-  renderEntryOfWeek(archiveData);
-  renderNexusTeaser(archiveData);
   const axes = $('axes-browse');
   const eow = $('entry-of-week');
   const nexusT = $('nexus-teaser');
   if (axes) axes.style.display = 'block';
   if (eow) eow.style.display = 'block';
   if (nexusT) nexusT.style.display = 'block';
-
-  const panel = $('orientation-panel');
-  if (!panel || panel.classList.contains('hidden')) return;
 
   const tagLabelMap = {
     corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',

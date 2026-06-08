@@ -252,6 +252,10 @@ export function renderFeaturedStrip(archiveData) {
   const container = $('featured-strip');
   if (!container) return;
 
+  // Featured strip is a landing-page section — don't show once orientation is dismissed
+  const panel = $('orientation-panel');
+  if (!panel || panel.classList.contains('hidden')) return;
+
   const lang = AppState.language;
   const CATEGORIES = ['critique', 'subculture', 'corporeal', 'semiotic'];
   const tagLabelMap = {
