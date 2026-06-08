@@ -59,6 +59,15 @@ html:not(.dark) {
 .pointer-events-none { pointer-events: none; }
 .pointer-events-auto { pointer-events: auto; }
 
+/* Typography utility classes — Tailwind CDN misinterprets var() arbitrary
+   values like text-[var(--t-mono-xs)] as color, not font-size. These named
+   classes apply the correct font-size property directly. */
+.t-mono-xs   { font-size: var(--t-mono-xs); }
+.t-mono-sm   { font-size: var(--t-mono-sm); }
+.t-mono-base { font-size: var(--t-mono-base); }
+.t-chrome-xs { font-size: var(--t-chrome-xs); }
+.t-body      { font-size: var(--t-body); }
+
 /* Responsive show/hide helpers (avoid clashing with .hidden !important).
    Use these instead of `class="hidden lg:flex"` etc. */
 .lexicon-desktop-only { display: none; }

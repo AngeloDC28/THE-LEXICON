@@ -59,7 +59,7 @@ export function renderTimeline(archiveData, callbacks) {
                      onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');this.closest('.timeline-item').classList.add('loaded');this.classList.add('broken-asset');" />
               </picture>
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
-                <p class="text-[var(--t-mono-xs)] text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
+                <p class="t-mono-xs text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
                 <p class="text-[7px] text-white/60 uppercase truncate">${getTranslation(e.title, AppState.language)}</p>
               </div>
             </div>

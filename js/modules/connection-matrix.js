@@ -321,7 +321,7 @@ function renderNexusEmptyState(entry, container) {
 
   const peerCards = peers.length ? `
     <div class="nexus-peers">
-      <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.18em] opacity-40 mb-3">From the same era</p>
+      <p class="t-mono-xs font-mono uppercase tracking-[0.18em] opacity-40 mb-3">From the same era</p>
       <div class="nexus-peers-grid">
         ${peers.map(p => {
           const img = p.images?.[0]?.src ? resolveImgSrc({ src: p.images[0].src }) : '';
@@ -337,8 +337,8 @@ function renderNexusEmptyState(entry, container) {
 
   container.innerHTML = `
     <div class="matrix-section nexus-empty">
-      <p class="text-[var(--t-mono-xs)] uppercase tracking-[0.2em] opacity-40 mb-1">Nexus</p>
-      <p class="text-[var(--t-mono-sm)] font-mono text-white/50 mb-4">This entry's connections are still being mapped.</p>
+      <p class="t-mono-xs uppercase tracking-[0.2em] opacity-40 mb-1">Nexus</p>
+      <p class="t-mono-sm font-mono text-white/50 mb-4">This entry's connections are still being mapped.</p>
       ${peerCards}
     </div>`;
 
@@ -367,7 +367,7 @@ function renderTimeline(entry, connections, callbacks, container) {
   });
 
   if (seen.size === 0) {
-    container.innerHTML = `<div class="matrix-section"><p class="text-[var(--t-mono-xs)] uppercase tracking-[0.15em] opacity-40 text-center py-8">${getTranslation('nexus_no_connections', AppState.language)}</p></div>`;
+    container.innerHTML = `<div class="matrix-section"><p class="t-mono-xs uppercase tracking-[0.15em] opacity-40 text-center py-8">${getTranslation('nexus_no_connections', AppState.language)}</p></div>`;
     return;
   }
 
@@ -454,7 +454,7 @@ function renderList(entry, connections, callbacks, container) {
   const t = k => getTranslation(k, lang);
 
   let html = `<div class="matrix-center">
-    <p class="text-[var(--t-mono-xs)] uppercase tracking-[0.2em] opacity-40 mb-2">${t('nexus_viewing')}</p>
+    <p class="t-mono-xs uppercase tracking-[0.2em] opacity-40 mb-2">${t('nexus_viewing')}</p>
     <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${entry.tags.brand}</p>
     <p class="text-xs font-mono uppercase opacity-60 mt-1">${entry.year} &middot; ${entry.season}</p>
     <div class="mt-3">
@@ -463,7 +463,7 @@ function renderList(entry, connections, callbacks, container) {
   </div>`;
 
   if (connections.size === 0) {
-    html += `<div class="matrix-section"><p class="text-[var(--t-mono-xs)] uppercase tracking-[0.15em] opacity-40 text-center py-8">${t('nexus_no_connections')}</p></div>`;
+    html += `<div class="matrix-section"><p class="t-mono-xs uppercase tracking-[0.15em] opacity-40 text-center py-8">${t('nexus_no_connections')}</p></div>`;
   } else {
     connections.forEach(({ key, entries: relEntries }, tagValue) => {
       html += '<div class="matrix-section">';
@@ -474,8 +474,8 @@ function renderList(entry, connections, callbacks, container) {
         const label = `${rel.tags.brand || ''} ${rel.year || ''}`;
         html += `<button type="button" class="matrix-entry focus-ring" data-matrix-entry-id="${rel.id}" aria-label="Open ${label}">
           <img src="${thumbSrc}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;" loading="lazy" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.style.filter='none'" />
-          <p class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>
-          <p class="text-[var(--t-mono-xs)] font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>
+          <p class="t-mono-xs font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>
+          <p class="t-mono-xs font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>
         </button>`;
       });
       html += '</div></div>';
