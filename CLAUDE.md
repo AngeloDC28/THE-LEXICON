@@ -118,16 +118,16 @@ THE LEXICON is undergoing a major redesign to position it as a **research termin
 - [x] Brutalist Index View: Text-only sortable table mode with keyboard navigation
 - [x] Command palette: `⌘K` / `Ctrl+K` with type-ahead and boolean operators
 - [x] Multi-select filters: URL-encoded, shareable filter combinations
-- [ ] WCAG 2.2 AA accessibility audit and fixes
+- [~] WCAG 2.2 AA accessibility audit and fixes (foundations + contrast/ARIA-title pass done; full axe sweep still pending)
 - [x] Mobile bottom-sheet filters
-- [ ] Saved searches (authenticated)
+- [x] Saved searches — implemented **local-only** (localStorage) to honour the "store ONLY email + folders" rule; no cross-device sync by design
 
 ### Phase 3: Entry architecture (6–8 weeks)
-- Per-entry routes: Move from SPA modals to `/entry/{slug}` with SSR + JSON-LD
-- Three-column reading layout: Sticky metadata rail | prose | Nexus preview
-- Print stylesheet: Reader-friendly PDF output
-- Citation export (Chicago, MLA, APA, Harvard, BibTeX)
-- Nexus graph visualization: D3 force-directed with Timeline and List views
+- [x] Per-entry routes: static `/entry/{slug}` pages with JSON-LD (Article) + OG/Twitter meta (`generate-entry-pages.mjs`)
+- [~] Three-column reading layout: meta rail | image | metadata+notes sidebar (in place; reading-mode polish ongoing)
+- [x] Print stylesheet: Reader-friendly PDF output (+ "Print / Save as PDF" in the citation modal)
+- [x] Citation export (Chicago, MLA, APA, Harvard, BibTeX, permalink)
+- [x] Nexus graph visualization: SVG force layout with Timeline and List views (+ landing teaser)
 
 ### Phase 4: Editorial & business (ongoing)
 - MDX/CMS editorial pipeline
