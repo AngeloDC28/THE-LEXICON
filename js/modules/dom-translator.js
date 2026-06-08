@@ -25,8 +25,8 @@ const _orig = new WeakMap();
 let _obs = null;
 let _gen = 0; // incremented on every translate() call, used to abort stale fetches
 
-// Attributes carrying screen-reader content — translated alongside text nodes
-const TRANSLATE_ATTRS = ['aria-label', 'placeholder', 'alt'];
+// Attributes carrying screen-reader / tooltip content — translated alongside text nodes
+const TRANSLATE_ATTRS = ['aria-label', 'placeholder', 'alt', 'title'];
 const _origAttrs = new WeakMap(); // element → { attr: original }
 
 // ─── helpers ────────────────────────────────────────────────────────────────
