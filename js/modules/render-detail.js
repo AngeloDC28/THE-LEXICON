@@ -58,8 +58,9 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   const detailView = $('detail-image-view');
   if (detailView) {
     detailView.classList.remove('hidden');
-    // Used by print stylesheet ::after for permalink footer
+    // Used by print stylesheet ::after for permalink + accessed-date footer
     detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
+    detailView.dataset.printAccessed = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   }
   const appRoot = $('app-root');
   if (appRoot) appRoot.classList.add('detail-mode-active');
@@ -235,7 +236,12 @@ function renderSidebarHeader(entry) {
     ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<button type="button" class="detail-vibe" data-vibe="${v}" aria-label="Find entries with the vibe: ${v}">${v}</button>`).join('')}</div>`
     : '';
 
+  // Print-only title — the on-screen title lives in the action panel, which the
+  // print stylesheet hides, so the printed page would otherwise have no heading.
+  const printTitle = entry.title ? getTranslation(entry.title, lang) : `${brand} ${season} ${year}`.trim();
+
   header.innerHTML = `
+    <h1 class="detail-print-title print-only">${printTitle}</h1>
     <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
     <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
     ${vibesHtml}

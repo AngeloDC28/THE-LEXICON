@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=b42918a');
+  const { archiveData: staticData } = await import('../database.js?v=3997c9a');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -1263,6 +1263,14 @@ function setupEventListeners() {
         setTimeout(() => { btn.textContent = original; btn.classList.remove('btn-copied'); }, 1400);
       });
     });
+  });
+
+  // Print / Save as PDF — close the citation modal first so it isn't part of
+  // the print, then trigger the browser print dialog (print stylesheet
+  // linearises the open entry into a reader-friendly document).
+  $('btn-print-entry')?.addEventListener('click', () => {
+    $('cite-modal')?.classList.add('hidden');
+    requestAnimationFrame(() => window.print());
   });
 
   // Lightbox: click the image wrapper to open fullscreen view.
