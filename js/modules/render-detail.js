@@ -232,7 +232,7 @@ function renderSidebarHeader(entry) {
 
   const vibes = Array.isArray(entry.vibes) ? entry.vibes.slice(0, 6) : [];
   const vibesHtml = vibes.length
-    ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<span class="detail-vibe">${v}</span>`).join('')}</div>`
+    ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<button type="button" class="detail-vibe" data-vibe="${v}" aria-label="Find entries with the vibe: ${v}">${v}</button>`).join('')}</div>`
     : '';
 
   header.innerHTML = `

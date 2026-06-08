@@ -657,8 +657,19 @@ html:not(.dark) .gc-hook { color: rgba(0,0,0,0.75); }
   padding: 1px 4px;
   line-height: 1.6;
   white-space: nowrap;
+  background: none;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.gc-vibe:hover,
+.gc-vibe:focus-visible {
+  color: #CCFF00;
+  border-color: #CCFF00;
+  outline: none;
 }
 html:not(.dark) .gc-vibe { color: rgba(0,0,0,0.4); border-color: rgba(0,0,0,0.12); }
+html:not(.dark) .gc-vibe:hover,
+html:not(.dark) .gc-vibe:focus-visible { color: #000; border-color: #000; }
 @media (max-width: 767px) { .gc-vibes { display: none; } }
 
 /* ─── Phase 1: Hero Panel ─────────────────────────────────────────── */
@@ -1690,11 +1701,22 @@ html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.55); }
   border: 1px solid rgba(255,255,255,0.18);
   padding: 2px 7px;
   line-height: 1.5;
+  background: none;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.detail-vibe:hover,
+.detail-vibe:focus-visible {
+  color: #CCFF00;
+  border-color: #CCFF00;
+  outline: none;
 }
 html:not(.dark) .detail-vibe {
   color: rgba(0,0,0,0.6);
   border-color: rgba(0,0,0,0.18);
 }
+html:not(.dark) .detail-vibe:hover,
+html:not(.dark) .detail-vibe:focus-visible { color: #000; border-color: #000; }
 
 /* ─── Detail entry navigation (prev / pos / next in sidebar header) ─── */
 .detail-entry-nav {

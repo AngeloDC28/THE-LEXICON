@@ -142,7 +142,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
             ${hook ? `<div class="gc-hook">${hook}.</div>` : ''}
-            ${isFirst && entry.vibes?.length ? `<div class="gc-vibes">${entry.vibes.slice(0,3).map(v => `<span class="gc-vibe">${v}</span>`).join('')}</div>` : ''}
+            ${isFirst && entry.vibes?.length ? `<div class="gc-vibes">${entry.vibes.slice(0,3).map(v => `<button type="button" class="gc-vibe" data-vibe="${v}" aria-label="Find entries with the vibe: ${v}">${v}</button>`).join('')}</div>` : ''}
           </div>
         </div>`;
     });

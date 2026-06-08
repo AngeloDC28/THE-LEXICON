@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=51f92d2');
+  const { archiveData: staticData } = await import('../database.js?v=88d69fc');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -768,6 +768,28 @@ function setupEventListeners() {
         dismissOrientation();
         $('image-grid')?.scrollIntoView({ behavior: 'smooth' });
       }
+      return;
+    }
+
+    // Vibe chip click (grid card or entry sidebar) — search the archive by that
+    // plain-language tag. stopPropagation so a card-cell click doesn't also open
+    // the entry. Vibes are indexed in the search engine, so this just runs a query.
+    const vibeBtn = e.target.closest('[data-vibe]');
+    if (vibeBtn) {
+      e.stopPropagation();
+      e.preventDefault();
+      const vibe = vibeBtn.dataset.vibe || '';
+      AppState.searchQuery = vibe;
+      AppState.analyticalCat = null;
+      const si = $('search-input');
+      if (si) si.value = vibe;
+      // If an entry detail is open, return to the grid to show results.
+      if (AppState.selectedEntryId) { closeDetail(callbacks, archiveData); }
+      switchView('grid', callbacks);
+      invalidateSearchCache();
+      refreshContent();
+      syncHashFromState();
+      $('image-grid')?.scrollIntoView({ behavior: 'smooth' });
       return;
     }
 
