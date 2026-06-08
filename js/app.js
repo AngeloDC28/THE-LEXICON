@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=5c672a0');
+  const { archiveData: staticData } = await import('../database.js?v=3505610');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }

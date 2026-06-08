@@ -1535,6 +1535,28 @@ html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:foc
 }
 html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.55); }
 
+/* ─── Detail vibe chips (plain-language aesthetic tags) ─── */
+.detail-vibes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+}
+.detail-vibe {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 2px 7px;
+  line-height: 1.5;
+}
+html:not(.dark) .detail-vibe {
+  color: rgba(0,0,0,0.6);
+  border-color: rgba(0,0,0,0.18);
+}
+
 /* ─── Detail entry navigation (prev / pos / next in sidebar header) ─── */
 .detail-entry-nav {
   display: flex;

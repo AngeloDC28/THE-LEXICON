@@ -230,9 +230,15 @@ function renderSidebarHeader(entry) {
   const total = filtered.length;
   const posLabel = total > 0 ? `${pos + 1} / ${total}` : '';
 
+  const vibes = Array.isArray(entry.vibes) ? entry.vibes.slice(0, 6) : [];
+  const vibesHtml = vibes.length
+    ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<span class="detail-vibe">${v}</span>`).join('')}</div>`
+    : '';
+
   header.innerHTML = `
     <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
     <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
+    ${vibesHtml}
     ${posLabel ? `
     <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
       <button type="button" class="den-btn" id="btn-detail-prev" aria-label="Previous entry (←)" ${pos <= 0 ? 'disabled' : ''}>‹</button>
