@@ -1464,6 +1464,7 @@ function setupEventListeners() {
       const openModal = document.querySelector('[role="dialog"]:not(.hidden):not(#image-lightbox)');
       if (openModal) {
         openModal.classList.add('hidden');
+        document.body.style.overflow = '';
         restoreFocus();
         e.preventDefault();
         return;
