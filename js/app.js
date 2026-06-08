@@ -165,6 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (eowEl) eowEl.style.display = 'none';
     const nexusTEl = $('nexus-teaser');
     if (nexusTEl) nexusTEl.style.display = 'none';
+    $('featured-strip')?.classList.add('hidden');
   }
 
   // Shorten search placeholder on mobile — full query syntax hint overflows at 375px
@@ -1189,6 +1190,7 @@ function setupEventListeners() {
     if (eowEl) eowEl.style.display = 'none';
     const nexusTEl = $('nexus-teaser');
     if (nexusTEl) nexusTEl.style.display = 'none';
+    $('featured-strip')?.classList.add('hidden');
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
     // Scroll the right panel back to the top so the grid is immediately visible
     // after all the landing sections collapse (user may have scrolled down).
