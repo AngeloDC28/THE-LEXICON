@@ -142,6 +142,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
             ${hook ? `<div class="gc-hook">${hook}.</div>` : ''}
+            ${isFirst && entry.vibes?.length ? `<div class="gc-vibes">${entry.vibes.slice(0,3).map(v => `<span class="gc-vibe">${v}</span>`).join('')}</div>` : ''}
           </div>
         </div>`;
     });

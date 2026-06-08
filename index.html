@@ -78,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="index.css?v=f293439" />
+  <link rel="stylesheet" href="index.css?v=5c672a0" />
 </head>
 
 <body>
@@ -179,6 +179,7 @@
         <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
       </div>
       <a href="/about" id="btn-about" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">ABOUT</a>
+      <button type="button" data-open-glossary="1" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">GLOSSARY</button>
       <button type="button" id="btn-contact" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
       <button type="button" id="btn-theme-toggle" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
     </div>
@@ -233,6 +234,7 @@
             <button type="button" id="btn-lang-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
             <button type="button" id="btn-theme-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
             <button type="button" id="btn-about-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
+            <button type="button" data-open-glossary="1" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Glossary</button>
             <button type="button" id="btn-contact-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
           </div>
         </div>
@@ -842,6 +844,21 @@
       </div>
     </div>
 
+    <!-- GLOSSARY MODAL -->
+    <div id="glossary-modal" class="hidden fixed inset-0 z-[3000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="glossary-modal-title">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="glossary" aria-hidden="true"></div>
+      <div class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border border-black dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-black dark:border-white/20">
+          <div>
+            <h2 id="glossary-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.14em]">CRITICAL VOCABULARY</h2>
+            <p class="text-[var(--t-mono-xs)] font-mono opacity-50 uppercase tracking-wide mt-0.5">Theoretical terms used throughout The Lexicon</p>
+          </div>
+          <button type="button" data-modal-close="glossary" class="focus-ring text-sm font-bold uppercase tracking-wider hover:opacity-70 px-2 py-1" aria-label="Close glossary">[ X ]</button>
+        </div>
+        <div class="overflow-y-auto p-5" id="glossary-terms"></div>
+      </div>
+    </div>
+
     <!-- COMMAND PALETTE (CMD+K) -->
     <div id="cmd-palette" class="hidden fixed inset-0 z-[1000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Command palette">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-md" id="cmd-palette-backdrop" aria-hidden="true"></div>
@@ -1002,7 +1019,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=f293439"></script>
+    <script type="module" src="js/app.js?v=5c672a0"></script>
 
   </div>
 

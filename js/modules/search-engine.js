@@ -111,7 +111,8 @@ export function getFilteredEntries(archiveData) {
           entry.id || '', entry.title || '',
           entry.year ? String(entry.year) : '',
           entry.season || '', entry.description || '',
-          ...Object.values(t), ...Object.values(entry.notes || {})
+          ...Object.values(t), ...Object.values(entry.notes || {}),
+          ...(entry.vibes || [])
         ].join(' ').toLowerCase();
         // Exact substring match first; fall back to compressed match so
         // "mqueen" finds "McQueen", "balanciga" finds "Balenciaga", etc.

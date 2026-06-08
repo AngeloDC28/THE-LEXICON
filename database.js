@@ -301,7 +301,14 @@ export const archiveData = [
       "strategy": "McQueen's structural logic treated the prosthetic not as a medical necessity to be concealed but as a site of highly visible; customised architectural construction. Watts faced the technical challenge of engineering a solid one-block wooden leg with internally carved sockets accommodating Mullins's residual limbs; eliminating the need for external straps while allowing a graceful gait. The external geometry was resolved as a Victorian knee-length boot form; with a Louis heel; slim ankle; and pointed toe. Kinetic movement was solved through clog mechanics; with the sole curved upward at the toe to enable forward roll. In place of lacing; Ferguson carved intricate vines and foliage directly into the surface of the wood. The finale deployed industrial robotics as an agent of aesthetic violence; structuring the destruction of the garment as a live event witnessed in real time by the front row; ensuring immediate editorial dominance and foreclosing any conventional press-release narrative.",
       "critique": "No. 13 constitutes a foundational document of Post-Humanism in fashion; systematically dismantling the boundary between the biological body and its technological supplement. By placing Mullins on the runway in hand-carved ash prosthetics; McQueen transformed a clinical medical device into a symbolic object of radical self-authorship; directly challenging ableist beauty standards that demand the unmarked; normative physique. The intervention drew an explicit historical parallel between the corset -- an orthopaedic device aestheticised into a fashion object -- and the prosthetic; proposing both as architectures of corporeal negotiation. The wooden legs; coded simultaneously as grotesque and beautiful; enacted The Subverted Gaze; forcing the audience into an unstable position between desire and uncanny dread. The finale extended this logic into its most violent register: Harlow; stripped of agency on the rotating platform; became the passive subject of a panoptic; non-consensual mechanical assault; her garment destroyed by algorithmic precision. The total sequence positions the human body as a site of perpetual negotiation between biological fragility and technological overwriting."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "cyborg body",
+      "post-human spectacle",
+      "dark theatrics",
+      "armour as skin",
+      "body as sculpture"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -630,7 +637,14 @@ export const archiveData = [
       "strategy": "Mugler synthesises extreme materiality across registers; engineering garments from heavy black velvet; pink duchess satin; and antique lace alongside rigid chrome; metal; perspex; PVC; and fetishistic latex to construct a taxonomy of corporeal states ranging from the organic to the fully industrial. Extreme corsetry requiring up to six weeks of tight-lacing work reshapes the internal skeletal logic of each look; producing dramatic hourglass architectures that function as structures imposed upon biology rather than derived from it. The Cyborg Suit operates through segmented componentry; deploying cold opaque metal against clear perspex cutouts to simultaneously conceal and articulate the body's natural joints; enacting a strategy of strategic revelation and armoured concealment. Mugler transmits the show as a television broadcast special; deploying mainstream celebrity stunt-casting to generate unprecedented press disruption beyond the traditional fashion press ecosystem.",
       "critique": "The collection directly materialises the arguments of Donna Haraway's A Cyborg Manifesto; blurring the boundary between the human organism and industrial machine through a body transformed into a literal hybrid vessel whose biological surface is simultaneously framed and replaced by metal and perspex apparatus. The Cyborg Suit's formal lineage is traceable to the Maschinenmensch of Fritz Lang's 1927 Metropolis and the erotic robotic iconography of Hajime Sorayama; situating Mugler within a post-human aesthetic lineage that renders femininity as technological infrastructure rather than passive ornament. In Susan Sontag's terms the presentation constitutes a complete embodiment of Camp; revelling in extreme theatricality; artifice; and a performative register in which Being-as-Playing-a-Role becomes the primary semiotic operation. Mugler democratises the catwalk by casting older Hollywood icons including Tippi Hedren alongside drag queens; adult performers; and individuals of varying age and body morphology; actively disrupting the industry's normative body conventions and reframing corporeal difference as a site of absolute power."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "cyborg glamour",
+      "armour dressing",
+      "body modification fashion",
+      "sci-fi couture",
+      "power silhouette"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -895,7 +909,14 @@ export const archiveData = [
       "strategy": "The A-POC process engineers garments from a single continuous piece of computer-knitted fabric; eliminating the traditional need for cuts and seams through a manufacturing logic Miyake traced to the simplest prehistoric textile forms. Dashed cut-lines encoded directly into the fabric's structure transfer the final act of construction from the designer to the wearer; who may customize sleeve length; garment length; and silhouette using scissors alone. The runway presentation literalized this collective logic by attaching all twenty-three models within a single garment; presenting the body not as an isolated individual unit but as a node within a continuous; interconnected corporeal network. This integration of wearer agency into the manufacturing system dismantles the traditional top-down hierarchy of haute couture authorship.",
       "critique": "The A-POC system constitutes a radical reordering of the conventional fashion supply chain; compressing designer; manufacturer; and consumer into a single participatory circuit that collapses the Marxist distinction between production and consumption. The red tube connecting twenty-three bodies on the runway operates as a visceral spatial argument; the collective form evoking what critics described as something tense and fleshy from a Cronenberg film — a deliberate rejection of fashion's normative grammar of the isolated individual body moving through space. Miyake explicitly frames A-POC within the most ancient of human technological impulses; stating that all of his work stems from the simplest of ideas that go back to the earliest civilizations — making clothing from one piece of cloth; a strategy that positions Post-Human engineering not as rupture but as the return to an irreducible material truth. The system's near-zero-waste production logic further enacts a Labour Politics critique; embedding environmental ethics into the industrial process rather than appending them as a retail gesture."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "tech textiles",
+      "futurism in fabric",
+      "industrial poetics",
+      "body architecture",
+      "wearable engineering"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -1237,7 +1258,14 @@ export const archiveData = [
       "strategy": "Ghesquière deliberately eroded the boundary between masculine and feminine silhouettes; engineering garments with flowing lines and modular configurations designed to be mixed; matched; and worn in multiple combinations. The structural logic borrows systematically from high-performance athletic gear; elevating prosthetic and functional components — ankle pads; detachable straps; cage frameworks — into luxury couture objects. Material tension operates as the primary compositional device: sleek minimalist silhouettes are set against highly textured leather; rubberised industrial coatings; geometric paneling; and lace-trimmed hems; producing an aesthetic of controlled opposition between the organic and the synthetic. Ghesquière stated his explicit goal was to create fashion that was modern; optimistic; and free from the constraints of traditional fashion.",
       "critique": "The collection is catalogued as a turning point in fashion history; demonstrating that garments could be simultaneously functional and artful — a formulation that dismantles the conventional hierarchy between craft utility and luxury status. By elevating utilitarian components such as snowboarding boot bindings into prosthetic extensions within a luxury context; Ghesquière enacts in material terms the arguments of Donna Haraway's Cyborg Manifesto; merging techno-functional design with haute couture. The robotic leggings and articulated carapaces constitute a Baudrillardian simulacrum of the athletic body; producing a hyperreal version of sportswear more legible as technology than as clothing. The collection directly paved the way for the sleek minimalism of Alexander Wang and the dramatic avant-garde architectural silhouettes of Rick Owens; and as Dior Men's Kim Jones noted; it remains a standard for what is possible when design and creativity come together."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "techno future",
+      "cyborg glamour",
+      "sleek dystopia",
+      "digital body",
+      "speed dressing"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -1525,7 +1553,14 @@ export const archiveData = [
       "strategy": "The structural logic centres on Adaptive Transformation; engineering garments that transition seamlessly between domestic furniture and wearable clothing; models remove grey seat covers from chairs; invert them to reveal contrasting colours; and slip them on as dresses; men in hazmat suits fold the remaining wooden chair frames into portable suitcases; and in the show's dramatic finale a model steps inside the hollow coffee table; lifts it by inner handles attached to a waist harness; and the table telescopes outward into a geometric tiered wooden skirt; each transformation enforces a narrative in which household objects are mobilised as vehicles of physical survival.",
       "critique": "Afterwords positions clothing as a portable territory and psychological shelter; exploring how displaced individuals carry domestic memory and material history on their bodies when forced to evacuate; the collection constitutes a Post-Colonial Critique of static property ownership and the violent erasure of the private sphere during ethnic conflict; by requiring models to physically dismantle the set and wear it Chalayan enforces a bodily autonomy and transgression that collapses the boundary between architectural environment and biological body; the collection proves fashion capable of functioning as an intellectual tool for complex sociological inquiry; treating the human form as a structure around which clothing may cocoon to preserve identity when private space is violently lost."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "cultural diaspora",
+      "identity in cloth",
+      "political fashion",
+      "wearable concept",
+      "heritage tension"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -1807,7 +1842,14 @@ export const archiveData = [
       "strategy": "The architectural strategy hinges on deliberate wrongness. Classic separates — striped button-ups, polo shirts, knee-length skirts, straight pants — are paired with awkward color combinations and unconventional textiles. Banal prints sourced from 1970s upholstery, Formica tiles, and tablecloths are reproduced on synthetic Bri-Nylon or printed onto cotton tweeds as trompe-l'oeil. The drab palette of olive, mustard, chartreuse, ochre, brown, and lilac is anchored by chunky sandals and thick wedges now famously known as toilet-bowl heels. Every element is engineered to read as off, on purpose.",
       "provenance": "Miuccia Prada's Spring/Summer 1996 collection, officially titled Banal Eccentricity, is remembered in fashion history as the Ugly Chic or Geek Chic collection. Prada drew direct inspiration from ordinary household objects and the 1980 Venice Biennale of Architecture, paying tribute to the postmodern design group Studio Alchimia and its exhibition The Banal Object. Regarded as a seismic sartorial shift comparable in impact to Christian Dior's 1947 New Look, this collection cemented Miuccia Prada as a cultural provocateur and established intellectual fashion as a credible position within the luxury system."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "ugly beautiful",
+      "anti-pretty",
+      "intellectual camp",
+      "subverted feminine",
+      "retro-futurism"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -2131,7 +2173,14 @@ export const archiveData = [
       "strategy": "Deconstructed Assembly: Borrowing heavily from the deconstructionist techniques pioneered by designers like Martin Margiela, Galliano's models wore unstructured, torn, and strangely layered garments. The collection featured frayed and stretched fabrics attached to one another, with nautical ropes replacing traditional belts. Bias-Cut Newspaper Print: Galliano took press clippings from the International Herald Tribune—specifically incorporating reviews of his own past collections—and printed them onto silk chiffon. He used his signature bias-cut technique to drape this fabric, lending \"pictures of distress a perversely sensual air\". The Aestheticization of Refuse: Galliano accessorized the looks with literal junk and household items. Models walked down the runway with oversized pins yoking string vests to belts, while chains dangled with broken spectacles, tin openers, electrical plugs, and miniature bottles of Jack Daniels. Theatrical Styling: The styling completely embraced melodrama and destitution. Models' faces were made up to look smeared with grime and sweat, and their hair was threaded with tissue. Other looks featured boyish girls with faces painted like Charlie Chaplin dangling old kit bags, as well as diaphanous linen gowns engineered to look like straitjackets.",
       "critique": "Poverty Chic and the Limits of Spectacle: The SS2000 collection represents the extreme zenith of \"poverty chic,\" appropriating the visual markers of economic vulnerability and absolute destitution for the consumption of the global elite. By translating the tragedy of homelessness into a highly commercialized fashion spectacle, Galliano tested the boundaries of what is socially appropriate to stage. Socio-Political Backlash: The collection generated immediate and fierce outrage. Protesters picketed Dior's offices at 30 Avenue Montaigne, furious at what they saw as Galliano's profound cynicism. The media echoed this anger; New York Times critic Maureen Dowd famously summarized the grotesque irony of the show, writing: \"Dior models who starve themselves posed as the starving\". Margiela vs. Galliano (The Ragpicker vs. The Woman of Fashion): Fashion critics, including Alexander Fury, noted that the collection's frayed, decomposed roots lay in Margiela's brand of deconstruction. However, while Margiela acted as a \"poetic ragpicker\" genuinely questioning the capitalist fashion system through anonymity and recycling, Galliano utilized these same deconstructive aesthetics to enhance an environment of pure materialistic lavishness and theatrical melodrama."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "poverty chic",
+      "theatrical excess",
+      "romantic decay",
+      "beggar couture",
+      "operatic drama"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -2443,7 +2492,14 @@ export const archiveData = [
       "strategy": "Brutalist Soul: Owens's structural strategy for his garments mirrors Brutalist architecture, utilizing a stark, almost monastic color palette of \"dust and bone\" alongside long, dramatic drapes. Monolithic Massing: His designs favor monumental, sculptural silhouettes built from heavy, often untreated fabrics like washed leather, crisp cottons, and densely woven wools. The garments function less like traditional clothing and more like a \"second skin for a nomadic tribe\". Architectural Shielding: By employing sweeping lines, exaggerated shoulders, and architectural cut-outs, Owens sculpts space with a powerful hand, turning the wearer into a \"walking monument of carefully considered forms and voids\". These heavy leather forms act as physical armor, offering protection and distance through their robust materiality. Visceral Wearability: Unlike avant-garde pieces that remain on a pedestal, Owens engineers his complex, Brutalist garments to be lived-in and walked-in, functioning as a daily uniform for the modern urbanite.",
       "critique": "Combating Exclusion and Racism: The runway presentation of \"Vicious\" was a highly charged socio-political statement. By having forty dancers pound the runway with aggressive \"grit faces\" rather than traditional, passive pouting lips, the collection served as a direct critique of the culture of exclusion, elitism, and racism that is deeply prevalent in the fashion industry. Subcultural Roots and Post-Binary Identity: Owens's overarching political framework is deeply queer and rooted in the goth and punk subcultures of Los Angeles and Paris. He utilizes these subcultural origins to offer a post-binary vision of masculinity and femininity that is grounded in the reality of the \"body in crisis\". Redefining the Avant-Garde: By treating clothing as philosophy, Owens acts as an architect of a new fashion language. He establishes that garments can possess immense strength while simultaneously housing quiet vulnerability, transforming the \"unwearable\" into a visceral expression of human lifestyle and defiance."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "step dressing",
+      "human backpack",
+      "community runway",
+      "dark romanticism",
+      "anti-fashion spectacle"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -2713,7 +2769,14 @@ export const archiveData = [
       "strategy": "Displaced Anatomy & Internal Padding: Rather than using clothing to complement the body's natural lines, Kawakubo deliberately disfigured the traditional silhouette by engineering garments with strategically placed, asymmetrical internal padding made of down or synthetic batting. Engineered Protuberances: The garments featured precise, architectural additions that created bulbous, hard-edged protrusions. For instance, a dress might feature a bulge extending 25-30 centimeters from the hip, or an asymmetric hump positioned over the shoulder blade measuring 15 to 20 centimeters in height. Obliteration of the Waistline: The traditional waistline, which serves as the primary reference point for the human silhouette, was frequently obliterated entirely and replaced by a continuous, undulating surface. Tectonic Craft: The structural mastery of the collection lay in how the outer fabric was manipulated. The seams and darting, typically used to contour fabric to the body, were instead engineered to contain these engineered distortions, creating a taut, stretched surface pulled tightly over the internal sculptural forms.",
       "critique": "Post-Humanism & The Grotesque: By challenging the notion of what a human body should look like, the collection is a definitive example of \"posthuman fashion\". The garments push the boundary between the human and non-human, utilizing grotesque, alien-like forms to decenter the idealized, classical body. Reclaiming Personal Space & Feminist Ideology: The collection functioned as a direct feminist critique of Western beauty ideals. By refusing to create clothing as a flattering accoutrement, Kawakubo reclaimed the body from the male gaze. The implicit message behind the engineered distortion was the feminist sentiment that women should be admired for their minds and intellect rather than their physical bodies. Clothing as an Autonomous Entity: \"Body Meets Dress, Dress Meets Body\" completely reversed the traditional relationship between wearer and garment. Rather than the clothing passively conforming to a preconceived biological shape, the lumps and bumps seemed to force the boundaries between the body and the dress, turning the garment into an independent sculptural entity that the body must react to and inhabit. Intellectual Disruption: The collection represents Kawakubo's mastery of intellectual disruption. By demonstrating that any departure from a crystallized standard of perfection should not be viewed as a flaw, she successfully dismantled the parameters prescribing what is considered \"high\" and \"low\" or \"beautiful\" and \"ugly\" in fashion."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "body horror",
+      "anti-beauty",
+      "lumps and bumps",
+      "grotesque chic",
+      "deconstructed form"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -2995,7 +3058,14 @@ export const archiveData = [
       "strategy": "Kinetic State and \"Stretch\": The foundational structural logic of the AW1998 collection was an exploration of \"stretch\" and movement. Yamamoto heavily utilized knits—both of a \"loving-hands-made-at-home variety\" and luxurious fluid jerseys—to explore new draping possibilities, combining these active materials with more static woven fabrics. The \"Delayed\" Reaction: Yamamoto's primary mechanical strategy for this collection was to actively experiment with the \"delayed\" reaction of certain fabrics, engineering the garments to intentionally contest and resist the natural movements of the wearer's body. Historical Referencing (20th vs 19th Century): For the majority of the collection, Yamamoto referenced 20th-century silhouettes, engineering looks like pre-World War II cargo-pocket peplums. Scaffolding and The Caged Finale: For the show's finale, the structural strategy shifted abruptly to hyper-exaggerated 19th-century proportions. The bridal gown featured a massive cream skirt supported by a visible internal framework—a bamboo cage strapped around the waist with canes radiating outward—paired with a vast My Fair Lady picture hat and subversively grounded with heavy Doc Martens.",
       "critique": "Kinetic Subversion: By deliberately engineering fabrics that possess a \"delayed\" reaction to contest biological movement, Yamamoto subverts the traditional Western expectation that clothing must seamlessly conform to the body. Instead, the garment asserts its own structural autonomy and weight, forcing the wearer to negotiate with the spatial environment it creates. The Art of Imperfection (Wabi-Sabi): This collection reflects Yamamoto's overarching aesthetic philosophy that \"perfection is ugly\". By incorporating raw finishes and exploring the natural contraction and aging of fabrics, he finds beauty in \"scars, failure, disorder, [and] distortion\". Clothing as Armor: Consistent with his broader oeuvre, the voluminous, untailored drapes in this collection function as a form of psychological and architectural shielding. Yamamoto treats clothing as a protective \"armor\" that guards the wearer's body from \"unwelcome eyes,\" establishing a safe, emotional distance between the individual and the outside world."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "wabi-sabi fashion",
+      "imperfect beauty",
+      "japanese minimalism",
+      "dark romance",
+      "anti-fit"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -3288,7 +3358,14 @@ export const archiveData = [
       "strategy": "Trompe L'Oeil & Body Illusion: The core structural strategy of \"Les Tatouages\" relied on garments constructed from signature second-skin mesh and sheer stretch tulle. These pieces were printed with dense, layered motifs—ranging from tribal tattoos and intricate Indian henna patterns to snippets of international banknotes and Eastern European currency—creating the deliberate illusion of tattooed skin. Historical Pastiche & Collage: Reflecting the globalized collage of the Parisian streets, Gaultier melded 18th-century court silhouettes (like brocade frock coats and waistcoats) with heavy, patchworked denim, printed kilts, sarongs, and fetishwear. Armor & Chainmail: Fusing the masculine and the feminine, the show's finale heavily referenced the armored figure of Joan of Arc. Gaultier utilized slices of chainmail recreated in silver sequins, metallic knitwear, and actual physical panels taken from suits of armor, which were layered over deconstructed medieval gowns and flattened corsets.",
       "critique": "The Postmodern Sensibility: The collection serves as a perfect example of postmodern fashion, playfully asserting the idea that \"nothing is original\" by dismantling and rebuilding how men and women dress. By surrendering cognitive command of the past, Gaultier seamlessly wove together elements of Eastern mysticism, punk rebellion, and classical French history. Commodification of Pluralism vs. Cultural Appropriation: While praised at the time for its multiculturalism, critical theory notes that the collection exemplifies the \"commodification of pluralism\". By uprooting deeply meaningful, regionally specific cultural products (such as traditional African tribal prints and Indian bridal henna) and transforming them into mere markers of Western \"exoticism,\" the collection allowed luxury consumers to play with ethnic identity without engaging with the complex realities of structural inequality or marginalization. Subverting Orthodox Beauty: Before this 1994 show, tattoos and body piercings were rarely seen in high fashion. By bringing subcultural body modification to the Parisian catwalk, Gaultier radically subverted traditional, polished beauty standards. Democratization of the Runway: Gaultier further challenged industry norms through his casting. He actively utilized street casting to create a radically diverse lineup that defied easy categorization regarding gender, race, and body shape, utilizing muses like the unconventionally beautiful Rossy de Palma, androgynous model Jenny Shimizu, and his long-time male muse Tanel Bedrossiantz alongside traditional supermodels."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "global mash-up",
+      "multicultural camp",
+      "corsetry as outerwear",
+      "gender play",
+      "carnival fashion"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -3398,7 +3475,14 @@ export const archiveData = [
       "strategy": "Sequential Layering (The Matryoshka Effect): The primary structural logic mirrored a Russian Matryoshka doll. Rizer began the show wearing only a frayed, raw minidress made of hessian sackcloth/jute. The designers systematically added nine to ten layers of couture garments on top of one another. Interconnected Componentry: The layering was not random; each successive garment was engineered to fit over the previous ones, acting as \"pieces in a puzzle\" where each new layer completed or mirrored a detail from the preceding tier. Material Tension: Viktor & Rolf deliberately contrasted unfinished, unconventional fabrics (like the frayed jute) with highly traditional, opulent couture materials, incorporating silk satin, heavy brocade, delicate lace, and intricate crystal and diamante embroidery. Monolithic Massing: As the layers accumulated, the model's physicality was engulfed by the sheer mass of the garments (weighing in excess of 70 kilograms). The final silhouette was a towering, bulbous cocoon-coat featuring shoulder pads raised high above her head and a colossal rose embellishment, making her head appear \"shrunk to the size of a walnut.\"",
       "critique": "Institutional Critique & The Speed of Fashion: The \"Russian Doll\" collection functioned as a profound commentary on the relentless cycle of consumption and the breakneck speed of the fashion industry. The staggering accumulation of clothes visually represented the \"sedimentation of fashion\" and the burden of constant overproduction. Parody vs. Homage: The performance walked a fine line between satire and reverence. While the absurd, immobilizing weight of the final layered silhouette parodied the ludicrous inaccessibility of haute couture, the meticulous, real-time dressing process paid genuine homage to couture as a highly crafted \"laboratory of ideas.\" Subverting the Catwalk: By stripping away the traditional linear catwalk procession and forcing the audience to watch the intimate, backstage act of dressing, Viktor & Rolf transformed the models from passive hangers into participants of performance art. Materiality Over Immateriality: While heavily conceptual, critics note that the collection was an exercise in haptic visuality. By highlighting the heavy weight of the clothes, the visible warmth experienced by the model, and the tactile differences between raw jute and fine lace, the designers anchored their abstract intellectual concepts firmly within the tangible, physical reality of the garments and the human body."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "conceptual couture",
+      "art installation fashion",
+      "wearable sculpture",
+      "labour of making",
+      "slowness as statement"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -3595,7 +3679,14 @@ export const archiveData = [
       "strategy": "Utilitarian Minimalism: The collection consisted of 81 looks that merged menswear and womenswear. The aesthetic was defined by what would now be termed \"quiet luxury\" or \"casual drama,\" utilizing a muted palette of white, khaki, yellow, olive green, and signature black. Subtle Deconstruction: The garments featured intricate details displayed rather plainly, prioritizing sheer layers, asymmetrical sleeves, and clean, architectural lines. Technical Integration (The Ballistic Vest): A defining structural element of this season was Lang's continued exploration of his iconic ballistic/bulletproof vest. Transforming a strictly technical, non-fashion garment into a piece of subtle elegance, the FW98 collection featured the vest rendered in elevated finishes like off-white and silk grey.",
       "critique": "Democratizing the Spectacle: By broadcasting his collection directly to the internet, Lang performed a massive institutional critique of the fashion hierarchy. He stripped away the elitist, gatekept nature of the traditional runway (usually reserved only for wealthy clients and top editors) and opened the experience up directly to the end consumer. The Medium is the Message: The technological disruption of the show was so profound that contemporary fashion critics spent more time reviewing the implications of live-streaming than the actual clothes themselves. Lang's foresight proved that cyberspace would fundamentally alter how fashion was consumed, communicated, and experienced globally. Urban Armor: Lang's elevation of the bulletproof vest and sturdy workwear elements served as a commentary on modern city life. It reflected a psychological need for protective, utilitarian \"armor\" tailored for the urban landscape, proving that function could seamlessly become high-fashion décor. Psychological Eroticism: As fashion critic Cathy Horyn noted, Lang's minimalism was never parochial; it possessed \"a rush of sin\". His austere, precise designs were charged with a distinct, subtle eroticism and psychological depth rooted in his Viennese heritage, showcasing an aesthetic that articulated identity through absolute restraint and powerful presence."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "quiet luxury",
+      "intellectual minimalism",
+      "anti-fashion fashion",
+      "stealth wealth",
+      "cerebral cool"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -3883,7 +3974,14 @@ export const archiveData = [
       "strategy": "High/Low Mashup & \"Fauxchino\": Scott's primary strategy was fusing the rigid, traditional codes of haute luxury with the lowest denominators of American junk culture. He engineered \"mutant hybrids,\" such as taking a classic, tailored Chanel-esque bouclé suit and color-blocking it with the tomato-red and mustard-yellow of a fast-food uniform. Literal Graphic Appropriation: Scott twisted the iconic golden arches of the McDonald's logo into Moschino's signature heart shape. This logo was plastered across quilted cross-body bags (shaped like Happy Meal boxes) and serving trays. Streetwear & Subcultural Silhouettes: Tapping into Moschino's 1990s hip-hop heritage (famously worn by The Notorious B.I.G. and Lil' Kim), the collection featured 80s and 90s streetwear silhouettes, including heavy gold chain accessories, leather overalls, padded jackets, and denim. Sartorial Kitsch & Eveningwear: For the finale, Scott parodied traditional evening gowns by transforming the models into literal candy wrappers and snacks. Jourdan Dunn wore a dress mimicking a Hershey's Kisses wrapper, Lily McMenamy wore a Budweiser \"King of Beers\" gown, and Lindsey Wixson closed the show in a wedding dress printed entirely with a nutritional facts label.",
       "critique": "The Ultimate \"Fast Fashion\" Critique: By transforming the minimum-wage uniform of a fast-food worker into a highly coveted luxury item costing thousands of dollars, the AW2014 collection acted as a surreal and satirical commentary on late-capitalist consumerism. It was a literal manifestation of \"fast fashion,\" directly equating the consumption of disposable junk food with the consumption of luxury trends. Downmarket Irony & Commodification: Scott masterfully utilized \"downmarket irony\" (the trend of luxury brands creating designs that mimic cheap, everyday items). By elevating \"trash\" to the runway, he proved that within the hyper-modern fashion system, luxury and mundane utility are merely different sides of the same capitalist coin, perfectly understood in any global market from \"Mumbai to Los Angeles.\" Subverting Fashion's Pretensions: By plastering calorie-dense junk food packaging across high-fashion eveningwear, Scott actively mocked the fashion industry's notorious elitism and fear of fat. The collection refused to take itself too seriously, successfully reigniting founder Franco Moschino's original ethos of using fashion as a joyful, irreverent form of protest and commentary."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "fast food camp",
+      "logo irony",
+      "consumer critique",
+      "fashion meme",
+      "kitsch maximalism"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -4165,7 +4263,14 @@ export const archiveData = [
       "strategy": "The collection's core structural strategy was the creation of sculptural cuirasses and molded leather bustiers designed to mimic ripped human physiques, resembling ancient Greek bronze armor with hyper-defined abdominals and nipples, introducing heroic nudity into high fashion. Deeply rooted in founder Elsa Schiaparelli's surrealist legacy, Roseberry integrated disembodied body parts directly into garments and accessories including box-frame handbags with snap closures shaped like noses, prosthetic nail-glove hybrids, and oversized golden brass jewelry molded into ears, teeth, and eyes. To redefine couture, Roseberry deliberately omitted traditional skirts, instead elevating utilitarian garments: blouson leather pants with elastic waists, bomber jackets, and denim jeans rendered in stone-washed silk duchess embellished with dangling gold padlocks. Embroidery and beading were treated not as delicate accents but as raw, barbaric jewelry, including a basket-weave wool cape covered in thousands of gold bugle beads referencing Schiaparelli's 1938 hair-embroidered veil and a gown shimmering with over 100,000 Swarovski crystals.",
       "critique": "By applying traditionally masculine ergonomics such as muscular abs and broad chest plates to the female body, the collection radically challenged gendered expectations of high fashion. As Roseberry quipped: if you want to look like a cupcake, you can go somewhere else. The collection reframes female empowerment through physical power and architectural shielding, transforming the wearer into a warrior rather than a passive object of beauty. The collection exemplifies the second coming of surrealism in fashion, acting as a psychological response to the unprecedented strangeness and uncertainty of the post-pandemic era. A standout conceptual look featured a model in a pristine sleeveless hooded dress carrying a sculpted gold baby being breastfed, elevating the biological act of motherhood into an iconic monumental work of sculptural art and seamlessly merging biological function with surrealist haute couture."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "surreal couture",
+      "trompe loeil",
+      "art fashion",
+      "body illusion",
+      "maximalist surrealism"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -4368,7 +4473,14 @@ export const archiveData = [
       "strategy": "Margiela's core structural strategy was to draft women's garments using heavily exaggerated menswear sizing, pushing the previous season's Italian size 74 to a brutal size 78 (roughly 14XL). To ensure the models were 'swimming' inside the garments rather than the fabric hanging limp, the Maison utilized a technique called 'hot molding' — heat was applied to garments while draped over extra-large mannequins, setting the fabric so it autonomously retained a massive three-dimensional shape even when worn by a smaller frame. The atelier sourced vintage deadstock fabrics that had been undisturbed for years; these aged textiles, possessing a distinct drape and 'mood' due to time, were used to craft entirely new silhouettes including an oversized leather biker jacket. Consistent with his signature aesthetic, Margiela exposed the hidden interior architecture of the garments — bust darts and internal blazer structures were deliberately displaced and presented on the exterior. To make the size 78 trousers wearable, the excess cloth at the waist was simply folded over itself and looped with a hook and eye, turning a structural necessity into an elegant design feature.",
       "critique": "Margiela's monolithic gargantuan shapes acted as a direct contrarian attack on the prevailing fashion trends of the early 2000s — aggressively dominated by ultra-slim silhouettes and low-rise skinny jeans. Due to the low lighting and the heavy cumbersome nature of the garments, models walked at an incredibly slow pace, subverting the fast-paced 'speed walking' of the typical catwalk and replacing it with a creeping, intimate, slightly uneasy 'horror-tinged surrealism'. Margiela continued his philosophical dedication to anonymity by obscuring the models' faces with wigs whose exaggerated bangs covered the eyes, decentralizing human identity and redirecting the audience's gaze entirely toward the sculptural integrity of the clothing. By sourcing undisturbed vintage deadstock fabrics, Margiela functioned as a 'poetic ragpicker' capturing the silent testament of a fabric's past life — honoring the natural degradation and settling of the material and proving that true luxury is found not in pristine novelty but in the history and process embedded within the cloth."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "deconstructed tailoring",
+      "anti-fashion",
+      "found material",
+      "artisan concept",
+      "invisible brand"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -4503,7 +4615,14 @@ export const archiveData = [
       "strategy": "Rejecting the aggressive harsh constraints of her earlier punk aesthetic, Westwood turned to theatrical historical romanticism. The structural strategy of Pirates included voluminous flowy pirate and poet shirts, breeches, and dramatic sashes. A key mechanical feature of the garments was their asymmetrical necklines, introducing a deliberate off-kilter fluidity to the drape. The collection relied on a rich eclectic mix of textiles, engineering looks out of figured cotton, rayon ensembles, and printed plain weave cotton shirts; accessories were equally theatrical, featuring muslin stockings and hats crafted from stiffened felt trimmed with leather and braid. The visual styling was heavily gender-fluid — men were presented wearing dramatic cosmetics alongside ruffled shirts, shiny rayon waistcoats, and tight pants, blurring the boundaries between masculine and feminine dress.",
       "critique": "The Pirates collection and the resulting New Romantic movement were conceived as a direct cultural retaliation to punk. By 1981 the punk scene had become increasingly violent and co-opted by neo-Nazis and skinheads; Westwood sought to 'destroy the word conformity' by pivoting toward an entirely new extravagant aesthetic. The flamboyant theatricality functioned as a form of psychological escapism, allowing British youth to momentarily forget their relative poverty and serving as a glamorous distraction from the UK's severe economic recession and the lingering effects of the Winter of Discontent. While the New Romantic look celebrated extreme individualism and the DIY ethic of punk, Westwood's insistence on strict creative control caused friction — famously, Boy George left Bow Wow Wow to form Culture Club specifically because he resented Westwood attempting to dictate how he dressed. Despite its hyper-localized roots in London club culture, Pirates proved that subcultural streetwear could dictate high fashion — its asymmetrical earth-colored historically-referenced separates became one of the few worldwide fashion trends to emerge purely from London since the 1960s youthquake."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "punk royalty",
+      "pirate chic",
+      "tartans and bondage",
+      "british subversion",
+      "dressing up as protest"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -4672,7 +4791,14 @@ export const archiveData = [
       "strategy": "Prior to this collection, Simons was celebrated for inventing the emphatically narrow tailored menswear silhouette that defined late-1990s fashion. With Riot! Riot! Riot! he completely abandoned these gangly slim shapes in favor of aggressive hyper-oversized bulky volumes. The structural strategy was heavily inspired by the everyday dress code of Eastern European youth — Simons noted observing young people from Ukraine and Romania at Viennese flea markets who would simply lay layer by layer to create their own volumes against the cold. Models were wrapped in distressed sweatshirts, thick cable knits, long black coats, and sleeveless hoodies. The collection's most iconic structural intervention involved taking standard-issue inexpensive Fostex MA-1 camouflage bomber jackets and elevating them via DIY customization — Simons tacked on patches featuring Joy Division and Sonic Youth concert flyers, Christiane F. movie posters, Bauhaus artwork, and news clippings detailing the disappearance of Manic Street Preachers guitarist Richey Edwards. He utilized heavy layering and balaclavas to obscure the models' faces, creating an environment of unfamiliarity, mystery, and physical shielding.",
       "critique": "This collection is historically credited as the definitive moment that shaped the relationship between youth streetwear and high-end luxury fashion. By introducing a baggier menacing look plastered with postmodern graphic mishmash, Simons laid the exact blueprint for the heavy graphics and oversized layering used decades later by designers like Virgil Abloh at Off-White and Demna Gvasalia at Vetements and Balenciaga. At the time of release the collection's aggressively dark dystopian aesthetic was highly controversial — because models marched down the runway completely hooded and wrapped in bulky garments, the press dubbed the look 'fashionable terrorists' or 'terrorist chic', a moniker that took on a heavier criticized resonance when the September 11 attacks occurred just months later. The collection served as a profound psychological reflection of teenage rebellion, angst, and isolation — by heavily referencing tragic isolated musicians like Ian Curtis and Richey Edwards, Simons connected his garments directly to the raw emotional reality of youth subcultures feeling detached from mainstream society. The patched camo bomber has transcended its status as mere clothing to become a cornerstone cultural artifact, worn by Kanye West, Rihanna, and Drake, with the Riot jacket now fetching upwards of $47,000 USD on the secondary market — single-handedly helping transform the niche hobby of collecting vintage fashion into a lucrative high-stakes archive business model."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "rave culture",
+      "teen rebellion",
+      "hauntology fashion",
+      "subculture elevated",
+      "nineties nostalgia"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -4863,7 +4989,14 @@ export const archiveData = [
       "strategy": "The foundational structural logic of the collection was the literal interpretation of a 'scab'. Takahashi engineered garments where individual frayed patches and ethnic fabrics were painstakingly hand-stitched over one another to replicate human scabs, resulting in garments covered in loose hanging threads and raw asymmetrical edges. Takahashi integrated heavy hardware and utilitarian details characteristic of crust punk — encircling zippers, buckles, and D-rings embellished the waists of cargo pants. Rather than relying solely on rigid heavy denim as typical in punk aesthetics, Takahashi utilized surprisingly lightweight stretchy cotton for bottoms, fusing them with intricate knit panelling that transitioned down the leg into the dense patchwork. The collection heavily appropriated graphics from the UK crust punk band Sedition, specifically incorporating the inverted crescent moon from their 1993 Earth Beat LP across garments and hessian pouches. For the finale, the lights went out and models emerged completely obfuscated in brightly multi-colored patchwork burqas.",
       "critique": "Heavily influenced by his youth in the UK punk scene and his time as the frontman for the Tokyo Sex Pistols, Takahashi used SCAB to force high fashion to confront crust punk — by elevating aesthetics of frugality, decay, and DIY repair onto the luxurious Parisian catwalk, he championed an anti-capitalist anti-establishment ideology. Philosophically, a scab is a distortion — a natural protective crust that forms as the body responds to a wound or displacement; in a deconstructivist lens the tattered clothing and holes juxtaposed with the reinforced heavy patching represented the paradox of destruction and repair, mirroring Undercover's intent to rebuild and subvert the traditional fashion industry. The inclusion of the burqa was a radical daring political intervention — in a post-9/11 world steeped in Islamophobia and war, Takahashi recontextualized the burqa, often framed by Western media as a sign of absolute terror or repression, as a symbol of gentle mysterious protection and punk rebellion against hegemonic norms. It functioned as a non-aggressive yet incredibly powerful anti-war statement. During a period when the West was highly suspicious of foreign aesthetics, Takahashi actively celebrated globalism by embedding ethnic patterns such as Datooga-inspired full-arm bangles from Tanzania within the crust punk framework, demonstrating a profound appreciation for marginalized cultures."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "anti-war statement",
+      "punk deconstruction",
+      "political protest",
+      "dark romanticism",
+      "subculture chaos"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -5060,7 +5193,14 @@ export const archiveData = [
       "strategy": "Adrover's core structural methodology was the radical repurposing and upcycling of preexisting garments — a technique directly compared to Marcel Duchamp's readymades and Robert Rauschenberg's combine paintings. He integrated discarded everyday objects and iconic luxury pieces from his urban environment directly into his clothing compositions. Adrover engineered new avant-garde silhouettes by slicing up hyper-recognizable luxury goods: he famously took a classic Burberry trench coat and reconstructed it inside-out and backwards to create a plaid dress, and dismantled a Louis Vuitton bag to craft a miniskirt. He utilized distinctly non-fashion items to build the internal architecture of his garments — most notably using New York Yankees baseball caps as structural shoulder pads beneath a navy sweater. He also deconstructed two pairs of trousers, resewing one pair into a cropped jacket paired with Hermès belts. The collection's most poignant and famous piece was a tailored striped overcoat constructed entirely out of a discarded stained mattress that had belonged to Adrover's recently deceased neighbor, the famous queer writer and raconteur Quentin Crisp; Adrover distressed the fabric further by burning it on a stove in his East 3rd Street basement.",
       "critique": "During an era dominated by corporate fashion conglomerates and an obsession with polished logo-heavy luxury, Adrover's collection served as a sharp critique of capitalist consumerism and fashion's growing homogeneity. By illegally appropriating the ultimate status symbols of the time (Burberry, Louis Vuitton), he hijacked their cultural cachet while simultaneously mocking the industry's logo-mania. Adrover actively championed imperfection, decay, and raw honesty — by transforming the stained abandoned mattress of Quentin Crisp into a beautifully tailored garment, he elevated urban detritus into poetic invention, proving that the histories, memories, and physical wear embedded within an object hold more profound value than pristine mass-produced commercial clothing. The collection functioned as a love letter to the gritty reality of downtown New York City culture — the juxtaposition of European luxury goods with the ubiquitous working-class NY Yankees cap highlighted the contrasting socio-economic realities of the city, celebrating the authentic street style and rampant bootleg culture of the era. Long before sustainability became an industry buzzword, Adrover was a trailblazer for circular design, operating under severe financial constraints and turning those limitations into a profound strength by proving that luxury upcycling could yield garments worthy of high-fashion runways and museum archives."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "dumpster couture",
+      "anti-fashion",
+      "camp maximalism",
+      "reclaimed luxury",
+      "queer provocation"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -5244,7 +5384,14 @@ export const archiveData = [
       "strategy": "The core structural intervention of the skeleton dress, created in collaboration with architect Isaïe Bloch, was a literal reversal of human anatomy — rendered in white polyamide, the dress functioned as a haunting exoskeleton, making it appear as if the body had been turned inside out by wearing its bones on the exterior. Van Herpen fundamentally altered fashion construction by utilizing rapid prototyping and 3D printing; this technology allowed her to materialize complex digitally designed 3D folds and structures that would be physically impossible to replicate by hand or with traditional needle and thread. Her structural blueprint relied on observing complex organic forms in nature — fossils, shells, and bone structures — and engineering them out of distinctly cold inorganic rigid plastic materials. 'Capriole' is a dressage term for a horse's leap, and the collection explored the moment of suspension between gravity and flight as a formal design problem.",
       "critique": "Van Herpen's work serves as the ultimate sartorial manifestation of posthumanism — by merging human flesh with rigid digital polymers, she blurs the boundaries between humans and machines, organic and artificial. She decenters the human subject, proposing instead a hybrid figure deeply entangled in a 'nature-culture continuum' where technology itself is viewed as a living self-organizing entity. Philosophers frequently analyze van Herpen's extreme silhouettes through Gilles Deleuze and Félix Guattari's concept of the 'body without organs' — by applying grotesque alienating non-normative forms to the female figure, van Herpen actively de-organizes and de-stratifies the socially disciplined body. Her exoskeletons liberate the wearer from conventional beauty ideals, initiating a dynamic process of 'becoming' other than strictly human. While hailed as futuristic, the 3D-printed plastics used in this collection present a unique theoretical and conservational paradox: the advanced polyamide used to print the Capriole skeleton dress is highly susceptible to rapid degradation. Fashion archivists note that the dress has already begun to shift from pristine white to a yellowish coloration, proving that even cutting-edge synthetic materials possess a transient ephemeral lifespan that continually alters the artifact's visual reality."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "3d printed couture",
+      "biomimicry",
+      "techno organic",
+      "wearable science",
+      "cyborg nature"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -5448,7 +5595,14 @@ export const archiveData = [
       "strategy": "As fashion critic Sarah Mower noted in her review of this debut, 'Pugh has a thing about balloons'. Pugh utilized PVC inflated into voluminous coats, continuing to develop the pneumatic beach-ball fabric balloons that defined his 2003 Central Saint Martins graduation collection. He built his garments using materials entirely divorced from traditional luxury — knitted refuse sacks, parachute silk, shiny latex, cellophane fringing, foam footballs, and Perspex discs linked together to mimic chainmail. The structural logic of the collection involved 'nonsensically shaped wearable sculptures' designed to aggressively distort the human body almost beyond recognition. The models' frail bodies were swamped and extended by immense geometric shapes such as cuboid shoulders, while their faces were frequently obscured by impenetrable black masks and shiny latex.",
       "critique": "This collection firmly entrenched Pugh in the lineage of fashion-as-performance-art, drawing direct comparisons to the 1980s club culture of Leigh Bowery as well as the theatricality of Alexander McQueen and Vivienne Westwood. At this point in his career his focus was entirely on experimental avant-garde spectacle; he famously struggled to make ends meet and had yet to sell a single wearable commercial dress. Theorists note that Pugh's models appeared profoundly uneasy with their environment, looking as though they were literally 'carrying fragments of the city on their shoulders' — the heavy oppressive architectural designs evoked an apocalyptic sci-fi future where the human body is forced to organically merge with or shield itself from the debris of the urban landscape. Despite the menacing dystopian and monochromatic appearance of the inflated volumes, the collection retained a playful club-kid humor; Pugh himself summarized the philosophical core of his designs by stating they are fundamentally 'about the struggle between lightness and darkness'."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "sculptural excess",
+      "fantasy fashion",
+      "queer camp",
+      "wearable art",
+      "theatrical grotesque"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -5715,7 +5869,14 @@ export const archiveData = [
       "strategy": "Hacking & Defacement: Vetements’ core structural logic relied on \"hacking\" the existing fashion system. The strategy involved taking iconic, everyday products that other labels were known for (such as Hanes T-shirts or Manolo Blahnik heels) and reworking them through creative defacement—a process that birthed the phrase \"to Vetementize\" Downmarket Irony (The DHL Shirt): The most famous sartorial intervention of this era was the exact reproduction of a standard DHL courier T-shirt. Vetements paraded this mundane uniform down the SS2016 runway, subverting it by attaching a luxury price tag of £185 Engineering the \"Fashion Meme\": Gvasalia designed garments specifically to be \"viral.\" The clothing was engineered like internet memes—intended to be copied, modified, shared, and commented upon across digital platforms, giving the garments as much life online as they had offline",
       "critique": "Post-Postmodernism & Capitalist Kitsch: The 2015/2016 Vetements collections are definitive examples of post-postmodernism. By turning a working-class delivery uniform into a highly expensive, coveted item, Vetements delivered a calculated disruption and assault on the fashion status quo, making profound statements on \"capitalist kitsch\" and bringing anti-fashion back to the luxury runway Romanticising the Mundane: Gvasalia actively romanticised the ordinary, bringing visibility to everyday communities and transforming mundane utility wear into fetishised high-fashion commodities. This signaled a massive shift in consumer culture: unlike the 2000s, where traditional logos (like Louis Vuitton or Chanel) represented ostentatious wealth, Vetements proved that non-fashion logos and \"downmarket irony\" plugged much more effectively into the millennial generation's vibe Subverting Intellectual Property: By actively creating fashion memes and inviting parody, satire, and pastiche, Vetements subverted the traditional, reverential rights-based fashion system that typically frowned upon copying and imitation. As critics noted, being transformed into a meme was no longer a mark of derision, but the ultimate signifier of cultural relevance"
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "demna irony",
+      "logo fatigue",
+      "normcore subverted",
+      "fashion meme",
+      "anti-fashion fashion"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -5941,7 +6102,14 @@ export const archiveData = [
       "strategy": "Fashion Infused into Street: Oliver’s core structural strategy was to elevate street basics through highly crafted, conceptual garment construction. As critics noted, rather than merely infusing street elements into high fashion, the collection showed \"fashion infused to street\" Androgynous Componentry: Though officially designated as a menswear collection, Oliver enlisted both male and female models to walk the runway. He engineered a range of androgynous designs featuring billowy silhouettes, futuristic cut-and-sew techniques, revealing cutouts, and corset-inspired suits Bold Branding and Hardware: Garments heavily featured the iconic \"HBA\" block-letter logo printed across oxfords, blouses, jackets, and shorts in a bold laminate. Utilitarian zipper details were streamlined throughout the tailored trousers and jumpers Theatrical Proportions: Key standout pieces included a double-layered ivory jacket described as \"straightjacket chic\" and a voluminous, textured \"abominable snowman-like sweatshirt and skirt combo\" for the finale. The styling complemented this gritty, urban reality by sending models down the runway with dirt-caked faces to represent the grueling NYC streets",
       "critique": "Pioneering the Luxury Streetwear Movement: This specific era of Hood By Air is historically credited with elevating the very concept of streetwear in the minds of the luxury industry’s cognoscenti. By refusing to play by the rules of fashion's old guard, Oliver laid the foundation for the massive high-fashion/streetwear crossover that dominated the 2010s. Virgil Abloh directly credited HBA with \"ushering in a new era of American designer\" Queer Power and Ballroom Glamour: As a Black gay man raised around the bright lights of Ballroom culture and club kid costumery, Oliver imbued his collections with a radical queer aesthetic. His designs unapologetically placed the power and glamour of these marginalized communities front and center, utilizing fashion as an escape hatch and demanding a seat at the elite table Subverting Hyper-Masculinity: By placing skirts, crop tops, and corsets on unconventional, often thuggish-looking models, Oliver actively challenged and subverted the hyper-masculine norms typically associated with hip-hop and streetwear. The collection did not toy with androgyny simply for shock value, but rather to create garments that \"exude power\" regardless of traditional gender binaries Corporate Irony: True to his streetwear roots, Oliver frequently played with recognizable motifs in pop culture—such as flipping the Warner Bros. logo—long before corporate fashion irony from labels like Balenciaga and Vetements became a mainstream runway staple"
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "ballroom culture",
+      "streetwear elevated",
+      "queer underground",
+      "logo subversion",
+      "ghe20goth1k"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -6177,7 +6345,14 @@ export const archiveData = [
       "strategy": "Mathematical Origami & The Golden Section: The structural foundation of the collection relied on rigorous, mathematical pattern-making, utilizing folds and three-dimensional forms akin to complex paper lanterns. Watanabe engineered interconnected pyramids, honeycombs, and waffles that blossomed over the body, even employing the golden section (a mathematical sequence found in nature) to form rigid diamond-shaped patterns Kinetic Concertina Expansion: To create the bouncy, honeycomb-shaped holes, horizontal bands of fabric mesh were stacked and attached at offset intervals. The length of the slits and the spacing between seams were strictly controlled so that when gravity took hold, the \"concertina\" latticed garments bounced and expanded dynamically as the models walked Bodily Obfuscation (The Spherical Helmets): The clothing was paired with extreme, sculptural headgear crafted by hair artist Tomihiro Kono. These domed, lampshade-like pieces were constructed from vertical fins of material repeated in a radial pattern around 360 degrees. In some looks, the models' heads were completely obscured by spherical helmets of pleats and folds, creating a sense of being entirely cocooned away from reality Grounding the Avant-Garde: To contrast these wild, exoskeleton-like structures, Watanabe anchored the base layers with highly wearable, everyday clothing. The 3D origami structures were worn over simple, crisp white shirts, loose tailored trousers, and studded brogues, ensuring the garments remained grounded",
       "critique": "Fashion as Hardcore Science: Watanabe aggressively merged science with fashion, proving that clothing can be a feat of hardcore numerical calculation. This \"technology attack\" was made literal by makeup artist Isamaya Ffrench, who doodled complex algebraic equations across the models' hands, legs, chests, and necks 2D to 3D Incarnations: Critics noted that Watanabe's structures functioned as 3D incarnations of Victor Vasarely's Op-Art paintings. By taking flat, 2D planes and manipulating them to explode into 3D reality, Watanabe broadened the general vision of how the human body can be represented and framed by clothing The Parisian Precision: Unlike the \"undone and hedonistic\" styling often seen in London, Watanabe’s AW15 presentation was lauded for its absolute Parisian precision. It stood as a powerful reminder that while much of modern fashion relies on simple design-by-numbers, true avant-garde fashion can push physical dimensions and technique to the absolute limit"
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "mathematical fashion",
+      "geometric precision",
+      "op art dressing",
+      "techno couture",
+      "structure over drape"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -6381,7 +6556,14 @@ export const archiveData = [
       "strategy": "Kinetic Extensions and Corporeal Framing: Green utilized wood, cardboard, and muslin to create kite-like structures and sail-masts worn by barefoot models. These architectural interventions acted as kinetic extensions of the body, allowing garments to actively catch the breeze and interface with the surrounding spatial volume. Deconstructed Assembly: The collection rejected conventional heavy tailoring and hardware; instead of standard zips or buttons, Green employed a system of simple fabric ties to pull, wrap, and close the garments. This created slouchy, loose silhouettes punctuated by deliberate slits and holes with perfectly bound edges. Monochromatic Asceticism: To maintain rigorous aesthetic focus, the collection utilized a limited palette. Most notably, an intense electric blue was deployed to project a specific energetic frequency, acting as a visual palette cleanser from the extreme multi-tonal prints of previous seasons.",
       "critique": "Subversion of Hyper-Masculinity: Green engineered an anthropological critique of traditional male stoicism. By sending barefoot models down the runway in sweeping robes that evoked samurais, priests, and gurus, he replaced aggressive posturing with a radical vulnerability. This established a new paradigm where delicacy and emotion exude structural power. Post-Gender Modularity: Although strictly scheduled as a menswear presentation, the fluid geometry of the collection immediately captured a dedicated female clientele. The garments stripped away anatomical hyper-focus, functioning as unisex armor and reflecting the collapsing boundaries of gender-specific semiotics. Spiritual Asceticism: The aesthetic language of the collection operated as a minimalist, almost monastic retreat. Reviewer Tim Blanks noted the \"Zen-like\" quality of the clothing, isolating the garments as artifacts of a modern, spiritual subculture, distinct from the trend-based consumption of the era."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "raw menswear",
+      "vulnerable masculinity",
+      "workwear deconstructed",
+      "emotional tailoring",
+      "bare minimum"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -6751,7 +6933,14 @@ export const archiveData = [
       "strategy": "Corporeal Alteration and Prosthetics: Michele collaborated with the Roman special effects studio Makinarium to engineer hyper-realistic silicone prosthetics. Models carried exact replicas of their own severed heads, cradled baby dragons, or sported a third eye on their foreheads. These interventions treated the anatomical body as a mutable canvas, actively subverting biological limitations. Sartorial Collage: The construction of the garments relied on an extreme, ahistorical layering system. The collection aggressively clashed textures, eras, and global signifiers; pairing New York Yankees logos with Scottish tartans, Russian babushka headscarves, and Manga illustrations. This structural approach dismantled traditional hierarchies of taste. Clinical Staging: The show's environment was engineered to resemble a sterile operating theater complete with PVC-covered waiting room chairs, LED lighting, and panic-inducing monitor sounds. This specific spatial volume positioned the designer as a surgeon of style who actively splices and sutures disparate identities together.",
       "critique": "Strategy (Architectural & Structural Logic) Corporeal Alteration and Prosthetics: Michele collaborated with the Roman special effects studio Makinarium to engineer hyper-realistic silicone prosthetics. Models carried exact replicas of their own severed heads, cradled baby dragons, or sported a third eye on their foreheads. These interventions treated the anatomical body as a mutable canvas, actively subverting biological limitations. Sartorial Collage: The construction of the garments relied on an extreme, ahistorical layering system. The collection aggressively clashed textures, eras, and global signifiers; pairing New York Yankees logos with Scottish tartans, Russian babushka headscarves, and Manga illustrations. This structural approach dismantled traditional hierarchies of taste. Clinical Staging: The show's environment was engineered to resemble a sterile operating theater complete with PVC-covered waiting room chairs, LED lighting, and panic-inducing monitor sounds. This specific spatial volume positioned the designer as a surgeon of style who actively splices and sutures disparate identities together. Critique (Socio-Political & Theoretical Analysis) Post-Human Identity and Cyborg Theory: Grounded in Haraway's framework, the collection served as a rigorous audit of the cyborg as a post-identity figure. By rejecting rigid binary boundaries between human and animal, male and female, or nature and culture, the garments celebrated the self as an assembled, engineered construct rather than a fixed biological essence. Semiotic Pluralism: Michele engaged in a radical flattening of cultural codes. By placing high-fashion tailoring alongside lowbrow pop culture iconography and religious vestments, the collection decoded the underlying mechanics of modern consumption. It suggested that in a hyper-connected digital age, identity is curated through a chaotic, endless stream of visual data. Subverting the \"Natural\": The collection did not aim for traditional aesthetic beauty; instead, it explored the grotesque and the uncanny. By isolating garments that actively challenged the concept of \"natural\" human development, the archive of looks functioned as surrealist armour for a generation navigating an increasingly synthetic and fragmented reality."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "maximalist chaos",
+      "geek chic",
+      "cyborg kitsch",
+      "aesthetic overload",
+      "postmodern mix"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -6983,7 +7172,14 @@ export const archiveData = [
       "strategy": "Macabre Staging and Corporeal Resurrection: Browne engineered a highly controlled, cinematic environment by utilizing caskets to illustrate an uncanny state of dreaming and resurrection. This specific spatial volume forced the audience to confront the garments as artifacts of the afterlife; blending the clinical precision of his tailoring with a theatrical, surrealist narrative. Monochromatic Armour: The collection relied on a rigorous, monochromatic palette of black, white, and signature grey. By isolating these tones, Browne stripped away superficial embellishment in favor of uncompromising structural integrity, utilizing heavy wools and flannels to construct garments that act as surrealist armour. Bodily Obfuscation and Exaggerated Proportions: Models were shrouded in tulle veils, effectively erasing individual identity to emphasize the monolithic massing of the clothing. The tailoring warped traditional mid-century silhouettes by deploying inflated shoulders, extreme peplums, and bound layers that actively subverted standard anatomical codes.",
       "critique": "Semiotic Sabotage of the Uniform: By filtering the rigid codes of the mid-century grey flannel suit through a darkly feminine and gothic lens, Browne engaged in a rigorous audit of American corporate conformity. The collection dismantled the structural power of the uniform, morphing it into an avant-garde costume that questions the boundaries between the living and the dead. The Uncanny and the Anti-Spectacle: While the staging was undeniably theatrical, the clinical execution of the garments provided a forensic analysis of the uncanny. The models functioned as living dolls or reanimated brides, utilizing visionary image-making to challenge societal comfort zones and explore the anxieties surrounding death, beauty, and female bodily autonomy. Institutional Critique: By placing this morbid display inside the hallowed, academic halls of a major public library, Browne actively engaged in institutional critique. The juxtaposition of rigorous academia with subversive visual culture cemented the runway as a cultural artifact rather than a mere commercial exercise."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "dark academia",
+      "gothic tailoring",
+      "the uncanny",
+      "macabre prep",
+      "deconstructed classic"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -7226,7 +7422,14 @@ export const archiveData = [
       "strategy": "The Anthurium as Structural Anchor: Anderson selected the anthurium as the collection's central motif due to its naturally synthetic appearance. This waxy, highly eroticized blossom was mutated into hard fiberglass bodices, wrapping the body as surrealist armour. The toxic beauty of the flower functioned as a semiotic anchor for the entire collection, blurring the line between a product of nature and an object of design. Pixelated Flattening and Trompe l'Oeil: A key architectural strategy involved the deployment of glitched garments. Anderson engineered 8-bit, pixelated hoodies, t-shirts, and chinos that appeared flat and completely devoid of three-dimensional depth. This corporeal flattening actively interfaced with the physical body, transforming the wearer into a walking optical illusion and forcing the audience to question their own depth perception. Kinetic Rigidity and Impractical Volume: The tailoring warped conventional silhouettes through the use of extreme panniers and stiffened, wire-framed mini dresses that jutted outwards to restrict spatial volume. Sweaters featured elevated, cardboard-like necklines that obscured the face, while footwear incorporated deflated, rubber balloons. These design choices abandoned utilitarian function in favor of uncompromising sculptural massing.",
       "critique": "Strategy (Architectural & Structural Logic) The Anthurium as Structural Anchor: Anderson selected the anthurium as the collection's central motif due to its naturally synthetic appearance. This waxy, highly eroticized blossom was mutated into hard fiberglass bodices, wrapping the body as surrealist armour. The toxic beauty of the flower functioned as a semiotic anchor for the entire collection, blurring the line between a product of nature and an object of design. Pixelated Flattening and Trompe l'Oeil: A key architectural strategy involved the deployment of glitched garments. Anderson engineered 8-bit, pixelated hoodies, t-shirts, and chinos that appeared flat and completely devoid of three-dimensional depth. This corporeal flattening actively interfaced with the physical body, transforming the wearer into a walking optical illusion and forcing the audience to question their own depth perception. Kinetic Rigidity and Impractical Volume: The tailoring warped conventional silhouettes through the use of extreme panniers and stiffened, wire-framed mini dresses that jutted outwards to restrict spatial volume. Sweaters featured elevated, cardboard-like necklines that obscured the face, while footwear incorporated deflated, rubber balloons. These design choices abandoned utilitarian function in favor of uncompromising sculptural massing. Critique (Socio-Political & Theoretical Analysis) Hyperreality and the Digital Glitch: Grounded in a rigorous audit of our hyper-connected digital age, the collection decoded the underlying mechanics of modern visual culture. The pixelated garments operated as a direct commentary on the screen as the primary mediator of reality. By materializing a digital glitch in physical cotton, Anderson highlighted the absurdity of our increasingly synthetic existence. Subverting the \"Natural\": The collection refused the traditional, romanticized tropes of springtime florals. Instead, it interrogated the grotesque and the uncanny elements of nature. The oversized anthurium breastplates and rigid enamel dresses provided a forensic analysis of artifice, treating the female body as a canvas for surreal, almost alien, botanical interventions. Semiotic Sabotage of Silhouette: By deploying 18th-century pannier shapes alongside exaggerated, floor-length sleeves and shrunken polos, Anderson engaged in a radical sabotage of traditional dress codes. This deliberate impracticality functioned as a critique of class dynamics and status. It positioned space-consuming, difficult garments as the ultimate luxury, rendering the female form both hyper-visible and structurally protected."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "trompe loeil",
+      "hyperrealism",
+      "internet brain",
+      "glitch aesthetic",
+      "absurdist surrealism"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -7514,7 +7717,14 @@ export const archiveData = [
       "strategy": "Regenerative Assemblage: Serre’s core structural logic relied on an uncompromising commitment to upcycling. Nearly half of the collection was constructed from end-of-life materials. She engineered tailored suiting from deadstock moiré, draped post-apocalyptic robes from repurposed terrycloth towels, and spliced together regenerated denim, actively dismantling the luxury sector's reliance on virgin resources. Survivalist Componentry & Anatomy: The garments functioned explicitly as survival gear for a damaged planet. The body was encased in aerodynamic, protective layers featuring utilitarian hardware, radiation-style suits, and heavy PVC outerwear. Accessories were hyper-functional, treating the anatomical body as a fragile entity requiring shielding from a toxic environment. The Crescent Moon as Semiotic Anchor: Serre deployed her signature crescent moon motif across second-skin bodysuits and balaclavas. This ubiquitous logo functioned as an ambiguous tribal marker or a bio-hazard insignia for a newly formed, post-apocalyptic underground, tightly wrapping the body to serve as a base layer of dystopian armour.",
       "critique": "Ecocriticism and the Anthropocene: Grounded in a rigorous audit of the climate crisis, \"Marée Noire\" served as a stark visual translation of the Anthropocene. By simulating the aesthetic of a global oil spill through an initial sequence of entirely black, uniform-like garments, the collection decoded the underlying mechanics of industrial devastation and consumer complicity. The Aesthetics of Climate Anxiety: Serre refused to provide a utopian vision of the future. Instead, she explored the anxiety, dread, and necessary resilience of a generation inheriting a dying planet. The integration of face masks and balaclavas—eerily prescient just months before the global pandemic—highlighted an era where breathable air and bodily safety are treated as extreme luxury. Subversion of Luxury Codes: The collection engaged in institutional critique by elevating discarded, domestic materials (like crochet and bath towels) to the level of high-fashion construction. This strategy stripped away the traditional, elitist codes of Parisian haute couture, replacing them with a radical, pragmatic approach to creation where survival, rather than opulence, is the ultimate aesthetic goal."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "eco dystopia",
+      "upcycled future",
+      "climate anxiety fashion",
+      "patchwork survival",
+      "apocalypse chic"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -7813,7 +8023,14 @@ export const archiveData = [
       "strategy": "Lagerfeld's structural approach for the collection centred on a deliberate collision of the house's aristocratic codes with democratising sportswear logic. Classic Chanel tweed suits were cut oversized and slouched; interlocking CC logos were printed as graffiti-style repeat patterns on jersey; pearls were scaled to absurd proportions and worn as body chains. The theatrical boulevard set functioned as an architectural strategy — the runway became a social space rather than a performance space, and the models' protest march disrupted the passive spectatorship of the fashion show format entirely.",
       "critique": "The collection invites reading through the lens of what cultural theorists have called 'commodity feminism' — the absorption of feminist signifiers into luxury branding as a means of expanding market appeal without substantive political commitment. Lagerfeld, a man, directing a group of predominantly white, predominantly thin models to march with feminist placards through a purpose-built simulacrum of a Parisian street constitutes a hyperreal political performance: all the signs of activism with none of its material stakes. Yet the show's cultural impact was undeniable. It made the front pages of newspapers that rarely covered fashion, forced public discourse about feminism in luxury spaces, and positioned Chanel as a brand willing to occupy contested ideological territory."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "feminist protest",
+      "power suiting",
+      "logo maximalism",
+      "chanel irony",
+      "political runway"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -8179,7 +8396,14 @@ export const archiveData = [
       "strategy": "Jacobs structured the collection around the logic of layered utility: silk organza blouses were worn over structured bustiers; fluid trousers were cut with architectural precision at the hip and cuff; outerwear was constructed with the kind of internal scaffolding more commonly associated with couture. The monogram vocabulary was treated as a graphic system rather than a brand identifier — scaled up, fractured across seams, and dissolved into the surface of fabrics that refused easy legibility. The colour palette of ivory, beige, and warm gold reinforced the idea of the permanent traveller: neutral enough for any context, opulent enough to declare the cost of the ticket.",
       "critique": "The Jacobs era at Vuitton is the definitive case study in what has been theorised as 'luxury's postmodern turn' — the moment at which heritage fashion houses abandoned the pretence of timelessness and embraced the contemporary as a perpetual source of capital. Jacobs's genius was to understand that the monogram itself was already postmodern: a sign system so saturated by global reproduction that its meaning had been emptied and was available for reinscription. Each Vuitton collection under his direction was less a proposal about clothing than an argument about what luxury means at the moment of maximum global proliferation — an argument conducted in materials of extraordinary quality on a stage of extraordinary scale."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "marc jacobs camp",
+      "pop art fashion",
+      "luxury streetwear",
+      "logo maximalism",
+      "art collaboration"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -8352,7 +8576,14 @@ export const archiveData = [
       "strategy": "Philo's structural strategy was predicated on radical subtraction: the removal of every ornamental element that could not be justified by function, proportion, or material quality. Garments were cut with extreme precision but finished in ways that looked deliberately unresolved — raw edges, deliberately fallen hems, unlined jackets that moved with the body rather than directing it. The palette was restricted to tan, ecru, bone, and black, with the occasional intrusion of a muted colour that read as accidental rather than designed. Silhouettes were wide at the shoulder and loose at the hip, refusing the body-revealing cuts that had dominated women's fashion in the preceding decade.",
       "critique": "Philo's debut at Céline is the founding document of what has been theorised as the 'anti-fashion fashion' of the 2010s: a design proposition in which the refusal of visibility — the deliberate un-shouting of a garment — becomes its primary form of luxury signalling. The Philo woman was positioned as post-decorative: too confident, too educated, too affluent to need her clothing to perform on her behalf. This was a politics of anti-spectacle that was simultaneously a new form of spectacle — conspicuous in its inconspicuousness, ostentatious in its restraint. The collection launched a decade of Céline that would influence virtually every luxury label, produce some of fashion's most fervent consumer loyalty, and generate enormous critical and commercial capital from the performance of not trying."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "minimalist chic",
+      "quiet luxury",
+      "power dressing",
+      "intellectual cool",
+      "effortless restraint"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -8652,7 +8883,14 @@ export const archiveData = [
       "strategy": "Piccioli constructed the collection around the productive tension between the maximalist and the monastic — extreme volume placed in dialogue with extreme restraint. Coats were engineered to twice the natural width of the shoulder; capes were cut to fall in a single geometric plane from neck to floor; evening looks used the internal scaffolding of couture construction to support volumes that defied structural logic at RTW price points. The colour palette moved between saturated Valentino red, deep forest green, electric cobalt, and dense ivory — hues chosen for their psychological intensity rather than their seasonal relevance. Models walked with consistent uniformity: a deliberate choreographic choice that treated the individual body as a unit of a collective rather than a site of personal expression.",
       "critique": "Piccioli's project at Valentino across the 2020s constitutes one of contemporary fashion's most sustained arguments for the political possibilities of beauty. His AW 2022 collection is readable as a post-pandemic excess-as-resistance proposition: the deployment of extreme colour, extreme volume, and extreme craft as an argument against the grey pragmatism that austerity politics demands. The inclusive casting — extended size range, diverse age range, and non-model faces — refused the traditional couture logic of a singular body type as the legitimate vehicle for luxury clothing, reinscribing beauty as a democratic rather than exclusive category. In this reading, the collection's ostensible extravagance is its most politically rigorous quality."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "pink maximalism",
+      "inclusive couture",
+      "gender fluid glamour",
+      "monochrome statement",
+      "fashion as joy"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -8901,7 +9139,14 @@ export const archiveData = [
       "strategy": "The collection's structural logic operated through deliberate anachronism: the combination of garments from structurally incompatible fashion histories. The micro-skirt referenced early 1960s Courrèges futurism and late 1990s Y2K minimalism simultaneously; the underskirt introduced a Victorian or Edwardian petticoat logic; the low-rise waist invoked the controversial hip-hugger silhouette of early 2000s club culture. The result was a garment system that refused linear fashion time — it was legible as historical quotation, ironic revival, and original design proposition simultaneously. Crystal embellishments were applied with deliberate incongruity: heavy jewellery on utilitarian fabrics, raw edges on couture-weight materials.",
       "critique": "The Miu Miu SS 2022 collection is the most significant recent case study in fashion's capacity to generate cultural discourse entirely through silhouette. The low-rise waist produced a torrent of online commentary that extended far beyond fashion's usual audience: discussions of body image, generational trauma, 2000s nostalgia, the politics of the female midriff, and the question of who is granted permission to occupy public space with an exposed body. Prada has consistently maintained that Miu Miu is a space for exploring the ambivalences of femininity rather than resolving them — the collection's deliberately uncomfortable silhouette is in this reading a forensic instrument, producing discomfort as a means of making the politics of the female body visible."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "bimbo aesthetic",
+      "micro skirt",
+      "underdressed luxury",
+      "subversive femininity",
+      "sexy minimalism"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -9143,7 +9388,14 @@ export const archiveData = [
       "strategy": "Simons structured the collection around a systematic archaeology of American vernacular culture: the rodeo, the cheerleader, the homecoming queen, the horror-film prom. Each reference was treated not as celebration but as forensic specimen — extracted from its original context, placed in dialogue with European tailoring codes, and re-presented as a cultural object available for scrutiny. American quilts were draped over shoulders as outerwear; Warhol silkscreens were applied to the house's signature minimalist white shirts; fringed leather coats invoked the Western while being cut to the precision of Belgian tailoring. The result was a garment system that refused to love or condemn America, choosing instead to make the country's self-mythologising visible.",
       "critique": "The AW 2017 collection is the most forensically rigorous application of postmodern cultural analysis to American fashion in the contemporary archive. Simons, a Belgian designer working for an American house during one of the most politically fractured moments in recent American history, used the collection to conduct a public reckoning with the image systems that constitute American identity: the flag, the cheerleader, the horror-film victim, the supermarket, the factory. By running these images through the filter of his own irreducibly European sensibility — precise tailoring, intellectual rigour, studied alienation — Simons produced a collection that was simultaneously inside and outside American culture, able to see it with a clarity unavailable to those who inhabit it."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "activist runway",
+      "black excellence",
+      "intersectional fashion",
+      "protest dressing",
+      "community as model"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -9462,7 +9714,14 @@ export const archiveData = [
       "strategy": "Tisci built the collection through a systematic collision of the sacred and the profane — the iconography of Catholicism placed in aggressive proximity to fetish wear, tribal body adornment, and sportswear construction. Heavily embroidered organza panels referenced ecclesiastical vestments while being cut into streetwear silhouettes. Laser-cut leather formed body-hugging panels that simultaneously invoked protective armour and bondage gear. Lace — historically the most delicate of couture materials — was bonded to neoprene and stiffened into architectural forms. The colour palette of black, ivory, and deep burgundy reinforced the collection's consistently gothic register, broken only by the occasional intrusion of a flesh-toned sheer that read the body itself as material.",
       "critique": "Tisci's sustained project at Givenchy constitutes the most commercially successful integration of subcultural codes into the luxury fashion apparatus in the 2010s. His AW 2015 collection demonstrates how this integration functioned at its most formally rigorous: the gothic, the tribal, the fetishistic, and the ecclesiastical are not decoratively applied but structurally embedded — each code informing the cut, the material choice, and the silhouette at a foundational level. The result is a fashion object that carries the weight of its subcultural references without reducing them to ornament. Tisci's casting — consistently diverse in ethnicity and body type across his Givenchy tenure — reinforced the collection's implicit argument that the bodies most comfortable in extreme clothing are those accustomed to existing at the margins of mainstream cultural legibility."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "riccardo tisci gothic",
+      "street meets couture",
+      "religious imagery",
+      "dark romance",
+      "urban tribe"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -9585,7 +9844,14 @@ export const archiveData = [
       "strategy": "The collection was structurally organised as a layered archive — each look built from multiple textile traditions, print techniques, and construction methodologies placed in productive dialogue. Hand-painted silk organza was worn over velvet; metallic brocade was cut into utilitarian field-jacket silhouettes; embroidered panels were applied to raw-cotton bases. The colour combinations were characteristically Van Noten: unexpected adjacencies that should conflict but instead resolve into a logic accessible only after sustained looking. The accumulation was not maximalist in the sense of excess but archival in the sense of depth — each layer legible as a specific reference to a specific tradition of making.",
       "critique": "Van Noten's 100th show is the most explicit statement in the contemporary fashion archive of what an independent, craft-centred, long-term practice looks like when held against the conglomerate model that dominates the luxury industry. The collection's meaning is inseparable from its context: 100 shows produced by a single designer, without outside capital, without a fragrance or accessories category to subsidise the runway, without a succession plan dictated by investor return. In this context, the density of the clothes — the accumulation of hand processes, the layers of reference, the weight of material history — reads not as decoration but as argument: evidence that the slow accumulation of knowledge and relationship produces a different kind of object than the fast cycle of conglomerate fashion."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "textile maximalism",
+      "print clash",
+      "artisanal luxury",
+      "global textile",
+      "painterly fashion"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -9836,7 +10102,14 @@ export const archiveData = [
       "strategy": "Slimane's structural strategy was the annihilation of volume: every silhouette in the collection was narrow to the point of restriction, every fabric pulled taut against the body or cut to avoid any excess material. The skinny trouser — which Slimane had pioneered for men's fashion during his Dior Homme tenure in the early 2000s — was applied with equal rigidity to women's wear. Sheer silk georgette blouses were cut to fall with no surplus fabric. Leather jackets were shaped to the precise contour of the shoulder. The effect was not sensual in the traditional fashion sense of body-revelation but geometric in the sense of body-as-line: the female silhouette reduced to a single vertical axis.",
       "critique": "Slimane's Saint Laurent represents the most acute instance of what could be described as the 'auteur problem' in contemporary fashion: the substitution of a house's historical identity with the creative director's personal obsessions, conducted without acknowledgement of what has been displaced. His AW 2013 collection is at once immaculately resolved — every look operating within a coherent visual system — and culturally amnesiac, treating the house's archive as irrelevant. The collection's significance lies precisely in this tension: it was Slimane's most commercially successful Saint Laurent proposal, generating the sales figures that justified his approach to Kering's shareholders, while simultaneously constituting the most forceful rejection of the house's founding principles in its history."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "rock and roll",
+      "hedi slimane skinny",
+      "androgyny",
+      "french cool",
+      "dark glam"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -10003,7 +10276,14 @@ export const archiveData = [
       "strategy": "The show's structural strategy positioned technology not as a finish applied to an otherwise conventional garment system but as the primary manufacturing process: the dress that closed the show had no pattern, no seam, no cutter, and no atelier — it was assembled directly on the body in public view. The broader collection reinforced this logic through its treatment of hardware: bag straps were engineered from architectural resin; closures were replaced with magnetic systems; garments were structured using technical mesh derived from aerospace materials. Meyer and Vaillant consistently position Coperni within a tradition of applied science rather than applied craft, sourcing collaborators from research institutions rather than textile mills.",
       "critique": "The Coperni SS 2023 spray-dress finale is the defining fashion spectacle of the post-Instagram era: an event designed for the moving image rather than the still photograph, for sharing rather than for looking, for the immediate emotional hit rather than the sustained critical engagement. Its cultural significance is not diminished by this observation — the capacity to generate a universally legible image of fashion's capacity for transformation is itself a form of power. The dress raises the question that all genuinely technological fashion objects raise: at what point does the technology become the garment, and at what point does it remain a performance conducted on a garment? The Fabrican material produces a textile, and the textile produces a dress — but the process of production is the cultural content, not the object it generates."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "viral moment",
+      "spray-on fashion",
+      "techno spectacle",
+      "body meets material",
+      "live performance fashion"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -10206,7 +10486,14 @@ export const archiveData = [
       "strategy": "Ackermann's structural approach centred on the diagonal as a compositional principle: seams were angled to redirect the eye away from horizontal and vertical axes, creating silhouettes that appeared to be in constant rotational motion even when static. Draped silk charmeuse was anchored at shoulder and hip by structured lacquered panels, producing a garment that combined the liquid movement of couture draping with the precise geometry of tailoring. The collection's androgynous casting reinforced this structural ambiguity: garments moved between women's and men's bodies without alteration, their essential form unchanged by the anatomy that wore them.",
       "critique": "Ackermann occupies a specific and undertheorised position in the contemporary fashion archive: the designer whose work is consistently described in the language of sensation rather than concept. Critics write about his clothes as experiences — the way the silk moves, the quality of the colour, the particular intimacy of the construction. This sensory register is not incidental but constitutive: Ackermann's primary theoretical proposition is that clothing functions as second skin, and that the quality of that skin — its warmth, its weight, its relationship to the body it covers — is the primary site of meaning in fashion. His AW 2014 collection is an extended argument for the intelligence of the haptic: that what cloth does against the body is a more sophisticated form of communication than what it signifies at a distance."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "gender fluidity",
+      "body as architecture",
+      "dark minimalism",
+      "queer elegance",
+      "sculpted silhouette"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -10507,7 +10794,14 @@ export const archiveData = [
       "strategy": "Lee's structural strategy centred on the amplification of the house's existing material vocabulary: the intrecciato weave was scaled up to exaggerated proportions, applied to outerwear, accessories, and footwear simultaneously. Silhouettes were broadly cut — wide shoulders, generous trouser legs, oversized coats — but constructed from materials of such density and quality that the volume read as authority rather than excess. The deliberate absence of visible logos was itself a structural choice: in a fashion system saturated with logomania following the LVMH and Kering campaigns of the mid-2010s, the refusal of the logo was the most legible signal of luxury available.",
       "critique": "Lee's AW 2019 debut represents the most commercially successful recent application of the 'quiet luxury' proposition first articulated by Philo at Céline in 2010. Its significance lies not in its formal originality — the collection's premises are largely continuous with Philo's — but in the specific moment of its arrival: a fashion culture in the grip of hypebeast maximalism, streetwear logomania, and Instagram performance that was beginning to produce its own internal critique. Lee's Bottega Veneta provided that critique in material form: clothing and accessories that communicated status through quality rather than recognition, legible only to those with sufficient cultural capital to read the code. This exclusivity was itself the luxury product."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "quiet luxury",
+      "stealth wealth",
+      "armour dressing",
+      "old money minimalism",
+      "power dressing"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -10783,7 +11077,14 @@ export const archiveData = [
       "strategy": "Simons's structural approach for the collection was the pursuit of geometric purity through tailoring: garments were constructed to maintain their three-dimensional shape independently of the body, using internal scaffolding and compressed interfacing to produce forms that read as architectural volumes rather than clothing. Lacquered organza was engineered to hold precise angles at shoulder and hem; wool suiting was bonded to technical fabric to resist the natural collapse of the weave under its own weight; silk faille was cut to form self-supporting cylindrical sleeves that retained their shape whether worn or not. The colour palette — white, ivory, pale sand, and a single intrusion of acid yellow — forced all attention onto form, eliminating the possibility of colour as a compositional distraction.",
       "critique": "The Simons era at Jil Sander constitutes the most forensically rigorous investigation of minimalism's possibilities and limits in the contemporary fashion archive. His SS 2011 collection poses with particular clarity the central problem of fashion minimalism: if the garment is stripped of all ornamental and referential content, what remains as the carrier of meaning? Simons's answer — consistently across his Jil Sander period — was construction: the precision of the cut, the quality of the material, the degree to which the garment's form is independent of the body wearing it. This is a deeply sculptural proposition that treats the human body not as the garment's primary subject but as one structural variable among several. The collection remains a standard reference for the intellectual possibilities of the reduced silhouette."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "radical minimalism",
+      "colour blocking",
+      "clean lines",
+      "intellectual simplicity",
+      "power dressing"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -10979,7 +11280,14 @@ export const archiveData = [
       "strategy": "McCharen-Tran's structural strategy is consistently defined by her architectural training: garments are designed from the inside out, with the structural armature — the scaffolding of elastic, power mesh, and boning — functioning as both the construction system and the visible aesthetic surface. Technical performance fabrics derived from athletic wear are cut and assembled with the precision of couture construction, producing garments that perform under the physical stress of actual movement while retaining their visual identity. The collection's recurring device was the structural frame: garments that used visible strapping, cutout geometry, and engineered mesh to define the body's volume while simultaneously making that engineering visible.",
       "critique": "Chromat is the most significant contemporary fashion practice to have made size inclusivity the foundational structural premise of its design work rather than an afterthought applied to an existing garment system. McCharen-Tran does not design for a normative body and then grade out — she designs for the full range of human bodies simultaneously, which requires different construction logics, different structural assumptions, and different material choices. The SS 2020 collection demonstrates what this approach produces at its most resolved: garments that look and function differently on different body types not because they have been compromised in the scaling process but because they have been designed to accommodate multiple bodies from the outset. This constitutes a genuine formal innovation, not merely a political position."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "body positivity",
+      "inclusive glamour",
+      "queer celebration",
+      "sport meets couture",
+      "activist fashion"
+    ]
   },
   {
     "$schema": "../entry.schema.json",
@@ -11140,6 +11448,13 @@ export const archiveData = [
       "strategy": "Anderson's structural strategy centred on the subversion of the silhouette through deliberate anatomical dislocation: garments that misidentified or displaced the body's expected contours. Sculptural intarsia knitwear produced torso-length garments in which the relationship between garment and body was systematically ambiguous — knitted forms that read as clothing at one scale and as sculptural objects at another. The proportional system was consistently extreme: very narrow legs against very wide shoulders; very long bodices against very short skirts. Felted wool outerwear was structured to maintain its form independently of the body wearing it, producing coats that functioned as wearable architecture.",
       "critique": "Anderson's practice — at both JW Anderson and Loewe — constitutes the most sustained contemporary argument for fashion as an intellectual practice conducted through objects rather than images. His AW 2022 collection extends this argument through its treatment of craft: the intarsia knitwear is not decorative but structural, not applied but integral to the garment's form. The collection raises the question that Anderson's work consistently poses: at what point does a garment become an object, and at what point does it remain clothing? The answer his practice implies is that this distinction is less stable than fashion discourse usually assumes — that the most interesting garments occupy the space where clothing and object become indistinguishable, and that this indistinguishability is a form of critical intelligence about what fashion can do."
     },
-    "photo_credit": ""
+    "photo_credit": "",
+    "vibes": [
+      "surreal objects",
+      "gender bending",
+      "art-fashion crossover",
+      "body horror chic",
+      "conceptual weird"
+    ]
   }
 ];

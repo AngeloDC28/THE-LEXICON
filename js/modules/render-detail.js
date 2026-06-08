@@ -7,6 +7,7 @@ import { AppState, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
 import { getTagCategory } from './render-index-view.js';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -436,6 +437,9 @@ function renderBrutalistNodes(entry) {
       <span class="ntl-label">${nt.label.toUpperCase()}</span>
     </a>`).join('');
   container.prepend(toc);
+
+  // Activate glossary tooltips on note text
+  initGlossaryTooltips(container);
 }
 
 /**

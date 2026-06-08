@@ -641,6 +641,25 @@ html:not(.dark) .gc-meta { color: rgba(0,0,0,0.65); }
 html:not(.dark) .gc-hook { color: rgba(0,0,0,0.75); }
 /* Cards are too narrow at 2-col to show the critique hook legibly */
 @media (max-width: 767px) { .gc-hook { display: none; } }
+.gc-vibes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 5px;
+}
+.gc-vibe {
+  font-family: var(--font-mono);
+  font-size: 7px;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1px 4px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+html:not(.dark) .gc-vibe { color: rgba(0,0,0,0.4); border-color: rgba(0,0,0,0.12); }
+@media (max-width: 767px) { .gc-vibes { display: none; } }
 
 /* ─── Phase 1: Hero Panel ─────────────────────────────────────────── */
 .hero-panel {
@@ -4286,4 +4305,81 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 #detail-image-wrapper {
   overscroll-behavior-y: contain;
   touch-action: pan-x pan-y pinch-zoom;
+}
+
+/* ─── Glossary Tooltips ──────────────────────────────────────────────────── */
+.gloss-term {
+  border-bottom: 1px dashed rgba(204, 255, 0, 0.6);
+  cursor: pointer;
+  color: inherit;
+  transition: border-color 0.15s, background 0.15s;
+}
+.gloss-term:hover,
+.gloss-term:focus {
+  border-bottom-color: #CCFF00;
+  background: rgba(204, 255, 0, 0.08);
+  outline: none;
+}
+
+.gloss-tooltip {
+  position: absolute;
+  z-index: 9999;
+  background: #000;
+  color: #fff;
+  border: 1px solid #CCFF00;
+  padding: 10px 14px;
+  max-width: min(320px, calc(100vw - 24px));
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.55;
+  pointer-events: none;
+}
+.dark .gloss-tooltip {
+  background: #0a0a0a;
+}
+.gloss-tooltip-term {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #CCFF00;
+  margin-bottom: 5px;
+}
+.gloss-tooltip p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ─── Glossary Modal ─────────────────────────────────────────────────────── */
+#glossary-modal .glossary-entry {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0 24px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  align-items: baseline;
+}
+.dark #glossary-modal .glossary-entry {
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+.glossary-term {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #CCFF00;
+  background: #000;
+  padding: 2px 5px;
+  display: inline-block;
+  line-height: 1.6;
+}
+.dark .glossary-term { background: rgba(204,255,0,0.12); color: #CCFF00; }
+.glossary-def {
+  font-size: 12px;
+  line-height: 1.55;
+  opacity: 0.85;
+}
+@media (max-width: 600px) {
+  #glossary-modal .glossary-entry { grid-template-columns: 1fr; gap: 4px 0; }
+  .glossary-term { font-size: 9px; }
 }
