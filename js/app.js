@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=f57daa3');
+  const { archiveData: staticData } = await import('../database.js?v=51f92d2');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -159,6 +159,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (how) how.style.display = 'none';
     if (featHead) featHead.style.display = 'none';
     if (whoEl) whoEl.style.display = 'none';
+    const axesEl = $('axes-browse');
+    if (axesEl) axesEl.style.display = 'none';
+    const eowEl = $('entry-of-week');
+    if (eowEl) eowEl.style.display = 'none';
   }
 
   // Shorten search placeholder on mobile — full query syntax hint overflows at 375px
@@ -758,6 +762,12 @@ function setupEventListeners() {
       AppState.analyticalCat = AppState.analyticalCat === cat ? null : cat;
       refreshContent();
       syncHashFromState();
+      // When triggered from the landing axis cards, dismiss the hero and drop
+      // the user into the filtered grid so they see results immediately.
+      if (catFilter.classList.contains('axis-card') && !$('orientation-panel')?.classList.contains('hidden')) {
+        dismissOrientation();
+        $('image-grid')?.scrollIntoView({ behavior: 'smooth' });
+      }
       return;
     }
 
@@ -1052,6 +1062,10 @@ function setupEventListeners() {
     if (featHead) featHead.style.display = 'none';
     const whoEl = $('who-section');
     if (whoEl) whoEl.style.display = 'none';
+    const axesEl = $('axes-browse');
+    if (axesEl) axesEl.style.display = 'none';
+    const eowEl = $('entry-of-week');
+    if (eowEl) eowEl.style.display = 'none';
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
     // Move focus into the archive so keyboard users land somewhere meaningful
     // (otherwise focus goes to <body> when the orientation panel is removed).
@@ -1630,6 +1644,14 @@ function renderHero(archiveData) {
   if (how) how.style.display = 'block';
   if (who) who.style.display = 'block';
 
+  // Second-door browse + rotating spotlight
+  renderAxesBrowse(archiveData);
+  renderEntryOfWeek(archiveData);
+  const axes = $('axes-browse');
+  const eow = $('entry-of-week');
+  if (axes) axes.style.display = 'block';
+  if (eow) eow.style.display = 'block';
+
   const panel = $('orientation-panel');
   if (!panel || panel.classList.contains('hidden')) return;
 
@@ -1751,6 +1773,76 @@ function renderHero(archiveData) {
       showHeroEntry(heroIndex);
     }, 6000);
   }
+}
+
+// ── BROWSE BY ANALYTICAL AXIS (second door — enter by lens, not designer) ──
+const AXIS_DEFS = [
+  { key: 'corporeal',  label: 'Corporeal Intervention',  blurb: 'The body as material, site, and weapon.' },
+  { key: 'critique',   label: 'Institutional Critique',  blurb: 'Fashion turned against its own machinery.' },
+  { key: 'subculture', label: 'Subcultural Codification', blurb: 'Street codes, queer signal, refusal.' },
+  { key: 'strategy',   label: 'Strategic Appropriation', blurb: 'Borrowing, hybridity, and who gets to.' },
+  { key: 'semiotic',   label: 'Semiotic Sabotage',       blurb: 'Surveillance, ecology, the digital body.' },
+  { key: 'provenance', label: 'Historical Lineage',      blurb: 'The gaze, censorship, feminist refusal.' },
+];
+
+function renderAxesBrowse(archiveData) {
+  const grid = $('axes-grid');
+  if (!grid) return;
+  const counts = new Map();
+  archiveData.forEach(e => {
+    const c = getTagCategory(e.tags?.politics || '');
+    counts.set(c, (counts.get(c) || 0) + 1);
+  });
+  grid.innerHTML = AXIS_DEFS.map(a => {
+    const n = counts.get(a.key) || 0;
+    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" style="--axis-c:var(--c-${a.key})" aria-label="Browse ${a.label} — ${n} entries">
+      <span class="axis-bar" aria-hidden="true"></span>
+      <span class="axis-label">${a.label}</span>
+      <span class="axis-blurb">${a.blurb}</span>
+      <span class="axis-count">${n} ${n === 1 ? 'entry' : 'entries'} →</span>
+    </button>`;
+  }).join('');
+}
+
+// ── ENTRY OF THE WEEK (deterministic weekly rotation — return-visit novelty) ──
+function renderEntryOfWeek(archiveData) {
+  const card = $('eow-card');
+  if (!card || !archiveData.length) return;
+  // ISO week number as a stable seed so the pick changes weekly but is
+  // identical for every visitor within the same week.
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 1);
+  const week = Math.floor((now - start) / (7 * 24 * 60 * 60 * 1000));
+  const seed = now.getFullYear() * 53 + week;
+  const pick = archiveData[seed % archiveData.length];
+  if (!pick) return;
+
+  const cat = getTagCategory(pick.tags?.politics || '');
+  const labelMap = {
+    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
+    subculture: 'Subcultural Codification', strategy: 'Strategic Appropriation',
+    semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
+  };
+  const tagEl = $('eow-tag');
+  if (tagEl) {
+    tagEl.textContent = (labelMap[cat] || 'Analytical Record').toUpperCase();
+    tagEl.style.color = `var(--c-${cat})`;
+    tagEl.style.borderColor = `var(--c-${cat})`;
+  }
+  const titleEl = $('eow-title');
+  if (titleEl) titleEl.innerHTML = pick.title ? `<em>${pick.title}</em>` : '';
+  const brandEl = $('eow-brand');
+  if (brandEl) brandEl.textContent = `${(pick.tags?.brand || '').toUpperCase()} · ${pick.year || '—'} · ${pick.season ? pick.season.toUpperCase() : ''}`;
+  const vibesEl = $('eow-vibes');
+  if (vibesEl) {
+    const vibes = Array.isArray(pick.vibes) ? pick.vibes.slice(0, 4) : [];
+    vibesEl.innerHTML = vibes.map(v => `<span class="eow-vibe">${v}</span>`).join('');
+  }
+  const bgEl = $('eow-bg');
+  if (bgEl && pick.images?.[0]) {
+    bgEl.style.backgroundImage = `url(${resolveImgSrc(pick.images[0])})`;
+  }
+  card.onclick = () => openDetail(pick.id, 0, archiveData, callbacks);
 }
 
 // ── CITATIONS (Phase 3 — multi-format export) ──

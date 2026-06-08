@@ -1188,6 +1188,145 @@ html:not(.dark) .how-term { color: #aaa; }
 html:not(.dark) .how-term span { color: #000; text-decoration: underline; }
 
 /* ─── Phase 1: Who It's For ───────────────────────────────────────── */
+/* ─── Browse by analytical axis (second-door front-door grid) ─── */
+.axes-browse { margin-bottom: 4px; }
+.axes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 0 4px;
+}
+@media (max-width: 1023px) { .axes-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px)  { .axes-grid { grid-template-columns: 1fr; } }
+.axis-card {
+  position: relative;
+  text-align: left;
+  border: 1px solid #1e1e1e;
+  padding: 16px 16px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s, background 0.15s;
+  min-height: 112px;
+}
+html:not(.dark) .axis-card { border-color: #e0e0dc; }
+.axis-card:hover,
+.axis-card:focus-visible {
+  border-color: var(--axis-c);
+  transform: translateY(-2px);
+  outline: none;
+}
+.axis-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--axis-c);
+}
+.axis-label {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  color: #fff;
+  line-height: 1.15;
+}
+html:not(.dark) .axis-label { color: #0a0a0a; }
+.axis-blurb {
+  font-size: var(--t-mono-xs);
+  color: rgba(255,255,255,0.5);
+  line-height: 1.45;
+  flex: 1;
+}
+html:not(.dark) .axis-blurb { color: rgba(0,0,0,0.55); }
+.axis-count {
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--axis-c);
+}
+
+/* ─── Entry of the week (rotating spotlight) ─── */
+.eow-section { margin-bottom: 4px; }
+.eow-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #1e1e1e;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 260px;
+  background: #0a0a0a;
+  transition: border-color 0.15s;
+}
+html:not(.dark) .eow-card { border-color: #e0e0dc; background: #f0efe9; }
+.eow-card:hover,
+.eow-card:focus-visible { border-color: var(--c-corporeal); outline: none; }
+.eow-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  transition: transform 0.4s ease, opacity 0.3s;
+}
+.eow-card:hover .eow-bg { transform: scale(1.04); opacity: 0.62; }
+.eow-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.45) 55%, rgba(0,0,0,0.2) 100%);
+}
+html:not(.dark) .eow-overlay {
+  background: linear-gradient(0deg, rgba(245,244,238,0.95) 0%, rgba(245,244,238,0.55) 55%, rgba(245,244,238,0.2) 100%);
+}
+.eow-body {
+  position: relative;
+  padding: clamp(20px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
+  min-height: 260px;
+}
+.eow-tag {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border: 1px solid;
+  padding: 3px 9px;
+}
+.eow-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  line-height: 1.1;
+  color: #fff;
+  max-width: 28ch;
+}
+html:not(.dark) .eow-title { color: #0a0a0a; }
+.eow-brand {
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+html:not(.dark) .eow-brand { color: rgba(0,0,0,0.6); }
+.eow-vibes { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.eow-vibe {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2px 7px;
+}
+html:not(.dark) .eow-vibe { color: rgba(0,0,0,0.6); border-color: rgba(0,0,0,0.2); }
+
 .who-section { margin-bottom: 4px; }
 .who-inner {
   border: 1px solid #1e1e1e;
