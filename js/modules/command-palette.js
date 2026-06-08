@@ -114,7 +114,7 @@ export function renderCmdResults(query, archiveData, callbacks) {
 
   if (!query.trim()) {
     container.innerHTML = `
-      <div class="p-4 text-[var(--t-mono-xs)] opacity-50 uppercase text-center font-mono leading-relaxed">
+      <div class="p-4 t-mono-xs opacity-50 uppercase text-center font-mono leading-relaxed">
         ${getTranslation('cmd_placeholder', AppState.language)}<br/>
         <span class="opacity-70">Tip: try <kbd class="border border-current px-1 mx-0.5">tag:corporeal</kbd> <kbd class="border border-current px-1 mx-0.5">year:1999</kbd> <kbd class="border border-current px-1 mx-0.5">designer:mcqueen</kbd></span>
       </div>
@@ -167,12 +167,12 @@ export function renderCmdResults(query, archiveData, callbacks) {
       const tagCount = archiveData.filter(e => (e.tags?.politics || '').toLowerCase().includes(tag.toLowerCase())).length;
       const shortTag = tag.split('&')[0].trim();
       html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex items-center gap-3" role="option" aria-selected="false" data-cmd-action="filter-tag" data-cmd-val="${tag}">
-        <div class="text-[var(--t-mono-xs)] font-bold opacity-30 shrink-0 font-mono">#</div>
+        <div class="t-mono-xs font-bold opacity-30 shrink-0 font-mono">#</div>
         <div class="min-w-0 flex-1">
-          <div class="text-[var(--t-mono-sm)] font-bold tracking-wide" style="color:var(--c-corporeal)">${tag}</div>
-          <div class="text-[var(--t-mono-xs)] opacity-50 uppercase tracking-wider mt-0.5">${tagCount} ENTRIES · ${shortTag.toUpperCase()}</div>
+          <div class="t-mono-sm font-bold tracking-wide" style="color:var(--c-corporeal)">${tag}</div>
+          <div class="t-mono-xs opacity-50 uppercase tracking-wider mt-0.5">${tagCount} ENTRIES · ${shortTag.toUpperCase()}</div>
         </div>
-        <div class="text-[var(--t-mono-xs)] opacity-40 ml-2 shrink-0 tracking-wider">TAG</div>
+        <div class="t-mono-xs opacity-40 ml-2 shrink-0 tracking-wider">TAG</div>
       </div>`;
     });
   }
@@ -191,13 +191,13 @@ export function renderCmdResults(query, archiveData, callbacks) {
         ? entry.notes.critique.slice(0, 72) + (entry.notes.critique.length > 72 ? '…' : '')
         : (entry.title ? entry.title.slice(0, 72) : `${brand} · ${season} · ${year}`);
       html += `<div class="cmd-item p-3 px-4 cursor-pointer flex items-start gap-3" role="option" aria-selected="false" data-index="${i}" data-entry-id="${entry.id}">
-        <div class="text-[var(--t-mono-xs)] font-bold opacity-30 mt-0.5 shrink-0 font-mono">N</div>
+        <div class="t-mono-xs font-bold opacity-30 mt-0.5 shrink-0 font-mono">N</div>
         <div class="min-w-0 flex-1">
-          <div class="text-[var(--t-mono-sm)] font-bold tracking-wide truncate">${brand.toUpperCase()} · ${season.toUpperCase()} · ${year}</div>
-          <div class="text-[var(--t-mono-xs)] opacity-60 mt-0.5 truncate font-normal normal-case">${hook}</div>
+          <div class="t-mono-sm font-bold tracking-wide truncate">${brand.toUpperCase()} · ${season.toUpperCase()} · ${year}</div>
+          <div class="t-mono-xs opacity-60 mt-0.5 truncate font-normal normal-case">${hook}</div>
           <div class="text-[8px] opacity-35 uppercase tracking-wider mt-0.5">${id} · ${politics}</div>
         </div>
-        <div class="text-[var(--t-mono-xs)] opacity-40 ml-1 shrink-0" aria-hidden="true">↵</div>
+        <div class="t-mono-xs opacity-40 ml-1 shrink-0" aria-hidden="true">↵</div>
       </div>`;
     });
   }
@@ -223,9 +223,9 @@ function buildCommandItems(query) {
   }
   return items.map(item => `
     <div class="cmd-item cmd-cmd-item p-3 px-4 cursor-pointer flex items-center gap-3" role="option" aria-selected="false" data-cmd-action="${item.action}" ${item.val ? `data-cmd-val="${item.val}"` : ''}>
-      <span class="text-[var(--t-body)] opacity-40" aria-hidden="true">${item.icon}</span>
-      <span class="text-[var(--t-mono-xs)] uppercase tracking-wide">${item.label}</span>
-      <span class="ml-auto text-[var(--t-mono-xs)] opacity-30 tracking-wider" aria-hidden="true">RUN →</span>
+      <span class="t-body opacity-40" aria-hidden="true">${item.icon}</span>
+      <span class="t-mono-xs uppercase tracking-wide">${item.label}</span>
+      <span class="ml-auto t-mono-xs opacity-30 tracking-wider" aria-hidden="true">RUN →</span>
     </div>`).join('');
 }
 

@@ -2465,7 +2465,7 @@ function renderLangDropdown() {
   dd.innerHTML = ALL_LANGS.map(({ code, label }) => {
     const isActive = code === AppState.language;
     const activeClass = isActive ? 'bg-black text-white dark:bg-acid dark:text-black' : 'hover:bg-black/10 dark:hover:bg-white/10';
-    return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" lang="${code}" class="w-full text-left px-3 py-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3 focus-ring">
+    return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" lang="${code}" class="w-full text-left px-3 py-2 min-h-[44px] t-mono-xs font-mono tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3 focus-ring">
       <span>${label}</span> <span class="opacity-50 text-[0.5rem] uppercase" aria-hidden="true">${code.toUpperCase()}</span>
     </button>`;
   }).join('');
@@ -2541,7 +2541,7 @@ function renderFoldersView() {
   if (!container) return;
   container.innerHTML = '';
   if (AppState.archivalFolders.length === 0) {
-    container.innerHTML = `<p class="text-[var(--t-mono-xs)] font-mono uppercase opacity-40">${getTranslation('folder_no_detected', AppState.language)}</p>`;
+    container.innerHTML = `<p class="t-mono-xs font-mono uppercase opacity-40">${getTranslation('folder_no_detected', AppState.language)}</p>`;
     return;
   }
   AppState.archivalFolders.forEach(fol => {
@@ -2553,10 +2553,10 @@ function renderFoldersView() {
     card.innerHTML = `
       <div class="flex items-baseline justify-between mb-4">
         <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
-        <button type="button" class="btn-export-fol text-[var(--t-mono-xs)] font-mono uppercase opacity-40 hover:opacity-100 underline focus-ring min-h-[44px] px-1" aria-label="Export folder ${fol.name} as JSON">EXPORT_JSON</button>
+        <button type="button" class="btn-export-fol t-mono-xs font-mono uppercase opacity-40 hover:opacity-100 underline focus-ring min-h-[44px] px-1" aria-label="Export folder ${fol.name} as JSON">EXPORT_JSON</button>
       </div>
-      <p class="text-[var(--t-mono-xs)] font-mono opacity-60 mb-4">${fol.notes ? fol.notes : getTranslation('no_obs_logged', AppState.language)}</p>
-      <div class="flex gap-6 text-[var(--t-mono-xs)] font-mono uppercase opacity-50">
+      <p class="t-mono-xs font-mono opacity-60 mb-4">${fol.notes ? fol.notes : getTranslation('no_obs_logged', AppState.language)}</p>
+      <div class="flex gap-6 t-mono-xs font-mono uppercase opacity-50">
         <span>${fol.lookIds ? fol.lookIds.length : 0} ${getTranslation('artifacts_count', AppState.language)}</span>
         <span>${new Date(fol.createdAt).toLocaleDateString()}</span>
       </div>
@@ -2586,13 +2586,13 @@ function renderSaveFolderModal() {
   if (!container) return;
   container.innerHTML = '';
   if (AppState.archivalFolders.length === 0) {
-    container.innerHTML = `<p class="text-[var(--t-mono-xs)] font-mono uppercase opacity-40">${getTranslation('folder_no_existing', AppState.language)}</p>`;
+    container.innerHTML = `<p class="t-mono-xs font-mono uppercase opacity-40">${getTranslation('folder_no_existing', AppState.language)}</p>`;
     return;
   }
   AppState.archivalFolders.forEach(fol => {
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 text-[var(--t-mono-xs)] font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center focus-ring';
+    btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 t-mono-xs font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center focus-ring';
     const count = fol.lookIds ? fol.lookIds.length : 0;
     btn.setAttribute('aria-label', `Save to folder ${fol.name}, ${count} entries`);
     btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40" aria-hidden="true">${count}</span>`;

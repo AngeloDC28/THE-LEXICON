@@ -731,8 +731,8 @@ function showPayload(spot) {
   text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
 
   content.innerHTML = `
-    <div class="text-[var(--t-mono-xs)] font-bold mb-2 border-b border-black/10 pb-1">${label.toUpperCase()}</div>
-    <div class="text-[var(--t-mono-xs)] leading-relaxed">${text}</div>
+    <div class="t-mono-xs font-bold mb-2 border-b border-black/10 pb-1">${label.toUpperCase()}</div>
+    <div class="t-mono-xs leading-relaxed">${text}</div>
   `;
   payload.classList.remove('hidden');
 }
