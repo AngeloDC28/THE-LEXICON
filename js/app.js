@@ -125,23 +125,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // setupEventListeners() already called at top of DOMContentLoaded (FIX-5)
   handleRouting();
 
-  // Initial Render
-  refreshUI();
-  renderHero(archiveData);
-  syncMobileSheetChips();
-
-  // Welcome Modal — shown on first visit only
-  initWelcomeModal();
-
-  // Restore DOM translation if a non-English language was saved
-  if (AppState.language && AppState.language !== 'en') {
-    const googleCode = GOOGLE_LANG[AppState.language] || AppState.language;
-    domTranslate(googleCode);
-  }
-
-  // Orientation Panel Logic — also hide the supporting landing sections
-  // (how-it-works, featured strip header, who-section) so the page state
-  // matches what the user dismissed previously.
+  // Orientation Panel Logic — run BEFORE renderHero so the hero only reveals
+  // sections that should be visible on this visit. Eliminates the flash of
+  // landing content for returning users and the mobile auto-dismiss case.
   var dismissed;
   try { dismissed = localStorage.getItem('lexicon-orientation-dismissed'); } catch(e) {}
   // Auto-dismiss hero on mobile — the grid IS the landing page on small screens.
@@ -166,6 +152,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     const nexusTEl = $('nexus-teaser');
     if (nexusTEl) nexusTEl.style.display = 'none';
     $('featured-strip')?.classList.add('hidden');
+  }
+
+  // Initial Render
+  refreshUI();
+  renderHero(archiveData);
+  syncMobileSheetChips();
+
+  // Welcome Modal — shown on first visit only
+  initWelcomeModal();
+
+  // Restore DOM translation if a non-English language was saved
+  if (AppState.language && AppState.language !== 'en') {
+    const googleCode = GOOGLE_LANG[AppState.language] || AppState.language;
+    domTranslate(googleCode);
   }
 
   // Shorten search placeholder on mobile — full query syntax hint overflows at 375px
