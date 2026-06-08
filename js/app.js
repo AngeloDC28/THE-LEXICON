@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=88d69fc');
+  const { archiveData: staticData } = await import('../database.js?v=39ee000');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -163,6 +163,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (axesEl) axesEl.style.display = 'none';
     const eowEl = $('entry-of-week');
     if (eowEl) eowEl.style.display = 'none';
+    const nexusTEl = $('nexus-teaser');
+    if (nexusTEl) nexusTEl.style.display = 'none';
   }
 
   // Shorten search placeholder on mobile — full query syntax hint overflows at 375px
@@ -1088,6 +1090,8 @@ function setupEventListeners() {
     if (axesEl) axesEl.style.display = 'none';
     const eowEl = $('entry-of-week');
     if (eowEl) eowEl.style.display = 'none';
+    const nexusTEl = $('nexus-teaser');
+    if (nexusTEl) nexusTEl.style.display = 'none';
     try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
     // Move focus into the archive so keyboard users land somewhere meaningful
     // (otherwise focus goes to <body> when the orientation panel is removed).
@@ -1666,13 +1670,16 @@ function renderHero(archiveData) {
   if (how) how.style.display = 'block';
   if (who) who.style.display = 'block';
 
-  // Second-door browse + rotating spotlight
+  // Second-door browse + rotating spotlight + connection-graph teaser
   renderAxesBrowse(archiveData);
   renderEntryOfWeek(archiveData);
+  renderNexusTeaser(archiveData);
   const axes = $('axes-browse');
   const eow = $('entry-of-week');
+  const nexusT = $('nexus-teaser');
   if (axes) axes.style.display = 'block';
   if (eow) eow.style.display = 'block';
+  if (nexusT) nexusT.style.display = 'block';
 
   const panel = $('orientation-panel');
   if (!panel || panel.classList.contains('hidden')) return;
@@ -1865,6 +1872,66 @@ function renderEntryOfWeek(archiveData) {
     bgEl.style.backgroundImage = `url(${resolveImgSrc(pick.images[0])})`;
   }
   card.onclick = () => openDetail(pick.id, 0, archiveData, callbacks);
+}
+
+// ── NEXUS TEASER (landing preview of the connection graph) ──
+function renderNexusTeaser(archiveData) {
+  const viz = $('nexus-teaser-svg');
+  const cardEl = $('nexus-teaser-card');
+  if (!viz || !cardEl || archiveData.length < 4) return;
+
+  const tagKeys = ['politics', 'theories', 'era', 'format', 'brand', 'materials', 'geography', 'anatomy'];
+  const shared = (a, b) => {
+    let s = 0;
+    for (const k of tagKeys) if (a.tags?.[k] && a.tags[k] === b.tags?.[k]) s++;
+    return s;
+  };
+
+  // Pick the most-connected entry as the hub — the densest node makes the
+  // best illustration of the graph.
+  let hub = null, hubLinks = [];
+  for (const e of archiveData) {
+    if (!e.tags) continue;
+    const links = archiveData
+      .filter(o => o.id !== e.id && o.tags)
+      .map(o => ({ o, s: shared(e, o) }))
+      .filter(x => x.s > 0)
+      .sort((a, b) => b.s - a.s);
+    if (links.length > hubLinks.length) { hub = e; hubLinks = links; }
+  }
+  if (!hub || hubLinks.length === 0) return;
+
+  const peers = hubLinks.slice(0, 6).map(x => x.o);
+  const cat = getTagCategory(hub.tags?.politics || '');
+  const W = 440, H = 260, cx = W / 2, cy = H / 2, R = 96;
+  const short = (e) => ((e.tags?.brand || e.id).split(/\s|-/)[0] || '').toUpperCase().slice(0, 9);
+
+  const pts = peers.map((p, i) => {
+    const ang = (-90 + (360 / peers.length) * i) * Math.PI / 180;
+    return { p, x: cx + Math.cos(ang) * R, y: cy + Math.sin(ang) * R };
+  });
+
+  const lines = pts.map(pt =>
+    `<line x1="${cx}" y1="${cy}" x2="${pt.x.toFixed(1)}" y2="${pt.y.toFixed(1)}" class="ntz-link" />`
+  ).join('');
+
+  const peerNodes = pts.map(pt => `
+    <g class="ntz-node">
+      <circle cx="${pt.x.toFixed(1)}" cy="${pt.y.toFixed(1)}" r="5" class="ntz-dot" />
+      <text x="${pt.x.toFixed(1)}" y="${(pt.y + (pt.y < cy ? -10 : 16)).toFixed(1)}" class="ntz-label" text-anchor="middle">${short(pt.p)}</text>
+    </g>`).join('');
+
+  viz.innerHTML = `
+    <svg viewBox="0 0 ${W} ${H}" class="ntz-svg" role="img" aria-label="Preview of the Nexus connection graph">
+      <g>${lines}</g>
+      ${peerNodes}
+      <g class="ntz-hub">
+        <circle cx="${cx}" cy="${cy}" r="11" class="ntz-hub-dot" style="fill:var(--c-${cat})" />
+        <text x="${cx}" y="${(cy + 28).toFixed(1)}" class="ntz-hub-label" text-anchor="middle">${short(hub)} ${hub.year || ''}</text>
+      </g>
+    </svg>`;
+
+  cardEl.onclick = () => openConnectionMatrix(hub.id, archiveData, callbacks);
 }
 
 // ── CITATIONS (Phase 3 — multi-format export) ──

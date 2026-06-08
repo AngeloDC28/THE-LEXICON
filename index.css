@@ -1338,6 +1338,65 @@ html:not(.dark) .eow-brand { color: rgba(0,0,0,0.6); }
 }
 html:not(.dark) .eow-vibe { color: rgba(0,0,0,0.6); border-color: rgba(0,0,0,0.2); }
 
+/* ─── Nexus teaser (landing connection-graph preview) ─── */
+.nexus-teaser-section { margin-bottom: 4px; }
+.nexus-teaser-card {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  border: 1px solid #1e1e1e;
+  padding: clamp(16px, 2.5vw, 32px);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+html:not(.dark) .nexus-teaser-card { border-color: #e0e0dc; }
+.nexus-teaser-card:hover,
+.nexus-teaser-card:focus-visible { border-color: var(--c-strategy); outline: none; }
+@media (max-width: 767px) { .nexus-teaser-card { grid-template-columns: 1fr; } }
+.nexus-teaser-viz { width: 100%; }
+.ntz-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.ntz-link { stroke: rgba(255,255,255,0.18); stroke-width: 1; }
+html:not(.dark) .ntz-link { stroke: rgba(0,0,0,0.18); }
+.nexus-teaser-card:hover .ntz-link { stroke: var(--c-strategy); }
+.ntz-dot { fill: rgba(255,255,255,0.5); transition: fill 0.2s; }
+html:not(.dark) .ntz-dot { fill: rgba(0,0,0,0.45); }
+.nexus-teaser-card:hover .ntz-dot { fill: #fff; }
+html:not(.dark) .nexus-teaser-card:hover .ntz-dot { fill: #000; }
+.ntz-label {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  fill: rgba(255,255,255,0.45);
+}
+html:not(.dark) .ntz-label { fill: rgba(0,0,0,0.5); }
+.ntz-hub-dot { stroke: rgba(255,255,255,0.4); stroke-width: 1.5; }
+.ntz-hub-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  fill: #fff;
+}
+html:not(.dark) .ntz-hub-label { fill: #0a0a0a; }
+.nexus-teaser-lead {
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 14px;
+}
+html:not(.dark) .nexus-teaser-lead { color: rgba(0,0,0,0.65); }
+.nexus-teaser-cta {
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-strategy);
+}
+
 .who-section { margin-bottom: 4px; }
 .who-inner {
   border: 1px solid #1e1e1e;
