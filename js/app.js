@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=9dcb93b');
+  const { archiveData: staticData } = await import('../database.js?v=3719596');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -1463,7 +1463,7 @@ function setupEventListeners() {
       if (matrix && !matrix.classList.contains('hidden')) {
         closeConnectionMatrix(); restoreFocus(); e.preventDefault(); return;
       }
-      const openModal = document.querySelector('[role="dialog"]:not(.hidden):not(#image-lightbox)');
+      const openModal = document.querySelector('[role="dialog"]:not(.hidden):not([hidden]):not(#image-lightbox)');
       if (openModal) {
         openModal.classList.add('hidden');
         document.body.style.overflow = '';
@@ -1475,7 +1475,11 @@ function setupEventListeners() {
     // Don't swallow typing in form fields
     const tag = document.activeElement?.tagName;
     if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
-    if (AppState.selectedEntryId) {
+    // Use detail DOM state as fallback: AppState.selectedEntryId may not reflect
+    // detail-mode-active when module instances diverge in some hosting environments.
+    const _detailOpen = AppState.selectedEntryId ||
+      (!$('detail-image-view')?.classList.contains('hidden') && $('app-root')?.classList.contains('detail-mode-active'));
+    if (_detailOpen) {
       if (e.key === 'ArrowLeft')       { e.preventDefault(); navigateEntry(-1, archiveData, callbacks); }
       else if (e.key === 'ArrowRight') { e.preventDefault(); navigateEntry(1, archiveData, callbacks); }
       else if (e.key === 'Escape')     { closeDetail(callbacks, archiveData); syncHashFromState(); }
