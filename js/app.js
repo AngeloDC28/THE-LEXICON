@@ -1479,8 +1479,8 @@ function setupEventListeners() {
         return;
       }
     }
-    // Command palette gets first pass at keys even when its input is focused
-    // (ArrowDown/Up/Enter navigate results; Escape closes the palette).
+    // Ctrl+K and command palette navigation must work regardless of what's focused.
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openCmdPalette(); return; }
     handleCmdKeydown(e, archiveData, callbacks);
     if (e.defaultPrevented) return;
     // Don't swallow typing in form fields
@@ -1583,10 +1583,6 @@ function setupEventListeners() {
           toggleBookmark(focusedRow.dataset.entryId, callbacks);
         }
       }
-    }
-    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-      e.preventDefault();
-      openCmdPalette();
     }
   });
 
