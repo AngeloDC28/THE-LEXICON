@@ -133,7 +133,6 @@ export function renderImageGrid(archiveData, callbacks) {
               <img
                 src="${src}"${imgAttrs(imgObj)}
                 alt="${isFirst ? brand + ' ' + season + ' ' + year : ''}"
-                loading="lazy"
                 decoding="async"
                 class="transition-transform duration-500 group-hover:scale-105"
                 onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
