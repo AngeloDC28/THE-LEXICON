@@ -1449,6 +1449,9 @@ function setupEventListeners() {
 
   // Keyboard
   window.addEventListener('keydown', (e) => {
+    // A more specific handler (e.g. hotspot Escape in hotspots.js) already
+    // consumed this keypress — don't also close the surface beneath it.
+    if (e.defaultPrevented) return;
     // Lightbox takes priority — Esc closes it, arrows navigate inside it
     const lightbox = $('image-lightbox');
     if (lightbox && !lightbox.classList.contains('hidden')) {
