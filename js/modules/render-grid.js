@@ -149,6 +149,13 @@ export function renderImageGrid(archiveData, callbacks) {
   });
 
   grid.innerHTML = html;
+  // After a short wait, mark any viewport images already in the browser
+  // cache as loaded so they don't sit at opacity:0 on re-visits.
+  // The timeout gives the browser time to fire intersection observer →
+  // start loading → resolve from cache before we check img.complete.
+  setTimeout(() => {
+    grid.querySelectorAll('img').forEach(img => { if (img.complete) img.classList.add('loaded'); });
+  }, 150);
   setupGridIntersectionObserver();
 }
 
