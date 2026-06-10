@@ -497,7 +497,8 @@ function refreshChrome() {
 
   const aboutBody = $('about-modal-body');
   if (aboutBody) {
-    aboutBody.innerHTML = t('modal_about_body').map(p => `<p>${p}</p>`).join('');
+    const v = t('modal_about_body');
+    aboutBody.innerHTML = (Array.isArray(v) ? v : [v]).map(p => `<p>${p}</p>`).join('');
   }
 
   // Contact Modal
@@ -506,7 +507,8 @@ function refreshChrome() {
 
   const contactBody = $('contact-modal-body');
   if (contactBody) {
-    contactBody.innerHTML = t('modal_contact_body').map(p => `<p>${p}</p>`).join('');
+    const v = t('modal_contact_body');
+    contactBody.innerHTML = (Array.isArray(v) ? v : [v]).map(p => `<p>${p}</p>`).join('');
   }
 
   // Legal Modals
@@ -515,7 +517,8 @@ function refreshChrome() {
 
   const privacyBody = $('privacy-modal-body');
   if (privacyBody) {
-    privacyBody.innerHTML = t('legal_privacy_body').map(p => `<p>${p}</p>`).join('');
+    const v = t('legal_privacy_body');
+    privacyBody.innerHTML = (Array.isArray(v) ? v : [v]).map(p => `<p>${p}</p>`).join('');
   }
 
   const termsTitle = $('terms-modal-title');
@@ -523,7 +526,8 @@ function refreshChrome() {
 
   const termsBody = $('terms-modal-body');
   if (termsBody) {
-    termsBody.innerHTML = t('legal_terms_body').map(p => `<p>${p}</p>`).join('');
+    const v = t('legal_terms_body');
+    termsBody.innerHTML = (Array.isArray(v) ? v : [v]).map(p => `<p>${p}</p>`).join('');
   }
 
   // --- Sort Button label (the active sort value is content, but the
@@ -1475,6 +1479,10 @@ function setupEventListeners() {
         return;
       }
     }
+    // Command palette gets first pass at keys even when its input is focused
+    // (ArrowDown/Up/Enter navigate results; Escape closes the palette).
+    handleCmdKeydown(e, archiveData, callbacks);
+    if (e.defaultPrevented) return;
     // Don't swallow typing in form fields
     const tag = document.activeElement?.tagName;
     if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
@@ -1580,7 +1588,6 @@ function setupEventListeners() {
       e.preventDefault();
       openCmdPalette();
     }
-    handleCmdKeydown(e, archiveData, callbacks);
   });
 
   $('cmd-input')?.addEventListener('input', (e) => {
