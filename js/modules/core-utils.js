@@ -57,6 +57,7 @@ export function initCustomCursor() {
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = `${e.clientX}px`;
     cursor.style.top  = `${e.clientY}px`;
+    cursor.style.visibility = 'visible'; // starts hidden so it doesn't sit parked at (0,0)
   });
   document.addEventListener('mousedown', () => {
     cursor.classList.add('cursor-expanding');

@@ -3789,6 +3789,10 @@ html.dark .active-hotspot-box {
   z-index: 10000;
   transition: transform 0.05s ease-out;
   display: none;
+  /* Invisible until the first mousemove positions it — otherwise it sits
+     parked at (0,0) in the page corner on load. JS reveals it. visibility
+     (not opacity) because the cursorFlicker animation owns opacity. */
+  visibility: hidden;
 }
 @media (hover: hover) and (pointer: fine) {
   #custom-cursor { display: block; }
