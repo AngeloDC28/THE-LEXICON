@@ -3374,7 +3374,7 @@ html.dark .skeleton {
 }
 
 /* ── LAZY FADE-IN ── */
-.grid-cell img { opacity: 0; transition: opacity 0.2s ease; }
+.grid-cell img { transition: opacity 0.2s ease; }
 .grid-cell img.loaded { opacity: 1; }
 .timeline-item { transform: translateY(10px); }
 .timeline-item.loaded { transform: translateY(0); }
