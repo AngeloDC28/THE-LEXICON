@@ -20,14 +20,14 @@ const SKIP_TAGS = new Set([
   'SVG','MATH','INPUT','TEXTAREA','SELECT'
 ]);
 
-// WeakMap: text node → English original text
-const _orig = new WeakMap();
+// Map: text node → English original text (Map, not WeakMap — must be iterable for restoreAll)
+const _orig = new Map();
 let _obs = null;
 let _gen = 0; // incremented on every translate() call, used to abort stale fetches
 
 // Attributes carrying screen-reader / tooltip content — translated alongside text nodes
 const TRANSLATE_ATTRS = ['aria-label', 'placeholder', 'alt', 'title'];
-const _origAttrs = new WeakMap(); // element → { attr: original }
+const _origAttrs = new Map(); // element → { attr: original } (Map for iterability in restoreAll)
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
@@ -205,11 +205,13 @@ export function restoreAll() {
   _orig.forEach((orig, node) => {
     if (node.isConnected) node.textContent = orig;
   });
+  _orig.clear();
   _origAttrs.forEach((map, el) => {
     if (el.isConnected) {
       for (const [attr, orig] of Object.entries(map)) el.setAttribute(attr, orig);
     }
   });
+  _origAttrs.clear();
 }
 
 /**
