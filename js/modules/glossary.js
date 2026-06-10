@@ -142,7 +142,12 @@ document.addEventListener('click', (e) => {
 });
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') dismissTooltip();
+  if (e.key === 'Escape' && _activeTooltip) {
+    // Consume the keypress so the global handler doesn't also close the
+    // surface beneath the tooltip (detail view, modal, etc.).
+    e.preventDefault();
+    dismissTooltip();
+  }
 });
 
 // ─── Glossary Modal ───────────────────────────────────────────────────────────
