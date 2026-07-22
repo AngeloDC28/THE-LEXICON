@@ -1594,16 +1594,32 @@ function setupEventListeners() {
   // Cookie Banner (GDPR compliance) — show until the user makes any choice.
   // Suppress while the welcome modal is open; reveal on dismissal so the two
   // overlays never stack at first visit.
+  // Expose the banner's height as a CSS var so bottom-anchored controls
+  // (e.g. the mobile filter FAB) can sit above it instead of being blocked.
+  const syncCookieBannerHeight = () => {
+    const b = $('cookie-banner');
+    const h = (b && !b.classList.contains('hidden')) ? b.offsetHeight : 0;
+    document.documentElement.style.setProperty('--cookie-banner-h', h + 'px');
+  };
+  const showCookieBanner = () => {
+    $('cookie-banner')?.classList.remove('hidden');
+    requestAnimationFrame(syncCookieBannerHeight);
+  };
+  const hideCookieBanner = () => {
+    $('cookie-banner')?.classList.add('hidden');
+    syncCookieBannerHeight();
+  };
+  window.addEventListener('resize', syncCookieBannerHeight);
+
   var cookieChoice, welcomedFlag;
   try { cookieChoice = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
   try { welcomedFlag = localStorage.getItem('lexicon-welcomed'); } catch(e) {}
   const willShowWelcome = !welcomedFlag && !!$('welcome-modal');
   if (!cookieChoice && !willShowWelcome) {
-    $('cookie-banner')?.classList.remove('hidden');
+    showCookieBanner();
   } else if (!cookieChoice && willShowWelcome) {
-    const reveal = () => $('cookie-banner')?.classList.remove('hidden');
-    $('btn-welcome-enter')?.addEventListener('click', () => setTimeout(reveal, 50));
-    $('btn-welcome-skip')?.addEventListener('click', () => setTimeout(reveal, 50));
+    $('btn-welcome-enter')?.addEventListener('click', () => setTimeout(showCookieBanner, 50));
+    $('btn-welcome-skip')?.addEventListener('click', () => setTimeout(showCookieBanner, 50));
   }
   // Populate cookie notice text from translations
   const cookieNotice = $('cookie-notice-text');
@@ -1612,11 +1628,11 @@ function setupEventListeners() {
   }
   $('btn-accept-cookies')?.addEventListener('click', () => {
     try { localStorage.setItem('lexicon-terms-accepted', 'true'); } catch(e) {}
-    $('cookie-banner')?.classList.add('hidden');
+    hideCookieBanner();
   });
   $('btn-reject-cookies')?.addEventListener('click', () => {
     try { localStorage.setItem('lexicon-terms-accepted', 'rejected'); } catch(e) {}
-    $('cookie-banner')?.classList.add('hidden');
+    hideCookieBanner();
   });
 
   // Custom Refresh Event

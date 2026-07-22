@@ -1474,8 +1474,10 @@ html:not(.dark) .who-use { color: #555; }
 .mobile-filter-btn {
   display: none;
   position: fixed;
-  bottom: calc(16px + env(safe-area-inset-bottom));
+  /* Sit above the cookie banner while it's showing (var set from JS). */
+  bottom: calc(16px + env(safe-area-inset-bottom) + var(--cookie-banner-h, 0px));
   right: calc(14px + env(safe-area-inset-right));
+  transition: bottom 0.2s ease;
   z-index: 80;
   background: #fff;
   color: #000;
