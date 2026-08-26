@@ -118,13 +118,12 @@ export function renderImageGrid(archiveData, callbacks) {
         : `aria-hidden="true"`;
 
       html += `
-        <div class="grid-cell"
+        <div class="grid-cell grid-cell--delay-${index % 10}"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
-             ${a11yAttrs}
-             style="animation-delay: ${delay}s">
+             ${a11yAttrs}>
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
-            <span class="gc-tag-label" style="color: var(${tagColor}, #999)"${catTip ? ` data-tooltip="${catTip.replace(/"/g, '&quot;')}"` : ''}>${tagLabel}</span>
+            <span class="gc-tag-label"${catTip ? ` data-tooltip="${catTip.replace(/"/g, '&quot;')}"` : ''}>${tagLabel}</span>
           </div>
           <div class="grid-cell-img group">
             ${hotspotBadge}
@@ -230,7 +229,7 @@ export function renderEntryList(archiveData, callbacks) {
     const isActiveCat = AppState.analyticalCat === tagCategory;
     const listCatTip  = getTranslation(`cat_tip_${tagCategory}`, lang);
     const catHeader = isNewCat
-      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}" aria-description="${listCatTip}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
+      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}" aria-description="${listCatTip}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
       : '';
     // Thumbnail — first image of entry, shown inline on desktop
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;

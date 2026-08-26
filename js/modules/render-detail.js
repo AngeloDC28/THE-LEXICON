@@ -242,7 +242,7 @@ function renderSidebarHeader(entry) {
 
   header.innerHTML = `
     <h1 class="detail-print-title print-only">${printTitle}</h1>
-    <span class="detail-accent-tag" style="color:var(--c-${cat});border-color:var(--c-${cat})">${tagLabel.toUpperCase()}</span>
+    <span class="detail-accent-tag" data-cat="${cat}">${tagLabel.toUpperCase()}</span>
     <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
     ${vibesHtml}
     ${posLabel ? `
@@ -273,7 +273,7 @@ function renderBreadcrumb(entry) {
   crumb.innerHTML =
     `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
     + sep
-    + `<span style="color:var(--c-${cat}, #e2a4a0)">${tagCat}</span>`
+    + `<span class="detail-breadcrumb-cat" data-cat="${cat}">${tagCat}</span>`
     + sep
     + `<span class="text-white/50">${brand.toUpperCase()}</span>`
     + (season ? sep + `<span class="text-white/70">${season.slice(0, 30).toUpperCase()}</span>` : '');

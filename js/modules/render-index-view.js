@@ -113,14 +113,16 @@ function buildHeaderRow() {
     { key: null,       label: 'PROVENANCE',  width: null    },
     { key: null,       label: 'STATUS',      width: '120px' },
   ];
+  const colClass = { designer: 'idx-col-designer', year: 'idx-col-year', season: 'idx-col-season', tag: 'idx-col-tag', status: 'idx-col-status' };
   return cols.map(({ key, label, width }) => {
-    const w = width ? ` style="width:${width};"` : '';
-    if (!key) return `<th scope="col"${w}>${label}</th>`;
+    const cls = colClass[key] || (label === 'STATUS' ? colClass.status : '');
+    const c = cls ? ` class="${cls}"` : '';
+    if (!key) return `<th scope="col"${c}>${label}</th>`;
     const active = _indexSort.col === key ? ' sort-active' : '';
     const ariaSort = _indexSort.col === key
       ? (_indexSort.dir === 'asc' ? 'ascending' : 'descending')
       : 'none';
-    return `<th scope="col"${w} class="sortable${active}" data-sort-col="${key}" aria-sort="${ariaSort}" tabindex="0" role="columnheader" aria-label="Sort by ${label}">${label} ${sortIndicator(key)}</th>`;
+    return `<th scope="col" class="sortable${active}${cls ? ' ' + cls : ''}" data-sort-col="${key}" aria-sort="${ariaSort}" tabindex="0" role="columnheader" aria-label="Sort by ${label}">${label} ${sortIndicator(key)}</th>`;
   }).join('');
 }
 

@@ -3376,7 +3376,7 @@ html.dark .skeleton {
 /* ── LAZY FADE-IN ── */
 .grid-cell img { transition: opacity 0.2s ease; }
 .grid-cell img.loaded { opacity: 1; }
-.timeline-item { transform: translateY(10px); }
+.timeline-item { transform: translateY(10px); transition: all 0.6s ease; }
 .timeline-item.loaded { transform: translateY(0); }
 .timeline-item img { transition: opacity 0.2s ease, transform 0.5s ease; }
 .timeline-item img.loaded { opacity: 1 !important; }
@@ -4730,3 +4730,89 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
   #glossary-modal .glossary-entry { grid-template-columns: 1fr; gap: 4px 0; }
   .glossary-term { font-size: 9px; }
 }
+
+/* ─── CSP-safe replacements for values that used to be set via inline
+   style="" attributes (blocked by the style-src CSP with no unsafe-inline).
+   Same category-color pattern as .grid-cell-tag-strip[data-cat] above. ─── */
+.axis-card[data-cat-filter="corporeal"]  { --axis-c: var(--c-corporeal); }
+.axis-card[data-cat-filter="semiotic"]   { --axis-c: var(--c-semiotic); }
+.axis-card[data-cat-filter="subculture"] { --axis-c: var(--c-subculture); }
+.axis-card[data-cat-filter="critique"]   { --axis-c: var(--c-critique); }
+.axis-card[data-cat-filter="strategy"]   { --axis-c: var(--c-strategy); }
+.axis-card[data-cat-filter="provenance"] { --axis-c: var(--c-provenance); }
+
+.ntz-hub-dot[data-cat="corporeal"]  { fill: var(--c-corporeal); }
+.ntz-hub-dot[data-cat="semiotic"]   { fill: var(--c-semiotic); }
+.ntz-hub-dot[data-cat="subculture"] { fill: var(--c-subculture); }
+.ntz-hub-dot[data-cat="critique"]   { fill: var(--c-critique); }
+.ntz-hub-dot[data-cat="strategy"]   { fill: var(--c-strategy); }
+.ntz-hub-dot[data-cat="provenance"] { fill: var(--c-provenance); }
+
+.detail-accent-tag[data-cat="corporeal"]  { color: var(--c-corporeal);  border-color: var(--c-corporeal); }
+.detail-accent-tag[data-cat="semiotic"]   { color: var(--c-semiotic);   border-color: var(--c-semiotic); }
+.detail-accent-tag[data-cat="subculture"] { color: var(--c-subculture); border-color: var(--c-subculture); }
+.detail-accent-tag[data-cat="critique"]   { color: var(--c-critique);   border-color: var(--c-critique); }
+.detail-accent-tag[data-cat="strategy"]   { color: var(--c-strategy);   border-color: var(--c-strategy); }
+.detail-accent-tag[data-cat="provenance"] { color: var(--c-provenance); border-color: var(--c-provenance); }
+
+.detail-breadcrumb-cat { color: #e2a4a0; }
+.detail-breadcrumb-cat[data-cat="corporeal"]  { color: var(--c-corporeal); }
+.detail-breadcrumb-cat[data-cat="semiotic"]   { color: var(--c-semiotic); }
+.detail-breadcrumb-cat[data-cat="subculture"] { color: var(--c-subculture); }
+.detail-breadcrumb-cat[data-cat="critique"]   { color: var(--c-critique); }
+.detail-breadcrumb-cat[data-cat="strategy"]   { color: var(--c-strategy); }
+.detail-breadcrumb-cat[data-cat="provenance"] { color: var(--c-provenance); }
+
+.entry-cat-header[data-cat-filter="corporeal"]  { color: var(--c-corporeal); }
+.entry-cat-header[data-cat-filter="semiotic"]   { color: var(--c-semiotic); }
+.entry-cat-header[data-cat-filter="subculture"] { color: var(--c-subculture); }
+.entry-cat-header[data-cat-filter="critique"]   { color: var(--c-critique); }
+.entry-cat-header[data-cat-filter="strategy"]   { color: var(--c-strategy); }
+.entry-cat-header[data-cat-filter="provenance"] { color: var(--c-provenance); }
+
+.cmd-tag-color { color: var(--c-corporeal); }
+
+.grid-cell--delay-0 { animation-delay: 0s; }
+.grid-cell--delay-1 { animation-delay: 0.05s; }
+.grid-cell--delay-2 { animation-delay: 0.1s; }
+.grid-cell--delay-3 { animation-delay: 0.15s; }
+.grid-cell--delay-4 { animation-delay: 0.2s; }
+.grid-cell--delay-5 { animation-delay: 0.25s; }
+.grid-cell--delay-6 { animation-delay: 0.3s; }
+.grid-cell--delay-7 { animation-delay: 0.35s; }
+.grid-cell--delay-8 { animation-delay: 0.4s; }
+.grid-cell--delay-9 { animation-delay: 0.45s; }
+
+.timeline-gap-label { writing-mode: vertical-rl; transform: rotate(180deg); }
+
+.idx-col-designer { width: 200px; }
+.idx-col-year { width: 70px; }
+.idx-col-season { width: 140px; }
+.idx-col-tag { width: 240px; }
+.idx-col-status { width: 120px; }
+
+.matrix-entry-thumb { width: 100%; aspect-ratio: 3/4; object-fit: cover; margin-bottom: 8px; }
+
+/* Nexus timeline view (connection-matrix.js renderTimeline) */
+.nexus-tl-wrap { padding: 24px 20px; font-family: ui-monospace, monospace; }
+.nexus-tl-caption { font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.nexus-tl-track { position: relative; padding-left: 32px; }
+.nexus-tl-line { position: absolute; left: 8px; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.12); }
+.nexus-tl-item { position: relative; margin-bottom: 18px; }
+.nexus-tl-item--clickable { cursor: pointer; }
+.nexus-tl-dot { position: absolute; left: -28px; top: 4px; width: 8px; height: 8px; border-radius: 50%; background: #fff; }
+.nexus-tl-dot--politics  { background: #FF6B6B; }
+.nexus-tl-dot--theories  { background: #FFB347; }
+.nexus-tl-dot--era       { background: #87CEEB; }
+.nexus-tl-dot--format    { background: #DDA0DD; }
+.nexus-tl-dot--brand     { background: #98FB98; }
+.nexus-tl-dot--materials { background: #F0E68C; }
+.nexus-tl-dot--geography { background: #87CEFA; }
+.nexus-tl-dot--anatomy   { background: #FFB6C1; }
+.nexus-tl-dot--current   { background: #CCFF00; box-shadow: 0 0 8px #CCFF00; }
+.nexus-tl-year { font-size: 7px; letter-spacing: 0.15em; margin-bottom: 2px; color: rgba(255,255,255,0.35); }
+.nexus-tl-year--current { color: #CCFF00; }
+.nexus-tl-brand { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+.nexus-tl-brand--current { color: #CCFF00; }
+.nexus-tl-keys { margin-top: 4px; }
+.nexus-tl-key { font-size: 6px; letter-spacing: 0.1em; text-transform: uppercase; padding: 1px 4px; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.4); margin-right: 3px; }

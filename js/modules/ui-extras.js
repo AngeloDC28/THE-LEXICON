@@ -33,7 +33,7 @@ export function renderTimeline(archiveData, callbacks) {
   container.innerHTML = items.map(item => {
     if (item.type === 'gap') {
       return `<div class="flex-shrink-0 w-16 h-full flex flex-col items-center justify-center opacity-20 border-r border-black/10 dark:border-white/10">
-        <div class="text-[7px] font-mono uppercase tracking-widest writing-mode-vertical" style="writing-mode:vertical-rl;transform:rotate(180deg)">· · · ${item.gap} ${item.gap === 1 ? 'yr' : 'yrs'} · · ·</div>
+        <div class="text-[7px] font-mono uppercase tracking-widest timeline-gap-label">· · · ${item.gap} ${item.gap === 1 ? 'yr' : 'yrs'} · · ·</div>
       </div>`;
     }
     const { year, entries } = item;
@@ -48,7 +48,7 @@ export function renderTimeline(archiveData, callbacks) {
             <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0"
                  data-id="${e.id}" role="button" tabindex="0"
                  aria-label="${getTranslation(e.tags.brand, AppState.language)} ${e.year} — ${getTranslation(e.title, AppState.language)}"
-                 style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
+                 data-delay="${Math.min(i * 0.1, 1.5)}">
               <picture>
                 <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(e.images && e.images[0])})}">
                 <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
@@ -69,6 +69,7 @@ export function renderTimeline(archiveData, callbacks) {
 
   // Attach Listeners
   container.querySelectorAll('.timeline-item').forEach(el => {
+    el.style.transitionDelay = `${el.dataset.delay}s`;
     const activate = () => { if (callbacks && callbacks.openDetail) callbacks.openDetail(el.dataset.id); };
     el.addEventListener('click', activate);
     el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });

@@ -401,11 +401,11 @@ function renderTimeline(entry, connections, callbacks, container) {
   };
 
   // Render as a scrollable vertical timeline
-  let html = `<div style="padding:24px 20px;font-family:ui-monospace,monospace;">`;
-  html += `<p style="font-size:7px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:20px;">Connected entries — ${minYear}–${maxYear}</p>`;
-  html += `<div style="position:relative;padding-left:32px;">`;
+  let html = `<div class="nexus-tl-wrap">`;
+  html += `<p class="nexus-tl-caption">Connected entries — ${minYear}–${maxYear}</p>`;
+  html += `<div class="nexus-tl-track">`;
   // Vertical line
-  html += `<div style="position:absolute;left:8px;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.12);"></div>`;
+  html += `<div class="nexus-tl-line"></div>`;
 
   years.forEach(yr => {
     const items = byYear.get(yr);
@@ -414,17 +414,17 @@ function renderTimeline(entry, connections, callbacks, container) {
       const brand = rel.tags?.brand || rel.id;
       const season = rel.season || '';
       const keyArr = isCur ? [] : [...keys];
-      const dotColor = isCur ? '#CCFF00' : (keyArr[0] ? TAG_COLORS[keyArr[0]] || '#fff' : '#fff');
-      const keyLabels = keyArr.map(k => `<span style="font-size:6px;letter-spacing:0.1em;text-transform:uppercase;padding:1px 4px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.4);margin-right:3px;">${k}</span>`).join('');
+      const dotClass = isCur ? 'nexus-tl-dot--current' : (keyArr[0] ? `nexus-tl-dot--${keyArr[0]}` : '');
+      const keyLabels = keyArr.map(k => `<span class="nexus-tl-key">${k}</span>`).join('');
 
-      html += `<div style="position:relative;margin-bottom:18px;${isCur ? '' : 'cursor:pointer;'}" ${isCur ? '' : `data-tl-id="${rel.id}"`} role="${isCur ? 'presentation' : 'button'}" tabindex="${isCur ? '-1' : '0'}" aria-label="${isCur ? '' : `Open ${brand} ${yr}`}">`;
+      html += `<div class="nexus-tl-item${isCur ? '' : ' nexus-tl-item--clickable'}" ${isCur ? '' : `data-tl-id="${rel.id}"`} role="${isCur ? 'presentation' : 'button'}" tabindex="${isCur ? '-1' : '0'}" aria-label="${isCur ? '' : `Open ${brand} ${yr}`}">`;
       // Dot on timeline
-      html += `<div style="position:absolute;left:-28px;top:4px;width:8px;height:8px;border-radius:50%;background:${dotColor};${isCur ? 'box-shadow:0 0 8px #CCFF00;' : ''}"></div>`;
+      html += `<div class="nexus-tl-dot ${dotClass}"></div>`;
       // Year
-      html += `<div style="font-size:7px;letter-spacing:0.15em;color:${isCur ? '#CCFF00' : 'rgba(255,255,255,0.35)'};margin-bottom:2px;">${yr}${season ? ' · ' + season.toUpperCase() : ''}</div>`;
+      html += `<div class="nexus-tl-year${isCur ? ' nexus-tl-year--current' : ''}">${yr}${season ? ' · ' + season.toUpperCase() : ''}</div>`;
       // Brand
-      html += `<div style="font-size:10px;font-weight:700;letter-spacing:0.1em;color:${isCur ? '#CCFF00' : 'rgba(255,255,255,0.85)'};text-transform:uppercase;${!isCur ? '' : ''}">${brand}</div>`;
-      if (keyLabels) html += `<div style="margin-top:4px;">${keyLabels}</div>`;
+      html += `<div class="nexus-tl-brand${isCur ? ' nexus-tl-brand--current' : ''}">${brand}</div>`;
+      if (keyLabels) html += `<div class="nexus-tl-keys">${keyLabels}</div>`;
       html += `</div>`;
     });
   });
@@ -479,7 +479,7 @@ function renderList(entry, connections, callbacks, container) {
         const thumbSrc = resolveImgSrc(rel.images?.[0]);
         const label = `${rel.tags.brand || ''} ${rel.year || ''}`;
         html += `<button type="button" class="matrix-entry focus-ring" data-matrix-entry-id="${rel.id}" aria-label="Open ${label}">
-          <img src="${thumbSrc}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;" loading="lazy" />
+          <img src="${thumbSrc}" alt="" class="matrix-entry-thumb" loading="lazy" />
           <p class="t-mono-xs font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>
           <p class="t-mono-xs font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>
         </button>`;

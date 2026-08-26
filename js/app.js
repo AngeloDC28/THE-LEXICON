@@ -1966,7 +1966,7 @@ function renderAxesBrowse(archiveData) {
   });
   grid.innerHTML = AXIS_DEFS.map(a => {
     const n = counts.get(a.key) || 0;
-    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" style="--axis-c:var(--c-${a.key})" aria-label="Browse ${a.label} — ${n} entries">
+    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" aria-label="Browse ${a.label} — ${n} entries">
       <span class="axis-bar" aria-hidden="true"></span>
       <span class="axis-label">${a.label}</span>
       <span class="axis-blurb">${a.blurb}</span>
@@ -2068,7 +2068,7 @@ function renderNexusTeaser(archiveData) {
       <g>${lines}</g>
       ${peerNodes}
       <g class="ntz-hub">
-        <circle cx="${cx}" cy="${cy}" r="11" class="ntz-hub-dot" style="fill:var(--c-${cat})" />
+        <circle cx="${cx}" cy="${cy}" r="11" class="ntz-hub-dot" data-cat="${cat}" />
         <text x="${cx}" y="${(cy + 28).toFixed(1)}" class="ntz-hub-label" text-anchor="middle">${short(hub)} ${hub.year || ''}</text>
       </g>
     </svg>`;

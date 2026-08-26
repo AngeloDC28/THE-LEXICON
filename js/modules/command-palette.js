@@ -169,7 +169,7 @@ export function renderCmdResults(query, archiveData, callbacks) {
       html += `<div class="cmd-item cmd-tag-item p-3 px-4 cursor-pointer flex items-center gap-3" role="option" aria-selected="false" data-cmd-action="filter-tag" data-cmd-val="${tag}">
         <div class="t-mono-xs font-bold opacity-30 shrink-0 font-mono">#</div>
         <div class="min-w-0 flex-1">
-          <div class="t-mono-sm font-bold tracking-wide" style="color:var(--c-corporeal)">${tag}</div>
+          <div class="t-mono-sm font-bold tracking-wide cmd-tag-color">${tag}</div>
           <div class="t-mono-xs opacity-50 uppercase tracking-wider mt-0.5">${tagCount} ENTRIES · ${shortTag.toUpperCase()}</div>
         </div>
         <div class="t-mono-xs opacity-40 ml-2 shrink-0 tracking-wider">TAG</div>
