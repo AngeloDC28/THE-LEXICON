@@ -51,8 +51,9 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   // Detect same-entry navigation (image paging) vs. new entry — for URL strategy
   const _previousEntryId = AppState.selectedEntryId;
 
-  AppState.selectedEntryId   = entryId;
-  AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
+  AppState.selectedEntryId = entryId;
+  const parsedIdx = Number.isFinite(imgIdx) ? Math.trunc(imgIdx) : 0;
+  AppState.currentImageIndex = Math.max(0, Math.min(parsedIdx, imgs.length - 1));
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
   const detailView = $('detail-image-view');

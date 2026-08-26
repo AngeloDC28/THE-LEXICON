@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=73e5278');
+  const { archiveData: staticData } = await import('../database.js?v=b704c3f');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -762,6 +762,19 @@ export function syncHashFromState() {
   setTimeout(() => { _suppressHashSync = false; }, 0);
 }
 
+function parseEntryPath(pathname) {
+  const match = pathname.match(/^\/entry\/([^/]+)(?:\/([^/]+))?\/?$/);
+  if (!match) return null;
+  const slug = match[1];
+  const rawIndex = match[2];
+  const parsed = rawIndex == null ? 0 : Number.parseInt(rawIndex, 10);
+  return {
+    slug,
+    index: Number.isFinite(parsed) ? parsed : 0,
+    hadExplicitIndex: rawIndex != null
+  };
+}
+
 function handleRouting() {
   if (_suppressHashSync) return;
 
@@ -782,14 +795,19 @@ function handleRouting() {
   }
 
   // Path-based entry routes: /entry/{slug}/{imageIndex}
-  const entryMatch = window.location.pathname.match(/^\/entry\/([^/]+)(?:\/(\d+))?/);
-  if (entryMatch) {
-    const id  = entryMatch[1];
-    const idx = entryMatch[2] ? parseInt(entryMatch[2]) : 0;
+  const entryRoute = parseEntryPath(window.location.pathname);
+  if (entryRoute) {
+    const id = entryRoute.slug;
     const entry = archiveData.find(e => e.id === id);
     if (entry) {
+      const maxIndex = (entry.images?.length || 1) - 1;
+      const safeIndex = Math.max(0, Math.min(entryRoute.index, maxIndex));
+      const canonicalPath = `/entry/${id}/${safeIndex}`;
+      if (window.location.pathname !== canonicalPath) {
+        history.replaceState({ entryId: id, imgIdx: String(safeIndex) }, '', canonicalPath);
+      }
       switchView('grid', callbacks);
-      openDetail(id, idx, archiveData, callbacks);
+      openDetail(id, safeIndex, archiveData, callbacks);
     } else if (archiveData.length > 0) {
       // Data is loaded but slug doesn't exist — genuine 404
       switchView('grid', callbacks);
