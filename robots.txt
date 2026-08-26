@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thelexicon.xyz/sitemap.xml
+Sitemap: https://thelexicon.xyz/sitemap-index.xml

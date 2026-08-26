@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script>
-    window.onerror = function(msg, url, lineNo, columnNo, error) {
-      console.error("LEXICON_CORE_EXCEPTION:", msg, "at line", lineNo, error);
-    };
-  </script>
+  <script src="/js/boot.js"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE LEXICON | Forensic Visual Culture Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>THE LEXICON — fashion history, indexed analytically</title>
   
   <!-- Inline SVG favicon — avoids the /favicon.ico 404 without shipping
        a binary asset. Black square with acid-green 'L' monogram. -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext y='78' x='18' fill='%23CCFF00' font-family='monospace' font-size='80' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#000000">
   <meta name="asset-base" content="/public">
 
   <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer." />
-  <meta name="keywords" content="fashion archive, fashion history, visual culture, subcultural theory, runway analysis, fashion criticism, fashion research" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="description" content="A research archive mapping fashion history, visual culture, and the lineage of ideas. 45 landmark collections annotated by analytical category, designer, era, and movement." />
   <meta name="author" content="Angelo Sanchez Dela Cruz" />
   <meta property="og:site_name" content="THE LEXICON" />
   <meta property="og:title" content="THE LEXICON — fashion history, indexed analytically" />
@@ -34,230 +32,44 @@
   <meta name="twitter:title" content="THE LEXICON — fashion history, indexed analytically" />
   <meta name="twitter:description" content="45 landmark collections, decoded by category, designer, era, and movement. A research archive for fashion history and visual culture." />
   <meta name="twitter:image" content="https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg" />
+  <meta name="twitter:site" content="@thelexi0n" />
+  <link rel="canonical" href="https://thelexicon.xyz/" />
+  <link rel="alternate" type="application/rss+xml" title="THE LEXICON — new entries" href="https://thelexicon.xyz/feed.xml" />
+  <link rel="alternate" hreflang="en" href="https://thelexicon.xyz/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://thelexicon.xyz/?lang=zh" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://thelexicon.xyz/?lang=zh-tw" />
+  <link rel="alternate" hreflang="hi" href="https://thelexicon.xyz/?lang=hi" />
+  <link rel="alternate" hreflang="es" href="https://thelexicon.xyz/?lang=es" />
+  <link rel="alternate" hreflang="fr" href="https://thelexicon.xyz/?lang=fr" />
+  <link rel="alternate" hreflang="ar" href="https://thelexicon.xyz/?lang=ar" />
+  <link rel="alternate" hreflang="bn" href="https://thelexicon.xyz/?lang=bn" />
+  <link rel="alternate" hreflang="pt" href="https://thelexicon.xyz/?lang=pt" />
+  <link rel="alternate" hreflang="ru" href="https://thelexicon.xyz/?lang=ru" />
+  <link rel="alternate" hreflang="ja" href="https://thelexicon.xyz/?lang=ja" />
+  <link rel="alternate" hreflang="de" href="https://thelexicon.xyz/?lang=de" />
+  <link rel="alternate" hreflang="ko" href="https://thelexicon.xyz/?lang=ko" />
+  <link rel="alternate" hreflang="it" href="https://thelexicon.xyz/?lang=it" />
+  <link rel="alternate" hreflang="tr" href="https://thelexicon.xyz/?lang=tr" />
+  <link rel="alternate" hreflang="vi" href="https://thelexicon.xyz/?lang=vi" />
+  <link rel="alternate" hreflang="pl" href="https://thelexicon.xyz/?lang=pl" />
+  <link rel="alternate" hreflang="nl" href="https://thelexicon.xyz/?lang=nl" />
+  <link rel="alternate" hreflang="uk" href="https://thelexicon.xyz/?lang=uk" />
+  <link rel="alternate" hreflang="id" href="https://thelexicon.xyz/?lang=id" />
+  <link rel="alternate" hreflang="ms" href="https://thelexicon.xyz/?lang=ms" />
+  <link rel="alternate" hreflang="th" href="https://thelexicon.xyz/?lang=th" />
+  <link rel="alternate" hreflang="el" href="https://thelexicon.xyz/?lang=el" />
+  <link rel="alternate" hreflang="he" href="https://thelexicon.xyz/?lang=he" />
+  <link rel="alternate" hreflang="sv" href="https://thelexicon.xyz/?lang=sv" />
+  <link rel="alternate" hreflang="no" href="https://thelexicon.xyz/?lang=no" />
+  <link rel="alternate" hreflang="da" href="https://thelexicon.xyz/?lang=da" />
+  <link rel="alternate" hreflang="fi" href="https://thelexicon.xyz/?lang=fi" />
+  <link rel="alternate" hreflang="cs" href="https://thelexicon.xyz/?lang=cs" />
+  <link rel="alternate" hreflang="ro" href="https://thelexicon.xyz/?lang=ro" />
+  <link rel="alternate" hreflang="hu" href="https://thelexicon.xyz/?lang=hu" />
+  <link rel="alternate" hreflang="tl" href="https://thelexicon.xyz/?lang=tl" />
+  <link rel="alternate" hreflang="x-default" href="https://thelexicon.xyz/" />
 
-  <!-- Accessibility: Skip Link Styles -->
-  <style>
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #CCFF00;
-      color: #000;
-      padding: 8px;
-      z-index: 10000;
-      transition: top 0.2s;
-    }
-    .skip-link:focus {
-      top: 0;
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border-width: 0;
-    }
-
-    /* ============================================================
-       TAXONOMY CELL GRID (bottom-left filter table)
-       2-column grid; last cell (Format & Medium) spans both columns.
-       Mimics a research-style data table with crisp hairline borders.
-    ============================================================ */
-    .taxonomy-cell-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .dark .taxonomy-cell-grid {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .taxonomy-cell {
-      background: #FAF9F6;
-      color: #000;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      text-align: left;
-      padding: 12px 14px;
-      min-height: 44px;
-      border: none;
-      margin: 0 1px 1px 0;
-      cursor: pointer;
-      transition: background-color 0.15s, color 0.15s;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .dark .taxonomy-cell {
-      background: #0A0A0A;
-      color: #fff;
-    }
-    .taxonomy-cell:hover {
-      background: #000;
-      color: #CCFF00;
-    }
-    .dark .taxonomy-cell:hover {
-      background: #CCFF00;
-      color: #000;
-    }
-    /* Distinct focus ring — visible to keyboard users even when the
-       cell already has a hover-equivalent background. */
-    .taxonomy-cell:focus-visible {
-      outline: 2px solid #CCFF00;
-      outline-offset: -2px;
-      background: #000;
-      color: #CCFF00;
-    }
-    .dark .taxonomy-cell:focus-visible {
-      outline-color: #000;
-      background: #CCFF00;
-      color: #000;
-    }
-    .taxonomy-cell--full {
-      grid-column: 1 / -1;
-      margin-right: 0;
-    }
-    .taxonomy-cell-filter {
-      font-weight: 400;
-      letter-spacing: 0.05em;
-      text-transform: none;
-      opacity: 0.7;
-      font-size: 9px;
-    }
-    /* Active state when this category is the focused sub-panel */
-    .taxonomy-cell[aria-pressed="true"] {
-      background: #000;
-      color: #CCFF00;
-    }
-    .dark .taxonomy-cell[aria-pressed="true"] {
-      background: #CCFF00;
-      color: #000;
-    }
-
-    /* ============================================================
-       ENTRY LIST SCROLL POLISH
-       Subtle scrollbar that doesn't clash with the monospace aesthetic.
-    ============================================================ */
-    #entry-list {
-      scrollbar-width: thin;
-      scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-      scroll-behavior: smooth;
-      overscroll-behavior: contain;
-    }
-    .dark #entry-list {
-      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-    }
-    #entry-list::-webkit-scrollbar {
-      width: 6px;
-    }
-    #entry-list::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    #entry-list::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 0;
-    }
-    .dark #entry-list::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    #entry-list::-webkit-scrollbar-thumb:hover {
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .dark #entry-list::-webkit-scrollbar-thumb:hover {
-      background: rgba(255, 255, 255, 0.5);
-    }
-
-    /* Apply the same scrollbar treatment to the taxonomy sub-panel */
-    #taxonomy-sub {
-      scrollbar-width: thin;
-      scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-    }
-    .dark #taxonomy-sub {
-      scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-    }
-    #taxonomy-sub::-webkit-scrollbar { width: 6px; }
-    #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.3); }
-    .dark #taxonomy-sub::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); }
-
-    /* ============================================================
-       MOBILE TWEAKS
-       Larger tap targets, collapsible categories, no pull-to-refresh.
-    ============================================================ */
-    @media (max-width: 1023px) {
-      .taxonomy-cell {
-        min-height: 52px;
-        padding: 14px 12px;
-        font-size: 11.5px;
-        line-height: 1.25;
-        letter-spacing: 0.1em;
-      }
-      .taxonomy-cell-filter {
-        display: block;
-        margin-top: 2px;
-        font-size: 9.5px;
-      }
-      /* Categories collapses to header-only by default on mobile, freeing
-         ~280px for the entry list. User taps the header to expand. */
-      #taxonomy-section:not(.taxonomy-expanded) #taxonomy-grid {
-        display: none;
-      }
-      #taxonomy-section:not(.taxonomy-expanded) #taxonomy-sub {
-        display: none !important;
-      }
-      #taxonomy-section.taxonomy-expanded {
-        max-height: 60vh;
-        overflow-y: auto;
-      }
-      #taxonomy-section.taxonomy-expanded #taxonomy-chevron {
-        transform: rotate(180deg);
-      }
-      /* Mobile drawer should never bounce-scroll into pull-to-refresh */
-      #index-panel { overscroll-behavior: contain; }
-      /* Categories header has a bit more vertical room on mobile so the
-         chevron + label sit comfortably above the cell grid. */
-      #btn-taxonomy-collapse {
-        padding-top: 14px;
-        padding-bottom: 14px;
-        min-height: 48px;
-      }
-      /* Slightly larger taxonomy heading on mobile for legibility. */
-      #taxonomy-heading {
-        font-size: 11px;
-        letter-spacing: 0.22em;
-      }
-    }
-
-    /* Block native pull-to-refresh on key interactive surfaces — users
-       horizontal-swiping images shouldn't accidentally reload the page. */
-    #grid-view,
-    #image-lightbox,
-    #detail-image-wrapper {
-      overscroll-behavior-y: contain;
-      touch-action: pan-x pan-y pinch-zoom;
-    }
-  </style>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script type="importmap">
-    {
-      "imports": {
-        "firebase/app": "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js",
-        "firebase/analytics": "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js",
-        "firebase/auth": "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js",
-        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js",
-        "firebase/functions": "https://www.gstatic.com/firebasejs/10.13.0/firebase-functions.js"
-      }
-    }
-  </script>
-  <script type="module" src="firebase-init.js"></script>
+  <link rel="stylesheet" href="/public/tailwind.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -266,56 +78,7 @@
     rel="stylesheet"
   />
 
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            bone: '#FAF9F6',
-            overlay: '#FDFCF0',
-            darkBase: '#0A0A0A',
-            darkSurface: '#111111',
-            acid: '#CCFF00',
-          },
-          fontFamily: {
-            mono: ['"JetBrains Mono"', '"Cascadia Code"', '"Fira Code"', 'monospace'],
-            serif: ['"EB Garamond"', 'Georgia', 'serif'],
-          },
-        },
-      },
-    };
-  </script>
-
-  <script>
-    (function() {
-      var saved;
-      try { saved = localStorage.getItem('lexicon-theme'); } catch(e) {}
-      if (saved === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
-
-      // Fail-safe boot dismissal
-      setTimeout(function() {
-        var overlay = document.getElementById('boot-overlay');
-        var root = document.getElementById('app-root');
-        if (overlay && !overlay.classList.contains('hidden')) {
-          console.warn("BOOT_FAILSAFE_TRIGGERED");
-          overlay.classList.add('boot-fade-out');
-          setTimeout(function() {
-            overlay.classList.add('hidden');
-            if (root) root.classList.remove('opacity-0');
-          }, 500);
-        } else if (root && root.classList.contains('opacity-0')) {
-          root.classList.remove('opacity-0');
-        }
-      }, 2500);
-    })();
-  </script>
-
-  <link rel="stylesheet" href="index.css?v=3a580a5" />
+  <link rel="stylesheet" href="index.css?v=73e5278" />
 </head>
 
 <body>
@@ -326,52 +89,103 @@
   <div id="aria-announcer" class="sr-only" aria-live="polite"></div>
 
   <noscript>
-    <div style="padding: 24px; font-family: 'JetBrains Mono', monospace; background: #000; color: #CCFF00; text-align: center;">
-      <strong>THE LEXICON requires JavaScript.</strong><br>
-      This research archive is a dynamic terminal — enable JavaScript to access entries, filters, and the command palette.
+    <div style="padding:32px 24px;font-family:Georgia,serif;background:#0a0a0a;color:#f5f5f5;max-width:860px;margin:0 auto;line-height:1.7">
+      <h1 style="font-family:monospace;font-size:22px;letter-spacing:0.15em;color:#CCFF00;margin:0 0 8px">THE LEXICON</h1>
+      <p style="color:#999;font-family:monospace;font-size:11px;margin:0 0 24px;letter-spacing:0.2em;text-transform:uppercase">Forensic Visual Culture Archive</p>
+      <p style="font-size:15px;margin:0 0 20px">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer. 45 landmark collections annotated with hotspot analysis, critical notes, and connection matrices.</p>
+      <p style="font-size:14px;color:#aaa;margin:0 0 24px">This site requires JavaScript to browse the interactive archive. Enable JavaScript or visit <a href="https://thelexicon.xyz" style="color:#CCFF00">thelexicon.xyz</a> in a modern browser.</p>
+      <h2 style="font-family:monospace;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#666;margin:0 0 16px;border-top:1px solid #222;padding-top:20px">Archive — 45 Entries</h2>
+      <ul style="columns:2;column-gap:32px;list-style:none;padding:0;margin:0;font-size:13px;color:#bbb">
+        <li><a href="/entry/mcqueen-ss99/0" style="color:#ddd">Alexander McQueen SS 1999</a></li>
+        <li><a href="/entry/mugler-aw95/0" style="color:#ddd">Thierry Mugler AW 1995</a></li>
+        <li><a href="/entry/miyake-ss99/0" style="color:#ddd">Issey Miyake SS 1999</a></li>
+        <li><a href="/entry/balenciaga-ss07/0" style="color:#ddd">Balenciaga SS 2007</a></li>
+        <li><a href="/entry/chalayan-aw00/0" style="color:#ddd">Hussein Chalayan AW 2000</a></li>
+        <li><a href="/entry/prada-ss96/0" style="color:#ddd">Prada SS 1996</a></li>
+        <li><a href="/entry/galliano-dior-ss00/0" style="color:#ddd">Christian Dior SS 2000</a></li>
+        <li><a href="/entry/owens-ss14/0" style="color:#ddd">Rick Owens SS 2014</a></li>
+        <li><a href="/entry/garcons-ss97/0" style="color:#ddd">Comme des Garçons SS 1997</a></li>
+        <li><a href="/entry/yamamoto-aw98/0" style="color:#ddd">Yohji Yamamoto AW 1998</a></li>
+        <li><a href="/entry/gaultier-ss94/0" style="color:#ddd">Jean Paul Gaultier SS 1994</a></li>
+        <li><a href="/entry/viktor-rolf-aw99/0" style="color:#ddd">Viktor &amp; Rolf AW 1999</a></li>
+        <li><a href="/entry/lang-aw98/0" style="color:#ddd">Helmut Lang AW 1998</a></li>
+        <li><a href="/entry/moschino-aw14/0" style="color:#ddd">Moschino AW 2014</a></li>
+        <li><a href="/entry/schiaparelli-ss21/0" style="color:#ddd">Schiaparelli SS 2021</a></li>
+        <li><a href="/entry/margiela-aw00/0" style="color:#ddd">Maison Margiela AW 2000</a></li>
+        <li><a href="/entry/westwood-aw81/0" style="color:#ddd">Vivienne Westwood AW 1981</a></li>
+        <li><a href="/entry/simons-aw01/0" style="color:#ddd">Raf Simons AW 2001</a></li>
+        <li><a href="/entry/undercover-ss03/0" style="color:#ddd">Undercover SS 2003</a></li>
+        <li><a href="/entry/adrover-aw00/0" style="color:#ddd">Miguel Adrover AW 2000</a></li>
+        <li><a href="/entry/van-herpen-aw11/0" style="color:#ddd">Iris van Herpen AW 2011</a></li>
+        <li><a href="/entry/pugh-aw06/0" style="color:#ddd">Gareth Pugh AW 2006</a></li>
+        <li><a href="/entry/vetements-aw15/0" style="color:#ddd">Vetements AW 2015</a></li>
+        <li><a href="/entry/hood-by-air-ss14/0" style="color:#ddd">Hood By Air SS 2014</a></li>
+        <li><a href="/entry/watanabe-aw15/0" style="color:#ddd">Junya Watanabe AW 2015</a></li>
+        <li><a href="/entry/green-ss15/0" style="color:#ddd">Craig Green SS 2015</a></li>
+        <li><a href="/entry/gucci-aw18/0" style="color:#ddd">Gucci AW 2018</a></li>
+        <li><a href="/entry/browne-aw12/0" style="color:#ddd">Thom Browne AW 2012</a></li>
+        <li><a href="/entry/loewe-ss23/0" style="color:#ddd">Loewe SS 2023</a></li>
+        <li><a href="/entry/serre-ss20/0" style="color:#ddd">Marine Serre SS 2020</a></li>
+        <li><a href="/entry/chanel-aw14/0" style="color:#ddd">Chanel AW 2014</a></li>
+        <li><a href="/entry/vuitton-ss08/0" style="color:#ddd">Louis Vuitton SS 2008</a></li>
+        <li><a href="/entry/celine-ss10/0" style="color:#ddd">Celine SS 2010</a></li>
+        <li><a href="/entry/valentino-aw22/0" style="color:#ddd">Valentino AW 2022</a></li>
+        <li><a href="/entry/miu-miu-ss22/0" style="color:#ddd">Miu Miu SS 2022</a></li>
+        <li><a href="/entry/klein-aw17/0" style="color:#ddd">Calvin Klein 205W39NYC AW 2017</a></li>
+        <li><a href="/entry/givenchy-aw15/0" style="color:#ddd">Givenchy AW 2015</a></li>
+        <li><a href="/entry/van-noten-ss15/0" style="color:#ddd">Dries Van Noten SS 2015</a></li>
+        <li><a href="/entry/saint-laurent-aw13/0" style="color:#ddd">Saint Laurent AW 2013</a></li>
+        <li><a href="/entry/coperni-ss23/0" style="color:#ddd">Coperni SS 2023</a></li>
+        <li><a href="/entry/ackermann-aw14/0" style="color:#ddd">Haider Ackermann AW 2014</a></li>
+        <li><a href="/entry/bottega-veneta-aw19/0" style="color:#ddd">Bottega Veneta AW 2019</a></li>
+        <li><a href="/entry/sander-ss11/0" style="color:#ddd">Jil Sander SS 2011</a></li>
+        <li><a href="/entry/chromat-ss20/0" style="color:#ddd">Chromat SS 2020</a></li>
+        <li><a href="/entry/anderson-aw22/0" style="color:#ddd">JW Anderson AW 2022</a></li>
+      </ul>
     </div>
   </noscript>
 
-  <a href="#image-panel" class="skip-link">Skip to Archive</a>
+  <a href="#grid-view" class="skip-link">Skip to Archive</a>
   <a href="#search-input" class="skip-link">Skip to Search</a>
   <a href="#site-footer" class="skip-link">Skip to Footer</a>
 
   <!-- ============================================================
        BOOT OVERLAY
   ============================================================ -->
-  <div id="boot-overlay" class="pointer-events-auto">
+  <div id="boot-overlay" class="pointer-events-auto hidden">
     <div class="boot-text" id="boot-text">THE LEXICON</div>
   </div>
 
   <!-- ============================================================
        PRIMARY NAVIGATION
   ============================================================ -->
-  <header id="primary-header" class="bg-black text-white flex items-center justify-between px-3 py-1.5 lg:px-5 lg:py-2 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
+  <header id="primary-header" class="bg-black text-white flex items-center justify-between px-3 py-0.5 lg:px-5 lg:py-1 border-b-[1px] border-black/80 dark:border-white/20 relative z-[1000]">
     <div class="flex items-center gap-3 lg:gap-5">
-      <button id="btn-hamburger" type="button" class="lg:hidden text-white hover:text-acid focus-ring -ml-2 -my-2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation" aria-label="Toggle Menu" aria-expanded="false" aria-controls="index-panel">
-        <svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      <button id="btn-hamburger" type="button" class="lg:hidden text-white border border-white/30 hover:border-acid hover:text-acid focus-ring p-2 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation transition-colors" aria-label="Toggle Menu" aria-expanded="false" aria-controls="index-panel">
+        <svg class="w-7 h-7 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <button type="button" id="header-title" aria-label="Reset filters and return to archive home" class="text-[var(--t-mono-xs)] lg:text-[var(--t-mono-sm)] font-bold tracking-[0.25em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
-      <div id="header-telemetry" class="lexicon-tablet-up text-[var(--t-mono-xs)] font-mono opacity-50 tracking-widest uppercase" data-notranslate translate="no">
+      <button type="button" id="header-title" aria-label="THE LEXICON · home" class="t-mono-xs lg:t-mono-sm font-bold tracking-[0.25em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
+      <div id="header-telemetry" class="lexicon-tablet-up t-mono-xs font-mono opacity-50 tracking-widest uppercase" data-notranslate translate="no" aria-hidden="true" role="presentation">
         <span id="telemetry-text">LOADING ARCHIVE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
-    <div class="lexicon-desktop-only items-center gap-2 lg:gap-4">
-      <button type="button" id="btn-folders-toggle" class="text-[var(--t-mono-xs)] opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-pressed="false">FOLDERS</button>
-      <button type="button" id="btn-auth-toggle" class="text-[var(--t-mono-xs)] opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">SIGN IN</button>
+    <div class="lexicon-desktop-only items-center gap-2 lg:gap-4 flex-wrap justify-end">
+      <button type="button" id="btn-folders-toggle" class="t-mono-xs opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] relative z-[60]" aria-pressed="false">FOLDERS</button>
+      <button type="button" id="btn-auth-toggle" class="t-mono-xs opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] relative z-[60]">SIGN IN</button>
       <div class="relative inline-block">
-        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
+        <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
           <span id="btn-lang-toggle-label" data-notranslate translate="no">EN ▾</span>
         </button>
         <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
       </div>
-      <button type="button" id="btn-about" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">ABOUT</button>
-      <button type="button" id="btn-contact" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
-      <button type="button" id="btn-theme-toggle" class="text-[var(--t-mono-xs)] font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
+      <a href="/about" id="btn-about" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">ABOUT</a>
+      <button type="button" data-open-glossary="1" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">GLOSSARY</button>
+      <button type="button" id="btn-contact" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
+      <button type="button" id="btn-theme-toggle" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
     </div>
   </header>
 
-  <div id="app-root" class="opacity-0 transition-opacity duration-1000">
+  <div id="app-root">
 
     <!-- Drawer Backdrop (mobile only) -->
     <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
@@ -382,19 +196,19 @@
     <div id="status-ribbon" class="grid grid-cols-2 md:grid-cols-4 border-b-[1px] border-black/80 dark:border-white/20 bg-overlay dark:bg-darkSurface shrink-0" aria-live="polite" aria-atomic="true">
       <div class="px-2 lg:px-4 py-0.5 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span id="status-brand-label" class="text-[7px] uppercase tracking-[0.3em] opacity-60 block">Brand</span>
-        <span id="status-brand" class="text-[var(--t-mono-xs)] font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-brand" class="t-mono-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-0.5 md:border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span id="status-year-label" class="text-[7px] uppercase tracking-[0.3em] opacity-60 block">Year</span>
-        <span id="status-year" class="text-[var(--t-mono-xs)] font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-year" class="t-mono-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-0.5 border-t-[1px] md:border-t-0 border-r-[1px] border-black/80 dark:border-white/20 overflow-hidden">
         <span id="status-season-label" class="text-[7px] uppercase tracking-[0.3em] opacity-60 block">Season</span>
-        <span id="status-season" class="text-[var(--t-mono-xs)] font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-season" class="t-mono-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
       <div class="px-2 lg:px-4 py-0.5 border-t-[1px] md:border-t-0 overflow-hidden">
         <span id="status-entry-label" class="text-[7px] uppercase tracking-[0.3em] opacity-60 block">Entry</span>
-        <span id="status-entry" class="text-[var(--t-mono-xs)] font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
+        <span id="status-entry" class="t-mono-xs font-medium uppercase tracking-wide block mt-0.5 truncate">--</span>
       </div>
     </div>
 
@@ -408,19 +222,20 @@
 
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
-          <span id="index-panel-title" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.15em]">Research Index</span>
-          <button type="button" id="btn-show-bookmarks" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
+          <span id="index-panel-title" class="t-chrome-xs font-medium uppercase tracking-[0.15em]">Research Index</span>
+          <button type="button" id="btn-show-bookmarks" class="t-chrome-xs font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring min-h-[44px] px-2 inline-flex items-center gap-1" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
         </div>
 
         <!-- Mobile Quick Nav (top of drawer, immediately visible) -->
         <div id="mobile-quick-nav" class="lg:hidden border-b-[1px] border-black/80 dark:border-white/20 shrink-0 bg-overlay dark:bg-darkSurface">
           <div class="grid grid-cols-3 gap-px bg-black/10 dark:bg-white/10">
-            <button type="button" id="btn-folders-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Folders</button>
-            <button type="button" id="btn-auth-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Sign In</button>
-            <button type="button" id="btn-lang-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
-            <button type="button" id="btn-theme-toggle-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
-            <button type="button" id="btn-about-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
-            <button type="button" id="btn-contact-mobile" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
+            <button type="button" id="btn-folders-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Folders</button>
+            <button type="button" id="btn-auth-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Sign In</button>
+            <button type="button" id="btn-lang-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
+            <button type="button" id="btn-theme-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
+            <button type="button" id="btn-about-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
+            <button type="button" data-open-glossary="1" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Glossary</button>
+            <button type="button" id="btn-contact-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
           </div>
         </div>
 
@@ -434,7 +249,7 @@
 
         <!-- Search -->
         <div id="search-wrapper" class="border-b-[1px] border-black/80 dark:border-white/20 p-3 shrink-0">
-          <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center text-[var(--t-mono-xs)] font-mono uppercase tracking-widest">
+          <div id="active-folder-indicator" class="hidden mb-2 p-2 bg-black text-white dark:bg-acid dark:text-black flex justify-between items-center t-mono-xs font-mono uppercase tracking-widest">
             <span>Filtering: <span id="active-folder-name"></span></span>
             <button type="button" id="btn-clear-folder-filter" aria-label="Clear active folder filter" class="underline min-h-[44px] px-2 focus-ring">Clear</button>
           </div>
@@ -447,7 +262,7 @@
                 autocorrect="off"
                 autocapitalize="off"
                 spellcheck="false"
-                placeholder="Search — or try brand:mcqueen year:1999 tag:corporeal..."
+                placeholder="Search archive — brand:mcqueen year:1999 tag:corporeal — Press ? for shortcuts"
                 aria-label="Search archive"
                 class="flex-1 min-w-0 border-[1px] border-black/80 dark:border-white/20 bg-bone dark:bg-darkBase px-3 py-2.5 min-h-[44px] text-xs font-mono text-black dark:text-white placeholder:text-black/40 dark:placeholder:text-white/40 focus:border-acid focus:outline-none"
               />
@@ -456,6 +271,10 @@
             </div>
             <div id="filter-chips" class="flex flex-wrap gap-1 mt-1 items-center">
               <span id="filter-result-count" class="text-[8px] font-mono opacity-40 uppercase tracking-widest hidden"></span>
+            </div>
+            <div id="saved-search-bar" class="flex flex-wrap items-center gap-1.5 mt-1">
+              <button type="button" id="btn-save-search" class="hidden text-[8px] font-bold font-mono uppercase tracking-[0.1em] border border-acid text-acid px-2 py-1 min-h-[28px] hover:bg-acid hover:text-black transition-colors focus-ring" aria-label="Save the current search and filters">+ Save search</button>
+              <div id="saved-search-list" class="flex flex-wrap gap-1.5" role="list" aria-label="Saved searches"></div>
             </div>
           </div>
         </div>
@@ -490,12 +309,13 @@
             aria-expanded="false"
             aria-controls="taxonomy-grid"
           >
-            <span id="taxonomy-heading" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] opacity-60">Categories</span>
+            <span id="taxonomy-heading" class="t-chrome-xs font-medium uppercase tracking-[0.2em] opacity-60">Categories</span>
             <span class="flex items-center gap-2">
               <span id="taxonomy-hint" class="text-[8px] font-mono uppercase tracking-wider opacity-40 hidden md:inline">Tap to filter</span>
-              <span id="taxonomy-chevron" class="lg:hidden text-[var(--t-mono-xs)] opacity-60 transition-transform" aria-hidden="true">▾</span>
+              <span id="taxonomy-chevron" class="lg:hidden t-mono-xs opacity-60 transition-transform" aria-hidden="true">▾</span>
             </span>
           </button>
+
 
           <div
             id="taxonomy-grid"
@@ -512,19 +332,19 @@
       <!-- RIGHT: IMAGE GRID PANEL -->
       <main id="image-panel" class="w-full lg:w-[60%] overflow-y-auto bg-bone dark:bg-darkBase flex flex-col min-h-0" aria-label="Archive entries">
         <!-- View Controls -->
-        <div id="view-controls-bar" class="px-3 py-1.5 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between gap-3 bg-bone dark:bg-darkBase shrink-0 overflow-x-auto scrollbar-none">
+        <div id="view-controls-bar" class="px-3 py-0.5 border-b-[1px] border-black/80 dark:border-white/20 flex items-center justify-between gap-3 bg-bone dark:bg-darkBase shrink-0 overflow-x-auto scrollbar-none">
           <div class="flex items-center gap-3 lg:gap-8 shrink-0">
             <!-- Visual / Index Mode Toggle (Phase 1/2 redesign) -->
             <div class="mode-toggle inline-flex border border-black/60 dark:border-white/30 shrink-0" role="group" aria-label="View mode">
-              <button type="button" id="btn-mode-visual" class="active text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Visual mode (shortcut: V)" aria-pressed="true">VISUAL <span class="kbd" aria-hidden="true">V</span></button>
-              <button type="button" id="btn-mode-index" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
+              <button type="button" id="btn-mode-visual" class="active t-mono-xs font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Visual mode (shortcut: V)" aria-pressed="true">VISUAL <span class="kbd" aria-hidden="true">V</span></button>
+              <button type="button" id="btn-mode-index" class="t-mono-xs font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
             </div>
-            <button type="button" id="btn-toggle-grid" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
-            <button type="button" id="btn-toggle-timeline" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Evolution Matrix" aria-pressed="false">Timeline</button>
+            <button type="button" id="btn-toggle-grid" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
+            <button type="button" id="btn-toggle-timeline" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Evolution Matrix" aria-pressed="false">Evolution Matrix</button>
           </div>
           <div class="flex items-center gap-3 lg:gap-4 shrink-0">
-            <button type="button" id="btn-sort-cycle" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-2 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Cycle sort order">Sort: Newest</button>
-            <span id="current-view-label" class="hidden lg:inline text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
+            <button type="button" id="btn-sort-cycle" class="t-mono-xs font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-2 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Cycle sort order">Sort: Newest</button>
+            <span id="current-view-label" class="hidden lg:inline t-mono-xs font-mono font-bold uppercase tracking-wider opacity-50">VISUAL</span>
           </div>
         </div>
 
@@ -547,9 +367,9 @@
                 </div>
               </div>
               <div class="hero-stats">
-                <div class="hero-stat"><div class="hs-num" id="stat-entries">—</div><div class="hs-lbl">Entries</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-brands">—</div><div class="hs-lbl">Brands</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-movements">—</div><div class="hs-lbl">Movements</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-entries">45</div><div class="hs-lbl">Entries</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-brands">45</div><div class="hs-lbl">Brands</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-movements">58</div><div class="hs-lbl">Movements</div></div>
                 <div class="hero-stat"><div class="hs-num">15</div><div class="hs-lbl">Categories</div></div>
               </div>
             </div>
@@ -561,7 +381,6 @@
               <div class="hero-bg-overlay" aria-hidden="true"></div>
               <div class="hero-featured-meta">
                 <span>FEATURED · ANALYTICAL RECORD</span>
-                <span class="hero-id">N-——</span>
               </div>
               <div class="hero-featured-content">
                 <span class="hero-featured-tag" id="hero-tag-label">CORPOREAL INTERVENTION</span>
@@ -577,6 +396,37 @@
               </div>
             </div>
           </section>
+          <!-- Browse by analytical axis (second door — enter by lens, not designer) -->
+          <div id="axes-browse" class="axes-browse" style="display:none;">
+            <div class="sec-head" style="display:flex;">
+              <div>
+                <div class="sec-eye">// ENTER BY ANALYTICAL LENS</div>
+                <div class="sec-title">Browse by analytical axis</div>
+              </div>
+            </div>
+            <div class="axes-grid" id="axes-grid" role="list"></div>
+          </div>
+
+          <!-- Entry of the Week (rotating spotlight — return-visit novelty) -->
+          <div id="entry-of-week" class="eow-section" style="display:none;">
+            <div class="sec-head" style="display:flex;">
+              <div>
+                <div class="sec-eye">// ROTATING SPOTLIGHT</div>
+                <div class="sec-title">Entry of the week</div>
+              </div>
+            </div>
+            <button type="button" id="eow-card" class="eow-card" aria-label="Open entry of the week">
+              <div class="eow-bg" id="eow-bg" aria-hidden="true"></div>
+              <div class="eow-overlay" aria-hidden="true"></div>
+              <div class="eow-body">
+                <span class="eow-tag" id="eow-tag"></span>
+                <div class="eow-title" id="eow-title"></div>
+                <div class="eow-brand" id="eow-brand"></div>
+                <div class="eow-vibes" id="eow-vibes"></div>
+              </div>
+            </button>
+          </div>
+
           <!-- Featured Strip (Phase 1 — dynamically populated from archive) -->
           <!-- Featured strip section header -->
           <div class="sec-head" id="featured-strip-head" style="display:none;">
@@ -599,23 +449,40 @@
             <div class="how-grid">
               <div class="how-step">
                 <div class="how-num"><span>01</span><span>RESEARCH</span></div>
-                <h3>Trace any lineage.</h3>
+              <h2>Trace any lineage.</h2>
                 <p>Search by brand, era, designer, or analytical category. Every entry is sourced, citable, and indexed by the editorial framework — not just the maker.</p>
                 <div class="how-term">↳ <span>Provenance</span> · where it came from</div>
               </div>
               <div class="how-step">
                 <div class="how-num"><span>02</span><span>CONNECT</span></div>
-                <h3>See the references.</h3>
+              <h2>See the references.</h2>
                 <p>The Nexus on every entry maps the visual, intellectual, and historical references it draws from — and the work it has gone on to influence.</p>
                 <div class="how-term">↳ <span>Nexus</span> · the connections between entries</div>
               </div>
               <div class="how-step">
                 <div class="how-num"><span>03</span><span>ARCHIVE</span></div>
-                <h3>Build your own.</h3>
+              <h2>Build your own.</h2>
                 <p>Sign in to save entries into folders, annotate them, and generate footnotes in Chicago, MLA, APA, Harvard, BibTeX, or permalink format.</p>
                 <div class="how-term">↳ <span>Folder</span> · your saved collection</div>
               </div>
             </div>
+          </div>
+
+          <!-- Nexus teaser (preview of the connection graph) -->
+          <div id="nexus-teaser" class="nexus-teaser-section" style="display:none;">
+            <div class="sec-head" style="display:flex;">
+              <div>
+                <div class="sec-eye">// THE NEXUS</div>
+                <div class="sec-title">Every entry is connected.</div>
+              </div>
+            </div>
+            <button type="button" id="nexus-teaser-card" class="nexus-teaser-card" aria-label="Explore the Nexus connection graph">
+              <div class="nexus-teaser-viz" id="nexus-teaser-svg" aria-hidden="true"></div>
+              <div class="nexus-teaser-aside">
+                <p class="nexus-teaser-lead">The Nexus maps the visual, intellectual, and historical threads between collections — shared theory, era, material, and lineage.</p>
+                <span class="nexus-teaser-cta" id="nexus-teaser-cta">Explore the Nexus →</span>
+              </div>
+            </button>
           </div>
 
           <!-- Who It's For (shown with hero on first visit) -->
@@ -710,8 +577,8 @@
             <div class="flex items-baseline justify-between mb-8 border-b border-black dark:border-white pb-4">
               <h1 class="text-lg md:text-2xl font-bold font-mono uppercase tracking-[0.15em]">Archival Folders</h1>
               <div class="flex gap-4">
-                <button type="button" id="btn-export-all-folders" aria-label="Export all folders as JSON" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline min-h-[44px] px-2 focus-ring">[ Export Database ]</button>
-                <span id="folders-count" class="text-[var(--t-mono-xs)] font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
+                <button type="button" id="btn-export-all-folders" aria-label="Export all folders as JSON" class="t-mono-xs font-bold uppercase tracking-widest opacity-40 hover:opacity-100 hover:underline min-h-[44px] px-2 focus-ring">[ Export Database ]</button>
+                <span id="folders-count" class="t-mono-xs font-mono opacity-50 uppercase">Save your first entry to start a folder.</span>
               </div>
             </div>
             <div id="folders-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -722,8 +589,12 @@
              JS shows/hides it via the .hidden class (only on grid view). -->
         <footer id="site-footer" class="site-footer hidden" aria-label="Site footer">
           <div class="footer-bottom">
-            <span>© THE LEXICON · LONDON · MMXXV</span>
-            <span class="footer-tech">VANILLA JS · STATIC · NO TRACKING</span>
+            <span>© THE LEXICON · LONDON · MMXXVI</span>
+            <span class="footer-tech">NO TRACKING · NO ADS · INDEPENDENT RESEARCH</span>
+            <button type="button" id="btn-kbd-help-footer" aria-label="Keyboard shortcuts (Press ?)" class="footer-kbd-hint focus-ring">? <span class="footer-kbd-label">SHORTCUTS</span></button>
+          </div>
+          <div class="footer-copyright">
+            Images reproduced for criticism and review under CDPA 1988 s.30. Copyright remains with original rights holders. Credits &amp; takedown: <a href="mailto:info@thelexicon.xyz" class="underline hover:text-acid transition-colors">info@thelexicon.xyz</a>
           </div>
         </footer>
 
@@ -732,7 +603,11 @@
           <!-- Breadcrumb bar -->
           <nav id="detail-breadcrumb" class="hidden lg:flex items-center gap-1 px-4 py-1.5 border-b border-white/10 text-[8px] font-mono uppercase tracking-widest text-white/30" aria-label="Entry breadcrumb"></nav>
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
-            <!-- LEFT: Image Sector -->
+            <!-- PHASE 3: Left metadata rail — visible only at ≥1400px via CSS three-col layout -->
+            <div id="detail-meta-rail" class="hidden w-[220px] flex-col overflow-y-auto border-r border-white/10 bg-black shrink-0">
+              <div id="meta-rail-body" class="p-5 flex flex-col gap-5"></div>
+            </div>
+            <!-- CENTER: Image Sector -->
             <div id="detail-image-sector" class="flex-1 relative flex flex-col items-center justify-center p-4 lg:p-12 border-r border-white/10">
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
@@ -758,8 +633,8 @@
                    already inline below the image and fullscreen is rarely
                    useful on a phone-sized image. -->
               <div class="hidden lg:flex absolute top-4 left-4 flex-col gap-2 z-[200]">
-                <button type="button" id="btn-tax-toggle" aria-label="Visualise taxonomy" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
-                <button type="button" id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
+                <button type="button" id="btn-tax-toggle" aria-label="Visualise taxonomy" class="t-mono-xs font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ VISUALISE TAXONOMY ]</button>
+                <button type="button" id="btn-fullscreen-toggle" aria-label="Toggle fullscreen" class="t-mono-xs font-mono uppercase tracking-[0.2em] border border-white/20 bg-black/60 backdrop-blur-md px-3 py-2 text-white hover:border-acid hover:text-acid transition-all">[ FULLSCREEN ]</button>
               </div>
 
               <!-- Sticky Note Squares (top-right triggers) -->
@@ -767,15 +642,16 @@
 
               <!-- Image counter / dots (bottom-centre of image sector) -->
               <div id="image-counter" class="shrink-0 flex items-center justify-center gap-2 pt-3 pb-1 z-[200]" aria-live="polite" aria-label="Image navigation"></div>
+              <div id="detail-image-credit" class="shrink-0 px-4 pb-2 text-[9px] font-mono tracking-[0.08em] text-white/30 text-center leading-relaxed"></div>
             </div>
 
             <!-- Sticky Note Panel (reveals on right when a square is clicked; shown via .visible CSS not Tailwind hidden) -->
             <div id="sticky-note-panel" class="w-[280px] flex-col overflow-y-auto border-l border-white/10 bg-black">
               <div id="sticky-panel-header" class="flex items-center justify-between px-4 py-3 border-b border-black/20">
-                <span id="sticky-panel-label" class="text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-[0.2em]"></span>
-                <button type="button" id="btn-close-sticky-panel" class="text-[var(--t-mono-sm)] font-bold leading-none hover:opacity-60 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close panel">✕</button>
+                <span id="sticky-panel-label" class="t-mono-xs font-mono font-bold uppercase tracking-[0.2em]"></span>
+                <button type="button" id="btn-close-sticky-panel" class="t-mono-sm font-bold leading-none hover:opacity-60 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Close panel">✕</button>
               </div>
-              <div id="sticky-panel-body" class="p-5 text-[var(--t-mono-sm)] font-mono leading-relaxed overflow-y-auto"></div>
+              <div id="sticky-panel-body" class="p-5 t-mono-sm font-mono leading-relaxed overflow-y-auto"></div>
             </div>
 
             <!-- RIGHT: Metadata Sidebar -->
@@ -785,7 +661,7 @@
               <!-- Sticky Note Container (Brutalist Nodes) -->
               <div class="flex items-center justify-between px-6 pt-5 pb-3">
                 <div class="flex items-baseline gap-3">
-                  <span class="text-[var(--t-mono-xs)] font-mono uppercase tracking-widest text-white/50 font-bold">Analysis</span>
+                  <span class="t-mono-xs font-mono uppercase tracking-widest text-white/50 font-bold">Analysis</span>
                   <span id="detail-reading-time" class="text-[8px] font-mono opacity-30 tracking-wider"></span>
                 </div>
                 <button class="btn-reading-mode" id="btn-reading-mode" type="button" aria-label="Toggle reader mode (press R)" aria-pressed="false" title="Reader mode (R)">READER MODE <kbd class="rm-kbd">R</kbd></button>
@@ -803,7 +679,7 @@
               <!-- Related Entries (auto-populated by render-detail.js) -->
               <div id="related-entries-section" class="p-6 border-t border-white/10 hidden">
                 <div class="flex items-baseline justify-between mb-4">
-                  <h4 id="related-entries-title" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] text-white/40">Related</h4>
+                  <h4 id="related-entries-title" class="t-mono-xs font-bold uppercase tracking-[0.2em] text-white/40">Related</h4>
                   <button id="btn-related-open-nexus" type="button" class="text-[8px] uppercase tracking-widest text-white/40 hover:text-acid transition-colors focus-ring min-h-[44px] px-1 flex items-center" aria-label="View all Nexus connections">View All Nexus ›</button>
                 </div>
                 <div id="related-entries-grid" class="grid grid-cols-3 gap-2"></div>
@@ -812,15 +688,15 @@
               <!-- Save / Action Panel -->
               <div class="mt-auto p-6 border-t border-white/10 bg-white/5">
                 <div class="flex items-center justify-between mb-4">
-                  <span id="active-entry-title" class="text-[var(--t-mono-xs)] font-bold uppercase tracking-[0.2em] text-white"></span>
+                  <span id="active-entry-title" class="t-mono-xs font-bold uppercase tracking-[0.2em] text-white"></span>
                   <button type="button" id="btn-bookmark-entry" class="bookmark-star text-white min-h-[44px] min-w-[44px] flex items-center justify-center focus-ring" aria-label="Bookmark this entry" aria-pressed="false">★</button>
                 </div>
+                <button type="button" id="btn-cite-entry" aria-label="Open citation formats for this entry" class="w-full flex items-center justify-center gap-2 t-mono-xs font-bold tracking-widest uppercase border-2 border-acid bg-acid text-black px-2 py-3 min-h-[48px] mb-2 hover:bg-transparent hover:text-acid transition-colors focus-ring"><span aria-hidden="true">❝</span> Cite Entry</button>
                 <div class="grid grid-cols-1 gap-2">
-                  <button type="button" id="btn-open-matrix" aria-label="View Nexus connections for this entry" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">View Nexus</button>
-                  <button type="button" id="btn-save-to-folder" aria-label="Save this entry to a folder" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Save to Folder</button>
-                  <button type="button" id="btn-cite-entry" aria-label="Open citation formats for this entry" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Cite Entry</button>
-                  <button type="button" id="btn-copy-link" aria-label="Copy permalink to this entry" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">[ Copy Link ]</button>
-                  <button type="button" id="btn-back-grid" aria-label="Return to archive grid" class="text-[var(--t-mono-xs)] tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Return to Archive</button>
+                  <button type="button" id="btn-open-matrix" aria-label="View Nexus connections for this entry" class="t-mono-xs tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">View Nexus</button>
+                  <button type="button" id="btn-save-to-folder" aria-label="Save this entry to a folder" class="t-mono-xs tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Save to Folder</button>
+                  <button type="button" id="btn-copy-link" aria-label="Copy permalink to this entry" class="t-mono-xs tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">[ Copy Link ]</button>
+                  <button type="button" id="btn-back-grid" aria-label="Return to archive grid" class="t-mono-xs tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Return to Archive</button>
                 </div>
               </div>
             </div>
@@ -830,43 +706,43 @@
           <div id="mobile-hotspot-sheet" class="lg:hidden fixed bottom-0 left-0 w-full z-[210]" aria-hidden="true" role="region" aria-label="Annotation details">
             <div class="bg-black border-t-[3px] border-acid flex flex-col" style="max-height:58vh">
               <div class="flex items-center justify-between px-4 py-3 border-b border-white/15 shrink-0">
-                <span id="mobile-hotspot-sheet-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.25em] text-acid"></span>
+                <span id="mobile-hotspot-sheet-label" class="t-mono-xs font-bold font-mono uppercase tracking-[0.25em] text-acid"></span>
                 <button type="button" id="btn-close-hotspot-sheet" aria-label="Close annotation" class="text-white text-sm font-bold opacity-60 hover:opacity-100 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center">✕</button>
               </div>
-              <div id="mobile-hotspot-sheet-body" class="px-4 py-5 overflow-y-auto flex-1 text-[var(--t-mono-base)] font-mono leading-[1.75] text-white/90"></div>
+              <div id="mobile-hotspot-sheet-body" class="px-4 py-5 overflow-y-auto flex-1 t-mono-base font-mono leading-[1.75] text-white/90"></div>
             </div>
           </div>
 
-          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]">
+          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]" style="padding-bottom:calc(0.5rem + env(safe-area-inset-bottom));">
             <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[var(--t-body)] leading-none">‹</span><span class="btn-label-mobile">Back</span>
+              <span class="t-body leading-none">‹</span><span class="btn-label-mobile">Back</span>
             </button>
             <button type="button" id="btn-notes-mobile" aria-label="View notes" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[var(--t-mono-base)] leading-none">▦</span><span class="btn-label-mobile">Notes</span>
+              <span class="t-mono-base leading-none">▦</span><span class="btn-label-mobile">Notes</span>
             </button>
             <button type="button" id="btn-toggle-hotspots-mobile" aria-label="Toggle hotspots" class="flex flex-col items-center justify-center gap-0.5 border border-acid text-acid py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[var(--t-mono-base)] leading-none">◉</span><span class="btn-label-mobile">Hotspots</span>
+              <span class="t-mono-base leading-none">◉</span><span class="btn-label-mobile">Hotspots</span>
             </button>
             <button type="button" id="btn-nexus-mobile" aria-label="Open Nexus" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[var(--t-mono-base)] leading-none">◈</span><span class="btn-label-mobile">Nexus</span>
+              <span class="t-mono-base leading-none">◈</span><span class="btn-label-mobile">Nexus</span>
             </button>
             <button type="button" id="btn-save-folder-mobile" aria-label="Save to folder" class="flex flex-col items-center justify-center gap-0.5 bg-acid text-black py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
-              <span class="text-[var(--t-mono-base)] leading-none">★</span><span class="btn-label-mobile">Save</span>
+              <span class="t-mono-base leading-none">★</span><span class="btn-label-mobile">Save</span>
             </button>
           </div>
 
           <!-- Mobile Notes Sheet (slides up from bottom on mobile) -->
           <div id="mobile-notes-sheet" class="lg:hidden hidden fixed inset-x-0 bottom-0 z-[300] bg-bone dark:bg-darkBase border-t-2 border-acid max-h-[70vh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="mobile-notes-title">
             <div class="flex items-center justify-between px-4 py-3 border-b border-black/20 dark:border-white/20 bg-black text-white">
-              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.2em]" id="mobile-notes-title">Forensic Notes</span>
+              <span class="t-mono-xs font-bold font-mono uppercase tracking-[0.2em]" id="mobile-notes-title">Forensic Notes</span>
               <button type="button" id="btn-close-mobile-notes" aria-label="Close notes" class="text-lg font-bold leading-none px-2 min-h-[44px] min-w-[44px] flex items-center justify-center">×</button>
             </div>
             <div class="grid grid-cols-3 gap-px bg-black/20 dark:bg-white/20 shrink-0" role="tablist" aria-label="Forensic note types">
-              <button type="button" role="tab" data-mobile-note="provenance" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Provenance</button>
-              <button type="button" role="tab" data-mobile-note="critique" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Critique</button>
-              <button type="button" role="tab" data-mobile-note="strategy" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Strategy</button>
+              <button type="button" role="tab" data-mobile-note="provenance" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab t-mono-xs font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Provenance</button>
+              <button type="button" role="tab" data-mobile-note="critique" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab t-mono-xs font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Critique</button>
+              <button type="button" role="tab" data-mobile-note="strategy" aria-selected="false" aria-controls="mobile-notes-body" class="mobile-note-tab t-mono-xs font-bold font-mono uppercase tracking-wider py-3 min-h-[44px] bg-bone dark:bg-darkBase">Strategy</button>
             </div>
-            <div id="mobile-notes-body" role="tabpanel" class="flex-1 overflow-y-auto p-5 text-[var(--t-mono-base)] leading-relaxed font-mono"></div>
+            <div id="mobile-notes-body" role="tabpanel" class="flex-1 overflow-y-auto p-5 t-mono-base leading-relaxed font-mono"></div>
           </div>
         </div>
 
@@ -883,56 +759,61 @@
       <div class="relative w-full max-w-xl bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 flex flex-col max-h-[85vh] overflow-y-auto">
         <button type="button" data-modal-close="cite" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close">X</button>
         <h2 id="cite-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-1 border-b border-black dark:border-white pb-2">Cite This Entry</h2>
-        <p id="cite-modal-subtitle" class="text-[var(--t-mono-xs)] font-mono opacity-60 uppercase tracking-wide mb-5">For academic and editorial reference.</p>
+        <p id="cite-modal-subtitle" class="t-mono-xs font-mono opacity-60 uppercase tracking-wide mb-5">For academic and editorial reference.</p>
 
         <div class="space-y-5">
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span id="cite-chicago-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">Chicago (17th)</span>
-              <button type="button" data-cite-copy="chicago" aria-label="Copy Chicago citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span id="cite-chicago-label" class="t-mono-xs font-bold font-mono uppercase tracking-[0.15em]">Chicago (17th)</span>
+              <button type="button" data-cite-copy="chicago" aria-label="Copy Chicago citation" class="cite-copy-btn t-mono-xs font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-chicago" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-chicago" class="t-mono-sm font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">MLA (9th)</span>
-              <button type="button" data-cite-copy="mla" aria-label="Copy MLA citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span class="t-mono-xs font-bold font-mono uppercase tracking-[0.15em]">MLA (9th)</span>
+              <button type="button" data-cite-copy="mla" aria-label="Copy MLA citation" class="cite-copy-btn t-mono-xs font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-mla" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-mla" class="t-mono-sm font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">APA (7th)</span>
-              <button type="button" data-cite-copy="apa" aria-label="Copy APA citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span class="t-mono-xs font-bold font-mono uppercase tracking-[0.15em]">APA (7th)</span>
+              <button type="button" data-cite-copy="apa" aria-label="Copy APA citation" class="cite-copy-btn t-mono-xs font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-apa" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-apa" class="t-mono-sm font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">Harvard</span>
-              <button type="button" data-cite-copy="harvard" aria-label="Copy Harvard citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span class="t-mono-xs font-bold font-mono uppercase tracking-[0.15em]">Harvard</span>
+              <button type="button" data-cite-copy="harvard" aria-label="Copy Harvard citation" class="cite-copy-btn t-mono-xs font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-harvard" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-harvard" class="t-mono-sm font-mono leading-relaxed whitespace-pre-wrap break-words bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span id="cite-bibtex-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">BibTeX</span>
-              <button type="button" data-cite-copy="bibtex" aria-label="Copy BibTeX citation" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span id="cite-bibtex-label" class="t-mono-xs font-bold font-mono uppercase tracking-[0.15em]">BibTeX</span>
+              <button type="button" data-cite-copy="bibtex" aria-label="Copy BibTeX citation" class="cite-copy-btn t-mono-xs font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-bibtex" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 overflow-x-auto"></pre>
+            <pre id="cite-bibtex" class="t-mono-sm font-mono leading-relaxed whitespace-pre bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3 overflow-x-auto"></pre>
           </div>
 
           <div>
             <div class="flex items-baseline justify-between mb-2">
-              <span id="cite-url-label" class="text-[var(--t-mono-xs)] font-bold font-mono uppercase tracking-[0.15em]">Permalink</span>
-              <button type="button" data-cite-copy="url" aria-label="Copy permalink URL" class="cite-copy-btn text-[var(--t-mono-xs)] font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
+              <span id="cite-url-label" class="t-mono-xs font-bold font-mono uppercase tracking-[0.15em]">Permalink</span>
+              <button type="button" data-cite-copy="url" aria-label="Copy permalink URL" class="cite-copy-btn t-mono-xs font-mono uppercase tracking-widest border border-current px-2 py-1 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">Copy</button>
             </div>
-            <pre id="cite-url" class="text-[var(--t-mono-sm)] font-mono leading-relaxed whitespace-pre-wrap break-all bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
+            <pre id="cite-url" class="t-mono-sm font-mono leading-relaxed whitespace-pre-wrap break-all bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 p-3"></pre>
           </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10">
+          <button type="button" id="btn-print-entry" class="w-full flex items-center justify-center gap-2 t-mono-xs font-bold tracking-widest uppercase border-2 border-black dark:border-acid bg-black dark:bg-acid text-white dark:text-black px-2 py-3 min-h-[48px] hover:bg-transparent hover:text-black dark:hover:bg-transparent dark:hover:text-acid transition-colors focus-ring"><span aria-hidden="true">⎙</span> Print / Save as PDF</button>
+          <p class="t-mono-xs font-mono opacity-50 text-center mt-2">Outputs a reader-friendly page: image, notes, metadata, and permalink.</p>
         </div>
       </div>
     </div>
@@ -948,7 +829,7 @@
           <img id="lightbox-image" src="" alt="" fetchpriority="high" decoding="async" class="max-w-full max-h-full object-contain transition-transform duration-300 select-none" draggable="false" />
         </picture>
       </div>
-      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 text-[var(--t-mono-xs)] font-mono tracking-widest uppercase pointer-events-none">
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 t-mono-xs font-mono tracking-widest uppercase pointer-events-none">
         <span id="lightbox-counter">1 / 1</span> · <span class="opacity-60">CLICK TO ZOOM · ESC TO CLOSE</span>
       </div>
     </div>
@@ -956,21 +837,24 @@
     <!-- TOAST -->
     <div id="toast" class="hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="hidden fixed bottom-4 right-4 z-[10000] bg-bone dark:bg-darkBase border border-black dark:border-white p-4 shadow-2xl max-w-sm" role="region" aria-label="Cookie consent">
-      <p id="cookie-notice-text" class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide mb-3 leading-relaxed"></p>
-      <div class="flex gap-4 mb-3">
-        <button type="button" id="btn-privacy-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Privacy</button>
-        <button type="button" id="btn-terms-link" class="text-[var(--t-mono-xs)] font-mono uppercase underline underline-offset-2 opacity-60 hover:opacity-100 min-h-[44px] px-1 focus-ring">Terms</button>
-      </div>
-      <div class="flex gap-2">
-        <button id="btn-reject-cookies" type="button" class="flex-1 border border-black dark:border-white bg-transparent dark:bg-transparent text-black dark:text-white py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-60 focus-ring">Reject</button>
-        <button id="btn-accept-cookies" type="button" class="flex-1 border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black py-3 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest hover:opacity-80 focus-ring">Accept</button>
+    <!-- Cookie Banner — compact strip -->
+    <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 z-[10000]" role="region" aria-label="Cookie consent">
+      <div class="cookie-strip">
+        <p id="cookie-notice-text" class="cookie-strip-text"></p>
+        <div class="cookie-strip-actions">
+          <button type="button" id="btn-privacy-link" class="cookie-link focus-ring">Privacy</button>
+          <button type="button" id="btn-terms-link" class="cookie-link focus-ring">Terms</button>
+          <button id="btn-reject-cookies" type="button" class="cookie-btn cookie-btn--ghost focus-ring">Reject</button>
+          <button id="btn-accept-cookies" type="button" class="cookie-btn cookie-btn--fill focus-ring">Accept</button>
+        </div>
       </div>
     </div>
 
+    <!-- Per-entry JSON-LD: populated dynamically by render-detail.js when an entry is opened -->
+    <script id="entry-jsonld" type="application/ld+json"></script>
+
     <!-- JSON-LD Structured Data -->
-    <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thelexicon.xyz/#website","url":"https://thelexicon.xyz/","name":"THE LEXICON","description":"A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.","publisher":{"@id":"https://thelexicon.xyz/#org"},"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://thelexicon.xyz/#org","name":"THE LEXICON","url":"https://thelexicon.xyz/","logo":"https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg","founder":{"@type":"Person","name":"Angelo Sanchez Dela Cruz","jobTitle":"Researcher and Cultural Analyst","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}},"contactPoint":[{"@type":"ContactPoint","contactType":"press","email":"press@thelexicon.xyz","availableLanguage":["en"]},{"@type":"ContactPoint","contactType":"customer support","email":"info@thelexicon.xyz","availableLanguage":["en"]}],"sameAs":[]},{"@type":"CreativeWork","@id":"https://thelexicon.xyz/#archive","name":"THE LEXICON Archive","creator":{"@id":"https://thelexicon.xyz/#org"},"keywords":["fashion history","visual culture","subcultural theory","runway analysis","fashion criticism"],"about":"Landmark fashion collections annotated by analytical category, designer, era, and movement."}]}</script>
+    <script id="json-ld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://thelexicon.xyz/#website","url":"https://thelexicon.xyz/","name":"THE LEXICON","description":"A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.","publisher":{"@id":"https://thelexicon.xyz/#org"},"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://thelexicon.xyz/#org","name":"THE LEXICON","url":"https://thelexicon.xyz/","logo":"https://thelexicon.xyz/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg","founder":{"@type":"Person","name":"Angelo Sanchez Dela Cruz","jobTitle":"Researcher and Cultural Analyst","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}},"contactPoint":[{"@type":"ContactPoint","contactType":"press","email":"info@thelexicon.xyz","availableLanguage":["en"]},{"@type":"ContactPoint","contactType":"customer support","email":"info@thelexicon.xyz","availableLanguage":["en"]}],"sameAs":["https://x.com/thelexi0n"]},{"@type":"CreativeWork","@id":"https://thelexicon.xyz/#archive","name":"THE LEXICON Archive","creator":{"@id":"https://thelexicon.xyz/#org"},"keywords":["fashion history","visual culture","subcultural theory","runway analysis","fashion criticism"],"about":"Landmark fashion collections annotated by analytical category, designer, era, and movement."},{"@type":"AboutPage","@id":"https://thelexicon.xyz/about","url":"https://thelexicon.xyz/about","name":"About THE LEXICON","description":"The editorial methodology, mission, and attribution for THE LEXICON research archive.","isPartOf":{"@id":"https://thelexicon.xyz/#website"},"about":{"@id":"https://thelexicon.xyz/#org"}}]}</script>
 
     <!-- SAVE TO FOLDER MODAL -->
     <div id="save-folder-modal" class="hidden fixed inset-0 z-[5000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="save-folder-modal-title">
@@ -980,10 +864,10 @@
         <h2 id="save-folder-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Save to Archival Folder</h2>
         <div class="flex-1 overflow-y-auto mb-6 space-y-2" id="folder-list-container"></div>
         <div class="border-t border-black dark:border-white pt-4">
-          <label for="new-folder-name" class="block text-[var(--t-mono-xs)] font-bold uppercase tracking-widest mb-2">Create New Folder</label>
+          <label for="new-folder-name" class="block t-mono-xs font-bold uppercase tracking-widest mb-2">Create New Folder</label>
           <div class="flex gap-2">
-            <input type="text" id="new-folder-name" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" placeholder="FOLDER_TITLE" />
-            <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest focus-ring">Create</button>
+            <input type="text" id="new-folder-name" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="60" class="flex-1 bg-transparent border border-black dark:border-white p-2 min-h-[44px] t-mono-xs font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" placeholder="FOLDER_TITLE" />
+            <button type="button" id="btn-create-folder" class="border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black px-4 py-2 min-h-[44px] t-mono-xs font-bold uppercase tracking-widest focus-ring">Create</button>
           </div>
         </div>
       </div>
@@ -995,7 +879,7 @@
       <div class="relative w-full max-w-xl bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[4px_4px_0_0_#000] dark:shadow-[4px_4px_0_0_#CCFF00] p-6 font-mono">
         <button type="button" data-modal-close="kbd-help" class="absolute top-3 right-3 text-sm font-bold uppercase tracking-wider hover:opacity-70 focus-ring p-2" aria-label="Close keyboard shortcuts">X</button>
         <h2 id="kbd-help-title" class="text-sm font-bold uppercase tracking-[0.2em] mb-4 border-b border-black dark:border-white pb-2">Keyboard Shortcuts</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-[var(--t-mono-xs)] uppercase tracking-wider">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 t-mono-xs uppercase tracking-wider">
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Visual mode</span><kbd class="border border-current px-2 py-0.5">V</kbd></div>
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Index mode</span><kbd class="border border-current px-2 py-0.5">I</kbd></div>
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Focus search</span><kbd class="border border-current px-2 py-0.5">/</kbd></div>
@@ -1013,7 +897,22 @@
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Toggle reading mode</span><kbd class="border border-current px-2 py-0.5">R</kbd></div>
           <div class="flex justify-between border-b border-black/10 dark:border-white/10 py-1.5"><span class="opacity-70">Show this help</span><kbd class="border border-current px-2 py-0.5">?</kbd></div>
         </div>
-        <p class="text-[var(--t-mono-xs)] uppercase tracking-wider opacity-50 mt-4">Press <kbd class="border border-current px-1">Esc</kbd> to close</p>
+        <p class="t-mono-xs uppercase tracking-wider opacity-50 mt-4">Press <kbd class="border border-current px-1">Esc</kbd> to close</p>
+      </div>
+    </div>
+
+    <!-- GLOSSARY MODAL -->
+    <div id="glossary-modal" class="hidden fixed inset-0 z-[3000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="glossary-modal-title">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="glossary" aria-hidden="true"></div>
+      <div class="relative w-full max-w-2xl bg-bone dark:bg-darkBase border border-black dark:border-white/20 shadow-2xl flex flex-col max-h-[80vh] overflow-hidden">
+        <div class="flex items-center justify-between p-5 border-b border-black dark:border-white/20">
+          <div>
+            <h2 id="glossary-modal-title" class="text-sm font-bold font-mono uppercase tracking-[0.14em]">CRITICAL VOCABULARY</h2>
+            <p class="t-mono-xs font-mono opacity-50 uppercase tracking-wide mt-0.5">Theoretical terms used throughout The Lexicon</p>
+          </div>
+          <button type="button" data-modal-close="glossary" class="focus-ring text-sm font-bold uppercase tracking-wider hover:opacity-70 px-2 py-1" aria-label="Close glossary">[ X ]</button>
+        </div>
+        <div class="overflow-y-auto p-5" id="glossary-terms"></div>
       </div>
     </div>
 
@@ -1024,7 +923,7 @@
         <div class="p-4 border-b-[1px] border-black/80 dark:border-white/20 flex items-center gap-3">
           <span class="text-xl font-bold font-mono">›</span>
           <input type="text" id="cmd-input" role="combobox" class="flex-1 bg-transparent border-none outline-none text-base md:text-xl font-mono uppercase placeholder:text-black/30 dark:placeholder:text-white/30" aria-label="Search archive" aria-autocomplete="list" aria-controls="cmd-results" aria-expanded="true" autocomplete="off" spellcheck="false" />
-          <span class="text-[var(--t-mono-xs)] font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
+          <span class="t-mono-xs font-mono opacity-50 border-[1px] border-black/30 dark:border-white/30 px-1 rounded-sm">ESC</span>
         </div>
         <div id="cmd-scope-bar" class="flex items-center gap-1 px-4 py-2 border-b border-black/10 dark:border-white/10">
           <button type="button" class="cmd-scope-pill active" data-scope="all" aria-pressed="true">ALL</button>
@@ -1051,21 +950,54 @@
     <div id="auth-modal" class="hidden fixed inset-0 z-[2000] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
       <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-modal-backdrop="auth" aria-hidden="true"></div>
       <div class="relative w-full max-w-sm bg-bone dark:bg-darkBase border border-black dark:border-white shadow-[8px_8px_0_0_rgba(0,0,0,0.12)] p-6">
-        <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close modal">X</button>
-        <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">Sign in</h2>
+        <button type="button" data-modal-close="auth" class="absolute top-4 right-4 text-xs font-bold uppercase tracking-wider hover:opacity-70 focus-ring" aria-label="Close sign-in modal">[ X ]</button>
+        <h2 id="auth-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.1em] mb-4 border-b border-black dark:border-white pb-2">SIGN IN</h2>
+
+        <!-- Form state -->
         <div id="auth-form-container">
-          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide opacity-70 mb-4 leading-relaxed">Enter your email to receive a sign-in link.</p>
+          <p id="auth-context-label" class="hidden t-mono-xs font-mono uppercase tracking-wide text-acid mb-3 leading-relaxed"></p>
+          <p class="t-mono-xs uppercase font-mono tracking-wide opacity-60 mb-4 leading-relaxed">Enter your email to receive a one-time sign-in link. No password.</p>
           <form id="auth-form" class="space-y-4" novalidate>
             <div>
-              <label for="auth-email" class="block text-[var(--t-mono-xs)] font-bold uppercase tracking-widest mb-1">Email Address</label>
-              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-2 min-h-[44px] text-[var(--t-mono-xs)] font-mono uppercase focus:outline-none focus:border-acid dark:focus:border-acid" />
+              <label for="auth-email" class="block t-mono-xs font-bold uppercase tracking-widest mb-2">Email</label>
+              <input type="email" id="auth-email" required autocomplete="email" inputmode="email" aria-describedby="auth-message" class="w-full bg-transparent border border-black dark:border-white p-3 min-h-[44px] t-mono-xs font-mono focus:outline-none focus:border-acid dark:focus:border-acid" placeholder="you@example.com" />
             </div>
-            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-acid text-white dark:text-black hover:opacity-80 min-h-[44px] text-[var(--t-mono-xs)] font-bold uppercase tracking-widest focus-ring">Send sign-in link</button>
+            <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-white text-white dark:text-black hover:opacity-80 min-h-[44px] t-mono-xs font-bold uppercase tracking-widest focus-ring">[ SEND SIGN-IN LINK ]</button>
           </form>
-          <p id="auth-message" role="alert" aria-live="polite" class="text-[var(--t-mono-xs)] text-red-500 uppercase font-mono tracking-wide mt-4 hidden"></p>
+          <p id="auth-message" role="alert" aria-live="polite" class="t-mono-xs text-red-500 font-mono tracking-wide mt-3 hidden"></p>
+          <p class="text-[9px] font-mono uppercase tracking-[0.15em] opacity-40 mt-3">No password. We store only your email.</p>
         </div>
-        <div id="auth-success-container" class="hidden">
-          <p class="text-[var(--t-mono-xs)] uppercase font-mono tracking-wide text-green-600 dark:text-acid leading-relaxed">Sign-in link sent. Check your email.</p>
+
+        <!-- Sent state -->
+        <div id="auth-success-container" class="hidden space-y-4" aria-live="polite">
+          <p class="t-mono-xs uppercase font-mono tracking-wide text-acid leading-relaxed font-bold">LINK SENT — CHECK YOUR EMAIL.</p>
+          <p class="t-mono-xs font-mono uppercase tracking-wide opacity-60 leading-relaxed">Sent to <span id="auth-sent-email" class="text-inherit opacity-100"></span>. Expires in 15 min — you can close this tab.</p>
+          <div class="flex items-center gap-4 pt-2">
+            <button type="button" id="btn-auth-resend" class="text-[9px] font-mono font-bold uppercase tracking-[0.2em] border border-black/30 dark:border-white/30 px-3 py-2 hover:border-black dark:hover:border-white transition-colors focus-ring" disabled>Resend in 30s</button>
+            <button type="button" id="btn-auth-use-different" class="text-[9px] font-mono uppercase tracking-[0.2em] opacity-50 hover:opacity-100 underline focus-ring">← Use a different email</button>
+          </div>
+        </div>
+
+        <!-- Signed-in state -->
+        <div id="auth-signed-in-container" class="hidden space-y-6">
+          <div class="border-b border-black/20 dark:border-white/20 pb-4">
+            <p class="text-[9px] font-mono uppercase tracking-[0.2em] opacity-50 mb-1">Signed in as</p>
+            <p id="auth-user-email" class="t-mono-xs font-mono break-all"></p>
+          </div>
+          <button type="button" id="btn-sign-out-account" class="w-full border border-black dark:border-white min-h-[44px] t-mono-xs font-bold uppercase tracking-widest hover:opacity-70 focus-ring">[ SIGN OUT ]</button>
+          <div class="border-t border-red-500/40 pt-4">
+            <p class="text-[9px] font-mono uppercase tracking-[0.2em] text-red-500 mb-3">Danger Zone</p>
+            <div id="auth-delete-confirm" class="hidden space-y-3 mb-3">
+              <p class="t-mono-xs font-mono uppercase tracking-wide opacity-70 leading-relaxed">This permanently deletes your account and all saved folders. Cannot be undone.</p>
+              <label for="auth-delete-email-input" class="block text-[9px] font-mono uppercase tracking-[0.2em] opacity-70 mb-1">Type your email to confirm:</label>
+              <input type="email" id="auth-delete-email-input" autocomplete="off" class="w-full bg-transparent border border-red-500 p-2 min-h-[44px] t-mono-xs font-mono focus:outline-none focus:border-red-400" aria-label="Confirm email for account deletion" />
+              <div class="flex gap-2">
+                <button type="button" id="btn-delete-account-confirm" class="flex-1 border border-red-500 text-red-500 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:bg-red-500 hover:text-white transition-colors focus-ring">Yes, delete my account</button>
+                <button type="button" id="btn-delete-account-cancel" class="border border-black dark:border-white px-4 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:opacity-70 focus-ring">Cancel</button>
+              </div>
+            </div>
+            <button type="button" id="btn-delete-account" class="w-full border border-red-500/60 text-red-500 min-h-[44px] text-[9px] font-bold uppercase tracking-widest hover:border-red-500 focus-ring">Delete Account</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1076,7 +1008,7 @@
       <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
         <div class="flex items-start justify-between mb-8">
           <h2 id="about-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">About</h2>
-          <button type="button" data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
+          <button type="button" data-modal-close="about" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring" aria-label="Close"><span aria-hidden="true">[ X Close ]</span></button>
         </div>
         <div id="about-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
       </div>
@@ -1088,12 +1020,14 @@
       <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
         <div class="flex items-start justify-between mb-8">
           <h2 id="contact-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Contact</h2>
-          <button type="button" data-modal-close="contact" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
+          <button type="button" data-modal-close="contact" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring" aria-label="Close"><span aria-hidden="true">[ X Close ]</span></button>
         </div>
         <div id="contact-modal-body" class="font-mono text-sm md:text-base leading-relaxed uppercase tracking-[0.04em] space-y-6">
-          <p>System Communications</p>
-          <p>Email: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
+          <p>General: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
+          <p>Press: <a href="mailto:info@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
+          <p>Licensing: <a href="mailto:licensing@thelexicon.xyz" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">licensing@thelexicon.xyz</a></p>
           <p>Location: London, United Kingdom</p>
+          <p class="border-t border-current/20 pt-4 text-[0.7rem] tracking-[0.05em] opacity-60">Data requests (DSAR/GDPR): <a href="mailto:info@thelexicon.xyz?subject=Data%20Subject%20Access%20Request" class="underline underline-offset-4 decoration-1 hover:opacity-70 focus-ring">info@thelexicon.xyz</a></p>
         </div>
       </div>
     </div>
@@ -1104,9 +1038,9 @@
       <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
         <div class="flex items-start justify-between mb-8">
           <h2 id="privacy-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Privacy Protocol</h2>
-          <button type="button" data-modal-close="privacy" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
+          <button type="button" data-modal-close="privacy" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring" aria-label="Close"><span aria-hidden="true">[ X Close ]</span></button>
         </div>
-        <div id="privacy-modal-body" class="font-mono text-[var(--t-mono-xs)] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
+        <div id="privacy-modal-body" class="font-mono t-mono-xs md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
       </div>
     </div>
 
@@ -1116,9 +1050,9 @@
       <div class="relative bg-bone dark:bg-darkBase w-full h-full md:max-w-2xl md:max-h-[90vh] md:mx-auto p-8 md:p-12 border-[1px] border-black/80 dark:border-white/20 overflow-y-auto shadow-[8px_8px_0_0_rgba(0,0,0,0.12)]">
         <div class="flex items-start justify-between mb-8">
           <h2 id="terms-modal-title" class="text-sm md:text-base font-bold font-mono uppercase tracking-[0.15em]">Terms of Service</h2>
-          <button type="button" data-modal-close="terms" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring">[ X Close ]</button>
+          <button type="button" data-modal-close="terms" class="text-sm font-bold font-mono uppercase tracking-[0.06em] hover:opacity-60 p-2 -m-2 focus-ring" aria-label="Close"><span aria-hidden="true">[ X Close ]</span></button>
         </div>
-        <div id="terms-modal-body" class="font-mono text-[var(--t-mono-xs)] md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
+        <div id="terms-modal-body" class="font-mono t-mono-xs md:text-xs leading-relaxed uppercase tracking-[0.04em] space-y-6"></div>
       </div>
     </div>
 
@@ -1127,15 +1061,22 @@
       <div class="matrix-backdrop" id="matrix-backdrop" aria-hidden="true"></div>
       <div class="matrix-panel">
         <div class="matrix-header">
-          <span id="matrix-panel-title" class="text-[var(--t-mono-xs)] font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
-          <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
+          <span id="matrix-panel-title" class="t-mono-xs font-mono font-bold tracking-[0.2em]">NEXUS · CONNECTIONS</span>
+          <div class="flex items-center gap-3">
+            <div class="flex gap-1" role="tablist" aria-label="Nexus view">
+              <button type="button" id="nexus-tab-graph"    role="tab" aria-selected="true"  aria-controls="matrix-content" class="text-[8px] font-mono uppercase tracking-[0.15em] px-2 py-1 border border-white/30 bg-white/10 text-white hover:bg-white/20 transition-colors focus-ring">GRAPH</button>
+              <button type="button" id="nexus-tab-timeline" role="tab" aria-selected="false" aria-controls="matrix-content" class="text-[8px] font-mono uppercase tracking-[0.15em] px-2 py-1 border border-white/10 text-white/40 hover:bg-white/10 transition-colors focus-ring">TIMELINE</button>
+              <button type="button" id="nexus-tab-list"     role="tab" aria-selected="false" aria-controls="matrix-content" class="text-[8px] font-mono uppercase tracking-[0.15em] px-2 py-1 border border-white/10 text-white/40 hover:bg-white/10 transition-colors focus-ring">LIST</button>
+            </div>
+            <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
+          </div>
         </div>
-        <div id="matrix-content" class="flex-1 overflow-y-auto"></div>
+        <div id="matrix-content" class="flex-1 overflow-y-auto" role="tabpanel"></div>
       </div>
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="js/app.js?v=3a580a5"></script>
+    <script type="module" src="js/app.js?v=73e5278"></script>
 
   </div>
 
@@ -1143,27 +1084,9 @@
   <div id="welcome-modal" class="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title" hidden>
     <div class="welcome-inner">
 
-      <!-- Language selector -->
-      <div class="welcome-lang-row" id="welcome-lang-row">
-        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
-        <div class="welcome-lang-options" id="welcome-lang-options">
-          <button type="button" class="wlang-btn active" data-lang="en" lang="en">EN</button>
-          <button type="button" class="wlang-btn" data-lang="en-gb" lang="en-GB">EN-GB</button>
-          <button type="button" class="wlang-btn" data-lang="fr" lang="fr">FR</button>
-          <button type="button" class="wlang-btn" data-lang="de" lang="de">DE</button>
-          <button type="button" class="wlang-btn" data-lang="es" lang="es">ES</button>
-          <button type="button" class="wlang-btn" data-lang="it" lang="it">IT</button>
-          <button type="button" class="wlang-btn" data-lang="pt" lang="pt">PT</button>
-          <button type="button" class="wlang-btn" data-lang="zh" lang="zh">中文</button>
-          <button type="button" class="wlang-btn" data-lang="ja" lang="ja">日本語</button>
-          <button type="button" class="wlang-btn" data-lang="ko" lang="ko">한국어</button>
-          <button type="button" class="wlang-btn" data-lang="ru" lang="ru">РУ</button>
-        </div>
-      </div>
-
       <!-- Header -->
       <div class="welcome-header">
-        <div class="welcome-wordmark">THE LEXICON</div>
+        <div class="welcome-wordmark" id="welcome-modal-title">THE LEXICON</div>
         <p class="welcome-subtitle" id="welcome-subtitle-text">A research archive for fashion history and visual culture.</p>
         <p class="welcome-desc" id="welcome-desc-text">We map where every idea came from — indexed by analytical category, not just designer.</p>
       </div>
@@ -1191,6 +1114,14 @@
       <div class="welcome-footer">
         <button type="button" id="btn-welcome-enter" class="welcome-cta">ENTER THE ARCHIVE</button>
         <button type="button" id="btn-welcome-skip" class="welcome-skip">Skip introduction</button>
+      </div>
+
+      <!-- Language selector — below CTA so hero content lands first -->
+      <div class="welcome-lang-row" id="welcome-lang-row">
+        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
+        <div class="welcome-lang-options" id="welcome-lang-options">
+          <!-- Populated by initWelcomeModal() from ALL_LANGS -->
+        </div>
       </div>
 
     </div>

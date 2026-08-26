@@ -52,20 +52,20 @@ export function renderImageGrid(archiveData, callbacks) {
     const lang = AppState.language;
     const activeFilters = Object.entries(AppState.filters).filter(([_, v]) => v);
     const filtersList = activeFilters.length
-      ? `<div class="text-[var(--t-mono-xs)] font-mono text-black/50 dark:text-white/50 mb-4 max-w-md mx-auto">
+      ? `<div class="t-mono-xs font-mono text-black/50 dark:text-white/50 mb-4 max-w-md mx-auto">
            <div class="text-[8px] uppercase tracking-[0.2em] opacity-60 mb-2">${getTranslation('filtering_label', lang)}</div>
            <div class="flex flex-wrap justify-center gap-1">
-             ${activeFilters.map(([k, v]) => `<span class="border border-current px-2 py-0.5 text-[var(--t-mono-xs)] uppercase">${getTranslation('tax_' + k, lang)}: ${getTranslation(v, lang)}</span>`).join('')}
-             ${AppState.searchQuery ? `<span class="border border-current px-2 py-0.5 text-[var(--t-mono-xs)] uppercase">"${AppState.searchQuery}"</span>` : ''}
+             ${activeFilters.map(([k, v]) => `<span class="border border-current px-2 py-0.5 t-mono-xs uppercase">${getTranslation('tax_' + k, lang)}: ${getTranslation(v, lang)}</span>`).join('')}
+             ${AppState.searchQuery ? `<span class="border border-current px-2 py-0.5 t-mono-xs uppercase">"${AppState.searchQuery}"</span>` : ''}
            </div>
          </div>`
       : '';
     grid.innerHTML = `
       <div class="col-span-full flex flex-col items-center justify-center py-24 text-center px-4">
         <div class="text-xs font-mono uppercase tracking-widest text-black/40 dark:text-white/40 mb-3">${getTranslation('null_set', lang)}</div>
-        <div class="text-[var(--t-mono-xs)] font-mono text-black/30 dark:text-white/30 mb-4">${getTranslation('null_set_desc', lang)}</div>
+        <div class="t-mono-xs font-mono text-black/30 dark:text-white/30 mb-4">${getTranslation('null_set_desc', lang)}</div>
         ${filtersList}
-        <button type="button" id="btn-reset-filters-null" class="border border-black dark:border-white text-[var(--t-mono-xs)] font-mono uppercase tracking-widest px-4 py-2 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">${getTranslation('btn_reset_system', lang)}</button>
+        <button type="button" id="btn-reset-filters-null" class="border border-black dark:border-white t-mono-xs font-mono uppercase tracking-widest px-4 py-2 min-h-[44px] hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors focus-ring">${getTranslation('btn_reset_system', lang)}</button>
       </div>`;
     $('btn-reset-filters-null')?.addEventListener('click', () => {
       AppState.filters = emptyFilters();
@@ -96,6 +96,7 @@ export function renderImageGrid(archiveData, callbacks) {
       };
       const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
       const tagColor = `--c-${tagCategory}`;
+      const catTip   = getTranslation(`cat_tip_${tagCategory}`, AppState.language);
 
       const hotspotCount = (imgObj?.hotspots || []).length;
       const hotspotBadge = hotspotCount > 0
@@ -107,43 +108,53 @@ export function renderImageGrid(archiveData, callbacks) {
       // Only show hook on first image of each entry (i===0) to avoid repetition
       const hookRaw = i === 0 ? (entry.notes?.critique || '') : '';
       const hook = hookRaw ? hookRaw.split('.')[0].trim().slice(0, 80) : '';
+
+      // Only the first image per entry is a keyboard/screen-reader target.
+      // Subsequent images are presentational — clickable via mouse but not
+      // tab-reachable. This reduces tab stops from 643 → 45.
+      const isFirst = i === 0;
+      const a11yAttrs = isFirst
+        ? `tabindex="0" role="button" aria-label="Open ${brand} ${season} ${year} — ${tagLabel} (${imgs.length} image${imgs.length !== 1 ? 's' : ''})"`
+        : `aria-hidden="true"`;
+
       html += `
         <div class="grid-cell"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
-             tabindex="0"
-             role="button"
-             aria-label="${brand} ${year} ${tagLabel}"
+             ${a11yAttrs}
              style="animation-delay: ${delay}s">
-          <!-- Tag strip: above image (Phase 1: inverted metadata hierarchy) -->
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
-            <span class="gc-tag-label" style="color: var(${tagColor}, #999)">${tagLabel}</span>
-            <span class="gc-tag-id" aria-hidden="true">N-${entry.id.slice(0,6).toUpperCase()}</span>
+            <span class="gc-tag-label" style="color: var(${tagColor}, #999)"${catTip ? ` data-tooltip="${catTip.replace(/"/g, '&quot;')}"` : ''}>${tagLabel}</span>
           </div>
-          <!-- Image wrapper -->
           <div class="grid-cell-img group">
             ${hotspotBadge}
             <picture>
               <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
               <img
                 src="${src}"${imgAttrs(imgObj)}
-                alt="${brand} ${season} ${year}"
-                loading="lazy"
+                alt="${isFirst ? brand + ' ' + season + ' ' + year : ''}"
                 decoding="async"
                 class="transition-transform duration-500 group-hover:scale-105"
                 onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
             </picture>
           </div>
-          <!-- Always-visible metadata below image -->
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
             ${hook ? `<div class="gc-hook">${hook}.</div>` : ''}
+            ${isFirst && entry.vibes?.length ? `<div class="gc-vibes">${entry.vibes.slice(0,3).map(v => `<button type="button" class="gc-vibe" data-vibe="${v}" aria-label="Find entries with the vibe: ${v}">${v}</button>`).join('')}</div>` : ''}
           </div>
         </div>`;
     });
   });
 
   grid.innerHTML = html;
+  // After a short wait, mark any viewport images already in the browser
+  // cache as loaded so they don't sit at opacity:0 on re-visits.
+  // The timeout gives the browser time to fire intersection observer →
+  // start loading → resolve from cache before we check img.complete.
+  setTimeout(() => {
+    grid.querySelectorAll('img').forEach(img => { if (img.complete) img.classList.add('loaded'); });
+  }, 150);
   setupGridIntersectionObserver();
 }
 
@@ -165,7 +176,9 @@ export function renderEntryList(archiveData, callbacks) {
   const totalLabel = $('index-panel-title');
   if (totalLabel) {
     const t = (key) => getTranslation(key, AppState.language);
-    totalLabel.textContent = `${t('index_title')} / ${pad(count)} OF ${pad(total)}`;
+    totalLabel.textContent = count < total
+      ? `${t('index_title')} · ${pad(count)} of ${pad(total)}`
+      : `${t('index_title')} · ${pad(total)}`;
   }
 
   if (count === 0) {
@@ -173,11 +186,21 @@ export function renderEntryList(archiveData, callbacks) {
     const hasActiveFilters = Object.values(AppState.filters || {}).some(Boolean) ||
                              AppState.searchQuery ||
                              (AppState.yearRange && (AppState.yearRange.min > 1980 || AppState.yearRange.max < 2025));
+    let emptyMsg;
+    if (AppState.bookmarksOnly) {
+      emptyMsg = t('no_results_bookmarks') || 'No saved entries yet. Use ★ on any entry to bookmark it.';
+    } else if (AppState.searchQuery) {
+      emptyMsg = (t('no_results_search') || 'No entries match “{q}”. Try a brand, year, or analytical category — or clear filters to browse all {n}.')
+        .replace('{q}', AppState.searchQuery)
+        .replace('{n}', total);
+    } else {
+      emptyMsg = t('no_results');
+    }
     container.innerHTML = `
       <div role="status" aria-live="polite" class="p-6 border border-black/10 dark:border-white/10 m-4">
-        <p class="text-[var(--t-mono-xs)] font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
-        <p class="text-[var(--t-mono-sm)] font-mono text-black/70 dark:text-white/70 mb-3">${t('no_results')}</p>
-        ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters" class="text-[var(--t-mono-xs)] font-mono font-bold uppercase tracking-[0.2em] border border-current px-3 py-1.5 hover:bg-acid hover:text-black hover:border-acid transition-colors focus-ring">${t('clear_all_filters') || 'CLEAR FILTERS'}</button>` : ''}
+        <p class="t-mono-xs font-mono uppercase tracking-[0.2em] text-acid mb-2">FILTER NULL</p>
+        <p class="t-mono-sm font-mono text-black/70 dark:text-white/70 mb-3">${emptyMsg}</p>
+        ${hasActiveFilters ? `<button type="button" id="btn-clear-all-filters" class="t-mono-xs font-mono font-bold uppercase tracking-[0.2em] border border-current px-3 py-1.5 hover:bg-acid hover:text-black hover:border-acid transition-colors focus-ring">${t('clear_all_filters') || 'CLEAR FILTERS'}</button>` : ''}
       </div>`;
     return;
   }
@@ -187,24 +210,45 @@ export function renderEntryList(archiveData, callbacks) {
     corporeal: 'CORPOREAL', critique: 'CRITIQUE', subculture: 'SUBCULTURE',
     strategy: 'STRATEGY', semiotic: 'SEMIOTIC', provenance: 'PROVENANCE'
   };
+  let prevCat = null;
   container.innerHTML = filtered.map(entry => {
     const brand = (entry.tags && entry.tags.brand)
       ? getTranslation(entry.tags.brand, lang)
       : getTranslation('brand_unknown', lang);
     const year  = entry.year  || '----';
-    const title = entry.title ? getTranslation(entry.title, lang) : getTranslation('entry_untitled', lang);
-    // Phase 1: Inverted metadata — analytical tag is primary, brand is secondary
+    const season = entry.season ? entry.season.replace(/^(SS|AW|FW|SS\/FW)\s*/i, '') : '';
     const tagCategory = getTagCategory(entry.tags?.politics || '');
     const tagLabel = tagLabels[tagCategory] || 'ARCHIVE';
-    return `
-      <div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
+    const isNewCat = tagCategory !== prevCat;
+    prevCat = tagCategory;
+    const isActiveCat = AppState.analyticalCat === tagCategory;
+    const listCatTip  = getTranslation(`cat_tip_${tagCategory}`, lang);
+    const catHeader = isNewCat
+      ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" style="color:var(--c-${tagCategory},#888)" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}" aria-description="${listCatTip}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
+      : '';
+    // Thumbnail — first image of entry, shown inline on desktop
+    const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
+    const thumbSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
+    const thumbWebp = firstImg ? resolveImgSrc({ src: webpSrc(firstImg) }) : null;
+    const thumb = thumbSrc
+      ? `<picture class="entry-item-thumb" aria-hidden="true">
+           <source type="image/webp" srcset="${thumbWebp}">
+           <img src="${thumbSrc}" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.parentElement.style.display='none'">
+         </picture>`
+      : '';
+    return `${catHeader}<div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
            data-id="${entry.id}"
+           data-thumb="${thumbSrc || ''}"
            role="button"
            tabindex="0"
            aria-label="${brand} ${year} ${tagLabel}">
-        <div class="text-[8px] font-mono uppercase tracking-[0.18em] font-bold leading-tight" style="color: var(--c-${tagCategory}, currentColor)">${tagLabel}</div>
-        <div class="text-[9px] font-mono uppercase tracking-widest font-medium leading-tight">${brand} <span class="text-black/40 dark:text-white/40">${year}</span></div>
-        <div class="text-[8px] font-mono text-black/50 dark:text-white/50 truncate leading-tight">${title}</div>
+        <div class="entry-item-inner">
+          <div>
+            <div class="entry-item-brand">${brand}</div>
+            <div class="entry-item-meta">${year}${season ? ' · ' + season : ''}</div>
+          </div>
+          ${thumb}
+        </div>
       </div>`;
   }).join('');
 }
@@ -213,6 +257,10 @@ export function renderEntryList(archiveData, callbacks) {
 export function renderFeaturedStrip(archiveData) {
   const container = $('featured-strip');
   if (!container) return;
+
+  // Featured strip is a landing-page section — don't show once orientation is dismissed
+  const panel = $('orientation-panel');
+  if (!panel || panel.classList.contains('hidden')) return;
 
   const lang = AppState.language;
   const CATEGORIES = ['critique', 'subculture', 'corporeal', 'semiotic'];
@@ -225,13 +273,12 @@ export function renderFeaturedStrip(archiveData) {
     provenance: 'Historical Lineage',
   };
 
-  // Pick best (most recent) entry per category
-  const picks = CATEGORIES.map(cat => {
-    const match = [...archiveData]
-      .sort((a, b) => (b.year || 0) - (a.year || 0))
-      .find(e => getTagCategory(e.tags?.politics || '') === cat);
-    return match ? { cat, entry: match } : null;
-  }).filter(Boolean);
+  // Pick 4 random entries on each load, labelled by their analytical category
+  const shuffled = [...archiveData].sort(() => Math.random() - 0.5);
+  const picks = shuffled.slice(0, 4).map(entry => {
+    const cat = getTagCategory(entry.tags?.politics || '') || 'critique';
+    return { cat, entry };
+  });
 
   if (picks.length === 0) {
     container.classList.add('hidden');
@@ -245,7 +292,6 @@ export function renderFeaturedStrip(archiveData) {
       : '—';
     const year = entry.year || '----';
     const season = entry.season ? entry.season.toUpperCase() : 'ARCHIVE';
-    const id = `N-${entry.id.slice(0, 4).toUpperCase()}`;
     const label = tagLabelMap[cat] || cat.toUpperCase();
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
     const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
@@ -259,7 +305,7 @@ export function renderFeaturedStrip(archiveData) {
     const imgHtml = imgSrc
       ? `<picture>
            <source type="image/webp" srcset="${webpImg}">
-           <img src="${imgSrc}" alt="${brand}" loading="lazy" decoding="async"
+           <img src="${imgSrc}" alt="" loading="lazy" decoding="async"
                 onerror="this.onerror=null;this.src='${BROKEN_ASSET}'">
          </picture>`
       : '';
@@ -269,7 +315,6 @@ export function renderFeaturedStrip(archiveData) {
            aria-label="${label} — ${brand} ${year}">
         <div class="feat-card-tag">
           <span class="fc-label">${label.toUpperCase()}</span>
-          <span class="fc-id">${id}</span>
         </div>
         <div class="feat-card-img">${imgHtml}</div>
         <div class="feat-card-body">
@@ -283,7 +328,7 @@ export function renderFeaturedStrip(archiveData) {
   container.querySelectorAll('.feat-card').forEach(card => {
     const open = () => {
       const id = card.dataset.entryId;
-      if (id) window.location.hash = `detail/${id}/0`;
+      if (id) document.dispatchEvent(new CustomEvent('lexicon:navigate', { detail: { id, idx: 0 } }));
     };
     card.addEventListener('click', open);
     card.addEventListener('keydown', e => {

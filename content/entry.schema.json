@@ -48,6 +48,15 @@
         "strategy":   { "type": "string", "minLength": 50 },
         "critique":   { "type": "string", "minLength": 50 }
       }
+    },
+    "photo_credit": {
+      "type": "string",
+      "description": "Attribution string for images in this entry. Displayed beneath the image carousel. Empty string = auto-generated fallback from brand/season/year."
+    },
+    "vibes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Plain-language aesthetic/vibe tags for discovery by non-academic audiences."
     }
   },
   "$defs": {

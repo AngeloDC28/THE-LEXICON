@@ -19,18 +19,33 @@ export function renderTimeline(archiveData, callbacks) {
   });
 
   const sortedYears = Object.keys(years).sort((a, b) => a - b);
-  
-  container.innerHTML = sortedYears.map(year => {
-    const entries = years[year];
+
+  // Insert gap markers between non-consecutive years (bug 7.1b)
+  const items = [];
+  sortedYears.forEach((year, idx) => {
+    if (idx > 0) {
+      const gap = Number(year) - Number(sortedYears[idx - 1]) - 1;
+      if (gap > 0) items.push({ type: 'gap', gap });
+    }
+    items.push({ type: 'year', year, entries: years[year] });
+  });
+
+  container.innerHTML = items.map(item => {
+    if (item.type === 'gap') {
+      return `<div class="flex-shrink-0 w-16 h-full flex flex-col items-center justify-center opacity-20 border-r border-black/10 dark:border-white/10">
+        <div class="text-[7px] font-mono uppercase tracking-widest writing-mode-vertical" style="writing-mode:vertical-rl;transform:rotate(180deg)">· · · ${item.gap} ${item.gap === 1 ? 'yr' : 'yrs'} · · ·</div>
+      </div>`;
+    }
+    const { year, entries } = item;
     return `
       <div class="flex-shrink-0 w-64 h-full border-r border-black/10 dark:border-white/10 flex flex-col p-4 bg-overlay/20 dark:bg-darkSurface/20">
         <div class="flex justify-between items-baseline mb-6 shrink-0">
           <h3 class="text-3xl font-bold font-mono tracking-tighter text-acid">${year}</h3>
-          <span class="text-[8px] uppercase tracking-widest opacity-40">${entries.length} ${getTranslation('label_artifacts', AppState.language)}</span>
+          <span class="text-[8px] uppercase tracking-widest opacity-40">${entries.length} ${entries.length === 1 ? getTranslation('label_artifact_singular', AppState.language) : getTranslation('label_artifacts', AppState.language)}</span>
         </div>
         <div class="flex-1 overflow-y-auto space-y-4 pr-2 custom-scrollbar">
           ${entries.map((e, i) => `
-            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0 translateY-10"
+            <div class="timeline-item group relative aspect-[3/4] overflow-hidden border border-black/5 dark:border-white/5 cursor-crosshair bg-black/5 dark:bg-white/5 opacity-0"
                  data-id="${e.id}" role="button" tabindex="0"
                  aria-label="${getTranslation(e.tags.brand, AppState.language)} ${e.year} — ${getTranslation(e.title, AppState.language)}"
                  style="transition: all 0.6s ease; transition-delay: ${Math.min(i * 0.1, 1.5)}s">
@@ -44,7 +59,7 @@ export function renderTimeline(archiveData, callbacks) {
                      onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');this.closest('.timeline-item').classList.add('loaded');this.classList.add('broken-asset');" />
               </picture>
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
-                <p class="text-[var(--t-mono-xs)] text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
+                <p class="t-mono-xs text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
                 <p class="text-[7px] text-white/60 uppercase truncate">${getTranslation(e.title, AppState.language)}</p>
               </div>
             </div>

@@ -6,6 +6,7 @@
 import { $ } from './core-utils.js';
 import { AppState, taxonomyData } from './core-state.js';
 import { getTranslation } from './translations.js';
+import { getTagCategory } from './render-index-view.js';
 
 let searchCache = new Map();
 
@@ -27,7 +28,7 @@ export function getFilteredEntries(archiveData) {
     : 0;
   const yr = AppState.yearRange || { min: 1980, max: 2025 };
   const bookmarksOnly = !!AppState.bookmarksOnly;
-  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.sortMode}|${yr.min}-${yr.max}|bm:${bookmarksOnly}`;
+  const cacheKey = `${q}|${folId}|${folRev}|${filterKey}|${AppState.analyticalCat}|${AppState.sortMode}|${yr.min}-${yr.max}|bm:${bookmarksOnly}`;
 
   if (searchCache.has(cacheKey)) {
     return searchCache.get(cacheKey);
@@ -60,6 +61,11 @@ export function getFilteredEntries(archiveData) {
       const y = e.year;
       return y && y >= yr.min && y <= yr.max;
     });
+  }
+
+  // 1c. Filter by analytical category (sidebar category header click)
+  if (AppState.analyticalCat) {
+    entries = entries.filter(e => getTagCategory(e.tags?.politics || '') === AppState.analyticalCat);
   }
 
   // 2. Filter by taxonomy tags
@@ -105,9 +111,21 @@ export function getFilteredEntries(archiveData) {
           entry.id || '', entry.title || '',
           entry.year ? String(entry.year) : '',
           entry.season || '', entry.description || '',
-          ...Object.values(t), ...Object.values(entry.notes || {})
+          ...Object.values(t), ...Object.values(entry.notes || {}),
+          ...(entry.vibes || [])
         ].join(' ').toLowerCase();
-        if (!searchable.includes(freeText)) return false;
+        // Exact substring match first; fall back to compressed match so
+        // "mqueen" finds "McQueen", "balanciga" finds "Balenciaga", etc.
+        const exact = searchable.includes(freeText);
+        if (!exact) {
+          const compress = s => s.replace(/[^a-z0-9]/gi, '').toLowerCase();
+          const sc = compress(searchable);
+          const matched = freeText.split(/\s+/).filter(Boolean).every(tok => {
+            const tc = compress(tok);
+            return tc.length >= 2 && sc.includes(tc);
+          });
+          if (!matched) return false;
+        }
       }
       return true;
     });
@@ -178,8 +196,11 @@ export function renderTaxonomySub(callbacks, archiveData) {
     return;
   }
 
-  // Show sub-panel ABOVE the grid (grid stays visible — they're stacked).
+  // Show sub-panel above the grid (grid stays visible — they're stacked).
   container.classList.remove('hidden');
+  // Scroll into view so the sub-panel is visible even on short sidebars where
+  // users are looking at the category cells below.
+  requestAnimationFrame(() => container.scrollIntoView({ behavior: 'smooth', block: 'nearest' }));
 
   const values = taxonomyData[type];
   const lang = AppState.language;
@@ -200,12 +221,12 @@ export function renderTaxonomySub(callbacks, archiveData) {
 
   container.innerHTML = `
     <div class="taxonomy-sub-header flex items-center justify-between gap-3 mb-3 pb-2 border-b border-black/10 dark:border-white/10">
-      <span class="text-[var(--t-mono-xs)] font-bold tracking-[0.2em] uppercase opacity-70">
+      <span class="t-chrome-xs font-medium tracking-[0.2em] uppercase opacity-70">
         ${getTranslation('tax_' + type, lang)}${activeVals.length ? ` <span class="opacity-50 font-normal normal-case tracking-normal">· ${activeVals.length} selected</span>` : ''}
       </span>
       <div class="flex items-center gap-2">
-        ${activeVals.length ? `<button type="button" class="focus-ring text-[var(--t-mono-xs)] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-acid text-acid px-2 py-1 transition-opacity" data-taxonomy-clear="${type}" aria-label="Clear all ${type} filters">[ Clear all ]</button>` : ''}
-        <button type="button" class="focus-ring text-[var(--t-mono-xs)] font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
+        ${activeVals.length ? `<button type="button" class="focus-ring t-chrome-xs font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-acid text-acid px-2 py-1 transition-opacity" data-taxonomy-clear="${type}" aria-label="Clear all ${type} filters">[ Clear all ]</button>` : ''}
+        <button type="button" class="focus-ring t-chrome-xs font-mono tracking-widest uppercase opacity-60 hover:opacity-100 border border-current px-2 py-1 transition-opacity" data-taxonomy-back="1" aria-label="Close filter panel">[ Close ]</button>
       </div>
     </div>
     <div class="taxonomy-sub-values flex flex-wrap gap-1.5">
@@ -216,13 +237,13 @@ export function renderTaxonomySub(callbacks, archiveData) {
         const activeClass = isActive
           ? 'border-acid bg-acid text-black hover:opacity-80'
           : 'border-black/30 dark:border-white/30 hover:border-black dark:hover:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black';
-        const zeroClass = count === 0 ? ' opacity-30' : '';
+        const zeroClass = !count ? ' opacity-30' : '';
         return `<button type="button"
-          class="taxonomy-val-btn px-2.5 py-1.5 text-[var(--t-mono-xs)] tracking-wider uppercase font-mono border transition-colors ${activeClass}${zeroClass}"
+          class="taxonomy-val-btn px-2.5 py-1.5 t-mono-xs tracking-wider uppercase font-mono border transition-colors ${activeClass}${zeroClass}"
           data-taxonomy-type="${type}"
           data-taxonomy-val="${val}"
           aria-pressed="${isActive}"
-          ${count === 0 ? 'disabled aria-disabled="true"' : ''}
+          ${!count ? 'disabled aria-disabled="true"' : ''}
         >${isActive ? '✓ ' : ''}${getTranslation(val, AppState.language)}${countBadge}</button>`;
       }).join('')}
     </div>

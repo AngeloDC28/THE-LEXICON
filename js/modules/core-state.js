@@ -29,7 +29,9 @@ export const AppState = {
   activeTaxonomy: null,
   language: safeLocalGet('lexicon-lang', 'en'),
   filters: emptyFilters(),
+  analyticalCat: null,
   searchQuery: '',
+  bookmarksOnly: false,
   archivalFolders: [],
   activeFolderId: null,
   previousView: 'grid',
@@ -46,11 +48,25 @@ export function setGridIntersectionObserver(observer) {
 // (stickyNotes export removed — render-detail.js uses its own internal
 // colors map and no other module reads this. See audit pass 2.)
 
-export function updateHash(id) {
-  if (id) {
+// replace=true → replaceState (same entry, different image); false → pushState (new entry)
+export function updateHash(id, replace = false) {
+  if (id && id.startsWith('detail/')) {
+    const parts = id.split('/');
+    const entryId = parts[1];
+    const imgIdx  = parts[2] || '0';
+    const url = `/entry/${entryId}/${imgIdx}`;
+    if (replace) {
+      history.replaceState({ entryId, imgIdx }, '', url);
+    } else {
+      history.pushState({ entryId, imgIdx }, '', url);
+    }
+  } else if (id) {
+    // non-detail hash (legacy fallback, e.g. grid views)
     window.location.hash = id;
   } else {
-    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // closing detail — replace rather than push so the entry doesn't live in
+    // the back-stack. Filter state is restored by syncHashFromState() in app.js.
+    history.replaceState(null, '', '/');
   }
 }
 

@@ -1,0 +1,409 @@
+THE LEXICON — WCAG 2.2 AA ACCESSIBILITY AUDIT
+==============================================
+Date: 2026-05-26
+Auditor: Claude (automated + manual code review)
+Scope: Full site at localhost:5173 / www.thelexicon.xyz
+Standard: WCAG 2.2 Level AA
+
+Method: Playwright automated checks + manual code review across 14 surfaces.
+Screenshots saved to /tmp/audit_*.png during testing.
+
+Legend: [CRITICAL] breaks screen reader / keyboard access entirely
+        [MAJOR]    fails a WCAG AA criterion with real-world impact
+        [MINOR]    fails a criterion but low real-world impact
+        [PASS]     explicitly tested and confirmed passing
+        [INFO]     not a failure, but worth noting
+
+
+══════════════════════════════════════════════════════════════════
+SECTION 1 — CRITICAL ISSUES (fix before next deploy)
+══════════════════════════════════════════════════════════════════
+
+CRIT-01 │ Hotspot content only on hover, not on focus
+──────────────────────────────────────────────────────
+WCAG:    1.4.13 Content on Hover or Focus (AA)
+Element: .hotspot-btn (render-detail.js lines 629–644)
+Problem: The analytical payload pops up on mouseenter and hides on mouseleave.
+         No focus/blur listener is attached. A keyboard user who tabs to a
+         hotspot button sees only the focus ring — the descriptive payload text
+         never appears. WCAG 1.4.13 requires that content triggered by hover is
+         also triggerable by keyboard focus.
+         Clicking (Enter/Space) does trigger the permanent-payload state, so the
+         content IS reachable, but discovery is broken because tabbing past
+         a hotspot gives no hint that any content is there.
+Fix:     Add focus/blur listeners alongside mouseenter/mouseleave:
+           btn.addEventListener('focus', () => showPayload(spot));
+           btn.addEventListener('blur',  () => hidePayload());
+         Also add aria-describedby pointing to the payload element so screen
+         readers announce the content on focus.
+
+CRIT-02 │ Detail view focus not managed on open
+───────────────────────────────────────────────
+WCAG:    2.4.3 Focus Order (AA)
+Element: openDetail() in js/modules/render-detail.js
+Problem: When an entry is opened (card click, keyboard Enter, command palette),
+         focus stays on whatever the user last touched. A screen reader user
+         pressing Enter on a grid card hears nothing change — the detail view
+         renders silently. There is no programmatic focus move to the detail
+         view heading or first focusable element.
+Fix:     At the end of openDetail(), after rendering is complete:
+           const heading = $('detail-sidebar-header') || $('active-entry-title');
+           if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus(); }
+         Use tabindex="-1" so it's focusable by JS but not in the Tab order.
+         Alternatively focus #btn-back-grid which is always present.
+
+CRIT-03 │ Focus not returned to source card after detail close
+─────────────────────────────────────────────────────────────
+WCAG:    2.4.3 Focus Order (AA)
+Element: closeDetail() + _lastNonModalFocus in js/app.js
+Problem: restoreFocus() returns focus to _lastNonModalFocus, which gets
+         overwritten by the focusin listener on every interaction. By the time
+         the user scrolls through the sidebar and clicks "Return to Archive",
+         _lastNonModalFocus holds the last button they touched in the sidebar —
+         not the original grid card. Keyboard users lose their scroll position
+         AND their focus position in the grid.
+Fix:     In openDetail(), capture and store the triggering element before
+         rendering:
+           AppState._detailTriggerEl = document.activeElement;
+         In closeDetail(), restore to it:
+           if (AppState._detailTriggerEl) {
+             requestAnimationFrame(() => AppState._detailTriggerEl.focus());
+             AppState._detailTriggerEl = null;
+           }
+
+CRIT-04 │ Language dropdown options missing lang attribute
+──────────────────────────────────────────────────────────
+WCAG:    3.1.2 Language of Parts (AA)
+Element: #lang-dropdown li buttons (js/app.js ~line 1995)
+Problem: The language switcher dropdown is populated in JS with buttons like
+         "Français FR", "Deutsch DE", "日本語 JA" etc. None of these buttons
+         have a lang attribute. Screen readers will attempt to pronounce
+         "Français" in English phonetics ("fran-sais") rather than French.
+         The welcome modal's language buttons DO have lang attributes — this
+         needs to be replicated in the main dropdown.
+Fix:     In the JS that builds the dropdown options, add lang="${code}" to
+         each button element. Map lang codes: fr→fr, de→de, ja→ja, etc.
+         e.g.:
+           <button type="button" role="option" lang="${code}" ...>
+
+══════════════════════════════════════════════════════════════════
+SECTION 2 — MAJOR ISSUES (fails WCAG AA, fix soon)
+══════════════════════════════════════════════════════════════════
+
+MAJOR-01 │ Low-contrast text using opacity utility classes
+──────────────────────────────────────────────────────────
+WCAG:    1.4.3 Contrast (Minimum) (AA) — requires 4.5:1 for normal text
+Element: 27+ instances of text-white/40, text-white/30, opacity-40, opacity-30
+         throughout index.html (status labels, taxonomy labels, secondary metadata)
+Problem: text-white/40 on #000 background = approximately #666666, which gives
+         a contrast ratio of 3.66:1 — below the 4.5:1 AA threshold for normal
+         text. text-white/30 gives ~2.5:1. The 8px font size labels compound
+         this: at small sizes, contrast must be even higher to be legible.
+         Most affected: metadata labels in the grid cards, secondary text in
+         the detail sidebar, the breadcrumb, and "Technical Specifications" header.
+Fix (preferred): Replace opacity-based transparency with solid muted colours.
+         Dark mode: use #999999 (#999 on #000 = 3.94:1, borderline) or better
+         #AAAAAA (#AAA on #000 = 5.74:1 ✓).
+         Light mode: equivalent opacity text on bone is even lower contrast.
+         For purely decorative/non-informative text (e.g. the "N-XXXXX" entry ID
+         already has aria-hidden="true") opacity is fine.
+         Audit each instance and determine if it carries information. If yes,
+         raise to #888 minimum in dark mode.
+
+MAJOR-02 │ Grid card aria-label doesn't describe the action
+─────────────────────────────────────────────────────────────
+WCAG:    2.4.6 Headings and Labels (AA), 4.1.2 Name, Role, Value (AA)
+Element: .grid-cell[role="button"] (render-grid.js line 116)
+         aria-label="${brand} ${year} ${tagLabel}"
+Problem: The aria-label describes what the card IS ("Balenciaga 2007
+         Subcultural Codification") but not what activating it DOES. A screen
+         reader announces it as a button but there's no indication it opens an
+         entry for analysis. Additionally the label omits the season.
+Fix:     Update to:
+           aria-label="Open entry: ${brand} ${season} ${year} — ${tagLabel}"
+         This pattern is consistent with ARIA button naming best practice.
+
+MAJOR-03 │ #mobile-detail-actions missing accessible name and landmark role
+───────────────────────────────────────────────────────────────────────────
+WCAG:    4.1.2 Name, Role, Value (AA)
+Element: #mobile-detail-actions (index.html line 844)
+         <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 ...">
+Problem: This fixed bottom bar contains 5 action buttons (Back, Notes, Nexus,
+         Bookmark, Cite). The container div has no role or aria-label. A screen
+         reader user navigating by landmarks cannot locate this toolbar.
+Fix:     Add role="toolbar" and aria-label="Entry actions":
+           <div id="mobile-detail-actions" role="toolbar" aria-label="Entry actions" ...>
+
+MAJOR-04 │ #btn-lang-toggle: ▾ character in accessible name
+────────────────────────────────────────────────────────────
+WCAG:    4.1.2 Name, Role, Value (AA)
+Element: #btn-lang-toggle (index.html line 363–365)
+         Text content: "EN ▾"
+Problem: The button's accessible name includes the ▾ Unicode character. Some
+         screen readers announce this as "downwards black arrow", "v" or silence.
+         The button also has no aria-label to clarify its purpose beyond the
+         two-letter language code.
+Fix:     Add aria-label to the button (not the inner span):
+           aria-label="Language: English. Select language"
+         Update this dynamically when language changes. The visible text can
+         remain "EN ▾" for sighted users.
+
+MAJOR-05 │ Featured strip image alt text too generic
+─────────────────────────────────────────────────────
+WCAG:    1.1.1 Non-text Content (AA)
+Element: .feat-card img (render-grid.js line 261)
+         alt="${brand}"  e.g. alt="Prada"
+Problem: Featured strip card images use just the brand name as alt text, with
+         no year, season, or description. These images are the primary visual
+         content of the card (research images, not decorative icons), so
+         "Prada" is insufficient to describe what's shown.
+Fix:     Update to include season and year at minimum:
+           alt="${brand} ${season} ${year} — archive image"
+         or alt="" with the text content of the card carrying the description
+         (acceptable since the card body already shows brand/year/tag).
+         The second option is actually cleaner — mark the image as decorative
+         (alt="") since the card label carries the information.
+
+MAJOR-06 │ Sort column header: sort indicator ↕ not announced meaningfully
+──────────────────────────────────────────────────────────────────────────
+WCAG:    1.3.1 Info and Relationships (AA)
+Element: th[data-sort-col] (render-index-view.js line 124)
+         Rendered as: "DESIGNER / BRAND ↕"
+Problem: The ↕ and ↓ Unicode arrows in column header text are read aloud by
+         screen readers literally ("upwards downwards arrow"). The header already
+         has aria-sort="none|ascending|descending" which correctly communicates
+         sort state, but the visible arrows duplicate this as raw Unicode text.
+Fix:     Wrap the arrow in an aria-hidden span:
+           `${label} <span aria-hidden="true">${sortIndicator(key)}</span>`
+         The aria-sort attribute already provides the sort state to AT; the
+         visible arrow is purely redundant for sighted users.
+
+MAJOR-07 │ Status ribbon aria-live may be over-chatty
+──────────────────────────────────────────────────────
+WCAG:    4.1.3 Status Messages (AA)
+Element: #status-ribbon (index.html)
+         aria-live="polite"
+Problem: The status ribbon updates on nearly every user action (opening entries,
+         filtering, navigating images). With aria-live="polite" a screen reader
+         will announce every change: "Brand: Balenciaga Year: 2007 Season: SS
+         Entry: 01 / 45". On rapid navigation (arrow keys through images) this
+         becomes a flood of announcements that interrupts the user.
+Fix:     Use aria-live="off" on the ribbon itself and route important status
+         changes through the dedicated #aria-announcer element (which already
+         exists with aria-live="polite"). That way changes are announced once,
+         controlled, and only when meaningful. The visual ribbon can still
+         update without announcing every pixel change.
+
+══════════════════════════════════════════════════════════════════
+SECTION 3 — MINOR ISSUES
+══════════════════════════════════════════════════════════════════
+
+MINOR-01 │ Absolute 8px font size
+──────────────────────────────────
+WCAG:    1.4.4 Resize Text (AA)
+Element: .text-\[8px\] (4 instances in index.html)
+         Used for: breadcrumb prefix, hotspot badge, some grid labels
+Problem: 8px is extremely small and uses an absolute unit that doesn't scale
+         with the user's browser default font size setting. At browser 200%
+         text zoom (WCAG requirement), 8px text stays at 8px.
+Fix:     Replace with clamp or rem-based size. Minimum practical:
+           text-[0.5rem] or font-size: clamp(0.5rem, 0.45rem + 0.1vw, 0.5625rem)
+         These already exist as --t-chrome-xs in the CSS variables.
+
+MINOR-02 │ Image counter dots not readable by AT
+─────────────────────────────────────────────────
+WCAG:    1.3.1 Info and Relationships (AA)
+Element: #image-counter (aria-live="polite", aria-label="Image navigation")
+Problem: The counter renders filled/unfilled dot characters (● ○) as visual
+         navigation. The aria-live region announces when its content changes,
+         but the dots themselves convey no text information to screen readers.
+         The existing page title does show "Brand Year [01/12]" which helps,
+         but #image-counter itself is not informative.
+Fix:     Render a screen-reader-only text alongside the dots:
+           <span class="sr-only">${currentIdx + 1} of ${total}</span>
+         The sr-only class (position:absolute; clip) hides it visually but
+         exposes it to AT. The visible dots remain for sighted users.
+
+MINOR-03 │ #analytical-payload (hotspot popup) has no role
+───────────────────────────────────────────────────────────
+WCAG:    4.1.2 Name, Role, Value (AA)
+Element: #analytical-payload (index.html line 746)
+         <div id="analytical-payload" class="hidden brutalist-node floating-payload">
+Problem: When a hotspot is hovered/clicked, this element becomes visible and
+         contains analytical text. It has no role, no aria-label, and isn't
+         announced when it appears. The content is duplicated in the mobile
+         sheet with better semantics, but on desktop the payload div is silent.
+Fix:     Add role="tooltip" and aria-live="polite" if it's informational:
+           <div id="analytical-payload" role="tooltip" aria-live="polite" ...>
+         Or if it's a click-triggered dialog: role="dialog" with aria-label.
+         Also: connect each hotspot button to the payload via aria-describedby:
+           btn.setAttribute('aria-describedby', 'analytical-payload');
+
+MINOR-04 │ Index table rows missing keyboard activation announcement
+─────────────────────────────────────────────────────────────────────
+WCAG:    2.4.6 Headings and Labels (AA)
+Element: #index-table-view tbody tr (render-index-view.js line 299)
+         tabindex="0", no role
+Problem: Table rows have tabindex="0" and respond to Enter/Space to open an
+         entry. But tr elements have implicit role="row" which doesn't suggest
+         they're interactive. A screen reader will not announce "button" or
+         "link" when focus lands on them.
+Fix:     Add aria-label to each row describing the action:
+           tr.setAttribute('aria-label',
+             `Open entry: ${entry.tags.brand} ${entry.season} ${entry.year}`);
+         Or, since the row already has tabindex=0, users will focus it and
+         hear the cell content — this is borderline acceptable but the label
+         improves discoverability.
+
+MINOR-05 │ Cookie banner Privacy/Terms buttons unclear purpose
+─────────────────────────────────────────────────────────────
+WCAG:    2.4.6 Headings and Labels (AA)
+Element: #btn-privacy-link, #btn-terms-link (index.html, cookie banner)
+Problem: Buttons labelled "Privacy" and "Terms" open modal overlays. The
+         button type/purpose (opens a modal) is not communicated.
+Fix:     Add aria-haspopup="dialog" and descriptive aria-label:
+           aria-label="Read privacy policy" aria-haspopup="dialog"
+           aria-label="Read terms of service" aria-haspopup="dialog"
+
+MINOR-06 │ Nexus force graph SVG: no <title> element
+─────────────────────────────────────────────────────
+WCAG:    1.1.1 Non-text Content (AA)
+Element: SVG in #matrix-content (connection-matrix.js renderGraph())
+         Has aria-label="Nexus connection graph" but no <title> child element
+Problem: The SVG has aria-label which is sufficient for most AT, but the
+         ARIA in HTML spec recommends a <title> as the first child of SVG for
+         maximum compatibility with older screen readers.
+Fix:     Add a title element after SVG creation:
+           const title = document.createElementNS(NS, 'title');
+           title.textContent = `Nexus connections for ${entry.tags.brand} ${entry.year}`;
+           svg.insertBefore(title, svg.firstChild);
+           svg.setAttribute('aria-labelledby', titleId); // reference the title
+
+MINOR-07 │ Focus not moved to modal on detail view ctrl+shortcuts
+────────────────────────────────────────────────────────────────
+WCAG:    2.4.3 Focus Order (AA)
+Element: Keyboard shortcuts C (cite), S (save), N (nexus) in js/app.js
+Problem: When these shortcuts open modals from within the detail view, focus
+         is moved correctly (trapFocus is called). But for the NEXUS shortcut
+         (N key), focus moves to the Nexus panel — confirmed working.
+         The CITE modal (C key) was tested and the modal did not appear in the
+         automated test (possible timing issue). Manual verification suggested
+         to confirm focus trap fires on C key.
+Fix:     Verify: press C while in detail view, confirm focus moves to cite
+         modal close button and tab cycles within modal. If not, add:
+           modal.querySelector('[data-modal-close]')?.focus();
+         after modal.classList.remove('hidden').
+
+══════════════════════════════════════════════════════════════════
+SECTION 4 — PASSING CHECKS (confirmed)
+══════════════════════════════════════════════════════════════════
+
+PASS-01  Skip link present and first focusable element on Tab.
+         text="Skip to Archive", href="#image-panel" ✓
+
+PASS-02  Search input has aria-label="Search archive" ✓
+         Combobox role present on command palette input ✓
+         Results list has role="listbox" and aria-live="polite" ✓
+
+PASS-03  #cookie-banner: role="region", aria-label="Cookie consent" ✓
+         Accept and Reject buttons both present and labelled ✓
+
+PASS-04  #welcome-modal: role="dialog", aria-modal="true",
+         aria-labelledby="welcome-modal-title" ✓
+         Focus trap active via trapFocus() ✓
+
+PASS-05  #cmd-palette: role="dialog", aria-modal="true" ✓
+         Input: role="combobox", aria-label="Search archive" ✓
+         Results: role="listbox", aria-live="polite" ✓
+         Ctrl+K opens, Escape closes ✓
+
+PASS-06  Detail view image alt text descriptive ✓
+         "Loewe SS 2023 — image 1 of 12" — brand, season, year, index ✓
+
+PASS-07  Detail view prev/next buttons: aria-label="Previous image" /
+         "Next image" ✓
+
+PASS-08  Hotspot buttons: real <button> elements with type="button" ✓
+         aria-label="Hotspot: [label]" ✓
+         focus-visible outline defined in CSS (.hotspot-btn:focus-visible) ✓
+         Hidden via visibility:hidden (not display:none) when .index-open,
+         so they're removed from tab order when hidden ✓
+
+PASS-09  Index table: proper <table>, th[scope="col"], aria-sort attributes ✓
+         Sort column headers: tabindex="0", respond to Enter/Space ✓
+
+PASS-10  Nexus panel: role="dialog", aria-modal="true",
+         aria-labelledby="matrix-panel-title" ✓
+         Tabs: role="tab", aria-selected, aria-controls ✓
+         restoreFocus() called on close ✓
+
+PASS-11  Focus visible styles defined for both dark and light modes:
+         Light: outline: #000 2px solid
+         Dark:  outline: #CCFF00 2px solid ✓
+
+PASS-12  prefers-reduced-motion: scan-line animation set to "none" ✓
+         Hero auto-rotate checks matchMedia('prefers-reduced-motion') ✓
+
+PASS-13  Hamburger button: aria-label="Toggle Menu",
+         aria-expanded state updates ✓
+         Touch target: min-width: 48px, min-height: 48px ✓
+
+PASS-14  Colour contrast: #CCFF00 on #000 = 17.87:1 ✓ (far exceeds 4.5:1)
+         White (#FFF) on #000 = 21:1 ✓
+         Status ribbon: rgb(244,244,245) on rgba(17,17,17,0.85) ≈ 17.5:1 ✓
+         Black text on bone (#FAF9F6): effectively same as black on white ≈ 18:1 ✓
+
+PASS-15  aria-announcer element present (id="aria-announcer",
+         aria-live="polite") for toast/status messages ✓
+
+PASS-16  Modal close: Escape key closes cite-modal, cmd-palette,
+         connection-matrix, image-lightbox ✓
+         All modals call restoreFocus() on close ✓
+
+PASS-17  Language switcher: aria-haspopup="listbox", aria-expanded updates,
+         keyboard nav bound (up/down arrows + Enter) ✓
+         Options have role="option", aria-selected ✓
+
+══════════════════════════════════════════════════════════════════
+SECTION 5 — PRIORITY FIX ORDER
+══════════════════════════════════════════════════════════════════
+
+Priority 1 (this sprint — screen reader blockers):
+  CRIT-02  openDetail() focus management
+  CRIT-03  closeDetail() focus return to source card
+  CRIT-01  Hotspot focus/blur triggers payload
+
+Priority 2 (this sprint — keyboard and AT parity):
+  CRIT-04  lang attribute on language dropdown options
+  MAJOR-03 #mobile-detail-actions role + label
+  MAJOR-04 #btn-lang-toggle aria-label
+  MAJOR-06 Sort indicator arrows aria-hidden
+
+Priority 3 (next sprint — contrast and labelling):
+  MAJOR-01 Low-contrast opacity text (audit 27 instances individually)
+  MAJOR-02 Grid card aria-label includes action verb
+  MAJOR-05 Featured strip image alt text
+  MAJOR-07 Status ribbon aria-live="off"
+
+Priority 4 (polish):
+  MINOR-01 through MINOR-07 as time permits
+
+══════════════════════════════════════════════════════════════════
+SECTION 6 — ESTIMATED EFFORT
+══════════════════════════════════════════════════════════════════
+
+All Priority 1 + 2 items: ~3–4 hours of focused work.
+Priority 3 (contrast audit is the largest): ~2 hours.
+Priority 4: ~1 hour.
+Total to reach WCAG 2.2 AA compliance: ~6–7 hours.
+
+The hardest item is MAJOR-01 (contrast). The opacity utility classes
+are used pervasively and each instance needs individual judgement —
+some carry meaning (need higher contrast), some are decorative
+(aria-hidden already, opacity fine). A design token approach (swap
+opacity-based greys to solid #888 / #AAA palette tokens) would
+resolve most instances in one pass.
+
+══════════════════════════════════════════════════════════════════
+END OF AUDIT
+══════════════════════════════════════════════════════════════════
