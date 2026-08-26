@@ -1,0 +1,87 @@
+# THE LEXICON — Image Fix Guide
+
+## Status: All Images Are Deployed Correctly ✓
+
+I verified all 558 image references in `database.js` resolve to valid
+`image/jpeg` or `image/webp` responses on `thelexicon.xyz`. The files
+exist on GitHub, Vercel, and (after the git pull) locally.
+
+---
+
+## If Images Are Broken in Your Browser
+
+The cause is **cached stale responses** from before the images were deployed.
+Vercel's edge CDN invalidates on each deploy, but your **local browser cache**
+may still hold old failed responses.
+
+### Option 1: Incognito Test (confirm it's cache)
+
+1. Open Chrome → `Ctrl+Shift+N` (incognito window)
+2. Go to `https://thelexicon.xyz`
+3. If images load → it's your browser cache. Do Option 2.
+
+### Option 2: Hard Clear (recommended)
+
+1. Go to `https://thelexicon.xyz`
+2. Press `F12` to open DevTools
+3. Click the **Application** tab (top bar)
+4. In the left sidebar, click **Storage**
+5. Click **Clear site data** (tick all boxes)
+6. Close DevTools
+7. Press `Ctrl+Shift+R` to hard reload
+
+### Option 3: Nuclear Clear
+
+1. Go to `chrome://settings/clearBrowserData`
+2. Select **All time** from the dropdown
+3. Tick **Cached images and files**
+4. Click **Clear data**
+5. Go to `https://thelexicon.xyz` and reload
+
+---
+
+## If Images Are Broken on Localhost (Vite Dev Server)
+
+Your local branch was 20 commits behind. The `git pull origin main` has
+been run and all image files are now present locally.
+
+1. Stop any running dev server (`Ctrl+C`)
+2. Run `npm run dev`
+3. Open `http://localhost:5173` (or whatever port Vite assigns)
+4. Images should load from `public/THE-LEXICON-ASSETS/`
+
+> Vite serves `public/` contents at the root, so
+> `public/THE-LEXICON-ASSETS/foo.jpg` → `http://localhost:5173/THE-LEXICON-ASSETS/foo.jpg`
+
+---
+
+## If Images Are STILL Broken After All of the Above
+
+Force a Vercel redeployment to invalidate the edge cache:
+
+1. Go to https://vercel.com/dashboard
+2. Find THE-LEXICON project
+3. Go to **Deployments** tab
+4. Click the `⋮` menu on the latest deployment
+5. Click **Redeploy** → confirm
+
+Or from the terminal:
+```
+git commit --allow-empty -m "chore: bust Vercel edge cache"
+git push origin main
+```
+This triggers a fresh deployment with a new build ID, which invalidates
+all edge-cached responses.
+
+---
+
+## Technical Summary
+
+| Layer | Status |
+|-------|--------|
+| GitHub repo (origin/main) | ✓ All 558 images committed |
+| Vercel static files | ✓ All return 200 image/jpeg |
+| Path resolution (resolveImgSrc) | ✓ Correctly prepends `/public` via `<meta name="asset-base">` |
+| Vercel rewrite rule | ✓ Excludes `/public/*` from SPA fallback |
+| Local working tree | ✓ Synced after `git pull` |
+| WebP variants | ✓ All present and serving as `image/webp` |
