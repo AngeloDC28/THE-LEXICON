@@ -11,23 +11,6 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Cellophane Fringe Carapace",
-          "description": "The cellophane fringe carapace engulfs the torso in an immense mass of reflective gold plastic strips; it creates a chaotic kinetic volume that obscures the natural anatomy entirely. This material application engages with the anti-commercial ethos of London's underground club scene by utilizing literal garbage to construct runway spectacle. The shiny fringes catch the light violently as they shift with movement; the heavy layer drops well past the hips. The garment asserts a playful but highly defensive architectural shield against the environment."
-        },
-        {
-          "x": 48,
-          "y": 8,
-          "label": "Geometric Fringe Headpiece",
-          "description": "The geometric fringe headpiece isolates the face within a harsh frame of synthetic black strips; it flattens the upper skull into an unnatural rectangular block. This accessory utilizes subcultural theatricality to transform the model into an unsettling apocalyptic figure. The black fringe drops vertically over the ears to contrast sharply with the stark white facial makeup. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
           "y": 35,
           "label": "Pneumatic PVC Puffer",
           "description": "The pneumatic PVC puffer balloons around the chest and neck into massive rigid geometric volumes; it physically forces the arms away from the sides. This structural extreme applies posthumanist theory by mutating the human form into an aggressive unyielding piece of architecture. The glossy black plastic mimics industrial refuse bags; the collar rises dangerously high to swallow the jawline. The outerwear asserts an oppressive and dystopian presence that severely restricts mobility."
@@ -47,7 +30,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-03.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -70,7 +53,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-04.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -93,7 +76,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-05.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -110,7 +93,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-06.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -127,7 +110,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-07.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -144,7 +127,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-08.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -161,7 +144,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-09.jpg",
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -180,6 +163,23 @@
           "y": 10,
           "label": "Elongated Cone Hat",
           "description": "The elongated cone hat points sharply upward in a matching gold and black harlequin pattern; it extends the vertical axis of the body dramatically. This accessory utilizes surrealist proportion play to transform the model into an absurd chess piece. The stiff fabric holds a perfect conical shape; it rests upon a tight black hood that obscures the hairline. The hat asserts the playful yet severe theatricality required of authentic performance art."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Cellophane Fringe Carapace",
+          "description": "The cellophane fringe carapace engulfs the torso in an immense mass of reflective gold plastic strips; it creates a chaotic kinetic volume that obscures the natural anatomy entirely. This material application engages with the anti-commercial ethos of London's underground club scene by utilizing literal garbage to construct runway spectacle. The shiny fringes catch the light violently as they shift with movement; the heavy layer drops well past the hips. The garment asserts a playful but highly defensive architectural shield against the environment."
+        },
+        {
+          "x": 48,
+          "y": 8,
+          "label": "Geometric Fringe Headpiece",
+          "description": "The geometric fringe headpiece isolates the face within a harsh frame of synthetic black strips; it flattens the upper skull into an unnatural rectangular block. This accessory utilizes subcultural theatricality to transform the model into an unsettling apocalyptic figure. The black fringe drops vertically over the ears to contrast sharply with the stark white facial makeup. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
         }
       ]
     }

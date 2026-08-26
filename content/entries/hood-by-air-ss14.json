@@ -11,15 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Horizontal Zipper-Track Outerwear",
-          "description": "The horizontal zipper-track outerwear structures the torso in a dark segmented shell; it utilizes thick blue velvet banding across multiple metallic zippers. This structural intervention engages with subcultural systems by integrating industrial hardware associated with punk into a luxurious urban silhouette. The stiff dark fabric provides a rigid background for the reflective teeth of the zippers; the high collar frames the neck securely. The garment asserts a highly engineered and tactile interpretation of \"fashion infused to street.\""
+          "y": 32,
+          "label": "Debossed Leather Carapace",
+          "description": "The debossed leather carapace wraps the upper body in a massive highly structured black hide; it features the iconic \"HBA\" typography and bold numbers stamped directly into the fabric in deep relief. This material application utilizes corporate irony by transforming premium leather into a literal billboard. The thick material holds a rigid shape that broadens the shoulders aggressively; the central zipper splits the torso cleanly down the middle. The outerwear asserts an intimidating and heavily branded urban armor."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Convertible Zip-Panel Denim",
-          "description": "The convertible zip-panel denim utilizes heavy metal hardware to create massive triangular flaps across the upper thighs; it exposes a darker indigo wash beneath the peeled-back layers. This material strategy engages with deconstructed assembly by allowing the wearer to actively alter the silhouette of the garment. The bold \"HBA\" typography sits prominently below the kneecaps; the straight legs stack heavily over blue suede boots. The piece asserts a hybridized aesthetic that fuses practical utility with hyper-commercial branding."
+          "y": 80,
+          "label": "Zipped Knee-High Leather Boots",
+          "description": "The zipped knee-high leather boots pull tightly over the calves into a sleek protective second skin; they feature aggressive front zippers that run from the toe to the knee, exposed by the leather skirt's front slit. This footwear strategy applies gender deconstruction by placing historically hyper-feminine fetishwear onto an androgynous runway model. The dark shiny leather mirrors the heavy coat above; the thick platform soles ground the silhouette with a heavy militant base. The accessory completes the look by asserting undeniable queer power and glamour."
         }
       ]
     },
@@ -28,15 +28,21 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Debossed Leather Carapace",
-          "description": "The debossed leather carapace wraps the upper body in a massive highly structured black hide; it features the iconic \"HBA\" typography and bold numbers stamped directly into the fabric in deep relief. This material application utilizes corporate irony by transforming premium leather into a literal billboard. The thick material holds a rigid shape that broadens the shoulders aggressively; the central zipper splits the torso cleanly down the middle. The outerwear asserts an intimidating and heavily branded urban armor."
+          "y": 28,
+          "label": "Elongated Utility Vest",
+          "description": "The elongated utility vest drapes heavily to the mid-thigh in a crisp white fabric; it features multiple D-rings, trailing straps, and asymmetrical panels. This structural extreme applies \"straightjacket chic\" by utilizing medical restraint aesthetics as an imposing luxury garment. The pale material contrasts violently with the dark underlayer; the long white ribbons dangle uselessly towards the floor. The outerwear asserts a dramatic and slightly unsettling posture of bodily obfuscation."
         },
         {
           "x": 50,
-          "y": 70,
-          "label": "Zipped Thigh-High Leather Boots",
-          "description": "The zipped thigh-high leather boots pull tightly over the legs into a sleek protective second skin; they feature aggressive front zippers that run from the toe to the mid-thigh. This footwear strategy applies gender deconstruction by placing historically hyper-feminine fetishwear onto an androgynous runway model. The dark shiny leather mirrors the heavy coat above; the thick platform soles ground the silhouette with a heavy militant base. The accessory completes the look by asserting undeniable queer power and glamour."
+          "y": 48,
+          "label": "Zip-Front Corseted Midriff",
+          "description": "The zip-front corseted midriff tightly binds the stomach in stark black fabric; it provides a severe structural anchor beneath the loose white vest. This material intervention engages directly with gender fluidity by applying a traditionally feminine piece of restrictive shapewear to a masculine frame. The metallic zipper runs cleanly down the center; the tight fit emphasizes the contrast in volume against the heavy outerwear. The garment refuses traditional menswear norms to assert a powerful androgynous core."
+        },
+        {
+          "x": 50,
+          "y": 78,
+          "label": "Paneled Leather Trousers",
+          "description": "The paneled leather trousers drop into a heavily stacked wide-leg silhouette; they feature distinct horizontal seams breaking up the shiny black hide across the knee and shin. This tailoring choice utilizes monolithic massing to ground the complex upper layers in a heavy utilitarian base. The dark material pools thickly over the footwear; cargo pockets sit flatly against the thighs. The trousers complete the ensemble by injecting a rugged streetwear staple into the theatrical presentation."
         }
       ]
     },
@@ -45,15 +51,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Lace-Trimmed Asymmetrical Suede Jacket",
-          "description": "The lace-trimmed asymmetrical suede jacket structures the upper body in an intricately detailed pale brown hide; it features raw lacing details and a wildly disjointed front panel overlapping the zipper. This structural logic utilizes deconstructed assembly to disrupt the symmetry of traditional outerwear. The soft suede is punctuated heavily by metallic eyelets and thick zippers; the collar is left completely unfastened. The garment asserts a chaotic but highly crafted approach to streetwear."
+          "y": 45,
+          "label": "Graphic Photographic Print Tunic",
+          "description": "The graphic photographic print tunic hangs loosely over the torso in a dark cotton blend; it features a stark horizontal block of distorted digital imagery across the chest. This material application utilizes corporate irony by disrupting a basic streetwear staple with abstract disjointed media. The white typography sits prominently on the dark fabric; the sleeves are banded with broken static-like patterns. The garment asserts a hyper-modern identity deeply connected to the digital era."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Utilitarian Harness Denim",
-          "description": "The utilitarian harness denim equips the lower body with heavy hanging straps, D-rings, and multiple zippered pockets; it transforms basic jeans into tactical gear. This sartorial choice engages with subcultural systems by elevating the bondage and utility motifs of the New York underground to the luxury runway. The bold \"HBA\" logo wraps the calf prominently; the dark blue wash contrasts with the pale suede jacket above. The piece completes the silhouette by enforcing an aesthetic of extreme urban readiness."
+          "y": 82,
+          "label": "Tapered Black Trousers",
+          "description": "The tapered black trousers drop cleanly to the ankle in a muted dark textile; they provide a sharp formal baseline against the casual printed tunic. This structural logic engages with the \"fashion infused to street\" strategy by utilizing precise tailoring on the lower body. The fabric falls without heavy bagging or distressing; the hem breaks cleanly over shiny gold sneakers. The piece completes the look by elevating the casual upper half with an unexpected touch of formal discipline."
         }
       ]
     },
@@ -62,21 +68,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Elongated Utility Vest",
-          "description": "The elongated utility vest drapes heavily to the mid-thigh in a crisp white fabric; it features multiple D-rings, trailing straps, and asymmetrical panels. This structural extreme applies \"straightjacket chic\" by utilizing medical restraint aesthetics as an imposing luxury garment. The pale material contrasts violently with the dark underlayer; the long white ribbons dangle uselessly towards the floor. The outerwear asserts a dramatic and slightly unsettling posture of bodily obfuscation."
+          "y": 32,
+          "label": "Hardware-Laced Sweatshirt",
+          "description": "The hardware-laced sweatshirt covers the torso in a deep maroon jersey fabric entirely crisscrossed by horizontal lacing and zippers; it turns a basic casual garment into a complex piece of bondage-wear. This structural intervention utilizes subcultural systems to inject the fetish aesthetics of the GHE20G0TH1K scene directly onto the runway. The silver eyelets and zippers reflect the light fiercely; the heavy texture creates a stiff unyielding drape. The top asserts an aggressive and highly tactile interpretation of modern streetwear."
         },
         {
           "x": 50,
-          "y": 35,
-          "label": "Zip-Front Corseted Midriff",
-          "description": "The zip-front corseted midriff tightly binds the stomach in stark black fabric; it provides a severe structural anchor beneath the loose white vest. This material intervention engages directly with gender fluidity by applying a traditionally feminine piece of restrictive shapewear to a masculine frame. The metallic zipper runs cleanly down the center; the tight fit emphasizes the contrast in volume against the heavy outerwear. The garment refuses traditional menswear norms to assert a powerful androgynous core."
-        },
-        {
-          "x": 50,
-          "y": 75,
-          "label": "Paneled Leather Trousers",
-          "description": "The paneled leather trousers drop into a heavily stacked wide-leg silhouette; they feature distinct horizontal seams breaking up the shiny black hide across the knee and shin. This tailoring choice utilizes monolithic massing to ground the complex upper layers in a heavy utilitarian base. The dark material pools thickly over the footwear; cargo pockets sit flatly against the thighs. The trousers complete the ensemble by injecting a rugged streetwear staple into the theatrical presentation."
+          "y": 70,
+          "label": "Convertible Zip-Away Trousers",
+          "description": "The convertible zip-away trousers mirror the exact hardware lacing of the sweatshirt above; they feature massive horizontal zippers that leave the knees entirely exposed. This material manipulation engages with deconstructed assembly by creating functional but absurd voids within the garment. The deep maroon fabric stacks heavily over the footwear; the bare skin contrasts sharply with the dense textured clothing. The piece completes the uniform by applying extreme subcultural modification to the entire body."
         }
       ]
     },
@@ -85,15 +85,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Graphic Photographic Print Tunic",
-          "description": "The graphic photographic print tunic hangs loosely over the torso in a dark cotton blend; it features a stark horizontal block of distorted digital imagery across the chest. This material application utilizes corporate irony by disrupting a basic streetwear staple with abstract disjointed media. The white typography sits prominently on the dark fabric; the sleeves are banded with broken static-like patterns. The garment asserts a hyper-modern identity deeply connected to the digital era."
+          "y": 45,
+          "label": "Graphic Line-Art Sweatshirt",
+          "description": "The graphic line-art sweatshirt drapes casually over the upper body in a pale off-white jersey; it is dominated by an enormous fingerprint-like pattern spreading across the stomach. This visual strategy utilizes bold branding to turn a simple cotton top into a highly recognizable statement piece. The stark black \"HBA\" logo sits prominently on the chest inside a solid rectangular block; the relaxed fit embodies classic skate and streetwear silhouettes. The garment asserts a comfortable but highly commodified posture."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Tapered Black Trousers",
-          "description": "The tapered black trousers drop cleanly to the ankle in a muted dark textile; they provide a sharp formal baseline against the casual printed tunic. This structural logic engages with the \"fashion infused to street\" strategy by utilizing precise tailoring on the lower body. The fabric falls without heavy bagging or distressing; the hem breaks cleanly over shiny gold sneakers. The piece completes the look by elevating the casual upper half with an unexpected touch of formal discipline."
+          "y": 76,
+          "label": "Color-Blocked Logo Trousers",
+          "description": "The color-blocked logo trousers drop from the waist in bright white fabric before being violently interrupted by thick black bands across the knees. This structural logic engages directly with the simulacrum by stamping the body with massive corporate typography. The bold \"HBA\" letters stretch entirely across the thighs; the white fabric stacks heavily over thick-soled boots. The piece completes the ensemble by functioning as a literal walking advertisement for the brand."
         }
       ]
     },
@@ -102,15 +102,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Hardware-Laced Sweatshirt",
-          "description": "The hardware-laced sweatshirt covers the torso in a deep maroon jersey fabric entirely crisscrossed by horizontal lacing and zippers; it turns a basic casual garment into a complex piece of bondage-wear. This structural intervention utilizes subcultural systems to inject the fetish aesthetics of the GHE20G0TH1K scene directly onto the runway. The silver eyelets and zippers reflect the light fiercely; the heavy texture creates a stiff unyielding drape. The top asserts an aggressive and highly tactile interpretation of modern streetwear."
+          "y": 32,
+          "label": "Layered Asymmetrical Outerwear",
+          "description": "The layered asymmetrical outerwear stacks a crisp white tailored coat over a stark white zip-up layer; it creates a clean but highly complex architectural volume. This material strategy engages with deconstructed assembly by piecing together multiple white textiles into a disjointed \"straightjacket chic\" silhouette. The heavy lapels frame a high central zipper; trailing white straps dangle loosely from the hem. The garment asserts a clinical and imposing presence that subverts traditional tailoring."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Convertible Zip-Away Trousers",
-          "description": "The convertible zip-away trousers mirror the exact hardware lacing of the sweatshirt above; they feature massive horizontal zippers that leave the knees entirely exposed. This material manipulation engages with deconstructed assembly by creating functional but absurd voids within the garment. The deep maroon fabric stacks heavily over the footwear; the bare skin contrasts sharply with the dense textured clothing. The piece completes the uniform by applying extreme subcultural modification to the entire body."
+          "y": 78,
+          "label": "Voluminous White Trousers",
+          "description": "The voluminous white trousers drop heavily from the waist in a massive un-tailored fit; they completely swallow the lower body in pale fabric. This structural extreme applies monolithic massing to create a relaxed and deeply slouched streetwear silhouette. The bright white material pools thickly around the ankles; the hem drags slightly over matching white footwear. The piece completes the monochromatic uniform by providing a heavy fluid base for the sharp architecture above."
         }
       ]
     },
@@ -119,15 +119,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Graphic Line-Art Sweatshirt",
-          "description": "The graphic line-art sweatshirt drapes casually over the upper body in a pale off-white jersey; it is dominated by an enormous fingerprint-like pattern spreading across the stomach. This visual strategy utilizes bold branding to turn a simple cotton top into a highly recognizable statement piece. The stark black \"HBA\" logo sits prominently on the chest inside a solid rectangular block; the relaxed fit embodies classic skate and streetwear silhouettes. The garment asserts a comfortable but highly commodified posture."
+          "y": 40,
+          "label": "Sleek Leather Overcoat",
+          "description": "The sleek leather overcoat drops cleanly to the mid-thigh in a highly polished black hide; it provides a sharp severe frame for the dark ensemble. This outerwear choice utilizes an aggressive urban aesthetic characteristic of the New York underground. The smooth leather catches the runway lighting starkly; the structured, winged lapel stands rigidly against the shoulder. The garment asserts a protective utilitarian armor designed to exude power."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Color-Blocked Logo Trousers",
-          "description": "The color-blocked logo trousers drop from the waist in bright white fabric before being violently interrupted by thick black bands across the knees. This structural logic engages directly with the simulacrum by stamping the body with massive corporate typography. The bold \"HBA\" letters stretch entirely across the thighs; the white fabric stacks heavily over thick-soled boots. The piece completes the ensemble by functioning as a literal walking advertisement for the brand."
+          "y": 25,
+          "label": "Heavy Metal Padlock Necklace",
+          "description": "The heavy metal padlock necklace sits prominently over the dark shirt collar; it introduces literal industrial hardware as luxury jewelry. This accessory engages directly with the fetishwear and club kid costumery of the ballroom scene. The thick silver chain contrasts violently with the stark black outfit; the heavy brass lock rests at the sternum. The piece completes the silhouette by injecting a heavy tactile symbol of restriction into the elegant outerwear."
         }
       ]
     },
@@ -136,15 +136,21 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Layered Asymmetrical Outerwear",
-          "description": "The layered asymmetrical outerwear stacks a crisp white tailored coat over a stark white zip-up layer; it creates a clean but highly complex architectural volume. This material strategy engages with deconstructed assembly by piecing together multiple white textiles into a disjointed \"straightjacket chic\" silhouette. The heavy lapels frame a high central zipper; trailing white straps dangle loosely from the hem. The garment asserts a clinical and imposing presence that subverts traditional tailoring."
+          "y": 32,
+          "label": "Cropped Asymmetrical Outerwear",
+          "description": "The cropped asymmetrical outerwear slices sharply across the midriff in a pale grey textile; it features an uneven lapel that reveals a dark faux-fur lining on one side. This structural logic engages with gender deconstruction by pairing a sharp masculine shoulder with a cropped silhouette that exposes the stomach entirely. The stiff fabric holds a rigid shape away from the body; the front zipper hangs unfastened. The garment asserts a highly tailored yet rebellious posture."
         },
         {
           "x": 50,
-          "y": 70,
-          "label": "Voluminous White Trousers",
-          "description": "The voluminous white trousers drop heavily from the waist in a massive un-tailored fit; they completely swallow the lower body in pale fabric. This structural extreme applies monolithic massing to create a relaxed and deeply slouched streetwear silhouette. The bright white material pools thickly around the ankles; the hem drags slightly over matching white footwear. The piece completes the monochromatic uniform by providing a heavy fluid base for the sharp architecture above."
+          "y": 65,
+          "label": "Tapered Grey Trousers",
+          "description": "The tapered grey trousers drop cleanly to the mid-calf in a matching pale fabric; they provide a strict formal baseline against the chaotic cropped jacket. This tailoring approach applies the \"fashion infused to street\" strategy by utilizing precise suiting on the lower body. The fabric falls cleanly with subtle darting; the high hem exposes the dramatic two-tone boots beneath. The piece completes the ensemble by grounding the exposed torso with quiet sartorial discipline."
+        },
+        {
+          "x": 50,
+          "y": 12,
+          "label": "Abstract Face Paint",
+          "description": "The abstract face paint covers the right eye and cheek in geometric blocks of pale beige and deep brown; it radically alters the model's natural features. This styling detail utilizes subcultural theatricality to subvert orthodox beauty standards entirely. The stark paint mimics a fragmented mask or tribal marking; the intense gaze is highlighted against the sharp contrast. The accessory completes the look by asserting the unyielding artistic vision of the GHE20G0TH1K scene."
         }
       ]
     },
@@ -153,15 +159,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Sleek Leather Overcoat",
-          "description": "The sleek leather overcoat drops cleanly to the mid-thigh in a highly polished black hide; it provides a sharp severe frame for the dark ensemble. This outerwear choice utilizes an aggressive urban aesthetic characteristic of the New York underground. The smooth leather catches the runway lighting starkly; the lapels stand rigidly against the chest. The garment asserts a protective utilitarian armor designed to exude power."
+          "y": 38,
+          "label": "Deconstructed Suede Pullover",
+          "description": "The deconstructed suede pullover wraps the torso in a pale brown hide heavily interrupted by asymmetrical zippered panels; it transforms a soft material into a rigid architectural shell. This material intervention engages with deconstructed assembly by applying chaotic and unnecessary functional hardware to a luxury textile. The folded triangular flap juts outward from the chest; the shiny silver zippers run horizontally across the body. The garment asserts a highly engineered and tactile interpretation of streetwear."
         },
         {
           "x": 50,
-          "y": 30,
-          "label": "Heavy Metal Padlock Necklace",
-          "description": "The heavy metal padlock necklace sits prominently over the dark shirt collar; it introduces literal industrial hardware as luxury jewelry. This accessory engages directly with the fetishwear and club kid costumery of the ballroom scene. The thick silver chain contrasts violently with the stark black outfit; the heavy brass lock rests at the sternum. The piece completes the silhouette by injecting a heavy tactile symbol of restriction into the elegant outerwear."
+          "y": 78,
+          "label": "Multi-Pocket Cargo Trousers",
+          "description": "The multi-pocket cargo trousers drop into a relaxed wide-leg fit; they feature massive protruding pockets dominating the thighs and shins. This structural choice utilizes monolithic massing to ground the complex suede top in a heavy utilitarian base. The muted brown fabric pools thickly over heavy brown platform boots; the pockets introduce severe bulk to the lower silhouette. The piece completes the look by enforcing an aesthetic of extreme urban readiness."
         }
       ]
     },
@@ -170,21 +176,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Cropped Asymmetrical Outerwear",
-          "description": "The cropped asymmetrical outerwear slices sharply across the midriff in a pale grey textile; it features an uneven lapel that reveals a dark faux-fur lining on one side. This structural logic engages with gender deconstruction by pairing a sharp masculine shoulder with a cropped silhouette that exposes the stomach entirely. The stiff fabric holds a rigid shape away from the body; the front zipper hangs unfastened. The garment asserts a highly tailored yet rebellious posture."
+          "y": 32,
+          "label": "Horizontal Zipper-Track Outerwear",
+          "description": "The horizontal zipper-track outerwear structures the torso in a dark segmented shell; it utilizes thick blue velvet banding across multiple metallic zippers. This structural intervention engages with subcultural systems by integrating industrial hardware associated with punk into a luxurious urban silhouette. The stiff dark fabric provides a rigid background for the reflective teeth of the zippers; the high collar frames the neck securely. The garment asserts a highly engineered and tactile interpretation of \"fashion infused to street.\""
         },
         {
           "x": 50,
-          "y": 60,
-          "label": "Tapered Grey Trousers",
-          "description": "The tapered grey trousers drop cleanly to the mid-calf in a matching pale fabric; they provide a strict formal baseline against the chaotic cropped jacket. This tailoring approach applies the \"fashion infused to street\" strategy by utilizing precise suiting on the lower body. The fabric falls cleanly with subtle darting; the high hem exposes the dramatic two-tone boots beneath. The piece completes the ensemble by grounding the exposed torso with quiet sartorial discipline."
-        },
-        {
-          "x": 50,
-          "y": 15,
-          "label": "Abstract Face Paint",
-          "description": "The abstract face paint covers the right eye and cheek in geometric blocks of pale beige and deep brown; it radically alters the model's natural features. This styling detail utilizes subcultural theatricality to subvert orthodox beauty standards entirely. The stark paint mimics a fragmented mask or tribal marking; the intense gaze is highlighted against the sharp contrast. The accessory completes the look by asserting the unyielding artistic vision of the GHE20G0TH1K scene."
+          "y": 68,
+          "label": "Convertible Zip-Panel Denim",
+          "description": "The convertible zip-panel denim utilizes heavy metal hardware to create massive triangular flaps across the upper thighs; it exposes a lighter denim panel beneath the peeled-back layers. This material strategy engages with deconstructed assembly by allowing the wearer to actively alter the silhouette of the garment. The bold \"HBA\" typography sits prominently below the kneecaps; the straight legs stack heavily over blue suede boots. The piece asserts a hybridized aesthetic that fuses practical utility with hyper-commercial branding."
         }
       ]
     },
@@ -194,14 +194,14 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Deconstructed Suede Pullover",
-          "description": "The deconstructed suede pullover wraps the torso in a pale brown hide heavily interrupted by asymmetrical zippered panels; it transforms a soft material into a rigid architectural shell. This material intervention engages with deconstructed assembly by applying chaotic and unnecessary functional hardware to a luxury textile. The folded triangular flaps jut outward from the chest; the shiny silver zippers run horizontally across the body. The garment asserts a highly engineered and tactile interpretation of streetwear."
+          "label": "Lace-Trimmed Asymmetrical Suede Jacket",
+          "description": "The lace-trimmed asymmetrical suede jacket structures the upper body in an intricately detailed camel-brown hide; it features raw lacing details and a wildly disjointed front panel overlapping the zipper. This structural logic utilizes deconstructed assembly to disrupt the symmetry of traditional outerwear. The soft suede is punctuated heavily by metallic eyelets and thick zippers; the collar is left completely unfastened. The garment asserts a chaotic but highly crafted approach to streetwear."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Multi-Pocket Cargo Trousers",
-          "description": "The multi-pocket cargo trousers drop into a relaxed wide-leg fit; they feature massive protruding pockets dominating the thighs and shins. This structural choice utilizes monolithic massing to ground the complex suede top in a heavy utilitarian base. The muted brown fabric pools thickly over heavy brown platform boots; the pockets introduce severe bulk to the lower silhouette. The piece completes the look by enforcing an aesthetic of extreme urban readiness."
+          "y": 70,
+          "label": "Utilitarian Harness Denim",
+          "description": "The utilitarian harness denim equips the lower body with heavy hanging straps, D-rings, and multiple zippered pockets; it transforms basic jeans into tactical gear. This sartorial choice engages with subcultural systems by elevating the bondage and utility motifs of the New York underground to the luxury runway. The bold \"HBA\" logo wraps the thigh prominently; the dark blue wash contrasts with the pale suede jacket above. The piece completes the silhouette by enforcing an aesthetic of extreme urban readiness."
         }
       ]
     }

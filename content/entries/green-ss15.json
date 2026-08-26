@@ -12,14 +12,20 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Tied Workwear Jacket",
-          "description": "The tied workwear jacket structures the upper body in a crisp bright blue cotton; it features large functional patch pockets alongside a classic point collar. This material intervention engages with the semiotic sabotage of workwear by treating a banal laborer's jacket with delicate fastening techniques. The fabric tie fastenings secure the front in place of traditional buttons; the boxy fit drops cleanly over the hips. The garment asserts an intense electric blue deployed to project a specific energetic frequency."
+          "label": "Quilted Off-White Jacket",
+          "description": "The quilted off-white jacket engulfs the torso in a massive heavily textured textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The bright fabric reflects light softly; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
+        },
+        {
+          "x": 45,
+          "y": 30,
+          "label": "Fabric Tie Fastenings",
+          "description": "The fabric tie fastenings secure the heavy jacket across the chest and sleeves; they replace traditional zippers or buttons with raw white ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The matching white ties hang loosely when unfastened; they provide a subtle kinetic movement against the stiff quilted fabric. The detail asserts a posture of vulnerability as strength."
         },
         {
           "x": 50,
           "y": 70,
-          "label": "Fringed Straight-Leg Trousers",
-          "description": "The fringed straight-leg trousers drop rigidly to the ankle in the exact same bright blue cotton; they are heavily adorned with long trailing fabric strips along the side seams. This structural choice applies kinetic extension to the lower body; the thick blue ribbons whip wildly as the model walks barefoot. The crisp fabric holds a slight crease; the waist is largely obscured by the jacket hem. The piece completes the uniform by turning an ordinary work pant into a dynamic spatial object."
+          "label": "Quilted Off-White Trousers",
+          "description": "The quilted off-white trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of monolithic massing completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
         }
       ]
     },
@@ -27,22 +33,22 @@
       "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-02.jpg",
       "hotspots": [
         {
-          "x": 50,
-          "y": 35,
-          "label": "Quilted Electric Blue Jacket",
-          "description": "The quilted electric blue jacket engulfs the torso in a massive heavily textured textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The bright fabric reflects light intensely; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
-        },
-        {
           "x": 45,
-          "y": 30,
-          "label": "Fabric Tie Fastenings",
-          "description": "The fabric tie fastenings secure the heavy jacket across the chest; they replace traditional zippers or buttons with raw black ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The black ties contrast sharply with the metallic blue base; they hang loosely when unfastened. The detail asserts a posture of vulnerability as strength."
+          "y": 15,
+          "label": "Wooden Sail Frame Accessory",
+          "description": "The wooden sail frame accessory extends from the back in a massive geometric structure; it features sheer white muslin stretched across a raw timber frame. This structural extreme applies kinetic extension and corporeal framing; it acts as a sail catching the breeze as the model walks barefoot. The stark white structure isolates the garment as an artifact of a modern spiritual subculture. The accessory asserts an anthropological critique of traditional male stoicism by replacing aggressive posturing with poetic frailty."
         },
         {
           "x": 50,
-          "y": 70,
-          "label": "Quilted Electric Blue Trousers",
-          "description": "The quilted electric blue trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of spatial volume completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
+          "y": 45,
+          "label": "Deconstructed White Shirting",
+          "description": "The deconstructed white shirting wraps the torso in crisp cotton; it features raw edges and an unfastened placket that exposes the chest. This structural intervention utilizes deconstructed assembly that rejects conventional heavy tailoring; it uses a system of simple fabric ties instead of standard buttons. The stark white fabric holds deep irregular creases; the sleeves are pushed up to the elbows. The top asserts a slouchy loose silhouette punctuated by deliberate slits."
+        },
+        {
+          "x": 50,
+          "y": 75,
+          "label": "Wrapped Cotton Trousers",
+          "description": "The wrapped cotton trousers drop from a heavily knotted waist into a fluid draped volume; they feature an extra panel of fabric tied like a sarong. This material application engages with spiritual asceticism by providing a Zen-like base for the outfit. The pale cotton falls cleanly over bare feet; it lacks any formal creasing or hardware. The trousers complete the look by anchoring the complex top in an aesthetic of monastic retreat."
         }
       ]
     },
@@ -51,15 +57,21 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Oversized Denim Topcoat",
-          "description": "The oversized denim topcoat swallows the body in a massive volume of dark blue jean fabric; it features drastically dropped shoulders alongside an unfastened front. This structural extreme applies the concept of vulnerability as strength by overwhelming the wearer in protective fabric while leaving the chest entirely bare. The stiff fabric holds deep heavy folds; the shiny inner lining is exposed as the coat hangs wide open. The garment asserts a defensive slouched posture typical of the designer's anti-fashion ethos."
+          "y": 35,
+          "label": "Quilted Metallic Jacket",
+          "description": "The quilted metallic jacket engulfs the upper body in a massive heavily textured silver textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The shiny fabric reflects light intensely; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
+        },
+        {
+          "x": 45,
+          "y": 30,
+          "label": "Fabric Tie Fastenings",
+          "description": "The fabric tie fastenings secure the heavy jacket across the chest; they replace traditional zippers or buttons with raw black ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The black ties contrast sharply with the metallic silver base; they hang loosely when unfastened. The detail asserts a posture of vulnerability as strength."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Wide-Leg Denim Trousers",
-          "description": "The wide-leg denim trousers drop from a high waist into a deeply gathered volume; they provide a heavy utilitarian base for the exposed torso above. This material choice engages with the semiotic sabotage of workwear by utilizing the most ubiquitous casual fabric for a highly dramatic runway silhouette. The dark denim falls to the bare feet without formal creasing; trailing black ribbons dangle from the waistline. The piece completes the look by fusing extreme architectural volume with aggressively normal casual wear."
+          "y": 70,
+          "label": "Quilted Metallic Trousers",
+          "description": "The quilted metallic trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of spatial volume completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
         }
       ]
     },
@@ -85,21 +97,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Quilted Off-White Jacket",
-          "description": "The quilted off-white jacket engulfs the torso in a massive heavily textured textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The bright fabric reflects light softly; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
-        },
-        {
-          "x": 45,
           "y": 30,
-          "label": "Fabric Tie Fastenings",
-          "description": "The fabric tie fastenings secure the heavy jacket across the chest and sleeves; they replace traditional zippers or buttons with raw white ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The matching white ties hang loosely when unfastened; they provide a subtle kinetic movement against the stiff quilted fabric. The detail asserts a posture of vulnerability as strength."
+          "label": "Cut-Out Jersey Top",
+          "description": "The cut-out jersey top clings tightly to the upper body in pale blue stretch fabric; it features precise circular and oval voids exposing the chest and shoulders. This structural logic utilizes deconstructed assembly to punctuate the tight silhouette with deliberate holes featuring perfectly bound edges. The soft material highlights the natural musculature beneath; the long sleeves are interrupted by matching cut-outs. The top asserts a post-gender modularity that strips away anatomical hyper-focus."
         },
         {
           "x": 50,
-          "y": 70,
-          "label": "Quilted Off-White Trousers",
-          "description": "The quilted off-white trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of monolithic massing completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
+          "y": 65,
+          "label": "Wrapped Cotton Trousers",
+          "description": "The wrapped cotton trousers drop from a heavily knotted waist into a fluid draped volume; they feature an extra panel of fabric tied like a sarong. This material application engages with spiritual asceticism by providing a Zen-like base for the outfit. The pale cotton falls cleanly over bare feet; it lacks any formal creasing or hardware. The trousers complete the look by anchoring the complex top in an aesthetic of monastic retreat."
         }
       ]
     },
@@ -107,22 +113,16 @@
       "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-06.jpg",
       "hotspots": [
         {
-          "x": 45,
-          "y": 15,
-          "label": "Wooden Sail Frame Accessory",
-          "description": "The wooden sail frame accessory extends from the back in a massive geometric structure; it features sheer white muslin stretched across a raw timber frame. This structural extreme applies kinetic extension and corporeal framing; it acts as a sail catching the breeze as the model walks barefoot. The stark white structure isolates the garment as an artifact of a modern spiritual subculture. The accessory asserts an anthropological critique of traditional male stoicism by replacing aggressive posturing with poetic frailty."
+          "x": 50,
+          "y": 35,
+          "label": "Tied Workwear Jacket",
+          "description": "The tied workwear jacket structures the upper body in a crisp bright blue cotton; it features large functional patch pockets alongside a classic point collar. This material intervention engages with the semiotic sabotage of workwear by treating a banal laborer's jacket with delicate fastening techniques. The fabric tie fastenings secure the front in place of traditional buttons; the boxy fit drops cleanly over the hips. The garment asserts an intense electric blue deployed to project a specific energetic frequency."
         },
         {
           "x": 50,
-          "y": 45,
-          "label": "Deconstructed White Shirting",
-          "description": "The deconstructed white shirting wraps the torso in crisp cotton; it features raw edges and an unfastened placket that exposes the chest. This structural intervention utilizes deconstructed assembly that rejects conventional heavy tailoring; it uses a system of simple fabric ties instead of standard buttons. The stark white fabric holds deep irregular creases; the sleeves are pushed up to the elbows. The top asserts a slouchy loose silhouette punctuated by deliberate slits."
-        },
-        {
-          "x": 50,
-          "y": 75,
-          "label": "Wrapped Cotton Trousers",
-          "description": "The wrapped cotton trousers drop from a heavily knotted waist into a fluid draped volume; they feature an extra panel of fabric tied like a sarong. This material application engages with spiritual asceticism by providing a Zen-like base for the outfit. The pale cotton falls cleanly over bare feet; it lacks any formal creasing or hardware. The trousers complete the look by anchoring the complex top in an aesthetic of monastic retreat."
+          "y": 70,
+          "label": "Fringed Straight-Leg Trousers",
+          "description": "The fringed straight-leg trousers drop rigidly to the ankle in the exact same bright blue cotton; they are heavily adorned with long trailing fabric strips along the side seams. This structural choice applies kinetic extension to the lower body; the thick blue ribbons whip wildly as the model walks barefoot. The crisp fabric holds a slight crease; the waist is largely obscured by the jacket hem. The piece completes the uniform by turning an ordinary work pant into a dynamic spatial object."
         }
       ]
     },
@@ -132,25 +132,42 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Quilted Metallic Jacket",
-          "description": "The quilted metallic jacket engulfs the upper body in a massive heavily textured silver textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The shiny fabric reflects light intensely; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
+          "label": "Quilted Electric Blue Jacket",
+          "description": "The quilted electric blue jacket engulfs the torso in a massive heavily textured textile; it features distinct vertical stitching channels holding dense padding. This material choice engages with the semiotic sabotage of workwear by elevating industrial quilted insulation into a high-fashion runway coat. The bright fabric reflects light intensely; the wide sleeves dwarf the arms. The outerwear asserts a hybridized aesthetic combining utilitarian warmth with avant-garde volume."
         },
         {
           "x": 45,
           "y": 30,
           "label": "Fabric Tie Fastenings",
-          "description": "The fabric tie fastenings secure the heavy jacket across the chest; they replace traditional zippers or buttons with raw black ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The black ties contrast sharply with the metallic silver base; they hang loosely when unfastened. The detail asserts a posture of vulnerability as strength."
+          "description": "The fabric tie fastenings secure the heavy jacket across the chest; they replace traditional zippers or buttons with raw black ribbons. This structural logic utilizes deconstructed assembly to force a delicate fragile closure mechanism onto a heavy piece of outerwear. The black ties contrast sharply with the metallic blue base; they hang loosely when unfastened. The detail asserts a posture of vulnerability as strength."
         },
         {
           "x": 50,
           "y": 70,
-          "label": "Quilted Metallic Trousers",
-          "description": "The quilted metallic trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of spatial volume completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
+          "label": "Quilted Electric Blue Trousers",
+          "description": "The quilted electric blue trousers drop heavily from the waist into a wide bell-shaped silhouette; they mirror the exact texture and vertical stitching of the jacket above. This application of spatial volume completes a full suit of oppressive synthetic fabric. The stiff material holds deep rigid folds that fall to the bare feet; the hem is uneven and slightly ragged. The trousers assert a ceremonial almost religious volume that completely obscures the legs."
         }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Denim Topcoat",
+          "description": "The oversized denim topcoat swallows the body in a massive volume of dark blue jean fabric; it features drastically dropped shoulders alongside an unfastened front. This structural extreme applies the concept of vulnerability as strength by overwhelming the wearer in protective fabric while leaving the chest entirely bare. The stiff fabric holds deep heavy folds; the shiny inner lining is exposed as the coat hangs wide open. The garment asserts a defensive slouched posture typical of the designer's anti-fashion ethos."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Wide-Leg Denim Trousers",
+          "description": "The wide-leg denim trousers drop from a high waist into a deeply gathered volume; they provide a heavy utilitarian base for the exposed torso above. This material choice engages with the semiotic sabotage of workwear by utilizing the most ubiquitous casual fabric for a highly dramatic runway silhouette. The dark denim falls to the bare feet without formal creasing; trailing black ribbons dangle from the waistline. The piece completes the look by fusing extreme architectural volume with aggressively normal casual wear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-09.jpg",
       "hotspots": [
         {
           "x": 65,
@@ -163,23 +180,6 @@
           "y": 45,
           "label": "Deconstructed Black Tunic",
           "description": "The deconstructed black tunic drapes softly over the chest and stomach; it features long fabric ties that loosely bind the waist. This material strategy utilizes deconstructed assembly that rejects conventional heavy tailoring; it is constructed entirely from soft lightweight cotton. The dark fabric absorbs the runway lighting completely; the front slit exposes a sliver of bare skin. The garment asserts a slouchy loose silhouette that embraces vulnerability as strength."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-09.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Cut-Out Jersey Top",
-          "description": "The cut-out jersey top clings tightly to the upper body in pale blue stretch fabric; it features precise circular and oval voids exposing the chest and shoulders. This structural logic utilizes deconstructed assembly to punctuate the tight silhouette with deliberate holes featuring perfectly bound edges. The soft material highlights the natural musculature beneath; the long sleeves are interrupted by matching cut-outs. The top asserts a post-gender modularity that strips away anatomical hyper-focus."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Wrapped Cotton Trousers",
-          "description": "The wrapped cotton trousers drop from a heavily knotted waist into a fluid draped volume; they feature an extra panel of fabric tied like a sarong. This material application engages with spiritual asceticism by providing a Zen-like base for the outfit. The pale cotton falls cleanly over bare feet; it lacks any formal creasing or hardware. The trousers complete the look by anchoring the complex top in an aesthetic of monastic retreat."
         }
       ]
     }

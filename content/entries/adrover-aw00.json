@@ -11,15 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Deconstructed Pinstripe Skirt Suit",
-          "description": "The deconstructed pinstripe skirt suit wraps the body in a dark fluid textile that subverts classic tailoring protocols; it features a twisted button placket and asymmetrical draping. This structural logic engages with post-modern pastiche by dismantling the rigid corporate uniform of the era into a relaxed almost bohemian silhouette. The fabric hangs loosely around the hips; a large knotted fabric bow sits prominently at the waist. The garment asserts a posture of quiet rebellion against polished Wall Street aesthetics."
+          "y": 38,
+          "label": "Reappropriated Burberry Check Overcoat",
+          "description": "The reappropriated Burberry check overcoat wraps the torso in the house's own camel, black, and red tartan, worn open over a black turtleneck with both hands driven into the pockets. This is among the literal artifacts the collection is remembered for: Adrover sourced and rebuilt an actual Burberry trench, detaching its trademarked pattern from licensed circulation and returning it to raw material. The gesture enacts symbolic exchange in Baudrillard's sense, hijacking a heritage house's status-signalling code without permission — a provocation pointed enough that Burberry itself threatened legal action. Read against the collection's anti-consumerist politics, the coat functions less as theft than as institutional critique made wearable."
         },
         {
-          "x": 48,
-          "y": 20,
-          "label": "Decorative Forehead Jewelry",
-          "description": "The decorative forehead jewelry frames the face with intricate metallic chains and a central gemstone; it introduces a non-Western cultural motif to the formal suiting. This accessory utilizes subcultural appropriation to blend downtown NYC club aesthetics with globalized references. The silver hardware rests flush against the skin and hair; it drops delicate chains over the ears. The piece completes the ensemble by asserting a highly individualized and exoticized identity."
+          "x": 50,
+          "y": 85,
+          "label": "Matching Check Trouser Cuffs and Pumps",
+          "description": "Beneath the coat's long hem, cuffs of the same appropriated check peek out above simple brown pointed pumps, extending the hijacked Burberry pattern from outerwear down to the ankle rather than isolating it to a single showpiece. The deliberately unremarkable footwear keeps visual emphasis on the stolen textile itself; there is no additional spectacle competing with the pattern's own recognisability. This continuity across the whole silhouette underlines Adrover's guerrilla methodology of total reconstruction from a single sourced luxury good, worn with the same deadpan confidence as any ordinary ready-to-wear coat and trouser combination."
         }
       ]
     },
@@ -28,15 +28,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Sartorial T-Shirt Harness",
-          "description": "The sartorial t-shirt harness layers a rigid black waistcoat directly over a crisp white button-down and a sheer underlayer; it constructs a dense architectural core. This material strategy engages with deconstructionist assembly by visibly stacking foundational garments as outerwear. The dark vest ends in sharp pointed lapels at the waist; a large silver pendant hangs heavily from the neck. The top asserts a complex hybridized approach to gendered formalwear."
+          "y": 32,
+          "label": "Oversized Bouclé Knit Wrap Cardigan",
+          "description": "The oversized bouclé knit wrap cardigan swallows the upper body in a dense oatmeal and grey knit, its collar rising into an exaggerated funnel shape and its sleeves ballooning into vast dolman volumes; left unfastened but for a single hook, it falls open to expose the bare midriff beneath. This relaxed, domestically-textured knitwear draws on found and surplus materials rather than couture fabrication, consistent with the collection's reliance on deadstock and upcycled textiles. The garment's soft, oversized bulk refuses the era's body-conscious tailoring, asserting a comfort-driven, almost blanket-like informality against the polished corporate silhouettes the collection was staged to critique."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Voluminous Wide-Leg Trousers",
-          "description": "The voluminous wide-leg trousers swallow the lower body in a massive dark bell shape; they obscure the legs entirely beneath heavy flowing fabric. This structural extreme applies historical pastiche by mimicking the sweeping volume of a 19th-century skirt while maintaining a bifurcated trouser format. The dark textile absorbs light completely to create a flat monumental base; the hem sweeps dangerously close to the runway floor. The garment completes the androgynous silhouette by blurring the visual boundaries between a skirt and a suit pant."
+          "y": 66,
+          "label": "High-Waisted Cream Wide-Leg Trousers",
+          "description": "The high-waisted cream wide-leg trousers drop in a fluid, undyed wool from just below the exposed midriff to the floor, their frayed unfinished hems dragging loosely over simple pointed pumps. Cut without a defined crease or dart, the trousers rely on soft volume rather than tailoring precision, extending the cardigan's relaxed informality into the lower body. The pale, unbleached tone reads as a deliberately raw, unfinished material choice, in keeping with the collection's broader commitment to visible imperfection and reclaimed textile honesty over polished mass-produced consistency."
         }
       ]
     },
@@ -45,15 +45,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Upcycled Denim Waistcoat",
-          "description": "The upcycled denim waistcoat is layered aggressively over a striped button-down and beneath a dark pinstripe blazer; it introduces a raw utilitarian textile into formal suiting. This application utilizes the fashion readymade to elevate working-class materials into a luxury context. The pale blue denim features traditional brass buttons; the lapels are folded back tightly. The piece asserts an aesthetic of downtown DIY collage."
+          "y": 32,
+          "label": "Windowpane Check Overcoat over Ribbed Turtleneck",
+          "description": "The windowpane check overcoat structures the torso in a fine black-and-white grid, worn open over a chunky ribbed ivory turtleneck and closed at a single button beneath the collarbone; the model's hair is worked into tight cornrows pulled back from the face. The coat's fine graphic check nods toward corporate tailoring codes without fully complying with them — the garment hangs open and unstructured rather than buttoned into formal discipline. This half-compliance with businesswear enacts the collection's broader subversion of Wall Street polish into something looser and more downtown."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Deconstructed Denim Kilt",
-          "description": "The deconstructed denim kilt wraps the lower body in a heavily pleated blue jean fabric; it features raw violently frayed edges running vertically down the thigh. This structural intervention utilizes subcultural systems to subvert traditional menswear by putting a male model in a skirt format associated with punk rebellion. The thick denim holds rigid knife pleats; a massive oversized safety pin dangles functionally from the frayed opening. The garment refuses orthodox beauty standards to assert a rugged and aggressive androgyny."
+          "y": 66,
+          "label": "Matching Windowpane Check Wide-Leg Trousers",
+          "description": "The matching windowpane check wide-leg trousers continue the coat's fine black-and-white grid down the body, cut with a wide, unrestrictive leg that pools slightly at the ankle over pointed heels. The exact pattern match between coat and trouser gives the look the appearance of a single continuous fabric rather than a coordinated separate suit, collapsing the traditional distinction between outerwear and tailoring into one unbroken graphic surface — a quietly rigorous exercise in pattern discipline within an otherwise loosely constructed silhouette."
         }
       ]
     },
@@ -63,14 +63,14 @@
         {
           "x": 50,
           "y": 30,
-          "label": "Relaxed V-Neck Tunic",
-          "description": "The relaxed v-neck tunic drapes loosely over the torso in a solid black fabric; it obscures the natural waistline completely. This simple format provides a quiet baseline that highlights the heavy metallic jewelry and facial styling. The soft textile absorbs light to create a flat upper silhouette; the neckline drops softly over the collarbone. The garment asserts a relaxed almost monastic simplicity amidst the dense globalized pastiche of the collection."
+          "label": "Draped Camel Kaftan with Dolman Sleeves",
+          "description": "The draped camel kaftan falls from a deep V-neckline in dolman sleeves so wide they read as a single continuous plane of fabric from wrist to hem; the loosely woven, undyed wool traps and releases light unevenly across its surface. This unstructured, single-seam construction abandons Western tailoring's reliance on darts and princess seams in favour of a wrapped, non-fitted drape borrowed from non-Western dress traditions. Consistent with the collection's ecological politics, the raw, minimally processed textile foregrounds the visible labour and material honesty of the weave itself over a polished finished surface."
         },
         {
           "x": 50,
-          "y": 55,
-          "label": "Asymmetrical Knotted Overskirt",
-          "description": "The asymmetrical knotted overskirt wraps tightly around the hips and ties into a massive heavy lump at the center axis; it creates a chaotic disruption of the lower silhouette. This material application relies on the illusion of a hastily tied sarong to introduce a fluid non-Western drape into the dark ensemble. The black fabric bunches heavily beneath the knot; the hem drops unevenly over opaque black tights. The piece completes the aesthetic by prioritizing informal draping over severe tailoring."
+          "y": 82,
+          "label": "Frayed Asymmetric Hem with Sheer Underlayer",
+          "description": "At the hem, the kaftan's fabric splits into an asymmetric double layer, its raw edges left visibly frayed and unhemmed where a sheer underlayer of the same camel tone shows through against the model's bronze pumps. The deliberate refusal to finish the hem — rather than concealing the fraying as a construction flaw — turns unraveling cloth into a stated aesthetic position: imperfection, wear, and rawness are treated as more valuable than the seamless finish of pristine mass-produced clothing."
         }
       ]
     },
@@ -79,15 +79,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Flattened Pearl-Trimmed Corset",
-          "description": "The flattened pearl-trimmed corset binds the midriff tightly with exposed boning and delicate pearl embellishments; it restricts the natural curve of the waist while deliberately flattening the bust. This sartorial restriction applies gender deconstruction by utilizing a historically hyper-feminine undergarment to create a more androgynous tubular torso. The vertical stripes of pearls follow the rigid internal framework; it sits over the draped fabric of the skirt rather than beneath it. The garment refuses soft contouring to assert a severe structural boundary."
+          "y": 32,
+          "label": "Sheer Rust Draped Overlay",
+          "description": "A sheer rust-orange overlay drapes asymmetrically across the shoulders and chest like an improvised stole, its diaphanous weave revealing the fitted knit top and undergarments beneath; the fabric falls unevenly, longer on one side than the other, with no visible closure holding its position. This provisional, half-tied styling — cloth draped rather than cut and seamed to the body — treats garment construction as an ongoing, informal gesture rather than a fixed engineering problem, in keeping with the collection's downtown, DIY sensibility."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Liquid Satin Sarong Skirt",
-          "description": "The liquid satin sarong skirt gathers into a massive reflective knot just below the corset; it drapes heavily over the legs in a highly lustrous bronze textile. This structural logic utilizes historical pastiche to mimic traditional Southeast Asian draping techniques using high-end luxury fabrics. The high-shine material highlights the deep fluid folds radiating from the central knot; the asymmetrical hem exposes the lower calves. The piece completes the globalized collage by anchoring the rigid corset with a chaotic and fluid lower volume."
+          "y": 66,
+          "label": "Khaki Wide-Leg Trousers",
+          "description": "The khaki wide-leg trousers drop in an unstructured woven wool from the natural waist to the floor, their wide leg swinging loosely with the model's stride and pooling slightly over simple metallic-buckled flats. The muted, workwear-adjacent khaki tone grounds the sheer rust drape above in something plainer and more utilitarian, echoing the collection's recurring juxtaposition of humble, working-class fabrics against more fragile or elevated textiles layered on top."
         }
       ]
     },
@@ -97,14 +97,14 @@
         {
           "x": 50,
           "y": 30,
-          "label": "Open-Front Corseted Blouse",
-          "description": "The open-front corseted blouse clings tightly to the upper body in crisp white cotton before splitting open across the stomach; it features subtle corsetry hook-and-eye closures running down the center. This material manipulation engages with the subversion of orthodox beauty by exposing the simulated tattooed skin beneath. The high collar and long sleeves mimic a traditional button-down; the tight fit emphasizes the bust before violently cutting away. The garment asserts a rigid formal shell deliberately fractured to reveal a subcultural underlayer."
+          "label": "Draped Wool Wrap Cape, Open to the Waist",
+          "description": "The draped wool wrap cape falls from the shoulders in an enormous unstructured triangle of soft grey-beige bouclé, its two front panels crossing loosely and fastened by a single small hook well below the collarbone, leaving the chest bare beneath. The cape's scale — pooling in deep folds well past the hips — treats the wearer's body as a mere armature for an oversized textile event rather than the reverse; construction subordinates itself entirely to the raw material's own drape and weight."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Reconstructed Dual-Wash Denim",
-          "description": "The reconstructed dual-wash denim trousers fuse two completely different washes of blue jeans into a single wide-leg garment; they drop heavily from a low unfastened waistband. This tectonic craft utilizes deconstruction to visually slice the lower body in half. The front panel features a classic faded blue denim completely unbuttoned to reveal white undergarments; the back and side panels transition into a stark white textile. The piece refuses cohesive tailoring to complete a silhouette defined by extreme collage."
+          "y": 85,
+          "label": "Black Trousers and Two-Tone Pumps",
+          "description": "Beneath the cape's sweeping hem, plain black trousers and simple black-and-white two-tone pumps offer the only structured, tailored element in an otherwise engulfing silhouette. Their quiet, almost invisible presence is the point: with virtually the entire visual field given over to the oversized cape above, the trousers exist purely as a practical, unremarkable base that lets the raw wool volume above read as the look's sole event."
         }
       ]
     },
@@ -112,16 +112,16 @@
       "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-07.jpg",
       "hotspots": [
         {
-          "x": 50,
-          "y": 35,
-          "label": "Rigid 18th-Century Frock Coat",
-          "description": "The rigid 18th-century frock coat structures the upper body with a long flared silhouette and a high collar; it features an excessive row of large self-fabric buttons running down the center seam. This garment engages with historical pastiche by translating the formal menswear of the French court into a stark modern textile. The stiff lavender fabric stands away from the hips; the sleeves end in massive folded red cuffs that swallow the hands. The coat asserts a theatrical and heavily structured armor that dominates the upper silhouette."
+          "x": 40,
+          "y": 40,
+          "label": "Sheer Sequin-Embroidered Caftan",
+          "description": "The foreground model wears a sheer caftan densely embroidered with scattered metallic sequins across an olive-toned net ground, its dolman sleeves and unfitted body allowing the light beneath to catch each sequin individually as she walks; the weave is sheer enough to reveal the body's silhouette entirely beneath the glittering surface. This exposed, unlined transparency abandons the era's tendency toward polished eveningwear opacity, instead offering a raw, handcrafted density of embellishment against the runway's low light."
         },
         {
-          "x": 50,
-          "y": 65,
-          "label": "Printed Trompe L'Oeil Leggings",
-          "description": "The printed trompe l'oeil leggings tightly encase the legs in a light fabric covered in chaotic red and blue graphic motifs; they create the deliberate illusion of heavily tattooed skin. This material strategy utilizes body politics to merge the garment entirely with the biological form. The tight fit highlights the musculature of the legs beneath the long stiff coat; the graphics mimic urban graffiti and traditional ink. The garment completes the postmodern collage by pairing rigid historical tailoring with simulated subcultural body modification."
+          "x": 78,
+          "y": 45,
+          "label": "Cream Asymmetric Slip Dress, Seen from Behind",
+          "description": "Behind her, a second model walks away from camera in a pale cream slip dress cut on the bias, its uneven hem dropping into a raw, frayed point at one hip while the opposite side rises to mid-thigh; her hair is worked into an elaborate braided updo pinned high off the neck. Seen only from behind, the dress's asymmetric hem and visible spine seam read as sculptural rather than merely decorative, emphasising construction over the more conventional frontal presentation typical of eveningwear."
         }
       ]
     },
@@ -130,15 +130,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Minimalist White Tailoring",
-          "description": "The minimalist white tailoring structures the upper body with a clean unadorned jacket; it hangs open to expose the bare midriff entirely. This simple format engages with the subversion of orthodox beauty by providing a stark clinical frame around the heavy subcultural styling and facial piercings. The crisp white fabric features a simple single-button closure left undone; the sleeves end cleanly at the wrist without cuffs. The garment refuses complex detailing to assert a quiet backdrop for the chaotic lower volume."
+          "y": 28,
+          "label": "Herringbone Wrap Jacket with Wide Lapels",
+          "description": "The herringbone wrap jacket crosses the torso in a soft brown-and-grey woven wool, its wide asymmetric lapel folding diagonally over a chunky ribbed brown turtleneck and closing low on the hip with two dark buttons. Cut from a heavier mid-century-coded tailoring cloth but assembled with a loose, wrapped closure rather than a fitted set of darts, the jacket borrows the visual authority of traditional menswear tweed while refusing its precision, softening a formal textile into something more improvised."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Patchwork Denim Crinoline Skirt",
-          "description": "The patchwork denim crinoline skirt explodes outward from the waist in a massive structured dome; it stitches together dozens of different denim scraps into a highly textured volume. This structural extreme applies historical pastiche by taking the monumental bell shape of a 19th-century ballgown and rendering it in heavy blue-collar fabric. The visible seams between the patches highlight the complex internal scaffolding required to hold the shape; the model lifts the heavy hem to walk. The piece completes the globalized collage by fusing royal proportions with worker's textiles."
+          "y": 62,
+          "label": "Brown Tweed Pencil Skirt",
+          "description": "The brown tweed pencil skirt drops in the same herringbone weave as the jacket above, falling in a straight, narrow column to the mid-calf where a contrasting rust-red underlayer peeks out beneath its raw hem. The skirt's narrow cut is the only strictly tailored element in the look, offsetting the jacket's looser wrapped construction with a single note of conventional discipline, while the glimpsed red lining beneath introduces an unexpected, half-hidden flash of colour into the otherwise monochrome tweed."
         }
       ]
     },
@@ -147,15 +147,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Satin Frock Coat Vest",
-          "description": "The satin frock coat vest drops heavily to the knee in a highly reflective mauve textile; it features an excessive row of buttons and stiff tailored pockets. This garment choice engages with historical pastiche by referencing the formal menswear of the 18th-century court while removing the sleeves entirely. The shiny fabric catches the runway light across its long vertical panels; it hangs open to reveal a heavily printed underlayer. The vest asserts a luxurious but rigid historical frame around the soft draping beneath."
+          "y": 40,
+          "label": "Cropped Blouse Cinched by Stacked Belts",
+          "description": "The cropped taupe blouse billows into wide gathered sleeves before being cinched sharply at the ribcage by two stacked leather belts, their gold buckles pulling the loose fabric into a tight horizontal band well above the natural waist and exposing the bare midriff beneath a white ribbed turtleneck collar. This is the garment the collection is remembered for pairing with genuine Hermès belt hardware: rather than treating the belts as mere waist accessories, Adrover uses them as the primary structural device holding the entire blouse's volume in place, collapsing the distinction between accessory and construction method."
         },
         {
           "x": 50,
-          "y": 55,
-          "label": "Printed Silk Sarong",
-          "description": "The printed silk sarong gathers loosely at the waist and drops into fluid sheer layers over the legs; it features delicate floral motifs in muted pastel tones. This material application relies on the illusion of a hastily tied wrap to introduce a non-Western drape into the tailored ensemble. The sheer fabric reveals the opaque metallic leggings beneath; the massive knot sits prominently below the waistline. The piece completes the aesthetic by fusing rigid European outerwear with relaxed globalized draping."
+          "y": 65,
+          "label": "Grey Wide-Leg Trousers and White Boots",
+          "description": "Below the cinched blouse, grey wide-leg trousers fall in a soft wool from the belted waistline to the floor, breaking cleanly over pointed white ankle boots. The trousers' wide, unfitted cut continues the collection's preference for loose lower-body volume even where the upper body has been tightly bound, so that the belts' constriction reads as an isolated event rather than a total-body silhouette strategy."
         }
       ]
     },
@@ -164,15 +164,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Trompe L'Oeil Bodice",
-          "description": "The trompe l'oeil bodice utilizes a printed second-skin mesh to simulate a heavily tattooed torso beneath a structured white coat; it completely blurs the line between garment and bare skin. This material application engages with body politics by bringing marginalized subcultural body modification onto the Parisian runway. The mesh features dense brown and red motifs mimicking bloody or scarred skin; it clings tightly to the bust without any structural support. The garment asserts a postmodern sensibility by forcing the viewer to question what is flesh and what is fabric."
+          "y": 32,
+          "label": "Floral-Printed Tailored Blazer",
+          "description": "The floral-printed tailored blazer covers the torso in a dense rust, olive, and cream botanical print rendered across structured menswear-cut lapels and shoulders, worn over a matching white ribbed turtleneck with both hands pushed into the pockets. Applying an unmistakably decorative, almost upholstery-coded print to a rigorously tailored menswear silhouette collapses the usual distinction between hard corporate tailoring and soft domestic textile, a pastiche move consistent with the collection's habit of dressing formal structures in unexpectedly informal cloth."
         },
         {
-          "x": 55,
-          "y": 80,
-          "label": "Metallic Knee Armor",
-          "description": "The metallic knee armor clamps over the left leg in a rigid segmented metal shell; it introduces literal protective hardware into the fluid ensemble. This structural intervention utilizes scaffolding and internal frameworks to reference the armored figure of Joan of Arc. The shiny silver metal is strapped tightly around the thigh and calf; it features articulated joints to allow movement. The accessory refuses delicate feminine styling to complete a silhouette defined by heavy militant aggression."
+          "x": 50,
+          "y": 65,
+          "label": "Matching Floral-Printed Trousers",
+          "description": "The matching floral-printed trousers extend the blazer's dense botanical pattern down the entire leg in a single continuous print, breaking cleanly at the ankle over simple pale pumps. The exact match between jacket and trouser gives the look the unbroken quality of a single printed textile wrapped around the body rather than a coordinated separate suit, intensifying the pastiche of applying a soft floral print to the rigid structure of matching tailored separates."
         }
       ]
     }

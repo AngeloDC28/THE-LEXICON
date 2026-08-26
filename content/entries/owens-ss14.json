@@ -10,6 +10,194 @@
       "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg",
       "hotspots": [
         {
+          "x": 50,
+          "y": 8,
+          "label": "Sheer Mesh Veil Cap",
+          "description": "The sheer mesh veil cap binds the skull in a fitted black dome before releasing two long panels of sheer black fabric that fall past the shoulders; it frames the face within a severe architectural silhouette. This headpiece engages with theories of architectural shielding by constructing a portable barrier between the model and the audience's gaze. The stiff dome sits flush against the scalp while the sheer drapes shift loosely with every stride; the intense grimace remains fully visible beneath the mesh. The accessory completes the look by asserting a defensive, almost monastic anonymity within an otherwise exposed presentation."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Center-Front Zip Tunic Dress",
+          "description": "The center-front zip tunic dress runs a single exposed zipper the full length of the black satin-finish fabric from collar to hem; it turns a structural closure into the garment's dominant graphic line. This detail engages with industrial brutalism by refusing hidden couture seaming in favor of a raw mechanical fastening. The bright silver teeth interrupt the flat matte black textile; the hem is finished with a stiff leather-bound band along the base. The dress asserts a utilitarian pragmatism that favors function over decorative embellishment."
+        },
+        {
+          "x": 50,
+          "y": 92,
+          "label": "Two-Tone Sneaker Boot",
+          "description": "The two-tone sneaker boot pairs a black suede upper with a stark white outsole and lacing details; it grounds the severe tunic in an aggressively sporting silhouette. This footwear strategy applies theories of monolithic massing to anchor the body in an exaggerated, heavily padded foundation. The thick geometric sole and reinforced ankle collar dwarf the natural proportions of the foot; the white trim cuts a sharp line against the black upper. This piece asserts a posture of combative readiness that prioritizes kinetic impact over delicate grace."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Exposed Vertical Zipper",
+          "description": "The exposed vertical zipper runs the full length of the black leather mini dress from the throat to the hem; this functional hardware engages with the concept of industrial brutalism by highlighting a crude mechanical closure. The bright silver teeth stand out sharply against the glossy black hide; the detail refuses hidden couture seaming to assert a harsh utilitarian pragmatism."
+        },
+        {
+          "x": 29,
+          "y": 55,
+          "label": "Gathered Drawstring Flank",
+          "description": "The gathered drawstring flank pulls the excess material of the dress tightly against the outer thigh using thick hanging cords. This manipulation invokes theories of modular adaptability meant for bodies in active crisis. The resulting horizontal wrinkles create a dense textural armor over the hip bone. The garment completes its form by allowing the wearer to physically alter its spatial massing."
+        },
+        {
+          "x": 50,
+          "y": 12,
+          "label": "Bared-Teeth Facial Choreography",
+          "description": "The aggressive facial choreography is manifested through bared teeth and a fiercely wrinkled snout. This performative action applies intersectional activism by dismantling the polite submissive facade traditionally expected of black women in high fashion spaces. The raw kinetic energy of the face matches the forceful stomping of the feet. This display completes the presentation by turning the body itself into a weaponized political statement."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-03.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Sheer Monastic Veil",
+          "description": "The sheer monastic veil drapes over the head and shoulders in a dark translucent fabric. This headwear engages with queer theory by subverting traditional religious or mournful iconography into a powerful subcultural statement. The fine mesh partially obscures the face while allowing the aggressive expression to remain visible. The accessory asserts a ghostly but imposing architectural volume around the skull."
+        },
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Layered Leather Plastron",
+          "description": "The layered leather plastron protects the chest with overlapping panels of matte black hide. This construction utilizes theories of architectural shielding by mimicking tactical body armor. The stiff material forms a flat impenetrable plane across the torso. The garment completes the dark uniform by enforcing a rigid and highly defended core."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-04.jpg",
+      "hotspots": [
+        {
+          "x": 30,
+          "y": 54,
+          "label": "Clustered Spherical Embellishments",
+          "description": "The clustered spherical embellishments hang heavily from the asymmetric hemline in dense black orbs. This decorative intervention engages with post-binary identity by appending absurd exaggerated volumes to an otherwise austere militaristic tunic. The plush balls bounce violently against the thighs with every aggressive step. The detail refuses severe minimalism to assert a playful yet chaotic subversion of the brutalist silhouette."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Washed Leather Shift Carapace",
+          "description": "The washed leather shift carapace coats the torso in a highly textured, battered black hide cut into a simple cap-sleeve shift silhouette; this material choice engages directly with subcultural origins by elevating punk and goth staple fabrics to the runway. The dull sheen of the treated skin catches the light unevenly across the bust; the boxy cut skims the body without darting or seaming. The dress asserts a tough, resilient shield later disrupted by the frivolity of its own pom-pom hem."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-05.jpg",
+      "hotspots": [
+        {
+          "x": 67,
+          "y": 22,
+          "label": "Contrast Structural Sash",
+          "description": "The contrast structural sash cuts across the collarbone in a muted coral tone before draping over the left shoulder. This geometric insertion engages with theories of suspended drape by anchoring the heavy beige fabric with a single distinct visual line. The flat strap pulls the excess volume of the tunic upward. The element asserts a rare moment of color within the collection to highlight the asymmetrical tension of the garment."
+        },
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Asymmetrical Suspended Drape Tunic",
+          "description": "The asymmetrical suspended drape tunic falls heavily across the torso in a sweeping diagonal mass. This application of monolithic massing obscures the natural waistline completely. The dense cotton folds upon itself to create a thick protective barrier. The garment refuses traditional bodily contouring to complete a silhouette defined entirely by gravity and motion."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Wrapped Torso Carapace",
+          "description": "The wrapped torso carapace binds the upper body in tightly folded layers of muted khaki fabric. This structural logic utilizes architectural shielding to create a thick multi-dimensional defense over the vital organs. The diagonal seams pull the textile securely against the bust. The piece asserts a nomadic utilitarianism designed for immediate kinetic deployment."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Layered Asymmetrical Overskirt",
+          "description": "The layered asymmetrical overskirt sits heavily on the hips with an exposed zipper pocket detail. This functional hardware engages with the concept of the body in crisis by suggesting modular utility and emergency storage. The thick fabric drops unevenly across the upper thighs. The garment completes the lower silhouette by providing a sturdy unrestrictive base for aggressive movement."
+        },
+        {
+          "x": 50,
+          "y": 8,
+          "label": "Wrapped Fabric Headband",
+          "description": "The wrapped fabric headband binds the skull tightly in a folded cream textile that matches the tunic beneath it; this styling choice invokes subcultural systems by referencing athletic sweatbands and urban street uniform codes. The strict horizontal wrap flattens the hair against the forehead while leaving the model's flat, unreadable expression fully exposed. The accessory completes the silhouette by framing the face as a disciplined extension of the muted khaki uniform."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-07.jpg",
+      "hotspots": [
+        {
+          "x": 49,
+          "y": 4,
+          "label": "Kinetic Somatic Gesture",
+          "description": "The kinetic somatic gesture captures the model pulling her hands forcefully through her hair. This performative action engages with queer theory and subcultural systems by introducing raw emotional labor into the presentation of the garment. The raised elbows create sharp geometric angles that temporarily alter the upper silhouette of the body. This movement refuses static mannequinesque posing to assert a lived-in and deeply visceral physical presence."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Monolithic Cotton Shift",
+          "description": "The monolithic cotton shift envelopes the torso in a flat beige field devoid of visible hardware or tailoring darts. This minimalist construction invokes the concept of the body in crisis by offering a completely unrestrictive and egalitarian covering. The hem is split at the sides to allow maximum mobility for the legs. The garment asserts a brutalist simplicity that prioritizes the kinetic action of the wearer over decorative complexity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Structured Cap-Shoulder Vest",
+          "description": "The structured cap-shoulder vest squares off the torso in a stiff charcoal hide with a stand collar and a vertical center tab that echoes a necktie; this outerwear choice utilizes architectural shielding to build a rigid plane across the chest. The dropped shoulder seams sit slightly away from the arm; the leather holds its shape without clinging to the body beneath. The vest asserts a disciplined, uniformed severity consistent with the collection's monastic palette of dust and bone."
+        },
+        {
+          "x": 50,
+          "y": 52,
+          "label": "Wrapped Sash Belt",
+          "description": "The wrapped sash belt crosses the waist in two wide bands of matching charcoal fabric before trailing loose past the hip; this sartorial intervention applies theories of bodily discipline and restraint to an otherwise boxy silhouette. The flat straps compress the vest against the ribcage while one length hangs free as a kinetic counterweight. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 18,
+          "label": "Rabbit-Ear Hood with Contrast Piping",
+          "description": "The rabbit-ear hood drops two long panels of dark fabric past the shoulders, each bound in a crisp white piped edge that continues down the vest front in a vertical stripe; this accessory utilizes subcultural theatricality to transform the model into an unsettling monastic figure. The stiff white trim traces the hood's outline sharply against the charcoal ground; the hood dwarfs the face beneath it. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Aggressive Facial Choreography",
+          "description": "The aggressive facial choreography wrinkles the nose and bares the lower teeth in a visible snarl. This kinetic performance engages directly with body politics by rejecting the passive heteronormative gaze historically demanded of runway models. The scrunched brow and flared nostrils project a visceral defensive energy outward toward the audience. This somatic display asserts an intersectional defiance that reclaims the runway space for active marginalized bodies."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-10.jpg",
+      "hotspots": [
+        {
+          "x": 45,
+          "y": 30,
+          "label": "Geometric Contrast Paneling",
+          "description": "The geometric contrast paneling intersects the dark grey tunic with stark white architectural blocks. This visual strategy engages with brutalist aesthetics by treating the body as a flat structural facade. The thick intersecting lines mimic structural scaffolding or warning signage. The design refuses organic fluidity to assert a harsh and highly calculated planar geometry."
+        },
+        {
+          "x": 45,
+          "y": 40,
+          "label": "Rigid Fabric Obi Belt",
+          "description": "The rigid fabric obi belt binds the midsection with layered white bands and a thick hanging strap. This sartorial intervention applies subcultural systems by hybridizing martial arts uniforms with urban streetwear. The stiff structure compresses the tunic securely against the natural waist. The accessory completes the silhouette by locking the monumental volumes into a strictly disciplined core."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-11.jpg",
+      "hotspots": [
+        {
           "x": 35,
           "y": 32,
           "label": "Geometric Ventilated Leather Cutouts",
@@ -30,58 +218,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 12,
-          "label": "Aggressive Facial Choreography",
-          "description": "The aggressive facial choreography contorts the model's features into a visible scowl. This kinetic performance engages directly with body politics by rejecting the passive heteronormative gaze historically demanded of runway models. The tense jaw and furrowed brow project a visceral defensive energy outward toward the audience. This somatic display asserts an intersectional defiance that reclaims the runway space for active marginalized bodies."
-        },
-        {
-          "x": 45,
-          "y": 45,
-          "label": "Asymmetrical Suspended Drape Tunic",
-          "description": "The asymmetrical suspended drape tunic falls from a cowl neckline into an uneven cascading hem. This structural logic utilizes monolithic massing to obscure the specific anatomy of the torso. The stiff off-white fabric holds its shape rigidly away from the hips rather than clinging to the skin. The garment refuses classical tailoring to complete a silhouette resembling a nomadic protective shroud."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-03.jpg",
-      "hotspots": [
-        {
-          "x": 49,
-          "y": 4,
-          "label": "Kinetic Somatic Gesture",
-          "description": "The kinetic somatic gesture captures the model pulling her hands forcefully through her hair. This performative action engages with queer theory and subcultural systems by introducing raw emotional labor into the presentation of the garment. The raised elbows create sharp geometric angles that temporarily alter the upper silhouette of the body. This movement refuses static mannequinesque posing to assert a lived-in and deeply visceral physical presence."
-        },
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Monolithic Cotton Shift",
-          "description": "The monolithic cotton shift envelopes the torso in a flat beige field devoid of visible hardware or tailoring darts. This minimalist construction invokes the concept of the body in crisis by offering a completely unrestrictive and egalitarian covering. The hem is split at the sides to allow maximum mobility for the legs. The garment asserts a brutalist simplicity that prioritizes the kinetic action of the wearer over decorative complexity."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-04.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 35,
-          "label": "Horizontal Torsional Strapping",
-          "description": "The horizontal torsional strapping wraps the dark brown tunic in multiple thick bands across the bust and midriff. This sartorial intervention applies theories of bodily discipline and restraint to an otherwise loose garment. The flat fabric belts compress the volume of the structured top against the ribcage. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
-        },
-        {
-          "x": 57,
-          "y": 88,
-          "label": "Monolithic Leather Sneaker Boot",
-          "description": "The monolithic leather sneaker boot anchors the dark look with a massive black padded exterior. This footwear utilizes architectural shielding to protect the ankle and instep completely. The stark white sole creates a harsh geometric baseline against the runway floor. This element completes the ensemble by enforcing a heavy and aggressive stride."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-05.jpg",
+      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-12.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -98,150 +235,19 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-06.jpg",
-      "hotspots": [
-        {
-          "x": 41,
-          "y": 38,
-          "label": "Exposed Asymmetrical Zipper",
-          "description": "The exposed asymmetrical zipper slices diagonally across the dense black tunic from the collar to the lower hip. This functional hardware engages with the concept of industrial brutalism by highlighting a crude mechanical closure. The bright silver teeth stand out sharply against the matte black textile. The detail refuses hidden couture seaming to assert a harsh utilitarian pragmatism."
-        },
-        {
-          "x": 29,
-          "y": 50,
-          "label": "Gathered Drawstring Flank",
-          "description": "The gathered drawstring flank pulls the excess material of the tunic tightly against the outer thigh using thick hanging cords. This manipulation invokes theories of modular adaptability meant for bodies in active crisis. The resulting horizontal wrinkles create a dense textural armor over the hip bone. The garment completes its form by allowing the wearer to physically alter its spatial massing."
-        },
-        {
-          "x": 50,
-          "y": 6,
-          "label": "Utilitarian Fabric Headwrap",
-          "description": "The utilitarian fabric headwrap encases the skull completely in a dark tight-fitting textile. This accessory applies intersectional subcultural codes referencing durags and protective street gear. The black fabric eliminates the distraction of hair to force direct engagement with the model's intense gaze. The piece asserts a communal and defensive identity intrinsic to the nomadic urban tribe."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-07.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 35,
-          "label": "Washed Leather Carapace",
-          "description": "The washed leather carapace coats the upper body in a highly textured and battered black hide. This material choice engages directly with subcultural origins by elevating punk and goth staple fabrics to the runway. The dull sheen of the treated skin catches the light unevenly across the bust and arms. The outerwear asserts a tough resilient shield designed for aggressive urban survival."
-        },
-        {
-          "x": 34,
-          "y": 56,
-          "label": "Trailing Side Lacings",
-          "description": "The trailing side lacings dangle loosely from the lower edge of the leather jacket down to the knee. This structural choice invokes the aesthetic of a body in crisis through the appearance of unraveling or unfinished bindings. The thin black cords whip violently through the air as the model stomps forward. The detail refuses clean finishing to complete the silhouette with a sense of frantic kinetic energy."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-08.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 15,
-          "label": "Sheer Monastic Veil",
-          "description": "The sheer monastic veil drapes over the head and shoulders in a dark translucent fabric. This headwear engages with queer theory by subverting traditional religious or mournful iconography into a powerful subcultural statement. The fine mesh partially obscures the face while allowing the aggressive expression to remain visible. The accessory asserts a ghostly but imposing architectural volume around the skull."
-        },
-        {
-          "x": 50,
-          "y": 40,
-          "label": "Layered Leather Plastron",
-          "description": "The layered leather plastron protects the chest with overlapping panels of matte black hide. This construction utilizes theories of architectural shielding by mimicking tactical body armor. The stiff material forms a flat impenetrable plane across the torso. The garment completes the dark uniform by enforcing a rigid and highly defended core."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-09.jpg",
-      "hotspots": [
-        {
-          "x": 30,
-          "y": 54,
-          "label": "Clustered Spherical Embellishments",
-          "description": "The clustered spherical embellishments hang heavily from the asymmetric hemline in dense black orbs. This decorative intervention engages with post-binary identity by appending absurd exaggerated volumes to an otherwise austere militaristic tunic. The plush balls bounce violently against the thighs with every aggressive step. The detail refuses severe minimalism to assert a playful yet chaotic subversion of the brutalist silhouette."
-        },
-        {
-          "x": 50,
-          "y": 12,
-          "label": "Aggressive Facial Choreography",
-          "description": "The aggressive facial choreography is manifested through bared teeth and a fiercely wrinkled snout. This performative action applies intersectional activism by dismantling the polite submissive facade traditionally expected of black women in high fashion spaces. The raw kinetic energy of the face matches the forceful stomping of the feet. This display completes the presentation by turning the body itself into a weaponized political statement."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-10.jpg",
-      "hotspots": [
-        {
-          "x": 67,
-          "y": 22,
-          "label": "Contrast Structural Sash",
-          "description": "The contrast structural sash cuts across the collarbone in a muted coral tone before draping over the left shoulder. This geometric insertion engages with theories of suspended drape by anchoring the heavy beige fabric with a single distinct visual line. The flat strap pulls the excess volume of the tunic upward. The element asserts a rare moment of color within the collection to highlight the asymmetrical tension of the garment."
-        },
-        {
-          "x": 50,
-          "y": 40,
-          "label": "Asymmetrical Suspended Drape Tunic",
-          "description": "The asymmetrical suspended drape tunic falls heavily across the torso in a sweeping diagonal mass. This application of monolithic massing obscures the natural waistline completely. The dense cotton folds upon itself to create a thick protective barrier. The garment refuses traditional bodily contouring to complete a silhouette defined entirely by gravity and motion."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-11.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Wrapped Torso Carapace",
-          "description": "The wrapped torso carapace binds the upper body in tightly folded layers of muted khaki fabric. This structural logic utilizes architectural shielding to create a thick multi-dimensional defense over the vital organs. The diagonal seams pull the textile securely against the bust. The piece asserts a nomadic utilitarianism designed for immediate kinetic deployment."
-        },
-        {
-          "x": 50,
-          "y": 50,
-          "label": "Layered Asymmetrical Overskirt",
-          "description": "The layered asymmetrical overskirt sits heavily on the hips with an exposed horizontal zipper detail. This functional hardware engages with the concept of the body in crisis by suggesting modular utility and emergency storage. The thick fabric drops unevenly across the upper thighs. The garment completes the lower silhouette by providing a sturdy unrestrictive base for aggressive movement."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-12.jpg",
-      "hotspots": [
-        {
-          "x": 45,
-          "y": 30,
-          "label": "Geometric Contrast Paneling",
-          "description": "The geometric contrast paneling intersects the dark grey tunic with stark white architectural blocks. This visual strategy engages with brutalist aesthetics by treating the body as a flat structural facade. The thick intersecting lines mimic structural scaffolding or warning signage. The design refuses organic fluidity to assert a harsh and highly calculated planar geometry."
-        },
-        {
-          "x": 45,
-          "y": 40,
-          "label": "Rigid Fabric Obi Belt",
-          "description": "The rigid fabric obi belt binds the midsection with layered white bands and a thick hanging strap. This sartorial intervention applies subcultural systems by hybridizing martial arts uniforms with urban streetwear. The stiff structure compresses the tunic securely against the natural waist. The accessory completes the silhouette by locking the monumental volumes into a strictly disciplined core."
-        }
-      ]
-    },
-    {
       "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-13.jpg",
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Suspended Drop-Crotch Drape",
-          "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+          "y": 40,
+          "label": "Asymmetrical Suspended Drape Tunic",
+          "description": "The asymmetrical suspended drape tunic falls from a rolled cowl neckline into an uneven cascading hem; this structural logic utilizes monolithic massing to obscure the specific anatomy of the torso. The stiff off-white fabric holds its shape rigidly away from the hips rather than clinging to the skin; a single triangular panel breaks free to trail past the knee on one side. The garment refuses classical tailoring to complete a silhouette resembling a nomadic protective shroud."
         },
         {
-          "x": 30,
-          "y": 20,
-          "label": "Asymmetrical Tunic Paneling",
-          "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-        },
-        {
-          "x": 70,
-          "y": 80,
-          "label": "Percussive Structural Reinforcement",
-          "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+          "x": 50,
+          "y": 18,
+          "label": "Doubled Portrait Collar",
+          "description": "The doubled portrait collar gathers heavy off-white fabric into two stacked folds that stand away from the throat; this construction utilizes suspended drape by allowing gravity to dictate the collar's final shape rather than internal boning. The dolman sleeves extend directly from the collar's base without a set-in seam; a faint ochre mark stains the fabric just below the collarbone, left visible rather than concealed. The detail asserts an unfinished, lived-in quality consistent with the collection's ethos of visceral wearability."
         }
       ]
     },
@@ -249,22 +255,16 @@
       "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-14.jpg",
       "hotspots": [
         {
-          "x": 60,
-          "y": 60,
-          "label": "Asymmetrical Tunic Paneling",
-          "description": "The diagonal lines of the upper garment create visual momentum even in stasis; operating as a rejection of colonial tailoring structures via Post-Colonial Critique. The deliberate imbalance rejects classical European tailoring conventions. This asymmetry generates a continuous wrapping motion that suggests perpetual movement. It is a structural manifestation of disruption and non-conformity."
-        },
-        {
-          "x": 40,
-          "y": 40,
-          "label": "Percussive Structural Reinforcement",
-          "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+          "x": 49,
+          "y": 6,
+          "label": "Raised-Elbow Hair Gesture",
+          "description": "The raised-elbow hair gesture captures the model dragging both hands back through her hair with visible force; this performative action engages with queer theory and subcultural systems by introducing raw emotional labor into the presentation of the garment. The sharply bent elbows momentarily widen the upper silhouette on either side of the head; the gesture reads as exhaustion or catharsis rather than posed elegance. This movement refuses static mannequinesque posing to assert a lived-in and deeply visceral physical presence."
         },
         {
           "x": 50,
-          "y": 20,
-          "label": "Volumetric Kinetic Shell",
-          "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
+          "y": 48,
+          "label": "Side-Vented Cotton Shift",
+          "description": "The side-vented cotton shift covers the torso in a flat khaki field left free of visible hardware or tailoring darts; this minimalist construction invokes the concept of the body in crisis by offering a completely unrestrictive and egalitarian covering. Deep vents split the hem at both hips to allow maximum mobility for the legs mid-stride; the fabric creases loosely rather than holding a set shape. The garment asserts a brutalist simplicity that prioritizes the kinetic action of the wearer over decorative complexity."
         }
       ]
     },
@@ -273,21 +273,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 70,
-          "label": "Percussive Structural Reinforcement",
-          "description": "The integration of reinforced seams withstands the intense mechanical stress of step-dancing; anchoring the design in Subcultural Resistance Theory. The garment is engineered as athletic equipment disguised as conceptual fashion. The durability of the construction is essential to its political message of resilience and power. It is clothing built to survive exertion and systemic resistance."
+          "y": 40,
+          "label": "Horizontal Torsional Strapping",
+          "description": "The horizontal torsional strapping wraps the charcoal vest in two crossed bands across the bust and midriff before trailing loose past the hip; this sartorial intervention applies theories of bodily discipline and restraint to an otherwise structured top. The flat fabric belts compress the volume of the vest against the ribcage; the excess length swings freely as a kinetic counterweight. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
         },
         {
-          "x": 60,
-          "y": 85,
-          "label": "Volumetric Kinetic Shell",
-          "description": "The massive exterior layers billow and collapse in rhythm with the choreography; a physical realization of Affect Theory. This dynamic volume extends the physical presence of the dancer far beyond their biological limits. The shell acts as an amplifier for the body; making every movement visually resonant and monumental. It redefines personal space in the context of collective action."
-        },
-        {
-          "x": 40,
-          "y": 55,
-          "label": "Suspended Drop-Crotch Drape",
-          "description": "The volumetric construction prioritizes kinetic freedom over anatomical tracing; asserting Bodily Autonomy and Transgression. The architectural drape is specifically engineered to accommodate aggressive; percussive choreography. By obscuring the pelvic region; the garment neutralizes traditional zones of sexualization. It forces the viewer to engage with the body as an instrument of kinetic force rather than an object of desire."
+          "x": 50,
+          "y": 90,
+          "label": "Monolithic Leather Sneaker Boot",
+          "description": "The monolithic leather sneaker boot anchors the dark look with a massive black padded exterior. This footwear utilizes architectural shielding to protect the ankle and instep completely. The stark white sole creates a harsh geometric baseline against the runway floor. This element completes the ensemble by enforcing a heavy and aggressive stride."
         }
       ]
     }

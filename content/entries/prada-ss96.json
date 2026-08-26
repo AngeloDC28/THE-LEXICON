@@ -12,23 +12,6 @@
         {
           "x": 50,
           "y": 30,
-          "label": "Crisp Cotton Button-Down",
-          "description": "The crisp cotton button-down fits closely to the torso with strict utilitarian precision; it standardizes the upper body in a uniform-like block of solid white. This deliberate austerity engages with anti-fashion theories by stripping the garment of traditional luxury embellishments. The severe point collar and opaque textile mask the décolletage entirely; the short sleeves end bluntly at the bicep. The piece refuses the overt sex appeal of the decade to assert a rigid and pragmatic modesty."
-        },
-        {
-          "x": 50,
-          "y": 55,
-          "label": "Drab Pencil Skirt",
-          "description": "The drab pencil skirt drops to the knee in a flat shade of muted brown; it restricts the lower body within a simple cylindrical column. This specific length and color palette invokes the concept of ugly chic to subvert the male gaze. The textile features a subtle sheen that highlights the visible darting around the hips; it lacks any thigh-high slits or dramatic draping. The garment completes the librariancore aesthetic by enforcing a deliberately dowdy silhouette."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
           "label": "Lilac Utilitarian Blouse",
           "description": "The lilac utilitarian blouse features stiff epaulettes and a structured chest pocket; it introduces military-inspired hardware to a soft pastel textile. This contradictory pairing engages with postmodern irony by blurring the boundaries between hyper-feminine colors and rigid functionalism. The long sleeves are buttoned tightly at the wrist; the collar is fastened strictly to the throat. The garment refuses relaxed styling to assert an uptight and disciplined upper silhouette."
         },
@@ -41,7 +24,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-03.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -58,7 +41,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-04.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -75,7 +58,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-05.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -92,7 +75,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-06.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -109,7 +92,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-07.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -126,7 +109,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-08.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -143,7 +126,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-09.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -160,7 +143,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-10.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-09.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -177,7 +160,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-11.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-10.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -194,7 +177,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-12.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-11.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -211,7 +194,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-13.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-12.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -228,7 +211,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-14.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-13.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -245,7 +228,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-15.jpg",
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-14.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -258,6 +241,23 @@
           "y": 50,
           "label": "Contrast Vertical Placket",
           "description": "The contrast vertical placket bisects the entire coat with a thick unbroken line of matte brown fabric; it creates a harsh visual boundary down the center of the body. This bold geometric slash applies postmodern irony by drawing intense focus to the mundane functional mechanism of the button closure. The drab brown stripe contrasts violently with the shiny white textile; the small buttons are evenly spaced along the dark vertical track. The detail completes the design by enforcing strict bilateral symmetry upon the eccentric silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-15.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Crisp Cotton Button-Down",
+          "description": "The crisp cotton button-down fits closely to the torso with strict utilitarian precision; it standardizes the upper body in a uniform-like block of solid white. This deliberate austerity engages with anti-fashion theories by stripping the garment of traditional luxury embellishments. The severe point collar and opaque textile mask the décolletage entirely; the short sleeves end bluntly at the bicep. The piece refuses the overt sex appeal of the decade to assert a rigid and pragmatic modesty."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Drab Pencil Skirt",
+          "description": "The drab pencil skirt drops to the knee in a flat shade of muted brown; it restricts the lower body within a simple cylindrical column. This specific length and color palette invokes the concept of ugly chic to subvert the male gaze. The textile features a subtle sheen that highlights the visible darting around the hips; it lacks any thigh-high slits or dramatic draping. The garment completes the librariancore aesthetic by enforcing a deliberately dowdy silhouette."
         }
       ]
     }

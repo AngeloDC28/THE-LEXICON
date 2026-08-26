@@ -11,9 +11,9 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Trompe l'Oeil Billboard Dress",
-          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a green dress; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          "y": 65,
+          "label": "Guerrilla Ad-Truck: Pink Anime-Print Look",
+          "description": "This is not a runway photograph but a street document: one of the JW Anderson AW 2022 campaign's oversized box-truck billboards, its side panel wrapped in a vinyl print showing a model in a pink long-sleeved dress bearing a graphic anime-character motif across the skirt, a matching anime-print handbag on her arm, and an enormous black curly wig framing a deliberately overdone glamour-shot face. Wheatpasted onto working delivery trucks driven through Milan rather than displayed in a gallery or magazine, the campaign collapses runway image and street advertising into a single object — a Dadaist détournement of commercial signage that welds the fashion image directly to the vehicle that would otherwise sell soap or soda."
         }
       ]
     },
@@ -21,10 +21,10 @@
       "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-02.jpg",
       "hotspots": [
         {
-          "x": 50,
-          "y": 45,
-          "label": "Trompe l'Oeil Billboard Dress",
-          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a red tracksuit; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          "x": 55,
+          "y": 60,
+          "label": "Guerrilla Ad-Truck: 'Carrie' Jacket Look",
+          "description": "A separate billboard truck, photographed at night beside passing traffic, carries a close-cropped image of a model in a black jacket collaged with fragments of found photography and a hand-scrawled slogan reading 'TAKE CARRIE TO THE...'; she holds a small round clutch bag stencilled with the word 'CARRIE' in red block letters, her hair styled into a loose strawberry-blonde perm. The collaged, tabloid-clipping surface of the jacket and the deliberately campy, B-movie reference in the text align the campaign with camp's affection for degraded, low-culture image sources, continuing the collection's interest in surrealist domesticity and mass-produced glamour."
         }
       ]
     },
@@ -33,9 +33,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Trompe l'Oeil Billboard Dress",
-          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a black gown; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          "y": 35,
+          "label": "Tinsel-Fringed Crop Top",
+          "description": "The tinsel-fringed crop top covers the upper torso in a highly textured pink synthetic yarn; it features a high funnel neckline and elongated dolman sleeves that taper to the wrist. This material application utilizes the semiotic sabotage of the party decoration by transforming a cheap festive tinsel texture into a dense architectural knit shell. The fuzzy fibre creates a chaotic visual noise that absorbs studio light unevenly; the cropped hem exposes the midriff above a matching skirt. The garment asserts a posture of calculated post-pandemic absurdity, dressing the body in what reads as party streamers rather than couture yarn."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tinsel-Fringed Cutout Midi Skirt",
+          "description": "The tinsel-fringed midi skirt continues the same dense pink synthetic yarn down the body, its hem cut with a sharp diagonal slit that exposes one knee, while matching fringed leg warmers pool over open-toe silver sandals below. The exaggerated texture running unbroken from sweater to legwarmer removes any visual seam between garment categories — top, skirt, and hosiery all read as a single continuous fibrous surface. The look's uniform pink density transforms the wearer into a soft, faintly comic monochrome object, consistent with the collection's recurring interest in absurd, non-human textures applied to the body."
         }
       ]
     },
@@ -44,9 +50,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 55,
-          "label": "Trompe l'Oeil Billboard Dress",
-          "description": "The trompe l'oeil billboard dress features a massive photographic print of an anime-style character and a model in a pink dress; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive dark wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          "y": 30,
+          "label": "Inflatable Tube Bandeau",
+          "description": "The inflatable tube bandeau acts as a rigid horizontal barrier across the chest, constructed from thick black patent tubes stacked like a segmented rib cage or a party balloon column; it sits away from the body on its own internal structure rather than following the natural curve of the bust. This replaces a traditional bodice with an object borrowed from cheap party decoration, engaging directly with corporeal distortion through trapped, alien componentry. The glossy black surface catches the studio lighting sharply, asserting an uncomfortable, deliberately non-anatomical upper architecture."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "Sweeping Black Fringe Skirt",
+          "description": "Below the rigid bandeau, an immense black fringe skirt swings from the hips in long strands of synthetic fibre, whipping outward as the model shifts her weight so that the legs disappear entirely beneath a churning dark mass. The stark contrast between the bandeau's total rigidity and the skirt's total kinetic looseness stages the same corporeal-distortion logic as the top through the opposite structural method — instead of trapped componentry, exaggerated fibrous volume — producing a silhouette that oscillates between architecture and animal pelt."
         }
       ]
     },
@@ -55,9 +67,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 55,
-          "label": "Trompe l'Oeil Billboard Dress",
-          "description": "The trompe l'oeil billboard dress features a massive photographic print of a model in a black hoodie; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          "y": 45,
+          "label": "Printed Metallic Balloon Dress",
+          "description": "The printed metallic dress wraps the body in a stiff silver textile scrawled with fragmented lettering and gathered at the waist into an asymmetric ruffled peplum, its hem printed with a row of glossy black, cream, and gold spheres reading as a string of deflated or discarded party balloons. Draped over one shoulder with a matching printed bow, the dress takes the ultimate symbol of celebration and renders it in a slightly tarnished, crumpled register rather than a bright one. The garment asserts a theatrical, faintly melancholic volume consistent with the collection's semiotic sabotage of party imagery."
+        },
+        {
+          "x": 33,
+          "y": 32,
+          "label": "Printed Red Handbag",
+          "description": "A rounded red leather handbag hangs from the model's raised hand, its surface printed with the same collaged photographic and graphic motifs that recur across the dress and campaign, set against the same saturated red as the bag's structure. This accessory carries the print's chaotic visual narrative onto functional hardware in the manner of surrealist domesticity, ensuring that even the most utilitarian object in the look — a bag meant to hold things — is absorbed into the collection's total image-surface logic rather than left as plain, unprinted leather."
         }
       ]
     },
@@ -65,16 +83,10 @@
       "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-06.jpg",
       "hotspots": [
         {
-          "x": 50,
-          "y": 45,
-          "label": "Tinsel-Fringed Crop Top",
-          "description": "The tinsel-fringed crop top covers the upper torso in a highly textured pink synthetic yarn; it features an aggressively short hemline that exposes the entire midriff. This material application utilizes the semiotic sabotage of the party dress by transforming a cheap festive decoration into a dense architectural shell. The fuzzy material creates a chaotic visual noise that absorbs light softly; the high neck obscures the collarbone entirely. The garment asserts a posture of calculated post-pandemic absurdity."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Tinsel-Fringed Cutout Skirt",
-          "description": "The tinsel-fringed cutout skirt drops to the mid-calf in the exact same pink synthetic yarn; it features massive asymmetrical cutouts that completely expose the knees. This structural extreme applies corporeal distortion by violently interrupting a traditional pencil skirt silhouette with absurd voids. The thick material clings to the hips before breaking apart; the leg warmers attached below the knee add a bizarre disjointed texture. The piece completes the ensemble by forcing a heavy awkward stride."
+          "x": 45,
+          "y": 60,
+          "label": "Guerrilla Ad-Truck: Reclining Figure Look",
+          "description": "This billboard panel breaks from the standing full-length format used elsewhere in the campaign: a model lies flat on the studio floor, both legs raised straight into the air to display a pair of gold metallic heeled sandals and a matching gold handbag looped over one ankle, while a shock of red fibrous texture — hair or a fur-trimmed hood — spills around her head at the bottom of the frame. The truck's hand-lettered 'JWA JT' signage runs beneath the image like a caption. The horizontal, off-kilter pose treats the billboard less as a coherent fashion photograph than as a piece of absurdist choreography stretched across the side of a moving vehicle."
         }
       ]
     },
@@ -84,14 +96,14 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Inflatable Tube Bandeau",
-          "description": "The inflatable tube bandeau acts as a rigid horizontal barrier across the chest; it is constructed from thick black latex inflated into a multi-chambered rectangular block. This material strategy engages directly with corporeal distortion via trapped componentry by replacing a traditional bodice with a piece of cheap party refuse. The shiny surface catches the bright studio lighting fiercely; it stands entirely away from the biological curve of the bust. The garment asserts a deeply alien and highly uncomfortable upper architecture."
+          "label": "Glossy Blue Leather Biker Jacket",
+          "description": "The glossy blue leather biker jacket structures the upper body in a highly reflective bright hide, its multiple zippered pockets and cropped moto cut worn open over a plain black bandeau top. This outerwear choice applies the subversion of the mundane by rendering a basic biker jacket in a blinding, almost synthetic pop-art blue. The stiff leather holds sharp creases at the elbows as both arms raise overhead; the saturated colour contrasts violently with the white trousers below. The jacket asserts an imposing, highly visible upper carapace over an otherwise soft silhouette."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Kinetic Faux-Fur Trousers",
-          "description": "The kinetic faux-fur trousers swallow the lower body in an immense volume of long synthetic black hair; they create a chaotic swirling mass that completely obscures the legs. This structural logic utilizes exaggerated and absurd volume to contrast the tight geometric rigidity of the latex bandeau above. The heavy fibers whip violently through the air as the model moves; the hem drags across the floor. The piece completes the silhouette by injecting an aggressive animalistic texture into the synthetic ensemble."
+          "y": 70,
+          "label": "Balloon-Studded White Trousers",
+          "description": "The balloon-studded white trousers drop from the waist in a wide gathered volume, entirely covered edge to edge in hundreds of soft white latex balloon-like petals stitched on as texture. This material extreme engages directly with corporeal distortion via trapped componentry, appending cheap party debris to the legs as if it were embroidery; the dense rubbery texture obscures the trousers' actual cut entirely, bunching awkwardly above silver mule heels. The garment completes the silhouette by carrying the collection's balloon motif from printed surface into literal three-dimensional object."
         }
       ]
     },
@@ -99,16 +111,10 @@
       "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-08.jpg",
       "hotspots": [
         {
-          "x": 50,
-          "y": 45,
-          "label": "Printed Balloon Silk Dress",
-          "description": "The printed balloon silk dress drapes over the body in a stiff metallic silver textile; it features an aggressive peplum at the waist and a chaotic print of deflated colored balloons. This material application engages with the semiotic sabotage of the party dress by taking the ultimate symbol of celebration and presenting it as a discarded ruined motif. The shiny fabric holds deep rigid creases without soft fluid movement; the asymmetrical neckline exposes the left shoulder. The garment asserts a highly theatrical and slightly melancholic volume."
-        },
-        {
-          "x": 35,
-          "y": 30,
-          "label": "Printed Leather Handbag",
-          "description": "The printed leather handbag hangs from the right hand; it features the exact same deflated balloon print and silver sheen as the dress. This accessory utilizes surrealist domesticity by ensuring the depressing party motif is carried onto the functional hardware. The bright red strap provides a sharp contrast to the metallic body; the stiff shape mimics a classic clutch. The piece completes the look by solidifying the absurd visual narrative."
+          "x": 45,
+          "y": 55,
+          "label": "Guerrilla Ad-Truck: Green Sequin Dress Diptych",
+          "description": "Mounted on the flank of a box truck, this billboard presents two campaign images side by side: a full-length shot of a model in a dark green sequinned mini dress with dangling fringe earrings, and beside it a tight close-up of the same exaggerated blonde wig and heavily lined eyes. The diptych format borrows directly from tabloid and mall-photography layouts — full body next to beauty close-up — a vernacular the campaign deliberately mimics rather than parodies from a distance. Installed on the street rather than in a fashion magazine, the poster continues the collection's argument that advertising imagery and clothing are functionally the same category of object."
         }
       ]
     },
@@ -117,9 +123,9 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Trompe l'Oeil Billboard Dress",
-          "description": "The trompe l'oeil billboard dress features a massive photographic print of a heavily made-up face and a model in a red bodysuit; it essentially turns the wearer into a mobile advertising truck. This structural intervention engages with the semiotic sabotage of the household and public space by confusing the boundary between the garment and its marketing material. The stiff fabric holds a rigid rectangular shape that entirely obscures the natural silhouette; the model's actual head is hidden behind the massive blonde wig of the print. The dress asserts a Dadaist critique of hyper-commercial image-making."
+          "y": 55,
+          "label": "Guerrilla Ad-Truck: Red Tracksuit Look",
+          "description": "The billboard truck's night-lit panel shows a model in a red tracksuit printed with the same anime-character graphic seen elsewhere in the campaign, one fist raised theatrically, a small clutch bag shaped like a cassette player swinging from her wrist; the oversized black curly wig repeats across multiple looks in the campaign, functioning as a unifying costume element rather than an individual styling choice. The hand-lettered 'JWA JT' tag repeating along the base of the truck reads as both graffiti signature and brand mark, blurring authorship between street tagging and official campaign design."
         }
       ]
     },
@@ -127,16 +133,10 @@
       "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-10.jpg",
       "hotspots": [
         {
-          "x": 50,
-          "y": 45,
-          "label": "Glossy Blue Leather Jacket",
-          "description": "The glossy blue leather jacket structures the upper body in a highly reflective bright hide; it features classic lapels and an unfastened asymmetrical front. This outerwear choice applies the subversion of the mundane by elevating a basic moto jacket into a blinding piece of synthetic pop art. The stiff fabric holds sharp geometric creases over the arms; the bright color contrasts violently with the white trousers below. The jacket asserts an imposing and highly visible upper carapace."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Balloon-Studded White Trousers",
-          "description": "The balloon-studded white trousers drop heavily from the waist in a massive gathered volume; they are entirely covered in hundreds of uninflated white latex balloons. This material extreme engages directly with corporeal distortion via trapped componentry by appending cheap party debris to the legs as high-fashion embroidery. The soft rubber creates a dense chaotic texture that obscures the cut of the pants entirely; the wide legs bunch awkwardly over silver sandals. The garment completes the silhouette by enforcing an aesthetic of complete Dadaist absurdity."
+          "x": 40,
+          "y": 55,
+          "label": "Guerrilla Ad-Truck: Black Gown Look",
+          "description": "Here the truck's billboard panel shows a model in a black one-shoulder gown, her curled dark wig loose across bare shoulders as she reaches one hand down toward the ground in a deliberately awkward, unglamorous pose; a small graphic logo is visible printed low on the skirt. Photographed against a plain grey studio backdrop and then blown up to the scale of a delivery truck, the image's original intimacy is destroyed by the sheer scale of the reproduction — the billboard format itself becomes the primary formal event, dwarfing the garment it depicts."
         }
       ]
     }

@@ -11,40 +11,6 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Oversized Red Velvet Suit",
-          "description": "The oversized red velvet suit engulfs the model in a massive slouching volume; it features immensely dropped shoulders that swallow the hands entirely. This structural intervention engages with downmarket irony by treating a luxurious eveningwear textile as a casual unkempt uniform. The jacket hangs open loosely; the trousers bunch heavily over the dark footwear. The garment asserts a deliberate \"vetementization\" of formalwear through radical proportion distortion."
-        },
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Tonal Red Turtleneck",
-          "description": "The tonal red turtleneck provides a continuous monochromatic base beneath the heavy velvet jacket; it sits high against the throat. This styling choice utilizes post-postmodernism by creating a saturated block of color that mimics digital flat-design aesthetics. The soft knit fabric clings to the neck; it lacks any visible branding or contrast details. The piece completes the ensemble by forcing an overwhelming visual consistency upon the exaggerated silhouette."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Green Striped Turtleneck",
-          "description": "The green striped turtleneck features high-contrast horizontal bands in a deliberately mundane textile; it stretches tightly across the chest before loosening at the waist. This material application engages with the concept of the fashion meme by elevating a banal everyday sweater into a runway centerpiece. The high collar pushes awkwardly against the chin; the sleeves extend significantly past the wrists. The garment asserts a romanticization of the mundane that rejects traditional luxury aesthetics."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Reconstructed Leather Trousers",
-          "description": "The reconstructed leather trousers feature a stark central zipper fly and prominent red side panels; they split open at the ankle via thick metal hardware. This structural logic utilizes sartorial defacement to disrupt the sleekness of traditional leather pants. The dark material wrinkles sharply at the crotch and knees; the red racing stripes introduce a jarring sportswear element. The piece completes the look by grounding the casual sweater in heavy utilitarian hardware."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-03.jpg",
-      "hotspots": [
-        {
-          "x": 50,
           "y": 35,
           "label": "Utilitarian Firefighter Sweater",
           "description": "The utilitarian firefighter sweater mimics a genuine public service uniform in bright red knit; it features highly visible reflective banding across the chest. This material strategy engages directly with downmarket irony by treating a functional working-class garment as a coveted high-fashion commodity. The thick yarn stretches tightly over the torso; the word \"INCENDIE\" is printed prominently on the black stripe. The top asserts a profound statement on capitalist kitsch by stripping the uniform of its heroic context."
@@ -64,7 +30,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-04.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -81,7 +47,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-05.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -104,7 +70,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-06.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -121,7 +87,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-07.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -138,7 +104,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-08.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -161,7 +127,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-09.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -184,7 +150,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-10.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -201,7 +167,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-11.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-09.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -224,7 +190,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-12.jpg",
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-10.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -243,6 +209,40 @@
           "y": 70,
           "label": "Matching Corduroy Trousers",
           "description": "The matching corduroy trousers drop heavily from the waist into a wide slouched volume; they feature the exact same yellow-beige ribbed texture as the blazer. This structural logic applies monolithic massing to complete a full suit of oppressive vintage fabric. The heavy textile pools thickly around the ankles; the hem drags slightly over dark platform footwear. The trousers assert a relaxed and highly un-tailored conclusion to the retro silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Oversized Red Velvet Suit",
+          "description": "The oversized red velvet suit engulfs the model in a massive slouching volume; it features immensely dropped shoulders that swallow the hands entirely. This structural intervention engages with downmarket irony by treating a luxurious eveningwear textile as a casual unkempt uniform. The jacket hangs open loosely; the trousers bunch heavily over the dark footwear. The garment asserts a deliberate \"vetementization\" of formalwear through radical proportion distortion."
+        },
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Tonal Red Turtleneck",
+          "description": "The tonal red turtleneck provides a continuous monochromatic base beneath the heavy velvet jacket; it sits high against the throat. This styling choice utilizes post-postmodernism by creating a saturated block of color that mimics digital flat-design aesthetics. The soft knit fabric clings to the neck; it lacks any visible branding or contrast details. The piece completes the ensemble by forcing an overwhelming visual consistency upon the exaggerated silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Green Striped Turtleneck",
+          "description": "The green striped turtleneck features high-contrast horizontal bands in a deliberately mundane textile; it stretches tightly across the chest before loosening at the waist. This material application engages with the concept of the fashion meme by elevating a banal everyday sweater into a runway centerpiece. The high collar pushes awkwardly against the chin; the sleeves extend significantly past the wrists. The garment asserts a romanticization of the mundane that rejects traditional luxury aesthetics."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Reconstructed Leather Trousers",
+          "description": "The reconstructed leather trousers feature a stark central zipper fly and prominent red side panels; they split open at the ankle via thick metal hardware. This structural logic utilizes sartorial defacement to disrupt the sleekness of traditional leather pants. The dark material wrinkles sharply at the crotch and knees; the red racing stripes introduce a jarring sportswear element. The piece completes the look by grounding the casual sweater in heavy utilitarian hardware."
         }
       ]
     }

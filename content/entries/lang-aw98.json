@@ -11,15 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Sheer Silk T-Shirt",
-          "description": "The sheer silk t-shirt clings loosely to the upper body in a translucent dark mesh; it exposes the torso entirely beneath a veil of fragile synthetic material. This material application engages with theories of psychological eroticism by pairing a deeply vulnerable transparent layer with the austere minimalism of the overall silhouette. The wide neckline hangs casually over the collarbone; the short sleeves drop softly without structured tailoring. The garment refuses traditional modesty to assert a quiet but potent sensuality."
+          "y": 32,
+          "label": "High-Shine Leather Blazer",
+          "description": "The high-shine leather blazer structures the torso in a rigid boxy frame of highly reflective black hide. This outerwear choice engages with theories of urban armor by elevating a protective utilitarian material into severe luxury tailoring. The crisp lapels and sharp shoulders create an imposing rectangular upper silhouette; the dark surface catches the studio lighting sharply across its slick finish. The jacket asserts an aggressive militant posture that functions as psychological shielding against the modern city."
         },
         {
           "x": 50,
-          "y": 60,
-          "label": "Asymmetrical Padded Skirt",
-          "description": "The asymmetrical padded skirt drops from the waist in a dark textured fabric before pooling heavily over the left hip into a massive bulbous volume. This engineered distortion applies subtle deconstruction to a minimal silhouette by violently shifting the center of gravity to one side. The dark textile absorbs light completely; it creates a strict tubular shape over the right leg to emphasize the extreme protrusion on the left. The piece completes the \"casual drama\" aesthetic by anchoring the sheer top with a chaotic and unyielding lower mass."
+          "y": 72,
+          "label": "High-Shine Leather Trousers",
+          "description": "The high-shine leather trousers drop cleanly to the ankle in the exact same reflective black hide as the blazer; they complete the severe monochromatic uniform. This material consistency utilizes the concept of quiet luxury by rejecting complex detailing in favor of sheer material impact. The straight leg cuts a sharp vertical line; the fabric pools slightly over heavy dark footwear. The trousers complete the look by enforcing a strictly disciplined and heavily armored kinetic state."
         }
       ]
     },
@@ -28,37 +28,20 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "High-Shine Leather Blazer",
-          "description": "The high-shine leather blazer structures the torso in a rigid boxy frame of highly reflective black hide. This outerwear choice engages with theories of urban armor by elevating a protective utilitarian material into severe luxury tailoring. The crisp lapels and sharp shoulders create an imposing rectangular upper silhouette; the dark surface catches the studio lighting sharply across its slick finish. The jacket asserts an aggressive militant posture that functions as psychological shielding against the modern city."
-        },
-        {
-          "x": 50,
-          "y": 70,
-          "label": "High-Shine Leather Trousers",
-          "description": "The high-shine leather trousers drop cleanly to the ankle in the exact same reflective black hide as the blazer; they complete the severe monochromatic uniform. This material consistency utilizes the concept of quiet luxury by rejecting complex detailing in favor of sheer material impact. The straight leg cuts a sharp vertical line; the fabric pools slightly over heavy dark footwear. The trousers complete the look by enforcing a strictly disciplined and heavily armored kinetic state."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-03.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
+          "y": 28,
           "label": "Off-White Ballistic Vest Layer",
           "description": "The off-white ballistic vest layer wraps the torso in a thick rigid shell of protective padding; it mimics military or police tactical gear. This functional hardware engages directly with institutional critique by transforming a tool of violent crisis response into a sleek high-fashion staple. The crisp white textile sits flatly against the chest; the high collar provides defense for the neck. The garment refuses traditional luxury ornamentation to assert the supreme value of utilitarian survivalism."
         },
         {
           "x": 50,
-          "y": 70,
+          "y": 75,
           "label": "Relaxed Tailored White Trousers",
           "description": "The relaxed tailored white trousers fall loosely from the waist in a crisp unblemished cotton fabric; they provide a soft moving base beneath the rigid armor above. This pairing utilizes quiet luxury to ground the extreme technical vest in accessible everyday menswear. The wide leg obscures the knee entirely; the hem rests cleanly upon white footwear. The piece completes the silhouette by neutralizing the militaristic top half with effortless urban drape."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-04.jpg",
+      "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -68,9 +51,26 @@
         },
         {
           "x": 50,
-          "y": 60,
+          "y": 72,
           "label": "Matching Tailored White Trousers",
           "description": "The matching tailored white trousers drop in a fluid uncreased line from the hip; they complete the monochromatic pale uniform. This simple format applies the concept of democratizing the spectacle by presenting a highly accessible and wearable ensemble during the internet live-stream. The fabric moves easily with the model's stride; the wide leg drops softly over bright white footwear. The trousers complete the silhouette by enforcing an unbroken vertical column of light fabric."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-04.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Metallic Silver Utilitarian Parka",
+          "description": "The metallic silver utilitarian parka drops heavily to the knee; it exposes a highly reflective inner lining that contrasts with the dull brown exterior. This outerwear choice engages with theories of urban armor by updating classic trench coats with advanced performative textiles. The stiff fabric creates a bulky protective shell around the torso; functional drawstring cords dangle loosely from the waist and hem. The jacket asserts a pragmatic technical dominance over the sleek tailoring beneath."
+        },
+        {
+          "x": 50,
+          "y": 72,
+          "label": "Dark Navy Tailored Trousers",
+          "description": "The dark navy tailored trousers fall straight to the ankle with a sharp vertical crease; they provide a strict formal baseline against the chaotic metallic parka. This structural logic utilizes subtle deconstruction by mixing high-performance outerwear with traditional formalwear. The dense fabric cuts a clean line over bright white sneakers. The trousers complete the look by anchoring the futuristic jacket with a deeply traditional lower silhouette."
         }
       ]
     },
@@ -79,15 +79,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Metallic Silver Utilitarian Parka",
-          "description": "The metallic silver utilitarian parka drops heavily to the knee; it exposes a highly reflective inner lining that contrasts with the dull brown exterior. This outerwear choice engages with theories of urban armor by updating classic trench coats with advanced performative textiles. The stiff fabric creates a bulky protective shell around the torso; functional drawstring cords dangle loosely from the waist and hem. The jacket asserts a pragmatic technical dominance over the sleek tailoring beneath."
+          "y": 32,
+          "label": "Off-White Ballistic Vest Outerwear",
+          "description": "The off-white ballistic vest outerwear engulfs the upper body in a massive thick shell of protective padding; it completely replaces the need for a traditional winter coat. This functional hardware engages directly with institutional critique by elevating a tool of violent crisis response into a sleek high-fashion staple. The crisp white textile is heavily quilted and structured; thick panels wrap around the neck and shoulders. The garment asserts the supreme value of utilitarian survivalism in the modern urban environment."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Dark Navy Tailored Trousers",
-          "description": "The dark navy tailored trousers fall straight to the ankle with a sharp vertical crease; they provide a strict formal baseline against the chaotic metallic parka. This structural logic utilizes subtle deconstruction by mixing high-performance outerwear with traditional formalwear. The dense fabric cuts a clean line over bright white sneakers. The trousers complete the look by anchoring the futuristic jacket with a deeply traditional lower silhouette."
+          "y": 75,
+          "label": "Relaxed Tailored White Trousers",
+          "description": "The relaxed tailored white trousers fall loosely from beneath the heavy vest in a crisp unblemished fabric; they provide a soft moving base beneath the rigid armor above. This pairing utilizes quiet luxury to ground the extreme technical outerwear in accessible everyday menswear. The wide leg drops straight to the ankle; the hem rests heavily upon dark footwear. The piece completes the silhouette by neutralizing the militaristic top half with effortless urban drape."
         }
       ]
     },

@@ -11,6 +11,23 @@
       "hotspots": [
         {
           "x": 50,
+          "y": 35,
+          "label": "Monolithic Notch-Lapel Overcoat",
+          "description": "The monolithic notch-lapel overcoat drops the body into a single unbroken column of warm brown-grey wool; a narrow felt-trimmed lapel is the only structural interruption across the chest. This reductive silhouette engages with Ackermann's haptic proposition that the quality of cloth against the body communicates more than applied ornament. The coat hangs open the full length of the torso over a crewneck tunic cut from the identical heather wool; the hand sinks into a single besom pocket. The garment asserts a quiet cosmopolitan restraint, privileging warmth and drape over overt display."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Slouching Wool Trousers",
+          "description": "The slouching wool trousers drop heavily from the waist into a wide relaxed volume; they perfectly match the color and texture of the coat above. This structural logic applies monolithic massing to complete a full suit of heavy organic fabric. The textile pools thickly around the ankles; the hem drags slightly over dark footwear. The trousers assert a ceremonial almost monastic volume that completely obscures the legs."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-02.jpg",
+      "hotspots": [
+        {
+          "x": 50,
           "y": 30,
           "label": "Layered Fur-Sleeved Jacket",
           "description": "The layered fur-sleeved jacket envelopes the upper body in a massive highly textured volume; it features dense dark brown fur completely covering the arms while leaving the torso in a smooth grey wool. This material strategy engages with structural draping by isolating heavy organic pelts to emphasize the shoulders and sleeves. The stiff grey lapels fold back rigidly; the front zipper hangs open to expose the chest. The outerwear asserts an imposing and highly defensive urban armor."
@@ -24,7 +41,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-02.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -47,7 +64,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-03.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -64,7 +81,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-04.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -81,13 +98,30 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-05.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 40,
+          "label": "Textured Houndstooth Topcoat",
+          "description": "The textured houndstooth topcoat drops heavily to the ankle in a massive unstructured volume; it features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds; it drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "label": "Matching Houndstooth Trousers",
+          "description": "The matching houndstooth trousers drop from the waist in the exact same highly textured pattern; they create a continuous unbroken column of heritage fabric. This material strategy engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The thick textile falls without sharp creases; the hem pools heavily over black leather boots. The trousers complete the ensemble by providing a soft tactile base that echoes the formal outerwear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-07.jpg",
       "hotspots": [
         {
           "x": 50,
           "y": 45,
-          "label": "Monolithic Dark Wool Overcoat",
-          "description": "The monolithic dark wool overcoat engulfs the body in an immense structural void; it features severe pointed shoulders and an extremely long hem that brushes the floor. This tailoring extreme applies corporeal obfuscation by mutating a formal overcoat into an imposing almost alien architecture. The dense dark fabric lacks visible hardware or lapels; the sleeves completely swallow the arms. The outerwear asserts an unyielding and intimidating physical presence."
+          "label": "Elongated Dark Wool Overcoat",
+          "description": "The elongated dark wool overcoat runs the body into a single unbroken column of near-black olive wool; a slim notch lapel finished in a whisper of contrast felt is the garment's only ornament. This severe reduction extends Ackermann's diagonal compositional logic into pure verticality, letting the coat's floor-sweeping hem do the work that seaming does elsewhere in the collection. The sleeves run the full length of the arm to the wrist; the coat hangs open over a matching crewneck knit. The garment asserts an unyielding, almost monastic quietude against the model's own bearing."
         },
         {
           "x": 50,
@@ -98,7 +132,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-06.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -115,7 +149,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-07.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-09.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -132,7 +166,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-08.jpg",
+      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-10.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -145,40 +179,6 @@
           "y": 65,
           "label": "Tailored Crepe Trousers",
           "description": "The tailored crepe trousers drop straight from the waist to the ankle in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex flowing topcoat with a heavy formal base. The fabric falls cleanly over dark footwear; the waist is finished cleanly without a belt. The trousers complete the look by enforcing a strict tailored discipline."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-09.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 35,
-          "label": "Layered Asymmetrical Wool Coat",
-          "description": "The layered asymmetrical wool coat wraps the torso in a dense brown fabric; it features a massive structured drape forming an integrated scarf around the neck. This material strategy engages with structural draping by piling heavy tailoring textiles into a single chaotic but protective volume. The stiff wool holds its shape rigidly against gravity; the sleeves are pushed up softly. The outerwear asserts an oppressive and highly defensive architectural shield."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Slouching Brown Jersey Trousers",
-          "description": "The slouching brown jersey trousers drop heavily from the waist into a wide relaxed volume; they perfectly match the color and texture of the coat above. This structural logic applies monolithic massing to complete a full suit of heavy organic fabric. The textile pools thickly around the ankles; the hem drags slightly over dark footwear. The trousers assert a ceremonial almost monastic volume that completely obscures the legs."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-10.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 40,
-          "label": "Textured Houndstooth Topcoat",
-          "description": "The textured houndstooth topcoat drops heavily to the ankle in a massive unstructured volume; it features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds; it drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
-        },
-        {
-          "x": 50,
-          "y": 60,
-          "label": "Matching Houndstooth Trousers",
-          "description": "The matching houndstooth trousers drop from the waist in the exact same highly textured pattern; they create a continuous unbroken column of heritage fabric. This material strategy engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The thick textile falls without sharp creases; the hem pools heavily over black leather boots. The trousers complete the ensemble by providing a soft tactile base that echoes the formal outerwear."
         }
       ]
     }

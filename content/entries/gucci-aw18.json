@@ -11,161 +11,6 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Ruched Emerald Silk Dress",
-          "description": "The ruched emerald silk dress tightly binds the torso and arms in an aggressive horizontal gathering; it forces the natural anatomy into a rigid architectural texture. This material intervention engages with posthuman identity by creating a synthetic exoskeleton that mimics biological ribbing. The fabric reflects light intensely across every fold; the plunging neckline provides a sharp geometric cut against the chest. The garment asserts a hyper-constructed femininity that rejects soft organic drape in favor of engineered tension."
-        },
-        {
-          "x": 50,
-          "y": 25,
-          "label": "Exaggerated Pagoda Shoulders",
-          "description": "The exaggerated pagoda shoulders thrust upward and outward to completely dwarf the head and neck; they redefine the upper silhouette into a monumental V-shape. This structural extreme applies sartorial collage by referencing 1980s power dressing pushed to an absurd science-fiction scale. The stiff silk holds its sharp angular volume without slumping; the sheer mass demands absolute spatial dominance. The detail asserts an intimidating and highly defensive upper architecture."
-        },
-        {
-          "x": 50,
-          "y": 70,
-          "label": "White Floral Lace Tights",
-          "description": "The white floral lace tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy emerald silk above. This styling choice utilizes postmodern pastiche by layering an innocent, almost bridal textile beneath a severe power dress. The intricate floral motifs stretch tightly over the musculature; the crisp white tone anchors the dark saturated green. The accessory completes the look by fusing delicate nostalgia with aggressive modern tailoring."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Faux-Fur Trimmed Tunic",
-          "description": "The faux-fur trimmed tunic wraps the body in a dense red fabric bordered by explosive bright turquoise synthetic hair; it creates a chaotic and overwhelming volume. This material choice engages with semiotic pluralism by blending ethnic folklore aesthetics with garish cartoonish coloring. The thick fur frames the face and hem entirely; heavy decorative tassels swing violently with kinetic movement. The garment asserts a hybridized identity that rejects tasteful minimalism for absolute sensory overload."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Orange Bouclé Trousers",
-          "description": "The orange bouclé trousers drop heavily into a wide flared silhouette; they are constructed from a highly textured thick knit. This structural logic utilizes maximalist layering to ensure the lower half of the body is as visually dense as the upper half. The bright speckled fabric pools slightly over the footwear; it lacks any formal creasing or darts. The trousers complete the ensemble by grounding the chaotic tunic in an equally loud and tactile foundation."
-        },
-        {
-          "x": 50,
-          "y": 15,
-          "label": "Knitted Face Obfuscation",
-          "description": "The knitted face obfuscation covers the lower half of the face in a tight white mask featuring painted red lips; it is entirely framed by the heavy blue fur and large decorative pom-poms. This accessory applies cyborg theory by transforming the human face into a synthetic, unreadable construct. The mask erases natural expression entirely; the heavy makeup above the eyes heightens the theatricality. The detail asserts a profoundly unsettling and surrealist alienation."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-03.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Sequin-Paved Mint Tunic",
-          "description": "The sequin-paved mint tunic falls rigidly from the shoulders into a stiff A-line shape; it is entirely covered in a geometric pattern of green and pink reflective discs. This material strategy engages with postmodern pastiche by taking a conservative 1960s silhouette and rendering it in hyper-glamorous synthetic textiles. The heavy fabric holds its shape like a bell; a bold corporate logo sits prominently on the left breast. The garment asserts a deliberate clash between modest tailoring and disco-era excess."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Sequin-Paved Pink Trousers",
-          "description": "The sequin-paved pink trousers drop straight to the ankle in the exact same dense reflective embellishment as the tunic above; they complete a full suit of oppressive glittering fabric. This structural logic utilizes maximalist layering to ensure every inch of the body functions as a mirrored surface. The stiff material wrinkles sharply at the knee; it catches the clinical runway lighting to create a liquid metallic effect. The trousers assert a ceremonial and slightly absurd volume."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Crystal Chainmail Headpiece",
-          "description": "The crystal chainmail headpiece encases the skull in a dense web of dangling silver diamantes; it cascades down to obscure the ears and forehead. This accessory applies corporeal alteration by merging medieval defensive armor with high-society jewelry. The heavy metallic structure reflects light constantly with kinetic movement; it flows seamlessly into a sheer veil covering the entire body. The piece completes the silhouette by isolating the face within a glittering synthetic cage."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-04.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Patchwork Floral Pleated Skirt",
-          "description": "The patchwork floral pleated skirt stitches together multiple mismatched bands of bright traditional fabric; it introduces a highly chaotic folk-art aesthetic to the lower silhouette. This structural intervention engages with semiotic pluralism by flattening distinct cultural textile histories into a single wearable collage. The deep knife pleats hold a rigid geometric volume; the diverse patterns clash violently against one another. The garment asserts a nomadic and heavily accumulated aesthetic."
-        },
-        {
-          "x": 50,
-          "y": 35,
-          "label": "Oversized Crystal Plastron",
-          "description": "The oversized crystal plastron covers the entire chest in a massive heavy web of interlocking clear stones; it functions as a literal shield of luxury hardware. This material choice engages with cyborg theory by treating jewelry not as an accent, but as a primary structural element of the outfit. The dense crystals obscure the floral patterns beneath; they weigh heavily upon the neckline. The accessory asserts a protective and highly defensive posture executed entirely in precious materials."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Crystal Chainmail Headpiece",
-          "description": "The crystal chainmail headpiece encases the skull in a dense web of dangling silver diamantes; it creates a glittering helmet that echoes the massive necklace below. This styling detail utilizes corporeal alteration to fuse the human head with synthetic decorative armor. The heavy metallic fringes swing kinetically with every step; the stark skin contrasts sharply with the cold hardware. The piece completes the silhouette by enforcing an aesthetic of absolute maximalist overload."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-05.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Plaid Tailored Suit Jacket",
-          "description": "The plaid tailored suit jacket structures the upper body in a classic muted brown and tan grid; it features standard notch lapels and functional front pockets. This outerwear choice engages with sartorial collage by providing a starkly traditional and highly conservative baseline against the absurd accessories. The stiff wool fabric holds a boxy 1970s silhouette; the sleeves drop cleanly to the wrist. The garment asserts a deeply banal foundation that highlights the surrounding subcultural noise."
-        },
-        {
-          "x": 50,
-          "y": 25,
-          "label": "Ornate Animalier Chest Piece",
-          "description": "The ornate animalier chest piece hangs heavily over the printed sweater; it features multiple three-dimensional sculpted animal heads cast in brightly colored resin or metal. This accessory utilizes postmodern pastiche by merging classical heraldry with campy costume jewelry. The aggressive tiger and lion motifs stare outward from the chest; the thick gold chain anchors the heavy weight. The detail asserts a chaotic and highly symbolic intervention onto the conservative suit."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Prosthetic Curling Horns",
-          "description": "The prosthetic curling horns emerge directly from the curly hair above the ears; they are rendered in hyper-realistic textured material resembling authentic animal growth. This styling extreme applies corporeal alteration to literally hybridize the human model with animalistic traits. The thick beige horns curve dramatically backwards; they are seamlessly integrated into the natural hairline. The accessory completes the look by fully embracing cyborg theory and blurring biological boundaries."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-06.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Ruched Velvet Bodice",
-          "description": "The ruched velvet bodice wraps the torso tightly in deep crimson folds; it gathers asymmetrically across the chest to create a heavy tactile texture. This structural logic utilizes maximalist layering to transform a traditional eveningwear textile into a dense architectural shell. The soft plush fabric absorbs the clinical runway lighting completely; the high neckline completely obscures the collarbone. The garment asserts a ceremonial and highly secretive upper silhouette."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Sweeping Velvet Skirt",
-          "description": "The sweeping velvet skirt drops from the ruched waist into a massive pooling volume; it drags heavily across the runway floor. This material application engages with the subversion of the \"natural\" by creating a silhouette that completely swallows the lower anatomy. The deep red fabric catches subtle highlights along its long vertical folds; the model must physically manage the excess fabric with her gloved hand. The skirt asserts an imposing and dramatic spatial presence."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Velvet Skull Cap",
-          "description": "The velvet skull cap binds the head tightly in the exact same crimson textile as the dress; it features subtle fabric rosettes clustered over the ears. This accessory utilizes sartorial collage by mimicking a monastic or religious head covering rendered in opulent materials. The tight fit completely obscures the hair and neck; it forces the pale face into stark relief. The piece completes the ensemble by isolating the model within a uniform of severe ascetic luxury."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-07.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Tiered Pleated Taffeta Dress",
-          "description": "The tiered pleated taffeta dress falls loosely over the torso in a pale pink fabric; it features a heavily gathered ruffled bodice that completely obscures the natural bustline. This material application engages with postmodern pastiche by taking a hyper-feminine 1980s prom silhouette and presenting it on a gaunt androgynous frame. The stiff fabric holds sharp creases; the hem drops cleanly to the mid-calf. The garment asserts a highly nostalgic and deliberately awkward volume."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Prosthetic Third Eye",
-          "description": "The prosthetic third eye sits dead center on the forehead; it is rendered in hyper-realistic silicone complete with eyelashes and a defined iris. This styling extreme applies corporeal alteration to literally mutate the human face into a surrealist canvas. The extra eye perfectly matches the model's actual eyes in color and shape; it stares blankly forward. The accessory completes the look by fully embracing cyborg theory and shattering the biological limitations of the human body."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-08.jpg",
-      "hotspots": [
-        {
-          "x": 50,
           "y": 40,
           "label": "Floral Botanical Silk Tunic",
           "description": "The floral botanical silk tunic envelopes the upper body in a crisp white fabric heavily printed with incredibly detailed flora and fauna; it functions as a vibrant wearable encyclopedia. This structural logic utilizes semiotic pluralism by pasting a hyper-traditional illustration style onto a relaxed slouched silhouette. The bright colors contrast sharply with the stark runway; the wide sleeves dwarf the arms completely. The garment asserts a chaotic but highly intellectual approach to classic textile design."
@@ -179,24 +24,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-09.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Spliced Logo Topcoat",
-          "description": "The spliced logo topcoat literally stitches two completely different garments together down the center axis; the left side features a traditional dark grey wool while the right side is a bold red and black tartan plaid. This structural intervention engages heavily with sartorial collage by visually fracturing the body into two competing identities. The stiff fabric holds a rigid formal shape despite the chaotic patterning; the mismatched lapels clash violently. The outerwear asserts a hybridized aesthetic that refuses singularity."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Jeweled Baseball Cap",
-          "description": "The jeweled baseball cap sits atop the head in a pale tan canvas featuring the iconic NY Yankees logo; it is heavily adorned with thick blue and red crystals along the brim. This accessory utilizes postmodern pastiche by taking a ubiquitous piece of American sportswear and encrusting it with high-fashion embellishments. The stark white logo contrasts with the shiny hardware; it sits over a pair of oversized aviator glasses. The piece completes the look by grounding the schizophrenic coat in casual streetwear."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-10.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -219,7 +47,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-11.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -236,7 +64,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-12.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -253,7 +81,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-13.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -276,7 +104,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-14.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -299,7 +127,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-15.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -316,7 +144,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-16.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -333,7 +161,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-17.jpg",
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-09.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -346,6 +174,178 @@
           "y": 40,
           "label": "Live Chameleon Accessory",
           "description": "The live chameleon accessory is cradled gently in the model's hands; it introduces a literal biological organism into the highly synthetic runway environment. This staging extreme applies posthumanist theory by blurring the boundaries between human, animal, and accessory. The bright green reptile contrasts sharply with the pale blue denim; it grips the fabric actively as the model walks. The inclusion of the animal asserts a surreal and deeply unpredictable element that shatters traditional runway decorum."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Spliced Logo Topcoat",
+          "description": "The spliced logo topcoat literally stitches two completely different garments together down the center axis; the left side features a traditional dark grey wool while the right side is a bold red and black tartan plaid. This structural intervention engages heavily with sartorial collage by visually fracturing the body into two competing identities. The stiff fabric holds a rigid formal shape despite the chaotic patterning; the mismatched lapels clash violently. The outerwear asserts a hybridized aesthetic that refuses singularity."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Jeweled Baseball Cap",
+          "description": "The jeweled baseball cap sits atop the head in a pale tan canvas featuring the iconic NY Yankees logo; it is heavily adorned with thick blue and red crystals along the brim. This accessory utilizes postmodern pastiche by taking a ubiquitous piece of American sportswear and encrusting it with high-fashion embellishments. The stark white logo contrasts with the shiny hardware; it sits over a pair of oversized aviator glasses. The piece completes the look by grounding the schizophrenic coat in casual streetwear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Ruched Emerald Silk Dress",
+          "description": "The ruched emerald silk dress tightly binds the torso and arms in an aggressive horizontal gathering; it forces the natural anatomy into a rigid architectural texture. This material intervention engages with posthuman identity by creating a synthetic exoskeleton that mimics biological ribbing. The fabric reflects light intensely across every fold; the plunging neckline provides a sharp geometric cut against the chest. The garment asserts a hyper-constructed femininity that rejects soft organic drape in favor of engineered tension."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Exaggerated Pagoda Shoulders",
+          "description": "The exaggerated pagoda shoulders thrust upward and outward to completely dwarf the head and neck; they redefine the upper silhouette into a monumental V-shape. This structural extreme applies sartorial collage by referencing 1980s power dressing pushed to an absurd science-fiction scale. The stiff silk holds its sharp angular volume without slumping; the sheer mass demands absolute spatial dominance. The detail asserts an intimidating and highly defensive upper architecture."
+        },
+        {
+          "x": 50,
+          "y": 70,
+          "label": "White Floral Lace Tights",
+          "description": "The white floral lace tights enclose the legs entirely beneath a fragile semi-translucent pattern; they provide a stark textural contrast to the heavy emerald silk above. This styling choice utilizes postmodern pastiche by layering an innocent, almost bridal textile beneath a severe power dress. The intricate floral motifs stretch tightly over the musculature; the crisp white tone anchors the dark saturated green. The accessory completes the look by fusing delicate nostalgia with aggressive modern tailoring."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Faux-Fur Trimmed Tunic",
+          "description": "The faux-fur trimmed tunic wraps the body in a dense red fabric bordered by explosive bright turquoise synthetic hair; it creates a chaotic and overwhelming volume. This material choice engages with semiotic pluralism by blending ethnic folklore aesthetics with garish cartoonish coloring. The thick fur frames the face and hem entirely; heavy decorative tassels swing violently with kinetic movement. The garment asserts a hybridized identity that rejects tasteful minimalism for absolute sensory overload."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Orange Bouclé Trousers",
+          "description": "The orange bouclé trousers drop heavily into a wide flared silhouette; they are constructed from a highly textured thick knit. This structural logic utilizes maximalist layering to ensure the lower half of the body is as visually dense as the upper half. The bright speckled fabric pools slightly over the footwear; it lacks any formal creasing or darts. The trousers complete the ensemble by grounding the chaotic tunic in an equally loud and tactile foundation."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Knitted Face Obfuscation",
+          "description": "The knitted face obfuscation covers the lower half of the face in a tight white mask featuring painted red lips; it is entirely framed by the heavy blue fur and large decorative pom-poms. This accessory applies cyborg theory by transforming the human face into a synthetic, unreadable construct. The mask erases natural expression entirely; the heavy makeup above the eyes heightens the theatricality. The detail asserts a profoundly unsettling and surrealist alienation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Sequin-Paved Mint Tunic",
+          "description": "The sequin-paved mint tunic falls rigidly from the shoulders into a stiff A-line shape; it is entirely covered in a geometric pattern of green and pink reflective discs. This material strategy engages with postmodern pastiche by taking a conservative 1960s silhouette and rendering it in hyper-glamorous synthetic textiles. The heavy fabric holds its shape like a bell; a bold corporate logo sits prominently on the left breast. The garment asserts a deliberate clash between modest tailoring and disco-era excess."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Sequin-Paved Pink Trousers",
+          "description": "The sequin-paved pink trousers drop straight to the ankle in the exact same dense reflective embellishment as the tunic above; they complete a full suit of oppressive glittering fabric. This structural logic utilizes maximalist layering to ensure every inch of the body functions as a mirrored surface. The stiff material wrinkles sharply at the knee; it catches the clinical runway lighting to create a liquid metallic effect. The trousers assert a ceremonial and slightly absurd volume."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Crystal Chainmail Headpiece",
+          "description": "The crystal chainmail headpiece encases the skull in a dense web of dangling silver diamantes; it cascades down to obscure the ears and forehead. This accessory applies corporeal alteration by merging medieval defensive armor with high-society jewelry. The heavy metallic structure reflects light constantly with kinetic movement; it flows seamlessly into a sheer veil covering the entire body. The piece completes the silhouette by isolating the face within a glittering synthetic cage."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Patchwork Floral Pleated Skirt",
+          "description": "The patchwork floral pleated skirt stitches together multiple mismatched bands of bright traditional fabric; it introduces a highly chaotic folk-art aesthetic to the lower silhouette. This structural intervention engages with semiotic pluralism by flattening distinct cultural textile histories into a single wearable collage. The deep knife pleats hold a rigid geometric volume; the diverse patterns clash violently against one another. The garment asserts a nomadic and heavily accumulated aesthetic."
+        },
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Oversized Crystal Plastron",
+          "description": "The oversized crystal plastron covers the entire chest in a massive heavy web of interlocking clear stones; it functions as a literal shield of luxury hardware. This material choice engages with cyborg theory by treating jewelry not as an accent, but as a primary structural element of the outfit. The dense crystals obscure the floral patterns beneath; they weigh heavily upon the neckline. The accessory asserts a protective and highly defensive posture executed entirely in precious materials."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Crystal Chainmail Headpiece",
+          "description": "The crystal chainmail headpiece encases the skull in a dense web of dangling silver diamantes; it creates a glittering helmet that echoes the massive necklace below. This styling detail utilizes corporeal alteration to fuse the human head with synthetic decorative armor. The heavy metallic fringes swing kinetically with every step; the stark skin contrasts sharply with the cold hardware. The piece completes the silhouette by enforcing an aesthetic of absolute maximalist overload."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-15.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Plaid Tailored Suit Jacket",
+          "description": "The plaid tailored suit jacket structures the upper body in a classic muted brown and tan grid; it features standard notch lapels and functional front pockets. This outerwear choice engages with sartorial collage by providing a starkly traditional and highly conservative baseline against the absurd accessories. The stiff wool fabric holds a boxy 1970s silhouette; the sleeves drop cleanly to the wrist. The garment asserts a deeply banal foundation that highlights the surrounding subcultural noise."
+        },
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Ornate Animalier Chest Piece",
+          "description": "The ornate animalier chest piece hangs heavily over the printed sweater; it features multiple three-dimensional sculpted animal heads cast in brightly colored resin or metal. This accessory utilizes postmodern pastiche by merging classical heraldry with campy costume jewelry. The aggressive tiger and lion motifs stare outward from the chest; the thick gold chain anchors the heavy weight. The detail asserts a chaotic and highly symbolic intervention onto the conservative suit."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Prosthetic Curling Horns",
+          "description": "The prosthetic curling horns emerge directly from the curly hair above the ears; they are rendered in hyper-realistic textured material resembling authentic animal growth. This styling extreme applies corporeal alteration to literally hybridize the human model with animalistic traits. The thick beige horns curve dramatically backwards; they are seamlessly integrated into the natural hairline. The accessory completes the look by fully embracing cyborg theory and blurring biological boundaries."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-16.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Ruched Velvet Bodice",
+          "description": "The ruched velvet bodice wraps the torso tightly in deep crimson folds; it gathers asymmetrically across the chest to create a heavy tactile texture. This structural logic utilizes maximalist layering to transform a traditional eveningwear textile into a dense architectural shell. The soft plush fabric absorbs the clinical runway lighting completely; the high neckline completely obscures the collarbone. The garment asserts a ceremonial and highly secretive upper silhouette."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Sweeping Velvet Skirt",
+          "description": "The sweeping velvet skirt drops from the ruched waist into a massive pooling volume; it drags heavily across the runway floor. This material application engages with the subversion of the \"natural\" by creating a silhouette that completely swallows the lower anatomy. The deep red fabric catches subtle highlights along its long vertical folds; the model must physically manage the excess fabric with her gloved hand. The skirt asserts an imposing and dramatic spatial presence."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Velvet Skull Cap",
+          "description": "The velvet skull cap binds the head tightly in the exact same crimson textile as the dress; it features subtle fabric rosettes clustered over the ears. This accessory utilizes sartorial collage by mimicking a monastic or religious head covering rendered in opulent materials. The tight fit completely obscures the hair and neck; it forces the pale face into stark relief. The piece completes the ensemble by isolating the model within a uniform of severe ascetic luxury."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-17.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Tiered Pleated Taffeta Dress",
+          "description": "The tiered pleated taffeta dress falls loosely over the torso in a pale pink fabric; it features a heavily gathered ruffled bodice that completely obscures the natural bustline. This material application engages with postmodern pastiche by taking a hyper-feminine 1980s prom silhouette and presenting it on a gaunt androgynous frame. The stiff fabric holds sharp creases; the hem drops cleanly to the mid-calf. The garment asserts a highly nostalgic and deliberately awkward volume."
+        },
+        {
+          "x": 50,
+          "y": 10,
+          "label": "Prosthetic Third Eye",
+          "description": "The prosthetic third eye sits dead center on the forehead; it is rendered in hyper-realistic silicone complete with eyelashes and a defined iris. This styling extreme applies corporeal alteration to literally mutate the human face into a surrealist canvas. The extra eye perfectly matches the model's actual eyes in color and shape; it stares blankly forward. The accessory completes the look by fully embracing cyborg theory and shattering the biological limitations of the human body."
         }
       ]
     }
