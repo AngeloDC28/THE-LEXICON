@@ -20,8 +20,8 @@ export default defineConfig({
       name: 'strip-cache-bust-in-dev',
       apply: 'serve',
       transformIndexHtml(html) {
-        return html.replace(/(src="js\/app\.js)\?v=[^"]*(")/, '$1$2')
-                   .replace(/(href="index\.css)\?v=[^"]*(")/, '$1$2');
+        return html.replace(/(src="\/js\/app\.js)\?v=[^"]*(")/, '$1$2')
+                   .replace(/(href="\/index\.css)\?v=[^"]*(")/, '$1$2');
       },
     },
   ],
