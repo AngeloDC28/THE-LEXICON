@@ -54,9 +54,7 @@ export function renderTimeline(archiveData, callbacks) {
                 <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
                      alt="${getTranslation(e.tags.brand, AppState.language)} ${e.year}"
                      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0"
-                     loading="lazy"
-                     onload="this.classList.add('loaded'); this.closest('.timeline-item').classList.add('loaded');"
-                     onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');this.closest('.timeline-item').classList.add('loaded');this.classList.add('broken-asset');" />
+                     loading="lazy" />
               </picture>
               <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
                 <p class="t-mono-xs text-white font-bold uppercase tracking-wider truncate">${getTranslation(e.tags.brand, AppState.language)}</p>
@@ -74,6 +72,18 @@ export function renderTimeline(archiveData, callbacks) {
     const activate = () => { if (callbacks && callbacks.openDetail) callbacks.openDetail(el.dataset.id); };
     el.addEventListener('click', activate);
     el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); } });
+  });
+
+  container.querySelectorAll('.timeline-item img').forEach(img => {
+    img.addEventListener('load', () => {
+      img.classList.add('loaded');
+      img.closest('.timeline-item')?.classList.add('loaded');
+    });
+    img.addEventListener('error', () => {
+      img.src = BROKEN_ASSET;
+      img.classList.add('loaded', 'broken-asset');
+      img.closest('.timeline-item')?.classList.add('loaded');
+    }, { once: true });
   });
 }
 

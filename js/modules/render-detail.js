@@ -651,13 +651,19 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
       <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
         <picture>
           <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(thumb)})}">
-          <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='${BROKEN_ASSET}'" />
+          <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
         </picture>
       </div>
       <div class="text-[8px] font-mono uppercase tracking-wider text-white/70 truncate group-hover:text-acid transition-colors">${brand}</div>
       <div class="text-[7px] font-mono text-white/40">${e.year || '----'}</div>
     </button>`;
   }).join('');
+
+  grid.querySelectorAll('img').forEach(img => {
+    img.addEventListener('error', () => {
+      img.src = BROKEN_ASSET;
+    }, { once: true });
+  });
 
   // Wire click delegation once
   if (!grid._relatedClickBound) {

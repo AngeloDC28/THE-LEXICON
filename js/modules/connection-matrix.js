@@ -328,7 +328,7 @@ function renderNexusEmptyState(entry, container) {
           const brand = (p.tags?.brand || p.id).toUpperCase();
           const year = p.year || '';
           return `<button type="button" class="nexus-peer-card focus-ring" data-entry-id="${p.id}" aria-label="Open ${brand} ${year}">
-            ${img ? `<img src="${img}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'">` : ''}
+            ${img ? `<img src="${img}" alt="" loading="lazy" decoding="async">` : ''}
             <span class="nexus-peer-label">${brand}<br>${year}</span>
           </button>`;
         }).join('')}
@@ -341,6 +341,12 @@ function renderNexusEmptyState(entry, container) {
       <p class="t-mono-sm font-mono text-white/50 mb-4">This entry's connections are still being mapped.</p>
       ${peerCards}
     </div>`;
+
+  container.querySelectorAll('.nexus-peer-card img').forEach(img => {
+    img.addEventListener('error', () => {
+      img.style.display = 'none';
+    }, { once: true });
+  });
 
   if (callbacks) {
     container.querySelectorAll('[data-entry-id]').forEach(btn => {
@@ -473,7 +479,7 @@ function renderList(entry, connections, callbacks, container) {
         const thumbSrc = resolveImgSrc(rel.images?.[0]);
         const label = `${rel.tags.brand || ''} ${rel.year || ''}`;
         html += `<button type="button" class="matrix-entry focus-ring" data-matrix-entry-id="${rel.id}" aria-label="Open ${label}">
-          <img src="${thumbSrc}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;" loading="lazy" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.style.filter='none'" />
+          <img src="${thumbSrc}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;margin-bottom:8px;" loading="lazy" />
           <p class="t-mono-xs font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>
           <p class="t-mono-xs font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>
         </button>`;
@@ -483,6 +489,13 @@ function renderList(entry, connections, callbacks, container) {
   }
 
   container.innerHTML = html;
+
+  container.querySelectorAll('.matrix-entry img').forEach(img => {
+    img.addEventListener('error', () => {
+      img.src = BROKEN_ASSET;
+      img.style.filter = 'none';
+    }, { once: true });
+  });
 
   container.addEventListener('click', e => {
     const el = e.target.closest('.matrix-entry');

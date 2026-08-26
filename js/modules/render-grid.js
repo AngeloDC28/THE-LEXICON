@@ -134,8 +134,7 @@ export function renderImageGrid(archiveData, callbacks) {
                 src="${src}"${imgAttrs(imgObj)}
                 alt="${isFirst ? brand + ' ' + season + ' ' + year : ''}"
                 decoding="async"
-                class="transition-transform duration-500 group-hover:scale-105"
-                onload="this.classList.add('loaded')" onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded')">
+                class="transition-transform duration-500 group-hover:scale-105">
             </picture>
           </div>
           <div class="grid-cell-body">
@@ -148,6 +147,13 @@ export function renderImageGrid(archiveData, callbacks) {
   });
 
   grid.innerHTML = html;
+  grid.querySelectorAll('img').forEach(img => {
+    img.addEventListener('load', () => img.classList.add('loaded'));
+    img.addEventListener('error', () => {
+      img.src = BROKEN_ASSET;
+      img.classList.add('loaded');
+    }, { once: true });
+  });
   // After a short wait, mark any viewport images already in the browser
   // cache as loaded so they don't sit at opacity:0 on re-visits.
   // The timeout gives the browser time to fire intersection observer →
@@ -233,7 +239,7 @@ export function renderEntryList(archiveData, callbacks) {
     const thumb = thumbSrc
       ? `<picture class="entry-item-thumb" aria-hidden="true">
            <source type="image/webp" srcset="${thumbWebp}">
-           <img src="${thumbSrc}" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.parentElement.style.display='none'">
+           <img src="${thumbSrc}" alt="" loading="lazy" decoding="async">
          </picture>`
       : '';
     return `${catHeader}<div class="entry-item cursor-crosshair border-b border-black/5 dark:border-white/5 px-4 py-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-ring"
@@ -251,6 +257,11 @@ export function renderEntryList(archiveData, callbacks) {
         </div>
       </div>`;
   }).join('');
+  container.querySelectorAll('.entry-item-thumb img').forEach(img => {
+    img.addEventListener('error', () => {
+      img.parentElement.style.display = 'none';
+    }, { once: true });
+  });
 }
 
 // Phase 1: Featured strip — one card per analytical category, ordered by year desc.
@@ -305,8 +316,7 @@ export function renderFeaturedStrip(archiveData) {
     const imgHtml = imgSrc
       ? `<picture>
            <source type="image/webp" srcset="${webpImg}">
-           <img src="${imgSrc}" alt="" loading="lazy" decoding="async"
-                onerror="this.onerror=null;this.src='${BROKEN_ASSET}'">
+           <img src="${imgSrc}" alt="" loading="lazy" decoding="async">
          </picture>`
       : '';
 
@@ -323,6 +333,12 @@ export function renderFeaturedStrip(archiveData) {
         </div>
       </div>`;
   }).join('');
+
+  container.querySelectorAll('.feat-card-img img').forEach(img => {
+    img.addEventListener('error', () => {
+      img.src = BROKEN_ASSET;
+    }, { once: true });
+  });
 
   // Click to open detail
   container.querySelectorAll('.feat-card').forEach(card => {

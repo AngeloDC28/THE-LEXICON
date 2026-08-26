@@ -96,11 +96,19 @@ function renderRecentlyViewed(archiveData, callbacks) {
         <img src="${thumbSrc}"
              alt=""
              class="recent-thumb opacity-0"
-             loading="lazy"
-             onload="this.classList.add('loaded'); this.style.opacity='1';"
-             onerror="this.onerror=null;this.src='${BROKEN_ASSET}';this.classList.add('loaded');" />
+             loading="lazy" />
       </button>
     `;
   });
   row.innerHTML = html;
+  row.querySelectorAll('img.recent-thumb').forEach(img => {
+    img.addEventListener('load', () => {
+      img.classList.add('loaded');
+      img.style.opacity = '1';
+    });
+    img.addEventListener('error', () => {
+      img.src = BROKEN_ASSET;
+      img.classList.add('loaded');
+    }, { once: true });
+  });
 }
