@@ -10,7 +10,7 @@
  * Keyboard-navigable (j/k for rows, Enter to open, /, ?, V, I).
  * Toggle persists in localStorage as 'lexicon.view-mode' (visual | index).
  */
-import { $, pad } from './core-utils.js';
+import { $, pad, withViewTransition } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -401,23 +401,25 @@ export function setViewMode(mode) {
 }
 
 export function applyViewMode(mode) {
-  const gridView = $('grid-view');
-  const indexView = $('index-table-view');
-  const visualBtn = $('btn-mode-visual');
-  const indexBtn = $('btn-mode-index');
-  const imagePanel = $('image-panel');
+  withViewTransition(() => {
+    const gridView = $('grid-view');
+    const indexView = $('index-table-view');
+    const visualBtn = $('btn-mode-visual');
+    const indexBtn = $('btn-mode-index');
+    const imagePanel = $('image-panel');
 
-  if (mode === 'index') {
-    if (gridView) gridView.classList.add('hidden');
-    if (indexView) indexView.classList.remove('hidden');
-    if (imagePanel) imagePanel.setAttribute('data-view-mode', 'index');
-    if (visualBtn) { visualBtn.classList.remove('active'); visualBtn.setAttribute('aria-pressed', 'false'); }
-    if (indexBtn) { indexBtn.classList.add('active'); indexBtn.setAttribute('aria-pressed', 'true'); }
-  } else {
-    if (gridView) gridView.classList.remove('hidden');
-    if (indexView) indexView.classList.add('hidden');
-    if (imagePanel) imagePanel.setAttribute('data-view-mode', 'visual');
-    if (visualBtn) { visualBtn.classList.add('active'); visualBtn.setAttribute('aria-pressed', 'true'); }
-    if (indexBtn) { indexBtn.classList.remove('active'); indexBtn.setAttribute('aria-pressed', 'false'); }
-  }
+    if (mode === 'index') {
+      if (gridView) gridView.classList.add('hidden');
+      if (indexView) indexView.classList.remove('hidden');
+      if (imagePanel) imagePanel.setAttribute('data-view-mode', 'index');
+      if (visualBtn) { visualBtn.classList.remove('active'); visualBtn.setAttribute('aria-pressed', 'false'); }
+      if (indexBtn) { indexBtn.classList.add('active'); indexBtn.setAttribute('aria-pressed', 'true'); }
+    } else {
+      if (gridView) gridView.classList.remove('hidden');
+      if (indexView) indexView.classList.add('hidden');
+      if (imagePanel) imagePanel.setAttribute('data-view-mode', 'visual');
+      if (visualBtn) { visualBtn.classList.add('active'); visualBtn.setAttribute('aria-pressed', 'true'); }
+      if (indexBtn) { indexBtn.classList.remove('active'); indexBtn.setAttribute('aria-pressed', 'false'); }
+    }
+  });
 }

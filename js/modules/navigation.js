@@ -1,4 +1,4 @@
-import { $ } from './core-utils.js';
+import { $, withViewTransition } from './core-utils.js';
 import { AppState } from './core-state.js';
 import { getTranslation } from './translations.js';
 
@@ -22,32 +22,40 @@ export function switchView(viewId, callbacks) {
 
   AppState.currentView = viewId;
 
-  // Views mapping
-  const views = ['grid-view', 'folders-view', 'timeline-view'];
-  views.forEach(v => {
-    const el = $(v);
-    if (el) {
-      if (v === `${viewId}-view`) {
-        el.classList.remove('hidden');
-        // Restore scroll position
-        const saved = _scrollPositions[viewId];
-        if (saved !== undefined) requestAnimationFrame(() => { el.scrollTop = saved; });
+  withViewTransition(() => {
+    // Views mapping
+    const views = ['grid-view', 'folders-view', 'timeline-view'];
+    views.forEach(v => {
+      const el = $(v);
+      if (el) {
+        if (v === `${viewId}-view`) {
+          el.classList.remove('hidden');
+          // Restore scroll position
+          const saved = _scrollPositions[viewId];
+          if (saved !== undefined) requestAnimationFrame(() => { el.scrollTop = saved; });
+        } else {
+          el.classList.add('hidden');
+        }
+      }
+    });
+
+    // Sidebar Visibility (Directory)
+    const directory = $('index-panel');
+    if (directory) {
+      // Only hide sidebar if explicitly not in grid view AND on mobile
+      if (viewId === 'grid' || window.innerWidth >= 1024) {
+        directory.classList.remove('hidden');
       } else {
-        el.classList.add('hidden');
+        directory.classList.add('hidden');
       }
     }
-  });
 
-  // Sidebar Visibility (Directory)
-  const directory = $('index-panel');
-  if (directory) {
-    // Only hide sidebar if explicitly not in grid view AND on mobile
-    if (viewId === 'grid' || window.innerWidth >= 1024) {
-      directory.classList.remove('hidden');
-    } else {
-      directory.classList.add('hidden');
+    // Callbacks to re-render active states
+    if (callbacks) {
+      if (callbacks.updateNavStates) callbacks.updateNavStates();
+      if (callbacks.updateStatusBar) callbacks.updateStatusBar();
     }
-  }
+  });
 
   // Header Title State
   const headerTitle = $('header-title');

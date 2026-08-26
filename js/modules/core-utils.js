@@ -8,6 +8,14 @@ export const $ = (id) => document.getElementById(id);
 export const $$ = (s) => document.querySelectorAll(s);
 export const pad = (num) => (num < 10 ? '0' + num : num);
 
+export function withViewTransition(updateDOM) {
+  if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    updateDOM();
+    return;
+  }
+  document.startViewTransition(() => updateDOM());
+}
+
 // Valid fallback SVG — dark panel with centered ERROR_404 text
 export const BROKEN_ASSET = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgMzAwIDQwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMxMTEiLz48dGV4dCB4PSIxNTAiIHk9IjIwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzU1NSI+RVJST1JfNDA0PC90ZXh0Pjwvc3ZnPg==`;
 
@@ -93,6 +101,12 @@ export function webpSrc(srcOrObj) {
   const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
   if (!src) return '';
   return src.replace(/\.(jpe?g|png)$/i, '.webp');
+}
+
+export function avifSrc(srcOrObj) {
+  const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
+  if (!src) return '';
+  return src.replace(/\.(jpe?g|png)$/i, '.avif');
 }
 
 export function debounce(func, wait) {

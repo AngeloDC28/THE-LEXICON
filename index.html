@@ -612,7 +612,8 @@
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
                 <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]"></div>
-                <picture style="pointer-events:none">
+                <picture>
+                  <source id="detail-image-avif" type="image/avif" srcset="" />
                   <source id="detail-image-webp" type="image/webp" srcset="" />
                   <img id="detail-image" class="relative z-10" style="pointer-events:none" src="" alt="" fetchpriority="high" decoding="async" />
                 </picture>

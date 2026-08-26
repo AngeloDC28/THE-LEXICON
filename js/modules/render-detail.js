@@ -2,7 +2,7 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, avifSrc, BROKEN_ASSET, withViewTransition } from './core-utils.js';
 import { AppState, updateHash } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -54,28 +54,30 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   AppState.selectedEntryId   = entryId;
   AppState.currentImageIndex = (typeof imgIdx === 'number') ? Math.min(imgIdx, imgs.length - 1) : 0;
 
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  const detailView = $('detail-image-view');
-  if (detailView) {
-    detailView.classList.remove('hidden');
-    // Used by print stylesheet ::after for permalink + accessed-date footer
-    detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
-    detailView.dataset.printAccessed = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-  }
-  const appRoot = $('app-root');
-  if (appRoot) appRoot.classList.add('detail-mode-active');
+  withViewTransition(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const detailView = $('detail-image-view');
+    if (detailView) {
+      detailView.classList.remove('hidden');
+      // Used by print stylesheet ::after for permalink + accessed-date footer
+      detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
+      detailView.dataset.printAccessed = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }
+    const appRoot = $('app-root');
+    if (appRoot) appRoot.classList.add('detail-mode-active');
 
-  renderBreadcrumb(entry);
-  renderImage(entry, callbacks);
-  preloadAdjacentImages(entry);
-  renderSidebarHeader(entry);
-  renderBrutalistNodes(entry);
-  renderStickyOverlay(entry);
-  renderMetadataGrid(entry);
-  renderMetaRail(entry);
-  renderRelatedEntries(entry, archiveData, callbacks);
-  renderHotspots(entry, $('detail-image-wrapper'));
-  setupSwipeGestures(archiveData, callbacks);
+    renderBreadcrumb(entry);
+    renderImage(entry, callbacks);
+    preloadAdjacentImages(entry);
+    renderSidebarHeader(entry);
+    renderBrutalistNodes(entry);
+    renderStickyOverlay(entry);
+    renderMetadataGrid(entry);
+    renderMetaRail(entry);
+    renderRelatedEntries(entry, archiveData, callbacks);
+    renderHotspots(entry, $('detail-image-wrapper'));
+    setupSwipeGestures(archiveData, callbacks);
+  });
 
   // Setup control panel listeners
   setupDetailControls();
@@ -169,23 +171,25 @@ function updateEntryJsonLd(entry) {
 }
 
 export function closeDetail(callbacks, archiveData) {
-  AppState.selectedEntryId = null;
-  updateHash(null);
-  _resetEntryMetaTags();
-  const entryLd = document.getElementById('entry-jsonld');
-  if (entryLd) entryLd.textContent = '';
-  const detailView = $('detail-image-view');
-  if (detailView) detailView.classList.add('hidden');
-  const appRoot = $('app-root');
-  if (appRoot) appRoot.classList.remove('detail-mode-active');
-  updateStatusBar(archiveData);
-  // Restore grid scroll position
-  const imagePanel = $('image-panel');
-  if (imagePanel && _savedGridScrollTop > 0) {
-    requestAnimationFrame(() => {
-      imagePanel.scrollTop = _savedGridScrollTop;
-    });
-  }
+  withViewTransition(() => {
+    AppState.selectedEntryId = null;
+    updateHash(null);
+    _resetEntryMetaTags();
+    const entryLd = document.getElementById('entry-jsonld');
+    if (entryLd) entryLd.textContent = '';
+    const detailView = $('detail-image-view');
+    if (detailView) detailView.classList.add('hidden');
+    const appRoot = $('app-root');
+    if (appRoot) appRoot.classList.remove('detail-mode-active');
+    updateStatusBar(archiveData);
+    // Restore grid scroll position
+    const imagePanel = $('image-panel');
+    if (imagePanel && _savedGridScrollTop > 0) {
+      requestAnimationFrame(() => {
+        imagePanel.scrollTop = _savedGridScrollTop;
+      });
+    }
+  });
 }
 
 export function navigateEntry(direction, archiveData, callbacks, entryOnly = false) {
@@ -291,6 +295,7 @@ function renderImage(entry, callbacks) {
 
   const imgEl  = $('detail-image');
   const webpEl = $('detail-image-webp');
+  const avifEl = $('detail-image-avif');
   if (imgEl) {
     imgEl.onerror = () => {
       // Detach handler before assigning fallback so a broken
@@ -298,11 +303,13 @@ function renderImage(entry, callbacks) {
       imgEl.onerror = null;
       imgEl.src = BROKEN_ASSET;
       if (webpEl) webpEl.srcset = '';
+      if (avifEl) avifEl.srcset = '';
     };
     imgEl.onload = () => {
       if (callbacks && callbacks.extractAccentColor) callbacks.extractAccentColor(imgEl);
     };
     if (webpEl) webpEl.srcset = resolveImgSrc({ src: webpSrc(currentImgObj) });
+    if (avifEl) avifEl.srcset = resolveImgSrc({ src: avifSrc(currentImgObj) });
     // Apply known dimensions to prevent CLS while the new image loads.
     const dims = imgAttrs(currentImgObj);
     if (dims) {
@@ -650,6 +657,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" aria-label="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}. Open entry">
       <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
         <picture>
+          <source type="image/avif" srcset="${resolveImgSrc({src: avifSrc(thumb)})}">
           <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(thumb)})}">
           <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
         </picture>

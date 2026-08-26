@@ -50,6 +50,7 @@ for (const filePath of files) {
   const sizeBefore = statSync(filePath).size;
   const ext = extname(filePath).toLowerCase();
   const webpPath = filePath.replace(/\.(jpe?g|png)$/i, '.webp');
+  const avifPath = filePath.replace(/\.(jpe?g|png)$/i, '.avif');
   const tmpPath = filePath + '.tmp';
 
   try {
@@ -79,18 +80,26 @@ for (const filePath of files) {
       ? sharp(filePath, { failOn: 'none' }).resize({ width: MAX_WIDTH, withoutEnlargement: true })
       : sharp(filePath, { failOn: 'none' })
     ).webp({ quality: WEBP_QUALITY, effort: 4 }).toFile(webpPath);
+    
+    // Sibling AVIF
+    await (needsResize
+      ? sharp(filePath, { failOn: 'none' }).resize({ width: MAX_WIDTH, withoutEnlargement: true })
+      : sharp(filePath, { failOn: 'none' })
+    ).avif({ quality: WEBP_QUALITY - 5, effort: 4 }).toFile(avifPath);
 
     const finalSize = statSync(filePath).size;
     const webpSize  = statSync(webpPath).size;
+    const avifSize  = statSync(avifPath).size;
     totalBefore += sizeBefore;
     totalAfter  += finalSize;
     optimised++;
 
     const savedPct = Math.round((1 - finalSize / sizeBefore) * 100);
     const webpPct  = Math.round((1 - webpSize / sizeBefore) * 100);
-    console.log(`  ${rel}  ${(sizeBefore/1024).toFixed(0)}K → ${(finalSize/1024).toFixed(0)}K (${savedPct >= 0 ? '-' : '+'}${Math.abs(savedPct)}%) + webp ${(webpSize/1024).toFixed(0)}K (-${webpPct}%)`);
+    const avifPct  = Math.round((1 - avifSize / sizeBefore) * 100);
+    console.log(`  ${rel}  ${(sizeBefore/1024).toFixed(0)}K → ${(finalSize/1024).toFixed(0)}K (${savedPct >= 0 ? '-' : '+'}${Math.abs(savedPct)}%) + webp ${(webpSize/1024).toFixed(0)}K (-${webpPct}%) + avif ${(avifSize/1024).toFixed(0)}K (-${avifPct}%)`);
 
-    manifest[rel] = { mtime: statSync(filePath).mtimeMs, sizeOriginal: sizeBefore, sizeOptimized: finalSize, sizeWebp: webpSize };
+    manifest[rel] = { mtime: statSync(filePath).mtimeMs, sizeOriginal: sizeBefore, sizeOptimized: finalSize, sizeWebp: webpSize, sizeAvif: avifSize };
   } catch (e) {
     console.warn(`  FAIL ${rel}: ${e.message}`);
     if (existsSync(tmpPath)) unlinkSync(tmpPath);

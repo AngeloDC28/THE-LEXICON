@@ -5,7 +5,7 @@
  * window.location.origin, fixing the broken image issue where relative paths
  * resolved incorrectly depending on the current URL.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, avifSrc, BROKEN_ASSET } from './core-utils.js';
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js';
 import { getFilteredEntries } from './search-engine.js';
 import { getTranslation } from './translations.js';
@@ -128,6 +128,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <div class="grid-cell-img group">
             ${hotspotBadge}
             <picture>
+              <source type="image/avif" srcset="${resolveImgSrc({src: avifSrc(imgObj)})}">
               <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(imgObj)})}">
               <img
                 src="${src}"${imgAttrs(imgObj)}
@@ -307,6 +308,7 @@ export function renderFeaturedStrip(archiveData) {
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
     const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
     const webpImg = firstImg ? resolveImgSrc({ src: webpSrc(firstImg) }) : null;
+    const avifImg = firstImg ? resolveImgSrc({ src: avifSrc(firstImg) }) : null;
     const hook = entry.notes?.critique
       ? getTranslation(entry.notes.critique, lang).replace(/<[^>]+>/g, '').slice(0, 120) + '…'
       : (entry.notes?.provenance
@@ -315,6 +317,7 @@ export function renderFeaturedStrip(archiveData) {
 
     const imgHtml = imgSrc
       ? `<picture>
+           <source type="image/avif" srcset="${avifImg}">
            <source type="image/webp" srcset="${webpImg}">
            <img src="${imgSrc}" alt="" loading="lazy" decoding="async">
          </picture>`
