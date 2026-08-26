@@ -1,21 +1,23 @@
 /**
- * THE LEXICON — Service Worker
+ * THE LEXICON — Service Worker v2
  *
  * Strategy:
- *   App shell (HTML/CSS/JS/manifest): cache-first, updated in background
+ *   Navigation requests: network-first (always fresh HTML shell after deploy)
+ *   App shell static (CSS/manifest/favicon): stale-while-revalidate
  *   Entry images (/public/THE-LEXICON-ASSETS/**): stale-while-revalidate
- *   External (Google APIs, Firebase, fonts): network-first, no cache
  *   database.js: network-first, stale-while-revalidate fallback
+ *   JS modules (/js/**): stale-while-revalidate
+ *   External (Google APIs, Firebase, fonts): passthrough (no cache)
  */
 
-const CACHE_NAME   = 'lexicon-v1';
-const IMAGES_CACHE = 'lexicon-images-v1';
+const CACHE_VERSION = 2;
+const CACHE_NAME   = `lexicon-v${CACHE_VERSION}`;
+const IMAGES_CACHE = `lexicon-images-v${CACHE_VERSION}`;
 
 const SHELL = [
   '/',
   '/index.html',
   '/index.css',
-  '/database.js',
   '/favicon.svg',
   '/site.webmanifest',
 ];
@@ -29,7 +31,7 @@ self.addEventListener('install', (e) => {
   );
 });
 
-// ── Activate: prune old caches ───────────────────────────────────────────────
+// ── Activate: prune old caches + notify clients ─────────────────────────────
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then(keys =>
@@ -39,6 +41,12 @@ self.addEventListener('activate', (e) => {
           .map(k => caches.delete(k))
       )
     ).then(() => self.clients.claim())
+     .then(() => {
+       // Notify all open tabs that a new version is active
+       self.clients.matchAll({ type: 'window' }).then(clients => {
+         clients.forEach(client => client.postMessage({ type: 'SW_UPDATED', version: CACHE_VERSION }));
+       });
+     })
   );
 });
 
@@ -47,7 +55,7 @@ self.addEventListener('fetch', (e) => {
   const { request } = e;
   const url = new URL(request.url);
 
-  // Only handle same-origin and the assets origin
+  // Only handle same-origin
   if (url.origin !== self.location.origin) return;
 
   // Entry images: stale-while-revalidate
@@ -62,32 +70,47 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // App shell routes (navigation + static files): cache-first
-  if (request.mode === 'navigate' || SHELL.some(p => url.pathname === p)) {
-    e.respondWith(cacheFirst(request, CACHE_NAME));
+  // Navigation requests: network-first with SPA fallback
+  // This ensures users always get the latest HTML shell after deploy,
+  // and deep links (/entry/slug) work offline by falling back to cached /index.html
+  if (request.mode === 'navigate') {
+    e.respondWith(navigationHandler(request));
     return;
   }
 
-  // JS modules: cache-first
+  // Static shell files: stale-while-revalidate
+  if (SHELL.some(p => url.pathname === p)) {
+    e.respondWith(staleWhileRevalidate(request, CACHE_NAME));
+    return;
+  }
+
+  // JS modules: stale-while-revalidate (not cache-first)
   if (url.pathname.startsWith('/js/')) {
-    e.respondWith(cacheFirst(request, CACHE_NAME));
+    e.respondWith(staleWhileRevalidate(request, CACHE_NAME));
     return;
   }
 });
 
 // ── Strategies ───────────────────────────────────────────────────────────────
 
-async function cacheFirst(request, cacheName) {
-  const cache  = await caches.open(cacheName);
-  const cached = await cache.match(request);
-  if (cached) {
-    // Background refresh
-    fetch(request).then(r => { if (r.ok) cache.put(request, r); }).catch(() => {});
-    return cached;
+/**
+ * Navigation handler: network-first with SPA fallback.
+ * - Try network first (always get latest HTML after deploy)
+ * - If network fails, fall back to cached version of the exact URL
+ * - If that misses too, fall back to cached /index.html (SPA shell)
+ */
+async function navigationHandler(request) {
+  const cache = await caches.open(CACHE_NAME);
+  try {
+    const response = await fetch(request);
+    if (response.ok) cache.put(request, response.clone());
+    return response;
+  } catch {
+    // Offline: try exact URL first, then fall back to app shell
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    return cache.match('/index.html');
   }
-  const response = await fetch(request);
-  if (response.ok) cache.put(request, response.clone());
-  return response;
 }
 
 async function networkFirst(request, cacheName) {
