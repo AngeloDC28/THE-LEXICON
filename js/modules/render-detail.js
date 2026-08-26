@@ -2,12 +2,12 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, avifSrc, BROKEN_ASSET, withViewTransition } from './core-utils.js';
-import { AppState, updateHash } from './core-state.js';
-import { getFilteredEntries } from './search-engine.js';
-import { getTranslation } from './translations.js';
-import { getTagCategory } from './render-index-view.js';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=715e5c2';
+import { AppState, updateHash } from './core-state.js?v=715e5c2';
+import { getFilteredEntries } from './search-engine.js?v=715e5c2';
+import { getTranslation } from './translations.js?v=715e5c2';
+import { getTagCategory } from './render-index-view.js?v=715e5c2';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=715e5c2';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -295,7 +295,6 @@ function renderImage(entry, callbacks) {
 
   const imgEl  = $('detail-image');
   const webpEl = $('detail-image-webp');
-  const avifEl = $('detail-image-avif');
   if (imgEl) {
     imgEl.onerror = () => {
       // Detach handler before assigning fallback so a broken
@@ -303,13 +302,11 @@ function renderImage(entry, callbacks) {
       imgEl.onerror = null;
       imgEl.src = BROKEN_ASSET;
       if (webpEl) webpEl.srcset = '';
-      if (avifEl) avifEl.srcset = '';
     };
     imgEl.onload = () => {
       if (callbacks && callbacks.extractAccentColor) callbacks.extractAccentColor(imgEl);
     };
     if (webpEl) webpEl.srcset = resolveImgSrc({ src: webpSrc(currentImgObj) });
-    if (avifEl) avifEl.srcset = resolveImgSrc({ src: avifSrc(currentImgObj) });
     // Apply known dimensions to prevent CLS while the new image loads.
     const dims = imgAttrs(currentImgObj);
     if (dims) {
@@ -657,7 +654,6 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" aria-label="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}. Open entry">
       <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
         <picture>
-          <source type="image/avif" srcset="${resolveImgSrc({src: avifSrc(thumb)})}">
           <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(thumb)})}">
           <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
         </picture>

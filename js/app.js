@@ -10,26 +10,26 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js';
+import { imageDimensions } from './modules/image-dimensions.js?v=715e5c2';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js?v=715e5c2';
 setImageDimensions(imageDimensions);
-import { AppState, updateHash, emptyFilters } from './modules/core-state.js';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js';
+import { AppState, updateHash, emptyFilters } from './modules/core-state.js?v=715e5c2';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=715e5c2';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=715e5c2';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=715e5c2';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=715e5c2';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js';
-import { getTranslation, supportedLanguages } from './modules/translations.js';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory } from './modules/render-index-view.js';
-import { renderGlossaryModal } from './modules/glossary.js';
+import { switchView } from './modules/navigation.js?v=715e5c2';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=715e5c2';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=715e5c2';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=715e5c2';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=715e5c2';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=715e5c2';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=715e5c2';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=715e5c2';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=715e5c2';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory } from './modules/render-index-view.js?v=715e5c2';
+import { renderGlossaryModal } from './modules/glossary.js?v=715e5c2';
 
 // --- Shared Callbacks ---
 const callbacks = {
@@ -67,7 +67,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=80b48f3');
+  const { archiveData: staticData } = await import('../database.js?v=715e5c2');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }

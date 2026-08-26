@@ -3,10 +3,10 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, imgAttrs, webpSrc, avifSrc, BROKEN_ASSET } from './core-utils.js';
-import { AppState } from './core-state.js';
-import { getTranslation } from './translations.js';
-import { invalidateSearchCache } from './search-engine.js';
+import { $, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
+import { AppState } from './core-state.js?v=715e5c2';
+import { getTranslation } from './translations.js?v=715e5c2';
+import { invalidateSearchCache } from './search-engine.js?v=715e5c2';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');
@@ -50,7 +50,6 @@ export function renderTimeline(archiveData, callbacks) {
                  aria-label="${getTranslation(e.tags.brand, AppState.language)} ${e.year} — ${getTranslation(e.title, AppState.language)}"
                  data-delay="${Math.min(i * 0.1, 1.5)}">
               <picture>
-                <source type="image/avif" srcset="${resolveImgSrc({src: avifSrc(e.images && e.images[0])})}">
                 <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(e.images && e.images[0])})}">
                 <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
                      alt="${getTranslation(e.tags.brand, AppState.language)} ${e.year}"

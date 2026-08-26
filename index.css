@@ -481,6 +481,19 @@ html.dark .text-white\/40:not([aria-hidden="true"]):not([role="presentation"]) {
 
 /* Detail image: hint that click opens lightbox */
 #detail-image { cursor: zoom-in; }
+.detail-image-noptr { pointer-events: none; }
+
+/* Landing-page sections start hidden and are revealed by app.js
+   (el.style.display = ...) once orientation-panel state is known.
+   Plain rule (no !important) so that JS's inline style, which the
+   cascade always ranks above a stylesheet rule, can override it. */
+#axes-browse, #entry-of-week, #featured-strip-head,
+#how-it-works, #nexus-teaser, #who-section {
+  display: none;
+}
+#taxonomy-sub { max-height: 280px; }
+.mobile-hotspot-sheet-inner { max-height: 58vh; }
+.mobile-detail-actions-safe { padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)); }
 #detail-image-wrapper::after {
   content: '⤢ CLICK TO ZOOM';
   position: absolute;

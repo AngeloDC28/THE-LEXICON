@@ -3,7 +3,7 @@
  * Logic for the telemetry system and typewriter effect.
  */
 
-import { $ } from './core-utils.js';
+import { $ } from './core-utils.js?v=715e5c2';
 
 export const telemetryLogs = [
   'INITIALIZING ARCHIVE_v7.2.5...',

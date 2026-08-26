@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/js/boot.js"></script>
+  <script src="/js/boot.js?v=715e5c2"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>THE LEXICON — fashion history, indexed analytically</title>
@@ -78,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="/index.css?v=80b48f3" />
+  <link rel="stylesheet" href="/index.css?v=715e5c2" />
 </head>
 
 <body>
@@ -292,7 +292,6 @@
           <div
             id="taxonomy-sub"
             class="hidden border-b-[1px] border-black/80 dark:border-white/20 p-3 overflow-y-auto bg-bone dark:bg-darkBase"
-            style="max-height: 280px;"
             role="navigation"
             aria-label="Filter by value"
           >
@@ -397,8 +396,8 @@
             </div>
           </section>
           <!-- Browse by analytical axis (second door — enter by lens, not designer) -->
-          <div id="axes-browse" class="axes-browse" style="display:none;">
-            <div class="sec-head" style="display:flex;">
+          <div id="axes-browse" class="axes-browse">
+            <div class="sec-head">
               <div>
                 <div class="sec-eye">// ENTER BY ANALYTICAL LENS</div>
                 <div class="sec-title">Browse by analytical axis</div>
@@ -408,8 +407,8 @@
           </div>
 
           <!-- Entry of the Week (rotating spotlight — return-visit novelty) -->
-          <div id="entry-of-week" class="eow-section" style="display:none;">
-            <div class="sec-head" style="display:flex;">
+          <div id="entry-of-week" class="eow-section">
+            <div class="sec-head">
               <div>
                 <div class="sec-eye">// ROTATING SPOTLIGHT</div>
                 <div class="sec-title">Entry of the week</div>
@@ -429,7 +428,7 @@
 
           <!-- Featured Strip (Phase 1 — dynamically populated from archive) -->
           <!-- Featured strip section header -->
-          <div class="sec-head" id="featured-strip-head" style="display:none;">
+          <div class="sec-head" id="featured-strip-head">
             <div>
               <div class="sec-eye">// INDEXED BY ANALYTICAL CATEGORY</div>
               <div class="sec-title">Featured entries</div>
@@ -439,8 +438,8 @@
           <div id="featured-strip" class="feat-strip mb-1 hidden"></div>
 
           <!-- How It Works (shown below featured strip when orientation is visible) -->
-          <div id="how-it-works" class="how-section" style="display:none;">
-            <div class="sec-head" style="display:flex;">
+          <div id="how-it-works" class="how-section">
+            <div class="sec-head">
               <div>
                 <div class="sec-eye">// METHOD</div>
                 <div class="sec-title">How The Lexicon works</div>
@@ -469,8 +468,8 @@
           </div>
 
           <!-- Nexus teaser (preview of the connection graph) -->
-          <div id="nexus-teaser" class="nexus-teaser-section" style="display:none;">
-            <div class="sec-head" style="display:flex;">
+          <div id="nexus-teaser" class="nexus-teaser-section">
+            <div class="sec-head">
               <div>
                 <div class="sec-eye">// THE NEXUS</div>
                 <div class="sec-title">Every entry is connected.</div>
@@ -486,7 +485,7 @@
           </div>
 
           <!-- Who It's For (shown with hero on first visit) -->
-          <div id="who-section" class="who-section" style="display:none;">
+          <div id="who-section" class="who-section">
             <div class="who-inner">
               <div class="who-head">
                 <div class="who-title">For people who take<br>fashion seriously.</div>
@@ -613,9 +612,8 @@
                 <div id="scan-line" class="hidden absolute left-0 right-0 h-[2px] bg-acid shadow-[0_0_15px_#CCFF00] z-[5] pointer-events-none"></div>
                 <div id="accent-glow" class="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen z-[1]"></div>
                 <picture>
-                  <source id="detail-image-avif" type="image/avif" srcset="" />
                   <source id="detail-image-webp" type="image/webp" srcset="" />
-                  <img id="detail-image" class="relative z-10" style="pointer-events:none" src="" alt="" fetchpriority="high" decoding="async" />
+                  <img id="detail-image" class="relative z-10 detail-image-noptr" src="" alt="" fetchpriority="high" decoding="async" />
                 </picture>
                 
                 <!-- Floating Analytical Payload -->
@@ -705,7 +703,7 @@
 
           <!-- Mobile Hotspot Sheet — slides up above the action bar -->
           <div id="mobile-hotspot-sheet" class="lg:hidden fixed bottom-0 left-0 w-full z-[210]" aria-hidden="true" role="region" aria-label="Annotation details">
-            <div class="bg-black border-t-[3px] border-acid flex flex-col" style="max-height:58vh">
+            <div class="bg-black border-t-[3px] border-acid flex flex-col mobile-hotspot-sheet-inner">
               <div class="flex items-center justify-between px-4 py-3 border-b border-white/15 shrink-0">
                 <span id="mobile-hotspot-sheet-label" class="t-mono-xs font-bold font-mono uppercase tracking-[0.25em] text-acid"></span>
                 <button type="button" id="btn-close-hotspot-sheet" aria-label="Close annotation" class="text-white text-sm font-bold opacity-60 hover:opacity-100 focus-ring min-h-[44px] min-w-[44px] flex items-center justify-center">✕</button>
@@ -714,7 +712,7 @@
             </div>
           </div>
 
-          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200]" style="padding-bottom:calc(0.5rem + env(safe-area-inset-bottom));">
+          <div id="mobile-detail-actions" class="lg:hidden fixed bottom-0 left-0 w-full bg-black border-t border-white/20 px-2 py-2 grid grid-cols-5 gap-1 z-[200] mobile-detail-actions-safe">
             <button type="button" id="btn-back-grid-mobile" aria-label="Back to archive" class="flex flex-col items-center justify-center gap-0.5 border border-white/20 text-white py-2 text-[8px] font-bold uppercase tracking-wider min-h-[48px] focus-ring">
               <span class="t-body leading-none">‹</span><span class="btn-label-mobile">Back</span>
             </button>
@@ -1077,7 +1075,7 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="/js/app.js?v=80b48f3"></script>
+    <script type="module" src="/js/app.js?v=715e5c2"></script>
 
   </div>
 

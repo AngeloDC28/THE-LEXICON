@@ -8,12 +8,28 @@ export const $ = (id) => document.getElementById(id);
 export const $$ = (s) => document.querySelectorAll(s);
 export const pad = (num) => (num < 10 ? '0' + num : num);
 
+// Tracks whether a transition is currently in flight. Two callers can
+// legitimately fire back-to-back in the same tick (e.g. a cold-boot deep
+// link does switchView('grid') immediately followed by openDetail(), both
+// wrapped in withViewTransition) — calling startViewTransition() again
+// before the first one settles throws InvalidStateError in Chrome, even
+// after skipTransition(), because the skip itself isn't synchronous. So
+// rather than racing a skip against a restart, a transition already in
+// flight just makes this call a plain, unanimated DOM update.
+let _transitionInFlight = false;
+
 export function withViewTransition(updateDOM) {
-  if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if (!document.startViewTransition || _transitionInFlight || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     updateDOM();
     return;
   }
-  document.startViewTransition(() => updateDOM());
+  try {
+    const transition = document.startViewTransition(() => updateDOM());
+    _transitionInFlight = true;
+    transition.finished.catch(() => {}).finally(() => { _transitionInFlight = false; });
+  } catch (e) {
+    updateDOM();
+  }
 }
 
 // Valid fallback SVG — dark panel with centered ERROR_404 text
@@ -101,12 +117,6 @@ export function webpSrc(srcOrObj) {
   const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
   if (!src) return '';
   return src.replace(/\.(jpe?g|png)$/i, '.webp');
-}
-
-export function avifSrc(srcOrObj) {
-  const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
-  if (!src) return '';
-  return src.replace(/\.(jpe?g|png)$/i, '.avif');
 }
 
 export function debounce(func, wait) {

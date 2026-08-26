@@ -10,10 +10,10 @@
  * Keyboard-navigable (j/k for rows, Enter to open, /, ?, V, I).
  * Toggle persists in localStorage as 'lexicon.view-mode' (visual | index).
  */
-import { $, pad, withViewTransition } from './core-utils.js';
-import { AppState } from './core-state.js';
-import { getFilteredEntries } from './search-engine.js';
-import { getTranslation } from './translations.js';
+import { $, pad, withViewTransition } from './core-utils.js?v=715e5c2';
+import { AppState } from './core-state.js?v=715e5c2';
+import { getFilteredEntries } from './search-engine.js?v=715e5c2';
+import { getTranslation } from './translations.js?v=715e5c2';
 
 // Map politics tag text → color category in the analytical tag palette.
 // Falls back to 'provenance' if no match.
