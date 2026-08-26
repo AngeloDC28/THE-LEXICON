@@ -37,8 +37,8 @@ let totalTouched = 0;
 // makes the browser fetch fresh app.js + index.css after a deploy.
 const html = readFileSync(HTML, 'utf8');
 const htmlPatterns = [
-  [/(\bsrc=")(js\/app\.js)(\?v=[^"]*)?(")/g,            `$1$2?v=${version}$4`],
-  [/(\brel="stylesheet"\s+href=")(index\.css)(\?v=[^"]*)?(")/g, `$1$2?v=${version}$4`],
+  [/(\bsrc=")(\/js\/app\.js)(\?v=[^"]*)?(")/g,            `$1$2?v=${version}$4`],
+  [/(\brel="stylesheet"\s+href=")(\/index\.css)(\?v=[^"]*)?(")/g, `$1$2?v=${version}$4`],
 ];
 let nextHtml = html;
 for (const [re, rep] of htmlPatterns) {
