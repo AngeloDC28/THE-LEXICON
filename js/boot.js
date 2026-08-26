@@ -15,10 +15,18 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
 
 // 2. Per-entry SEO bootstrapping
 (function() {
-  var m = window.location.pathname.match(/^\/entry\/([^/]+)/);
+  var m = window.location.pathname.match(/^\/entry\/([^/]+)(?:\/(\d+))?/);
   if (!m) return;
   var slug = m[1];
-  var url = 'https://thelexicon.xyz/entry/' + slug + '/0';
+  var imgIdx = m[2] || '0';
+  // Canonical URL always includes the image index for consistency
+  var url = 'https://thelexicon.xyz/entry/' + slug + '/' + imgIdx;
+
+  // Normalize URL: /entry/slug → /entry/slug/0 via replaceState
+  if (!m[2]) {
+    try { history.replaceState(null, '', '/entry/' + slug + '/0'); } catch(e) {}
+  }
+
   var parts = slug.split('-');
   var seasonRe = /^(ss|aw|fw|pre|cruise|resort)(\d+)$/i;
   var last = parts[parts.length - 1];
@@ -49,6 +57,9 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
   set('meta[name="description"]',        'content', desc);
   set('meta[name="twitter:title"]',      'content', title);
   set('meta[name="twitter:description"]','content', desc);
+
+  // Signal to app.js that this is an entry deep-link boot
+  window.__LEXICON_BOOT_ENTRY__ = { slug: slug, idx: parseInt(imgIdx, 10) };
 })();
 
 // 3. Dark/light mode FOUC prevention

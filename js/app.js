@@ -111,19 +111,43 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Initial State — folders are populated by auth hydration; start empty (not a Promise)
   AppState.archivalFolders = [];
 
-  // Systems
-  initCustomCursor();
+  // Systems — gate cursor on pointer devices only (skip on mobile/touch)
+  if (window.matchMedia('(pointer: fine)').matches) {
+    initCustomCursor();
+  }
   initHeaderTypewriter(archiveData);
-  // Pass archiveData to hotspots so it doesn't need to import database.js itself
-  initHotspotInteractions(archiveData);
+  // Hotspot interactions are deferred until first detail view open (Phase 3 perf trim)
+  let _hotspotsInitialized = false;
+  document.addEventListener('lexicon-detail-opened', () => {
+    if (!_hotspotsInitialized) {
+      initHotspotInteractions(archiveData);
+      _hotspotsInitialized = true;
+    }
+  }, { once: true });
   initAuth(callbacks);
 
   // Phase 1/2: Restore view mode preference (visual | index) from localStorage
   applyViewMode(getViewMode());
 
-  // Listeners
-  // setupEventListeners() already called at top of DOMContentLoaded (FIX-5)
-  handleRouting();
+  // Replay pending entry route now that data is loaded (fixes direct-link cold boot)
+  if (_pendingEntryRoute) {
+    const { id, idx } = _pendingEntryRoute;
+    _pendingEntryRoute = null;
+    const entry = archiveData.find(e => e.id === id);
+    if (entry) {
+      switchView('grid', callbacks);
+      openDetail(id, idx, archiveData, callbacks);
+    } else {
+      switchView('grid', callbacks);
+      showToast(getTranslation('entry_not_found', AppState.language) || 'Entry not found — returning to archive');
+    }
+  } else {
+    // Only run full routing if no pending entry was replayed
+    handleRouting();
+  }
+
+  // Detect if we're in an entry deep-link boot — skip heavy landing renders
+  const _isEntryDeepLink = !!AppState.selectedEntryId || !!window.__LEXICON_BOOT_ENTRY__;
 
   // Orientation Panel Logic — run BEFORE renderHero so the hero only reveals
   // sections that should be visible on this visit. Eliminates the flash of
@@ -154,13 +178,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     $('featured-strip')?.classList.add('hidden');
   }
 
-  // Initial Render
-  refreshUI();
-  renderHero(archiveData);
+  // Initial Render — for entry deep links, skip the full grid/taxonomy render
+  // since the detail view is the target. Defer grid rendering to idle time.
+  if (_isEntryDeepLink) {
+    // Chrome/taxonomy/status bar only — the detail view is already open
+    refreshChrome();
+    updateStatusBar(archiveData);
+  } else {
+    refreshUI();
+    renderHero(archiveData);
+  }
   syncMobileSheetChips();
 
   // Welcome Modal — shown on first visit only
-  initWelcomeModal();
+  // Use requestIdleCallback for i18n setup since it has a 50ms focus delay anyway
+  if (typeof requestIdleCallback === 'function') {
+    requestIdleCallback(() => initWelcomeModal());
+  } else {
+    initWelcomeModal();
+  }
 
   // Restore DOM translation if a non-English language was saved
   if (AppState.language && AppState.language !== 'en') {
@@ -177,15 +213,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Boot overlay is already hidden by inline script — nothing to do here
   $('boot-overlay')?.classList.add('hidden');
 
-  // Safety re-render: async ops (auth hydration, etc.) may run callbacks
-  // that clear state. If the grid is still empty 250ms after boot, force
-  // a render. This is a belt-and-suspenders guard, not the primary path.
-  setTimeout(() => {
-    const grid = $('image-grid');
-    if (grid && grid.children.length === 0 && archiveData.length > 0) {
-      refreshContent();
-    }
-  }, 250);
+  // Deferred grid render: if we entered via a deep link, render the grid
+  // in the background so it's ready when the user closes the entry view.
+  if (_isEntryDeepLink) {
+    requestAnimationFrame(() => {
+      refreshUI();
+      if (!dismissed) renderHero(archiveData);
+    });
+  }
     } catch(e) { console.error('LEXICON_BOOT_ERROR:', e); }
 });
 
@@ -193,6 +228,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+  // Listen for version update notifications from sw.js
+  navigator.serviceWorker.addEventListener('message', (e) => {
+    if (e.data?.type === 'SW_UPDATED') {
+      console.log(`[LEXICON] Service worker updated to v${e.data.version}`);
+      showToast('New version available — reload for the latest update');
+    }
   });
 }
 
@@ -762,6 +804,10 @@ export function syncHashFromState() {
   setTimeout(() => { _suppressHashSync = false; }, 0);
 }
 
+// Pending route: set when handleRouting() runs before archiveData is loaded.
+// Replayed by DOMContentLoaded after loadArchiveData() resolves.
+let _pendingEntryRoute = null;
+
 function handleRouting() {
   if (_suppressHashSync) return;
 
@@ -786,16 +832,26 @@ function handleRouting() {
   if (entryMatch) {
     const id  = entryMatch[1];
     const idx = entryMatch[2] ? parseInt(entryMatch[2]) : 0;
+
+    // Normalize: /entry/slug → /entry/slug/0 (canonical form)
+    if (!entryMatch[2]) {
+      history.replaceState(null, '', `/entry/${id}/0`);
+    }
+
     const entry = archiveData.find(e => e.id === id);
     if (entry) {
+      _pendingEntryRoute = null;
       switchView('grid', callbacks);
       openDetail(id, idx, archiveData, callbacks);
     } else if (archiveData.length > 0) {
       // Data is loaded but slug doesn't exist — genuine 404
+      _pendingEntryRoute = null;
       switchView('grid', callbacks);
       showToast(getTranslation('entry_not_found', AppState.language) || 'Entry not found — returning to archive');
+    } else {
+      // archiveData not yet loaded — store pending route for replay after load
+      _pendingEntryRoute = { id, idx };
     }
-    // If archiveData is still empty, the safety re-render will handle it
     return;
   }
 
