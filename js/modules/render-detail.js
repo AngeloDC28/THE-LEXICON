@@ -749,14 +749,24 @@ function hidePayload() {
   payload.classList.add('hidden');
 }
 
+// Track in-flight preloads so rapid navigation can cancel them
+let _preloadAbort = null;
+
 function preloadAdjacentImages(entry) {
+  // Cancel any in-flight preloads from previous navigation
+  if (_preloadAbort) _preloadAbort.abort();
+  _preloadAbort = new AbortController();
+
   const imgs = entry.images;
   const idx = AppState.currentImageIndex;
   [-1, 1].forEach(offset => {
     const adj = imgs[idx + offset];
     if (adj) {
+      // Preload WebP (what <picture> will actually request) instead of JPEG
+      const webpUrl = resolveImgSrc({ src: webpSrc(adj) });
+      const jpegUrl = resolveImgSrc(adj);
       const img = new Image();
-      img.src = resolveImgSrc(adj);
+      img.src = webpUrl || jpegUrl;
     }
   });
 }
