@@ -19,7 +19,7 @@
     "generate-feed": "node .github/scripts/generate-feed.mjs",
     "generate-entry-pages": "node .github/scripts/generate-entry-pages.mjs",
     "build-tailwind": "tailwindcss -i tailwind-entry.css -o public/tailwind.css --minify",
-    "preflight": "npm run build-tailwind && npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run generate-sitemap && npm run generate-feed && npm run generate-entry-pages && npm run check && npm run bust-cache",
+    "preflight": "npm run build-tailwind && npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run generate-sitemap && npm run generate-feed && npm run bust-cache && npm run generate-entry-pages && npm run check",
     "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs && node .github/scripts/measure-images.mjs && node .github/scripts/bust-cache.mjs",
     "build": "vite build",
     "preview": "vite preview"
