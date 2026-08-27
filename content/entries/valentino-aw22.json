@@ -2,7 +2,7 @@
   "$schema": "../entry.schema.json",
   "id": "valentino-aw22",
   "title": "Valentino AW 2022",
-  "subtitle": "The Beginning",
+  "subtitle": "Pink PP",
   "year": 2022,
   "season": "AW",
   "images": [
@@ -107,16 +107,16 @@
           "description": "The sequin-paved overcoat drops heavily to the ankle in a rigid column of intense pink reflections; it is completely covered in dense metallic embellishments. This material strategy engages with monolithic massing by transforming a classic topcoat into a solid shimmering monolith. The heavy fabric hangs stiffly over the shoulders; classic flap pockets sit at the hips. The outerwear asserts an aggressive highly visible armor that dominates the entire ensemble."
         },
         {
-          "x": 50,
-          "y": 30,
-          "label": "Sheer Tulle Underlayer",
-          "description": "The sheer tulle underlayer clings tightly to the chest in a dark translucent mesh; it exposes the torso entirely beneath the heavy coat. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the brilliant pink outerwear. The thin fabric features a simple scoop neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming glitter of the coat."
+          "x": 62,
+          "y": 50,
+          "label": "Faceted Pink Chain Clutch",
+          "description": "A small faceted clutch swings from a slender chain looped through the model's gloved fingers, its geometric stone-cut clasp catching the light in a single hard reflective point. This accessory engages with textural topography by introducing a sculptural, jewel-like surface into the coat's softer, all-over sequin glitter. The bag holds the same saturated pink lacquer as the garment, so the color reads as continuous rather than accessorized; the fine metal chain is the only visible hardware on the entire look. The piece completes the ensemble by anchoring its maximalist embellishment with one small, disciplined point of structure."
         },
         {
           "x": 50,
-          "y": 65,
+          "y": 68,
           "label": "Opaque Pink Tights",
-          "description": "The opaque pink tights encase the legs entirely in a matte spandex; they provide a bright continuous color block beneath the coat. This styling detail engages with radical monochromatism by ensuring absolutely no bare skin interrupts the saturated silhouette. The smooth fabric absorbs the light; it stretches tightly over the knee. The accessory completes the look by fusing the legs seamlessly with the extreme platform footwear."
+          "description": "The opaque pink tights encase the legs entirely in a matte spandex; they provide a bright continuous color block beneath the coat. This styling detail engages with radical monochromatism by ensuring absolutely no bare skin interrupts the saturated silhouette. The smooth fabric absorbs the light; it stretches tightly over the knee, visible through the coat's front slit. The accessory completes the look by fusing the legs seamlessly with the extreme platform footwear."
         }
       ]
     },
@@ -125,15 +125,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Deconstructed Shirt Dress",
-          "description": "The deconstructed shirt dress slices a classic black button-down into multiple erratic layers; it features massive structural cutouts that expose the waist and ribs. This structural intervention engages with sartorial collage by treating a mundane wardrobe staple as a mutable piece of avant-garde architecture. The crisp cotton holds sharp unnatural shapes; the sleeves extend significantly past the hands. The garment asserts an aesthetic of calculated failure and severe geometric tension."
+          "y": 38,
+          "label": "High-Neck Column Gown",
+          "description": "The high-neck column gown rises into a structured funnel collar before dropping in a single unbroken sheath to the floor; the saturated pink crepe holds a stiff, architectural line with none of the era's typical bias-cut fluidity. This structural choice engages with monolithic massing by reducing the body to a continuous vertical plane uninterrupted by seaming or waist definition. The fabric's matte surface absorbs the runway's magenta light rather than reflecting it; the long fitted sleeves taper cleanly to the wrist. The dress asserts a severe, almost monastic formality within the collection's maximalist palette."
         },
         {
-          "x": 50,
-          "y": 70,
-          "label": "Flowing Poplin Skirt",
-          "description": "The flowing poplin skirt drops from the waist into a wide sweeping volume; it drags heavily across the bright pink runway floor. This material application provides a heavy formal base that anchors the chaotic cutouts of the bodice. The dark fabric absorbs the clinical lighting completely; the hem is uneven and slightly jagged. The skirt completes the silhouette by extending the dark weight of the dress into the physical space surrounding the body."
+          "x": 38,
+          "y": 58,
+          "label": "Cascading Grosgrain Bows",
+          "description": "A vertical row of small bows descends the side seam from underarm to hip, the only ornamental interruption on an otherwise rigorously plain garment. This detail engages with sartorial collage by quoting the decorative vocabulary of couture finishing — hand-tied bows historically used to close a placket — and repeating it as pure surface pattern with no structural function. The bows are cut from the same intense pink as the gown, so the embellishment reads as tonal rather than contrasting; each sits slightly irregularly spaced from the next. The detail asserts a quiet, handcrafted counterpoint to the gown's severe silhouette."
         }
       ]
     },
@@ -142,15 +142,21 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Embellished Sheer Blouse",
-          "description": "The embellished sheer blouse clings to the upper body in a translucent dark mesh; it is heavily detailed with intricate black beadwork and sequins arranged in ornate floral patterns. This material strategy utilizes post-digital reality by creating a highly tactile three-dimensional surface that contrasts fiercely with the solid colors of the runway. The sheer fabric exposes the chest completely; the long sleeves end in subtle ruffled cuffs. The top asserts a romantic but highly exposed aesthetic."
+          "y": 40,
+          "label": "High-Gloss Sequined Coat",
+          "description": "The high-gloss sequined coat structures the upper body in a stiff heavy volume; it is constructed entirely from large black reflective paillettes that mimic shattered glass. This material choice engages with textural topography by forcing a wet-look synthetic shine onto a classic outerwear silhouette. The coat hangs rigidly over the shoulders; the dark fabric absorbs and fractures the bright pink runway light. The outerwear asserts an aggressive slightly hostile armor."
+        },
+        {
+          "x": 32,
+          "y": 32,
+          "label": "Trailing Chiffon Scarf",
+          "description": "The trailing chiffon scarf is tied loosely at the neck; it drops a sheer black ribbon down the front of the coat to contrast with the rigid sequins. This styling detail utilizes bodily obfuscation by introducing a delicate fragile element into the heavy ensemble. The translucent fabric flutters with movement; it blends into the dark shadows of the coat. The accessory asserts a subtle romantic tension."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Tailored High-Waisted Trousers",
-          "description": "The tailored high-waisted trousers drop cleanly from the waist in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex sheer top with a heavy formal base. The fabric falls cleanly over dark sneakers; the waist is finished without a belt to maintain a continuous line. The trousers complete the look by enforcing a strict tailored discipline."
+          "y": 68,
+          "label": "Opaque Black Tights",
+          "description": "The opaque black tights encase the legs entirely in a matte spandex; they provide a dark continuous color block beneath the heavy coat. This styling detail engages with monolithic massing by ensuring the lower body remains an unbroken visual void. The smooth fabric absorbs the light; it stretches tightly into the high platform boots. The accessory completes the look by enforcing a severe monochromatic discipline."
         }
       ]
     },
@@ -159,15 +165,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Voluminous Sequin Tunic Dress",
-          "description": "The voluminous sequin tunic dress envelops the torso in a massive slouched volume; it is completely paved in dense metallic pink embellishments. This material strategy engages with corporeal amplification by replacing the natural body shape with a heavy glittering carapace. The stiff fabric features three-dimensional floral appliques clustered over the shoulders and chest; the long sleeves obscure the hands entirely. The garment asserts a highly theatrical and slightly oppressive interpretation of luxury."
+          "y": 42,
+          "label": "Oversized Double-Breasted Topcoat",
+          "description": "The oversized double-breasted topcoat engulfs the body in a massive structured black wool shell; it features dramatically dropped, winged shoulders and an extended hem. This outerwear choice applies corporeal amplification by taking a classic menswear staple and mutating it into an imposing architectural volume. The stiff fabric holds a sharp rigid shape; the lapels fold deeply open over the chest. The coat asserts a defensive and highly armored urban presence."
         },
         {
           "x": 50,
-          "y": 65,
-          "label": "Opaque Pink Tights",
-          "description": "The opaque pink tights encase the legs entirely in a matte spandex; they provide a bright continuous color block beneath the heavy tunic. This styling detail engages with radical monochromatism by ensuring absolutely no bare skin interrupts the saturated silhouette. The smooth fabric absorbs the light; it stretches tightly over the knee. The accessory completes the look by fusing the legs seamlessly with the extreme platform footwear."
+          "y": 28,
+          "label": "Sheer Tulle Shirting",
+          "description": "The sheer tulle shirting clings to the chest in a translucent mesh, visible through the coat's open lapels; it exposes the torso beneath the heavy outerwear. This material choice utilizes bodily obfuscation by turning the skin into a shadowed plane against the solid black wool. The thin fabric features a simple round neckline; a fine chain necklace rests against it. The top asserts a quiet and vulnerable contrast to the overwhelming outerwear."
         }
       ]
     },
@@ -176,72 +182,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Draped Chiffon Gown",
-          "description": "The draped chiffon gown cascades over the body in a massive fluid volume of intense pink silk; it features an aggressively plunging neckline that exposes the chest entirely. This structural extreme applies the elevation of the individual by framing the bare skin within dramatic sweeping architecture. The lightweight fabric falls into deep soft pleats that pool around the feet; the off-the-shoulder drape leaves the arms completely unencumbered. The dress asserts an elegant but deeply vulnerable presence."
-        },
-        {
-          "x": 35,
-          "y": 40,
-          "label": "Opaque Opera Gloves",
-          "description": "The opaque opera gloves encase the arms entirely past the elbow in a matte pink spandex; they provide a stark textural contrast to the fluid chiffon gown. This styling choice utilizes the semiotic sabotage of gendered color codes by pushing a traditionally elegant accessory to an absurdly saturated limit. The smooth fabric absorbs light completely; it creates a strict unbroken line down the arm. The accessory completes the look by injecting a tight athletic texture into the romantic silhouette."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-11.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 40,
-          "label": "High-Gloss Sequined Coat",
-          "description": "The high-gloss sequined coat structures the upper body in a stiff heavy volume; it is constructed entirely from large black reflective paillettes that mimic shattered glass. This material choice engages with textural topography by forcing a wet-look synthetic shine onto a classic outerwear silhouette. The coat hangs rigidly over the shoulders; the dark fabric absorbs and fractures the bright pink runway light. The outerwear asserts an aggressive slightly hostile armor."
-        },
-        {
-          "x": 40,
-          "y": 30,
-          "label": "Trailing Chiffon Scarf",
-          "description": "The trailing chiffon scarf is tied loosely at the neck; it drops a sheer black ribbon down the front of the coat to contrast with the rigid sequins. This styling detail utilizes bodily obfuscation by introducing a delicate fragile element into the heavy ensemble. The translucent fabric flutters with movement; it blends into the dark shadows of the coat. The accessory asserts a subtle romantic tension."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Opaque Black Tights",
-          "description": "The opaque black tights encase the legs entirely in a matte spandex; they provide a dark continuous color block beneath the heavy coat. This styling detail engages with monolithic massing by ensuring the lower body remains an unbroken visual void. The smooth fabric absorbs the light; it stretches tightly into the high platform boots. The accessory completes the look by enforcing a severe monochromatic discipline."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-12.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Oversized Double-Breasted Topcoat",
-          "description": "The oversized double-breasted topcoat engulfs the body in a massive structured black wool shell; it features dramatically dropped shoulders and an extended hem. This outerwear choice applies corporeal amplification by taking a classic menswear staple and mutating it into an imposing architectural volume. The stiff fabric holds a sharp rigid shape; the lapels fold deeply over the chest. The coat asserts a defensive and highly armored urban presence."
-        },
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Sheer Tulle Shirting",
-          "description": "The sheer tulle shirting clings tightly to the chest in a dark translucent mesh; it exposes the torso entirely beneath the heavy coat. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black wool. The thin fabric features a simple crew neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming outerwear."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-13.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
+          "y": 42,
           "label": "Voluminous Wool Cape Coat",
-          "description": "The voluminous wool cape coat drops heavily from the shoulders to the ankles; it creates an immense triangular volume that completely swallows the arms and torso. This structural extreme applies monolithic massing by transforming the body into a solid black geometric monolith. The dense fabric holds deep rigid folds that fall to the floor; the coat lacks traditional sleeves entirely. The outerwear asserts an oppressive and theatrical presence that dominates the physical space."
+          "description": "The voluminous wool cape coat drops heavily from the shoulders to the ankles; it creates an immense triangular volume that completely swallows the arms and torso. This structural extreme applies monolithic massing by transforming the body into a solid black geometric monolith. The dense fabric holds deep rigid folds that fall to the floor; the coat lacks traditional set-in sleeves entirely. The outerwear asserts an oppressive and theatrical presence that dominates the physical space."
         },
         {
           "x": 50,
-          "y": 30,
-          "label": "Sheer Tulle Shirting",
-          "description": "The sheer tulle shirting clings tightly to the chest in a dark translucent mesh; it exposes the torso entirely beneath the heavy coat. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black wool. The thin fabric features a simple scoop neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming outerwear."
+          "y": 28,
+          "label": "Sheer Scoop-Neck Tank",
+          "description": "The sheer scoop-neck tank clings tightly to the chest in a dark translucent mesh; it exposes the torso beneath the heavy cape. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black wool. The thin fabric features a simple scoop neckline; it is tucked sharply into the tailored trousers. The top asserts a quiet and vulnerable contrast to the overwhelming outerwear."
         },
         {
           "x": 50,
@@ -252,13 +201,70 @@
       ]
     },
     {
+      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 42,
+          "label": "Deconstructed Shirt Dress",
+          "description": "The deconstructed shirt dress slices a classic black button-down into multiple erratic layers; it features massive structural cutouts that expose the waist and ribs. This structural intervention engages with sartorial collage by treating a mundane wardrobe staple as a mutable piece of avant-garde architecture. The satin-backed fabric holds sharp unnatural shapes; the sleeves extend significantly past the hands. The garment asserts an aesthetic of calculated failure and severe geometric tension."
+        },
+        {
+          "x": 50,
+          "y": 72,
+          "label": "Flowing Full Skirt",
+          "description": "The flowing full skirt drops from the waist into a wide sweeping volume; it drags heavily across the bright pink runway floor in a dramatic train. This material application provides a heavy formal base that anchors the chaotic cutouts of the bodice. The dark fabric absorbs the clinical lighting completely; the hem pools and folds unevenly. The skirt completes the silhouette by extending the dark weight of the dress into the physical space surrounding the body."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-12.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 32,
+          "label": "Embellished Sheer Top",
+          "description": "The embellished sheer top clings to the upper body in a translucent dark mesh; it is heavily detailed with intricate black beadwork and sequins arranged in ornate floral and scroll patterns across a mock neckline. This material strategy utilizes post-digital reality by creating a highly tactile three-dimensional surface that contrasts fiercely with the solid colors of the runway. The sheer fabric exposes the chest through its beaded lace; the long sleeves end in matching beaded cuffs. The top asserts a romantic but highly exposed aesthetic."
+        },
+        {
+          "x": 50,
+          "y": 65,
+          "label": "Tailored High-Waisted Trousers",
+          "description": "The tailored high-waisted trousers drop cleanly from the waist in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex sheer top with a heavy formal base. The fabric falls cleanly over dark platform sneakers; the waist is finished without a belt to maintain a continuous line. The trousers complete the look by enforcing a strict tailored discipline."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-13.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 33,
+          "label": "Sequin-Paved Off-Shoulder Jumpsuit",
+          "description": "The sequin-paved jumpsuit is worked entirely in dense, hand-applied pink beading from its sweetheart off-the-shoulder neckline to its floor-grazing hem; the fitted bodice and sleeves hold the same sculpted curve seen elsewhere in the collection's crepe pieces, here rendered as a rigid, light-catching shell. This material strategy engages with textural topography by trading the soft drape of crepe for a stiff, faceted surface that fractures the runway's magenta lighting into thousands of small points. The dense embellishment adds visible weight and structure to the garment, holding the bodice's line without boning. The look asserts a hybrid of couture embroidery technique and eveningwear glamour within the collection's monochrome discipline."
+        },
+        {
+          "x": 50,
+          "y": 68,
+          "label": "Wide-Leg Sequined Trousers",
+          "description": "The wide-leg trousers continue the jumpsuit's dense pink sequin paving down the length of the leg, breaking into soft folds at the ankle rather than holding a sharp crease. This continuity of embellishment from bodice to hem engages with radical monochromatism, ensuring no seam or fabric change interrupts the head-to-toe saturation of pink. The model's hands are sunk into concealed side pockets, a pink glove just visible at the opening; the trousers pool slightly over chunky platform boots in the same hue. The garment completes the silhouette by extending the coat's sculptural glamour into a fully wearable evening trouser suit."
+        }
+      ]
+    },
+    {
       "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-14.jpg",
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Cut-Out Taffeta Ballgown",
-          "description": "The cut-out taffeta ballgown manipulates a massive volume of rigid black fabric into an aggressively architectural shape; it features severe geometric cutouts that expose the torso and waist. This structural intervention engages with the subversion of gendered color codes by rendering a historically hyper-feminine silhouette in stark militant black. The stiff material holds deep structural folds across the skirt; the long sleeves drop heavily over the hands. The dress asserts a highly controlled but fractured presence."
+          "y": 42,
+          "label": "Voluminous Sequin Tunic Dress",
+          "description": "The voluminous sequin tunic dress envelops the torso in a boxy slouched volume; it is completely paved in dense metallic pink embellishments. This material strategy engages with corporeal amplification by replacing the natural body shape with a heavy glittering carapace. The stiff fabric features three-dimensional floral appliques clustered across the shoulders and chest; the long sleeves obscure the hands almost entirely, a single gloved fingertip visible at the cuff. The garment asserts a highly theatrical and slightly oppressive interpretation of luxury."
+        },
+        {
+          "x": 50,
+          "y": 68,
+          "label": "Opaque Pink Tights",
+          "description": "The opaque pink tights encase the legs entirely in a matte spandex; they provide a bright continuous color block beneath the short hem of the tunic dress. This styling detail engages with radical monochromatism by ensuring absolutely no bare skin interrupts the saturated silhouette. The smooth fabric absorbs the light; it stretches tightly over the knee. The accessory completes the look by fusing the legs seamlessly with the extreme platform footwear."
         }
       ]
     },
@@ -267,15 +273,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Embellished Sheer Tunic",
-          "description": "The embellished sheer tunic clings to the upper body in a translucent dark mesh; it is heavily detailed with intricate black beadwork and sequins arranged in ornate classical patterns. This material strategy utilizes post-digital reality by creating a highly tactile three-dimensional surface that contrasts fiercely with the solid pink runway. The sheer fabric exposes the chest completely; the long sleeves end in subtle beaded cuffs. The top asserts a romantic but highly exposed aesthetic."
+          "y": 40,
+          "label": "Draped Chiffon Gown",
+          "description": "The draped chiffon gown cascades over the body in a massive fluid volume of intense pink silk; it features an aggressively plunging square neckline that exposes the chest entirely. This structural extreme applies the elevation of the individual by framing the bare skin within dramatic sweeping architecture. The lightweight fabric falls into deep soft pleats that pool around the feet in a wide train; the off-the-shoulder drape leaves the shoulders completely bare. The dress asserts an elegant but deeply vulnerable presence."
         },
         {
-          "x": 50,
-          "y": 65,
-          "label": "Tailored High-Waisted Trousers",
-          "description": "The tailored high-waisted trousers drop cleanly from the waist in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex sheer top with a heavy formal base. The fabric falls cleanly over dark sneakers; the waist is finished with a simple tonal band. The trousers complete the look by enforcing a strict tailored discipline."
+          "x": 32,
+          "y": 42,
+          "label": "Opaque Opera Gloves",
+          "description": "The opaque opera gloves encase the arms entirely past the elbow in a matte pink spandex; they provide a stark textural contrast to the fluid chiffon gown. This styling choice utilizes the semiotic sabotage of gendered color codes by pushing a traditionally elegant accessory to an absurdly saturated limit. The smooth fabric absorbs light completely; it creates a strict unbroken line down the arm. The accessory completes the look by injecting a tight athletic texture into the romantic silhouette."
         }
       ]
     }
@@ -292,8 +298,8 @@
     "format": "Traditional Runway"
   },
   "notes": {
-    "provenance": "Pierpaolo Piccioli presented Valentino's Autumn/Winter 2022 ready-to-wear collection in March 2022 at the Hôtel Salomon de Rothschild in Paris, titling it 'The Beginning' — a declaration of intent that positioned the collection as the opening chapter of a new phase rather than a continuation of existing codes. The collection followed Piccioli's landmark SS 2022 'Pink PP' show, in which he had staged an almost monochromatic presentation in a single Pantone shade of hot fuchsia, generating one of the most widely reproduced fashion images of the decade. AW 2022 extended the chromatic ambition of that show while incorporating the full breadth of the Valentino couture atelier's technical vocabulary: micro-studding, hand-applied embroidery, bias-cut satin, and the extreme volume construction techniques historically associated with the house's founder Valentino Garavani.",
-    "strategy": "Piccioli constructed the collection around the productive tension between the maximalist and the monastic — extreme volume placed in dialogue with extreme restraint. Coats were engineered to twice the natural width of the shoulder; capes were cut to fall in a single geometric plane from neck to floor; evening looks used the internal scaffolding of couture construction to support volumes that defied structural logic at RTW price points. The colour palette moved between saturated Valentino red, deep forest green, electric cobalt, and dense ivory — hues chosen for their psychological intensity rather than their seasonal relevance. Models walked with consistent uniformity: a deliberate choreographic choice that treated the individual body as a unit of a collective rather than a site of personal expression.",
+    "provenance": "Pierpaolo Piccioli presented Valentino's Autumn/Winter 2022 ready-to-wear collection, titled 'Pink PP,' on 6 March 2022 at Le Carreau du Temple in Paris. The eighty-one-look collection — menswear and womenswear shown together on a single runway — was staged almost entirely in one blinding, custom-developed fuchsia that Piccioli registered with Pantone as its own shade, Pink PP, describing his approach as working 'like a monochromatic artist' in the vein of Lucio Fontana, who generated depth and gesture from a single hue. A minority of looks were rendered in black. The collection followed Piccioli's more eclectic, archive-driven Spring/Summer 2022 'Rendez-Vous' show, staged in the same venue six months earlier in a palette of acidic purples, yellows, greens, and pinks; AW 2022's radical narrowing to a single saturated color marked a deliberate departure from that variety, incorporating the Valentino atelier's technical vocabulary — micro-studding, hand-applied embroidery, feather work, and the extreme volume construction historically associated with house founder Valentino Garavani — in service of one unbroken chromatic statement.",
+    "strategy": "Piccioli constructed the collection around the productive tension between the maximalist and the monastic — extreme volume placed in dialogue with extreme restraint. Coats were engineered to twice the natural width of the shoulder; capes were cut to fall in a single geometric plane from neck to floor; evening looks used the internal scaffolding of couture construction to support volumes that defied structural logic at RTW price points. The colour palette was reduced to two notes only — the saturated, custom Pink PP fuchsia and a disciplined black — hues chosen for their psychological intensity and graphic clarity rather than their seasonal relevance. Models walked with consistent uniformity: a deliberate choreographic choice that treated the individual body as a unit of a collective rather than a site of personal expression.",
     "critique": "Piccioli's project at Valentino across the 2020s constitutes one of contemporary fashion's most sustained arguments for the political possibilities of beauty. His AW 2022 collection is readable as a post-pandemic excess-as-resistance proposition: the deployment of extreme colour, extreme volume, and extreme craft as an argument against the grey pragmatism that austerity politics demands. The inclusive casting — extended size range, diverse age range, and non-model faces — refused the traditional couture logic of a singular body type as the legitimate vehicle for luxury clothing, reinscribing beauty as a democratic rather than exclusive category. In this reading, the collection's ostensible extravagance is its most politically rigorous quality."
   },
   "photo_credit": "",

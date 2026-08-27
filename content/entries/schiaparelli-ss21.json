@@ -11,15 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 25,
-          "label": "Monolithic Hooded Silk Blouson",
-          "description": "The monolithic hooded silk blouson engulfs the upper body in an immense bulbous volume of crisp black fabric; it completely overrides the natural anatomy. This structural extreme engages with theories of architectural shielding by offering an aggressive protective carapace against the environment. The gathered folds and hidden internal scaffolding allow the hood to rise unnaturally high above the skull; the dense dark material absorbs light completely. The outerwear asserts a defensive and highly theatrical posture that dwarfs the human form."
+          "y": 38,
+          "label": "Molded Leather Muscle Cuirass",
+          "description": "The molded leather muscle cuirass aggressively redefines the female torso into a hyper-masculine anatomical plate; it features highly defined six-pack abdominals and rigid pectoral structures. This material manipulation utilizes body politics to radically challenge gendered expectations of high fashion by applying heroic nudity. The dark glossy leather mimics wet liquid or polished bronze armor; it completely flattens the natural bustline. The garment refuses traditional soft feminine tailoring to assert an imposing warrior-like presence."
         },
         {
           "x": 50,
           "y": 68,
-          "label": "Molded Padlock Handbag",
-          "description": "The molded padlock handbag utilizes solid golden brass to craft a surreal heavy-duty accessory; it mimics a literal lock scaled to absurd proportions. This object engages directly with surrealist heritage by elevating a banal functional item into a luxury fetish object. The reflective gold surface mimics the appearance of molten metal frozen in place; the model grips it tightly against her thigh. The accessory completes the look by injecting a stark heavy piece of hardware against the fluid dark tailoring."
+          "label": "Colossal Pink Silk Waist Bow",
+          "description": "The colossal pink silk waist bow explodes from the midriff in a massive geometric configuration; it deliberately parodies the \"cupcake\" trope associated with traditional haute couture. This structural extreme applies camp theory by maximizing a delicate feminine detail until it becomes a dominant and slightly absurd spatial obstruction. The bright pink fabric holds deep rigid creases; it sharply contrasts with the dark militant cuirass above it. The piece asserts a joyful but highly critical reflection on couture embellishment."
         }
       ]
     },
@@ -28,15 +28,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Molded Leather Muscle Cuirass",
-          "description": "The molded leather muscle cuirass aggressively redefines the female torso into a hyper-masculine anatomical plate; it features highly defined six-pack abdominals and rigid pectoral structures. This material manipulation utilizes body politics to radically challenge gendered expectations of high fashion by applying heroic nudity. The dark glossy leather mimics wet liquid or polished bronze armor; it completely flattens the natural bustline. The garment refuses traditional soft feminine tailoring to assert an imposing warrior-like presence."
+          "y": 15,
+          "label": "Surrealist Gathered Silk Collar",
+          "description": "The surrealist gathered silk collar frames the head within a massive rigid white halo; it utilizes dense gathering to build a stiff protective perimeter around the face. This architectural shielding applies the concept of monolithic massing by transforming the neckline into a colossal structural monument. The crisp dry taffeta holds its shape perfectly against gravity; it mimics the appearance of a ruffled classical ruff blown up to an absurd scale. The outerwear refuses delicate finishing to assert a highly theatrical and defensive upper silhouette."
         },
         {
           "x": 50,
-          "y": 75,
-          "label": "Colossal Pink Silk Waist Bow",
-          "description": "The colossal pink silk waist bow explodes from the midriff in a massive geometric configuration; it deliberately parodies the \"cupcake\" trope associated with traditional haute couture. This structural extreme applies camp theory by maximizing a delicate feminine detail until it becomes a dominant and slightly absurd spatial obstruction. The bright pink fabric holds deep rigid creases; it sharply contrasts with the dark militant cuirass above it. The piece asserts a joyful but highly critical reflection on couture embellishment."
+          "y": 72,
+          "label": "Stone-Washed Silk Duchess Trousers",
+          "description": "The stone-washed silk duchess trousers mimic the silhouette of utilitarian denim jeans but are rendered in a highly structured couture fabric; they drop loosely into a gathered cuff at the ankle. This material strategy engages with postmodern pastiche by elevating the most banal casual garment into the realm of high fashion via luxurious textiles. The bright white fabric catches the light smoothly without denim's typical rough texture; prominent cargo-style pockets sit on the hips. The garment asserts a \"disobedient\" approach to traditional couture hemlines."
         }
       ]
     },
@@ -45,15 +45,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
-          "label": "Voluminous Gathered Silk Sleeves",
-          "description": "The voluminous gathered silk sleeves erupt from the shoulders in massive crisp white spirals; they dwarf the slim black bodice entirely. This structural intervention utilizes monolithic massing to drastically extend the lateral footprint of the wearer. The dry hand taffeta holds deep circular folds that mimic unfurling shells or classical statuary drapery; they fall heavily toward the hip. The garment asserts an overwhelming architectural volume that completely restricts the kinetic motion of the arms."
+          "y": 38,
+          "label": "Woven Pink Silk Muscle Dress",
+          "description": "The woven pink silk muscle dress utilizes an intricate basket-weave technique to construct a vivid fuchsia bodice; it mimics a ripped muscular physique through subtle textile manipulation rather than molded leather. This structural strategy engages with gender deconstruction by applying heroic male musculature to a bright pink feminine silhouette. The tight weave highlights a defined six-pack and pectoral muscles; the long sleeves end in simple cuffs. The garment refuses traditional soft draping to assert a highly engineered and powerful upper carapace."
         },
         {
-          "x": 55,
-          "y": 15,
-          "label": "Surrealist Molded Brass Earrings",
-          "description": "The surrealist molded brass earrings hang heavily from the lobes into oversized gleaming golden forms; they introduce literal anatomical fragments as adornment. This styling choice engages directly with the house's surrealist legacy by utilizing disembodied body parts as jewelry. The heavy metallic finish contrasts sharply with the soft blonde hair and bright red lip; they pull downward under their own weight. The accessory completes the silhouette by framing the stark face with opulent bizarre hardware."
+          "x": 50,
+          "y": 8,
+          "label": "Oversized Golden Padlock Earrings",
+          "description": "The oversized golden padlock earrings dangle heavily from the ears; they utilize massive functional lock shapes as elite adornment. This accessory engages with the surrealist strategy of transforming banal hardware into luxury fetish objects. The bright yellow gold shines starkly against the dark skin and pink fabric; the keyholes are rendered in glossy black. The piece completes the silhouette by adding a dense mechanical weight to the face."
         }
       ]
     },
@@ -62,105 +62,20 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Surrealist Gathered Silk Collar",
-          "description": "The surrealist gathered silk collar frames the head within a massive rigid white halo; it utilizes dense gathering to build a stiff protective perimeter around the face. This architectural shielding applies the concept of monolithic massing by transforming the neckline into a colossal structural monument. The crisp dry taffeta holds its shape perfectly against gravity; it mimics the appearance of a ruffled classical ruff blown up to an absurd scale. The outerwear refuses delicate finishing to assert a highly theatrical and defensive upper silhouette."
-        },
-        {
-          "x": 50,
-          "y": 65,
-          "label": "Stone-Washed Silk Duchess Trousers",
-          "description": "The stone-washed silk duchess trousers mimic the silhouette of utilitarian denim jeans but are rendered in a highly structured couture fabric; they drop loosely into a gathered cuff at the ankle. This material strategy engages with postmodern pastiche by elevating the most banal casual garment into the realm of high fashion via luxurious textiles. The bright white fabric catches the light smoothly without denim's typical rough texture; prominent cargo-style pockets sit on the hips. The garment asserts a \"disobedient\" approach to traditional couture hemlines."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-05.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 55,
-          "label": "Liquid Fuchsia Silk Train",
-          "description": "The liquid fuchsia silk train spreads across the floor in a massive highly reflective pool; it utilizes a glossy metallic textile to create a striking wet-look finish. This structural extreme applies the joy of peacocking by maximizing spatial volume and vibrant color in response to post-pandemic austerity. The heavy fabric falls tightly from the high waist before expanding dramatically; the deep folds catch intense highlights from the runway lighting. The gown asserts an unapologetic and highly theatrical glamour."
-        },
-        {
-          "x": 50,
-          "y": 35,
-          "label": "Plunging Halter Neckline",
-          "description": "The plunging halter neckline cuts sharply down the center of the torso to expose the sternum entirely; it relies on rigid internal framework to maintain the severe V-shape without gaping. This sartorial choice engages with anatomical interaction by framing the bare skin with severe architectural lines rather than soft contouring. The bright pink straps pull tightly around the back of the neck; the side panels hold the fabric taut across the bust. The detail completes the dramatic silhouette with a sharp precise structural boundary."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-06.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 50,
-          "label": "Sculptural Golden Baby Accessory",
-          "description": "The sculptural golden baby accessory is cradled against the chest as a literal piece of wearable art; it portrays an infant actively nursing. This striking tableau engages with feminist ideology by elevating the biological act of motherhood into an iconic monumental work of surrealist haute couture. The gleaming brass figure is highly detailed and reflects light fiercely against the dark dress; it replaces traditional handbags or jewelry entirely. The piece asserts a radical subversion of polite couture tropes by displaying primal biology cast in gold."
-        },
-        {
-          "x": 50,
-          "y": 40,
-          "label": "Sleeveless Black Hooded Sheath",
-          "description": "The sleeveless black hooded sheath provides a stark unadorned background for the dramatic golden accessory; it features a clean front zipper completely fastened to the throat. This tailoring approach utilizes minimalist discipline to contrast the heavy surrealism of the sculpted child. The dark fabric falls cleanly over the body without gathering or draping; the hood creates a strict frame around the severe facial styling. The garment completes the look by functioning as a quiet monolithic pedestal for the central artwork."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-07.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 35,
+          "y": 42,
           "label": "Golden Bugle-Bead Hair Embroidery",
           "description": "The golden bugle-bead hair embroidery cascades from the shoulders in dense shimmering metallic waves; it meticulously recreates the texture of long flowing hair using thousands of individual beads. This unparalleled embellishment engages directly with the house's surrealist heritage by referencing Schiaparelli's historical 1938 hair-embroidered veil. The thick heavy strips of gold contrast violently with the matte black fabric of the jacket beneath; they catch light kinetically as the model moves. The detail asserts an unapologetic and barbaric approach to luxury embroidery."
         },
         {
           "x": 50,
-          "y": 90,
-          "label": "Molded Golden Toe Boots",
-          "description": "The molded golden toe boots feature a solid brass cast of a human foot resting over the toe box of a black leather boot; they apply surrealist anatomical interaction directly to the footwear. This design choice utilizes trompe l'oeil to blur the boundary between the biological body and the protective shoe. The bright gold toes shine starkly against the dark leather and runway floor; the boot rises tightly above the knee. The accessory completes the silhouette by extending the surrealist anatomy from head to toe."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-08.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 50,
-          "label": "Sequined Tiger-Stripe Gown",
-          "description": "The sequined tiger-stripe gown maps an intricate animal print across the body using thousands of tiny reflective paillettes; it creates a liquid golden and black surface that slinks over the anatomy. This material application engages with the joy of peacocking by reviving pure unadulterated glamour for the post-pandemic era. The dense beadwork creates a heavy but fluid drape that pools into a long sweeping train; the pattern follows the curves of the body seamlessly. The garment asserts a high-octane theatricality through meticulous unyielding craftsmanship."
-        },
-        {
-          "x": 48,
-          "y": 10,
-          "label": "Oversized Abstract Brass Earring",
-          "description": "The oversized abstract brass earring hangs from the right lobe as a massive heavy golden plaque; it features cutouts mimicking an animalistic motif. This styling choice utilizes the house's signature surrealist componentry to introduce a jarring asymmetrical weight to the portrait. The thick metal reflects light fiercely; it dwarfs the natural ear entirely. The piece completes the ensemble by providing a bold rigid focal point against the fluid slinking gown."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-09.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Woven Pink Silk Muscle Dress",
-          "description": "The woven pink silk muscle dress utilizes an intricate basket-weave technique to construct a vivid fuchsia bodice; it mimics a ripped muscular physique through subtle textile manipulation rather than molded leather. This structural strategy engages with gender deconstruction by applying heroic male musculature to a bright pink feminine silhouette. The tight weave highlights a defined six-pack and pectoral muscles; the long sleeves end in simple cuffs. The garment refuses traditional soft draping to assert a highly engineered and powerful upper carapace."
-        },
-        {
-          "x": 50,
           "y": 15,
-          "label": "Oversized Golden Padlock Earrings",
-          "description": "The oversized golden padlock earrings dangle heavily from the ears; they utilize massive functional lock shapes as elite adornment. This accessory engages with the surrealist strategy of transforming banal hardware into luxury fetish objects. The bright yellow gold shines starkly against the dark skin and pink fabric; the keyholes are rendered in glossy black. The piece completes the silhouette by adding a dense mechanical weight to the face."
+          "label": "Gold Hoop and Chain Drop Earrings",
+          "description": "The gold hoop and chain drop earrings hang in a heavy tangle from each lobe, pairing a solid hoop with a loosely linked golden chain that swings free beneath it. This accessory choice engages with the house's surrealist heritage of oversized, deliberately excessive jewellery scaled far beyond function. The wide-brimmed black hat shadows the upper face, throwing the gilded hardware into sharp relief; the metal catches the light in broken, uneven flashes. The detail completes the look by framing the face with the same raw, barbaric gold register as the embroidery below."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-10.jpg",
+      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -170,9 +85,100 @@
         },
         {
           "x": 40,
-          "y": 70,
+          "y": 68,
           "label": "Pearl-Encrusted Nose Clutch",
           "description": "The pearl-encrusted nose clutch is grasped tightly against the body; it is a rigid handbag covered entirely in black beadwork and features a massive golden brass nose as its clasp. This object utilizes surrealist componentry to elevate a functional clasp into a literal anatomical fragment. The heavy metallic nose sits prominently in the center of the dark swirling beads; the bag maintains a stiff circular shape. The accessory completes the look by reiterating the theme of fragmented anatomy."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-06.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 28,
+          "label": "Monolithic Hooded Silk Blouson",
+          "description": "The monolithic hooded silk blouson engulfs the upper body in an immense bulbous volume of crisp black fabric; it completely overrides the natural anatomy. This structural extreme engages with theories of architectural shielding by offering an aggressive protective carapace against the environment. The gathered folds and hidden internal scaffolding allow the hood to rise unnaturally high above the skull; the dense dark material absorbs light completely. The outerwear asserts a defensive and highly theatrical posture that dwarfs the human form."
+        },
+        {
+          "x": 50,
+          "y": 72,
+          "label": "Molded Padlock Handbag",
+          "description": "The molded padlock handbag utilizes solid golden brass to craft a surreal heavy-duty accessory; it mimics a literal lock scaled to absurd proportions. This object engages directly with surrealist heritage by elevating a banal functional item into a luxury fetish object. The reflective gold surface mimics the appearance of molten metal frozen in place; the model grips it tightly against her thigh. The accessory completes the look by injecting a stark heavy piece of hardware against the fluid dark tailoring."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-07.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Sequined Tiger-Stripe Gown",
+          "description": "The sequined tiger-stripe gown maps an intricate animal print across the body using thousands of tiny reflective paillettes; it creates a liquid golden and black surface that slinks over the anatomy. This material application engages with the joy of peacocking by reviving pure unadulterated glamour for the post-pandemic era. The dense beadwork creates a heavy but fluid drape that pools into a long sweeping train; the pattern follows the curves of the body seamlessly. The garment asserts a high-octane theatricality through meticulous unyielding craftsmanship."
+        },
+        {
+          "x": 48,
+          "y": 8,
+          "label": "Oversized Abstract Brass Earring",
+          "description": "The oversized abstract brass earring hangs from the right lobe as a massive heavy golden plaque; it features cutouts mimicking an animalistic motif. This styling choice utilizes the house's signature surrealist componentry to introduce a jarring asymmetrical weight to the portrait. The thick metal reflects light fiercely; it dwarfs the natural ear entirely. The piece completes the ensemble by providing a bold rigid focal point against the fluid slinking gown."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 22,
+          "label": "Backless Tiger-Stripe Bodice",
+          "description": "The backless tiger-stripe bodice drops in a deep V from the shoulder blades to the small of the back, held by two narrow spaghetti straps that leave the spine entirely bare. This structural choice engages with the joy of peacocking by exposing the body through absence rather than sheer fabric, letting the jacquard's molten gold-and-black pattern read as a second skin. The taut weave sits flush against the shoulder blades without gaping; the straps cross precisely at the nape. The bodice asserts a controlled, architectural eroticism before releasing into the gown's dramatic lower volume."
+        },
+        {
+          "x": 50,
+          "y": 75,
+          "label": "Trumpet-Hem Tiger-Print Train",
+          "description": "The trumpet-hem tiger-print train flares sharply below the knee into a wide fishtail sweep, the metallic gold and black jacquard pooling into a long triangular expanse across the floor. This material extreme applies monolithic massing, transforming a printed evening gown into an architectural event through sheer accumulated volume at the hem. The stiff jacquard holds its own flared shape independent of the legs beneath; the pattern fractures into wide organic bands as the fabric swings outward. The train completes the look with a theatrical, almost feral sense of scale."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 62,
+          "label": "Liquid Fuchsia Silk Train",
+          "description": "The liquid fuchsia silk train spreads across the floor in a massive highly reflective pool; it utilizes a glossy metallic textile to create a striking wet-look finish. This structural extreme applies the joy of peacocking by maximizing spatial volume and vibrant color in response to post-pandemic austerity. The heavy fabric falls tightly from the high waist before expanding dramatically; the deep folds catch intense highlights from the runway lighting. The gown asserts an unapologetic and highly theatrical glamour."
+        },
+        {
+          "x": 50,
+          "y": 32,
+          "label": "Plunging Halter Neckline",
+          "description": "The plunging halter neckline cuts sharply down the center of the torso to expose the sternum entirely; it relies on rigid internal framework to maintain the severe V-shape without gaping. This sartorial choice engages with anatomical interaction by framing the bare skin with severe architectural lines rather than soft contouring. The bright pink straps pull tightly around the back of the neck; the side panels hold the fabric taut across the bust. The detail completes the dramatic silhouette with a sharp precise structural boundary."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Sleeveless Black Hooded Sheath",
+          "description": "The sleeveless black hooded sheath provides a stark unadorned background for the dramatic golden accessory; it features a clean front zipper completely fastened to the throat. This tailoring approach utilizes minimalist discipline to contrast the heavy surrealism of the sculpted child. The dark fabric falls cleanly over the body without gathering or draping; the hood creates a strict frame around the severe facial styling. The garment completes the look by functioning as a quiet monolithic pedestal for the central artwork."
+        },
+        {
+          "x": 50,
+          "y": 58,
+          "label": "Sculptural Golden Baby Accessory",
+          "description": "The sculptural golden baby accessory is cradled against the chest as a literal piece of wearable art; it portrays an infant actively nursing. This striking tableau engages with feminist ideology by elevating the biological act of motherhood into an iconic monumental work of surrealist haute couture. The gleaming brass figure is highly detailed and reflects light fiercely against the dark dress; it replaces traditional handbags or jewelry entirely. The piece asserts a radical subversion of polite couture tropes by displaying primal biology cast in gold."
+        },
+        {
+          "x": 50,
+          "y": 6,
+          "label": "Golden Halo Ring",
+          "description": "The golden halo ring hovers rigidly above the crown of the head on a concealed metal support, a literal nimbus borrowed from Christian iconography of the Madonna. This surrealist prop engages directly with body politics by canonising the wearer as a secular saint of motherhood, collapsing centuries of religious painting into a single wearable object. The polished brass catches the studio light in an unbroken circle; it holds its position independent of the head's movement. The accessory completes the tableau by making explicit the devotional register the golden infant only implies."
         }
       ]
     },
@@ -232,7 +238,7 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 40,
+          "y": 20,
           "label": "Colossal White Silk Rosette",
           "description": "The colossal white silk rosette erupts from the shoulders and back in a massive pleated halo; it frames the entire upper body within a stiff rigid flower motif. This structural extreme applies monolithic massing by transforming a delicate floral detail into an overwhelming architectural volume. The crisp white fabric is heavily gathered to maintain the deep radiating folds; it dwarfs the model's head entirely. The outerwear refuses subtle embellishment to assert a dominant and highly theatrical spatial presence."
         },

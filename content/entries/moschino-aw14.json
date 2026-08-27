@@ -11,21 +11,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 25,
-          "label": "Heavy Gold Chain Accumulation",
-          "description": "The heavy gold chain accumulation completely obscures the upper chest beneath a dense metallic web; it introduces extreme hardware weight to the cropped silhouette. This accessory styling engages with subcultural systems by appropriating the opulent visual codes of 1980s hip-hop culture. The thick links and oversized padlocks reflect the runway lighting fiercely; they clatter against the metallic jacket beneath. This element asserts a hyper-commercialized luxury that merges urban streetwear history with traditional Italian excess."
-        },
-        {
-          "x": 35,
-          "y": 30,
-          "label": "Metallic Gold Cropped Jacket",
-          "description": "The metallic gold cropped jacket provides a rigid tailored frame around the torso; it truncates sharply above the navel to expose the midriff. This material application relies on the simulacrum by rendering a classic bouclé suit silhouette in an aggressively flashy reflective textile. The structural shoulders and zipper details maintain a strict shape despite the high-shine finish. The garment refuses understated elegance to complete an aesthetic of deliberate downmarket irony."
+          "y": 35,
+          "label": "Graphic Fast-Food Knitwear",
+          "description": "The graphic fast-food knitwear drapes over the upper body in a saturated tomato-red tone; it features a massive yellow logo distorted into a heart shape. This visual strategy utilizes consumer culture theories by directly mimicking the ubiquitous branding of global fast-food chains. The flat intarsia knit mimics the cheap mass-produced textiles of a service uniform; a bold slogan dominates the lower hemline. The garment asserts a satirical equivalence between the mass consumption of cheap calories and high-end luxury goods."
         },
         {
           "x": 50,
-          "y": 50,
-          "label": "Quilted Vinyl Zip Skirt",
-          "description": "The quilted vinyl zip skirt gathers into a dark glossy volume around the hips; it utilizes a center zipper that dissects the front profile. This fabric choice engages with consumer culture by mimicking cheap shiny garbage bags or downmarket synthetic materials. The dark brown surface reflects the light with a wet liquid appearance; the elasticized hem pulls the volume inward sharply above the knee. The piece asserts an unapologetic and bold rejection of traditional luxury textiles."
+          "y": 72,
+          "label": "Logo-Banded Mini Skirt",
+          "description": "The logo-banded mini skirt restricts the lower silhouette into a simple red tube; it is abruptly truncated by a thick yellow band bearing the house's name. This structural logic engages with late-capitalist commodification by stamping the body with literal corporate signage. The dense knit holds a tight shape over the thighs; the contrast trim sits sharply against the bare knees. The piece completes the runway ensemble by functioning as a literal billboard for the brand."
         }
       ]
     },
@@ -34,24 +28,7 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Graphic Fast-Food Knitwear",
-          "description": "The graphic fast-food knitwear drapes over the upper body in a saturated tomato-red tone; it features a massive yellow logo distorted into a heart shape. This visual strategy utilizes consumer culture theories by directly mimicking the ubiquitous branding of global fast-food chains. The flat intarsia knit mimics the cheap mass-produced textiles of a service uniform; a bold slogan dominates the lower hemline. The garment asserts a satirical equivalence between the mass consumption of cheap calories and high-end luxury goods."
-        },
-        {
-          "x": 50,
-          "y": 60,
-          "label": "Logo-Banded Mini Skirt",
-          "description": "The logo-banded mini skirt restricts the lower silhouette into a simple red tube; it is abruptly truncated by a thick yellow band bearing the house's name. This structural logic engages with late-capitalist commodification by stamping the body with literal corporate signage. The dense knit holds a tight shape over the thighs; the contrast trim sits sharply against the bare knees. The piece completes the runway ensemble by functioning as a literal billboard for the brand."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-03.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 40,
+          "y": 48,
           "label": "Quilted Fast-Food Handbag",
           "description": "The quilted fast-food handbag rests centrally upon a service tray; it transforms a classic luxury accessory into a literal meal replacement. This object engages heavily with postmodern irony by fusing the esteemed leatherwork of traditional Parisian houses with the disposable packaging of a children's fast-food box. The bright red leather is heavily stitched with a diamond grid; the yellow logo sits prominently on the front flap. The accessory asserts the absolute absurdity of luxury commodification by presenting the handbag as a ready-to-consume product."
         },
@@ -64,24 +41,24 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-04.jpg",
+      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-03.jpg",
       "hotspots": [
         {
           "x": 40,
-          "y": 35,
+          "y": 30,
           "label": "Quilted Denim-Tone Jacket",
           "description": "The quilted denim-tone jacket builds a boxy volume around the shoulders and chest; it mimics the visual texture of blue jeans through a soft padded textile. This material intervention engages with subcultural systems by elevating a staple of 1990s streetwear into a highly crafted runway item. The thick diamond stitching creates a rigid architectural shell; the sleeves are pushed up to reveal heavy metallic hardware. The outerwear asserts a hybridized aesthetic that fuses hip-hop styling with classic luxury codes."
         },
         {
           "x": 50,
-          "y": 45,
+          "y": 58,
           "label": "Metallic Lettering Chain Belt",
           "description": "The metallic lettering chain belt cinches the waist loosely with massive gold typography; it spells out the brand's name across the midriff. This accessory utilizes theories of hyper-capitalism by transforming the wearer's body into a mobile advertisement. The heavy gold letters hang freely from a thick linking chain; they overlap the quilted trousers beneath. The piece completes the ensemble by enforcing an aesthetic of unapologetic and loud consumerism."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-05.jpg",
+      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -91,9 +68,26 @@
         },
         {
           "x": 50,
-          "y": 60,
+          "y": 62,
           "label": "Metallic Leather Chap Trousers",
           "description": "The metallic leather chap trousers encase the legs in highly reflective gold tubes; they attach to a matching waistband while leaving the upper thighs entirely exposed. This structural extreme applies camp theory by merging Western rodeo gear with hyper-commercialized urban luxury. The stiff material wrinkles sharply around the knees; heavy chains connect the disjointed panels. The garment refuses practical utility to complete a deeply theatrical and provocative lower silhouette."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Hardware-Embellished Strap Dress",
+          "description": "The hardware-embellished strap dress binds the torso and hips in a dense matrix of black leather belts; it features dozens of gold metallic letters spelling out the brand's name. This structural logic engages with fetishwear subcultures by utilizing bondage techniques to construct a rigid outer shell. The horizontal straps overlap tightly to form a solid silhouette; the heavy buckles sit prominently along the left side. The garment asserts a highly commodified vision of restriction and bodily discipline."
+        },
+        {
+          "x": 50,
+          "y": 82,
+          "label": "Hardware-Embellished Leather Boots",
+          "description": "The hardware-embellished leather boots stretch above the knee to encase the calves in black leather; they mirror the exact strapping mechanism of the dress above. This footwear application utilizes postmodern repetition to brand every available surface of the human form. The tight straps cut into the soft leather underneath; the golden typography reflects the runway lighting intensely. The accessory completes the look by anchoring the militant bondage aesthetic firmly to the floor."
         }
       ]
     },
@@ -102,15 +96,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Hardware-Embellished Strap Dress",
-          "description": "The hardware-embellished strap dress binds the torso and hips in a dense matrix of black leather belts; it features dozens of gold metallic letters spelling out the brand's name. This structural logic engages with fetishwear subcultures by utilizing bondage techniques to construct a rigid outer shell. The horizontal straps overlap tightly to form a solid silhouette; the heavy buckles sit prominently along the left side. The garment asserts a highly commodified vision of restriction and bodily discipline."
+          "y": 35,
+          "label": "Character-Print Knit Tunic",
+          "description": "The character-print knit tunic drops heavily from the shoulders in a bright yellow textile; it features an oversized hyper-recognizable cartoon face across the torso. This graphic appropriation engages with late-capitalist consumerism by elevating cheap children's media into a luxury context. The flat knit fabric is covered in irregular black spots; the hem falls cleanly to the mid-thigh. The garment refuses mature sophistication to assert an aesthetic of playful downmarket irony."
         },
         {
-          "x": 50,
-          "y": 80,
-          "label": "Hardware-Embellished Leather Boots",
-          "description": "The hardware-embellished leather boots stretch above the knee to encase the calves in black leather; they mirror the exact strapping mechanism of the dress above. This footwear application utilizes postmodern repetition to brand every available surface of the human form. The tight straps cut into the soft leather underneath; the golden typography reflects the runway lighting intensely. The accessory completes the look by anchoring the militant bondage aesthetic firmly to the floor."
+          "x": 25,
+          "y": 55,
+          "label": "Character-Print Leather Backpack",
+          "description": "The character-print leather backpack hangs casually over the right shoulder; it translates the cartoon motif onto a structured luxury bag. This accessory utilizes the simulacrum by rendering a mundane schoolyard object in premium materials. The yellow leather features black spots and heavy zipper hardware; the thick brown straps contrast with the bright base. The piece completes the infantilized uniform by ensuring the pop-culture branding is visible from all angles."
         }
       ]
     },
@@ -120,14 +114,14 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Character-Print Knit Tunic",
-          "description": "The character-print knit tunic drops heavily from the shoulders in a bright yellow textile; it features an oversized hyper-recognizable cartoon face across the torso. This graphic appropriation engages with late-capitalist consumerism by elevating cheap children's media into a luxury context. The flat knit fabric is covered in irregular black spots; the hem falls cleanly to the mid-thigh. The garment refuses mature sophistication to assert an aesthetic of playful downmarket irony."
+          "label": "Spotted Faux-Fur Outerwear",
+          "description": "The spotted faux-fur outerwear creates a massive plush volume around the upper body; it features a bright yellow base punctuated by large black circles. This material strategy engages with camp aesthetics by transforming a cartoon sponge motif into an opulent synthetic pelt. The thick fibers completely obscure the natural shoulder line; the jacket hangs open to reveal the dark garments underneath. The outerwear asserts a joyful and tactile absurdity that mocks traditional luxury fur coats."
         },
         {
-          "x": 35,
-          "y": 30,
-          "label": "Character-Print Leather Backpack",
-          "description": "The character-print leather backpack hangs casually over the right shoulder; it translates the cartoon motif onto a structured luxury bag. This accessory utilizes the simulacrum by rendering a mundane schoolyard object in premium materials. The yellow leather features black spots and heavy zipper hardware; the thick brown straps contrast with the bright base. The piece completes the infantilized uniform by ensuring the pop-culture branding is visible from all angles."
+          "x": 20,
+          "y": 68,
+          "label": "Spotted Drawstring Bucket Bag",
+          "description": "The spotted drawstring bucket bag dangles from the right hand; it matches the bright yellow and black pattern of the heavy coat. This accessory applies theories of mass commercialization by offering a highly branded and recognizable product silhouette. The smooth leather base contrasts with the fuzzy jacket above; the black drawstring pulls the top opening shut tightly. The piece completes the ensemble by functioning as a literal piece of carrying merchandise."
         }
       ]
     },
@@ -137,14 +131,14 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Spotted Faux-Fur Outerwear",
-          "description": "The spotted faux-fur outerwear creates a massive plush volume around the upper body; it features a bright yellow base punctuated by large black circles. This material strategy engages with camp aesthetics by transforming a cartoon sponge motif into an opulent synthetic pelt. The thick fibers completely obscure the natural shoulder line; the jacket hangs open to reveal the dark garments underneath. The outerwear asserts a joyful and tactile absurdity that mocks traditional luxury fur coats."
+          "label": "Character-Print Cropped Knit",
+          "description": "The character-print cropped knit truncates sharply across the lower ribs in a vibrant yellow textile; it isolates a cartoon face across the bust. This sartorial intervention utilizes consumer culture theories by fracturing a recognizable pop-culture icon across a fragmented garment. The high neckline and long sleeves provide strict coverage above the exposed midriff; the black spots litter the bright background. The top asserts a hyper-commodified identity that relies on instant global recognition."
         },
         {
-          "x": 30,
-          "y": 55,
-          "label": "Spotted Drawstring Bucket Bag",
-          "description": "The spotted drawstring bucket bag dangles from the right hand; it matches the bright yellow and black pattern of the heavy coat. This accessory applies theories of mass commercialization by offering a highly branded and recognizable product silhouette. The smooth leather base contrasts with the fuzzy jacket above; the black drawstring pulls the top opening shut tightly. The piece completes the ensemble by functioning as a literal piece of carrying merchandise."
+          "x": 35,
+          "y": 65,
+          "label": "Trailing Knit Scarf Accessory",
+          "description": "The trailing knit scarf accessory drops from the neck entirely down to the runway floor; it provides a long sweeping vertical line beside the exposed leg. This structural addition engages with camp theatricality by extending a simple winter accessory into an exaggerated dramatic train. The soft yellow fabric mimics the exact spotting of the cropped sweater; it drags heavily against the white floor. The detail completes the silhouette by introducing fluid movement to an otherwise tight and abbreviated look."
         }
       ]
     },
@@ -153,15 +147,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 25,
-          "label": "Character-Print Cropped Knit",
-          "description": "The character-print cropped knit truncates sharply across the lower ribs in a vibrant yellow textile; it isolates a cartoon face across the bust. This sartorial intervention utilizes consumer culture theories by fracturing a recognizable pop-culture icon across a fragmented garment. The high neckline and long sleeves provide strict coverage above the exposed midriff; the black spots litter the bright background. The top asserts a hyper-commodified identity that relies on instant global recognition."
+          "y": 32,
+          "label": "Oversized Silk Waist Bow",
+          "description": "The oversized silk bow gathers the gown below the collarbone in a colossal knot of white fabric; it protrudes drastically from the chest like a drawstring cinching a paper sack shut. This structural extreme utilizes postmodern irony by blowing up a delicate feminine detail to absurd packaging-like proportions. The stiff silk holds its shape perfectly without drooping; the wide ribbons frame the printed bodice beneath. The piece completes the look by emphasizing the illusion of a newly wrapped and commodified product."
         },
         {
-          "x": 35,
-          "y": 70,
-          "label": "Trailing Knit Scarf Accessory",
-          "description": "The trailing knit scarf accessory drops from the neck entirely down to the runway floor; it provides a long sweeping vertical line beside the exposed leg. This structural addition engages with camp theatricality by extending a simple winter accessory into an exaggerated dramatic train. The soft yellow fabric mimics the exact spotting of the cropped sweater; it drags heavily against the white floor. The detail completes the silhouette by introducing fluid movement to an otherwise tight and abbreviated look."
+          "x": 50,
+          "y": 62,
+          "label": "Packaging-Print Silk Gown",
+          "description": "The packaging-print cape gown drapes to the floor in a massive volume of crimson and cream fabric; it transforms the wearer into a literal Moschino shopping bag. This graphic appropriation engages directly with consumer culture theories by equating the glamour of the runway with the disposable packaging of a boutique carrier bag. The cream silk mini-dress beneath is covered in the house's own promotional copy and nautical crest branding, proclaiming itself the \"largest selling brand in fashion\"; the crisp red cape is lined in white and borders the hem and collar. The garment refuses traditional eveningwear elegance to assert a deeply cynical and satirical narrative about branding as spectacle."
         }
       ]
     },
@@ -170,15 +164,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 50,
-          "label": "Packaging-Print Silk Gown",
-          "description": "The packaging-print silk gown drops to the floor in a massive volume of printed fabric; it transforms the wearer into a literal candy wrapper. This graphic appropriation engages directly with anti-consumerism by equating the consumption of high fashion with the disposal of cheap junk food. The white silk is covered in nutritional facts and corporate branding typography; the crisp red trim borders the hem and collar. The garment refuses traditional eveningwear elegance to assert a deeply cynical and satirical narrative."
+          "y": 65,
+          "label": "Cereal-Print Silk Dress",
+          "description": "The cereal-print silk dress tightly encases the torso and thighs in a vibrant blue textile; it features photorealistic prints of a popular breakfast food. This visual strategy utilizes the simulacrum to plaster the lowest denominator of supermarket aesthetics onto premium eveningwear. The tight fit highlights the bright loops of cereal and the cartoon mascot; the hem falls cleanly to the knee. The garment asserts a joyful but highly critical reflection on globalized junk culture."
         },
         {
           "x": 50,
-          "y": 40,
-          "label": "Oversized Silk Waist Bow",
-          "description": "The oversized silk waist bow cinches the midsection with a colossal knot of printed fabric; it protrudes drastically from the stomach. This structural extreme utilizes postmodern irony by blowing up a delicate feminine detail to absurd packaging-like proportions. The stiff silk holds its shape perfectly without drooping; the wide ribbons hang down over the skirt beneath. The piece completes the look by emphasizing the illusion of a newly wrapped and commodified product."
+          "y": 50,
+          "label": "Massive Structural Front Bow",
+          "description": "The massive structural front bow explodes from the waistline in a rigid geometric configuration; it completely consumes the midriff in bright blue printed silk. This architectural intervention applies camp theory by maximizing a decorative element until it becomes a dominant spatial obstruction. The stiff loops hold deep permanent creases; the fabric mimics the exact cereal pattern of the dress behind it. The detail completes the silhouette by forcing the viewer to confront the absurdity of the packaging motif."
         }
       ]
     },
@@ -188,23 +182,6 @@
         {
           "x": 50,
           "y": 60,
-          "label": "Cereal-Print Silk Dress",
-          "description": "The cereal-print silk dress tightly encases the torso and thighs in a vibrant blue textile; it features photorealistic prints of a popular breakfast food. This visual strategy utilizes the simulacrum to plaster the lowest denominator of supermarket aesthetics onto premium eveningwear. The tight fit highlights the bright loops of cereal and the cartoon mascot; the hem falls cleanly to the knee. The garment asserts a joyful but highly critical reflection on globalized junk culture."
-        },
-        {
-          "x": 50,
-          "y": 40,
-          "label": "Massive Structural Front Bow",
-          "description": "The massive structural front bow explodes from the waistline in a rigid geometric configuration; it completely consumes the midriff in bright blue printed silk. This architectural intervention applies camp theory by maximizing a decorative element until it becomes a dominant spatial obstruction. The stiff loops hold deep permanent creases; the fabric mimics the exact cereal pattern of the dress behind it. The detail completes the silhouette by forcing the viewer to confront the absurdity of the packaging motif."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-12.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
           "label": "Candy-Print Volumetric Dress",
           "description": "The candy-print volumetric dress balloons outward from the waist in a bright yellow bell shape; it features large photorealistic gummy bears scattered across the textile. This graphic application engages with late-capitalist commodification by plastering literal sugar products across a high-fashion silhouette. The stiff fabric holds a rigid dome shape; the red and green typography mimics cheap plastic wrappers. The garment refuses serious luxury to assert an aesthetic of pure infantile consumerism."
         },
@@ -217,11 +194,11 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-13.jpg",
+      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-12.jpg",
       "hotspots": [
         {
           "x": 50,
-          "y": 60,
+          "y": 62,
           "label": "Confectionery-Wrapper Silk Gown",
           "description": "The confectionery-wrapper silk gown cascades to the floor in a sleek dark brown textile; it features massive white typography spelling out a famous chocolate brand. This material strategy engages heavily with the simulacrum by designing a dress that literally functions as a candy wrapper. The fluid fabric pools around the feet in a small train; the barcode and nutritional information run vertically down the side seams. The garment asserts a satirical equivalence between human bodies and consumable goods."
         },
@@ -234,7 +211,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-14.jpg",
+      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-13.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -244,9 +221,26 @@
         },
         {
           "x": 50,
-          "y": 30,
+          "y": 40,
           "label": "Bridal Floral Bouquet Accessory",
           "description": "The bridal floral bouquet accessory rests cleanly in the model's hands; it provides a stark natural contrast to the heavily industrialized print of the dress. This styling choice engages with postmodern irony by fusing a sacred romantic tradition with a dress covered in junk food data. The tight cluster of white flowers sits directly over the word \"Fats\"; the green stems introduce the only organic color to the ensemble. The piece completes the look by solidifying the parody of the traditional haute couture bridal finale."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-14.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Striped Service Uniform Shirting",
+          "description": "The striped service uniform shirting provides a crisp pale yellow foundation for the upper body; it features a classic pointed collar and a neat button placket. This tailoring approach engages with downmarket irony by elevating the cheap polyester blend of a fast-food uniform into high fashion. The thin white stripes run vertically over the torso; the long sleeves are buttoned neatly at the wrists. The garment asserts a hyper-recognizable utilitarian aesthetic that bridges the gap between labor and luxury."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Oversized Plastic Chain Belt",
+          "description": "The oversized plastic chain belt cinches the waist securely over the bright red trousers; it utilizes bright yellow interlocking links to mimic heavy metal hardware. This material substitution applies camp theory by replacing traditional gold or silver with cheap commercial plastic. The thick links drape cleanly across the hips; the bright yellow tone perfectly matches the corporate color scheme of the ensemble. The accessory completes the look by injecting a final playful nod to 1990s streetwear styling."
         }
       ]
     },
@@ -255,15 +249,21 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 30,
-          "label": "Striped Service Uniform Shirting",
-          "description": "The striped service uniform shirting provides a crisp pale yellow foundation for the upper body; it features a classic pointed collar and a neat button placket. This tailoring approach engages with downmarket irony by elevating the cheap polyester blend of a fast-food uniform into high fashion. The thin white stripes run vertically over the torso; the long sleeves are buttoned neatly at the wrists. The garment asserts a hyper-recognizable utilitarian aesthetic that bridges the gap between labor and luxury."
+          "y": 38,
+          "label": "Heavy Gold Chain Accumulation",
+          "description": "The heavy gold chain accumulation completely obscures the upper chest beneath a dense metallic web; it introduces extreme hardware weight to the cropped silhouette. This accessory styling engages with subcultural systems by appropriating the opulent visual codes of 1980s hip-hop culture. The thick links and oversized padlocks reflect the runway lighting fiercely; they clatter against the metallic jacket beneath. This element asserts a hyper-commercialized luxury that merges urban streetwear history with traditional Italian excess."
+        },
+        {
+          "x": 35,
+          "y": 22,
+          "label": "Metallic Gold Cropped Jacket",
+          "description": "The metallic gold cropped jacket provides a rigid tailored frame around the torso; it truncates sharply above the navel to expose the midriff. This material application relies on the simulacrum by rendering a classic bouclé suit silhouette in an aggressively flashy reflective textile. The structural shoulders and zipper details maintain a strict shape despite the high-shine finish. The garment refuses understated elegance to complete an aesthetic of deliberate downmarket irony."
         },
         {
           "x": 50,
-          "y": 40,
-          "label": "Oversized Plastic Chain Belt",
-          "description": "The oversized plastic chain belt cinches the waist securely over the bright red trousers; it utilizes bright yellow interlocking links to mimic heavy metal hardware. This material substitution applies camp theory by replacing traditional gold or silver with cheap commercial plastic. The thick links drape cleanly across the hips; the bright yellow tone perfectly matches the corporate color scheme of the ensemble. The accessory completes the look by injecting a final playful nod to 1990s streetwear styling."
+          "y": 75,
+          "label": "Quilted Vinyl Zip Skirt",
+          "description": "The quilted vinyl zip skirt gathers into a dark glossy volume around the hips; it utilizes a center zipper that dissects the front profile. This fabric choice engages with consumer culture by mimicking cheap shiny garbage bags or downmarket synthetic materials. The dark brown surface reflects the light with a wet liquid appearance; the elasticized hem pulls the volume inward sharply above the knee. The piece asserts an unapologetic and bold rejection of traditional luxury textiles."
         }
       ]
     }

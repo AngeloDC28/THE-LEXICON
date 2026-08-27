@@ -12,30 +12,13 @@
         {
           "x": 50,
           "y": 45,
-          "label": "Solidified Fabrican Dress",
-          "description": "The solidified Fabrican dress tightly encases the torso and hips in a stark white non-woven textile; it represents the exact culmination of the live performative fabrication. This material extreme applies real-time chemical assembly by transforming a liquid polymer suspension into a wearable garment directly upon the flesh. The bright white material hugs every contour of the natural anatomy perfectly; the neckline is folded down awkwardly off the shoulders. The garment asserts a purely scientific approach to sculptural conformity."
-        },
-        {
-          "x": 55,
-          "y": 65,
-          "label": "Manually Altered Slit",
-          "description": "The manually altered slit cuts violently up the left thigh to expose the bare leg entirely; it features a raw jagged edge where the solidified material was hacked with scissors. This structural intervention engages with the performative material genesis by revealing the hasty on-stage finishing process. The stiff fabric lacks fluid drape; the high cut allows the model to walk off the platform. The detail completes the dress by injecting a necessary functional mobility into the restrictive chemical shell."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 45,
           "label": "Asymmetrical Cut-Out Dress",
           "description": "The asymmetrical cut-out dress drapes softly over the body in a dark fluid fabric; it features a massive diagonal void across the chest that completely exposes the right breast and torso. This structural logic utilizes corporeal objectification to frame the bare skin as a central visual element. The dark material falls cleanly to the knee with an uneven hem; a subtle knot sits at the right hip. The garment asserts a highly provocative and unsettling take on cinematic eveningwear."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-03.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -52,7 +35,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-04.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -62,14 +45,14 @@
         },
         {
           "x": 50,
-          "y": 45,
+          "y": 55,
           "label": "Matching Floral Hotpants",
           "description": "The matching floral hotpants tightly encase the hips in the exact same glossy printed leather; they truncate sharply to leave the legs entirely exposed. This styling choice engages with the female body as canvas by minimizing the physical fabric to maximize corporeal exposure. The dark material absorbs light heavily outside of the bright floral prints; they sit high on the natural waist. The piece completes the look by forcing an incredibly abbreviated and aggressive lower silhouette."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-05.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -86,7 +69,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-06.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -96,14 +79,14 @@
         },
         {
           "x": 50,
-          "y": 45,
+          "y": 50,
           "label": "High-Cut Satin Bodysuit",
           "description": "The high-cut satin bodysuit tightly encases the hips and groin in a matching pale blue textile; it leaves the legs entirely exposed to the top of the thigh. This sartorial choice engages with corporeal objectification by applying the aesthetics of vintage swimwear to a modern runway look. The smooth fabric clings tightly to the body; a subtle waistband detail mirrors the jacket above. The piece completes the silhouette by creating a massive contrast in volume between the heavy top and bare legs."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-07.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -114,7 +97,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-08.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -125,7 +108,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-09.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -136,13 +119,30 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-10.jpg",
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-09.jpg",
       "hotspots": [
         {
           "x": 50,
           "y": 45,
           "label": "Asymmetrical Zipper Dress",
           "description": "The asymmetrical zipper dress tightly encases the torso and hips in a smooth black fabric; it features two continuous metal zippers coiling chaotically around the entire body. This structural logic engages with the mechanics of virality by turning functional hardware into a massive spiral graphic motif. The dark material absorbs light heavily; the hem is uneven and features a long trailing strip of fabric. The piece completes the silhouette by asserting a highly engineered and slightly fetishistic approach to eveningwear."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Solidified Fabrican Dress",
+          "description": "The solidified Fabrican dress tightly encases the torso and hips in a stark white non-woven textile; it represents the exact culmination of the live performative fabrication. This material extreme applies real-time chemical assembly by transforming a liquid polymer suspension into a wearable garment directly upon the flesh. The bright white material hugs every contour of the natural anatomy perfectly; the neckline is folded down awkwardly off the shoulders. The garment asserts a purely scientific approach to sculptural conformity."
+        },
+        {
+          "x": 55,
+          "y": 65,
+          "label": "Manually Altered Slit",
+          "description": "The manually altered slit cuts violently up the left thigh to expose the bare leg entirely; it features a raw jagged edge where the solidified material was hacked with scissors. This structural intervention engages with the performative material genesis by revealing the hasty on-stage finishing process. The stiff fabric lacks fluid drape; the high cut allows the model to walk off the platform. The detail completes the dress by injecting a necessary functional mobility into the restrictive chemical shell."
         }
       ]
     }

@@ -12,36 +12,19 @@
         {
           "x": 50,
           "y": 45,
-          "label": "Graphic Seamed White Slip Dress",
-          "description": "The graphic seamed white slip dress hugs the torso and hips in a sleek synthetic fabric; it features aggressive black stitch lines mapping the garment's construction directly onto the exterior. This structural intervention engages with tension structures by treating the seams as visible architectural vectors. The crisp white textile drops cleanly to the ankle with a dramatic asymmetrical slit over the right thigh; it is suspended by thin delicate straps. The garment asserts a highly engineered and provocative approach to swimwear cover-ups."
-        },
-        {
-          "x": 48,
-          "y": 70,
-          "label": "Rigid Branded Crinoline Cage",
-          "description": "The rigid branded crinoline cage spirals around the lower legs in a wide bell shape; it is constructed entirely from stiff white ribbons printed with the brand's typography. This accessory utilizes architectural scaffolding to enforce a massive geometric boundary around the model's stride. The empty voids between the ribbons completely expose the leg; it drags heavily across the runway. The piece completes the silhouette by injecting a bizarre historical reference into the hyper-modern collection."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 40,
           "label": "Saturated Blue Velvet Swimsuit",
           "description": "The saturated blue velvet swimsuit tightly binds the torso and groin in a highly tactile plush fabric; it features subtle paneled construction that contours the body precisely. This material application engages with active corporeal exposure by presenting a heavily textured luxury fabric within the context of a utilitarian bathing suit. The bright blue absorbs the runway lighting smoothly; it exposes the thighs and shoulders entirely. The garment asserts a confident and unapologetic approach to plus-size swimwear."
         },
         {
           "x": 50,
-          "y": 40,
+          "y": 60,
           "label": "Rigid Red Architectural Caging",
           "description": "The rigid red architectural caging spirals over the blue swimsuit in an aggressive geometric grid; it flares widely away from the hips into a stiff bell shape. This structural extreme applies the concept of tension structures by using external scaffolding to create a massive spatial volume completely independent of the wearer's anatomy. The bright red material clashes violently with the blue velvet beneath; it casts sharp shadows over the stomach. The accessory completes the look by transforming the model into an imposing architectural monument."
         }
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-03.jpg",
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -58,7 +41,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-04.jpg",
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -75,41 +58,41 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-05.jpg",
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-04.jpg",
       "hotspots": [
         {
           "x": 50,
           "y": 35,
           "label": "Graphic Mesh Paneled Top",
-          "description": "The graphic mesh paneled top structures the upper chest with a sheer black net overlaid by bright blue geometric lines; it functions as a highly athletic and breathable crop top. This material choice engages with tension structures by treating the blue lines as supportive architectural vectors. The sheer fabric exposes the bust subtly beneath the grid; the solid black binding frames the edges tightly. The garment asserts a highly engineered and tactical approach to swimwear."
+          "description": "The graphic mesh paneled top structures the upper chest in a finely textured black mesh; a deep V cutout reveals a solid bright blue triangular underlayer beneath. This material choice engages with tension structures by treating the blue panel as a structural focal vector against the dark, technical mesh. The long fitted sleeves hold close to the arm in the same patterned mesh; the high neckline hugs the throat before the chest opens into the cutout. The garment asserts a highly engineered and tactical approach to swimwear."
         },
         {
           "x": 50,
-          "y": 55,
-          "label": "High-Waisted Mesh Cycling Shorts",
-          "description": "The high-waisted mesh cycling shorts encase the thighs in the exact same sheer black material as the top; they feature a solid blue groin panel that mimics traditional swimwear. This structural logic utilizes active corporeal exposure by turning athletic shorts into a translucent skin-baring garment. The tight mesh highlights the natural musculature; the solid panel sits artificially high. The piece completes the silhouette by enforcing an aggressive highly visible and athletic uniformity."
+          "y": 60,
+          "label": "High-Cut Navy Swimsuit Bottom",
+          "description": "The high-cut navy swimsuit bottom anchors the graphic mesh top in a solid, opaque cobalt fabric; it rises sharply at the hip to fully expose the thigh and leaves the legs entirely bare. This structural pairing engages with active corporeal exposure by contrasting the textured, patterned upper half against a stark solid-color lower half. The smooth fabric holds a clean geometric line against the skin; the high-cut leg opening elongates the silhouette. The piece completes the look by grounding the technical mesh top in a minimal, second-skin foundation."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-05.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Oversized Graphic Logo T-Shirt",
+          "description": "The oversized graphic logo t-shirt drapes loosely over the torso in a navy jersey printed with bold white \"SS20\" text and crossing technical grid-lines; it reads as an enlarged, deconstructed piece of branded athletic merchandise. This material strategy engages with post-digital reality by treating the garment itself as a wearable graphic interface, cluttered with typographic and linear information like a technical schematic. The heavyweight cotton hangs away from the body in soft loose folds; the crew neckline and dropped shoulder seams retain the silhouette of a basic tee. The garment asserts a casual, mass-market baseline that the corset above then radically reworks."
+        },
+        {
+          "x": 50,
+          "y": 50,
+          "label": "Neon Lime Underbust Corset with Utility Pouches",
+          "description": "The neon lime underbust corset cinches over the graphic tee in a bright stiff synthetic textile; it rises to a sharp V at the sternum and is anchored by two small zippered utility pouches that hang from drawstring cords at the hip. This structural logic engages with architectural scaffolding by forcing a soft printed tee into a rigid, corseted silhouette using hardware borrowed from technical outerwear. The acid-green color provides a massive chromatic contrast to the navy print beneath; the pouches swing loosely with the model's stride. The piece completes the look by injecting functional, sport-utility hardware into an otherwise soft ensemble."
         }
       ]
     },
     {
       "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-06.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
-          "label": "Graphic Printed Mesh Top",
-          "description": "The graphic printed mesh top clings tightly to the upper body in a translucent dark blue fabric; it is heavily detailed with abstract technological motifs. This material strategy utilizes post-digital reality by creating a highly complex surface texture resembling circuit boards or structural blueprints. The sheer fabric exposes the bright yellow corset beneath; the sleeves end sharply at the elbows. The top asserts a highly engineered and tactical upper silhouette."
-        },
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Neon Yellow Utility Corset",
-          "description": "The neon yellow utility corset tightly cinches the waist in a bright stiff synthetic textile; it features prominent functional zippers and small attached utility pouches. This structural logic engages with architectural scaffolding by forcing the soft mesh garments into a rigid controlled shape. The bright yellow color provides a massive chromatic contrast to the dark blue mesh; the sharp points angle downward over the hips. The garment completes the look by injecting heavy tactical hardware into the ensemble."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -126,7 +109,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-08.jpg",
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -145,6 +128,23 @@
           "y": 10,
           "label": "Voluminous Gathered Hairstyle",
           "description": "The voluminous gathered hairstyle features massive chaotic puffs of dark hair clustered tightly over the head and ears; it creates an unbalanced cartoonish silhouette. This styling detail applies subcultural theatricality by inflating the hair into an absurd geometric mass. The dark color contrasts softly with the bright red swimwear; the messy finish rejects pristine elegance. The accessory completes the look with an imposing and slightly aggressive anonymity."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-08.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Color-Blocked Lime Panel Top",
+          "description": "The color-blocked mock-neck top structures the upper body in a deep navy stretch fabric interrupted by two lime-green panels curving up the ribcage toward the bust; it fits close to the torso with long fitted sleeves and a high, banded collar. This chromatic strategy engages with tension structures by using the acid-green inserts to visually map the body's underlying musculature onto the garment's surface. The smooth synthetic fabric holds its color-blocking with sharp, clean edges; the high neckline contrasts with the exposed waist below. The top asserts a sleek, technical baseline for the architectural cage layered over it."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Rigid White Spiderweb Waist Cage",
+          "description": "The rigid white spiderweb waist cage encircles the hip in a radiating lattice of stiff white strapping fixed with metal rivets; it flares outward from the natural waistline into a wide, birdcage-like basket. This structural extreme applies architectural scaffolding by suspending an entirely independent geometric framework around the body, unconnected to any garment beneath it. The white strapping casts a graphic linear shadow over the navy mesh skirt underneath; the cage holds its shape regardless of the wearer's stride. The accessory completes the silhouette by asserting the primacy of engineered structure over soft drape."
         }
       ]
     },
@@ -173,7 +173,20 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-10.jpg",
-      "hotspots": []
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Graphic Seamed White Slip Dress",
+          "description": "The graphic seamed white slip dress hugs the torso and hips in a sleek synthetic fabric; it features aggressive black stitch lines mapping the garment's construction directly onto the exterior. This structural intervention engages with tension structures by treating the seams as visible architectural vectors. The crisp white textile drops cleanly to the ankle with a dramatic asymmetrical slit over the right thigh; it is suspended by thin delicate straps. The garment asserts a highly engineered and provocative approach to swimwear cover-ups."
+        },
+        {
+          "x": 48,
+          "y": 70,
+          "label": "Rigid Branded Crinoline Cage",
+          "description": "The rigid branded crinoline cage spirals around the lower legs in a wide bell shape; it is constructed entirely from stiff white ribbons printed with the brand's typography. This accessory utilizes architectural scaffolding to enforce a massive geometric boundary around the model's stride. The empty voids between the ribbons completely expose the leg; it drags heavily across the runway. The piece completes the silhouette by injecting a bizarre historical reference into the hyper-modern collection."
+        }
+      ]
     }
   ],
   "tags": {

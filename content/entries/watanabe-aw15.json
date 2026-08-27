@@ -11,15 +11,9 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Laser-Cut Synthetic Exoskeleton",
-          "description": "The laser-cut synthetic exoskeleton envelopes the body in a stiff black carapace constructed entirely from interconnected diamond-shaped fins; it aggressively disrupts the natural anatomical contour. This material manipulation utilizes mathematical precision, explicitly the golden ratio, to dictate the size and offset of each structural plane. The dark shiny fabric catches light intensely at every sharp crease; it forces the shoulders and hips into severe geometric pyramids. The garment asserts a purely scientific approach to architectural shielding."
-        },
-        {
-          "x": 50,
-          "y": 10,
-          "label": "Radial Fin Headpiece",
-          "description": "The radial fin headpiece completely obscures the skull within a domed lampshade-like structure made of flat black planes; it creates a stark architectural void above the body. This accessory engages with bodily obfuscation by substituting the human head with a 360-degree geometric sculpture. The stiff fins radiate outward from a central point, holding their rigid shape perfectly. The piece completes the silhouette by enforcing an alien anonymity that rejects conventional facial beauty."
+          "y": 55,
+          "label": "Concertina-Pleat Trapezoid Skirt",
+          "description": "The concertina-pleat trapezoid skirt drops from a high waist into a rigid expanding A-line; it carries the collection's mathematical origami language into the lower half of the body in a single uninterrupted geometric volume. This structural intervention applies the same offset-seam logic that produced the show's honeycomb capes, scaled and reoriented for skirt geometry — the pleats hold their three-dimensional shape entirely through the precision of the cut. The stiff fabric refuses any soft drape between vertical creases; the hem terminates bluntly at the knee. The garment asserts the collection's central thesis that flat textiles can be made to perform as architectural volumes via pure mathematical precision."
         }
       ]
     },
@@ -28,15 +22,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 45,
-          "label": "Kinetic Honeycomb Cape",
-          "description": "The kinetic honeycomb cape drapes heavily from the shoulders in a dark grey mesh; it creates a massive cage-like volume that swings outwards as the model walks. This structural logic utilizes the concertina expansion technique; the horizontal slits are engineered so that gravity pulls the offset seams open into perfect interconnected hexagons. The fabric lacks rigid internal scaffolding, relying entirely on the precision of the cuts for its shape. The outerwear asserts a playful yet highly calculated 3D interpretation of Op-Art."
+          "y": 32,
+          "label": "Cropped Stand-Collar Bell-Sleeve Jacket",
+          "description": "The cropped stand-collar jacket frames the upper body in a stark black shell; it truncates sharply at the waist to emphasize the sculptural drape below. This tailoring choice utilizes a relatively simple silhouette to balance the extreme complexity of the garment beneath. The stiff material holds a wide flared shape at the cuffs and a tall standing collar at the throat; the front is fastened with a tight row of round buttons. The piece completes the ensemble by providing a smooth, dark anchor against the chaotic marbled drape below."
         },
         {
           "x": 50,
-          "y": 30,
-          "label": "Crisp White Cotton Shirting",
-          "description": "The crisp white cotton shirting provides a simple unadorned foundation beneath the complex honeycomb mesh; it flashes cleanly through the voids of the cape. This material choice engages with the strategy of grounding the avant-garde by pairing extreme techno-couture with a banal everyday staple. The collar stands sharply against the neck; the fabric reflects the runway lighting through the dark grey cage. The garment completes the look by emphasizing the wearable reality hidden beneath the intellectual mathematics."
+          "y": 68,
+          "label": "Marbled Origami-Folded Trapeze Skirt",
+          "description": "The marbled origami-folded skirt drops from the waist in deep overlapping diagonal folds; it entirely obscures the legs within a massive ridged, asymmetric column that trails past the ankle. This structural extreme applies the collection's folding logic at floor-sweeping scale, using a smoky black-and-grey marbled print that reads as geological strata compressed into fabric. The dense pleats catch the runway light unevenly across their fractured surface; a raw, notched hem trails loosely at one side. The garment refuses traditional tailoring to assert a highly calculated and immersive sculptural volume."
         }
       ]
     },
@@ -46,14 +40,14 @@
         {
           "x": 50,
           "y": 45,
-          "label": "Pleated Honeycomb Tube Dress",
-          "description": "The pleated honeycomb tube dress drops rigidly from the high neck to the mid-thigh in a stiff dark brown fabric; it encases the torso completely within an unbroken three-dimensional grid. This structural intervention utilizes extreme mathematical precision to transform a flat textile into a self-supporting kinetic shell. The offset seams create perfect diamond-shaped voids that expand and contract with the model's movement. The piece asserts a strict architectural boundary that treats the female form as a central load-bearing column rather than an object of sensual display."
+          "label": "Elongated 3D Origami Scarf",
+          "description": "The elongated 3D origami scarf drapes heavily around the neck and trails down the front of the body in a thick column of sharp black pyramids; it functions as a rigid wearable sculpture. This accessory engages directly with the thesis of exploring dimensionality by taking a flat length of fabric and mathematically folding it into a dense, spiked mass. The dark material absorbs light completely to create a heavy visual void over the crisp white shirt; the peaks point aggressively outward. The piece asserts an intimidating architectural presence disguised as a winter accessory."
         },
         {
-          "x": 50,
-          "y": 65,
-          "label": "Tailored Cream Trousers",
-          "description": "The tailored cream trousers drop fluidly from beneath the heavy honeycomb dress; they introduce a relaxed menswear element to the lower body. This sartorial choice applies the concept of grounding the avant-garde by juxtaposing complex dimensionality with an ordinary straight-leg pant. The fabric features a sharp central crease; the hem breaks cleanly over dark studded brogues. The trousers complete the ensemble by anchoring the explosive sculptural volume in practical urban reality."
+          "x": 30,
+          "y": 55,
+          "label": "Algebraic Skin Doodles",
+          "description": "The algebraic skin doodles cover the exposed hands in chaotic black ink equations; they make the collection's \"technology attack\" literal. This styling intervention engages with anti-consumerism by treating the human body as a chalkboard for hardcore scientific calculation. The messy, handwritten graphics contrast sharply with the pristine white cuffs and absolute precision of the garments. The detail completes the look by solidifying the narrative of fashion as an intellectual, mathematical pursuit."
         }
       ]
     },
@@ -62,15 +56,15 @@
       "hotspots": [
         {
           "x": 50,
-          "y": 35,
-          "label": "Folded Geometric Bolero",
-          "description": "The folded geometric bolero wraps the chest and shoulders in an aggressive cluster of bright red pyramidal spikes; it physically mimics complex paper origami. This structural logic utilizes monolithic massing to create a dense protective barrier over the vital organs. The bright red fabric catches deep shadows inside the rigid geometric folds; it is secured tightly over the crisp white shirt beneath. The outerwear asserts a hybridized aesthetic that fuses organic mathematical sequences with high-visibility synthetic color."
+          "y": 20,
+          "label": "Angular Origami Collar",
+          "description": "The angular origami collar frames the neck in a tight ring of crisp white folded peaks; it physically isolates the head from the rest of the body. This structural logic utilizes mathematical pattern-making to elevate a banal shirt collar into a 3D geometric sculpture. The sharp white fabric stands rigidly without drooping; it mimics the spiked texture of the collection's heavier outerwear. The detail asserts a clinical and deeply formal precision that restricts the movement of the neck entirely."
         },
         {
           "x": 50,
-          "y": 15,
-          "label": "Rectangular Baffle Headpiece",
-          "description": "The rectangular baffle headpiece hovers massively above the head; it isolates the face within a deep architectural shadow cast by thick rigid black fins. This accessory applies bodily obfuscation by turning the headwear into an oppressive spatial enclosure. The vertical planes are stacked to resemble an inverted industrial heatsink; the structure demands absolute balance from the wearer. The piece asserts an intimidating and slightly absurd theatricality that emphasizes the collection's focus on hardcore volume."
+          "y": 38,
+          "label": "Stud-Embellished White Shirting",
+          "description": "The stud-embellished white shirting provides a clean tailored base layer for the extreme collar; it is punctured by small silver studs running down the arms. This material choice engages with the strategy of grounding the avant-garde by utilizing a highly wearable, everyday garment. The crisp cotton fits smoothly across the torso; it is tucked sharply into black trousers. The garment completes the top half of the silhouette by adding subtle hardware to an otherwise austere staple."
         }
       ]
     },
