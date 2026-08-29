@@ -12,29 +12,6 @@
         {
           "x": 50,
           "y": 35,
-          "label": "Sculptural White Wool Coat",
-          "description": "The sculptural white wool coat aggressively alters the upper silhouette with enormous pointed shoulders that dwarf the head; it creates a rigid triangular volume over the torso. This structural extreme applies the semiotic sabotage of the uniform by mutating a formal overcoat into an imposing almost alien architecture. The dense white fabric features tight rows of fabric-covered buttons; large angular pockets jut outward from the hips. The outerwear asserts an unyielding and intimidating physical presence."
-        },
-        {
-          "x": 50,
-          "y": 15,
-          "label": "Tulle Mourning Veil",
-          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
-        },
-        {
-          "x": 45,
-          "y": 85,
-          "label": "Pointed Wool Train",
-          "description": "The pointed wool train drags heavily across the runway in a long continuous sweep of fabric; it is bordered by signature grosgrain ribbon trimming. This material extension engages with corporeal resurrection by mimicking the dragging burial shrouds of gothic fantasy. The stiff fabric is folded deeply to create a massive structural tail; a row of pointed fabric spikes runs down the center line. The garment completes the dramatic volume by ensuring the model occupies an immense spatial footprint."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 35,
           "label": "Exaggerated Flannel Cropped Jacket",
           "description": "The exaggerated flannel cropped jacket inflates the upper arms into massive rounded sleeves while tapering sharply at the natural waist; it completely obscures the natural shoulder line. This tailoring extreme applies the subversion of traditional femininity by replacing soft contouring with aggressive bulbous massing. The stiff grey wool mimics mid-century menswear fabrics; the front features a tight column of dark buttons. The garment asserts a highly structured and slightly suffocating upper carapace."
         },
@@ -53,7 +30,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-03.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -70,7 +47,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-04.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -87,7 +64,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-05.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -104,7 +81,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-06.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -127,7 +104,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-07.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -144,7 +121,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-08.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -161,7 +138,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-09.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-08.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -178,7 +155,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-10.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-09.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -195,7 +172,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-11.jpg",
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-10.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -208,6 +185,29 @@
           "y": 15,
           "label": "Tulle Mourning Veil",
           "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-11.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 35,
+          "label": "Sculptural White Wool Coat",
+          "description": "The sculptural white wool coat aggressively alters the upper silhouette with enormous pointed shoulders that dwarf the head; it creates a rigid triangular volume over the torso. This structural extreme applies the semiotic sabotage of the uniform by mutating a formal overcoat into an imposing almost alien architecture. The dense white fabric features tight rows of fabric-covered buttons; large angular pockets jut outward from the hips. The outerwear asserts an unyielding and intimidating physical presence."
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "label": "Tulle Mourning Veil",
+          "description": "The tulle mourning veil obscures the entire head within a sheer black dome; it isolates the face behind a dark fragile barrier. This accessory utilizes bodily obfuscation to erase individual identity and enforce the macabre narrative of the collection. The stiff netting is shaped into a rigid oval; the metallic silver lipstick flashes subtly through the mesh. The piece completes the silhouette by emphasizing the uncanny reanimated aesthetic of the staging."
+        },
+        {
+          "x": 45,
+          "y": 85,
+          "label": "Pointed Wool Train",
+          "description": "The pointed wool train drags heavily across the runway in a long continuous sweep of fabric; it is bordered by signature grosgrain ribbon trimming. This material extension engages with corporeal resurrection by mimicking the dragging burial shrouds of gothic fantasy. The stiff fabric is folded deeply to create a massive structural tail; a row of pointed fabric spikes runs down the center line. The garment completes the dramatic volume by ensuring the model occupies an immense spatial footprint."
         }
       ]
     }

@@ -12,40 +12,6 @@
         {
           "x": 50,
           "y": 30,
-          "label": "Striped Sleeveless Poplin Shirt",
-          "description": "The striped sleeveless poplin shirt frames the upper body in crisp black and white vertical lines; it hangs loosely over the torso without darts or tailored contouring. This structural choice applies the concept of unrestrictive anatomy by prioritizing comfortable utilitarian geometry over the hyper-sexualized body-con silhouettes of the previous decade. The sharp collar and hidden button placket mimic traditional menswear shirting. The garment asserts a pragmatic minimalism designed for the working intellectual rather than for visual consumption."
-        },
-        {
-          "x": 50,
-          "y": 55,
-          "label": "Striped A-Line Midi Skirt",
-          "description": "The striped A-line midi skirt drops below the knee in the exact same crisp poplin as the shirt; it features contrasting panels of horizontal and vertical lines. This material application engages with essentialism by taking a mundane textile and elevating it through meticulous geometric pattern cutting. The stiff fabric holds a slight flare without clinging to the hips or thighs. The piece completes the uniform by subverting the traditional suit into a relaxed graphic ensemble."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-02.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 25,
-          "label": "Fluid White Silk Blouse",
-          "description": "The fluid white silk blouse drapes softly over the chest; it features a high rounded neckline and completely lacks sleeves. This material strategy utilizes quiet luxury to elevate a basic t-shirt silhouette into a highly refined runway piece. The delicate fabric catches the light smoothly without heavy structuring; it is tucked sharply into the rigid skirt below. The top asserts a posture of effortless and highly polished everyday elegance."
-        },
-        {
-          "x": 50,
-          "y": 45,
-          "label": "Leather A-Line Miniskirt",
-          "description": "The leather A-line miniskirt tightly binds the waist before flaring stiffly away from the thighs; it is constructed from a smooth matte black hide. This structural intervention engages with material elevation by applying an aggressive fetishistic textile to a conservative classic shape. The thick material holds a rigid unyielding volume that contrasts violently with the soft silk blouse above; a minimal unbranded belt cinches the waist. The skirt completes the look by grounding the delicate top in an imposing and structural base."
-        }
-      ]
-    },
-    {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-03.jpg",
-      "hotspots": [
-        {
-          "x": 50,
-          "y": 30,
           "label": "Leather Short-Sleeve T-Shirt",
           "description": "The leather short-sleeve t-shirt envelopes the upper body in a sleek black hide; it precisely mimics the cut of a banal cotton tee. This outerwear choice is the definitive example of the designer's core structural logic: isolating a basic everyday component and reconstructing it in hyper-luxurious buttery leather. The stiff material absorbs the runway lighting completely; the sleeves end bluntly at the elbow. The garment asserts a profound statement on essentialism and quiet luxury."
         },
@@ -58,7 +24,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-04.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-02.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -69,7 +35,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-05.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-03.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -86,7 +52,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-06.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-04.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -97,7 +63,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-07.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-05.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -114,7 +80,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-08.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-06.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -125,7 +91,7 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-09.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-07.jpg",
       "hotspots": [
         {
           "x": 50,
@@ -142,13 +108,47 @@
       ]
     },
     {
-      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-10.jpg",
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-08.jpg",
       "hotspots": [
         {
           "x": 50,
           "y": 45,
           "label": "Draped Asymmetrical Silk Dress",
           "description": "The draped asymmetrical silk dress wraps the torso and hips in a highly lustrous dark blue textile; it features a complex folded overlay that drops diagonally across the waist. This tailoring approach applies the concept of the female gaze by prioritizing the intellectual architecture of the drape over overt traditional sensuality. The shiny fabric catches the runway light softly; the sleeveless cut exposes the arms completely. The garment asserts a highly polished and quietly powerful eveningwear alternative."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-09.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 30,
+          "label": "Striped Sleeveless Poplin Shirt",
+          "description": "The striped sleeveless poplin shirt frames the upper body in crisp black and white vertical lines; it hangs loosely over the torso without darts or tailored contouring. This structural choice applies the concept of unrestrictive anatomy by prioritizing comfortable utilitarian geometry over the hyper-sexualized body-con silhouettes of the previous decade. The sharp collar and hidden button placket mimic traditional menswear shirting. The garment asserts a pragmatic minimalism designed for the working intellectual rather than for visual consumption."
+        },
+        {
+          "x": 50,
+          "y": 55,
+          "label": "Striped A-Line Midi Skirt",
+          "description": "The striped A-line midi skirt drops below the knee in the exact same crisp poplin as the shirt; it features contrasting panels of horizontal and vertical lines. This material application engages with essentialism by taking a mundane textile and elevating it through meticulous geometric pattern cutting. The stiff fabric holds a slight flare without clinging to the hips or thighs. The piece completes the uniform by subverting the traditional suit into a relaxed graphic ensemble."
+        }
+      ]
+    },
+    {
+      "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-10.jpg",
+      "hotspots": [
+        {
+          "x": 50,
+          "y": 25,
+          "label": "Fluid White Silk Blouse",
+          "description": "The fluid white silk blouse drapes softly over the chest; it features a high rounded neckline and completely lacks sleeves. This material strategy utilizes quiet luxury to elevate a basic t-shirt silhouette into a highly refined runway piece. The delicate fabric catches the light smoothly without heavy structuring; it is tucked sharply into the rigid skirt below. The top asserts a posture of effortless and highly polished everyday elegance."
+        },
+        {
+          "x": 50,
+          "y": 45,
+          "label": "Leather A-Line Miniskirt",
+          "description": "The leather A-line miniskirt tightly binds the waist before flaring stiffly away from the thighs; it is constructed from a smooth matte black hide. This structural intervention engages with material elevation by applying an aggressive fetishistic textile to a conservative classic shape. The thick material holds a rigid unyielding volume that contrasts violently with the soft silk blouse above; a minimal unbranded belt cinches the waist. The skirt completes the look by grounding the delicate top in an imposing and structural base."
         }
       ]
     }
