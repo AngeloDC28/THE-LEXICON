@@ -166,7 +166,7 @@
 
   "rewrites": [
     {
-      "source": "/((?!public|js|index\\.css|database\\.js|favicon\\.svg|favicon\\.ico|apple-touch-icon|site\\.webmanifest|sw\\.js|\\.well-known|sitemap\\.xml|sitemap-index\\.xml|feed\\.xml|robots\\.txt).*)",
+      "source": "/((?!public|js|reviews|index\\.css|database\\.js|favicon\\.svg|favicon\\.ico|apple-touch-icon|site\\.webmanifest|sw\\.js|\\.well-known|sitemap\\.xml|sitemap-index\\.xml|feed\\.xml|robots\\.txt).*)",
       "destination": "/index.html"
     }
   ]
