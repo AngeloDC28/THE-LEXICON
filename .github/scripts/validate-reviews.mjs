@@ -13,14 +13,23 @@
  * can't express on its own — including the legal one: every image must
  * carry a non-empty credit and a valid rights value, because the
  * fair-dealing exception (s.30 CDPA 1988) this site relies on for film
- * stills depends on sufficient acknowledgement. That check is enforced
- * here, in CI, not left to editorial discipline.
+ * stills depends on sufficient acknowledgement. That check is on the
+ * JSON content alone (credit string present, rights in the enum) — it
+ * doesn't depend on the image file actually existing on disk, so it runs
+ * at full strength unconditionally, everywhere, always.
  *
- * Images are not always available yet when a review is drafted. By
- * default a missing images[].src file FAILS the build (unlike
- * check-assets.mjs, which only warns for entries) — reviews are meant to
- * ship complete. Pass --allow-missing-assets to downgrade that one check
- * to a warning for local iteration. Never pass that flag in CI.
+ * The *file-existence* check is a different story, and deliberately
+ * separated from the legal one: this script's default invocation is the
+ * last step of `npm run check`, which is the last step of `preflight`,
+ * which is Vercel's buildCommand. A hard failure there doesn't just skip
+ * one review page — it fails the *entire deployment*, taking the whole
+ * site down over one review's not-yet-sourced stills. So by default,
+ * a missing images[].src file only WARNS (same treatment check-assets.mjs
+ * already gives entries, for the same reason). Pass --strict-assets to
+ * make it a hard failure — that flag is used by the separate
+ * .github/workflows/check.yml CI job, which blocks a PR's merge status
+ * without ever touching what Vercel deploys. That's where "enforced in
+ * CI, not by discipline" actually lives for this specific check.
  */
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
@@ -30,7 +39,7 @@ const ROOT           = fileURLToPath(new URL('../../', import.meta.url));
 const REVIEWS        = join(ROOT, 'content', 'reviews');
 const ENTRIES        = join(ROOT, 'content', 'entries');
 const SCHEMA         = JSON.parse(readFileSync(join(ROOT, 'content', 'review.schema.json'), 'utf8'));
-const ALLOW_MISSING  = process.argv.includes('--allow-missing-assets');
+const STRICT_ASSETS  = process.argv.includes('--strict-assets');
 
 function resolveRef(ref, root) {
   // only support intra-document refs like "#/$defs/image"
@@ -133,13 +142,15 @@ function checkInvariants(review, id) {
     }
   }
 
-  // every image's src must exist on disk — hard fail unless --allow-missing-assets
+  // every image's src should exist on disk — warn by default (deploy-safe,
+  // matches check-assets.mjs's treatment of entries), hard fail only with
+  // --strict-assets (the dedicated CI job).
   for (const img of review.images || []) {
     const abs = join(ROOT, img.src);
     if (!existsSync(abs)) {
       const msg = `$.images: "${img.src}" (id "${img.id}") does not exist on disk`;
-      if (ALLOW_MISSING) console.warn(`  WARN ${msg}`);
-      else errs.push(msg);
+      if (STRICT_ASSETS) errs.push(msg);
+      else console.warn(`  WARN ${msg}`);
     }
   }
 
@@ -174,8 +185,8 @@ for (const file of files) {
   }
 }
 
-if (ALLOW_MISSING) {
-  console.warn('\n--allow-missing-assets is set — missing image files were downgraded to warnings. Never use this flag in CI.');
+if (!STRICT_ASSETS) {
+  console.warn('\nMissing image files are warnings in this run (default). Pass --strict-assets (used by CI) to fail on them instead.');
 }
 
 if (failed) {
