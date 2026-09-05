@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lexicon review",
+  "description": "Shape of one film review under content/reviews/<slug>.json. Enforced by .github/scripts/validate-reviews.mjs (zero-dep, same interpreter as entry.schema.json).",
+  "type": "object",
+  "required": ["slug", "title", "dek", "rating", "byline", "publishedAt", "film", "body", "images"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema":      { "type": "string", "description": "Points to review.schema.json — enables editor autocomplete. Not validated at runtime." },
+    "slug":         { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Must equal the JSON filename (sans .json). Becomes the URL: /reviews/<slug>/" },
+    "title":        { "type": "string", "minLength": 1 },
+    "dek":          { "type": "string", "minLength": 1, "description": "One-sentence standfirst — the verdict, compressed. Used as meta description." },
+    "rating":       { "type": "number", "minimum": 0, "maximum": 5 },
+    "byline":       { "type": "string", "minLength": 1 },
+    "publishedAt":  { "type": "string", "description": "ISO date (YYYY-MM-DD). Must not be in the future." },
+    "updatedAt":    { "type": "string", "description": "ISO date (YYYY-MM-DD)." },
+
+    "film": {
+      "type": "object",
+      "required": ["director", "year"],
+      "additionalProperties": false,
+      "properties": {
+        "director":         { "type": "string", "minLength": 1 },
+        "year":             { "type": "integer", "minimum": 1880, "maximum": 2100 },
+        "runtimeMinutes":   { "type": "integer", "minimum": 1 },
+        "costumeDesigner":  { "type": "string" },
+        "cinematographer":  { "type": "string" },
+        "composer":         { "type": "string" },
+        "distributor":      { "type": "string" }
+      }
+    },
+
+    "body": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/bodyBlock" }
+    },
+
+    "images": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/image" }
+    },
+
+    "worksCited": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "relatedEntries": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Slugs that must exist in content/entries/."
+    },
+
+    "tags": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Optional — reuses the entry taxonomy's axis names, but no axis is required for a review.",
+      "properties": {
+        "brand":     { "type": "string" },
+        "era":       { "type": "string" },
+        "politics":  { "type": "string" },
+        "theories":  { "type": "string" },
+        "gender":    { "type": "string" },
+        "materials": { "type": "string" },
+        "geography": { "type": "string" },
+        "anatomy":   { "type": "string" },
+        "format":    { "type": "string" }
+      }
+    }
+  },
+
+  "$defs": {
+    "bodyBlock": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["p", "h2", "pullquote", "image"] },
+        "text": { "type": "string" },
+        "ref":  { "type": "string", "description": "For type=image only — must resolve to an images[].id." }
+      }
+    },
+    "image": {
+      "type": "object",
+      "required": ["id", "src", "alt", "caption", "credit", "rights"],
+      "additionalProperties": false,
+      "properties": {
+        "id":        { "type": "string", "minLength": 1 },
+        "src":       { "type": "string", "minLength": 1 },
+        "alt":       { "type": "string" },
+        "caption":   { "type": "string" },
+        "credit":    { "type": "string", "minLength": 1, "description": "Legal requirement for fair-dealing use — title, director, year, production company." },
+        "rights":    { "enum": ["public-domain", "fair-dealing", "licensed"] },
+        "sourceUrl": { "description": "URL string, or null if none." }
+      }
+    }
+  }
+}

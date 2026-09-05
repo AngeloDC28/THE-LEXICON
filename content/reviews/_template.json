@@ -1,0 +1,30 @@
+{
+  "$schema": "../review.schema.json",
+  "slug": "REPLACE-WITH-KEBAB-CASE-SLUG",
+  "title": "Film Title",
+  "dek": "One sentence standfirst — the verdict, compressed.",
+  "rating": 0,
+  "byline": "Angelo Sanchez Dela Cruz",
+  "publishedAt": "2026-01-01",
+  "updatedAt": "2026-01-01",
+
+  "film": {
+    "director": "Director Name",
+    "year": 2026,
+    "runtimeMinutes": 100,
+    "costumeDesigner": "",
+    "cinematographer": "",
+    "composer": "",
+    "distributor": ""
+  },
+
+  "body": [
+    { "type": "p", "text": "Opening paragraph." }
+  ],
+
+  "images": [],
+
+  "worksCited": [],
+  "relatedEntries": [],
+  "tags": {}
+}
