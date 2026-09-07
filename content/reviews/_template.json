@@ -5,8 +5,8 @@
   "dek": "One sentence standfirst — the verdict, compressed.",
   "rating": 0,
   "byline": "Angelo Sanchez Dela Cruz",
-  "publishedAt": "2026-01-01",
-  "updatedAt": "2026-01-01",
+  "publishedAt": null,
+  "updatedAt": null,
 
   "film": {
     "director": "Director Name",

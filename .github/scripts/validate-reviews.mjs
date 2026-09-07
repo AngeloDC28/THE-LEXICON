@@ -116,12 +116,16 @@ function checkInvariants(review, id) {
     errs.push(`$.rating: ${review.rating} is not a multiple of 0.5`);
   }
 
-  // publishedAt must parse and not be in the future
-  const published = review.publishedAt ? new Date(review.publishedAt) : null;
-  if (!published || Number.isNaN(published.getTime())) {
-    errs.push(`$.publishedAt: "${review.publishedAt}" does not parse as a date`);
-  } else if (published.getTime() > Date.now()) {
-    errs.push(`$.publishedAt: "${review.publishedAt}" is in the future`);
+  // publishedAt is null for an unpublished draft (valid, deliberate — the
+  // editor sets the real date by hand, never inferred). If set, it must
+  // parse and not be in the future.
+  if (review.publishedAt != null) {
+    const published = new Date(review.publishedAt);
+    if (Number.isNaN(published.getTime())) {
+      errs.push(`$.publishedAt: "${review.publishedAt}" does not parse as a date`);
+    } else if (published.getTime() > Date.now()) {
+      errs.push(`$.publishedAt: "${review.publishedAt}" is in the future`);
+    }
   }
 
   // every body[] image block's ref must resolve to an images[].id

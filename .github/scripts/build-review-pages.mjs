@@ -98,6 +98,7 @@ const CSS = `
   .rating { color: #CCFF00; font-size: 1.1rem; letter-spacing: 0.08em; }
   .byline { text-transform: uppercase; letter-spacing: 0.1em; color: #999; }
   time { color: #999; }
+  .draft-flag { color: #CCFF00; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid #CCFF00; padding: 2px 8px; }
   dl.credits {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 12px 24px;
@@ -197,14 +198,18 @@ function buildReviewJsonLd(review, url, ogImage) {
       worstRating: 0,
     },
     author: { '@type': 'Person', name: review.byline },
-    datePublished: review.publishedAt,
-    dateModified: review.updatedAt || review.publishedAt,
     publisher: {
       '@type': 'Organization',
       name: 'THE LEXICON',
       url: BASE,
     },
   };
+  // publishedAt/updatedAt are null for an unpublished draft — omit the
+  // JSON-LD date fields entirely rather than claim a date that isn't real.
+  if (review.publishedAt) {
+    obj.datePublished = review.publishedAt;
+    obj.dateModified = review.updatedAt || review.publishedAt;
+  }
   if (ogImage) obj.image = [ogImage];
   return JSON.stringify(obj);
 }
@@ -250,7 +255,7 @@ ${ogImage ? `<meta name="twitter:image" content="${esc(ogImage)}">\n` : ''}<link
       <div class="review-meta">
         <span class="rating" aria-label="Rating: ${review.rating} out of 5 stars">${stars(review.rating)}</span>
         <span class="byline">${esc(review.byline)}</span>
-        <time datetime="${esc(review.publishedAt)}">${formatDate(review.publishedAt)}</time>
+        ${review.publishedAt ? `<time datetime="${esc(review.publishedAt)}">${formatDate(review.publishedAt)}</time>` : `<span class="draft-flag">Unpublished draft</span>`}
       </div>
 
       ${renderCredits(review.film)}
@@ -281,17 +286,120 @@ ${review.relatedEntries?.length ? `
 `;
 }
 
+function renderIndexPage(reviews) {
+  const url = `${BASE}/reviews/`;
+  const title = 'Reviews — THE LEXICON';
+  const desc = 'Film reviewed through costume and dress — the most consistently undervalued craft in cinema.';
+
+  // Listed reviews only include published (dated) ones — an undated draft
+  // isn't live editorial yet, even though its static page already exists
+  // at its own URL. Order matches build-reviews.mjs: newest first.
+  const published = reviews.filter(r => r.publishedAt);
+
+  const cards = published.map(r => `
+      <li class="review-card">
+        <a href="/reviews/${esc(r.slug)}/">
+          <span class="rating" aria-label="Rating: ${r.rating} out of 5 stars">${stars(r.rating)}</span>
+          <h2>${esc(r.title)}</h2>
+          <p class="dek">${esc(r.dek)}</p>
+        </a>
+      </li>`).join('\n');
+
+  const itemListLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: published.map((r, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${BASE}/reviews/${r.slug}/`,
+      name: r.title,
+    })),
+  });
+
+  return `<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${esc(title)}</title>
+<meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${url}">
+<meta property="og:site_name" content="THE LEXICON">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
+<link rel="icon" href="/favicon.svg">
+<script type="application/ld+json">${itemListLd}</script>
+<style>${CSS}
+  .review-list { list-style: none; }
+  .review-card { border-bottom: 1px solid rgba(255,255,255,0.2); padding: 32px 0; }
+  .review-card:first-child { padding-top: 0; }
+  .review-card a:hover h2, .review-card a:focus-visible h2 { text-decoration: underline; }
+  .review-card h2 {
+    font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem);
+    color: #F4F4F5; margin: 10px 0 8px; line-height: 1.1;
+  }
+  .review-card .rating { font-size: 0.85rem; }
+  .review-card .dek {
+    font-family: 'EB Garamond', Georgia, serif; font-size: 1.05rem; color: #d4d4d4;
+  }
+  .empty-note { color: #999; font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem; }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="wordmark">THE LEXICON</a>
+    <nav><a href="/reviews/">REVIEWS</a></nav>
+  </header>
+
+  <main>
+    <article>
+      <div class="eyebrow">Reviews</div>
+      <h1>Film, through costume</h1>
+      <p class="dek">${esc(desc)}</p>
+
+      ${published.length
+        ? `<ul class="review-list">${cards}</ul>`
+        : `<p class="empty-note">Nothing published yet.</p>`}
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <a href="/">&larr; THE LEXICON</a>
+    <a href="/reviews/">All reviews</a>
+    <a href="/press/">Press</a>
+  </footer>
+</body>
+</html>
+`;
+}
+
 // --- run ---
 
 const files = readdirSync(REVIEWS).filter(f => f.endsWith('.json') && !f.startsWith('_'));
 
+const reviews = files
+  .map(f => JSON.parse(readFileSync(join(REVIEWS, f), 'utf8')))
+  .sort((a, b) => {
+    if (!a.publishedAt && !b.publishedAt) return a.slug.localeCompare(b.slug);
+    if (!a.publishedAt) return 1;
+    if (!b.publishedAt) return -1;
+    return new Date(b.publishedAt) - new Date(a.publishedAt);
+  });
+
 let count = 0;
-for (const f of files) {
-  const review = JSON.parse(readFileSync(join(REVIEWS, f), 'utf8'));
+for (const review of reviews) {
   const dir = join(OUT_DIR, review.slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), renderPage(review), 'utf8');
   count++;
 }
 
-console.log(`LEXICON_REVIEW_PAGES ok — wrote ${count} static review page(s) to /reviews/`);
+mkdirSync(OUT_DIR, { recursive: true });
+writeFileSync(join(OUT_DIR, 'index.html'), renderIndexPage(reviews), 'utf8');
+
+console.log(`LEXICON_REVIEW_PAGES ok — wrote ${count} static review page(s) + reviews/index.html to /reviews/`);

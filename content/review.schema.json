@@ -12,8 +12,8 @@
     "dek":          { "type": "string", "minLength": 1, "description": "One-sentence standfirst — the verdict, compressed. Used as meta description." },
     "rating":       { "type": "number", "minimum": 0, "maximum": 5 },
     "byline":       { "type": "string", "minLength": 1 },
-    "publishedAt":  { "type": "string", "description": "ISO date (YYYY-MM-DD). Must not be in the future." },
-    "updatedAt":    { "type": "string", "description": "ISO date (YYYY-MM-DD)." },
+    "publishedAt":  { "description": "ISO date (YYYY-MM-DD), or null for an unpublished draft awaiting a real date. Never invent/infer/backdate one — this is set by the editor only. Must not be in the future once set." },
+    "updatedAt":    { "description": "ISO date (YYYY-MM-DD), or null. Same rule as publishedAt." },
 
     "film": {
       "type": "object",

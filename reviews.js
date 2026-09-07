@@ -11,8 +11,8 @@ export const reviewsData = [
     "dek": "Jean Paul Gaultier's costumes change colour when the characters change rooms. It is the most complete integration of clothing into film grammar anyone has managed, in a film whose contempt eventually includes you.",
     "rating": 5,
     "byline": "Angelo Sanchez Dela Cruz",
-    "publishedAt": "2026-08-31",
-    "updatedAt": "2026-08-31",
+    "publishedAt": null,
+    "updatedAt": null,
     "film": {
       "director": "Peter Greenaway",
       "year": 1989,
