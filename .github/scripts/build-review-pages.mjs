@@ -56,6 +56,12 @@ function formatDate(iso) {
 
 // One shared stylesheet, inlined into every page. Duplicated per file on
 // purpose — these are static documents, each one must stand alone.
+// Matches index.css's actual signature, not a generic "dark + monospace"
+// approximation of it: hard, thick black-on-light or light-on-dark
+// borders; flat offset drop-shadows (no blur — see .brutalist-node); loud
+// 900-weight uppercase labels; the acid-yellow "tricolour sticky note"
+// treatment reused for pull quotes, since a pull quote is exactly the
+// kind of loud, single callout that device exists for on the archive.
 const CSS = `
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html.dark, html.dark body { background: #0A0A0A; color: #F4F4F5; }
@@ -66,18 +72,19 @@ const CSS = `
   }
   a { color: #CCFF00; text-decoration: none; }
   a:hover, a:focus-visible { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
   .site-header, .site-footer {
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px clamp(16px, 4vw, 48px);
     border-bottom: 2px solid #CCFF00;
     font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
   }
-  .site-footer { border-bottom: none; border-top: 1px solid rgba(255,255,255,0.2); gap: 24px; flex-wrap: wrap; }
+  .site-footer { border-bottom: none; border-top: 2px solid rgba(255,255,255,0.3); gap: 24px; flex-wrap: wrap; }
   .wordmark { font-weight: 700; letter-spacing: 0.1em; }
   main, article { max-width: 720px; margin: 0 auto; padding: clamp(24px, 5vw, 64px) clamp(16px, 4vw, 48px) 80px; }
   .eyebrow {
     font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: #CCFF00; margin-bottom: 12px;
+    color: #CCFF00; margin-bottom: 12px; font-weight: 700;
   }
   h1 {
     font-family: 'EB Garamond', Georgia, serif;
@@ -87,27 +94,40 @@ const CSS = `
   p.dek {
     font-family: 'EB Garamond', Georgia, serif;
     font-size: clamp(1.1rem, 1rem + 0.5vw, 1.4rem);
-    color: #d4d4d4; margin-bottom: 24px;
+    color: #d4d4d4; margin-bottom: 28px;
   }
   .review-meta {
-    display: flex; flex-wrap: wrap; align-items: baseline; gap: 16px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 16px;
     font-size: 0.8rem; letter-spacing: 0.04em;
-    padding-bottom: 24px; margin-bottom: 24px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 24px; margin-bottom: 32px;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
   }
   .rating { color: #CCFF00; font-size: 1.1rem; letter-spacing: 0.08em; }
-  .byline { text-transform: uppercase; letter-spacing: 0.1em; color: #999; }
+  .byline {
+    text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.4); padding: 3px 10px;
+  }
   time { color: #999; }
-  .draft-flag { color: #CCFF00; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid #CCFF00; padding: 2px 8px; }
+  .draft-flag {
+    color: #000; background: #CCFF00; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    border: 2px solid #000; padding: 3px 10px;
+  }
+
+  /* "Note card" treatment — the flat offset shadow is the site's actual
+     signature (see .brutalist-node in index.css), not a soft box-shadow. */
   dl.credits {
     display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px 24px;
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 20px; margin-bottom: 40px;
+    gap: 14px 28px;
+    background: #F4F4F5; color: #0A0A0A;
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0 #000;
+    padding: 24px; margin: 8px 0 44px;
     font-size: 0.78rem;
   }
-  dl.credits dt { color: #999; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.68rem; margin-bottom: 2px; }
-  dl.credits dd { color: #F4F4F5; }
+  dl.credits dt { color: #555; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; font-size: 0.66rem; margin-bottom: 3px; }
+  dl.credits dd { color: #0A0A0A; font-weight: 500; }
+
   .review-body {
     font-family: 'EB Garamond', Georgia, serif;
     font-size: clamp(1.05rem, 1rem + 0.2vw, 1.2rem);
@@ -115,34 +135,53 @@ const CSS = `
   .review-body p { margin-bottom: 22px; }
   .review-body h2 {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: #CCFF00; margin: 48px 0 20px; padding-bottom: 8px;
-    border-bottom: 2px solid #CCFF00;
+    font-weight: 900;
+    font-size: 0.85rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #CCFF00; margin: 56px 0 22px; padding-bottom: 10px;
+    border-bottom: 3px solid #CCFF00;
   }
+
+  /* Pull quote as tricolour sticky note: bold fill, hard border, flat
+     shadow, slight lift on hover — same device as the entry sidebar's
+     brutalist notes, reused here because a pull quote IS that device. */
   blockquote.pullquote {
+    font-family: 'EB Garamond', Georgia, serif;
     font-size: clamp(1.3rem, 1.1rem + 0.8vw, 1.7rem);
-    line-height: 1.3; border-left: 3px solid #CCFF00;
-    padding: 4px 0 4px 24px; margin: 40px 0; color: #fff;
+    line-height: 1.3; font-weight: 500;
+    background: #CCFF00; color: #000;
+    border: 3px solid #000;
+    box-shadow: 8px 8px 0 #000;
+    padding: 28px 32px; margin: 48px 0;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
-  figure { margin: 40px 0; border: 1px solid rgba(255,255,255,0.2); }
+  blockquote.pullquote p { margin: 0; }
+
+  figure { margin: 44px 0; border: 2px solid rgba(255,255,255,0.4); background: #000; }
   figure img { display: block; width: 100%; height: auto; background: #111; }
-  figcaption { padding: 12px 16px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; line-height: 1.5; color: #999; }
+  figcaption {
+    padding: 14px 16px; font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; line-height: 1.5; color: #999;
+    border-top: 2px solid rgba(255,255,255,0.4);
+  }
   figcaption .credit { display: block; margin-top: 4px; color: #666; }
+
   section.works-cited, section.related {
-    margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 52px; padding-top: 26px; border-top: 2px solid rgba(255,255,255,0.3);
     font-size: 0.85rem;
   }
   section.works-cited h2, section.related h2 {
-    font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: #999; margin-bottom: 12px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #CCFF00; margin-bottom: 14px;
   }
-  section.works-cited li, section.related li { list-style: none; margin-bottom: 8px; }
-  .review-body strong { color: #fff; }
+  section.works-cited li, section.related li { list-style: none; margin-bottom: 10px; }
+  section.related a {
+    display: inline-block; border: 1px solid rgba(255,255,255,0.4);
+    padding: 6px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  section.related a:hover { border-color: #CCFF00; text-decoration: none; }
+
+  .review-body strong { color: #fff; font-weight: 700; }
   .review-body em { font-style: italic; }
-  @media (prefers-color-scheme: light) {
-    /* Reviews are always dark-themed regardless of system preference — the
-       house style is dark by default (see boot.js), and these are
-       standalone documents with no JS to reconcile a light toggle. */
-  }
 `;
 
 function renderBody(review) {
@@ -336,18 +375,22 @@ function renderIndexPage(reviews) {
 <script type="application/ld+json">${itemListLd}</script>
 <style>${CSS}
   .review-list { list-style: none; }
-  .review-card { border-bottom: 1px solid rgba(255,255,255,0.2); padding: 32px 0; }
+  .review-card { border-bottom: 2px solid rgba(255,255,255,0.3); padding: 36px 0; }
   .review-card:first-child { padding-top: 0; }
-  .review-card a:hover h2, .review-card a:focus-visible h2 { text-decoration: underline; }
+  .review-card a:hover h2, .review-card a:focus-visible h2 { color: #CCFF00; }
   .review-card h2 {
     font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem);
-    color: #F4F4F5; margin: 10px 0 8px; line-height: 1.1;
+    font-weight: 700;
+    color: #F4F4F5; margin: 12px 0 10px; line-height: 1.1; transition: color 0.1s ease;
   }
   .review-card .rating { font-size: 0.85rem; }
   .review-card .dek {
     font-family: 'EB Garamond', Georgia, serif; font-size: 1.05rem; color: #d4d4d4;
   }
-  .empty-note { color: #999; font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem; }
+  .empty-note {
+    color: #0A0A0A; background: #F4F4F5; font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem;
+    border: 3px solid #000; box-shadow: 8px 8px 0 #000; padding: 28px 32px; display: inline-block;
+  }
 </style>
 </head>
 <body>

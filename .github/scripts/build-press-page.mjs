@@ -39,18 +39,19 @@ const CSS = `
   }
   a { color: #CCFF00; text-decoration: none; }
   a:hover, a:focus-visible { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
   .site-header, .site-footer {
     display: flex; align-items: center; justify-content: space-between;
     padding: 20px clamp(16px, 4vw, 48px);
     border-bottom: 2px solid #CCFF00;
     font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
   }
-  .site-footer { border-bottom: none; border-top: 1px solid rgba(255,255,255,0.2); gap: 24px; flex-wrap: wrap; }
+  .site-footer { border-bottom: none; border-top: 2px solid rgba(255,255,255,0.3); gap: 24px; flex-wrap: wrap; }
   .wordmark { font-weight: 700; letter-spacing: 0.1em; }
   main, article { max-width: 640px; margin: 0 auto; padding: clamp(24px, 5vw, 64px) clamp(16px, 4vw, 48px) 80px; }
   .eyebrow {
     font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: #CCFF00; margin-bottom: 12px;
+    color: #CCFF00; margin-bottom: 12px; font-weight: 700;
   }
   h1 {
     font-family: 'EB Garamond', Georgia, serif;
@@ -58,17 +59,30 @@ const CSS = `
     line-height: 1.1; margin-bottom: 28px;
   }
   h2 {
-    font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: #CCFF00; margin: 40px 0 14px; padding-bottom: 6px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-weight: 900;
+    font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #CCFF00; margin: 44px 0 16px; padding-bottom: 8px;
+    border-bottom: 3px solid #CCFF00;
   }
   p {
     font-family: 'EB Garamond', Georgia, serif;
     font-size: 1.1rem; margin-bottom: 16px; color: #F4F4F5;
   }
-  p.lead { font-size: 1.3rem; }
-  strong { color: #fff; }
-  .links { display: flex; gap: 24px; margin: 24px 0; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+  p.lead {
+    font-size: 1.3rem;
+    background: #F4F4F5; color: #0A0A0A;
+    border: 3px solid #000; box-shadow: 8px 8px 0 #000;
+    padding: 24px 28px; margin-bottom: 32px;
+  }
+  p.lead strong { color: #0A0A0A; }
+  strong { color: #fff; font-weight: 700; }
+  .links {
+    display: flex; gap: 16px; margin: 8px 0 24px; flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .links a { border: 1px solid rgba(255,255,255,0.4); padding: 8px 14px; }
+  .links a:hover { border-color: #CCFF00; text-decoration: none; }
 `;
 
 const html = `<!DOCTYPE html>
