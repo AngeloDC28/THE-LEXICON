@@ -6,6 +6,569 @@
 export const reviewsData = [
   {
     "$schema": "../review.schema.json",
+    "slug": "duke-of-burgundy",
+    "title": "The Duke of Burgundy",
+    "dek": "A film about a relationship conducted as unpaid labour, which announces itself in the credits by hiring a perfume that does not exist.",
+    "rating": 5,
+    "byline": "Angelo Sanchez Dela Cruz",
+    "publishedAt": null,
+    "updatedAt": null,
+    "film": {
+      "director": "Peter Strickland",
+      "year": 2014,
+      "runtimeMinutes": 104,
+      "costumeDesigner": "Andrea Flesch",
+      "cinematographer": "Nic Knowland",
+      "composer": "Cat's Eyes",
+      "distributor": "Artificial Eye"
+    },
+    "body": [
+      {
+        "type": "image",
+        "ref": "duke-of-burgundy-01"
+      },
+      {
+        "type": "p",
+        "text": "Before a frame of the film proper, Peter Strickland tells you exactly what kind of object you are about to watch. The opening titles run like a magazine masthead — Cinematography, Nic Knowland. Music, Cat's Eyes. Editing, Mátyás Fekete — and then two credits that do not belong on a call sheet:"
+      },
+      {
+        "type": "pullquote",
+        "text": "Dress and lingerie by Andrea Flesch.<br>Perfume by Je Suis Gizella."
+      },
+      {
+        "type": "p",
+        "text": "There is no perfume in <em>The Duke of Burgundy</em>. There cannot be. Film has never carried scent outside a handful of gimmicks, and nobody who has seen this film has smelled anything."
+      },
+      {
+        "type": "p",
+        "text": "It is the best joke in a very funny film, and it is also the thesis."
+      },
+      {
+        "type": "h2",
+        "text": "The film"
+      },
+      {
+        "type": "p",
+        "text": "Cynthia and Evelyn live together in a house full of butterflies, in a village apparently populated entirely by women, in no identifiable decade. Evelyn is the maid; Cynthia is the mistress who punishes her. Within twenty minutes you understand that Evelyn writes the scripts, sets the schedule, chooses the costumes, and hands Cynthia her lines on index cards — and that Cynthia, who would rather be reading in bed, performs them nightly out of love and is being slowly destroyed by the workload."
+      },
+      {
+        "type": "p",
+        "text": "That is the film. It is a domestic drama about a woman exhausted by a job she never applied for, staged as 1970s European erotica and played almost entirely straight."
+      },
+      {
+        "type": "p",
+        "text": "Sidse Babett Knudsen is extraordinary. The performance is built out of very small failures of enthusiasm — a beat too long before a line, a hand that doesn't quite commit — and the cumulative effect is one of the most precise portraits of resentment in recent cinema. Chiara D'Anna has the harder and less rewarded job, playing someone whose need is genuinely selfish and who cannot see it."
+      },
+      {
+        "type": "p",
+        "text": "Knowland shoots it in soft focus and heavy grain, and Cat's Eyes score it with a lushness that never once winks. Strickland's discipline here is the whole achievement: a film this close to pastiche that never becomes parody, because it takes its characters' feelings more seriously than its own references."
+      },
+      {
+        "type": "h2",
+        "text": "The clothes are the plot"
+      },
+      {
+        "type": "image",
+        "ref": "duke-of-burgundy-02"
+      },
+      {
+        "type": "p",
+        "text": "Most films with a costume budget use clothes to establish character. This one uses them as narrative mechanism. The garments are the script — the specific skirt, the specific boots, the specific nightdress are <em>what has been requested</em>, in writing, for that evening's performance. When Cynthia appears in the wrong thing, or in something comfortable, that is the plot advancing. When she buys a pair of pyjamas, it is a declaration of war."
+      },
+      {
+        "type": "p",
+        "text": "Which is why splitting the credit into <em>dress and lingerie</em> rather than the standard \"costume design\" is not a flourish. In this film the outerwear and the underwear are doing different jobs against different briefs, exactly as a fashion house would treat them, with different ateliers. Andrea Flesch is credited twice because she did two things."
+      },
+      {
+        "type": "p",
+        "text": "And the perfume credit is the same move pushed to its limit."
+      },
+      {
+        "type": "p",
+        "text": "Laura U. Marks' <em>The Skin of the Film</em> (2000) has the useful term: <strong>haptic visuality</strong>, images that ask the eye to work like a sense of touch, lingering on surface and texture rather than resolving into depth. Marks' point is that such films are reaching for senses cinema does not have, and that the reaching is the aesthetic. <em>The Duke of Burgundy</em> is haptic to the point of obsession — gauze, fur, water, the macro shots of wings and fabric held far past their informational usefulness."
+      },
+      {
+        "type": "p",
+        "text": "So somebody was asked what this house smells of. Somebody answered. The credit records that the answer was authored, by a named party, even though the medium then failed to transmit a single molecule of it."
+      },
+      {
+        "type": "h2",
+        "text": "Against the academic reading"
+      },
+      {
+        "type": "p",
+        "text": "This has been written about seriously once, by Monika Lemke in the <em>International Journal of Baudrillard Studies</em> (13:2, July 2016), who reads the credit as implicating the viewer in simulacra and consumer culture — a sign with no referent, in Baudrillard's sense, collapsing the boundary between the film's fantasy and our own consumption."
+      },
+      {
+        "type": "p",
+        "text": "The Baudrillard fits the <em>form</em> and misses the target, in the way theory often does when it assumes every gesture is about the audience."
+      },
+      {
+        "type": "p",
+        "text": "The credit is not addressed to consumers. It appears among the heads of department, where a job is named and a person is paid. <em>Je Suis Gizella</em> is not a house; there is no product, no placement, no money changing hands. Strickland cites <em>Paris When It Sizzles</em> (1964), which credited Audrey Hepburn's perfume to Hubert de Givenchy — but Givenchy in 1964 was doing commerce, extending a wardrobe deal into a second product category on screen. Strickland has taken that commercial artefact and emptied the commerce out of it."
+      },
+      {
+        "type": "p",
+        "text": "And the film simply is not about consumption. It is about work — who performs, on whose instruction, and who gets named for it. The entire plot is a credit dispute."
+      },
+      {
+        "type": "p",
+        "text": "Costume is the most persistently undervalued craft in cinema: discussed as \"the frocks,\" awarded for period pastiche, missing from most reviews of films whose whole look it built. Part of the reason is that the credit is too small for the job. It names clothes. The work is not clothes."
+      },
+      {
+        "type": "p",
+        "text": "Strickland's titles propose the fix without arguing for it — split the credit until it matches what actually happened, and include the parts the medium cannot deliver, because they were designed anyway."
+      },
+      {
+        "type": "h2",
+        "text": "Five stars"
+      },
+      {
+        "type": "p",
+        "text": "104 minutes, no wasted frame, funny, upsetting, and the rare erotic film whose eroticism is structural rather than decorative. It sits at 94% on Rotten Tomatoes across 101 reviews and 87 on Metacritic; the A.V. Club had it fourth-best of 2015, IndieWire's critics third. That consensus is correct and, unusually, well-reasoned."
+      },
+      {
+        "type": "p",
+        "text": "Whether any liquid was ever produced by <em>Je Suis Gizella</em> is beside the point. A perfume was commissioned for a film that cannot be smelled, and it got a card to itself."
+      },
+      {
+        "type": "p",
+        "text": "That is more respect than most costume departments get for work you can actually see."
+      }
+    ],
+    "images": [
+      {
+        "id": "duke-of-burgundy-01",
+        "src": "public/THE-LEXICON-ASSETS/reviews/duke-of-burgundy-01.jpg",
+        "alt": "Title card reading \"Perfume by Je Suis Gizella,\" from the opening credits",
+        "caption": "The opening credits, crediting a perfume that does not exist.",
+        "credit": "Peter Strickland, The Duke of Burgundy, 2014. Film4 Productions / Rook Films. Still reproduced for criticism and review.",
+        "rights": "fair-dealing",
+        "sourceUrl": null
+      },
+      {
+        "id": "duke-of-burgundy-02",
+        "src": "public/THE-LEXICON-ASSETS/reviews/duke-of-burgundy-02.jpg",
+        "alt": "Sidse Babett Knudsen and Chiara D'Anna in a production still",
+        "caption": "Sidse Babett Knudsen and Chiara D'Anna.",
+        "credit": "Peter Strickland, The Duke of Burgundy, 2014. Film4 Productions / Rook Films. Still reproduced for criticism and review.",
+        "rights": "fair-dealing",
+        "sourceUrl": null
+      }
+    ],
+    "relatedEntries": [],
+    "tags": {}
+  },
+  {
+    "$schema": "../review.schema.json",
+    "slug": "lady-blue-shanghai",
+    "title": "Lady Blue Shanghai",
+    "dek": "The best advertisement ever made, and a minor Lynch film. Both things are true, and the second one is the advertisement's fault.",
+    "rating": 3,
+    "byline": "Angelo Sanchez Dela Cruz",
+    "publishedAt": null,
+    "updatedAt": null,
+    "film": {
+      "director": "David Lynch",
+      "year": 2010,
+      "runtimeMinutes": 16,
+      "cinematographer": "Justyn Field",
+      "composer": "David Lynch, Dean Hurley",
+      "distributor": "Christian Dior S.A."
+    },
+    "body": [
+      {
+        "type": "image",
+        "ref": "lady-blue-shanghai-01"
+      },
+      {
+        "type": "p",
+        "text": "Dior's brief to David Lynch in 2010 had three items on it. Show the handbag. Show the Oriental Pearl Tower. Show some old Shanghai."
+      },
+      {
+        "type": "p",
+        "text": "Sixteen minutes later: Marion Cotillard enters a hotel room and hears tango from the 1920s. A Dior bag materialises out of smoke. Security sweeps the room and finds nothing. She remembers — or invents — a meeting at the Pearl Tower with a man named Yu, who cannot stay, and who gives her a blue rose. She finds the same rose inside the handbag."
+      },
+      {
+        "type": "p",
+        "text": "Lynch wrote, directed and edited it. Justyn Field shot it. Lynch and Dean Hurley scored it. Sabrina S. Sutherland produced for Christian Dior S.A. It is a real film with a real crew, and for about eleven of its sixteen minutes it is extremely good."
+      },
+      {
+        "type": "p",
+        "text": "Then it has to sell you a bag, and the whole thing collapses in a way that is worth being precise about."
+      },
+      {
+        "type": "h2",
+        "text": "What works"
+      },
+      {
+        "type": "p",
+        "text": "The opening is Lynch operating at full strength on a budget he never had for the features. The hotel corridor sequence has the specific quality his best work has — the sense that a perfectly ordinary space is running at the wrong speed, and that the wrongness is coming from somewhere just outside the frame. Cotillard is very good, better than she was in either of her previous Dior appearances, because Lynch does the thing he always does with actresses and asks her to play someone who is not sure whether she is remembering or inventing."
+      },
+      {
+        "type": "p",
+        "text": "The sound design carries it. Hurley and Lynch build the room out of low-frequency hum and that tango, and the tango is doing the same work the songs do in <em>Mulholland Drive</em>: it arrives from nowhere, it is too emotionally specific for the scene it is in, and it makes you distrust the image."
+      },
+      {
+        "type": "p",
+        "text": "And the central object is a genuinely good idea. The blue rose recurs across Lynch's work as the marker of a case that cannot be solved by ordinary means. Putting one inside a Dior handbag is an argument: this bag is a container for something that isn't there. Which is, accurately, what a luxury object is. Walter Benjamin's point about mass reproduction stripping an object of its aura is the whole commercial problem the luxury industry exists to solve, and hiring Lynch to solve it makes complete sense — his entire aesthetic is objects that seem to hold a secret. He is, structurally, an aura machine."
+      },
+      {
+        "type": "p",
+        "text": "So the film has a real thesis about the thing it is advertising, which almost no advertisement does."
+      },
+      {
+        "type": "h2",
+        "text": "What doesn't"
+      },
+      {
+        "type": "p",
+        "text": "The thesis is inert, because the client experienced it as flattery."
+      },
+      {
+        "type": "p",
+        "text": "This is the specific failure and it is not a moral one. A criticism that the target receives as a compliment has not landed; it has been absorbed. Dior did not commission a sixteen-minute meditation on the emptiness of luxury goods and then run it anyway out of bravery. Dior commissioned atmosphere, got atmosphere, and the argument travelled along inside it undetected, like a stowaway who never gets off the boat."
+      },
+      {
+        "type": "p",
+        "text": "You can see Lynch noticing this. The last four minutes are the weakest — the film has to return to the bag, in close-up, lit, and it does so with a visible loss of interest. The rose-in-the-bag reveal, which should be the sting, plays as product photography. He has made the object mysterious for eleven minutes and then has to hand it over intact."
+      },
+      {
+        "type": "p",
+        "text": "Compare the earlier work and the decline is obvious. Lynch made nine fashion campaigns over twenty-two years: Calvin Klein's Obsession in 1988 (four black-and-white shorts built on Hemingway, Lawrence, Flaubert and Fitzgerald, with an unknown Heather Graham and an unknown Benicio Del Toro), Armani and Saint Laurent in 1992, Lancôme and Jil Sander in 1993, Lagerfeld in 1994, Dior's Fahrenheit in 2004, Gucci in 2008. The Jil Sander film — desert, black panther, techniques he reused in <em>Lost Highway</em> four years later — is better than this. Obsession is much better than this."
+      },
+      {
+        "type": "p",
+        "text": "The pattern is the money. The cheap early ones had to think; the expensive late ones only had to look. Gucci by Gucci (2008) is the nadir, three supermodels under falling glitter with no idea in it at all — Lynch performing Lynch, style detached from the thinking that produced it. <em>Lady Blue Shanghai</em> is a recovery from that, but it is a recovery within a form that had already beaten him."
+      },
+      {
+        "type": "h2",
+        "text": "The rating explained"
+      },
+      {
+        "type": "p",
+        "text": "Three stars is not a shrug. It is: eleven minutes of first-rate Lynch, five minutes of contractual obligation, and a structural problem the film cannot solve because the film is owned by the thing it wants to be sceptical about."
+      },
+      {
+        "type": "p",
+        "text": "If you saw the first eleven minutes on their own you would call it a lost Lynch short and want it restored."
+      },
+      {
+        "type": "p",
+        "text": "Which brings up the only genuinely annoying thing about writing this review, and it applies to the whole sequence."
+      },
+      {
+        "type": "p",
+        "text": "You cannot watch these properly. The features are archived, restored and distributed; the campaigns are on YouTube in varying resolutions, varying cuts, uploaded by people with no relationship to the rights holders, often undated and occasionally misattributed. The four Obsession films are hard to see as a set at all. Film preservation doesn't claim them because they're advertising. Fashion heritage doesn't catalogue them as films because they're marketing — Dior, Gucci and Saint Laurent all run serious heritage operations, but a brand archive is organised around the brand, and keeps the campaign as company history rather than as a film findable by director, running time and crew."
+      },
+      {
+        "type": "p",
+        "text": "Lynch died on 16 January 2025, at 78. The obituaries all ran the commercials as a curiosity. Not one of them could link to a reliable source for the work it was describing."
+      },
+      {
+        "type": "p",
+        "text": "Dior asked for the handbag, the Pearl Tower and some old Shanghai. It got all three, plus an argument about the limits of what an object can hold. The brief was met exactly, and nobody kept the result anywhere you can find it."
+      }
+    ],
+    "images": [
+      {
+        "id": "lady-blue-shanghai-01",
+        "src": "public/THE-LEXICON-ASSETS/reviews/lady-blue-shanghai-01.jpg",
+        "alt": "Marion Cotillard with the blue rose, closing sequence",
+        "caption": "Marion Cotillard with the blue rose, in the film's closing sequence.",
+        "credit": "David Lynch, Lady Blue Shanghai, 2010. Christian Dior S.A. Still reproduced for criticism and review.",
+        "rights": "fair-dealing",
+        "sourceUrl": null
+      }
+    ],
+    "relatedEntries": [
+      "galliano-dior-ss00"
+    ],
+    "tags": {}
+  },
+  {
+    "$schema": "../review.schema.json",
+    "slug": "marie-antoinette",
+    "title": "Marie Antoinette",
+    "dek": "Twenty years on, and with Versailles about to exhibit the costumes inside the palace itself: the greatest costume film of the century, and a cowardly piece of history.",
+    "rating": 4,
+    "byline": "Angelo Sanchez Dela Cruz",
+    "publishedAt": null,
+    "updatedAt": null,
+    "film": {
+      "director": "Sofia Coppola",
+      "year": 2006,
+      "runtimeMinutes": 123,
+      "costumeDesigner": "Milena Canonero"
+    },
+    "body": [
+      {
+        "type": "image",
+        "ref": "marie-antoinette-01"
+      },
+      {
+        "type": "p",
+        "text": "On 22 September the Château de Versailles opens <em>Marie-Antoinette by Sofia Coppola</em> at the Petit Trianon, running to 24 January 2027 — Milena Canonero's original costumes, Manolo Blahnik's shoes, Coppola's mood boards and working documents, shown in the residence the film is about, inside the palace the film was allowed to shoot in."
+      },
+      {
+        "type": "p",
+        "text": "That is an extraordinary institutional endorsement, and it is a good moment to say clearly what the film is and is not. It is not, as its detractors have insisted for twenty years, a frivolous film with wrong shoes. It is a superb film about clothes and a badly compromised film about a revolution, and the second half of that sentence has been drowned out by an argument that was never worth having."
+      },
+      {
+        "type": "h2",
+        "text": "The argument that wasted twenty years"
+      },
+      {
+        "type": "p",
+        "text": "The Converse. The New Order. The pastels."
+      },
+      {
+        "type": "p",
+        "text": "Anyone still making the anachronism objection has misunderstood the job. Almost nothing of Marie Antoinette's actual wardrobe survives — dispersed, sold, cut down, repurposed, burned across two centuries. What remains of eighteenth-century French court dress remains mostly as other women's garments, fragments, pattern books, paintings, inventories, and the <em>Gazette des atours</em> recording what was ordered rather than what exists."
+      },
+      {
+        "type": "p",
+        "text": "So Canonero was not copying objects. There are none. She was working from a documentary record <em>about</em> objects, which is what a historian does, not what a dressmaker does. Every costume department in this situation invents; the only choice is whether the invention is disclosed. A production that dresses its cast in muted, textured, \"accurate\"-looking wool has invented exactly as much — it has just picked a register that reads to modern eyes as truthful. Restraint is a style, not evidence."
+      },
+      {
+        "type": "p",
+        "text": "She won the Academy Award for it, her third of four across nine nominations. The award is usually read as a prize for extravagance. It is better read as a reconstruction problem solved under conditions where verification is impossible."
+      },
+      {
+        "type": "p",
+        "text": "And here is the detail that ends the argument for good."
+      },
+      {
+        "type": "p",
+        "text": "In 1783 Vigée Le Brun exhibited the queen in a <em>chemise à la reine</em> — loose, unstructured, imported Indian muslin. The painting was pulled from the Salon and replaced with a portrait of her in silk. The charges were that the dress was unpatriotic, because muslin was not French silk and French silk was an instrument of state power, and that it was indecent, because the thing read as underwear."
+      },
+      {
+        "type": "p",
+        "text": "Marie Antoinette was accused in her own lifetime of dressing wrongly for her period. Of informality, foreign materials, and treating court dress as optional. Which is, almost word for word, the charge against Coppola and Canonero."
+      },
+      {
+        "type": "p",
+        "text": "The film has been condemned for doing to her what she was condemned for doing to herself. That single frame of lilac Converse in the shoe pile is a two-second admission that everything else on screen was made in 2005 by people who weren't there — and it is the most misread two seconds in 2000s cinema."
+      },
+      {
+        "type": "image",
+        "ref": "marie-antoinette-02"
+      },
+      {
+        "type": "h2",
+        "text": "Where the film actually fails"
+      },
+      {
+        "type": "p",
+        "text": "Now the part its defenders skip."
+      },
+      {
+        "type": "p",
+        "text": "<em>Marie Antoinette</em> is exceptional on interiority. Coppola is one of very few directors who can film boredom without being boring, and the long middle stretch — the ritual of the <em>lever</em>, the endless dressing, the way the court's protocol is shot as sensory assault on a fourteen-year-old — is the best work of her career. Kirsten Dunst is quietly excellent at playing someone being watched."
+      },
+      {
+        "type": "p",
+        "text": "But the film declines, almost totally, to look at the country paying for it. France arrives as weather. The revolution is a noise offstage and then a carriage leaving. There is no serious attempt to render anyone outside the palace as a person with a claim."
+      },
+      {
+        "type": "p",
+        "text": "You can defend this as a strict limit of point of view — she didn't see them, so we don't. I think that is too generous. Caroline Weber's <em>Queen of Fashion</em>, published in 2006, the same year as the film, argues that the queen's clothing was never merely personal: it was a sustained political instrument with material consequences, and eventually a fatal one. Weber holds both halves. Coppola keeps the refuge and drops the provocation, and the result is a film that makes its subject sympathetic by making her situation apolitical."
+      },
+      {
+        "type": "p",
+        "text": "That is not a small trim. It is the difference between a portrait and an alibi."
+      },
+      {
+        "type": "p",
+        "text": "Four stars, not five, and the missing star is precisely there."
+      },
+      {
+        "type": "h2",
+        "text": "What Versailles is doing with it"
+      },
+      {
+        "type": "p",
+        "text": "Which makes the Petit Trianon show more interesting than a birthday."
+      },
+      {
+        "type": "p",
+        "text": "Museums do not usually exhibit fictions inside the buildings the fictions are about. Versailles can because its own Marie Antoinette holdings have the same hole Canonero worked around: it has the architecture, the gardens, the furniture, the inventories. What it substantially lacks is her clothes."
+      },
+      {
+        "type": "p",
+        "text": "Into that hole go a set of garments made in 2005 whose entire research process is preserved — mood boards, working documents, accessories — because film production generates paperwork and film paperwork gets kept. We know more about how Canonero's court dresses were made than about how the queen's were. The film's archive is in better shape than its subject's."
+      },
+      {
+        "type": "p",
+        "text": "So the exhibition performs a substitution while looking like a commemoration. The dominant popular image of this wardrobe is now Canonero's, for an enormous number of people. Putting the costumes in the Petit Trianon doesn't create that; it ratifies it, in the one venue with the authority to make it look like history rather than cinema."
+      },
+      {
+        "type": "p",
+        "text": "And it does so for a film in which the palace is beautiful, the queen is sympathetic, and the crowd outside is barely there. A château that sells tickets on that image has an interest in Coppola's version. That is not a scandal — it is just worth saying out loud while everyone is admiring the shoes."
+      },
+      {
+        "type": "p",
+        "text": "Go anyway. Go with the right question, which is not <em>are these accurate</em>. It is what a costume becomes when it enters a museum with no rival object to place beside it."
+      },
+      {
+        "type": "p",
+        "text": "At that point it stops referring to a garment and becomes the garment of record."
+      }
+    ],
+    "images": [
+      {
+        "id": "marie-antoinette-01",
+        "src": "public/THE-LEXICON-ASSETS/reviews/marie-antoinette-01.jpg",
+        "alt": "Élisabeth Louise Vigée Le Brun's 1783 portrait of Marie Antoinette in a chemise dress",
+        "caption": "Withdrawn from the 1783 Salon. The scandal was the muslin.",
+        "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette in a Chemise Dress, 1783. Hessische Hausstiftung, Kronberg. Public domain.",
+        "rights": "public-domain",
+        "sourceUrl": "https://fashionhistory.fitnyc.edu/1783-vigee-le-brun-antoinette-chemise/"
+      },
+      {
+        "id": "marie-antoinette-02",
+        "src": "public/THE-LEXICON-ASSETS/reviews/marie-antoinette-02.jpg",
+        "alt": "Élisabeth Louise Vigée Le Brun's 1783 portrait Marie Antoinette with a Rose",
+        "caption": "The replacement. Silk, formality, and a queen dressed as the Salon required.",
+        "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette with a Rose, 1783. Public domain.",
+        "rights": "public-domain",
+        "sourceUrl": "https://fashionhistory.fitnyc.edu/1783-vigee-le-brun-antoinette/"
+      }
+    ],
+    "relatedEntries": [],
+    "tags": {}
+  },
+  {
+    "$schema": "../review.schema.json",
+    "slug": "mean-girls",
+    "title": "Mean Girls",
+    "dek": "The sharpest teen script of the century, filmed with no visual ideas whatsoever — except in the costume department, where the film's actual argument is being made.",
+    "rating": 4,
+    "byline": "Angelo Sanchez Dela Cruz",
+    "publishedAt": null,
+    "updatedAt": null,
+    "film": {
+      "director": "Mark Waters",
+      "year": 2004,
+      "runtimeMinutes": 97,
+      "costumeDesigner": "Mary Jane Fort",
+      "distributor": "Paramount Pictures"
+    },
+    "body": [
+      {
+        "type": "image",
+        "ref": "mean-girls-01"
+      },
+      {
+        "type": "p",
+        "text": "Watch <em>Mean Girls</em> with the sound off and you will notice something that twenty-two years of quotation has buried: it is a flat-looking film. Mark Waters shoots it like television — mid-shots, even light, cafeteria coverage you could cut into any sitcom of the period. There is no composition doing any work. Tina Fey's screenplay is doing so much heavy lifting that nobody appears to have asked the camera to contribute."
+      },
+      {
+        "type": "p",
+        "text": "Except the clothes. Mary Jane Fort's costume design is the only element of the filmmaking operating at the level of the writing, and it is quietly making an argument the script only half commits to."
+      },
+      {
+        "type": "h2",
+        "text": "The uniform, not the aspiration"
+      },
+      {
+        "type": "p",
+        "text": "The standard reading of the Plastics' wardrobe is aspirational — they are the pretty rich girls, they wear the nice things, Cady wants in. Fort's design says something colder."
+      },
+      {
+        "type": "p",
+        "text": "Look at what the pink actually does. It is not a preference; it is a <strong>rota</strong>. On Wednesdays we wear pink is a scheduling instruction, enforced by penalty, issued by an authority. Regina's rules about ponytails, jeans and tank tops are dress code in the literal sense — a set of prohibitions with a disciplinary apparatus behind it. The Plastics are not a friendship group with a look. They are an institution with a uniform, and the film is smart enough to shoot the Burn Book as an administrative document."
+      },
+      {
+        "type": "p",
+        "text": "Fort has said she wanted them to read as the brightest, shiniest thing on the tree, working from 1950s glamour crossed with contemporary European trends, and that the pink specifically came from Fey rather than from her. She dressed the three of them by function: Regina in the boldest choices, Gretchen in sweaters that telegraph sweetness and compliance, Karen literally mirroring whatever the others wore. That is not three characters who like the same shop. It is a hierarchy rendered in fabric — a leader, an enforcer, and a follower who has no independent taste because she is not permitted one."
+      },
+      {
+        "type": "p",
+        "text": "Cady's assimilation is tracked entirely through this. Fort dresses her into the group before the script admits she has joined, and the single best costume decision in the film is Fey's note that Cady's oversized pink polo should look borrowed from Damian — a girl performing membership in a garment that isn't hers, at the exact moment she stops noticing she's performing."
+      },
+      {
+        "type": "h2",
+        "text": "A note on the pink"
+      },
+      {
+        "type": "p",
+        "text": "There is an internet-standard fact that will get trotted out in any discussion of this film: that pink used to be for boys, until it flipped. Handle it carefully, because the real history is messier than the viral version."
+      },
+      {
+        "type": "p",
+        "text": "Jo B. Paoletti's <em>Pink and Blue: Telling the Boys from the Girls in America</em> (Indiana University Press, 2012) is the scholarly treatment, built from surviving garments, retail catalogues, paper dolls and baby records from 1885 onward. What she describes is not a clean reversal but a slow, regionally inconsistent settling of a convention across the twentieth century, with a genuinely gender-neutral period for children's clothing from roughly the 1960s to the mid-1980s — followed by a re-gendering that was well underway by the time the Plastics were supposedly at school."
+      },
+      {
+        "type": "p",
+        "text": "Which matters for the film, because it means the pink in <em>Mean Girls</em> is not ancient. It is recent, deliberate, and commercially manufactured within the lifetime of the girls wearing it. Fort is dressing her characters in a convention roughly as old as their parents. The uniform feels eternal to the people inside it and is about thirty years old. That is more or less the film's whole subject."
+      },
+      {
+        "type": "h2",
+        "text": "Where it loses a star"
+      },
+      {
+        "type": "image",
+        "ref": "mean-girls-02"
+      },
+      {
+        "type": "p",
+        "text": "The script is astonishing. Fey adapted a parenting book — Rosalind Wiseman's <em>Queen Bees and Wannabes</em> — into a comedy with a genuinely sociological structure, and the jokes have survived two decades of being repeated by people who have forgotten they were jokes. The Halloween sequence remains the most efficient piece of satire in any teen film."
+      },
+      {
+        "type": "p",
+        "text": "But the ending is a cop-out, and the costumes expose it."
+      },
+      {
+        "type": "p",
+        "text": "<em>Mean Girls</em> spends ninety minutes establishing that the problem is a system: a hierarchy with a uniform, a code, and enforcement. It then resolves that problem by breaking the crown into pieces and handing them out. Everyone gets a fragment; the mechanism is untouched. The last act redistributes power without questioning that the power should exist, and the final scenes dress everyone in softer, warmer, individually-styled clothes as though personal style were an answer to structural coercion."
+      },
+      {
+        "type": "p",
+        "text": "It isn't. The Plastics dissolve and a new set of freshmen walk in, and the film plays that as a joke rather than as the indictment it obviously is. Fort's design has spent the whole film arguing that this is an institution. The screenplay ends by treating it as a phase."
+      },
+      {
+        "type": "p",
+        "text": "Four stars, and the missing one is entirely in the last ten minutes."
+      },
+      {
+        "type": "h2",
+        "text": "The verdict"
+      },
+      {
+        "type": "p",
+        "text": "The best-written American teen film of its century, directed with total visual indifference, and rescued as an object of visual interest by a costume designer who understood the material better than the camera did."
+      },
+      {
+        "type": "p",
+        "text": "If you want to know what <em>Mean Girls</em> is actually about, do not look at the shots. Look at who is allowed to choose what they wear, and on which day."
+      }
+    ],
+    "images": [
+      {
+        "id": "mean-girls-01",
+        "src": "public/THE-LEXICON-ASSETS/reviews/mean-girls-01.jpg",
+        "alt": "The Plastics in the cafeteria",
+        "caption": "The Plastics, in the cafeteria.",
+        "credit": "Mark Waters, Mean Girls, 2004. Paramount Pictures. Costume design by Mary Jane Fort. Still reproduced for criticism and review.",
+        "rights": "fair-dealing",
+        "sourceUrl": null
+      },
+      {
+        "id": "mean-girls-02",
+        "src": "public/THE-LEXICON-ASSETS/reviews/mean-girls-02.jpg",
+        "alt": "Cady in the borrowed pink polo",
+        "caption": "Cady, in the borrowed pink polo.",
+        "credit": "Mark Waters, Mean Girls, 2004. Paramount Pictures. Still reproduced for criticism and review.",
+        "rights": "fair-dealing",
+        "sourceUrl": null
+      }
+    ],
+    "relatedEntries": [],
+    "tags": {}
+  },
+  {
+    "$schema": "../review.schema.json",
     "slug": "the-cook-the-thief",
     "title": "The Cook, the Thief, His Wife & Her Lover",
     "dek": "Jean Paul Gaultier's costumes change colour when the characters change rooms. It is the most complete integration of clothing into film grammar anyone has managed, in a film whose contempt eventually includes you.",

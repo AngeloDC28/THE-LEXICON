@@ -1,0 +1,71 @@
+# Mean Girls
+
+**dir. Mark Waters, 2004, 97 min**
+
+★★★★☆
+
+## The sharpest teen script of the century, filmed with no visual ideas whatsoever — except in the costume department, where the film's actual argument is being made.
+
+*THE LEXICON*
+
+---
+
+> **IMAGE 1** — The Plastics in the cafeteria.
+> *Caption:* Mark Waters, *Mean Girls*, 2004. Paramount Pictures. Costume design by Mary Jane Fort. Still reproduced for criticism and review.
+
+---
+
+Watch *Mean Girls* with the sound off and you will notice something that twenty-two years of quotation has buried: it is a flat-looking film. Mark Waters shoots it like television — mid-shots, even light, cafeteria coverage you could cut into any sitcom of the period. There is no composition doing any work. Tina Fey's screenplay is doing so much heavy lifting that nobody appears to have asked the camera to contribute.
+
+Except the clothes. Mary Jane Fort's costume design is the only element of the filmmaking operating at the level of the writing, and it is quietly making an argument the script only half commits to.
+
+---
+
+## The uniform, not the aspiration
+
+The standard reading of the Plastics' wardrobe is aspirational — they are the pretty rich girls, they wear the nice things, Cady wants in. Fort's design says something colder.
+
+Look at what the pink actually does. It is not a preference; it is a **rota**. On Wednesdays we wear pink is a scheduling instruction, enforced by penalty, issued by an authority. Regina's rules about ponytails, jeans and tank tops are dress code in the literal sense — a set of prohibitions with a disciplinary apparatus behind it. The Plastics are not a friendship group with a look. They are an institution with a uniform, and the film is smart enough to shoot the Burn Book as an administrative document.
+
+Fort has said she wanted them to read as the brightest, shiniest thing on the tree, working from 1950s glamour crossed with contemporary European trends, and that the pink specifically came from Fey rather than from her. She dressed the three of them by function: Regina in the boldest choices, Gretchen in sweaters that telegraph sweetness and compliance, Karen literally mirroring whatever the others wore. That is not three characters who like the same shop. It is a hierarchy rendered in fabric — a leader, an enforcer, and a follower who has no independent taste because she is not permitted one.
+
+Cady's assimilation is tracked entirely through this. Fort dresses her into the group before the script admits she has joined, and the single best costume decision in the film is Fey's note that Cady's oversized pink polo should look borrowed from Damian — a girl performing membership in a garment that isn't hers, at the exact moment she stops noticing she's performing.
+
+---
+
+## A note on the pink
+
+There is an internet-standard fact that will get trotted out in any discussion of this film: that pink used to be for boys, until it flipped. Handle it carefully, because the real history is messier than the viral version.
+
+Jo B. Paoletti's *Pink and Blue: Telling the Boys from the Girls in America* (Indiana University Press, 2012) is the scholarly treatment, built from surviving garments, retail catalogues, paper dolls and baby records from 1885 onward. What she describes is not a clean reversal but a slow, regionally inconsistent settling of a convention across the twentieth century, with a genuinely gender-neutral period for children's clothing from roughly the 1960s to the mid-1980s — followed by a re-gendering that was well underway by the time the Plastics were supposedly at school.
+
+Which matters for the film, because it means the pink in *Mean Girls* is not ancient. It is recent, deliberate, and commercially manufactured within the lifetime of the girls wearing it. Fort is dressing her characters in a convention roughly as old as their parents. The uniform feels eternal to the people inside it and is about thirty years old. That is more or less the film's whole subject.
+
+---
+
+## Where it loses a star
+
+> **IMAGE 2** — Cady in the borrowed pink polo.
+> *Caption:* Still reproduced for criticism and review.
+
+The script is astonishing. Fey adapted a parenting book — Rosalind Wiseman's *Queen Bees and Wannabes* — into a comedy with a genuinely sociological structure, and the jokes have survived two decades of being repeated by people who have forgotten they were jokes. The Halloween sequence remains the most efficient piece of satire in any teen film.
+
+But the ending is a cop-out, and the costumes expose it.
+
+*Mean Girls* spends ninety minutes establishing that the problem is a system: a hierarchy with a uniform, a code, and enforcement. It then resolves that problem by breaking the crown into pieces and handing them out. Everyone gets a fragment; the mechanism is untouched. The last act redistributes power without questioning that the power should exist, and the final scenes dress everyone in softer, warmer, individually-styled clothes as though personal style were an answer to structural coercion.
+
+It isn't. The Plastics dissolve and a new set of freshmen walk in, and the film plays that as a joke rather than as the indictment it obviously is. Fort's design has spent the whole film arguing that this is an institution. The screenplay ends by treating it as a phase.
+
+Four stars, and the missing one is entirely in the last ten minutes.
+
+---
+
+## The verdict
+
+The best-written American teen film of its century, directed with total visual indifference, and rescued as an object of visual interest by a costume designer who understood the material better than the camera did.
+
+If you want to know what *Mean Girls* is actually about, do not look at the shots. Look at who is allowed to choose what they wear, and on which day.
+
+---
+
+*Mean Girls, dir. Mark Waters, 2004. Paramount Pictures. Screenplay by Tina Fey, from* Queen Bees and Wannabes *by Rosalind Wiseman. Costume design by Mary Jane Fort. 97 minutes.*

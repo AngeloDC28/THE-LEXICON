@@ -1,0 +1,76 @@
+{
+  "$schema": "../review.schema.json",
+  "slug": "marie-antoinette",
+  "title": "Marie Antoinette",
+  "dek": "Twenty years on, and with Versailles about to exhibit the costumes inside the palace itself: the greatest costume film of the century, and a cowardly piece of history.",
+  "rating": 4,
+  "byline": "Angelo Sanchez Dela Cruz",
+  "publishedAt": null,
+  "updatedAt": null,
+
+  "film": {
+    "director": "Sofia Coppola",
+    "year": 2006,
+    "runtimeMinutes": 123,
+    "costumeDesigner": "Milena Canonero"
+  },
+
+  "body": [
+    { "type": "image", "ref": "marie-antoinette-01" },
+    { "type": "p", "text": "On 22 September the Château de Versailles opens <em>Marie-Antoinette by Sofia Coppola</em> at the Petit Trianon, running to 24 January 2027 — Milena Canonero's original costumes, Manolo Blahnik's shoes, Coppola's mood boards and working documents, shown in the residence the film is about, inside the palace the film was allowed to shoot in." },
+    { "type": "p", "text": "That is an extraordinary institutional endorsement, and it is a good moment to say clearly what the film is and is not. It is not, as its detractors have insisted for twenty years, a frivolous film with wrong shoes. It is a superb film about clothes and a badly compromised film about a revolution, and the second half of that sentence has been drowned out by an argument that was never worth having." },
+
+    { "type": "h2", "text": "The argument that wasted twenty years" },
+    { "type": "p", "text": "The Converse. The New Order. The pastels." },
+    { "type": "p", "text": "Anyone still making the anachronism objection has misunderstood the job. Almost nothing of Marie Antoinette's actual wardrobe survives — dispersed, sold, cut down, repurposed, burned across two centuries. What remains of eighteenth-century French court dress remains mostly as other women's garments, fragments, pattern books, paintings, inventories, and the <em>Gazette des atours</em> recording what was ordered rather than what exists." },
+    { "type": "p", "text": "So Canonero was not copying objects. There are none. She was working from a documentary record <em>about</em> objects, which is what a historian does, not what a dressmaker does. Every costume department in this situation invents; the only choice is whether the invention is disclosed. A production that dresses its cast in muted, textured, \"accurate\"-looking wool has invented exactly as much — it has just picked a register that reads to modern eyes as truthful. Restraint is a style, not evidence." },
+    { "type": "p", "text": "She won the Academy Award for it, her third of four across nine nominations. The award is usually read as a prize for extravagance. It is better read as a reconstruction problem solved under conditions where verification is impossible." },
+    { "type": "p", "text": "And here is the detail that ends the argument for good." },
+    { "type": "p", "text": "In 1783 Vigée Le Brun exhibited the queen in a <em>chemise à la reine</em> — loose, unstructured, imported Indian muslin. The painting was pulled from the Salon and replaced with a portrait of her in silk. The charges were that the dress was unpatriotic, because muslin was not French silk and French silk was an instrument of state power, and that it was indecent, because the thing read as underwear." },
+    { "type": "p", "text": "Marie Antoinette was accused in her own lifetime of dressing wrongly for her period. Of informality, foreign materials, and treating court dress as optional. Which is, almost word for word, the charge against Coppola and Canonero." },
+    { "type": "p", "text": "The film has been condemned for doing to her what she was condemned for doing to herself. That single frame of lilac Converse in the shoe pile is a two-second admission that everything else on screen was made in 2005 by people who weren't there — and it is the most misread two seconds in 2000s cinema." },
+
+    { "type": "image", "ref": "marie-antoinette-02" },
+
+    { "type": "h2", "text": "Where the film actually fails" },
+    { "type": "p", "text": "Now the part its defenders skip." },
+    { "type": "p", "text": "<em>Marie Antoinette</em> is exceptional on interiority. Coppola is one of very few directors who can film boredom without being boring, and the long middle stretch — the ritual of the <em>lever</em>, the endless dressing, the way the court's protocol is shot as sensory assault on a fourteen-year-old — is the best work of her career. Kirsten Dunst is quietly excellent at playing someone being watched." },
+    { "type": "p", "text": "But the film declines, almost totally, to look at the country paying for it. France arrives as weather. The revolution is a noise offstage and then a carriage leaving. There is no serious attempt to render anyone outside the palace as a person with a claim." },
+    { "type": "p", "text": "You can defend this as a strict limit of point of view — she didn't see them, so we don't. I think that is too generous. Caroline Weber's <em>Queen of Fashion</em>, published in 2006, the same year as the film, argues that the queen's clothing was never merely personal: it was a sustained political instrument with material consequences, and eventually a fatal one. Weber holds both halves. Coppola keeps the refuge and drops the provocation, and the result is a film that makes its subject sympathetic by making her situation apolitical." },
+    { "type": "p", "text": "That is not a small trim. It is the difference between a portrait and an alibi." },
+    { "type": "p", "text": "Four stars, not five, and the missing star is precisely there." },
+
+    { "type": "h2", "text": "What Versailles is doing with it" },
+    { "type": "p", "text": "Which makes the Petit Trianon show more interesting than a birthday." },
+    { "type": "p", "text": "Museums do not usually exhibit fictions inside the buildings the fictions are about. Versailles can because its own Marie Antoinette holdings have the same hole Canonero worked around: it has the architecture, the gardens, the furniture, the inventories. What it substantially lacks is her clothes." },
+    { "type": "p", "text": "Into that hole go a set of garments made in 2005 whose entire research process is preserved — mood boards, working documents, accessories — because film production generates paperwork and film paperwork gets kept. We know more about how Canonero's court dresses were made than about how the queen's were. The film's archive is in better shape than its subject's." },
+    { "type": "p", "text": "So the exhibition performs a substitution while looking like a commemoration. The dominant popular image of this wardrobe is now Canonero's, for an enormous number of people. Putting the costumes in the Petit Trianon doesn't create that; it ratifies it, in the one venue with the authority to make it look like history rather than cinema." },
+    { "type": "p", "text": "And it does so for a film in which the palace is beautiful, the queen is sympathetic, and the crowd outside is barely there. A château that sells tickets on that image has an interest in Coppola's version. That is not a scandal — it is just worth saying out loud while everyone is admiring the shoes." },
+    { "type": "p", "text": "Go anyway. Go with the right question, which is not <em>are these accurate</em>. It is what a costume becomes when it enters a museum with no rival object to place beside it." },
+    { "type": "p", "text": "At that point it stops referring to a garment and becomes the garment of record." }
+  ],
+
+  "images": [
+    {
+      "id": "marie-antoinette-01",
+      "src": "public/THE-LEXICON-ASSETS/reviews/marie-antoinette-01.jpg",
+      "alt": "Élisabeth Louise Vigée Le Brun's 1783 portrait of Marie Antoinette in a chemise dress",
+      "caption": "Withdrawn from the 1783 Salon. The scandal was the muslin.",
+      "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette in a Chemise Dress, 1783. Hessische Hausstiftung, Kronberg. Public domain.",
+      "rights": "public-domain",
+      "sourceUrl": "https://fashionhistory.fitnyc.edu/1783-vigee-le-brun-antoinette-chemise/"
+    },
+    {
+      "id": "marie-antoinette-02",
+      "src": "public/THE-LEXICON-ASSETS/reviews/marie-antoinette-02.jpg",
+      "alt": "Élisabeth Louise Vigée Le Brun's 1783 portrait Marie Antoinette with a Rose",
+      "caption": "The replacement. Silk, formality, and a queen dressed as the Salon required.",
+      "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette with a Rose, 1783. Public domain.",
+      "rights": "public-domain",
+      "sourceUrl": "https://fashionhistory.fitnyc.edu/1783-vigee-le-brun-antoinette/"
+    }
+  ],
+
+  "relatedEntries": [],
+  "tags": {}
+}
