@@ -11,11 +11,19 @@
  * person opening the link decides whether this is a real publication in
  * about four seconds, with no guarantee JS ran.
  *
- * So this script does NOT touch index.html or the SPA. It emits a fully
- * self-contained HTML document per review — its own inline <style>, no
- * external stylesheet — so the page is correct even if something else on
- * the site's asset pipeline is broken. Zero dependencies: template
- * literals and node:fs only.
+ * So this script does NOT touch index.html or the SPA. It emits a static
+ * HTML document per review with the full article text server-rendered,
+ * so the page is correct with no guarantee JS ran.
+ *
+ * Styling is a separate external stylesheet (reviews/reviews.css), NOT an
+ * inline <style> block — the site's CSP is `style-src 'self'` with no
+ * 'unsafe-inline', which silently strips inline <style> tags exactly the
+ * same way it strips inline style="" attributes. An earlier version of
+ * this script inlined the CSS reasoning that it made each page correct
+ * "even if the asset pipeline is broken" — that reasoning was backwards:
+ * CSP made every review page render completely unstyled from day one.
+ * A same-origin <link rel="stylesheet"> is unaffected by style-src 'self'
+ * (see /index.css, which the SPA has always used for the same reason).
  *
  * Also writes reviews/index.html — the listing page linked as "the
  * publication" — title/dek/rating/date per review, reverse chronological.
@@ -24,6 +32,7 @@
  * safe to re-run any time content/reviews/*.json changes.
  */
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -31,6 +40,13 @@ const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const REVIEWS = join(ROOT, 'content', 'reviews');
 const OUT_DIR = join(ROOT, 'reviews');
 const BASE    = 'https://thelexicon.xyz';
+
+let CSS_VERSION;
+try {
+  CSS_VERSION = execSync('git rev-parse --short HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+} catch {
+  CSS_VERSION = Math.floor(Date.now() / 1000).toString(36);
+}
 
 function esc(str) {
   return String(str ?? '')
@@ -182,6 +198,24 @@ const CSS = `
 
   .review-body strong { color: #fff; font-weight: 700; }
   .review-body em { font-style: italic; }
+
+  .review-list { list-style: none; }
+  .review-card { border-bottom: 2px solid rgba(255,255,255,0.3); padding: 36px 0; }
+  .review-card:first-child { padding-top: 0; }
+  .review-card a:hover h2, .review-card a:focus-visible h2 { color: #CCFF00; }
+  .review-card h2 {
+    font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem);
+    font-weight: 700;
+    color: #F4F4F5; margin: 12px 0 10px; line-height: 1.1; transition: color 0.1s ease;
+  }
+  .review-card .rating { font-size: 0.85rem; }
+  .review-card .dek {
+    font-family: 'EB Garamond', Georgia, serif; font-size: 1.05rem; color: #d4d4d4;
+  }
+  .empty-note {
+    color: #0A0A0A; background: #F4F4F5; font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem;
+    border: 3px solid #000; box-shadow: 8px 8px 0 #000; padding: 28px 32px; display: inline-block;
+  }
 `;
 
 function renderBody(review) {
@@ -277,7 +311,7 @@ ${ogImage ? `<meta property="og:image" content="${esc(ogImage)}">\n` : ''}<meta 
 <meta name="twitter:description" content="${esc(review.dek)}">
 ${ogImage ? `<meta name="twitter:image" content="${esc(ogImage)}">\n` : ''}<link rel="icon" href="/favicon.svg">
 <script type="application/ld+json">${buildReviewJsonLd(review, url, ogImage)}</script>
-<style>${CSS}</style>
+<link rel="stylesheet" href="/reviews/reviews.css?v=${CSS_VERSION}">
 </head>
 <body>
   <header class="site-header">
@@ -373,25 +407,7 @@ function renderIndexPage(reviews) {
 <meta name="twitter:description" content="${esc(desc)}">
 <link rel="icon" href="/favicon.svg">
 <script type="application/ld+json">${itemListLd}</script>
-<style>${CSS}
-  .review-list { list-style: none; }
-  .review-card { border-bottom: 2px solid rgba(255,255,255,0.3); padding: 36px 0; }
-  .review-card:first-child { padding-top: 0; }
-  .review-card a:hover h2, .review-card a:focus-visible h2 { color: #CCFF00; }
-  .review-card h2 {
-    font-family: 'EB Garamond', Georgia, serif; font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2.1rem);
-    font-weight: 700;
-    color: #F4F4F5; margin: 12px 0 10px; line-height: 1.1; transition: color 0.1s ease;
-  }
-  .review-card .rating { font-size: 0.85rem; }
-  .review-card .dek {
-    font-family: 'EB Garamond', Georgia, serif; font-size: 1.05rem; color: #d4d4d4;
-  }
-  .empty-note {
-    color: #0A0A0A; background: #F4F4F5; font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem;
-    border: 3px solid #000; box-shadow: 8px 8px 0 #000; padding: 28px 32px; display: inline-block;
-  }
-</style>
+<link rel="stylesheet" href="/reviews/reviews.css?v=${CSS_VERSION}">
 </head>
 <body>
   <header class="site-header">
@@ -444,5 +460,6 @@ for (const review of reviews) {
 
 mkdirSync(OUT_DIR, { recursive: true });
 writeFileSync(join(OUT_DIR, 'index.html'), renderIndexPage(reviews), 'utf8');
+writeFileSync(join(OUT_DIR, 'reviews.css'), CSS, 'utf8');
 
-console.log(`LEXICON_REVIEW_PAGES ok — wrote ${count} static review page(s) + reviews/index.html to /reviews/`);
+console.log(`LEXICON_REVIEW_PAGES ok — wrote ${count} static review page(s) + reviews/index.html + reviews/reviews.css to /reviews/`);

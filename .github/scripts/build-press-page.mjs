@@ -11,14 +11,19 @@
  * correct automatically as entries are added.
  *
  * Not driven by content/reviews/*.json, so it lives in its own script
- * rather than build-review-pages.mjs. Same house style (inline CSS, no
- * external stylesheet dependency) as the review pages. Zero dependencies:
- * template literals and node:fs only.
+ * rather than build-review-pages.mjs. Zero dependencies: template
+ * literals and node:fs only.
+ *
+ * Styling is an external stylesheet (press/press.css), NOT an inline
+ * <style> block — the site's CSP is `style-src 'self'` with no
+ * 'unsafe-inline', which silently strips inline <style> tags. See the
+ * matching note in build-review-pages.mjs.
  *
  * Run as part of preflight/prebuild. Output is gitignored — regenerated
  * on every build, same treatment as /entry/ and /reviews/.
  */
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { execSync } from 'node:child_process';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -26,6 +31,13 @@ const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
 const OUT_DIR = join(ROOT, 'press');
 const BASE    = 'https://thelexicon.xyz';
+
+let CSS_VERSION;
+try {
+  CSS_VERSION = execSync('git rev-parse --short HEAD', { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+} catch {
+  CSS_VERSION = Math.floor(Date.now() / 1000).toString(36);
+}
 
 const entryCount = readdirSync(ENTRIES).filter(f => f.endsWith('.json') && !f.startsWith('_')).length;
 
@@ -99,7 +111,7 @@ const html = `<!DOCTYPE html>
 <meta property="og:url" content="${BASE}/press/">
 <meta property="og:site_name" content="THE LEXICON">
 <link rel="icon" href="/favicon.svg">
-<style>${CSS}</style>
+<link rel="stylesheet" href="/press/press.css?v=${CSS_VERSION}">
 </head>
 <body>
   <header class="site-header">
@@ -145,4 +157,5 @@ const html = `<!DOCTYPE html>
 
 mkdirSync(OUT_DIR, { recursive: true });
 writeFileSync(join(OUT_DIR, 'index.html'), html, 'utf8');
-console.log(`LEXICON_PRESS_PAGE ok — wrote press/index.html (archive count: ${entryCount})`);
+writeFileSync(join(OUT_DIR, 'press.css'), CSS, 'utf8');
+console.log(`LEXICON_PRESS_PAGE ok — wrote press/index.html + press/press.css (archive count: ${entryCount})`);
