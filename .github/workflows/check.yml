@@ -40,3 +40,20 @@ jobs:
             git --no-pager diff js/modules/translations.js | head -40
             exit 1
           fi
+      - name: Regenerate reviews.js from content/reviews/*.json
+        run: node .github/scripts/build-reviews.mjs
+      - name: Fail if reviews.js is out of sync with review JSONs
+        run: |
+          if ! git diff --quiet reviews.js; then
+            echo "::error::reviews.js is stale. Run \`npm run build-reviews\` and commit the result."
+            git --no-pager diff reviews.js | head -40
+            exit 1
+          fi
+      - name: Validate reviews — schema, structure, and the fair-dealing rights/credit check
+        run: node .github/scripts/validate-reviews.mjs --strict-assets
+        # --strict-assets fails this CI job (blocking merge) on a missing
+        # review image instead of only warning. Deliberately NOT passed in
+        # preflight/prebuild (what Vercel's buildCommand runs) — a missing
+        # still there would fail the entire site's deployment, not just
+        # the one review page. This job blocks merges without ever
+        # touching what gets deployed.
