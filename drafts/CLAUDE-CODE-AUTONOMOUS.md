@@ -36,14 +36,18 @@ Non-zero means the page is server-rendered and the rewrite exclusion works. If i
 
 ## Images
 
-Two you can source yourself, both public domain, both from Wikimedia Commons at the highest resolution available:
+**Only the Marie Antoinette review has images. Every other review publishes text-only.** The image blocks have been removed from the other four drafts — do not add placeholders, do not reference missing files, do not invent `images[]` entries for them. An empty `images: []` is correct and intended.
+
+Download these two yourself (you have network access; the drafts specify them):
 
 - Élisabeth Louise Vigée Le Brun, *Marie Antoinette in a Chemise Dress* (1783) → `public/THE-LEXICON-ASSETS/reviews/marie-antoinette-01.jpg`
-- Élisabeth Louise Vigée Le Brun, *Marie Antoinette with a Rose* (1783) → `public/THE-LEXICON-ASSETS/reviews/marie-antoinette-02.jpg`
+- Élisabeth Louise Vigée Le Brun, *Marie Antoinette with a Rose* (1783) → `marie-antoinette-02.jpg`
 
-Set `rights: "public-domain"` on both, credit the painter, title and date. Run `npm run optimize-images` after adding them.
+Both public domain. Wikimedia Commons at the highest resolution available. **Verify which painting each file actually is before saving** — the two 1783 portraits are routinely mislabelled as each other; the rose version is blue-grey silk with pearls, the chemise version is loose white muslin.
 
-The rest are film stills and a screenshot that Angelo is capturing. Filenames and contents are listed in `drafts/IMAGES.md`. Reference them at those exact paths and let the warn-only asset check flag them as missing until they land.
+Set `rights: "public-domain"`. Credit strings and captions are in `drafts/IMAGE-MANIFEST.md` — but if the file you download comes from a different collection than the credit line states, **correct the credit to match the file**. Do not paste a credit that doesn't describe the image you actually have.
+
+Run `npm run optimize-images` after adding them.
 
 ## Stop and ask only for
 

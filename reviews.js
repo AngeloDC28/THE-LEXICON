@@ -68,10 +68,6 @@ export const reviewsData = [
         "text": "The clothes are the plot"
       },
       {
-        "type": "image",
-        "ref": "duke-of-burgundy-02"
-      },
-      {
         "type": "p",
         "text": "Most films with a costume budget use clothes to establish character. This one uses them as narrative mechanism. The garments are the script — the specific skirt, the specific boots, the specific nightdress are <em>what has been requested</em>, in writing, for that evening's performance. When Cynthia appears in the wrong thing, or in something comfortable, that is the plot advancing. When she buys a pair of pyjamas, it is a declaration of war."
       },
@@ -145,15 +141,6 @@ export const reviewsData = [
         "credit": "Peter Strickland, The Duke of Burgundy, 2014. Film4 Productions / Rook Films. Still reproduced for criticism and review.",
         "rights": "fair-dealing",
         "sourceUrl": null
-      },
-      {
-        "id": "duke-of-burgundy-02",
-        "src": "public/THE-LEXICON-ASSETS/reviews/duke-of-burgundy-02.jpg",
-        "alt": "Sidse Babett Knudsen and Chiara D'Anna in a production still",
-        "caption": "Sidse Babett Knudsen and Chiara D'Anna.",
-        "credit": "Peter Strickland, The Duke of Burgundy, 2014. Film4 Productions / Rook Films. Still reproduced for criticism and review.",
-        "rights": "fair-dealing",
-        "sourceUrl": null
       }
     ],
     "relatedEntries": [],
@@ -177,10 +164,6 @@ export const reviewsData = [
       "distributor": "Christian Dior S.A."
     },
     "body": [
-      {
-        "type": "image",
-        "ref": "lady-blue-shanghai-01"
-      },
       {
         "type": "p",
         "text": "Dior's brief to David Lynch in 2010 had three items on it. Show the handbag. Show the Oriental Pearl Tower. Show some old Shanghai."
@@ -270,17 +253,7 @@ export const reviewsData = [
         "text": "Dior asked for the handbag, the Pearl Tower and some old Shanghai. It got all three, plus an argument about the limits of what an object can hold. The brief was met exactly, and nobody kept the result anywhere you can find it."
       }
     ],
-    "images": [
-      {
-        "id": "lady-blue-shanghai-01",
-        "src": "public/THE-LEXICON-ASSETS/reviews/lady-blue-shanghai-01.jpg",
-        "alt": "Marion Cotillard with the blue rose, closing sequence",
-        "caption": "Marion Cotillard with the blue rose, in the film's closing sequence.",
-        "credit": "David Lynch, Lady Blue Shanghai, 2010. Christian Dior S.A. Still reproduced for criticism and review.",
-        "rights": "fair-dealing",
-        "sourceUrl": null
-      }
-    ],
+    "images": [],
     "relatedEntries": [
       "galliano-dior-ss00"
     ],
@@ -419,18 +392,18 @@ export const reviewsData = [
       {
         "id": "marie-antoinette-01",
         "src": "public/THE-LEXICON-ASSETS/reviews/marie-antoinette-01.jpg",
-        "alt": "Élisabeth Louise Vigée Le Brun's 1783 portrait of Marie Antoinette in a chemise dress",
+        "alt": "Marie Antoinette in a loose white muslin chemise dress and straw hat, holding a rose",
         "caption": "Withdrawn from the 1783 Salon. The scandal was the muslin.",
-        "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette in a Chemise Dress, 1783. Hessische Hausstiftung, Kronberg. Public domain.",
+        "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette in a Chemise Dress, 1783. Oil on canvas, 89.8 × 72 cm. Hessische Hausstiftung, Kronberg.",
         "rights": "public-domain",
         "sourceUrl": "https://fashionhistory.fitnyc.edu/1783-vigee-le-brun-antoinette-chemise/"
       },
       {
         "id": "marie-antoinette-02",
         "src": "public/THE-LEXICON-ASSETS/reviews/marie-antoinette-02.jpg",
-        "alt": "Élisabeth Louise Vigée Le Brun's 1783 portrait Marie Antoinette with a Rose",
+        "alt": "Marie Antoinette in blue-grey silk with pearls, holding a rose",
         "caption": "The replacement. Silk, formality, and a queen dressed as the Salon required.",
-        "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette with a Rose, 1783. Public domain.",
+        "credit": "Élisabeth Louise Vigée Le Brun, Marie Antoinette with a Rose, 1783. Oil on canvas, 116.8 × 88.9 cm. Château de Versailles.",
         "rights": "public-domain",
         "sourceUrl": "https://fashionhistory.fitnyc.edu/1783-vigee-le-brun-antoinette/"
       }
@@ -455,10 +428,6 @@ export const reviewsData = [
       "distributor": "Paramount Pictures"
     },
     "body": [
-      {
-        "type": "image",
-        "ref": "mean-girls-01"
-      },
       {
         "type": "p",
         "text": "Watch <em>Mean Girls</em> with the sound off and you will notice something that twenty-two years of quotation has buried: it is a flat-looking film. Mark Waters shoots it like television — mid-shots, even light, cafeteria coverage you could cut into any sitcom of the period. There is no composition doing any work. Tina Fey's screenplay is doing so much heavy lifting that nobody appears to have asked the camera to contribute."
@@ -508,10 +477,6 @@ export const reviewsData = [
         "text": "Where it loses a star"
       },
       {
-        "type": "image",
-        "ref": "mean-girls-02"
-      },
-      {
         "type": "p",
         "text": "The script is astonishing. Fey adapted a parenting book — Rosalind Wiseman's <em>Queen Bees and Wannabes</em> — into a comedy with a genuinely sociological structure, and the jokes have survived two decades of being repeated by people who have forgotten they were jokes. The Halloween sequence remains the most efficient piece of satire in any teen film."
       },
@@ -544,26 +509,7 @@ export const reviewsData = [
         "text": "If you want to know what <em>Mean Girls</em> is actually about, do not look at the shots. Look at who is allowed to choose what they wear, and on which day."
       }
     ],
-    "images": [
-      {
-        "id": "mean-girls-01",
-        "src": "public/THE-LEXICON-ASSETS/reviews/mean-girls-01.jpg",
-        "alt": "The Plastics in the cafeteria",
-        "caption": "The Plastics, in the cafeteria.",
-        "credit": "Mark Waters, Mean Girls, 2004. Paramount Pictures. Costume design by Mary Jane Fort. Still reproduced for criticism and review.",
-        "rights": "fair-dealing",
-        "sourceUrl": null
-      },
-      {
-        "id": "mean-girls-02",
-        "src": "public/THE-LEXICON-ASSETS/reviews/mean-girls-02.jpg",
-        "alt": "Cady in the borrowed pink polo",
-        "caption": "Cady, in the borrowed pink polo.",
-        "credit": "Mark Waters, Mean Girls, 2004. Paramount Pictures. Still reproduced for criticism and review.",
-        "rights": "fair-dealing",
-        "sourceUrl": null
-      }
-    ],
+    "images": [],
     "relatedEntries": [],
     "tags": {}
   },

@@ -10,11 +10,6 @@
 
 ---
 
-> **IMAGE 1** — Title card: "Perfume by Je Suis Gizella," opening credits.
-> *Caption:* Peter Strickland, *The Duke of Burgundy*, 2014. Film4 / Rook Films. Still reproduced for criticism and review.
-
----
-
 Before a frame of the film proper, Peter Strickland tells you exactly what kind of object you are about to watch. The opening titles run like a magazine masthead — Cinematography, Nic Knowland. Music, Cat's Eyes. Editing, Mátyás Fekete — and then two credits that do not belong on a call sheet:
 
 **Dress and lingerie by Andrea Flesch.**
@@ -40,9 +35,6 @@ Knowland shoots it in soft focus and heavy grain, and Cat's Eyes score it with a
 ---
 
 ## The clothes are the plot
-
-> **IMAGE 2** — Production still, Knudsen and D'Anna.
-> *Caption:* Request via Curzon/Artificial Eye (UK distributor) press office, or the BFI film page.
 
 Most films with a costume budget use clothes to establish character. This one uses them as narrative mechanism. The garments are the script — the specific skirt, the specific boots, the specific nightdress are *what has been requested*, in writing, for that evening's performance. When Cynthia appears in the wrong thing, or in something comfortable, that is the plot advancing. When she buys a pair of pyjamas, it is a declaration of war.
 

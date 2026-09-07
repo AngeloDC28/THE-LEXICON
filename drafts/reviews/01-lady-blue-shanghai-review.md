@@ -10,11 +10,6 @@
 
 ---
 
-> **IMAGE 1** — Marion Cotillard with the blue rose, closing sequence.
-> *Caption:* David Lynch, *Lady Blue Shanghai*, 2010. Christian Dior S.A. Still reproduced for criticism and review.
-
----
-
 Dior's brief to David Lynch in 2010 had three items on it. Show the handbag. Show the Oriental Pearl Tower. Show some old Shanghai.
 
 Sixteen minutes later: Marion Cotillard enters a hotel room and hears tango from the 1920s. A Dior bag materialises out of smoke. Security sweeps the room and finds nothing. She remembers — or invents — a meeting at the Pearl Tower with a man named Yu, who cannot stay, and who gives her a blue rose. She finds the same rose inside the handbag.

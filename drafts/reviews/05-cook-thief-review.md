@@ -10,11 +10,6 @@
 
 ---
 
-> **IMAGE 1** — Helen Mirren as Georgina in the red dining room.
-> *Caption:* Peter Greenaway, *The Cook, the Thief, His Wife & Her Lover*, 1989. Palace Pictures. Costume design by Jean Paul Gaultier. Still reproduced for criticism and review.
-
----
-
 The device is stated in the first ten minutes and never explained, which is why it works.
 
 Albert Spica's restaurant is colour-zoned: the dining room is red, the kitchen is green, the lavatories are white, the car park outside is blue. Sacha Vierny lights each space to saturation. And as the characters cross between them, **their clothes change colour to match.** Georgina's corset is scarlet at the table, turquoise in the kitchen, ivory in the bathroom. Outside, in the car park, the Spicas wear black.
@@ -22,6 +17,8 @@ Albert Spica's restaurant is colour-zoned: the dining room is red, the kitchen i
 Nobody remarks on it. No character notices. There is no in-world justification and the film offers none.
 
 This is the single best costume idea in cinema, and thirty-seven years later almost nothing has come near it.
+
+Watch the first ten minutes with the sound off if you want to be sure it's really happening. It is, and the film never once draws attention to it.
 
 ---
 
@@ -38,9 +35,6 @@ The register is deliberately unplaceable — Victoriana, Japonisme, militarism, 
 ---
 
 ## The performances
-
-> **IMAGE 2** — The kitchen, green.
-> *Caption:* Still reproduced for criticism and review.
 
 Michael Gambon is monumentally, exhaustingly good as Albert. It is a performance with no modulation and no interior, and that is the correct choice: Albert has no interior, only volume. Gambon plays him as a man who has never in his life stopped talking long enough to be alone with himself, and the effect after two hours is genuinely oppressive.
 

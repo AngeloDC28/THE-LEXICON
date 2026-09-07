@@ -10,11 +10,6 @@
 
 ---
 
-> **IMAGE 1** — The Plastics in the cafeteria.
-> *Caption:* Mark Waters, *Mean Girls*, 2004. Paramount Pictures. Costume design by Mary Jane Fort. Still reproduced for criticism and review.
-
----
-
 Watch *Mean Girls* with the sound off and you will notice something that twenty-two years of quotation has buried: it is a flat-looking film. Mark Waters shoots it like television — mid-shots, even light, cafeteria coverage you could cut into any sitcom of the period. There is no composition doing any work. Tina Fey's screenplay is doing so much heavy lifting that nobody appears to have asked the camera to contribute.
 
 Except the clothes. Mary Jane Fort's costume design is the only element of the filmmaking operating at the level of the writing, and it is quietly making an argument the script only half commits to.
@@ -44,9 +39,6 @@ Which matters for the film, because it means the pink in *Mean Girls* is not anc
 ---
 
 ## Where it loses a star
-
-> **IMAGE 2** — Cady in the borrowed pink polo.
-> *Caption:* Still reproduced for criticism and review.
 
 The script is astonishing. Fey adapted a parenting book — Rosalind Wiseman's *Queen Bees and Wannabes* — into a comedy with a genuinely sociological structure, and the jokes have survived two decades of being repeated by people who have forgotten they were jokes. The Halloween sequence remains the most efficient piece of satire in any teen film.
 

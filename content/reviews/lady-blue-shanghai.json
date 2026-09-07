@@ -18,7 +18,6 @@
   },
 
   "body": [
-    { "type": "image", "ref": "lady-blue-shanghai-01" },
     { "type": "p", "text": "Dior's brief to David Lynch in 2010 had three items on it. Show the handbag. Show the Oriental Pearl Tower. Show some old Shanghai." },
     { "type": "p", "text": "Sixteen minutes later: Marion Cotillard enters a hotel room and hears tango from the 1920s. A Dior bag materialises out of smoke. Security sweeps the room and finds nothing. She remembers — or invents — a meeting at the Pearl Tower with a man named Yu, who cannot stay, and who gives her a blue rose. She finds the same rose inside the handbag." },
     { "type": "p", "text": "Lynch wrote, directed and edited it. Justyn Field shot it. Lynch and Dean Hurley scored it. Sabrina S. Sutherland produced for Christian Dior S.A. It is a real film with a real crew, and for about eleven of its sixteen minutes it is extremely good." },
@@ -46,17 +45,7 @@
     { "type": "p", "text": "Dior asked for the handbag, the Pearl Tower and some old Shanghai. It got all three, plus an argument about the limits of what an object can hold. The brief was met exactly, and nobody kept the result anywhere you can find it." }
   ],
 
-  "images": [
-    {
-      "id": "lady-blue-shanghai-01",
-      "src": "public/THE-LEXICON-ASSETS/reviews/lady-blue-shanghai-01.jpg",
-      "alt": "Marion Cotillard with the blue rose, closing sequence",
-      "caption": "Marion Cotillard with the blue rose, in the film's closing sequence.",
-      "credit": "David Lynch, Lady Blue Shanghai, 2010. Christian Dior S.A. Still reproduced for criticism and review.",
-      "rights": "fair-dealing",
-      "sourceUrl": null
-    }
-  ],
+  "images": [],
 
   "relatedEntries": ["galliano-dior-ss00"],
   "tags": {}
