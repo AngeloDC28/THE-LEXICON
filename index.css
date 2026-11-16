@@ -4995,3 +4995,10 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
    mobile Back / Notes / Nexus / Save bar — the banner sat on top of it.
    --cookie-banner-h is kept up to date by app.js while the banner shows. */
 #mobile-detail-actions { bottom: var(--cookie-banner-h, 0px); }
+
+/* Entry sources list */
+.sources-list { list-style: decimal; padding-left: 1.25rem; display: flex; flex-direction: column; gap: 10px; }
+.sources-list li { font-family: var(--font-serif); font-size: 1rem; line-height: 1.5; }
+.sources-list cite { font-style: italic; }
+.sources-list .src-link { font-family: var(--font-mono); font-size: 0.75rem; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.sources-list .src-note { font-size: 0.875rem; opacity: 0.75; margin-top: 2px; }

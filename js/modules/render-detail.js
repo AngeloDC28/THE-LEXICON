@@ -76,6 +76,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     renderBrutalistNodes(entry);
     renderStickyOverlay(entry);
     renderMetadataGrid(entry);
+    renderSources(entry);
     renderRelatedEntries(entry, archiveData, callbacks);
     renderHotspots(entry, $('detail-image-wrapper'));
     setupSwipeGestures(archiveData, callbacks);
@@ -341,14 +342,18 @@ function renderImage(entry, callbacks) {
   // Image credit / attribution
   const creditEl = $('detail-image-credit');
   if (creditEl) {
-    const brand = entry.tags?.brand || '';
     const slug  = entry.id || '';
-    const line  = entry.season ? `${entry.season} ${entry.year}` : String(entry.year || '');
-    const credit = entry.photo_credit
-      ? entry.photo_credit
-      : `Source: ${brand ? brand.replace(/_/g, ' ') : 'Unknown'} press archive, ${line}`;
     const contactHref = `mailto:info@thelexicon.xyz?subject=Image%20credit%3A%20${encodeURIComponent(slug)}`;
-    creditEl.innerHTML = `<span>${escapeHtml(credit)}</span> · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
+    // The fallback used to read "Source: <Brand> press archive", which was
+    // an invented attribution. If the credit isn't confirmed yet, say so.
+    const credit = entry.photo_credit
+      ? `Photo: ${escapeHtml(entry.photo_credit)}`
+      : 'Photographer credit being confirmed';
+    const src = entry.image_source;
+    const via = src?.url
+      ? ` · via <a href="${escapeHtml(src.url)}" class="underline hover:text-acid focus:text-acid transition-colors" target="_blank" rel="noopener noreferrer">${escapeHtml(src.name)}</a>`
+      : '';
+    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
   }
 
   // Image counter dots
@@ -613,6 +618,29 @@ function renderMetaRail(entry) {
       </div>`;
     }).join('')}
   `;
+}
+
+/**
+ * renderSources
+ * The references behind an entry's analysis, as a numbered list in a
+ * citation-like format: Author, "Title," Publication, Date.
+ */
+function renderSources(entry) {
+  const section = $('sources-section');
+  const list = $('sources-list');
+  if (!section || !list) return;
+  const sources = Array.isArray(entry.sources) ? entry.sources : [];
+  if (!sources.length) { section.classList.add('hidden'); list.innerHTML = ''; return; }
+  section.classList.remove('hidden');
+  list.innerHTML = sources.map(s => {
+    const title = s.type === 'book' || s.type === 'catalogue'
+      ? `<cite>${escapeHtml(s.title)}</cite>`
+      : `“${escapeHtml(s.title)}”`;
+    const parts = [s.author ? escapeHtml(s.author) : '', title, s.publication ? `<span class="src-pub">${escapeHtml(s.publication)}</span>` : '', s.date ? escapeHtml(s.date) : ''].filter(Boolean);
+    const link = s.url ? ` <a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer" class="src-link">Link ↗</a>` : '';
+    const note = s.note ? `<div class="src-note">${escapeHtml(s.note)}</div>` : '';
+    return `<li>${parts.join(', ')}.${link}${note}</li>`;
+  }).join('');
 }
 
 /**

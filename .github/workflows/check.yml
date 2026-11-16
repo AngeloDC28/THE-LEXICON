@@ -44,3 +44,5 @@ jobs:
         run: node .github/scripts/check-punctuation.mjs
       - name: Images — every archive image capped and thumbnailed
         run: node .github/scripts/resize-images.mjs --check
+      - name: Credits — every entry credited or explicitly pending
+        run: node .github/scripts/check-credits.mjs
