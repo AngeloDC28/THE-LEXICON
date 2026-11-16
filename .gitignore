@@ -40,6 +40,9 @@ yarn-error.log*
 # Vercel rebuilds them on every deploy; no need to track in git.
 /entry/
 
+# Deploy output — staged by stage-output.mjs at the end of preflight.
+/out/
+
 # Temp scratch files
 *.tmp
 .commit-msg.tmp

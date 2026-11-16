@@ -3,8 +3,7 @@
   "framework": null,
   "installCommand": "npm install",
   "buildCommand": "node .github/scripts/inject-env.mjs && npm run preflight",
-  "outputDirectory": ".",
-
+  "outputDirectory": "out",
   "headers": [
     {
       "source": "/public/THE-LEXICON-ASSETS/(.*)",
@@ -155,7 +154,6 @@
       ]
     }
   ],
-
   "redirects": [
     {
       "source": "/favicon.ico",
@@ -163,10 +161,13 @@
       "permanent": true
     }
   ],
-
   "rewrites": [
     {
-      "source": "/((?!public|js|index\\.css|database\\.js|favicon\\.svg|favicon\\.ico|apple-touch-icon|site\\.webmanifest|sw\\.js|\\.well-known|sitemap\\.xml|sitemap-index\\.xml|feed\\.xml|robots\\.txt).*)",
+      "source": "/about",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/entry/:path*",
       "destination": "/index.html"
     }
   ]
