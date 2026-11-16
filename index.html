@@ -368,8 +368,8 @@
               <div class="hero-stats">
                 <div class="hero-stat"><div class="hs-num" id="stat-entries">45</div><div class="hs-lbl">Entries</div></div>
                 <div class="hero-stat"><div class="hs-num" id="stat-brands">45</div><div class="hs-lbl">Brands</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-movements">58</div><div class="hs-lbl">Movements</div></div>
-                <div class="hero-stat"><div class="hs-num">15</div><div class="hs-lbl">Categories</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-movements">60</div><div class="hs-lbl">Movements</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-axes">6</div><div class="hs-lbl">Analytical axes</div></div>
               </div>
             </div>
 
@@ -588,7 +588,7 @@
              JS shows/hides it via the .hidden class (only on grid view). -->
         <footer id="site-footer" class="site-footer hidden" aria-label="Site footer">
           <div class="footer-bottom">
-            <span>© THE LEXICON · LONDON · MMXXVI</span>
+            <span translate="no" data-notranslate>© THE LEXICON · LONDON · MMXXVI</span>
             <span class="footer-tech">NO TRACKING · NO ADS · INDEPENDENT RESEARCH</span>
             <button type="button" id="btn-kbd-help-footer" aria-label="Keyboard shortcuts (Press ?)" class="footer-kbd-hint focus-ring">? <span class="footer-kbd-label">SHORTCUTS</span></button>
           </div>
@@ -602,10 +602,6 @@
           <!-- Breadcrumb bar -->
           <nav id="detail-breadcrumb" class="hidden lg:flex items-center gap-1 px-4 py-1.5 border-b border-white/10 text-[8px] font-mono uppercase tracking-widest text-white/30" aria-label="Entry breadcrumb"></nav>
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
-            <!-- PHASE 3: Left metadata rail — visible only at ≥1400px via CSS three-col layout -->
-            <div id="detail-meta-rail" class="hidden w-[220px] flex-col overflow-y-auto border-r border-white/10 bg-black shrink-0">
-              <div id="meta-rail-body" class="p-5 flex flex-col gap-5"></div>
-            </div>
             <!-- CENTER: Image Sector -->
             <div id="detail-image-sector" class="flex-1 relative flex flex-col items-center justify-center p-4 lg:p-12 border-r border-white/10">
               <div id="detail-image-wrapper" class="relative inline-block max-w-full max-h-full">
@@ -660,8 +656,8 @@
               <!-- Sticky Note Container (Brutalist Nodes) -->
               <div class="flex items-center justify-between px-6 pt-5 pb-3">
                 <div class="flex items-baseline gap-3">
-                  <span class="t-mono-xs font-mono uppercase tracking-widest text-white/50 font-bold">Analysis</span>
-                  <span id="detail-reading-time" class="text-[8px] font-mono opacity-30 tracking-wider"></span>
+                  <h2 id="analysis-title" class="detail-section-title">Analysis</h2>
+                  <span id="detail-reading-time" class="detail-reading-time"></span>
                 </div>
                 <button class="btn-reading-mode" id="btn-reading-mode" type="button" aria-label="Toggle reader mode (press R)" aria-pressed="false" title="Reader mode (R)">READER MODE <kbd class="rm-kbd">R</kbd></button>
               </div>
@@ -671,14 +667,14 @@
               
               <!-- Core Metadata Grid -->
               <div class="p-6 border-t border-white/10">
-                <h4 class="text-[8px] font-bold uppercase tracking-[0.2em] mb-4 text-white/40">Technical Specifications</h4>
+                <h2 id="tech-specs-title" class="detail-section-title mb-4">Technical Specifications</h2>
                 <div id="metadata-grid" class="grid grid-cols-2 gap-4"></div>
               </div>
 
               <!-- Related Entries (auto-populated by render-detail.js) -->
               <div id="related-entries-section" class="p-6 border-t border-white/10 hidden">
                 <div class="flex items-baseline justify-between mb-4">
-                  <h4 id="related-entries-title" class="t-mono-xs font-bold uppercase tracking-[0.2em] text-white/40">Related</h4>
+                  <h2 id="related-entries-title" class="detail-section-title">Related</h2>
                   <button id="btn-related-open-nexus" type="button" class="text-[8px] uppercase tracking-widest text-white/40 hover:text-acid transition-colors focus-ring min-h-[44px] px-1 flex items-center" aria-label="View all Nexus connections">View All Nexus ›</button>
                 </div>
                 <div id="related-entries-grid" class="grid grid-cols-3 gap-2"></div>
@@ -690,7 +686,7 @@
                   <span id="active-entry-title" class="t-mono-xs font-bold uppercase tracking-[0.2em] text-white"></span>
                   <button type="button" id="btn-bookmark-entry" class="bookmark-star text-white min-h-[44px] min-w-[44px] flex items-center justify-center focus-ring" aria-label="Bookmark this entry" aria-pressed="false">★</button>
                 </div>
-                <button type="button" id="btn-cite-entry" aria-label="Open citation formats for this entry" class="w-full flex items-center justify-center gap-2 t-mono-xs font-bold tracking-widest uppercase border-2 border-acid bg-acid text-black px-2 py-3 min-h-[48px] mb-2 hover:bg-transparent hover:text-acid transition-colors focus-ring"><span aria-hidden="true">❝</span> Cite Entry</button>
+                <button type="button" id="btn-cite-entry" aria-label="Open citation formats for this entry" class="w-full flex items-center justify-center gap-2 t-mono-xs font-bold tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[48px] mb-2 hover:bg-white hover:text-black transition-colors focus-ring"><span aria-hidden="true">❝</span> Cite Entry</button>
                 <div class="grid grid-cols-1 gap-2">
                   <button type="button" id="btn-open-matrix" aria-label="View Nexus connections for this entry" class="t-mono-xs tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">View Nexus</button>
                   <button type="button" id="btn-save-to-folder" aria-label="Save this entry to a folder" class="t-mono-xs tracking-widest uppercase border border-white/20 text-white px-2 py-3 min-h-[44px] hover:bg-white hover:text-black transition-colors focus-ring">Save to Folder</button>

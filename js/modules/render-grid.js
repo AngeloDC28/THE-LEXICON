@@ -16,9 +16,8 @@ export function setupGridIntersectionObserver() {
     gridIntersectionObserver.disconnect();
     setGridIntersectionObserver(null);
   }
-  const rootEl = $('grid-view');
   const cells  = document.querySelectorAll('#image-grid .grid-cell');
-  if (!cells.length || !rootEl) return;
+  if (!cells.length) return;
   if (!window.matchMedia('(max-width: 767px)').matches) {
     cells.forEach(c => c.classList.remove('grid-cell--focus'));
     return;
@@ -28,7 +27,9 @@ export function setupGridIntersectionObserver() {
       if (en.intersectionRatio >= 0.5) en.target.classList.add('grid-cell--focus');
       else en.target.classList.remove('grid-cell--focus');
     });
-  }, { root: rootEl, rootMargin: '-20% 0px -20% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+    // root: the viewport. #grid-view is not a scroll container (it grows to
+    // its content), so using it as the root made every cell "intersect".
+  }, { root: null, rootMargin: '-20% 0px -20% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
   cells.forEach(cell => observer.observe(cell));
   setGridIntersectionObserver(observer);
 }
@@ -79,7 +80,11 @@ export function renderImageGrid(archiveData, callbacks) {
   let html = '';
   entries.forEach((entry, index) => {
     const imgs = entry.images;
-    imgs.forEach((imgObj, i) => {
+    // One cover per collection. Showing every look (550+ tiles) made the
+    // grid repeat the same show a dozen times, made the rows ragged, and
+    // left the later looks unreachable by keyboard anyway. The looks are
+    // all in the entry view.
+    imgs.slice(0, 1).forEach((imgObj, i) => {
       // FIX: use resolveImgSrc so all paths become absolute URLs
       const src   = resolveImgSrc(imgObj);
       const delay = (index % 10) * 0.05;
@@ -94,7 +99,7 @@ export function renderImageGrid(archiveData, callbacks) {
       const tagColor = `--c-${tagCategory}`;
       const catTip   = getTranslation(`cat_tip_${tagCategory}`, AppState.language);
 
-      const hotspotCount = (imgObj?.hotspots || []).length;
+      const hotspotCount = imgs.reduce((n, im) => n + (im?.hotspots || []).length, 0);
       const hotspotBadge = hotspotCount > 0
         ? `<div class="grid-cell-hotspot-badge" aria-label="${hotspotCount} hotspot${hotspotCount > 1 ? 's' : ''}">◉ ${hotspotCount}</div>`
         : '';
@@ -136,7 +141,6 @@ export function renderImageGrid(archiveData, callbacks) {
           <div class="grid-cell-body">
             <div class="gc-meta">${metaLine}</div>
             ${hook ? `<div class="gc-hook">${escapeHtml(hook)}</div>` : ''}
-            ${isFirst && entry.vibes?.length ? `<div class="gc-vibes">${entry.vibes.slice(0,3).map(v => `<button type="button" class="gc-vibe" data-vibe="${escapeHtml(v)}" aria-label="Find entries with the vibe: ${escapeHtml(v)}">${escapeHtml(v)}</button>`).join('')}</div>` : ''}
           </div>
         </div>`;
     });

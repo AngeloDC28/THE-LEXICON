@@ -23,7 +23,10 @@ export function updateStatusBar(archiveData) {
   } else {
     const filtered = getFilteredEntries(archiveData);
     if (brand)       brand.textContent       = 'ARCHIVE';
-    if (year)        year.textContent        = '1981–2023';
+    if (year) {
+      const ys = archiveData.map(e => e.year).filter(Boolean);
+      year.textContent = ys.length ? `${Math.min(...ys)}–${Math.max(...ys)}` : '—';
+    }
     if (season)      season.textContent      = 'ALL';
     if (entryStatus) entryStatus.textContent = pad(filtered.length) + ' ' + getTranslation('label_entries', AppState.language);
   }
@@ -73,7 +76,6 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     renderBrutalistNodes(entry);
     renderStickyOverlay(entry);
     renderMetadataGrid(entry);
-    renderMetaRail(entry);
     renderRelatedEntries(entry, archiveData, callbacks);
     renderHotspots(entry, $('detail-image-wrapper'));
     setupSwipeGestures(archiveData, callbacks);
@@ -235,12 +237,13 @@ function renderSidebarHeader(entry) {
     ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<button type="button" class="detail-vibe" data-vibe="${escapeHtml(v)}" aria-label="Find entries with the vibe: ${escapeHtml(v)}">${escapeHtml(v)}</button>`).join('')}</div>`
     : '';
 
-  // Print-only title — the on-screen title lives in the action panel, which the
-  // print stylesheet hides, so the printed page would otherwise have no heading.
-  const printTitle = entry.title ? getTranslation(entry.title, lang) : `${brand} ${season} ${year}`.trim();
+  // The entry's one <h1>. It used to be print-only, which left entry pages
+  // with no heading at all for screen-reader navigation.
+  const pageTitle = entry.title ? getTranslation(entry.title, lang) : `${brand} ${season} ${year}`.trim();
+  const subtitle = entry.subtitle ? getTranslation(entry.subtitle, lang) : '';
 
   header.innerHTML = `
-    <h1 class="detail-print-title print-only">${printTitle}</h1>
+    <h1 class="detail-title">${escapeHtml(pageTitle)}${subtitle ? `<span class="detail-subtitle">${escapeHtml(subtitle)}</span>` : ''}</h1>
     <span class="detail-accent-tag" data-cat="${cat}">${tagLabel.toUpperCase()}</span>
     <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
     ${vibesHtml}
@@ -316,7 +319,11 @@ function renderImage(entry, callbacks) {
     const baseAlt = entry.title
       || [entry.tags?.brand, entry.season, entry.year].filter(Boolean).join(' ')
       || entry.id;
-    imgEl.alt = `${baseAlt} — image ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}`;
+    // "Look 3 of 16" says nothing about the picture. The hotspot labels are
+    // already a curated description of what is in it, so use them.
+    const parts = (currentImgObj?.hotspots || []).map(h => h.label).filter(Boolean);
+    const described = parts.length ? `: ${parts.join(', ')}` : '';
+    imgEl.alt = `${baseAlt}, look ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}${described}`;
   }
 
   const titleEl = $('active-entry-title');
@@ -505,7 +512,9 @@ function renderStickyOverlay(entry) {
     const sq = document.createElement('button');
     sq.type = 'button';
     sq.className = `sticky-square ${type.cls}`;
-    sq.setAttribute('aria-label', type.label);
+    // Colour alone carried the meaning (WCAG 1.4.1); show the name too.
+    sq.textContent = type.label;
+    sq.setAttribute('aria-expanded', 'false');
 
     sq.addEventListener('click', (e) => {
       e.stopPropagation();

@@ -16,16 +16,19 @@
   --c-provenance: #c4a87a;
 
   /* Fluid typography system: scales fluidly between 360px and 1440px viewport */
-  --t-mono-xs:   clamp(0.5625rem, 0.49rem + 0.18vw, 0.6875rem);
-  --t-mono-sm:   clamp(0.625rem, 0.55rem + 0.18vw, 0.75rem);
-  --t-mono-base: clamp(0.75rem, 0.65rem + 0.25vw, 0.9375rem);
+  /* Minimums: 12px for labels, 14px for interface text, 16px+ for anything
+     read at length. The old scale bottomed out at 7–9px, set in uppercase
+     monospace with wide tracking — the single biggest readability barrier. */
+  --t-mono-xs:   0.75rem;
+  --t-mono-sm:   0.875rem;
+  --t-mono-base: clamp(0.875rem, 0.82rem + 0.2vw, 1rem);
 
   /* Chrome-scoped sizes: ~25% smaller than mono-xs/sm.
      Applied via #primary-header, #status-ribbon, #view-controls-bar
      so the rest of the app's mono text keeps its original sizing. */
-  --t-chrome-xs: clamp(0.5rem, 0.46rem + 0.12vw, 0.5625rem);
-  --t-chrome-sm: clamp(0.5625rem, 0.52rem + 0.12vw, 0.625rem);
-  --t-body:      clamp(0.95rem, 0.85rem + 0.3vw, 1.0625rem);
+  --t-chrome-xs: 0.75rem;
+  --t-chrome-sm: 0.8125rem;
+  --t-body:      clamp(1rem, 0.94rem + 0.2vw, 1.125rem);
   --t-lead:      clamp(1rem, 0.85rem + 0.55vw, 1.25rem);
   --t-h3:        clamp(1.25rem, 1rem + 0.9vw, 1.75rem);
   --t-h2:        clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
@@ -316,7 +319,7 @@ html:not(.dark) #cite-modal > div:nth-child(2) {
     gap: 2px;
     min-height: 48px;
     padding: 6px 4px;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -356,7 +359,7 @@ html:not(.dark) #cite-modal > div:nth-child(2) {
   #mobile-notes-sheet .mobile-note-tab {
     padding: 12px 8px;
     min-height: 44px;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -571,7 +574,7 @@ html:not(.dark) .grid-cell-tag-strip {
   background: #f4f4f0;
 }
 .gc-tag-label { font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
-.gc-tag-id { font-size: 8px; opacity: 0.35; letter-spacing: 0.12em; }
+.gc-tag-id { font-size: 12px; opacity: 0.35; letter-spacing: 0.12em; }
 /* Colored accent border-bottom on grid card tag strip, via data attribute set in render-grid.js */
 .grid-cell-tag-strip[data-cat="corporeal"]  { border-bottom-color: rgba(226,164,160,0.45); }
 .grid-cell-tag-strip[data-cat="semiotic"]   { border-bottom-color: rgba(212,196,160,0.45); }
@@ -617,9 +620,11 @@ html:not(.dark) .grid-cell-img { background: #e8e8e4; }
   top: 6px;
   right: 6px;
   z-index: 10;
-  background: #CCFF00;
-  color: #000;
-  font-size: 8px;
+  /* Neutral, not acid: acid is kept for the primary action and focus. */
+  background: rgba(0,0,0,0.78);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  font-size: 12px;
   font-family: var(--font-mono);
   font-weight: 700;
   padding: 2px 5px;
@@ -669,7 +674,7 @@ html:not(.dark) .gc-hook { color: rgba(0,0,0,0.75); }
 }
 .gc-vibe {
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: lowercase;
   color: rgba(255,255,255,0.6);
@@ -1350,7 +1355,7 @@ html:not(.dark) .eow-brand { color: rgba(0,0,0,0.6); }
 .eow-vibes { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
 .eow-vibe {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: lowercase;
   color: rgba(255,255,255,0.6);
@@ -1389,7 +1394,7 @@ html:not(.dark) .ntz-dot { fill: rgba(0,0,0,0.45); }
 html:not(.dark) .nexus-teaser-card:hover .ntz-dot { fill: #000; }
 .ntz-label {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   fill: rgba(255,255,255,0.45);
 }
@@ -1397,7 +1402,7 @@ html:not(.dark) .ntz-label { fill: rgba(0,0,0,0.5); }
 .ntz-hub-dot { stroke: rgba(255,255,255,0.4); stroke-width: 1.5; }
 .ntz-hub-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   font-weight: 600;
   fill: #fff;
@@ -1696,7 +1701,7 @@ html:not(.dark) .mbs-range-track { background: rgba(0,0,0,0.12); }
 .mbs-range-bounds {
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 0.1em;
   opacity: 0.4;
@@ -1761,7 +1766,7 @@ html:not(.dark) .mbs-btn-clear:focus-visible, html:not(.dark) .mbs-btn-apply:foc
 }
 .detail-entry-id {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
@@ -1777,7 +1782,7 @@ html:not(.dark) .detail-entry-id { color: rgba(0,0,0,0.55); }
 }
 .detail-vibe {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: lowercase;
   color: rgba(255,255,255,0.72);
@@ -1837,7 +1842,7 @@ html:not(.dark) .detail-vibe:focus-visible { color: #000; border-color: #000; }
 }
 .den-pos {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   color: rgba(255,255,255,0.4);
   min-width: 40px;
@@ -1917,7 +1922,7 @@ html.dark .mode-toggle button.active {
 }
 .mode-toggle button .kbd {
   margin-left: 4px;
-  font-size: 8px;
+  font-size: 12px;
   opacity: 0.65;
   padding: 1px 3px;
   border: 1px solid currentColor;
@@ -1926,6 +1931,11 @@ html.dark .mode-toggle button.active {
 
 /* ─── Phase 2: Brutalist Index Table View ──────────────────────────── */
 /* Guarantee grid is hidden in INDEX mode — CSS-level, not relying on Tailwind */
+/* The grid must grow to its content. It was flex: 1 1 0% with min-height: 0,
+   so inside the scrolling #image-panel its box shrank to the panel height,
+   the cards overflowed it, and the footer (the next sibling) was laid out at
+   the end of that short box — drawn on top of the grid. */
+#grid-view { flex: 1 0 auto; }
 #image-panel[data-view-mode="index"] #grid-view { display: none !important; }
 #image-panel[data-view-mode="visual"] #index-table-view { display: none !important; }
 
@@ -2144,7 +2154,7 @@ html:not(.dark) .idx-export-btn:hover { color: #000; }
   padding: 5px 16px;
   border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 8px;
-  font-size: 8px;
+  font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 0.14em;
   color: rgba(255,255,255,0.5);
@@ -2160,7 +2170,7 @@ html:not(.dark) .index-kbd-bar {
 .index-kbd-bar kbd {
   border: 1px solid currentColor;
   padding: 0 3px;
-  font-size: 7px;
+  font-size: 12px;
   line-height: 1.4;
   border-radius: 1px;
 }
@@ -2169,7 +2179,7 @@ html:not(.dark) .index-kbd-bar {
   padding: 1px 6px;
   background: #CCFF00;
   color: #000;
-  font-size: 7px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -2278,7 +2288,7 @@ html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
   background: #000;
   color: #CCFF00;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: none;
   line-height: 1.4;
@@ -2373,6 +2383,51 @@ html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
 .node-provenance { background: #E6FF00 !important; } /* Acid Yellow */
 .node-critique   { background: #FF0000 !important; } /* Editorial Red */
 .node-strategy   { background: #0000FF !important; } /* Digital Blue */
+/* Black on #0000FF is about 2.4:1 — unreadable. White is 8.6:1. */
+.node-strategy, .node-strategy .node-label { color: #fff !important; }
+.node-strategy .node-label { border-bottom-color: rgba(255,255,255,0.8); }
+
+/* The notes are the archive's main content: set them as reading text in
+   EB Garamond, sentence case, at body size. Mono stays for the labels. */
+.brutalist-node .node-body,
+#sticky-panel-body,
+#mobile-notes-body,
+#mobile-hotspot-sheet-body,
+#payload-content .leading-relaxed {
+  font-family: var(--font-serif) !important;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.brutalist-node .node-body .note-pullquote { font-family: var(--font-serif); text-transform: none; }
+
+/* Entry page headings */
+.detail-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 12px 0 6px;
+  color: inherit;
+}
+.detail-subtitle {
+  display: block;
+  font-style: italic;
+  font-size: 0.65em;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+.detail-section-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.detail-reading-time { font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.65; }
 
 /* ── Reading Mode: editorial layout for the note sidebar ─────────────
    Applied via .reading-mode on #sticky-note-container.
@@ -2548,7 +2603,7 @@ html:not(.dark) .btn-reading-mode.active { color: #000; border-color: #000; }
   padding: 0 4px;
   margin-left: 6px;
   border: 1px solid currentColor;
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.4;
   opacity: 0.7;
 }
@@ -2587,7 +2642,7 @@ html:not(.dark) .notes-toc-link:hover,
 html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #000; }
 
 .ntl-num {
-  font-size: 8px;
+  font-size: 12px;
   opacity: 0.4;
   letter-spacing: 0.15em;
 }
@@ -2595,7 +2650,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 /* Numbered label inside node (reading mode uses this differently) */
 .node-num {
   opacity: 0.4;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   margin-right: 2px;
 }
@@ -2708,7 +2763,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 }
 .meta-rail-label {
   font-family: ui-monospace, monospace;
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.55);
@@ -2717,13 +2772,13 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 }
 .meta-rail-value {
   font-family: ui-monospace, monospace;
-  font-size: 8.5px;
+  font-size: 12px;
   color: rgba(255,255,255,0.75);
   line-height: 1.5;
 }
 .meta-rail-id {
   font-family: ui-monospace, monospace;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   color: #CCFF00;
   font-weight: 700;
@@ -2731,14 +2786,14 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 }
 .meta-rail-cat {
   font-family: ui-monospace, monospace;
-  font-size: 8px;
+  font-size: 12px;
   color: rgba(255,255,255,0.5);
   line-height: 1.4;
 }
 .meta-rail-tag {
   display: inline-block;
   font-family: ui-monospace, monospace;
-  font-size: 6.5px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.5);
@@ -3000,7 +3055,7 @@ html.dark .cmd-item.selected {
 /* Command palette: grouped result sections */
 .cmd-group-head {
   padding: 6px 16px 4px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
   color: #555;
@@ -3017,7 +3072,7 @@ html:not(.dark) .cmd-group-head { border-top-color: rgba(0,0,0,0.06); background
 
 .cmd-scope-pill {
   padding: 2px 8px;
-  font-size: 8px;
+  font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -3091,15 +3146,15 @@ html:not(.dark) .cmd-scope-pill:focus-visible { outline-color: #000; }
     min-height: 48px;
   }
   /* Entry list — explicit sizes so Tailwind CDN gaps don't affect mobile */
-  .entry-cat-header { font-size: 7px; padding: 10px 16px 3px; }
-  .entry-item-brand { font-size: 10px; }
-  .entry-item-meta  { font-size: 8px; }
+  .entry-cat-header { font-size: 12px; padding: 10px 16px 3px; }
+  .entry-item-brand { font-size: 12px; }
+  .entry-item-meta  { font-size: 12px; }
 
   /* Mobile quick-nav buttons — explicit size */
-  #mobile-quick-nav button { font-size: 9px; }
+  #mobile-quick-nav button { font-size: 12px; }
 
   /* Index panel header — keep bookmark button subtle */
-  #btn-show-bookmarks { font-size: 8px; opacity: 0.4; }
+  #btn-show-bookmarks { font-size: 12px; opacity: 0.4; }
 
   /* Search input: bigger on mobile */
   #search-input {
@@ -3311,7 +3366,7 @@ html.dark .matrix-section { border-color: rgba(255,255,255,0.08); }
 .nexus-peer-label {
   display: block;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -3583,7 +3638,7 @@ html.dark .entry-item:hover::after {
   font-size: var(--t-chrome-xs);
 }
 #status-ribbon span[id$="-label"] {
-  font-size: 9px;
+  font-size: 12px;
 }
 #view-controls-bar button,
 #view-controls-bar span {
@@ -3606,7 +3661,7 @@ html:not(.dark) .cookie-strip {
 }
 .cookie-strip-text {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   opacity: 0.6;
@@ -3624,7 +3679,7 @@ html:not(.dark) .cookie-strip-text { color: #000; }
 }
 .cookie-link {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   opacity: 0.45;
@@ -3638,7 +3693,7 @@ html:not(.dark) .cookie-strip-text { color: #000; }
 .cookie-link:hover { opacity: 0.8; }
 .cookie-btn {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 700;
@@ -3668,7 +3723,7 @@ html:not(.dark) .cookie-btn--ghost { color: rgba(0,0,0,0.5); }
   background: none;
   border: none;
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -3682,7 +3737,7 @@ html:not(.dark) .cookie-btn--ghost { color: rgba(0,0,0,0.5); }
 .entry-cat-header--active { opacity: 1; font-weight: 900; }
 .entry-cat-header:first-child { border-top: none; padding-top: 6px; }
 html.dark .entry-cat-header { border-top-color: rgba(255,255,255,0.06); }
-html:not(.dark) .entry-cat-header { opacity: 0.65; }
+html:not(.dark) .entry-cat-header { opacity: 1; filter: brightness(0.55); } /* category colours are tuned for black; darken them on paper (was 3.4–4.2:1) */
 html:not(.dark) .entry-cat-header:hover { opacity: 1; }
 html:not(.dark) .entry-cat-header--active { opacity: 1; }
 .entry-item-inner {
@@ -3693,7 +3748,7 @@ html:not(.dark) .entry-cat-header--active { opacity: 1; }
 }
 .entry-item-brand {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -3701,7 +3756,7 @@ html:not(.dark) .entry-cat-header--active { opacity: 1; }
 }
 .entry-item-meta {
   font-family: var(--font-mono);
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   opacity: 0.6;
   text-transform: uppercase;
@@ -3948,7 +4003,7 @@ html.dark .active-hotspot-box {
 }
 .welcome-lang-label {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
@@ -3960,7 +4015,7 @@ html.dark .active-hotspot-box {
 }
 .wlang-btn {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 6px 12px;
@@ -4026,7 +4081,7 @@ html.dark .active-hotspot-box {
 }
 .ws-label {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #CCFF00;
@@ -4076,7 +4131,7 @@ html.dark .active-hotspot-box {
 .welcome-cta:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 .welcome-skip {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.3);
@@ -4110,15 +4165,23 @@ html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
 
 /* ── STICKY NOTE SQUARES (top-right image triggers) ── */
 .sticky-square {
-  width: 32px;
-  height: 32px;
+  /* Labelled pills, not bare colour swatches — the colour alone used to be
+     the only clue that yellow/red/blue meant Provenance/Critique/Strategy. */
+  min-width: 44px;
+  min-height: 32px;
+  padding: 0 10px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
   border: 2px solid rgba(0,0,0,0.8);
   box-shadow: 3px 3px 0 rgba(0,0,0,0.8);
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease, outline 0.1s ease;
   flex-shrink: 0;
   position: relative;
-  padding: 0;
   background: transparent;
 }
 /* Extend touch target to 44×44 via pseudo-element */
@@ -4140,9 +4203,9 @@ html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
   outline: 2px solid #CCFF00;
   outline-offset: 3px;
 }
-.sq-provenance { background: #E6FF00; }
-.sq-critique   { background: #FF0000; }
-.sq-strategy   { background: #0000FF; }
+.sq-provenance { background: #E6FF00; color: #000; }
+.sq-critique   { background: #FF0000; color: #fff; }
+.sq-strategy   { background: #0000FF; color: #fff; }
 
 /* ── STICKY NOTE PANEL (right-side reveal panel) ── */
 #sticky-note-panel {
@@ -4167,12 +4230,12 @@ html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
   min-width: 200px;
 }
 #payload-content {
-  font-size: 9.5px !important;
+  font-size: 12px !important;
   line-height: 1.55 !important;
   color: #000 !important;
 }
 #payload-content .text-\[10px\] {
-  font-size: 9.5px !important;
+  font-size: 12px !important;
 }
 
 /* ─── Site Footer ─────────────────────────────────────────────────── */
@@ -4217,7 +4280,7 @@ html:not(.dark) .footer-bottom { color: #666; }
 .footer-kbd-hint:hover { opacity: 1; }
 .footer-kbd-label { opacity: 0.7; }
 .footer-copyright {
-  font-size: 9px;
+  font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -4250,7 +4313,7 @@ html:not(.dark) #btn-viewer-next:hover { color: #000; text-decoration: underline
   align-items: center;
   gap: 4px;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.75);
@@ -4280,7 +4343,7 @@ html:not(.dark) .saved-search-chip:focus-within { color: #000; border-color: #00
 .saved-search-chip .ssc-apply:focus-visible,
 .saved-search-chip .ssc-del:focus-visible { outline: 1px solid currentColor; outline-offset: 1px; }
 .saved-search-chip .ssc-del {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1;
   padding: 0 2px;
   opacity: 0.55;
@@ -4499,7 +4562,7 @@ html:not(.dark) .saved-search-chip:focus-within { color: #000; border-color: #00
 
   /* Printed entry title (the on-screen title is trapped in the hidden
      action panel, so the sidebar header carries a print-only heading). */
-  .detail-print-title {
+  .detail-title {
     font-family: Georgia, serif !important;
     font-size: 16pt !important;
     font-weight: 700 !important;
@@ -4638,7 +4701,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
   background: #FAF9F6;
   color: #000;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -4669,7 +4732,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
   letter-spacing: 0.05em;
   text-transform: none;
   opacity: 0.7;
-  font-size: 9px;
+  font-size: 12px;
 }
 .taxonomy-cell[aria-pressed="true"] { background: #000; color: #CCFF00; }
 .dark .taxonomy-cell[aria-pressed="true"] { background: #CCFF00; color: #000; }
@@ -4703,18 +4766,18 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
   .taxonomy-cell {
     min-height: 52px;
     padding: 14px 12px;
-    font-size: 11.5px;
+    font-size: 12px;
     line-height: 1.25;
     letter-spacing: 0.1em;
   }
-  .taxonomy-cell-filter { display: block; margin-top: 2px; font-size: 9.5px; }
+  .taxonomy-cell-filter { display: block; margin-top: 2px; font-size: 12px; }
   #taxonomy-section:not(.taxonomy-expanded) #taxonomy-grid { display: none; }
   #taxonomy-section:not(.taxonomy-expanded) #taxonomy-sub { display: none !important; }
   #taxonomy-section.taxonomy-expanded { max-height: 60vh; overflow-y: auto; }
   #taxonomy-section.taxonomy-expanded #taxonomy-chevron { transform: rotate(180deg); }
   #index-panel { overscroll-behavior: contain; }
   #btn-taxonomy-collapse { padding-top: 14px; padding-bottom: 14px; min-height: 48px; }
-  #taxonomy-heading { font-size: 11px; letter-spacing: 0.22em; }
+  #taxonomy-heading { font-size: 12px; letter-spacing: 0.22em; }
 }
 
 /* Pull-to-refresh prevention on interactive surfaces */
@@ -4748,7 +4811,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
   padding: 10px 14px;
   max-width: min(320px, calc(100vw - 24px));
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.55;
   pointer-events: none;
 }
@@ -4757,7 +4820,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 }
 .gloss-tooltip-term {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #CCFF00;
@@ -4782,7 +4845,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 }
 .glossary-term {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #CCFF00;
@@ -4799,7 +4862,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 }
 @media (max-width: 600px) {
   #glossary-modal .glossary-entry { grid-template-columns: 1fr; gap: 4px 0; }
-  .glossary-term { font-size: 9px; }
+  .glossary-term { font-size: 12px; }
 }
 
 /* ─── CSP-safe replacements for values that used to be set via inline
@@ -4866,7 +4929,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 
 /* Nexus timeline view (connection-matrix.js renderTimeline) */
 .nexus-tl-wrap { padding: 24px 20px; font-family: ui-monospace, monospace; }
-.nexus-tl-caption { font-size: 7px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.nexus-tl-caption { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
 .nexus-tl-track { position: relative; padding-left: 32px; }
 .nexus-tl-line { position: absolute; left: 8px; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.12); }
 .nexus-tl-item { position: relative; margin-bottom: 18px; }
@@ -4881,9 +4944,54 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 .nexus-tl-dot--geography { background: #87CEFA; }
 .nexus-tl-dot--anatomy   { background: #FFB6C1; }
 .nexus-tl-dot--current   { background: #CCFF00; box-shadow: 0 0 8px #CCFF00; }
-.nexus-tl-year { font-size: 7px; letter-spacing: 0.15em; margin-bottom: 2px; color: rgba(255,255,255,0.35); }
+.nexus-tl-year { font-size: 12px; letter-spacing: 0.15em; margin-bottom: 2px; color: rgba(255,255,255,0.35); }
 .nexus-tl-year--current { color: #CCFF00; }
-.nexus-tl-brand { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+.nexus-tl-brand { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
 .nexus-tl-brand--current { color: #CCFF00; }
 .nexus-tl-keys { margin-top: 4px; }
-.nexus-tl-key { font-size: 6px; letter-spacing: 0.1em; text-transform: uppercase; padding: 1px 4px; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.4); margin-right: 3px; }
+.nexus-tl-key { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; padding: 1px 4px; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.4); margin-right: 3px; }
+
+/* ── Type floor ───────────────────────────────────────────────────────────
+   Tailwind arbitrary sizes used for labels in index.html and the render
+   modules (7–9px, 0.5rem). Nothing on the site is set below 12px. */
+.text-\[7px\], .text-\[8px\], .text-\[9px\], .text-\[10px\],
+.text-\[0\.5rem\], .text-\[0\.7rem\] { font-size: 0.75rem; }
+
+/* The detail image's max-height: 100% never resolved (its wrapper and the
+   flex column above it have no definite height), so tall looks ran past
+   the bottom of the panel with the image dots and credit drawn over them.
+   Cap against the viewport instead: header + breadcrumb + dots + credit. */
+@media (min-width: 1024px) {
+  #detail-image { max-height: calc(100dvh - 210px) !important; }
+}
+
+/* Intro panel: `1.1fr 0.9fr` tracks have an automatic minimum, so the
+   headline's min-content width won and the featured column was crushed to
+   one word per line (~1040px wide, where the archive panel is only ~620px).
+   Let both tracks shrink, and stack the columns whenever the panel is that
+   narrow (≥1024px the panel is 60% of the window). */
+.hero-panel { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .hero-panel { grid-template-columns: minmax(0, 1fr); }
+  .hero-col-left { border-right: none; border-bottom: 1px solid #222; }
+  html:not(.dark) .hero-col-left { border-bottom-color: #e0e0dc; }
+  .hero-col-right { min-height: 260px; }
+}
+
+/* View controls (Visual/Index, Grid/Evolution, Sort): this bar scrolled
+   sideways with its scrollbar hidden, so on narrow panels "Evolution
+   Matrix" and the Sort button were simply cut off with no hint that more
+   was there. Wrap onto a second line instead. */
+#view-controls-bar { flex-wrap: wrap; overflow-x: visible; row-gap: 4px; }
+#view-controls-bar > div { flex-wrap: wrap; flex-shrink: 1; min-width: 0; row-gap: 4px; }
+/* Inactive "Evolution Matrix" and Sort sat at 40–50% opacity (≈3.5:1). */
+#btn-toggle-timeline.opacity-40, #btn-sort-cycle.opacity-50 { opacity: 0.75; }
+
+/* Target sizes (WCAG 2.2 · 2.5.8, 24px minimum). */
+.detail-vibe { min-height: 28px; display: inline-flex; align-items: center; padding: 2px 9px; }
+#btn-lang-toggle { min-height: 44px; padding: 0 6px; }
+
+/* The cookie banner is fixed to the bottom of the screen, and so is the
+   mobile Back / Notes / Nexus / Save bar — the banner sat on top of it.
+   --cookie-banner-h is kept up to date by app.js while the banner shows. */
+#mobile-detail-actions { bottom: var(--cookie-banner-h, 0px); }

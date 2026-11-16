@@ -498,7 +498,7 @@ function refreshChrome() {
   // overwrite the whole textContent here, that destroys the icon+label structure.)
 
   // --- Technical specs label ---
-  const techSpecsLabel = $$('#detail-metadata-sidebar h4')[0];
+  const techSpecsLabel = $('tech-specs-title');
   if (techSpecsLabel) techSpecsLabel.textContent = t('tech_specs');
 
   // --- Related entries label ---

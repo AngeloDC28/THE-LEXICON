@@ -112,7 +112,7 @@ export function renderFilterChips(callbacks) {
   });
 
   if (chips.length === 0) {
-    container.innerHTML = `<span class="text-[8px] opacity-20 uppercase tracking-widest">${getTranslation('no_active_filters', AppState.language)}</span>`;
+    container.innerHTML = `<span class="text-[8px] opacity-70 uppercase tracking-widest">${getTranslation('no_active_filters', AppState.language)}</span>`;
     return;
   }
 
