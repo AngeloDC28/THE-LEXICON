@@ -11,9 +11,9 @@ let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
 import { imageDimensions } from './modules/image-dimensions.js?v=715e5c2';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc } from './modules/core-utils.js?v=715e5c2';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt } from './modules/core-utils.js?v=715e5c2';
 setImageDimensions(imageDimensions);
-import { AppState, updateHash, emptyFilters } from './modules/core-state.js?v=715e5c2';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=715e5c2';
 import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=715e5c2';
 import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=715e5c2';
 import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=715e5c2';
@@ -28,7 +28,7 @@ import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/
 import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=715e5c2';
 import { getTranslation, supportedLanguages } from './modules/translations.js?v=715e5c2';
 import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=715e5c2';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory } from './modules/render-index-view.js?v=715e5c2';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel } from './modules/render-index-view.js?v=715e5c2';
 import { renderGlossaryModal } from './modules/glossary.js?v=715e5c2';
 
 // --- Shared Callbacks ---
@@ -38,14 +38,24 @@ const callbacks = {
   navigateEntry: (dir) => navigateEntry(dir, archiveData, callbacks),
   showToast: showToast,
   renderFolders: () => renderFoldersView(),
-  renderFolderOptions: () => { openModal('save-folder-modal'); renderSaveFolderModal(); },
+  // Two separate jobs that used to be one callback. auth.js calls
+  // renderFolderOptions after every folder fetch (including the one on page
+  // load) purely to refresh the list; only an explicit save intent should
+  // open the dialog.
+  renderFolderOptions: () => renderSaveFolderModal(),
+  openSaveFolder: (entryId) => openSaveFolderModal(entryId),
   updateBookmarkUI: (id) => {
     const btn = $('btn-bookmark-entry');
     const saved = isBookmarked(id);
-    if (btn) {
+    if (btn && id === AppState.selectedEntryId) {
       btn.style.opacity = saved ? '1' : '0.4';
       btn.setAttribute('aria-pressed', String(saved));
     }
+    // The bookmark list lives in localStorage, outside the search cache
+    // key — without this the "Saved" view kept showing an entry after it
+    // was un-bookmarked.
+    invalidateSearchCache();
+    if (AppState.bookmarksOnly) refreshContent();
   },
   closeModal: (id) => {
     const modal = $(id + '-modal');
@@ -92,7 +102,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ?lang=<code> URL param lets users escape a stuck language (e.g. ?lang=en)
   try {
     const _urlLang = new URLSearchParams(window.location.search).get('lang');
-    if (_urlLang) {
+    // Only accept codes the language menu actually offers — an arbitrary
+    // value used to be persisted and sent to the translator on every load.
+    if (_urlLang && ALL_LANGS.some(l => l.code === _urlLang)) {
       AppState.language = _urlLang;
       localStorage.setItem('lexicon-lang', _urlLang);
       // Strip ?lang= from URL so it doesn't linger
@@ -138,6 +150,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       switchView('grid', callbacks);
       openDetail(id, idx, archiveData, callbacks);
     } else {
+      history.replaceState(null, '', '/');
       switchView('grid', callbacks);
       showToast(getTranslation('entry_not_found', AppState.language) || 'Entry not found — returning to archive');
     }
@@ -226,13 +239,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // ─── Service Worker ──────────────────────────────────────────────────
 if ('serviceWorker' in navigator) {
+  // A page that already has a controller is a returning visit; only then
+  // does an activating worker mean "there is a newer version". On a first
+  // ever visit the worker installs and activates too, and announcing that
+  // as an update told brand-new visitors to reload.
+  const hadControllerAtLoad = !!navigator.serviceWorker.controller;
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   });
   // Listen for version update notifications from sw.js
   navigator.serviceWorker.addEventListener('message', (e) => {
-    if (e.data?.type === 'SW_UPDATED') {
-      console.log(`[LEXICON] Service worker updated to v${e.data.version}`);
+    if (e.data?.type === 'SW_UPDATED' && hadControllerAtLoad) {
       showToast('New version available — reload for the latest update');
     }
   });
@@ -736,8 +753,8 @@ function renderSavedSearches() {
   const saved = getSavedSearches();
   list.innerHTML = saved.map(s => `
     <span class="saved-search-chip" role="listitem">
-      <button type="button" class="ssc-apply" data-saved-apply="${s.id}" aria-label="Apply saved search: ${s.name.replace(/"/g, '&quot;')}">${s.name}</button>
-      <button type="button" class="ssc-del" data-saved-del="${s.id}" aria-label="Delete saved search: ${s.name.replace(/"/g, '&quot;')}">×</button>
+      <button type="button" class="ssc-apply" data-saved-apply="${escapeHtml(s.id)}" aria-label="Apply saved search: ${escapeHtml(s.name)}">${escapeHtml(s.name)}</button>
+      <button type="button" class="ssc-del" data-saved-del="${escapeHtml(s.id)}" aria-label="Delete saved search: ${escapeHtml(s.name)}">×</button>
     </span>`).join('');
 }
 
@@ -749,27 +766,29 @@ function refreshUI() {
 
 let _suppressHashSync = false;
 
+const SORT_MODES = ['year-desc', 'year-asc', 'brand-az', 'default'];
+
+// The hash is the source of truth for filter state, so this is a full
+// restore: a parameter that is absent means "not set", not "leave whatever
+// was there". The old version only ever added state, which made Back and
+// Forward unable to undo a filter or a search.
 function applyStateFromQuery(params) {
-  if (params.has('sort')) AppState.sortMode = params.get('sort');
-  if (params.has('q')) {
-    AppState.searchQuery = params.get('q');
-    const si = $('search-input');
-    if (si) si.value = AppState.searchQuery;
-  }
-  for (const key of Object.keys(AppState.filters)) {
-    if (params.has(key)) AppState.filters[key] = params.get(key);
+  if (params.has('sort') && SORT_MODES.includes(params.get('sort'))) AppState.sortMode = params.get('sort');
+  AppState.searchQuery = params.get('q') || '';
+  const si = $('search-input');
+  if (si && si.value !== AppState.searchQuery) si.value = AppState.searchQuery;
+  for (const key of FILTER_KEYS) {
+    AppState.filters[key] = params.get(key) || null;
   }
   // Year range from URL (y_min / y_max)
   const yMin = params.has('y_min') ? parseInt(params.get('y_min')) : 1980;
   const yMax = params.has('y_max') ? parseInt(params.get('y_max')) : 2025;
   if (!isNaN(yMin) && !isNaN(yMax)) AppState.yearRange = { min: yMin, max: yMax };
 
-  if (params.has('saved') && params.get('saved') === '1') {
-    AppState.bookmarksOnly = true;
-    const btn = $('btn-show-bookmarks');
-    if (btn) btn.setAttribute('aria-pressed', 'true');
-  }
-  if (params.has('cat')) AppState.analyticalCat = params.get('cat') || null;
+  AppState.bookmarksOnly = params.get('saved') === '1';
+  $('btn-show-bookmarks')?.setAttribute('aria-pressed', String(AppState.bookmarksOnly));
+  AppState.analyticalCat = params.get('cat') || null;
+  invalidateSearchCache();
   // Phase 2: view mode (visual | index) is URL-shareable
   if (params.has('mode')) {
     const mode = params.get('mode');
@@ -844,8 +863,11 @@ function handleRouting() {
       switchView('grid', callbacks);
       openDetail(id, idx, archiveData, callbacks);
     } else if (archiveData.length > 0) {
-      // Data is loaded but slug doesn't exist — genuine 404
+      // Data is loaded but slug doesn't exist — genuine 404. Drop the dead
+      // path so the address bar, canonical and any later share don't keep
+      // pointing at an entry that isn't there.
       _pendingEntryRoute = null;
+      history.replaceState(null, '', '/');
       switchView('grid', callbacks);
       showToast(getTranslation('entry_not_found', AppState.language) || 'Entry not found — returning to archive');
     } else {
@@ -989,8 +1011,12 @@ function setupEventListeners() {
       // Re-render sub-panel to update checked state; keep panel open for multi-select.
       renderTaxonomySub(callbacks, archiveData);
       renderTaxonomyGrid();
+      // refreshContent() already writes the new filter state into the URL.
+      // This used to be followed by updateHash('grid'), which assigned
+      // location.hash: that pushed an extra history entry per click, fired a
+      // hashchange that re-ran routing, and left Back cycling through
+      // identical states instead of leaving the page.
       refreshContent();
-      updateHash('grid');
       return;
     }
 
@@ -1001,7 +1027,6 @@ function setupEventListeners() {
       renderTaxonomySub(callbacks, archiveData);
       renderTaxonomyGrid();
       refreshContent();
-      updateHash('grid');
       return;
     }
 
@@ -1085,16 +1110,6 @@ function setupEventListeners() {
     }
   });
 
-  // Modals — opening
-  function openModal(id) {
-    const modal = $(id);
-    if (!modal) return;
-    modal.classList.remove('hidden');
-    // Move focus to first focusable element (prefer close button)
-    const focusEl = modal.querySelector('[data-modal-close], [autofocus]') || modal.querySelector(FOCUSABLE_SELECTORS);
-    if (focusEl) requestAnimationFrame(() => focusEl.focus());
-    trapFocus(modal);
-  }
   $('btn-about')?.addEventListener('click', (e) => { e.preventDefault(); history.pushState(null, '', '/about'); handleRouting(); });
   $('btn-contact')?.addEventListener('click', () => openModal('contact-modal'));
   $('btn-about-mobile')?.addEventListener('click', () => { history.pushState(null, '', '/about'); handleRouting(); toggleHamburger(); });
@@ -1398,7 +1413,8 @@ function setupEventListeners() {
         btn.classList.remove('btn-copied');
       }, 1500);
     };
-    navigator.clipboard?.writeText(url).then(flashCopied).catch(() => {
+    if (!navigator.clipboard) { showToast(url); return; }
+    navigator.clipboard.writeText(url).then(flashCopied).catch(() => {
       showToast(url);
     });
   });
@@ -1419,7 +1435,8 @@ function setupEventListeners() {
       const which = btn.dataset.citeCopy;
       const el = $('cite-' + which);
       if (!el) return;
-      navigator.clipboard?.writeText(el.textContent).then(() => {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(el.textContent).then(() => {
         const original = btn.textContent;
         btn.textContent = '✓ ' + getTranslation('link_copied', AppState.language).replace('.','').toUpperCase();
         btn.classList.add('btn-copied');
@@ -1482,24 +1499,10 @@ function setupEventListeners() {
   $('matrix-backdrop')?.addEventListener('click', () => { closeConnectionMatrix(); restoreFocus(); });
 
   $('btn-save-to-folder')?.addEventListener('click', () => {
-    if (!currentUser) {
-      const entry = archiveData?.find(e => e.id === AppState.selectedEntryId);
-      const label = entry ? `Sign in to save ${entry.title || entry.id} to a folder.` : null;
-      requireAuth(window.location.pathname + window.location.hash, label);
-      return;
-    }
-    openModal('save-folder-modal');
-    renderSaveFolderModal();
+    openSaveFolderModal();
   });
   $('btn-save-folder-mobile')?.addEventListener('click', () => {
-    if (!currentUser) {
-      const entry = archiveData?.find(e => e.id === AppState.selectedEntryId);
-      const label = entry ? `Sign in to save ${entry.title || entry.id} to a folder.` : null;
-      requireAuth(window.location.pathname + window.location.hash, label);
-      return;
-    }
-    openModal('save-folder-modal');
-    renderSaveFolderModal();
+    openSaveFolderModal();
   });
 
   $('btn-export-all-folders')?.addEventListener('click', () => exportAllFolders());
@@ -1526,10 +1529,13 @@ function setupEventListeners() {
       if (matrix && !matrix.classList.contains('hidden')) {
         closeConnectionMatrix(); restoreFocus(); e.preventDefault(); return;
       }
-      const openModal = document.querySelector('[role="dialog"]:not(.hidden):not([hidden]):not(#image-lightbox)');
-      if (openModal) {
-        openModal.classList.add('hidden');
+      const openDialog = document.querySelector('[role="dialog"]:not(.hidden):not([hidden]):not(#image-lightbox)');
+      if (openDialog) {
+        openDialog.classList.add('hidden');
         document.body.style.overflow = '';
+        // Same URL clean-up the About close button does — otherwise the
+        // address stays on /about and a reload reopens the dialog.
+        if (openDialog.id === 'about-modal' && window.location.pathname === '/about') history.pushState(null, '', '/');
         restoreFocus();
         e.preventDefault();
         return;
@@ -1541,7 +1547,12 @@ function setupEventListeners() {
     if (e.defaultPrevented) return;
     // Don't swallow typing in form fields
     const tag = document.activeElement?.tagName;
-    if (tag === 'INPUT' || tag === 'TEXTAREA' || document.activeElement?.isContentEditable) return;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || document.activeElement?.isContentEditable) return;
+    // Single-letter shortcuts must not fire behind an open dialog (typing
+    // "i" with the About panel open used to flip the archive into index
+    // mode underneath it), nor hijack browser shortcuts such as Ctrl+V.
+    if (document.querySelector('[role="dialog"]:not(.hidden):not([hidden])')) return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
     // Use detail DOM state as fallback: AppState.selectedEntryId may not reflect
     // detail-mode-active when module instances diverge in some hosting environments.
     const _detailOpen = AppState.selectedEntryId ||
@@ -1582,10 +1593,10 @@ function setupEventListeners() {
       setViewMode('index');
       renderIndexView(archiveData);
     }
-    if (e.key === 'r' || e.key === 'R') {
+    if ((e.key === 'r' || e.key === 'R') && _detailOpen) {
       const container = $('sticky-note-container');
       const btn = $('btn-reading-mode');
-      if (container && !e.metaKey && !e.ctrlKey) {
+      if (container) {
         e.preventDefault();
         const isReading = container.classList.toggle('reading-mode');
         if (btn) { btn.classList.toggle('active', isReading); btn.setAttribute('aria-pressed', String(isReading)); }
@@ -1604,8 +1615,11 @@ function setupEventListeners() {
       e.preventDefault();
       toggleBookmark(AppState.selectedEntryId, callbacks);
     }
-    // Brutalist Index View: j/k row navigation when index mode is active
-    if (AppState.viewMode === 'index') {
+    // Brutalist Index View: j/k row navigation when index mode is active.
+    // Not while an entry is open on top of it: there the arrow keys scroll
+    // and B bookmarks the open entry (this block used to run as well, so B
+    // toggled the bookmark twice and left it unchanged).
+    if (AppState.viewMode === 'index' && !_detailOpen) {
       if (e.key === 'j' || e.key === 'ArrowDown') {
         e.preventDefault();
         indexNavigateRow(1);
@@ -1620,16 +1634,17 @@ function setupEventListeners() {
         const focusedRow = document.querySelector('#index-table-view tbody tr.focused');
         if (focusedRow?.dataset.entryId) {
           e.preventDefault();
-          AppState.selectedEntryId = focusedRow.dataset.entryId;
-          callbacks.renderFolderOptions?.();
+          // Pass the id instead of writing it into AppState.selectedEntryId:
+          // that field means "an entry is open", and setting it with no
+          // entry open froze URL syncing and re-routed the arrow keys.
+          openSaveFolderModal(focusedRow.dataset.entryId);
         }
       } else if ((e.key === 'c' || e.key === 'C') && !e.ctrlKey && !e.metaKey) {
         // Cite focused row entry
         const focusedRow = document.querySelector('#index-table-view tbody tr.focused');
         if (focusedRow?.dataset.entryId) {
           e.preventDefault();
-          AppState.selectedEntryId = focusedRow.dataset.entryId;
-          openCiteModal();
+          openCiteModal(focusedRow.dataset.entryId);
         }
       } else if (e.key === 'b' || e.key === 'B') {
         // Bookmark focused row entry
@@ -1710,9 +1725,14 @@ function setupEventListeners() {
   };
   const closeMobileSheet = () => {
     const sheet = $('mobile-filter-sheet');
+    const wasOpen = sheet && !sheet.classList.contains('hidden');
     if (sheet) sheet.classList.add('hidden');
     document.body.style.overflow = '';
     restoreFocus();
+    // Chips and the year slider write straight into AppState as they are
+    // toggled, so dismissing the sheet without pressing Apply used to leave
+    // the grid showing the old results under new filter state.
+    if (wasOpen) { invalidateSearchCache(); refreshTaxonomy(); refreshContent(); }
   };
 
   $('btn-mobile-filter')?.addEventListener('click', openMobileSheet);
@@ -1744,11 +1764,7 @@ function setupEventListeners() {
     updateMbsResultCount();
   });
 
-  $('btn-mbs-apply')?.addEventListener('click', () => {
-    closeMobileSheet();
-    invalidateSearchCache();
-    refreshContent();
-  });
+  $('btn-mbs-apply')?.addEventListener('click', closeMobileSheet);
 
   // Year range dual-thumb slider
   const minInput = $('mbs-year-min');
@@ -1882,12 +1898,6 @@ function renderHero(archiveData) {
   if (eow) eow.style.display = 'block';
   if (nexusT) nexusT.style.display = 'block';
 
-  const tagLabelMap = {
-    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
-    subculture: 'Subcultural Codification', semiotic: 'Semiotic Sabotage',
-    strategy: 'Strategic Appropriation', provenance: 'Historical Lineage',
-  };
-
   // Pick one entry per category (most recent), up to 4 candidates
   const HERO_CATS = ['corporeal', 'critique', 'subculture', 'semiotic'];
   const sorted = [...archiveData].sort((a, b) => (b.year || 0) - (a.year || 0));
@@ -1909,15 +1919,11 @@ function renderHero(archiveData) {
     const candidate = picks[idx];
     if (!candidate) return;
     const cat = getTagCategory(candidate.tags?.politics || '');
-    const tagLabel = tagLabelMap[cat] || 'Analytical Record';
+    const tagLabel = categoryLabel(cat);
     const brand = (candidate.tags?.brand || '').toUpperCase();
     const year = candidate.year || '—';
     const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
-    const hook = candidate.notes?.critique
-      ? candidate.notes.critique.replace(/<[^>]+>/g, '').slice(0, 200) + '…'
-      : candidate.notes?.provenance
-        ? candidate.notes.provenance.replace(/<[^>]+>/g, '').slice(0, 200) + '…'
-        : '';
+    const hook = excerpt(candidate.notes?.critique || candidate.notes?.provenance || '', 200);
 
     const tagEl = $('hero-tag-label');
     if (tagEl) {
@@ -2022,7 +2028,7 @@ function renderAxesBrowse(archiveData) {
   });
   grid.innerHTML = AXIS_DEFS.map(a => {
     const n = counts.get(a.key) || 0;
-    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" aria-label="Browse ${a.label} — ${n} entries">
+    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" aria-label="Browse ${a.label} — ${n} ${n === 1 ? 'entry' : 'entries'}">
       <span class="axis-bar" aria-hidden="true"></span>
       <span class="axis-label">${a.label}</span>
       <span class="axis-blurb">${a.blurb}</span>
@@ -2045,14 +2051,9 @@ function renderEntryOfWeek(archiveData) {
   if (!pick) return;
 
   const cat = getTagCategory(pick.tags?.politics || '');
-  const labelMap = {
-    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
-    subculture: 'Subcultural Codification', strategy: 'Strategic Appropriation',
-    semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
-  };
   const tagEl = $('eow-tag');
   if (tagEl) {
-    tagEl.textContent = (labelMap[cat] || 'Analytical Record').toUpperCase();
+    tagEl.textContent = categoryLabel(cat).toUpperCase();
     tagEl.style.color = `var(--c-${cat})`;
     tagEl.style.borderColor = `var(--c-${cat})`;
   }
@@ -2132,9 +2133,39 @@ function renderNexusTeaser(archiveData) {
   cardEl.onclick = () => openConnectionMatrix(hub.id, archiveData, callbacks);
 }
 
+// ── MODALS ──
+// Module scope on purpose: `callbacks` (top of file) and the keyboard
+// handler both need it. It used to be declared inside setupEventListeners(),
+// so the save-to-folder callback threw a ReferenceError whenever auth.js
+// invoked it.
+function openModal(id) {
+  const modal = $(id);
+  if (!modal) return;
+  modal.classList.remove('hidden');
+  // Move focus to first focusable element (prefer close button)
+  const focusEl = modal.querySelector('[data-modal-close], [autofocus]') || modal.querySelector(FOCUSABLE_SELECTORS);
+  if (focusEl) requestAnimationFrame(() => focusEl.focus());
+  trapFocus(modal);
+}
+
+// Entry the save-to-folder dialog is acting on. Usually the open entry, but
+// the index table can save a focused row without opening it.
+let _saveTargetEntryId = null;
+function openSaveFolderModal(entryId) {
+  _saveTargetEntryId = entryId || AppState.selectedEntryId;
+  if (!_saveTargetEntryId) return;
+  if (!currentUser) {
+    const entry = archiveData.find(e => e.id === _saveTargetEntryId);
+    requireAuth(window.location.pathname + window.location.hash, entry ? `Sign in to save ${entry.title || entry.id} to a folder.` : null);
+    return;
+  }
+  openModal('save-folder-modal');
+  renderSaveFolderModal();
+}
+
 // ── CITATIONS (Phase 3 — multi-format export) ──
-function openCiteModal() {
-  const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
+function openCiteModal(entryId) {
+  const entry = archiveData.find(e => e.id === (entryId || AppState.selectedEntryId));
   if (!entry) return;
   const modal = $('cite-modal');
   if (!modal) return;
@@ -2634,10 +2665,10 @@ function renderFoldersView() {
     card.setAttribute('aria-label', `Open folder ${fol.name}, ${fol.lookIds ? fol.lookIds.length : 0} entries`);
     card.innerHTML = `
       <div class="flex items-baseline justify-between mb-4">
-        <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${fol.name}</h3>
-        <button type="button" class="btn-export-fol t-mono-xs font-mono uppercase opacity-40 hover:opacity-100 underline focus-ring min-h-[44px] px-1" aria-label="Export folder ${fol.name} as JSON">EXPORT_JSON</button>
+        <h3 class="text-xs font-bold font-mono uppercase tracking-[0.1em]">${escapeHtml(fol.name)}</h3>
+        <button type="button" class="btn-export-fol t-mono-xs font-mono uppercase opacity-40 hover:opacity-100 underline focus-ring min-h-[44px] px-1" aria-label="Export folder ${escapeHtml(fol.name)} as JSON">EXPORT_JSON</button>
       </div>
-      <p class="t-mono-xs font-mono opacity-60 mb-4">${fol.notes ? fol.notes : getTranslation('no_obs_logged', AppState.language)}</p>
+      <p class="t-mono-xs font-mono opacity-60 mb-4">${fol.notes ? escapeHtml(fol.notes) : getTranslation('no_obs_logged', AppState.language)}</p>
       <div class="flex gap-6 t-mono-xs font-mono uppercase opacity-50">
         <span>${fol.lookIds ? fol.lookIds.length : 0} ${getTranslation('artifacts_count', AppState.language)}</span>
         <span>${new Date(fol.createdAt).toLocaleDateString()}</span>
@@ -2677,9 +2708,9 @@ function renderSaveFolderModal() {
     btn.className = 'w-full text-left border border-black/10 dark:border-white/10 p-3 t-mono-xs font-mono uppercase tracking-widest hover:bg-black hover:text-white dark:hover:bg-acid dark:hover:text-black transition-colors flex justify-between items-center focus-ring';
     const count = fol.lookIds ? fol.lookIds.length : 0;
     btn.setAttribute('aria-label', `Save to folder ${fol.name}, ${count} entries`);
-    btn.innerHTML = `<span>${fol.name}</span><span class="opacity-40" aria-hidden="true">${count}</span>`;
+    btn.innerHTML = `<span>${escapeHtml(fol.name)}</span><span class="opacity-40" aria-hidden="true">${count}</span>`;
     btn.addEventListener('click', () => {
-      saveToFolder(fol.id, AppState.selectedEntryId, callbacks);
+      saveToFolder(fol.id, _saveTargetEntryId || AppState.selectedEntryId, callbacks);
       const modal = $('save-folder-modal');
       if (modal) modal.classList.add('hidden');
       restoreFocus();
@@ -2758,26 +2789,10 @@ function initEntryHoverPreview() {
 function initMobileGestures() {
   if (window.innerWidth >= 1024) return;
 
-  // ── Swipe to navigate images / entries in detail view ────────────────
-  const detailView = $('detail-image-view');
-  if (detailView) {
-    let tx = 0, ty = 0, tracking = false;
-    detailView.addEventListener('touchstart', (e) => {
-      if (e.touches.length !== 1) return;
-      tx = e.touches[0].clientX;
-      ty = e.touches[0].clientY;
-      tracking = true;
-    }, { passive: true });
-    detailView.addEventListener('touchend', (e) => {
-      if (!tracking || e.changedTouches.length !== 1) return;
-      tracking = false;
-      const dx = e.changedTouches[0].clientX - tx;
-      const dy = e.changedTouches[0].clientY - ty;
-      // Only act on predominantly horizontal swipes (> 55px, less vertical drift)
-      if (Math.abs(dx) < 55 || Math.abs(dy) > Math.abs(dx) * 0.8) return;
-      navigateEntry(dx < 0 ? 1 : -1, archiveData, callbacks);
-    }, { passive: true });
-  }
+  // Swiping between images is handled by render-detail.js on the image
+  // wrapper itself. A second handler used to live here on the whole detail
+  // view; a swipe over the image bubbled through both, so every swipe moved
+  // two images instead of one.
 
   // ── Swipe left on index panel to close the drawer ────────────────────
   const drawer = $('index-panel');

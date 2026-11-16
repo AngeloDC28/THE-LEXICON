@@ -33,7 +33,9 @@ export async function initAuth(callbacks) {
     }
     if (authResult === 'expired') {
       toggleAuth();
-      if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_link_expired', lang) || 'That link expired. Send a new one.');
+      // (`lang` was only declared inside the 'ok' branch above — referencing
+      // it here threw, which also skipped the session hydrate below.)
+      if (callbacks?.showToast) callbacks.showToast(getTranslation('auth_link_expired', AppState.language) || 'That link expired. Send a new one.');
     }
   }
 
@@ -85,8 +87,8 @@ function _completeIntent(callbacks) {
     }
   }
   // Auto-open Save dialog if entry is in focus
-  if (AppState.selectedEntryId && callbacks?.renderFolderOptions) {
-    callbacks.renderFolderOptions();
+  if (AppState.selectedEntryId && callbacks?.openSaveFolder) {
+    callbacks.openSaveFolder();
   }
 }
 
@@ -277,11 +279,14 @@ export async function fetchArchivalFolders(callbacks) {
 export async function createArchivalFolder(name, callbacks) {
   if (!currentUser || !name?.trim()) return;
   try {
-    await fetch('/api/folders', {
+    const r = await fetch('/api/folders', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name }),
     });
+    // fetch() only rejects on network failure; a 401/500 must not be
+    // reported to the user as "folder created".
+    if (!r.ok) throw new Error('create_failed');
     const input = $('new-folder-name');
     if (input) input.value = '';
     if (callbacks?.showToast) callbacks.showToast(getTranslation('folder_new', AppState.language));
@@ -294,11 +299,12 @@ export async function createArchivalFolder(name, callbacks) {
 export async function saveToFolder(folderId, entryId, callbacks) {
   if (!currentUser || !entryId) return;
   try {
-    await fetch('/api/folders/entry', {
+    const r = await fetch('/api/folders/entry', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ folderId, entrySlug: entryId }),
     });
+    if (!r.ok) throw new Error('save_failed');
     if (callbacks?.showToast) callbacks.showToast(getTranslation('folder_sync_success', AppState.language));
     if (callbacks?.closeModal) callbacks.closeModal('save-folder');
     await fetchArchivalFolders(callbacks);

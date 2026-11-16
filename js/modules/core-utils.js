@@ -125,6 +125,48 @@ export function webpSrc(srcOrObj) {
   return src.replace(/\.(jpe?g|png)$/i, '.webp');
 }
 
+/**
+ * thumbSrc — the 480px-wide WebP thumbnail written by optimize-images.mjs
+ * next to every archive image (foo-01.jpg → foo-01.thumb.webp). Anything
+ * that renders an image smaller than the detail view should use this: the
+ * grid alone shows 550+ images, and serving the full file into a ~200px
+ * tile is both slow and more resolution than critical analysis needs.
+ */
+export function thumbSrc(srcOrObj) {
+  const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
+  if (!src) return '';
+  return src.replace(/\.(jpe?g|png|webp)$/i, '.thumb.webp');
+}
+
+/** Escape text for safe interpolation into innerHTML or a quoted attribute. */
+export function escapeHtml(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+/**
+ * excerpt — shorten prose to at most `max` characters without cutting a
+ * word in half. Strips tags and [cite: n] markers first; when it has to
+ * truncate it backs up to the last word boundary and ends with an ellipsis
+ * rather than a full stop, so a cut never reads as a finished sentence.
+ */
+export function excerpt(text, max = 120) {
+  const clean = String(text ?? '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\[cite:\s*\d+\]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (clean.length <= max) return clean;
+  const cut = clean.slice(0, max + 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  const body = (lastSpace > max * 0.5 ? cut.slice(0, lastSpace) : clean.slice(0, max));
+  return body.replace(/[\s,;:.\-–—(]+$/, '') + '…';
+}
+
 export function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {

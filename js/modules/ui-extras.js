@@ -3,7 +3,7 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
+import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
 import { AppState } from './core-state.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
 import { invalidateSearchCache } from './search-engine.js?v=715e5c2';
@@ -50,7 +50,7 @@ export function renderTimeline(archiveData, callbacks) {
                  aria-label="${getTranslation(e.tags.brand, AppState.language)} ${e.year} — ${getTranslation(e.title, AppState.language)}"
                  data-delay="${Math.min(i * 0.1, 1.5)}">
               <picture>
-                <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(e.images && e.images[0])})}">
+                <source type="image/webp" srcset="${resolveImgSrc({src: thumbSrc(e.images && e.images[0])})}">
                 <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
                      alt="${getTranslation(e.tags.brand, AppState.language)} ${e.year}"
                      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0"
@@ -118,9 +118,9 @@ export function renderFilterChips(callbacks) {
 
   container.innerHTML = chips.map(c => `
     <button type="button" class="filter-chip focus-ring bg-black text-white dark:bg-white dark:text-black px-2 py-0.5 text-[8px] font-bold uppercase tracking-widest flex items-center gap-2 hover:opacity-80 transition-opacity"
-            data-type="${c.type}" data-value="${c.value}"
-            aria-label="Remove filter: ${c.label}">
-      ${c.label}
+            data-type="${c.type}" data-value="${escapeHtml(c.value)}"
+            aria-label="Remove filter: ${escapeHtml(c.label)}">
+      ${escapeHtml(c.label)}
       <span aria-hidden="true" class="opacity-50">✕</span>
     </button>
   `).join('');

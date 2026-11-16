@@ -10,7 +10,7 @@
  * Keyboard-navigable (j/k for rows, Enter to open, /, ?, V, I).
  * Toggle persists in localStorage as 'lexicon.view-mode' (visual | index).
  */
-import { $, pad, withViewTransition } from './core-utils.js?v=715e5c2';
+import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=715e5c2';
 import { AppState } from './core-state.js?v=715e5c2';
 import { getFilteredEntries } from './search-engine.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
@@ -33,20 +33,31 @@ export function getTagCategory(politicsTag = '') {
   return 'provenance';
 }
 
+// The one name for each analytical axis. Every surface that labels an axis
+// (grid cards, sidebar list, entry header, index table, landing cards) reads
+// from here — previously the grid said "CORPOREAL" / "PROVENANCE" while the
+// entry page said "Corporeal Intervention" / "Historical Lineage" for the
+// same thing.
+export const CATEGORY_LABELS = {
+  corporeal: 'Corporeal Intervention',
+  critique: 'Institutional Critique',
+  subculture: 'Subcultural Codification',
+  strategy: 'Strategic Appropriation',
+  semiotic: 'Semiotic Sabotage',
+  provenance: 'Historical Lineage',
+};
+
+export function categoryLabel(cat) {
+  return CATEGORY_LABELS[cat] || 'Analytical Record';
+}
+
 // Extract a short label from a long politics tag.
 // "Body Politics & Corporeal Interventions" → "Corporeal Intervention"
 function shortTagLabel(politicsTag = '') {
-  const first = politicsTag.split('|')[0].trim();
-  const cat = getTagCategory(first);
-  const labelMap = {
-    corporeal: 'Corporeal Intervention',
-    critique: 'Institutional Critique',
-    subculture: 'Subcultural Codification',
-    strategy: 'Strategic Appropriation',
-    semiotic: 'Semiotic Sabotage',
-    provenance: 'Historical Lineage',
-  };
-  return labelMap[cat] || first;
+  // Categorise the whole tag string, exactly as getTagCategory() callers do
+  // for colour — categorising only the first value could label a row with
+  // one axis and colour it as another.
+  return CATEGORY_LABELS[getTagCategory(politicsTag)] || politicsTag.split('|')[0].trim();
 }
 
 let _focusedRowIndex = 0;
@@ -204,7 +215,7 @@ export function renderIndexView(archiveData, resetPage = false) {
     const tagCat = getTagCategory(politics);
     const tagLabel = shortTagLabel(politics);
     const provenance = entry.notes?.provenance
-      ? getTranslation(entry.notes.provenance, lang).slice(0, 80) + '…'
+      ? excerpt(getTranslation(entry.notes.provenance, lang), 80)
       : '—';
     const seasonLabel = title ? `${season} · "${title.slice(0, 30)}"` : season;
     const focused = idx === _focusedRowIndex ? 'focused' : '';
@@ -244,11 +255,11 @@ export function renderIndexView(archiveData, resetPage = false) {
       val.split('|').map(v => v.trim()).filter(Boolean).map(v => {
         // Shorten long politics tag values to category label
         const displayVal = key === 'politics' ? shortTagLabel(v).toUpperCase() : v.toUpperCase();
-        return `<button type="button" class="idx-filter-chip focus-ring" data-type="${key}" data-val="${v}" aria-label="Remove filter ${key} ${v}">${key.toUpperCase()}: ${displayVal} ×</button>`;
+        return `<button type="button" class="idx-filter-chip focus-ring" data-type="${key}" data-val="${escapeHtml(v)}" aria-label="Remove filter ${key} ${escapeHtml(v)}">${key.toUpperCase()}: ${escapeHtml(displayVal)} ×</button>`;
       })
     ).join('');
   const searchChip = AppState.searchQuery
-    ? `<button type="button" class="idx-filter-chip focus-ring" data-type="search" data-val="" aria-label="Clear search">${AppState.searchQuery} ×</button>`
+    ? `<button type="button" class="idx-filter-chip focus-ring" data-type="search" data-val="" aria-label="Clear search">${escapeHtml(AppState.searchQuery)} ×</button>`
     : '';
   const filterBar = (activeFilterChips || searchChip)
     ? `<div class="index-filter-bar">${searchChip}${activeFilterChips}</div>`

@@ -125,14 +125,12 @@ export function toggleMobileHotspots() {
   const btn = $('btn-toggle-hotspots-mobile');
   const detail = $('detail-image-view');
   if (!detail) return;
-  const lang = AppState.language;
   const isVisible = detail.classList.contains('show-hotspots');
-  if (isVisible) {
-    detail.classList.remove('show-hotspots');
-    if (btn) btn.textContent = getTranslation('hotspots_off', lang) || 'HOTSPOTS OFF';
-    cleanupHotspots();
-  } else {
-    detail.classList.add('show-hotspots');
-    if (btn) btn.textContent = getTranslation('hotspots_on', lang) || 'HOTSPOTS ON';
-  }
+  detail.classList.toggle('show-hotspots', !isVisible);
+  if (isVisible) cleanupHotspots();
+  // The button is an icon span + a .btn-label-mobile span. Writing
+  // textContent on the button itself wiped both and left a long
+  // "HOTSPOTS ON" string that doesn't fit the 65px column — so state is
+  // carried by aria-pressed (styled in CSS) and the label is left alone.
+  if (btn) btn.setAttribute('aria-pressed', String(!isVisible));
 }
