@@ -2757,33 +2757,28 @@ function initEntryHoverPreview() {
   const panel = $('index-panel');
   if (!panel) return;
 
-  panel.addEventListener('mouseenter', (e) => {
-    const item = e.target.closest('.entry-item');
-    if (!item) return;
-    const src = item.dataset.thumb;
-    if (!src || src === currentSrc) return;
-    currentSrc = src;
-    img.src = src;
-    preview.classList.add('visible');
-  }, true);
-
-  panel.addEventListener('mousemove', (e) => {
-    const item = e.target.closest('.entry-item');
-    if (!item) {
-      preview.classList.remove('visible');
-      currentSrc = '';
-      return;
-    }
-    // Position preview to the right of the panel
-    const rect = panel.getBoundingClientRect();
-    preview.style.top = Math.min(e.clientY - 40, window.innerHeight - 130) + 'px';
-    preview.style.left = (rect.right + 8) + 'px';
-  }, true);
-
-  panel.addEventListener('mouseleave', () => {
+  const hide = () => {
     preview.classList.remove('visible');
     currentSrc = '';
-  }, true);
+  };
+
+  // One handler, driven by pointer movement. The preview used to be made
+  // visible on (captured) mouseenter but only positioned on mousemove, so
+  // it first appeared at 0,0 — on top of the logo — and the captured
+  // mouseleave of every child element hid and re-showed it as the pointer
+  // crossed the row's own text and thumbnail.
+  panel.addEventListener('mousemove', (e) => {
+    const item = e.target.closest('.entry-item');
+    const src = item?.dataset.thumb;
+    if (!src) { hide(); return; }
+    const rect = panel.getBoundingClientRect();
+    preview.style.top = Math.max(8, Math.min(e.clientY - 40, window.innerHeight - 160)) + 'px';
+    preview.style.left = (rect.right + 8) + 'px';
+    if (src !== currentSrc) { currentSrc = src; img.src = src; }
+    preview.classList.add('visible');
+  });
+
+  panel.addEventListener('mouseleave', hide);
 }
 
 function initMobileGestures() {

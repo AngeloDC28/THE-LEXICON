@@ -4985,7 +4985,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 #view-controls-bar { flex-wrap: wrap; overflow-x: visible; row-gap: 4px; }
 #view-controls-bar > div { flex-wrap: wrap; flex-shrink: 1; min-width: 0; row-gap: 4px; }
 /* Inactive "Evolution Matrix" and Sort sat at 40–50% opacity (≈3.5:1). */
-#btn-toggle-timeline.opacity-40, #btn-sort-cycle.opacity-50 { opacity: 0.75; }
+#btn-toggle-timeline.opacity-40, #btn-sort-cycle.opacity-50, #btn-show-bookmarks.opacity-50 { opacity: 0.75; }
 
 /* Target sizes (WCAG 2.2 · 2.5.8, 24px minimum). */
 .detail-vibe { min-height: 28px; display: inline-flex; align-items: center; padding: 2px 9px; }

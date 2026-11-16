@@ -14,7 +14,7 @@ const ROOT = new URL('../../', import.meta.url).pathname.replace(/^\/([A-Za-z]:)
 
 function walk(dir, out = []) {
   for (const name of readdirSync(dir)) {
-    if (name === 'node_modules' || name === '.git' || name === 'dist' || name.startsWith('.')) continue;
+    if (name === 'node_modules' || name === '.git' || name === 'dist' || name === 'out' || name.startsWith('.')) continue;
     const p = join(dir, name);
     const s = statSync(p);
     if (s.isDirectory()) walk(p, out);
