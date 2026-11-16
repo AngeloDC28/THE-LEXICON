@@ -42,3 +42,5 @@ jobs:
           fi
       - name: Punctuation — fail on semicolons doing a comma's job
         run: node .github/scripts/check-punctuation.mjs
+      - name: Images — every archive image capped and thumbnailed
+        run: node .github/scripts/resize-images.mjs --check

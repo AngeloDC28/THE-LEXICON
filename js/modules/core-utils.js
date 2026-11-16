@@ -126,8 +126,8 @@ export function webpSrc(srcOrObj) {
 }
 
 /**
- * thumbSrc — the 480px-wide WebP thumbnail written by optimize-images.mjs
- * next to every archive image (foo-01.jpg → foo-01.thumb.webp). Anything
+ * thumbSrc — the 480px-wide WebP thumbnail written by resize-images.mjs
+ * next to every archive image (foo-01.jpg → foo-01.t480.webp). Anything
  * that renders an image smaller than the detail view should use this: the
  * grid alone shows 550+ images, and serving the full file into a ~200px
  * tile is both slow and more resolution than critical analysis needs.
@@ -135,7 +135,7 @@ export function webpSrc(srcOrObj) {
 export function thumbSrc(srcOrObj) {
   const src = typeof srcOrObj === 'string' ? srcOrObj : (srcOrObj && srcOrObj.src) || '';
   if (!src) return '';
-  return src.replace(/\.(jpe?g|png|webp)$/i, '.thumb.webp');
+  return src.replace(/\.(jpe?g|png|webp)$/i, '.t480.webp');
 }
 
 /** Escape text for safe interpolation into innerHTML or a quoted attribute. */

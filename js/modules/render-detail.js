@@ -2,11 +2,11 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=715e5c2';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=715e5c2';
 import { AppState, updateHash } from './core-state.js?v=715e5c2';
 import { getFilteredEntries } from './search-engine.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory } from './render-index-view.js?v=715e5c2';
+import { getTagCategory, categoryLabel } from './render-index-view.js?v=715e5c2';
 import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=715e5c2';
 
 export function updateStatusBar(archiveData) {
@@ -219,12 +219,7 @@ function renderSidebarHeader(entry) {
   if (!header) return;
   const lang = AppState.language;
   const cat = getTagCategory(entry.tags?.politics || '');
-  const labelMap = {
-    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
-    subculture: 'Subcultural Codification', strategy: 'Strategic Appropriation',
-    semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
-  };
-  const tagLabel = labelMap[cat] || (entry.tags?.politics || 'ARCHIVE').split('&')[0].trim();
+  const tagLabel = categoryLabel(cat);
   const brand = entry.tags?.brand ? getTranslation(entry.tags.brand, lang).toUpperCase() : '—';
   const year = entry.year || '----';
   const season = entry.season ? entry.season.toUpperCase() : '';
@@ -237,7 +232,7 @@ function renderSidebarHeader(entry) {
 
   const vibes = Array.isArray(entry.vibes) ? entry.vibes.slice(0, 6) : [];
   const vibesHtml = vibes.length
-    ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<button type="button" class="detail-vibe" data-vibe="${v}" aria-label="Find entries with the vibe: ${v}">${v}</button>`).join('')}</div>`
+    ? `<div class="detail-vibes" aria-label="Aesthetic tags">${vibes.map(v => `<button type="button" class="detail-vibe" data-vibe="${escapeHtml(v)}" aria-label="Find entries with the vibe: ${escapeHtml(v)}">${escapeHtml(v)}</button>`).join('')}</div>`
     : '';
 
   // Print-only title — the on-screen title lives in the action panel, which the
@@ -271,16 +266,18 @@ function renderBreadcrumb(entry) {
   const brand = entry.tags?.brand || '—';
   const politics = entry.tags?.politics || '';
   const cat = getTagCategory(politics);
-  const tagCat = politics.split('&')[0].trim().replace(/s$/, '').toUpperCase() || 'ARCHIVE';
-  const season = entry.season || '';
+  const tagCat = categoryLabel(cat).toUpperCase();
+  // Season alone ("SS") isn't an identifier — the breadcrumb used to read
+  // "ALEXANDER MCQUEEN / SS" with no year.
+  const season = [entry.season, entry.year].filter(Boolean).join(' ');
   const sep = `<span class="mx-1 opacity-30">/</span>`;
   crumb.innerHTML =
     `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
     + sep
     + `<span class="detail-breadcrumb-cat" data-cat="${cat}">${tagCat}</span>`
     + sep
-    + `<span class="text-white/50">${brand.toUpperCase()}</span>`
-    + (season ? sep + `<span class="text-white/70">${season.slice(0, 30).toUpperCase()}</span>` : '');
+    + `<span class="text-white/50">${escapeHtml(brand.toUpperCase())}</span>`
+    + (season ? sep + `<span class="text-white/70">${escapeHtml(season.slice(0, 30).toUpperCase())}</span>` : '');
   crumb.classList.remove('hidden');
   crumb.querySelector('[data-crumb-back]')?.addEventListener('click', (e) => {
     e.preventDefault();
@@ -344,7 +341,7 @@ function renderImage(entry, callbacks) {
       ? entry.photo_credit
       : `Source: ${brand ? brand.replace(/_/g, ' ') : 'Unknown'} press archive, ${line}`;
     const contactHref = `mailto:info@thelexicon.xyz?subject=Image%20credit%3A%20${encodeURIComponent(slug)}`;
-    creditEl.innerHTML = `<span>${credit}</span> · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
+    creditEl.innerHTML = `<span>${escapeHtml(credit)}</span> · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
   }
 
   // Image counter dots
@@ -576,12 +573,7 @@ function renderMetaRail(entry) {
   const lang = AppState.language;
   const t    = (k) => getTranslation(k, lang);
   const cat  = getTagCategory(entry.tags?.politics || '');
-  const catLabels = {
-    corporeal: 'Corporeal Intervention', critique: 'Institutional Critique',
-    subculture: 'Subcultural Codification', strategy: 'Strategic Appropriation',
-    semiotic: 'Semiotic Sabotage', provenance: 'Historical Lineage',
-  };
-  const catLabel = catLabels[cat] || (entry.tags?.politics || 'Archive').split('&')[0].trim();
+  const catLabel = categoryLabel(cat);
   const taxRows = [
     { key: 'brand',     label: t('tax_brand') },
     { key: 'era',       label: t('tax_era') },
@@ -654,7 +646,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
     return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" aria-label="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}. Open entry">
       <div class="aspect-[3/4] overflow-hidden bg-white/5 mb-1">
         <picture>
-          <source type="image/webp" srcset="${resolveImgSrc({src: webpSrc(thumb)})}">
+          <source type="image/webp" srcset="${resolveImgSrc({src: thumbSrc(thumb)})}">
           <img src="${src}"${imgAttrs(thumb)} alt="${brand}" loading="lazy" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
         </picture>
       </div>
@@ -741,8 +733,8 @@ function showPayload(spot) {
   text = text.replace(/\[cite:\s*\d+\]/g, '').replace(/—/g, ' —').replace(/--/g, ' —').trim();
 
   content.innerHTML = `
-    <div class="t-mono-xs font-bold mb-2 border-b border-black/10 pb-1">${label.toUpperCase()}</div>
-    <div class="t-mono-xs leading-relaxed">${text}</div>
+    <div class="t-mono-xs font-bold mb-2 border-b border-black/10 pb-1">${escapeHtml(String(label || '').toUpperCase())}</div>
+    <div class="t-mono-xs leading-relaxed">${escapeHtml(text)}</div>
   `;
   payload.classList.remove('hidden');
 }

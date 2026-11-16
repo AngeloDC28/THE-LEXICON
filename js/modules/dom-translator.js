@@ -10,9 +10,10 @@
  */
 
 const API = 'https://translate.googleapis.com/translate_a/single';
-const CHAR_LIMIT = 1800;   // conservative per-request character budget
-const SEP = '\n\n';        // batch separator (double newline, rare in UI strings)
-const CACHE_PFX = 'lx-tx:';
+const CHAR_LIMIT = 3500;   // per-request character budget (GET URL stays well under limits)
+const SEP = '\n';          // batch separator — sources are whitespace-normalised, so they never contain one
+const CONCURRENCY = 4;     // requests in flight at once
+const CACHE_PFX = 'lx-tx2:'; // bumped: v1 entries could hold misaligned results
 
 // Tags whose content should never be translated
 const SKIP_TAGS = new Set([
@@ -71,13 +72,63 @@ async function _apiFetch(text, lang) {
   return data[0].map(seg => seg[0]).join('');
 }
 
+// Text nodes carry template indentation ("\n      Strategy …\n    "). Translate
+// only the collapsed core and put the surrounding whitespace back, so a
+// source string can never contain the batch separator.
+function _core(s) { return s.replace(/\s+/g, ' ').trim(); }
+function _rewrap(original, translated) {
+  const lead = original.match(/^\s*/)[0];
+  const trail = original.match(/\s*$/)[0];
+  return lead + translated + trail;
+}
+
+/**
+ * Translate an array of whitespace-free-of-newline strings, returning an
+ * array of the same length in the same order — or null if the service
+ * didn't give back one line per input (in which case the caller splits the
+ * batch rather than guessing an alignment).
+ */
+async function _translateLines(lines, lang) {
+  const joined = lines.join(SEP);
+  const cacheKey = CACHE_PFX + lang + ':' + _hash(joined);
+  try {
+    const cached = sessionStorage.getItem(cacheKey);
+    if (cached) return JSON.parse(cached);
+  } catch (_) {}
+  const raw = await _apiFetch(joined, lang);
+  const out = raw.split(SEP).map(s => s.trim());
+  if (out.length !== lines.length) return null;
+  try { sessionStorage.setItem(cacheKey, JSON.stringify(out)); } catch (_) {}
+  return out;
+}
+
+/** Fill `map` for every string in `lines`, splitting on any misalignment. */
+async function _translateInto(lines, lang, gen, map) {
+  if (!lines.length || gen !== _gen) return;
+  let out = null;
+  try {
+    out = await _translateLines(lines, lang);
+  } catch (_) {
+    return; // network / rate-limit failure: leave these in English
+  }
+  if (gen !== _gen) return;
+  if (out) { lines.forEach((src, i) => map.set(src, out[i] || src)); return; }
+  // Line count came back different (the service merged or split a line).
+  // Never guess — the old code padded the array, which put translations on
+  // the wrong elements. Halve and retry; a single line cannot misalign.
+  if (lines.length === 1) return;
+  const mid = Math.ceil(lines.length / 2);
+  await _translateInto(lines.slice(0, mid), lang, gen, map);
+  await _translateInto(lines.slice(mid), lang, gen, map);
+}
+
 async function _translateBatch(pairs, lang, gen) {
   if (!pairs.length) return;
 
-  // Deduplicate: only send unique source strings
-  const unique = [...new Set(pairs.map(p => p.src))];
+  // Deduplicate on the normalised text: only send unique source strings
+  const unique = [...new Set(pairs.map(p => _core(p.src)).filter(Boolean))];
 
-  // Split unique strings into char-budget chunks
+  // Split into char-budget chunks
   const chunks = [];
   let chunk = [], len = 0;
   for (const t of unique) {
@@ -89,44 +140,26 @@ async function _translateBatch(pairs, lang, gen) {
   }
   if (chunk.length) chunks.push(chunk);
 
-  const map = new Map(); // src text → translated text
-
-  for (const ch of chunks) {
-    if (gen !== _gen) return;
-
-    const joined = ch.join(SEP);
-    const cacheKey = CACHE_PFX + lang + ':' + _hash(joined);
-    let results;
-
-    try {
-      const cached = sessionStorage.getItem(cacheKey);
-      if (cached) results = JSON.parse(cached);
-    } catch (_) {}
-
-    if (!results) {
-      try {
-        const raw = await _apiFetch(joined, lang);
-        if (gen !== _gen) return;
-        // Split response on SEP (double newline); Google usually preserves it
-        results = raw.split(/\n\n+/).map(s => s.trim());
-        // Pad/trim to match chunk length
-        while (results.length < ch.length) results.push(ch[results.length] || '');
-        results = results.slice(0, ch.length);
-        try { sessionStorage.setItem(cacheKey, JSON.stringify(results)); } catch (_) {}
-      } catch (_) {
-        results = ch; // network error → keep originals
-      }
+  const map = new Map(); // normalised src → translated text
+  const apply = () => {
+    for (const { node, src } of pairs) {
+      const tx = map.get(_core(src));
+      if (tx && tx !== _core(src) && node.isConnected) node.textContent = _rewrap(src, tx);
     }
+  };
 
-    ch.forEach((src, i) => map.set(src, results[i] ?? src));
-  }
-
-  if (gen !== _gen) return;
-
-  for (const { node, src } of pairs) {
-    const tx = map.get(src);
-    if (tx && tx !== src && node.isConnected) node.textContent = tx;
-  }
+  // A small worker pool: the page has hundreds of strings, and sending the
+  // chunks one after another left content in English for a long time.
+  // Results are applied as each chunk lands, not all at the end.
+  let next = 0;
+  const worker = async () => {
+    while (next < chunks.length && gen === _gen) {
+      const ch = chunks[next++];
+      await _translateInto(ch, lang, gen, map);
+      if (gen === _gen) apply();
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, chunks.length) }, worker));
 }
 
 // ─── Observer ───────────────────────────────────────────────────────────────

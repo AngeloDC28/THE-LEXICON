@@ -5,7 +5,7 @@
  * Click events are handled here via a single delegated listener on #detail-image-view.
  * render-detail.js keeps only mouseenter/mouseleave for the desktop hover preview.
  */
-import { $ } from './core-utils.js?v=715e5c2';
+import { $, escapeHtml } from './core-utils.js?v=715e5c2';
 import { AppState } from './core-state.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
 
@@ -68,7 +68,7 @@ function showHotspot(index) {
     const labelEl = $('mobile-hotspot-sheet-label');
     const bodyEl = $('mobile-hotspot-sheet-body');
     if (sheet && labelEl && bodyEl) {
-      labelEl.textContent = spot.label.toUpperCase();
+      labelEl.textContent = String(spot.label || '').toUpperCase();
       bodyEl.textContent = text;
       sheet.setAttribute('aria-hidden', 'false');
       sheet.classList.add('open');
@@ -82,8 +82,8 @@ function showHotspot(index) {
     const content = $('payload-content');
     if (payload && content) {
       content.innerHTML = `
-        <div class="t-mono-xs font-bold mb-2 border-b border-black/10 pb-1">${spot.label.toUpperCase()}</div>
-        <div class="t-mono-xs leading-relaxed">${text}</div>
+        <div class="t-mono-xs font-bold mb-2 border-b border-black/10 pb-1">${escapeHtml(String(spot.label || '').toUpperCase())}</div>
+        <div class="t-mono-xs leading-relaxed">${escapeHtml(text)}</div>
       `;
       payload.classList.remove('hidden');
       payload.classList.add('permanent-payload', 'expand-active');

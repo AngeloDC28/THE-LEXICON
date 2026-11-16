@@ -1843,6 +1843,10 @@ html:not(.dark) .detail-vibe:focus-visible { color: #000; border-color: #000; }
   min-width: 40px;
   text-align: center;
 }
+html:not(.dark) .den-btn { border-color: rgba(0,0,0,0.25); color: rgba(0,0,0,0.65); }
+html:not(.dark) .den-btn:hover:not(:disabled) { border-color: #000; color: #000; }
+html:not(.dark) .den-btn:focus-visible { outline-color: #000; }
+html:not(.dark) .den-pos { color: rgba(0,0,0,0.55); }
 
 /* ─── Mobile index view: stacked cards instead of table ─────────────── */
 @media (max-width: 767px) {
@@ -2749,6 +2753,49 @@ html:not(.dark) .meta-rail-cat    { color: rgba(0,0,0,0.5); }
 html:not(.dark) .meta-rail-tag    { color: rgba(0,0,0,0.5); border-color: rgba(0,0,0,0.15); }
 html:not(.dark) #detail-meta-rail { background: #F5F5F0; border-right-color: rgba(0,0,0,0.1); }
 
+/* ── Entry page, light theme ──────────────────────────────────────────────
+   The image stage and left rail already switch to light, and some sidebar
+   text (.detail-entry-id, .detail-vibe) already has dark light-theme
+   colours — but the right sidebar, the sticky-note panel and the breadcrumb
+   were hard-coded black (bg-black / text-white utilities in index.html and
+   render-detail.js). In light mode that put dark text on a black panel, so
+   the brand/year line and vibe tags were invisible. These rules give those
+   panels the same paper surface as the rest of the light theme and map the
+   white-on-black utilities they use onto their dark-on-light equivalents.
+   The coloured note cards keep their own fills. */
+html:not(.dark) #detail-metadata-sidebar,
+html:not(.dark) #sticky-note-panel,
+html:not(.dark) #detail-breadcrumb {
+  background: #FAF9F6;
+  color: #0A0A0A;
+  border-color: rgba(0,0,0,0.12);
+}
+html:not(.dark) #detail-metadata-sidebar .border-white\/10,
+html:not(.dark) #detail-metadata-sidebar .border-white\/20,
+html:not(.dark) #sticky-note-panel .border-white\/10,
+html:not(.dark) #detail-breadcrumb { border-color: rgba(0,0,0,0.12); }
+html:not(.dark) #detail-metadata-sidebar .bg-white\/5 { background: rgba(0,0,0,0.04); }
+html:not(.dark) #detail-metadata-sidebar .text-white,
+html:not(.dark) #sticky-note-panel .text-white { color: #0A0A0A; }
+html:not(.dark) #detail-metadata-sidebar .text-white\/70,
+html:not(.dark) #detail-breadcrumb .text-white\/70 { color: rgba(0,0,0,0.72); }
+html:not(.dark) #detail-metadata-sidebar .text-white\/50,
+html:not(.dark) #detail-breadcrumb .text-white\/50 { color: rgba(0,0,0,0.6); }
+html:not(.dark) #detail-metadata-sidebar .text-white\/40,
+html:not(.dark) #detail-breadcrumb { color: rgba(0,0,0,0.55); }
+html:not(.dark) #detail-metadata-sidebar .text-white\/30 { color: rgba(0,0,0,0.5); }
+html:not(.dark) #detail-image-credit { color: rgba(0,0,0,0.55); }
+html:not(.dark) #detail-metadata-sidebar .hover\:bg-white:hover { background: #000; color: #fff; }
+html:not(.dark) #detail-metadata-sidebar .hover\:text-black:hover { color: #fff; }
+html:not(.dark) #detail-metadata-sidebar .group:hover .group-hover\:text-acid,
+html:not(.dark) #detail-metadata-sidebar .hover\:text-acid:hover,
+html:not(.dark) #detail-breadcrumb .hover\:text-white\/60:hover { color: #000; text-decoration: underline; }
+/* Acid yellow on paper is unreadable — use black for the accent text and
+   keep acid only as a fill. */
+html:not(.dark) #detail-metadata-sidebar .text-acid { color: #000; }
+html:not(.dark) #btn-bookmark-entry { color: #0A0A0A; }
+html:not(.dark) .metadata-tag-btn:hover { background: rgba(0,0,0,0.05); }
+
 /* ── RE-IMPLEMENTED HOTSPOTS (Geometric Crosshairs) ── */
 .hotspot-btn {
   position: absolute;
@@ -2961,7 +3008,7 @@ html.dark .cmd-item.selected {
   border-top: 1px solid rgba(255,255,255,0.06);
   background: rgba(255,255,255,0.02);
 }
-html:not(.dark) .cmd-group-head { border-top-color: rgba(0,0,0,0.06); background: rgba(0,0,0,0.02); color: #aaa; }
+html:not(.dark) .cmd-group-head { border-top-color: rgba(0,0,0,0.06); background: rgba(0,0,0,0.02); color: #666; }
 .cmd-group-head:first-child { border-top: none; }
 
 .cmd-tag-item .text-[11px] { color: var(--c-corporeal); }
@@ -2980,7 +3027,7 @@ html:not(.dark) .cmd-group-head { border-top-color: rgba(0,0,0,0.06); background
   background: transparent;
   transition: color 0.15s, border-color 0.15s;
 }
-html:not(.dark) .cmd-scope-pill { color: #aaa; }
+html:not(.dark) .cmd-scope-pill { color: #666; }
 .cmd-scope-pill:hover { color: #ccc; border-color: rgba(255,255,255,0.15); }
 html:not(.dark) .cmd-scope-pill:hover { color: #444; border-color: rgba(0,0,0,0.15); }
 .cmd-scope-pill.active { color: #CCFF00; border-color: rgba(204,255,0,0.3); }
@@ -4143,13 +4190,13 @@ html:not(.dark) .site-footer { border-top-color: #e0e0dc; background: #f4f4f0; }
   align-items: center;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.2em;
-  color: #444;
+  color: #8a8a8a; /* was #444 on #000 — about 2:1, unreadable */
   text-transform: uppercase;
   flex-wrap: wrap;
   gap: 8px;
 }
-html:not(.dark) .footer-bottom { color: #bbb; }
-.footer-tech { opacity: 0.5; }
+html:not(.dark) .footer-bottom { color: #666; }
+.footer-tech { opacity: 0.85; }
 .footer-kbd-hint {
   background: none;
   border: 1px solid currentColor;
@@ -4161,7 +4208,7 @@ html:not(.dark) .footer-bottom { color: #bbb; }
   padding: 3px 8px;
   min-height: 28px;
   cursor: pointer;
-  opacity: 0.45;
+  opacity: 0.8;
   transition: opacity 0.15s;
   display: flex;
   align-items: center;
@@ -4174,13 +4221,20 @@ html:not(.dark) .footer-bottom { color: #bbb; }
   font-family: var(--font-mono);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #444;
+  color: #8a8a8a;
   padding: 8px 24px 12px;
   border-top: 1px solid #1a1a1a;
   text-align: center;
   line-height: 1.6;
 }
-html:not(.dark) .footer-copyright { color: #aaa; border-top-color: #ddd; }
+html:not(.dark) .footer-copyright { color: #666; border-top-color: #ddd; }
+
+/* Image prev/next arrows sit on the image stage, which is paper-coloured in
+   the light theme; text-white made them invisible there. */
+html:not(.dark) #btn-viewer-prev,
+html:not(.dark) #btn-viewer-next { color: #0A0A0A; }
+html:not(.dark) #btn-viewer-prev:hover,
+html:not(.dark) #btn-viewer-next:hover { color: #000; text-decoration: underline; }
 
 /* ============================================================
    PRINT STYLESHEET

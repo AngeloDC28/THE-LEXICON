@@ -3,7 +3,7 @@
  * Logic for bookmarks, recently viewed, and local storage.
  */
 
-import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
+import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
 import { AppState } from './core-state.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
 
@@ -89,11 +89,11 @@ function renderRecentlyViewed(archiveData, callbacks) {
   recent.forEach(id => {
     const entry = archiveData.find(e => e.id === id);
     if (!entry) return;
-    const thumbSrc = resolveImgSrc(entry.images && entry.images[0]);
-    const label = `${entry.tags.brand || ''} ${entry.year || ''}`.trim();
+    const small = entry.images?.[0] ? resolveImgSrc({ src: thumbSrc(entry.images[0]) }) : resolveImgSrc(null);
+    const label = `${entry.tags?.brand || ''} ${entry.year || ''}`.trim();
     html += `
       <button type="button" class="recent-thumb-btn focus-ring" data-recent-id="${id}" aria-label="Open ${label}">
-        <img src="${thumbSrc}"
+        <img src="${small}"
              alt=""
              class="recent-thumb opacity-0"
              loading="lazy" />
@@ -104,11 +104,14 @@ function renderRecentlyViewed(archiveData, callbacks) {
   row.querySelectorAll('img.recent-thumb').forEach(img => {
     img.addEventListener('load', () => {
       img.classList.add('loaded');
-      img.style.opacity = '1';
+      img.classList.remove('opacity-0');
     });
     img.addEventListener('error', () => {
-      img.src = BROKEN_ASSET;
-      img.classList.add('loaded');
+      // Thumbnail missing (e.g. a brand-new image not yet optimised):
+      // fall back to the full file once, then to the placeholder.
+      const full = resolveImgSrc(archiveData.find(e => e.id === img.closest('[data-recent-id]')?.dataset.recentId)?.images?.[0]);
+      img.addEventListener('error', () => { img.src = BROKEN_ASSET; img.classList.remove('opacity-0'); }, { once: true });
+      img.src = full;
     }, { once: true });
   });
 }

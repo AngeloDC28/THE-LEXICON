@@ -88,7 +88,9 @@ function walk(dir, base = dir, out = []) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name);
     if (statSync(p).isDirectory()) walk(p, base, out);
-    else if (/\.(jpe?g|png|webp)$/i.test(name)) out.push(p);
+    // Thumbnails never get width/height attrs (their tiles are sized by CSS),
+    // so keep them out of the map every visitor downloads.
+    else if (/\.(jpe?g|png|webp)$/i.test(name) && !/\.t480\.webp$/i.test(name)) out.push(p);
   }
   return out;
 }
