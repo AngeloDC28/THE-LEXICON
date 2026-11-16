@@ -40,3 +40,5 @@ jobs:
             git --no-pager diff js/modules/translations.js | head -40
             exit 1
           fi
+      - name: Punctuation — fail on semicolons doing a comma's job
+        run: node .github/scripts/check-punctuation.mjs

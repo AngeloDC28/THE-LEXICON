@@ -2330,7 +2330,11 @@ html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
   flex-direction: column;
   gap: 20px;
   padding: 24px;
-  overflow-y: auto;
+  /* The sidebar (#detail-metadata-sidebar) is the scroller. This must not
+     be one too: overflow-y:auto zeroes a flex item's automatic min-height,
+     so the column squeezed the notes into a strip the height of their own
+     padding and the specs panel drew over them. */
+  flex-shrink: 0;
   background: transparent;
 }
 

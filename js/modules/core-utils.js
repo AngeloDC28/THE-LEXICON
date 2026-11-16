@@ -26,6 +26,12 @@ export function withViewTransition(updateDOM) {
   try {
     const transition = document.startViewTransition(() => updateDOM());
     _transitionInFlight = true;
+    // `ready` rejects whenever the animation is skipped — most commonly
+    // because the tab is in the background ("Document hidden"). The DOM
+    // update still runs, so that rejection is expected, not an error;
+    // left unhandled it surfaces as an uncaught promise rejection on every
+    // page opened in a background tab.
+    transition.ready.catch(() => {});
     transition.finished.catch(() => {}).finally(() => { _transitionInFlight = false; });
   } catch (e) {
     updateDOM();
