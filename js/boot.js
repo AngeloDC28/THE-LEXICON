@@ -8,6 +8,11 @@
  * 4. Boot gate removal
  */
 
+// 0. Mark that JavaScript is running, before first paint. index.css uses
+//    html.js to hide the pre-rendered no-JS copy of an entry (.static-entry)
+//    and html:not(.js) to hide the interactive app shell when JS is off.
+document.documentElement.classList.add('js');
+
 // 1. Error telemetry
 window.onerror = function(msg, url, lineNo, columnNo, error) {
   console.error('LEXICON_CORE_EXCEPTION:', msg, 'at line', lineNo, error);

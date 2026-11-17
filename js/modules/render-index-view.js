@@ -15,41 +15,10 @@ import { AppState } from './core-state.js?v=715e5c2';
 import { getFilteredEntries } from './search-engine.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
 
-// Map politics tag text → color category in the analytical tag palette.
-// Falls back to 'provenance' if no match.
-const TAG_CATEGORY_MAP = [
-  { match: /corporeal|body politic|displaced anatomy|prosthetic/i, key: 'corporeal' },
-  { match: /institutional critique|anti-consumer|class dynamics|labour politic/i, key: 'critique' },
-  { match: /subcultur|queer theory|punk|gender deconstruction/i, key: 'subculture' },
-  { match: /post-colonial|globalisation|cultural hybrid|racial identity/i, key: 'strategy' },
-  { match: /techno-politic|surveillance|digital ident|ecological/i, key: 'semiotic' },
-  { match: /feminist|the subverted gaze|censorship|activism/i, key: 'provenance' },
-];
-
-export function getTagCategory(politicsTag = '') {
-  for (const { match, key } of TAG_CATEGORY_MAP) {
-    if (match.test(politicsTag)) return key;
-  }
-  return 'provenance';
-}
-
-// The one name for each analytical axis. Every surface that labels an axis
-// (grid cards, sidebar list, entry header, index table, landing cards) reads
-// from here — previously the grid said "CORPOREAL" / "PROVENANCE" while the
-// entry page said "Corporeal Intervention" / "Historical Lineage" for the
-// same thing.
-export const CATEGORY_LABELS = {
-  corporeal: 'Corporeal Intervention',
-  critique: 'Institutional Critique',
-  subculture: 'Subcultural Codification',
-  strategy: 'Strategic Appropriation',
-  semiotic: 'Semiotic Sabotage',
-  provenance: 'Historical Lineage',
-};
-
-export function categoryLabel(cat) {
-  return CATEGORY_LABELS[cat] || 'Analytical Record';
-}
+// Axis mapping and names live in categories.js (shared with the build
+// scripts); re-exported here so existing imports keep working.
+import { getTagCategory, CATEGORY_LABELS, categoryLabel } from './categories.js?v=715e5c2';
+export { getTagCategory, CATEGORY_LABELS, categoryLabel };
 
 // Extract a short label from a long politics tag.
 // "Body Politics & Corporeal Interventions" → "Corporeal Intervention"

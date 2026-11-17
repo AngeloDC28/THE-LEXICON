@@ -16,10 +16,70 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { getTagCategory, categoryLabel } from '../../js/modules/categories.js';
 
 const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
 const BASE    = 'https://thelexicon.xyz';
+
+const esc = (s) => String(s ?? '')
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const clean = (s) => String(s ?? '')
+  .replace(/\[cite:\s*\d+\]/g, '').replace(/--/g, '—').replace(/\s+/g, ' ').trim();
+const thumb = (src) => `/public/${src.replace(/\.(jpe?g|png|webp)$/i, '.t480.webp')}`;
+
+const SPEC_FIELDS = [
+  ['era', 'Era'], ['politics', 'Politics'], ['theories', 'Theories'], ['anatomy', 'Form & anatomy'],
+  ['materials', 'Materials'], ['geography', 'Geography'], ['gender', 'Gender'], ['format', 'Format & medium'],
+];
+const NOTE_FIELDS = [['provenance', 'Provenance'], ['critique', 'Critique'], ['strategy', 'Strategy']];
+
+/**
+ * The whole entry as a plain HTML article, so the page is complete without
+ * JavaScript: search engines, link unfurlers, reader modes and people with
+ * JS off all get the real content instead of the homepage. boot.js adds
+ * html.js before first paint and index.css hides .static-entry under it, so
+ * the interactive view is unchanged for everyone else.
+ */
+function buildStaticArticle(entry) {
+  const t = entry.tags || {};
+  const cat = getTagCategory(t.politics || '');
+  const notes = NOTE_FIELDS
+    .filter(([k]) => entry.notes?.[k])
+    .map(([k, label]) => `<section><h2>${label}</h2><p>${esc(clean(entry.notes[k]))}</p></section>`)
+    .join('');
+  const looks = (entry.images || []).map((img, i) => {
+    const spots = (img.hotspots || []);
+    const alt = `${entry.title}, look ${i + 1} of ${entry.images.length}${spots.length ? ': ' + spots.map(h => h.label).join(', ') : ''}`;
+    const list = spots.length
+      ? `<dl>${spots.map(h => `<dt>${esc(h.label)}</dt><dd>${esc(clean(h.description))}</dd>`).join('')}</dl>`
+      : '';
+    return `<figure><img src="${esc(thumb(img.src))}" alt="${esc(alt)}" width="480" loading="lazy" decoding="async"><figcaption>Look ${i + 1}</figcaption>${list}</figure>`;
+  }).join('');
+  const specs = SPEC_FIELDS
+    .filter(([k]) => t[k])
+    .map(([k, label]) => `<dt>${label}</dt><dd>${esc(t[k].split('|').map(s => s.trim()).join(', '))}</dd>`)
+    .join('');
+  const sources = (entry.sources || []).map(s => {
+    const title = s.type === 'book' || s.type === 'catalogue' ? `<cite>${esc(s.title)}</cite>` : `“${esc(s.title)}”`;
+    const parts = [s.author && esc(s.author), title, s.publication && esc(s.publication), s.date && esc(s.date)].filter(Boolean).join(', ');
+    return `<li>${s.url ? `<a href="${esc(s.url)}" rel="noopener">${parts}</a>` : parts}.</li>`;
+  }).join('');
+  const credit = entry.photo_credit
+    ? `Photographs: ${esc(entry.photo_credit)}${entry.image_source?.url ? `, via <a href="${esc(entry.image_source.url)}">${esc(entry.image_source.name)}</a>` : ''}.`
+    : 'Photographer credit being confirmed.';
+  return `
+  <article class="static-entry" aria-labelledby="static-entry-title">
+    <p class="static-entry-nav"><a href="/">THE LEXICON</a> / <span>${esc(categoryLabel(cat))}</span></p>
+    <h1 id="static-entry-title">${esc(entry.title)}${entry.subtitle ? `<span class="static-entry-sub">${esc(entry.subtitle)}</span>` : ''}</h1>
+    <p class="static-entry-meta">${esc(t.brand || '')} · ${esc(entry.season || '')} ${esc(entry.year || '')} · ${esc(categoryLabel(cat))}</p>
+    ${notes}
+    <section><h2>Looks</h2>${looks}<p class="static-entry-credit">${credit} Reproduced for criticism and review under CDPA 1988 s.30.</p></section>
+    ${specs ? `<section><h2>Technical specifications</h2><dl class="static-entry-specs">${specs}</dl></section>` : ''}
+    ${sources ? `<section><h2>Sources</h2><ol>${sources}</ol></section>` : ''}
+    <p class="static-entry-nav"><a href="/">← All 45 collections</a></p>
+  </article>`;
+}
 
 function escAttr(str) {
   return String(str)
@@ -187,6 +247,9 @@ for (const slug of slugs) {
     `<script id="entry-jsonld" type="application/ld+json">${buildArticleJsonLd(entry, url, ogImage)}</script>`
   );
 
+
+  // Full entry content, readable without JavaScript (hidden under html.js).
+  html = html.replace(/<body>/, `<body>${buildStaticArticle(entry)}`);
 
   const dir = join(ROOT, 'entry', slug, '0');
   mkdirSync(dir, { recursive: true });
