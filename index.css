@@ -5036,3 +5036,42 @@ html:not(.js) #custom-cursor { display: none !important; }
 .noscript-index h2 { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #aaa; margin: 24px 0 16px; border-top: 1px solid #222; padding-top: 20px; }
 .noscript-index ul { columns: 2; column-gap: 32px; list-style: none; padding: 0; margin: 0; }
 .noscript-index a { color: #ddd; }
+
+/* ── Hotspot annotation card: docked beside the image ─────────────────────
+   hotspots.js placePayload() moves the card into #detail-image-sector and
+   positions it in the empty gutter next to the photograph (or over the
+   notes column when there is no gutter), with a leader line back to the
+   hotspot. It no longer covers the look it describes. */
+#analytical-payload.payload-docked {
+  position: absolute !important;
+  bottom: auto !important;
+  right: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+  z-index: 400;
+  max-height: calc(100% - 24px);
+  overflow-y: auto;
+}
+#payload-leader {
+  position: absolute;
+  height: 0;
+  border-top: 1px dashed #CCFF00;
+  transform-origin: 0 0;
+  pointer-events: none;
+  z-index: 390;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+#payload-leader.visible { opacity: 0.9; }
+html:not(.dark) #payload-leader { border-top-color: #000; }
+/* Reading text, not 12px mono */
+#payload-content, #payload-content .leading-relaxed {
+  font-family: var(--font-serif) !important;
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+}
+#payload-content > div:first-child {
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.08em;
+}

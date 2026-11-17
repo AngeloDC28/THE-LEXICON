@@ -8,6 +8,7 @@ import { getFilteredEntries } from './search-engine.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
 import { getTagCategory, categoryLabel } from './render-index-view.js?v=715e5c2';
 import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=715e5c2';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=715e5c2';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -724,6 +725,7 @@ function renderHotspots(entry, container) {
   if (payloadEl) {
     payloadEl.classList.add('hidden');
     payloadEl.classList.remove('permanent-payload', 'expand-active');
+    hidePayloadLeader();
   }
   const mobileSheet = $('mobile-hotspot-sheet');
   if (mobileSheet) {
@@ -747,16 +749,16 @@ function renderHotspots(entry, container) {
 
     btn.setAttribute('aria-describedby', 'analytical-payload');
     // Desktop hover/focus preview. Click delegation is handled by hotspots.js.
-    btn.addEventListener('mouseenter', () => showPayload(spot));
+    btn.addEventListener('mouseenter', () => showPayload(spot, btn));
     btn.addEventListener('mouseleave', () => hidePayload());
-    btn.addEventListener('focus',      () => showPayload(spot));
+    btn.addEventListener('focus',      () => showPayload(spot, btn));
     btn.addEventListener('blur',       () => hidePayload());
 
     container.appendChild(btn);
   });
 }
 
-function showPayload(spot) {
+function showPayload(spot, btn) {
   const payload = $('analytical-payload');
   const content = $('payload-content');
   if (!payload || !content) return;
@@ -774,12 +776,15 @@ function showPayload(spot) {
     <div class="t-mono-xs leading-relaxed">${escapeHtml(text)}</div>
   `;
   payload.classList.remove('hidden');
+  // Beside the image, not on it — same placement as a clicked hotspot.
+  placePayload(btn);
 }
 
 function hidePayload() {
   const payload = $('analytical-payload');
   if (!payload || payload.classList.contains('permanent-payload')) return;
   payload.classList.add('hidden');
+  hidePayloadLeader();
 }
 
 // Track in-flight preloads so rapid navigation can cancel them
