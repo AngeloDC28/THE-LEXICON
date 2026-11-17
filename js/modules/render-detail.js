@@ -2,13 +2,13 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=3652186';
-import { AppState, updateHash } from './core-state.js?v=3652186';
-import { getFilteredEntries } from './search-engine.js?v=3652186';
-import { getTranslation } from './translations.js?v=3652186';
-import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=3652186';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=3652186';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=3652186';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=e91de3c';
+import { AppState, updateHash } from './core-state.js?v=e91de3c';
+import { getFilteredEntries } from './search-engine.js?v=e91de3c';
+import { getTranslation } from './translations.js?v=e91de3c';
+import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=e91de3c';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=e91de3c';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=e91de3c';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -68,7 +68,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     if (detailView) {
       detailView.classList.remove('hidden');
       // Used by print stylesheet ::after for permalink + accessed-date footer
-      detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
+      detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}${AppState.currentImageIndex ? `/${AppState.currentImageIndex}` : ''}`;
       detailView.dataset.printAccessed = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     }
     const appRoot = $('app-root');
@@ -114,7 +114,7 @@ function updateEntryMetaTags(entry) {
   const desc   = entry.subtitle
     ? `${title}: ${entry.subtitle}`
     : `Forensic visual analysis of ${title}. Annotated for visual and cultural research.`;
-  const url    = `${window.location.origin}/entry/${entry.id}/0`;
+  const url    = `${window.location.origin}/entry/${entry.id}`;
   const img    = entry.images?.[0]?.src
     ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
@@ -158,7 +158,7 @@ function updateEntryJsonLd(entry) {
   const year   = entry.year || '';
   const season = entry.season || '';
   const title  = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
-  const url    = `${window.location.origin}/entry/${entry.id}/0`;
+  const url    = `${window.location.origin}/entry/${entry.id}`;
   const img    = entry.images?.[0]?.src
     ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
@@ -270,7 +270,7 @@ function renderSidebarHeader(entry) {
     <h1 class="detail-title">${escapeHtml(pageTitle)}${subtitle ? `<span class="detail-subtitle">${escapeHtml(subtitle)}</span>` : ''}</h1>
     <span class="detail-accent-tag" data-cat="${cat}">${tagLabel.toUpperCase()}</span>
     <div class="detail-entry-id">${brand} · ${season ? seasonLong(season) + ' ' : ''}${year}</div>
-    ${entry.summary_plain ? `<p class="detail-summary">${escapeHtml(getTranslation(entry.summary_plain, lang))}</p>` : ''}
+    ${entry.summary_plain ? `<p class="detail-summary"${lang !== 'en' && getTranslation(entry.summary_plain, lang) === entry.summary_plain ? ' lang="en"' : ''}>${escapeHtml(getTranslation(entry.summary_plain, lang))}</p>` : ''}
     ${vibesHtml}
     ${posLabel ? `
     <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
@@ -417,7 +417,8 @@ function renderImage(entry, callbacks) {
     const via = src?.url
       ? ` · via <a href="${escapeHtml(src.url)}" class="underline hover:text-acid focus:text-acid transition-colors" target="_blank" rel="noopener noreferrer">${escapeHtml(src.name)}</a>`
       : '';
-    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
+    const mistakeHref = `mailto:info@thelexicon.xyz?subject=${encodeURIComponent(`Problem with ${entry.title || slug}`)}`;
+    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a> · <a href="${mistakeHref}" class="underline hover:text-acid focus:text-acid transition-colors">Spotted a mistake?</a>`;
   }
 
   // Image counter dots
@@ -429,7 +430,7 @@ function renderImage(entry, callbacks) {
       counter.innerHTML = imgs.map((_, i) => {
         const isActive = i === currentIdx;
         return `<button type="button" class="img-dot${isActive ? ' active' : ''}" data-img-index="${i}" aria-label="Image ${i + 1} of ${imgs.length}"${isActive ? ' aria-current="true"' : ''}></button>`;
-      }).join('') + `<span class="sr-only">${currentIdx + 1} of ${imgs.length}</span>`;
+      }).join('') + `<span class="img-count">Look ${currentIdx + 1} of ${imgs.length}</span>`;
       counter.querySelectorAll('.img-dot').forEach(btn => {
         btn.addEventListener('click', () => {
           const idx = parseInt(btn.dataset.imgIndex, 10);
@@ -479,6 +480,9 @@ function renderBrutalistNodes(entry) {
       node.dataset.noteId = type.id;
       node.id = `note-${type.id}`;
       node.setAttribute('aria-labelledby', `note-${type.id}-label`);
+      // An untranslated note inside a translated page is still English:
+      // say so, so screen readers switch voice (WCAG 3.1.2).
+      if (lang !== 'en' && getTranslation(rawText, lang) === rawText) node.lang = 'en';
 
       // Critique note gets a pull quote — extract the first sentence 40–250 chars
       let bodyHtml = text;

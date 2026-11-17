@@ -10,14 +10,14 @@
  * Keyboard-navigable (j/k for rows, Enter to open, /, ?, V, I).
  * Toggle persists in localStorage as 'lexicon.view-mode' (visual | index).
  */
-import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=3652186';
-import { AppState } from './core-state.js?v=3652186';
-import { getFilteredEntries } from './search-engine.js?v=3652186';
-import { getTranslation } from './translations.js?v=3652186';
+import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=e91de3c';
+import { AppState } from './core-state.js?v=e91de3c';
+import { getFilteredEntries } from './search-engine.js?v=e91de3c';
+import { getTranslation } from './translations.js?v=e91de3c';
 
 // Axis mapping and names live in categories.js (shared with the build
 // scripts); re-exported here so existing imports keep working.
-import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain } from './categories.js?v=3652186';
+import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain } from './categories.js?v=e91de3c';
 export { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain };
 
 // Extract a short label from a long politics tag.

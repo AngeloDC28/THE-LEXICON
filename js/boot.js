@@ -24,12 +24,12 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
   if (!m) return;
   var slug = m[1];
   var imgIdx = m[2] || '0';
-  // Canonical URL always includes the image index for consistency
-  var url = 'https://thelexicon.xyz/entry/' + slug + '/' + imgIdx;
+  // Canonical URL is /entry/slug for the first look, /entry/slug/N after it
+  var url = 'https://thelexicon.xyz/entry/' + slug + (imgIdx === '0' ? '' : '/' + imgIdx);
 
-  // Normalize URL: /entry/slug → /entry/slug/0 via replaceState
-  if (!m[2]) {
-    try { history.replaceState(null, '', '/entry/' + slug + '/0'); } catch(e) {}
+  // Normalize URL: /entry/slug/0 → /entry/slug via replaceState
+  if (m[2] === '0') {
+    try { history.replaceState(null, '', '/entry/' + slug); } catch(e) {}
   }
 
   var parts = slug.split('-');

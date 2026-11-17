@@ -12,7 +12,7 @@
  *
  * URL structure:
  *   Homepage  https://thelexicon.xyz/           priority 1.0, weekly
- *   Entry     https://thelexicon.xyz/entry/{id}/0  priority 0.8, monthly
+ *   Entry     https://thelexicon.xyz/entry/{id}  priority 0.8, monthly
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -37,7 +37,7 @@ const urls = [
   url(`${BASE}/`),
   // Static pages written by generate-static-pages.mjs.
   ...['about', 'glossary', 'privacy', 'terms'].map(p => url(`${BASE}/${p}`)),
-  ...ids.map(id => url(`${BASE}/entry/${id}/0`)),
+  ...ids.map(id => url(`${BASE}/entry/${id}`)),
 ];
 
 const xml =

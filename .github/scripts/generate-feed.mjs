@@ -35,7 +35,7 @@ const items = order.map(id => {
   catch { return null; }
 
   const title   = entry.title || `${entry.brand || id} ${entry.season || ''} ${entry.year || ''}`.trim();
-  const url     = `${BASE}/entry/${id}/0`;
+  const url     = `${BASE}/entry/${id}`;
   const cover   = (entry.images || []).find(im => !im.content_note);
   const img     = cover?.src ? `${BASE}/public/${cover.src}` : null;
   const desc    = entry.summary_plain

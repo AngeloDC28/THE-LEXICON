@@ -3989,9 +3989,11 @@ html.dark .active-hotspot-box {
 #image-counter {
   min-height: 20px;
 }
+/* 10px dot inside a 24px target (WCAG 2.2 · 2.5.8); was a bare 6px dot. */
 .img-dot {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
+  position: relative;
   border-radius: 50%;
   background: rgba(255,255,255,0.25);
   border: 1px solid rgba(255,255,255,0.15);
@@ -4004,6 +4006,9 @@ html.dark .active-hotspot-box {
   border-color: #CCFF00;
   transform: scale(1.4);
 }
+.img-dot::after { content: ''; position: absolute; inset: -6px; }
+.img-count { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); margin-left: 6px; }
+html:not(.dark) .img-count { color: rgba(0,0,0,0.7); }
 .img-dot:focus-visible {
   outline: 2px solid #CCFF00;
   outline-offset: 2px;

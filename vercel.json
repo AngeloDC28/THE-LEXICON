@@ -159,6 +159,11 @@
       "source": "/favicon.ico",
       "destination": "/favicon.svg",
       "permanent": true
+    },
+    {
+      "source": "/entry/:slug/0",
+      "destination": "/entry/:slug",
+      "permanent": true
     }
   ],
   "rewrites": [

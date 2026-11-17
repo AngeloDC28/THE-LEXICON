@@ -2,7 +2,7 @@
 /**
  * generate-entry-pages.mjs
  *
- * For each of the 45 entries, writes /entry/{slug}/0/index.html — a full copy
+ * For each of the 45 entries, writes /entry/{slug}/index.html — a full copy
  * of index.html with entry-specific <head> meta (title, description, og:*, twitter:*,
  * canonical). Vercel serves these as static files, so social crawlers (Twitter card
  * validator, Facebook OG debugger, WhatsApp link preview) see unique meta per entry.
@@ -13,7 +13,7 @@
  * Run as part of preflight. Generated files are gitignored (/entry/) — Vercel
  * regenerates them on every build. Does NOT require any npm deps.
  */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getTagCategory, categoryLabel, categoryPlain } from '../../js/modules/categories.js';
@@ -147,6 +147,10 @@ function buildDesc(entry) {
 
 const template = readFileSync(join(ROOT, 'index.html'), 'utf8');
 
+// Start clean so pages for renamed entries (or the old /entry/{slug}/0/
+// layout) never linger in the deploy.
+rmSync(join(ROOT, 'entry'), { recursive: true, force: true });
+
 const slugs = readdirSync(ENTRIES)
   .filter(f => f.endsWith('.json') && !f.startsWith('_'))
   .map(f => f.replace(/\.json$/, ''))
@@ -159,7 +163,7 @@ for (const slug of slugs) {
 
   const title    = entry.title || slug;
   const desc     = buildDesc(entry);
-  const url      = `${BASE}/entry/${slug}/0`;
+  const url      = `${BASE}/entry/${slug}`;
   // Link previews never show a look that carries a content note.
   const imgSrc   = (entry.images || []).find(img => !img.content_note)?.src || '';
   const ogImage  = imgSrc
@@ -242,7 +246,7 @@ for (const slug of slugs) {
   );
 
   // hreflang — rewrite homepage hrefs to per-entry hrefs, preserving ?lang= params
-  // e.g. href="https://thelexicon.xyz/?lang=fr" → href="https://thelexicon.xyz/entry/slug/0?lang=fr"
+  // e.g. href="https://thelexicon.xyz/?lang=fr" → href="https://thelexicon.xyz/entry/slug?lang=fr"
   html = html.replace(
     /(<link rel="alternate" hreflang="[^"]*" href=")https:\/\/thelexicon\.xyz\/(\?lang=[^"]*)?"/g,
     (_, pre, query) => `${pre}${url}${query || ''}"`
@@ -258,7 +262,7 @@ for (const slug of slugs) {
   // Full entry content, readable without JavaScript (hidden under html.js).
   html = html.replace(/<body>/, `<body>${buildStaticArticle(entry)}`);
 
-  const dir = join(ROOT, 'entry', slug, '0');
+  const dir = join(ROOT, 'entry', slug);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html, 'utf8');
   count++;

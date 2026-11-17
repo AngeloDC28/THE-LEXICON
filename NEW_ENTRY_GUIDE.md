@@ -150,6 +150,18 @@ A pinned annotation on a specific point in the image. It has:
 
 > "Neoprene panels sewn with exposed topstitch reference technical sportswear fabrication, collapsing the boundary between protective gear and couture structure."
 
+### Punctuation
+Hotspot descriptions take **no semicolons**: end each clause as its own sentence ("...the navel. This displacement..."). `npm run check` fails on any `;` in a hotspot.
+
+---
+
+## 7b. Plain summary, publish date, content notes
+
+- **`summary_plain`** (required, 25–40 words, 80–320 characters): what happened at the show, then why people still talk about it, for a 15-year-old who doesn't know fashion. No theory words. It is shown on the card, at the top of the entry and as the link-preview description.
+  > "McQueen sent a Paralympic athlete down the runway on carved wooden legs, then had robots spray-paint a dress live. It made people ask what a 'perfect' body is."
+- **`published`** (required, `YYYY-MM-DD`): the day the entry went online. Citations use it as the publication date (never the collection year).
+- **`content_note`** (on an image, optional): add `"content_note": "Nudity (sheer top)"` to any look with visible nudity. The image is blurred behind the note until the reader taps "Show image", and it is never used as a cover background or link-preview image.
+
 ---
 
 ## 8. The command sequence (once you have everything)

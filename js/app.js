@@ -10,26 +10,26 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js?v=3652186';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand } from './modules/core-utils.js?v=3652186';
+import { imageDimensions } from './modules/image-dimensions.js?v=e91de3c';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand } from './modules/core-utils.js?v=e91de3c';
 setImageDimensions(imageDimensions);
-import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=3652186';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=3652186';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=3652186';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=3652186';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=3652186';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=e91de3c';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=e91de3c';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=e91de3c';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=e91de3c';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=e91de3c';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js?v=3652186';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=3652186';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=3652186';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=3652186';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=3652186';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=3652186';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=3652186';
-import { getTranslation, supportedLanguages } from './modules/translations.js?v=3652186';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=3652186';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=3652186';
-import { renderGlossaryModal } from './modules/glossary.js?v=3652186';
+import { switchView } from './modules/navigation.js?v=e91de3c';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=e91de3c';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=e91de3c';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=e91de3c';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=e91de3c';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=e91de3c';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=e91de3c';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=e91de3c';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=e91de3c';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=e91de3c';
+import { renderGlossaryModal } from './modules/glossary.js?v=e91de3c';
 
 // --- Shared Callbacks ---
 const callbacks = {
@@ -77,7 +77,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=3652186');
+  const { archiveData: staticData } = await import('../database.js?v=e91de3c');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -772,9 +772,9 @@ function handleRouting() {
     const id  = entryMatch[1];
     const idx = entryMatch[2] ? parseInt(entryMatch[2]) : 0;
 
-    // Normalize: /entry/slug → /entry/slug/0 (canonical form)
-    if (!entryMatch[2]) {
-      history.replaceState(null, '', `/entry/${id}/0`);
+    // Normalize: /entry/slug/0 → /entry/slug (canonical form)
+    if (entryMatch[2] === '0') {
+      history.replaceState(null, '', `/entry/${id}`);
     }
 
     const entry = archiveData.find(e => e.id === id);
@@ -1327,7 +1327,7 @@ function setupEventListeners() {
   $('btn-copy-link')?.addEventListener('click', () => {
     const lang = AppState.language;
     const btn = $('btn-copy-link');
-    const url = `${window.location.origin}/entry/${AppState.selectedEntryId}/${AppState.currentImageIndex}`;
+    const url = `${window.location.origin}/entry/${AppState.selectedEntryId}${AppState.currentImageIndex ? `/${AppState.currentImageIndex}` : ''}`;
     const flashCopied = () => {
       if (!btn) return;
       const original = btn.textContent;
@@ -2091,7 +2091,7 @@ function openCiteModal(entryId) {
   const modal = $('cite-modal');
   if (!modal) return;
 
-  const url   = `${window.location.origin}/entry/${entry.id}/0`;
+  const url   = `${window.location.origin}/entry/${entry.id}`;
   const brand = entry.tags?.brand || entry.id;
   const year  = entry.year || '';
   const season = entry.season ? entry.season + ' ' : '';
@@ -2506,7 +2506,9 @@ async function applyLanguage(code) {
 function renderLangDropdown() {
   const dd = $('lang-dropdown');
   if (!dd) return;
-  dd.innerHTML = ALL_LANGS.map(({ code, label }) => {
+  // Say what switching changes: the menus, not (yet) every note. A page that
+  // turned half French with no warning felt broken.
+  dd.innerHTML = `<li role="none" class="px-3 py-2 t-mono-xs font-mono leading-relaxed opacity-80 border-b border-current/20 normal-case tracking-normal">Interface language. Menus change; show notes stay in English unless translated. Your browser's translate option covers the rest.</li>` + ALL_LANGS.map(({ code, label }) => {
     const isActive = code === AppState.language;
     const activeClass = isActive ? 'bg-black text-white dark:bg-acid dark:text-black' : 'hover:bg-black/10 dark:hover:bg-white/10';
     return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" lang="${code}" class="w-full text-left px-3 py-2 min-h-[44px] t-mono-xs font-mono tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3 focus-ring">
