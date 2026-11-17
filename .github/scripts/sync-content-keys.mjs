@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Walk every entry JSON, pull out all editorial English strings (titles,
- * subtitles, hotspot labels + descriptions, notes.{provenance,critique,strategy}),
+ * subtitles, summary_plain, hotspot labels + descriptions, notes.{provenance,critique,strategy}),
  * and make sure each one exists as a key in content/translations/en.json with
  * key === value (the passthrough pattern getTranslation() already uses).
  *
@@ -32,6 +32,7 @@ for (const f of files) {
   const e = JSON.parse(readFileSync(join(ENTRIES, f), 'utf8'));
   add(e.title);
   add(e.subtitle);
+  add(e.summary_plain);
   if (e.notes) {
     add(e.notes.provenance);
     add(e.notes.critique);

@@ -6,6 +6,7 @@
   "year": 1997,
   "season": "SS",
   "published": "2026-05-12",
+  "summary_plain": "Rei Kawakubo put padded lumps on the back, hips and shoulders of stretchy dresses, changing the shape of the body. The press nicknamed it 'lumps and bumps', but it made people rethink what a 'beautiful' figure is.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg",
@@ -14,13 +15,13 @@
           "x": 50,
           "y": 35,
           "label": "Sheer Red Stretch Bodice",
-          "description": "The sheer red stretch bodice clings tightly to the upper torso to fully expose the natural anatomy beneath; it contrasts sharply with the extreme artificial volumes positioned below. This material transparency engages with feminist ideology by confronting the viewer directly with the unedited female form; the thin synthetic mesh offers no structural support. The tight crew neckline and short sleeves mimic a basic t-shirt silhouette; this mundane upper formatting highlights the radical lower half. The top refuses conventional modesty protocols to assert the biological body as merely one layer within the overall sculptural composition."
+          "description": "The sheer red stretch bodice clings tightly to the upper torso to fully expose the natural anatomy beneath. It contrasts sharply with the extreme artificial volumes positioned below. This material transparency engages with feminist ideology by confronting the viewer directly with the unedited female form. The thin synthetic mesh offers no structural support. The tight crew neckline and short sleeves mimic a basic t-shirt silhouette. This mundane upper formatting highlights the radical lower half. The top refuses conventional modesty protocols to assert the biological body as merely one layer within the overall sculptural composition."
         },
         {
           "x": 50,
           "y": 50,
           "label": "Toroidal Hip Protuberance",
-          "description": "The toroidal hip protuberance encircles the pelvis in a massive padded tube; it entirely obliterates the natural waistline to enforce a synthetic spatial boundary. This engineered distortion utilizes theories of the grotesque to challenge idealized Western beauty standards; the bright red fabric stretches tautly over the hidden internal batting. The heavy ring drops the visual center of gravity drastically downward; it stands entirely rigid regardless of the wearer's movement. The construction asserts an autonomous architectural presence that the human form is forced to inhabit."
+          "description": "The toroidal hip protuberance encircles the pelvis in a massive padded tube. It entirely obliterates the natural waistline to enforce a synthetic spatial boundary. This engineered distortion utilizes theories of the grotesque to challenge idealized Western beauty standards. The bright red fabric stretches tautly over the hidden internal batting. The heavy ring drops the visual center of gravity drastically downward. It stands entirely rigid regardless of the wearer's movement. The construction asserts an autonomous architectural presence that the human form is forced to inhabit."
         }
       ]
     },
@@ -31,13 +32,13 @@
           "x": 50,
           "y": 40,
           "label": "Textured Asymmetrical Padded Jacket",
-          "description": "The textured asymmetrical padded jacket envelopes the upper body in a violently crinkled bright orange textile; it obscures the shoulders and arms within an oversized geometric mass. This tectonic craft engages with post-humanism by generating a silhouette completely divorced from mammalian anatomy; the stiff fabric holds its shape rigidly away from the torso. The irregular quilting creates a deeply tactile surface terrain; the oversized lapels fold heavily over the chest. The outerwear refuses somatic conformity to complete a purely alien morphology."
+          "description": "The textured asymmetrical padded jacket envelopes the upper body in a violently crinkled bright orange textile. It obscures the shoulders and arms within an oversized geometric mass. This tectonic craft engages with post-humanism by generating a silhouette completely divorced from mammalian anatomy. The stiff fabric holds its shape rigidly away from the torso. The irregular quilting creates a deeply tactile surface terrain. The oversized lapels fold heavily over the chest. The outerwear refuses somatic conformity to complete a purely alien morphology."
         },
         {
           "x": 51,
           "y": 88,
           "label": "Utilitarian Leather Ballet Flat",
-          "description": "The utilitarian leather ballet flat grounds the extreme upper volumes in a simple unadorned black silhouette; it anchors the foot without any elevating heel. This footwear strategy applies anti-fashion aesthetics to ensure the body remains firmly planted while bearing the weight of the structural distortions. The soft leather molds strictly to the natural shape of the foot; a simple string tie secures the bridge. The shoe refuses the hyper-feminine stiletto to assert a pragmatic and subverted posture."
+          "description": "The utilitarian leather ballet flat grounds the extreme upper volumes in a simple unadorned black silhouette. It anchors the foot without any elevating heel. This footwear strategy applies anti-fashion aesthetics to ensure the body remains firmly planted while bearing the weight of the structural distortions. The soft leather molds strictly to the natural shape of the foot. A simple string tie secures the bridge. The shoe refuses the hyper-feminine stiletto to assert a pragmatic and subverted posture."
         }
       ]
     },
@@ -48,13 +49,13 @@
           "x": 50,
           "y": 35,
           "label": "Paneled Sheer Stretch Blouse",
-          "description": "The paneled sheer stretch blouse pieces together semi-translucent blocks of blue and yellow fabric; it clings directly to the torso to reveal the skin underneath. This structural logic engages with theories of body politics by rendering the chest hyper-visible against the looming padded collar. The fabric pulls tightly across the bust to highlight the tension between the synthetic stretch and the biological form; the uneven button placket runs askew down the stomach. The garment refuses traditional opaque tailoring to assert a fluid boundary between flesh and dress."
+          "description": "The paneled sheer stretch blouse pieces together semi-translucent blocks of blue and yellow fabric. It clings directly to the torso to reveal the skin underneath. This structural logic engages with theories of body politics by rendering the chest hyper-visible against the looming padded collar. The fabric pulls tightly across the bust to highlight the tension between the synthetic stretch and the biological form. The uneven button placket runs askew down the stomach. The garment refuses traditional opaque tailoring to assert a fluid boundary between flesh and dress."
         },
         {
           "x": 50,
           "y": 25,
           "label": "Engineered Cervical Protuberance",
-          "description": "The engineered cervical protuberance swells outward from the nape of the neck to shroud the lower jaw; it creates an abnormal massing at the top of the spine. This internal padding utilizes the concept of the abject to render a familiar body part suddenly alien; the soft pastel fabric stretches smoothly over the hidden down insert. The bulge alters the natural posture of the model significantly; the fabric wraps tightly around the throat to secure the mass. The element completes the silhouette by challenging the hierarchical dominance of the head."
+          "description": "The engineered cervical protuberance swells outward from the nape of the neck to shroud the lower jaw. It creates an abnormal massing at the top of the spine. This internal padding utilizes the concept of the abject to render a familiar body part suddenly alien. The soft pastel fabric stretches smoothly over the hidden down insert. The bulge alters the natural posture of the model significantly. The fabric wraps tightly around the throat to secure the mass. The element completes the silhouette by challenging the hierarchical dominance of the head."
         }
       ]
     },
@@ -65,13 +66,13 @@
           "x": 60,
           "y": 30,
           "label": "Asymmetrical Shoulder Protuberance",
-          "description": "The asymmetrical shoulder protuberance erupts from the right clavicle to dwarf the neck and head; it violently displaces the bilateral symmetry of the human frame. This structural addition applies post-humanist theory to construct a chimeric anatomy; the tight printed fabric is forced to accommodate the massive underlying down pad. The fluid pastel graphics warp entirely around the curved mass; the fabric pulls tightly against the collarbone to support the heavy internal batting. The intervention refuses classical proportion to assert the body as a mutable and malleable site."
+          "description": "The asymmetrical shoulder protuberance erupts from the right clavicle to dwarf the neck and head. It violently displaces the bilateral symmetry of the human frame. This structural addition applies post-humanist theory to construct a chimeric anatomy. The tight printed fabric is forced to accommodate the massive underlying down pad. The fluid pastel graphics warp entirely around the curved mass. The fabric pulls tightly against the collarbone to support the heavy internal batting. The intervention refuses classical proportion to assert the body as a mutable and malleable site."
         },
         {
           "x": 50,
           "y": 60,
           "label": "Abstract Stretch Tube Dress",
-          "description": "The abstract stretch tube dress maps a chaotic terrain of blue and orange forms across the torso and legs; it visually flattens the extreme three-dimensional lumps built into the silhouette. This textile application engages with psychedelic aesthetics to disorient the viewer's perception of depth and volume; the synthetic material clings to every dip and bulge tightly. The pattern stretches to near transparency over the widest points of the padding; the hem tapers inward to restrict the stride. The garment asserts a totalizing synthetic skin that traps the deformed anatomy within."
+          "description": "The abstract stretch tube dress maps a chaotic terrain of blue and orange forms across the torso and legs. It visually flattens the extreme three-dimensional lumps built into the silhouette. This textile application engages with psychedelic aesthetics to disorient the viewer's perception of depth and volume. The synthetic material clings to every dip and bulge tightly. The pattern stretches to near transparency over the widest points of the padding. The hem tapers inward to restrict the stride. The garment asserts a totalizing synthetic skin that traps the deformed anatomy within."
         }
       ]
     },
@@ -82,13 +83,13 @@
           "x": 50,
           "y": 35,
           "label": "Textured Cropped Shrug",
-          "description": "The textured cropped shrug covers the upper chest in a deeply crinkled brown fabric; it truncates the torso severely just below the bust. This spatial division engages with theories of gender deconstruction by ignoring traditional zones of feminine emphasis; the stiff material forms an architectural box around the shoulders. The short sleeves flare slightly away from the arms; the front opening lacks any functional closures. The piece refuses fluid drape to assert a harsh and protective upper carapace."
+          "description": "The textured cropped shrug covers the upper chest in a deeply crinkled brown fabric. It truncates the torso severely just below the bust. This spatial division engages with theories of gender deconstruction by ignoring traditional zones of feminine emphasis. The stiff material forms an architectural box around the shoulders. The short sleeves flare slightly away from the arms. The front opening lacks any functional closures. The piece refuses fluid drape to assert a harsh and protective upper carapace."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Volumetric Padded Balloon Skirt",
-          "description": "The volumetric padded balloon skirt swells outward from the high waist into a massive red sphere; it entirely swallows the lower half of the body. This displaced anatomy utilizes the grotesque to magnify the hips to absurd and non-functional proportions; the heavy synthetic batting forces the bright red fabric into a taut tension structure. The hem tapers sharply inward at the knee to exaggerate the central mass; the sheer volume requires significant physical effort to maneuver down the runway. The garment completes the silhouette by dominating the physical space around the wearer."
+          "description": "The volumetric padded balloon skirt swells outward from the high waist into a massive red sphere. It entirely swallows the lower half of the body. This displaced anatomy utilizes the grotesque to magnify the hips to absurd and non-functional proportions. The heavy synthetic batting forces the bright red fabric into a taut tension structure. The hem tapers sharply inward at the knee to exaggerate the central mass. The sheer volume requires significant physical effort to maneuver down the runway. The garment completes the silhouette by dominating the physical space around the wearer."
         }
       ]
     },
@@ -99,13 +100,13 @@
           "x": 50,
           "y": 35,
           "label": "Contrast Opacity Stretch Bodice",
-          "description": "The contrast opacity stretch bodice merges a highly transparent central panel with densely knitted white cap sleeves; it acts as a bizarre second skin that selectively exposes the bust. This material strategy engages with feminist body politics by simultaneously revealing and concealing the biological form; the sheer mesh offers zero structural support. The opaque knit sleeves mimic traditional sportswear; the neckline sits high against the clavicle. The garment refuses unified coverage to assert a fragmented approach to modesty."
+          "description": "The contrast opacity stretch bodice merges a highly transparent central panel with densely knitted white cap sleeves. It acts as a bizarre second skin that selectively exposes the bust. This material strategy engages with feminist body politics by simultaneously revealing and concealing the biological form. The sheer mesh offers zero structural support. The opaque knit sleeves mimic traditional sportswear. The neckline sits high against the clavicle. The garment refuses unified coverage to assert a fragmented approach to modesty."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Volumetric Padded Balloon Skirt",
-          "description": "The volumetric padded balloon skirt inflates dramatically below the natural waist to form an unyielding white globe; it obscures the hips and thighs entirely. This tectonic craft leverages theories of the abject to transform the lower body into an alien pod; the smooth white fabric is pulled drum-tight over the hidden internal scaffolding. The gathered hem forces the massive volume back inward; slight horizontal seams trace across the widest circumference of the sphere. The piece completes the angelic yet monstrous aesthetic of the ensemble."
+          "description": "The volumetric padded balloon skirt inflates dramatically below the natural waist to form an unyielding white globe. It obscures the hips and thighs entirely. This tectonic craft leverages theories of the abject to transform the lower body into an alien pod. The smooth white fabric is pulled drum-tight over the hidden internal scaffolding. The gathered hem forces the massive volume back inward. Slight horizontal seams trace across the widest circumference of the sphere. The piece completes the angelic yet monstrous aesthetic of the ensemble."
         }
       ]
     },
@@ -116,13 +117,13 @@
           "x": 50,
           "y": 40,
           "label": "Gingham Stretch Tube Dress",
-          "description": "The gingham stretch tube dress wraps the torso in a classic red and white domestic pattern; it forces a traditionally innocent print to stretch over monstrous underlying structures. This juxtaposition engages with the grotesque by corrupting the nostalgic signifiers of picnic blankets and domesticity; the squares warp violently over the right hip and abdomen. The tight fit highlights the extreme tension required to hold the padding in place; a high cowl neckline bunches loosely under the chin. The garment refuses traditional feminine silhouettes to assert a corrupted and mutant form."
+          "description": "The gingham stretch tube dress wraps the torso in a classic red and white domestic pattern. It forces a traditionally innocent print to stretch over monstrous underlying structures. This juxtaposition engages with the grotesque by corrupting the nostalgic signifiers of picnic blankets and domesticity. The squares warp violently over the right hip and abdomen. The tight fit highlights the extreme tension required to hold the padding in place. A high cowl neckline bunches loosely under the chin. The garment refuses traditional feminine silhouettes to assert a corrupted and mutant form."
         },
         {
           "x": 35,
           "y": 45,
           "label": "Lateral Pelvic Protuberance",
-          "description": "The lateral pelvic protuberance juts out aggressively from the right hip bone; it creates a massive hard-edged shelf that ruins the bilateral symmetry of the legs. This engineered distortion applies post-humanist theory to propose a radical evolutionary mutation; the gingham fabric stretches to its absolute limit across the apex of the bulge. The unnatural weight shifts the entire drape of the dress; the protrusion casts a dark shadow over the right thigh. The element completes the silhouette by demanding an abnormal amount of lateral space."
+          "description": "The lateral pelvic protuberance juts out aggressively from the right hip bone. It creates a massive hard-edged shelf that ruins the bilateral symmetry of the legs. This engineered distortion applies post-humanist theory to propose a radical evolutionary mutation. The gingham fabric stretches to its absolute limit across the apex of the bulge. The unnatural weight shifts the entire drape of the dress. The protrusion casts a dark shadow over the right thigh. The element completes the silhouette by demanding an abnormal amount of lateral space."
         }
       ]
     },
@@ -133,13 +134,13 @@
           "x": 50,
           "y": 25,
           "label": "Gingham Funnel Neckline",
-          "description": "The gingham funnel neckline rises high to obscure the throat and jaw; it creates a rigid synthetic tube that isolates the head from the torso. This structural construction engages with theories of displacement by drawing focus upward away from the monstrous lower body; the black and white grid remains relatively undistorted here compared to the hips. The tight collar restricts the movement of the neck; the cap sleeves terminate bluntly at the shoulder joint. The detail asserts a clinical and suffocating closure to the upper silhouette."
+          "description": "The gingham funnel neckline rises high to obscure the throat and jaw. It creates a rigid synthetic tube that isolates the head from the torso. This structural construction engages with theories of displacement by drawing focus upward away from the monstrous lower body. The black and white grid remains relatively undistorted here compared to the hips. The tight collar restricts the movement of the neck. The cap sleeves terminate bluntly at the shoulder joint. The detail asserts a clinical and suffocating closure to the upper silhouette."
         },
         {
           "x": 65,
           "y": 55,
           "label": "Lateral Pelvic Protuberance",
-          "description": "The lateral pelvic protuberance forces the left side of the dress to balloon outward in an immense asymmetrical mass; it mimics a grotesque biological swelling. This internal padding leverages feminist ideology to actively repel the male gaze through deliberate and shocking deformity; the black and white gingham pattern stretches chaotically over the dense synthetic down. The protrusion hangs heavy past the mid-thigh; the right side of the skirt falls flat to highlight the violent imbalance. The padding refuses somatic conformity to complete a deeply alien presence."
+          "description": "The lateral pelvic protuberance forces the left side of the dress to balloon outward in an immense asymmetrical mass. It mimics a grotesque biological swelling. This internal padding leverages feminist ideology to actively repel the male gaze through deliberate and shocking deformity. The black and white gingham pattern stretches chaotically over the dense synthetic down. The protrusion hangs heavy past the mid-thigh. The right side of the skirt falls flat to highlight the violent imbalance. The padding refuses somatic conformity to complete a deeply alien presence."
         }
       ]
     },
@@ -150,13 +151,13 @@
           "x": 50,
           "y": 35,
           "label": "Crinkled Sheer Organza Crop",
-          "description": "The crinkled sheer organza crop covers the chest in a bright red highly textured cloud; it floats away from the body rather than clinging to it. This material manipulation engages with the abject by resembling scorched or shriveled synthetic skin; the raw hemline exposes a sliver of the midriff beneath. The stiff fabric maintains its erratic volume through intense heat-pressing; the sleeves billow outward without internal padding. The garment asserts a fragile yet chaotic barrier over the upper anatomy."
+          "description": "The crinkled sheer organza crop covers the chest in a bright red highly textured cloud. It floats away from the body rather than clinging to it. This material manipulation engages with the abject by resembling scorched or shriveled synthetic skin. The raw hemline exposes a sliver of the midriff beneath. The stiff fabric maintains its erratic volume through intense heat-pressing. The sleeves billow outward without internal padding. The garment asserts a fragile yet chaotic barrier over the upper anatomy."
         },
         {
           "x": 50,
           "y": 60,
           "label": "Crinkled Paper-Textured Balloon Skirt",
-          "description": "The crinkled paper-textured balloon skirt inflates diagonally across the lower body; it utilizes a stiff beige textile that mimics packing material or raw parchment. This tectonic craft invokes post-humanism by transforming the human base into an industrial parcel; the irregular shape droops heavily toward the left knee. The sharp creases catch the runway light to emphasize the stiff unyielding volume; the waistband is finished with a stark white binding. The skirt refuses fluid movement to assert a harsh and noisy physical presence."
+          "description": "The crinkled paper-textured balloon skirt inflates diagonally across the lower body. It utilizes a stiff beige textile that mimics packing material or raw parchment. This tectonic craft invokes post-humanism by transforming the human base into an industrial parcel. The irregular shape droops heavily toward the left knee. The sharp creases catch the runway light to emphasize the stiff unyielding volume. The waistband is finished with a stark white binding. The skirt refuses fluid movement to assert a harsh and noisy physical presence."
         }
       ]
     },
@@ -167,15 +168,16 @@
           "x": 50,
           "y": 35,
           "label": "Crinkled Sheer Organza Bodice",
-          "description": "The crinkled sheer organza bodice warps a translucent purple fabric into an intricate three-dimensional terrain; it obscures the bust behind stiff floral-like clusters. This surface topography applies theories of the grotesque to organic motifs by rendering them alien and synthetic; the dark mesh reveals flashes of pale skin through its chaotic folds. The material is bunched and tacked to create permanent artificial volume; the long sleeves end in slightly flared ruffled cuffs. The top asserts an erratic and unruly upper silhouette."
+          "description": "The crinkled sheer organza bodice warps a translucent purple fabric into an intricate three-dimensional terrain. It obscures the bust behind stiff floral-like clusters. This surface topography applies theories of the grotesque to organic motifs by rendering them alien and synthetic. The dark mesh reveals flashes of pale skin through its chaotic folds. The material is bunched and tacked to create permanent artificial volume. The long sleeves end in slightly flared ruffled cuffs. The top asserts an erratic and unruly upper silhouette."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Crinkled Paper-Textured Balloon Skirt",
-          "description": "The crinkled paper-textured balloon skirt expands into a massive beige teardrop shape; it anchors the look with an incredibly heavy and stiff lower volume. This displaced anatomy engages with the concept of independent garment entity; the skirt appears to engulf the model rather than being worn by her. The sharp crinkles in the fabric suggest a garment that has been crushed and re-inflated; the hem curves drastically upward in the front to expose the bare knees. The piece completes the ensemble by enforcing an extreme and restrictive spatial footprint."
+          "description": "The crinkled paper-textured balloon skirt expands into a massive beige teardrop shape. It anchors the look with an incredibly heavy and stiff lower volume. This displaced anatomy engages with the concept of independent garment entity. The skirt appears to engulf the model rather than being worn by her. The sharp crinkles in the fabric suggest a garment that has been crushed and re-inflated. The hem curves drastically upward in the front to expose the bare knees. The piece completes the ensemble by enforcing an extreme and restrictive spatial footprint."
         }
-      ]
+      ],
+      "content_note": "Nudity (sheer top)"
     },
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-11.jpg",
@@ -184,13 +186,13 @@
           "x": 50,
           "y": 35,
           "label": "Textured Bouclé Crop Top",
-          "description": "The textured bouclé crop top covers the torso in a vibrant lime-green mass of tight synthetic loops; it creates a thick spongy barrier over the chest. This extreme tactility engages with post-humanist themes by mimicking moss or artificial turf growing directly upon the wearer; the sleeveless cut leaves the arms entirely bare and vulnerable against the heavy body. The thick fabric is bunched heavily at the front; the high neckline completely surrounds the clavicle. The garment refuses smooth luxury to assert a bizarre biomorphic texture."
+          "description": "The textured bouclé crop top covers the torso in a vibrant lime-green mass of tight synthetic loops. It creates a thick spongy barrier over the chest. This extreme tactility engages with post-humanist themes by mimicking moss or artificial turf growing directly upon the wearer. The sleeveless cut leaves the arms entirely bare and vulnerable against the heavy body. The thick fabric is bunched heavily at the front. The high neckline completely surrounds the clavicle. The garment refuses smooth luxury to assert a bizarre biomorphic texture."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Crinkled Paper-Textured Balloon Skirt",
-          "description": "The crinkled paper-textured balloon skirt drops asymmetrically from the waist to form a stiff cavernous bell; it utilizes the signature crushed beige material of the collection. This structural logic utilizes feminist critique to obliterate the traditional waist-to-hip ratio; the massive skirt forces the viewer to confront an abstract geometric form rather than a human body. The hem arches high in the front and dips low in the back; the paper-like fabric holds deep permanent wrinkles throughout its surface. The skirt asserts the primacy of the garment's internal architecture over the wearer's anatomy."
+          "description": "The crinkled paper-textured balloon skirt drops asymmetrically from the waist to form a stiff cavernous bell. It utilizes the signature crushed beige material of the collection. This structural logic utilizes feminist critique to obliterate the traditional waist-to-hip ratio. The massive skirt forces the viewer to confront an abstract geometric form rather than a human body. The hem arches high in the front and dips low in the back. The paper-like fabric holds deep permanent wrinkles throughout its surface. The skirt asserts the primacy of the garment's internal architecture over the wearer's anatomy."
         }
       ]
     },
@@ -201,13 +203,13 @@
           "x": 50,
           "y": 35,
           "label": "Sheer Layered Stretch Tunic",
-          "description": "The sheer layered stretch tunic pulls a fine lilac mesh tightly over a matching opaque underlayer; it features prominent erratic seam lines tracking across the bust. This tectonic craft engages with the concept of the body as a stitched-together entity; the visible raw seams look like surgical scars running across the synthetic skin. The high neckline hugs the throat severely; the sleeves are completely absent to emphasize the narrow upper torso. The garment refuses seamless elegance to assert a visibly engineered and slightly traumatic construction."
+          "description": "The sheer layered stretch tunic pulls a fine lilac mesh tightly over a matching opaque underlayer. It features prominent erratic seam lines tracking across the bust. This tectonic craft engages with the concept of the body as a stitched-together entity. The visible raw seams look like surgical scars running across the synthetic skin. The high neckline hugs the throat severely. The sleeves are completely absent to emphasize the narrow upper torso. The garment refuses seamless elegance to assert a visibly engineered and slightly traumatic construction."
         },
         {
           "x": 50,
           "y": 55,
           "label": "Bilateral Pelvic Protuberance",
-          "description": "The bilateral pelvic protuberance forces both hips to flare outward into massive shelf-like structures; it violently alters the lower silhouette into a brutal rectangular block. This engineered distortion applies theories of the grotesque to completely dismantle the biological reality of the pelvis; the fine lilac mesh stretches dangerously thin over the hard edges of the hidden down pads. The skirt drops straight down from the widest point of the padding; the underlying opaque layer ends abruptly mid-thigh beneath the sheer mesh overskirt. The element completes the look by trapping the body inside an uncompromising geometric box."
+          "description": "The bilateral pelvic protuberance forces both hips to flare outward into massive shelf-like structures. It violently alters the lower silhouette into a brutal rectangular block. This engineered distortion applies theories of the grotesque to completely dismantle the biological reality of the pelvis. The fine lilac mesh stretches dangerously thin over the hard edges of the hidden down pads. The skirt drops straight down from the widest point of the padding. The underlying opaque layer ends abruptly mid-thigh beneath the sheer mesh overskirt. The element completes the look by trapping the body inside an uncompromising geometric box."
         }
       ]
     },
@@ -218,7 +220,7 @@
           "x": 50,
           "y": 35,
           "label": "Asymmetrical Torso Protuberance",
-          "description": "The asymmetrical torso protuberance twists a large mass of padded white fabric around the left shoulder and chest; it creates a heavy diagonal burden that the model must carry. This structural addition engages with post-humanist displacement by placing a massive tumor-like growth directly over the heart; the crisp white textile is ruched and gathered to contain the internal batting. The crisp white fabric mimics a straightjacket or hospital bedding; the diagonal folds pull tightly across the ribcage to secure the padding. The dress asserts a clinical yet deeply unsettling morphological shift."
+          "description": "The asymmetrical torso protuberance twists a large mass of padded white fabric around the left shoulder and chest. It creates a heavy diagonal burden that the model must carry. This structural addition engages with post-humanist displacement by placing a massive tumor-like growth directly over the heart. The crisp white textile is ruched and gathered to contain the internal batting. The crisp white fabric mimics a straightjacket or hospital bedding. The diagonal folds pull tightly across the ribcage to secure the padding. The dress asserts a clinical yet deeply unsettling morphological shift."
         }
       ]
     },
@@ -229,7 +231,7 @@
           "x": 50,
           "y": 28,
           "label": "Asymmetrical Chest Protuberance",
-          "description": "The asymmetrical chest protuberance swells from the right pectoral into a large padded red mound; it visually consumes the neckline and collarbone. This internal padding utilizes feminist ideology to actively disfigure the traditional décolletage; the soft jersey fabric is pulled across the lump to create deep tension lines radiating outward. The high cowl neck is forced askew by the underlying mass; the left side of the torso remains completely flat in stark opposition to the bloated right side. The garment refuses sensual contouring to complete a silhouette defined by an intrusive autonomous growth."
+          "description": "The asymmetrical chest protuberance swells from the right pectoral into a large padded red mound. It visually consumes the neckline and collarbone. This internal padding utilizes feminist ideology to actively disfigure the traditional décolletage. The soft jersey fabric is pulled across the lump to create deep tension lines radiating outward. The high cowl neck is forced askew by the underlying mass. The left side of the torso remains completely flat in stark opposition to the bloated right side. The garment refuses sensual contouring to complete a silhouette defined by an intrusive autonomous growth."
         }
       ]
     },
@@ -240,15 +242,16 @@
           "x": 50,
           "y": 20,
           "label": "Engineered Cervical Protuberance",
-          "description": "The engineered cervical protuberance swells dramatically behind the neck beneath the collar of the red jacket; it forces the head forward into a permanent stoop. This displaced anatomy engages with the abject by mimicking severe spinal curvature or a parasitic attachment; the crisp red fabric covers the internal down pad seamlessly. The unbuttoned jacket splits open over the stomach but remains anchored to this massive dorsal hump; a singular black button sits dangerously strained at the sternum. The structure asserts a physical burden that dictates the entire posture of the wearer."
+          "description": "The engineered cervical protuberance swells dramatically behind the neck beneath the collar of the red jacket. It forces the head forward into a permanent stoop. This displaced anatomy engages with the abject by mimicking severe spinal curvature or a parasitic attachment. The crisp red fabric covers the internal down pad seamlessly. The unbuttoned jacket splits open over the stomach but remains anchored to this massive dorsal hump. A singular black button sits dangerously strained at the sternum. The structure asserts a physical burden that dictates the entire posture of the wearer."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Sheer Asymmetrical Midi Skirt",
-          "description": "The sheer asymmetrical midi skirt drops below the heavy jacket in a light translucent red layer; it provides a stark textural contrast to the dense padding above. This material choice applies deconstructionist theory by pairing a seemingly unfinished delicate undergarment with the heavy structural outerwear; the raw hem trails unevenly around the calves. The fabric shifts fluidly with the model's stride; the transparency reveals the silhouette of the legs beneath the heavy upper carapace. The skirt completes the look by offering a brief moment of organic movement beneath the engineered distortion."
+          "description": "The sheer asymmetrical midi skirt drops below the heavy jacket in a light translucent red layer. It provides a stark textural contrast to the dense padding above. This material choice applies deconstructionist theory by pairing a seemingly unfinished delicate undergarment with the heavy structural outerwear. The raw hem trails unevenly around the calves. The fabric shifts fluidly with the model's stride. The transparency reveals the silhouette of the legs beneath the heavy upper carapace. The skirt completes the look by offering a brief moment of organic movement beneath the engineered distortion."
         }
-      ]
+      ],
+      "content_note": "Nudity (sheer top)"
     }
   ],
   "tags": {

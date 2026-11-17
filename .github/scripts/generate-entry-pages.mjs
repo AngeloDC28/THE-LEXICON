@@ -41,6 +41,8 @@ const NOTE_FIELDS = [['provenance', 'Provenance'], ['critique', 'Critique'], ['s
  * html.js before first paint and index.css hides .static-entry under it, so
  * the interactive view is unchanged for everyone else.
  */
+const SEASONS = { SS: 'Spring/Summer', AW: 'Autumn/Winter' };
+
 function buildStaticArticle(entry) {
   const t = entry.tags || {};
   const cat = getTagCategory(t.politics || '');
@@ -54,6 +56,7 @@ function buildStaticArticle(entry) {
     const list = spots.length
       ? `<dl>${spots.map(h => `<dt>${esc(h.label)}</dt><dd>${esc(clean(h.description))}</dd>`).join('')}</dl>`
       : '';
+    if (img.content_note) return `<figure><p class="static-entry-note">Look ${i + 1} not shown here. Content note: ${esc(img.content_note)}.</p>${list}</figure>`;
     return `<figure><img src="${esc(thumb(img.src))}" alt="${esc(alt)}" width="480" loading="lazy" decoding="async"><figcaption>Look ${i + 1}</figcaption>${list}</figure>`;
   }).join('');
   const specs = SPEC_FIELDS
@@ -72,7 +75,8 @@ function buildStaticArticle(entry) {
   <article class="static-entry" aria-labelledby="static-entry-title">
     <p class="static-entry-nav"><a href="/">THE LEXICON</a> / <span>${esc(categoryPlain(cat))}</span></p>
     <h1 id="static-entry-title">${esc(entry.title)}${entry.subtitle ? `<span class="static-entry-sub">${esc(entry.subtitle)}</span>` : ''}</h1>
-    <p class="static-entry-meta">${esc(t.brand || '')} · ${esc(entry.season || '')} ${esc(entry.year || '')} · ${esc(categoryPlain(cat))} (${esc(categoryLabel(cat))})</p>
+    <p class="static-entry-meta">${esc(t.brand || '')} · ${esc(SEASONS[entry.season] || entry.season || '')} ${esc(entry.year || '')} · ${esc(categoryPlain(cat))} (${esc(categoryLabel(cat))})</p>
+    ${entry.summary_plain ? `<p class="static-entry-summary">${esc(entry.summary_plain)}</p>` : ''}
     ${notes}
     <section><h2>Looks</h2>${looks}<p class="static-entry-credit">${credit} Reproduced for criticism and review under CDPA 1988 s.30.</p></section>
     ${specs ? `<section><h2>Quick facts</h2><dl class="static-entry-specs">${specs}</dl></section>` : ''}
@@ -98,7 +102,7 @@ function buildArticleJsonLd(entry, url, ogImage) {
     t.brand, t.politics, t.theories, t.era, t.format
   ].filter(Boolean).flatMap(v => v.split(';').map(s => s.trim())).filter(Boolean);
 
-  const images = (entry.images || []).slice(0, 3).map(img =>
+  const images = (entry.images || []).filter(img => !img.content_note).slice(0, 3).map(img =>
     `${BASE}/public/${img.src || ''}`
   ).filter(s => s.length > BASE.length + 1);
   if (!images.length && ogImage) images.push(ogImage);
@@ -127,6 +131,8 @@ function buildArticleJsonLd(entry, url, ogImage) {
 }
 
 function buildDesc(entry) {
+  // The plain summary is what a friend sees when the link is shared.
+  if (entry.summary_plain) return entry.summary_plain;
   const critique = (entry.notes?.critique || '').slice(0, 200).trimEnd();
   const subtitle = entry.subtitle || '';
   // Don't prepend subtitle if it's already the opening words of the critique
@@ -154,7 +160,8 @@ for (const slug of slugs) {
   const title    = entry.title || slug;
   const desc     = buildDesc(entry);
   const url      = `${BASE}/entry/${slug}/0`;
-  const imgSrc   = entry.images?.[0]?.src || '';
+  // Link previews never show a look that carries a content note.
+  const imgSrc   = (entry.images || []).find(img => !img.content_note)?.src || '';
   const ogImage  = imgSrc
     ? `${BASE}/public/${imgSrc}`
     : `${BASE}/public/THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg`;

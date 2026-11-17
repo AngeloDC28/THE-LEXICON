@@ -167,6 +167,40 @@ export function excerpt(text, max = 120) {
   return body.replace(/[\s,;:.\-–—(]+$/, '') + '…';
 }
 
+// Abbreviations that end in a full stop but don't end a sentence. Splitting
+// on them turned McQueen's critique into the pull-quote "13 constitutes a
+// foundational document..." with the paragraph starting "No. By placing...".
+const NON_TERMINAL = /\b(No|Nos|St|Dr|Mr|Mrs|Ms|Mt|vs|etc|e\.g|i\.e|c|ca|cf|approx|Vol|Fig|Jr|Sr)\.$/i;
+
+/** Split prose into sentences without breaking on "No.", "St.", "vs." etc. */
+export function splitSentences(text) {
+  const parts = String(text ?? '').split(/(?<=[.!?])\s+/);
+  const out = [];
+  for (const part of parts) {
+    const prev = out[out.length - 1];
+    // Also glue a split before a lower-case word or a digit: "No. 13", "c. 1999".
+    if (prev && (NON_TERMINAL.test(prev) || /^[a-z0-9]/.test(part))) out[out.length - 1] = `${prev} ${part}`;
+    else out.push(part);
+  }
+  return out;
+}
+
+/** "SS" → "Spring/Summer", "AW" → "Autumn/Winter"; anything else unchanged. */
+export function seasonLong(season) {
+  const s = String(season || '').toUpperCase();
+  return s === 'SS' ? 'Spring/Summer' : s === 'AW' || s === 'FW' ? 'Autumn/Winter' : (season || '');
+}
+
+/**
+ * The one line a newcomer reads about a show: the plain summary when the entry
+ * has one, otherwise the first sentence of the critique.
+ */
+export function entrySummary(entry, translate = (s) => s, max = 200) {
+  if (entry?.summary_plain) return translate(entry.summary_plain);
+  const raw = entry?.notes?.critique || entry?.notes?.provenance || '';
+  return excerpt(splitSentences(translate(raw))[0] || '', max);
+}
+
 export function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {

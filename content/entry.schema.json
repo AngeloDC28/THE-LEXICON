@@ -10,7 +10,9 @@
     "season",
     "images",
     "tags",
-    "notes"
+    "notes",
+    "published",
+    "summary_plain"
   ],
   "additionalProperties": false,
   "properties": {

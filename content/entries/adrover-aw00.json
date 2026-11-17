@@ -6,6 +6,7 @@
   "year": 2000,
   "season": "AW",
   "published": "2026-05-18",
+  "summary_plain": "Miguel Adrover held an underground show in New York using old, thrown-away clothes, including a coat made from his late neighbour's stained mattress. It made people ask who decides what counts as luxury, and what counts as rubbish.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg",
@@ -20,7 +21,7 @@
           "x": 50,
           "y": 85,
           "label": "Matching Check Trouser Cuffs and Pumps",
-          "description": "Beneath the coat's long hem, cuffs of the same appropriated check peek out above simple brown pointed pumps, extending the hijacked Burberry pattern from outerwear down to the ankle rather than isolating it to a single showpiece. The deliberately unremarkable footwear keeps visual emphasis on the stolen textile itself; there is no additional spectacle competing with the pattern's own recognisability. This continuity across the whole silhouette underlines Adrover's guerrilla methodology of total reconstruction from a single sourced luxury good, worn with the same deadpan confidence as any ordinary ready-to-wear coat and trouser combination."
+          "description": "Beneath the coat's long hem, cuffs of the same appropriated check peek out above simple brown pointed pumps, extending the hijacked Burberry pattern from outerwear down to the ankle rather than isolating it to a single showpiece. The deliberately unremarkable footwear keeps visual emphasis on the stolen textile itself. There is no additional spectacle competing with the pattern's own recognisability. This continuity across the whole silhouette underlines Adrover's guerrilla methodology of total reconstruction from a single sourced luxury good, worn with the same deadpan confidence as any ordinary ready-to-wear coat and trouser combination."
         }
       ]
     },
@@ -31,7 +32,7 @@
           "x": 50,
           "y": 32,
           "label": "Oversized Bouclé Knit Wrap Cardigan",
-          "description": "The oversized bouclé knit wrap cardigan swallows the upper body in a dense oatmeal and grey knit, its collar rising into an exaggerated funnel shape and its sleeves ballooning into vast dolman volumes; left unfastened but for a single hook, it falls open to expose the bare midriff beneath. This relaxed, domestically-textured knitwear draws on found and surplus materials rather than couture fabrication, consistent with the collection's reliance on deadstock and upcycled textiles. The garment's soft, oversized bulk refuses the era's body-conscious tailoring, asserting a comfort-driven, almost blanket-like informality against the polished corporate silhouettes the collection was staged to critique."
+          "description": "The oversized bouclé knit wrap cardigan swallows the upper body in a dense oatmeal and grey knit, its collar rising into an exaggerated funnel shape and its sleeves ballooning into vast dolman volumes. Left unfastened but for a single hook, it falls open to expose the bare midriff beneath. This relaxed, domestically-textured knitwear draws on found and surplus materials rather than couture fabrication, consistent with the collection's reliance on deadstock and upcycled textiles. The garment's soft, oversized bulk refuses the era's body-conscious tailoring, asserting a comfort-driven, almost blanket-like informality against the polished corporate silhouettes the collection was staged to critique."
         },
         {
           "x": 50,
@@ -48,7 +49,7 @@
           "x": 50,
           "y": 32,
           "label": "Windowpane Check Overcoat over Ribbed Turtleneck",
-          "description": "The windowpane check overcoat structures the torso in a fine black-and-white grid, worn open over a chunky ribbed ivory turtleneck and closed at a single button beneath the collarbone; the model's hair is worked into tight cornrows pulled back from the face. The coat's fine graphic check nods toward corporate tailoring codes without fully complying with them — the garment hangs open and unstructured rather than buttoned into formal discipline. This half-compliance with businesswear enacts the collection's broader subversion of Wall Street polish into something looser and more downtown."
+          "description": "The windowpane check overcoat structures the torso in a fine black-and-white grid, worn open over a chunky ribbed ivory turtleneck and closed at a single button beneath the collarbone. The model's hair is worked into tight cornrows pulled back from the face. The coat's fine graphic check nods toward corporate tailoring codes without fully complying with them — the garment hangs open and unstructured rather than buttoned into formal discipline. This half-compliance with businesswear enacts the collection's broader subversion of Wall Street polish into something looser and more downtown."
         },
         {
           "x": 50,
@@ -65,7 +66,7 @@
           "x": 50,
           "y": 30,
           "label": "Draped Camel Kaftan with Dolman Sleeves",
-          "description": "The draped camel kaftan falls from a deep V-neckline in dolman sleeves so wide they read as a single continuous plane of fabric from wrist to hem; the loosely woven, undyed wool traps and releases light unevenly across its surface. This unstructured, single-seam construction abandons Western tailoring's reliance on darts and princess seams in favour of a wrapped, non-fitted drape borrowed from non-Western dress traditions. Consistent with the collection's ecological politics, the raw, minimally processed textile foregrounds the visible labour and material honesty of the weave itself over a polished finished surface."
+          "description": "The draped camel kaftan falls from a deep V-neckline in dolman sleeves so wide they read as a single continuous plane of fabric from wrist to hem. The loosely woven, undyed wool traps and releases light unevenly across its surface. This unstructured, single-seam construction abandons Western tailoring's reliance on darts and princess seams in favour of a wrapped, non-fitted drape borrowed from non-Western dress traditions. Consistent with the collection's ecological politics, the raw, minimally processed textile foregrounds the visible labour and material honesty of the weave itself over a polished finished surface."
         },
         {
           "x": 50,
@@ -82,7 +83,7 @@
           "x": 50,
           "y": 32,
           "label": "Sheer Rust Draped Overlay",
-          "description": "A sheer rust-orange overlay drapes asymmetrically across the shoulders and chest like an improvised stole, its diaphanous weave revealing the fitted knit top and undergarments beneath; the fabric falls unevenly, longer on one side than the other, with no visible closure holding its position. This provisional, half-tied styling — cloth draped rather than cut and seamed to the body — treats garment construction as an ongoing, informal gesture rather than a fixed engineering problem, in keeping with the collection's downtown, DIY sensibility."
+          "description": "A sheer rust-orange overlay drapes asymmetrically across the shoulders and chest like an improvised stole, its diaphanous weave revealing the fitted knit top and undergarments beneath. The fabric falls unevenly, longer on one side than the other, with no visible closure holding its position. This provisional, half-tied styling — cloth draped rather than cut and seamed to the body — treats garment construction as an ongoing, informal gesture rather than a fixed engineering problem, in keeping with the collection's downtown, DIY sensibility."
         },
         {
           "x": 50,
@@ -99,7 +100,7 @@
           "x": 50,
           "y": 30,
           "label": "Draped Wool Wrap Cape, Open to the Waist",
-          "description": "The draped wool wrap cape falls from the shoulders in an enormous unstructured triangle of soft grey-beige bouclé, its two front panels crossing loosely and fastened by a single small hook well below the collarbone, leaving the chest bare beneath. The cape's scale — pooling in deep folds well past the hips — treats the wearer's body as a mere armature for an oversized textile event rather than the reverse; construction subordinates itself entirely to the raw material's own drape and weight."
+          "description": "The draped wool wrap cape falls from the shoulders in an enormous unstructured triangle of soft grey-beige bouclé, its two front panels crossing loosely and fastened by a single small hook well below the collarbone, leaving the chest bare beneath. The cape's scale — pooling in deep folds well past the hips — treats the wearer's body as a mere armature for an oversized textile event rather than the reverse. Construction subordinates itself entirely to the raw material's own drape and weight."
         },
         {
           "x": 50,
@@ -116,15 +117,16 @@
           "x": 40,
           "y": 40,
           "label": "Sheer Sequin-Embroidered Caftan",
-          "description": "The foreground model wears a sheer caftan densely embroidered with scattered metallic sequins across an olive-toned net ground, its dolman sleeves and unfitted body allowing the light beneath to catch each sequin individually as she walks; the weave is sheer enough to reveal the body's silhouette entirely beneath the glittering surface. This exposed, unlined transparency abandons the era's tendency toward polished eveningwear opacity, instead offering a raw, handcrafted density of embellishment against the runway's low light."
+          "description": "The foreground model wears a sheer caftan densely embroidered with scattered metallic sequins across an olive-toned net ground, its dolman sleeves and unfitted body allowing the light beneath to catch each sequin individually as she walks. The weave is sheer enough to reveal the body's silhouette entirely beneath the glittering surface. This exposed, unlined transparency abandons the era's tendency toward polished eveningwear opacity, instead offering a raw, handcrafted density of embellishment against the runway's low light."
         },
         {
           "x": 78,
           "y": 45,
           "label": "Cream Asymmetric Slip Dress, Seen from Behind",
-          "description": "Behind her, a second model walks away from camera in a pale cream slip dress cut on the bias, its uneven hem dropping into a raw, frayed point at one hip while the opposite side rises to mid-thigh; her hair is worked into an elaborate braided updo pinned high off the neck. Seen only from behind, the dress's asymmetric hem and visible spine seam read as sculptural rather than merely decorative, emphasising construction over the more conventional frontal presentation typical of eveningwear."
+          "description": "Behind her, a second model walks away from camera in a pale cream slip dress cut on the bias, its uneven hem dropping into a raw, frayed point at one hip while the opposite side rises to mid-thigh. Her hair is worked into an elaborate braided updo pinned high off the neck. Seen only from behind, the dress's asymmetric hem and visible spine seam read as sculptural rather than merely decorative, emphasising construction over the more conventional frontal presentation typical of eveningwear."
         }
-      ]
+      ],
+      "content_note": "Nudity (sheer dress)"
     },
     {
       "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-08.jpg",

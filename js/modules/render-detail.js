@@ -2,13 +2,13 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=715e5c2';
-import { AppState, updateHash } from './core-state.js?v=715e5c2';
-import { getFilteredEntries } from './search-engine.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=715e5c2';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=715e5c2';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=715e5c2';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=9291973';
+import { AppState, updateHash } from './core-state.js?v=9291973';
+import { getFilteredEntries } from './search-engine.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=9291973';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=9291973';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=9291973';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -265,7 +265,8 @@ function renderSidebarHeader(entry) {
   header.innerHTML = `
     <h1 class="detail-title">${escapeHtml(pageTitle)}${subtitle ? `<span class="detail-subtitle">${escapeHtml(subtitle)}</span>` : ''}</h1>
     <span class="detail-accent-tag" data-cat="${cat}">${tagLabel.toUpperCase()}</span>
-    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
+    <div class="detail-entry-id">${brand} · ${season ? seasonLong(season) + ' ' : ''}${year}</div>
+    ${entry.summary_plain ? `<p class="detail-summary">${escapeHtml(getTranslation(entry.summary_plain, lang))}</p>` : ''}
     ${vibesHtml}
     ${posLabel ? `
     <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
@@ -308,6 +309,36 @@ function renderBreadcrumb(entry) {
   });
 }
 
+// Looks with nudity carry a content_note. The image is blurred behind a
+// short note until the reader chooses to see it; the choice lasts for the
+// visit (sessionStorage), so they aren't asked again on every look.
+const REVEAL_KEY = 'lexicon_reveal_sensitive';
+function sensitiveRevealed() {
+  try { return sessionStorage.getItem(REVEAL_KEY) === '1'; } catch { return false; }
+}
+function renderContentNote(imgObj) {
+  const wrapper = $('detail-image-wrapper');
+  if (!wrapper) return;
+  wrapper.querySelector('.content-note-veil')?.remove();
+  const note = imgObj?.content_note;
+  const veiled = !!note && !sensitiveRevealed();
+  wrapper.classList.toggle('is-veiled', veiled);
+  if (!veiled) return;
+  const veil = document.createElement('div');
+  veil.className = 'content-note-veil';
+  veil.innerHTML = `
+    <p class="content-note-label">Content note</p>
+    <p class="content-note-text">${escapeHtml(note)}</p>
+    <button type="button" class="content-note-btn">Show image</button>`;
+  veil.querySelector('button').addEventListener('click', () => {
+    try { sessionStorage.setItem(REVEAL_KEY, '1'); } catch { /* private mode: reveal this one only */ }
+    wrapper.classList.remove('is-veiled');
+    veil.remove();
+    document.querySelectorAll('.grid-cell.is-veiled').forEach(c => c.classList.remove('is-veiled'));
+  });
+  wrapper.appendChild(veil);
+}
+
 function renderImage(entry, callbacks) {
   const imgs = entry.images;
   const currentImgObj = imgs[AppState.currentImageIndex];
@@ -326,7 +357,12 @@ function renderImage(entry, callbacks) {
     imgEl.onload = () => {
       if (callbacks && callbacks.extractAccentColor) callbacks.extractAccentColor(imgEl);
     };
-    if (webpEl) webpEl.srcset = resolveImgSrc({ src: webpSrc(currentImgObj) });
+    // Phones get the 480px thumbnail (the image shows at ~430px wide there);
+    // larger screens the 1000px file. Saves ~4x the bytes on mobile data.
+    if (webpEl) {
+      webpEl.srcset = `${resolveImgSrc({ src: thumbSrc(currentImgObj) })} 480w, ${resolveImgSrc({ src: webpSrc(currentImgObj) })} 1000w`;
+      webpEl.sizes = '(max-width: 1023px) 92vw, 50vw';
+    }
     // Apply known dimensions to prevent CLS while the new image loads.
     const dims = imgAttrs(currentImgObj);
     if (dims) {
@@ -345,6 +381,8 @@ function renderImage(entry, callbacks) {
     const described = parts.length ? `: ${parts.join(', ')}` : '';
     imgEl.alt = `${baseAlt}, look ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}${described}`;
   }
+
+  renderContentNote(currentImgObj);
 
   const titleEl = $('active-entry-title');
   if (titleEl) {
@@ -438,7 +476,7 @@ function renderBrutalistNodes(entry) {
       // Critique note gets a pull quote — extract the first sentence 40–250 chars
       let bodyHtml = text;
       if (type.id === 'critique') {
-        const sentences = text.split(/(?<=[.!?])\s+/);
+        const sentences = splitSentences(text);
         const pullIdx = sentences.findIndex(s => s.length >= 40 && s.length <= 280);
         if (pullIdx >= 0) {
           const pull = sentences.splice(pullIdx, 1)[0];

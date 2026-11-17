@@ -10,26 +10,26 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js?v=715e5c2';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt } from './modules/core-utils.js?v=715e5c2';
+import { imageDimensions } from './modules/image-dimensions.js?v=9291973';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong } from './modules/core-utils.js?v=9291973';
 setImageDimensions(imageDimensions);
-import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=715e5c2';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=715e5c2';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=715e5c2';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=715e5c2';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=715e5c2';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=9291973';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=9291973';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=9291973';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=9291973';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=9291973';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js?v=715e5c2';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=715e5c2';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=715e5c2';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=715e5c2';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=715e5c2';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=715e5c2';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=715e5c2';
-import { getTranslation, supportedLanguages } from './modules/translations.js?v=715e5c2';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=715e5c2';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=715e5c2';
-import { renderGlossaryModal } from './modules/glossary.js?v=715e5c2';
+import { switchView } from './modules/navigation.js?v=9291973';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=9291973';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=9291973';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=9291973';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=9291973';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=9291973';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=9291973';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=9291973';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=9291973';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=9291973';
+import { renderGlossaryModal } from './modules/glossary.js?v=9291973';
 
 // --- Shared Callbacks ---
 const callbacks = {
@@ -77,7 +77,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=715e5c2');
+  const { archiveData: staticData } = await import('../database.js?v=9291973');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -1923,7 +1923,7 @@ function renderHero(archiveData) {
     const brand = (candidate.tags?.brand || '').toUpperCase();
     const year = candidate.year || '—';
     const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
-    const hook = excerpt(candidate.notes?.critique || candidate.notes?.provenance || '', 200);
+    const hook = entrySummary(candidate, s => getTranslation(s, AppState.language), 220);
 
     const tagEl = $('hero-tag-label');
     if (tagEl) {
@@ -1936,7 +1936,7 @@ function renderHero(archiveData) {
     if (titleEl && candidate.title) titleEl.innerHTML = `<em>${candidate.title}</em>`;
 
     const brandEl = $('hero-featured-brand');
-    if (brandEl) brandEl.textContent = `${brand} · ${year} · ${season}`;
+    if (brandEl) brandEl.textContent = `${brand} · ${seasonLong(candidate.season)} ${year}`.trim();
 
     const descEl = $('hero-featured-desc');
     if (descEl) descEl.textContent = hook;
@@ -2056,15 +2056,19 @@ function renderEntryOfWeek(archiveData) {
   const titleEl = $('eow-title');
   if (titleEl) titleEl.innerHTML = pick.title ? `<em>${pick.title}</em>` : '';
   const brandEl = $('eow-brand');
-  if (brandEl) brandEl.textContent = `${(pick.tags?.brand || '').toUpperCase()} · ${pick.year || '—'} · ${pick.season ? pick.season.toUpperCase() : ''}`;
+  if (brandEl) brandEl.textContent = `${(pick.tags?.brand || '').toUpperCase()} · ${seasonLong(pick.season)} ${pick.year || ''}`.trim();
+  const sumEl = $('eow-summary');
+  if (sumEl) sumEl.textContent = entrySummary(pick, s => getTranslation(s, AppState.language), 220);
   const vibesEl = $('eow-vibes');
   if (vibesEl) {
     const vibes = Array.isArray(pick.vibes) ? pick.vibes.slice(0, 4) : [];
     vibesEl.innerHTML = vibes.map(v => `<span class="eow-vibe">${v}</span>`).join('');
   }
   const bgEl = $('eow-bg');
-  if (bgEl && pick.images?.[0]) {
-    bgEl.style.backgroundImage = `url(${resolveImgSrc(pick.images[0])})`;
+  // Never use a look with a content note as a background nobody chose to see.
+  const bgImg = (pick.images || []).find(im => !im.content_note);
+  if (bgEl && bgImg) {
+    bgEl.style.backgroundImage = `url(${resolveImgSrc(bgImg)})`;
   }
   card.onclick = () => openDetail(pick.id, 0, archiveData, callbacks);
 }

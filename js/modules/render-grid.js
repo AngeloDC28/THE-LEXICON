@@ -5,11 +5,11 @@
  * window.location.origin, fixing the broken image issue where relative paths
  * resolved incorrectly depending on the current URL.
  */
-import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
-import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=715e5c2';
-import { getFilteredEntries } from './search-engine.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=715e5c2';
+import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, BROKEN_ASSET } from './core-utils.js?v=9291973';
+import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=9291973';
+import { getFilteredEntries } from './search-engine.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=9291973';
 
 export function setupGridIntersectionObserver() {
   if (gridIntersectionObserver) {
@@ -101,25 +101,27 @@ export function renderImageGrid(archiveData, callbacks) {
 
       const hotspotCount = imgs.reduce((n, im) => n + (im?.hotspots || []).length, 0);
       const hotspotBadge = hotspotCount > 0
-        ? `<div class="grid-cell-hotspot-badge" aria-label="${hotspotCount} hotspot${hotspotCount > 1 ? 's' : ''}">◉ ${hotspotCount}</div>`
+        ? `<div class="grid-cell-hotspot-badge" aria-hidden="true">◉ ${hotspotCount} note${hotspotCount > 1 ? 's' : ''}</div>`
         : '';
       const season = entry.season || '';
       const year = entry.year || '----';
-      const metaLine = [brand.toUpperCase(), year, season].filter(Boolean).join(' · ');
-      // Only show hook on first image of each entry (i===0) to avoid repetition
-      const hookRaw = i === 0 ? (entry.notes?.critique || '') : '';
-      const hook = hookRaw ? excerpt(getTranslation(hookRaw, AppState.language).split(/(?<=[.!?])\s/)[0], 90) : '';
+      // "Loewe · Spring/Summer 2023": SS/AW mean nothing to a newcomer.
+      const metaLine = `${brand.toUpperCase()} · ${[seasonLong(season), year].filter(Boolean).join(' ')}`;
+      // The plain summary is what a newcomer reads; it falls back to the
+      // first sentence of the critique for entries that don't have one yet.
+      const hook = i === 0 ? entrySummary(entry, s => getTranslation(s, AppState.language), 220) : '';
+      const note = imgObj?.content_note && !sensitiveRevealed() ? imgObj.content_note : '';
 
       // Only the first image per entry is a keyboard/screen-reader target.
       // Subsequent images are presentational — clickable via mouse but not
       // tab-reachable. This reduces tab stops from 643 → 45.
       const isFirst = i === 0;
       const a11yAttrs = isFirst
-        ? `tabindex="0" role="button" aria-label="Open ${brand} ${season} ${year} — ${tagLabel} (${imgs.length} image${imgs.length !== 1 ? 's' : ''})"`
+        ? `tabindex="0" role="button" aria-label="Open ${brand} ${seasonLong(season)} ${year}: ${categoryPlain(tagCategory)}, ${imgs.length} look${imgs.length !== 1 ? 's' : ''}${hotspotCount ? `, ${hotspotCount} notes` : ''}${note ? `. Content note: ${note}` : ''}"`
         : `aria-hidden="true"`;
 
       html += `
-        <div class="grid-cell grid-cell--delay-${index % 10}"
+        <div class="grid-cell grid-cell--delay-${index % 10}${note ? ' is-veiled' : ''}"
              data-entry-id="${entry.id}"
              data-img-index="${i}"
              ${a11yAttrs}>
@@ -128,6 +130,7 @@ export function renderImageGrid(archiveData, callbacks) {
           </div>
           <div class="grid-cell-img group">
             ${hotspotBadge}
+            ${note ? `<span class="grid-cell-note" aria-hidden="true">Content note: ${escapeHtml(note)}</span>` : ''}
             <picture>
               <source type="image/webp" srcset="${resolveImgSrc({src: thumbSrc(imgObj)})}">
               <img
@@ -162,6 +165,10 @@ export function renderImageGrid(archiveData, callbacks) {
     grid.querySelectorAll('img').forEach(img => { if (img.complete) img.classList.add('loaded'); });
   }, 150);
   setupGridIntersectionObserver();
+}
+
+function sensitiveRevealed() {
+  try { return sessionStorage.getItem('lexicon_reveal_sensitive') === '1'; } catch { return false; }
 }
 
 export function renderEntryList(archiveData, callbacks) {
@@ -295,7 +302,7 @@ export function renderFeaturedStrip(archiveData) {
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
     const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
     const webpImg = firstImg ? resolveImgSrc({ src: thumbSrc(firstImg) }) : null;
-    const hook = excerpt(getTranslation(entry.notes?.critique || entry.notes?.provenance || '', lang), 120);
+    const hook = entrySummary(entry, s => getTranslation(s, lang), 200);
 
     const imgHtml = imgSrc
       ? `<picture>

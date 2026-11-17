@@ -3,10 +3,10 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
-import { AppState } from './core-state.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
-import { invalidateSearchCache } from './search-engine.js?v=715e5c2';
+import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=9291973';
+import { AppState } from './core-state.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { invalidateSearchCache } from './search-engine.js?v=9291973';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');
@@ -158,17 +158,21 @@ export function updateMetaForEntry(entry) {
   if (ogTitle) ogTitle.content = title;
 
   const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc) ogDesc.content = `Analyzing architectural details of ${entry.tags.brand} (${entry.year}) within the forensic archival database.`;
+  if (ogDesc) ogDesc.content = entry.summary_plain || `${entry.tags.brand} (${entry.year}), explained.`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && entry.summary_plain) metaDesc.content = entry.summary_plain;
 
+  // Never a look with a content note as the preview image.
+  const cover = (entry.images || []).find(im => !im.content_note) || null;
   const ogImg = document.querySelector('meta[property="og:image"]');
-  if (ogImg) ogImg.content = resolveImgSrc(entry.images && entry.images[0]);
+  if (ogImg && cover) ogImg.content = resolveImgSrc(cover);
 
   // Twitter Tags
   const twTitle = document.querySelector('meta[name="twitter:title"]');
   if (twTitle) twTitle.content = title;
 
   const twImg = document.querySelector('meta[name="twitter:image"]');
-  if (twImg) twImg.content = resolveImgSrc(entry.images && entry.images[0]);
+  if (twImg && cover) twImg.content = resolveImgSrc(cover);
 }
 
 export function resetMeta() {

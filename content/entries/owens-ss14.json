@@ -6,6 +6,7 @@
   "year": 2014,
   "season": "SS",
   "published": "2026-05-12",
+  "summary_plain": "Instead of models, Rick Owens cast forty step dancers, from a dance style born in Black American colleges, who stomped down the runway pulling fierce faces. It challenged who gets to show clothes, and how.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg",
@@ -14,19 +15,19 @@
           "x": 50,
           "y": 8,
           "label": "Sheer Mesh Veil Cap",
-          "description": "The sheer mesh veil cap binds the skull in a fitted black dome before releasing two long panels of sheer black fabric that fall past the shoulders; it frames the face within a severe architectural silhouette. This headpiece engages with theories of architectural shielding by constructing a portable barrier between the model and the audience's gaze. The stiff dome sits flush against the scalp while the sheer drapes shift loosely with every stride; the intense grimace remains fully visible beneath the mesh. The accessory completes the look by asserting a defensive, almost monastic anonymity within an otherwise exposed presentation."
+          "description": "The sheer mesh veil cap binds the skull in a fitted black dome before releasing two long panels of sheer black fabric that fall past the shoulders. It frames the face within a severe architectural silhouette. This headpiece engages with theories of architectural shielding by constructing a portable barrier between the model and the audience's gaze. The stiff dome sits flush against the scalp while the sheer drapes shift loosely with every stride. The intense grimace remains fully visible beneath the mesh. The accessory completes the look by asserting a defensive, almost monastic anonymity within an otherwise exposed presentation."
         },
         {
           "x": 50,
           "y": 35,
           "label": "Center-Front Zip Tunic Dress",
-          "description": "The center-front zip tunic dress runs a single exposed zipper the full length of the black satin-finish fabric from collar to hem; it turns a structural closure into the garment's dominant graphic line. This detail engages with industrial brutalism by refusing hidden couture seaming in favor of a raw mechanical fastening. The bright silver teeth interrupt the flat matte black textile; the hem is finished with a stiff leather-bound band along the base. The dress asserts a utilitarian pragmatism that favors function over decorative embellishment."
+          "description": "The center-front zip tunic dress runs a single exposed zipper the full length of the black satin-finish fabric from collar to hem. It turns a structural closure into the garment's dominant graphic line. This detail engages with industrial brutalism by refusing hidden couture seaming in favor of a raw mechanical fastening. The bright silver teeth interrupt the flat matte black textile. The hem is finished with a stiff leather-bound band along the base. The dress asserts a utilitarian pragmatism that favors function over decorative embellishment."
         },
         {
           "x": 50,
           "y": 92,
           "label": "Two-Tone Sneaker Boot",
-          "description": "The two-tone sneaker boot pairs a black suede upper with a stark white outsole and lacing details; it grounds the severe tunic in an aggressively sporting silhouette. This footwear strategy applies theories of monolithic massing to anchor the body in an exaggerated, heavily padded foundation. The thick geometric sole and reinforced ankle collar dwarf the natural proportions of the foot; the white trim cuts a sharp line against the black upper. This piece asserts a posture of combative readiness that prioritizes kinetic impact over delicate grace."
+          "description": "The two-tone sneaker boot pairs a black suede upper with a stark white outsole and lacing details. It grounds the severe tunic in an aggressively sporting silhouette. This footwear strategy applies theories of monolithic massing to anchor the body in an exaggerated, heavily padded foundation. The thick geometric sole and reinforced ankle collar dwarf the natural proportions of the foot. The white trim cuts a sharp line against the black upper. This piece asserts a posture of combative readiness that prioritizes kinetic impact over delicate grace."
         }
       ]
     },
@@ -37,7 +38,7 @@
           "x": 50,
           "y": 35,
           "label": "Exposed Vertical Zipper",
-          "description": "The exposed vertical zipper runs the full length of the black leather mini dress from the throat to the hem; this functional hardware engages with the concept of industrial brutalism by highlighting a crude mechanical closure. The bright silver teeth stand out sharply against the glossy black hide; the detail refuses hidden couture seaming to assert a harsh utilitarian pragmatism."
+          "description": "The exposed vertical zipper runs the full length of the black leather mini dress from the throat to the hem. This functional hardware engages with the concept of industrial brutalism by highlighting a crude mechanical closure. The bright silver teeth stand out sharply against the glossy black hide. The detail refuses hidden couture seaming to assert a harsh utilitarian pragmatism."
         },
         {
           "x": 29,
@@ -83,7 +84,7 @@
           "x": 50,
           "y": 30,
           "label": "Washed Leather Shift Carapace",
-          "description": "The washed leather shift carapace coats the torso in a highly textured, battered black hide cut into a simple cap-sleeve shift silhouette; this material choice engages directly with subcultural origins by elevating punk and goth staple fabrics to the runway. The dull sheen of the treated skin catches the light unevenly across the bust; the boxy cut skims the body without darting or seaming. The dress asserts a tough, resilient shield later disrupted by the frivolity of its own pom-pom hem."
+          "description": "The washed leather shift carapace coats the torso in a highly textured, battered black hide cut into a simple cap-sleeve shift silhouette. This material choice engages directly with subcultural origins by elevating punk and goth staple fabrics to the runway. The dull sheen of the treated skin catches the light unevenly across the bust. The boxy cut skims the body without darting or seaming. The dress asserts a tough, resilient shield later disrupted by the frivolity of its own pom-pom hem."
         }
       ]
     },
@@ -123,7 +124,7 @@
           "x": 50,
           "y": 8,
           "label": "Wrapped Fabric Headband",
-          "description": "The wrapped fabric headband binds the skull tightly in a folded cream textile that matches the tunic beneath it; this styling choice invokes subcultural systems by referencing athletic sweatbands and urban street uniform codes. The strict horizontal wrap flattens the hair against the forehead while leaving the model's flat, unreadable expression fully exposed. The accessory completes the silhouette by framing the face as a disciplined extension of the muted khaki uniform."
+          "description": "The wrapped fabric headband binds the skull tightly in a folded cream textile that matches the tunic beneath it. This styling choice invokes subcultural systems by referencing athletic sweatbands and urban street uniform codes. The strict horizontal wrap flattens the hair against the forehead while leaving the model's flat, unreadable expression fully exposed. The accessory completes the silhouette by framing the face as a disciplined extension of the muted khaki uniform."
         }
       ]
     },
@@ -151,13 +152,13 @@
           "x": 50,
           "y": 30,
           "label": "Structured Cap-Shoulder Vest",
-          "description": "The structured cap-shoulder vest squares off the torso in a stiff charcoal hide with a stand collar and a vertical center tab that echoes a necktie; this outerwear choice utilizes architectural shielding to build a rigid plane across the chest. The dropped shoulder seams sit slightly away from the arm; the leather holds its shape without clinging to the body beneath. The vest asserts a disciplined, uniformed severity consistent with the collection's monastic palette of dust and bone."
+          "description": "The structured cap-shoulder vest squares off the torso in a stiff charcoal hide with a stand collar and a vertical center tab that echoes a necktie. This outerwear choice utilizes architectural shielding to build a rigid plane across the chest. The dropped shoulder seams sit slightly away from the arm. The leather holds its shape without clinging to the body beneath. The vest asserts a disciplined, uniformed severity consistent with the collection's monastic palette of dust and bone."
         },
         {
           "x": 50,
           "y": 52,
           "label": "Wrapped Sash Belt",
-          "description": "The wrapped sash belt crosses the waist in two wide bands of matching charcoal fabric before trailing loose past the hip; this sartorial intervention applies theories of bodily discipline and restraint to an otherwise boxy silhouette. The flat straps compress the vest against the ribcage while one length hangs free as a kinetic counterweight. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
+          "description": "The wrapped sash belt crosses the waist in two wide bands of matching charcoal fabric before trailing loose past the hip. This sartorial intervention applies theories of bodily discipline and restraint to an otherwise boxy silhouette. The flat straps compress the vest against the ribcage while one length hangs free as a kinetic counterweight. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
         }
       ]
     },
@@ -168,7 +169,7 @@
           "x": 50,
           "y": 18,
           "label": "Rabbit-Ear Hood with Contrast Piping",
-          "description": "The rabbit-ear hood drops two long panels of dark fabric past the shoulders, each bound in a crisp white piped edge that continues down the vest front in a vertical stripe; this accessory utilizes subcultural theatricality to transform the model into an unsettling monastic figure. The stiff white trim traces the hood's outline sharply against the charcoal ground; the hood dwarfs the face beneath it. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
+          "description": "The rabbit-ear hood drops two long panels of dark fabric past the shoulders, each bound in a crisp white piped edge that continues down the vest front in a vertical stripe. This accessory utilizes subcultural theatricality to transform the model into an unsettling monastic figure. The stiff white trim traces the hood's outline sharply against the charcoal ground. The hood dwarfs the face beneath it. The piece completes the silhouette by enforcing bodily obfuscation at the highest point of the body."
         },
         {
           "x": 50,
@@ -242,13 +243,13 @@
           "x": 50,
           "y": 40,
           "label": "Asymmetrical Suspended Drape Tunic",
-          "description": "The asymmetrical suspended drape tunic falls from a rolled cowl neckline into an uneven cascading hem; this structural logic utilizes monolithic massing to obscure the specific anatomy of the torso. The stiff off-white fabric holds its shape rigidly away from the hips rather than clinging to the skin; a single triangular panel breaks free to trail past the knee on one side. The garment refuses classical tailoring to complete a silhouette resembling a nomadic protective shroud."
+          "description": "The asymmetrical suspended drape tunic falls from a rolled cowl neckline into an uneven cascading hem. This structural logic utilizes monolithic massing to obscure the specific anatomy of the torso. The stiff off-white fabric holds its shape rigidly away from the hips rather than clinging to the skin. A single triangular panel breaks free to trail past the knee on one side. The garment refuses classical tailoring to complete a silhouette resembling a nomadic protective shroud."
         },
         {
           "x": 50,
           "y": 18,
           "label": "Doubled Portrait Collar",
-          "description": "The doubled portrait collar gathers heavy off-white fabric into two stacked folds that stand away from the throat; this construction utilizes suspended drape by allowing gravity to dictate the collar's final shape rather than internal boning. The dolman sleeves extend directly from the collar's base without a set-in seam; a faint ochre mark stains the fabric just below the collarbone, left visible rather than concealed. The detail asserts an unfinished, lived-in quality consistent with the collection's ethos of visceral wearability."
+          "description": "The doubled portrait collar gathers heavy off-white fabric into two stacked folds that stand away from the throat. This construction utilizes suspended drape by allowing gravity to dictate the collar's final shape rather than internal boning. The dolman sleeves extend directly from the collar's base without a set-in seam. A faint ochre mark stains the fabric just below the collarbone, left visible rather than concealed. The detail asserts an unfinished, lived-in quality consistent with the collection's ethos of visceral wearability."
         }
       ]
     },
@@ -259,13 +260,13 @@
           "x": 49,
           "y": 6,
           "label": "Raised-Elbow Hair Gesture",
-          "description": "The raised-elbow hair gesture captures the model dragging both hands back through her hair with visible force; this performative action engages with queer theory and subcultural systems by introducing raw emotional labor into the presentation of the garment. The sharply bent elbows momentarily widen the upper silhouette on either side of the head; the gesture reads as exhaustion or catharsis rather than posed elegance. This movement refuses static mannequinesque posing to assert a lived-in and deeply visceral physical presence."
+          "description": "The raised-elbow hair gesture captures the model dragging both hands back through her hair with visible force. This performative action engages with queer theory and subcultural systems by introducing raw emotional labor into the presentation of the garment. The sharply bent elbows momentarily widen the upper silhouette on either side of the head. The gesture reads as exhaustion or catharsis rather than posed elegance. This movement refuses static mannequinesque posing to assert a lived-in and deeply visceral physical presence."
         },
         {
           "x": 50,
           "y": 48,
           "label": "Side-Vented Cotton Shift",
-          "description": "The side-vented cotton shift covers the torso in a flat khaki field left free of visible hardware or tailoring darts; this minimalist construction invokes the concept of the body in crisis by offering a completely unrestrictive and egalitarian covering. Deep vents split the hem at both hips to allow maximum mobility for the legs mid-stride; the fabric creases loosely rather than holding a set shape. The garment asserts a brutalist simplicity that prioritizes the kinetic action of the wearer over decorative complexity."
+          "description": "The side-vented cotton shift covers the torso in a flat khaki field left free of visible hardware or tailoring darts. This minimalist construction invokes the concept of the body in crisis by offering a completely unrestrictive and egalitarian covering. Deep vents split the hem at both hips to allow maximum mobility for the legs mid-stride. The fabric creases loosely rather than holding a set shape. The garment asserts a brutalist simplicity that prioritizes the kinetic action of the wearer over decorative complexity."
         }
       ]
     },
@@ -276,7 +277,7 @@
           "x": 50,
           "y": 40,
           "label": "Horizontal Torsional Strapping",
-          "description": "The horizontal torsional strapping wraps the charcoal vest in two crossed bands across the bust and midriff before trailing loose past the hip; this sartorial intervention applies theories of bodily discipline and restraint to an otherwise structured top. The flat fabric belts compress the volume of the vest against the ribcage; the excess length swings freely as a kinetic counterweight. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
+          "description": "The horizontal torsional strapping wraps the charcoal vest in two crossed bands across the bust and midriff before trailing loose past the hip. This sartorial intervention applies theories of bodily discipline and restraint to an otherwise structured top. The flat fabric belts compress the volume of the vest against the ribcage. The excess length swings freely as a kinetic counterweight. This detail refuses fluid drape to assert an aesthetic of martial readiness and engineered containment."
         },
         {
           "x": 50,

@@ -6,6 +6,7 @@
   "year": 2014,
   "season": "AW",
   "published": "2026-05-21",
+  "summary_plain": "Haider Ackermann made clothes that seem to twist around the body, with seams running on the diagonal and deep reds, greys and golds. It showed how cut and fabric alone, with no logos or tricks, can feel powerful.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg",
@@ -14,13 +15,13 @@
           "x": 50,
           "y": 35,
           "label": "Monolithic Notch-Lapel Overcoat",
-          "description": "The monolithic notch-lapel overcoat drops the body into a single unbroken column of warm brown-grey wool; a narrow felt-trimmed lapel is the only structural interruption across the chest. This reductive silhouette engages with Ackermann's haptic proposition that the quality of cloth against the body communicates more than applied ornament. The coat hangs open the full length of the torso over a crewneck tunic cut from the identical heather wool; the hand sinks into a single besom pocket. The garment asserts a quiet cosmopolitan restraint, privileging warmth and drape over overt display."
+          "description": "The monolithic notch-lapel overcoat drops the body into a single unbroken column of warm brown-grey wool. A narrow felt-trimmed lapel is the only structural interruption across the chest. This reductive silhouette engages with Ackermann's haptic proposition that the quality of cloth against the body communicates more than applied ornament. The coat hangs open the full length of the torso over a crewneck tunic cut from the identical heather wool. The hand sinks into a single besom pocket. The garment asserts a quiet cosmopolitan restraint, privileging warmth and drape over overt display."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Slouching Wool Trousers",
-          "description": "The slouching wool trousers drop heavily from the waist into a wide relaxed volume; they perfectly match the color and texture of the coat above. This structural logic applies monolithic massing to complete a full suit of heavy organic fabric. The textile pools thickly around the ankles; the hem drags slightly over dark footwear. The trousers assert a ceremonial almost monastic volume that completely obscures the legs."
+          "description": "The slouching wool trousers drop heavily from the waist into a wide relaxed volume. They perfectly match the color and texture of the coat above. This structural logic applies monolithic massing to complete a full suit of heavy organic fabric. The textile pools thickly around the ankles. The hem drags slightly over dark footwear. The trousers assert a ceremonial almost monastic volume that completely obscures the legs."
         }
       ]
     },
@@ -31,13 +32,13 @@
           "x": 50,
           "y": 30,
           "label": "Layered Fur-Sleeved Jacket",
-          "description": "The layered fur-sleeved jacket envelopes the upper body in a massive highly textured volume; it features dense dark brown fur completely covering the arms while leaving the torso in a smooth grey wool. This material strategy engages with structural draping by isolating heavy organic pelts to emphasize the shoulders and sleeves. The stiff grey lapels fold back rigidly; the front zipper hangs open to expose the chest. The outerwear asserts an imposing and highly defensive urban armor."
+          "description": "The layered fur-sleeved jacket envelopes the upper body in a massive highly textured volume. It features dense dark brown fur completely covering the arms while leaving the torso in a smooth grey wool. This material strategy engages with structural draping by isolating heavy organic pelts to emphasize the shoulders and sleeves. The stiff grey lapels fold back rigidly. The front zipper hangs open to expose the chest. The outerwear asserts an imposing and highly defensive urban armor."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Tapered Wool Trousers",
-          "description": "The tapered wool trousers drop cleanly to the ankle in a soft grey textile; they provide a strict formal baseline against the chaotic heavy fur above. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear. The fabric falls cleanly without formal pleating; the hem breaks sharply over dark suede boots. The trousers complete the look by enforcing a strictly disciplined and abbreviated lower silhouette."
+          "description": "The tapered wool trousers drop cleanly to the ankle in a soft grey textile. They provide a strict formal baseline against the chaotic heavy fur above. This tailoring choice utilizes quiet minimalism to anchor the aggressive outerwear. The fabric falls cleanly without formal pleating. The hem breaks sharply over dark suede boots. The trousers complete the look by enforcing a strictly disciplined and abbreviated lower silhouette."
         }
       ]
     },
@@ -48,19 +49,19 @@
           "x": 50,
           "y": 35,
           "label": "Asymmetrical Checkered Coat",
-          "description": "The asymmetrical checkered coat structures the upper body in a stiff dark brown and black grid pattern; it features deeply dropped shoulders and uneven lapels that fold casually over the chest. This tailoring extreme engages with sartorial melancholia by treating a classic piece of formal menswear as a relaxed slightly slouched layer. The heavy wool fabric holds deep rigid folds; the massive fur sleeves peek out from the cuffs. The outerwear asserts an elegant but deeply vulnerable and informal presence."
+          "description": "The asymmetrical checkered coat structures the upper body in a stiff dark brown and black grid pattern. It features deeply dropped shoulders and uneven lapels that fold casually over the chest. This tailoring extreme engages with sartorial melancholia by treating a classic piece of formal menswear as a relaxed slightly slouched layer. The heavy wool fabric holds deep rigid folds. The massive fur sleeves peek out from the cuffs. The outerwear asserts an elegant but deeply vulnerable and informal presence."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Slouchy Black Jersey Trousers",
-          "description": "The slouchy black jersey trousers drop fluidly from the waist into a relaxed comfortable fit; they gather thickly around the ankles. This material application provides a soft kinetic base beneath the heavy formal coat. The dark fabric absorbs the runway lighting completely; it lacks any formal creasing or hardware. The trousers complete the ensemble by grounding the formal upper volume in a deeply casual domestic drape."
+          "description": "The slouchy black jersey trousers drop fluidly from the waist into a relaxed comfortable fit. They gather thickly around the ankles. This material application provides a soft kinetic base beneath the heavy formal coat. The dark fabric absorbs the runway lighting completely. It lacks any formal creasing or hardware. The trousers complete the ensemble by grounding the formal upper volume in a deeply casual domestic drape."
         },
         {
           "x": 50,
           "y": 10,
           "label": "Minimalist Skull Cap",
-          "description": "The minimalist skull cap binds the head tightly in dark material; it heavily obscures the hairline and natural proportions of the skull. This styling detail engages with corporeal obfuscation by forcing the pale face into stark relief against the dark uniform. The tight fit creates a stark horizontal line across the forehead; the model lacks any bright cosmetic embellishment. The accessory completes the look by isolating the face within a heavy protective frame."
+          "description": "The minimalist skull cap binds the head tightly in dark material. It heavily obscures the hairline and natural proportions of the skull. This styling detail engages with corporeal obfuscation by forcing the pale face into stark relief against the dark uniform. The tight fit creates a stark horizontal line across the forehead. The model lacks any bright cosmetic embellishment. The accessory completes the look by isolating the face within a heavy protective frame."
         }
       ]
     },
@@ -71,13 +72,13 @@
           "x": 50,
           "y": 35,
           "label": "Cropped Leather Moto Jacket",
-          "description": "The cropped leather moto jacket tightly binds the upper torso in a stiff dark hide; it features classic sharp lapels and a heavily zipped front closure left completely open. This outerwear choice engages with the subversion of menswear tailoring by taking an aggressive fetishistic fabric and mutating it into an abbreviated feminine shell. The dark material absorbs light heavily; the wide collar sits flatly over the bare chest. The jacket asserts a highly structured and slightly provocative upper carapace."
+          "description": "The cropped leather moto jacket tightly binds the upper torso in a stiff dark hide. It features classic sharp lapels and a heavily zipped front closure left completely open. This outerwear choice engages with the subversion of menswear tailoring by taking an aggressive fetishistic fabric and mutating it into an abbreviated feminine shell. The dark material absorbs light heavily. The wide collar sits flatly over the bare chest. The jacket asserts a highly structured and slightly provocative upper carapace."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Wide-Leg Khaki Trousers",
-          "description": "The wide-leg khaki trousers drop from a high thick black leather belt into a relaxed fluid volume; they provide a quiet formal base for the aggressive leather jacket. This structural logic utilizes unrestrictive spatial volume to allow kinetic mobility beneath the tight top. The pale fabric falls smoothly over dark pointed footwear; the waist is finished cleanly without pleats. The trousers complete the look by anchoring the severe top with comfortable effortless drape."
+          "description": "The wide-leg khaki trousers drop from a high thick black leather belt into a relaxed fluid volume. They provide a quiet formal base for the aggressive leather jacket. This structural logic utilizes unrestrictive spatial volume to allow kinetic mobility beneath the tight top. The pale fabric falls smoothly over dark pointed footwear. The waist is finished cleanly without pleats. The trousers complete the look by anchoring the severe top with comfortable effortless drape."
         }
       ]
     },
@@ -88,13 +89,13 @@
           "x": 50,
           "y": 45,
           "label": "Elongated Houndstooth Topcoat",
-          "description": "The elongated houndstooth topcoat drops heavily to the ankle in a massive unstructured volume; it features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds; it drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
+          "description": "The elongated houndstooth topcoat drops heavily to the ankle in a massive unstructured volume. It features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds. It drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
         },
         {
           "x": 50,
           "y": 30,
           "label": "Draped Silk Blouse",
-          "description": "The draped silk blouse wraps the torso tightly beneath the heavy coat in a highly lustrous dark fabric; it features a plunging neckline that exposes the chest. This material application introduces a soft fluid layer to contrast the heavy wool outerwear. The shiny textile catches the light softly; it tucks sharply into the matching trousers. The garment asserts a quiet sensual elegance hidden beneath the heavy protective shell."
+          "description": "The draped silk blouse wraps the torso tightly beneath the heavy coat in a highly lustrous dark fabric. It features a plunging neckline that exposes the chest. This material application introduces a soft fluid layer to contrast the heavy wool outerwear. The shiny textile catches the light softly. It tucks sharply into the matching trousers. The garment asserts a quiet sensual elegance hidden beneath the heavy protective shell."
         }
       ]
     },
@@ -105,13 +106,13 @@
           "x": 50,
           "y": 40,
           "label": "Textured Houndstooth Topcoat",
-          "description": "The textured houndstooth topcoat drops heavily to the ankle in a massive unstructured volume; it features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds; it drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
+          "description": "The textured houndstooth topcoat drops heavily to the ankle in a massive unstructured volume. It features a classic brown and black woven pattern that obscures the natural shoulder line. This outerwear choice applies structural draping by taking a highly formal heritage textile and letting it hang like a relaxed cardigan. The stiff wool fabric holds deep loose folds. It drags slightly as the model walks. The coat asserts an imposing architectural shield that functions as luxurious nomadic armor."
         },
         {
           "x": 50,
           "y": 60,
           "label": "Matching Houndstooth Trousers",
-          "description": "The matching houndstooth trousers drop from the waist in the exact same highly textured pattern; they create a continuous unbroken column of heritage fabric. This material strategy engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The thick textile falls without sharp creases; the hem pools heavily over black leather boots. The trousers complete the ensemble by providing a soft tactile base that echoes the formal outerwear."
+          "description": "The matching houndstooth trousers drop from the waist in the exact same highly textured pattern. They create a continuous unbroken column of heritage fabric. This material strategy engages with monolithic massing by ensuring the upper and lower volumes blend seamlessly. The thick textile falls without sharp creases. The hem pools heavily over black leather boots. The trousers complete the ensemble by providing a soft tactile base that echoes the formal outerwear."
         }
       ]
     },
@@ -122,13 +123,13 @@
           "x": 50,
           "y": 45,
           "label": "Elongated Dark Wool Overcoat",
-          "description": "The elongated dark wool overcoat runs the body into a single unbroken column of near-black olive wool; a slim notch lapel finished in a whisper of contrast felt is the garment's only ornament. This severe reduction extends Ackermann's diagonal compositional logic into pure verticality, letting the coat's floor-sweeping hem do the work that seaming does elsewhere in the collection. The sleeves run the full length of the arm to the wrist; the coat hangs open over a matching crewneck knit. The garment asserts an unyielding, almost monastic quietude against the model's own bearing."
+          "description": "The elongated dark wool overcoat runs the body into a single unbroken column of near-black olive wool. A slim notch lapel finished in a whisper of contrast felt is the garment's only ornament. This severe reduction extends Ackermann's diagonal compositional logic into pure verticality, letting the coat's floor-sweeping hem do the work that seaming does elsewhere in the collection. The sleeves run the full length of the arm to the wrist. The coat hangs open over a matching crewneck knit. The garment asserts an unyielding, almost monastic quietude against the model's own bearing."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Relaxed Jersey Trousers",
-          "description": "The relaxed jersey trousers drop from the waist in a dark muted fabric; they feature a soft un-tailored fit that contrasts with the severe coat above. This material application provides a comfortable kinetic base beneath the heavy formal armor. The dark material falls cleanly over black leather boots; it lacks sharp formal creasing. The trousers complete the ensemble by emphasizing the relaxed nomadic aesthetic beneath the rigid outerwear."
+          "description": "The relaxed jersey trousers drop from the waist in a dark muted fabric. They feature a soft un-tailored fit that contrasts with the severe coat above. This material application provides a comfortable kinetic base beneath the heavy formal armor. The dark material falls cleanly over black leather boots. It lacks sharp formal creasing. The trousers complete the ensemble by emphasizing the relaxed nomadic aesthetic beneath the rigid outerwear."
         }
       ]
     },
@@ -139,13 +140,13 @@
           "x": 50,
           "y": 30,
           "label": "Sheer Knit Pullover",
-          "description": "The sheer knit pullover clings tightly to the upper body in a translucent dark mesh; it exposes the torso entirely beneath a fragile synthetic layer. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black trousers. The thin fabric features a simple crew neckline; it is tucked sharply into the wide leather belt. The top asserts a quiet and vulnerable contrast to the heavy textured layers of the collection."
+          "description": "The sheer knit pullover clings tightly to the upper body in a translucent dark mesh. It exposes the torso entirely beneath a fragile synthetic layer. This material choice utilizes bodily obfuscation by turning the skin into a dark smoky shadow against the solid black trousers. The thin fabric features a simple crew neckline. It is tucked sharply into the wide leather belt. The top asserts a quiet and vulnerable contrast to the heavy textured layers of the collection."
         },
         {
           "x": 50,
           "y": 65,
           "label": "High-Waisted Black Maxi Skirt",
-          "description": "The high-waisted black maxi skirt drops heavily to the floor in a dense unbroken column of dark fabric; it provides a severe formal base for the sheer top. This structural logic utilizes monolithic massing to fuse classic tailoring textiles with surreal proportion distortion. The dark fabric absorbs the light completely; the thick leather belt cinches the natural waist securely. The skirt completes the look by anchoring the delicate knitwear with an imposing geometric base."
+          "description": "The high-waisted black maxi skirt drops heavily to the floor in a dense unbroken column of dark fabric. It provides a severe formal base for the sheer top. This structural logic utilizes monolithic massing to fuse classic tailoring textiles with surreal proportion distortion. The dark fabric absorbs the light completely. The thick leather belt cinches the natural waist securely. The skirt completes the look by anchoring the delicate knitwear with an imposing geometric base."
         }
       ]
     },
@@ -156,13 +157,13 @@
           "x": 50,
           "y": 30,
           "label": "Layered Wool and Leather Jacket",
-          "description": "The layered wool and leather jacket structures the torso in a complex collage of textures; it features snakeskin-print leather sleeves extending from a dark brown wool vest. This outerwear choice engages with sartorial layering by physically fusing multiple distinct garments into a single architectural shell. The stiff lapels hang open to reveal a grey knit underlayer; a thick black leather belt cinches the waist aggressively. The jacket asserts a highly constructed and protective upper carapace."
+          "description": "The layered wool and leather jacket structures the torso in a complex collage of textures. It features snakeskin-print leather sleeves extending from a dark brown wool vest. This outerwear choice engages with sartorial layering by physically fusing multiple distinct garments into a single architectural shell. The stiff lapels hang open to reveal a grey knit underlayer. A thick black leather belt cinches the waist aggressively. The jacket asserts a highly constructed and protective upper carapace."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Slouchy Dark Wool Trousers",
-          "description": "The slouchy dark wool trousers drop fluidly from the waist into a deeply relaxed and baggy silhouette; they gather thickly around the ankles. This styling choice engages with the nomadic aesthetic by pairing highly conceptual restricted outerwear with incredibly casual mundane pants. The dark fabric pools heavily over black footwear; it lacks any formal pleating or hardware. The garment completes the look by grounding the surreal upper volume in a familiar everyday staple."
+          "description": "The slouchy dark wool trousers drop fluidly from the waist into a deeply relaxed and baggy silhouette. They gather thickly around the ankles. This styling choice engages with the nomadic aesthetic by pairing highly conceptual restricted outerwear with incredibly casual mundane pants. The dark fabric pools heavily over black footwear. It lacks any formal pleating or hardware. The garment completes the look by grounding the surreal upper volume in a familiar everyday staple."
         }
       ]
     },
@@ -173,13 +174,13 @@
           "x": 50,
           "y": 45,
           "label": "Elongated Black Wool Topcoat",
-          "description": "The elongated black wool topcoat drops cleanly to the ankle in a smooth dark fabric; it features long flowing lapels that trail heavily down the chest. This outerwear choice utilizes unrestrictive spatial volume to create a dramatic sweeping silhouette that obscures the natural waistline. The dark material absorbs light completely; the front hangs open to reveal the tailored suit beneath. The coat asserts a highly theatrical and slightly mournful presence."
+          "description": "The elongated black wool topcoat drops cleanly to the ankle in a smooth dark fabric. It features long flowing lapels that trail heavily down the chest. This outerwear choice utilizes unrestrictive spatial volume to create a dramatic sweeping silhouette that obscures the natural waistline. The dark material absorbs light completely. The front hangs open to reveal the tailored suit beneath. The coat asserts a highly theatrical and slightly mournful presence."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Tailored Crepe Trousers",
-          "description": "The tailored crepe trousers drop straight from the waist to the ankle in a dark matte fabric; they feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex flowing topcoat with a heavy formal base. The fabric falls cleanly over dark footwear; the waist is finished cleanly without a belt. The trousers complete the look by enforcing a strict tailored discipline."
+          "description": "The tailored crepe trousers drop straight from the waist to the ankle in a dark matte fabric. They feature a sharp front crease and a slightly relaxed fit. This structural logic engages with monolithic massing by anchoring the complex flowing topcoat with a heavy formal base. The fabric falls cleanly over dark footwear. The waist is finished cleanly without a belt. The trousers complete the look by enforcing a strict tailored discipline."
         }
       ]
     }
