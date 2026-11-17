@@ -2397,12 +2397,39 @@ html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
   padding-bottom: 6px;
 }
 
-.node-provenance { background: #E6FF00 !important; } /* Acid Yellow */
-.node-critique   { background: #FF0000 !important; } /* Editorial Red */
-.node-strategy   { background: #0000FF !important; } /* Digital Blue */
-/* Black on #0000FF is about 2.4:1 — unreadable. White is 8.6:1. */
-.node-strategy, .node-strategy .node-label { color: #fff !important; }
-.node-strategy .node-label { border-bottom-color: rgba(255,255,255,0.8); }
+/* The three notes keep their colours as markers (a thick left rule and the
+   label), not as full-bleed backgrounds: a whole paragraph on #CCFF00 was
+   tiring to read and made Provenance look more important than the other
+   two, and pure #FF0000 / #0000FF read as browser defaults next to the
+   photographs. Yellow is kept for the main action and the focus ring. */
+:root { --note-prov: #CCFF00; --note-crit: #FF5A47; --note-strat: #6F86FF; }
+.node-provenance, .node-critique, .node-strategy {
+  background: #0A0A0A !important;
+  color: rgba(255,255,255,0.92) !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  border-left-width: 6px !important;
+  box-shadow: none;
+}
+.node-provenance { border-left-color: var(--note-prov) !important; }
+.node-critique   { border-left-color: var(--note-crit) !important; }
+.node-strategy   { border-left-color: var(--note-strat) !important; }
+.node-provenance .node-label { color: var(--note-prov); }
+.node-critique .node-label   { color: var(--note-crit); }
+.node-strategy .node-label   { color: var(--note-strat); }
+.brutalist-node.node-provenance .node-label,
+.brutalist-node.node-critique .node-label,
+.brutalist-node.node-strategy .node-label { border-bottom-color: rgba(255,255,255,0.18); }
+.node-provenance:hover, .node-critique:hover, .node-strategy:hover { transform: none; box-shadow: none; }
+html:not(.dark) .node-provenance, html:not(.dark) .node-critique, html:not(.dark) .node-strategy {
+  background: #fff !important; color: #111 !important; border-color: rgba(0,0,0,0.18) !important;
+}
+html:not(.dark) .node-provenance { border-left-color: #8FB300 !important; }
+html:not(.dark) .node-critique   { border-left-color: #D62B17 !important; }
+html:not(.dark) .node-strategy   { border-left-color: #2F49D1 !important; }
+html:not(.dark) .node-provenance .node-label { color: #4d6600; }
+html:not(.dark) .node-critique .node-label   { color: #B3200F; }
+html:not(.dark) .node-strategy .node-label   { color: #2F49D1; }
+.node-label .node-plain { text-transform: none; letter-spacing: 0.02em; font-weight: 400; opacity: 0.8; }
 
 /* The notes are the archive's main content: set them as reading text in
    EB Garamond, sentence case, at body size. Mono stays for the labels. */
@@ -3677,17 +3704,22 @@ html:not(.dark) .cookie-strip {
   border-top-color: rgba(0,0,0,0.15);
 }
 .cookie-strip-text {
+  /* A sentence, so sentence case: uppercase mono is the hardest style to
+     read for anything longer than a label. */
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.6;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
   flex: 1;
   min-width: 0;
   line-height: 1.4;
   color: #fff;
 }
 html:not(.dark) .cookie-strip-text { color: #000; }
+@media (max-width: 640px) {
+  .cookie-strip { flex-direction: column; align-items: stretch; gap: 8px; }
+  .cookie-strip-actions { justify-content: flex-end; flex-wrap: wrap; }
+}
 .cookie-strip-actions {
   display: flex;
   align-items: center;
@@ -3980,206 +4012,6 @@ html.dark .active-hotspot-box {
 #image-counter:empty,
 #image-counter[data-count="1"] { display: none !important; }
 
-/* ── WELCOME MODAL (first-visit onboarding overlay) ── */
-.welcome-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9000;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: auto;
-  padding: 24px 16px;
-}
-@media (max-width: 600px) {
-  .welcome-modal { padding: 16px 12px; align-items: flex-start; }
-}
-.welcome-modal[hidden] { display: none !important; }
-
-.welcome-inner {
-  width: 100%;
-  max-width: 760px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-@media (max-width: 600px) {
-  .welcome-inner { gap: 18px; }
-}
-
-/* Language row */
-.welcome-lang-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-.welcome-lang-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-}
-.welcome-lang-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.wlang-btn {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 6px 12px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: transparent;
-  color: rgba(255,255,255,0.45);
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
-  min-height: 44px;
-  min-width: 44px;
-}
-.wlang-btn:hover { border-color: #CCFF00; color: #CCFF00; }
-.wlang-btn.active { border-color: #CCFF00; color: #CCFF00; background: rgba(204,255,0,0.06); }
-.wlang-btn:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
-
-/* Header */
-.welcome-header { display: flex; flex-direction: column; gap: 10px; }
-.welcome-wordmark {
-  font-family: var(--font-mono);
-  font-size: clamp(1.125rem, 3.2vw, 2.5rem);
-  font-weight: 900;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #fff;
-}
-.welcome-wordmark span { color: #CCFF00; }
-.welcome-subtitle {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-sm);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin: 0;
-}
-.welcome-desc {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-  color: rgba(255,255,255,0.5);
-  line-height: 1.45;
-  margin: 0;
-}
-
-/* Steps */
-.welcome-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-@media (max-width: 600px) {
-  .welcome-steps { grid-template-columns: 1fr; }
-}
-.welcome-step {
-  background: #000;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-@media (max-width: 600px) {
-  .welcome-step { padding: 14px 16px; gap: 4px; }
-}
-.ws-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #CCFF00;
-}
-.ws-title {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-sm);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-top: 4px;
-}
-.ws-desc {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 15px;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.5);
-}
-@media (max-width: 600px) {
-  .ws-desc { font-size: 13.5px; line-height: 1.45; }
-}
-
-/* Footer */
-.welcome-footer {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.welcome-cta {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-xs);
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  background: #CCFF00;
-  color: #000;
-  border: none;
-  padding: 14px 28px;
-  cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
-  min-height: 48px;
-}
-.welcome-cta:hover { background: #fff; }
-.welcome-cta:active { transform: scale(0.98); }
-.welcome-cta:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-.welcome-skip {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  min-height: 44px;
-}
-.welcome-skip:hover { color: rgba(255,255,255,0.6); }
-.welcome-skip:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
-
-/* Light mode */
-html:not(.dark) .welcome-modal { background: #f5f5f0; }
-html:not(.dark) .welcome-wordmark { color: #000; }
-html:not(.dark) .welcome-subtitle { color: rgba(0,0,0,0.6); }
-html:not(.dark) .welcome-desc { color: rgba(0,0,0,0.5); }
-html:not(.dark) .welcome-steps { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.06); }
-html:not(.dark) .welcome-step { background: #f5f5f0; }
-html:not(.dark) .ws-title { color: #000; }
-html:not(.dark) .ws-desc { color: rgba(0,0,0,0.5); }
-html:not(.dark) .wlang-btn { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.5); }
-html:not(.dark) .wlang-btn:hover { border-color: #000; color: #000; }
-html:not(.dark) .wlang-btn.active { border-color: #000; color: #000; background: rgba(0,0,0,0.06); }
-html:not(.dark) .welcome-lang-label { color: rgba(0,0,0,0.55); }
-html:not(.dark) .welcome-cta { background: #000; color: #CCFF00; }
-html:not(.dark) .welcome-cta:hover { background: #333; }
-html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
-
 /* ── STICKY NOTE SQUARES (top-right image triggers) ── */
 .sticky-square {
   /* Labelled pills, not bare colour swatches — the colour alone used to be
@@ -4220,9 +4052,11 @@ html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
   outline: 2px solid #CCFF00;
   outline-offset: 3px;
 }
-.sq-provenance { background: #E6FF00; color: #000; }
-.sq-critique   { background: #FF0000; color: #fff; }
-.sq-strategy   { background: #0000FF; color: #fff; }
+/* Outlined, on black, so they don't fight the photo they sit on. */
+.sq-provenance, .sq-critique, .sq-strategy { background: rgba(0,0,0,0.82); border: 2px solid currentColor; }
+.sq-provenance { color: var(--note-prov); }
+.sq-critique   { color: var(--note-crit); }
+.sq-strategy   { color: var(--note-strat); }
 
 /* ── STICKY NOTE PANEL (right-side reveal panel) ── */
 #sticky-note-panel {
@@ -4277,6 +4111,9 @@ html:not(.dark) .site-footer { border-top-color: #e0e0dc; background: #f4f4f0; }
 }
 html:not(.dark) .footer-bottom { color: #666; }
 .footer-tech { opacity: 0.85; }
+.footer-links { display: inline-flex; flex-wrap: wrap; gap: 0 6px; }
+.footer-links a { text-decoration: underline; text-underline-offset: 3px; min-height: 24px; display: inline-flex; align-items: center; }
+.footer-links a:hover { color: #CCFF00; }
 .footer-kbd-hint {
   background: none;
   border: 1px solid currentColor;
@@ -4873,9 +4710,26 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 }
 .dark .glossary-term { background: rgba(204,255,0,0.12); color: #CCFF00; }
 .glossary-def {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.glossary-group {
+  font-family: var(--font-mono);
   font-size: 12px;
-  line-height: 1.55;
-  opacity: 0.85;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 20px 0 6px;
+  opacity: 0.7;
+}
+.gloss-tooltip-more {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 @media (max-width: 600px) {
   #glossary-modal .glossary-entry { grid-template-columns: 1fr; gap: 4px 0; }
@@ -5130,4 +4984,15 @@ html:not(.dark) .detail-summary { color: #1a1a1a; }
   position: absolute; left: 8px; bottom: 8px; z-index: 3;
   font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
   background: rgba(0,0,0,0.8); color: #fff; padding: 4px 8px;
+}
+
+/* One line under the Nexus header saying what a connection means. */
+.matrix-key {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.78);
+  padding: 10px 16px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }

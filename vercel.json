@@ -163,10 +163,6 @@
   ],
   "rewrites": [
     {
-      "source": "/about",
-      "destination": "/index.html"
-    },
-    {
       "source": "/entry/:path*",
       "destination": "/index.html"
     }

@@ -35,6 +35,8 @@ const url = (loc) => `  <url><loc>${loc}</loc></url>`;
 
 const urls = [
   url(`${BASE}/`),
+  // Static pages written by generate-static-pages.mjs.
+  ...['about', 'glossary', 'privacy', 'terms'].map(p => url(`${BASE}/${p}`)),
   ...ids.map(id => url(`${BASE}/entry/${id}/0`)),
 ];
 
@@ -48,4 +50,4 @@ writeFileSync(OUT, xml, 'utf8');
 // Mirror to a second URL — gives a clean fetch path that bypasses any
 // cached-failure backoff in Google Search Console's sitemap processor.
 writeFileSync(OUT_ALT, xml, 'utf8');
-console.log(`LEXICON_SITEMAP ok (wrote ${OUT} + ${OUT_ALT} — 1 homepage + ${ids.length} entries)`);
+console.log(`LEXICON_SITEMAP ok (wrote ${OUT} + ${OUT_ALT} — 1 homepage + 4 pages + ${ids.length} entries)`);

@@ -60,7 +60,6 @@
   ],
   "loading": "CARICAMENTO LEXICON...",
   "accept_terms": "[ ACCETTA ]",
-  "cookie_notice": "Questa directory utilizza lo storage locale per mantenere lo stato del terminale.",
   "close": "Chiudi",
   "null_set": "Insieme Nullo Rilevato",
   "null_set_desc": "Regola i filtri o i parametri di ricerca",

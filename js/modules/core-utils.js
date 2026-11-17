@@ -185,6 +185,23 @@ export function splitSentences(text) {
   return out;
 }
 
+// Short names for tight labels (Nexus graph nodes). Cutting at a fixed
+// length gave "UNDERCOVE", "BALENCIAG", "ALEXANDER MCQU".
+const SHORT_BRAND = {
+  'Comme des Garçons': 'CDG', 'Hood By Air (HBA)': 'HBA', 'Viktor & Rolf': 'V&R',
+  'Iris van Herpen': 'Van Herpen', 'Dries Van Noten': 'Van Noten', 'Bottega Veneta': 'Bottega',
+  'Christian Dior': 'Dior', 'Maison Margiela': 'Margiela', 'Louis Vuitton': 'Vuitton',
+  'Saint Laurent': 'Saint Laurent', 'Calvin Klein': 'Calvin Klein', 'Miu Miu': 'Miu Miu',
+  'JW Anderson': 'JW Anderson',
+};
+/** "Alexander McQueen" → "McQueen", "Comme des Garçons" → "CDG", "Gucci" → "Gucci". */
+export function shortBrand(brand) {
+  const b = String(brand || '').trim();
+  if (SHORT_BRAND[b]) return SHORT_BRAND[b];
+  const words = b.split(/\s+/);
+  return words.length > 1 ? words[words.length - 1] : b;
+}
+
 /** "SS" → "Spring/Summer", "AW" → "Autumn/Winter"; anything else unchanged. */
 export function seasonLong(season) {
   const s = String(season || '').toUpperCase();

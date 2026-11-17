@@ -3,9 +3,9 @@
  * Logic for bookmarks, recently viewed, and local storage.
  */
 
-import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=9291973';
-import { AppState } from './core-state.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
+import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=3652186';
+import { AppState } from './core-state.js?v=3652186';
+import { getTranslation } from './translations.js?v=3652186';
 
 export function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }

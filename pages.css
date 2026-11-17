@@ -1,0 +1,61 @@
+/* Styles for the static pages (/about, /glossary, /privacy, /terms), written
+   by .github/scripts/generate-static-pages.mjs. External, not inline: the
+   site's CSP (style-src 'self') blocks inline styles. Same language as the
+   app: black, bone, acid yellow #CCFF00, mono labels, serif reading text. */
+:root {
+  --bg: #0A0A0A; --fg: #FAF9F6; --muted: rgba(250,249,246,0.72); --line: rgba(250,249,246,0.2);
+  --acid: #CCFF00;
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--fg); }
+body { font-family: var(--serif); font-size: 19px; line-height: 1.6; }
+a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--acid); }
+a:focus-visible { outline: 2px solid var(--acid); outline-offset: 2px; }
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 16px; top: 16px; background: var(--acid); color: #000; padding: 8px 12px; z-index: 10; }
+
+.bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px;
+  padding: 12px 16px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.14em; text-transform: uppercase; }
+.bar .logo { font-weight: 700; letter-spacing: 0.25em; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.bar nav { display: flex; gap: 20px; }
+.bar nav a { text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+.bar nav a[aria-current="page"] { color: var(--acid); }
+
+.doc { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--acid); margin: 0 0 8px; }
+h1 { font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem); line-height: 1.1; font-weight: 500; margin: 0 0 16px; }
+h2 { font-family: var(--mono); font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700;
+  margin: 40px 0 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+.lede { font-size: 1.2em; color: var(--fg); }
+p, li, dd { color: var(--muted); }
+ul { padding-left: 1.2em; }
+li { margin: 8px 0; }
+strong { color: var(--fg); font-weight: 600; }
+.ideas { list-style: none; padding: 0; }
+.ideas li { border-left: 3px solid var(--acid); padding-left: 12px; margin: 14px 0; }
+.theory { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+.jump { font-family: var(--mono); font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px; }
+.jump a { min-width: 32px; min-height: 32px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); text-decoration: none; }
+.gloss { margin: 0; }
+.term { padding: 14px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 16px; }
+.term:target { background: rgba(204,255,0,0.08); }
+.term dt { font-family: var(--mono); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--acid); margin-bottom: 4px; }
+.term dd { margin: 0; }
+
+.foot { border-top: 1px solid var(--line); padding: 20px 16px 32px; font-family: var(--mono); font-size: 12px;
+  letter-spacing: 0.08em; text-align: center; color: var(--muted); }
+.foot p { margin: 6px 0; }
+
+@media (prefers-color-scheme: light) {
+  :root { --bg: #F5F5F0; --fg: #0A0A0A; --muted: rgba(10,10,10,0.75); --line: rgba(10,10,10,0.2); color-scheme: light; }
+  .eyebrow, .term dt, .bar nav a[aria-current="page"] { color: #4d6600; }
+  .ideas li { border-left-color: #0A0A0A; }
+  .term:target { background: rgba(204,255,0,0.35); }
+  a:hover { color: #4d6600; }
+}

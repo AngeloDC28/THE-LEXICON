@@ -2,13 +2,13 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=9291973';
-import { AppState, updateHash } from './core-state.js?v=9291973';
-import { getFilteredEntries } from './search-engine.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
-import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=9291973';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=9291973';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=9291973';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=3652186';
+import { AppState, updateHash } from './core-state.js?v=3652186';
+import { getFilteredEntries } from './search-engine.js?v=3652186';
+import { getTranslation } from './translations.js?v=3652186';
+import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=3652186';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=3652186';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=3652186';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -19,11 +19,15 @@ export function updateStatusBar(archiveData) {
   if (entry) {
     if (brand)       brand.textContent       = entry.tags?.brand || '--';
     if (year)        year.textContent        = entry.year;
-    if (season)      season.textContent      = entry.season;
-    if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
+    if (season)      season.textContent      = seasonLong(entry.season);
+    // Same numbering as the entry panel's ‹ 36 / 45 › (position in the
+    // current, filtered order), not the position in the raw data file.
+    const filtered = getFilteredEntries(archiveData);
+    const pos = filtered.findIndex(e => e.id === entry.id);
+    if (entryStatus) entryStatus.textContent = pos >= 0 ? `${pos + 1} / ${filtered.length}` : '';
   } else {
     const filtered = getFilteredEntries(archiveData);
-    if (brand)       brand.textContent       = 'ARCHIVE';
+    if (brand)       brand.textContent       = 'ALL SHOWS';
     if (year) {
       const ys = archiveData.map(e => e.year).filter(Boolean);
       year.textContent = ys.length ? `${Math.min(...ys)}–${Math.max(...ys)}` : '—';
@@ -296,7 +300,7 @@ function renderBreadcrumb(entry) {
   const season = [entry.season, entry.year].filter(Boolean).join(' ');
   const sep = `<span class="mx-1 opacity-30">/</span>`;
   crumb.innerHTML =
-    `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
+    `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to all shows">ALL SHOWS</a>`
     + sep
     + `<span class="detail-breadcrumb-cat" data-cat="${cat}">${tagCat}</span>`
     + sep
@@ -330,7 +334,10 @@ function renderContentNote(imgObj) {
     <p class="content-note-label">Content note</p>
     <p class="content-note-text">${escapeHtml(note)}</p>
     <button type="button" class="content-note-btn">Show image</button>`;
-  veil.querySelector('button').addEventListener('click', () => {
+  // The image wrapper opens the full-screen zoom on click; the veil must not.
+  veil.addEventListener('click', (e) => e.stopPropagation());
+  veil.querySelector('button').addEventListener('click', (e) => {
+    e.stopPropagation();
     try { sessionStorage.setItem(REVEAL_KEY, '1'); } catch { /* private mode: reveal this one only */ }
     wrapper.classList.remove('is-veiled');
     veil.remove();
@@ -487,7 +494,7 @@ function renderBrutalistNodes(entry) {
       }
 
       node.innerHTML = `
-        <h3 id="note-${type.id}-label" class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]</h3>
+        <h3 id="note-${type.id}-label" class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]<span class="node-plain"> · ${escapeHtml(t(`note_${type.id}_plain`))}</span></h3>
         <div class="node-body">${bodyHtml}</div>
       `;
       container.appendChild(node);
@@ -545,9 +552,9 @@ function renderStickyOverlay(entry) {
   const t    = (k) => getTranslation(k, lang);
 
   const noteTypes = [
-    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance', bg: '#E6FF00', fg: '#000' },
-    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique',   bg: '#FF0000', fg: '#fff' },
-    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy',   bg: '#0000FF', fg: '#fff' }
+    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance', bg: '#0A0A0A', fg: '#CCFF00' },
+    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique',   bg: '#0A0A0A', fg: '#FF5A47' },
+    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy',   bg: '#0A0A0A', fg: '#6F86FF' }
   ];
 
   let activeId = null;
@@ -590,7 +597,7 @@ function renderStickyOverlay(entry) {
       if (panelHdr) {
         panelHdr.style.background  = type.bg;
         panelHdr.style.color       = type.fg;
-        panelHdr.style.borderColor = type.fg === '#fff' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.2)';
+        panelHdr.style.borderColor = type.fg;
       }
       if (panelLabel) { panelLabel.textContent = type.label; panelLabel.style.color = type.fg; }
       if (closeBtn)   closeBtn.style.color = type.fg;

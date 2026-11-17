@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/js/boot.js?v=9291973"></script>
+  <script src="/js/boot.js?v=3652186"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>THE LEXICON — fashion history, indexed analytically</title>
@@ -78,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="/index.css?v=9291973" />
+  <link rel="stylesheet" href="/index.css?v=3652186" />
 </head>
 
 <body>
@@ -164,13 +164,13 @@
       <button id="btn-hamburger" type="button" class="lg:hidden text-white border border-white/30 hover:border-acid hover:text-acid focus-ring p-2 min-w-[44px] min-h-[44px] flex items-center justify-center touch-manipulation transition-colors" aria-label="Toggle Menu" aria-expanded="false" aria-controls="index-panel">
         <svg class="w-7 h-7 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
-      <button type="button" id="header-title" aria-label="THE LEXICON · home" class="t-mono-xs lg:t-mono-sm font-bold tracking-[0.25em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</button>
+      <a href="/" id="header-title" class="t-mono-xs lg:t-mono-sm font-bold tracking-[0.25em] hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">THE LEXICON</a>
       <div id="header-telemetry" class="lexicon-tablet-up t-mono-xs font-mono opacity-50 tracking-widest uppercase" data-notranslate translate="no" aria-hidden="true" role="presentation">
         <span id="telemetry-text">LOADING ARCHIVE</span><span id="telemetry-cursor"></span>
       </div>
     </div>
     <div class="lexicon-desktop-only items-center gap-2 lg:gap-4 flex-wrap justify-end">
-      <button type="button" id="btn-folders-toggle" class="t-mono-xs opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] relative z-[60]" aria-pressed="false">FOLDERS</button>
+      <button type="button" id="btn-folders-toggle" class="t-mono-xs opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] relative z-[60]" aria-pressed="false">MY FOLDERS</button>
       <button type="button" id="btn-auth-toggle" class="t-mono-xs opacity-50 hover:opacity-100 font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] relative z-[60]">SIGN IN</button>
       <div class="relative inline-block">
         <button id="btn-lang-toggle" type="button" aria-haspopup="listbox" aria-expanded="false" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring flex items-center gap-1">
@@ -179,7 +179,7 @@
         <ul id="lang-dropdown" role="listbox" class="hidden absolute right-0 top-full mt-1 z-50 min-w-[160px] bg-bone dark:bg-darkBase border border-black dark:border-white shadow-lg max-h-[60vh] overflow-y-auto"></ul>
       </div>
       <a href="/about" id="btn-about" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">ABOUT</a>
-      <button type="button" data-open-glossary="1" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">GLOSSARY</button>
+      <a href="/glossary" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px] flex items-center">GLOSSARY</a>
       <button type="button" id="btn-contact" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]">CONTACT</button>
       <button type="button" id="btn-theme-toggle" class="t-mono-xs font-bold tracking-widest hover:text-acid transition-colors focus-ring min-h-[44px]" aria-label="Toggle light/dark theme">THEME</button>
     </div>
@@ -222,7 +222,7 @@
 
         <!-- Index Header -->
         <div class="border-b-[1px] border-black/80 dark:border-white/20 px-4 py-3 flex items-baseline justify-between shrink-0">
-          <span id="index-panel-title" class="t-chrome-xs font-medium uppercase tracking-[0.15em]">Research Index</span>
+          <span id="index-panel-title" class="t-chrome-xs font-medium uppercase tracking-[0.15em]">All shows</span>
           <button type="button" id="btn-show-bookmarks" class="t-chrome-xs font-mono uppercase tracking-wider opacity-50 hover:opacity-100 transition-opacity focus-ring min-h-[44px] px-2 inline-flex items-center gap-1" aria-pressed="false" aria-label="Filter to bookmarked entries"><span aria-hidden="true">★</span> Saved</button>
         </div>
 
@@ -233,8 +233,8 @@
             <button type="button" id="btn-auth-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Sign In</button>
             <button type="button" id="btn-lang-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Lang</button>
             <button type="button" id="btn-theme-toggle-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Theme</button>
-            <button type="button" id="btn-about-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">About</button>
-            <button type="button" data-open-glossary="1" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Glossary</button>
+            <a href="/about" id="btn-about-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring flex items-center justify-center">About</a>
+            <a href="/glossary" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring flex items-center justify-center">Glossary</a>
             <button type="button" id="btn-contact-mobile" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] bg-bone dark:bg-darkBase px-2 py-3 min-h-[48px] active:bg-acid active:text-black focus-ring">Contact</button>
           </div>
         </div>
@@ -339,7 +339,7 @@
               <button type="button" id="btn-mode-index" class="t-mono-xs font-bold font-mono uppercase tracking-[0.1em] px-2 py-2 min-h-[44px] inline-flex items-center focus-ring" aria-label="Index mode (shortcut: I)" aria-pressed="false">INDEX <span class="kbd" aria-hidden="true">I</span></button>
             </div>
             <button type="button" id="btn-toggle-grid" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Grid View" aria-pressed="true">Grid View</button>
-            <button type="button" id="btn-toggle-timeline" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Evolution Matrix" aria-pressed="false">Evolution Matrix</button>
+            <button type="button" id="btn-toggle-timeline" class="t-mono-xs font-bold font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-40 hover:opacity-100 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Switch to Timeline" aria-pressed="false">Timeline</button>
           </div>
           <div class="flex items-center gap-3 lg:gap-4 shrink-0">
             <button type="button" id="btn-sort-cycle" class="t-mono-xs font-mono uppercase tracking-[0.08em] lg:tracking-[0.15em] opacity-50 hover:opacity-100 transition-opacity border border-current px-2 py-2 whitespace-nowrap shrink-0 min-h-[44px] inline-flex items-center" aria-label="Cycle sort order">Sort: Newest</button>
@@ -349,7 +349,7 @@
 
         <!-- Grid View -->
         <div id="grid-view" class="p-1 flex-1 min-h-0">
-          <h1 class="sr-only">THE LEXICON — archive of fashion collections, indexed by analytical category</h1>
+          <h1 class="sr-only">THE LEXICON: famous fashion shows, explained</h1>
           <!-- Orientation Panel -->
           <!-- Hero (Phase 1 redesign — two-column layout matching 01-homepage mockup) -->
           <section id="orientation-panel" class="hero-panel mb-1" aria-label="Site introduction">
@@ -360,17 +360,16 @@
               <div>
                 <div class="hero-eyebrow"><span class="hero-bar"></span>FASHION HISTORY · VISUAL CULTURE · LINEAGE</div>
                 <h2 class="hero-headline">See where every fashion idea <em>actually</em> came from.</h2>
-                <p class="hero-sub">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.</p>
+                <p class="hero-sub">45 famous fashion shows, explained: what they meant, where the ideas came from, and what they inspired.</p>
                 <div class="hero-actions">
-                  <button id="btn-dismiss-orientation" class="hero-btn-pri" type="button">BROWSE THE ARCHIVE →</button>
-                  <button id="btn-hero-search" class="hero-btn-sec" type="button">RESEARCH TERMINAL</button>
+                  <button id="btn-dismiss-orientation" class="hero-btn-pri" type="button">Start exploring →</button>
+                  <button id="btn-hero-search" class="hero-btn-sec" type="button">Search</button>
                 </div>
               </div>
               <div class="hero-stats">
-                <div class="hero-stat"><div class="hs-num" id="stat-entries">45</div><div class="hs-lbl">Entries</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-brands">45</div><div class="hs-lbl">Brands</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-movements">60</div><div class="hs-lbl">Movements</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-axes">6</div><div class="hs-lbl">Analytical axes</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-entries">45</div><div class="hs-lbl">Shows</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-years">1981–2023</div><div class="hs-lbl">Years</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-axes">6</div><div class="hs-lbl">Big ideas</div></div>
               </div>
             </div>
 
@@ -380,10 +379,10 @@
               <div id="hero-bg-img" class="hero-bg-img" aria-hidden="true"></div>
               <div class="hero-bg-overlay" aria-hidden="true"></div>
               <div class="hero-featured-meta">
-                <span>FEATURED · ANALYTICAL RECORD</span>
+                <span>FEATURED SHOW</span>
               </div>
               <div class="hero-featured-content">
-                <span class="hero-featured-tag" id="hero-tag-label">CORPOREAL INTERVENTION</span>
+                <span class="hero-featured-tag" id="hero-tag-label">CHANGING THE BODY</span>
                 <div class="hero-featured-title" id="hero-featured-title"><em>A single show rewrote the grammar of fashion spectacle.</em></div>
                 <div class="hero-featured-brand" id="hero-featured-brand">— · —</div>
                 <div class="hero-featured-desc" id="hero-featured-desc"></div>
@@ -396,12 +395,42 @@
               </div>
             </div>
           </section>
+          <!-- How It Works (shown below featured strip when orientation is visible) -->
+          <div id="how-it-works" class="how-section">
+            <div class="sec-head">
+              <div>
+                <div class="sec-eye">// HOW IT WORKS</div>
+                <div class="sec-title">Three ways in</div>
+              </div>
+            </div>
+            <div class="how-grid">
+              <div class="how-step">
+                <div class="how-num"><span>01</span><span>LOOK</span></div>
+              <h2>Pick a show.</h2>
+                <p>Every show starts with a short, plain summary. Tap the pins on each photo for notes on what you're looking at.</p>
+                <div class="how-term">↳ <span>Notes on the photo</span> · tap a pin</div>
+              </div>
+              <div class="how-step">
+                <div class="how-num"><span>02</span><span>CONNECT</span></div>
+              <h2>Follow the ideas.</h2>
+                <p>The Nexus shows which other shows share an idea with this one, from the 1980s to today.</p>
+                <div class="how-term">↳ <span>Nexus</span> · the links between shows</div>
+              </div>
+              <div class="how-step">
+                <div class="how-num"><span>03</span><span>USE IT</span></div>
+              <h2>Save and cite.</h2>
+                <p>Every show has a ready-made reference for essays (Harvard, MLA, APA, Chicago). Sign in to save shows into your own folders.</p>
+                <div class="how-term">↳ <span>Cite</span> · copy a reference for your essay</div>
+              </div>
+            </div>
+          </div>
+
           <!-- Browse by analytical axis (second door — enter by lens, not designer) -->
           <div id="axes-browse" class="axes-browse">
             <div class="sec-head">
               <div>
-                <div class="sec-eye">// ENTER BY ANALYTICAL LENS</div>
-                <div class="sec-title">Browse by analytical axis</div>
+                <div class="sec-eye">// SIX BIG IDEAS</div>
+                <div class="sec-title">Browse by big idea</div>
               </div>
             </div>
             <div class="axes-grid" id="axes-grid" role="list"></div>
@@ -411,11 +440,11 @@
           <div id="entry-of-week" class="eow-section">
             <div class="sec-head">
               <div>
-                <div class="sec-eye">// ROTATING SPOTLIGHT</div>
-                <div class="sec-title">Entry of the week</div>
+                <div class="sec-eye">// CHANGES EVERY MONDAY</div>
+                <div class="sec-title">Show of the week</div>
               </div>
             </div>
-            <button type="button" id="eow-card" class="eow-card" aria-label="Open entry of the week">
+            <button type="button" id="eow-card" class="eow-card" aria-label="Open the show of the week">
               <div class="eow-bg" id="eow-bg" aria-hidden="true"></div>
               <div class="eow-overlay" aria-hidden="true"></div>
               <div class="eow-body">
@@ -432,55 +461,27 @@
           <!-- Featured strip section header -->
           <div class="sec-head" id="featured-strip-head">
             <div>
-              <div class="sec-eye">// INDEXED BY ANALYTICAL CATEGORY</div>
-              <div class="sec-title">Featured entries</div>
+              <div class="sec-eye">// ONE FROM EACH BIG IDEA</div>
+              <div class="sec-title">Featured shows</div>
             </div>
-            <button class="sec-link" id="btn-hide-featured" type="button">VIEW ALL ENTRIES →</button>
+            <button class="sec-link" id="btn-hide-featured" type="button">SEE ALL SHOWS →</button>
           </div>
           <div id="featured-strip" class="feat-strip mb-1 hidden"></div>
 
-          <!-- How It Works (shown below featured strip when orientation is visible) -->
-          <div id="how-it-works" class="how-section">
-            <div class="sec-head">
-              <div>
-                <div class="sec-eye">// METHOD</div>
-                <div class="sec-title">How The Lexicon works</div>
-              </div>
-            </div>
-            <div class="how-grid">
-              <div class="how-step">
-                <div class="how-num"><span>01</span><span>RESEARCH</span></div>
-              <h2>Trace any lineage.</h2>
-                <p>Search by brand, era, designer, or analytical category. Every entry is sourced, citable, and indexed by the editorial framework — not just the maker.</p>
-                <div class="how-term">↳ <span>Provenance</span> · where it came from</div>
-              </div>
-              <div class="how-step">
-                <div class="how-num"><span>02</span><span>CONNECT</span></div>
-              <h2>See the references.</h2>
-                <p>The Nexus on every entry maps the visual, intellectual, and historical references it draws from — and the work it has gone on to influence.</p>
-                <div class="how-term">↳ <span>Nexus</span> · the connections between entries</div>
-              </div>
-              <div class="how-step">
-                <div class="how-num"><span>03</span><span>ARCHIVE</span></div>
-              <h2>Build your own.</h2>
-                <p>Sign in to save entries into folders, annotate them, and generate footnotes in Chicago, MLA, APA, Harvard, BibTeX, or permalink format.</p>
-                <div class="how-term">↳ <span>Folder</span> · your saved collection</div>
-              </div>
-            </div>
-          </div>
+          <div id="image-grid" class="image-grid"></div>
 
           <!-- Nexus teaser (preview of the connection graph) -->
           <div id="nexus-teaser" class="nexus-teaser-section">
             <div class="sec-head">
               <div>
                 <div class="sec-eye">// THE NEXUS</div>
-                <div class="sec-title">Every entry is connected.</div>
+                <div class="sec-title">Every show is connected.</div>
               </div>
             </div>
             <button type="button" id="nexus-teaser-card" class="nexus-teaser-card" aria-label="Explore the Nexus connection graph">
               <div class="nexus-teaser-viz" id="nexus-teaser-svg" aria-hidden="true"></div>
               <div class="nexus-teaser-aside">
-                <p class="nexus-teaser-lead">The Nexus maps the visual, intellectual, and historical threads between collections — shared theory, era, material, and lineage.</p>
+                <p class="nexus-teaser-lead">A line between two shows means they share an idea: the same big idea, era, theory or material.</p>
                 <span class="nexus-teaser-cta" id="nexus-teaser-cta">Explore the Nexus →</span>
               </div>
             </button>
@@ -491,9 +492,10 @@
             <div class="who-inner">
               <div class="who-head">
                 <div class="who-title">For people who take<br>fashion seriously.</div>
-                <div class="who-lead">The Lexicon is built for the people who do the work — designers, students, critics, costume teams, and stylists who need references that hold up to scrutiny. Free to browse; sign in to save.</div>
+                <div class="who-lead">For anyone curious about why clothes look the way they do, and for the people who do the work: designers, students, critics, costume teams and stylists who need references that hold up. Free to browse; sign in to save.</div>
               </div>
               <div class="who-grid">
+                <div class="who-cell"><div class="who-role">CURIOUS?</div><div class="who-use">New to fashion? Start with the show of the week, and read the short summary at the top.</div></div>
                 <div class="who-cell"><div class="who-role">DESIGNERS</div><div class="who-use">Reference checks. Avoid accidental repeats. Find lineage for new ideas.</div></div>
                 <div class="who-cell"><div class="who-role">STUDENTS</div><div class="who-use">Citable sources for dissertations, essays, and critical writing.</div></div>
                 <div class="who-cell"><div class="who-role">STYLISTS</div><div class="who-use">Build moodboards anchored in real history, not Pinterest drift.</div></div>
@@ -502,8 +504,6 @@
               </div>
             </div>
           </div>
-
-          <div id="image-grid" class="image-grid"></div>
         </div>
 
         <!-- Mobile filter button (visible only on small screens) -->
@@ -592,6 +592,7 @@
           <div class="footer-bottom">
             <span translate="no" data-notranslate>© THE LEXICON · LONDON · MMXXVI</span>
             <span class="footer-tech">NO TRACKING · NO ADS · INDEPENDENT RESEARCH</span>
+            <nav class="footer-links" aria-label="Site information"><a href="/about">About</a> · <a href="/glossary">Glossary</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/feed.xml">RSS</a></nav>
             <button type="button" id="btn-kbd-help-footer" aria-label="Keyboard shortcuts (Press ?)" class="footer-kbd-hint focus-ring">? <span class="footer-kbd-label">SHORTCUTS</span></button>
           </div>
           <div class="footer-copyright">
@@ -845,8 +846,8 @@
       <div class="cookie-strip">
         <p id="cookie-notice-text" class="cookie-strip-text"></p>
         <div class="cookie-strip-actions">
-          <button type="button" id="btn-privacy-link" class="cookie-link focus-ring">Privacy</button>
-          <button type="button" id="btn-terms-link" class="cookie-link focus-ring">Terms</button>
+          <a href="/privacy" id="btn-privacy-link" class="cookie-link focus-ring">Privacy</a>
+          <a href="/terms" id="btn-terms-link" class="cookie-link focus-ring">Terms</a>
           <button id="btn-reject-cookies" type="button" class="cookie-btn cookie-btn--ghost focus-ring">Reject</button>
           <button id="btn-accept-cookies" type="button" class="cookie-btn cookie-btn--fill focus-ring">Accept</button>
         </div>
@@ -968,7 +969,7 @@
             <button type="submit" id="btn-submit-auth" class="w-full border border-black dark:border-white bg-black dark:bg-white text-white dark:text-black hover:opacity-80 min-h-[44px] t-mono-xs font-bold uppercase tracking-widest focus-ring">[ SEND SIGN-IN LINK ]</button>
           </form>
           <p id="auth-message" role="alert" aria-live="polite" class="t-mono-xs text-red-500 font-mono tracking-wide mt-3 hidden"></p>
-          <p class="text-[9px] font-mono uppercase tracking-[0.15em] opacity-40 mt-3">No password. We store only your email.</p>
+          <p class="t-mono-xs font-mono tracking-wide opacity-70 mt-3 leading-relaxed">No password. We store only your email and your folders. If you're under 13, ask a parent or carer first. <a href="/privacy" class="underline underline-offset-2">Privacy</a></p>
         </div>
 
         <!-- Sent state -->
@@ -1074,61 +1075,16 @@
             <button type="button" id="btn-close-matrix" aria-label="Close Nexus connections" class="text-xs font-bold hover:opacity-70 focus-ring">[ X ]</button>
           </div>
         </div>
+        <p class="matrix-key">A line means two shows share tags: the same big idea, era, theory, material or place. It shows a shared theme, not that one designer copied the other.</p>
         <div id="matrix-content" class="flex-1 overflow-y-auto" role="tabpanel"></div>
       </div>
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="/js/app.js?v=9291973"></script>
+    <script type="module" src="/js/app.js?v=3652186"></script>
 
   </div>
 
-  <!-- Welcome Modal: shown on first visit, dismissed to localStorage -->
-  <div id="welcome-modal" class="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title" hidden>
-    <div class="welcome-inner">
-
-      <!-- Header -->
-      <div class="welcome-header">
-        <div class="welcome-wordmark" id="welcome-modal-title">THE LEXICON</div>
-        <p class="welcome-subtitle" id="welcome-subtitle-text">A research archive for fashion history and visual culture.</p>
-        <p class="welcome-desc" id="welcome-desc-text">We map where every idea came from — indexed by analytical category, not just designer.</p>
-      </div>
-
-      <!-- 3-step guide -->
-      <div class="welcome-steps" role="list">
-        <div class="welcome-step" role="listitem">
-          <div class="ws-label" id="ws-label-1">01 · BROWSE</div>
-          <div class="ws-title" id="ws-title-1">Explore the archive</div>
-          <div class="ws-desc" id="ws-desc-1">Scroll the visual grid or switch to the index table. Filter by brand, era, movement, or theory.</div>
-        </div>
-        <div class="welcome-step" role="listitem">
-          <div class="ws-label" id="ws-label-2">02 · ANALYSE</div>
-          <div class="ws-title" id="ws-title-2">Open any entry</div>
-          <div class="ws-desc" id="ws-desc-2">Each entry has annotated hotspots on every image, and three structured notes: Provenance, Critique, and Strategy.</div>
-        </div>
-        <div class="welcome-step" role="listitem">
-          <div class="ws-label" id="ws-label-3">03 · CONNECT</div>
-          <div class="ws-title" id="ws-title-3">Follow the lineage</div>
-          <div class="ws-desc" id="ws-desc-3">The Nexus maps every entry's visual and intellectual references — and what it went on to influence.</div>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="welcome-footer">
-        <button type="button" id="btn-welcome-enter" class="welcome-cta">ENTER THE ARCHIVE</button>
-        <button type="button" id="btn-welcome-skip" class="welcome-skip">Skip introduction</button>
-      </div>
-
-      <!-- Language selector — below CTA so hero content lands first -->
-      <div class="welcome-lang-row" id="welcome-lang-row">
-        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
-        <div class="welcome-lang-options" id="welcome-lang-options">
-          <!-- Populated by initWelcomeModal() from ALL_LANGS -->
-        </div>
-      </div>
-
-    </div>
-  </div>
 
 </body>
 </html>

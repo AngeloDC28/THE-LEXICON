@@ -3,9 +3,9 @@
  * Nexus connections panel with force-directed graph and list views.
  */
 
-import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js?v=9291973';
-import { AppState } from './core-state.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
+import { $, resolveImgSrc, BROKEN_ASSET, shortBrand } from './core-utils.js?v=3652186';
+import { AppState } from './core-state.js?v=3652186';
+import { getTranslation } from './translations.js?v=3652186';
 
 // Track active simulation cleanup across re-opens
 let _cancelSim = null;
@@ -191,7 +191,7 @@ function renderGraph(entry, connections, callbacks, container) {
     label.setAttribute('font-size', '7');
     label.setAttribute('font-family', 'ui-monospace,monospace');
     label.setAttribute('pointer-events', 'none');
-    label.textContent = node.brand.slice(0, 14);
+    label.textContent = shortBrand(node.brand);
     g.appendChild(label);
 
     if (!node.isCurrent) {

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://thelexicon.xyz/</loc></url>
+  <url><loc>https://thelexicon.xyz/about</loc></url>
+  <url><loc>https://thelexicon.xyz/glossary</loc></url>
+  <url><loc>https://thelexicon.xyz/privacy</loc></url>
+  <url><loc>https://thelexicon.xyz/terms</loc></url>
   <url><loc>https://thelexicon.xyz/entry/ackermann-aw14/0</loc></url>
   <url><loc>https://thelexicon.xyz/entry/adrover-aw00/0</loc></url>
   <url><loc>https://thelexicon.xyz/entry/anderson-aw22/0</loc></url>
