@@ -38,3 +38,23 @@ export const CATEGORY_LABELS = {
 export function categoryLabel(cat) {
   return CATEGORY_LABELS[cat] || 'Analytical Record';
 }
+
+// Plain-English names for readers new to fashion theory. The theory name
+// (CATEGORY_LABELS) stays as the subtitle so nothing is lost for experts.
+// Titles describe what is actually filed under each axis by
+// TAG_CATEGORY_MAP above: 'semiotic' collects techno-politics, surveillance
+// and ecology, and 'provenance' is the fallback that holds the gaze and
+// identity entries, so the plain names follow the contents, not the
+// theory names.
+export const CATEGORY_PLAIN = {
+  corporeal:  { title: 'Changing the body',         blurb: 'Clothes that reshape, exaggerate or question what a "normal" body looks like.' },
+  critique:   { title: 'Fashion vs. fashion',       blurb: 'Shows that mock, or protest against, the fashion industry itself.' },
+  subculture: { title: 'Street to runway',          blurb: 'Youth culture, queer scenes and protest turned into designer clothes.' },
+  strategy:   { title: 'Borders and belonging',     blurb: 'Migration, home and identity: what you carry with you, and who decides.' },
+  semiotic:   { title: 'Technology and the future', blurb: 'Machines, screens and the planet: the body in a high-tech world.' },
+  provenance: { title: 'Who is looking',            blurb: 'The gaze and identity: who clothes are made to be seen by.' },
+};
+
+export function categoryPlain(cat) {
+  return CATEGORY_PLAIN[cat]?.title || 'Featured show';
+}

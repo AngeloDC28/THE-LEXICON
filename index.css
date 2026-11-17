@@ -1266,6 +1266,14 @@ html:not(.dark) .axis-card { border-color: #e0e0dc; }
   line-height: 1.15;
 }
 html:not(.dark) .axis-label { color: #0a0a0a; }
+/* Theory name under the plain title: for experts, quieter than the title. */
+.axis-theory {
+  font-family: var(--font-mono);
+  font-size: var(--t-mono-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--axis-c);
+}
 .axis-blurb {
   font-size: var(--t-mono-xs);
   color: rgba(255,255,255,0.72);

@@ -16,7 +16,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getTagCategory, categoryLabel } from '../../js/modules/categories.js';
+import { getTagCategory, categoryLabel, categoryPlain } from '../../js/modules/categories.js';
 
 const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
@@ -70,12 +70,12 @@ function buildStaticArticle(entry) {
     : 'Photographer credit being confirmed.';
   return `
   <article class="static-entry" aria-labelledby="static-entry-title">
-    <p class="static-entry-nav"><a href="/">THE LEXICON</a> / <span>${esc(categoryLabel(cat))}</span></p>
+    <p class="static-entry-nav"><a href="/">THE LEXICON</a> / <span>${esc(categoryPlain(cat))}</span></p>
     <h1 id="static-entry-title">${esc(entry.title)}${entry.subtitle ? `<span class="static-entry-sub">${esc(entry.subtitle)}</span>` : ''}</h1>
-    <p class="static-entry-meta">${esc(t.brand || '')} · ${esc(entry.season || '')} ${esc(entry.year || '')} · ${esc(categoryLabel(cat))}</p>
+    <p class="static-entry-meta">${esc(t.brand || '')} · ${esc(entry.season || '')} ${esc(entry.year || '')} · ${esc(categoryPlain(cat))} (${esc(categoryLabel(cat))})</p>
     ${notes}
     <section><h2>Looks</h2>${looks}<p class="static-entry-credit">${credit} Reproduced for criticism and review under CDPA 1988 s.30.</p></section>
-    ${specs ? `<section><h2>Technical specifications</h2><dl class="static-entry-specs">${specs}</dl></section>` : ''}
+    ${specs ? `<section><h2>Quick facts</h2><dl class="static-entry-specs">${specs}</dl></section>` : ''}
     ${sources ? `<section><h2>Sources</h2><ol>${sources}</ol></section>` : ''}
     <p class="static-entry-nav"><a href="/">← All 45 collections</a></p>
   </article>`;

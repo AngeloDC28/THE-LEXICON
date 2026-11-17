@@ -6,7 +6,7 @@ import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_
 import { AppState, updateHash } from './core-state.js?v=715e5c2';
 import { getFilteredEntries } from './search-engine.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory, categoryLabel } from './render-index-view.js?v=715e5c2';
+import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=715e5c2';
 import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=715e5c2';
 import { placePayload, hidePayloadLeader } from './hotspots.js?v=715e5c2';
 
@@ -65,10 +65,11 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
       detailView.classList.remove('hidden');
       // Used by print stylesheet ::after for permalink + accessed-date footer
       detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
-      detailView.dataset.printAccessed = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      detailView.dataset.printAccessed = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     }
     const appRoot = $('app-root');
     if (appRoot) appRoot.classList.add('detail-mode-active');
+    setArchiveInert(true);
 
     renderBreadcrumb(entry);
     renderImage(entry, callbacks);
@@ -174,6 +175,22 @@ function updateEntryJsonLd(entry) {
   el.textContent = JSON.stringify(ld);
 }
 
+
+// While an entry is open, the archive views behind it (hero, axis cards, the
+// 45-card grid, timeline, index table, folders) stay in the DOM. Without
+// inert, a screen reader heard the whole homepage, and its extra <h1>,
+// before the show. inert takes them out of the accessibility tree and the
+// tab order; it is removed again on close.
+const BEHIND_ENTRY = ['grid-view', 'timeline-view', 'index-table-view', 'folders-view'];
+function setArchiveInert(on) {
+  BEHIND_ENTRY.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (on) el.setAttribute('inert', '');
+    else el.removeAttribute('inert');
+  });
+}
+
 export function closeDetail(callbacks, archiveData) {
   withViewTransition(() => {
     AppState.selectedEntryId = null;
@@ -185,6 +202,7 @@ export function closeDetail(callbacks, archiveData) {
     if (detailView) detailView.classList.add('hidden');
     const appRoot = $('app-root');
     if (appRoot) appRoot.classList.remove('detail-mode-active');
+    setArchiveInert(false);
     updateStatusBar(archiveData);
     // Restore grid scroll position
     const imagePanel = $('image-panel');
@@ -223,7 +241,7 @@ function renderSidebarHeader(entry) {
   if (!header) return;
   const lang = AppState.language;
   const cat = getTagCategory(entry.tags?.politics || '');
-  const tagLabel = categoryLabel(cat);
+  const tagLabel = categoryPlain(cat);
   const brand = entry.tags?.brand ? getTranslation(entry.tags.brand, lang).toUpperCase() : '—';
   const year = entry.year || '----';
   const season = entry.season ? entry.season.toUpperCase() : '';
@@ -271,7 +289,7 @@ function renderBreadcrumb(entry) {
   const brand = entry.tags?.brand || '—';
   const politics = entry.tags?.politics || '';
   const cat = getTagCategory(politics);
-  const tagCat = categoryLabel(cat).toUpperCase();
+  const tagCat = categoryPlain(cat).toUpperCase();
   // Season alone ("SS") isn't an identifier — the breadcrumb used to read
   // "ALEXANDER MCQUEEN / SS" with no year.
   const season = [entry.season, entry.year].filter(Boolean).join(' ');

@@ -28,7 +28,7 @@ import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/
 import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=715e5c2';
 import { getTranslation, supportedLanguages } from './modules/translations.js?v=715e5c2';
 import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=715e5c2';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel } from './modules/render-index-view.js?v=715e5c2';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=715e5c2';
 import { renderGlossaryModal } from './modules/glossary.js?v=715e5c2';
 
 // --- Shared Callbacks ---
@@ -1919,7 +1919,7 @@ function renderHero(archiveData) {
     const candidate = picks[idx];
     if (!candidate) return;
     const cat = getTagCategory(candidate.tags?.politics || '');
-    const tagLabel = categoryLabel(cat);
+    const tagLabel = categoryPlain(cat);
     const brand = (candidate.tags?.brand || '').toUpperCase();
     const year = candidate.year || '—';
     const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
@@ -2009,14 +2009,9 @@ function renderHero(archiveData) {
 }
 
 // ── BROWSE BY ANALYTICAL AXIS (second door — enter by lens, not designer) ──
-const AXIS_DEFS = [
-  { key: 'corporeal',  label: 'Corporeal Intervention',  blurb: 'The body as material, site, and weapon.' },
-  { key: 'critique',   label: 'Institutional Critique',  blurb: 'Fashion turned against its own machinery.' },
-  { key: 'subculture', label: 'Subcultural Codification', blurb: 'Street codes, queer signal, refusal.' },
-  { key: 'strategy',   label: 'Strategic Appropriation', blurb: 'Borrowing, hybridity, and who gets to.' },
-  { key: 'semiotic',   label: 'Semiotic Sabotage',       blurb: 'Surveillance, ecology, the digital body.' },
-  { key: 'provenance', label: 'Historical Lineage',      blurb: 'The gaze, censorship, feminist refusal.' },
-];
+// Plain title first (for newcomers), theory name underneath (for experts).
+const AXIS_DEFS = ['corporeal', 'critique', 'subculture', 'strategy', 'semiotic', 'provenance']
+  .map(key => ({ key, title: CATEGORY_PLAIN[key].title, theory: categoryLabel(key), blurb: CATEGORY_PLAIN[key].blurb }));
 
 function renderAxesBrowse(archiveData) {
   const grid = $('axes-grid');
@@ -2028,11 +2023,12 @@ function renderAxesBrowse(archiveData) {
   });
   grid.innerHTML = AXIS_DEFS.map(a => {
     const n = counts.get(a.key) || 0;
-    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" aria-label="Browse ${a.label} — ${n} ${n === 1 ? 'entry' : 'entries'}">
+    return `<button type="button" role="listitem" class="axis-card" data-cat-filter="${a.key}" aria-label="${a.title} (${a.theory}): ${n} ${n === 1 ? 'show' : 'shows'}">
       <span class="axis-bar" aria-hidden="true"></span>
-      <span class="axis-label">${a.label}</span>
+      <span class="axis-label">${a.title}</span>
+      <span class="axis-theory">${a.theory}</span>
       <span class="axis-blurb">${a.blurb}</span>
-      <span class="axis-count">${n} ${n === 1 ? 'entry' : 'entries'} →</span>
+      <span class="axis-count">${n} ${n === 1 ? 'show' : 'shows'} →</span>
     </button>`;
   }).join('');
 }
@@ -2053,7 +2049,7 @@ function renderEntryOfWeek(archiveData) {
   const cat = getTagCategory(pick.tags?.politics || '');
   const tagEl = $('eow-tag');
   if (tagEl) {
-    tagEl.textContent = categoryLabel(cat).toUpperCase();
+    tagEl.textContent = categoryPlain(cat).toUpperCase();
     tagEl.style.color = `var(--c-${cat})`;
     tagEl.style.borderColor = `var(--c-${cat})`;
   }
@@ -2179,35 +2175,45 @@ function openCiteModal(entryId) {
     : `${brand} ${season}${year}`.trim();
   const subtitle = entry.subtitle ? `: ${entry.subtitle}` : '';
   const fullTitle = collectionTitle + subtitle;
-  const accessDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-  const accessIso = new Date().toISOString().slice(0, 10);
-  const siteName = 'THE LEXICON: Forensic Archive of Visual Culture';
+  // The citation date is when the entry was published on the site, never the
+  // collection's year: "THE LEXICON (1999)" told a marker the page was
+  // written in 1999. `published` comes from the entry file (first commit).
+  const now = new Date();
+  const pubDate = entry.published ? new Date(`${entry.published}T12:00:00Z`) : now;
+  const pubYear = pubDate.getUTCFullYear();
+  const ukDate = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });     // 17 November 2026
+  const usDate = (d) => d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });     // November 17, 2026
+  const mlaDate = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).replace(/ (\w{3}) /, (m, mon) => ` ${mon}${mon === 'May' ? '' : '.'} `); // 17 Nov. 2026
+  const accessIso = now.toISOString().slice(0, 10);
+  const siteName = 'THE LEXICON';
+  const author = { last: 'Sanchez Dela Cruz', first: 'Angelo', initial: 'A.' };
 
-  // Chicago Manual of Style 17th ed. note format
+  // Chicago Manual of Style 17th ed. (notes and bibliography, web page)
   const chicago =
-    `"${fullTitle}," ${siteName}, accessed ${accessDate}, ${url}.`;
+    `${author.last}, ${author.first}. "${fullTitle}." ${siteName}, ${usDate(pubDate)}. ${url}.`;
 
   // MLA 9th edition
   const mla =
-    `"${fullTitle}." ${siteName}, ${year}, ${url}. Accessed ${accessDate}.`;
+    `${author.last}, ${author.first}. "${fullTitle}." ${siteName}, ${mlaDate(pubDate)}, ${url.replace(/^https?:\/\//, '')}. Accessed ${mlaDate(now)}.`;
 
   // APA 7th edition
   const apa =
-    `${siteName}. (${year}). ${fullTitle}. Retrieved ${accessDate}, from ${url}`;
+    `${author.last}, ${author.initial} (${pubYear}, ${pubDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}). ${fullTitle}. ${siteName}. ${url}`;
 
-  // Harvard
+  // Harvard (UK: day month year)
   const harvard =
-    `${siteName} (${year}) ${fullTitle}. Available at: ${url} (Accessed: ${accessDate}).`;
+    `${author.last}, ${author.initial} (${pubYear}) ${fullTitle}. ${siteName}. Available at: ${url} (Accessed: ${ukDate(now)}).`;
 
   // BibTeX @misc with stable citekey
   const citekey = `lexicon-${entry.id}`;
   const bibtex =
     `@misc{${citekey},\n` +
+    `  author       = {${author.last}, ${author.first}},\n` +
     `  title        = {{${fullTitle.replace(/[{}]/g,'')}}},\n` +
     `  howpublished = {{${siteName}}},\n` +
-    `  year         = {${year}},\n` +
+    `  year         = {${pubYear}},\n` +
     `  urldate      = {${accessIso}},\n` +
-    `  note         = {Entry ID: ${entry.id}. Accessed ${accessDate}.},\n` +
+    `  note         = {Entry ID: ${entry.id}. Accessed ${ukDate(now)}.},\n` +
     `  url          = {${url}}\n` +
     `}`;
 

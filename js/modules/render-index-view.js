@@ -17,8 +17,8 @@ import { getTranslation } from './translations.js?v=715e5c2';
 
 // Axis mapping and names live in categories.js (shared with the build
 // scripts); re-exported here so existing imports keep working.
-import { getTagCategory, CATEGORY_LABELS, categoryLabel } from './categories.js?v=715e5c2';
-export { getTagCategory, CATEGORY_LABELS, categoryLabel };
+import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain } from './categories.js?v=715e5c2';
+export { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain };
 
 // Extract a short label from a long politics tag.
 // "Body Politics & Corporeal Interventions" → "Corporeal Intervention"

@@ -4,7 +4,7 @@
  *
  * Supports the subset of JSON Schema that content/entry.schema.json uses:
  *   type, required, properties, additionalProperties, items, minItems,
- *   minLength, minimum, maximum, pattern, enum, $ref (intra-file only).
+ *   minLength, maxLength, minimum, maximum, pattern, enum, $ref (intra-file only).
  *
  * Good enough to catch every shape error we care about, without pulling
  * `ajv` into the dependency tree. If we ever outgrow it, swap the
@@ -46,6 +46,9 @@ function validate(data, schema, path = '$', root = schema) {
   if (typeof data === 'string') {
     if (schema.minLength != null && data.length < schema.minLength) {
       errs.push(`${path}: string length ${data.length} < minLength ${schema.minLength}`);
+    }
+    if (schema.maxLength != null && data.length > schema.maxLength) {
+      errs.push(`${path}: string length ${data.length} > maxLength ${schema.maxLength}`);
     }
     if (schema.pattern && !new RegExp(schema.pattern).test(data)) {
       errs.push(`${path}: string does not match pattern /${schema.pattern}/`);

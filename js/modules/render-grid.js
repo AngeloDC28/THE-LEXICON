@@ -9,7 +9,7 @@ import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, BROKEN_
 import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=715e5c2';
 import { getFilteredEntries } from './search-engine.js?v=715e5c2';
 import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory, categoryLabel } from './render-index-view.js?v=715e5c2';
+import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=715e5c2';
 
 export function setupGridIntersectionObserver() {
   if (gridIntersectionObserver) {
@@ -95,7 +95,7 @@ export function renderImageGrid(archiveData, callbacks) {
       // Phase 1: Inverted metadata hierarchy — extract primary analytical tag
       const politicsTag = entry.tags?.politics || '';
       const tagCategory = getTagCategory(politicsTag);
-      const tagLabel = categoryLabel(tagCategory).toUpperCase();
+      const tagLabel = categoryPlain(tagCategory).toUpperCase();
       const tagColor = `--c-${tagCategory}`;
       const catTip   = getTranslation(`cat_tip_${tagCategory}`, AppState.language);
 
@@ -220,7 +220,7 @@ export function renderEntryList(archiveData, callbacks) {
     const year  = entry.year  || '----';
     const season = entry.season ? entry.season.replace(/^(SS|AW|FW|SS\/FW)\s*/i, '') : '';
     const tagCategory = getTagCategory(entry.tags?.politics || '');
-    const tagLabel = categoryLabel(tagCategory).toUpperCase();
+    const tagLabel = categoryPlain(tagCategory).toUpperCase();
     const isNewCat = tagCategory !== prevCat;
     prevCat = tagCategory;
     const isActiveCat = AppState.analyticalCat === tagCategory;
@@ -291,7 +291,7 @@ export function renderFeaturedStrip(archiveData) {
       : '—';
     const year = entry.year || '----';
     const season = entry.season ? entry.season.toUpperCase() : 'ARCHIVE';
-    const label = categoryLabel(cat);
+    const label = categoryPlain(cat);
     const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
     const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
     const webpImg = firstImg ? resolveImgSrc({ src: thumbSrc(firstImg) }) : null;
