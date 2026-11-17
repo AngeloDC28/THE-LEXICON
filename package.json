@@ -13,6 +13,7 @@
     "measure-images": "node .github/scripts/measure-images.mjs",
     "optimize-images": "node .github/scripts/resize-images.mjs && node .github/scripts/measure-images.mjs",
     "new-entry": "node .github/scripts/new-entry.mjs",
+    "credit": "node .github/scripts/set-credit.mjs",
     "stats": "node .github/scripts/stats.mjs",
     "bust-cache": "node .github/scripts/bust-cache.mjs",
     "generate-sitemap": "node .github/scripts/generate-sitemap.mjs",
