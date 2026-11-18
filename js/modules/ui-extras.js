@@ -3,10 +3,11 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
-import { AppState } from './core-state.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
-import { invalidateSearchCache } from './search-engine.js?v=715e5c2';
+import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=9291973';
+import { AppState } from './core-state.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { invalidateSearchCache } from './search-engine.js?v=9291973';
+import { safeCover } from './categories.js?v=9291973';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');
@@ -50,8 +51,8 @@ export function renderTimeline(archiveData, callbacks) {
                  aria-label="${getTranslation(e.tags.brand, AppState.language)} ${e.year} — ${getTranslation(e.title, AppState.language)}"
                  data-delay="${Math.min(i * 0.1, 1.5)}">
               <picture>
-                <source type="image/webp" srcset="${resolveImgSrc({src: thumbSrc(e.images && e.images[0])})}">
-                <img src="${resolveImgSrc(e.images && e.images[0])}"${imgAttrs(e.images && e.images[0])}
+                <source type="image/webp" srcset="${resolveImgSrc({src: thumbSrc(safeCover(e))})}">
+                <img src="${resolveImgSrc(safeCover(e))}"${imgAttrs(safeCover(e))}
                      alt="${getTranslation(e.tags.brand, AppState.language)} ${e.year}"
                      class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 opacity-0"
                      loading="lazy" />
@@ -161,14 +162,14 @@ export function updateMetaForEntry(entry) {
   if (ogDesc) ogDesc.content = `Analyzing architectural details of ${entry.tags.brand} (${entry.year}) within the forensic archival database.`;
 
   const ogImg = document.querySelector('meta[property="og:image"]');
-  if (ogImg) ogImg.content = resolveImgSrc(entry.images && entry.images[0]);
+  if (ogImg) ogImg.content = resolveImgSrc(safeCover(entry));
 
   // Twitter Tags
   const twTitle = document.querySelector('meta[name="twitter:title"]');
   if (twTitle) twTitle.content = title;
 
   const twImg = document.querySelector('meta[name="twitter:image"]');
-  if (twImg) twImg.content = resolveImgSrc(entry.images && entry.images[0]);
+  if (twImg) twImg.content = resolveImgSrc(safeCover(entry));
 }
 
 export function resetMeta() {

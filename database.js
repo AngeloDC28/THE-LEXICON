@@ -9,11 +9,14 @@ export const archiveData = [
     "id": "mcqueen-ss99",
     "title": "Alexander McQueen SS 1999",
     "subtitle": "No. 13",
+    "summary_plain": "Paralympic athlete Aimee Mullins opened Alexander McQueen's show on carved wooden legs, and at the end two factory robots spray-painted a white dress on a model as she turned. It made people ask what a 'perfect' body is.",
     "year": 1999,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg",
+        "content_note": "Partial nudity",
         "hotspots": [
           {
             "x": 48,
@@ -337,6 +340,7 @@ export const archiveData = [
     "subtitle": "Anniversaire",
     "year": 1995,
     "season": "AW",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/mugler-aw95/mugler-aw95-01.jpg",
@@ -694,6 +698,7 @@ export const archiveData = [
     "subtitle": "A-POC",
     "year": 1999,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg",
@@ -987,6 +992,7 @@ export const archiveData = [
     "subtitle": "Robotic Articulation",
     "year": 2007,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/balenciaga-ss07/balenciaga-ss07-01.jpg",
@@ -1355,8 +1361,10 @@ export const archiveData = [
     "id": "chalayan-aw00",
     "title": "Hussein Chalayan AW 2000",
     "subtitle": "After Words",
+    "summary_plain": "Models pulled the covers off living-room chairs and wore them as dresses, and a coffee table became a wooden skirt. Hussein Chalayan based it on his family being forced from their home in Cyprus: what do you take when you have to leave?",
     "year": 2000,
     "season": "AW",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-01.jpg",
@@ -1676,8 +1684,10 @@ export const archiveData = [
     "id": "prada-ss96",
     "title": "Prada SS 1996",
     "subtitle": "Banal Eccentricity",
+    "summary_plain": "Miuccia Prada made 'ugly' clothes on purpose: clashing colours, prints copied from 1970s curtains and kitchen surfaces, and plain everyday shapes. Nicknamed 'Ugly Chic', it showed that clothes could be clever, not just pretty.",
     "year": 1996,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-01.jpg",
@@ -1981,6 +1991,7 @@ export const archiveData = [
     "subtitle": "Clochard",
     "year": 2000,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg",
@@ -2333,6 +2344,7 @@ export const archiveData = [
     "subtitle": "Vicious",
     "year": 2014,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/owens-ss14/owens-ss14-01.jpg",
@@ -2666,8 +2678,10 @@ export const archiveData = [
     "id": "garcons-ss97",
     "title": "Comme des Garçons SS 1997",
     "subtitle": "Body Meets Dress, Dress Meets Body",
+    "summary_plain": "Rei Kawakubo sewed padded lumps into stretchy dresses, giving models bumps on their backs, hips and shoulders. The press called it the 'lumps and bumps' show. It asked why fashion only flatters one idea of a good body.",
     "year": 1997,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg",
@@ -2824,6 +2838,7 @@ export const archiveData = [
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-10.jpg",
+        "content_note": "Partial nudity",
         "hotspots": [
           {
             "x": 50,
@@ -2897,6 +2912,7 @@ export const archiveData = [
       },
       {
         "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-15.jpg",
+        "content_note": "Partial nudity",
         "hotspots": [
           {
             "x": 50,
@@ -2966,6 +2982,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 1998,
     "season": "AW",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-01.jpg",
@@ -3269,6 +3286,7 @@ export const archiveData = [
     "subtitle": "Les Tatouages",
     "year": 1994,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-01.jpg",
@@ -3340,6 +3358,7 @@ export const archiveData = [
       },
       {
         "src": "THE-LEXICON-ASSETS/gaultier-ss94/gaultier-ss94-05.jpg",
+        "content_note": "Partial nudity",
         "hotspots": [
           {
             "x": 50,
@@ -3583,6 +3602,7 @@ export const archiveData = [
     "subtitle": "Russian Doll",
     "year": 1999,
     "season": "AW",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-01.jpg",
@@ -3727,6 +3747,7 @@ export const archiveData = [
     "subtitle": "Séance de Travail",
     "year": 1998,
     "season": "AW",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/lang-aw98/lang-aw98-01.jpg",
@@ -3951,8 +3972,10 @@ export const archiveData = [
     "id": "moschino-aw14",
     "title": "Moschino AW 2014",
     "subtitle": "",
+    "summary_plain": "In his first Moschino show, Jeremy Scott turned McDonald's uniforms, cereal boxes and SpongeBob into luxury clothes, and some pieces went on sale the next morning. It was a joke about fast food, fast fashion and what 'luxury' means.",
     "year": 2014,
     "season": "AW",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-01.jpg",
@@ -4269,6 +4292,7 @@ export const archiveData = [
     "subtitle": "231 Seconds of Haute Couture",
     "year": 2021,
     "season": "SS",
+    "published": "2026-05-12",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/schiaparelli-ss21/schiaparelli-ss21-01.jpg",
@@ -4584,6 +4608,7 @@ export const archiveData = [
     "subtitle": "Oversize",
     "year": 2000,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/margiela-aw00/margiela-aw00-01.jpg",
@@ -4812,8 +4837,10 @@ export const archiveData = [
     "id": "westwood-aw81",
     "title": "Vivienne Westwood AW 1981",
     "subtitle": "Pirates",
+    "summary_plain": "Vivienne Westwood's first ever catwalk show, 'Pirates', swapped punk's harsh look for billowing pirate shirts, sashes and breeches. Worn by London club kids and bands, it helped start the New Romantic style of the early 1980s.",
     "year": 1981,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-01.jpg",
@@ -4974,8 +5001,10 @@ export const archiveData = [
     "id": "simons-aw01",
     "title": "Raf Simons AW 2001",
     "subtitle": "Riot, Riot, Riot!",
+    "summary_plain": "After a year away, Raf Simons swapped his famously skinny suits for huge hooded layers inspired by young people in Eastern Europe, shown in a foggy warehouse to loud techno. Later designers like Virgil Abloh built on its look.",
     "year": 2001,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-01.jpg",
@@ -5172,6 +5201,7 @@ export const archiveData = [
     "subtitle": "Scab",
     "year": 2003,
     "season": "SS",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.jpg",
@@ -5379,6 +5409,7 @@ export const archiveData = [
     "subtitle": "Midtown",
     "year": 2000,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/adrover-aw00/adrover-aw00-01.jpg",
@@ -5611,6 +5642,7 @@ export const archiveData = [
     "subtitle": "Capriole",
     "year": 2011,
     "season": "Couture-AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/van-herpen-aw11/van-herpen-aw11-01.jpg",
@@ -5823,6 +5855,7 @@ export const archiveData = [
     "subtitle": "Solo Debut",
     "year": 2006,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/pugh-aw06/pugh-aw06-01.jpg",
@@ -6048,6 +6081,7 @@ export const archiveData = [
     "subtitle": "The Breakout Era (FW15 / SS16)",
     "year": 2015,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/vetements-aw15/vetements-aw15-01.jpg",
@@ -6344,6 +6378,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2014,
     "season": "SS",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/hood-by-air-ss14/hood-by-air-ss14-01.jpg",
@@ -6593,6 +6628,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2015,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/watanabe-aw15/watanabe-aw15-01.jpg",
@@ -6852,6 +6888,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2015,
     "season": "SS",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/green-ss15/green-ss15-01.jpg",
@@ -7084,6 +7121,7 @@ export const archiveData = [
     "subtitle": "Cyborg",
     "year": 2018,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/gucci-aw18/gucci-aw18-01.jpg",
@@ -7476,6 +7514,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2012,
     "season": "AW",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/browne-aw12/browne-aw12-01.jpg",
@@ -7729,6 +7768,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2023,
     "season": "SS",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/loewe-ss23/loewe-ss23-01.jpg",
@@ -8000,6 +8040,7 @@ export const archiveData = [
     "subtitle": "Marée Noire",
     "year": 2020,
     "season": "SS",
+    "published": "2026-05-18",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-01.jpg",
@@ -8315,6 +8356,7 @@ export const archiveData = [
     "subtitle": "Chanel No. 5 Féminisme",
     "year": 2014,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/chanel-aw14/chanel-aw14-01.jpg",
@@ -8643,6 +8685,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2008,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/vuitton-ss08/vuitton-ss08-01.jpg",
@@ -9043,6 +9086,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2010,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/celine-ss10/celine-ss10-01.jpg",
@@ -9243,6 +9287,7 @@ export const archiveData = [
     "subtitle": "Pink PP",
     "year": 2022,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-01.jpg",
@@ -9263,6 +9308,7 @@ export const archiveData = [
       },
       {
         "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-02.jpg",
+        "content_note": "Partial nudity",
         "hotspots": [
           {
             "x": 50,
@@ -9576,6 +9622,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2022,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/miu-miu-ss22/miu-miu-ss22-01.jpg",
@@ -9852,6 +9899,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2017,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/klein-aw17/klein-aw17-01.jpg",
@@ -10121,6 +10169,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2015,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/givenchy-aw15/givenchy-aw15-01.jpg",
@@ -10468,6 +10517,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2015,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/van-noten-ss15/van-noten-ss15-01.jpg",
@@ -10618,6 +10668,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2013,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/saint-laurent-aw13/saint-laurent-aw13-01.jpg",
@@ -10895,8 +10946,10 @@ export const archiveData = [
     "id": "coperni-ss23",
     "title": "Coperni SS 2023",
     "subtitle": "",
+    "summary_plain": "At the end of Coperni's show, two technicians sprayed a liquid fabric onto Bella Hadid's body, and it dried into a white dress in about ten minutes. It was filmed from every angle and went viral around the world within hours.",
     "year": 2023,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg",
@@ -11094,6 +11147,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2014,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/ackermann-aw14/ackermann-aw14-01.jpg",
@@ -11318,6 +11372,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2019,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/bottega-veneta-aw19/bottega-veneta-aw19-01.jpg",
@@ -11652,6 +11707,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2011,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/sander-ss11/sander-ss11-01.jpg",
@@ -11974,6 +12030,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2020,
     "season": "SS",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/chromat-ss20/chromat-ss20-01.jpg",
@@ -12212,6 +12269,7 @@ export const archiveData = [
     "subtitle": "",
     "year": 2022,
     "season": "AW",
+    "published": "2026-05-21",
     "images": [
       {
         "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg",

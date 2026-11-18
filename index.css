@@ -983,8 +983,7 @@ html:not(.dark) .hero-featured-brand { color: #6b5d54; }
   .hero-panel {
     grid-template-columns: 1fr;
     min-height: auto;
-    max-height: 80vh;
-    overflow: hidden;
+    /* No height cap: it clipped the buttons on short phones. */
   }
   .hero-col-left {
     border-right: none;
@@ -992,8 +991,12 @@ html:not(.dark) .hero-featured-brand { color: #6b5d54; }
     padding: 20px 20px 16px;
   }
   html:not(.dark) .hero-col-left { border-bottom-color: #e0e0dc; }
-  /* Hide the right image column on mobile — saves ~280px of vertical space */
-  .hero-col-right { display: none; }
+  /* Phones get a short runway photo strip ABOVE the headline, so the first
+     screen shows fashion, not just text. (It used to be hidden here.) */
+  .hero-col-right { order: -1; min-height: 190px; height: 190px; }
+  .hero-col-right .hero-featured-desc,
+  .hero-col-right .hero-featured-meta { display: none; }
+  .hero-col-right .hero-featured-title { font-size: 1.05rem; line-height: 1.25; }
   .hero-headline { font-size: clamp(1.875rem, 7.5vw, 2rem); margin-top: 12px; }
   .hero-sub { font-size: clamp(0.875rem, 3.5vw, 1rem); margin-top: 8px; }
   .hero-stats { padding-top: 12px; gap: 20px; }
@@ -3667,16 +3670,24 @@ html:not(.dark) .cookie-strip {
   background: #f0efe9;
   border-top-color: rgba(0,0,0,0.15);
 }
+/* A sentence, so it's set as one: sentence case, normal spacing. In
+   uppercase with 0.15em tracking it squeezed to one word per line on phones. */
 .cookie-strip-text {
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  opacity: 0.6;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
   flex: 1;
   min-width: 0;
-  line-height: 1.4;
+  line-height: 1.45;
   color: #fff;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .cookie-strip { flex-direction: column; align-items: stretch; gap: 8px; padding: 12px 16px; padding-bottom: calc(12px + env(safe-area-inset-bottom)); }
+  .cookie-strip-actions { justify-content: flex-end; flex-wrap: wrap; }
+  .cookie-btn { min-height: 44px; padding: 8px 16px; }
+  .cookie-link { min-height: 44px; }
 }
 html:not(.dark) .cookie-strip-text { color: #000; }
 .cookie-strip-actions {
@@ -4978,7 +4989,9 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
    one word per line (~1040px wide, where the archive panel is only ~620px).
    Let both tracks shrink, and stack the columns whenever the panel is that
    narrow (≥1024px the panel is 60% of the window). */
-.hero-panel { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+@media (min-width: 768px) {
+  .hero-panel { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+}
 @media (min-width: 1024px) and (max-width: 1279px) {
   .hero-panel { grid-template-columns: minmax(0, 1fr); }
   .hero-col-left { border-right: none; border-bottom: 1px solid #222; }
@@ -5082,4 +5095,100 @@ html:not(.dark) #payload-leader { border-top-color: #000; }
   font-family: var(--font-mono) !important;
   font-size: 0.75rem !important;
   letter-spacing: 0.08em;
+}
+
+/* ── Phones: get to the point ──
+   The BRAND / YEAR / SEASON / ENTRY strip looks like a filter but can't be
+   tapped, and the view controls (Visual / Index / Grid / Evolution Matrix /
+   Sort) are expert tools. On a phone they took the first screen before any
+   explanation or any show. The strip is hidden on phones; the view controls
+   wait until the reader leaves the introduction ("Start exploring" or ×). */
+@media (max-width: 767px) {
+  #status-ribbon { display: none !important; }
+  #app-root:not(.detail-mode-active):has(#orientation-panel:not(.hidden)) #view-controls-bar { display: none !important; }
+}
+
+/* The floating FILTER button sat on top of the introduction text on phones.
+   It appears once the reader is in the archive. */
+@media (max-width: 767px) {
+  #app-root:has(#orientation-panel:not(.hidden)) #btn-mobile-filter { display: none !important; }
+}
+@media (max-width: 767px) {
+  .hero-col-right .hero-bg-img { background-position: center 18%; }
+  .hero-col-right .hero-bg-img.loaded { opacity: 0.8; }
+}
+
+/* ── Entry title block for phones and tablets ──
+   The side column (with the entry's <h1>) is not shown below 1024px, so
+   this block carries the title there; the side column's copy is hidden at
+   those widths so there is still exactly one <h1>. */
+.detail-mobile-intro { display: none; }
+@media (max-width: 1023px) {
+  .detail-mobile-intro {
+    display: block;
+    padding: 10px 16px 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: #000;
+    color: #fff;
+  }
+  html:not(.dark) .detail-mobile-intro { background: #fdfcf0; color: #000; border-bottom-color: rgba(0,0,0,0.12); }
+  .dmi-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0 0 6px;
+  }
+  .dmi-when {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-top: 4px;
+  }
+  .detail-mobile-intro .detail-accent-tag { display: inline-block; }
+  .dmi-summary {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 8px 0 0;
+  }
+  #detail-sidebar-header .detail-title { display: none; }
+}
+.detail-summary {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 10px 0 4px;
+}
+.static-entry-summary { font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.55; margin: 12px 0 20px; max-width: 42rem; }
+
+/* ── Content notes (looks with partial nudity; the site is for 15+) ── */
+#detail-image-wrapper.is-veiled #detail-image,
+#detail-image-wrapper.is-veiled .hotspot-btn,
+.grid-cell-img.is-veiled img,
+.entry-item-thumb.is-veiled img { filter: blur(28px) brightness(0.7); }
+#detail-image-wrapper.is-veiled .hotspot-btn { pointer-events: none; }
+#detail-image-wrapper.is-veiled,
+.grid-cell-img.is-veiled,
+.entry-item-thumb.is-veiled { overflow: hidden; }
+.content-note {
+  position: absolute; inset: 0; z-index: 30;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  text-align: center; padding: 16px; color: #fff;
+}
+.content-note-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin: 0; opacity: 0.85; }
+.content-note-text { font-family: var(--font-serif); font-size: 1.25rem; margin: 0; }
+.content-note-btn {
+  margin-top: 6px; min-height: 44px; padding: 10px 20px;
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
+  background: #fff; color: #000; border: 1px solid #fff; cursor: pointer;
+}
+.content-note-btn:hover { background: #CCFF00; border-color: #CCFF00; }
+.grid-content-note {
+  position: absolute; left: 8px; right: 8px; top: 50%; transform: translateY(-50%); z-index: 3;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff; text-align: center; pointer-events: none;
 }

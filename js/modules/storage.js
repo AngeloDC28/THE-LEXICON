@@ -3,9 +3,10 @@
  * Logic for bookmarks, recently viewed, and local storage.
  */
 
-import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
-import { AppState } from './core-state.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
+import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=9291973';
+import { AppState } from './core-state.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { safeCover } from './categories.js?v=9291973';
 
 export function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
@@ -89,7 +90,7 @@ function renderRecentlyViewed(archiveData, callbacks) {
   recent.forEach(id => {
     const entry = archiveData.find(e => e.id === id);
     if (!entry) return;
-    const small = entry.images?.[0] ? resolveImgSrc({ src: thumbSrc(entry.images[0]) }) : resolveImgSrc(null);
+    const small = safeCover(entry) ? resolveImgSrc({ src: thumbSrc(safeCover(entry)) }) : resolveImgSrc(null);
     const label = `${entry.tags?.brand || ''} ${entry.year || ''}`.trim();
     html += `
       <button type="button" class="recent-thumb-btn focus-ring" data-recent-id="${id}" aria-label="Open ${label}">
@@ -109,7 +110,7 @@ function renderRecentlyViewed(archiveData, callbacks) {
     img.addEventListener('error', () => {
       // Thumbnail missing (e.g. a brand-new image not yet optimised):
       // fall back to the full file once, then to the placeholder.
-      const full = resolveImgSrc(archiveData.find(e => e.id === img.closest('[data-recent-id]')?.dataset.recentId)?.images?.[0]);
+      const full = resolveImgSrc(archiveData.find(e => e.id === img.closest('[data-recent-id]')?.dataset.recentId) ? safeCover(archiveData.find(e => e.id === img.closest('[data-recent-id]')?.dataset.recentId)) : null);
       img.addEventListener('error', () => { img.src = BROKEN_ASSET; img.classList.remove('opacity-0'); }, { once: true });
       img.src = full;
     }, { once: true });

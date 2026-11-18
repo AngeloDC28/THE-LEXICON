@@ -3,9 +3,10 @@
  * Nexus connections panel with force-directed graph and list views.
  */
 
-import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
-import { AppState } from './core-state.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
+import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js?v=9291973';
+import { AppState } from './core-state.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { safeCover } from './categories.js?v=9291973';
 
 // Track active simulation cleanup across re-opens
 let _cancelSim = null;
@@ -324,7 +325,7 @@ function renderNexusEmptyState(entry, container) {
       <p class="t-mono-xs font-mono uppercase tracking-[0.18em] opacity-40 mb-3">From the same era</p>
       <div class="nexus-peers-grid">
         ${peers.map(p => {
-          const img = p.images?.[0]?.src ? resolveImgSrc({ src: p.images[0].src }) : '';
+          const img = safeCover(p)?.src ? resolveImgSrc({ src: safeCover(p).src }) : '';
           const brand = (p.tags?.brand || p.id).toUpperCase();
           const year = p.year || '';
           return `<button type="button" class="nexus-peer-card focus-ring" data-entry-id="${p.id}" aria-label="Open ${brand} ${year}">
@@ -476,7 +477,7 @@ function renderList(entry, connections, callbacks, container) {
       html += `<p class="matrix-section-title">${t('nexus_shared')}: ${tagValue}</p>`;
       html += '<div class="matrix-entries">';
       relEntries.slice(0, 12).forEach(rel => {
-        const thumbSrc = resolveImgSrc(rel.images?.[0]);
+        const thumbSrc = resolveImgSrc(safeCover(rel));
         const label = `${rel.tags.brand || ''} ${rel.year || ''}`;
         html += `<button type="button" class="matrix-entry focus-ring" data-matrix-entry-id="${rel.id}" aria-label="Open ${label}">
           <img src="${thumbSrc}" alt="" class="matrix-entry-thumb" loading="lazy" />

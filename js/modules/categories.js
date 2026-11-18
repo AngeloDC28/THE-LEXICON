@@ -58,3 +58,18 @@ export const CATEGORY_PLAIN = {
 export function categoryPlain(cat) {
   return CATEGORY_PLAIN[cat]?.title || 'Featured show';
 }
+
+// "SS" and "AW" are trade shorthand a newcomer won't know. Spell them out
+// wherever a reader (not a table) sees them.
+const SEASON_NAMES = { SS: 'Spring/Summer', AW: 'Autumn/Winter', FW: 'Autumn/Winter' };
+export function seasonName(season = '') {
+  const key = String(season).trim().toUpperCase();
+  return SEASON_NAMES[key] || String(season).trim();
+}
+
+// The image to show when a look stands in for the whole show (backgrounds,
+// thumbnails, link previews, feeds): the first look without a content note.
+export function safeCover(entry) {
+  const imgs = Array.isArray(entry?.images) ? entry.images : [];
+  return imgs.find(im => im && !im.content_note) || imgs[0] || null;
+}

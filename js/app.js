@@ -10,26 +10,29 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js?v=715e5c2';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt } from './modules/core-utils.js?v=715e5c2';
+import { imageDimensions } from './modules/image-dimensions.js?v=9291973';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt } from './modules/core-utils.js?v=9291973';
 setImageDimensions(imageDimensions);
-import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=715e5c2';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=715e5c2';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=715e5c2';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=715e5c2';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=715e5c2';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=9291973';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=9291973';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=9291973';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=9291973';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=9291973';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js?v=715e5c2';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=715e5c2';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=715e5c2';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=715e5c2';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=715e5c2';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=715e5c2';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=715e5c2';
-import { getTranslation, supportedLanguages } from './modules/translations.js?v=715e5c2';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=715e5c2';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=715e5c2';
-import { renderGlossaryModal } from './modules/glossary.js?v=715e5c2';
+import { switchView } from './modules/navigation.js?v=9291973';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=9291973';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=9291973';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=9291973';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=9291973';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=9291973';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=9291973';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=9291973';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=9291973';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=9291973';
+import { renderGlossaryModal } from './modules/glossary.js?v=9291973';
+import { safeCover } from './modules/categories.js?v=9291973';
+
+const INTRO_DISMISSED_KEY = 'lexicon-intro-dismissed-v2';
 
 // --- Shared Callbacks ---
 const callbacks = {
@@ -77,7 +80,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=715e5c2');
+  const { archiveData: staticData } = await import('../database.js?v=9291973');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -165,14 +168,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Orientation Panel Logic — run BEFORE renderHero so the hero only reveals
   // sections that should be visible on this visit. Eliminates the flash of
   // landing content for returning users and the mobile auto-dismiss case.
+  // The intro used to be auto-dismissed (permanently) on phones, so a
+  // newcomer on mobile never saw what the site is. Phones now get the intro
+  // too, in a compact form (index.css, max-width 767px). The key was renamed
+  // so visitors who were auto-dismissed under the old rule see it once.
   var dismissed;
-  try { dismissed = localStorage.getItem('lexicon-orientation-dismissed'); } catch(e) {}
-  // Auto-dismiss hero on mobile — the grid IS the landing page on small screens.
-  // Set the flag so it stays dismissed on return visits too.
-  if (!dismissed && window.innerWidth < 768) {
-    try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
-    dismissed = 'true';
-  }
+  try { dismissed = localStorage.getItem(INTRO_DISMISSED_KEY); } catch(e) {}
   if (dismissed) {
     const op = $('orientation-panel');
     if (op) op.classList.add('hidden');
@@ -444,7 +445,7 @@ function refreshChrome() {
 
   // --- Orientation panel (hero layout) — text is baked into HTML; no dynamic i18n needed here ---
   const btnDismissOri = $('btn-dismiss-orientation');
-  if (btnDismissOri) btnDismissOri.textContent = t('orientation_proceed') || 'BROWSE THE ARCHIVE →';
+  if (btnDismissOri) btnDismissOri.textContent = t('orientation_proceed') || 'Start exploring →';
 
   // --- Active Entry Detail ---
   const btnSaveFolder       = $('btn-save-to-folder');
@@ -1266,7 +1267,7 @@ function setupEventListeners() {
     const nexusTEl = $('nexus-teaser');
     if (nexusTEl) nexusTEl.style.display = 'none';
     $('featured-strip')?.classList.add('hidden');
-    try { localStorage.setItem('lexicon-orientation-dismissed', 'true'); } catch(e) {}
+    try { localStorage.setItem(INTRO_DISMISSED_KEY, 'true'); } catch(e) {}
     // Scroll the right panel back to the top so the grid is immediately visible
     // after all the landing sections collapse (user may have scrolled down).
     const imagePanel = $('image-panel');
@@ -1867,10 +1868,10 @@ function renderHero(archiveData) {
     const uniqueBrands = new Set(archiveData.map(e => e.tags?.brand).filter(Boolean));
     statBrands.textContent = uniqueBrands.size.toLocaleString();
   }
-  const statMov = $('stat-movements');
-  if (statMov) {
-    const uniqueMovements = new Set(archiveData.flatMap(e => (e.tags?.theories || '').split('|').map(s => s.trim())).filter(Boolean));
-    statMov.textContent = uniqueMovements.size.toLocaleString();
+  const statYears = $('stat-years');
+  if (statYears) {
+    const ys = archiveData.map(e => e.year).filter(Boolean);
+    if (ys.length) statYears.textContent = `${Math.min(...ys)}–${Math.max(...ys)}`;
   }
 
   // Populate landing section content (always — so they're ready when shown)
@@ -1923,7 +1924,7 @@ function renderHero(archiveData) {
     const brand = (candidate.tags?.brand || '').toUpperCase();
     const year = candidate.year || '—';
     const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
-    const hook = excerpt(candidate.notes?.critique || candidate.notes?.provenance || '', 200);
+    const hook = excerpt(candidate.summary_plain || candidate.notes?.critique || candidate.notes?.provenance || '', 220);
 
     const tagEl = $('hero-tag-label');
     if (tagEl) {
@@ -1983,9 +1984,9 @@ function renderHero(archiveData) {
 
     // Hero background image
     const bgEl = $('hero-bg-img');
-    if (bgEl && candidate.images?.[0]) {
+    if (bgEl && safeCover(candidate)) {
       bgEl.classList.remove('loaded');
-      const src = resolveImgSrc(candidate.images[0]);
+      const src = resolveImgSrc(safeCover(candidate));
       bgEl.style.backgroundImage = `url(${src})`;
       const img = new Image();
       img.onload = () => bgEl.classList.add('loaded');
@@ -2063,8 +2064,8 @@ function renderEntryOfWeek(archiveData) {
     vibesEl.innerHTML = vibes.map(v => `<span class="eow-vibe">${v}</span>`).join('');
   }
   const bgEl = $('eow-bg');
-  if (bgEl && pick.images?.[0]) {
-    bgEl.style.backgroundImage = `url(${resolveImgSrc(pick.images[0])})`;
+  if (bgEl && safeCover(pick)) {
+    bgEl.style.backgroundImage = `url(${resolveImgSrc(safeCover(pick))})`;
   }
   card.onclick = () => openDetail(pick.id, 0, archiveData, callbacks);
 }

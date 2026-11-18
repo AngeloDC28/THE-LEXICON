@@ -3,6 +3,7 @@
   "id": "garcons-ss97",
   "title": "Comme des Garçons SS 1997",
   "subtitle": "Body Meets Dress, Dress Meets Body",
+  "summary_plain": "Rei Kawakubo sewed padded lumps into stretchy dresses, giving models bumps on their backs, hips and shoulders. The press called it the 'lumps and bumps' show. It asked why fashion only flatters one idea of a good body.",
   "year": 1997,
   "season": "SS",
   "published": "2026-05-12",
@@ -162,6 +163,7 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-10.jpg",
+      "content_note": "Partial nudity",
       "hotspots": [
         {
           "x": 50,
@@ -235,6 +237,7 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-15.jpg",
+      "content_note": "Partial nudity",
       "hotspots": [
         {
           "x": 50,

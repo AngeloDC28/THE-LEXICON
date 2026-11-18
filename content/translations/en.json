@@ -140,7 +140,7 @@
   "btn_reset_system": "Reset System",
   "loading": "LOADING THE LEXICON",
   "accept_terms": "Accept",
-  "cookie_notice": "We use cookies to keep your archive state and folders between visits.",
+  "cookie_notice": "We save your folders and settings on this device only. No tracking, no ads.",
   "close": "Close",
   "legal_privacy_title": "Privacy Protocol",
   "legal_privacy_body": [
@@ -191,7 +191,7 @@
   "orientation_col2_desc": "See how this entry connects to others — references, influences, lineage.",
   "orientation_col3_title": "Archival Collections",
   "orientation_col3_desc": "Sign in to save entries to your own folders for ongoing research.",
-  "orientation_proceed": "[ Proceed to Archive ]",
+  "orientation_proceed": "Start exploring →",
   "connection_matrix_header": "NEXUS · CONNECTIONS",
   "sort_label": "Sort",
   "sort_default": "Newest",

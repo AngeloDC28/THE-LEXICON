@@ -2,13 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=715e5c2';
-import { AppState, updateHash } from './core-state.js?v=715e5c2';
-import { getFilteredEntries } from './search-engine.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=715e5c2';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=715e5c2';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=715e5c2';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=9291973';
+import { AppState, updateHash } from './core-state.js?v=9291973';
+import { getFilteredEntries } from './search-engine.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=9291973';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=9291973';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=9291973';
+import { safeCover } from './categories.js?v=9291973';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -75,6 +76,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     renderImage(entry, callbacks);
     preloadAdjacentImages(entry);
     renderSidebarHeader(entry);
+    renderMobileIntro(entry);
     renderBrutalistNodes(entry);
     renderStickyOverlay(entry);
     renderMetadataGrid(entry);
@@ -111,8 +113,8 @@ function updateEntryMetaTags(entry) {
     ? `${title}: ${entry.subtitle}`
     : `Forensic visual analysis of ${title}. Annotated for visual and cultural research.`;
   const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = entry.images?.[0]?.src
-    ? `${window.location.origin}/public/${entry.images[0].src}`
+  const img    = safeCover(entry)?.src
+    ? `${window.location.origin}/public/${safeCover(entry).src}`
     : null;
 
   document.title = `${title} — THE LEXICON`;
@@ -155,8 +157,8 @@ function updateEntryJsonLd(entry) {
   const season = entry.season || '';
   const title  = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
   const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = entry.images?.[0]?.src
-    ? `${window.location.origin}/public/${entry.images[0].src}`
+  const img    = safeCover(entry)?.src
+    ? `${window.location.origin}/public/${safeCover(entry).src}`
     : null;
   const ld = {
     '@context': 'https://schema.org',
@@ -262,10 +264,14 @@ function renderSidebarHeader(entry) {
   const pageTitle = entry.title ? getTranslation(entry.title, lang) : `${brand} ${season} ${year}`.trim();
   const subtitle = entry.subtitle ? getTranslation(entry.subtitle, lang) : '';
 
+  // A plain one-paragraph "what am I looking at?" before the analysis.
+  const summary = entry.summary_plain ? getTranslation(entry.summary_plain, lang) : '';
+  const when = [seasonName(entry.season), entry.year].filter(Boolean).join(' ');
   header.innerHTML = `
     <h1 class="detail-title">${escapeHtml(pageTitle)}${subtitle ? `<span class="detail-subtitle">${escapeHtml(subtitle)}</span>` : ''}</h1>
-    <span class="detail-accent-tag" data-cat="${cat}">${tagLabel.toUpperCase()}</span>
-    <div class="detail-entry-id">${brand} · ${year}${season ? ' · ' + season : ''}</div>
+    <span class="detail-accent-tag" data-cat="${cat}" title="${escapeHtml(categoryLabel(cat))}">${tagLabel.toUpperCase()}</span>
+    <div class="detail-entry-id">${brand} · ${escapeHtml(when.toUpperCase())}</div>
+    ${summary ? `<p class="detail-summary">${escapeHtml(summary)}</p>` : ''}
     ${vibesHtml}
     ${posLabel ? `
     <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
@@ -281,6 +287,24 @@ function renderSidebarHeader(entry) {
   header.querySelector('#btn-detail-next')?.addEventListener('click', () => {
     document.dispatchEvent(new CustomEvent('lexicon:entry-nav', { detail: { dir: 1 } }));
   });
+}
+
+// Phones and tablets: the side column with the title is hidden, so a reader
+// saw only a photo. This short block under the breadcrumb names the show and
+// says what it is. Hidden at ≥1024px, where the side column shows instead.
+function renderMobileIntro(entry) {
+  const el = $('detail-mobile-intro');
+  if (!el) return;
+  const lang = AppState.language;
+  const cat = getTagCategory(entry.tags?.politics || '');
+  const brand = entry.tags?.brand ? getTranslation(entry.tags.brand, lang) : '';
+  const when = [seasonName(entry.season), entry.year].filter(Boolean).join(' ');
+  const subtitle = entry.subtitle ? getTranslation(entry.subtitle, lang) : '';
+  const summary = entry.summary_plain ? getTranslation(entry.summary_plain, lang) : '';
+  el.innerHTML = `
+    <h1 class="dmi-title">${escapeHtml(brand)}<span class="dmi-when">${escapeHtml(when)}${subtitle ? ' · ' + escapeHtml(subtitle) : ''}</span></h1>
+    <span class="detail-accent-tag" data-cat="${cat}">${escapeHtml(categoryPlain(cat).toUpperCase())}</span>
+    ${summary ? `<p class="dmi-summary">${escapeHtml(summary)}</p>` : ''}`;
 }
 
 function renderBreadcrumb(entry) {
@@ -306,6 +330,38 @@ function renderBreadcrumb(entry) {
     e.preventDefault();
     document.dispatchEvent(new CustomEvent('lexicon:close-detail'));
   });
+}
+
+// Looks with a content_note (e.g. "Partial nudity") are blurred behind a short
+// note until the reader chooses to see them. The choice is remembered for the
+// rest of the visit (sessionStorage), per look, so paging back doesn't ask
+// again. The site is meant for readers aged 15 and up.
+const _revealed = new Set();
+try { JSON.parse(sessionStorage.getItem('lexicon-revealed') || '[]').forEach(k => _revealed.add(k)); } catch (e) {}
+
+function applyContentNote(entry, imgObj) {
+  const wrapper = $('detail-image-wrapper');
+  if (!wrapper) return;
+  wrapper.querySelector('.content-note')?.remove();
+  const key = `${entry.id}#${AppState.currentImageIndex}`;
+  const note = imgObj?.content_note;
+  const veiled = !!note && !_revealed.has(key);
+  wrapper.classList.toggle('is-veiled', veiled);
+  if (!veiled) return;
+  const box = document.createElement('div');
+  box.className = 'content-note';
+  box.innerHTML = `<p class="content-note-label">Content note</p>
+    <p class="content-note-text">${escapeHtml(note)}</p>
+    <button type="button" class="content-note-btn focus-ring">Show image</button>`;
+  box.querySelector('button').addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    _revealed.add(key);
+    try { sessionStorage.setItem('lexicon-revealed', JSON.stringify([..._revealed])); } catch (e) {}
+    wrapper.classList.remove('is-veiled');
+    box.remove();
+    $('detail-image')?.focus?.();
+  });
+  wrapper.appendChild(box);
 }
 
 function renderImage(entry, callbacks) {
@@ -345,6 +401,7 @@ function renderImage(entry, callbacks) {
     const described = parts.length ? `: ${parts.join(', ')}` : '';
     imgEl.alt = `${baseAlt}, look ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}${described}`;
   }
+  applyContentNote(entry, currentImgObj);
 
   const titleEl = $('active-entry-title');
   if (titleEl) {
@@ -696,7 +753,7 @@ function renderRelatedEntries(entry, archiveData, callbacks) {
 
   const lang = AppState.language;
   grid.innerHTML = scored.map(({ e, score }) => {
-    const thumb = e.images && e.images[0];
+    const thumb = safeCover(e);
     const src   = resolveImgSrc(thumb);
     const brand = e.tags.brand ? getTranslation(e.tags.brand, lang) : '';
     return `<button type="button" class="related-entry-btn group text-left focus-ring" data-related-id="${e.id}" aria-label="${brand} ${e.year || ''} · ${score} shared tag${score>1?'s':''}. Open entry">

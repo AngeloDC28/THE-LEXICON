@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/js/boot.js?v=715e5c2"></script>
+  <script src="/js/boot.js?v=9291973"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>THE LEXICON — fashion history, indexed analytically</title>
@@ -78,7 +78,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="/index.css?v=715e5c2" />
+  <link rel="stylesheet" href="/index.css?v=9291973" />
 </head>
 
 <body>
@@ -353,24 +353,23 @@
           <!-- Orientation Panel -->
           <!-- Hero (Phase 1 redesign — two-column layout matching 01-homepage mockup) -->
           <section id="orientation-panel" class="hero-panel mb-1" aria-label="Site introduction">
-            <button id="btn-close-orientation" type="button" aria-label="Dismiss orientation panel" class="hero-close">×</button>
+            <button id="btn-close-orientation" type="button" aria-label="Hide the introduction" class="hero-close">×</button>
 
             <!-- Left column: headline + stats + actions -->
             <div class="hero-col-left">
               <div>
-                <div class="hero-eyebrow"><span class="hero-bar"></span>FASHION HISTORY · VISUAL CULTURE · LINEAGE</div>
+                <div class="hero-eyebrow"><span class="hero-bar"></span>FASHION HISTORY, EXPLAINED</div>
                 <h2 class="hero-headline">See where every fashion idea <em>actually</em> came from.</h2>
-                <p class="hero-sub">A research archive mapping fashion history, visual culture, and the lineage of ideas — indexed by analytical category, not just designer.</p>
+                <p class="hero-sub">45 famous fashion shows, explained: what they meant, where the ideas came from, and what they inspired. Sorted by the big idea behind each show, not just the designer.</p>
                 <div class="hero-actions">
-                  <button id="btn-dismiss-orientation" class="hero-btn-pri" type="button">BROWSE THE ARCHIVE →</button>
-                  <button id="btn-hero-search" class="hero-btn-sec" type="button">RESEARCH TERMINAL</button>
+                  <button id="btn-dismiss-orientation" class="hero-btn-pri" type="button">Start exploring →</button>
+                  <button id="btn-hero-search" class="hero-btn-sec" type="button">Search</button>
                 </div>
               </div>
               <div class="hero-stats">
-                <div class="hero-stat"><div class="hs-num" id="stat-entries">45</div><div class="hs-lbl">Entries</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-brands">45</div><div class="hs-lbl">Brands</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-movements">60</div><div class="hs-lbl">Movements</div></div>
-                <div class="hero-stat"><div class="hs-num" id="stat-axes">6</div><div class="hs-lbl">Analytical axes</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-entries">45</div><div class="hs-lbl">Shows</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-years">1981–2023</div><div class="hs-lbl">Years</div></div>
+                <div class="hero-stat"><div class="hs-num" id="stat-axes">6</div><div class="hs-lbl">Big ideas</div></div>
               </div>
             </div>
 
@@ -380,7 +379,7 @@
               <div id="hero-bg-img" class="hero-bg-img" aria-hidden="true"></div>
               <div class="hero-bg-overlay" aria-hidden="true"></div>
               <div class="hero-featured-meta">
-                <span>FEATURED · ANALYTICAL RECORD</span>
+                <span>FEATURED SHOW</span>
               </div>
               <div class="hero-featured-content">
                 <span class="hero-featured-tag" id="hero-tag-label">CORPOREAL INTERVENTION</span>
@@ -396,12 +395,41 @@
               </div>
             </div>
           </section>
+          <!-- How It Works (directly under the hero: the first thing a newcomer needs) -->
+          <div id="how-it-works" class="how-section">
+            <div class="sec-head">
+              <div>
+                <div class="sec-eye">// HOW IT WORKS</div>
+                <div class="sec-title">How The Lexicon works</div>
+              </div>
+            </div>
+            <div class="how-grid">
+              <div class="how-step">
+                <div class="how-num"><span>01</span><span>RESEARCH</span></div>
+              <h2>Pick a show.</h2>
+                <p>Each entry is one fashion show. Tap the crosshairs on the photos to read notes on what you're looking at, then read what happened, how it was made and what it means.</p>
+                <div class="how-term">↳ <span>Notes</span> · pinned to the photo</div>
+              </div>
+              <div class="how-step">
+                <div class="how-num"><span>02</span><span>CONNECT</span></div>
+              <h2>Follow the ideas.</h2>
+                <p>The Nexus shows which earlier shows each one borrowed from, and what it went on to inspire. Hard words are underlined: tap one for a plain definition.</p>
+                <div class="how-term">↳ <span>Nexus</span> · how the shows connect</div>
+              </div>
+              <div class="how-step">
+                <div class="how-num"><span>03</span><span>ARCHIVE</span></div>
+              <h2>Save and cite.</h2>
+                <p>Save shows into folders for a project, and copy a ready-made reference (Harvard, MLA, APA, Chicago) for your essay or homework.</p>
+                <div class="how-term">↳ <span>Folder</span> · your saved collection</div>
+              </div>
+            </div>
+          </div>
           <!-- Browse by analytical axis (second door — enter by lens, not designer) -->
           <div id="axes-browse" class="axes-browse">
             <div class="sec-head">
               <div>
-                <div class="sec-eye">// ENTER BY ANALYTICAL LENS</div>
-                <div class="sec-title">Browse by analytical axis</div>
+                <div class="sec-eye">// SIX BIG IDEAS</div>
+                <div class="sec-title">Start with an idea</div>
               </div>
             </div>
             <div class="axes-grid" id="axes-grid" role="list"></div>
@@ -438,36 +466,10 @@
           </div>
           <div id="featured-strip" class="feat-strip mb-1 hidden"></div>
 
-          <!-- How It Works (shown below featured strip when orientation is visible) -->
-          <div id="how-it-works" class="how-section">
-            <div class="sec-head">
-              <div>
-                <div class="sec-eye">// METHOD</div>
-                <div class="sec-title">How The Lexicon works</div>
-              </div>
-            </div>
-            <div class="how-grid">
-              <div class="how-step">
-                <div class="how-num"><span>01</span><span>RESEARCH</span></div>
-              <h2>Trace any lineage.</h2>
-                <p>Search by brand, era, designer, or analytical category. Every entry is sourced, citable, and indexed by the editorial framework — not just the maker.</p>
-                <div class="how-term">↳ <span>Provenance</span> · where it came from</div>
-              </div>
-              <div class="how-step">
-                <div class="how-num"><span>02</span><span>CONNECT</span></div>
-              <h2>See the references.</h2>
-                <p>The Nexus on every entry maps the visual, intellectual, and historical references it draws from — and the work it has gone on to influence.</p>
-                <div class="how-term">↳ <span>Nexus</span> · the connections between entries</div>
-              </div>
-              <div class="how-step">
-                <div class="how-num"><span>03</span><span>ARCHIVE</span></div>
-              <h2>Build your own.</h2>
-                <p>Sign in to save entries into folders, annotate them, and generate footnotes in Chicago, MLA, APA, Harvard, BibTeX, or permalink format.</p>
-                <div class="how-term">↳ <span>Folder</span> · your saved collection</div>
-              </div>
-            </div>
-          </div>
 
+
+
+          <div id="image-grid" class="image-grid"></div>
           <!-- Nexus teaser (preview of the connection graph) -->
           <div id="nexus-teaser" class="nexus-teaser-section">
             <div class="sec-head">
@@ -479,20 +481,20 @@
             <button type="button" id="nexus-teaser-card" class="nexus-teaser-card" aria-label="Explore the Nexus connection graph">
               <div class="nexus-teaser-viz" id="nexus-teaser-svg" aria-hidden="true"></div>
               <div class="nexus-teaser-aside">
-                <p class="nexus-teaser-lead">The Nexus maps the visual, intellectual, and historical threads between collections — shared theory, era, material, and lineage.</p>
+                <p class="nexus-teaser-lead">Every show is linked to the shows it shares ideas with. A line between two shows means they share a theme, a material or a period.</p>
                 <span class="nexus-teaser-cta" id="nexus-teaser-cta">Explore the Nexus →</span>
               </div>
             </button>
           </div>
-
           <!-- Who It's For (shown with hero on first visit) -->
           <div id="who-section" class="who-section">
             <div class="who-inner">
               <div class="who-head">
-                <div class="who-title">For people who take<br>fashion seriously.</div>
-                <div class="who-lead">The Lexicon is built for the people who do the work — designers, students, critics, costume teams, and stylists who need references that hold up to scrutiny. Free to browse; sign in to save.</div>
+                <div class="who-title">For anyone curious<br>about fashion.</div>
+                <div class="who-lead">No fashion knowledge needed: every show starts with what happened, and hard words are explained where they appear. The detail goes deep enough for designers, students and critics. Free to browse; sign in to save.</div>
               </div>
               <div class="who-grid">
+                <div class="who-cell"><div class="who-role">CURIOUS?</div><div class="who-use">Start with the six big ideas above, or open any show that catches your eye.</div></div>
                 <div class="who-cell"><div class="who-role">DESIGNERS</div><div class="who-use">Reference checks. Avoid accidental repeats. Find lineage for new ideas.</div></div>
                 <div class="who-cell"><div class="who-role">STUDENTS</div><div class="who-use">Citable sources for dissertations, essays, and critical writing.</div></div>
                 <div class="who-cell"><div class="who-role">STYLISTS</div><div class="who-use">Build moodboards anchored in real history, not Pinterest drift.</div></div>
@@ -501,8 +503,6 @@
               </div>
             </div>
           </div>
-
-          <div id="image-grid" class="image-grid"></div>
         </div>
 
         <!-- Mobile filter button (visible only on small screens) -->
@@ -602,6 +602,7 @@
         <div id="detail-image-view" class="hidden relative overflow-hidden w-full flex-1 min-h-0 flex flex-col bg-black lg:pb-0">
           <!-- Breadcrumb bar -->
           <nav id="detail-breadcrumb" class="hidden lg:flex items-center gap-1 px-4 py-1.5 border-b border-white/10 text-[8px] font-mono uppercase tracking-widest text-white/30" aria-label="Entry breadcrumb"></nav>
+          <div id="detail-mobile-intro" class="detail-mobile-intro"></div>
           <div id="detail-desktop-stack" class="relative flex-1 min-h-0 flex">
             <!-- CENTER: Image Sector -->
             <div id="detail-image-sector" class="flex-1 relative flex flex-col items-center justify-center p-4 lg:p-12 border-r border-white/10">
@@ -1078,56 +1079,13 @@
     </div>
 
     <!-- MAIN ENTRY POINT -->
-    <script type="module" src="/js/app.js?v=715e5c2"></script>
+    <script type="module" src="/js/app.js?v=9291973"></script>
 
   </div>
 
-  <!-- Welcome Modal: shown on first visit, dismissed to localStorage -->
-  <div id="welcome-modal" class="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="welcome-modal-title" hidden>
-    <div class="welcome-inner">
-
-      <!-- Header -->
-      <div class="welcome-header">
-        <div class="welcome-wordmark" id="welcome-modal-title">THE LEXICON</div>
-        <p class="welcome-subtitle" id="welcome-subtitle-text">A research archive for fashion history and visual culture.</p>
-        <p class="welcome-desc" id="welcome-desc-text">We map where every idea came from — indexed by analytical category, not just designer.</p>
-      </div>
-
-      <!-- 3-step guide -->
-      <div class="welcome-steps" role="list">
-        <div class="welcome-step" role="listitem">
-          <div class="ws-label" id="ws-label-1">01 · BROWSE</div>
-          <div class="ws-title" id="ws-title-1">Explore the archive</div>
-          <div class="ws-desc" id="ws-desc-1">Scroll the visual grid or switch to the index table. Filter by brand, era, movement, or theory.</div>
-        </div>
-        <div class="welcome-step" role="listitem">
-          <div class="ws-label" id="ws-label-2">02 · ANALYSE</div>
-          <div class="ws-title" id="ws-title-2">Open any entry</div>
-          <div class="ws-desc" id="ws-desc-2">Each entry has annotated hotspots on every image, and three structured notes: Provenance, Critique, and Strategy.</div>
-        </div>
-        <div class="welcome-step" role="listitem">
-          <div class="ws-label" id="ws-label-3">03 · CONNECT</div>
-          <div class="ws-title" id="ws-title-3">Follow the lineage</div>
-          <div class="ws-desc" id="ws-desc-3">The Nexus maps every entry's visual and intellectual references — and what it went on to influence.</div>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="welcome-footer">
-        <button type="button" id="btn-welcome-enter" class="welcome-cta">ENTER THE ARCHIVE</button>
-        <button type="button" id="btn-welcome-skip" class="welcome-skip">Skip introduction</button>
-      </div>
-
-      <!-- Language selector — below CTA so hero content lands first -->
-      <div class="welcome-lang-row" id="welcome-lang-row">
-        <span class="welcome-lang-label" id="welcome-lang-label-text">Choose language</span>
-        <div class="welcome-lang-options" id="welcome-lang-options">
-          <!-- Populated by initWelcomeModal() from ALL_LANGS -->
-        </div>
-      </div>
-
-    </div>
-  </div>
+  <!-- The first-visit welcome overlay was removed: it put a full-screen wall
+       (and a second intro, after the hero) before any fashion. The homepage
+       hero is now the only introduction. -->
 
 </body>
 </html>

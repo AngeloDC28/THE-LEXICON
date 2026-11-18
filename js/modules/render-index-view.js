@@ -10,15 +10,15 @@
  * Keyboard-navigable (j/k for rows, Enter to open, /, ?, V, I).
  * Toggle persists in localStorage as 'lexicon.view-mode' (visual | index).
  */
-import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=715e5c2';
-import { AppState } from './core-state.js?v=715e5c2';
-import { getFilteredEntries } from './search-engine.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
+import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=9291973';
+import { AppState } from './core-state.js?v=9291973';
+import { getFilteredEntries } from './search-engine.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
 
 // Axis mapping and names live in categories.js (shared with the build
 // scripts); re-exported here so existing imports keep working.
-import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain } from './categories.js?v=715e5c2';
-export { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain };
+import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain, seasonName } from './categories.js?v=9291973';
+export { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain, seasonName };
 
 // Extract a short label from a long politics tag.
 // "Body Politics & Corporeal Interventions" → "Corporeal Intervention"

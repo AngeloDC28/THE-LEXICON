@@ -13,6 +13,7 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { safeCover } from '../../js/modules/categories.js';
 
 const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
@@ -36,8 +37,8 @@ const items = order.map(id => {
 
   const title   = entry.title || `${entry.brand || id} ${entry.season || ''} ${entry.year || ''}`.trim();
   const url     = `${BASE}/entry/${id}/0`;
-  const img     = entry.images?.[0]?.src
-    ? `${BASE}/public/${entry.images[0].src}`
+  const img     = safeCover(entry)?.src
+    ? `${BASE}/public/${safeCover(entry).src}`
     : null;
   const desc    = entry.subtitle
     || entry.notes?.critique?.slice(0, 200)

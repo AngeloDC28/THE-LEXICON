@@ -5,11 +5,12 @@
  * window.location.origin, fixing the broken image issue where relative paths
  * resolved incorrectly depending on the current URL.
  */
-import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, BROKEN_ASSET } from './core-utils.js?v=715e5c2';
-import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=715e5c2';
-import { getFilteredEntries } from './search-engine.js?v=715e5c2';
-import { getTranslation } from './translations.js?v=715e5c2';
-import { getTagCategory, categoryLabel, categoryPlain } from './render-index-view.js?v=715e5c2';
+import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, BROKEN_ASSET } from './core-utils.js?v=9291973';
+import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=9291973';
+import { getFilteredEntries } from './search-engine.js?v=9291973';
+import { getTranslation } from './translations.js?v=9291973';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=9291973';
+import { safeCover } from './categories.js?v=9291973';
 
 export function setupGridIntersectionObserver() {
   if (gridIntersectionObserver) {
@@ -105,10 +106,14 @@ export function renderImageGrid(archiveData, callbacks) {
         : '';
       const season = entry.season || '';
       const year = entry.year || '----';
-      const metaLine = [brand.toUpperCase(), year, season].filter(Boolean).join(' · ');
-      // Only show hook on first image of each entry (i===0) to avoid repetition
-      const hookRaw = i === 0 ? (entry.notes?.critique || '') : '';
-      const hook = hookRaw ? excerpt(getTranslation(hookRaw, AppState.language).split(/(?<=[.!?])\s/)[0], 90) : '';
+      // "SS"/"AW" spelled out: newcomers don't know the shorthand.
+      const metaLine = [brand.toUpperCase(), [seasonName(season), year].filter(Boolean).join(' ').toUpperCase()].filter(Boolean).join(' · ');
+      // Plain summary first (written for newcomers); otherwise the opening
+      // sentence of the critique.
+      const hookRaw = i === 0 ? (entry.summary_plain || entry.notes?.critique || '') : '';
+      const hook = !hookRaw ? '' : entry.summary_plain
+        ? excerpt(getTranslation(hookRaw, AppState.language), 140)
+        : excerpt(getTranslation(hookRaw, AppState.language).split(/(?<=[.!?])\s/)[0], 90);
 
       // Only the first image per entry is a keyboard/screen-reader target.
       // Subsequent images are presentational — clickable via mouse but not
@@ -126,7 +131,7 @@ export function renderImageGrid(archiveData, callbacks) {
           <div class="grid-cell-tag-strip" data-cat="${tagCategory}">
             <span class="gc-tag-label"${catTip ? ` data-tooltip="${catTip.replace(/"/g, '&quot;')}"` : ''}>${tagLabel}</span>
           </div>
-          <div class="grid-cell-img group">
+          <div class="grid-cell-img group${imgObj.content_note ? ' is-veiled' : ''}">${imgObj.content_note ? `<span class="grid-content-note">Content note: ${imgObj.content_note}</span>` : ''}
             ${hotspotBadge}
             <picture>
               <source type="image/webp" srcset="${resolveImgSrc({src: thumbSrc(imgObj)})}">
@@ -229,11 +234,11 @@ export function renderEntryList(archiveData, callbacks) {
       ? `<button type="button" class="entry-cat-header focus-ring${isActiveCat ? ' entry-cat-header--active' : ''}" data-cat-filter="${tagCategory}" aria-pressed="${isActiveCat}" aria-label="Filter by ${tagLabel}" aria-description="${listCatTip}">${tagLabel}${isActiveCat ? ' ×' : ''}</button>`
       : '';
     // Thumbnail — first image of entry, shown inline on desktop
-    const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
+    const firstImg = safeCover(entry);
     const fullSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
     const smallSrc = firstImg ? resolveImgSrc({ src: thumbSrc(firstImg) }) : null;
     const thumb = fullSrc
-      ? `<picture class="entry-item-thumb" aria-hidden="true">
+      ? `<picture class="entry-item-thumb${firstImg?.content_note ? ' is-veiled' : ''}" aria-hidden="true">
            <source type="image/webp" srcset="${smallSrc}">
            <img src="${fullSrc}" alt="" loading="lazy" decoding="async">
          </picture>`
@@ -292,10 +297,10 @@ export function renderFeaturedStrip(archiveData) {
     const year = entry.year || '----';
     const season = entry.season ? entry.season.toUpperCase() : 'ARCHIVE';
     const label = categoryPlain(cat);
-    const firstImg = Array.isArray(entry.images) ? entry.images[0] : null;
+    const firstImg = safeCover(entry);
     const imgSrc = firstImg?.src ? resolveImgSrc({ src: firstImg.src }) : null;
     const webpImg = firstImg ? resolveImgSrc({ src: thumbSrc(firstImg) }) : null;
-    const hook = excerpt(getTranslation(entry.notes?.critique || entry.notes?.provenance || '', lang), 120);
+    const hook = excerpt(getTranslation(entry.summary_plain || entry.notes?.critique || entry.notes?.provenance || '', lang), 160);
 
     const imgHtml = imgSrc
       ? `<picture>
