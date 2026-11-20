@@ -19,8 +19,9 @@
     "generate-sitemap": "node .github/scripts/generate-sitemap.mjs",
     "generate-feed": "node .github/scripts/generate-feed.mjs",
     "generate-entry-pages": "node .github/scripts/generate-entry-pages.mjs",
+    "generate-static-pages": "node .github/scripts/generate-static-pages.mjs",
     "build-tailwind": "tailwindcss -i tailwind-entry.css -o public/tailwind.css --minify",
-    "preflight": "npm run build-tailwind && npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run generate-sitemap && npm run generate-feed && npm run bust-cache && npm run generate-entry-pages && npm run check && node .github/scripts/stage-output.mjs",
+    "preflight": "npm run build-tailwind && npm run sync-content-keys && npm run build-data && npm run build-translations && npm run measure-images && npm run generate-sitemap && npm run generate-feed && npm run bust-cache && npm run generate-entry-pages && npm run generate-static-pages && npm run check && node .github/scripts/stage-output.mjs",
     "prebuild": "npm run check && node .github/scripts/build-data.mjs && node .github/scripts/build-translations.mjs && node .github/scripts/measure-images.mjs && node .github/scripts/bust-cache.mjs",
     "build": "vite build",
     "preview": "vite preview"

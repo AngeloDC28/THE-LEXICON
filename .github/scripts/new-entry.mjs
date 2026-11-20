@@ -78,7 +78,7 @@ if (created === 0) {
   console.log('Next steps:');
   console.log(`  1. Drop your images into public/THE-LEXICON-ASSETS/${slug}/`);
   console.log(`     Sequential, zero-padded: ${slug}-01.jpg, ${slug}-02.jpg, ...`);
-  console.log(`  2. Edit content/entries/${slug}.json: title, tags, notes, hotspots per image`);
+  console.log(`  2. Edit content/entries/${slug}.json: title, published date, summary_plain (25–40 plain words), tags, notes, hotspots per image`);
   console.log(`  3. npm run optimize-images     # resize >2400px + generate WebP siblings`);
   console.log(`  4. npm run sync-content-keys   # register new editorial strings`);
   console.log(`  5. npm run build-data && npm run build-translations`);

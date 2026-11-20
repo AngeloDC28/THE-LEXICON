@@ -10,27 +10,26 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js?v=9291973';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt } from './modules/core-utils.js?v=9291973';
+import { imageDimensions } from './modules/image-dimensions.js?v=eb25565';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand } from './modules/core-utils.js?v=eb25565';
 setImageDimensions(imageDimensions);
-import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=9291973';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=9291973';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=9291973';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=9291973';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=9291973';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=eb25565';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=eb25565';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=eb25565';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=eb25565';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=eb25565';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js?v=9291973';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=9291973';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=9291973';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=9291973';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=9291973';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=9291973';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=9291973';
-import { getTranslation, supportedLanguages } from './modules/translations.js?v=9291973';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=9291973';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=9291973';
-import { renderGlossaryModal } from './modules/glossary.js?v=9291973';
-import { safeCover } from './modules/categories.js?v=9291973';
+import { switchView } from './modules/navigation.js?v=eb25565';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=eb25565';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=eb25565';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=eb25565';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=eb25565';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=eb25565';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=eb25565';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=eb25565';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=eb25565';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=eb25565';
+import { renderGlossaryModal } from './modules/glossary.js?v=eb25565';
 
 const INTRO_DISMISSED_KEY = 'lexicon-intro-dismissed-v2';
 
@@ -80,7 +79,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=9291973');
+  const { archiveData: staticData } = await import('../database.js?v=eb25565');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -204,14 +203,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   syncMobileSheetChips();
 
-  // Welcome Modal — shown on first visit only
-  // Use requestIdleCallback for i18n setup since it has a 50ms focus delay anyway
-  if (typeof requestIdleCallback === 'function') {
-    requestIdleCallback(() => initWelcomeModal());
-  } else {
-    initWelcomeModal();
-  }
-
   // Restore DOM translation if a non-English language was saved
   if (AppState.language && AppState.language !== 'en') {
     const googleCode = GOOGLE_LANG[AppState.language] || AppState.language;
@@ -254,78 +245,6 @@ if ('serviceWorker' in navigator) {
       showToast('New version available — reload for the latest update');
     }
   });
-}
-
-// ─── Welcome Modal ───────────────────────────────────────────────────
-function initWelcomeModal() {
-  const modal = $('welcome-modal');
-  if (!modal) return;
-
-  let welcomed;
-  try { welcomed = localStorage.getItem('lexicon-welcomed'); } catch(e) {}
-  if (welcomed) return;
-
-  modal.removeAttribute('hidden');
-  document.body.style.overflow = 'hidden';
-
-  const enterBtn = $('btn-welcome-enter');
-  if (enterBtn) setTimeout(() => enterBtn.focus(), 50);
-
-  function dismiss() {
-    modal.setAttribute('hidden', '');
-    document.body.style.overflow = '';
-    try { localStorage.setItem('lexicon-welcomed', '1'); } catch(e) {}
-    // Return focus to the search input so keyboard users land somewhere useful
-    requestAnimationFrame(() => $('search-input')?.focus());
-    if (AppState.language && AppState.language !== 'en') applyLanguage(AppState.language);
-  }
-
-  $('btn-welcome-enter')?.addEventListener('click', dismiss);
-  $('btn-welcome-skip')?.addEventListener('click', dismiss);
-  modal.addEventListener('keydown', (e) => { if (e.key === 'Escape') dismiss(); });
-
-  // Auto-detect browser language and silently pre-select it if supported
-  const WELCOME_LANGS = ['en', 'zh', 'es', 'fr', 'ar', 'pt', 'ru', 'ja', 'de', 'ko', 'it'];
-  const SHORT_LABEL = { en:'EN', zh:'中文', 'zh-tw':'繁中', hi:'HI', es:'ES', fr:'FR', ar:'عر', bn:'BN', pt:'PT', ru:'РУ', ja:'日本語', de:'DE', ko:'한국어', it:'IT', tr:'TR', vi:'VI', pl:'PL', nl:'NL', uk:'UK', id:'ID', ms:'MS', th:'ไทย', el:'EL', he:'HE', sv:'SV', no:'NO', da:'DA', fi:'FI', cs:'CS', ro:'RO', hu:'HU', tl:'TL' };
-  if (!AppState.language || AppState.language === 'en') {
-    const browserLang = (navigator.language || '').toLowerCase().split('-')[0];
-    if (WELCOME_LANGS.includes(browserLang) && browserLang !== 'en') {
-      AppState.language = browserLang;
-      try { localStorage.setItem('lexicon-lang', browserLang); } catch(e) {}
-    }
-  }
-  const wlangOpts = $('welcome-lang-options');
-  const lang = AppState.language || 'en';
-  if (wlangOpts) {
-    const langSubset = ALL_LANGS.filter(l => WELCOME_LANGS.includes(l.code));
-    wlangOpts.innerHTML = langSubset.map(({ code }) =>
-      `<button type="button" class="wlang-btn${code === lang ? ' active' : ''}" data-lang="${code}" lang="${code}">${SHORT_LABEL[code] || code.toUpperCase()}</button>`
-    ).join('');
-  }
-  const langBtns = modal.querySelectorAll('.wlang-btn');
-  langBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      langBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      AppState.language = btn.dataset.lang;
-      try { localStorage.setItem('lexicon-lang', AppState.language); } catch(e) {}
-      updateWelcomeText(AppState.language);
-    });
-  });
-  updateWelcomeText(lang);
-}
-
-function updateWelcomeText(lang) {
-  const t = (key) => getTranslation(key, lang);
-  const set = (id, key) => { const el = $(id); if (el) el.textContent = t(key) || el.textContent; };
-  set('welcome-subtitle-text', 'welcome_subtitle');
-  set('welcome-desc-text',     'welcome_desc');
-  set('welcome-lang-label-text', 'welcome_lang_label');
-  set('ws-label-1', 'welcome_step1_label'); set('ws-title-1', 'welcome_step1_title'); set('ws-desc-1', 'welcome_step1_desc');
-  set('ws-label-2', 'welcome_step2_label'); set('ws-title-2', 'welcome_step2_title'); set('ws-desc-2', 'welcome_step2_desc');
-  set('ws-label-3', 'welcome_step3_label'); set('ws-title-3', 'welcome_step3_title'); set('ws-desc-3', 'welcome_step3_desc');
-  const cta = $('btn-welcome-enter'); if (cta) cta.textContent = t('welcome_cta') || cta.textContent;
-  const skip = $('btn-welcome-skip'); if (skip) skip.textContent = t('welcome_skip') || skip.textContent;
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -853,9 +772,9 @@ function handleRouting() {
     const id  = entryMatch[1];
     const idx = entryMatch[2] ? parseInt(entryMatch[2]) : 0;
 
-    // Normalize: /entry/slug → /entry/slug/0 (canonical form)
-    if (!entryMatch[2]) {
-      history.replaceState(null, '', `/entry/${id}/0`);
+    // Normalize: /entry/slug/0 → /entry/slug (canonical form)
+    if (entryMatch[2] === '0') {
+      history.replaceState(null, '', `/entry/${id}`);
     }
 
     const entry = archiveData.find(e => e.id === id);
@@ -1044,15 +963,25 @@ function setupEventListeners() {
 
   // Header Title — navigates home but preserves filter state.
   // Use the explicit Clear buttons to destroy filters.
-  $('header-title')?.addEventListener('click', () => {
+  // It is a real link to / (so it opens in a new tab and reads as a link);
+  // a plain click is handled in place to keep the filter state.
+  $('header-title')?.addEventListener('click', (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    e.preventDefault();
     if (AppState.selectedEntryId) { closeDetail(callbacks, archiveData); }
     switchView('grid', callbacks);
     syncHashFromState();
   });
 
   // Toggles
-  $('btn-folders-toggle')?.addEventListener('click', () => switchView('folders', callbacks));
-  $('btn-folders-toggle-mobile')?.addEventListener('click', () => { switchView('folders', callbacks); toggleHamburger(); });
+  // Signed out, "My folders" used to open an empty view: a dead click. Ask
+  // to sign in instead, and come back to the folders afterwards.
+  const openFolders = () => {
+    if (!currentUser) { requireAuth('/#folders', 'Sign in to save shows into your own folders.'); return; }
+    switchView('folders', callbacks);
+  };
+  $('btn-folders-toggle')?.addEventListener('click', openFolders);
+  $('btn-folders-toggle-mobile')?.addEventListener('click', () => { toggleHamburger(); openFolders(); });
   $('btn-theme-toggle')?.addEventListener('click', toggleTheme);
   $('btn-lang-toggle')?.addEventListener('click', toggleLangDropdown);
   document.addEventListener('click', (e) => {
@@ -1111,13 +1040,9 @@ function setupEventListeners() {
     }
   });
 
-  $('btn-about')?.addEventListener('click', (e) => { e.preventDefault(); history.pushState(null, '', '/about'); handleRouting(); });
   $('btn-contact')?.addEventListener('click', () => openModal('contact-modal'));
-  $('btn-about-mobile')?.addEventListener('click', () => { history.pushState(null, '', '/about'); handleRouting(); toggleHamburger(); });
   $('btn-contact-mobile')?.addEventListener('click', () => { openModal('contact-modal'); toggleHamburger(); });
   $('btn-search-mobile')?.addEventListener('click', () => { const s = $('search-input'); if (s) { s.focus(); s.scrollIntoView({ behavior: 'smooth' }); } });
-  $('btn-privacy-link')?.addEventListener('click', () => openModal('privacy-modal'));
-  $('btn-terms-link')?.addEventListener('click', () => openModal('terms-modal'));
   document.querySelectorAll('[data-open-glossary]').forEach(btn => {
     btn.addEventListener('click', () => { renderGlossaryModal(); openModal('glossary-modal'); });
   });
@@ -1402,7 +1327,7 @@ function setupEventListeners() {
   $('btn-copy-link')?.addEventListener('click', () => {
     const lang = AppState.language;
     const btn = $('btn-copy-link');
-    const url = `${window.location.origin}/entry/${AppState.selectedEntryId}/${AppState.currentImageIndex}`;
+    const url = `${window.location.origin}/entry/${AppState.selectedEntryId}${AppState.currentImageIndex ? `/${AppState.currentImageIndex}` : ''}`;
     const flashCopied = () => {
       if (!btn) return;
       const original = btn.textContent;
@@ -1664,8 +1589,9 @@ function setupEventListeners() {
   $('cmd-palette-backdrop')?.addEventListener('click', () => toggleCmdPalette(archiveData, callbacks));
 
   // Cookie Banner (GDPR compliance) — show until the user makes any choice.
-  // Suppress while the welcome modal is open; reveal on dismissal so the two
-  // overlays never stack at first visit.
+  // It is the only thing a first-time visitor has to dismiss: the full-screen
+  // welcome overlay was removed (the homepage hero already says what the site
+  // is and how it works, so the overlay repeated it in front of the pictures).
   // Expose the banner's height as a CSS var so bottom-anchored controls
   // (e.g. the mobile filter FAB) can sit above it instead of being blocked.
   const syncCookieBannerHeight = () => {
@@ -1683,16 +1609,9 @@ function setupEventListeners() {
   };
   window.addEventListener('resize', syncCookieBannerHeight);
 
-  var cookieChoice, welcomedFlag;
+  var cookieChoice;
   try { cookieChoice = localStorage.getItem('lexicon-terms-accepted'); } catch(e) {}
-  try { welcomedFlag = localStorage.getItem('lexicon-welcomed'); } catch(e) {}
-  const willShowWelcome = !welcomedFlag && !!$('welcome-modal');
-  if (!cookieChoice && !willShowWelcome) {
-    showCookieBanner();
-  } else if (!cookieChoice && willShowWelcome) {
-    $('btn-welcome-enter')?.addEventListener('click', () => setTimeout(showCookieBanner, 50));
-    $('btn-welcome-skip')?.addEventListener('click', () => setTimeout(showCookieBanner, 50));
-  }
+  if (!cookieChoice) showCookieBanner();
   // Populate cookie notice text from translations
   const cookieNotice = $('cookie-notice-text');
   if (cookieNotice) {
@@ -1863,15 +1782,10 @@ function renderHero(archiveData) {
   // Update live stats
   const statEl = $('stat-entries');
   if (statEl) statEl.textContent = archiveData.length.toLocaleString();
-  const statBrands = $('stat-brands');
-  if (statBrands) {
-    const uniqueBrands = new Set(archiveData.map(e => e.tags?.brand).filter(Boolean));
-    statBrands.textContent = uniqueBrands.size.toLocaleString();
-  }
   const statYears = $('stat-years');
   if (statYears) {
-    const ys = archiveData.map(e => e.year).filter(Boolean);
-    if (ys.length) statYears.textContent = `${Math.min(...ys)}–${Math.max(...ys)}`;
+    const years = archiveData.map(e => e.year).filter(Boolean);
+    if (years.length) statYears.textContent = `${Math.min(...years)}–${Math.max(...years)}`;
   }
 
   // Populate landing section content (always — so they're ready when shown)
@@ -1924,7 +1838,7 @@ function renderHero(archiveData) {
     const brand = (candidate.tags?.brand || '').toUpperCase();
     const year = candidate.year || '—';
     const season = candidate.season ? candidate.season.toUpperCase() : 'ARCHIVE';
-    const hook = excerpt(candidate.summary_plain || candidate.notes?.critique || candidate.notes?.provenance || '', 220);
+    const hook = entrySummary(candidate, s => getTranslation(s, AppState.language), 220);
 
     const tagEl = $('hero-tag-label');
     if (tagEl) {
@@ -1937,7 +1851,7 @@ function renderHero(archiveData) {
     if (titleEl && candidate.title) titleEl.innerHTML = `<em>${candidate.title}</em>`;
 
     const brandEl = $('hero-featured-brand');
-    if (brandEl) brandEl.textContent = `${brand} · ${year} · ${season}`;
+    if (brandEl) brandEl.textContent = `${brand} · ${seasonLong(candidate.season)} ${year}`.trim();
 
     const descEl = $('hero-featured-desc');
     if (descEl) descEl.textContent = hook;
@@ -1974,7 +1888,7 @@ function renderHero(archiveData) {
       rightCol.style.cursor = 'pointer';
       rightCol.setAttribute('role', 'link');
       rightCol.setAttribute('tabindex', '0');
-      rightCol.setAttribute('aria-label', `Open featured entry: ${candidate.tags?.brand || ''} ${candidate.year || ''}`);
+      rightCol.setAttribute('aria-label', `Open featured show: ${candidate.tags?.brand || ''} ${candidate.year || ''}`);
       const openCandidate = () => { openDetail(candidate.id, 0, archiveData, callbacks); };
       rightCol.onclick = openCandidate;
       rightCol.onkeydown = (e) => {
@@ -1984,9 +1898,10 @@ function renderHero(archiveData) {
 
     // Hero background image
     const bgEl = $('hero-bg-img');
-    if (bgEl && safeCover(candidate)) {
+    const bgImg = (candidate.images || []).find(im => !im.content_note);
+    if (bgEl && bgImg) {
       bgEl.classList.remove('loaded');
-      const src = resolveImgSrc(safeCover(candidate));
+      const src = resolveImgSrc(bgImg);
       bgEl.style.backgroundImage = `url(${src})`;
       const img = new Image();
       img.onload = () => bgEl.classList.add('loaded');
@@ -2057,15 +1972,19 @@ function renderEntryOfWeek(archiveData) {
   const titleEl = $('eow-title');
   if (titleEl) titleEl.innerHTML = pick.title ? `<em>${pick.title}</em>` : '';
   const brandEl = $('eow-brand');
-  if (brandEl) brandEl.textContent = `${(pick.tags?.brand || '').toUpperCase()} · ${pick.year || '—'} · ${pick.season ? pick.season.toUpperCase() : ''}`;
+  if (brandEl) brandEl.textContent = `${(pick.tags?.brand || '').toUpperCase()} · ${seasonLong(pick.season)} ${pick.year || ''}`.trim();
+  const sumEl = $('eow-summary');
+  if (sumEl) sumEl.textContent = entrySummary(pick, s => getTranslation(s, AppState.language), 220);
   const vibesEl = $('eow-vibes');
   if (vibesEl) {
     const vibes = Array.isArray(pick.vibes) ? pick.vibes.slice(0, 4) : [];
     vibesEl.innerHTML = vibes.map(v => `<span class="eow-vibe">${v}</span>`).join('');
   }
   const bgEl = $('eow-bg');
-  if (bgEl && safeCover(pick)) {
-    bgEl.style.backgroundImage = `url(${resolveImgSrc(safeCover(pick))})`;
+  // Never use a look with a content note as a background nobody chose to see.
+  const bgImg = (pick.images || []).find(im => !im.content_note);
+  if (bgEl && bgImg) {
+    bgEl.style.backgroundImage = `url(${resolveImgSrc(bgImg)})`;
   }
   card.onclick = () => openDetail(pick.id, 0, archiveData, callbacks);
 }
@@ -2100,7 +2019,7 @@ function renderNexusTeaser(archiveData) {
   const peers = hubLinks.slice(0, 6).map(x => x.o);
   const cat = getTagCategory(hub.tags?.politics || '');
   const W = 440, H = 260, cx = W / 2, cy = H / 2, R = 96;
-  const short = (e) => ((e.tags?.brand || e.id).split(/\s|-/)[0] || '').toUpperCase().slice(0, 9);
+  const short = (e) => shortBrand(e.tags?.brand || e.id).toUpperCase();
 
   const pts = peers.map((p, i) => {
     const ang = (-90 + (360 / peers.length) * i) * Math.PI / 180;
@@ -2138,6 +2057,11 @@ function renderNexusTeaser(archiveData) {
 function openModal(id) {
   const modal = $(id);
   if (!modal) return;
+  // One dialog at a time: opening Glossary from inside About used to leave
+  // both on screen with focus trapped in the top one.
+  document.querySelectorAll('[role="dialog"][aria-modal="true"]:not(.hidden)').forEach(d => {
+    if (d !== modal && d.id !== 'detail-image-view') d.classList.add('hidden');
+  });
   modal.classList.remove('hidden');
   // Move focus to first focusable element (prefer close button)
   const focusEl = modal.querySelector('[data-modal-close], [autofocus]') || modal.querySelector(FOCUSABLE_SELECTORS);
@@ -2167,7 +2091,7 @@ function openCiteModal(entryId) {
   const modal = $('cite-modal');
   if (!modal) return;
 
-  const url   = `${window.location.origin}/entry/${entry.id}/0`;
+  const url   = `${window.location.origin}/entry/${entry.id}`;
   const brand = entry.tags?.brand || entry.id;
   const year  = entry.year || '';
   const season = entry.season ? entry.season + ' ' : '';
@@ -2492,11 +2416,18 @@ function showMobileNote(type) {
   });
 }
 
+let _lastHamburgerToggle = 0;
 function toggleHamburger() {
   const panel    = $('index-panel');
   const backdrop = $('drawer-backdrop');
   const btn      = $('btn-hamburger');
   if (!panel || !backdrop || !btn) return;
+  // A second tap within 450ms is the same press arriving twice (or an
+  // impatient re-tap while the drawer animates). It used to close the
+  // drawer the moment it opened, which read as "the menu doesn't work".
+  const now = performance.now();
+  if (now - _lastHamburgerToggle < 450) return;
+  _lastHamburgerToggle = now;
   const isOpen = panel.classList.contains('translate-x-0');
   if (isOpen) {
     panel.classList.remove('translate-x-0');
@@ -2512,14 +2443,27 @@ function toggleHamburger() {
     // Prevent body scroll behind the mobile drawer; desktop is unaffected
     // because the drawer transform is a no-op at lg breakpoint.
     if (window.innerWidth < 1024) document.body.style.overflow = 'hidden';
-    // Drawer was just opened on mobile — re-render the entry list it
-    // skipped while hidden (see render-grid.js renderEntryList guard).
-    if (window.innerWidth < 1024) document.dispatchEvent(new CustomEvent('lexicon-refresh'));
+    // Drawer was just opened on mobile: fill in the show list it skipped
+    // while hidden (see render-grid.js renderEntryList guard). Only that
+    // list: this used to fire a full refresh (grid, featured strip, index
+    // table), which froze the page for ~1s on a laptop and longer on a
+    // phone before the drawer appeared. Wait two frames so the slide-in
+    // starts first and the tap gets an immediate response.
+    if (window.innerWidth < 1024) {
+      requestAnimationFrame(() => requestAnimationFrame(() => renderEntryList(archiveData, callbacks)));
+    }
   }
 }
 
 function toggleTheme() {
-  const isDark = document.documentElement.classList.toggle('dark');
+  // Switch every colour in the same frame. Component transitions (buttons,
+  // cards, borders) would otherwise animate at different speeds, leaving
+  // some text in the old theme's colour for a moment.
+  const root = document.documentElement;
+  root.classList.add('theme-switching');
+  const isDark = root.classList.toggle('dark');
+  void root.offsetWidth; // apply the new colours with transitions off
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove('theme-switching')));
   try { localStorage.setItem('lexicon-theme', isDark ? 'dark' : 'light'); } catch(e) {}
   // Reflect theme in <meta name="theme-color"> so mobile chrome matches.
   const meta = document.querySelector('meta[name="theme-color"]');
@@ -2582,7 +2526,9 @@ async function applyLanguage(code) {
 function renderLangDropdown() {
   const dd = $('lang-dropdown');
   if (!dd) return;
-  dd.innerHTML = ALL_LANGS.map(({ code, label }) => {
+  // Say what switching changes: the menus, not (yet) every note. A page that
+  // turned half French with no warning felt broken.
+  dd.innerHTML = `<li role="none" class="px-3 py-2 t-mono-xs font-mono leading-relaxed opacity-80 border-b border-current/20 normal-case tracking-normal">Interface language. Menus change; show notes stay in English unless translated. Your browser's translate option covers the rest.</li>` + ALL_LANGS.map(({ code, label }) => {
     const isActive = code === AppState.language;
     const activeClass = isActive ? 'bg-black text-white dark:bg-acid dark:text-black' : 'hover:bg-black/10 dark:hover:bg-white/10';
     return `<button type="button" role="option" aria-selected="${isActive}" data-lang-code="${code}" lang="${code}" class="w-full text-left px-3 py-2 min-h-[44px] t-mono-xs font-mono tracking-widest ${activeClass} transition-colors flex items-center justify-between gap-3 focus-ring">

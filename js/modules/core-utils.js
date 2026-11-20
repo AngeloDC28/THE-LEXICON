@@ -17,14 +17,25 @@ export const pad = (num) => (num < 10 ? '0' + num : num);
 // rather than racing a skip against a restart, a transition already in
 // flight just makes this call a plain, unanimated DOM update.
 let _transitionInFlight = false;
+let _currentTransition = null;
 
 export function withViewTransition(updateDOM) {
+  // A transition already in flight hasn't necessarily run ITS update yet
+  // (the browser captures the old frame first). Running this update now
+  // would let that earlier update land afterwards and undo it: tapping
+  // Index straight after Timeline left the Timeline on screen. So queue
+  // this update behind the earlier one; it still runs unanimated.
+  if (_transitionInFlight && _currentTransition) {
+    _currentTransition.updateCallbackDone.catch(() => {}).finally(() => updateDOM());
+    return;
+  }
   if (!document.startViewTransition || _transitionInFlight || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     updateDOM();
     return;
   }
   try {
     const transition = document.startViewTransition(() => updateDOM());
+    _currentTransition = transition;
     _transitionInFlight = true;
     // `ready` rejects whenever the animation is skipped — most commonly
     // because the tab is in the background ("Document hidden"). The DOM
@@ -32,7 +43,7 @@ export function withViewTransition(updateDOM) {
     // left unhandled it surfaces as an uncaught promise rejection on every
     // page opened in a background tab.
     transition.ready.catch(() => {});
-    transition.finished.catch(() => {}).finally(() => { _transitionInFlight = false; });
+    transition.finished.catch(() => {}).finally(() => { _transitionInFlight = false; _currentTransition = null; });
   } catch (e) {
     updateDOM();
   }
@@ -165,6 +176,57 @@ export function excerpt(text, max = 120) {
   const lastSpace = cut.lastIndexOf(' ');
   const body = (lastSpace > max * 0.5 ? cut.slice(0, lastSpace) : clean.slice(0, max));
   return body.replace(/[\s,;:.\-–—(]+$/, '') + '…';
+}
+
+// Abbreviations that end in a full stop but don't end a sentence. Splitting
+// on them turned McQueen's critique into the pull-quote "13 constitutes a
+// foundational document..." with the paragraph starting "No. By placing...".
+const NON_TERMINAL = /\b(No|Nos|St|Dr|Mr|Mrs|Ms|Mt|vs|etc|e\.g|i\.e|c|ca|cf|approx|Vol|Fig|Jr|Sr)\.$/i;
+
+/** Split prose into sentences without breaking on "No.", "St.", "vs." etc. */
+export function splitSentences(text) {
+  const parts = String(text ?? '').split(/(?<=[.!?])\s+/);
+  const out = [];
+  for (const part of parts) {
+    const prev = out[out.length - 1];
+    // Also glue a split before a lower-case word or a digit: "No. 13", "c. 1999".
+    if (prev && (NON_TERMINAL.test(prev) || /^[a-z0-9]/.test(part))) out[out.length - 1] = `${prev} ${part}`;
+    else out.push(part);
+  }
+  return out;
+}
+
+// Short names for tight labels (Nexus graph nodes). Cutting at a fixed
+// length gave "UNDERCOVE", "BALENCIAG", "ALEXANDER MCQU".
+const SHORT_BRAND = {
+  'Comme des Garçons': 'CDG', 'Hood By Air (HBA)': 'HBA', 'Viktor & Rolf': 'V&R',
+  'Iris van Herpen': 'Van Herpen', 'Dries Van Noten': 'Van Noten', 'Bottega Veneta': 'Bottega',
+  'Christian Dior': 'Dior', 'Maison Margiela': 'Margiela', 'Louis Vuitton': 'Vuitton',
+  'Saint Laurent': 'Saint Laurent', 'Calvin Klein': 'Calvin Klein', 'Miu Miu': 'Miu Miu',
+  'JW Anderson': 'JW Anderson',
+};
+/** "Alexander McQueen" → "McQueen", "Comme des Garçons" → "CDG", "Gucci" → "Gucci". */
+export function shortBrand(brand) {
+  const b = String(brand || '').trim();
+  if (SHORT_BRAND[b]) return SHORT_BRAND[b];
+  const words = b.split(/\s+/);
+  return words.length > 1 ? words[words.length - 1] : b;
+}
+
+/** "SS" → "Spring/Summer", "AW" → "Autumn/Winter"; anything else unchanged. */
+export function seasonLong(season) {
+  const s = String(season || '').toUpperCase();
+  return s === 'SS' ? 'Spring/Summer' : s === 'AW' || s === 'FW' ? 'Autumn/Winter' : (season || '');
+}
+
+/**
+ * The one line a newcomer reads about a show: the plain summary when the entry
+ * has one, otherwise the first sentence of the critique.
+ */
+export function entrySummary(entry, translate = (s) => s, max = 200) {
+  if (entry?.summary_plain) return translate(entry.summary_plain);
+  const raw = entry?.notes?.critique || entry?.notes?.provenance || '';
+  return excerpt(splitSentences(translate(raw))[0] || '', max);
 }
 
 export function debounce(func, wait) {

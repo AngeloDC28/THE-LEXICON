@@ -10,14 +10,14 @@
  * Keyboard-navigable (j/k for rows, Enter to open, /, ?, V, I).
  * Toggle persists in localStorage as 'lexicon.view-mode' (visual | index).
  */
-import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=9291973';
-import { AppState } from './core-state.js?v=9291973';
-import { getFilteredEntries } from './search-engine.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
+import { $, pad, withViewTransition, escapeHtml, excerpt } from './core-utils.js?v=eb25565';
+import { AppState } from './core-state.js?v=eb25565';
+import { getFilteredEntries } from './search-engine.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
 
 // Axis mapping and names live in categories.js (shared with the build
 // scripts); re-exported here so existing imports keep working.
-import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain, seasonName } from './categories.js?v=9291973';
+import { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain, seasonName } from './categories.js?v=eb25565';
 export { getTagCategory, CATEGORY_LABELS, categoryLabel, CATEGORY_PLAIN, categoryPlain, seasonName };
 
 // Extract a short label from a long politics tag.
@@ -26,7 +26,9 @@ function shortTagLabel(politicsTag = '') {
   // Categorise the whole tag string, exactly as getTagCategory() callers do
   // for colour — categorising only the first value could label a row with
   // one axis and colour it as another.
-  return CATEGORY_LABELS[getTagCategory(politicsTag)] || politicsTag.split('|')[0].trim();
+  // Plain name ("Changing the body"), like every other surface; the theory
+  // name is kept on the row as a tooltip.
+  return CATEGORY_PLAIN[getTagCategory(politicsTag)]?.title || politicsTag.split('|')[0].trim();
 }
 
 let _focusedRowIndex = 0;
@@ -178,24 +180,28 @@ export function renderIndexView(archiveData, resetPage = false) {
       ? getTranslation(entry.tags.brand, lang)
       : getTranslation('brand_unknown', lang);
     const year = entry.year || '----';
-    const season = entry.season || '—';
-    const title = entry.title ? getTranslation(entry.title, lang) : '';
+    // "Spring/Summer", not "SS": newcomers don't know the shorthand.
+    const season = seasonName(entry.season) || '—';
+    // The show's own name ("No. 13"), not the full title, which repeats the
+    // brand and year already in the row and was cut off mid-word at 30 chars.
+    const title = entry.subtitle ? getTranslation(entry.subtitle, lang) : '';
     const politics = entry.tags?.politics || '';
     const tagCat = getTagCategory(politics);
     const tagLabel = shortTagLabel(politics);
-    const provenance = entry.notes?.provenance
-      ? excerpt(getTranslation(entry.notes.provenance, lang), 80)
-      : '—';
-    const seasonLabel = title ? `${season} · "${title.slice(0, 30)}"` : season;
+    // The plain summary reads better than the opening of the provenance note.
+    const provenance = entry.summary_plain
+      ? excerpt(getTranslation(entry.summary_plain, lang), 110)
+      : entry.notes?.provenance ? excerpt(getTranslation(entry.notes.provenance, lang), 80) : '—';
+    const seasonLabel = title ? `${season} · "${title}"` : season;
     const focused = idx === _focusedRowIndex ? 'focused' : '';
 
     // STATUS: hotspot count + note completeness
     const hotspotCount = (entry.images || []).reduce((sum, img) => sum + (img?.hotspots?.length || 0), 0);
     const noteCount = ['provenance', 'critique', 'strategy'].filter(k => entry.notes?.[k]).length;
     const statusParts = [];
-    if (hotspotCount > 0) statusParts.push(`◉ ${hotspotCount}`);
-    if (noteCount === 3) statusParts.push('✦ FULL');
-    else if (noteCount > 0) statusParts.push(`${noteCount}/3 NOTES`);
+    if (hotspotCount > 0) statusParts.push(`◉ ${hotspotCount} notes`);
+    // Every entry has all three notes, so "✦ FULL" on every row said nothing.
+    if (noteCount > 0 && noteCount < 3) statusParts.push(`${noteCount}/3 NOTES`);
     const statusClass = hotspotCount > 0 ? 'td-status cited' : 'td-status';
     const statusText = statusParts.length ? statusParts.join(' · ') : '● ARCHIVED';
 
@@ -208,7 +214,7 @@ export function renderIndexView(archiveData, resetPage = false) {
         <td class="td-designer">${brand.toUpperCase()}</td>
         <td class="td-year">${year}</td>
         <td class="td-season">${seasonLabel.toUpperCase()}</td>
-        <td><span class="td-tag ${tagCat}">${tagLabel.toUpperCase()}</span></td>
+        <td><span class="td-tag ${tagCat}" title="${escapeHtml(categoryLabel(tagCat))}">${tagLabel.toUpperCase()}</span></td>
         <td class="td-prov">${provenance}</td>
         <td class="${statusClass}">${statusText}</td>
       </tr>`;
@@ -388,14 +394,28 @@ export function applyViewMode(mode) {
     const indexBtn = $('btn-mode-index');
     const imagePanel = $('image-panel');
 
+    // Visual / Index is a choice between two ways of showing the archive
+    // list. It used to ignore the Grid / Timeline choice: Visual always
+    // un-hid the grid (so after a reload on the Timeline both were stacked,
+    // the grid as a blank block above the years) and Index left the
+    // Timeline showing underneath the table.
+    const onTimelineOrFolders = AppState.currentView === 'timeline' || AppState.currentView === 'folders';
     if (mode === 'index') {
       if (gridView) gridView.classList.add('hidden');
+      if (onTimelineOrFolders) {
+        // The table replaces whichever list view was showing.
+        $('timeline-view')?.classList.add('hidden');
+        $('folders-view')?.classList.add('hidden');
+        AppState.currentView = 'grid';
+        $('btn-toggle-grid')?.classList.add('active');
+        $('btn-toggle-timeline')?.classList.remove('active');
+      }
       if (indexView) indexView.classList.remove('hidden');
       if (imagePanel) imagePanel.setAttribute('data-view-mode', 'index');
       if (visualBtn) { visualBtn.classList.remove('active'); visualBtn.setAttribute('aria-pressed', 'false'); }
       if (indexBtn) { indexBtn.classList.add('active'); indexBtn.setAttribute('aria-pressed', 'true'); }
     } else {
-      if (gridView) gridView.classList.remove('hidden');
+      if (gridView && !onTimelineOrFolders) gridView.classList.remove('hidden');
       if (indexView) indexView.classList.add('hidden');
       if (imagePanel) imagePanel.setAttribute('data-view-mode', 'visual');
       if (visualBtn) { visualBtn.classList.add('active'); visualBtn.setAttribute('aria-pressed', 'true'); }

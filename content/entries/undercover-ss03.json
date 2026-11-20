@@ -6,6 +6,7 @@
   "year": 2003,
   "season": "SS",
   "published": "2026-05-18",
+  "summary_plain": "Jun Takahashi stitched scraps of fabric over one another to look like healing scabs on the skin. It turned something gross into something beautiful and brought Japanese street style to Paris.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/undercover-ss03/undercover-ss03-01.jpg",
@@ -14,13 +15,13 @@
           "x": 50,
           "y": 32,
           "label": "Folded-Bodice Slip Dress",
-          "description": "The folded-bodice slip dress features sharp white panels aggressively folded back over the bust; it exposes a delicate underlayer of faded floral prints. This structural logic engages with deconstructionist assembly by manipulating a simple slip into an asymmetrical heavily pinned garment. The white fabric cuts a stark horizontal line against the soft drape below; the shoulder straps hang loosely off the arms. The garment asserts an aesthetic of hasty customization and makeshift elegance."
+          "description": "The folded-bodice slip dress features sharp white panels aggressively folded back over the bust. It exposes a delicate underlayer of faded floral prints. This structural logic engages with deconstructionist assembly by manipulating a simple slip into an asymmetrical heavily pinned garment. The white fabric cuts a stark horizontal line against the soft drape below. The shoulder straps hang loosely off the arms. The garment asserts an aesthetic of hasty customization and makeshift elegance."
         },
         {
           "x": 50,
           "y": 68,
           "label": "Faded Lace Midi Skirt",
-          "description": "The faded lace midi skirt drops softly from the waist in a pale grey and white textile; it provides a quiet romantic baseline against the aggressive scab elements of the collection. This material application utilizes a surprisingly lightweight and delicate fabric to contrast the heavy crust punk hardware seen elsewhere. The hem falls cleanly to the ankle without excessive fraying; subtle floral motifs are woven into the lace. The piece completes the look by injecting a fragile femininity into the brutalist runway presentation."
+          "description": "The faded lace midi skirt drops softly from the waist in a pale grey and white textile. It provides a quiet romantic baseline against the aggressive scab elements of the collection. This material application utilizes a surprisingly lightweight and delicate fabric to contrast the heavy crust punk hardware seen elsewhere. The hem falls cleanly to the ankle without excessive fraying. Subtle floral motifs are woven into the lace. The piece completes the look by injecting a fragile femininity into the brutalist runway presentation."
         }
       ]
     },
@@ -31,13 +32,13 @@
           "x": 48,
           "y": 38,
           "label": "Deconstructed Black Vest",
-          "description": "The deconstructed black vest is worn entirely open over the bare chest; it features violently hacked armholes and a jagged asymmetrical hem. This sartorial intervention engages with subcultural systems by utilizing a staple of punk rock uniforms — the sleeveless jacket — and rendering it in high-end Parisian materials. The dark fabric is heavily trimmed with neon green piping and silver hardware; it lacks any functional closure. The outerwear asserts an unapologetic and rebellious posture."
+          "description": "The deconstructed black vest is worn entirely open over the bare chest. It features violently hacked armholes and a jagged asymmetrical hem. This sartorial intervention engages with subcultural systems by utilizing a staple of punk rock uniforms — the sleeveless jacket — and rendering it in high-end Parisian materials. The dark fabric is heavily trimmed with neon green piping and silver hardware. It lacks any functional closure. The outerwear asserts an unapologetic and rebellious posture."
         },
         {
           "x": 48,
           "y": 68,
           "label": "Micro-Pleated Maxi Skirt",
-          "description": "The micro-pleated maxi skirt drops heavily to the floor in dense black fabric; it provides a formal sweeping volume beneath the chaotic vest. This structural choice introduces a sudden moment of elegant fluid drape into an otherwise stiff and heavily patched collection. The deep black pleats catch the light subtly as they swing with the model's stride; a bright silver zipper cuts diagonally across the hip. The skirt completes the silhouette by anchoring the aggressive punk styling with dramatic sweeping length."
+          "description": "The micro-pleated maxi skirt drops heavily to the floor in dense black fabric. It provides a formal sweeping volume beneath the chaotic vest. This structural choice introduces a sudden moment of elegant fluid drape into an otherwise stiff and heavily patched collection. The deep black pleats catch the light subtly as they swing with the model's stride. A bright silver zipper cuts diagonally across the hip. The skirt completes the silhouette by anchoring the aggressive punk styling with dramatic sweeping length."
         }
       ]
     },
@@ -48,13 +49,13 @@
           "x": 40,
           "y": 32,
           "label": "Deconstructed Utility Vest",
-          "description": "The deconstructed utility vest features dozens of small beige patches hastily sewn together; it creates a stiff protective shell over the torso with raw hanging white ribbons. This material strategy utilizes the literal interpretation of a scab to construct a garment entirely out of mended fragments. The front features classic cargo pockets; a heavy brass belt cinches the natural waist. The top asserts a survivalist aesthetic prioritizing extreme DIY resourcefulness."
+          "description": "The deconstructed utility vest features dozens of small beige patches hastily sewn together. It creates a stiff protective shell over the torso with raw hanging white ribbons. This material strategy utilizes the literal interpretation of a scab to construct a garment entirely out of mended fragments. The front features classic cargo pockets. A heavy brass belt cinches the natural waist. The top asserts a survivalist aesthetic prioritizing extreme DIY resourcefulness."
         },
         {
           "x": 58,
           "y": 55,
           "label": "Relaxed Beige Trousers",
-          "description": "The relaxed beige trousers drop fluidly from beneath the heavy utility vest; they feature subtle white patches stitched sparsely along the shins. This structural application provides a quiet utilitarian base for the busy upper half. The light fabric moves easily with the stride; a large hessian pouch featuring crust punk graphics dangles prominently from a D-ring on the hip. The trousers complete the look by enforcing the nomadic functionality of the crust punk uniform."
+          "description": "The relaxed beige trousers drop fluidly from beneath the heavy utility vest. They feature subtle white patches stitched sparsely along the shins. This structural application provides a quiet utilitarian base for the busy upper half. The light fabric moves easily with the stride. A large hessian pouch featuring crust punk graphics dangles prominently from a D-ring on the hip. The trousers complete the look by enforcing the nomadic functionality of the crust punk uniform."
         }
       ]
     },
@@ -65,7 +66,7 @@
           "x": 50,
           "y": 45,
           "label": "Bright Pink Tulle Burqa",
-          "description": "The bright pink tulle burqa engulfs the entire figure in a massive translucent volume; it obscures the face and body completely behind layers of neon netting. This structural extreme engages directly with post-9/11 activism by recontextualizing a highly stigmatized garment as a symbol of gentle mysterious protection. The sheer fabric reveals the tailored garments underneath; the eye-slit is bordered by a harsh red band. The outerwear asserts a daring and provocative anti-war statement that champions cultural pluralism."
+          "description": "The bright pink tulle burqa engulfs the entire figure in a massive translucent volume. It obscures the face and body completely behind layers of neon netting. This structural extreme engages directly with post-9/11 activism by recontextualizing a highly stigmatized garment as a symbol of gentle mysterious protection. The sheer fabric reveals the tailored garments underneath. The eye-slit is bordered by a harsh red band. The outerwear asserts a daring and provocative anti-war statement that champions cultural pluralism."
         }
       ]
     },
@@ -76,7 +77,7 @@
           "x": 50,
           "y": 45,
           "label": "Deep Red Tulle Burqa",
-          "description": "The deep red tulle burqa drapes heavily over the model in a shocking sheer red veil; it introduces a profound visual disruption to the runway finale. This garment utilizes bodily obfuscation to force the audience to confront Islamophobia and xenophobia directly. The translucent layers feature subtle crescent moon graphics related to the crust punk band Sedition; the eye-slit is tightly framed. The piece completes the political intervention by flooding the catwalk with an undeniable and unapologetic presence."
+          "description": "The deep red tulle burqa drapes heavily over the model in a shocking sheer red veil. It introduces a profound visual disruption to the runway finale. This garment utilizes bodily obfuscation to force the audience to confront Islamophobia and xenophobia directly. The translucent layers feature subtle crescent moon graphics related to the crust punk band Sedition. The eye-slit is tightly framed. The piece completes the political intervention by flooding the catwalk with an undeniable and unapologetic presence."
         }
       ]
     },
@@ -87,13 +88,13 @@
           "x": 50,
           "y": 30,
           "label": "Subcultural Graphic Halter Top",
-          "description": "The subcultural graphic halter top features a stark black and white geometric pattern mimicking ethnic or tribal motifs; it hangs loosely from the neck via thin white ribbons. This graphic appropriation engages with cultural pluralism by merging crust punk DIY construction with non-Western aesthetics. The fabric is heavily textured like a thick rug or blanket; the back and shoulders are left entirely bare. The garment asserts a highly specific subcultural identity grounded in globalized references."
+          "description": "The subcultural graphic halter top features a stark black and white geometric pattern mimicking ethnic or tribal motifs. It hangs loosely from the neck via thin white ribbons. This graphic appropriation engages with cultural pluralism by merging crust punk DIY construction with non-Western aesthetics. The fabric is heavily textured like a thick rug or blanket. The back and shoulders are left entirely bare. The garment asserts a highly specific subcultural identity grounded in globalized references."
         },
         {
           "x": 28,
           "y": 42,
           "label": "Tribal-Inspired Metal Bangles",
-          "description": "The tribal-inspired metal bangles stack heavily up both forearms in solid silver bands; they introduce dense tactile hardware into the silhouette. This accessory utilizes cultural hybridity by referencing traditional Datooga jewelry from Tanzania within a punk framework. The shiny metal reflects light fiercely; they compress the skin slightly and force a rigid posture in the arms. The piece completes the ensemble by emphasizing a deep appreciation for marginalized global cultures."
+          "description": "The tribal-inspired metal bangles stack heavily up both forearms in solid silver bands. They introduce dense tactile hardware into the silhouette. This accessory utilizes cultural hybridity by referencing traditional Datooga jewelry from Tanzania within a punk framework. The shiny metal reflects light fiercely. They compress the skin slightly and force a rigid posture in the arms. The piece completes the ensemble by emphasizing a deep appreciation for marginalized global cultures."
         }
       ]
     },
@@ -104,7 +105,7 @@
           "x": 50,
           "y": 45,
           "label": "Deep Red Tulle Burqa",
-          "description": "The deep red tulle burqa drapes heavily over the model in a shocking sheer red veil; it introduces a profound visual disruption to the runway finale. This garment utilizes bodily obfuscation to force the audience to confront Islamophobia and xenophobia directly. The translucent layers feature subtle crescent moon graphics related to the crust punk band Sedition; the eye-slit is tightly framed. The piece completes the political intervention by flooding the catwalk with an undeniable and unapologetic presence."
+          "description": "The deep red tulle burqa drapes heavily over the model in a shocking sheer red veil. It introduces a profound visual disruption to the runway finale. This garment utilizes bodily obfuscation to force the audience to confront Islamophobia and xenophobia directly. The translucent layers feature subtle crescent moon graphics related to the crust punk band Sedition. The eye-slit is tightly framed. The piece completes the political intervention by flooding the catwalk with an undeniable and unapologetic presence."
         }
       ]
     },
@@ -115,13 +116,13 @@
           "x": 50,
           "y": 30,
           "label": "Subcultural Graphic Halter Top",
-          "description": "The subcultural graphic halter top features a stark black and white geometric pattern mimicking ethnic or tribal motifs; it hangs loosely from the neck via thin white ribbons. This graphic appropriation engages with cultural pluralism by merging crust punk DIY construction with non-Western aesthetics. The fabric is heavily textured like a thick rug or blanket; the back and shoulders are left entirely bare. The garment asserts a highly specific subcultural identity grounded in globalized references."
+          "description": "The subcultural graphic halter top features a stark black and white geometric pattern mimicking ethnic or tribal motifs. It hangs loosely from the neck via thin white ribbons. This graphic appropriation engages with cultural pluralism by merging crust punk DIY construction with non-Western aesthetics. The fabric is heavily textured like a thick rug or blanket. The back and shoulders are left entirely bare. The garment asserts a highly specific subcultural identity grounded in globalized references."
         },
         {
           "x": 30,
           "y": 35,
           "label": "Tribal-Inspired Metal Bangles",
-          "description": "The tribal-inspired metal bangles stack heavily up both forearms in solid silver bands; they introduce dense tactile hardware into the silhouette. This accessory utilizes cultural hybridity by referencing traditional Datooga jewelry from Tanzania within a punk framework. The shiny metal reflects light fiercely; they compress the skin slightly and force a rigid posture in the arms. The piece completes the ensemble by emphasizing a deep appreciation for marginalized global cultures."
+          "description": "The tribal-inspired metal bangles stack heavily up both forearms in solid silver bands. They introduce dense tactile hardware into the silhouette. This accessory utilizes cultural hybridity by referencing traditional Datooga jewelry from Tanzania within a punk framework. The shiny metal reflects light fiercely. They compress the skin slightly and force a rigid posture in the arms. The piece completes the ensemble by emphasizing a deep appreciation for marginalized global cultures."
         }
       ]
     },
@@ -132,13 +133,13 @@
           "x": 50,
           "y": 30,
           "label": "Graphic Patched Tunic",
-          "description": "The graphic patched tunic utilizes a sleek black textile violently interrupted by dozens of shiny rectangular patches; each patch features subtle subcultural iconography. This material manipulation engages with the scab technique by plastering a smooth surface with rigid artificial wounds. The high neckline hugs the throat; the asymmetrical hem exposes a complex multi-layered undergarment. The top asserts an unsettling and heavily branded aesthetic that disrupts the clean black silhouette."
+          "description": "The graphic patched tunic utilizes a sleek black textile violently interrupted by dozens of shiny rectangular patches. Each patch features subtle subcultural iconography. This material manipulation engages with the scab technique by plastering a smooth surface with rigid artificial wounds. The high neckline hugs the throat. The asymmetrical hem exposes a complex multi-layered undergarment. The top asserts an unsettling and heavily branded aesthetic that disrupts the clean black silhouette."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Heavily Frayed Patchwork Trousers",
-          "description": "The heavily frayed patchwork trousers are entirely constructed from thick black threads, shredded denim, and hanging cords; they look as though they are actively falling apart. This structural extreme applies crust punk anti-fashion by elevating absolute degradation onto the haute couture runway. The dense mass of fabric completely hides the shape of the legs; bright red and white threads flash through the dark ruin. The garment refuses traditional tailoring to complete a silhouette defined by absolute destruction."
+          "description": "The heavily frayed patchwork trousers are entirely constructed from thick black threads, shredded denim, and hanging cords. They look as though they are actively falling apart. This structural extreme applies crust punk anti-fashion by elevating absolute degradation onto the haute couture runway. The dense mass of fabric completely hides the shape of the legs. Bright red and white threads flash through the dark ruin. The garment refuses traditional tailoring to complete a silhouette defined by absolute destruction."
         }
       ]
     },
@@ -149,13 +150,13 @@
           "x": 50,
           "y": 30,
           "label": "Asymmetrical Tailored Canvas Jacket",
-          "description": "The asymmetrical tailored canvas jacket features a stiff off-white textile heavily adorned with brass studs down the right arm; it hangs open to reveal trailing white ribbons and raw fabric panels. This structural intervention engages with deconstructionist assembly by manipulating a formal jacket into a chaotic punk-inspired garment. The left lapel features a bright red zipper track completely disconnected from its partner; the hem drops violently on the left side into a long sweeping train. The outerwear asserts a posture of calculated structural failure."
+          "description": "The asymmetrical tailored canvas jacket features a stiff off-white textile heavily adorned with brass studs down the right arm. It hangs open to reveal trailing white ribbons and raw fabric panels. This structural intervention engages with deconstructionist assembly by manipulating a formal jacket into a chaotic punk-inspired garment. The left lapel features a bright red zipper track completely disconnected from its partner. The hem drops violently on the left side into a long sweeping train. The outerwear asserts a posture of calculated structural failure."
         },
         {
           "x": 50,
           "y": 80,
           "label": "Brass-Studded Open-Toe Boots",
-          "description": "The brass-studded open-toe boots rise tightly over the calf in a pale beige canvas; they are completely covered in the same heavy metal hardware as the jacket sleeve. This footwear application utilizes crust punk componentry to weaponize the silhouette. The bright studs reflect the runway lighting starkly; the open toe reveals bare skin amidst the heavy armor. The accessory completes the look by anchoring the asymmetrical volume with a violent and highly tactile base."
+          "description": "The brass-studded open-toe boots rise tightly over the calf in a pale beige canvas. They are completely covered in the same heavy metal hardware as the jacket sleeve. This footwear application utilizes crust punk componentry to weaponize the silhouette. The bright studs reflect the runway lighting starkly. The open toe reveals bare skin amidst the heavy armor. The accessory completes the look by anchoring the asymmetrical volume with a violent and highly tactile base."
         }
       ]
     }

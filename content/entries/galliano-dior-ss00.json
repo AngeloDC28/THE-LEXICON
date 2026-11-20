@@ -6,6 +6,7 @@
   "year": 2000,
   "season": "SS",
   "published": "2026-05-12",
+  "summary_plain": "John Galliano based a Dior couture show on people living rough by the river in Paris, with torn and layered clothes. It caused anger, and it still raises the question of whether fashion should borrow from poverty.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/galliano-dior-ss00/galliano-dior-ss00-01.jpg",
@@ -14,7 +15,7 @@
           "x": 48,
           "y": 10,
           "label": "Sculptural Newspaper-Wrapped Hat",
-          "description": "The sculptural newspaper-wrapped hat builds an immense asymmetrical brim atop the head using crushed, paper-like pleated fabric folded into wide, striated bands; it drastically alters the body's center of gravity and reads as a giant, crumpled broadsheet. This accessory engages with the aestheticization of refuse by utilizing the visual language of literal trash to mimic the grandeur of elite millinery. The pale beige and dusty-pink pleats catch the runway light against their sharp chaotic folds; the structure completely overshadows the face beneath. The headpiece asserts a cynical parody of haute couture traditions."
+          "description": "The sculptural newspaper-wrapped hat builds an immense asymmetrical brim atop the head using crushed, paper-like pleated fabric folded into wide, striated bands. It drastically alters the body's center of gravity and reads as a giant, crumpled broadsheet. This accessory engages with the aestheticization of refuse by utilizing the visual language of literal trash to mimic the grandeur of elite millinery. The pale beige and dusty-pink pleats catch the runway light against their sharp chaotic folds. The structure completely overshadows the face beneath. The headpiece asserts a cynical parody of haute couture traditions."
         },
         {
           "x": 45,
@@ -31,19 +32,19 @@
           "x": 48,
           "y": 28,
           "label": "Cropped Structured Blazer",
-          "description": "A cropped white blazer with an exaggerated, off-kilter funnel collar sits open over a sliver of plaid lining, baring the sternum; the sleeves elongate past the wrist. This structural restriction applies institutional critique by turning a rigid tailoring convention into something worn askew, as if grabbed in haste. The stiff white fabric folds diagonally across the chest; the collar stands away from the neck at an unnatural angle. The jacket refuses ergonomic tailoring logic to assert a narrative of hurried, improvised dressing."
+          "description": "A cropped white blazer with an exaggerated, off-kilter funnel collar sits open over a sliver of plaid lining, baring the sternum. The sleeves elongate past the wrist. This structural restriction applies institutional critique by turning a rigid tailoring convention into something worn askew, as if grabbed in haste. The stiff white fabric folds diagonally across the chest. The collar stands away from the neck at an unnatural angle. The jacket refuses ergonomic tailoring logic to assert a narrative of hurried, improvised dressing."
         },
         {
           "x": 45,
           "y": 68,
           "label": "Newspaper-Print Trousers",
-          "description": "The oversized wide-leg trousers are woven from a pale, plaid-checked textile overprinted with dense columns of newsprint text, pooling heavily over the shoes and dragging on the runway floor. This deliberate mis-sizing engages with the appropriation of poverty by mimicking the ill-fitting, scavenged garments of the homeless while literalizing Galliano's own \"Christian Dior Daily\" print motif. The fabric bunches and creases at the ankle; the columns of grey type distort across the folds. The trousers complete the silhouette by dragging tabloid ephemera into couture cloth."
+          "description": "The oversized wide-leg trousers are woven from a pale, plaid-checked textile overprinted with dense columns of newsprint text, pooling heavily over the shoes and dragging on the runway floor. This deliberate mis-sizing engages with the appropriation of poverty by mimicking the ill-fitting, scavenged garments of the homeless while literalizing Galliano's own \"Christian Dior Daily\" print motif. The fabric bunches and creases at the ankle. The columns of grey type distort across the folds. The trousers complete the silhouette by dragging tabloid ephemera into couture cloth."
         },
         {
           "x": 42,
           "y": 48,
           "label": "Utility Belt with Dangling Charms",
-          "description": "A crude fabric belt sits unbuckled and loose at the hip, hung with a cluster of small dangling trinkets and keys. This functional substitution invokes class dynamics by appropriating the found-object hoarding of the dispossessed as decorative hardware. The dull metal charms swing against the pale plaid lining; the belt itself looks tied rather than fastened. The detail completes the ensemble by cementing the illusion of a frantically assembled wardrobe."
+          "description": "A crude fabric belt sits unbuckled and loose at the hip, hung with a cluster of small dangling trinkets and keys. This functional substitution invokes class dynamics by appropriating the found-object hoarding of the dispossessed as decorative hardware. The dull metal charms swing against the pale plaid lining. The belt itself looks tied rather than fastened. The detail completes the ensemble by cementing the illusion of a frantically assembled wardrobe."
         }
       ]
     },
@@ -54,13 +55,13 @@
           "x": 48,
           "y": 52,
           "label": "Bias-Cut Newspaper Print Gown",
-          "description": "The bias-cut newspaper print gown drapes sheer grey silk chiffon tightly across the anatomy; it features custom typography detailing the designer's own press clippings. This iconic textile directly engages with institutional critique by transforming the media's commentary on fashion into the physical garment itself. The bias-cut technique forces the fabric to cling to the hips before revealing the leg through a high asymmetrical slit; the text warps and distorts over the curves of the body. The dress asserts a hyper-self-aware vanity masked as urban detritus."
+          "description": "The bias-cut newspaper print gown drapes sheer grey silk chiffon tightly across the anatomy. It features custom typography detailing the designer's own press clippings. This iconic textile directly engages with institutional critique by transforming the media's commentary on fashion into the physical garment itself. The bias-cut technique forces the fabric to cling to the hips before revealing the leg through a high asymmetrical slit. The text warps and distorts over the curves of the body. The dress asserts a hyper-self-aware vanity masked as urban detritus."
         },
         {
           "x": 60,
           "y": 40,
           "label": "Frayed Ruffle Cascade",
-          "description": "A cascade of frayed ruffles spirals down one side of the gown in torn strips of the same newspaper-printed silk, destroying the clean line of the bias-cut slip. This structural manipulation applies deconstructionist methodology to mimic a garment shredded by the harsh realities of street life. The raw edges curl inward and fray extensively along the ribcage; they flap loosely as the model walks. The detail completes the garment by ensuring the luxurious silk mimics the chaotic texture of actual garbage."
+          "description": "A cascade of frayed ruffles spirals down one side of the gown in torn strips of the same newspaper-printed silk, destroying the clean line of the bias-cut slip. This structural manipulation applies deconstructionist methodology to mimic a garment shredded by the harsh realities of street life. The raw edges curl inward and fray extensively along the ribcage. They flap loosely as the model walks. The detail completes the garment by ensuring the luxurious silk mimics the chaotic texture of actual garbage."
         }
       ]
     },
@@ -71,7 +72,7 @@
           "x": 48,
           "y": 28,
           "label": "Sheer Distressed Organza Shirting",
-          "description": "The sheer distressed organza shirting balloons over the torso in a dark oxblood haze; it is visibly water-stained and streaked across the chest and sleeves. This material vulnerability invokes theories of poverty chic by presenting a delicate luxury textile in a state of apparent ruin. The oversized fit hangs open at the collar; the fabric looks as though it has been rained on or left out to rot in patches. The garment refuses traditional elegance to assert a romanticized vision of decay."
+          "description": "The sheer distressed organza shirting balloons over the torso in a dark oxblood haze. It is visibly water-stained and streaked across the chest and sleeves. This material vulnerability invokes theories of poverty chic by presenting a delicate luxury textile in a state of apparent ruin. The oversized fit hangs open at the collar. The fabric looks as though it has been rained on or left out to rot in patches. The garment refuses traditional elegance to assert a romanticized vision of decay."
         },
         {
           "x": 48,
@@ -88,19 +89,19 @@
           "x": 50,
           "y": 32,
           "label": "Layered Tulle Ruffle Wrap",
-          "description": "The layered tulle ruffle wrap engulfs the shoulder and upper body in an excessive volume of frayed, distressed burgundy netting draped like a shawl scavenged in a hurry; it obscures the natural shoulder line beneath a chaotic structural mass. This extreme accumulation engages with theories of poverty chic by mimicking the desperate layering of scavenged garments against the cold. The sheer textile is bunched and knotted haphazardly around the neck and bust over a sheer fishnet under-layer; the edges remain unfinished and raw. The outerwear asserts a grotesque opulence that deliberately mocks the aesthetics of destitution."
+          "description": "The layered tulle ruffle wrap engulfs the shoulder and upper body in an excessive volume of frayed, distressed burgundy netting draped like a shawl scavenged in a hurry. It obscures the natural shoulder line beneath a chaotic structural mass. This extreme accumulation engages with theories of poverty chic by mimicking the desperate layering of scavenged garments against the cold. The sheer textile is bunched and knotted haphazardly around the neck and bust over a sheer fishnet under-layer. The edges remain unfinished and raw. The outerwear asserts a grotesque opulence that deliberately mocks the aesthetics of destitution."
         },
         {
           "x": 50,
           "y": 72,
           "label": "Low-Slung Wide-Leg Trousers",
-          "description": "The low-slung wide-leg trousers in matching burgundy taffeta hang loosely from the hips; they disrupt traditional haute couture tailoring with an ill-fitting, slouched silhouette. This dropped waistline applies deconstructionist logic to challenge the rigid corporeal discipline usually demanded by elite fashion houses. The heavy fabric pools thickly around the ankles; a round medallion pendant and a torn strip of red fabric hang loosely at the hip. The garment completes the silhouette by enforcing an aesthetic of deliberate neglect."
+          "description": "The low-slung wide-leg trousers in matching burgundy taffeta hang loosely from the hips. They disrupt traditional haute couture tailoring with an ill-fitting, slouched silhouette. This dropped waistline applies deconstructionist logic to challenge the rigid corporeal discipline usually demanded by elite fashion houses. The heavy fabric pools thickly around the ankles. A round medallion pendant and a torn strip of red fabric hang loosely at the hip. The garment completes the silhouette by enforcing an aesthetic of deliberate neglect."
         },
         {
           "x": 50,
           "y": 14,
           "label": "Paled Theatrical Visage",
-          "description": "The paled theatrical visage covers the model's face in stark white foundation punctuated by heavily smeared black eye makeup; it creates a ghostly and unsettling mask. This cosmetic styling invokes theories of melodrama by translating the physical toll of extreme hardship into an artificial runway pantomime. The stark white skin contrasts violently with the dark burgundy layers framing the head. This element refuses naturalistic beauty to complete the look with an unsettling tragicomic theatricality."
+          "description": "The paled theatrical visage covers the model's face in stark white foundation punctuated by heavily smeared black eye makeup. It creates a ghostly and unsettling mask. This cosmetic styling invokes theories of melodrama by translating the physical toll of extreme hardship into an artificial runway pantomime. The stark white skin contrasts violently with the dark burgundy layers framing the head. This element refuses naturalistic beauty to complete the look with an unsettling tragicomic theatricality."
         }
       ]
     },
@@ -111,19 +112,19 @@
           "x": 42,
           "y": 10,
           "label": "Sculptural Found-Object Headpiece",
-          "description": "The sculptural found-object headpiece balances asymmetrically upon the skull with protruding white blossoms and green foliage jutting outward from a crushed base; it extends the vertical axis of the body dramatically. This accessory engages with the aestheticization of refuse by elevating scavenged, wilting botanical matter to the status of elite millinery. The pale petals catch the runway light against their sharp, chaotic arrangement; they cast irregular shadows over the face. The piece asserts a survivalist resourcefulness weaponized as high-fashion spectacle."
+          "description": "The sculptural found-object headpiece balances asymmetrically upon the skull with protruding white blossoms and green foliage jutting outward from a crushed base. It extends the vertical axis of the body dramatically. This accessory engages with the aestheticization of refuse by elevating scavenged, wilting botanical matter to the status of elite millinery. The pale petals catch the runway light against their sharp, chaotic arrangement. They cast irregular shadows over the face. The piece asserts a survivalist resourcefulness weaponized as high-fashion spectacle."
         },
         {
           "x": 45,
           "y": 55,
           "label": "Deconstructed Tiered Chiffon Dress",
-          "description": "The deconstructed tiered chiffon dress wraps the torso and legs in a tattered matrix of sheer brown fabric; it exposes the underlying anatomy through ragged, asymmetric tears and a thigh-high slit. This material manipulation utilizes deconstructionist methodologies to mimic the natural decay of abandoned clothing. The bias-cut textile clings irregularly to the hips before disintegrating into frayed, trailing tiers at the hem. The garment refuses traditional couture perfection to assert a calculated and highly engineered ruination."
+          "description": "The deconstructed tiered chiffon dress wraps the torso and legs in a tattered matrix of sheer brown fabric. It exposes the underlying anatomy through ragged, asymmetric tears and a thigh-high slit. This material manipulation utilizes deconstructionist methodologies to mimic the natural decay of abandoned clothing. The bias-cut textile clings irregularly to the hips before disintegrating into frayed, trailing tiers at the hem. The garment refuses traditional couture perfection to assert a calculated and highly engineered ruination."
         },
         {
           "x": 42,
           "y": 42,
           "label": "Oversized Utility Safety Pins",
-          "description": "The oversized utility safety pins cluster around the waistline to forcibly yoke disparate layers of fabric together; they replace classical hidden closures with crude mechanical hardware. This functional substitution invokes class dynamics by appropriating the emergency repair tactics of the impoverished. The bright gold-tone metal interrupts the muted brown chiffon sharply; a multi-strand beaded necklace and various trinkets dangle from the clasps. The detail completes the ensemble by cementing the illusion of a frantically assembled wardrobe."
+          "description": "The oversized utility safety pins cluster around the waistline to forcibly yoke disparate layers of fabric together. They replace classical hidden closures with crude mechanical hardware. This functional substitution invokes class dynamics by appropriating the emergency repair tactics of the impoverished. The bright gold-tone metal interrupts the muted brown chiffon sharply. A multi-strand beaded necklace and various trinkets dangle from the clasps. The detail completes the ensemble by cementing the illusion of a frantically assembled wardrobe."
         }
       ]
     },
@@ -134,19 +135,19 @@
           "x": 45,
           "y": 68,
           "label": "Shredded Sequin-Embellished Gown",
-          "description": "The shredded sequin-embellished gown fractures the lower silhouette into a cascade of tattered black fabric and highly reflective silver sequin strips; it creates a chaotic and kinetic volume around the legs before opening into a high thigh slit. This surface treatment applies theories of poverty chic by mimicking the visual texture of shredded trash bags or scavenged industrial foil. The metallic elements catch the runway lighting violently as the bias-cut fabric shifts; the hem trails unevenly across the floor. The garment asserts a glamorous interpretation of urban decay."
+          "description": "The shredded sequin-embellished gown fractures the lower silhouette into a cascade of tattered black fabric and highly reflective silver sequin strips. It creates a chaotic and kinetic volume around the legs before opening into a high thigh slit. This surface treatment applies theories of poverty chic by mimicking the visual texture of shredded trash bags or scavenged industrial foil. The metallic elements catch the runway lighting violently as the bias-cut fabric shifts. The hem trails unevenly across the floor. The garment asserts a glamorous interpretation of urban decay."
         },
         {
           "x": 38,
           "y": 32,
           "label": "Suspended Miniature Glass Bottle",
-          "description": "A suspended miniature glass bottle dangles from a crude cord attached directly to the bodice; it introduces a heavy, literal object into the garment's drape. This literal application of refuse engages with institutional critique by forcing the haute couture client to wear the literal markers of street-level substance abuse. The green glass catches the light against the dark sequinned fabric of the chest; the raw cord cuts into the sheer netting beneath it. The accessory refuses ornamental subtlety to complete the tragic narrative of the collection."
+          "description": "A suspended miniature glass bottle dangles from a crude cord attached directly to the bodice. It introduces a heavy, literal object into the garment's drape. This literal application of refuse engages with institutional critique by forcing the haute couture client to wear the literal markers of street-level substance abuse. The green glass catches the light against the dark sequinned fabric of the chest. The raw cord cuts into the sheer netting beneath it. The accessory refuses ornamental subtlety to complete the tragic narrative of the collection."
         },
         {
           "x": 42,
           "y": 12,
           "label": "Netted Mourning Veil",
-          "description": "The netted mourning veil obscures the face behind a rigid black grid topped with dark plumage; it creates a severe barrier between the model and the audience. This headwear invokes concepts of melodrama by referencing Victorian grieving attire distorted through a lens of total destitution. The thick netting casts sharp shadows across the stark white theatrical makeup beneath; the oversized structure dwarfs the skull. The piece asserts a morbid theatricality that elevates the styling from mere clothing to performance art."
+          "description": "The netted mourning veil obscures the face behind a rigid black grid topped with dark plumage. It creates a severe barrier between the model and the audience. This headwear invokes concepts of melodrama by referencing Victorian grieving attire distorted through a lens of total destitution. The thick netting casts sharp shadows across the stark white theatrical makeup beneath. The oversized structure dwarfs the skull. The piece asserts a morbid theatricality that elevates the styling from mere clothing to performance art."
         }
       ]
     },
@@ -157,19 +158,19 @@
           "x": 48,
           "y": 42,
           "label": "Straitjacket-Inspired Coat",
-          "description": "The straitjacket-inspired coat binds the torso in stark white fabric with an oversized funnel lapel and a strict vertical seam of criss-crossed lacing threaded through brass grommets down the front closure. This sartorial restriction engages with theories of institutional critique by transforming a medical confinement apparatus into luxury outerwear. The heavy white cloth is punctured by the grommets in a rigid column; the closure splits to reveal the leg through a high slit below. The garment refuses physical agency to assert a disturbing narrative of psychological captivity."
+          "description": "The straitjacket-inspired coat binds the torso in stark white fabric with an oversized funnel lapel and a strict vertical seam of criss-crossed lacing threaded through brass grommets down the front closure. This sartorial restriction engages with theories of institutional critique by transforming a medical confinement apparatus into luxury outerwear. The heavy white cloth is punctured by the grommets in a rigid column. The closure splits to reveal the leg through a high slit below. The garment refuses physical agency to assert a disturbing narrative of psychological captivity."
         },
         {
           "x": 42,
           "y": 70,
           "label": "Crude Cord Lacing",
-          "description": "A length of crude gold cord trails from the coat's lacing to hang loosely in the model's hand and pool onto the runway floor; it replaces fine tailoring hardware with rough, improvised cordage. This material substitution applies the aesthetic philosophy of poverty chic by elevating a scavenged tether to the level of haute couture fastening. The braided cord frays at the end; the white lace-up knee boots below echo the same lacing logic down to the feet. The detail completes the ensemble by emphasizing a desperate and primitive mode of construction."
+          "description": "A length of crude gold cord trails from the coat's lacing to hang loosely in the model's hand and pool onto the runway floor. It replaces fine tailoring hardware with rough, improvised cordage. This material substitution applies the aesthetic philosophy of poverty chic by elevating a scavenged tether to the level of haute couture fastening. The braided cord frays at the end. The white lace-up knee boots below echo the same lacing logic down to the feet. The detail completes the ensemble by emphasizing a desperate and primitive mode of construction."
         },
         {
           "x": 48,
           "y": 10,
           "label": "Inflated Balloon Headpiece",
-          "description": "The inflated balloon headpiece twists brightly colored latex around the model's distressed hair; it introduces a jarring burst of neon into the monochromatic white look. This bizarre styling choice invokes theories of the absurd by juxtaposing cheerful party favors with the grim reality of a straitjacket. The yellow and orange tubes hover erratically above the stark white face makeup; they fight against the severe mood of the tailoring. The accessory asserts a manic energy that heightens the psychological tension of the silhouette."
+          "description": "The inflated balloon headpiece twists brightly colored latex around the model's distressed hair. It introduces a jarring burst of neon into the monochromatic white look. This bizarre styling choice invokes theories of the absurd by juxtaposing cheerful party favors with the grim reality of a straitjacket. The yellow and orange tubes hover erratically above the stark white face makeup. They fight against the severe mood of the tailoring. The accessory asserts a manic energy that heightens the psychological tension of the silhouette."
         }
       ]
     },
@@ -180,19 +181,19 @@
           "x": 45,
           "y": 55,
           "label": "Volumetric Tulle Ballet Skirt",
-          "description": "The volumetric tulle skirt explodes from the waistline in tiers of champagne-toned netting over a boned, corseted bodice; it evokes a ballet costume abandoned mid-performance. This structural extreme applies deconstructionist logic to the classic Dior silhouette by rendering the traditional ballgown as a theatrical costume piece rather than eveningwear. The stiff layers catch the runway light in overlapping folds; the model wears gilded satin pointe shoes that push the reference further toward dance. The garment asserts a silhouette suspended between couture and stagecraft."
+          "description": "The volumetric tulle skirt explodes from the waistline in tiers of champagne-toned netting over a boned, corseted bodice. It evokes a ballet costume abandoned mid-performance. This structural extreme applies deconstructionist logic to the classic Dior silhouette by rendering the traditional ballgown as a theatrical costume piece rather than eveningwear. The stiff layers catch the runway light in overlapping folds. The model wears gilded satin pointe shoes that push the reference further toward dance. The garment asserts a silhouette suspended between couture and stagecraft."
         },
         {
           "x": 25,
           "y": 28,
           "label": "Raised Sheer Wing Drape",
-          "description": "A wing-like panel of sheer champagne organza is caught and lifted in the model's raised hand, extending off the shoulder like a broken piece of scenery. This gestural styling engages with theatrical performance by treating the garment as a prop the wearer must actively hold together. The translucent fabric stands away from the body in a stiff diagonal; it exposes the arm beneath entirely. The detail completes the tragicomic narrative by staging elegance as something requiring visible physical effort to maintain."
+          "description": "A wing-like panel of sheer champagne organza is caught and lifted in the model's raised hand, extending off the shoulder like a broken piece of scenery. This gestural styling engages with theatrical performance by treating the garment as a prop the wearer must actively hold together. The translucent fabric stands away from the body in a stiff diagonal. It exposes the arm beneath entirely. The detail completes the tragicomic narrative by staging elegance as something requiring visible physical effort to maintain."
         },
         {
           "x": 48,
           "y": 12,
           "label": "Gilded Spike Headpiece",
-          "description": "A small gilded, spiked headpiece sits precariously atop the head, catching the light like a fragment of stage armor. This headwear invokes the aestheticization of performance by crowning the model with a piece that reads as costume jewelry rather than couture millinery. The metallic gold tone blends with the pale makeup and champagne tulle of the dress below; it is pinned into the swept-back hair. The piece asserts a theatrical grandeur pitched between ballet and pageantry."
+          "description": "A small gilded, spiked headpiece sits precariously atop the head, catching the light like a fragment of stage armor. This headwear invokes the aestheticization of performance by crowning the model with a piece that reads as costume jewelry rather than couture millinery. The metallic gold tone blends with the pale makeup and champagne tulle of the dress below. It is pinned into the swept-back hair. The piece asserts a theatrical grandeur pitched between ballet and pageantry."
         }
       ]
     },
@@ -203,13 +204,13 @@
           "x": 45,
           "y": 65,
           "label": "Blush Lace-Hemmed Gown",
-          "description": "A blush-pink gown falls in soft, semi-sheer layers to a lace-trimmed hem; the model's arms are thrown wide in a dancer's pose that sets the whole silhouette in motion. This fluid, theatrical styling invokes theories of melodrama by rendering the garment as a costume for performance rather than static display. The delicate pleats and lace catch and stretch with the movement; the pale color blurs the boundary between undergarment and gown. The garment refuses stillness to assert an aesthetic of romantic, kinetic fragility."
+          "description": "A blush-pink gown falls in soft, semi-sheer layers to a lace-trimmed hem. The model's arms are thrown wide in a dancer's pose that sets the whole silhouette in motion. This fluid, theatrical styling invokes theories of melodrama by rendering the garment as a costume for performance rather than static display. The delicate pleats and lace catch and stretch with the movement. The pale color blurs the boundary between undergarment and gown. The garment refuses stillness to assert an aesthetic of romantic, kinetic fragility."
         },
         {
           "x": 32,
           "y": 25,
           "label": "Knotted Organza Shoulder Drape",
-          "description": "A folded, origami-like panel of stiff pale organza wraps asymmetrically across one shoulder and out past the raised arm, functioning as a makeshift sculptural wing rather than a sleeve. This styling technique applies deconstructionist assembly by repurposing a scrap of bridal-weight fabric into an emergency, improvised silhouette. The stiff fabric stands away from the neck in sharp folds; a magenta headband cuts across the swept-up hair beneath it. The detail completes the look by introducing an element of rushed, theatrical layering over the fragile gown."
+          "description": "A folded, origami-like panel of stiff pale organza wraps asymmetrically across one shoulder and out past the raised arm, functioning as a makeshift sculptural wing rather than a sleeve. This styling technique applies deconstructionist assembly by repurposing a scrap of bridal-weight fabric into an emergency, improvised silhouette. The stiff fabric stands away from the neck in sharp folds. A magenta headband cuts across the swept-up hair beneath it. The detail completes the look by introducing an element of rushed, theatrical layering over the fragile gown."
         }
       ]
     },
@@ -220,13 +221,13 @@
           "x": 48,
           "y": 32,
           "label": "Grime-Stained Draped Top",
-          "description": "The grime-stained draped top wraps the torso in structured ivory fabric visibly smeared with streaks of acid yellow-green pigment across the shoulder and neck; it simulates chemical contamination or extreme urban filth. This surface manipulation directly engages with the aestheticization of poverty by treating realistic dirt as a painted luxury motif. The fabric folds sculpturally at the shoulder before trailing into a long train behind the model; the pigment bleeds onto the skin of the throat and jaw. The garment refuses pristine finishing to assert the romanticization of decay."
+          "description": "The grime-stained draped top wraps the torso in structured ivory fabric visibly smeared with streaks of acid yellow-green pigment across the shoulder and neck. It simulates chemical contamination or extreme urban filth. This surface manipulation directly engages with the aestheticization of poverty by treating realistic dirt as a painted luxury motif. The fabric folds sculpturally at the shoulder before trailing into a long train behind the model. The pigment bleeds onto the skin of the throat and jaw. The garment refuses pristine finishing to assert the romanticization of decay."
         },
         {
           "x": 48,
           "y": 55,
           "label": "Striped Knit Under-Shorts",
-          "description": "Black-and-white striped knit under-shorts peek out from beneath the draped ivory train, introducing a jarringly domestic foundation layer to the sculptural ensemble above. This layered exposure engages with class dynamics by revealing the private, utilitarian garments usually hidden by haute couture. The horizontal stripes stretch tightly over the thighs; sheer black tights and knee-high lace-up combat boots ground the look. The piece completes the silhouette by emphasizing the haphazard accumulation of mismatched clothing."
+          "description": "Black-and-white striped knit under-shorts peek out from beneath the draped ivory train, introducing a jarringly domestic foundation layer to the sculptural ensemble above. This layered exposure engages with class dynamics by revealing the private, utilitarian garments usually hidden by haute couture. The horizontal stripes stretch tightly over the thighs. Sheer black tights and knee-high lace-up combat boots ground the look. The piece completes the silhouette by emphasizing the haphazard accumulation of mismatched clothing."
         }
       ]
     },
@@ -237,19 +238,19 @@
           "x": 42,
           "y": 28,
           "label": "Asymmetrical Deconstructed Bodice",
-          "description": "The asymmetrical deconstructed bodice warps pale ivory fabric into a chaotic knot across the torso, punctuated by an olive-green bow at the shoulder; it entirely disguises the natural bust line. This structural logic utilizes deconstruction to mimic a garment hastily pinned together from scavenged bedsheets. The stiff fabric points outward at the shoulders; a wide belt cinches the waist over yellow-green pigment smeared down one leg. The garment refuses traditional tailoring to assert a posture of erratic survivalism."
+          "description": "The asymmetrical deconstructed bodice warps pale ivory fabric into a chaotic knot across the torso, punctuated by an olive-green bow at the shoulder. It entirely disguises the natural bust line. This structural logic utilizes deconstruction to mimic a garment hastily pinned together from scavenged bedsheets. The stiff fabric points outward at the shoulders. A wide belt cinches the waist over yellow-green pigment smeared down one leg. The garment refuses traditional tailoring to assert a posture of erratic survivalism."
         },
         {
           "x": 45,
           "y": 55,
           "label": "Striped Knit Under-Shorts",
-          "description": "The striped knit under-shorts peek out from beneath the fractured hemline of the ivory drape; they introduce a jarringly domestic foundation layer to the chaotic ensemble. This layered exposure engages with class dynamics by revealing the private utilitarian garments usually hidden by haute couture. The horizontal black and grey stripes stretch tightly over the thighs; the yellow-green pigment stains continue down onto the fabric. The piece completes the look by emphasizing the haphazard accumulation of mismatched clothing."
+          "description": "The striped knit under-shorts peek out from beneath the fractured hemline of the ivory drape. They introduce a jarringly domestic foundation layer to the chaotic ensemble. This layered exposure engages with class dynamics by revealing the private utilitarian garments usually hidden by haute couture. The horizontal black and grey stripes stretch tightly over the thighs. The yellow-green pigment stains continue down onto the fabric. The piece completes the look by emphasizing the haphazard accumulation of mismatched clothing."
         },
         {
           "x": 42,
           "y": 82,
           "label": "Mismatched Lace-Up Boots",
-          "description": "The mismatched lace-up boots ground the chaotic draped fabrics in deliberately unbalanced footwear — one leg wrapped to the knee in laced fabric, the other in a shorter cropped boot. This asymmetry applies an aesthetic of scavenged, mismatched dressing to the otherwise sculptural silhouette above. The pale wrappings contrast against the pigment-stained skin; multiple laces crisscross up each leg. The boots assert a heavy, improvised readiness amidst the theatrical decay."
+          "description": "The mismatched lace-up boots ground the chaotic draped fabrics in deliberately unbalanced footwear — one leg wrapped to the knee in laced fabric, the other in a shorter cropped boot. This asymmetry applies an aesthetic of scavenged, mismatched dressing to the otherwise sculptural silhouette above. The pale wrappings contrast against the pigment-stained skin. Multiple laces crisscross up each leg. The boots assert a heavy, improvised readiness amidst the theatrical decay."
         }
       ]
     },
@@ -260,13 +261,13 @@
           "x": 45,
           "y": 32,
           "label": "Laced Coral Silk Bodice",
-          "description": "The laced coral silk bodice stretches a vivid red-orange textile across the torso, cinched at the waist by a wide belt over a spiral of corset lacing that replaces traditional seaming with visible tension. This functional substitution engages with anti-consumerist aesthetics by mimicking the desperate repairs of those unable to afford new garments. The bright silk gathers tightly against the pull of the lacing; fabric rosettes bloom at each shoulder like wounds dressed in flowers. The garment asserts a deliberate state of ongoing ruin and frantic assembly."
+          "description": "The laced coral silk bodice stretches a vivid red-orange textile across the torso, cinched at the waist by a wide belt over a spiral of corset lacing that replaces traditional seaming with visible tension. This functional substitution engages with anti-consumerist aesthetics by mimicking the desperate repairs of those unable to afford new garments. The bright silk gathers tightly against the pull of the lacing. Fabric rosettes bloom at each shoulder like wounds dressed in flowers. The garment asserts a deliberate state of ongoing ruin and frantic assembly."
         },
         {
           "x": 40,
           "y": 62,
           "label": "High-Slit Coral Chiffon Skirt",
-          "description": "The high-slit coral chiffon skirt drops from the hip in long, irregular trailing panels, completely exposing the leg up to the upper thigh. This extreme bias-cut fluidity invokes theories of melodrama by rendering the fabric as a tattered, fragile web easily caught by the wind. The sheer coral material pools lightly on the runway floor beneath gold strappy sandals; a colorful floral and fruit headpiece crowns the look above. The skirt completes the silhouette with an air of tragic vulnerability."
+          "description": "The high-slit coral chiffon skirt drops from the hip in long, irregular trailing panels, completely exposing the leg up to the upper thigh. This extreme bias-cut fluidity invokes theories of melodrama by rendering the fabric as a tattered, fragile web easily caught by the wind. The sheer coral material pools lightly on the runway floor beneath gold strappy sandals. A colorful floral and fruit headpiece crowns the look above. The skirt completes the silhouette with an air of tragic vulnerability."
         }
       ]
     },
@@ -277,13 +278,13 @@
           "x": 48,
           "y": 42,
           "label": "Raw-Ruffled Ivory Gown",
-          "description": "The raw-ruffled ivory gown wraps the body in stark white fabric with unfinished, frayed ruffle trim gathered at the bodice and cascading down the skirt; it leaves one shoulder bare while a wide cummerbund belt cinches the waist. This sartorial contradiction applies institutional critique by pairing the structured discipline of a belt with the visibly unraveling ruffles above and below it. The stiff material folds asymmetrically across the chest; the raw edges curl and fray at every seam. The garment refuses graceful, finished draping to assert a posture of elegant self-destruction."
+          "description": "The raw-ruffled ivory gown wraps the body in stark white fabric with unfinished, frayed ruffle trim gathered at the bodice and cascading down the skirt. It leaves one shoulder bare while a wide cummerbund belt cinches the waist. This sartorial contradiction applies institutional critique by pairing the structured discipline of a belt with the visibly unraveling ruffles above and below it. The stiff material folds asymmetrically across the chest. The raw edges curl and fray at every seam. The garment refuses graceful, finished draping to assert a posture of elegant self-destruction."
         },
         {
           "x": 48,
           "y": 80,
           "label": "High-Laced White Knee Boots",
-          "description": "The high-laced white knee boots encase the lower legs in leather laced tightly from ankle to knee, continuing the raw, unfinished theme down to the footwear. This design engages with the appropriation of poverty by pairing scuffed, matte leather with an otherwise pristine couture gown. The tight lacing restricts the calf completely; the boots strike a severe, utilitarian profile against the floor. The boots complete the ensemble by grounding the fraying gown in a stark, disciplined foundation."
+          "description": "The high-laced white knee boots encase the lower legs in leather laced tightly from ankle to knee, continuing the raw, unfinished theme down to the footwear. This design engages with the appropriation of poverty by pairing scuffed, matte leather with an otherwise pristine couture gown. The tight lacing restricts the calf completely. The boots strike a severe, utilitarian profile against the floor. The boots complete the ensemble by grounding the fraying gown in a stark, disciplined foundation."
         }
       ]
     },
@@ -294,13 +295,13 @@
           "x": 35,
           "y": 40,
           "label": "Distressed Oversized Cable Cardigan",
-          "description": "The distressed oversized cardigan swallows the torso in a heavy-gauge cream cable knit; it features violently frayed edges, exposed buttonholes, and small metal charms and keys dangling from the lapel. This extreme accumulation of material engages with theories of poverty chic by simulating the desperate hoarding of oversized donated clothing. The thick knit hangs open to the hip; the frayed hem droops unevenly at the cuffs. The outerwear asserts a grotesque caricature of warmth and protection."
+          "description": "The distressed oversized cardigan swallows the torso in a heavy-gauge cream cable knit. It features violently frayed edges, exposed buttonholes, and small metal charms and keys dangling from the lapel. This extreme accumulation of material engages with theories of poverty chic by simulating the desperate hoarding of oversized donated clothing. The thick knit hangs open to the hip. The frayed hem droops unevenly at the cuffs. The outerwear asserts a grotesque caricature of warmth and protection."
         },
         {
           "x": 55,
           "y": 60,
           "label": "Frayed Lace Slip Dress",
-          "description": "The frayed lace slip dress exposes delicate lingerie detailing beneath the heavy ruin of the cardigan; it layers over a raw-edged white wrap skirt laced with cord at the hip. This layered exposure utilizes deconstructionist methodologies to blur the lines between intimate apparel and public armor. The sheer white lace sits close over the chest; crude lacing crisscrosses the wrap skirt below like a makeshift corset. The garment refuses pristine elegance to complete the silhouette with a deeply tragic and vulnerable core."
+          "description": "The frayed lace slip dress exposes delicate lingerie detailing beneath the heavy ruin of the cardigan. It layers over a raw-edged white wrap skirt laced with cord at the hip. This layered exposure utilizes deconstructionist methodologies to blur the lines between intimate apparel and public armor. The sheer white lace sits close over the chest. Crude lacing crisscrosses the wrap skirt below like a makeshift corset. The garment refuses pristine elegance to complete the silhouette with a deeply tragic and vulnerable core."
         }
       ]
     }

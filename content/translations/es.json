@@ -61,7 +61,6 @@
   ],
   "loading": "CARGANDO TERMINAL...",
   "accept_terms": "[ ACEPTAR ]",
-  "cookie_notice": "Este directorio utiliza almacenamiento local para mantener el estado del terminal.",
   "close": "Cerrar",
   "null_set": "Conjunto Nulo Detectado",
   "null_set_desc": "Ajuste los filtros o los parámetros de búsqueda",

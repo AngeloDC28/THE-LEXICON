@@ -6,6 +6,7 @@
   "year": 2020,
   "season": "SS",
   "published": "2026-05-18",
+  "summary_plain": "Marine Serre held a show in the rain about climate disaster, and made about half the clothes from old, recycled materials. It showed that waste can be turned into luxury fashion.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/serre-ss20/serre-ss20-01.jpg",
@@ -14,13 +15,13 @@
           "x": 50,
           "y": 28,
           "label": "Monolithic Moiré Puffer Coat",
-          "description": "The monolithic moiré puffer coat swallows the body in a massive inflated volume of black water-marked silk; it features an immense protective hood that dwarfs the head completely. This outerwear choice applies the aesthetics of climate anxiety by engineering a garment that resembles a radiation suit or deep-sea survival gear. The glossy deadstock fabric holds deep rigid folds; the wide sleeves completely obscure the arms. The coat asserts a defensive and highly armored architectural presence."
+          "description": "The monolithic moiré puffer coat swallows the body in a massive inflated volume of black water-marked silk. It features an immense protective hood that dwarfs the head completely. This outerwear choice applies the aesthetics of climate anxiety by engineering a garment that resembles a radiation suit or deep-sea survival gear. The glossy deadstock fabric holds deep rigid folds. The wide sleeves completely obscure the arms. The coat asserts a defensive and highly armored architectural presence."
         },
         {
           "x": 50,
           "y": 68,
           "label": "Volumetric Moiré Skirt",
-          "description": "The volumetric moiré skirt drops from the waist into a wide bell-shaped silhouette; it mirrors the exact texture and fabric of the heavy coat above. This structural logic utilizes monolithic massing to ensure the lower half of the body is as heavily protected as the upper half. The dark fabric pools thickly around the knees; it is abruptly truncated by high-gloss black boots. The skirt completes the ensemble by forcing an overwhelming visual consistency upon the exaggerated silhouette."
+          "description": "The volumetric moiré skirt drops from the waist into a wide bell-shaped silhouette. It mirrors the exact texture and fabric of the heavy coat above. This structural logic utilizes monolithic massing to ensure the lower half of the body is as heavily protected as the upper half. The dark fabric pools thickly around the knees. It is abruptly truncated by high-gloss black boots. The skirt completes the ensemble by forcing an overwhelming visual consistency upon the exaggerated silhouette."
         }
       ]
     },
@@ -31,19 +32,19 @@
           "x": 50,
           "y": 40,
           "label": "Utilitarian Utility Jacket",
-          "description": "The utilitarian utility jacket structures the upper body in a stiff black textured fabric; it features aggressive white topstitching and heavy functional pockets. This material strategy engages directly with post-apocalyptic survivalism by elevating a mechanic's uniform into a sleek runway garment. The jacket is cinched tightly at the waist by a simple fabric belt; the collar stands stiffly against the neck. The outerwear asserts a rugged and highly practical defensive posture."
+          "description": "The utilitarian utility jacket structures the upper body in a stiff black textured fabric. It features aggressive white topstitching and heavy functional pockets. This material strategy engages directly with post-apocalyptic survivalism by elevating a mechanic's uniform into a sleek runway garment. The jacket is cinched tightly at the waist by a simple fabric belt. The collar stands stiffly against the neck. The outerwear asserts a rugged and highly practical defensive posture."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Matching Cargo Trousers",
-          "description": "The matching cargo trousers drop fluidly from the waist into a relaxed utilitarian fit; they feature the exact same white topstitching and pocket detailing as the jacket. This structural choice provides a banal working-class base that emphasizes the grim functionality of the collection. The dark textile lacks any formal creasing; the straight legs tuck roughly into black tactical boots. The trousers complete the look by enforcing a strict uniform designed for harsh environmental endurance."
+          "description": "The matching cargo trousers drop fluidly from the waist into a relaxed utilitarian fit. They feature the exact same white topstitching and pocket detailing as the jacket. This structural choice provides a banal working-class base that emphasizes the grim functionality of the collection. The dark textile lacks any formal creasing. The straight legs tuck roughly into black tactical boots. The trousers complete the look by enforcing a strict uniform designed for harsh environmental endurance."
         },
         {
           "x": 25,
           "y": 35,
           "label": "Tactical Arm Pouch",
-          "description": "The tactical arm pouch straps tightly around the right bicep; it features heavy black nylon and functional zippers. This accessory utilizes survivalist componentry to introduce literal carrying capacity directly onto the limbs. The small bag interrupts the clean line of the sleeve; it is adorned with subtle metal hardware. The detail completes the ensemble by emphasizing the necessity of hands-free utility in a crisis scenario."
+          "description": "The tactical arm pouch straps tightly around the right bicep. It features heavy black nylon and functional zippers. This accessory utilizes survivalist componentry to introduce literal carrying capacity directly onto the limbs. The small bag interrupts the clean line of the sleeve. It is adorned with subtle metal hardware. The detail completes the ensemble by emphasizing the necessity of hands-free utility in a crisis scenario."
         }
       ]
     },
@@ -54,13 +55,13 @@
           "x": 50,
           "y": 35,
           "label": "Chain-Fringed Leather Tunic",
-          "description": "The chain-fringed leather tunic wraps the torso in a soft white fabric heavily obscured by a massive cascade of fine silver chains; it acts as a metallic protective veil over the chest. This structural intervention engages with survivalist armour by fusing delicate jewelry techniques with heavy industrial hardware. The chains drape heavily from the neckline down to the waist; small shells and charms are integrated into the metal links. The top asserts a hybridized aesthetic combining fragile beauty with defensive weight."
+          "description": "The chain-fringed leather tunic wraps the torso in a soft white fabric heavily obscured by a massive cascade of fine silver chains. It acts as a metallic protective veil over the chest. This structural intervention engages with survivalist armour by fusing delicate jewelry techniques with heavy industrial hardware. The chains drape heavily from the neckline down to the waist. Small shells and charms are integrated into the metal links. The top asserts a hybridized aesthetic combining fragile beauty with defensive weight."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Embossed Crescent Leather Trousers",
-          "description": "The embossed crescent leather trousers encase the legs in a highly textured black hide; they feature a dense repeating pattern of the brand's signature moon logo stamped directly into the fabric. This material application utilizes semiotic sabotage by forcing a ubiquitous tribal marker into a heavy luxury material. The dark shiny surface reflects the runway lighting intensely; the trousers are tucked tightly into knee-high boots. The garment completes the silhouette by grounding the delicate upper chains in a severe militant base."
+          "description": "The embossed crescent leather trousers encase the legs in a highly textured black hide. They feature a dense repeating pattern of the brand's signature moon logo stamped directly into the fabric. This material application utilizes semiotic sabotage by forcing a ubiquitous tribal marker into a heavy luxury material. The dark shiny surface reflects the runway lighting intensely. The trousers are tucked tightly into knee-high boots. The garment completes the silhouette by grounding the delicate upper chains in a severe militant base."
         }
       ]
     },
@@ -71,13 +72,13 @@
           "x": 50,
           "y": 45,
           "label": "Glossy PVC Topcoat",
-          "description": "The glossy PVC topcoat falls cleanly to the mid-calf in a highly reflective black synthetic plastic; it functions as a severe weather-proof outer shell. This material choice engages with ecocriticism by utilizing deadstock petrochemical materials to construct a garment explicitly designed to repel environmental hazards. The slick surface holds sharp vertical highlights; the front hangs open to reveal a stark white underlayer. The outerwear asserts an artificial and highly defensive urban armor."
+          "description": "The glossy PVC topcoat falls cleanly to the mid-calf in a highly reflective black synthetic plastic. It functions as a severe weather-proof outer shell. This material choice engages with ecocriticism by utilizing deadstock petrochemical materials to construct a garment explicitly designed to repel environmental hazards. The slick surface holds sharp vertical highlights. The front hangs open to reveal a stark white underlayer. The outerwear asserts an artificial and highly defensive urban armor."
         },
         {
           "x": 50,
           "y": 62,
           "label": "Bare-Legged Styling",
-          "description": "The bare-legged styling introduces a moment of profound vulnerability against the heavy industrial coat; the model's exposed skin contrasts violently with the toxic PVC. This styling detail engages with the aesthetics of climate anxiety by leaving the body partially unprotected in a harsh environment. The stark white undergarments sit high on the thigh; the model wears simple white sneakers. The look asserts a tension between total architectural shielding and fragile human biology."
+          "description": "The bare-legged styling introduces a moment of profound vulnerability against the heavy industrial coat. The model's exposed skin contrasts violently with the toxic PVC. This styling detail engages with the aesthetics of climate anxiety by leaving the body partially unprotected in a harsh environment. The stark white undergarments sit high on the thigh. The model wears simple white sneakers. The look asserts a tension between total architectural shielding and fragile human biology."
         }
       ]
     },
@@ -88,19 +89,19 @@
           "x": 50,
           "y": 35,
           "label": "Cinched Nylon Field Jacket",
-          "description": "The cinched nylon field jacket structures the upper body in a lightweight black synthetic fabric; it features a heavy chain belt wrapping the waist. This outerwear choice applies survivalist componentry by taking a basic windbreaker and equipping it with aggressive hardware. The V-neck collar sits softly against the throat; a pendant necklace hangs at the open neckline. The garment asserts a highly functional and tactical posture designed for rapid movement."
+          "description": "The cinched nylon field jacket structures the upper body in a lightweight black synthetic fabric. It features a heavy chain belt wrapping the waist. This outerwear choice applies survivalist componentry by taking a basic windbreaker and equipping it with aggressive hardware. The V-neck collar sits softly against the throat. A pendant necklace hangs at the open neckline. The garment asserts a highly functional and tactical posture designed for rapid movement."
         },
         {
           "x": 50,
           "y": 60,
           "label": "Nylon Cargo Trousers",
-          "description": "The nylon cargo trousers drop seamlessly from beneath the jacket into a relaxed utilitarian fit; they feature heavy zippers and subtle seaming details. This structural choice provides a quiet practical base that emphasizes the militant styling of the top half. The dark fabric falls without heavy bagging; it is tucked tightly into high-gloss black boots. The trousers complete the ensemble by reinforcing the strict survivalist uniform."
+          "description": "The nylon cargo trousers drop seamlessly from beneath the jacket into a relaxed utilitarian fit. They feature heavy zippers and subtle seaming details. This structural choice provides a quiet practical base that emphasizes the militant styling of the top half. The dark fabric falls without heavy bagging. It is tucked tightly into high-gloss black boots. The trousers complete the ensemble by reinforcing the strict survivalist uniform."
         },
         {
           "x": 30,
           "y": 72,
           "label": "Spherical Chain Handbag",
-          "description": "The spherical chain handbag dangles from the right hand in a bright highly reflective red finish; it is suspended by a thick silver chain. This accessory utilizes the simulacrum to introduce a jarringly perfect geometric object into the gritty utilitarian ensemble. The bright color provides the only chromatic break in the dark silhouette; it resembles a futuristic containment vessel. The piece completes the look by asserting the collection's focus on bizarre industrial hardware."
+          "description": "The spherical chain handbag dangles from the right hand in a bright highly reflective red finish. It is suspended by a thick silver chain. This accessory utilizes the simulacrum to introduce a jarringly perfect geometric object into the gritty utilitarian ensemble. The bright color provides the only chromatic break in the dark silhouette. It resembles a futuristic containment vessel. The piece completes the look by asserting the collection's focus on bizarre industrial hardware."
         }
       ]
     },
@@ -111,13 +112,13 @@
           "x": 50,
           "y": 35,
           "label": "Tailored Moiré Suit Jacket",
-          "description": "The tailored moiré suit jacket structures the torso in a vibrant bright red silk; it features an extremely cinched waist and prominent structured shoulders. This tailoring extreme applies the subversion of luxury codes by taking an opulent historical fabric and rendering it into a sharp aggressive power suit. The glossy deadstock textile displays its signature water-marked pattern subtly; it lacks heavy lapels or visible buttons. The outerwear asserts a commanding and highly visible presence."
+          "description": "The tailored moiré suit jacket structures the torso in a vibrant bright red silk. It features an extremely cinched waist and prominent structured shoulders. This tailoring extreme applies the subversion of luxury codes by taking an opulent historical fabric and rendering it into a sharp aggressive power suit. The glossy deadstock textile displays its signature water-marked pattern subtly. It lacks heavy lapels or visible buttons. The outerwear asserts a commanding and highly visible presence."
         },
         {
           "x": 50,
           "y": 62,
           "label": "Matching Moiré Bermuda Shorts",
-          "description": "The matching moiré Bermuda shorts drop from beneath the heavy blazer to truncate sharply just below the knee; they complete the disjointed suit. This structural choice utilizes sartorial defacement by substituting formal trousers with an awkward mid-length short. The crisp red fabric holds a slight crease down the center leg; the dark crescent moon hosiery peeks out from the hem. The garment completes the ensemble by emphasizing the bold graphic branding against the vivid luxury textile."
+          "description": "The matching moiré Bermuda shorts drop from beneath the heavy blazer to truncate sharply just below the knee. They complete the disjointed suit. This structural choice utilizes sartorial defacement by substituting formal trousers with an awkward mid-length short. The crisp red fabric holds a slight crease down the center leg. The dark crescent moon hosiery peeks out from the hem. The garment completes the ensemble by emphasizing the bold graphic branding against the vivid luxury textile."
         }
       ]
     },
@@ -128,13 +129,13 @@
           "x": 50,
           "y": 35,
           "label": "Spliced Athletic Bodysuit",
-          "description": "The spliced athletic bodysuit binds the torso tightly in panels of black and red synthetic stretch fabric; it mimics the aerodynamic cut of professional sportswear. This material application engages with the concept of the survivalist base layer, treating the body as an entity requiring high-performance athletic gear. The tight fabric highlights the musculature; the deep scoop neck exposes the collarbone. The top asserts a hyper-functional core necessary for physical endurance."
+          "description": "The spliced athletic bodysuit binds the torso tightly in panels of black and red synthetic stretch fabric. It mimics the aerodynamic cut of professional sportswear. This material application engages with the concept of the survivalist base layer, treating the body as an entity requiring high-performance athletic gear. The tight fabric highlights the musculature. The deep scoop neck exposes the collarbone. The top asserts a hyper-functional core necessary for physical endurance."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Draped Upcycled Silk Skirt",
-          "description": "The draped upcycled silk skirt wraps the lower body in a chaotic red fabric heavily distressed with dark ink-like splatters; it creates the illusion of a garment ruined by toxic exposure. This structural logic utilizes regenerative assemblage to fuse damaged materials into a fluid asymmetrical volume. The fabric hangs loosely from the hips; it trails unevenly across the runway over high-gloss black boots. The skirt asserts the environmental reality of the \"Marée Noire\" theme."
+          "description": "The draped upcycled silk skirt wraps the lower body in a chaotic red fabric heavily distressed with dark ink-like splatters. It creates the illusion of a garment ruined by toxic exposure. This structural logic utilizes regenerative assemblage to fuse damaged materials into a fluid asymmetrical volume. The fabric hangs loosely from the hips. It trails unevenly across the runway over high-gloss black boots. The skirt asserts the environmental reality of the \"Marée Noire\" theme."
         }
       ]
     },
@@ -145,7 +146,7 @@
           "x": 50,
           "y": 42,
           "label": "Upcycled Toweling Trench Coat",
-          "description": "The upcycled toweling trench coat engulfs the figure in a massive volume of dark orange and brown camouflage fabric; it is constructed entirely from repurposed bath towels. This material strategy engages heavily with institutional critique by elevating domestic refuse into the realm of luxury outerwear. The thick highly textured fabric hangs heavily over the shoulders; the traditional storm flaps are maintained despite the bizarre textile. The coat asserts a pragmatic approach to creation where warmth and survival supersede opulence."
+          "description": "The upcycled toweling trench coat engulfs the figure in a massive volume of dark orange and brown camouflage fabric. It is constructed entirely from repurposed bath towels. This material strategy engages heavily with institutional critique by elevating domestic refuse into the realm of luxury outerwear. The thick highly textured fabric hangs heavily over the shoulders. The traditional storm flaps are maintained despite the bizarre textile. The coat asserts a pragmatic approach to creation where warmth and survival supersede opulence."
         }
       ]
     },
@@ -156,7 +157,7 @@
           "x": 50,
           "y": 50,
           "label": "Repurposed Crochet Gown",
-          "description": "The repurposed crochet gown falls heavily to the floor in a massive intricate web of white yarn; it completely engulfs the dark denim underlayer. This structural extreme applies regenerative assemblage to transform traditional domestic craft into a sweeping runway silhouette. The dense patterns feature large circular and floral motifs; the loose knit allows the body beneath to remain partially visible. The garment asserts a deep respect for historical handiwork while maintaining a slightly decaying post-apocalyptic aesthetic."
+          "description": "The repurposed crochet gown falls heavily to the floor in a massive intricate web of white yarn. It completely engulfs the dark denim underlayer. This structural extreme applies regenerative assemblage to transform traditional domestic craft into a sweeping runway silhouette. The dense patterns feature large circular and floral motifs. The loose knit allows the body beneath to remain partially visible. The garment asserts a deep respect for historical handiwork while maintaining a slightly decaying post-apocalyptic aesthetic."
         }
       ]
     },
@@ -167,19 +168,19 @@
           "x": 50,
           "y": 35,
           "label": "Spliced Satin and Lace Tunic",
-          "description": "The spliced satin and lace tunic wraps the upper body in a chaotic collage of delicate white textiles; it features an asymmetrical neckline and violently ruffled sleeves. This material manipulation utilizes deconstructivist assembly to create a garment that appears hastily stitched together from salvaged bridal wear. The smooth satin center contrasts sharply with the sheer floral lace on the arms; the fabric hangs loosely without any rigid tailoring. The top asserts a fragile and slightly ruined femininity."
+          "description": "The spliced satin and lace tunic wraps the upper body in a chaotic collage of delicate white textiles. It features an asymmetrical neckline and violently ruffled sleeves. This material manipulation utilizes deconstructivist assembly to create a garment that appears hastily stitched together from salvaged bridal wear. The smooth satin center contrasts sharply with the sheer floral lace on the arms. The fabric hangs loosely without any rigid tailoring. The top asserts a fragile and slightly ruined femininity."
         },
         {
           "x": 50,
           "y": 58,
           "label": "Satin Track Shorts",
-          "description": "The satin track shorts truncate the silhouette sharply at the mid-thigh in a pale beige fabric bordered by delicate white lace; they introduce a highly casual athletic element to the complex lace top. This styling choice utilizes semiotic sabotage by pairing romantic textiles with the format of gym shorts. The smooth fabric drops cleanly from the waist; it exposes the sheer white crescent moon hosiery beneath. The piece completes the ensemble by forcing an awkward but highly mobile proportion onto the model."
+          "description": "The satin track shorts truncate the silhouette sharply at the mid-thigh in a pale beige fabric bordered by delicate white lace. They introduce a highly casual athletic element to the complex lace top. This styling choice utilizes semiotic sabotage by pairing romantic textiles with the format of gym shorts. The smooth fabric drops cleanly from the waist. It exposes the sheer white crescent moon hosiery beneath. The piece completes the ensemble by forcing an awkward but highly mobile proportion onto the model."
         },
         {
           "x": 28,
           "y": 72,
           "label": "Netted Macramé Handbag",
-          "description": "The netted macramé handbag dangles heavily from the left hand; it features a bright red spherical core trapped within a thick woven cream net. This accessory applies the concept of upcycling as institutional critique by elevating a basic craft technique into a high-fashion object. The thick cream cords contrast with the bright red interior; it swings kinetically with the model's stride. The detail completes the look by emphasizing the collection's focus on domestic resourcefulness."
+          "description": "The netted macramé handbag dangles heavily from the left hand. It features a bright red spherical core trapped within a thick woven cream net. This accessory applies the concept of upcycling as institutional critique by elevating a basic craft technique into a high-fashion object. The thick cream cords contrast with the bright red interior. It swings kinetically with the model's stride. The detail completes the look by emphasizing the collection's focus on domestic resourcefulness."
         }
       ]
     },
@@ -190,13 +191,13 @@
           "x": 50,
           "y": 38,
           "label": "Upcycled Toweling Pullover",
-          "description": "The upcycled toweling pullover structures the upper body in a thick heavily textured black fabric; it is constructed from repurposed bath towels featuring subtle geometric patterns. This material strategy engages heavily with institutional critique by elevating domestic refuse into the realm of luxury streetwear. The stiff fabric features a high zippered collar and a large front pocket; the sleeves end in raw fringed hems. The garment asserts a pragmatic approach to creation where warmth and survival supersede opulence."
+          "description": "The upcycled toweling pullover structures the upper body in a thick heavily textured black fabric. It is constructed from repurposed bath towels featuring subtle geometric patterns. This material strategy engages heavily with institutional critique by elevating domestic refuse into the realm of luxury streetwear. The stiff fabric features a high zippered collar and a large front pocket. The sleeves end in raw fringed hems. The garment asserts a pragmatic approach to creation where warmth and survival supersede opulence."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Matching Toweling Shorts",
-          "description": "The matching toweling shorts drop from beneath the heavy pullover to truncate just above the knee; they complete the disjointed monochromatic suit. This structural choice utilizes sartorial defacement by substituting traditional trousers with an awkward fringed short. The thick fabric holds a slightly bulky shape; it exposes tight black cropped leggings beneath. The garment completes the ensemble by emphasizing the highly functional and protective base layers."
+          "description": "The matching toweling shorts drop from beneath the heavy pullover to truncate just above the knee. They complete the disjointed monochromatic suit. This structural choice utilizes sartorial defacement by substituting traditional trousers with an awkward fringed short. The thick fabric holds a slightly bulky shape. It exposes tight black cropped leggings beneath. The garment completes the ensemble by emphasizing the highly functional and protective base layers."
         }
       ]
     },
@@ -207,7 +208,7 @@
           "x": 50,
           "y": 42,
           "label": "Embellished Wool Topcoat",
-          "description": "The embellished wool topcoat structures the body into a massive rigid black column; it is entirely covered in a chaotic assortment of golden hardware, brooches, and shell motifs. This material application engages with the aesthetic of climate anxiety by treating the coat like an artifact salvaged from a shipwreck or a hoard of discarded treasures. The thick black fabric absorbs the light, forcing the shiny gold elements into sharp relief; the front is zippered tightly to the throat. The outerwear asserts an unyielding architectural armor heavily burdened by accumulated history."
+          "description": "The embellished wool topcoat structures the body into a massive rigid black column. It is entirely covered in a chaotic assortment of golden hardware, brooches, and shell motifs. This material application engages with the aesthetic of climate anxiety by treating the coat like an artifact salvaged from a shipwreck or a hoard of discarded treasures. The thick black fabric absorbs the light, forcing the shiny gold elements into sharp relief. The front is zippered tightly to the throat. The outerwear asserts an unyielding architectural armor heavily burdened by accumulated history."
         }
       ]
     },
@@ -218,19 +219,19 @@
           "x": 50,
           "y": 45,
           "label": "Ruffled Floral Silk Dress",
-          "description": "The ruffled floral silk dress drapes the body in a chaotic volume of electric blue and black printed fabric; it mimics the toxic bioluminescence of a mutated botanical species. This material choice engages with ecocriticism by corrupting a traditional feminine floral print with a harsh synthetic color palette. The heavy ruffles create an erratic kinetic silhouette that obscures the natural waistline. The garment asserts a dystopian approach to eveningwear, suggesting an aggressive and poisonous form of nature."
+          "description": "The ruffled floral silk dress drapes the body in a chaotic volume of electric blue and black printed fabric. It mimics the toxic bioluminescence of a mutated botanical species. This material choice engages with ecocriticism by corrupting a traditional feminine floral print with a harsh synthetic color palette. The heavy ruffles create an erratic kinetic silhouette that obscures the natural waistline. The garment asserts a dystopian approach to eveningwear, suggesting an aggressive and poisonous form of nature."
         },
         {
           "x": 48,
           "y": 10,
           "label": "Sheer Visage Obfuscation",
-          "description": "The sheer visage obfuscation covers the entire head and face in the same dark floral textile; it isolates the model within an impenetrable decorative barrier. This styling choice utilizes bodily obfuscation to enforce the narrative of a toxic environment requiring total physical shielding. The thin fabric allows the model to see but completely erases her individual identity. The accessory completes the look by transforming the human wearer into an anonymous entity engulfed by synthetic nature."
+          "description": "The sheer visage obfuscation covers the entire head and face in the same dark floral textile. It isolates the model within an impenetrable decorative barrier. This styling choice utilizes bodily obfuscation to enforce the narrative of a toxic environment requiring total physical shielding. The thin fabric allows the model to see but completely erases her individual identity. The accessory completes the look by transforming the human wearer into an anonymous entity engulfed by synthetic nature."
         },
         {
           "x": 45,
           "y": 55,
           "label": "Crescent Moon Base Layer",
-          "description": "The crescent moon base layer peeks out from beneath the chaotic ruffles; it tightly encases the arms and legs in a pale jersey printed with the brand's signature logo. This material application provides a strict aerodynamic foundation beneath the explosive volume of the dress. The tight fabric acts as a primary protective skin for the post-apocalyptic underground. The piece completes the ensemble by branding the wearer's anatomy with an unmistakable tribal marker."
+          "description": "The crescent moon base layer peeks out from beneath the chaotic ruffles. It tightly encases the arms and legs in a pale jersey printed with the brand's signature logo. This material application provides a strict aerodynamic foundation beneath the explosive volume of the dress. The tight fabric acts as a primary protective skin for the post-apocalyptic underground. The piece completes the ensemble by branding the wearer's anatomy with an unmistakable tribal marker."
         }
       ]
     },
@@ -241,13 +242,13 @@
           "x": 50,
           "y": 45,
           "label": "Spliced Zebra-Print Dress",
-          "description": "The spliced zebra-print dress wraps the torso and hips in an aggressive animalistic pattern heavily interrupted by geometric panels of bright blue silk; it creates a jarring visual collage. This structural logic utilizes regenerative assemblage to merge distinct textile remnants into a single survivalist garment. The tight bodice pulls the fabric taut before flaring into a relaxed asymmetrical skirt. The garment asserts a hybridized aesthetic that mimics the chaotic blending of nature and synthetic refuse."
+          "description": "The spliced zebra-print dress wraps the torso and hips in an aggressive animalistic pattern heavily interrupted by geometric panels of bright blue silk. It creates a jarring visual collage. This structural logic utilizes regenerative assemblage to merge distinct textile remnants into a single survivalist garment. The tight bodice pulls the fabric taut before flaring into a relaxed asymmetrical skirt. The garment asserts a hybridized aesthetic that mimics the chaotic blending of nature and synthetic refuse."
         },
         {
           "x": 50,
           "y": 30,
           "label": "Aerodynamic Jersey Base",
-          "description": "The aerodynamic jersey base provides a solid black foundation beneath the chaotic printed dress; it features subtle white topstitching along the chest and shoulders. This tailoring choice utilizes the crescent moon base layer concept by treating the body as an entity requiring a sleek protective under-suit. The tight sleeves extend past the elbows to reveal the branded jersey beneath. The top asserts a highly functional and athletic core necessary for physical endurance."
+          "description": "The aerodynamic jersey base provides a solid black foundation beneath the chaotic printed dress. It features subtle white topstitching along the chest and shoulders. This tailoring choice utilizes the crescent moon base layer concept by treating the body as an entity requiring a sleek protective under-suit. The tight sleeves extend past the elbows to reveal the branded jersey beneath. The top asserts a highly functional and athletic core necessary for physical endurance."
         }
       ]
     },
@@ -258,13 +259,13 @@
           "x": 50,
           "y": 45,
           "label": "Wrapped Asymmetrical Tunic",
-          "description": "The wrapped asymmetrical tunic binds the torso in a tight black stretch fabric intersected by a bright blue twisted sash across the chest; it features a single sleeve printed with the signature crescent moon logo. This structural intervention engages with hybrid assemblage by deliberately disorienting the symmetry of the upper body. The tight black fabric falls into a loose fluid skirt; the blue sash trails heavily behind the model. The garment asserts a posture of hasty protective dressing."
+          "description": "The wrapped asymmetrical tunic binds the torso in a tight black stretch fabric intersected by a bright blue twisted sash across the chest. It features a single sleeve printed with the signature crescent moon logo. This structural intervention engages with hybrid assemblage by deliberately disorienting the symmetry of the upper body. The tight black fabric falls into a loose fluid skirt. The blue sash trails heavily behind the model. The garment asserts a posture of hasty protective dressing."
         },
         {
           "x": 50,
           "y": 80,
           "label": "Zebra-Striped Mesh Hosiery",
-          "description": "The zebra-striped mesh hosiery replaces the brand's signature crescent moon print with a dense yellow-and-black animalistic pattern that climbs from the ankle into the pointed boot; it visually rhymes with the spliced zebra-print dress seen elsewhere in the collection. This styling choice extends the logic of hybrid assemblage, treating the leg as another surface onto which a mutated, aggressive nature can be printed. The sharp graphic stripes wrap tightly around the calf without a seam break, reading as a single continuous animal skin. The detail completes the ensemble by grounding the wrapped tunic's fluid drape in a hard, feral base."
+          "description": "The zebra-striped mesh hosiery replaces the brand's signature crescent moon print with a dense yellow-and-black animalistic pattern that climbs from the ankle into the pointed boot. It visually rhymes with the spliced zebra-print dress seen elsewhere in the collection. This styling choice extends the logic of hybrid assemblage, treating the leg as another surface onto which a mutated, aggressive nature can be printed. The sharp graphic stripes wrap tightly around the calf without a seam break, reading as a single continuous animal skin. The detail completes the ensemble by grounding the wrapped tunic's fluid drape in a hard, feral base."
         }
       ]
     }

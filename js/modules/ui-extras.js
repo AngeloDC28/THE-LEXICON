@@ -3,11 +3,11 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=9291973';
-import { AppState } from './core-state.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
-import { invalidateSearchCache } from './search-engine.js?v=9291973';
-import { safeCover } from './categories.js?v=9291973';
+import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=eb25565';
+import { AppState } from './core-state.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
+import { invalidateSearchCache } from './search-engine.js?v=eb25565';
+import { safeCover } from './categories.js?v=eb25565';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');
@@ -113,7 +113,9 @@ export function renderFilterChips(callbacks) {
   });
 
   if (chips.length === 0) {
-    container.innerHTML = `<span class="text-[8px] opacity-70 uppercase tracking-widest">${getTranslation('no_active_filters', AppState.language)}</span>`;
+    // Nothing to say when nothing is filtered ("No active filters" was a
+    // near-invisible 1.7:1 line that only added noise).
+    container.innerHTML = '';
     return;
   }
 
@@ -159,17 +161,21 @@ export function updateMetaForEntry(entry) {
   if (ogTitle) ogTitle.content = title;
 
   const ogDesc = document.querySelector('meta[property="og:description"]');
-  if (ogDesc) ogDesc.content = `Analyzing architectural details of ${entry.tags.brand} (${entry.year}) within the forensic archival database.`;
+  if (ogDesc) ogDesc.content = entry.summary_plain || `${entry.tags.brand} (${entry.year}), explained.`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && entry.summary_plain) metaDesc.content = entry.summary_plain;
 
+  // Never a look with a content note as the preview image.
+  const cover = (entry.images || []).find(im => !im.content_note) || null;
   const ogImg = document.querySelector('meta[property="og:image"]');
-  if (ogImg) ogImg.content = resolveImgSrc(safeCover(entry));
+  if (ogImg && cover) ogImg.content = resolveImgSrc(cover);
 
   // Twitter Tags
   const twTitle = document.querySelector('meta[name="twitter:title"]');
   if (twTitle) twTitle.content = title;
 
   const twImg = document.querySelector('meta[name="twitter:image"]');
-  if (twImg) twImg.content = resolveImgSrc(safeCover(entry));
+  if (twImg && cover) twImg.content = resolveImgSrc(cover);
 }
 
 export function resetMeta() {
