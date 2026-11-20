@@ -6,6 +6,7 @@
   "year": 1999,
   "season": "SS",
   "published": "2026-05-12",
+  "summary_plain": "Issey Miyake showed clothes cut from one long tube of machine-knitted fabric, so you could snip out a dress with no sewing. It imagined a smarter, less wasteful way of making clothes.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/miyake-ss99/miyake-ss99-01.jpg",
@@ -14,13 +15,13 @@
           "x": 45,
           "y": 40,
           "label": "Heat-Pressed Pleated Surcoat",
-          "description": "This pale ivory heat-pressed pleated surcoat envelopes the body in a rigid yet collapsible volume; engaging with Deleuzian concepts of the fold the garment refuses flat planar construction in favor of infinite topographical variations; the sweeping curved opening reveals the green micro-pleated underlayer while maintaining a distinct architectural shell; the structure asserts the supremacy of textile engineering over traditional tailoring techniques within the collection's methodology."
+          "description": "This pale ivory heat-pressed pleated surcoat envelopes the body in a rigid yet collapsible volume. Engaging with Deleuzian concepts of the fold the garment refuses flat planar construction in favor of infinite topographical variations. The sweeping curved opening reveals the green micro-pleated underlayer while maintaining a distinct architectural shell. The structure asserts the supremacy of textile engineering over traditional tailoring techniques within the collection's methodology."
         },
         {
           "x": 50,
           "y": 55,
           "label": "Micro-Pleated Patterned Underlayer",
-          "description": "The micro-pleated patterned underlayer functions as a second skin adhering closely to the body's contours; this visible tension between the tight inner layer and voluminous outer shell enacts a biopolitical discourse on containment and release; the grid-like pattern distorts as the fabric stretches across the torso and legs; this layer completes the silhouette by providing a dense foundational texture against the broad sculptural strokes of the outerwear."
+          "description": "The micro-pleated patterned underlayer functions as a second skin adhering closely to the body's contours. This visible tension between the tight inner layer and voluminous outer shell enacts a biopolitical discourse on containment and release. The grid-like pattern distorts as the fabric stretches across the torso and legs. This layer completes the silhouette by providing a dense foundational texture against the broad sculptural strokes of the outerwear."
         }
       ]
     },
@@ -31,13 +32,13 @@
           "x": 45,
           "y": 70,
           "label": "Concertina-Pleated Tiered Skirt",
-          "description": "The concertina-pleated tiered skirt collapses and expands horizontally to create a rigid bell-like silhouette; this structural extremity engages with cybernetic theories of self-organizing systems where material properties dictate form; the stark horizontal ridges protrude significantly from the body axis; the construction refuses traditional drape to assert the garment as an independent spatial entity."
+          "description": "The concertina-pleated tiered skirt collapses and expands horizontally to create a rigid bell-like silhouette. This structural extremity engages with cybernetic theories of self-organizing systems where material properties dictate form. The stark horizontal ridges protrude significantly from the body axis. The construction refuses traditional drape to assert the garment as an independent spatial entity."
         },
         {
           "x": 45,
           "y": 35,
           "label": "Integrated Pleated Bodice",
-          "description": "The integrated pleated bodice transitions seamlessly from smooth tension over the bust into the aggressive horizontal tiers below; this continuous material extrusion reflects post-humanist ideals of body-garment symbiosis; the fine vertical striations of the fabric mold tightly to the upper torso before radically shifting direction; the element completes the collection's vision of garments born from a singular industrial process rather than pieced assembly."
+          "description": "The integrated pleated bodice transitions seamlessly from smooth tension over the bust into the aggressive horizontal tiers below. This continuous material extrusion reflects post-humanist ideals of body-garment symbiosis. The fine vertical striations of the fabric mold tightly to the upper torso before radically shifting direction. The element completes the collection's vision of garments born from a singular industrial process rather than pieced assembly."
         }
       ]
     },
@@ -48,13 +49,13 @@
           "x": 50,
           "y": 65,
           "label": "Bi-Color Concertina-Pleated Structure",
-          "description": "The bi-color concertina-pleated structure bisects the garment vertically through an abrupt shift from green to peach; this stark chromatic division invokes structuralist binaries while manifesting them through continuous material; the horizontal tiers maintain their rigid projection regardless of the color shift; the design asserts a visual fracture within an unbroken physical form."
+          "description": "The bi-color concertina-pleated structure bisects the garment vertically through an abrupt shift from green to peach. This stark chromatic division invokes structuralist binaries while manifesting them through continuous material. The horizontal tiers maintain their rigid projection regardless of the color shift. The design asserts a visual fracture within an unbroken physical form."
         },
         {
           "x": 65,
           "y": 50,
           "label": "Engineered Fold Locus",
-          "description": "The engineered fold locus at the outer edge of each tier defines the maximum expansion of the pleated textile; applying object-oriented ontology these sharp edges grant the garment an agency distinct from the wearer; the rigid points of the tiers interact directly with the surrounding space; this detail refuses the softness of textile to complete a silhouette of aggressive geometric precision."
+          "description": "The engineered fold locus at the outer edge of each tier defines the maximum expansion of the pleated textile. Applying object-oriented ontology these sharp edges grant the garment an agency distinct from the wearer. The rigid points of the tiers interact directly with the surrounding space. This detail refuses the softness of textile to complete a silhouette of aggressive geometric precision."
         }
       ]
     },
@@ -65,13 +66,13 @@
           "x": 25,
           "y": 45,
           "label": "Metallic Sunburst-Pleated Outerwear",
-          "description": "The metallic sunburst-pleated outerwear creates a rigid radial carapace over the shoulders and arms; engaging with cyborg manifestos the reflective surface and architectural structure suggest an exoskeleton rather than conventional clothing; the deep ridges catch the runway lighting to emphasize the density of the fold; this element asserts a futuristic armor protecting the softer inner core."
+          "description": "The metallic sunburst-pleated outerwear creates a rigid radial carapace over the shoulders and arms. Engaging with cyborg manifestos the reflective surface and architectural structure suggest an exoskeleton rather than conventional clothing. The deep ridges catch the runway lighting to emphasize the density of the fold. This element asserts a futuristic armor protecting the softer inner core."
         },
         {
           "x": 50,
           "y": 60,
           "label": "Corrugated Textile Shift",
-          "description": "The corrugated textile shift dress presents a horizontal ribbed texture contrasting with the radial pleats of the coat; this juxtaposition enacts a dialectic of directionality upon the body; the matte finish of the purple shift anchors the high-shine exterior; the garment completes the look by providing a linear foundation beneath the explosive volume of the outerwear."
+          "description": "The corrugated textile shift dress presents a horizontal ribbed texture contrasting with the radial pleats of the coat. This juxtaposition enacts a dialectic of directionality upon the body. The matte finish of the purple shift anchors the high-shine exterior. The garment completes the look by providing a linear foundation beneath the explosive volume of the outerwear."
         }
       ]
     },
@@ -82,13 +83,13 @@
           "x": 50,
           "y": 65,
           "label": "Crinkled V-Neck Tunic",
-          "description": "The crinkled V-neck tunic utilizes a deeply textured fabric that appears permanently crushed or scorched; this material degradation engages with aesthetic theories of the abject and the ruined; the irregular surface catches light unevenly across the long columnar silhouette; the textile refuses pristine finishing to assert the beauty of controlled destruction within the manufacturing process."
+          "description": "The crinkled V-neck tunic utilizes a deeply textured fabric that appears permanently crushed or scorched. This material degradation engages with aesthetic theories of the abject and the ruined. The irregular surface catches light unevenly across the long columnar silhouette. The textile refuses pristine finishing to assert the beauty of controlled destruction within the manufacturing process."
         },
         {
           "x": 50,
           "y": 25,
           "label": "Plunging Structural V-Neck",
-          "description": "The plunging structural V-neck sharply divides the upper chest with a clean linear cut amidst the chaotic textile; this geometric intervention introduces a deconstructionist logic to the otherwise organic form; the rigid edges of the neckline maintain their shape despite the heavy crinkling of the surrounding fabric; this detail completes the garment by providing an anchor of precision against textural entropy."
+          "description": "The plunging structural V-neck sharply divides the upper chest with a clean linear cut amidst the chaotic textile. This geometric intervention introduces a deconstructionist logic to the otherwise organic form. The rigid edges of the neckline maintain their shape despite the heavy crinkling of the surrounding fabric. This detail completes the garment by providing an anchor of precision against textural entropy."
         }
       ]
     },
@@ -99,13 +100,13 @@
           "x": 50,
           "y": 50,
           "label": "Elongated Ribbed Overcoat",
-          "description": "The elongated ribbed overcoat drops vertically to the lower calf in an unbroken textural column; this severe linear silhouette invokes monastic austerity while engaging with theories of minimalist reduction; the fine vertical ribbing draws the eye downward without interruption; the garment asserts a disciplined uniformity within the collection's broader morphological experiments."
+          "description": "The elongated ribbed overcoat drops vertically to the lower calf in an unbroken textural column. This severe linear silhouette invokes monastic austerity while engaging with theories of minimalist reduction. The fine vertical ribbing draws the eye downward without interruption. The garment asserts a disciplined uniformity within the collection's broader morphological experiments."
         },
         {
           "x": 52,
           "y": 4,
           "label": "Asymmetrical Miniature Top Hat",
-          "description": "The asymmetrical miniature top hat sits precariously perched upon the crown of the head; this surrealist accessory introduces an element of the absurd into the severe presentation; the rigid black cylinder tilts off-axis; the hat refuses proportional logic to complete the silhouette with a gesture of theatrical subversion."
+          "description": "The asymmetrical miniature top hat sits precariously perched upon the crown of the head. This surrealist accessory introduces an element of the absurd into the severe presentation. The rigid black cylinder tilts off-axis. The hat refuses proportional logic to complete the silhouette with a gesture of theatrical subversion."
         }
       ]
     },
@@ -116,13 +117,13 @@
           "x": 50,
           "y": 50,
           "label": "Translucent Crinkled Monastic Habit",
-          "description": "The translucent crinkled monastic habit completely veils the body in a fragile sheath of textured white fabric; this totalizing coverage engages with biopolitical theories regarding the erasure of the individual subject; the semi-transparent material reveals the hazy outline of the form beneath while denying direct visibility; the garment asserts a ghostly presence that prioritizes surface over underlying anatomy."
+          "description": "The translucent crinkled monastic habit completely veils the body in a fragile sheath of textured white fabric. This totalizing coverage engages with biopolitical theories regarding the erasure of the individual subject. The semi-transparent material reveals the hazy outline of the form beneath while denying direct visibility. The garment asserts a ghostly presence that prioritizes surface over underlying anatomy."
         },
         {
           "x": 50,
           "y": 15,
           "label": "Metallic Painted Visage",
-          "description": "The metallic painted visage replaces natural skin tone with an unbroken silver mask; this literal application of cyborg theory transforms the model into an automaton; the reflective pigment catches the blue light of the runway; the makeup completes the look by fully integrating the human face into the synthetic logic of the textiles."
+          "description": "The metallic painted visage replaces natural skin tone with an unbroken silver mask. This literal application of cyborg theory transforms the model into an automaton. The reflective pigment catches the blue light of the runway. The makeup completes the look by fully integrating the human face into the synthetic logic of the textiles."
         }
       ]
     },
@@ -133,13 +134,13 @@
           "x": 45,
           "y": 30,
           "label": "Cropped Angular-Shoulder Jacket",
-          "description": "The cropped angular-shoulder jacket creates a severe geometric frame across the upper torso; this extreme proportion engages with feminist critiques of power dressing by distorting rather than enhancing the natural shoulder line; the pale lilac fabric is stiffly pressed into sharp boxy forms; the structure asserts architectural dominance over the body's organic curves."
+          "description": "The cropped angular-shoulder jacket creates a severe geometric frame across the upper torso. This extreme proportion engages with feminist critiques of power dressing by distorting rather than enhancing the natural shoulder line. The pale lilac fabric is stiffly pressed into sharp boxy forms. The structure asserts architectural dominance over the body's organic curves."
         },
         {
           "x": 50,
           "y": 10,
           "label": "Translucent Amber Headpiece",
-          "description": "The translucent amber headpiece forms a warped cylindrical volume above the face; engaging with theories of the simulacrum the synthetic material suggests a distorted memory of a traditional hat; the clear yellow plastic allows light to pass through while obscuring the top of the head; this element completes the ensemble by introducing an industrial material contrast to the woven garments."
+          "description": "The translucent amber headpiece forms a warped cylindrical volume above the face. Engaging with theories of the simulacrum the synthetic material suggests a distorted memory of a traditional hat. The clear yellow plastic allows light to pass through while obscuring the top of the head. This element completes the ensemble by introducing an industrial material contrast to the woven garments."
         }
       ]
     },
@@ -150,13 +151,13 @@
           "x": 50,
           "y": 50,
           "label": "Textural Plaid Tailoring",
-          "description": "The textural plaid tailoring utilizes a highly tactile bouclé-like fabric to construct a traditional suit silhouette; this material density engages with semiotic analyses of domesticity versus professional dress; the blurry grid of the plaid is softened by the tufted surface; the garment refuses the sleekness of modern suiting to assert a hyper-tactile presence."
+          "description": "The textural plaid tailoring utilizes a highly tactile bouclé-like fabric to construct a traditional suit silhouette. This material density engages with semiotic analyses of domesticity versus professional dress. The blurry grid of the plaid is softened by the tufted surface. The garment refuses the sleekness of modern suiting to assert a hyper-tactile presence."
         },
         {
           "x": 50,
           "y": 10,
           "label": "Molded Dome Headwear",
-          "description": "The molded dome headwear presents a porous sponge-like texture in bright yellow; this biomorphic accessory introduces theories of organic growth intersecting with synthetic production; the thick brim casts a heavy shadow over the upper face; the hat completes the look by capping the dense suit with a surreal volumetric form."
+          "description": "The molded dome headwear presents a porous sponge-like texture in bright yellow. This biomorphic accessory introduces theories of organic growth intersecting with synthetic production. The thick brim casts a heavy shadow over the upper face. The hat completes the look by capping the dense suit with a surreal volumetric form."
         }
       ]
     },
@@ -167,13 +168,13 @@
           "x": 35,
           "y": 55,
           "label": "Relaxed-Fit Crinkled Shirting",
-          "description": "The relaxed-fit crinkled shirting hangs loosely from the shoulders with a permanently rumpled texture; this aesthetic of exhaustion engages with Marxist critiques of labor and the pristine commodity; the bright red fabric features deep irregular creases throughout the sleeves and bodice; the garment asserts a lived-in materiality that rejects the polished finish of haute couture."
+          "description": "The relaxed-fit crinkled shirting hangs loosely from the shoulders with a permanently rumpled texture. This aesthetic of exhaustion engages with Marxist critiques of labor and the pristine commodity. The bright red fabric features deep irregular creases throughout the sleeves and bodice. The garment asserts a lived-in materiality that rejects the polished finish of haute couture."
         },
         {
           "x": 35,
           "y": 7,
           "label": "Crumpled Lacquer Headpiece",
-          "description": "The crumpled lacquer headpiece resembles a discarded plastic bag fused into a sculptural mass; this radical upcycling aesthetic invokes ecocritical theories regarding waste and value; the shiny black surface reflects runway lights haphazardly; the accessory completes the look by elevating detritus to the status of high fashion adornment."
+          "description": "The crumpled lacquer headpiece resembles a discarded plastic bag fused into a sculptural mass. This radical upcycling aesthetic invokes ecocritical theories regarding waste and value. The shiny black surface reflects runway lights haphazardly. The accessory completes the look by elevating detritus to the status of high fashion adornment."
         }
       ]
     },
@@ -184,13 +185,13 @@
           "x": 45,
           "y": 40,
           "label": "Polka-Dot Knit Shift",
-          "description": "The polka-dot knit shift features a dense array of white spots on a pink ground woven as a single continuous tube; this construction directly implements the A-POC philosophy of mass-customizable industrial production; the simple silhouette stretches slightly over the hips while maintaining the integrity of the pattern; the garment asserts a democratization of design through its unpretentious form and advanced engineering."
+          "description": "The polka-dot knit shift features a dense array of white spots on a pink ground woven as a single continuous tube. This construction directly implements the A-POC philosophy of mass-customizable industrial production. The simple silhouette stretches slightly over the hips while maintaining the integrity of the pattern. The garment asserts a democratization of design through its unpretentious form and advanced engineering."
         },
         {
           "x": 55,
           "y": 85,
           "label": "Monochromatic Platform Boot",
-          "description": "The monochromatic platform boot provides a heavy grounding element in bright blue suede; this primary color blocking engages with pop art theories of visual impact; the thick sole and stark lacing create a solid geometric base; the footwear completes the youthful graphic logic of the ensemble."
+          "description": "The monochromatic platform boot provides a heavy grounding element in bright blue suede. This primary color blocking engages with pop art theories of visual impact. The thick sole and stark lacing create a solid geometric base. The footwear completes the youthful graphic logic of the ensemble."
         }
       ]
     },
@@ -201,13 +202,13 @@
           "x": 40,
           "y": 50,
           "label": "Color-Blocked Shirting Dress",
-          "description": "The color-blocked shirting dress stitches together varying shades of lilac and purple in broad horizontal bands; this patchwork construction invokes structuralist theories of signifiers assembled to create meaning; the shifts in tone break up the long line of the garment; the textile refuses a singular surface to assert a composite identity."
+          "description": "The color-blocked shirting dress stitches together varying shades of lilac and purple in broad horizontal bands. This patchwork construction invokes structuralist theories of signifiers assembled to create meaning. The shifts in tone break up the long line of the garment. The textile refuses a singular surface to assert a composite identity."
         },
         {
           "x": 30,
           "y": 25,
           "label": "Trompe L'Oeil Suspender Straps",
-          "description": "The trompe l'oeil suspender straps are integrated directly into the weave of the bodice; this clever visual trick engages with post-structuralist ideas of surface versus depth; the darker purple vertical lines mimic structural supports without functioning as such; this detail completes the garment by adding a layer of ironic utility to a simple shape."
+          "description": "The trompe l'oeil suspender straps are integrated directly into the weave of the bodice. This clever visual trick engages with post-structuralist ideas of surface versus depth. The darker purple vertical lines mimic structural supports without functioning as such. This detail completes the garment by adding a layer of ironic utility to a simple shape."
         }
       ]
     },
@@ -218,13 +219,13 @@
           "x": 40,
           "y": 65,
           "label": "Engineered Sunburst-Pleated Tunic",
-          "description": "The engineered sunburst-pleated tunic features complex radiating folds that structure the deep V-neck and flared hem; this intricate topography engages with Deleuzian concepts of becoming through infinite folding; the sheer white fabric gains opacity where the pleats dense together; the garment asserts the technical mastery of textile manipulation as the primary driver of silhouette."
+          "description": "The engineered sunburst-pleated tunic features complex radiating folds that structure the deep V-neck and flared hem. This intricate topography engages with Deleuzian concepts of becoming through infinite folding. The sheer white fabric gains opacity where the pleats dense together. The garment asserts the technical mastery of textile manipulation as the primary driver of silhouette."
         },
         {
           "x": 40,
           "y": 20,
           "label": "Voluminous Crinkled Headwear",
-          "description": "The voluminous crinkled headwear forms a massive undulating halo around the face; this exaggerated proportion invokes theories of the sublime by dwarfing the human scale; the paper-like texture suggests fragility despite its massive size; the accessory completes the ethereal almost religious iconography of the look."
+          "description": "The voluminous crinkled headwear forms a massive undulating halo around the face. This exaggerated proportion invokes theories of the sublime by dwarfing the human scale. The paper-like texture suggests fragility despite its massive size. The accessory completes the ethereal almost religious iconography of the look."
         }
       ]
     },
@@ -235,13 +236,13 @@
           "x": 30,
           "y": 55,
           "label": "Continuous Extruded Tubular Knit",
-          "description": "The continuous extruded tubular knit physically links the models together as they process down the runway; this literal manifestation of collective identity engages heavily with biopolitical theories of the social body; the bright red fabric stretches taught between the individuals demonstrating its resilient elasticity; the material asserts the collection's core thesis that clothing can be generated as a singular unending industrial output."
+          "description": "The continuous extruded tubular knit physically links the models together as they process down the runway. This literal manifestation of collective identity engages heavily with biopolitical theories of the social body. The bright red fabric stretches taught between the individuals demonstrating its resilient elasticity. The material asserts the collection's core thesis that clothing can be generated as a singular unending industrial output."
         },
         {
           "x": 40,
           "y": 45,
           "label": "Cut-to-Fit Garment Iteration",
-          "description": "The cut-to-fit garment iteration on the central model demonstrates how individual dresses are liberated from the continuous tube via simple scissor cuts; this interactive design paradigm invokes open-source theories of user participation in the final product; the raw edges of the red knit sit cleanly against the skin without unravelling; this element completes the conceptual performance by proving the functional viability of the A-POC system."
+          "description": "The cut-to-fit garment iteration on the central model demonstrates how individual dresses are liberated from the continuous tube via simple scissor cuts. This interactive design paradigm invokes open-source theories of user participation in the final product. The raw edges of the red knit sit cleanly against the skin without unravelling. This element completes the conceptual performance by proving the functional viability of the A-POC system."
         }
       ]
     }

@@ -30,6 +30,11 @@
  * entries. Only do that after reading the flagged lines — it accepts all of
  * them.
  *
+ * Hotspot descriptions are stricter: they are the short notes a newcomer
+ * reads on a phone, so they use no semicolons at all. Clauses that used to
+ * be joined with one are separate sentences ("...the navel. This
+ * displacement..."). Any semicolon in a hotspot description fails.
+ *
  * Scope: subtitle, notes.*, and hotspot descriptions. Tag values are left
  * alone (era names such as "1990 to 1999; The Deconstructionist Decade" are
  * taxonomy keys, not sentences). Zero dependencies.
@@ -101,6 +106,10 @@ for (const f of files) {
     for (let i = 0; i < text.length; i++) {
       if (text[i] !== ';') continue;
       total++;
+      if (!isNote) {
+        failures.push({ f, path, context: `${text.slice(Math.max(0, i - 45), i)}⟦;⟧${text.slice(i + 1, i + 45)}`, hotspot: true });
+        continue;
+      }
       if (isClauseBreak(text, i, isNote)) continue;
       const key = allowKey(slug, text, i);
       seen.push(key);
@@ -121,6 +130,7 @@ if (failures.length) {
   console.error(`\nPUNCTUATION: ${failures.length} semicolon(s) look like commas:\n`);
   for (const x of failures.slice(0, 40)) console.error(`  ${x.f} ${x.path}\n    …${x.context}…`);
   if (failures.length > 40) console.error(`  … and ${failures.length - 40} more`);
+  if (failures.some(x => x.hotspot)) console.error('\nHotspot descriptions take no semicolons: end the sentence with a full stop instead.');
   console.error('\nReplace each with a comma. If one genuinely joins two full clauses, see the header of');
   console.error('.github/scripts/check-punctuation.mjs for how to allow it.\n');
   process.exit(1);

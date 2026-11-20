@@ -3,9 +3,9 @@
  * Logic for the CMD+K command palette.
  */
 
-import { $ } from './core-utils.js?v=9291973';
-import { AppState } from './core-state.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
+import { $ } from './core-utils.js?v=4858eed';
+import { AppState } from './core-state.js?v=4858eed';
+import { getTranslation } from './translations.js?v=4858eed';
 
 let cmdSelectedIndex = -1;
 let cmdResults = [];
@@ -187,8 +187,9 @@ export function renderCmdResults(query, archiveData, callbacks) {
       const id    = `N-${entry.id.slice(0,6).toUpperCase()}`;
       const politics = (entry.tags?.politics || '').split('&')[0].trim().toUpperCase().slice(0, 32);
       // Use critique note as the "hook" text, or fall back to title
-      const hook = entry.notes?.critique
-        ? entry.notes.critique.slice(0, 72) + (entry.notes.critique.length > 72 ? '…' : '')
+      const plain = entry.summary_plain || entry.notes?.critique || '';
+      const hook = plain
+        ? plain.slice(0, 72) + (plain.length > 72 ? '…' : '')
         : (entry.title ? entry.title.slice(0, 72) : `${brand} · ${season} · ${year}`);
       html += `<div class="cmd-item p-3 px-4 cursor-pointer flex items-start gap-3" role="option" aria-selected="false" data-index="${i}" data-entry-id="${entry.id}">
         <div class="t-mono-xs font-bold opacity-30 mt-0.5 shrink-0 font-mono">N</div>

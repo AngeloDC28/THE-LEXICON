@@ -1363,6 +1363,15 @@ html:not(.dark) .eow-title { color: #0a0a0a; }
   color: rgba(255,255,255,0.6);
 }
 html:not(.dark) .eow-brand { color: rgba(0,0,0,0.6); }
+.eow-summary {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.9);
+  margin: 8px 0 0;
+  max-width: 46ch;
+}
+html:not(.dark) .eow-summary { color: #1a1a1a; }
 .eow-vibes { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
 .eow-vibe {
   font-family: var(--font-mono);
@@ -2391,12 +2400,39 @@ html:not(.dark) .index-mode-tag { background: #000; color: #CCFF00; }
   padding-bottom: 6px;
 }
 
-.node-provenance { background: #E6FF00 !important; } /* Acid Yellow */
-.node-critique   { background: #FF0000 !important; } /* Editorial Red */
-.node-strategy   { background: #0000FF !important; } /* Digital Blue */
-/* Black on #0000FF is about 2.4:1 — unreadable. White is 8.6:1. */
-.node-strategy, .node-strategy .node-label { color: #fff !important; }
-.node-strategy .node-label { border-bottom-color: rgba(255,255,255,0.8); }
+/* The three notes keep their colours as markers (a thick left rule and the
+   label), not as full-bleed backgrounds: a whole paragraph on #CCFF00 was
+   tiring to read and made Provenance look more important than the other
+   two, and pure #FF0000 / #0000FF read as browser defaults next to the
+   photographs. Yellow is kept for the main action and the focus ring. */
+:root { --note-prov: #CCFF00; --note-crit: #FF5A47; --note-strat: #6F86FF; }
+.node-provenance, .node-critique, .node-strategy {
+  background: #0A0A0A !important;
+  color: rgba(255,255,255,0.92) !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  border-left-width: 6px !important;
+  box-shadow: none;
+}
+.node-provenance { border-left-color: var(--note-prov) !important; }
+.node-critique   { border-left-color: var(--note-crit) !important; }
+.node-strategy   { border-left-color: var(--note-strat) !important; }
+.node-provenance .node-label { color: var(--note-prov); }
+.node-critique .node-label   { color: var(--note-crit); }
+.node-strategy .node-label   { color: var(--note-strat); }
+.brutalist-node.node-provenance .node-label,
+.brutalist-node.node-critique .node-label,
+.brutalist-node.node-strategy .node-label { border-bottom-color: rgba(255,255,255,0.18); }
+.node-provenance:hover, .node-critique:hover, .node-strategy:hover { transform: none; box-shadow: none; }
+html:not(.dark) .node-provenance, html:not(.dark) .node-critique, html:not(.dark) .node-strategy {
+  background: #fff !important; color: #111 !important; border-color: rgba(0,0,0,0.18) !important;
+}
+html:not(.dark) .node-provenance { border-left-color: #8FB300 !important; }
+html:not(.dark) .node-critique   { border-left-color: #D62B17 !important; }
+html:not(.dark) .node-strategy   { border-left-color: #2F49D1 !important; }
+html:not(.dark) .node-provenance .node-label { color: #4d6600; }
+html:not(.dark) .node-critique .node-label   { color: #B3200F; }
+html:not(.dark) .node-strategy .node-label   { color: #2F49D1; }
+.node-label .node-plain { text-transform: none; letter-spacing: 0.02em; font-weight: 400; opacity: 0.8; }
 
 /* The notes are the archive's main content: set them as reading text in
    EB Garamond, sentence case, at body size. Mono stays for the labels. */
@@ -3673,10 +3709,12 @@ html:not(.dark) .cookie-strip {
 /* A sentence, so it's set as one: sentence case, normal spacing. In
    uppercase with 0.15em tracking it squeezed to one word per line on phones. */
 .cookie-strip-text {
+  /* A sentence, so sentence case: uppercase mono is the hardest style to
+     read for anything longer than a label. */
   font-family: var(--font-mono);
   font-size: 13px;
-  letter-spacing: 0.01em;
-  opacity: 0.8;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
   flex: 1;
   min-width: 0;
   line-height: 1.45;
@@ -3690,6 +3728,10 @@ html:not(.dark) .cookie-strip {
   .cookie-link { min-height: 44px; }
 }
 html:not(.dark) .cookie-strip-text { color: #000; }
+@media (max-width: 640px) {
+  .cookie-strip { flex-direction: column; align-items: stretch; gap: 8px; }
+  .cookie-strip-actions { justify-content: flex-end; flex-wrap: wrap; }
+}
 .cookie-strip-actions {
   display: flex;
   align-items: center;
@@ -3959,9 +4001,11 @@ html.dark .active-hotspot-box {
 #image-counter {
   min-height: 20px;
 }
+/* 10px dot inside a 24px target (WCAG 2.2 · 2.5.8); was a bare 6px dot. */
 .img-dot {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
+  position: relative;
   border-radius: 50%;
   background: rgba(255,255,255,0.25);
   border: 1px solid rgba(255,255,255,0.15);
@@ -3974,6 +4018,9 @@ html.dark .active-hotspot-box {
   border-color: #CCFF00;
   transform: scale(1.4);
 }
+.img-dot::after { content: ''; position: absolute; inset: -6px; }
+.img-count { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); margin-left: 6px; }
+html:not(.dark) .img-count { color: rgba(0,0,0,0.7); }
 .img-dot:focus-visible {
   outline: 2px solid #CCFF00;
   outline-offset: 2px;
@@ -3981,206 +4028,6 @@ html.dark .active-hotspot-box {
 /* On single-image entries the counter stays hidden */
 #image-counter:empty,
 #image-counter[data-count="1"] { display: none !important; }
-
-/* ── WELCOME MODAL (first-visit onboarding overlay) ── */
-.welcome-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 9000;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: auto;
-  padding: 24px 16px;
-}
-@media (max-width: 600px) {
-  .welcome-modal { padding: 16px 12px; align-items: flex-start; }
-}
-.welcome-modal[hidden] { display: none !important; }
-
-.welcome-inner {
-  width: 100%;
-  max-width: 760px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-@media (max-width: 600px) {
-  .welcome-inner { gap: 18px; }
-}
-
-/* Language row */
-.welcome-lang-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-.welcome-lang-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-}
-.welcome-lang-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.wlang-btn {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 6px 12px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: transparent;
-  color: rgba(255,255,255,0.45);
-  cursor: pointer;
-  transition: border-color 0.15s, color 0.15s;
-  min-height: 44px;
-  min-width: 44px;
-}
-.wlang-btn:hover { border-color: #CCFF00; color: #CCFF00; }
-.wlang-btn.active { border-color: #CCFF00; color: #CCFF00; background: rgba(204,255,0,0.06); }
-.wlang-btn:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
-
-/* Header */
-.welcome-header { display: flex; flex-direction: column; gap: 10px; }
-.welcome-wordmark {
-  font-family: var(--font-mono);
-  font-size: clamp(1.125rem, 3.2vw, 2.5rem);
-  font-weight: 900;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #fff;
-}
-.welcome-wordmark span { color: #CCFF00; }
-.welcome-subtitle {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-sm);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin: 0;
-}
-.welcome-desc {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
-  color: rgba(255,255,255,0.5);
-  line-height: 1.45;
-  margin: 0;
-}
-
-/* Steps */
-.welcome-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-@media (max-width: 600px) {
-  .welcome-steps { grid-template-columns: 1fr; }
-}
-.welcome-step {
-  background: #000;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-@media (max-width: 600px) {
-  .welcome-step { padding: 14px 16px; gap: 4px; }
-}
-.ws-label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #CCFF00;
-}
-.ws-title {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-sm);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-top: 4px;
-}
-.ws-desc {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 15px;
-  line-height: 1.55;
-  color: rgba(255,255,255,0.5);
-}
-@media (max-width: 600px) {
-  .ws-desc { font-size: 13.5px; line-height: 1.45; }
-}
-
-/* Footer */
-.welcome-footer {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.welcome-cta {
-  font-family: var(--font-mono);
-  font-size: var(--t-mono-xs);
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  background: #CCFF00;
-  color: #000;
-  border: none;
-  padding: 14px 28px;
-  cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
-  min-height: 48px;
-}
-.welcome-cta:hover { background: #fff; }
-.welcome-cta:active { transform: scale(0.98); }
-.welcome-cta:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-.welcome-skip {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px 0;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  min-height: 44px;
-}
-.welcome-skip:hover { color: rgba(255,255,255,0.6); }
-.welcome-skip:focus-visible { outline: 2px solid #CCFF00; outline-offset: 2px; }
-
-/* Light mode */
-html:not(.dark) .welcome-modal { background: #f5f5f0; }
-html:not(.dark) .welcome-wordmark { color: #000; }
-html:not(.dark) .welcome-subtitle { color: rgba(0,0,0,0.6); }
-html:not(.dark) .welcome-desc { color: rgba(0,0,0,0.5); }
-html:not(.dark) .welcome-steps { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.06); }
-html:not(.dark) .welcome-step { background: #f5f5f0; }
-html:not(.dark) .ws-title { color: #000; }
-html:not(.dark) .ws-desc { color: rgba(0,0,0,0.5); }
-html:not(.dark) .wlang-btn { border-color: rgba(0,0,0,0.2); color: rgba(0,0,0,0.5); }
-html:not(.dark) .wlang-btn:hover { border-color: #000; color: #000; }
-html:not(.dark) .wlang-btn.active { border-color: #000; color: #000; background: rgba(0,0,0,0.06); }
-html:not(.dark) .welcome-lang-label { color: rgba(0,0,0,0.55); }
-html:not(.dark) .welcome-cta { background: #000; color: #CCFF00; }
-html:not(.dark) .welcome-cta:hover { background: #333; }
-html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
 
 /* ── STICKY NOTE SQUARES (top-right image triggers) ── */
 .sticky-square {
@@ -4222,9 +4069,11 @@ html:not(.dark) .welcome-skip { color: rgba(0,0,0,0.55); }
   outline: 2px solid #CCFF00;
   outline-offset: 3px;
 }
-.sq-provenance { background: #E6FF00; color: #000; }
-.sq-critique   { background: #FF0000; color: #fff; }
-.sq-strategy   { background: #0000FF; color: #fff; }
+/* Outlined, on black, so they don't fight the photo they sit on. */
+.sq-provenance, .sq-critique, .sq-strategy { background: rgba(0,0,0,0.82); border: 2px solid currentColor; }
+.sq-provenance { color: var(--note-prov); }
+.sq-critique   { color: var(--note-crit); }
+.sq-strategy   { color: var(--note-strat); }
 
 /* ── STICKY NOTE PANEL (right-side reveal panel) ── */
 #sticky-note-panel {
@@ -4279,6 +4128,9 @@ html:not(.dark) .site-footer { border-top-color: #e0e0dc; background: #f4f4f0; }
 }
 html:not(.dark) .footer-bottom { color: #666; }
 .footer-tech { opacity: 0.85; }
+.footer-links { display: inline-flex; flex-wrap: wrap; gap: 0 6px; }
+.footer-links a { text-decoration: underline; text-underline-offset: 3px; min-height: 24px; display: inline-flex; align-items: center; }
+.footer-links a:hover { color: #CCFF00; }
 .footer-kbd-hint {
   background: none;
   border: 1px solid currentColor;
@@ -4875,9 +4727,26 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 }
 .dark .glossary-term { background: rgba(204,255,0,0.12); color: #CCFF00; }
 .glossary-def {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.glossary-group {
+  font-family: var(--font-mono);
   font-size: 12px;
-  line-height: 1.55;
-  opacity: 0.85;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 20px 0 6px;
+  opacity: 0.7;
+}
+.gloss-tooltip-more {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 @media (max-width: 600px) {
   #glossary-modal .glossary-entry { grid-template-columns: 1fr; gap: 4px 0; }
@@ -5041,6 +4910,8 @@ html:not(.js) #custom-cursor { display: none !important; }
 .static-entry-sub { display: block; font-style: italic; font-size: 0.6em; opacity: 0.8; }
 .static-entry h2 { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; margin: 36px 0 10px; color: #CCFF00; }
 .static-entry-meta, .static-entry-nav, .static-entry-credit { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
+.static-entry-summary { font-size: 1.25rem; line-height: 1.5; margin: 1rem 0 1.5rem; max-width: 40ch; }
+.static-entry-note { font-family: var(--font-mono); font-size: 0.8rem; border: 1px solid currentColor; padding: 1rem; }
 .static-entry a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .static-entry figure { margin: 24px 0; }
 .static-entry figure img { max-width: 100%; height: auto; display: block; }
@@ -5157,38 +5028,52 @@ html:not(.dark) #payload-leader { border-top-color: #000; }
   }
   #detail-sidebar-header .detail-title { display: none; }
 }
-.detail-summary {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  line-height: 1.5;
-  margin: 10px 0 4px;
-}
 .static-entry-summary { font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.55; margin: 12px 0 20px; max-width: 42rem; }
 
-/* ── Content notes (looks with partial nudity; the site is for 15+) ── */
-#detail-image-wrapper.is-veiled #detail-image,
+/* ─── Plain-English summary under the entry title ─── */
+.detail-summary {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.88);
+  margin: 12px 0 4px;
+  max-width: 42ch;
+}
+html:not(.dark) .detail-summary { color: #1a1a1a; }
+
+/* ─── Content note: blur a look with nudity until the reader chooses ─── */
+#detail-image-wrapper.is-veiled picture,
 #detail-image-wrapper.is-veiled .hotspot-btn,
-.grid-cell-img.is-veiled img,
-.entry-item-thumb.is-veiled img { filter: blur(28px) brightness(0.7); }
-#detail-image-wrapper.is-veiled .hotspot-btn { pointer-events: none; }
-#detail-image-wrapper.is-veiled,
-.grid-cell-img.is-veiled,
-.entry-item-thumb.is-veiled { overflow: hidden; }
-.content-note {
-  position: absolute; inset: 0; z-index: 30;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
-  text-align: center; padding: 16px; color: #fff;
+.grid-cell.is-veiled .grid-cell-img img { filter: blur(32px); }
+#detail-image-wrapper.is-veiled .hotspot-btn { pointer-events: none; visibility: hidden; }
+#detail-image-wrapper.is-veiled { overflow: hidden; }
+.content-note-veil {
+  position: absolute; inset: 0; z-index: 50;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  padding: 24px; text-align: center;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
 }
-.content-note-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; margin: 0; opacity: 0.85; }
-.content-note-text { font-family: var(--font-serif); font-size: 1.25rem; margin: 0; }
+.content-note-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #CCFF00; }
+.content-note-text { font-family: var(--font-serif); font-size: 18px; }
 .content-note-btn {
-  margin-top: 6px; min-height: 44px; padding: 10px 20px;
-  font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase;
-  background: #fff; color: #000; border: 1px solid #fff; cursor: pointer;
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+  min-height: 44px; padding: 0 18px; border: 1px solid #fff; background: transparent; color: #fff; cursor: pointer;
 }
-.content-note-btn:hover { background: #CCFF00; border-color: #CCFF00; }
-.grid-content-note {
-  position: absolute; left: 8px; right: 8px; top: 50%; transform: translateY(-50%); z-index: 3;
-  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #fff; text-align: center; pointer-events: none;
+.content-note-btn:hover, .content-note-btn:focus-visible { border-color: #CCFF00; color: #CCFF00; }
+.grid-cell-note {
+  position: absolute; left: 8px; bottom: 8px; z-index: 3;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  background: rgba(0,0,0,0.8); color: #fff; padding: 4px 8px;
+}
+
+/* One line under the Nexus header saying what a connection means. */
+.matrix-key {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.78);
+  padding: 10px 16px;
+  margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }

@@ -2,14 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition } from './core-utils.js?v=9291973';
-import { AppState, updateHash } from './core-state.js?v=9291973';
-import { getFilteredEntries } from './search-engine.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=9291973';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=9291973';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=9291973';
-import { safeCover } from './categories.js?v=9291973';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=4858eed';
+import { AppState, updateHash } from './core-state.js?v=4858eed';
+import { getFilteredEntries } from './search-engine.js?v=4858eed';
+import { getTranslation } from './translations.js?v=4858eed';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=4858eed';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=4858eed';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=4858eed';
+import { safeCover } from './categories.js?v=4858eed';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -20,11 +20,15 @@ export function updateStatusBar(archiveData) {
   if (entry) {
     if (brand)       brand.textContent       = entry.tags?.brand || '--';
     if (year)        year.textContent        = entry.year;
-    if (season)      season.textContent      = entry.season;
-    if (entryStatus) entryStatus.textContent = pad(archiveData.indexOf(entry) + 1) + ' / ' + pad(archiveData.length);
+    if (season)      season.textContent      = seasonLong(entry.season);
+    // Same numbering as the entry panel's ‹ 36 / 45 › (position in the
+    // current, filtered order), not the position in the raw data file.
+    const filtered = getFilteredEntries(archiveData);
+    const pos = filtered.findIndex(e => e.id === entry.id);
+    if (entryStatus) entryStatus.textContent = pos >= 0 ? `${pos + 1} / ${filtered.length}` : '';
   } else {
     const filtered = getFilteredEntries(archiveData);
-    if (brand)       brand.textContent       = 'ARCHIVE';
+    if (brand)       brand.textContent       = 'ALL SHOWS';
     if (year) {
       const ys = archiveData.map(e => e.year).filter(Boolean);
       year.textContent = ys.length ? `${Math.min(...ys)}–${Math.max(...ys)}` : '—';
@@ -65,7 +69,7 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
     if (detailView) {
       detailView.classList.remove('hidden');
       // Used by print stylesheet ::after for permalink + accessed-date footer
-      detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}/${AppState.currentImageIndex}`;
+      detailView.dataset.printUrl = `${window.location.origin}/entry/${entry.id}${AppState.currentImageIndex ? `/${AppState.currentImageIndex}` : ''}`;
       detailView.dataset.printAccessed = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     }
     const appRoot = $('app-root');
@@ -112,9 +116,9 @@ function updateEntryMetaTags(entry) {
   const desc   = entry.subtitle
     ? `${title}: ${entry.subtitle}`
     : `Forensic visual analysis of ${title}. Annotated for visual and cultural research.`;
-  const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = safeCover(entry)?.src
-    ? `${window.location.origin}/public/${safeCover(entry).src}`
+  const url    = `${window.location.origin}/entry/${entry.id}`;
+  const img    = entry.images?.[0]?.src
+    ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
 
   document.title = `${title} — THE LEXICON`;
@@ -156,9 +160,9 @@ function updateEntryJsonLd(entry) {
   const year   = entry.year || '';
   const season = entry.season || '';
   const title  = entry.title ? entry.title : `${brand} ${season} ${year}`.trim();
-  const url    = `${window.location.origin}/entry/${entry.id}/0`;
-  const img    = safeCover(entry)?.src
-    ? `${window.location.origin}/public/${safeCover(entry).src}`
+  const url    = `${window.location.origin}/entry/${entry.id}`;
+  const img    = entry.images?.[0]?.src
+    ? `${window.location.origin}/public/${entry.images[0].src}`
     : null;
   const ld = {
     '@context': 'https://schema.org',
@@ -269,9 +273,9 @@ function renderSidebarHeader(entry) {
   const when = [seasonName(entry.season), entry.year].filter(Boolean).join(' ');
   header.innerHTML = `
     <h1 class="detail-title">${escapeHtml(pageTitle)}${subtitle ? `<span class="detail-subtitle">${escapeHtml(subtitle)}</span>` : ''}</h1>
-    <span class="detail-accent-tag" data-cat="${cat}" title="${escapeHtml(categoryLabel(cat))}">${tagLabel.toUpperCase()}</span>
-    <div class="detail-entry-id">${brand} · ${escapeHtml(when.toUpperCase())}</div>
-    ${summary ? `<p class="detail-summary">${escapeHtml(summary)}</p>` : ''}
+    <span class="detail-accent-tag" data-cat="${cat}">${tagLabel.toUpperCase()}</span>
+    <div class="detail-entry-id">${brand} · ${season ? seasonLong(season) + ' ' : ''}${year}</div>
+    ${entry.summary_plain ? `<p class="detail-summary"${lang !== 'en' && getTranslation(entry.summary_plain, lang) === entry.summary_plain ? ' lang="en"' : ''}>${escapeHtml(getTranslation(entry.summary_plain, lang))}</p>` : ''}
     ${vibesHtml}
     ${posLabel ? `
     <div class="detail-entry-nav" role="group" aria-label="Navigate entries">
@@ -319,7 +323,7 @@ function renderBreadcrumb(entry) {
   const season = [entry.season, entry.year].filter(Boolean).join(' ');
   const sep = `<span class="mx-1 opacity-30">/</span>`;
   crumb.innerHTML =
-    `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to archive">ARCHIVE</a>`
+    `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to all shows">ALL SHOWS</a>`
     + sep
     + `<span class="detail-breadcrumb-cat" data-cat="${cat}">${tagCat}</span>`
     + sep
@@ -332,36 +336,37 @@ function renderBreadcrumb(entry) {
   });
 }
 
-// Looks with a content_note (e.g. "Partial nudity") are blurred behind a short
-// note until the reader chooses to see them. The choice is remembered for the
-// rest of the visit (sessionStorage), per look, so paging back doesn't ask
-// again. The site is meant for readers aged 15 and up.
-const _revealed = new Set();
-try { JSON.parse(sessionStorage.getItem('lexicon-revealed') || '[]').forEach(k => _revealed.add(k)); } catch (e) {}
-
-function applyContentNote(entry, imgObj) {
+// Looks with nudity carry a content_note. The image is blurred behind a
+// short note until the reader chooses to see it; the choice lasts for the
+// visit (sessionStorage), so they aren't asked again on every look.
+const REVEAL_KEY = 'lexicon_reveal_sensitive';
+function sensitiveRevealed() {
+  try { return sessionStorage.getItem(REVEAL_KEY) === '1'; } catch { return false; }
+}
+function renderContentNote(imgObj) {
   const wrapper = $('detail-image-wrapper');
   if (!wrapper) return;
-  wrapper.querySelector('.content-note')?.remove();
-  const key = `${entry.id}#${AppState.currentImageIndex}`;
+  wrapper.querySelector('.content-note-veil')?.remove();
   const note = imgObj?.content_note;
-  const veiled = !!note && !_revealed.has(key);
+  const veiled = !!note && !sensitiveRevealed();
   wrapper.classList.toggle('is-veiled', veiled);
   if (!veiled) return;
-  const box = document.createElement('div');
-  box.className = 'content-note';
-  box.innerHTML = `<p class="content-note-label">Content note</p>
+  const veil = document.createElement('div');
+  veil.className = 'content-note-veil';
+  veil.innerHTML = `
+    <p class="content-note-label">Content note</p>
     <p class="content-note-text">${escapeHtml(note)}</p>
-    <button type="button" class="content-note-btn focus-ring">Show image</button>`;
-  box.querySelector('button').addEventListener('click', (ev) => {
-    ev.stopPropagation();
-    _revealed.add(key);
-    try { sessionStorage.setItem('lexicon-revealed', JSON.stringify([..._revealed])); } catch (e) {}
+    <button type="button" class="content-note-btn">Show image</button>`;
+  // The image wrapper opens the full-screen zoom on click; the veil must not.
+  veil.addEventListener('click', (e) => e.stopPropagation());
+  veil.querySelector('button').addEventListener('click', (e) => {
+    e.stopPropagation();
+    try { sessionStorage.setItem(REVEAL_KEY, '1'); } catch { /* private mode: reveal this one only */ }
     wrapper.classList.remove('is-veiled');
-    box.remove();
-    $('detail-image')?.focus?.();
+    veil.remove();
+    document.querySelectorAll('.grid-cell.is-veiled').forEach(c => c.classList.remove('is-veiled'));
   });
-  wrapper.appendChild(box);
+  wrapper.appendChild(veil);
 }
 
 function renderImage(entry, callbacks) {
@@ -382,7 +387,12 @@ function renderImage(entry, callbacks) {
     imgEl.onload = () => {
       if (callbacks && callbacks.extractAccentColor) callbacks.extractAccentColor(imgEl);
     };
-    if (webpEl) webpEl.srcset = resolveImgSrc({ src: webpSrc(currentImgObj) });
+    // Phones get the 480px thumbnail (the image shows at ~430px wide there);
+    // larger screens the 1000px file. Saves ~4x the bytes on mobile data.
+    if (webpEl) {
+      webpEl.srcset = `${resolveImgSrc({ src: thumbSrc(currentImgObj) })} 480w, ${resolveImgSrc({ src: webpSrc(currentImgObj) })} 1000w`;
+      webpEl.sizes = '(max-width: 1023px) 92vw, 50vw';
+    }
     // Apply known dimensions to prevent CLS while the new image loads.
     const dims = imgAttrs(currentImgObj);
     if (dims) {
@@ -401,7 +411,8 @@ function renderImage(entry, callbacks) {
     const described = parts.length ? `: ${parts.join(', ')}` : '';
     imgEl.alt = `${baseAlt}, look ${(AppState.currentImageIndex || 0) + 1} of ${imgs.length}${described}`;
   }
-  applyContentNote(entry, currentImgObj);
+
+  renderContentNote(currentImgObj);
 
   const titleEl = $('active-entry-title');
   if (titleEl) {
@@ -429,7 +440,8 @@ function renderImage(entry, callbacks) {
     const via = src?.url
       ? ` · via <a href="${escapeHtml(src.url)}" class="underline hover:text-acid focus:text-acid transition-colors" target="_blank" rel="noopener noreferrer">${escapeHtml(src.name)}</a>`
       : '';
-    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a>`;
+    const mistakeHref = `mailto:info@thelexicon.xyz?subject=${encodeURIComponent(`Problem with ${entry.title || slug}`)}`;
+    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a> · <a href="${mistakeHref}" class="underline hover:text-acid focus:text-acid transition-colors">Spotted a mistake?</a>`;
   }
 
   // Image counter dots
@@ -441,7 +453,7 @@ function renderImage(entry, callbacks) {
       counter.innerHTML = imgs.map((_, i) => {
         const isActive = i === currentIdx;
         return `<button type="button" class="img-dot${isActive ? ' active' : ''}" data-img-index="${i}" aria-label="Image ${i + 1} of ${imgs.length}"${isActive ? ' aria-current="true"' : ''}></button>`;
-      }).join('') + `<span class="sr-only">${currentIdx + 1} of ${imgs.length}</span>`;
+      }).join('') + `<span class="img-count">Look ${currentIdx + 1} of ${imgs.length}</span>`;
       counter.querySelectorAll('.img-dot').forEach(btn => {
         btn.addEventListener('click', () => {
           const idx = parseInt(btn.dataset.imgIndex, 10);
@@ -491,11 +503,14 @@ function renderBrutalistNodes(entry) {
       node.dataset.noteId = type.id;
       node.id = `note-${type.id}`;
       node.setAttribute('aria-labelledby', `note-${type.id}-label`);
+      // An untranslated note inside a translated page is still English:
+      // say so, so screen readers switch voice (WCAG 3.1.2).
+      if (lang !== 'en' && getTranslation(rawText, lang) === rawText) node.lang = 'en';
 
       // Critique note gets a pull quote — extract the first sentence 40–250 chars
       let bodyHtml = text;
       if (type.id === 'critique') {
-        const sentences = text.split(/(?<=[.!?])\s+/);
+        const sentences = splitSentences(text);
         const pullIdx = sentences.findIndex(s => s.length >= 40 && s.length <= 280);
         if (pullIdx >= 0) {
           const pull = sentences.splice(pullIdx, 1)[0];
@@ -506,7 +521,7 @@ function renderBrutalistNodes(entry) {
       }
 
       node.innerHTML = `
-        <h3 id="note-${type.id}-label" class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]</h3>
+        <h3 id="note-${type.id}-label" class="node-label"><span class="node-num">${type.num}</span> [ ${type.label.toUpperCase()} ]<span class="node-plain"> · ${escapeHtml(t(`note_${type.id}_plain`))}</span></h3>
         <div class="node-body">${bodyHtml}</div>
       `;
       container.appendChild(node);
@@ -564,9 +579,9 @@ function renderStickyOverlay(entry) {
   const t    = (k) => getTranslation(k, lang);
 
   const noteTypes = [
-    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance', bg: '#E6FF00', fg: '#000' },
-    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique',   bg: '#FF0000', fg: '#fff' },
-    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy',   bg: '#0000FF', fg: '#fff' }
+    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance', bg: '#0A0A0A', fg: '#CCFF00' },
+    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique',   bg: '#0A0A0A', fg: '#FF5A47' },
+    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy',   bg: '#0A0A0A', fg: '#6F86FF' }
   ];
 
   let activeId = null;
@@ -609,7 +624,7 @@ function renderStickyOverlay(entry) {
       if (panelHdr) {
         panelHdr.style.background  = type.bg;
         panelHdr.style.color       = type.fg;
-        panelHdr.style.borderColor = type.fg === '#fff' ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.2)';
+        panelHdr.style.borderColor = type.fg;
       }
       if (panelLabel) { panelLabel.textContent = type.label; panelLabel.style.color = type.fg; }
       if (closeBtn)   closeBtn.style.color = type.fg;

@@ -6,6 +6,7 @@
   "year": 1998,
   "season": "AW",
   "published": "2026-05-12",
+  "summary_plain": "Yohji Yamamoto mixed old-fashioned shapes with stretchy knits, including a model leaping down the runway in a ball-shaped skirt and a giant wedding-dress finale. It made clothes that move against the body, not just with it.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/yamamoto-aw98/yamamoto-aw98-01.jpg",
@@ -14,13 +15,13 @@
           "x": 50,
           "y": 65,
           "label": "Voluminous Parachute Taffeta Skirt",
-          "description": "The voluminous parachute taffeta skirt swells from the hip in deep erratic folds; it creates a massive bell-shaped silhouette reaching down to the floor. This structural logic engages with theories of architectural shielding by isolating the lower body within an impenetrable void. The dark lustrous textile catches the light randomly across its chaotic surface; a large structural bow sits awkwardly upon the hip to weigh down the drape. The garment asserts a protective and imposing spatial volume that actively contests the biological form."
+          "description": "The voluminous parachute taffeta skirt swells from the hip in deep erratic folds. It creates a massive bell-shaped silhouette reaching down to the floor. This structural logic engages with theories of architectural shielding by isolating the lower body within an impenetrable void. The dark lustrous textile catches the light randomly across its chaotic surface. A large structural bow sits awkwardly upon the hip to weigh down the drape. The garment asserts a protective and imposing spatial volume that actively contests the biological form."
         },
         {
           "x": 50,
           "y": 30,
           "label": "Asymmetrical Knitted Wrap",
-          "description": "The asymmetrical knitted wrap envelopes the torso and shoulders in a thick matte black textile; it obscures the bust and natural waistline entirely. This material application invokes the aesthetic philosophy of wabi-sabi by replacing pristine tailoring with a comforting but slightly disjointed drape. The heavy fabric falls heavily off the right shoulder while remaining securely wrapped around the neck. The piece completes the silhouette by introducing a heavy tactile armor over the upper body."
+          "description": "The asymmetrical knitted wrap envelopes the torso and shoulders in a thick matte black textile. It obscures the bust and natural waistline entirely. This material application invokes the aesthetic philosophy of wabi-sabi by replacing pristine tailoring with a comforting but slightly disjointed drape. The heavy fabric falls heavily off the right shoulder while remaining securely wrapped around the neck. The piece completes the silhouette by introducing a heavy tactile armor over the upper body."
         }
       ]
     },
@@ -31,13 +32,13 @@
           "x": 50,
           "y": 35,
           "label": "Elongated Ribbed Knit Turtleneck",
-          "description": "The elongated ribbed knit turtleneck clings directly to the upper body before dropping below the hips; it functions as an extended synthetic skin rather than a traditional sweater. This material strategy engages with theories of kinetic state and movement by utilizing a highly elastic fabric that resists and delays the body's natural stride. The dark grey knit features slightly exaggerated sleeves that bunch around the wrists; the high collar completely obscures the throat. The garment asserts a fluid yet restrictive modesty."
+          "description": "The elongated ribbed knit turtleneck clings directly to the upper body before dropping below the hips. It functions as an extended synthetic skin rather than a traditional sweater. This material strategy engages with theories of kinetic state and movement by utilizing a highly elastic fabric that resists and delays the body's natural stride. The dark grey knit features slightly exaggerated sleeves that bunch around the wrists. The high collar completely obscures the throat. The garment asserts a fluid yet restrictive modesty."
         },
         {
           "x": 50,
           "y": 70,
           "label": "Gathered Jersey Maxi Skirt",
-          "description": "The gathered jersey maxi skirt drops from the dropped waist of the turtleneck in hundreds of fine vertical pleats; it creates an immense sweeping bell shape. This volume utilizes suspended drape to generate kinetic energy; the heavy fabric swings outward significantly as the model walks. The dark grey textile matches the top precisely to create an unbroken monochromatic column; the hem drags slightly against the runway floor. The piece completes the \"delayed\" reaction aesthetic by forcing the wearer to drag the heavy cloth through space."
+          "description": "The gathered jersey maxi skirt drops from the dropped waist of the turtleneck in hundreds of fine vertical pleats. It creates an immense sweeping bell shape. This volume utilizes suspended drape to generate kinetic energy. The heavy fabric swings outward significantly as the model walks. The dark grey textile matches the top precisely to create an unbroken monochromatic column. The hem drags slightly against the runway floor. The piece completes the \"delayed\" reaction aesthetic by forcing the wearer to drag the heavy cloth through space."
         }
       ]
     },
@@ -48,13 +49,13 @@
           "x": 50,
           "y": 35,
           "label": "Deconstructed Peplum Tailoring",
-          "description": "The deconstructed peplum tailoring breaks the classical tailored jacket into fragmented angular flaps across the midriff; it exposes the stomach beneath a dark wool shell. This structural intervention engages with theories of imperfect beauty by intentionally failing to close the garment seamlessly. The crisp black textile maintains rigid sharp lapels despite the chaotic lower edge; the sleeves end bluntly over the hands. The jacket refuses polished formality to assert a slightly damaged yet commanding posture."
+          "description": "The deconstructed peplum tailoring breaks the classical tailored jacket into fragmented angular flaps across the midriff. It exposes the stomach beneath a dark wool shell. This structural intervention engages with theories of imperfect beauty by intentionally failing to close the garment seamlessly. The crisp black textile maintains rigid sharp lapels despite the chaotic lower edge. The sleeves end bluntly over the hands. The jacket refuses polished formality to assert a slightly damaged yet commanding posture."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Tapered Wool Midi Skirt",
-          "description": "The tapered wool midi skirt falls straight from the hips and narrows slightly at the ankle; it restricts the lower body into a severe black column. This simple format provides a static woven baseline that contrasts with the active kinetic pieces elsewhere in the collection. The dense fabric absorbs light completely; it lacks any visible pleating or functional slitting. The garment completes the severe uniform by enforcing a highly disciplined and abbreviated stride."
+          "description": "The tapered wool midi skirt falls straight from the hips and narrows slightly at the ankle. It restricts the lower body into a severe black column. This simple format provides a static woven baseline that contrasts with the active kinetic pieces elsewhere in the collection. The dense fabric absorbs light completely. It lacks any visible pleating or functional slitting. The garment completes the severe uniform by enforcing a highly disciplined and abbreviated stride."
         }
       ]
     },
@@ -65,13 +66,13 @@
           "x": 50,
           "y": 35,
           "label": "Asymmetrical Knitted Torso Wrap",
-          "description": "The asymmetrical knitted torso wrap entirely consumes the upper body and arms within a single massive tube of black fabric; it obliterates all natural contours of the shoulders and bust. This structural logic utilizes monolithic massing to transform the wearer into a solid geometric block. The heavy jersey creates deep irregular folds as it hangs under its own immense weight; the neckline droops loosely over the clavicle. The piece asserts clothing as armor by creating a thick tactile barrier against unwelcome eyes."
+          "description": "The asymmetrical knitted torso wrap entirely consumes the upper body and arms within a single massive tube of black fabric. It obliterates all natural contours of the shoulders and bust. This structural logic utilizes monolithic massing to transform the wearer into a solid geometric block. The heavy jersey creates deep irregular folds as it hangs under its own immense weight. The neckline droops loosely over the clavicle. The piece asserts clothing as armor by creating a thick tactile barrier against unwelcome eyes."
         },
         {
           "x": 50,
           "y": 75,
           "label": "Exposed Wide-Leg Trousers",
-          "description": "The exposed wide-leg trousers peak out from beneath the massive hem of the knit wrap; they introduce a tailored woven element beneath the heavy drape. This layered construction applies the tension of mixing active stretch materials with static suiting. The dark grey fabric falls loosely over thick combat-style boots; a sharp crease runs down the center of the leg. The detail completes the silhouette by anchoring the abstract upper volume with grounded pragmatic tailoring."
+          "description": "The exposed wide-leg trousers peak out from beneath the massive hem of the knit wrap. They introduce a tailored woven element beneath the heavy drape. This layered construction applies the tension of mixing active stretch materials with static suiting. The dark grey fabric falls loosely over thick combat-style boots. A sharp crease runs down the center of the leg. The detail completes the silhouette by anchoring the abstract upper volume with grounded pragmatic tailoring."
         }
       ]
     },
@@ -82,13 +83,13 @@
           "x": 50,
           "y": 45,
           "label": "Oversized Hand-Knit Carapace",
-          "description": "The oversized hand-knit carapace engulfs the model in a massive heavy-gauge white yarn; it completely swallows the arms and drops past the knees. This extreme accumulation of material engages with the aesthetic of \"loving-hands-made-at-home\" craft pushed to monumental proportions. The dense texture creates a protective cloud-like buffer; the sleeves bunch up massively at the elbows. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
+          "description": "The oversized hand-knit carapace engulfs the model in a massive heavy-gauge white yarn. It completely swallows the arms and drops past the knees. This extreme accumulation of material engages with the aesthetic of \"loving-hands-made-at-home\" craft pushed to monumental proportions. The dense texture creates a protective cloud-like buffer. The sleeves bunch up massively at the elbows. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
         },
         {
           "x": 50,
           "y": 70,
           "label": "Shearling-Trimmed Tunic Layer",
-          "description": "The shearling-trimmed tunic layer drops beneath the knit coat in a straight column of off-white textile; it features a prominent vertical strip of fuzzy texture running down the center. This material integration mixes soft organic fibers with the heavy synthetic-looking knit. The fabric falls cleanly to the ankle; it lacks any shaping or waist definition. The garment completes the severe monochromatic look by adding a secondary layer of defensive insulation."
+          "description": "The shearling-trimmed tunic layer drops beneath the knit coat in a straight column of off-white textile. It features a prominent vertical strip of fuzzy texture running down the center. This material integration mixes soft organic fibers with the heavy synthetic-looking knit. The fabric falls cleanly to the ankle. It lacks any shaping or waist definition. The garment completes the severe monochromatic look by adding a secondary layer of defensive insulation."
         }
       ]
     },
@@ -99,13 +100,13 @@
           "x": 50,
           "y": 20,
           "label": "Hyper-Exaggerated Picture Hat",
-          "description": "The hyper-exaggerated picture hat dwarfs the skull with an immense wide brim made of stiff white fabric; it dominates the visual space around the head entirely. This structural extreme applies the theatrical surrealism noted in the collection's lookbook. The massive disc requires the model to physically balance its weight; the crown features a gathered ruched texture. The accessory asserts a dramatic historical reference pushed to an absurd architectural limit."
+          "description": "The hyper-exaggerated picture hat dwarfs the skull with an immense wide brim made of stiff white fabric. It dominates the visual space around the head entirely. This structural extreme applies the theatrical surrealism noted in the collection's lookbook. The massive disc requires the model to physically balance its weight. The crown features a gathered ruched texture. The accessory asserts a dramatic historical reference pushed to an absurd architectural limit."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Bamboo Cage Skirt Framework",
-          "description": "The bamboo cage skirt framework is worn entirely on the outside of the white gown; it utilizes literal solid wood scaffolding to build a 19th-century crinoline shape. This internal framework brought to the exterior engages directly with deconstructionist methodology. The long wooden canes radiate outward from the waist to hold the sheer outer fabric in a massive bell shape; the model's hands hover near the structure to manage its kinetic bounce. The structure refuses hidden support to assert the mechanical reality of extreme fashion silhouettes."
+          "description": "The bamboo cage skirt framework is worn entirely on the outside of the white gown. It utilizes literal solid wood scaffolding to build a 19th-century crinoline shape. This internal framework brought to the exterior engages directly with deconstructionist methodology. The long wooden canes radiate outward from the waist to hold the sheer outer fabric in a massive bell shape. The model's hands hover near the structure to manage its kinetic bounce. The structure refuses hidden support to assert the mechanical reality of extreme fashion silhouettes."
         }
       ]
     },
@@ -116,13 +117,13 @@
           "x": 50,
           "y": 45,
           "label": "Elongated Ribbed Knit Tunic",
-          "description": "The elongated ribbed knit tunic stretches over the torso and drops past the knees; it functions as a dark heavy cylinder encasing the body. This material strategy engages with theories of kinetic state by applying dense elastic fabric that resists biological movement. The thick black ribbing provides a highly tactile vertical texture; the oversized sleeves are folded back upon themselves into massive chunky cuffs. The garment asserts a posture of strict modesty while physically weighing down the wearer."
+          "description": "The elongated ribbed knit tunic stretches over the torso and drops past the knees. It functions as a dark heavy cylinder encasing the body. This material strategy engages with theories of kinetic state by applying dense elastic fabric that resists biological movement. The thick black ribbing provides a highly tactile vertical texture. The oversized sleeves are folded back upon themselves into massive chunky cuffs. The garment asserts a posture of strict modesty while physically weighing down the wearer."
         },
         {
           "x": 50,
           "y": 80,
           "label": "Straight-Leg Tailored Trousers",
-          "description": "The straight-leg tailored trousers extend beneath the heavy knit tunic in a dark grey woven fabric; they present a stark contrast to the stretchy upper layer. This pairing invokes the collection's core strategy of mixing active knits with static historical tailoring. The pants drop cleanly to the ankle with a sharp front crease; they rest upon heavy practical footwear. The piece completes the severe defensive silhouette by fully covering the legs."
+          "description": "The straight-leg tailored trousers extend beneath the heavy knit tunic in a dark grey woven fabric. They present a stark contrast to the stretchy upper layer. This pairing invokes the collection's core strategy of mixing active knits with static historical tailoring. The pants drop cleanly to the ankle with a sharp front crease. They rest upon heavy practical footwear. The piece completes the severe defensive silhouette by fully covering the legs."
         }
       ]
     },
@@ -133,13 +134,13 @@
           "x": 50,
           "y": 30,
           "label": "Deconstructed Wool Riding Jacket",
-          "description": "The deconstructed wool riding jacket features a classic brown tweed texture manipulated into a disjointed shape; it hangs open to reveal the knitwear beneath. This structural intervention engages with wabi-sabi by taking a historically formal 20th-century garment and presenting it in a state of subtle ruin. The stiff fabric curves away from the waistline; the button placket runs uselessly along the side seam. The outerwear refuses pristine closure to assert an aesthetic of relaxed imperfection."
+          "description": "The deconstructed wool riding jacket features a classic brown tweed texture manipulated into a disjointed shape. It hangs open to reveal the knitwear beneath. This structural intervention engages with wabi-sabi by taking a historically formal 20th-century garment and presenting it in a state of subtle ruin. The stiff fabric curves away from the waistline. The button placket runs uselessly along the side seam. The outerwear refuses pristine closure to assert an aesthetic of relaxed imperfection."
         },
         {
           "x": 50,
           "y": 55,
           "label": "Horizontally Striped Knit Midi Skirt",
-          "description": "The horizontally striped knit midi skirt stretches tightly over the hips and drops into a heavy ribbed hem; it creates a textured cocoon around the lower body. This material application utilizes the \"delayed\" stretch reaction to force the wearer to drag the heavy cloth through space. The dark base color is shot through with thin erratic lines of gold and beige; the knit bunches slightly around the knees. The garment completes the look by adding heavy kinetic resistance to the stride."
+          "description": "The horizontally striped knit midi skirt stretches tightly over the hips and drops into a heavy ribbed hem. It creates a textured cocoon around the lower body. This material application utilizes the \"delayed\" stretch reaction to force the wearer to drag the heavy cloth through space. The dark base color is shot through with thin erratic lines of gold and beige. The knit bunches slightly around the knees. The garment completes the look by adding heavy kinetic resistance to the stride."
         }
       ]
     },
@@ -150,13 +151,13 @@
           "x": 50,
           "y": 28,
           "label": "Oversized Faux-Fur Cowl",
-          "description": "The oversized faux-fur cowl wraps the neck and shoulders in a massive black textured ring; it creates a thick protective barrier around the head. This extreme accumulation of material engages with theories of architectural shielding and the romanticization of cold-weather survival gear. The dense black fibers absorb light to create a heavy visual void over the chest; it entirely obscures the natural slope of the shoulders. The accessory asserts a luxurious but highly defensive posture."
+          "description": "The oversized faux-fur cowl wraps the neck and shoulders in a massive black textured ring. It creates a thick protective barrier around the head. This extreme accumulation of material engages with theories of architectural shielding and the romanticization of cold-weather survival gear. The dense black fibers absorb light to create a heavy visual void over the chest. It entirely obscures the natural slope of the shoulders. The accessory asserts a luxurious but highly defensive posture."
         },
         {
           "x": 50,
           "y": 48,
           "label": "Tiered Pinstripe Peplum Tunic",
-          "description": "The tiered pinstripe peplum tunic features a complex architectural structure built from stiff dark fabric; it drops into layered angular ruffles over the hips. This historical referencing applies 20th-century tailoring motifs to a modern elongated silhouette. The subtle vertical stripes contrast with the horizontal cuts of the peplum; the waist is cinched slightly to emphasize the flare below. The garment completes the severe look by injecting precise woven geometry beneath the chaotic fur."
+          "description": "The tiered pinstripe peplum tunic features a complex architectural structure built from stiff dark fabric. It drops into layered angular ruffles over the hips. This historical referencing applies 20th-century tailoring motifs to a modern elongated silhouette. The subtle vertical stripes contrast with the horizontal cuts of the peplum. The waist is cinched slightly to emphasize the flare below. The garment completes the severe look by injecting precise woven geometry beneath the chaotic fur."
         }
       ]
     },
@@ -167,13 +168,13 @@
           "x": 50,
           "y": 50,
           "label": "Asymmetrical Ribbed Knit Cape",
-          "description": "The asymmetrical ribbed knit cape drapes diagonally across the body; it drops from the right shoulder down to the left calf in a massive heavy sweep of fabric. This structural logic utilizes monolithic massing to create a protective armor-like shell over the front of the body. The thick black ribbing stretches under its own weight; the wide lapels fold open slightly over the chest. The piece refuses balanced tailoring to assert a silhouette defined entirely by suspended gravity."
+          "description": "The asymmetrical ribbed knit cape drapes diagonally across the body. It drops from the right shoulder down to the left calf in a massive heavy sweep of fabric. This structural logic utilizes monolithic massing to create a protective armor-like shell over the front of the body. The thick black ribbing stretches under its own weight. The wide lapels fold open slightly over the chest. The piece refuses balanced tailoring to assert a silhouette defined entirely by suspended gravity."
         },
         {
           "x": 55,
           "y": 70,
           "label": "Wide-Leg Jersey Trousers",
-          "description": "The wide-leg jersey trousers drop softly from beneath the heavy cape in a smooth dark grey fabric; they allow the legs mobility against the restrictive knit above. This material choice engages with the kinetic tension between heavy outer layers and fluid undergarments. The fabric pools slightly around the ankle; the wide cut obscures the knee entirely. The trousers complete the look by anchoring the massive asymmetrical drape."
+          "description": "The wide-leg jersey trousers drop softly from beneath the heavy cape in a smooth dark grey fabric. They allow the legs mobility against the restrictive knit above. This material choice engages with the kinetic tension between heavy outer layers and fluid undergarments. The fabric pools slightly around the ankle. The wide cut obscures the knee entirely. The trousers complete the look by anchoring the massive asymmetrical drape."
         }
       ]
     },
@@ -184,13 +185,13 @@
           "x": 50,
           "y": 15,
           "label": "Wide-Brimmed Textured Hat",
-          "description": "The wide-brimmed textured hat features a flat rigid disk covered in a mottled grey and black fabric; it casts a severe shadow over the upper face. This accessory applies the theatrical surrealism noted in the lookbook by imposing an exaggerated horizontal plane atop the head. The stiff brim tilts slightly downward; the crown features a gathered ruched detail. The hat asserts a dramatic historical reference that functions as an immediate architectural shield for the eyes."
+          "description": "The wide-brimmed textured hat features a flat rigid disk covered in a mottled grey and black fabric. It casts a severe shadow over the upper face. This accessory applies the theatrical surrealism noted in the lookbook by imposing an exaggerated horizontal plane atop the head. The stiff brim tilts slightly downward. The crown features a gathered ruched detail. The hat asserts a dramatic historical reference that functions as an immediate architectural shield for the eyes."
         },
         {
           "x": 48,
           "y": 45,
           "label": "Ruched Black Tube Dress",
-          "description": "The ruched black tube dress tightly binds the torso and hips in a dark opaque stretch fabric; it features diagonal tension lines wrapping around the body. This material strategy utilizes the \"delayed\" reaction of the knit to firmly contest biological movement by restricting the stride. The strapless neckline drops straight across the bust; the long black opera gloves integrate the arms into the dark silhouette. The garment asserts a sleek but highly restrictive monolithic form."
+          "description": "The ruched black tube dress tightly binds the torso and hips in a dark opaque stretch fabric. It features diagonal tension lines wrapping around the body. This material strategy utilizes the \"delayed\" reaction of the knit to firmly contest biological movement by restricting the stride. The strapless neckline drops straight across the bust. The long black opera gloves integrate the arms into the dark silhouette. The garment asserts a sleek but highly restrictive monolithic form."
         }
       ]
     },
@@ -201,13 +202,13 @@
           "x": 50,
           "y": 45,
           "label": "Deconstructed Architectural Blazer",
-          "description": "The deconstructed architectural blazer features sharp classic lapels resting above a chaotic tiered and fragmented hemline; it breaks the traditional suit jacket into angular floating planes. This structural intervention engages with theories of imperfect beauty by intentionally destabilizing formal woven attire. The matte black fabric holds a rigid shape despite the drastic cutouts over the hips; the sleeves end sharply over the black gloves. The jacket refuses polished formality to assert a slightly damaged yet commanding posture."
+          "description": "The deconstructed architectural blazer features sharp classic lapels resting above a chaotic tiered and fragmented hemline. It breaks the traditional suit jacket into angular floating planes. This structural intervention engages with theories of imperfect beauty by intentionally destabilizing formal woven attire. The matte black fabric holds a rigid shape despite the drastic cutouts over the hips. The sleeves end sharply over the black gloves. The jacket refuses polished formality to assert a slightly damaged yet commanding posture."
         },
         {
           "x": 50,
           "y": 70,
           "label": "Tapered Black Midi Skirt",
-          "description": "The tapered black midi skirt falls from the chaotic hem of the jacket into a strict and simple dark column; it truncates just below the knee. This simple format provides a static woven baseline that contrasts with the architectural action happening above. The dense fabric absorbs light completely to create a flat visual block; it lacks any visible pleating. The garment completes the severe uniform by enforcing a highly disciplined and abbreviated silhouette."
+          "description": "The tapered black midi skirt falls from the chaotic hem of the jacket into a strict and simple dark column. It truncates just below the knee. This simple format provides a static woven baseline that contrasts with the architectural action happening above. The dense fabric absorbs light completely to create a flat visual block. It lacks any visible pleating. The garment completes the severe uniform by enforcing a highly disciplined and abbreviated silhouette."
         }
       ]
     },
@@ -218,13 +219,13 @@
           "x": 50,
           "y": 45,
           "label": "Golden Faux-Fur Stole",
-          "description": "The golden faux-fur stole wraps the neck and drops heavily down the front of the body in two massive textured tails; it introduces a violent burst of bright color against the dark collection. This extreme accumulation of material engages with the aesthetic of \"loving-hands-made-at-home\" craft pushed to luxurious extremes. The long yellow and black fibers mimic animal pelt but clearly assert their synthetic origin; the model clutches the stole tightly to her chest. The accessory asserts a protective and imposing tactical barrier."
+          "description": "The golden faux-fur stole wraps the neck and drops heavily down the front of the body in two massive textured tails. It introduces a violent burst of bright color against the dark collection. This extreme accumulation of material engages with the aesthetic of \"loving-hands-made-at-home\" craft pushed to luxurious extremes. The long yellow and black fibers mimic animal pelt but clearly assert their synthetic origin. The model clutches the stole tightly to her chest. The accessory asserts a protective and imposing tactical barrier."
         },
         {
           "x": 50,
           "y": 65,
           "label": "Ribbed Knit Midi Dress",
-          "description": "The ribbed knit midi dress hugs the lower body in a thick dark grey cylinder; it finishes in a bulky folded cuff just below the knee. This material application utilizes the \"delayed\" stretch reaction to force the wearer to drag the heavy cloth through space. The dark base color contrasts completely with the bright stole above; the tight knit bunches slightly around the thighs. The garment completes the look by adding heavy kinetic resistance to the stride."
+          "description": "The ribbed knit midi dress hugs the lower body in a thick dark grey cylinder. It finishes in a bulky folded cuff just below the knee. This material application utilizes the \"delayed\" stretch reaction to force the wearer to drag the heavy cloth through space. The dark base color contrasts completely with the bright stole above. The tight knit bunches slightly around the thighs. The garment completes the look by adding heavy kinetic resistance to the stride."
         }
       ]
     },
@@ -235,13 +236,13 @@
           "x": 50,
           "y": 20,
           "label": "Oversized Fuzzy Dome Hat",
-          "description": "The oversized fuzzy dome hat envelopes the skull in a massive bell-shaped structure of thick mustard-brown synthetic fibers; it drastically alters the proportions of the head. This accessory applies the theatrical surrealism noted in the lookbook by transforming the model into a bizarre organic-looking character. The dense texture resembles 1970s shag carpeting; the wide brim completely hides the ears and forehead. The piece asserts a playful but highly defensive architectural shield."
+          "description": "The oversized fuzzy dome hat envelopes the skull in a massive bell-shaped structure of thick mustard-brown synthetic fibers. It drastically alters the proportions of the head. This accessory applies the theatrical surrealism noted in the lookbook by transforming the model into a bizarre organic-looking character. The dense texture resembles 1970s shag carpeting. The wide brim completely hides the ears and forehead. The piece asserts a playful but highly defensive architectural shield."
         },
         {
           "x": 50,
           "y": 55,
           "label": "Striped Mohair Tunic",
-          "description": "The striped mohair tunic drops heavily from the shoulders in broad horizontal bands of orange, green, and blue; it creates a massive textured rectangle over the body. This material strategy engages with wabi-sabi through the use of a seemingly hand-knit domestic craft aesthetic. The fuzzy fibers blur the lines between the bold colors; the long sleeves drag past the hands. The garment refuses tailored structure to assert a cocoon-like armor of warmth and nostalgia."
+          "description": "The striped mohair tunic drops heavily from the shoulders in broad horizontal bands of orange, green, and blue. It creates a massive textured rectangle over the body. This material strategy engages with wabi-sabi through the use of a seemingly hand-knit domestic craft aesthetic. The fuzzy fibers blur the lines between the bold colors. The long sleeves drag past the hands. The garment refuses tailored structure to assert a cocoon-like armor of warmth and nostalgia."
         }
       ]
     },
@@ -252,13 +253,13 @@
           "x": 50,
           "y": 45,
           "label": "Oversized Hand-Knit Cardigan",
-          "description": "The oversized hand-knit cardigan hangs completely off the shoulders to trap the arms inside massive thick yellow sleeves; it functions as a heavy mobile blanket rather than a fitted sweater. This extreme accumulation of material engages with the aesthetic of domestic craft pushed to monumental proportions. The dense yarn creates a protective tactile buffer; the bright mustard color commands absolute visual attention against the stark runway. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
+          "description": "The oversized hand-knit cardigan hangs completely off the shoulders to trap the arms inside massive thick yellow sleeves. It functions as a heavy mobile blanket rather than a fitted sweater. This extreme accumulation of material engages with the aesthetic of domestic craft pushed to monumental proportions. The dense yarn creates a protective tactile buffer. The bright mustard color commands absolute visual attention against the stark runway. The outerwear asserts an aggressive coziness that functions as physical and emotional armor."
         },
         {
           "x": 50,
           "y": 60,
           "label": "Grey Ribbed Jersey Midi Dress",
-          "description": "The grey ribbed jersey midi dress drops softly beneath the heavy cardigan in a simple unadorned column; it provides a quiet monochromatic base for the extreme knitwear above. This material choice engages with the kinetic tension between heavy outer layers and fluid undergarments. The fabric falls cleanly past the knee; the neckline features subtle button hardware. The piece completes the silhouette by anchoring the massive asymmetrical drape of the yellow coat."
+          "description": "The grey ribbed jersey midi dress drops softly beneath the heavy cardigan in a simple unadorned column. It provides a quiet monochromatic base for the extreme knitwear above. This material choice engages with the kinetic tension between heavy outer layers and fluid undergarments. The fabric falls cleanly past the knee. The neckline features subtle button hardware. The piece completes the silhouette by anchoring the massive asymmetrical drape of the yellow coat."
         }
       ]
     }

@@ -10,14 +10,14 @@
  * factual line built from the archive itself.
  */
 
-import { $ } from './core-utils.js?v=9291973';
+import { $ } from './core-utils.js?v=4858eed';
 
 export function initHeaderTypewriter(archiveData) {
   const textEl = $('telemetry-text');
   if (!textEl || !archiveData || !archiveData.length) return;
-  const brands = new Set(archiveData.map(e => e.tags?.brand).filter(Boolean));
+  // One brand per show, so "45 ENTRIES · 45 BRANDS" read like a placeholder.
   const years = archiveData.map(e => e.year).filter(Boolean);
-  textEl.textContent = `${archiveData.length} ENTRIES · ${brands.size} BRANDS · ${Math.min(...years)}–${Math.max(...years)}`;
+  textEl.textContent = `${archiveData.length} SHOWS · ${Math.min(...years)}–${Math.max(...years)}`;
 }
 
 /** Kept for callers; the header no longer narrates actions. */

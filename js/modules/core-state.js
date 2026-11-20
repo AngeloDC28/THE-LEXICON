@@ -54,7 +54,9 @@ export function updateHash(id, replace = false) {
     const parts = id.split('/');
     const entryId = parts[1];
     const imgIdx  = parts[2] || '0';
-    const url = `/entry/${entryId}/${imgIdx}`;
+    // The first look is the entry itself: /entry/slug, not /entry/slug/0
+    // (a trailing /0 read like a bug). Later looks keep their number.
+    const url = imgIdx === '0' ? `/entry/${entryId}` : `/entry/${entryId}/${imgIdx}`;
     if (replace) {
       history.replaceState({ entryId, imgIdx }, '', url);
     } else {
