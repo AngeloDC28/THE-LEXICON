@@ -2,14 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=4858eed';
-import { AppState, updateHash } from './core-state.js?v=4858eed';
-import { getFilteredEntries } from './search-engine.js?v=4858eed';
-import { getTranslation } from './translations.js?v=4858eed';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=4858eed';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=4858eed';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=4858eed';
-import { safeCover } from './categories.js?v=4858eed';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=eb25565';
+import { AppState, updateHash } from './core-state.js?v=eb25565';
+import { getFilteredEntries } from './search-engine.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=eb25565';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=eb25565';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=eb25565';
+import { safeCover } from './categories.js?v=eb25565';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);

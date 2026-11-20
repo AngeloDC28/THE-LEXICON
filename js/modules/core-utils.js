@@ -17,14 +17,25 @@ export const pad = (num) => (num < 10 ? '0' + num : num);
 // rather than racing a skip against a restart, a transition already in
 // flight just makes this call a plain, unanimated DOM update.
 let _transitionInFlight = false;
+let _currentTransition = null;
 
 export function withViewTransition(updateDOM) {
+  // A transition already in flight hasn't necessarily run ITS update yet
+  // (the browser captures the old frame first). Running this update now
+  // would let that earlier update land afterwards and undo it: tapping
+  // Index straight after Timeline left the Timeline on screen. So queue
+  // this update behind the earlier one; it still runs unanimated.
+  if (_transitionInFlight && _currentTransition) {
+    _currentTransition.updateCallbackDone.catch(() => {}).finally(() => updateDOM());
+    return;
+  }
   if (!document.startViewTransition || _transitionInFlight || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     updateDOM();
     return;
   }
   try {
     const transition = document.startViewTransition(() => updateDOM());
+    _currentTransition = transition;
     _transitionInFlight = true;
     // `ready` rejects whenever the animation is skipped — most commonly
     // because the tab is in the background ("Document hidden"). The DOM
@@ -32,7 +43,7 @@ export function withViewTransition(updateDOM) {
     // left unhandled it surfaces as an uncaught promise rejection on every
     // page opened in a background tab.
     transition.ready.catch(() => {});
-    transition.finished.catch(() => {}).finally(() => { _transitionInFlight = false; });
+    transition.finished.catch(() => {}).finally(() => { _transitionInFlight = false; _currentTransition = null; });
   } catch (e) {
     updateDOM();
   }

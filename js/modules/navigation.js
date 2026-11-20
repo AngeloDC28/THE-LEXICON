@@ -1,6 +1,6 @@
-import { $, withViewTransition } from './core-utils.js?v=4858eed';
-import { AppState } from './core-state.js?v=4858eed';
-import { getTranslation } from './translations.js?v=4858eed';
+import { $, withViewTransition } from './core-utils.js?v=eb25565';
+import { AppState } from './core-state.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
 
 const _scrollPositions = {};
 
@@ -39,16 +39,24 @@ export function switchView(viewId, callbacks) {
       }
     });
 
-    // Sidebar Visibility (Directory)
-    const directory = $('index-panel');
-    if (directory) {
-      // Only hide sidebar if explicitly not in grid view AND on mobile
-      if (viewId === 'grid' || window.innerWidth >= 1024) {
-        directory.classList.remove('hidden');
+    // The index table belongs to Grid: show it only there, and only in Index
+    // mode (it used to stay on screen under the Timeline).
+    const indexView = $('index-table-view');
+    if (indexView) {
+      if (viewId === 'grid' && AppState.viewMode === 'index') {
+        indexView.classList.remove('hidden');
+        $('grid-view')?.classList.add('hidden');
       } else {
-        directory.classList.add('hidden');
+        indexView.classList.add('hidden');
       }
     }
+
+    // The sidebar is the phone's menu drawer (off-canvas below 1024px), so it
+    // must stay available in every view. It used to be display:none outside
+    // Grid view on phones, which made the ☰ button do nothing on the
+    // Timeline and in Folders.
+    const directory = $('index-panel');
+    if (directory) directory.classList.remove('hidden');
 
     // Callbacks to re-render active states
     if (callbacks) {

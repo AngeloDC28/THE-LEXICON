@@ -10,26 +10,26 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js?v=4858eed';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand } from './modules/core-utils.js?v=4858eed';
+import { imageDimensions } from './modules/image-dimensions.js?v=eb25565';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand } from './modules/core-utils.js?v=eb25565';
 setImageDimensions(imageDimensions);
-import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=4858eed';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=4858eed';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=4858eed';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=4858eed';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=4858eed';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=eb25565';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=eb25565';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=eb25565';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=eb25565';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=eb25565';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js?v=4858eed';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=4858eed';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=4858eed';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=4858eed';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=4858eed';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=4858eed';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=4858eed';
-import { getTranslation, supportedLanguages } from './modules/translations.js?v=4858eed';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=4858eed';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=4858eed';
-import { renderGlossaryModal } from './modules/glossary.js?v=4858eed';
+import { switchView } from './modules/navigation.js?v=eb25565';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=eb25565';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=eb25565';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=eb25565';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=eb25565';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=eb25565';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=eb25565';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=eb25565';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=eb25565';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=eb25565';
+import { renderGlossaryModal } from './modules/glossary.js?v=eb25565';
 
 const INTRO_DISMISSED_KEY = 'lexicon-intro-dismissed-v2';
 
@@ -79,7 +79,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=4858eed');
+  const { archiveData: staticData } = await import('../database.js?v=eb25565');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -2416,11 +2416,18 @@ function showMobileNote(type) {
   });
 }
 
+let _lastHamburgerToggle = 0;
 function toggleHamburger() {
   const panel    = $('index-panel');
   const backdrop = $('drawer-backdrop');
   const btn      = $('btn-hamburger');
   if (!panel || !backdrop || !btn) return;
+  // A second tap within 450ms is the same press arriving twice (or an
+  // impatient re-tap while the drawer animates). It used to close the
+  // drawer the moment it opened, which read as "the menu doesn't work".
+  const now = performance.now();
+  if (now - _lastHamburgerToggle < 450) return;
+  _lastHamburgerToggle = now;
   const isOpen = panel.classList.contains('translate-x-0');
   if (isOpen) {
     panel.classList.remove('translate-x-0');
@@ -2436,14 +2443,27 @@ function toggleHamburger() {
     // Prevent body scroll behind the mobile drawer; desktop is unaffected
     // because the drawer transform is a no-op at lg breakpoint.
     if (window.innerWidth < 1024) document.body.style.overflow = 'hidden';
-    // Drawer was just opened on mobile — re-render the entry list it
-    // skipped while hidden (see render-grid.js renderEntryList guard).
-    if (window.innerWidth < 1024) document.dispatchEvent(new CustomEvent('lexicon-refresh'));
+    // Drawer was just opened on mobile: fill in the show list it skipped
+    // while hidden (see render-grid.js renderEntryList guard). Only that
+    // list: this used to fire a full refresh (grid, featured strip, index
+    // table), which froze the page for ~1s on a laptop and longer on a
+    // phone before the drawer appeared. Wait two frames so the slide-in
+    // starts first and the tap gets an immediate response.
+    if (window.innerWidth < 1024) {
+      requestAnimationFrame(() => requestAnimationFrame(() => renderEntryList(archiveData, callbacks)));
+    }
   }
 }
 
 function toggleTheme() {
-  const isDark = document.documentElement.classList.toggle('dark');
+  // Switch every colour in the same frame. Component transitions (buttons,
+  // cards, borders) would otherwise animate at different speeds, leaving
+  // some text in the old theme's colour for a moment.
+  const root = document.documentElement;
+  root.classList.add('theme-switching');
+  const isDark = root.classList.toggle('dark');
+  void root.offsetWidth; // apply the new colours with transitions off
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove('theme-switching')));
   try { localStorage.setItem('lexicon-theme', isDark ? 'dark' : 'light'); } catch(e) {}
   // Reflect theme in <meta name="theme-color"> so mobile chrome matches.
   const meta = document.querySelector('meta[name="theme-color"]');

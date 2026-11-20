@@ -4,10 +4,10 @@
  * No Firebase. No SDK. Pure fetch().
  */
 
-import { $ } from './core-utils.js?v=4858eed';
-import { AppState } from './core-state.js?v=4858eed';
-import { getTranslation } from './translations.js?v=4858eed';
-import { invalidateSearchCache } from './search-engine.js?v=4858eed';
+import { $ } from './core-utils.js?v=eb25565';
+import { AppState } from './core-state.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
+import { invalidateSearchCache } from './search-engine.js?v=eb25565';
 
 export let currentUser = null; // { email } or null
 

@@ -5,12 +5,12 @@
  * window.location.origin, fixing the broken image issue where relative paths
  * resolved incorrectly depending on the current URL.
  */
-import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, BROKEN_ASSET } from './core-utils.js?v=4858eed';
-import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=4858eed';
-import { getFilteredEntries } from './search-engine.js?v=4858eed';
-import { getTranslation } from './translations.js?v=4858eed';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=4858eed';
-import { safeCover } from './categories.js?v=4858eed';
+import { $, pad, resolveImgSrc, imgAttrs, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, BROKEN_ASSET } from './core-utils.js?v=eb25565';
+import { AppState, gridIntersectionObserver, setGridIntersectionObserver, emptyFilters } from './core-state.js?v=eb25565';
+import { getFilteredEntries } from './search-engine.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=eb25565';
+import { safeCover } from './categories.js?v=eb25565';
 
 export function setupGridIntersectionObserver() {
   if (gridIntersectionObserver) {

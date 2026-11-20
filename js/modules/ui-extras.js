@@ -3,11 +3,11 @@
  * Timeline matrix, filter chips, and metadata.
  */
 
-import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=4858eed';
-import { AppState } from './core-state.js?v=4858eed';
-import { getTranslation } from './translations.js?v=4858eed';
-import { invalidateSearchCache } from './search-engine.js?v=4858eed';
-import { safeCover } from './categories.js?v=4858eed';
+import { $, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET } from './core-utils.js?v=eb25565';
+import { AppState } from './core-state.js?v=eb25565';
+import { getTranslation } from './translations.js?v=eb25565';
+import { invalidateSearchCache } from './search-engine.js?v=eb25565';
+import { safeCover } from './categories.js?v=eb25565';
 
 export function renderTimeline(archiveData, callbacks) {
   const container = $('timeline-matrix');

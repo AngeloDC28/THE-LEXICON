@@ -93,7 +93,9 @@ html, body {
   color: var(--text-main);
   font-family: var(--font-mono);
   overflow: hidden;
-  transition: background-color 0.4s cubic-bezier(0.23, 1, 0.32, 1), color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  /* No colour transition here: every element inherits text colour from
+     html/body, so animating it made inherited text lag ~2.4s behind the
+     backgrounds on a theme switch (dark text on dark, light on light). */
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
@@ -1094,7 +1096,7 @@ html:not(.dark) .feat-card-img { background: #e8e8e8; }
   text-transform: uppercase;
   font-family: var(--font-mono);
 }
-html:not(.dark) .feat-card-meta { color: #999; }
+html:not(.dark) .feat-card-meta { color: #595959; }
 .feat-card-hook {
   margin-top: 6px;
   font-family: 'EB Garamond', Georgia, serif;
@@ -1124,7 +1126,7 @@ html:not(.dark) .feat-card-hook { color: #333; }
   margin-bottom: 4px;
   font-family: var(--font-mono);
 }
-html:not(.dark) .sec-eye { color: #999; }
+html:not(.dark) .sec-eye { color: #595959; }
 .sec-title {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: var(--t-h2);
@@ -1144,7 +1146,7 @@ html:not(.dark) .sec-title { color: #0a0a0a; }
   transition: color 0.15s;
 }
 .sec-link:hover { color: #CCFF00; }
-html:not(.dark) .sec-link { color: #999; }
+html:not(.dark) .sec-link { color: #595959; }
 html:not(.dark) .sec-link:hover { color: #000; }
 .sec-link:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
 html:not(.dark) .sec-link:focus-visible { outline-color: #000; }
@@ -1186,7 +1188,7 @@ html:not(.dark) .how-step { border-right-color: #e0e0dc; }
   font-weight: 400;
   line-height: 1;
 }
-html:not(.dark) .how-num span:first-child { color: #ccc; }
+html:not(.dark) .how-num span:first-child { color: #767676; }
 .how-num span:last-child {
   font-size: var(--t-mono-xs);
   letter-spacing: 0.25em;
@@ -1194,7 +1196,7 @@ html:not(.dark) .how-num span:first-child { color: #ccc; }
   text-transform: uppercase;
   font-family: var(--font-mono);
 }
-html:not(.dark) .how-num span:last-child { color: #999; }
+html:not(.dark) .how-num span:last-child { color: #595959; }
 
 .how-step h2 {
   font-family: 'EB Garamond', Georgia, serif;
@@ -1221,7 +1223,7 @@ html:not(.dark) .how-step p { color: #555; }
   color: #444;
   font-family: var(--font-mono);
 }
-html:not(.dark) .how-term { color: #aaa; }
+html:not(.dark) .how-term { color: #595959; }
 .how-term span { color: #CCFF00; }
 html:not(.dark) .how-term span { color: #000; text-decoration: underline; }
 
@@ -1888,27 +1890,28 @@ html:not(.dark) .den-pos { color: rgba(0,0,0,0.55); }
     gap: 0;
   }
   html:not(.dark) .index-table tbody tr { border-color: #e0e0dc; }
-  /* ID + STATUS on first row */
-  .index-table tbody td.td-id   { grid-column:1; grid-row:1; padding: 0 0 4px; }
-  .index-table tbody td.td-status { grid-column:2; grid-row:1; padding: 0 0 4px; text-align:right; }
-  /* Tag on second row spanning both cols */
-  .index-table tbody tr td:nth-child(5) { grid-column:1/-1; grid-row:2; padding: 4px 0; }
-  /* Designer third row */
-  .index-table tbody td.td-designer { grid-column:1/-1; grid-row:3; padding: 4px 0; font-size: var(--t-mono-base); }
-  /* Year + Season on row 4 */
-  .index-table tbody td.td-year   { grid-column:1; grid-row:4; padding: 6px 0 0; font-size: var(--t-mono-xs); }
-  .index-table tbody td.td-season { grid-column:2; grid-row:4; padding: 6px 0 0; text-align:right; font-size:var(--t-mono-xs); }
-  /* Provenance as italic hook on mobile row 5 */
+  /* Cells are placed by class, not column number: the columns changed and
+     nth-child(5) had put the excerpt where the big-idea tag should be. */
+  /* Row 1: big idea + notes count */
+  .index-table tbody td:has(> .td-tag) { grid-column:1; grid-row:1; padding: 0 0 6px; }
+  .index-table tbody td.td-status { grid-column:2; grid-row:1; padding: 0 0 6px; text-align:right; }
+  /* Row 2: designer */
+  .index-table tbody td.td-designer { grid-column:1/-1; grid-row:2; padding: 2px 0; font-size: var(--t-mono-base); }
+  /* Row 3: "Spring/Summer · No. 13" and year */
+  .index-table tbody td.td-season { grid-column:1; grid-row:3; padding: 2px 0 0; font-size: var(--t-mono-xs); text-align:left; }
+  .index-table tbody td.td-year   { grid-column:2; grid-row:3; padding: 2px 0 0; font-size: var(--t-mono-xs); text-align:right; }
+  /* Row 4: the plain summary, two lines */
   .index-table tbody td.td-prov {
-    grid-column: 1/-1; grid-row: 5;
-    padding: 6px 0 0;
+    grid-column: 1/-1; grid-row: 4;
+    padding: 8px 0 0;
     font-family: var(--font-serif);
-    font-size: 13px;
-    font-style: italic;
-    color: rgba(255,255,255,0.5);
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-size: 15px;
+    line-height: 1.4;
+    font-style: normal;
+    color: rgba(255,255,255,0.78);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
-  html:not(.dark) .index-table tbody td.td-prov { color: rgba(0,0,0,0.45); }
+  html:not(.dark) .index-table tbody td.td-prov { color: rgba(0,0,0,0.75); }
   .index-table td { padding: 0; border: none; }
   .index-filter-bar { padding: 8px 12px; }
 }
@@ -2165,6 +2168,8 @@ html:not(.dark) .idx-page-btn.active { background: #000; color: #fff; border-col
 }
 .idx-export-btn:hover { opacity: 1; color: #CCFF00; }
 html:not(.dark) .idx-export-btn:hover { color: #000; }
+/* 0.6 opacity grey-on-white measured 2.5:1; the label is an action, keep it readable. */
+html:not(.dark) .idx-export-btn { opacity: 0.8; }
 
 /* Bottom status bar — terminal mode line style */
 .index-kbd-bar {
@@ -2696,7 +2701,7 @@ html:not(.dark) .notes-toc-link.toc-active { color: #000; border-left-color: #00
 
 /* Numbered label inside node (reading mode uses this differently) */
 .node-num {
-  opacity: 0.4;
+  opacity: 0.75;
   font-size: 12px;
   letter-spacing: 0.15em;
   margin-right: 2px;
@@ -4149,7 +4154,7 @@ html:not(.dark) .footer-bottom { color: #666; }
   gap: 5px;
 }
 .footer-kbd-hint:hover { opacity: 1; }
-.footer-kbd-label { opacity: 0.7; }
+.footer-kbd-label { opacity: 1; }
 .footer-copyright {
   font-size: 12px;
   font-family: var(--font-mono);
@@ -5076,4 +5081,69 @@ html:not(.dark) .detail-summary { color: #1a1a1a; }
   padding: 10px 16px;
   margin: 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Theme switch: all colours change in one frame (see toggleTheme in app.js). */
+html.theme-switching,
+html.theme-switching *,
+html.theme-switching *::before,
+html.theme-switching *::after { transition: none !important; }
+/* Breadcrumb and photo-credit line were 30% white in dark mode (2.6:1). */
+html.dark #detail-breadcrumb,
+html.dark #detail-breadcrumb a,
+html.dark #detail-image-credit,
+html.dark #detail-image-credit a { color: rgba(255,255,255,0.62); }
+
+/* ── Phone menu drawer ── */
+@media (max-width: 1023px) {
+  /* The floating FILTER button sat on top of the open drawer's list. */
+  body:has(#index-panel.translate-x-0) #btn-mobile-filter { display: none !important; }
+  /* Big-idea headings in the drawer list are filter buttons: 44px targets. */
+  #entry-list .entry-cat-header { min-height: 44px; display: flex; align-items: center; width: 100%; }
+}
+/* viewport-fit=cover is set, so keep the header clear of the notch / status
+   bar (landscape, and when the site is added to the home screen). */
+#primary-header {
+  padding-top: max(2px, env(safe-area-inset-top));
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+}
+
+/* ── Timeline on phones: a vertical list of years ──
+   On desktop the timeline is a row of 256px year columns, each with its own
+   scroll box. On a 375px phone that became a 7,000px sideways strip whose
+   first screen showed only "1981 · 1 SHOW". Below 768px the years stack
+   top to bottom in the normal page scroll, with the gaps as thin dividers. */
+@media (max-width: 767px) {
+  #timeline-view:not(.hidden) { overflow-x: hidden !important; overflow-y: visible !important; height: auto !important; }
+  #timeline-view .timeline-axis { display: none; }
+  #timeline-matrix { flex-direction: column; align-items: stretch !important; height: auto !important; width: 100%; }
+  #timeline-matrix > .w-64 {
+    width: 100% !important; height: auto !important;
+    border-right: 0 !important; border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 16px !important;
+  }
+  html:not(.dark) #timeline-matrix > .w-64 { border-bottom-color: rgba(0,0,0,0.1); }
+  #timeline-matrix > .w-64 > .flex-1 { overflow: visible !important; padding-right: 0 !important; }
+  #timeline-matrix > .w-64 > .flex-1 {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;
+  }
+  #timeline-matrix > .w-64 > .flex-1 > * { margin-top: 0 !important; }
+  #timeline-matrix > .w-16 {
+    width: 100% !important; height: 28px !important; opacity: 0.6 !important;
+    border-right: 0 !important; border-bottom: 1px dashed rgba(255,255,255,0.15);
+  }
+  html:not(.dark) #timeline-matrix > .w-16 { border-bottom-color: rgba(0,0,0,0.15); }
+  #timeline-matrix .timeline-gap-label { font-size: 12px !important; writing-mode: horizontal-tb !important; transform: none !important; }
+  #timeline-matrix h3 { font-size: 1.75rem; }
+  #timeline-matrix > .w-64 > div:first-child span { font-size: 12px; opacity: 0.7; }
+}
+@media (max-width: 359px) {
+  #timeline-matrix > .w-64 > .flex-1 { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767px) {
+  /* The timeline wrapper centres its row vertically for desktop; on phones
+     that left a screen of empty space above the first year. */
+  #timeline-view:not(.hidden) { display: block !important; }
+  #timeline-matrix { margin: 0 !important; justify-content: flex-start !important; }
 }
