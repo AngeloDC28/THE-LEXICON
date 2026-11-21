@@ -122,6 +122,18 @@ async function main() {
       expect(Math.abs(after - before) < 60, `desktop Back returned to ${after}, not ${before}`);
     }, { desktop: true });
 
+    await flow('a search link (as on the 404 page) filters the archive', browser, async (page) => {
+      const all = await page.evaluate(() => document.querySelectorAll('#image-grid .grid-cell').length);
+      await page.goto(BASE + '/#?q=robots', { waitUntil: 'networkidle' });
+      await page.waitForTimeout(1000);
+      const r = await page.evaluate(() => ({
+        n: document.querySelectorAll('#image-grid .grid-cell').length,
+        box: document.getElementById('search-input')?.value,
+      }));
+      expect(r.box === 'robots', `the search box shows "${r.box}", not "robots"`);
+      expect(r.n > 0 && r.n < all, `searching "robots" showed ${r.n} of ${all} shows`);
+    });
+
     await flow('menu opens on the first tap, in Grid and in Timeline', browser, async (page) => {
       const openOnce = async (where) => {
         await tap(page, '#btn-hamburger');

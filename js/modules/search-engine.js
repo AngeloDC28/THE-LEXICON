@@ -17,6 +17,56 @@ export function invalidateSearchCache() {
   searchCache.clear();
 }
 
+// ── Free-text search ────────────────────────────────────────────────────
+// Everything a reader might remember about a show: names, season, the
+// plain summary, the three notes, every hotspot note, tags and vibes. Built
+// once per entry (the archive doesn't change while the page is open) rather
+// than on every keystroke.
+const _haystacks = new WeakMap();
+const fold = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+function haystack(entry) {
+  let h = _haystacks.get(entry);
+  if (h) return h;
+  const hotspots = (entry.images || []).flatMap(im => (im?.hotspots || []).map(s => `${s.label || ''} ${s.description || ''}`));
+  const text = fold([
+    entry.id, entry.title, entry.subtitle, entry.summary_plain,
+    entry.year != null ? String(entry.year) : '', entry.season,
+    ...Object.values(entry.tags || {}), ...Object.values(entry.notes || {}),
+    ...(entry.vibes || []), ...hotspots,
+  ].filter(Boolean).join(' ').toLowerCase());
+  h = { text, compact: text.replace(/[^a-z0-9]/g, '') };
+  _haystacks.set(entry, h);
+  return h;
+}
+
+// Light stemming so a reader's word finds the archive's word: "robots" ->
+// "robot" (matches "robotic"), "dresses" -> "dress", "punks" -> "punk".
+// A stem is never shorter than 4 letters, so short words aren't mangled.
+function stems(token) {
+  const out = [token];
+  for (const suffix of ['ies', 'es', 's', 'ing', 'ed']) {
+    if (token.endsWith(suffix) && token.length - suffix.length >= 4) {
+      out.push(token.slice(0, -suffix.length) + (suffix === 'ies' ? 'y' : ''));
+    }
+  }
+  return out;
+}
+
+/** True when every word of `query` appears in the entry (any order, any
+ *  field). Accents are ignored ("garcons" finds "Garçons"), and a
+ *  spacing/punctuation-free fallback lets "mcqueen" find "McQueen". */
+export function matchesText(entry, query) {
+  const q = fold(String(query || '').toLowerCase().trim());
+  if (!q) return true;
+  const h = haystack(entry);
+  if (h.text.includes(q)) return true;
+  return q.split(/\s+/).filter(Boolean).every(tok => stems(tok).some(s => {
+    if (h.text.includes(s)) return true;
+    const c = s.replace(/[^a-z0-9]/g, '');
+    return c.length >= 3 && h.compact.includes(c);
+  }));
+}
+
 export function getFilteredEntries(archiveData) {
   const q = (AppState.searchQuery || '').toLowerCase();
   const folId = AppState.activeFolderId;
@@ -106,27 +156,7 @@ export function getFilteredEntries(archiveData) {
       if (ops.era    && !(t.era || '').toLowerCase().includes(ops.era)) return false;
       if (ops.format && !(t.format || '').toLowerCase().includes(ops.format)) return false;
       if (ops.movement && !(t.theories || '').toLowerCase().includes(ops.movement)) return false;
-      if (freeText) {
-        const searchable = [
-          entry.id || '', entry.title || '',
-          entry.year ? String(entry.year) : '',
-          entry.season || '', entry.description || '',
-          ...Object.values(t), ...Object.values(entry.notes || {}),
-          ...(entry.vibes || [])
-        ].join(' ').toLowerCase();
-        // Exact substring match first; fall back to compressed match so
-        // "mqueen" finds "McQueen", "balanciga" finds "Balenciaga", etc.
-        const exact = searchable.includes(freeText);
-        if (!exact) {
-          const compress = s => s.replace(/[^a-z0-9]/gi, '').toLowerCase();
-          const sc = compress(searchable);
-          const matched = freeText.split(/\s+/).filter(Boolean).every(tok => {
-            const tc = compress(tok);
-            return tc.length >= 2 && sc.includes(tc);
-          });
-          if (!matched) return false;
-        }
-      }
+      if (freeText && !matchesText(entry, freeText)) return false;
       return true;
     });
   }
