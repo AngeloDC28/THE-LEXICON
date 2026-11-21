@@ -20,6 +20,3 @@ export function initHeaderTypewriter(archiveData) {
   textEl.textContent = `${archiveData.length} SHOWS · ${Math.min(...years)}–${Math.max(...years)}`;
 }
 
-/** Kept for callers; the header no longer narrates actions. */
-export function updateHeaderTelemetry() {}
-export function updateTelemetry() {}

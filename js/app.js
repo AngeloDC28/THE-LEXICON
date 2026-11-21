@@ -21,7 +21,7 @@ import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from '
 // sticky-notes module reserved for future use; previous exports were dead.
 import { switchView } from './modules/navigation.js?v=267b59c';
 import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=267b59c';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=267b59c';
+import { initHeaderTypewriter } from './modules/telemetry.js?v=267b59c';
 import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=267b59c';
 import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=267b59c';
 import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=267b59c';
@@ -63,7 +63,6 @@ const callbacks = {
     const modal = $(id + '-modal');
     if (modal) { modal.classList.add('hidden'); restoreFocus(); }
   },
-  updateHeaderTelemetry: updateHeaderTelemetry,
   addRecentlyViewed: (id) => addRecentlyViewed(id, archiveData, callbacks),
   updateMetaForEntry: updateMetaForEntry,
   extractAccentColor: extractAccentColor,
@@ -425,9 +424,6 @@ function refreshChrome() {
   const relatedLabel = $('related-entries-title');
   if (relatedLabel) relatedLabel.textContent = t('related_artifacts');
 
-  // --- Mobile drawer search button ---
-  const btnSearchMobile = $('btn-search-mobile');
-  if (btnSearchMobile) btnSearchMobile.textContent = t('btn_search_mobile');
 
 
   // --- Folders View ---
@@ -1042,7 +1038,6 @@ function setupEventListeners() {
 
   $('btn-contact')?.addEventListener('click', () => openModal('contact-modal'));
   $('btn-contact-mobile')?.addEventListener('click', () => { openModal('contact-modal'); toggleHamburger(); });
-  $('btn-search-mobile')?.addEventListener('click', () => { const s = $('search-input'); if (s) { s.focus(); s.scrollIntoView({ behavior: 'smooth' }); } });
   document.querySelectorAll('[data-open-glossary]').forEach(btn => {
     btn.addEventListener('click', () => { renderGlossaryModal(); openModal('glossary-modal'); });
   });
@@ -1847,7 +1842,7 @@ function renderHero(archiveData) {
     }
 
     const titleEl = $('hero-featured-title');
-    if (titleEl && candidate.title) titleEl.innerHTML = `<em>${candidate.title}</em>`;
+    if (titleEl && candidate.title) titleEl.innerHTML = `<em>${escapeHtml(candidate.title)}</em>`;
 
     const brandEl = $('hero-featured-brand');
     if (brandEl) brandEl.textContent = `${brand} · ${seasonLong(candidate.season)} ${year}`.trim();
@@ -1969,7 +1964,7 @@ function renderEntryOfWeek(archiveData) {
     tagEl.style.borderColor = `var(--c-${cat})`;
   }
   const titleEl = $('eow-title');
-  if (titleEl) titleEl.innerHTML = pick.title ? `<em>${pick.title}</em>` : '';
+  if (titleEl) titleEl.innerHTML = pick.title ? `<em>${escapeHtml(pick.title)}</em>` : '';
   const brandEl = $('eow-brand');
   if (brandEl) brandEl.textContent = `${(pick.tags?.brand || '').toUpperCase()} · ${seasonLong(pick.season)} ${pick.year || ''}`.trim();
   const sumEl = $('eow-summary');
@@ -2677,7 +2672,9 @@ function exportFolder(folId) {
   const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(fol, null, 2));
   const a = document.createElement('a');
   a.setAttribute('href', dataStr);
-  a.setAttribute('download', `lexicon_folder_${fol.name.toLowerCase()}.json`);
+  // Folder names are free text; keep the filename valid on every system.
+  const safeName = String(fol.name || 'folder').toLowerCase().replace(/[^a-z0-9-_]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60) || 'folder';
+  a.setAttribute('download', `lexicon_folder_${safeName}.json`);
   a.click();
 }
 

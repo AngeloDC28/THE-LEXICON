@@ -95,7 +95,6 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   setupDetailControls();
 
   if (callbacks) {
-    if (callbacks.updateHeaderTelemetry) callbacks.updateHeaderTelemetry(`ACCESSING_NODE: ${entry.id.toUpperCase()}`);
     if (callbacks.addRecentlyViewed)     callbacks.addRecentlyViewed(entryId);
     if (callbacks.updateBookmarkUI)      callbacks.updateBookmarkUI(entryId);
   }
@@ -684,50 +683,6 @@ function renderMetadataGrid(entry) {
   }).join('');
 }
 
-/**
- * renderMetaRail
- * Populates the Phase 3 left metadata rail (visible at ≥1400px).
- * Shows entry ID, analytical category, and taxonomy axes at a glance
- * without requiring sidebar scroll.
- */
-function renderMetaRail(entry) {
-  const rail = $('meta-rail-body');
-  if (!rail) return;
-  const lang = AppState.language;
-  const t    = (k) => getTranslation(k, lang);
-  const cat  = getTagCategory(entry.tags?.politics || '');
-  const catLabel = categoryLabel(cat);
-  const taxRows = [
-    { key: 'brand',     label: t('tax_brand') },
-    { key: 'era',       label: t('tax_era') },
-    { key: 'politics',  label: t('tax_politics') },
-    { key: 'theories',  label: t('tax_theories') },
-    { key: 'gender',    label: t('tax_gender') },
-    { key: 'geography', label: t('tax_geography') },
-    { key: 'format',    label: t('tax_format') },
-    { key: 'materials', label: t('tax_materials') },
-    { key: 'anatomy',   label: t('tax_anatomy') },
-  ];
-
-  rail.innerHTML = `
-    <div class="meta-rail-section">
-      <div class="meta-rail-cat">${catLabel}</div>
-    </div>
-    <div class="meta-rail-section">
-      <span class="meta-rail-label">${t('tax_year_season') || 'Year / Season'}</span>
-      <div class="meta-rail-value">${entry.year || '—'} · ${entry.season || '—'}</div>
-    </div>
-    ${taxRows.map(({ key, label }) => {
-      const val = entry.tags?.[key];
-      if (!val) return '';
-      const translated = getTranslation(val, lang);
-      return `<div class="meta-rail-section">
-        <span class="meta-rail-label">${label}</span>
-        <div class="meta-rail-value">${translated}</div>
-      </div>`;
-    }).join('')}
-  `;
-}
 
 /**
  * renderSources

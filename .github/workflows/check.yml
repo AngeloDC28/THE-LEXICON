@@ -46,3 +46,32 @@ jobs:
         run: node .github/scripts/resize-images.mjs --check
       - name: Credits — every entry credited or explicitly pending
         run: node .github/scripts/check-credits.mjs
+
+  # Phone layout and interaction checks (docs/mobile-spec.md §8). Builds the
+  # pages the tests visit, serves out/ the way Vercel does and drives the
+  # Chrome that ships on GitHub's Ubuntu runners via playwright-core.
+  phone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dev dependencies (playwright-core, sharp)
+        run: npm ci --no-audit --no-fund
+      - name: Build entry and static pages, stage out/
+        run: |
+          node .github/scripts/generate-entry-pages.mjs
+          node .github/scripts/generate-static-pages.mjs
+          node .github/scripts/stage-output.mjs
+      - name: Phone layout (320 / 375 / 430px)
+        run: npm run test:mobile -- --report
+      - name: Phone and desktop interaction flows
+        run: npm run test:flows
+      - name: Keep screenshots when something fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phone-screenshots
+          path: tests/screenshots/
