@@ -3,11 +3,10 @@
   "id": "westwood-aw81",
   "title": "Vivienne Westwood AW 1981",
   "subtitle": "Pirates",
-  "summary_plain": "Vivienne Westwood's first ever catwalk show, 'Pirates', swapped punk's harsh look for billowing pirate shirts, sashes and breeches. Worn by London club kids and bands, it helped start the New Romantic style of the early 1980s.",
+  "summary_plain": "Vivienne Westwood's first catwalk show dressed models as pirates in loose shirts, sashes and wide trousers. It turned the dressing-up style of London's club kids into fashion and ended her punk era.",
   "year": 1981,
   "season": "AW",
   "published": "2026-05-18",
-  "summary_plain": "Vivienne Westwood's first catwalk show dressed models as pirates in loose shirts, sashes and wide trousers. It turned the dressing-up style of London's club kids into fashion and ended her punk era.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/westwood-aw81/westwood-aw81-01.jpg",
@@ -154,7 +153,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "David Corio / Redferns via Getty Images",
+  "image_source": {
+    "name": "Getty Images",
+    "url": "https://www.gettyimages.co.uk/detail/news-photo/vivienne-westwood-worlds-end-fashion-show-pirates-autumn-news-photo/1255034023"
+  },
   "vibes": [
     "punk royalty",
     "pirate chic",

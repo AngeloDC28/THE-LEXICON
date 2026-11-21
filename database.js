@@ -4998,7 +4998,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "David Corio / Redferns via Getty Images",
+    "image_source": {
+      "name": "Getty Images",
+      "url": "https://www.gettyimages.co.uk/detail/news-photo/vivienne-westwood-worlds-end-fashion-show-pirates-autumn-news-photo/1255034023"
+    },
     "vibes": [
       "punk royalty",
       "pirate chic",
@@ -9914,6 +9918,10 @@ export const archiveData = [
       }
     ],
     "photo_credit": "",
+    "image_source": {
+      "name": "The Impression",
+      "url": "https://theimpression.com/miu-miu-spring-2022-fashion-show-details/"
+    },
     "vibes": [
       "bimbo aesthetic",
       "micro skirt",
