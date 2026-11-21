@@ -13,6 +13,11 @@
 //    and html:not(.js) to hide the interactive app shell when JS is off.
 document.documentElement.classList.add('js');
 
+// The app restores the archive's scroll position itself when a show is
+// closed (render-detail.js restoreScroll). Left on 'auto', the browser
+// restores first, while the show is still the page, and clamps the value.
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+
 // 1. Error telemetry
 window.onerror = function(msg, url, lineNo, columnNo, error) {
   console.error('LEXICON_CORE_EXCEPTION:', msg, 'at line', lineNo, error);

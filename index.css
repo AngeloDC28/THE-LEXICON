@@ -5147,3 +5147,65 @@ html.dark #detail-image-credit a { color: rgba(255,255,255,0.62); }
   #timeline-view:not(.hidden) { display: block !important; }
   #timeline-matrix { margin: 0 !important; justify-content: flex-start !important; }
 }
+
+/* ── Phone tap targets and the show page (docs/mobile-spec.md §4.4, §5) ──
+   Every rule here is below 768px; desktop is unchanged. Found by
+   `npm run test:mobile`. */
+@media (max-width: 767px) {
+  /* Provenance / Critique / Strategy sat on top of the photo, covering the
+     look. On phones the toolbar's NOTES button opens the same three notes,
+     so the squares are not shown (docs/mobile-spec.md §4.4). */
+  #sticky-squares { display: none !important; }
+
+  /* Sixteen 10px dots can't be tapped accurately. The arrows and swiping
+     change looks; the counter says where you are. */
+  #image-counter .img-dot { display: none; }
+  #image-counter .img-count { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85; }
+  #btn-viewer-prev, #btn-viewer-next { min-width: 44px; justify-content: center; }
+
+  /* Small links in the credit line and breadcrumb: full-height tap rows. */
+  #detail-image-credit a,
+  #detail-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }
+
+  /* Cookie notice buttons (a later rule had put them back to 30px). */
+  #cookie-banner .cookie-btn,
+  #cookie-banner .cookie-link { min-height: 44px !important; }
+
+  /* Featured-show dots: a 44px tap area around the 6px dot. */
+  .hero-dot { width: 44px !important; height: 44px !important; min-width: 44px !important; border: 0 !important; background: transparent !important; }
+  .hero-dot::before { content: ''; position: absolute; inset: 19px; border: 1px solid #8a7a70; background: transparent; }
+  .hero-dot.active::before { background: #8a7a70; }
+  .hero-dots { gap: 0 !important; }
+
+  #btn-hide-featured { min-height: 44px; }
+  #btn-toggle-grid { min-width: 44px; justify-content: center; }
+}
+/* Stat labels were 11px at phone widths; 12px is the site's floor. */
+.hero-stat .hs-lbl { font-size: max(12px, clamp(0.6875rem, 0.55rem + 0.5vw, 0.75rem)); }
+
+/* ── M1: on phones the page scrolls, not a box inside it ──
+   Desktop keeps its fixed two-pane layout (sidebar + scrolling image panel).
+   Below 768px the whole document scrolls, so Safari's address bar collapses,
+   tapping the status bar scrolls to the top, and nothing sits trapped under
+   the fixed toolbar. The show page joins the normal flow instead of being an
+   overlay, and the views behind it are hidden while it is open. JS uses
+   pageScroller() (core-utils.js) to save and restore the right scroll. */
+@media (max-width: 767px) {
+  html, body { height: auto; min-height: 100%; overflow-x: hidden; overflow-y: visible; display: block; }
+  #app-root, #app-root > .main-shell, #image-panel { display: block; overflow: visible !important; height: auto; min-height: 0; flex: none; }
+  #primary-header { position: sticky; top: 0; z-index: 1000; }
+
+  #app-root.detail-mode-active #grid-view,
+  #app-root.detail-mode-active #timeline-view,
+  #app-root.detail-mode-active #index-table-view,
+  #app-root.detail-mode-active #folders-view,
+  #app-root.detail-mode-active #view-controls-bar { display: none !important; }
+
+  #app-root.detail-mode-active #detail-image-view {
+    position: relative; inset: auto; height: auto !important; min-height: calc(100dvh - 62px);
+  }
+  #app-root.detail-mode-active #detail-desktop-stack { flex: none; }
+  /* The photo gets most of the screen, not all of it, so the title above and
+     the counter below stay in view. */
+  #app-root.detail-mode-active #detail-image { max-height: 72dvh !important; }
+}

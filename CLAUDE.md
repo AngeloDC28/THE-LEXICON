@@ -15,7 +15,7 @@ annotated for forensic visual / cultural analysis. Each entry has:
 - a **tags** object across 9 taxonomy axes (brand, era, politics, theories,
   gender, materials, geography, anatomy, format)
 
-Hosted on GitHub Pages. Vanilla ES modules + Tailwind via CDN. No build
+Hosted on Vercel (out/ staged by .github/scripts/stage-output.mjs). Vanilla ES modules + a prebuilt Tailwind CSS file. No build
 step required for runtime — the browser loads the JS directly. Built
 artifacts are committed (see below) so deploys are zero-config.
 

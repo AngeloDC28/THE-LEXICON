@@ -52,3 +52,6 @@ yarn-error.log*
 # Temp scratch files
 *.tmp
 .commit-msg.tmp
+
+# npm run test:mobile output
+tests/screenshots/

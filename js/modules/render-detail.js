@@ -2,14 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong } from './core-utils.js?v=eb25565';
-import { AppState, updateHash } from './core-state.js?v=eb25565';
-import { getFilteredEntries } from './search-engine.js?v=eb25565';
-import { getTranslation } from './translations.js?v=eb25565';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=eb25565';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=eb25565';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=eb25565';
-import { safeCover } from './categories.js?v=eb25565';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=267b59c';
+import { AppState, updateHash } from './core-state.js?v=267b59c';
+import { getFilteredEntries } from './search-engine.js?v=267b59c';
+import { getTranslation } from './translations.js?v=267b59c';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=267b59c';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=267b59c';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=267b59c';
+import { safeCover } from './categories.js?v=267b59c';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -53,9 +53,10 @@ export function openDetail(entryId, imgIdx, archiveData, callbacks) {
   // Store reference so renderSidebarHeader can build position counter
   AppState._archiveData = archiveData;
 
-  // Save grid scroll position for restoration on close
-  const imagePanel = $('image-panel');
-  if (imagePanel) _savedGridScrollTop = imagePanel.scrollTop;
+  // Save the archive's scroll position for restoration on close — only when
+  // coming from the archive. Paging from one show to the next must not
+  // overwrite it (on phones the page scroller is also the show's scroller).
+  if (!$('app-root')?.classList.contains('detail-mode-active')) _savedGridScrollTop = pageScroller().scrollTop;
 
   // Detect same-entry navigation (image paging) vs. new entry — for URL strategy
   const _previousEntryId = AppState.selectedEntryId;
@@ -210,14 +211,31 @@ export function closeDetail(callbacks, archiveData) {
     if (appRoot) appRoot.classList.remove('detail-mode-active');
     setArchiveInert(false);
     updateStatusBar(archiveData);
-    // Restore grid scroll position
-    const imagePanel = $('image-panel');
-    if (imagePanel && _savedGridScrollTop > 0) {
-      requestAnimationFrame(() => {
-        imagePanel.scrollTop = _savedGridScrollTop;
-      });
-    }
+    restoreScroll(_savedGridScrollTop);
   });
+}
+
+// Put the archive back where the reader left it (page on phones, panel on
+// desktop). The grid can be re-rendered on Back, and until its images lay
+// out the page is briefly too short, so a single assignment gets clamped
+// (2,400px came back as 766px). Keep re-applying for up to ~1s until it
+// sticks or the reader scrolls themselves.
+function restoreScroll(target) {
+  if (!(target > 0)) return;
+  let frames = 0;
+  let userScrolled = false;
+  const onUser = () => { userScrolled = true; };
+  window.addEventListener('touchstart', onUser, { once: true, passive: true });
+  window.addEventListener('wheel', onUser, { once: true, passive: true });
+  const step = () => {
+    if (userScrolled) return;
+    const scroller = pageScroller();
+    // 'instant': the page has scroll-behavior: smooth, which would animate
+    // the reader all the way down from the top instead of putting them back.
+    scroller.scrollTo({ top: target, behavior: 'instant' });
+    if (Math.abs(scroller.scrollTop - target) > 2 && ++frames < 60) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
 
 export function navigateEntry(direction, archiveData, callbacks, entryOnly = false) {
@@ -320,7 +338,7 @@ function renderBreadcrumb(entry) {
   const tagCat = categoryPlain(cat).toUpperCase();
   // Season alone ("SS") isn't an identifier — the breadcrumb used to read
   // "ALEXANDER MCQUEEN / SS" with no year.
-  const season = [entry.season, entry.year].filter(Boolean).join(' ');
+  const season = [seasonName(entry.season), entry.year].filter(Boolean).join(' ');
   const sep = `<span class="mx-1 opacity-30">/</span>`;
   crumb.innerHTML =
     `<a href="#" class="hover:text-white/60 transition-colors focus-ring" data-crumb-back aria-label="Back to all shows">ALL SHOWS</a>`

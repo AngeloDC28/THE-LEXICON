@@ -29,9 +29,27 @@ const missing = order.filter(l => !filesInDir.has(l));
 if (orphan.length)  throw new Error('language files not in _order.json: ' + orphan.join(', '));
 if (missing.length) throw new Error('langs in _order.json with no file: ' + missing.join(', '));
 
-const translations = {};
+const source = {};
 for (const lang of order) {
-  translations[lang] = JSON.parse(readFileSync(join(DIR, lang + '.json'), 'utf8'));
+  source[lang] = JSON.parse(readFileSync(join(DIR, lang + '.json'), 'utf8'));
+}
+
+// Ship only entries that change something. Editorial text is looked up by
+// its own English wording, so en.json holds ~3,300 identity pairs
+// ("text": "text") — 1.8 MB that getTranslation() already returns via its
+// `|| key` fallback. A language's identity pair is kept only where English
+// says something different, so it still overrides the English value.
+const en = source.en || {};
+const translations = {};
+let dropped = 0;
+for (const lang of order) {
+  translations[lang] = {};
+  for (const [key, value] of Object.entries(source[lang])) {
+    const identity = value === key;
+    const englishDiffers = lang !== 'en' && en[key] !== undefined && en[key] !== key;
+    if (identity && !englishDiffers) { dropped++; continue; }
+    translations[lang][key] = value;
+  }
 }
 
 const banner = `/**
@@ -42,11 +60,14 @@ const banner = `/**
 `;
 
 const body = banner +
-  'export const translations = ' + JSON.stringify(translations, null, 2) + ';\n\n' +
+  // One language per line: compact, but diffs stay readable per language.
+  'export const translations = {\n' +
+  Object.entries(translations).map(([lang, map]) => `  ${JSON.stringify(lang)}: ${JSON.stringify(map)}`).join(',\n') +
+  '\n};\n\n' +
   'export const supportedLanguages = Object.keys(translations);\n\n' +
   'export function getTranslation(key, lang = \'en\') {\n' +
   '  return translations[lang]?.[key] || translations[\'en\'][key] || key;\n' +
   '}\n';
 
 writeFileSync(OUT, body, 'utf8');
-console.log(`Wrote ${OUT} (${order.length} languages)`);
+console.log(`Wrote ${OUT} (${order.length} languages, ${dropped} identity entries left to the key fallback)`);

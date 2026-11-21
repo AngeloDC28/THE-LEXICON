@@ -3,10 +3,10 @@
  * Nexus connections panel with force-directed graph and list views.
  */
 
-import { $, resolveImgSrc, BROKEN_ASSET, shortBrand } from './core-utils.js?v=eb25565';
-import { AppState } from './core-state.js?v=eb25565';
-import { getTranslation } from './translations.js?v=eb25565';
-import { safeCover } from './categories.js?v=eb25565';
+import { $, resolveImgSrc, BROKEN_ASSET, shortBrand } from './core-utils.js?v=267b59c';
+import { AppState } from './core-state.js?v=267b59c';
+import { getTranslation } from './translations.js?v=267b59c';
+import { safeCover } from './categories.js?v=267b59c';
 
 // Track active simulation cleanup across re-opens
 let _cancelSim = null;

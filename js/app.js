@@ -10,26 +10,26 @@
 let archiveData = [];
 
 const FOCUSABLE_SELECTORS = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
-import { imageDimensions } from './modules/image-dimensions.js?v=eb25565';
-import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand } from './modules/core-utils.js?v=eb25565';
+import { imageDimensions } from './modules/image-dimensions.js?v=267b59c';
+import { $, $$, debounce, initCustomCursor, showToast, resolveImgSrc, setImageDimensions, webpSrc, thumbSrc, escapeHtml, excerpt, entrySummary, seasonLong, shortBrand, pageScroller } from './modules/core-utils.js?v=267b59c';
 setImageDimensions(imageDimensions);
-import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=eb25565';
-import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=eb25565';
-import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=eb25565';
-import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=eb25565';
-import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=eb25565';
+import { AppState, emptyFilters, FILTER_KEYS } from './modules/core-state.js?v=267b59c';
+import { renderTaxonomyGrid, renderTaxonomySub, getFilteredEntries, setActiveTaxonomy, invalidateSearchCache } from './modules/search-engine.js?v=267b59c';
+import { renderImageGrid, renderEntryList, renderFeaturedStrip } from './modules/render-grid.js?v=267b59c';
+import { openDetail, closeDetail, navigateEntry, updateStatusBar } from './modules/render-detail.js?v=267b59c';
+import { initHotspotInteractions, cleanupHotspots, toggleMobileHotspots } from './modules/hotspots.js?v=267b59c';
 // sticky-notes module reserved for future use; previous exports were dead.
-import { switchView } from './modules/navigation.js?v=eb25565';
-import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=eb25565';
-import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=eb25565';
-import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=eb25565';
-import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=eb25565';
-import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=eb25565';
-import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=eb25565';
-import { getTranslation, supportedLanguages } from './modules/translations.js?v=eb25565';
-import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=eb25565';
-import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=eb25565';
-import { renderGlossaryModal } from './modules/glossary.js?v=eb25565';
+import { switchView } from './modules/navigation.js?v=267b59c';
+import { openConnectionMatrix, closeConnectionMatrix } from './modules/connection-matrix.js?v=267b59c';
+import { initHeaderTypewriter, updateHeaderTelemetry } from './modules/telemetry.js?v=267b59c';
+import { initAuth, toggleAuth, sendSignInLink, signOut, createArchivalFolder, saveToFolder, deleteAccount, currentUser, fetchArchivalFolders, requireAuth } from './modules/auth.js?v=267b59c';
+import { addRecentlyViewed, toggleBookmark, isBookmarked, getBookmarks, getSavedSearches, saveSearch, deleteSavedSearch } from './modules/storage.js?v=267b59c';
+import { toggleCmdPalette, handleCmdKeydown, renderCmdResults } from './modules/command-palette.js?v=267b59c';
+import { renderTimeline, renderFilterChips, updateMetaForEntry, resetMeta, extractAccentColor } from './modules/ui-extras.js?v=267b59c';
+import { getTranslation, supportedLanguages } from './modules/translations.js?v=267b59c';
+import { translate as domTranslate, restoreAll as domRestore, ALL_LANGS, GOOGLE_LANG } from './modules/dom-translator.js?v=267b59c';
+import { renderIndexView, setViewMode, getViewMode, applyViewMode, indexNavigateRow, indexActivateRow, getTagCategory, categoryLabel, categoryPlain, CATEGORY_PLAIN } from './modules/render-index-view.js?v=267b59c';
+import { renderGlossaryModal } from './modules/glossary.js?v=267b59c';
 
 const INTRO_DISMISSED_KEY = 'lexicon-intro-dismissed-v2';
 
@@ -79,7 +79,7 @@ const callbacks = {
  * email + folders (data minimisation), never entry content.
  */
 async function loadArchiveData() {
-  const { archiveData: staticData } = await import('../database.js?v=eb25565');
+  const { archiveData: staticData } = await import('../database.js?v=267b59c');
   archiveData = staticData;
   console.log(`[LEXICON] Loaded ${archiveData.length} entries from database.js.`);
 }
@@ -1195,8 +1195,7 @@ function setupEventListeners() {
     try { localStorage.setItem(INTRO_DISMISSED_KEY, 'true'); } catch(e) {}
     // Scroll the right panel back to the top so the grid is immediately visible
     // after all the landing sections collapse (user may have scrolled down).
-    const imagePanel = $('image-panel');
-    if (imagePanel) imagePanel.scrollTop = 0;
+    pageScroller().scrollTop = 0;
     // Move focus into the archive so keyboard users land somewhere meaningful.
     requestAnimationFrame(() => {
       const firstCell = document.querySelector('#image-grid .grid-cell');

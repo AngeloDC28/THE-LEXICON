@@ -49,6 +49,17 @@ export function withViewTransition(updateDOM) {
   }
 }
 
+/**
+ * The element that scrolls the archive. On phones (below 768px) the whole
+ * page scrolls (index.css "M1"); on wider screens the image panel does.
+ * Save and restore scroll positions through this, never a fixed element.
+ */
+export function pageScroller() {
+  return window.matchMedia('(max-width: 767px)').matches
+    ? (document.scrollingElement || document.documentElement)
+    : (document.getElementById('image-panel') || document.scrollingElement);
+}
+
 // Valid fallback SVG — dark panel with centered ERROR_404 text
 export const BROKEN_ASSET = `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgMzAwIDQwMCI+PHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiMxMTEiLz48dGV4dCB4PSIxNTAiIHk9IjIwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzU1NSI+RVJST1JfNDA0PC90ZXh0Pjwvc3ZnPg==`;
 
