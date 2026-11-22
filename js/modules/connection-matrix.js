@@ -3,10 +3,10 @@
  * Nexus connections panel with force-directed graph and list views.
  */
 
-import { $, resolveImgSrc, BROKEN_ASSET } from './core-utils.js?v=9291973';
-import { AppState } from './core-state.js?v=9291973';
-import { getTranslation } from './translations.js?v=9291973';
-import { safeCover } from './categories.js?v=9291973';
+import { $, resolveImgSrc, BROKEN_ASSET, shortBrand, escapeHtml } from './core-utils.js?v=a1a9c0f';
+import { AppState } from './core-state.js?v=a1a9c0f';
+import { getTranslation } from './translations.js?v=a1a9c0f';
+import { safeCover } from './categories.js?v=a1a9c0f';
 
 // Track active simulation cleanup across re-opens
 let _cancelSim = null;
@@ -192,7 +192,7 @@ function renderGraph(entry, connections, callbacks, container) {
     label.setAttribute('font-size', '7');
     label.setAttribute('font-family', 'ui-monospace,monospace');
     label.setAttribute('pointer-events', 'none');
-    label.textContent = node.brand.slice(0, 14);
+    label.textContent = shortBrand(node.brand);
     g.appendChild(label);
 
     if (!node.isCurrent) {
@@ -462,8 +462,8 @@ function renderList(entry, connections, callbacks, container) {
 
   let html = `<div class="matrix-center">
     <p class="t-mono-xs uppercase tracking-[0.2em] opacity-40 mb-2">${t('nexus_viewing')}</p>
-    <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${entry.tags.brand}</p>
-    <p class="text-xs font-mono uppercase opacity-60 mt-1">${entry.year} &middot; ${entry.season}</p>
+    <p class="text-base md:text-lg font-bold font-mono uppercase tracking-[0.1em]">${escapeHtml(entry.tags.brand)}</p>
+    <p class="text-xs font-mono uppercase opacity-60 mt-1">${escapeHtml(entry.year)} &middot; ${escapeHtml(entry.season)}</p>
     <div class="mt-3">
       ${Object.entries(entry.tags).map(([, v]) => v ? `<span class="matrix-tag">${t(v)}</span>` : '').join('')}
     </div>
@@ -481,7 +481,7 @@ function renderList(entry, connections, callbacks, container) {
         const label = `${rel.tags.brand || ''} ${rel.year || ''}`;
         html += `<button type="button" class="matrix-entry focus-ring" data-matrix-entry-id="${rel.id}" aria-label="Open ${label}">
           <img src="${thumbSrc}" alt="" class="matrix-entry-thumb" loading="lazy" />
-          <p class="t-mono-xs font-bold font-mono uppercase tracking-wide">${rel.tags.brand}</p>
+          <p class="t-mono-xs font-bold font-mono uppercase tracking-wide">${escapeHtml(rel.tags.brand)}</p>
           <p class="t-mono-xs font-mono uppercase opacity-50 mt-0.5">${rel.year}</p>
         </button>`;
       });

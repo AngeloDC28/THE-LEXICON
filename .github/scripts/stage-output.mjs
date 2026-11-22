@@ -26,18 +26,18 @@ const ROOT = fileURLToPath(new URL('../../', import.meta.url));
 const OUT  = join(ROOT, 'out');
 
 const FILES = [
-  'index.html', '404.html', '404.css', 'index.css', 'database.js',
+  'index.html', '404.html', '404.css', 'pages.css', 'index.css', 'database.js',
   'favicon.svg', 'site.webmanifest', 'sw.js',
   'robots.txt', 'sitemap.xml', 'sitemap-index.xml', 'feed.xml',
   'public/tailwind.css',
 ];
 // Only the archive's own images from public/: public/data (unreferenced
 // source images, ~90MB) and stray files there are not part of the site.
-const DIRS = ['js', 'public/THE-LEXICON-ASSETS', 'entry', '.well-known'];
+const DIRS = ['js', 'public/THE-LEXICON-ASSETS', 'entry', 'about', 'glossary', 'privacy', 'terms', '.well-known'];
 
 // Required for the site to work at all — fail the build rather than ship a
 // deploy that is missing one.
-const REQUIRED = ['index.html', '404.html', 'index.css', 'database.js', 'js', 'public/tailwind.css', 'public/THE-LEXICON-ASSETS', 'entry'];
+const REQUIRED = ['index.html', '404.html', 'index.css', 'database.js', 'js', 'public/tailwind.css', 'public/THE-LEXICON-ASSETS', 'entry', 'about', 'glossary', 'privacy', 'terms'];
 
 rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });

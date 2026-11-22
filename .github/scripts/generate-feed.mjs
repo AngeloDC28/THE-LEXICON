@@ -13,7 +13,6 @@
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { safeCover } from '../../js/modules/categories.js';
 
 const ROOT    = fileURLToPath(new URL('../../', import.meta.url));
 const ENTRIES = join(ROOT, 'content', 'entries');
@@ -36,11 +35,11 @@ const items = order.map(id => {
   catch { return null; }
 
   const title   = entry.title || `${entry.brand || id} ${entry.season || ''} ${entry.year || ''}`.trim();
-  const url     = `${BASE}/entry/${id}/0`;
-  const img     = safeCover(entry)?.src
-    ? `${BASE}/public/${safeCover(entry).src}`
-    : null;
-  const desc    = entry.subtitle
+  const url     = `${BASE}/entry/${id}`;
+  const cover   = (entry.images || []).find(im => !im.content_note);
+  const img     = cover?.src ? `${BASE}/public/${cover.src}` : null;
+  const desc    = entry.summary_plain
+    || entry.subtitle
     || entry.notes?.critique?.slice(0, 200)
     || `Forensic visual analysis of ${title}.`;
   const imgTag  = img ? `<enclosure url="${esc(img)}" type="image/jpeg" length="0"/>` : '';

@@ -6,6 +6,7 @@
   "year": 2022,
   "season": "AW",
   "published": "2026-05-21",
+  "summary_plain": "Jonathan Anderson showed huge, oddly shaped knits and clothes that seem to sit in the wrong place on the body. It played with what we expect clothes to look like, and his pieces spread fast online.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/anderson-aw22/anderson-aw22-01.jpg",
@@ -25,7 +26,7 @@
           "x": 55,
           "y": 60,
           "label": "Guerrilla Ad-Truck: 'Carrie' Jacket Look",
-          "description": "A separate billboard truck, photographed at night beside passing traffic, carries a close-cropped image of a model in a black jacket collaged with fragments of found photography and a hand-scrawled slogan reading 'TAKE CARRIE TO THE...'; she holds a small round clutch bag stencilled with the word 'CARRIE' in red block letters, her hair styled into a loose strawberry-blonde perm. The collaged, tabloid-clipping surface of the jacket and the deliberately campy, B-movie reference in the text align the campaign with camp's affection for degraded, low-culture image sources, continuing the collection's interest in surrealist domesticity and mass-produced glamour."
+          "description": "A separate billboard truck, photographed at night beside passing traffic, carries a close-cropped image of a model in a black jacket collaged with fragments of found photography and a hand-scrawled slogan reading 'TAKE CARRIE TO THE...'. She holds a small round clutch bag stencilled with the word 'CARRIE' in red block letters, her hair styled into a loose strawberry-blonde perm. The collaged, tabloid-clipping surface of the jacket and the deliberately campy, B-movie reference in the text align the campaign with camp's affection for degraded, low-culture image sources, continuing the collection's interest in surrealist domesticity and mass-produced glamour."
         }
       ]
     },
@@ -36,7 +37,7 @@
           "x": 50,
           "y": 35,
           "label": "Tinsel-Fringed Crop Top",
-          "description": "The tinsel-fringed crop top covers the upper torso in a highly textured pink synthetic yarn; it features a high funnel neckline and elongated dolman sleeves that taper to the wrist. This material application utilizes the semiotic sabotage of the party decoration by transforming a cheap festive tinsel texture into a dense architectural knit shell. The fuzzy fibre creates a chaotic visual noise that absorbs studio light unevenly; the cropped hem exposes the midriff above a matching skirt. The garment asserts a posture of calculated post-pandemic absurdity, dressing the body in what reads as party streamers rather than couture yarn."
+          "description": "The tinsel-fringed crop top covers the upper torso in a highly textured pink synthetic yarn. It features a high funnel neckline and elongated dolman sleeves that taper to the wrist. This material application utilizes the semiotic sabotage of the party decoration by transforming a cheap festive tinsel texture into a dense architectural knit shell. The fuzzy fibre creates a chaotic visual noise that absorbs studio light unevenly. The cropped hem exposes the midriff above a matching skirt. The garment asserts a posture of calculated post-pandemic absurdity, dressing the body in what reads as party streamers rather than couture yarn."
         },
         {
           "x": 50,
@@ -53,7 +54,7 @@
           "x": 50,
           "y": 30,
           "label": "Inflatable Tube Bandeau",
-          "description": "The inflatable tube bandeau acts as a rigid horizontal barrier across the chest, constructed from thick black patent tubes stacked like a segmented rib cage or a party balloon column; it sits away from the body on its own internal structure rather than following the natural curve of the bust. This replaces a traditional bodice with an object borrowed from cheap party decoration, engaging directly with corporeal distortion through trapped, alien componentry. The glossy black surface catches the studio lighting sharply, asserting an uncomfortable, deliberately non-anatomical upper architecture."
+          "description": "The inflatable tube bandeau acts as a rigid horizontal barrier across the chest, constructed from thick black patent tubes stacked like a segmented rib cage or a party balloon column. It sits away from the body on its own internal structure rather than following the natural curve of the bust. This replaces a traditional bodice with an object borrowed from cheap party decoration, engaging directly with corporeal distortion through trapped, alien componentry. The glossy black surface catches the studio lighting sharply, asserting an uncomfortable, deliberately non-anatomical upper architecture."
         },
         {
           "x": 50,
@@ -98,13 +99,13 @@
           "x": 50,
           "y": 35,
           "label": "Glossy Blue Leather Biker Jacket",
-          "description": "The glossy blue leather biker jacket structures the upper body in a highly reflective bright hide, its multiple zippered pockets and cropped moto cut worn open over a plain black bandeau top. This outerwear choice applies the subversion of the mundane by rendering a basic biker jacket in a blinding, almost synthetic pop-art blue. The stiff leather holds sharp creases at the elbows as both arms raise overhead; the saturated colour contrasts violently with the white trousers below. The jacket asserts an imposing, highly visible upper carapace over an otherwise soft silhouette."
+          "description": "The glossy blue leather biker jacket structures the upper body in a highly reflective bright hide, its multiple zippered pockets and cropped moto cut worn open over a plain black bandeau top. This outerwear choice applies the subversion of the mundane by rendering a basic biker jacket in a blinding, almost synthetic pop-art blue. The stiff leather holds sharp creases at the elbows as both arms raise overhead. The saturated colour contrasts violently with the white trousers below. The jacket asserts an imposing, highly visible upper carapace over an otherwise soft silhouette."
         },
         {
           "x": 50,
           "y": 70,
           "label": "Balloon-Studded White Trousers",
-          "description": "The balloon-studded white trousers drop from the waist in a wide gathered volume, entirely covered edge to edge in hundreds of soft white latex balloon-like petals stitched on as texture. This material extreme engages directly with corporeal distortion via trapped componentry, appending cheap party debris to the legs as if it were embroidery; the dense rubbery texture obscures the trousers' actual cut entirely, bunching awkwardly above silver mule heels. The garment completes the silhouette by carrying the collection's balloon motif from printed surface into literal three-dimensional object."
+          "description": "The balloon-studded white trousers drop from the waist in a wide gathered volume, entirely covered edge to edge in hundreds of soft white latex balloon-like petals stitched on as texture. This material extreme engages directly with corporeal distortion via trapped componentry, appending cheap party debris to the legs as if it were embroidery. The dense rubbery texture obscures the trousers' actual cut entirely, bunching awkwardly above silver mule heels. The garment completes the silhouette by carrying the collection's balloon motif from printed surface into literal three-dimensional object."
         }
       ]
     },
@@ -126,7 +127,7 @@
           "x": 50,
           "y": 55,
           "label": "Guerrilla Ad-Truck: Red Tracksuit Look",
-          "description": "The billboard truck's night-lit panel shows a model in a red tracksuit printed with the same anime-character graphic seen elsewhere in the campaign, one fist raised theatrically, a small clutch bag shaped like a cassette player swinging from her wrist; the oversized black curly wig repeats across multiple looks in the campaign, functioning as a unifying costume element rather than an individual styling choice. The hand-lettered 'JWA JT' tag repeating along the base of the truck reads as both graffiti signature and brand mark, blurring authorship between street tagging and official campaign design."
+          "description": "The billboard truck's night-lit panel shows a model in a red tracksuit printed with the same anime-character graphic seen elsewhere in the campaign, one fist raised theatrically, a small clutch bag shaped like a cassette player swinging from her wrist. The oversized black curly wig repeats across multiple looks in the campaign, functioning as a unifying costume element rather than an individual styling choice. The hand-lettered 'JWA JT' tag repeating along the base of the truck reads as both graffiti signature and brand mark, blurring authorship between street tagging and official campaign design."
         }
       ]
     },
@@ -137,7 +138,7 @@
           "x": 40,
           "y": 55,
           "label": "Guerrilla Ad-Truck: Black Gown Look",
-          "description": "Here the truck's billboard panel shows a model in a black one-shoulder gown, her curled dark wig loose across bare shoulders as she reaches one hand down toward the ground in a deliberately awkward, unglamorous pose; a small graphic logo is visible printed low on the skirt. Photographed against a plain grey studio backdrop and then blown up to the scale of a delivery truck, the image's original intimacy is destroyed by the sheer scale of the reproduction — the billboard format itself becomes the primary formal event, dwarfing the garment it depicts."
+          "description": "Here the truck's billboard panel shows a model in a black one-shoulder gown, her curled dark wig loose across bare shoulders as she reaches one hand down toward the ground in a deliberately awkward, unglamorous pose. A small graphic logo is visible printed low on the skirt. Photographed against a plain grey studio backdrop and then blown up to the scale of a delivery truck, the image's original intimacy is destroyed by the sheer scale of the reproduction — the billboard format itself becomes the primary formal event, dwarfing the garment it depicts."
         }
       ]
     }
@@ -172,7 +173,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "© Juergen Teller, All Rights Reserved 2022",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/j-w-anderson"
+  },
   "vibes": [
     "surreal objects",
     "gender bending",

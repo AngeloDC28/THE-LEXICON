@@ -6,6 +6,7 @@
   "year": 1999,
   "season": "AW",
   "published": "2026-05-12",
+  "summary_plain": "One model stood on a turning platform while the designers put nine outfits on her, one over another, like a Russian doll. It turned dressing itself into the show.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/viktor-rolf-aw99/viktor-rolf-aw99-01.jpg",
@@ -14,7 +15,7 @@
           "x": 50,
           "y": 45,
           "label": "Frayed Hessian Minidress",
-          "description": "The frayed hessian minidress provides the foundational layer of the entire performance; it covers the torso in a raw scratchy jute textile. This material selection engages with institutional critique by presenting the cheapest agricultural sackcloth as the literal baseline of haute couture. The edges are violently frayed at the neckline and hem to emphasize the unrefined nature of the textile. This garment asserts a brutal material honesty before the subsequent accumulation of luxury layers."
+          "description": "The frayed hessian minidress provides the foundational layer of the entire performance. It covers the torso in a raw scratchy jute textile. This material selection engages with institutional critique by presenting the cheapest agricultural sackcloth as the literal baseline of haute couture. The edges are violently frayed at the neckline and hem to emphasize the unrefined nature of the textile. This garment asserts a brutal material honesty before the subsequent accumulation of luxury layers."
         }
       ]
     },
@@ -25,7 +26,7 @@
           "x": 50,
           "y": 55,
           "label": "Crystal-Embellished A-Line Dress",
-          "description": "The crystal-embellished A-line dress envelopes the body in a dense matrix of reflective diamante and metallic sequins; it completely obscures the rough hessian underlayer. This material application utilizes haptic visuality to sharply contrast the scratchy jute with cold hard luxury embellishments. The heavy fabric falls rigidly from the high shoulders to the knee. The garment refuses soft fluidity to assert an armor of overwhelming opulent weight."
+          "description": "The crystal-embellished A-line dress envelopes the body in a dense matrix of reflective diamante and metallic sequins. It completely obscures the rough hessian underlayer. This material application utilizes haptic visuality to sharply contrast the scratchy jute with cold hard luxury embellishments. The heavy fabric falls rigidly from the high shoulders to the knee. The garment refuses soft fluidity to assert an armor of overwhelming opulent weight."
         }
       ]
     },
@@ -36,7 +37,7 @@
           "x": 50,
           "y": 50,
           "label": "Couture Embellished Sackcloth Coat",
-          "description": "The couture embellished sackcloth coat fuses the raw jute of the foundational layer with intricate beadwork and heavy embroidery; it introduces intense material tension to the silhouette. This hybrid construction applies postmodernism by collapsing the binary between \"low\" agricultural textiles and \"high\" Parisian craft. The stiff fabric is tailored with structured shoulders and a flared skirt. The piece asserts that the process of couture can elevate even the most banal materials into objects of intense luxury."
+          "description": "The couture embellished sackcloth coat fuses the raw jute of the foundational layer with intricate beadwork and heavy embroidery. It introduces intense material tension to the silhouette. This hybrid construction applies postmodernism by collapsing the binary between \"low\" agricultural textiles and \"high\" Parisian craft. The stiff fabric is tailored with structured shoulders and a flared skirt. The piece asserts that the process of couture can elevate even the most banal materials into objects of intense luxury."
         }
       ]
     },
@@ -47,7 +48,7 @@
           "x": 50,
           "y": 50,
           "label": "Sequined Floral Brocade Overcoat",
-          "description": "The sequined floral brocade overcoat adds another massive layer of volume over the preceding garments; it features a bright yellow and purple pastel pattern heavily encrusted with reflective media. This structural logic utilizes sequential layering to physically expand the model's footprint on the pedestal. The oversized sleeves are pushed up to reveal the cuffs of the layers beneath; the front hangs open to expose the complex puzzle of the accumulated clothing. The outerwear asserts the visual fatigue of relentless overproduction."
+          "description": "The sequined floral brocade overcoat adds another massive layer of volume over the preceding garments. It features a bright yellow and purple pastel pattern heavily encrusted with reflective media. This structural logic utilizes sequential layering to physically expand the model's footprint on the pedestal. The oversized sleeves are pushed up to reveal the cuffs of the layers beneath. The front hangs open to expose the complex puzzle of the accumulated clothing. The outerwear asserts the visual fatigue of relentless overproduction."
         }
       ]
     },
@@ -58,13 +59,13 @@
           "x": 50,
           "y": 50,
           "label": "Heavy Lace Applique Overcoat",
-          "description": "The heavy lace applique overcoat wraps the accumulating silhouette in a dense floral textile; it is heavily embellished with dark metallic beading along the hemline. This material addition engages with the sedimentation of fashion by literally piling historical decorative techniques on top of one another. The wide sleeves bunch heavily around the wrists; the thick collar stands rigid against the neck. The garment refuses lightweight mobility to complete the physical encasement of the wearer."
+          "description": "The heavy lace applique overcoat wraps the accumulating silhouette in a dense floral textile. It is heavily embellished with dark metallic beading along the hemline. This material addition engages with the sedimentation of fashion by literally piling historical decorative techniques on top of one another. The wide sleeves bunch heavily around the wrists. The thick collar stands rigid against the neck. The garment refuses lightweight mobility to complete the physical encasement of the wearer."
         },
         {
           "x": 45,
           "y": 50,
           "label": "Intricate Beaded Glove Accessory",
-          "description": "The intricate beaded glove accessory extends the heavy embellishment directly onto the model's hand; it features a dense cluster of multi-colored crystals and jewels. This styling choice invokes the sheer excess of haute couture detailing. The heavy gems drip from the fingers like a physical manifestation of wealth. The accessory completes the look by ensuring no part of the anatomy remains untouched by the opulent accumulation."
+          "description": "The intricate beaded glove accessory extends the heavy embellishment directly onto the model's hand. It features a dense cluster of multi-colored crystals and jewels. This styling choice invokes the sheer excess of haute couture detailing. The heavy gems drip from the fingers like a physical manifestation of wealth. The accessory completes the look by ensuring no part of the anatomy remains untouched by the opulent accumulation."
         }
       ]
     },
@@ -75,7 +76,7 @@
           "x": 50,
           "y": 50,
           "label": "Towering Crystal-Encrusted Carapace",
-          "description": "The towering crystal-encrusted carapace raises the shoulder line drastically above the model's head; it consumes her entire upper body in a massive reflective pyramid. This structural extreme applies monolithic massing to parody the ludicrous inaccessibility of haute couture. The stiff fabric is covered entirely in silver sequins and diamante; it leaves only a small opening for the face. The garment asserts a final suffocating layer that transforms the human form into a static glittering monument."
+          "description": "The towering crystal-encrusted carapace raises the shoulder line drastically above the model's head. It consumes her entire upper body in a massive reflective pyramid. This structural extreme applies monolithic massing to parody the ludicrous inaccessibility of haute couture. The stiff fabric is covered entirely in silver sequins and diamante. It leaves only a small opening for the face. The garment asserts a final suffocating layer that transforms the human form into a static glittering monument."
         }
       ]
     },
@@ -86,7 +87,7 @@
           "x": 50,
           "y": 50,
           "label": "Colossal Rosette Cocoon-Coat",
-          "description": "The colossal rosette cocoon-coat represents the final heaviest layer of the performance; it completely engulfs the model in a massive beige structure topped with a giant fabric rose. This displaced anatomy utilizes internal scaffolding to create a silhouette that shrinks the model's head to the size of a walnut. The immense weight of the accumulated 70 kilograms of clothing is visibly anchored within this final shell. The coat completes the presentation by turning the wearer into a fully immobilized object of performance art."
+          "description": "The colossal rosette cocoon-coat represents the final heaviest layer of the performance. It completely engulfs the model in a massive beige structure topped with a giant fabric rose. This displaced anatomy utilizes internal scaffolding to create a silhouette that shrinks the model's head to the size of a walnut. The immense weight of the accumulated 70 kilograms of clothing is visibly anchored within this final shell. The coat completes the presentation by turning the wearer into a fully immobilized object of performance art."
         }
       ]
     }
@@ -134,7 +135,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-1999-couture/viktor-rolf"
+  },
   "vibes": [
     "conceptual couture",
     "art installation fashion",

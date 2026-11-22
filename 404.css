@@ -71,3 +71,9 @@ a.cta:hover, a.cta:focus-visible {
   text-transform: uppercase;
   opacity: 0.65;
 }
+
+.sub { margin-top: 24px; }
+.links, .shows { font-size: 14px; line-height: 1.8; }
+.links a, .shows a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.links a:hover, .shows a:hover { color: #CCFF00; }
+.shows { list-style: none; padding: 0; margin: 8px 0 0; }

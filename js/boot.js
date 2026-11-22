@@ -13,6 +13,11 @@
 //    and html:not(.js) to hide the interactive app shell when JS is off.
 document.documentElement.classList.add('js');
 
+// The app restores the archive's scroll position itself when a show is
+// closed (render-detail.js restoreScroll). Left on 'auto', the browser
+// restores first, while the show is still the page, and clamps the value.
+try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+
 // 1. Error telemetry
 window.onerror = function(msg, url, lineNo, columnNo, error) {
   console.error('LEXICON_CORE_EXCEPTION:', msg, 'at line', lineNo, error);
@@ -24,12 +29,12 @@ window.onerror = function(msg, url, lineNo, columnNo, error) {
   if (!m) return;
   var slug = m[1];
   var imgIdx = m[2] || '0';
-  // Canonical URL always includes the image index for consistency
-  var url = 'https://thelexicon.xyz/entry/' + slug + '/' + imgIdx;
+  // Canonical URL is /entry/slug for the first look, /entry/slug/N after it
+  var url = 'https://thelexicon.xyz/entry/' + slug + (imgIdx === '0' ? '' : '/' + imgIdx);
 
-  // Normalize URL: /entry/slug → /entry/slug/0 via replaceState
-  if (!m[2]) {
-    try { history.replaceState(null, '', '/entry/' + slug + '/0'); } catch(e) {}
+  // Normalize URL: /entry/slug/0 → /entry/slug via replaceState
+  if (m[2] === '0') {
+    try { history.replaceState(null, '', '/entry/' + slug); } catch(e) {}
   }
 
   var parts = slug.split('-');

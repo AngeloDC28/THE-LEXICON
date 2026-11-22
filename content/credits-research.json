@@ -4,50 +4,469 @@
   "date": "2026-11-17",
   "next_step_vogue": "For entries traced to a Vogue Runway gallery: open the collection on vogue.com/fashion-shows, find this look, copy the 'Photo: …' line under it exactly, and run: npm run credit -- <id> \"<credit as printed>\" \"Vogue Runway\" <collection URL>",
   "entries": {
-    "ackermann-aw14":      { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue gallery dated 28 Feb 2014; also ELLE, NYT, WWD articles" },
-    "adrover-aw00":        { "traced": "Vogue Runway gallery", "evidence": "1152x1728, Vogue gallery dated 5 Feb 2000; same file on a 'Martial Bourdis' page titled like the Vogue gallery (could not establish who that is, so not used)" },
-    "anderson-aw22":       { "traced": null, "evidence": "No exact matches. Similar results are the JW Anderson AW22 ad campaign (The Impression) and lookbook (SHOWstudio)", "flag": "Cover may be a campaign or lookbook image rather than a runway photo" },
-    "balenciaga-ss07":     { "traced": "Vogue Runway gallery", "evidence": "2136x3201, Vogue gallery dated 2 Oct 2006" },
-    "bottega-veneta-aw19": { "traced": "Vogue Runway gallery", "evidence": "2560x3840, Vogue gallery dated 22 Feb 2019; also FashionNetwork, Vogue Hong Kong" },
-    "browne-aw12":         { "traced": "Vogue Runway gallery", "evidence": "683x1024, Vogue gallery dated 12 Feb 2012; ELLE has 932x1400" },
-    "celine-ss10":         { "traced": "Vogue Runway gallery", "evidence": "683x1024, Vogue gallery dated 4 Oct 2009; British Vogue article 7 Oct 2009 has 1280x1920" },
-    "chalayan-aw00":       { "traced": null, "evidence": "Instagram reposts; Vogue #TBT article 13 Feb 2020 (1152x1728); University of the Arts London article 'Inside the Industry with iconic catwalk photographer…' 3 Feb 2016", "lead": "The UAL article may name the photographer" },
-    "chanel-aw14":         { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue gallery dated 3 Mar 2014; WWD 4 Mar 2014" },
-    "chromat-ss20":        { "traced": "Vogue Runway gallery", "evidence": "2560x3840 on Vogue; also chromat.co review 12 Sept 2019, Tagwalk, SHOWstudio" },
-    "coperni-ss23":        { "traced": "Vogue Runway gallery", "evidence": "2560x3840, Vogue gallery dated 30 Sept 2022; WWDJAPAN 1365x2048" },
-    "galliano-dior-ss00":  { "traced": null, "evidence": "Pinterest, British Vogue article 19 Feb 2019 (1277x1920), Getty Images search pages" },
-    "garcons-ss97":        { "traced": null, "evidence": "Instagram and Facebook reposts only (largest 1354x2048)" },
-    "gaultier-ss94":       { "traced": "Vogue Runway gallery", "evidence": "2006x3000, Vogue gallery dated 25 Aug 2015 (archive upload)" },
-    "givenchy-aw15":       { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue gallery dated 8 Mar 2015" },
-    "green-ss15":          { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue menswear gallery dated 16 Jun 2014" },
-    "gucci-aw18":          { "traced": null, "evidence": "393 matches; earliest are gucci.com and press on 21 Feb 2018 (ELLE, Glamour 1600x2400, Evening Standard)", "lead": "Probably a Gucci-issued press image; check gucci.com / press credit" },
-    "hood-by-air-ss14":    { "traced": null, "evidence": "Lens returned no results (two attempts)" },
-    "klein-aw17":          { "traced": null, "evidence": "Google withholds the exact matches for this image because of a DMCA complaint", "flag": "A rights holder has filed a takedown against copies of this image. Resolve the credit or replace the image first." },
-    "lang-aw98":           { "traced": null, "evidence": "Vogue, British Vogue and Vogue India news articles of 10-11 May 2023 (Peter Do appointment), 1200x1533; Pinterest pin titled 'Helmut Lang Fall 1998 Ready-to-Wear Fashion Show'", "lead": "Those articles print a credit under the image" },
-    "loewe-ss23":          { "traced": "Vogue Runway gallery", "evidence": "2560x3840, Vogue gallery dated 30 Sept 2022; WWD 1280x1920" },
-    "margiela-aw00":       { "traced": "Vogue Runway gallery", "evidence": "1991x3000, Vogue gallery dated 10 Nov 2015 (archive upload)" },
-    "mcqueen-ss99":        { "traced": null, "evidence": "No exact matches (two attempts)" },
-    "miu-miu-ss22":        { "traced": "The Impression", "evidence": "Single exact match: The Impression 'Miu Miu Spring 2022 Details', 1800x2700", "lead": "The Impression credits its photographers on the gallery" },
-    "miyake-ss99":         { "traced": null, "evidence": "8 matches, all Instagram/Pinterest (largest 2000x2571). Captions date this photo to Issey Miyake FW 1994-95 or SS 1995", "flag": "Possibly the wrong season for an SS99 entry: check before crediting" },
-    "moschino-aw14":       { "traced": null, "evidence": "WWD 683x1022 and Getty pages. The three Getty images checked (479534253, 470774157, 1711620578) are different photos of the same look, so no Getty credit applies" },
-    "mugler-aw95":         { "traced": "Vogue Runway gallery", "evidence": "2047x3034, Vogue 'Mugler Fall 1995 Couture' gallery" },
-    "owens-ss14":          { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue gallery dated 25 Sept 2013" },
-    "prada-ss96":          { "traced": "Vogue Runway gallery", "evidence": "1971x2963, Vogue gallery dated 1 Oct 1995" },
-    "pugh-aw06":           { "traced": "Vogue Runway gallery", "evidence": "2136x3201, Vogue gallery dated 14 Feb 2006; also a 'Martial Bourdis' page (not used, see adrover-aw00)" },
-    "saint-laurent-aw13":  { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue gallery dated 3 Mar 2013; FashionNetwork" },
-    "sander-ss11":         { "traced": "Vogue Runway gallery", "evidence": "683x1024, Vogue gallery dated 24 Sept 2010" },
-    "schiaparelli-ss21":   { "traced": "Vogue Runway gallery", "evidence": "2560x3840 on Vogue; ELLE has a larger 2732x4098 copy dated 25 Jan 2021, so the original may be brand-issued", "lead": "Check the Schiaparelli press credit as well as Vogue's" },
-    "serre-ss20":          { "traced": "Vogue Runway gallery", "evidence": "2560x3840, Vogue gallery dated 24 Sept 2019" },
-    "simons-aw01":         { "traced": null, "evidence": "Instagram reposts; one post (14 Sept 2025) is captioned 'Raf Simons AW2001 Runway Collection Credit'", "lead": "That caption may name the photographer; confirm at the original source" },
-    "undercover-ss03":     { "traced": null, "evidence": "No exact matches (two attempts)" },
-    "valentino-aw22":      { "traced": "Vogue Runway gallery", "evidence": "2560x3840, Vogue gallery dated 7 Mar 2022" },
-    "van-herpen-aw11":     { "traced": "Vogue Runway gallery", "evidence": "1772x2658 on Vogue; also irisvanherpen.com 'Capriole' runway page, 920x1380", "lead": "The designer's site may credit the photographer" },
-    "van-noten-ss15":      { "traced": "Vogue Runway gallery", "evidence": "1366x2048, Vogue gallery dated 24 Sept 2014; ELLE has a 2048x2730 different crop" },
-    "vetements-aw15":      { "traced": null, "evidence": "Only 2 exact matches: a blog post titled 'French Fireman' and a Sobaka.ru article (7 Oct 2015)", "flag": "Check that this cover really is from the Vetements AW15 show" },
-    "viktor-rolf-aw99":    { "traced": "Vogue Runway gallery", "evidence": "1847x3000, Vogue 'Fall 1999 Couture' gallery dated 4 Jul 1999" },
-    "vuitton-ss08":        { "traced": null, "evidence": "Single exact match on TikTok (26 Sept 2026)" },
-    "watanabe-aw15":       { "traced": null, "evidence": "Single exact match: an Alibaba product listing", "flag": "Check that this cover is a runway photo of the Junya Watanabe AW15 show" },
-    "westwood-aw81":       { "traced": null, "evidence": "Vogue article 17 May 2021 (1600x2400), British Vogue 29 Dec 2022; Getty Images 'Vivienne Westwood Fashion Show 1981' (8 Jul 2020)", "lead": "Compare with the Getty 1981 show set; if it is the same frame, Getty prints the credit" },
-    "yamamoto-aw98":       { "traced": null, "evidence": "Single exact match: a 1stDibs listing 'Fine and rare runway Yohji Yamamoto knitted sweater'", "flag": "Cover may be a dealer's product photo rather than a runway image" }
+    "ackermann-aw14": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue gallery dated 28 Feb 2014; also ELLE, NYT, WWD articles",
+      "credited": {
+        "credit": "Kim Weston Arnold / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/haider-ackermann",
+        "date": "2026-11-22"
+      }
+    },
+    "adrover-aw00": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1152x1728, Vogue gallery dated 5 Feb 2000; same file on a 'Martial Bourdis' page titled like the Vogue gallery (could not establish who that is, so not used)",
+      "credited": {
+        "credit": "JB Villareal / Shoot Digital",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/miguel-adrover",
+        "date": "2026-11-22"
+      }
+    },
+    "anderson-aw22": {
+      "traced": null,
+      "evidence": "No exact matches. Similar results are the JW Anderson AW22 ad campaign (The Impression) and lookbook (SHOWstudio)",
+      "flag": "Cover may be a campaign or lookbook image rather than a runway photo",
+      "credited": {
+        "credit": "© Juergen Teller, All Rights Reserved 2022",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/j-w-anderson",
+        "date": "2026-11-22"
+      }
+    },
+    "balenciaga-ss07": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2136x3201, Vogue gallery dated 2 Oct 2006",
+      "credited": {
+        "credit": "Marcio Madeira",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2007-ready-to-wear/balenciaga",
+        "date": "2026-11-22"
+      }
+    },
+    "bottega-veneta-aw19": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840, Vogue gallery dated 22 Feb 2019; also FashionNetwork, Vogue Hong Kong",
+      "credited": {
+        "credit": "Alessandro Lucioni / Gorunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2019-ready-to-wear/bottega-veneta",
+        "date": "2026-11-22"
+      }
+    },
+    "browne-aw12": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "683x1024, Vogue gallery dated 12 Feb 2012; ELLE has 932x1400",
+      "credited": {
+        "credit": "Alessandro Garofalo / GoRunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2012-ready-to-wear/thom-browne",
+        "date": "2026-11-22"
+      }
+    },
+    "celine-ss10": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "683x1024, Vogue gallery dated 4 Oct 2009; British Vogue article 7 Oct 2009 has 1280x1920",
+      "credited": {
+        "credit": "Monica Feudi / GoRunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2010-ready-to-wear/celine",
+        "date": "2026-11-22"
+      }
+    },
+    "chalayan-aw00": {
+      "traced": null,
+      "evidence": "Instagram reposts; Vogue #TBT article 13 Feb 2020 (1152x1728); University of the Arts London article 'Inside the Industry with iconic catwalk photographer…' 3 Feb 2016",
+      "lead": "The UAL article may name the photographer",
+      "credited": {
+        "credit": "JB Villareal / Shoot Digital",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/chalayan",
+        "date": "2026-11-22"
+      }
+    },
+    "chanel-aw14": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue gallery dated 3 Mar 2014; WWD 4 Mar 2014",
+      "credited": {
+        "credit": "Yannis Vlamos / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/chanel",
+        "date": "2026-11-22"
+      }
+    },
+    "chromat-ss20": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840 on Vogue; also chromat.co review 12 Sept 2019, Tagwalk, SHOWstudio",
+      "checked": {
+        "date": "2026-11-21",
+        "note": "Getty 1173087926 \"Photo by Victor VIRGILE/Gamma-Rapho via Getty Images\" shows the same model and look but framed to mid-thigh; ours is full-length at the same 2:3 ratio, so it is not the same image (or not provably). Not used."
+      },
+      "credited": {
+        "credit": "Filippo Fior / Gorunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2020-ready-to-wear/chromat",
+        "date": "2026-11-22"
+      }
+    },
+    "coperni-ss23": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840, Vogue gallery dated 30 Sept 2022; WWDJAPAN 1365x2048",
+      "credited": {
+        "credit": "Courtesy of Coperni",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2023-ready-to-wear/coperni",
+        "date": "2026-11-22"
+      }
+    },
+    "galliano-dior-ss00": {
+      "traced": null,
+      "evidence": "Pinterest, British Vogue article 19 Feb 2019 (1277x1920), Getty Images search pages"
+    },
+    "garcons-ss97": {
+      "traced": null,
+      "evidence": "Instagram and Facebook reposts only (largest 1354x2048)",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-1997-ready-to-wear/comme-des-garcons",
+        "date": "2026-11-22"
+      }
+    },
+    "gaultier-ss94": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2006x3000, Vogue gallery dated 25 Aug 2015 (archive upload)",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-1994-ready-to-wear/jean-paul-gaultier",
+        "date": "2026-11-22"
+      },
+      "note_mixed": "Vogue credits look 1 (our cover) to Condé Nast Archive, but some later looks in the same gallery to Guy Marineau. photo_credit is entry-wide; check which of our 16 looks are Marineau before relying on it for every image."
+    },
+    "givenchy-aw15": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue gallery dated 8 Mar 2015",
+      "credited": {
+        "credit": "Monica Feudi / Feudiguaineri.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/givenchy",
+        "date": "2026-11-22"
+      }
+    },
+    "green-ss15": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue menswear gallery dated 16 Jun 2014",
+      "credited": {
+        "credit": "Yannis Vlamos / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2015-menswear/craig-green",
+        "date": "2026-11-22"
+      }
+    },
+    "gucci-aw18": {
+      "traced": null,
+      "evidence": "393 matches; earliest are gucci.com and press on 21 Feb 2018 (ELLE, Glamour 1600x2400, Evening Standard)",
+      "lead": "Probably a Gucci-issued press image; check gucci.com / press credit",
+      "credited": {
+        "credit": "Marcus Tondo / Indigital.tv",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2018-ready-to-wear/gucci",
+        "date": "2026-11-22"
+      }
+    },
+    "hood-by-air-ss14": {
+      "traced": null,
+      "evidence": "Lens returned no results (two attempts)"
+    },
+    "klein-aw17": {
+      "traced": null,
+      "evidence": "Google withholds the exact matches for this image because of a DMCA complaint",
+      "flag": "A rights holder has filed a takedown against copies of this image. Resolve the credit or replace the image first.",
+      "credited": {
+        "credit": "Yannis Vlamos / Indigital.tv",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2017-ready-to-wear/calvin-klein",
+        "date": "2026-11-22"
+      }
+    },
+    "lang-aw98": {
+      "traced": null,
+      "evidence": "Vogue, British Vogue and Vogue India news articles of 10-11 May 2023 (Peter Do appointment), 1200x1533; Pinterest pin titled 'Helmut Lang Fall 1998 Ready-to-Wear Fashion Show'",
+      "lead": "Those articles print a credit under the image",
+      "credited": {
+        "credit": "Courtesy of hl-art",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/helmut-lang",
+        "date": "2026-11-22"
+      }
+    },
+    "loewe-ss23": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840, Vogue gallery dated 30 Sept 2022; WWD 1280x1920",
+      "credited": {
+        "credit": "Daniele Oberrauch / Gorunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2023-ready-to-wear/loewe",
+        "date": "2026-11-22"
+      }
+    },
+    "margiela-aw00": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1991x3000, Vogue gallery dated 10 Nov 2015 (archive upload)",
+      "credited": {
+        "credit": "Courtesy of Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/maison-martin-margiela",
+        "date": "2026-11-22"
+      }
+    },
+    "mcqueen-ss99": {
+      "traced": null,
+      "evidence": "No exact matches (two attempts)",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-1999-ready-to-wear/alexander-mcqueen",
+        "date": "2026-11-22"
+      }
+    },
+    "miu-miu-ss22": {
+      "traced": "The Impression",
+      "evidence": "Single exact match: The Impression 'Miu Miu Spring 2022 Details', 1800x2700",
+      "lead": "The Impression credits its photographers on the gallery",
+      "checked": {
+        "date": "2026-11-21",
+        "source_verified": true,
+        "url": "https://theimpression.com/miu-miu-spring-2022-fashion-show-details/",
+        "note": "Cover is one of the 18 images on this page. No per-photo credit printed; site footer reads \"© The Impression LLC\". image_source set; photographer still unknown — ask The Impression.",
+        "resolved": "2026-11-22: all 12 images are Vogue Runway Miu Miu Spring 2022 looks (cover = look 1, distance 1); credit printed there: Filippo Fior / Gorunway.com."
+      },
+      "credited": {
+        "credit": "Filippo Fior / Gorunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2022-ready-to-wear/miu-miu",
+        "date": "2026-11-22"
+      }
+    },
+    "miyake-ss99": {
+      "traced": null,
+      "evidence": "8 matches, all Instagram/Pinterest (largest 2000x2571). Captions date this photo to Issey Miyake FW 1994-95 or SS 1995",
+      "flag": "Possibly the wrong season for an SS99 entry: check before crediting",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-1995-ready-to-wear/issey-miyake",
+        "date": "2026-11-22"
+      },
+      "season_conflict": {
+        "date": "2026-11-22",
+        "finding": "All 14 images match Vogue Runway Issey Miyake Spring 1995 ready-to-wear (dHash distance 0-5 each); none match Spring 1998, and Vogue has no Spring 1999 show. The entry is dated SS99: the photos are from SS95. Needs an editorial decision (re-date the entry, or replace the images)."
+      }
+    },
+    "moschino-aw14": {
+      "traced": null,
+      "evidence": "WWD 683x1022 and Getty pages. The three Getty images checked (479534253, 470774157, 1711620578) are different photos of the same look, so no Getty credit applies",
+      "credited": {
+        "credit": "Yannis Vlamos / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/moschino",
+        "date": "2026-11-22"
+      }
+    },
+    "mugler-aw95": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2047x3034, Vogue 'Mugler Fall 1995 Couture' gallery",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-1995-couture/mugler",
+        "date": "2026-11-22"
+      }
+    },
+    "owens-ss14": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue gallery dated 25 Sept 2013",
+      "credited": {
+        "credit": "Marcus Tondo / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2014-ready-to-wear/rick-owens",
+        "date": "2026-11-22"
+      }
+    },
+    "prada-ss96": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1971x2963, Vogue gallery dated 1 Oct 1995",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-1996-ready-to-wear/prada",
+        "date": "2026-11-22"
+      }
+    },
+    "pugh-aw06": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2136x3201, Vogue gallery dated 14 Feb 2006; also a 'Martial Bourdis' page (not used, see adrover-aw00)",
+      "credited": {
+        "credit": "Marcio Madeira",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2006-ready-to-wear/gareth-pugh",
+        "date": "2026-11-22"
+      }
+    },
+    "saint-laurent-aw13": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue gallery dated 3 Mar 2013; FashionNetwork",
+      "credited": {
+        "credit": "Marcus Tondo / InDigital | GoRunway",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2013-ready-to-wear/saint-laurent",
+        "date": "2026-11-22"
+      }
+    },
+    "sander-ss11": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "683x1024, Vogue gallery dated 24 Sept 2010",
+      "credited": {
+        "credit": "Monica Feudi / GoRunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2011-ready-to-wear/jil-sander",
+        "date": "2026-11-22"
+      }
+    },
+    "schiaparelli-ss21": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840 on Vogue; ELLE has a larger 2732x4098 copy dated 25 Jan 2021, so the original may be brand-issued",
+      "lead": "Check the Schiaparelli press credit as well as Vogue's",
+      "credited": {
+        "credit": "Daniel Roseberry / Courtesy of Schiaparelli",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2021-couture/schiaparelli",
+        "date": "2026-11-22"
+      }
+    },
+    "serre-ss20": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840, Vogue gallery dated 24 Sept 2019",
+      "credited": {
+        "credit": "Alessandro Lucioni / Daniele Oberrauch / Gorunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2020-ready-to-wear/marine-serre",
+        "date": "2026-11-22"
+      }
+    },
+    "simons-aw01": {
+      "traced": null,
+      "evidence": "Instagram reposts; one post (14 Sept 2025) is captioned 'Raf Simons AW2001 Runway Collection Credit'",
+      "lead": "That caption may name the photographer; confirm at the original source",
+      "credited": {
+        "credit": "Courtesy of Raf Simons",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2001-menswear/raf-simons",
+        "date": "2026-11-22"
+      }
+    },
+    "undercover-ss03": {
+      "traced": null,
+      "evidence": "No exact matches (two attempts)"
+    },
+    "valentino-aw22": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "2560x3840, Vogue gallery dated 7 Mar 2022",
+      "credited": {
+        "credit": "Courtesy of Valentino",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/valentino",
+        "date": "2026-11-22"
+      }
+    },
+    "van-herpen-aw11": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1772x2658 on Vogue; also irisvanherpen.com 'Capriole' runway page, 920x1380",
+      "lead": "The designer's site may credit the photographer",
+      "checked": {
+        "date": "2026-11-21",
+        "note": "irisvanherpen.com/about/credits lists \"House Photographer: Michel Zoeter\" for the Capriole show. NOT used as the credit: our cover is the Vogue Runway file (1772x2658) and the designer site does not say who shot that image. Confirm on Vogue Runway or with the house."
+      },
+      "credited": {
+        "credit": "Michel Zoeter / Courtesy of Iris van Herpen",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2011-couture/iris-van-herpen",
+        "date": "2026-11-22"
+      }
+    },
+    "van-noten-ss15": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1366x2048, Vogue gallery dated 24 Sept 2014; ELLE has a 2048x2730 different crop",
+      "credited": {
+        "credit": "Yannis Vlamos / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2015-ready-to-wear/dries-van-noten",
+        "date": "2026-11-22"
+      }
+    },
+    "vetements-aw15": {
+      "traced": null,
+      "evidence": "Only 2 exact matches: a blog post titled 'French Fireman' and a Sobaka.ru article (7 Oct 2015)",
+      "flag": "Check that this cover really is from the Vetements AW15 show",
+      "credited": {
+        "credit": "Marcus Tondo / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/vetements",
+        "date": "2026-11-22"
+      }
+    },
+    "viktor-rolf-aw99": {
+      "traced": "Vogue Runway gallery",
+      "evidence": "1847x3000, Vogue 'Fall 1999 Couture' gallery dated 4 Jul 1999",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-1999-couture/viktor-rolf",
+        "date": "2026-11-22"
+      }
+    },
+    "vuitton-ss08": {
+      "traced": null,
+      "evidence": "Single exact match on TikTok (26 Sept 2026)"
+    },
+    "watanabe-aw15": {
+      "traced": null,
+      "evidence": "Single exact match: an Alibaba product listing",
+      "flag": "Check that this cover is a runway photo of the Junya Watanabe AW15 show",
+      "credited": {
+        "credit": "Yannis Vlamos / Indigitalimages.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/junya-watanabe",
+        "date": "2026-11-22"
+      }
+    },
+    "westwood-aw81": {
+      "traced": null,
+      "evidence": "Vogue article 17 May 2021 (1600x2400), British Vogue 29 Dec 2022; Getty Images 'Vivienne Westwood Fashion Show 1981' (8 Jul 2020)",
+      "lead": "Compare with the Getty 1981 show set; if it is the same frame, Getty prints the credit",
+      "credited": {
+        "credit": "David Corio / Redferns via Getty Images",
+        "source": "Getty Images",
+        "url": "https://www.gettyimages.co.uk/detail/news-photo/vivienne-westwood-worlds-end-fashion-show-pirates-autumn-news-photo/1255034023",
+        "date": "2026-11-21"
+      },
+      "checked": {
+        "date": "2026-11-21",
+        "note": "Confirmed frame-for-frame against Getty 1255034023: \"Pirates\", Olympia, London, 22 October 1981. (Photo by David Corio/Redferns)."
+      }
+    },
+    "yamamoto-aw98": {
+      "traced": null,
+      "evidence": "Single exact match: a 1stDibs listing 'Fine and rare runway Yohji Yamamoto knitted sweater'",
+      "flag": "Cover may be a dealer's product photo rather than a runway image",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/yohji-yamamoto",
+        "date": "2026-11-22"
+      }
+    }
   }
 }

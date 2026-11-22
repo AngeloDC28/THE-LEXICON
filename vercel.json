@@ -159,13 +159,14 @@
       "source": "/favicon.ico",
       "destination": "/favicon.svg",
       "permanent": true
+    },
+    {
+      "source": "/entry/:slug/0",
+      "destination": "/entry/:slug",
+      "permanent": true
     }
   ],
   "rewrites": [
-    {
-      "source": "/about",
-      "destination": "/index.html"
-    },
     {
       "source": "/entry/:path*",
       "destination": "/index.html"

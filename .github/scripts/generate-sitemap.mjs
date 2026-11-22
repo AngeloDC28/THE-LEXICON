@@ -12,7 +12,7 @@
  *
  * URL structure:
  *   Homepage  https://thelexicon.xyz/           priority 1.0, weekly
- *   Entry     https://thelexicon.xyz/entry/{id}/0  priority 0.8, monthly
+ *   Entry     https://thelexicon.xyz/entry/{id}  priority 0.8, monthly
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -35,7 +35,9 @@ const url = (loc) => `  <url><loc>${loc}</loc></url>`;
 
 const urls = [
   url(`${BASE}/`),
-  ...ids.map(id => url(`${BASE}/entry/${id}/0`)),
+  // Static pages written by generate-static-pages.mjs.
+  ...['about', 'glossary', 'privacy', 'terms'].map(p => url(`${BASE}/${p}`)),
+  ...ids.map(id => url(`${BASE}/entry/${id}`)),
 ];
 
 const xml =
@@ -48,4 +50,4 @@ writeFileSync(OUT, xml, 'utf8');
 // Mirror to a second URL — gives a clean fetch path that bypasses any
 // cached-failure backoff in Google Search Console's sitemap processor.
 writeFileSync(OUT_ALT, xml, 'utf8');
-console.log(`LEXICON_SITEMAP ok (wrote ${OUT} + ${OUT_ALT} — 1 homepage + ${ids.length} entries)`);
+console.log(`LEXICON_SITEMAP ok (wrote ${OUT} + ${OUT_ALT} — 1 homepage + 4 pages + ${ids.length} entries)`);

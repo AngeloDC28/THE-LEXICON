@@ -15,7 +15,7 @@ annotated for forensic visual / cultural analysis. Each entry has:
 - a **tags** object across 9 taxonomy axes (brand, era, politics, theories,
   gender, materials, geography, anatomy, format)
 
-Hosted on GitHub Pages. Vanilla ES modules + Tailwind via CDN. No build
+Hosted on Vercel (out/ staged by .github/scripts/stage-output.mjs). Vanilla ES modules + a prebuilt Tailwind CSS file. No build
 step required for runtime — the browser loads the JS directly. Built
 artifacts are committed (see below) so deploys are zero-config.
 
@@ -88,13 +88,44 @@ which runs them all in order.
 - Use `npm run build` (it invokes vite build for the SPA path — only used
   if/when we move to a bundled deploy; not the primary path today).
 
+## Mobile (below 768px)
+
+Spec: "THE LEXICON — Mobile Experience Spec" (sections 4–8). Follow it exactly.
+
+Rules
+- Mobile-only changes go inside `@media (max-width: 767px)` or Tailwind's
+  base classes with `md:`/`lg:` overrides. Never change the desktop layout
+  (≥ 768px) unless the ticket says so.
+- The document scrolls, not an inner panel. No `overflow: auto` wrappers
+  around page content on mobile.
+- Tap targets ≥ 44×44px. No hover-only behaviour. Inputs ≥ 16px font.
+- Use `100dvh`, never `100vh`. Bottom bars use env(safe-area-inset-bottom).
+- One sheet open at a time; every sheet and show pushes a history entry so
+  the phone's Back button closes it.
+- Images: phones never load an original. Use the generated widths via
+  srcset/sizes.
+- Keep the brutalist look: black, #CCFF00, mono labels, hard borders. Body
+  text in EB Garamond. No rounded corners, no shadows, no gradients.
+- Generated files (database.js, translations.js, image-dimensions.js, and any
+  new index.json / entries/*.json) are written by build scripts only.
+- Build scripts keep zero npm dependencies. Test tooling (Playwright) is a
+  devDependency used only by `npm run test:mobile`, never by the build.
+
+Definition of done for any mobile ticket
+1. `npm run preflight` passes.
+2. `npm run test:mobile` passes (screenshots at 320, 375, 430 + checks).
+3. Before/after screenshots attached in the PR description.
+4. Desktop screenshot at 1440px unchanged unless intended.
+
+The spec lives in docs/mobile-spec.md (sections 4–8 of the maintainer's doc).
+
 ## Style notes (from past sessions with the maintainer)
 
 - The maintainer prefers terse, opinionated answers. Pick a path; don't
   enumerate options unless asked.
 - Match scope to what was requested. A bug fix doesn't need surrounding
   cleanup; one-shot operations don't need helpers.
-- Commit at logical break points and push to main. Don't batch giant
+- Commit at logical break points. Mobile tickets go on a `mobile/<ticket>` branch with one PR each (see below); other work may go to main. Don't batch giant
   end-of-session megacommits.
 - The site uses brutalist / forensic-archive design language — acid
   yellow `#CCFF00` is the accent, monospace fonts, harsh borders. Don't
