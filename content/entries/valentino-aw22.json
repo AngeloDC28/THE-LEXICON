@@ -27,7 +27,7 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-02.jpg",
-      "content_note": "Partial nudity",
+      "content_note": "Nudity (sheer top)",
       "hotspots": [
         {
           "x": 50,
@@ -47,8 +47,7 @@
           "label": "Rigid Envelope Clutch",
           "description": "The rigid envelope clutch is gripped tightly against the hip. It provides the only hard architectural element in an otherwise fluid ensemble. This accessory engages with textural topography by introducing a smooth glossy surface against the matte crepe and sheer chiffon. The bright pink leather perfectly matches the garments. Subtle metallic hardware sits at the clasp. The piece completes the silhouette by injecting a subtle but necessary structural anchor."
         }
-      ],
-      "content_note": "Nudity (sheer top)"
+      ]
     },
     {
       "src": "THE-LEXICON-ASSETS/valentino-aw22/valentino-aw22-03.jpg",
@@ -327,7 +326,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Courtesy of Valentino",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/valentino"
+  },
   "vibes": [
     "pink maximalism",
     "inclusive couture",

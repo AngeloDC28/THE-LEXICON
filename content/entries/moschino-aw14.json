@@ -3,11 +3,10 @@
   "id": "moschino-aw14",
   "title": "Moschino AW 2014",
   "subtitle": "",
-  "summary_plain": "In his first Moschino show, Jeremy Scott turned McDonald's uniforms, cereal boxes and SpongeBob into luxury clothes, and some pieces went on sale the next morning. It was a joke about fast food, fast fashion and what 'luxury' means.",
+  "summary_plain": "Jeremy Scott turned McDonald's uniforms and junk-food packaging into luxury clothes. It was a joke about how fashion copies cheap, fast culture, and it made people ask what 'luxury' even means.",
   "year": 2014,
   "season": "AW",
   "published": "2026-05-12",
-  "summary_plain": "Jeremy Scott turned McDonald's uniforms and junk-food packaging into luxury clothes. It was a joke about how fashion copies cheap, fast culture, and it made people ask what 'luxury' even means.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/moschino-aw14/moschino-aw14-01.jpg",
@@ -308,7 +307,11 @@
       "type": "archive"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/moschino"
+  },
   "vibes": [
     "fast food camp",
     "logo irony",

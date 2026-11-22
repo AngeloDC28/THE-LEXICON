@@ -325,7 +325,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Alessandro Lucioni / Gorunway.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2019-ready-to-wear/bottega-veneta"
+  },
   "vibes": [
     "quiet luxury",
     "stealth wealth",

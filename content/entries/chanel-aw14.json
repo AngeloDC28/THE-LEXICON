@@ -319,7 +319,11 @@
       "date": "2014-03"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/chanel"
+  },
   "vibes": [
     "supermarket satire",
     "consumerist spectacle",

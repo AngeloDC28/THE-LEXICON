@@ -3,11 +3,10 @@
   "id": "garcons-ss97",
   "title": "Comme des Garçons SS 1997",
   "subtitle": "Body Meets Dress, Dress Meets Body",
-  "summary_plain": "Rei Kawakubo sewed padded lumps into stretchy dresses, giving models bumps on their backs, hips and shoulders. The press called it the 'lumps and bumps' show. It asked why fashion only flatters one idea of a good body.",
+  "summary_plain": "Rei Kawakubo put padded lumps on the back, hips and shoulders of stretchy dresses, changing the shape of the body. The press nicknamed it 'lumps and bumps', but it made people rethink what a 'beautiful' figure is.",
   "year": 1997,
   "season": "SS",
   "published": "2026-05-12",
-  "summary_plain": "Rei Kawakubo put padded lumps on the back, hips and shoulders of stretchy dresses, changing the shape of the body. The press nicknamed it 'lumps and bumps', but it made people rethink what a 'beautiful' figure is.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-01.jpg",
@@ -164,7 +163,7 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-10.jpg",
-      "content_note": "Partial nudity",
+      "content_note": "Nudity (sheer top)",
       "hotspots": [
         {
           "x": 50,
@@ -178,8 +177,7 @@
           "label": "Crinkled Paper-Textured Balloon Skirt",
           "description": "The crinkled paper-textured balloon skirt expands into a massive beige teardrop shape. It anchors the look with an incredibly heavy and stiff lower volume. This displaced anatomy engages with the concept of independent garment entity. The skirt appears to engulf the model rather than being worn by her. The sharp crinkles in the fabric suggest a garment that has been crushed and re-inflated. The hem curves drastically upward in the front to expose the bare knees. The piece completes the ensemble by enforcing an extreme and restrictive spatial footprint."
         }
-      ],
-      "content_note": "Nudity (sheer top)"
+      ]
     },
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-11.jpg",
@@ -239,7 +237,7 @@
     },
     {
       "src": "THE-LEXICON-ASSETS/garcons-ss97/garcons-ss97-15.jpg",
-      "content_note": "Partial nudity",
+      "content_note": "Nudity (sheer top)",
       "hotspots": [
         {
           "x": 50,
@@ -253,8 +251,7 @@
           "label": "Sheer Asymmetrical Midi Skirt",
           "description": "The sheer asymmetrical midi skirt drops below the heavy jacket in a light translucent red layer. It provides a stark textural contrast to the dense padding above. This material choice applies deconstructionist theory by pairing a seemingly unfinished delicate undergarment with the heavy structural outerwear. The raw hem trails unevenly around the calves. The fabric shifts fluidly with the model's stride. The transparency reveals the silhouette of the legs beneath the heavy upper carapace. The skirt completes the look by offering a brief moment of organic movement beneath the engineered distortion."
         }
-      ],
-      "content_note": "Nudity (sheer top)"
+      ]
     }
   ],
   "tags": {
@@ -294,7 +291,11 @@
       "type": "archive"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-1997-ready-to-wear/comme-des-garcons"
+  },
   "vibes": [
     "body horror",
     "anti-beauty",

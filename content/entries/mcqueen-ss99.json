@@ -3,15 +3,14 @@
   "id": "mcqueen-ss99",
   "title": "Alexander McQueen SS 1999",
   "subtitle": "No. 13",
-  "summary_plain": "Paralympic athlete Aimee Mullins opened Alexander McQueen's show on carved wooden legs, and at the end two factory robots spray-painted a white dress on a model as she turned. It made people ask what a 'perfect' body is.",
+  "summary_plain": "McQueen sent a Paralympic athlete down the runway on carved wooden legs, then had robots spray-paint a dress live. It made people ask what a 'perfect' body is.",
   "year": 1999,
   "season": "SS",
   "published": "2026-05-12",
-  "summary_plain": "McQueen sent a Paralympic athlete down the runway on carved wooden legs, then had robots spray-paint a dress live. It made people ask what a 'perfect' body is.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-01.jpg",
-      "content_note": "Partial nudity",
+      "content_note": "Nudity",
       "hotspots": [
         {
           "x": 48,
@@ -25,8 +24,7 @@
           "label": "Open Standing Collar",
           "description": "The high funnel collar is integrated into the lapel and remains unfastened to frame the neck and sternum. Through Deconstructionist Logic the garment is stripped of its utilitarian closure to reveal the interiority of the silhouette. The sharp vertical lines of the plaid print accentuate the architectural rigidity of the coat. It asserts the jacket as a sculptural frame rather than a protective outer layer."
         }
-      ],
-      "content_note": "Nudity"
+      ]
     },
     {
       "src": "THE-LEXICON-ASSETS/mcqueen-ss99/mcqueen-ss99-02.jpg",
@@ -320,7 +318,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-1999-ready-to-wear/alexander-mcqueen"
+  },
   "vibes": [
     "cyborg body",
     "post-human spectacle",

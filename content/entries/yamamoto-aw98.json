@@ -294,7 +294,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/yohji-yamamoto"
+  },
   "vibes": [
     "wabi-sabi fashion",
     "imperfect beauty",

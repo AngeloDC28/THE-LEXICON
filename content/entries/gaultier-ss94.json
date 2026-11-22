@@ -306,7 +306,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-1994-ready-to-wear/jean-paul-gaultier"
+  },
   "vibes": [
     "global mash-up",
     "multicultural camp",

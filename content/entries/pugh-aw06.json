@@ -216,7 +216,11 @@
       "type": "video"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Marcio Madeira",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2006-ready-to-wear/gareth-pugh"
+  },
   "vibes": [
     "sculptural excess",
     "fantasy fashion",

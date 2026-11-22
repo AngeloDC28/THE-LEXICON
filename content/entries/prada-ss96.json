@@ -3,11 +3,10 @@
   "id": "prada-ss96",
   "title": "Prada SS 1996",
   "subtitle": "Banal Eccentricity",
-  "summary_plain": "Miuccia Prada made 'ugly' clothes on purpose: clashing colours, prints copied from 1970s curtains and kitchen surfaces, and plain everyday shapes. Nicknamed 'Ugly Chic', it showed that clothes could be clever, not just pretty.",
+  "summary_plain": "Miuccia Prada used 'ugly' colours and prints that clashed on purpose, inspired by everyday objects. It became known as 'ugly chic' and proved bad taste could be smart and stylish.",
   "year": 1996,
   "season": "SS",
   "published": "2026-05-12",
-  "summary_plain": "Miuccia Prada used 'ugly' colours and prints that clashed on purpose, inspired by everyday objects. It became known as 'ugly chic' and proved bad taste could be smart and stylish.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/prada-ss96/prada-ss96-01.jpg",
@@ -295,7 +294,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-1996-ready-to-wear/prada"
+  },
   "vibes": [
     "ugly beautiful",
     "anti-pretty",

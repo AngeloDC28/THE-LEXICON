@@ -383,7 +383,11 @@
       "date": "2018-02"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Marcus Tondo / Indigital.tv",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2018-ready-to-wear/gucci"
+  },
   "vibes": [
     "maximalist chaos",
     "geek chic",

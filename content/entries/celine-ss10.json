@@ -191,7 +191,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Monica Feudi / GoRunway.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-2010-ready-to-wear/celine"
+  },
   "vibes": [
     "minimalist chic",
     "quiet luxury",

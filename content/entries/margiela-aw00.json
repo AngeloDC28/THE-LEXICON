@@ -221,7 +221,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Courtesy of Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/maison-martin-margiela"
+  },
   "vibes": [
     "deconstructed tailoring",
     "anti-fashion",

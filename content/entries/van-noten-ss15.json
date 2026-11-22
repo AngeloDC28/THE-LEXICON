@@ -141,7 +141,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-2015-ready-to-wear/dries-van-noten"
+  },
   "vibes": [
     "textile maximalism",
     "print clash",

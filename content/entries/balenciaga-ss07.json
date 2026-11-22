@@ -361,7 +361,11 @@
       "type": "archive"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Marcio Madeira",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-2007-ready-to-wear/balenciaga"
+  },
   "vibes": [
     "techno future",
     "cyborg glamour",

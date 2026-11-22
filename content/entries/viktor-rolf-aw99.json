@@ -135,7 +135,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-1999-couture/viktor-rolf"
+  },
   "vibes": [
     "conceptual couture",
     "art installation fashion",

@@ -324,7 +324,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-1999-ready-to-wear/alexander-mcqueen"
+    },
     "vibes": [
       "cyborg body",
       "post-human spectacle",
@@ -683,7 +687,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-1995-couture/mugler"
+    },
     "vibes": [
       "cyborg glamour",
       "armour dressing",
@@ -1350,7 +1358,11 @@ export const archiveData = [
         "type": "archive"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Marcio Madeira",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2007-ready-to-wear/balenciaga"
+    },
     "vibes": [
       "techno future",
       "cyborg glamour",
@@ -1978,7 +1990,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-1996-ready-to-wear/prada"
+    },
     "vibes": [
       "ugly beautiful",
       "anti-pretty",
@@ -2669,7 +2685,11 @@ export const archiveData = [
         "type": "interview"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Marcus Tondo / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2014-ready-to-wear/rick-owens"
+    },
     "vibes": [
       "step dressing",
       "human backpack",
@@ -2971,7 +2991,11 @@ export const archiveData = [
         "type": "archive"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-1997-ready-to-wear/comme-des-garcons"
+    },
     "vibes": [
       "body horror",
       "anti-beauty",
@@ -3276,7 +3300,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/yohji-yamamoto"
+    },
     "vibes": [
       "wabi-sabi fashion",
       "imperfect beauty",
@@ -3593,7 +3621,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-1994-ready-to-wear/jean-paul-gaultier"
+    },
     "vibes": [
       "global mash-up",
       "multicultural camp",
@@ -3739,7 +3771,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-1999-couture/viktor-rolf"
+    },
     "vibes": [
       "conceptual couture",
       "art installation fashion",
@@ -4285,7 +4321,11 @@ export const archiveData = [
         "type": "archive"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/moschino"
+    },
     "vibes": [
       "fast food camp",
       "logo irony",
@@ -4602,7 +4642,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Daniel Roseberry / Courtesy of Schiaparelli",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2021-couture/schiaparelli"
+    },
     "vibes": [
       "surreal couture",
       "trompe loeil",
@@ -4834,7 +4878,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Courtesy of Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/maison-martin-margiela"
+    },
     "vibes": [
       "deconstructed tailoring",
       "anti-fashion",
@@ -5644,7 +5692,11 @@ export const archiveData = [
         "date": "2008-02-07"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "JB Villareal / Shoot Digital",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/miguel-adrover"
+    },
     "vibes": [
       "dumpster couture",
       "anti-fashion",
@@ -5858,7 +5910,11 @@ export const archiveData = [
         "type": "catalogue"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Michel Zoeter / Courtesy of Iris van Herpen",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2011-couture/iris-van-herpen"
+    },
     "vibes": [
       "3d printed couture",
       "biomimicry",
@@ -6085,7 +6141,11 @@ export const archiveData = [
         "type": "video"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Marcio Madeira",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2006-ready-to-wear/gareth-pugh"
+    },
     "vibes": [
       "sculptural excess",
       "fantasy fashion",
@@ -6383,7 +6443,11 @@ export const archiveData = [
         "author": "David Valinskiy"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Marcus Tondo / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/vetements"
+    },
     "vibes": [
       "demna irony",
       "logo fatigue",
@@ -6895,7 +6959,11 @@ export const archiveData = [
         "date": "2015-04-22"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/junya-watanabe"
+    },
     "vibes": [
       "mathematical fashion",
       "geometric precision",
@@ -7129,7 +7197,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2015-menswear/craig-green"
+    },
     "vibes": [
       "raw menswear",
       "vulnerable masculinity",
@@ -7523,7 +7595,11 @@ export const archiveData = [
         "date": "2018-02"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Marcus Tondo / Indigital.tv",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2018-ready-to-wear/gucci"
+    },
     "vibes": [
       "maximalist chaos",
       "geek chic",
@@ -7778,7 +7854,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Alessandro Garofalo / GoRunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2012-ready-to-wear/thom-browne"
+    },
     "vibes": [
       "dark academia",
       "gothic tailoring",
@@ -8051,7 +8131,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Daniele Oberrauch / Gorunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2023-ready-to-wear/loewe"
+    },
     "vibes": [
       "trompe loeil",
       "hyperrealism",
@@ -8368,7 +8452,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Alessandro Lucioni / Daniele Oberrauch / Gorunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2020-ready-to-wear/marine-serre"
+    },
     "vibes": [
       "eco dystopia",
       "upcycled future",
@@ -8698,7 +8786,11 @@ export const archiveData = [
         "date": "2014-03"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/chanel"
+    },
     "vibes": [
       "supermarket satire",
       "consumerist spectacle",
@@ -9302,7 +9394,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Monica Feudi / GoRunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2010-ready-to-wear/celine"
+    },
     "vibes": [
       "minimalist chic",
       "quiet luxury",
@@ -9639,7 +9735,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Courtesy of Valentino",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/valentino"
+    },
     "vibes": [
       "pink maximalism",
       "inclusive couture",
@@ -10192,7 +10292,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Yannis Vlamos / Indigital.tv",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2017-ready-to-wear/calvin-klein"
+    },
     "vibes": [
       "American vernacular",
       "forensic Americana",
@@ -10541,7 +10645,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Monica Feudi / Feudiguaineri.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/givenchy"
+    },
     "vibes": [
       "riccardo tisci gothic",
       "street meets couture",
@@ -10693,7 +10801,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2015-ready-to-wear/dries-van-noten"
+    },
     "vibes": [
       "textile maximalism",
       "print clash",
@@ -10975,7 +11087,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Marcus Tondo / InDigital | GoRunway",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2013-ready-to-wear/saint-laurent"
+    },
     "vibes": [
       "rock and roll",
       "hedi slimane skinny",
@@ -11174,7 +11290,11 @@ export const archiveData = [
         "date": "2022-10"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Courtesy of Coperni",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2023-ready-to-wear/coperni"
+    },
     "vibes": [
       "viral moment",
       "spray-on fashion",
@@ -11400,7 +11520,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Kim Weston Arnold / Indigitalimages.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/haider-ackermann"
+    },
     "vibes": [
       "gender fluidity",
       "body as architecture",
@@ -11736,7 +11860,11 @@ export const archiveData = [
         "type": "review"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Alessandro Lucioni / Gorunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2019-ready-to-wear/bottega-veneta"
+    },
     "vibes": [
       "quiet luxury",
       "stealth wealth",
@@ -12060,7 +12188,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Monica Feudi / GoRunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2011-ready-to-wear/jil-sander"
+    },
     "vibes": [
       "radical minimalism",
       "colour blocking",
@@ -12300,7 +12432,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Filippo Fior / Gorunway.com",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2020-ready-to-wear/chromat"
+    },
     "vibes": [
       "body positivity",
       "inclusive glamour",

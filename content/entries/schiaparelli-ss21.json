@@ -306,7 +306,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Daniel Roseberry / Courtesy of Schiaparelli",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-2021-couture/schiaparelli"
+  },
   "vibes": [
     "surreal couture",
     "trompe loeil",

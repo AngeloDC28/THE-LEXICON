@@ -338,7 +338,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Monica Feudi / Feudiguaineri.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/givenchy"
+  },
   "vibes": [
     "riccardo tisci gothic",
     "street meets couture",

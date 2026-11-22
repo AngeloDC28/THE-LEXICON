@@ -215,7 +215,11 @@
       "type": "review"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Kim Weston Arnold / Indigitalimages.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2014-ready-to-wear/haider-ackermann"
+  },
   "vibes": [
     "gender fluidity",
     "body as architecture",

@@ -3,11 +3,10 @@
   "id": "coperni-ss23",
   "title": "Coperni SS 2023",
   "subtitle": "",
-  "summary_plain": "At the end of Coperni's show, two technicians sprayed a liquid fabric onto Bella Hadid's body, and it dried into a white dress in about ten minutes. It was filmed from every angle and went viral around the world within hours.",
+  "summary_plain": "Bella Hadid walked on stage almost bare and a liquid dress was sprayed onto her body in front of the audience. It went viral because it was made to be filmed, not photographed.",
   "year": 2023,
   "season": "SS",
   "published": "2026-05-21",
-  "summary_plain": "Bella Hadid walked on stage almost bare and a liquid dress was sprayed onto her body in front of the audience. It went viral because it was made to be filmed, not photographed.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/coperni-ss23/coperni-ss23-01.jpg",
@@ -189,7 +188,11 @@
       "date": "2022-10"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Courtesy of Coperni",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-2023-ready-to-wear/coperni"
+  },
   "vibes": [
     "viral moment",
     "spray-on fashion",

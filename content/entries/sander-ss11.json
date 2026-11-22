@@ -313,7 +313,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Monica Feudi / GoRunway.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-2011-ready-to-wear/jil-sander"
+  },
   "vibes": [
     "radical minimalism",
     "colour blocking",

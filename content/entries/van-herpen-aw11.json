@@ -203,7 +203,11 @@
       "type": "catalogue"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Michel Zoeter / Courtesy of Iris van Herpen",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2011-couture/iris-van-herpen"
+  },
   "vibes": [
     "3d printed couture",
     "biomimicry",

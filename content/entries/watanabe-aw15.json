@@ -250,7 +250,11 @@
       "date": "2015-04-22"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Yannis Vlamos / Indigitalimages.com",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2015-ready-to-wear/junya-watanabe"
+  },
   "vibes": [
     "mathematical fashion",
     "geometric precision",
