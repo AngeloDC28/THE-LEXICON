@@ -10,7 +10,7 @@
  * factual line built from the archive itself.
  */
 
-import { $ } from './core-utils.js?v=267b59c';
+import { $ } from './core-utils.js?v=a1a9c0f';
 
 export function initHeaderTypewriter(archiveData) {
   const textEl = $('telemetry-text');

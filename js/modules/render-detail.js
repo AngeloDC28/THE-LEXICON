@@ -2,14 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=267b59c';
-import { AppState, updateHash } from './core-state.js?v=267b59c';
-import { getFilteredEntries } from './search-engine.js?v=267b59c';
-import { getTranslation } from './translations.js?v=267b59c';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=267b59c';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=267b59c';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=267b59c';
-import { safeCover } from './categories.js?v=267b59c';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=a1a9c0f';
+import { AppState, updateHash } from './core-state.js?v=a1a9c0f';
+import { getFilteredEntries } from './search-engine.js?v=a1a9c0f';
+import { getTranslation } from './translations.js?v=a1a9c0f';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=a1a9c0f';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=a1a9c0f';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=a1a9c0f';
+import { safeCover } from './categories.js?v=a1a9c0f';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -589,16 +589,15 @@ function renderStickyOverlay(entry) {
   const panel      = $('sticky-note-panel');
   const panelLabel = $('sticky-panel-label');
   const panelBody  = $('sticky-panel-body');
-  const panelHdr   = $('sticky-panel-header');
   if (panel) panel.classList.remove('visible');
 
   const lang = AppState.language;
   const t    = (k) => getTranslation(k, lang);
 
   const noteTypes = [
-    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance', bg: '#0A0A0A', fg: '#CCFF00' },
-    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique',   bg: '#0A0A0A', fg: '#FF5A47' },
-    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy',   bg: '#0A0A0A', fg: '#6F86FF' }
+    { id: 'provenance', label: t('note_provenance') || 'AUDIT PROVENANCE',  cls: 'sq-provenance' },
+    { id: 'critique',   label: t('note_critique')   || 'FORENSIC CRITIQUE', cls: 'sq-critique'   },
+    { id: 'strategy',   label: t('note_strategy')   || 'ISOLATE STRATEGY',  cls: 'sq-strategy'   }
   ];
 
   let activeId = null;
@@ -606,7 +605,7 @@ function renderStickyOverlay(entry) {
 
   const closePanel = () => {
     if (panel) panel.classList.remove('visible');
-    squaresEl.querySelectorAll('.sticky-square').forEach(s => s.classList.remove('active'));
+    squaresEl.querySelectorAll('.sticky-square').forEach(s => { s.classList.remove('active'); s.setAttribute('aria-expanded', 'false'); });
     if (activeSq) requestAnimationFrame(() => activeSq?.focus());
     activeId = null;
     activeSq = null;
@@ -635,16 +634,15 @@ function renderStickyOverlay(entry) {
       activeId = type.id;
       activeSq = sq;
 
-      squaresEl.querySelectorAll('.sticky-square').forEach(s => s.classList.remove('active'));
+      squaresEl.querySelectorAll('.sticky-square').forEach(s => { s.classList.remove('active'); s.setAttribute('aria-expanded', 'false'); });
       sq.classList.add('active');
+      sq.setAttribute('aria-expanded', 'true');
 
-      if (panelHdr) {
-        panelHdr.style.background  = type.bg;
-        panelHdr.style.color       = type.fg;
-        panelHdr.style.borderColor = type.fg;
-      }
-      if (panelLabel) { panelLabel.textContent = type.label; panelLabel.style.color = type.fg; }
-      if (closeBtn)   closeBtn.style.color = type.fg;
+      // Colours come from CSS (#sticky-note-panel[data-note=…]) so they
+      // follow the theme. They used to be inline dark-theme values, and
+      // the body text stayed white on the light theme's paper panel.
+      if (panel)      panel.dataset.note = type.id;
+      if (panelLabel) panelLabel.textContent = type.label;
       if (panelBody)  panelBody.textContent = text;
       if (panel)      panel.classList.add('visible');
     });

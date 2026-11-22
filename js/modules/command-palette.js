@@ -3,9 +3,9 @@
  * Logic for the CMD+K command palette.
  */
 
-import { $ } from './core-utils.js?v=267b59c';
-import { AppState } from './core-state.js?v=267b59c';
-import { getTranslation } from './translations.js?v=267b59c';
+import { $ } from './core-utils.js?v=a1a9c0f';
+import { AppState } from './core-state.js?v=a1a9c0f';
+import { getTranslation } from './translations.js?v=a1a9c0f';
 
 let cmdSelectedIndex = -1;
 let cmdResults = [];

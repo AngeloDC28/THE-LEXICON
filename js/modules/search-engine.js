@@ -3,10 +3,10 @@
  * Logic for filtering entries and interacting with the taxonomy system.
  */
 
-import { $ } from './core-utils.js?v=267b59c';
-import { AppState, taxonomyData } from './core-state.js?v=267b59c';
-import { getTranslation } from './translations.js?v=267b59c';
-import { getTagCategory } from './render-index-view.js?v=267b59c';
+import { $ } from './core-utils.js?v=a1a9c0f';
+import { AppState, taxonomyData } from './core-state.js?v=a1a9c0f';
+import { getTranslation } from './translations.js?v=a1a9c0f';
+import { getTagCategory } from './render-index-view.js?v=a1a9c0f';
 
 let searchCache = new Map();
 

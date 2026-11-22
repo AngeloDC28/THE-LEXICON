@@ -942,8 +942,9 @@ html:not(.dark) .hero-stat .hs-lbl { color: #666; } /* #999 on bone ≈ 2.7:1 (F
   text-transform: uppercase;
   font-family: var(--font-mono);
 }
-/* #8a7a70 on bone ≈ 3.9:1 (FAIL) → #6b5d54 ≈ 5.6:1 */
-html:not(.dark) .hero-featured-brand { color: #6b5d54; }
+/* The featured panel stays dark in both themes, so the brand line keeps
+   its light-on-dark colour (a light-theme "darker" override made it
+   ~3:1 on the dark gradient). */
 
 .hero-featured-desc {
   font-family: 'EB Garamond', Georgia, serif;
@@ -1121,7 +1122,7 @@ html:not(.dark) .feat-card-hook { color: #333; }
 .sec-eye {
   font-size: var(--t-mono-xs);
   letter-spacing: 0.28em;
-  color: #555;
+  color: #8a8a8a; /* was #555 on #0a0a0a, about 2.6:1 */
   text-transform: uppercase;
   margin-bottom: 4px;
   font-family: var(--font-mono);
@@ -1184,7 +1185,7 @@ html:not(.dark) .how-step { border-right-color: #e0e0dc; }
 .how-num span:first-child {
   font-family: 'EB Garamond', Georgia, serif;
   font-size: var(--t-h3);
-  color: #333;
+  color: #777; /* large numeral: was #333, about 1.6:1 */
   font-weight: 400;
   line-height: 1;
 }
@@ -1192,7 +1193,7 @@ html:not(.dark) .how-num span:first-child { color: #767676; }
 .how-num span:last-child {
   font-size: var(--t-mono-xs);
   letter-spacing: 0.25em;
-  color: #555;
+  color: #8a8a8a;
   text-transform: uppercase;
   font-family: var(--font-mono);
 }
@@ -1220,7 +1221,7 @@ html:not(.dark) .how-step p { color: #555; }
   margin-top: 16px;
   font-size: var(--t-mono-xs);
   letter-spacing: 0.14em;
-  color: #444;
+  color: #8a8a8a; /* was #444, about 2:1 */
   font-family: var(--font-mono);
 }
 html:not(.dark) .how-term { color: #595959; }
@@ -4089,13 +4090,26 @@ html:not(.dark) .img-count { color: rgba(0,0,0,0.7); }
 }
 #sticky-panel-header {
   flex-shrink: 0;
+  background: #0A0A0A;
+  border-bottom: 2px solid currentColor;
 }
+#sticky-note-panel[data-note="provenance"] #sticky-panel-header { color: var(--note-prov); }
+#sticky-note-panel[data-note="critique"]   #sticky-panel-header { color: var(--note-crit); }
+#sticky-note-panel[data-note="strategy"]   #sticky-panel-header { color: var(--note-strat); }
 #sticky-panel-body {
   flex: 1;
   overflow-y: auto;
-  color: #fff;
+  color: rgba(255,255,255,0.92);
   line-height: 1.65;
 }
+/* Light theme: the panel is paper (see the light-mode detail rules), so
+   the text goes dark and the labels use the same darker accents as the
+   sidebar notes. */
+html:not(.dark) #sticky-panel-header { background: #FAF9F6; }
+html:not(.dark) #sticky-note-panel[data-note="provenance"] #sticky-panel-header { color: #4d6600; }
+html:not(.dark) #sticky-note-panel[data-note="critique"]   #sticky-panel-header { color: #B3200F; }
+html:not(.dark) #sticky-note-panel[data-note="strategy"]   #sticky-panel-header { color: #2F49D1; }
+html:not(.dark) #sticky-panel-body { color: #111; }
 
 /* Ensure analytical payload is readable */
 #analytical-payload {

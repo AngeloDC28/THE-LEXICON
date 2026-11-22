@@ -13,6 +13,8 @@
  *   4. The menu opens on the first tap, in Grid and in Timeline.
  *   5. Grid / Timeline / Index never show two views at once.
  *   6. Theme switch: no text left in the old theme's colour.
+ *   7. In both themes no text blends into its background (home, a show,
+ *      and the Provenance / Critique / Strategy panel).
  *
  * Uses the machine's Chrome via playwright-core (see tests/mobile.mjs).
  */
@@ -46,6 +48,36 @@ const expect = (cond, msg) => { if (!cond) throw new Error(msg); };
 const visibleViews = (page) => page.evaluate(() => ['grid-view', 'index-table-view', 'timeline-view', 'folders-view']
   .filter(id => { const e = document.getElementById(id); return e && getComputedStyle(e).display !== 'none' && e.getBoundingClientRect().height > 0; }));
 const tap = async (page, sel) => { await page.locator(sel).first().click(); await page.waitForTimeout(700); };
+const toggleTheme = (page) => page.evaluate(() => document.querySelector('[aria-label="Toggle light/dark theme"]').click());
+
+// Every visible piece of text whose colour is too close to the solid
+// background behind it (luminance gap < 0.3, roughly under 3:1). Text over
+// a gradient or photo is skipped: its background can't be read reliably.
+const lowContrastText = (page) => page.evaluate(() => {
+  const lum = (c) => { const m = c.match(/[\d.]+/g); if (!m) return null; const [r, g, b, a = 1] = m.map(Number); return { L: (0.299 * r + 0.587 * g + 0.114 * b) / 255, a }; };
+  const bgOf = (el) => {
+    for (let e = el; e; e = e.parentElement) {
+      const cs = getComputedStyle(e);
+      if (cs.backgroundImage !== 'none') return null;
+      const x = lum(cs.backgroundColor);
+      if (x && x.a > 0.5) return x.L;
+    }
+    return lum(getComputedStyle(document.body).backgroundColor).L;
+  };
+  const bad = [];
+  for (const el of document.querySelectorAll('body *')) {
+    if (!el.offsetParent && getComputedStyle(el).position !== 'fixed') continue;
+    if (![...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) continue;
+    const r = el.getBoundingClientRect();
+    if (!r.width || !r.height || r.bottom < 0 || r.top > innerHeight * 3) continue;
+    const cs = getComputedStyle(el);
+    if (cs.visibility === 'hidden' || +cs.opacity < 0.1) continue;
+    const bg = bgOf(el);
+    if (bg === null) continue;
+    if (Math.abs(lum(cs.color).L - bg) < 0.3) bad.push(`"${el.textContent.trim().slice(0, 30)}" (${el.id || el.className || el.tagName})`);
+  }
+  return bad.slice(0, 5);
+});
 
 async function main() {
   const server = await startServer(PORT);
@@ -182,6 +214,36 @@ async function main() {
         expect(stuck.bad.length === 0, `switching to ${target}: text still in the old colour: ${stuck.bad.join(', ')}`);
       }
     });
+
+    await flow('both themes: no text blends into its background (home, show page)', browser, async (page) => {
+      for (const path of ['/', '/entry/gaultier-ss94']) {
+        if (path !== '/') { await page.goto(BASE + path, { waitUntil: 'networkidle' }); await page.waitForTimeout(1000); }
+        for (let i = 0; i < 2; i++) {
+          const theme = await page.evaluate(() => document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+          const bad = await lowContrastText(page);
+          expect(bad.length === 0, `${path} in ${theme}: ${bad.join(', ')}`);
+          await toggleTheme(page);
+          await page.waitForTimeout(300);
+        }
+      }
+    });
+
+    await flow('desktop: Provenance / Critique / Strategy panel is readable in both themes', browser, async (page) => {
+      await page.goto(BASE + '/entry/gaultier-ss94', { waitUntil: 'networkidle' });
+      await page.waitForTimeout(1000);
+      for (const sq of ['sq-provenance', 'sq-critique', 'sq-strategy']) {
+        await page.evaluate((c) => document.querySelector('.' + c).click(), sq);
+        await page.waitForTimeout(300);
+        for (let i = 0; i < 2; i++) {
+          const theme = await page.evaluate(() => document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+          const bad = await lowContrastText(page);
+          expect(bad.length === 0, `${sq} panel in ${theme}: ${bad.join(', ')}`);
+          await toggleTheme(page);
+          await page.waitForTimeout(300);
+        }
+        await page.evaluate((c) => document.querySelector('.' + c).click(), sq); // close
+      }
+    }, { desktop: true });
   } finally {
     await browser.close();
     server.close();
