@@ -284,7 +284,11 @@
       "date": "2000-02"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Condé Nast Archive",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/spring-1995-ready-to-wear/issey-miyake"
+  },
   "vibes": [
     "tech textiles",
     "futurism in fabric",

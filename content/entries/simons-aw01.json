@@ -3,11 +3,10 @@
   "id": "simons-aw01",
   "title": "Raf Simons AW 2001",
   "subtitle": "Riot, Riot, Riot!",
-  "summary_plain": "After a year away, Raf Simons swapped his famously skinny suits for huge hooded layers inspired by young people in Eastern Europe, shown in a foggy warehouse to loud techno. Later designers like Virgil Abloh built on its look.",
+  "summary_plain": "Raf Simons's models marched in hoods and huge layered jackets covered in graphics, to loud techno music. It became the blueprint for the big, graphic streetwear that luxury brands still sell today.",
   "year": 2001,
   "season": "AW",
   "published": "2026-05-18",
-  "summary_plain": "Raf Simons's models marched in hoods and huge layered jackets covered in graphics, to loud techno music. It became the blueprint for the big, graphic streetwear that luxury brands still sell today.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/simons-aw01/simons-aw01-01.jpg",
@@ -188,7 +187,11 @@
       "type": "video"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Courtesy of Raf Simons",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2001-menswear/raf-simons"
+  },
   "vibes": [
     "rave culture",
     "teen rebellion",

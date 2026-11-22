@@ -3,11 +3,10 @@
   "id": "chalayan-aw00",
   "title": "Hussein Chalayan AW 2000",
   "subtitle": "After Words",
-  "summary_plain": "Models pulled the covers off living-room chairs and wore them as dresses, and a coffee table became a wooden skirt. Hussein Chalayan based it on his family being forced from their home in Cyprus: what do you take when you have to leave?",
+  "summary_plain": "In a living-room set, models took the covers off chairs and wore them as dresses, and a wooden table turned into a skirt. It was about refugees who must carry their home with them when they flee.",
   "year": 2000,
   "season": "AW",
   "published": "2026-05-12",
-  "summary_plain": "In a living-room set, models took the covers off chairs and wore them as dresses, and a wooden table turned into a skirt. It was about refugees who must carry their home with them when they flee.",
   "images": [
     {
       "src": "THE-LEXICON-ASSETS/chalayan-aw00/chalayan-aw00-01.jpg",
@@ -313,7 +312,11 @@
       "type": "interview"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "JB Villareal / Shoot Digital",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/chalayan"
+  },
   "vibes": [
     "cultural diaspora",
     "identity in cloth",

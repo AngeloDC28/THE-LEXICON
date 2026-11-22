@@ -27,7 +27,13 @@
     "anderson-aw22": {
       "traced": null,
       "evidence": "No exact matches. Similar results are the JW Anderson AW22 ad campaign (The Impression) and lookbook (SHOWstudio)",
-      "flag": "Cover may be a campaign or lookbook image rather than a runway photo"
+      "flag": "Cover may be a campaign or lookbook image rather than a runway photo",
+      "credited": {
+        "credit": "© Juergen Teller, All Rights Reserved 2022",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/j-w-anderson",
+        "date": "2026-11-22"
+      }
     },
     "balenciaga-ss07": {
       "traced": "Vogue Runway gallery",
@@ -72,7 +78,13 @@
     "chalayan-aw00": {
       "traced": null,
       "evidence": "Instagram reposts; Vogue #TBT article 13 Feb 2020 (1152x1728); University of the Arts London article 'Inside the Industry with iconic catwalk photographer…' 3 Feb 2016",
-      "lead": "The UAL article may name the photographer"
+      "lead": "The UAL article may name the photographer",
+      "credited": {
+        "credit": "JB Villareal / Shoot Digital",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/chalayan",
+        "date": "2026-11-22"
+      }
     },
     "chanel-aw14": {
       "traced": "Vogue Runway gallery",
@@ -182,7 +194,13 @@
     "lang-aw98": {
       "traced": null,
       "evidence": "Vogue, British Vogue and Vogue India news articles of 10-11 May 2023 (Peter Do appointment), 1200x1533; Pinterest pin titled 'Helmut Lang Fall 1998 Ready-to-Wear Fashion Show'",
-      "lead": "Those articles print a credit under the image"
+      "lead": "Those articles print a credit under the image",
+      "credited": {
+        "credit": "Courtesy of hl-art",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/helmut-lang",
+        "date": "2026-11-22"
+      }
     },
     "loewe-ss23": {
       "traced": "Vogue Runway gallery",
@@ -222,13 +240,30 @@
         "date": "2026-11-21",
         "source_verified": true,
         "url": "https://theimpression.com/miu-miu-spring-2022-fashion-show-details/",
-        "note": "Cover is one of the 18 images on this page. No per-photo credit printed; site footer reads \"© The Impression LLC\". image_source set; photographer still unknown — ask The Impression."
+        "note": "Cover is one of the 18 images on this page. No per-photo credit printed; site footer reads \"© The Impression LLC\". image_source set; photographer still unknown — ask The Impression.",
+        "resolved": "2026-11-22: all 12 images are Vogue Runway Miu Miu Spring 2022 looks (cover = look 1, distance 1); credit printed there: Filippo Fior / Gorunway.com."
+      },
+      "credited": {
+        "credit": "Filippo Fior / Gorunway.com",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-2022-ready-to-wear/miu-miu",
+        "date": "2026-11-22"
       }
     },
     "miyake-ss99": {
       "traced": null,
       "evidence": "8 matches, all Instagram/Pinterest (largest 2000x2571). Captions date this photo to Issey Miyake FW 1994-95 or SS 1995",
-      "flag": "Possibly the wrong season for an SS99 entry: check before crediting"
+      "flag": "Possibly the wrong season for an SS99 entry: check before crediting",
+      "credited": {
+        "credit": "Condé Nast Archive",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/spring-1995-ready-to-wear/issey-miyake",
+        "date": "2026-11-22"
+      },
+      "season_conflict": {
+        "date": "2026-11-22",
+        "finding": "All 14 images match Vogue Runway Issey Miyake Spring 1995 ready-to-wear (dHash distance 0-5 each); none match Spring 1998, and Vogue has no Spring 1999 show. The entry is dated SS99: the photos are from SS95. Needs an editorial decision (re-date the entry, or replace the images)."
+      }
     },
     "moschino-aw14": {
       "traced": null,
@@ -324,7 +359,13 @@
     "simons-aw01": {
       "traced": null,
       "evidence": "Instagram reposts; one post (14 Sept 2025) is captioned 'Raf Simons AW2001 Runway Collection Credit'",
-      "lead": "That caption may name the photographer; confirm at the original source"
+      "lead": "That caption may name the photographer; confirm at the original source",
+      "credited": {
+        "credit": "Courtesy of Raf Simons",
+        "source": "Vogue Runway",
+        "url": "https://www.vogue.com/fashion-shows/fall-2001-menswear/raf-simons",
+        "date": "2026-11-22"
+      }
     },
     "undercover-ss03": {
       "traced": null,

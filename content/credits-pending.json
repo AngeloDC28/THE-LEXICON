@@ -1,14 +1,8 @@
 {
   "_comment": "Entries still waiting for a confirmed photo credit. check-credits.mjs fails the build for any entry with an empty photo_credit or image_source that is NOT listed here, and for any entry listed here that already has both (remove it). Shrink this list to [] as credits are confirmed.",
   "pending": [
-    "anderson-aw22",
-    "chalayan-aw00",
     "galliano-dior-ss00",
     "hood-by-air-ss14",
-    "lang-aw98",
-    "miu-miu-ss22",
-    "miyake-ss99",
-    "simons-aw01",
     "undercover-ss03",
     "vuitton-ss08"
   ]

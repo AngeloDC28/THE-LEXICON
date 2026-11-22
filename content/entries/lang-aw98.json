@@ -217,7 +217,11 @@
       "type": "article"
     }
   ],
-  "photo_credit": "",
+  "photo_credit": "Courtesy of hl-art",
+  "image_source": {
+    "name": "Vogue Runway",
+    "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/helmut-lang"
+  },
   "vibes": [
     "quiet luxury",
     "intellectual minimalism",
