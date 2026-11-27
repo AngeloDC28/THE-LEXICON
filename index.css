@@ -924,6 +924,13 @@ html:not(.dark) .hero-stat .hs-lbl { color: #666; } /* #999 on bone ≈ 2.7:1 (F
   color: var(--c-corporeal);
   font-family: var(--font-mono);
 }
+/* The featured panel stays dark in both themes, so inside it the category
+   colours keep their dark-theme (light-on-dark) values. The light theme's
+   darker versions were about 1.7:1 on this panel. */
+html:not(.dark) .hero-col-right {
+  --c-corporeal: #e2a4a0; --c-semiotic: #d4c4a0; --c-subculture: #b08fc4;
+  --c-critique: #d96b6b; --c-strategy: #7fb3a3; --c-provenance: #c4a87a;
+}
 
 .hero-featured-title {
   font-family: 'EB Garamond', Georgia, serif;
@@ -4836,7 +4843,7 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 
 /* Nexus timeline view (connection-matrix.js renderTimeline) */
 .nexus-tl-wrap { padding: 24px 20px; font-family: ui-monospace, monospace; }
-.nexus-tl-caption { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 20px; }
+.nexus-tl-caption { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
 .nexus-tl-track { position: relative; padding-left: 32px; }
 .nexus-tl-line { position: absolute; left: 8px; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.12); }
 .nexus-tl-item { position: relative; margin-bottom: 18px; }
@@ -4851,12 +4858,25 @@ html:not(.dark) .mobile-note-tab:focus-visible { outline-color: #000; }
 .nexus-tl-dot--geography { background: #87CEFA; }
 .nexus-tl-dot--anatomy   { background: #FFB6C1; }
 .nexus-tl-dot--current   { background: #CCFF00; box-shadow: 0 0 8px #CCFF00; }
-.nexus-tl-year { font-size: 12px; letter-spacing: 0.15em; margin-bottom: 2px; color: rgba(255,255,255,0.35); }
+.nexus-tl-year { font-size: 12px; letter-spacing: 0.15em; margin-bottom: 2px; color: rgba(255,255,255,0.62); }
 .nexus-tl-year--current { color: #CCFF00; }
 .nexus-tl-brand { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
 .nexus-tl-brand--current { color: #CCFF00; }
 .nexus-tl-keys { margin-top: 4px; }
-.nexus-tl-key { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; padding: 1px 4px; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.4); margin-right: 3px; }
+.nexus-tl-key { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; padding: 1px 4px; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.62); margin-right: 3px; }
+/* Light theme: the Nexus panel is paper, and every colour above was
+   white-on-dark, so the whole Timeline tab disappeared. Dark equivalents;
+   the current show uses the olive of the Provenance labels. (The dark
+   greys above were also raised from 0.3-0.4 alpha, about 2.5:1.) */
+html:not(.dark) .nexus-tl-caption { color: rgba(0,0,0,0.6); }
+html:not(.dark) .nexus-tl-line { background: rgba(0,0,0,0.15); }
+html:not(.dark) .nexus-tl-dot:not([class*="nexus-tl-dot--"]) { background: #0A0A0A; }
+html:not(.dark) .nexus-tl-dot--current { background: #8FB300; box-shadow: none; }
+html:not(.dark) .nexus-tl-year { color: rgba(0,0,0,0.62); }
+html:not(.dark) .nexus-tl-brand { color: rgba(0,0,0,0.85); }
+html:not(.dark) .nexus-tl-year--current,
+html:not(.dark) .nexus-tl-brand--current { color: #4d6600; }
+html:not(.dark) .nexus-tl-key { color: rgba(0,0,0,0.62); border-color: rgba(0,0,0,0.2); }
 
 /* ── Type floor ───────────────────────────────────────────────────────────
    Tailwind arbitrary sizes used for labels in index.html and the render
@@ -5096,6 +5116,13 @@ html:not(.dark) .detail-summary { color: #1a1a1a; }
   margin: 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+/* Light theme: the Nexus panel is paper (#FAF9F6), so the key was white on
+   white. Same for acid-yellow text that sits on a light surface: the
+   sign-in note and the timeline's year headings use the darker olive the
+   Provenance labels use. */
+html:not(.dark) .matrix-key { color: rgba(0,0,0,0.75); border-bottom-color: rgba(0,0,0,0.1); }
+html:not(.dark) #auth-context-label { color: #4d6600; }
+html:not(.dark) #timeline-view h3.text-acid { color: #4d6600; }
 
 /* Theme switch: all colours change in one frame (see toggleTheme in app.js). */
 html.theme-switching,

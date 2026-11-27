@@ -5,9 +5,9 @@
  * Click events are handled here via a single delegated listener on #detail-image-view.
  * render-detail.js keeps only mouseenter/mouseleave for the desktop hover preview.
  */
-import { $, escapeHtml } from './core-utils.js?v=4d1f35d';
-import { AppState } from './core-state.js?v=4d1f35d';
-import { getTranslation } from './translations.js?v=4d1f35d';
+import { $, escapeHtml } from './core-utils.js?v=d58e597';
+import { AppState } from './core-state.js?v=d58e597';
+import { getTranslation } from './translations.js?v=d58e597';
 
 let _archiveData = [];
 let _triggerBtn = null;

@@ -14,7 +14,8 @@
  *   5. Grid / Timeline / Index never show two views at once.
  *   6. Theme switch: no text left in the old theme's colour.
  *   7. In both themes no text blends into its background (home, a show,
- *      and the Provenance / Critique / Strategy panel).
+ *      the Provenance / Critique / Strategy panel, the Nexus tabs and the
+ *      sign-in box).
  *
  * Uses the machine's Chrome via playwright-core (see tests/mobile.mjs).
  */
@@ -50,33 +51,55 @@ const visibleViews = (page) => page.evaluate(() => ['grid-view', 'index-table-vi
 const tap = async (page, sel) => { await page.locator(sel).first().click(); await page.waitForTimeout(700); };
 const toggleTheme = (page) => page.evaluate(() => document.querySelector('[aria-label="Toggle light/dark theme"]').click());
 
-// Every visible piece of text whose colour is too close to the solid
-// background behind it (luminance gap < 0.3, roughly under 3:1). Text over
-// a gradient or photo is skipped: its background can't be read reliably.
+// Every visible piece of text whose colour is too close to the background
+// behind it (luminance gap < 0.25, roughly under 3:1). Translucent text and
+// backgrounds are composited first: white at 30% on paper is pale grey,
+// not white. Text over a photo is skipped (its background can't be read
+// reliably; gradients count as decoration), as is text covered by
+// something else, and one- or two-character ornaments such as "/"
+// separators and arrows.
 const lowContrastText = (page) => page.evaluate(() => {
-  const lum = (c) => { const m = c.match(/[\d.]+/g); if (!m) return null; const [r, g, b, a = 1] = m.map(Number); return { L: (0.299 * r + 0.587 * g + 0.114 * b) / 255, a }; };
+  const rgba = (c) => { const m = c.match(/[\d.]+/g); if (!m) return null; const [r, g, b, a = 1] = m.map(Number); return [r, g, b, a]; };
+  const L = ([r, g, b]) => (0.299 * r + 0.587 * g + 0.114 * b) / 255;
   const bgOf = (el) => {
+    const layers = [];
     for (let e = el; e; e = e.parentElement) {
       const cs = getComputedStyle(e);
-      if (cs.backgroundImage !== 'none') return null;
-      const x = lum(cs.backgroundColor);
-      if (x && x.a > 0.5) return x.L;
+      const img = cs.backgroundImage;
+      if (img.includes('url(')) return null; // a photo: unknowable
+      // An opaque gradient is the surface: use its first colour. One with
+      // transparent stops is an overlay, so look through it.
+      const stops = img.includes('gradient') ? img.match(/rgba?\([^)]*\)/g) || [] : [];
+      if (stops.length && stops.every(x => (rgba(x)[3] ?? 1) >= 0.95)) { layers.push(rgba(stops[0])); break; }
+      const c = rgba(cs.backgroundColor);
+      if (c && c[3] > 0) { layers.push(c); if (c[3] >= 0.95) break; }
     }
-    return lum(getComputedStyle(document.body).backgroundColor).L;
+    let col = (layers.length && layers[layers.length - 1][3] >= 0.95) ? layers.pop() : (rgba(getComputedStyle(document.body).backgroundColor) || [255, 255, 255, 1]);
+    while (layers.length) { const t = layers.pop(); col = [0, 1, 2].map(i => t[i] * t[3] + col[i] * (1 - t[3])); }
+    return col;
   };
   const bad = [];
   for (const el of document.querySelectorAll('body *')) {
     if (!el.offsetParent && getComputedStyle(el).position !== 'fixed') continue;
-    if (![...el.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) continue;
+    const own = [...el.childNodes].filter(n => n.nodeType === 3).map(n => n.textContent.trim()).join('');
+    if (own.length < 3 && !/[a-z0-9]/i.test(own)) continue;
     const r = el.getBoundingClientRect();
-    if (!r.width || !r.height || r.bottom < 0 || r.top > innerHeight * 3) continue;
+    if (r.width < 2 || r.height < 2 || r.bottom < 0 || r.top > innerHeight || r.right < 0 || r.left > innerWidth) continue;
     const cs = getComputedStyle(el);
-    if (cs.visibility === 'hidden' || +cs.opacity < 0.1) continue;
+    if (cs.visibility === 'hidden') continue;
+    let op = 1; for (let e = el; e; e = e.parentElement) op *= +getComputedStyle(e).opacity;
+    if (op < 0.05) continue;
+    const hit = document.elementFromPoint(Math.min(innerWidth - 1, Math.max(0, r.left + r.width / 2)), Math.min(innerHeight - 1, Math.max(0, r.top + Math.min(r.height / 2, 8))));
+    if (hit && !el.contains(hit) && !hit.contains(el)) continue;
     const bg = bgOf(el);
-    if (bg === null) continue;
-    if (Math.abs(lum(cs.color).L - bg) < 0.3) bad.push(`"${el.textContent.trim().slice(0, 30)}" (${el.id || el.className || el.tagName})`);
+    if (!bg) continue;
+    const f = rgba(cs.color);
+    if (!f) continue;
+    const a = f[3] * op;
+    const fg = [0, 1, 2].map(i => f[i] * a + bg[i] * (1 - a));
+    if (Math.abs(L(fg) - L(bg)) < 0.25) bad.push(`"${el.textContent.trim().replace(/\s+/g, ' ').slice(0, 30)}" (${el.id || el.className || el.tagName})`);
   }
-  return bad.slice(0, 5);
+  return [...new Set(bad)].slice(0, 5);
 });
 
 async function main() {
@@ -225,6 +248,36 @@ async function main() {
           await toggleTheme(page);
           await page.waitForTimeout(300);
         }
+      }
+    });
+
+    await flow('both themes: Nexus (graph, timeline, list) and sign-in box are readable', browser, async (page) => {
+      await page.goto(BASE + '/entry/gaultier-ss94', { waitUntil: 'networkidle' });
+      await page.waitForTimeout(1000);
+      const click = (sel) => page.evaluate(s => { const e = [...document.querySelectorAll(s)].find(x => x.offsetParent || getComputedStyle(x).position === 'fixed'); if (e) e.click(); return !!e; }, sel);
+      for (let i = 0; i < 2; i++) {
+        const theme = await page.evaluate(() => document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        expect(await click('#btn-nexus-mobile, #btn-related-open-nexus'), 'no button opens the Nexus');
+        for (const tab of ['#nexus-tab-graph', '#nexus-tab-timeline', '#nexus-tab-list']) {
+          await click(tab);
+          await page.waitForTimeout(500);
+          const seen = await page.evaluate(() => [...document.querySelectorAll('#matrix-content *')].some(e => { const r = e.getBoundingClientRect(); const h = document.elementFromPoint(r.left + r.width / 2, r.top + Math.min(r.height / 2, 8)); return r.width > 2 && r.top >= 0 && r.top < innerHeight && h && (e.contains(h) || h.contains(e)); }));
+          expect(seen, `Nexus ${tab.slice(11)} tab in ${theme}: its contents are not visible (covered or not open)`);
+          const bad = await lowContrastText(page);
+          expect(bad.length === 0, `Nexus ${tab.slice(11)} tab in ${theme}: ${bad.join(', ')}`);
+        }
+        await click('#btn-close-matrix');
+        await page.waitForTimeout(400);
+        if (await click('#btn-save-folder-mobile, #btn-save-to-folder')) {
+          await page.waitForTimeout(500);
+          const bad = await lowContrastText(page);
+          expect(bad.length === 0, `sign-in box in ${theme}: ${bad.join(', ')}`);
+          await click('[data-modal-close="auth"]');
+          await page.waitForTimeout(300);
+          expect(await page.evaluate(() => document.getElementById('auth-modal').classList.contains('hidden')), 'the sign-in box did not close');
+        }
+        await toggleTheme(page);
+        await page.waitForTimeout(300);
       }
     });
 
