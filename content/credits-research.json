@@ -127,7 +127,8 @@
         "date": "2026-11-27",
         "vogue": "No Spring 2000 Couture show on Vogue Runway (Spring 2000 RTW checked: no match).",
         "getty": "All 193 photos of Getty event \"Christian Dior - Runway - Spring/Summer 2000 Paris Haute Couture Fashion Week\" checked, plus ~300 broader results: cover not found.",
-        "partial": "Image 13 matches Getty 1221899075 (distance 4): Victor VIRGILE / Gamma-Rapho via Getty Images, 24 Jan 2000. Only that image; the cover credit is still unknown."
+        "partial": "Image 13 matches Getty 1221899075 (distance 4): Victor VIRGILE / Gamma-Rapho via Getty Images, 24 Jan 2000. Only that image; the cover credit is still unknown.",
+        "tineye": "2026-11-27: 0 matches"
       }
     },
     "garcons-ss97": {
@@ -189,6 +190,10 @@
         "date": "2026-11-27",
         "vogue": "Vogue files this show as Spring 2014 Menswear: all 44 looks checked, no match.",
         "getty": "All 99 photos of Getty event \"Hood By Air - Runway - MADE Fashion Week Spring 2014\" checked: no match."
+      },
+      "season_conflict": {
+        "date": "2026-11-27",
+        "finding": "TinEye: the cover (-01) is Vogue Runway asset 55c6513408298d8be21d5ee9 (file HOO_0019), crawled on vogue.com/fashion-shows/fall-2015-ready-to-wear/hood-by-air. dHash distance 2. So the cover is from Hood By Air Fall 2015, not Spring 2014. It is no longer in that show's current gallery (35 looks, Stefano Masse / Indigitalimages.com: no match) nor in Fall 2015 Menswear, so no credit is printed for it. Images 02-11 match neither show."
       }
     },
     "klein-aw17": {
@@ -384,7 +389,8 @@
       "checked_2": {
         "date": "2026-11-27",
         "vogue": "No Spring 2003 show on Vogue Runway (earliest is Fall 2003, checked: no match).",
-        "getty": "No matching photo in Getty searches for Undercover Spring 2003 / Paris October 2002."
+        "getty": "No matching photo in Getty searches for Undercover Spring 2003 / Paris October 2002.",
+        "tineye": "2026-11-27: 0 matches"
       }
     },
     "valentino-aw22": {
@@ -449,7 +455,9 @@
       "checked_2": {
         "date": "2026-11-27",
         "vogue": "Vogue Spring 2008 RTW: all 70 Collection looks and 51 Details images checked, no match.",
-        "getty": "~180 Getty photos of the show checked: no match."
+        "getty": "~180 Getty photos of the show checked: no match.",
+        "tineye": "2026-11-27: 0 matches",
+        "other": "Shutterstock Editorial: page blank (bot check), not pursued. Alamy: results are front-row, not runway."
       }
     },
     "watanabe-aw15": {
