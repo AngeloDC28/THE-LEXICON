@@ -122,7 +122,13 @@
     },
     "galliano-dior-ss00": {
       "traced": null,
-      "evidence": "Pinterest, British Vogue article 19 Feb 2019 (1277x1920), Getty Images search pages"
+      "evidence": "Pinterest, British Vogue article 19 Feb 2019 (1277x1920), Getty Images search pages",
+      "checked_2": {
+        "date": "2026-11-27",
+        "vogue": "No Spring 2000 Couture show on Vogue Runway (Spring 2000 RTW checked: no match).",
+        "getty": "All 193 photos of Getty event \"Christian Dior - Runway - Spring/Summer 2000 Paris Haute Couture Fashion Week\" checked, plus ~300 broader results: cover not found.",
+        "partial": "Image 13 matches Getty 1221899075 (distance 4): Victor VIRGILE / Gamma-Rapho via Getty Images, 24 Jan 2000. Only that image; the cover credit is still unknown."
+      }
     },
     "garcons-ss97": {
       "traced": null,
@@ -178,7 +184,12 @@
     },
     "hood-by-air-ss14": {
       "traced": null,
-      "evidence": "Lens returned no results (two attempts)"
+      "evidence": "Lens returned no results (two attempts)",
+      "checked_2": {
+        "date": "2026-11-27",
+        "vogue": "Vogue files this show as Spring 2014 Menswear: all 44 looks checked, no match.",
+        "getty": "All 99 photos of Getty event \"Hood By Air - Runway - MADE Fashion Week Spring 2014\" checked: no match."
+      }
     },
     "klein-aw17": {
       "traced": null,
@@ -369,7 +380,12 @@
     },
     "undercover-ss03": {
       "traced": null,
-      "evidence": "No exact matches (two attempts)"
+      "evidence": "No exact matches (two attempts)",
+      "checked_2": {
+        "date": "2026-11-27",
+        "vogue": "No Spring 2003 show on Vogue Runway (earliest is Fall 2003, checked: no match).",
+        "getty": "No matching photo in Getty searches for Undercover Spring 2003 / Paris October 2002."
+      }
     },
     "valentino-aw22": {
       "traced": "Vogue Runway gallery",
@@ -429,7 +445,12 @@
     },
     "vuitton-ss08": {
       "traced": null,
-      "evidence": "Single exact match on TikTok (26 Sept 2026)"
+      "evidence": "Single exact match on TikTok (26 Sept 2026)",
+      "checked_2": {
+        "date": "2026-11-27",
+        "vogue": "Vogue Spring 2008 RTW: all 70 Collection looks and 51 Details images checked, no match.",
+        "getty": "~180 Getty photos of the show checked: no match."
+      }
     },
     "watanabe-aw15": {
       "traced": null,

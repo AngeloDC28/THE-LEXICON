@@ -986,7 +986,11 @@ export const archiveData = [
         "date": "2000-02"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Condé Nast Archive",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-1995-ready-to-wear/issey-miyake"
+    },
     "vibes": [
       "tech textiles",
       "futurism in fabric",
@@ -1685,7 +1689,11 @@ export const archiveData = [
         "type": "interview"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "JB Villareal / Shoot Digital",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2000-ready-to-wear/chalayan"
+    },
     "vibes": [
       "cultural diaspora",
       "identity in cloth",
@@ -4003,7 +4011,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Courtesy of hl-art",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-1998-ready-to-wear/helmut-lang"
+    },
     "vibes": [
       "quiet luxury",
       "intellectual minimalism",
@@ -5248,7 +5260,11 @@ export const archiveData = [
         "type": "video"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Courtesy of Raf Simons",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2001-menswear/raf-simons"
+    },
     "vibes": [
       "rave culture",
       "teen rebellion",
@@ -10017,10 +10033,10 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "Filippo Fior / Gorunway.com",
     "image_source": {
-      "name": "The Impression",
-      "url": "https://theimpression.com/miu-miu-spring-2022-fashion-show-details/"
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/spring-2022-ready-to-wear/miu-miu"
     },
     "vibes": [
       "bimbo aesthetic",
@@ -12620,7 +12636,11 @@ export const archiveData = [
         "type": "article"
       }
     ],
-    "photo_credit": "",
+    "photo_credit": "© Juergen Teller, All Rights Reserved 2022",
+    "image_source": {
+      "name": "Vogue Runway",
+      "url": "https://www.vogue.com/fashion-shows/fall-2022-ready-to-wear/j-w-anderson"
+    },
     "vibes": [
       "surreal objects",
       "gender bending",

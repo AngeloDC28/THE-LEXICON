@@ -2,14 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=a1a9c0f';
-import { AppState, updateHash } from './core-state.js?v=a1a9c0f';
-import { getFilteredEntries } from './search-engine.js?v=a1a9c0f';
-import { getTranslation } from './translations.js?v=a1a9c0f';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=a1a9c0f';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=a1a9c0f';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=a1a9c0f';
-import { safeCover } from './categories.js?v=a1a9c0f';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=ef3bf88';
+import { AppState, updateHash } from './core-state.js?v=ef3bf88';
+import { getFilteredEntries } from './search-engine.js?v=ef3bf88';
+import { getTranslation } from './translations.js?v=ef3bf88';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=ef3bf88';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=ef3bf88';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=ef3bf88';
+import { safeCover } from './categories.js?v=ef3bf88';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);

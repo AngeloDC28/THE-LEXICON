@@ -3,10 +3,10 @@
  * Logic for bookmarks, recently viewed, and local storage.
  */
 
-import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=a1a9c0f';
-import { AppState } from './core-state.js?v=a1a9c0f';
-import { getTranslation } from './translations.js?v=a1a9c0f';
-import { safeCover } from './categories.js?v=a1a9c0f';
+import { $, resolveImgSrc, thumbSrc, BROKEN_ASSET } from './core-utils.js?v=ef3bf88';
+import { AppState } from './core-state.js?v=ef3bf88';
+import { getTranslation } from './translations.js?v=ef3bf88';
+import { safeCover } from './categories.js?v=ef3bf88';
 
 export function getBookmarks() {
   try { return JSON.parse(localStorage.getItem('lexicon-bookmarks') || '[]'); } catch(e) { return []; }
