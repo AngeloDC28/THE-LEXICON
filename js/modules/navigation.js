@@ -1,6 +1,6 @@
-import { $, withViewTransition } from './core-utils.js?v=ef3bf88';
-import { AppState } from './core-state.js?v=ef3bf88';
-import { getTranslation } from './translations.js?v=ef3bf88';
+import { $, withViewTransition } from './core-utils.js?v=4d1f35d';
+import { AppState } from './core-state.js?v=4d1f35d';
+import { getTranslation } from './translations.js?v=4d1f35d';
 
 const _scrollPositions = {};
 

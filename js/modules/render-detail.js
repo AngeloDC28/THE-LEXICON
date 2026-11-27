@@ -2,14 +2,14 @@
  * render-detail.js
  * Logic for Detail View, Brutalist Nodes, and Geometric Hotspots.
  */
-import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=ef3bf88';
-import { AppState, updateHash } from './core-state.js?v=ef3bf88';
-import { getFilteredEntries } from './search-engine.js?v=ef3bf88';
-import { getTranslation } from './translations.js?v=ef3bf88';
-import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=ef3bf88';
-import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=ef3bf88';
-import { placePayload, hidePayloadLeader } from './hotspots.js?v=ef3bf88';
-import { safeCover } from './categories.js?v=ef3bf88';
+import { $, pad, resolveImgSrc, imgAttrs, webpSrc, thumbSrc, escapeHtml, BROKEN_ASSET, withViewTransition, splitSentences, seasonLong, pageScroller } from './core-utils.js?v=4d1f35d';
+import { AppState, updateHash } from './core-state.js?v=4d1f35d';
+import { getFilteredEntries } from './search-engine.js?v=4d1f35d';
+import { getTranslation } from './translations.js?v=4d1f35d';
+import { getTagCategory, categoryLabel, categoryPlain, seasonName } from './render-index-view.js?v=4d1f35d';
+import { initGlossaryTooltips, renderGlossaryModal } from './glossary.js?v=4d1f35d';
+import { placePayload, hidePayloadLeader } from './hotspots.js?v=4d1f35d';
+import { safeCover } from './categories.js?v=4d1f35d';
 
 export function updateStatusBar(archiveData) {
   const entry = archiveData.find(e => e.id === AppState.selectedEntryId);
@@ -447,7 +447,6 @@ function renderImage(entry, callbacks) {
   const creditEl = $('detail-image-credit');
   if (creditEl) {
     const slug  = entry.id || '';
-    const contactHref = `mailto:info@thelexicon.xyz?subject=Image%20credit%3A%20${encodeURIComponent(slug)}`;
     // The fallback used to read "Source: <Brand> press archive", which was
     // an invented attribution. If the credit isn't confirmed yet, say so.
     const credit = entry.photo_credit
@@ -458,7 +457,7 @@ function renderImage(entry, callbacks) {
       ? ` · via <a href="${escapeHtml(src.url)}" class="underline hover:text-acid focus:text-acid transition-colors" target="_blank" rel="noopener noreferrer">${escapeHtml(src.name)}</a>`
       : '';
     const mistakeHref = `mailto:info@thelexicon.xyz?subject=${encodeURIComponent(`Problem with ${entry.title || slug}`)}`;
-    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${contactHref}" class="underline hover:text-acid focus:text-acid transition-colors">Rights holder?</a> · <a href="${mistakeHref}" class="underline hover:text-acid focus:text-acid transition-colors">Spotted a mistake?</a>`;
+    creditEl.innerHTML = `<span>${credit}</span>${via} · <a href="${mistakeHref}" class="underline hover:text-acid focus:text-acid transition-colors">Spotted a mistake?</a>`;
   }
 
   // Image counter dots

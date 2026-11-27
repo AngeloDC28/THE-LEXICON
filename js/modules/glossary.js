@@ -5,7 +5,7 @@
  * also imports to write the /glossary page.
  */
 
-import { GLOSSARY, FASHION_BASICS } from './glossary-data.js?v=ef3bf88';
+import { GLOSSARY, FASHION_BASICS } from './glossary-data.js?v=4d1f35d';
 export { GLOSSARY, FASHION_BASICS };
 
 // ─── Tooltip Engine ──────────────────────────────────────────────────────────
